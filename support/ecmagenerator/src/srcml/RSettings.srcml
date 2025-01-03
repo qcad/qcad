@@ -98,6 +98,7 @@
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getDesktopLocation</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getDocumentsLocation</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getHomeLocation</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>getPluginsLocation</name><parameter_list>()</parameter_list>;</function_decl>
 
     <comment type="line">//static void setEventBlocking(bool on);</comment>
     <comment type="line">//static bool isEventBlockingEnabled();</comment>

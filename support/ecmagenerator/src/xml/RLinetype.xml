@@ -40,7 +40,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RLinetype *" isPureVirtual="false" />
+      <variant returnType="QSharedPointer &lt; RObject &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="cloneToLinetype" cppName="cloneToLinetype"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RLinetype &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="getName" cppName="getName" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

@@ -73,6 +73,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToView, "cloneToView");
+            
             REcmaHelper::registerFunction(&engine, proto, getName, "getName");
             
             REcmaHelper::registerFunction(&engine, proto, setName, "setName");
@@ -520,13 +522,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RView *'
-    RView * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RView *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -537,6 +539,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerView::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerView::cloneToView
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerView::cloneToView", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerView::cloneToView";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RView* self = 
+                        getSelf("cloneToView", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RView >'
+    QSharedPointer < RView > cppResult =
+        
+               self->cloneToView();
+        // return type: QSharedPointer < RView >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RView.cloneToView().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerView::cloneToView", context, engine);
             return result;
         }
          QScriptValue

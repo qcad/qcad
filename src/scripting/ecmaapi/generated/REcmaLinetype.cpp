@@ -73,6 +73,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToLinetype, "cloneToLinetype");
+            
             REcmaHelper::registerFunction(&engine, proto, getName, "getName");
             
             REcmaHelper::registerFunction(&engine, proto, setName, "setName");
@@ -595,13 +597,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLinetype *'
-    RLinetype * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RLinetype *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -612,6 +614,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinetype::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetype::cloneToLinetype
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetype::cloneToLinetype", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetype::cloneToLinetype";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetype* self = 
+                        getSelf("cloneToLinetype", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLinetype >'
+    QSharedPointer < RLinetype > cppResult =
+        
+               self->cloneToLinetype();
+        // return type: QSharedPointer < RLinetype >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetype.cloneToLinetype().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetype::cloneToLinetype", context, engine);
             return result;
         }
          QScriptValue

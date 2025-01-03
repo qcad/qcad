@@ -374,6 +374,9 @@
         showContextMenu
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        requestResourceBlockEditing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         escapeEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

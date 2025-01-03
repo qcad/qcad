@@ -66,6 +66,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToDimAngular3PEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

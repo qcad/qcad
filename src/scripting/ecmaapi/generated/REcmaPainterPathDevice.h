@@ -48,6 +48,9 @@
 
     // public methods:
     static  QScriptValue
+        setStrokePolygon
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPainterPaths
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

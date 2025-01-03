@@ -64,6 +64,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToTraceEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

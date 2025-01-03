@@ -266,6 +266,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="requestResourceBlockEditing"
+    cppName="requestResourceBlockEditing" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="entityId" isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="pos"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="escapeEvent" cppName="escapeEvent"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

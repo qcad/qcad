@@ -114,6 +114,9 @@
         getReferencedBlockId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasBlockOwnership
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setReferencedBlockName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

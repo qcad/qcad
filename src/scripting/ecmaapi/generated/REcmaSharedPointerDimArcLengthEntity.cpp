@@ -82,6 +82,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToDimArcLengthEntity, "cloneToDimArcLengthEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -679,13 +681,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RDimArcLengthEntity *'
-    RDimArcLengthEntity * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RDimArcLengthEntity *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -696,6 +698,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDimArcLengthEntity::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDimArcLengthEntity::cloneToDimArcLengthEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDimArcLengthEntity::cloneToDimArcLengthEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimArcLengthEntity::cloneToDimArcLengthEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimArcLengthEntity* self = 
+                        getSelf("cloneToDimArcLengthEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RDimArcLengthEntity >'
+    QSharedPointer < RDimArcLengthEntity > cppResult =
+        
+               self->cloneToDimArcLengthEntity();
+        // return type: QSharedPointer < RDimArcLengthEntity >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimArcLengthEntity.cloneToDimArcLengthEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimArcLengthEntity::cloneToDimArcLengthEntity", context, engine);
             return result;
         }
          QScriptValue

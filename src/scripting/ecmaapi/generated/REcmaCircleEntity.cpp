@@ -74,6 +74,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToCircleEntity, "cloneToCircleEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -572,13 +574,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RCircleEntity *'
-    RCircleEntity * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RCircleEntity *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -589,6 +591,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaCircleEntity::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCircleEntity::cloneToCircleEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCircleEntity::cloneToCircleEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCircleEntity::cloneToCircleEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCircleEntity* self = 
+                        getSelf("cloneToCircleEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RCircleEntity >'
+    QSharedPointer < RCircleEntity > cppResult =
+        
+               self->cloneToCircleEntity();
+        // return type: QSharedPointer < RCircleEntity >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCircleEntity.cloneToCircleEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCircleEntity::cloneToCircleEntity", context, engine);
             return result;
         }
          QScriptValue

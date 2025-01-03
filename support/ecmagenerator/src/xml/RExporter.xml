@@ -241,7 +241,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getBlockRefOrEntity"
     cppName="getBlockRefOrEntity" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="REntity *" isPureVirtual="false" />
+      <variant returnType="QSharedPointer &lt; REntity &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="getBlockRefOrEntityId"
     cppName="getBlockRefOrEntityId" specifier="public"
@@ -250,23 +251,25 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="getEntity" cppName="getEntity" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="REntity *" isPureVirtual="false" />
+      <variant returnType="QSharedPointer &lt; REntity &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="getCurrentBlockRef" cppName="getCurrentBlockRef"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
-      <variant returnType="REntity *" isPureVirtual="false" />
+      <variant returnType="QSharedPointer &lt; REntity &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="getCurrentViewport" cppName="getCurrentViewport"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
-      <variant returnType="RViewportEntity *"
+      <variant returnType="QSharedPointer &lt; RViewportEntity &gt;"
       isPureVirtual="false" />
     </method>
     <method name="getBlockRefViewportStack"
     cppName="getBlockRefViewportStack" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="QStack &lt; REntity * &gt;"
+      <variant returnType="QStack &lt; QSharedPointer &lt; REntity &gt; &gt;"
       isPureVirtual="false" />
     </method>
     <method name="isEntitySelected" cppName="isEntitySelected"
@@ -358,7 +361,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLayer &amp;" typeName="RLayer" name=""
+        <arg type="QSharedPointer &lt; RLayer &gt;"
+        typeName="QSharedPointer &lt; RLayer &gt;" name=""
         isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
@@ -370,15 +374,17 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLayerState &amp;" typeName="RLayerState"
-        name="" isConst="false" />
+        <arg type="QSharedPointer &lt; RLayerState &gt;"
+        typeName="QSharedPointer &lt; RLayerState &gt;" name=""
+        isConst="false" />
       </variant>
     </method>
     <method name="exportBlock" cppName="exportBlock"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RBlock &amp;" typeName="RBlock" name=""
+        <arg type="QSharedPointer &lt; RBlock &gt;"
+        typeName="QSharedPointer &lt; RBlock &gt;" name=""
         isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
@@ -390,7 +396,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RView &amp;" typeName="RView" name=""
+        <arg type="QSharedPointer &lt; RView &gt;"
+        typeName="QSharedPointer &lt; RView &gt;" name=""
         isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
@@ -402,7 +409,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLinetype &amp;" typeName="RLinetype" name=""
+        <arg type="QSharedPointer &lt; RLinetype &gt;"
+        typeName="QSharedPointer &lt; RLinetype &gt;" name=""
         isConst="false" />
       </variant>
     </method>
@@ -433,7 +441,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity &amp;" typeName="REntity" name="entity"
+        <arg type="QSharedPointer &lt; REntity &gt;"
+        typeName="QSharedPointer &lt; REntity &gt;" name="entity"
         isConst="false" />
         <arg type="bool" typeName="bool" name="preview"
         hasDefault="true" default="false" isConst="false" />
@@ -458,14 +467,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QSharedPointer &lt; RLayer &gt;"
       isPureVirtual="false">
-        <arg type="REntity &amp;" typeName="REntity" name="entity"
+        <arg type="QSharedPointer &lt; REntity &gt;"
+        typeName="QSharedPointer &lt; REntity &gt;" name="entity"
         isConst="false" />
       </variant>
     </method>
     <method name="isVisible" cppName="isVisible" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
-        <arg type="REntity &amp;" typeName="REntity" name="entity"
+        <arg type="QSharedPointer &lt; REntity &gt;"
+        typeName="QSharedPointer &lt; REntity &gt;" name="entity"
         isConst="false" />
       </variant>
     </method>
@@ -790,14 +801,15 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getEntityStack" cppName="getEntityStack"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="QStack &lt; REntity * &gt;"
+      <variant returnType="QStack &lt; QSharedPointer &lt; REntity &gt; &gt;"
       isPureVirtual="false" />
     </method>
     <method name="pushEntity" cppName="pushEntity"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity *" typeName="REntity *" name="e"
+        <arg type="QSharedPointer &lt; REntity &gt;"
+        typeName="QSharedPointer &lt; REntity &gt;" name="e"
         isConst="false" />
       </variant>
     </method>

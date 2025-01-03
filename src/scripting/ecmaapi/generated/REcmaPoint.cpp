@@ -82,6 +82,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToPoint, "cloneToPoint");
+            
             REcmaHelper::registerFunction(&engine, proto, setZ, "setZ");
             
             REcmaHelper::registerFunction(&engine, proto, getVectorProperties, "getVectorProperties");
@@ -463,13 +465,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RPoint *'
-    RPoint * cppResult =
+    // return type 'QSharedPointer < RShape >'
+    QSharedPointer < RShape > cppResult =
         
                self->clone();
-        // return type: RPoint *
-                // pointer, copyable 
-                result = qScriptValueFromValue(engine, *cppResult);
+        // return type: QSharedPointer < RShape >
+                // Shared pointer to shape, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -480,6 +482,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPoint::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPoint::cloneToPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPoint::cloneToPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPoint::cloneToPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPoint* self = 
+                        getSelf("cloneToPoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RPoint >'
+    QSharedPointer < RPoint > cppResult =
+        
+               self->cloneToPoint();
+        // return type: QSharedPointer < RPoint >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.cloneToPoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPoint::cloneToPoint", context, engine);
             return result;
         }
          QScriptValue

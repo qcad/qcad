@@ -64,6 +64,8 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimscale</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimasz</name></decl>;</decl_stmt>
 
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLength</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyTotalLength</name></decl>;</decl_stmt>
 
 </public><public>public:
     <constructor_decl><name>RLeaderEntity</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>RLeaderData</name>&amp;</type> <name>data</name></decl></param>)</parameter_list>;</constructor_decl>
@@ -80,8 +82,12 @@
         <return>return <expr><call><name><name>RPropertyTypeId</name>::<name>getPropertyTypeIds</name></name><argument_list>(<argument><expr><call><name><name>RLeaderEntity</name>::<name>getRtti</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>virtual</name> <name>RLeaderEntity</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr>new <call><name>RLeaderEntity</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr>;</return>
+    <function><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name><argument_list>(<argument><expr>new <call><name>RLeaderEntity</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>QSharedPointer<argument_list>&lt;<argument><name>RLeaderEntity</name></argument>&gt;</argument_list></name></type> <name>cloneToLeaderEntity</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>QSharedPointer<argument_list>&lt;<argument><name>RLeaderEntity</name></argument>&gt;</argument_list></name><argument_list>(<argument><expr>new <call><name>RLeaderEntity</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>setProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>,
@@ -100,6 +106,10 @@
 
     <function><type><name>virtual</name> <name>const</name> <name>RLeaderData</name>&amp;</type> <name>getData</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>data</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>reverse</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>data</name>.<call><name>reverse</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setArrowHead</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{

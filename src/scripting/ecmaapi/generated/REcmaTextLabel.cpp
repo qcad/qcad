@@ -387,13 +387,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RTextLabel *'
-    RTextLabel * cppResult =
+    // return type 'QSharedPointer < RShape >'
+    QSharedPointer < RShape > cppResult =
         
                self->clone();
-        // return type: RTextLabel *
-                // pointer, copyable 
-                result = qScriptValueFromValue(engine, *cppResult);
+        // return type: QSharedPointer < RShape >
+                // Shared pointer to shape, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 

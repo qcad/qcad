@@ -533,13 +533,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RRay *'
-    RRay * cppResult =
+    // return type 'QSharedPointer < RShape >'
+    QSharedPointer < RShape > cppResult =
         
                self->clone();
-        // return type: RRay *
-                // pointer, copyable 
-                result = qScriptValueFromValue(engine, *cppResult);
+        // return type: QSharedPointer < RShape >
+                // Shared pointer to shape, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 

@@ -270,9 +270,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RLinetype::Id" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="resolve"
         isConst="false" />
-        <arg type="QStack &lt; REntity * &gt; &amp;"
-        typeName="QStack &lt; REntity * &gt;" name="blockRefStack"
-        isConst="true" />
+        <arg type="QStack &lt; QSharedPointer &lt; REntity &gt; &gt; &amp;"
+        typeName="QStack &lt; QSharedPointer &lt; REntity &gt; &gt;"
+        name="blockRefStack" isConst="true" />
       </variant>
     </method>
     <method name="setLinetypePattern" cppName="setLinetypePattern"
@@ -311,18 +311,18 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="resolve"
         isConst="false" />
-        <arg type="QStack &lt; REntity * &gt; &amp;"
-        typeName="QStack &lt; REntity * &gt;" name="blockRefStack"
-        isConst="true" />
+        <arg type="QStack &lt; QSharedPointer &lt; REntity &gt; &gt; &amp;"
+        typeName="QStack &lt; QSharedPointer &lt; REntity &gt; &gt;"
+        name="blockRefStack" isConst="true" />
       </variant>
     </method>
     <method name="getLineweightInUnits"
     cppName="getLineweightInUnits" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false">
-        <arg type="QStack &lt; REntity * &gt; &amp;"
-        typeName="QStack &lt; REntity * &gt;" name="blockRefStack"
-        isConst="true" />
+        <arg type="QStack &lt; QSharedPointer &lt; REntity &gt; &gt; &amp;"
+        typeName="QStack &lt; QSharedPointer &lt; REntity &gt; &gt;"
+        name="blockRefStack" isConst="true" />
       </variant>
     </method>
     <method name="setLineweight" cppName="setLineweight"
@@ -347,16 +347,16 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RColor" isPureVirtual="false">
         <arg type="RColor &amp;" typeName="RColor"
         name="unresolvedColor" isConst="true" />
-        <arg type="QStack &lt; REntity * &gt; &amp;"
-        typeName="QStack &lt; REntity * &gt;" name="blockRefStack"
-        isConst="true" />
+        <arg type="QStack &lt; QSharedPointer &lt; REntity &gt; &gt; &amp;"
+        typeName="QStack &lt; QSharedPointer &lt; REntity &gt; &gt;"
+        name="blockRefStack" isConst="true" />
       </variant>
       <variant returnType="RColor" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="resolve"
         isConst="false" />
-        <arg type="QStack &lt; REntity * &gt; &amp;"
-        typeName="QStack &lt; REntity * &gt;" name="blockRefStack"
-        isConst="true" />
+        <arg type="QStack &lt; QSharedPointer &lt; REntity &gt; &gt; &amp;"
+        typeName="QStack &lt; QSharedPointer &lt; REntity &gt; &gt;"
+        name="blockRefStack" isConst="true" />
       </variant>
     </method>
     <method name="getDisplayColor" cppName="getDisplayColor"

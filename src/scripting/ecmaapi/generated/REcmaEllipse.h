@@ -72,6 +72,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToEllipse
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isDirected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

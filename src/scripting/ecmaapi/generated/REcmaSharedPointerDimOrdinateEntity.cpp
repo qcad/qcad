@@ -79,6 +79,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToDimOrdinateEntity, "cloneToDimOrdinateEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -591,13 +593,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RDimOrdinateEntity *'
-    RDimOrdinateEntity * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RDimOrdinateEntity *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -608,6 +610,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDimOrdinateEntity::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDimOrdinateEntity::cloneToDimOrdinateEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDimOrdinateEntity::cloneToDimOrdinateEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimOrdinateEntity::cloneToDimOrdinateEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimOrdinateEntity* self = 
+                        getSelf("cloneToDimOrdinateEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RDimOrdinateEntity >'
+    QSharedPointer < RDimOrdinateEntity > cppResult =
+        
+               self->cloneToDimOrdinateEntity();
+        // return type: QSharedPointer < RDimOrdinateEntity >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.cloneToDimOrdinateEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimOrdinateEntity::cloneToDimOrdinateEntity", context, engine);
             return result;
         }
          QScriptValue

@@ -36,7 +36,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RToleranceEntity *"
+      <variant returnType="QSharedPointer &lt; RObject &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="cloneToToleranceEntity"
+    cppName="cloneToToleranceEntity" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RToleranceEntity &gt;"
       isPureVirtual="false" />
     </method>
     <method name="setProperty" cppName="setProperty"

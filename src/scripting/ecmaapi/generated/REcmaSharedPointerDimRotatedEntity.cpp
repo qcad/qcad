@@ -82,6 +82,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToDimRotatedEntity, "cloneToDimRotatedEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -675,13 +677,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RDimRotatedEntity *'
-    RDimRotatedEntity * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RDimRotatedEntity *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -692,6 +694,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDimRotatedEntity::cloneToDimRotatedEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::cloneToDimRotatedEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::cloneToDimRotatedEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimRotatedEntity* self = 
+                        getSelf("cloneToDimRotatedEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RDimRotatedEntity >'
+    QSharedPointer < RDimRotatedEntity > cppResult =
+        
+               self->cloneToDimRotatedEntity();
+        // return type: QSharedPointer < RDimRotatedEntity >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.cloneToDimRotatedEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::cloneToDimRotatedEntity", context, engine);
             return result;
         }
          QScriptValue

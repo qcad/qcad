@@ -76,6 +76,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToFaceEntity, "cloneToFaceEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -555,13 +557,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RFaceEntity *'
-    RFaceEntity * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RFaceEntity *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -572,6 +574,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerFaceEntity::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerFaceEntity::cloneToFaceEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerFaceEntity::cloneToFaceEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerFaceEntity::cloneToFaceEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RFaceEntity* self = 
+                        getSelf("cloneToFaceEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RFaceEntity >'
+    QSharedPointer < RFaceEntity > cppResult =
+        
+               self->cloneToFaceEntity();
+        // return type: QSharedPointer < RFaceEntity >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFaceEntity.cloneToFaceEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerFaceEntity::cloneToFaceEntity", context, engine);
             return result;
         }
          QScriptValue

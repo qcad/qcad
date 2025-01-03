@@ -36,7 +36,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RPointEntity *" isPureVirtual="false" />
+      <variant returnType="QSharedPointer &lt; RObject &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="cloneToPointEntity" cppName="cloneToPointEntity"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RPointEntity &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="setProperty" cppName="setProperty"
     specifier="public" isStatic="false" isVirtual="true"

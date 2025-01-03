@@ -62,6 +62,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToLeaderEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -72,6 +75,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setData
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        reverse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setArrowHead

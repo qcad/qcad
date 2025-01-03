@@ -74,6 +74,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToRayEntity, "cloneToRayEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -554,13 +556,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RRayEntity *'
-    RRayEntity * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RRayEntity *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -571,6 +573,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaRayEntity::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRayEntity::cloneToRayEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRayEntity::cloneToRayEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::cloneToRayEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRayEntity* self = 
+                        getSelf("cloneToRayEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RRayEntity >'
+    QSharedPointer < RRayEntity > cppResult =
+        
+               self->cloneToRayEntity();
+        // return type: QSharedPointer < RRayEntity >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.cloneToRayEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRayEntity::cloneToRayEntity", context, engine);
             return result;
         }
          QScriptValue

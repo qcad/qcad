@@ -66,6 +66,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToDimAngular2LEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

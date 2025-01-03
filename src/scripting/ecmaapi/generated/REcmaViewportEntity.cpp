@@ -74,6 +74,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToViewportEntity, "cloneToViewportEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -582,13 +584,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RViewportEntity *'
-    RViewportEntity * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RViewportEntity *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -599,6 +601,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaViewportEntity::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::cloneToViewportEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::cloneToViewportEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::cloneToViewportEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("cloneToViewportEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RViewportEntity >'
+    QSharedPointer < RViewportEntity > cppResult =
+        
+               self->cloneToViewportEntity();
+        // return type: QSharedPointer < RViewportEntity >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.cloneToViewportEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::cloneToViewportEntity", context, engine);
             return result;
         }
          QScriptValue

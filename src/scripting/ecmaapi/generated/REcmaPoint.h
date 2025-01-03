@@ -56,6 +56,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setZ
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

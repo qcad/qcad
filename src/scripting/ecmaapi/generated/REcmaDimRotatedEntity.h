@@ -66,6 +66,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToDimRotatedEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

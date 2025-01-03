@@ -37,7 +37,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RSpline *" isPureVirtual="false" />
+      <variant returnType="QSharedPointer &lt; RShape &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="cloneToSpline" cppName="cloneToSpline"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RSpline &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="isDirected" cppName="isDirected"
     specifier="public" isStatic="false" isVirtual="true"

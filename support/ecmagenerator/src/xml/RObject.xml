@@ -45,7 +45,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RObject *" isPureVirtual="false" />
+      <variant returnType="QSharedPointer &lt; RObject &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="mustAlwaysClone" cppName="mustAlwaysClone"
     specifier="public" isStatic="false" isVirtual="true"

@@ -36,7 +36,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RView *" isPureVirtual="false" />
+      <variant returnType="QSharedPointer &lt; RObject &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="cloneToView" cppName="cloneToView"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RView &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="getName" cppName="getName" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

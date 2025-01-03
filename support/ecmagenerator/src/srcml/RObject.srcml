@@ -107,7 +107,7 @@
         <return>return <expr><name><name>RS</name>::<name>ObjectUnknown</name></name></expr>;</return>
     }</block></function>
 
-    <function_decl><type><name>virtual</name> <name>RObject</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
 
     <comment type="block">/**
      * \return True to always clone object instead of saving diff when object changes.

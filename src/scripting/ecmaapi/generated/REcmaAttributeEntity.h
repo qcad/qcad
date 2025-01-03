@@ -64,6 +64,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToAttributeEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

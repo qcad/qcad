@@ -81,8 +81,12 @@
         <return>return <expr><call><name><name>RPropertyTypeId</name>::<name>getPropertyTypeIds</name></name><argument_list>(<argument><expr><call><name><name>RBlockReferenceEntity</name>::<name>getRtti</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>virtual</name> <name>RBlockReferenceEntity</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr>new <call><name>RBlockReferenceEntity</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr>;</return>
+    <function><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name><argument_list>(<argument><expr>new <call><name>RBlockReferenceEntity</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>QSharedPointer<argument_list>&lt;<argument><name>RBlockReferenceEntity</name></argument>&gt;</argument_list></name></type> <name>cloneToBlockReferenceEntity</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>QSharedPointer<argument_list>&lt;<argument><name>RBlockReferenceEntity</name></argument>&gt;</argument_list></name><argument_list>(<argument><expr>new <call><name>RBlockReferenceEntity</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></type> <name>getPropertyTypeIds</name><parameter_list>(<param><decl><type><name><name>RPropertyAttributes</name>::<name>Option</name></name></type> <name>option</name> =<init> <expr><name><name>RPropertyAttributes</name>::<name>NoOptions</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -163,6 +167,10 @@
 
     <function><type><name>void</name></type> <name>setReferencedBlockName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>data</name>.<call><name>setReferencedBlockName</name><argument_list>(<argument><expr><name>blockName</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>hasBlockOwnership</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>hasBlockOwnership</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>getReferencedBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{

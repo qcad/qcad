@@ -62,6 +62,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToHatchEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -111,6 +114,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setSolid
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isWinding
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setWinding
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getScale

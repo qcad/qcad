@@ -7135,6 +7135,52 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < QString >'
+    QSet < QString > cppResult =
+        
+               self->getBlockNames(a0
+        ,
+    a1);
+        // return type: QSet < QString >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getBlockNames().",
                    context);
@@ -12580,6 +12626,108 @@
     a1
         ,
     a2);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSharedPointer < RObject > */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is SharedPointer
+                    QSharedPointer < RObject > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     RObject * o0 = 
+                    qscriptvalue_cast < RObject * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RObject >(o0);
+                        
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RObject >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < RObject >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RStorage: Argument 0 is not of type  RObject .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RStorage: Argument 0 is not of type  RObject .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RObject > 
+                    //a0 =
+                    //QSharedPointer < RObject >(o0->clone());
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool *
+                    a3 =
+                    (bool *)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->saveObject(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);

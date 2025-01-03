@@ -145,6 +145,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToDimStyle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         updateDocumentVariables
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

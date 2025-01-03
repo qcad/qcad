@@ -2115,12 +2115,12 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'REntity *'
-    REntity * cppResult =
+    // return type 'QSharedPointer < REntity >'
+    QSharedPointer < REntity > cppResult =
         
                self->getBlockRefOrEntity();
-        // return type: REntity *
-                // REntity:
+        // return type: QSharedPointer < REntity >
+                // Shared pointer to entity, cast to best match:
                 result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
@@ -2213,12 +2213,12 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'REntity *'
-    REntity * cppResult =
+    // return type 'QSharedPointer < REntity >'
+    QSharedPointer < REntity > cppResult =
         
                self->getEntity();
-        // return type: REntity *
-                // REntity:
+        // return type: QSharedPointer < REntity >
+                // Shared pointer to entity, cast to best match:
                 result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
@@ -2262,12 +2262,12 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'REntity *'
-    REntity * cppResult =
+    // return type 'QSharedPointer < REntity >'
+    QSharedPointer < REntity > cppResult =
         
                self->getCurrentBlockRef();
-        // return type: REntity *
-                // REntity:
+        // return type: QSharedPointer < REntity >
+                // Shared pointer to entity, cast to best match:
                 result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
@@ -2311,11 +2311,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RViewportEntity *'
-    RViewportEntity * cppResult =
+    // return type 'QSharedPointer < RViewportEntity >'
+    QSharedPointer < RViewportEntity > cppResult =
         
                self->getCurrentViewport();
-        // return type: RViewportEntity *
+        // return type: QSharedPointer < RViewportEntity >
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -2360,11 +2360,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QStack < REntity * >'
-    QStack < REntity * > cppResult =
+    // return type 'QStack < QSharedPointer < REntity > >'
+    QStack < QSharedPointer < REntity > > cppResult =
         
                self->getBlockRefViewportStack();
-        // return type: QStack < REntity * >
+        // return type: QStack < QSharedPointer < REntity > >
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -3169,26 +3169,47 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: RLayer */
+        ) /* type: QSharedPointer < RLayer > */
     
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    RLayer*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RLayer*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RLayer*.",
-                               context);                    
+                    // argument is SharedPointer
+                    QSharedPointer < RLayer > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     RLayer * o0 = 
+                    qscriptvalue_cast < RLayer * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RLayer >(o0);
+                        
                     }
-                    RLayer& a0 = *ap0;
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RLayer >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < RLayer >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type  RLayer .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RExporter: Argument 0 is not of type  RLayer .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RLayer > 
+                    //a0 =
+                    //QSharedPointer < RLayer >(o0->clone());
                 
     // end of arguments
 
@@ -3261,26 +3282,47 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: RLayerState */
+        ) /* type: QSharedPointer < RLayerState > */
     
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    RLayerState*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RLayerState*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RLayerState*.",
-                               context);                    
+                    // argument is SharedPointer
+                    QSharedPointer < RLayerState > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     RLayerState * o0 = 
+                    qscriptvalue_cast < RLayerState * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RLayerState >(o0);
+                        
                     }
-                    RLayerState& a0 = *ap0;
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RLayerState >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < RLayerState >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type  RLayerState .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RExporter: Argument 0 is not of type  RLayerState .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RLayerState > 
+                    //a0 =
+                    //QSharedPointer < RLayerState >(o0->clone());
                 
     // end of arguments
 
@@ -3326,26 +3368,47 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: RBlock */
+        ) /* type: QSharedPointer < RBlock > */
     
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    RBlock*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RBlock*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RBlock*.",
-                               context);                    
+                    // argument is SharedPointer
+                    QSharedPointer < RBlock > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     RBlock * o0 = 
+                    qscriptvalue_cast < RBlock * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RBlock >(o0);
+                        
                     }
-                    RBlock& a0 = *ap0;
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RBlock >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < RBlock >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type  RBlock .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RExporter: Argument 0 is not of type  RBlock .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RBlock > 
+                    //a0 =
+                    //QSharedPointer < RBlock >(o0->clone());
                 
     // end of arguments
 
@@ -3418,26 +3481,47 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: RView */
+        ) /* type: QSharedPointer < RView > */
     
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    RView*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RView*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RView*.",
-                               context);                    
+                    // argument is SharedPointer
+                    QSharedPointer < RView > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     RView * o0 = 
+                    qscriptvalue_cast < RView * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RView >(o0);
+                        
                     }
-                    RView& a0 = *ap0;
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RView >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < RView >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type  RView .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RExporter: Argument 0 is not of type  RView .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RView > 
+                    //a0 =
+                    //QSharedPointer < RView >(o0->clone());
                 
     // end of arguments
 
@@ -3510,26 +3594,47 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: RLinetype */
+        ) /* type: QSharedPointer < RLinetype > */
     
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    RLinetype*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RLinetype*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RLinetype*.",
-                               context);                    
+                    // argument is SharedPointer
+                    QSharedPointer < RLinetype > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     RLinetype * o0 = 
+                    qscriptvalue_cast < RLinetype * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RLinetype >(o0);
+                        
                     }
-                    RLinetype& a0 = *ap0;
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RLinetype >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < RLinetype >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type  RLinetype .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RExporter: Argument 0 is not of type  RLinetype .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RLinetype > 
+                    //a0 =
+                    //QSharedPointer < RLinetype >(o0->clone());
                 
     // end of arguments
 
@@ -3847,26 +3952,47 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: REntity */
+        ) /* type: QSharedPointer < REntity > */
     
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    REntity*
-                    ap0 =
-                    qscriptvalue_cast<
-                    REntity*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type REntity*.",
-                               context);                    
+                    // argument is SharedPointer
+                    QSharedPointer < REntity > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     REntity * o0 = 
+                    qscriptvalue_cast < REntity * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < REntity >(o0);
+                        
                     }
-                    REntity& a0 = *ap0;
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < REntity >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < REntity >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type  REntity .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RExporter: Argument 0 is not of type  REntity .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < REntity > 
+                    //a0 =
+                    //QSharedPointer < REntity >(o0->clone());
                 
     // end of arguments
 
@@ -3884,7 +4010,7 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: REntity */
+        ) /* type: QSharedPointer < REntity > */
      && (
             context->argument(1).isBool()
         ) /* type: bool */
@@ -3892,21 +4018,42 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    REntity*
-                    ap0 =
-                    qscriptvalue_cast<
-                    REntity*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type REntity*.",
-                               context);                    
+                    // argument is SharedPointer
+                    QSharedPointer < REntity > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     REntity * o0 = 
+                    qscriptvalue_cast < REntity * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < REntity >(o0);
+                        
                     }
-                    REntity& a0 = *ap0;
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < REntity >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < REntity >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type  REntity .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RExporter: Argument 0 is not of type  REntity .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < REntity > 
+                    //a0 =
+                    //QSharedPointer < REntity >(o0->clone());
                 
                     // argument isStandardType
                     bool
@@ -3934,7 +4081,7 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: REntity */
+        ) /* type: QSharedPointer < REntity > */
      && (
             context->argument(1).isBool()
         ) /* type: bool */
@@ -3945,21 +4092,42 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    REntity*
-                    ap0 =
-                    qscriptvalue_cast<
-                    REntity*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type REntity*.",
-                               context);                    
+                    // argument is SharedPointer
+                    QSharedPointer < REntity > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     REntity * o0 = 
+                    qscriptvalue_cast < REntity * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < REntity >(o0);
+                        
                     }
-                    REntity& a0 = *ap0;
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < REntity >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < REntity >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type  REntity .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RExporter: Argument 0 is not of type  REntity .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < REntity > 
+                    //a0 =
+                    //QSharedPointer < REntity >(o0->clone());
                 
                     // argument isStandardType
                     bool
@@ -3997,7 +4165,7 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: REntity */
+        ) /* type: QSharedPointer < REntity > */
      && (
             context->argument(1).isBool()
         ) /* type: bool */
@@ -4011,21 +4179,42 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    REntity*
-                    ap0 =
-                    qscriptvalue_cast<
-                    REntity*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type REntity*.",
-                               context);                    
+                    // argument is SharedPointer
+                    QSharedPointer < REntity > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     REntity * o0 = 
+                    qscriptvalue_cast < REntity * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < REntity >(o0);
+                        
                     }
-                    REntity& a0 = *ap0;
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < REntity >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < REntity >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type  REntity .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RExporter: Argument 0 is not of type  REntity .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < REntity > 
+                    //a0 =
+                    //QSharedPointer < REntity >(o0->clone());
                 
                     // argument isStandardType
                     bool
@@ -4073,7 +4262,7 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: REntity */
+        ) /* type: QSharedPointer < REntity > */
      && (
             context->argument(1).isBool()
         ) /* type: bool */
@@ -4090,21 +4279,42 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    REntity*
-                    ap0 =
-                    qscriptvalue_cast<
-                    REntity*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type REntity*.",
-                               context);                    
+                    // argument is SharedPointer
+                    QSharedPointer < REntity > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     REntity * o0 = 
+                    qscriptvalue_cast < REntity * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < REntity >(o0);
+                        
                     }
-                    REntity& a0 = *ap0;
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < REntity >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < REntity >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type  REntity .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RExporter: Argument 0 is not of type  REntity .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < REntity > 
+                    //a0 =
+                    //QSharedPointer < REntity >(o0->clone());
                 
                     // argument isStandardType
                     bool
@@ -4310,26 +4520,47 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: REntity */
+        ) /* type: QSharedPointer < REntity > */
     
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    REntity*
-                    ap0 =
-                    qscriptvalue_cast<
-                    REntity*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type REntity*.",
-                               context);                    
+                    // argument is SharedPointer
+                    QSharedPointer < REntity > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     REntity * o0 = 
+                    qscriptvalue_cast < REntity * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < REntity >(o0);
+                        
                     }
-                    REntity& a0 = *ap0;
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < REntity >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < REntity >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type  REntity .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RExporter: Argument 0 is not of type  REntity .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < REntity > 
+                    //a0 =
+                    //QSharedPointer < REntity >(o0->clone());
                 
     // end of arguments
 
@@ -4380,26 +4611,47 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: REntity */
+        ) /* type: QSharedPointer < REntity > */
     
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    REntity*
-                    ap0 =
-                    qscriptvalue_cast<
-                    REntity*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type REntity*.",
-                               context);                    
+                    // argument is SharedPointer
+                    QSharedPointer < REntity > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     REntity * o0 = 
+                    qscriptvalue_cast < REntity * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < REntity >(o0);
+                        
                     }
-                    REntity& a0 = *ap0;
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < REntity >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < REntity >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type  REntity .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RExporter: Argument 0 is not of type  REntity .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < REntity > 
+                    //a0 =
+                    //QSharedPointer < REntity >(o0->clone());
                 
     // end of arguments
 
@@ -7604,11 +7856,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QStack < REntity * >'
-    QStack < REntity * > cppResult =
+    // return type 'QStack < QSharedPointer < REntity > >'
+    QStack < QSharedPointer < REntity > > cppResult =
         
                self->getEntityStack();
-        // return type: QStack < REntity * >
+        // return type: QStack < QSharedPointer < REntity > >
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -7650,23 +7902,47 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: REntity * */
+        ) /* type: QSharedPointer < REntity > */
     
     ){
     // prepare arguments:
     
-                    // argument is pointer
-                    REntity * a0 = NULL;
+                    // argument is SharedPointer
+                    QSharedPointer < REntity > 
+                    a0;
 
-                    a0 = 
-                        REcmaHelper::scriptValueTo<REntity >(
-                            context->argument(0)
-                        );
-                    
-                    if (a0==NULL && 
-                        !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("RExporter: Argument 0 is not of type REntity *REntity *.", context);                    
+                    // argument might be a simple pointer:
+                     REntity * o0 = 
+                    qscriptvalue_cast < REntity * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < REntity >(o0);
+                        
                     }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < REntity >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < REntity >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type  REntity .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RExporter: Argument 0 is not of type  REntity .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < REntity > 
+                    //a0 =
+                    //QSharedPointer < REntity >(o0->clone());
                 
     // end of arguments
 

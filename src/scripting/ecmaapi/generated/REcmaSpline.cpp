@@ -126,6 +126,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToSpline, "cloneToSpline");
+            
             REcmaHelper::registerFunction(&engine, proto, isDirected, "isDirected");
             
             REcmaHelper::registerFunction(&engine, proto, copySpline, "copySpline");
@@ -887,13 +889,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RSpline *'
-    RSpline * cppResult =
+    // return type 'QSharedPointer < RShape >'
+    QSharedPointer < RShape > cppResult =
         
                self->clone();
-        // return type: RSpline *
-                // pointer, copyable 
-                result = qScriptValueFromValue(engine, *cppResult);
+        // return type: QSharedPointer < RShape >
+                // Shared pointer to shape, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -904,6 +906,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpline::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpline::cloneToSpline
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::cloneToSpline", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::cloneToSpline";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("cloneToSpline", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RSpline >'
+    QSharedPointer < RSpline > cppResult =
+        
+               self->cloneToSpline();
+        // return type: QSharedPointer < RSpline >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.cloneToSpline().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::cloneToSpline", context, engine);
             return result;
         }
          QScriptValue

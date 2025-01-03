@@ -20,7 +20,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     </constructor>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RTextLabel *" isPureVirtual="false" />
+      <variant returnType="QSharedPointer &lt; RShape &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="getText" cppName="getText" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

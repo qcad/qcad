@@ -74,6 +74,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToBlockReferenceEntity, "cloneToBlockReferenceEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, getPropertyTypeIds, "getPropertyTypeIds");
             
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
@@ -115,6 +117,8 @@
             REcmaHelper::registerFunction(&engine, proto, setReferencedBlockId, "setReferencedBlockId");
             
             REcmaHelper::registerFunction(&engine, proto, setReferencedBlockName, "setReferencedBlockName");
+            
+            REcmaHelper::registerFunction(&engine, proto, hasBlockOwnership, "hasBlockOwnership");
             
             REcmaHelper::registerFunction(&engine, proto, getReferencedBlockId, "getReferencedBlockId");
             
@@ -624,13 +628,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RBlockReferenceEntity *'
-    RBlockReferenceEntity * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RBlockReferenceEntity *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -641,6 +645,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBlockReferenceEntity::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceEntity::cloneToBlockReferenceEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceEntity::cloneToBlockReferenceEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceEntity::cloneToBlockReferenceEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceEntity* self = 
+                        getSelf("cloneToBlockReferenceEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RBlockReferenceEntity >'
+    QSharedPointer < RBlockReferenceEntity > cppResult =
+        
+               self->cloneToBlockReferenceEntity();
+        // return type: QSharedPointer < RBlockReferenceEntity >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.cloneToBlockReferenceEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceEntity::cloneToBlockReferenceEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -2374,6 +2427,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBlockReferenceEntity::setReferencedBlockName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceEntity::hasBlockOwnership
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceEntity::hasBlockOwnership", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceEntity::hasBlockOwnership";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceEntity* self = 
+                        getSelf("hasBlockOwnership", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasBlockOwnership();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.hasBlockOwnership().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceEntity::hasBlockOwnership", context, engine);
             return result;
         }
          QScriptValue

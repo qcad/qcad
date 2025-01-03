@@ -52,6 +52,10 @@
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QLIST_RBOX</name> <name>QList</name>&lt;RBox&gt;()</cpp:define>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_QSTRINGLIST</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QSTRINGLIST</name> <name>QStringList</name>()</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_MIN1</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_MIN1</name> -1</cpp:define>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
@@ -370,11 +374,12 @@
     <function_decl><type><name><name>RView</name>::<name>Id</name></name></type> <name>getCurrentViewId</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>QString</name></type> <name>getTempBlockName</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>getUniqueBlockName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>currentName</name></decl></param>, <param><decl><type><name>const</name> <name>QStringList</name>&amp;</type> <name>usedBlockNames</name> =<init> <expr><name>RDEFAULT_QSTRINGLIST</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QString</name></type> <name>getBlockName</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QString</name></type> <name>getBlockNameFromHandle</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Handle</name></name></type> <name>blockHandle</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QString</name></type> <name>getBlockNameFromLayout</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layoutName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QString</name></type> <name>getBlockNameFromLayout</name><parameter_list>(<param><decl><type><name><name>RLayout</name>::<name>Id</name></name></type> <name>layoutId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getBlockNames</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>rxStr</name> =<init> <expr><name>RDEFAULT_QSTRING</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getBlockNames</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>rxStr</name> =<init> <expr><name>RDEFAULT_QSTRING</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>undone</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QList<argument_list>&lt;<argument><name><name>RBlock</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>sortBlocks</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name><name>RBlock</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>blockIds</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QList<argument_list>&lt;<argument><name><name>RLayer</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>sortLayers</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name><name>RLayer</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>layerIds</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QString</name></type> <name>getLayerName</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>

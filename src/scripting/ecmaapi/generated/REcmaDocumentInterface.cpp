@@ -271,8 +271,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, addAuxShapeToPreview, "addAuxShapeToPreview");
             
-            REcmaHelper::registerFunction(&engine, proto, addEntityToPreview, "addEntityToPreview");
-            
             REcmaHelper::registerFunction(&engine, proto, addDrawableToPreview, "addDrawableToPreview");
             
             REcmaHelper::registerFunction(&engine, proto, beginPreview, "beginPreview");
@@ -7991,71 +7989,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::addAuxShapeToPreview", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDocumentInterface::addEntityToPreview
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDocumentInterface::addEntityToPreview", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::addEntityToPreview";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDocumentInterface* self = 
-                        getSelf("addEntityToPreview", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: REntity */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument is reference
-                    REntity*
-                    ap0 =
-                    qscriptvalue_cast<
-                    REntity*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocumentInterface: Argument 0 is not of type REntity*.",
-                               context);                    
-                    }
-                    REntity& a0 = *ap0;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->addEntityToPreview(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.addEntityToPreview().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDocumentInterface::addEntityToPreview", context, engine);
             return result;
         }
          QScriptValue

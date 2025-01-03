@@ -248,7 +248,7 @@
             );
         
     
-      REntity * getBlockRefOrEntity(
+      QSharedPointer < REntity > getBlockRefOrEntity(
                 
             );
         
@@ -258,22 +258,22 @@
             );
         
     
-      REntity * getEntity(
+      QSharedPointer < REntity > getEntity(
                 
             );
         
     
-      REntity * getCurrentBlockRef(
+      QSharedPointer < REntity > getCurrentBlockRef(
                 
             );
         
     
-      RViewportEntity * getCurrentViewport(
+      QSharedPointer < RViewportEntity > getCurrentViewport(
                 
             );
         
     
-      QStack < REntity * > getBlockRefViewportStack(
+      QStack < QSharedPointer < REntity > > getBlockRefViewportStack(
                 
             );
         
@@ -345,7 +345,7 @@
         
     
       void exportLayer(
-                RLayer & arg1
+                QSharedPointer < RLayer > arg1
             );
         
       void exportLayer(
@@ -354,12 +354,12 @@
         
     
       void exportLayerState(
-                RLayerState & arg1
+                QSharedPointer < RLayerState > arg1
             );
         
     
       void exportBlock(
-                RBlock & arg1
+                QSharedPointer < RBlock > arg1
             );
         
       void exportBlock(
@@ -368,7 +368,7 @@
         
     
       void exportView(
-                RView & arg1
+                QSharedPointer < RView > arg1
             );
         
       void exportView(
@@ -377,7 +377,7 @@
         
     
       void exportLinetype(
-                RLinetype & arg1
+                QSharedPointer < RLinetype > arg1
             );
         
     
@@ -399,7 +399,7 @@
         
     
       void exportEntity(
-                REntity & entity, bool preview
+                QSharedPointer < REntity > entity, bool preview
         = false, bool allBlocks
         = true, bool forceSelected
         = false, bool invisible
@@ -414,12 +414,12 @@
         
     
       QSharedPointer < RLayer > getEntityLayer(
-                REntity & entity
+                QSharedPointer < REntity > entity
             );
         
     
       bool isVisible(
-                REntity & entity
+                QSharedPointer < REntity > entity
             );
         
     
@@ -579,13 +579,13 @@
             );
         
     
-      QStack < REntity * > getEntityStack(
+      QStack < QSharedPointer < REntity > > getEntityStack(
                 
             );
         
     
       void pushEntity(
-                REntity * e
+                QSharedPointer < REntity > e
             );
         
     

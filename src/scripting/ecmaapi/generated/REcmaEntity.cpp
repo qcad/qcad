@@ -79,6 +79,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToEntity, "cloneToEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, getType, "getType");
             
             REcmaHelper::registerFunction(&engine, proto, isPointType, "isPointType");
@@ -614,12 +616,12 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'REntity *'
-    REntity * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: REntity *
-                // REntity:
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
                 result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
@@ -631,6 +633,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEntity::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEntity::cloneToEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEntity::cloneToEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntity::cloneToEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntity* self = 
+                        getSelf("cloneToEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < REntity >'
+    QSharedPointer < REntity > cppResult =
+        
+               self->cloneToEntity();
+        // return type: QSharedPointer < REntity >
+                // Shared pointer to entity, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.cloneToEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEntity::cloneToEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -2148,7 +2199,7 @@
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
             context->argument(1).isNull()
-        ) /* type: QStack < REntity * > */
+        ) /* type: QStack < QSharedPointer < REntity > > */
     
     ){
     // prepare arguments:
@@ -2162,20 +2213,20 @@
                     toBool();
                 
                     // argument is reference
-                    QStack < REntity * >*
+                    QStack < QSharedPointer < REntity > >*
                     ap1 =
                     qscriptvalue_cast<
-                    QStack < REntity * >*
+                    QStack < QSharedPointer < REntity > >*
                         >(
                         context->argument(
                         1
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < REntity * >*.",
+                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < QSharedPointer < REntity > >*.",
                                context);                    
                     }
-                    QStack < REntity * >& a1 = *ap1;
+                    QStack < QSharedPointer < REntity > >& a1 = *ap1;
                 
     // end of arguments
 
@@ -2460,7 +2511,7 @@
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
             context->argument(1).isNull()
-        ) /* type: QStack < REntity * > */
+        ) /* type: QStack < QSharedPointer < REntity > > */
     
     ){
     // prepare arguments:
@@ -2474,20 +2525,20 @@
                     toBool();
                 
                     // argument is reference
-                    QStack < REntity * >*
+                    QStack < QSharedPointer < REntity > >*
                     ap1 =
                     qscriptvalue_cast<
-                    QStack < REntity * >*
+                    QStack < QSharedPointer < REntity > >*
                         >(
                         context->argument(
                         1
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < REntity * >*.",
+                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < QSharedPointer < REntity > >*.",
                                context);                    
                     }
-                    QStack < REntity * >& a1 = *ap1;
+                    QStack < QSharedPointer < REntity > >& a1 = *ap1;
                 
     // end of arguments
 
@@ -2540,26 +2591,26 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: QStack < REntity * > */
+        ) /* type: QStack < QSharedPointer < REntity > > */
     
     ){
     // prepare arguments:
     
                     // argument is reference
-                    QStack < REntity * >*
+                    QStack < QSharedPointer < REntity > >*
                     ap0 =
                     qscriptvalue_cast<
-                    QStack < REntity * >*
+                    QStack < QSharedPointer < REntity > >*
                         >(
                         context->argument(
                         0
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type QStack < REntity * >*.",
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type QStack < QSharedPointer < REntity > >*.",
                                context);                    
                     }
-                    QStack < REntity * >& a0 = *ap0;
+                    QStack < QSharedPointer < REntity > >& a0 = *ap0;
                 
     // end of arguments
 
@@ -2703,7 +2754,7 @@
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
             context->argument(1).isNull()
-        ) /* type: QStack < REntity * > */
+        ) /* type: QStack < QSharedPointer < REntity > > */
     
     ){
     // prepare arguments:
@@ -2727,20 +2778,20 @@
                     *ap0;
                 
                     // argument is reference
-                    QStack < REntity * >*
+                    QStack < QSharedPointer < REntity > >*
                     ap1 =
                     qscriptvalue_cast<
-                    QStack < REntity * >*
+                    QStack < QSharedPointer < REntity > >*
                         >(
                         context->argument(
                         1
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < REntity * >*.",
+                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < QSharedPointer < REntity > >*.",
                                context);                    
                     }
-                    QStack < REntity * >& a1 = *ap1;
+                    QStack < QSharedPointer < REntity > >& a1 = *ap1;
                 
     // end of arguments
 
@@ -2768,7 +2819,7 @@
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
             context->argument(1).isNull()
-        ) /* type: QStack < REntity * > */
+        ) /* type: QStack < QSharedPointer < REntity > > */
     
     ){
     // prepare arguments:
@@ -2782,20 +2833,20 @@
                     toBool();
                 
                     // argument is reference
-                    QStack < REntity * >*
+                    QStack < QSharedPointer < REntity > >*
                     ap1 =
                     qscriptvalue_cast<
-                    QStack < REntity * >*
+                    QStack < QSharedPointer < REntity > >*
                         >(
                         context->argument(
                         1
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < REntity * >*.",
+                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < QSharedPointer < REntity > >*.",
                                context);                    
                     }
-                    QStack < REntity * >& a1 = *ap1;
+                    QStack < QSharedPointer < REntity > >& a1 = *ap1;
                 
     // end of arguments
 

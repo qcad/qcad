@@ -82,6 +82,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToDimAngular3PEntity, "cloneToDimAngular3PEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -671,13 +673,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RDimAngular3PEntity *'
-    RDimAngular3PEntity * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RDimAngular3PEntity *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -688,6 +690,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDimAngular3PEntity::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDimAngular3PEntity::cloneToDimAngular3PEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDimAngular3PEntity::cloneToDimAngular3PEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimAngular3PEntity::cloneToDimAngular3PEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAngular3PEntity* self = 
+                        getSelf("cloneToDimAngular3PEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RDimAngular3PEntity >'
+    QSharedPointer < RDimAngular3PEntity > cppResult =
+        
+               self->cloneToDimAngular3PEntity();
+        // return type: QSharedPointer < RDimAngular3PEntity >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngular3PEntity.cloneToDimAngular3PEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimAngular3PEntity::cloneToDimAngular3PEntity", context, engine);
             return result;
         }
          QScriptValue

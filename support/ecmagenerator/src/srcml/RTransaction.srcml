@@ -413,6 +413,16 @@
     <decl_stmt><decl><type><name>bool</name></type> <name>blockRecursionDetectionDisabled</name></decl>;</decl_stmt>
 
     <comment type="block">/**
+     * True if a block is being deleted to prevent recursion in deleteObject.
+     */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>deletingBlock</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * List of block names that have been already used in this transaction.
+     */</comment>
+    <decl_stmt><decl><type><name>QStringList</name></type> <name>usedBlockNames</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
      * True to keep existing object handles (importers).
      */</comment>
     <decl_stmt><decl><type><name>bool</name></type> <name>keepHandles</name></decl>;</decl_stmt>

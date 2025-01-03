@@ -84,6 +84,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToPolyline, "cloneToPolyline");
+            
             REcmaHelper::registerFunction(&engine, proto, isDirected, "isDirected");
             
             REcmaHelper::registerFunction(&engine, proto, isFlat, "isFlat");
@@ -240,8 +242,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, getClosestVertex, "getClosestVertex");
             
-            REcmaHelper::registerFunction(&engine, proto, reverse, "reverse");
-            
             REcmaHelper::registerFunction(&engine, proto, getReversed, "getReversed");
             
             REcmaHelper::registerFunction(&engine, proto, getTransformed, "getTransformed");
@@ -337,6 +337,8 @@
             REcmaHelper::registerFunction(&engine, proto, setZ, "setZ");
             
             REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
+            
+            REcmaHelper::registerFunction(&engine, proto, reverse, "reverse");
             
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
@@ -715,13 +717,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RPolyline *'
-    RPolyline * cppResult =
+    // return type 'QSharedPointer < RShape >'
+    QSharedPointer < RShape > cppResult =
         
                self->clone();
-        // return type: RPolyline *
-                // pointer, copyable 
-                result = qScriptValueFromValue(engine, *cppResult);
+        // return type: QSharedPointer < RShape >
+                // Shared pointer to shape, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -732,6 +734,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLeaderData::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLeaderData::cloneToPolyline
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLeaderData::cloneToPolyline", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderData::cloneToPolyline";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderData* self = 
+                        getSelf("cloneToPolyline", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RPolyline >'
+    QSharedPointer < RPolyline > cppResult =
+        
+               self->cloneToPolyline();
+        // return type: QSharedPointer < RPolyline >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderData.cloneToPolyline().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLeaderData::cloneToPolyline", context, engine);
             return result;
         }
          QScriptValue
@@ -6204,55 +6255,6 @@
             return result;
         }
          QScriptValue
-        REcmaLeaderData::reverse
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaLeaderData::reverse", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderData::reverse";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RLeaderData* self = 
-                        getSelf("reverse", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->reverse();
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderData.reverse().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaLeaderData::reverse", context, engine);
-            return result;
-        }
-         QScriptValue
         REcmaLeaderData::getReversed
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -10055,6 +10057,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLeaderData::to2D", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLeaderData::reverse
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLeaderData::reverse", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderData::reverse";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderData* self = 
+                        getSelf("reverse", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->reverse();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderData.reverse().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLeaderData::reverse", context, engine);
             return result;
         }
          QScriptValue

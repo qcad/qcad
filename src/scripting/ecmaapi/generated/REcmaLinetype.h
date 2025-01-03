@@ -60,6 +60,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToLinetype
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

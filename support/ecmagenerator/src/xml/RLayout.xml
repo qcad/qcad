@@ -86,8 +86,15 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RS::EntityType" isPureVirtual="false" />
     </method>
     <method name="clone" cppName="clone" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RLayout *" isPureVirtual="false" />
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RObject &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="cloneToLayout" cppName="cloneToLayout"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RLayout &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="getName" cppName="getName" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

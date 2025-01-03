@@ -325,6 +325,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, showContextMenu, "showContextMenu");
             
+            REcmaHelper::registerFunction(&engine, proto, requestResourceBlockEditing, "requestResourceBlockEditing");
+            
             REcmaHelper::registerFunction(&engine, proto, escapeEvent, "escapeEvent");
             
             REcmaHelper::registerFunction(&engine, proto, setGraphicsViewCursor, "setGraphicsViewCursor");
@@ -7668,6 +7670,86 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindowQt::showContextMenu", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::requestResourceBlockEditing
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::requestResourceBlockEditing", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::requestResourceBlockEditing";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("requestResourceBlockEditing", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RObject::Id */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RObject::Id
+                    a0 =
+                    (RObject::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RMainWindowQt: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->requestResourceBlockEditing(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.requestResourceBlockEditing().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::requestResourceBlockEditing", context, engine);
             return result;
         }
          QScriptValue

@@ -36,7 +36,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RRay *" isPureVirtual="false" />
+      <variant returnType="QSharedPointer &lt; RShape &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="getVectorProperties"
     cppName="getVectorProperties" specifier="public"

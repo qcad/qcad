@@ -74,6 +74,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToToleranceEntity, "cloneToToleranceEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -598,13 +600,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RToleranceEntity *'
-    RToleranceEntity * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RToleranceEntity *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -615,6 +617,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaToleranceEntity::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaToleranceEntity::cloneToToleranceEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaToleranceEntity::cloneToToleranceEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceEntity::cloneToToleranceEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RToleranceEntity* self = 
+                        getSelf("cloneToToleranceEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RToleranceEntity >'
+    QSharedPointer < RToleranceEntity > cppResult =
+        
+               self->cloneToToleranceEntity();
+        // return type: QSharedPointer < RToleranceEntity >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceEntity.cloneToToleranceEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaToleranceEntity::cloneToToleranceEntity", context, engine);
             return result;
         }
          QScriptValue

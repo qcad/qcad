@@ -73,6 +73,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToUcs, "cloneToUcs");
+            
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
             
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
@@ -576,13 +578,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RUcs *'
-    RUcs * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RUcs *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -593,6 +595,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerUcs::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerUcs::cloneToUcs
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerUcs::cloneToUcs", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerUcs::cloneToUcs";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RUcs* self = 
+                        getSelf("cloneToUcs", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RUcs >'
+    QSharedPointer < RUcs > cppResult =
+        
+               self->cloneToUcs();
+        // return type: QSharedPointer < RUcs >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RUcs.cloneToUcs().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerUcs::cloneToUcs", context, engine);
             return result;
         }
          QScriptValue

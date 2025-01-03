@@ -63,6 +63,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToTriangle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setZ
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

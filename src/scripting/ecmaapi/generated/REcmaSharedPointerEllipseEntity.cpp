@@ -76,6 +76,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToEllipseEntity, "cloneToEllipseEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, setShape, "setShape");
             
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
@@ -621,13 +623,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'REllipseEntity *'
-    REllipseEntity * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: REllipseEntity *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -638,6 +640,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerEllipseEntity::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEllipseEntity::cloneToEllipseEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEllipseEntity::cloneToEllipseEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEllipseEntity::cloneToEllipseEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REllipseEntity* self = 
+                        getSelf("cloneToEllipseEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < REllipseEntity >'
+    QSharedPointer < REllipseEntity > cppResult =
+        
+               self->cloneToEllipseEntity();
+        // return type: QSharedPointer < REllipseEntity >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipseEntity.cloneToEllipseEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEllipseEntity::cloneToEllipseEntity", context, engine);
             return result;
         }
          QScriptValue

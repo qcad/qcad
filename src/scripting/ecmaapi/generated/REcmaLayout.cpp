@@ -73,6 +73,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToLayout, "cloneToLayout");
+            
             REcmaHelper::registerFunction(&engine, proto, getName, "getName");
             
             REcmaHelper::registerFunction(&engine, proto, setName, "setName");
@@ -938,13 +940,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLayout *'
-    RLayout * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RLayout *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -955,6 +957,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLayout::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::cloneToLayout
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::cloneToLayout", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::cloneToLayout";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("cloneToLayout", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLayout >'
+    QSharedPointer < RLayout > cppResult =
+        
+               self->cloneToLayout();
+        // return type: QSharedPointer < RLayout >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.cloneToLayout().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::cloneToLayout", context, engine);
             return result;
         }
          QScriptValue

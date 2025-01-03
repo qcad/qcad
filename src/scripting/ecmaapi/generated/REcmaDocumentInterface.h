@@ -352,9 +352,6 @@
         addAuxShapeToPreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        addEntityToPreview
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         addDrawableToPreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

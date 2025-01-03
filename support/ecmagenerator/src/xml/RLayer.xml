@@ -58,7 +58,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RLayer *" isPureVirtual="false" />
+      <variant returnType="QSharedPointer &lt; RObject &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="cloneToLayer" cppName="cloneToLayer"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RLayer &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="getParentLayerId" cppName="getParentLayerId"
     specifier="public" isStatic="false" isVirtual="false"

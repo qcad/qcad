@@ -64,6 +64,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToPolylineEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

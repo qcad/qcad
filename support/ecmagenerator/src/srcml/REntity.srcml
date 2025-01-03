@@ -113,7 +113,13 @@
         <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setDocument</name><argument_list>(<argument><expr><name>document</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
-    <function_decl><type><name>virtual</name> <name>REntity</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <function><type><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></type> <name>cloneToEntity</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></type> <name>ret</name> =<init> <expr><call><name>clone</name><argument_list>()</argument_list></call>.<call><name>dynamicCast<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name>Q_ASSERT</name><argument_list>(<argument><expr>!<name>ret</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <return>return <expr><name>ret</name></expr>;</return>
+    }</block></function>
 
     <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getType</name><argument_list>()</argument_list></call></expr>;</return>
@@ -287,8 +293,7 @@
         <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getLinetypeId</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function_decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>resolve</name></decl></param>,
-        <param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>REntity</name>*</argument>&gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>resolve</name></decl></param>, <param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <comment type="block">/**
      * \copydoc REntityData::getLinetypePattern
@@ -325,10 +330,9 @@
         <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getLineweight</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function_decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>getLineweight</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>resolve</name></decl></param>,
-        <param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>REntity</name>*</argument>&gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>getLineweight</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>resolve</name></decl></param>, <param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function_decl><type><name>double</name></type> <name>getLineweightInUnits</name><parameter_list>(<param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>REntity</name>*</argument>&gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getLineweightInUnits</name><parameter_list>(<param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <comment type="block">/**
      * \copydoc REntityData::setColor
@@ -344,8 +348,8 @@
         <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getColor</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function_decl><type><name>RColor</name></type> <name>getColor</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>unresolvedColor</name></decl></param>, <param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>REntity</name>*</argument>&gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>RColor</name></type> <name>getColor</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>resolve</name></decl></param>, <param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>REntity</name>*</argument>&gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RColor</name></type> <name>getColor</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>unresolvedColor</name></decl></param>, <param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RColor</name></type> <name>getColor</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>resolve</name></decl></param>, <param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list>;</function_decl>
 
     <function><type><name>RColor</name></type> <name>getDisplayColor</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getDisplayColor</name><argument_list>()</argument_list></call></expr>;</return>
@@ -690,8 +694,8 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>REntity*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;REntity&gt;</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;REntity&gt;*</argument>)</argument_list></macro>
-<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QStack&lt;REntity*&gt;</argument>)</argument_list></macro>
-<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QStack&lt;REntity*&gt;*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QStack&lt;QSharedPointer&lt;REntity&gt; &gt;</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QStack&lt;QSharedPointer&lt;REntity&gt; &gt;*</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

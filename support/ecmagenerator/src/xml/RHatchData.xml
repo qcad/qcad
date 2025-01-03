@@ -205,6 +205,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="isWinding" cppName="isWinding" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setWinding" cppName="setWinding"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getScale" cppName="getScale" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
@@ -394,16 +406,16 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RColor" isPureVirtual="false">
         <arg type="RColor &amp;" typeName="RColor"
         name="unresolvedColor" isConst="true" />
-        <arg type="QStack &lt; REntity * &gt; &amp;"
-        typeName="QStack &lt; REntity * &gt;" name="blockRefStack"
-        isConst="true" />
+        <arg type="QStack &lt; QSharedPointer &lt; REntity &gt; &gt; &amp;"
+        typeName="QStack &lt; QSharedPointer &lt; REntity &gt; &gt;"
+        name="blockRefStack" isConst="true" />
       </variant>
       <variant returnType="RColor" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="resolve"
         isConst="false" />
-        <arg type="QStack &lt; REntity * &gt; &amp;"
-        typeName="QStack &lt; REntity * &gt;" name="blockRefStack"
-        isConst="true" />
+        <arg type="QStack &lt; QSharedPointer &lt; REntity &gt; &gt; &amp;"
+        typeName="QStack &lt; QSharedPointer &lt; REntity &gt; &gt;"
+        name="blockRefStack" isConst="true" />
       </variant>
     </method>
     <method name="hasProxy" cppName="hasProxy" specifier="public"

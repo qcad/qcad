@@ -62,6 +62,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

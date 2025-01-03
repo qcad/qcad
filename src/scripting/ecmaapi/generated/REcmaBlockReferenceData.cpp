@@ -114,6 +114,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getReferencedBlockId, "getReferencedBlockId");
             
+            REcmaHelper::registerFunction(&engine, proto, hasBlockOwnership, "hasBlockOwnership");
+            
             REcmaHelper::registerFunction(&engine, proto, setReferencedBlockName, "setReferencedBlockName");
             
             REcmaHelper::registerFunction(&engine, proto, getReferencedBlockName, "getReferencedBlockName");
@@ -3632,6 +3634,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBlockReferenceData::getReferencedBlockId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceData::hasBlockOwnership
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::hasBlockOwnership", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::hasBlockOwnership";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceData* self = 
+                        getSelf("hasBlockOwnership", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasBlockOwnership();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.hasBlockOwnership().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::hasBlockOwnership", context, engine);
             return result;
         }
          QScriptValue

@@ -123,6 +123,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToDimStyle, "cloneToDimStyle");
+            
             REcmaHelper::registerFunction(&engine, proto, updateDocumentVariables, "updateDocumentVariables");
             
             REcmaHelper::registerFunction(&engine, proto, updateFromDocumentVariables, "updateFromDocumentVariables");
@@ -2076,13 +2078,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RDimStyle *'
-    RDimStyle * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RDimStyle *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -2093,6 +2095,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDimStyle::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDimStyle::cloneToDimStyle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDimStyle::cloneToDimStyle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimStyle::cloneToDimStyle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("cloneToDimStyle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RDimStyle >'
+    QSharedPointer < RDimStyle > cppResult =
+        
+               self->cloneToDimStyle();
+        // return type: QSharedPointer < RDimStyle >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.cloneToDimStyle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimStyle::cloneToDimStyle", context, engine);
             return result;
         }
          QScriptValue

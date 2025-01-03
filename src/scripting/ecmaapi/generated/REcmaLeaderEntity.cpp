@@ -74,6 +74,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToLeaderEntity, "cloneToLeaderEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -81,6 +83,8 @@
             REcmaHelper::registerFunction(&engine, proto, getData, "getData");
             
             REcmaHelper::registerFunction(&engine, proto, setData, "setData");
+            
+            REcmaHelper::registerFunction(&engine, proto, reverse, "reverse");
             
             REcmaHelper::registerFunction(&engine, proto, setArrowHead, "setArrowHead");
             
@@ -249,6 +253,14 @@
             
             ctor.setProperty("PropertyDimasz",
                 qScriptValueFromValue(&engine, RLeaderEntity::PropertyDimasz),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyLength",
+                qScriptValueFromValue(&engine, RLeaderEntity::PropertyLength),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyTotalLength",
+                qScriptValueFromValue(&engine, RLeaderEntity::PropertyTotalLength),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -628,13 +640,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLeaderEntity *'
-    RLeaderEntity * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RLeaderEntity *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -645,6 +657,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLeaderEntity::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLeaderEntity::cloneToLeaderEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLeaderEntity::cloneToLeaderEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderEntity::cloneToLeaderEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderEntity* self = 
+                        getSelf("cloneToLeaderEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLeaderEntity >'
+    QSharedPointer < RLeaderEntity > cppResult =
+        
+               self->cloneToLeaderEntity();
+        // return type: QSharedPointer < RLeaderEntity >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderEntity.cloneToLeaderEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLeaderEntity::cloneToLeaderEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -1312,6 +1373,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLeaderEntity::setData", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLeaderEntity::reverse
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLeaderEntity::reverse", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderEntity::reverse";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderEntity* self = 
+                        getSelf("reverse", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->reverse();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderEntity.reverse().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLeaderEntity::reverse", context, engine);
             return result;
         }
          QScriptValue

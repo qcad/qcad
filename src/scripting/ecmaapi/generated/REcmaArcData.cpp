@@ -121,6 +121,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToArc, "cloneToArc");
+            
             REcmaHelper::registerFunction(&engine, proto, isDirected, "isDirected");
             
             REcmaHelper::registerFunction(&engine, proto, getVectorProperties, "getVectorProperties");
@@ -952,13 +954,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RArc *'
-    RArc * cppResult =
+    // return type 'QSharedPointer < RShape >'
+    QSharedPointer < RShape > cppResult =
         
                self->clone();
-        // return type: RArc *
-                // pointer, copyable 
-                result = qScriptValueFromValue(engine, *cppResult);
+        // return type: QSharedPointer < RShape >
+                // Shared pointer to shape, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -969,6 +971,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaArcData::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaArcData::cloneToArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaArcData::cloneToArc", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaArcData::cloneToArc";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RArcData* self = 
+                        getSelf("cloneToArc", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RArc >'
+    QSharedPointer < RArc > cppResult =
+        
+               self->cloneToArc();
+        // return type: QSharedPointer < RArc >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RArcData.cloneToArc().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaArcData::cloneToArc", context, engine);
             return result;
         }
          QScriptValue

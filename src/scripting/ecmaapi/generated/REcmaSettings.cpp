@@ -117,6 +117,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getHomeLocation, "getHomeLocation");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getPluginsLocation, "getPluginsLocation");
+            
             REcmaHelper::registerFunction(&engine, &ctor, isGuiEnabled, "isGuiEnabled");
             
             REcmaHelper::registerFunction(&engine, &ctor, isDebuggerEnabled, "isDebuggerEnabled");
@@ -2573,6 +2575,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getHomeLocation", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getPluginsLocation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getPluginsLocation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getPluginsLocation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getPluginsLocation();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getPluginsLocation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getPluginsLocation", context, engine);
             return result;
         }
          QScriptValue

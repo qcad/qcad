@@ -49,8 +49,12 @@
         <return>return <expr><name>Point</name></expr>;</return>
     }</block></function>
 
-    <function><type><name>virtual</name> <name>RPoint</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr>new <call><name>RPoint</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr>;</return>
+    <function><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name><argument_list>(<argument><expr>new <call><name>RPoint</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>QSharedPointer<argument_list>&lt;<argument><name>RPoint</name></argument>&gt;</argument_list></name></type> <name>cloneToPoint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>QSharedPointer<argument_list>&lt;<argument><name>RPoint</name></argument>&gt;</argument_list></name><argument_list>(<argument><expr>new <call><name>RPoint</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setZ</name><parameter_list>(<param><decl><type><name>double</name></type> <name>z</name></decl></param>)</parameter_list>;</function_decl>

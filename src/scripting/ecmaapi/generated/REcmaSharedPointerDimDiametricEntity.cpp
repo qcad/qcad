@@ -79,6 +79,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToDimDiametricEntity, "cloneToDimDiametricEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -641,13 +643,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RDimDiametricEntity *'
-    RDimDiametricEntity * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RDimDiametricEntity *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -658,6 +660,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDimDiametricEntity::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDimDiametricEntity::cloneToDimDiametricEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDimDiametricEntity::cloneToDimDiametricEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimDiametricEntity::cloneToDimDiametricEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimDiametricEntity* self = 
+                        getSelf("cloneToDimDiametricEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RDimDiametricEntity >'
+    QSharedPointer < RDimDiametricEntity > cppResult =
+        
+               self->cloneToDimDiametricEntity();
+        // return type: QSharedPointer < RDimDiametricEntity >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimDiametricEntity.cloneToDimDiametricEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimDiametricEntity::cloneToDimDiametricEntity", context, engine);
             return result;
         }
          QScriptValue

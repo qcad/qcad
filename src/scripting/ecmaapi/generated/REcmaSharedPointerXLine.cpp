@@ -96,6 +96,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToXLine, "cloneToXLine");
+            
             REcmaHelper::registerFunction(&engine, proto, isDirected, "isDirected");
             
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
@@ -735,13 +737,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RXLine *'
-    RXLine * cppResult =
+    // return type 'QSharedPointer < RShape >'
+    QSharedPointer < RShape > cppResult =
         
                self->clone();
-        // return type: RXLine *
-                // pointer, copyable 
-                result = qScriptValueFromValue(engine, *cppResult);
+        // return type: QSharedPointer < RShape >
+                // Shared pointer to shape, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -752,6 +754,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerXLine::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerXLine::cloneToXLine
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerXLine::cloneToXLine", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerXLine::cloneToXLine";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RXLine* self = 
+                        getSelf("cloneToXLine", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RXLine >'
+    QSharedPointer < RXLine > cppResult =
+        
+               self->cloneToXLine();
+        // return type: QSharedPointer < RXLine >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLine.cloneToXLine().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerXLine::cloneToXLine", context, engine);
             return result;
         }
          QScriptValue

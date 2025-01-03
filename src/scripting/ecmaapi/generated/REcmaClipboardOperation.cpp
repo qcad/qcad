@@ -92,6 +92,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setKeepSelection, "setKeepSelection");
             
+            REcmaHelper::registerFunction(&engine, proto, setBlockOwnership, "setBlockOwnership");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RClipboardOperation*>(), *proto);
 
@@ -2135,6 +2137,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaClipboardOperation::setKeepSelection", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaClipboardOperation::setBlockOwnership
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaClipboardOperation::setBlockOwnership", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::setBlockOwnership";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RClipboardOperation* self = 
+                        getSelf("setBlockOwnership", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setBlockOwnership(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.setBlockOwnership().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::setBlockOwnership", context, engine);
             return result;
         }
          QScriptValue REcmaClipboardOperation::toString

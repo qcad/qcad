@@ -60,6 +60,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToCircle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         createFrom2Points
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

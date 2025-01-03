@@ -27,7 +27,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RDocumentVariables *"
+      <variant returnType="QSharedPointer &lt; RObject &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="cloneToDocumentVariables"
+    cppName="cloneToDocumentVariables" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RDocumentVariables &gt;"
       isPureVirtual="false" />
     </method>
     <method name="getProperty" cppName="getProperty"

@@ -275,7 +275,7 @@
             <param><decl><type><name>const</name> <name>QBrush</name>&amp;</type> <name>brush</name></decl></param>, <param><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lineweight</name></decl></param>,
             <param><decl><type><name><name>Qt</name>::<name>PenStyle</name></name></type> <name>style</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>qreal</name></argument>&gt;</argument_list></name>&amp;</type> <name>dashValues</name> =<init> <expr><name>RDEFAULT_QLIST_QREAL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>addAuxShapeToPreview</name><parameter_list>(<param><decl><type><name>RShape</name>&amp;</type> <name>shape</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>addEntityToPreview</name><parameter_list>(<param><decl><type><name>REntity</name>&amp;</type> <name>entity</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="line">//void addEntityToPreview(REntity&amp; entity);</comment>
     <function_decl><type><name>void</name></type> <name>addDrawableToPreview</name><parameter_list>(<param><decl><type><name>RGraphicsSceneDrawable</name>&amp;</type> <name>drawable</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>beginPreview</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>endPreview</name><parameter_list>()</parameter_list>;</function_decl>

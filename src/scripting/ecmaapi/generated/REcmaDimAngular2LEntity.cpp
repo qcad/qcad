@@ -80,6 +80,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToDimAngular2LEntity, "cloneToDimAngular2LEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -688,13 +690,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RDimAngular2LEntity *'
-    RDimAngular2LEntity * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RDimAngular2LEntity *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -705,6 +707,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimAngular2LEntity::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAngular2LEntity::cloneToDimAngular2LEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAngular2LEntity::cloneToDimAngular2LEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAngular2LEntity::cloneToDimAngular2LEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAngular2LEntity* self = 
+                        getSelf("cloneToDimAngular2LEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RDimAngular2LEntity >'
+    QSharedPointer < RDimAngular2LEntity > cppResult =
+        
+               self->cloneToDimAngular2LEntity();
+        // return type: QSharedPointer < RDimAngular2LEntity >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngular2LEntity.cloneToDimAngular2LEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAngular2LEntity::cloneToDimAngular2LEntity", context, engine);
             return result;
         }
          QScriptValue

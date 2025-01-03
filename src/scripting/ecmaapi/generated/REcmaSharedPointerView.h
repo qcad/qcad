@@ -62,6 +62,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToView
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

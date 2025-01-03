@@ -62,10 +62,19 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setOwnedByReference
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isOwnedByReference
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isFrozen

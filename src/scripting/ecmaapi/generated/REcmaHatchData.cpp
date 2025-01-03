@@ -126,6 +126,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setSolid, "setSolid");
             
+            REcmaHelper::registerFunction(&engine, proto, isWinding, "isWinding");
+            
+            REcmaHelper::registerFunction(&engine, proto, setWinding, "setWinding");
+            
             REcmaHelper::registerFunction(&engine, proto, getScale, "getScale");
             
             REcmaHelper::registerFunction(&engine, proto, setScale, "setScale");
@@ -2683,6 +2687,110 @@
             return result;
         }
          QScriptValue
+        REcmaHatchData::isWinding
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::isWinding", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::isWinding";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("isWinding", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isWinding();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.isWinding().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::isWinding", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::setWinding
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::setWinding", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::setWinding";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("setWinding", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setWinding(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.setWinding().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::setWinding", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaHatchData::getScale
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4504,7 +4612,7 @@
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
             context->argument(1).isNull()
-        ) /* type: QStack < REntity * > */
+        ) /* type: QStack < QSharedPointer < REntity > > */
     
     ){
     // prepare arguments:
@@ -4528,20 +4636,20 @@
                     *ap0;
                 
                     // argument is reference
-                    QStack < REntity * >*
+                    QStack < QSharedPointer < REntity > >*
                     ap1 =
                     qscriptvalue_cast<
-                    QStack < REntity * >*
+                    QStack < QSharedPointer < REntity > >*
                         >(
                         context->argument(
                         1
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RHatchData: Argument 1 is not of type QStack < REntity * >*.",
+                           return REcmaHelper::throwError("RHatchData: Argument 1 is not of type QStack < QSharedPointer < REntity > >*.",
                                context);                    
                     }
-                    QStack < REntity * >& a1 = *ap1;
+                    QStack < QSharedPointer < REntity > >& a1 = *ap1;
                 
     // end of arguments
 
@@ -4569,7 +4677,7 @@
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
             context->argument(1).isNull()
-        ) /* type: QStack < REntity * > */
+        ) /* type: QStack < QSharedPointer < REntity > > */
     
     ){
     // prepare arguments:
@@ -4583,20 +4691,20 @@
                     toBool();
                 
                     // argument is reference
-                    QStack < REntity * >*
+                    QStack < QSharedPointer < REntity > >*
                     ap1 =
                     qscriptvalue_cast<
-                    QStack < REntity * >*
+                    QStack < QSharedPointer < REntity > >*
                         >(
                         context->argument(
                         1
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RHatchData: Argument 1 is not of type QStack < REntity * >*.",
+                           return REcmaHelper::throwError("RHatchData: Argument 1 is not of type QStack < QSharedPointer < REntity > >*.",
                                context);                    
                     }
-                    QStack < REntity * >& a1 = *ap1;
+                    QStack < QSharedPointer < REntity > >& a1 = *ap1;
                 
     // end of arguments
 

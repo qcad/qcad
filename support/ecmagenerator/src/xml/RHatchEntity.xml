@@ -32,7 +32,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RHatchEntity *" isPureVirtual="false" />
+      <variant returnType="QSharedPointer &lt; RObject &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="cloneToHatchEntity" cppName="cloneToHatchEntity"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RHatchEntity &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="setData" cppName="setData" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -171,6 +178,18 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="setSolid" cppName="setSolid" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isWinding" cppName="isWinding" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setWinding" cppName="setWinding"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="on"
         isConst="false" />
@@ -323,6 +342,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyDrawOrder" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertySolid" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyWinding" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyTransparency" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

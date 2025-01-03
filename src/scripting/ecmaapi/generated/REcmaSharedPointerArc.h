@@ -66,6 +66,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isDirected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

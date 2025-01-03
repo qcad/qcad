@@ -36,6 +36,11 @@
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPainterPathDevice</name> <super>: <specifier>public</specifier> <name>QPaintDevice</name></super> <block>{<private type="default">
 </private><public>public:
     <constructor_decl><name>RPainterPathDevice</name><parameter_list>()</parameter_list>;</constructor_decl>
+
+    <function><type><name>void</name></type> <name>setStrokePolygon</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>engine</name>-&gt;<call><name>setStrokePolygon</name><argument_list>(<argument><expr><name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
     <destructor_decl><specifier>virtual</specifier> <name>~RPainterPathDevice</name><parameter_list>()</parameter_list>;</destructor_decl>
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPaths</name><parameter_list>()</parameter_list>;</function_decl>
 

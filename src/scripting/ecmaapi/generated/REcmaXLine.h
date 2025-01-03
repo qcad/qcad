@@ -61,6 +61,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToXLine
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isDirected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

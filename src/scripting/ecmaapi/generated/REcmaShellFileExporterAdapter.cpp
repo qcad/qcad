@@ -2833,7 +2833,7 @@
             }
         
     
-      REntity * REcmaShellFileExporterAdapter::getBlockRefOrEntity(
+      QSharedPointer < REntity > REcmaShellFileExporterAdapter::getBlockRefOrEntity(
                 
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
@@ -2859,7 +2859,7 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        REntity * ret =
+                        QSharedPointer < REntity > ret =
                         RFileExporterAdapter::getBlockRefOrEntity(
                             
                         );
@@ -2877,10 +2877,10 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    REntity * res;
+                    QSharedPointer < REntity > res;
                       
                           res = qscriptvalue_cast< 
-                            REntity *
+                            QSharedPointer < REntity >
                           >(
                         
                             _q_function.call(__qtscript_self)
@@ -2963,7 +2963,7 @@
             }
         
     
-      REntity * REcmaShellFileExporterAdapter::getEntity(
+      QSharedPointer < REntity > REcmaShellFileExporterAdapter::getEntity(
                 
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
@@ -2989,7 +2989,7 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        REntity * ret =
+                        QSharedPointer < REntity > ret =
                         RFileExporterAdapter::getEntity(
                             
                         );
@@ -3007,10 +3007,10 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    REntity * res;
+                    QSharedPointer < REntity > res;
                       
                           res = qscriptvalue_cast< 
-                            REntity *
+                            QSharedPointer < REntity >
                           >(
                         
                             _q_function.call(__qtscript_self)
@@ -3028,7 +3028,7 @@
             }
         
     
-      REntity * REcmaShellFileExporterAdapter::getCurrentBlockRef(
+      QSharedPointer < REntity > REcmaShellFileExporterAdapter::getCurrentBlockRef(
                 
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
@@ -3054,7 +3054,7 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        REntity * ret =
+                        QSharedPointer < REntity > ret =
                         RFileExporterAdapter::getCurrentBlockRef(
                             
                         );
@@ -3072,10 +3072,10 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    REntity * res;
+                    QSharedPointer < REntity > res;
                       
                           res = qscriptvalue_cast< 
-                            REntity *
+                            QSharedPointer < REntity >
                           >(
                         
                             _q_function.call(__qtscript_self)
@@ -3093,7 +3093,7 @@
             }
         
     
-      RViewportEntity * REcmaShellFileExporterAdapter::getCurrentViewport(
+      QSharedPointer < RViewportEntity > REcmaShellFileExporterAdapter::getCurrentViewport(
                 
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
@@ -3119,7 +3119,7 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        RViewportEntity * ret =
+                        QSharedPointer < RViewportEntity > ret =
                         RFileExporterAdapter::getCurrentViewport(
                             
                         );
@@ -3137,10 +3137,10 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    RViewportEntity * res;
+                    QSharedPointer < RViewportEntity > res;
                       
                           res = qscriptvalue_cast< 
-                            RViewportEntity *
+                            QSharedPointer < RViewportEntity >
                           >(
                         
                             _q_function.call(__qtscript_self)
@@ -3158,7 +3158,7 @@
             }
         
     
-      QStack < REntity * > REcmaShellFileExporterAdapter::getBlockRefViewportStack(
+      QStack < QSharedPointer < REntity > > REcmaShellFileExporterAdapter::getBlockRefViewportStack(
                 
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
@@ -3184,7 +3184,7 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        QStack < REntity * > ret =
+                        QStack < QSharedPointer < REntity > > ret =
                         RFileExporterAdapter::getBlockRefViewportStack(
                             
                         );
@@ -3202,10 +3202,10 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    QStack < REntity * > res;
+                    QStack < QSharedPointer < REntity > > res;
                       
                           res = qscriptvalue_cast< 
-                            QStack < REntity * >
+                            QStack < QSharedPointer < REntity > >
                           >(
                         
                             _q_function.call(__qtscript_self)
@@ -4064,7 +4064,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportLayer(
-                RLayer & arg1
+                QSharedPointer < RLayer > arg1
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportLayer", engine);
@@ -4113,10 +4113,10 @@
 
 
 
-    // type: RLayer &, copyable: false
+    // type: QSharedPointer < RLayer >, copyable: false
         << qScriptValueFromValue(engine, 
 
-        &arg1
+        arg1
         )
       
                             )
@@ -4197,7 +4197,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportLayerState(
-                RLayerState & arg1
+                QSharedPointer < RLayerState > arg1
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportLayerState", engine);
@@ -4246,10 +4246,10 @@
 
 
 
-    // type: RLayerState &, copyable: false
+    // type: QSharedPointer < RLayerState >, copyable: false
         << qScriptValueFromValue(engine, 
 
-        &arg1
+        arg1
         )
       
                             )
@@ -4264,7 +4264,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportBlock(
-                RBlock & arg1
+                QSharedPointer < RBlock > arg1
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportBlock", engine);
@@ -4313,10 +4313,10 @@
 
 
 
-    // type: RBlock &, copyable: false
+    // type: QSharedPointer < RBlock >, copyable: false
         << qScriptValueFromValue(engine, 
 
-        &arg1
+        arg1
         )
       
                             )
@@ -4397,7 +4397,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportView(
-                RView & arg1
+                QSharedPointer < RView > arg1
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportView", engine);
@@ -4446,10 +4446,10 @@
 
 
 
-    // type: RView &, copyable: false
+    // type: QSharedPointer < RView >, copyable: false
         << qScriptValueFromValue(engine, 
 
-        &arg1
+        arg1
         )
       
                             )
@@ -4530,7 +4530,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportLinetype(
-                RLinetype & arg1
+                QSharedPointer < RLinetype > arg1
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportLinetype", engine);
@@ -4579,10 +4579,10 @@
 
 
 
-    // type: RLinetype &, copyable: false
+    // type: QSharedPointer < RLinetype >, copyable: false
         << qScriptValueFromValue(engine, 
 
-        &arg1
+        arg1
         )
       
                             )
@@ -4825,7 +4825,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportEntity(
-                REntity & entity, bool preview, bool allBlocks, bool forceSelected, bool invisible
+                QSharedPointer < REntity > entity, bool preview, bool allBlocks, bool forceSelected, bool invisible
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportEntity", engine);
@@ -4874,10 +4874,10 @@
 
 
 
-    // type: REntity &, copyable: false
-        // REntity &:
-        << REcmaHelper::toScriptValue(engine, 
-          &entity
+    // type: QSharedPointer < REntity >, copyable: false
+        << qScriptValueFromValue(engine, 
+
+        entity
         )
       
 
@@ -5012,7 +5012,7 @@
         
     
       QSharedPointer < RLayer > REcmaShellFileExporterAdapter::getEntityLayer(
-                REntity & entity
+                QSharedPointer < REntity > entity
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::getEntityLayer", engine);
@@ -5067,10 +5067,10 @@
 
 
 
-    // type: REntity &, copyable: false
-        // REntity &:
-        << REcmaHelper::toScriptValue(engine, 
-          &entity
+    // type: QSharedPointer < REntity >, copyable: false
+        << qScriptValueFromValue(engine, 
+
+        entity
         )
       
                             )
@@ -5089,7 +5089,7 @@
         
     
       bool REcmaShellFileExporterAdapter::isVisible(
-                REntity & entity
+                QSharedPointer < REntity > entity
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::isVisible", engine);
@@ -5144,10 +5144,10 @@
 
 
 
-    // type: REntity &, copyable: false
-        // REntity &:
-        << REcmaHelper::toScriptValue(engine, 
-          &entity
+    // type: QSharedPointer < REntity >, copyable: false
+        << qScriptValueFromValue(engine, 
+
+        entity
         )
       
                             )
@@ -7313,7 +7313,7 @@
             }
         
     
-      QStack < REntity * > REcmaShellFileExporterAdapter::getEntityStack(
+      QStack < QSharedPointer < REntity > > REcmaShellFileExporterAdapter::getEntityStack(
                 
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
@@ -7339,7 +7339,7 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        QStack < REntity * > ret =
+                        QStack < QSharedPointer < REntity > > ret =
                         RFileExporterAdapter::getEntityStack(
                             
                         );
@@ -7357,10 +7357,10 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    QStack < REntity * > res;
+                    QStack < QSharedPointer < REntity > > res;
                       
                           res = qscriptvalue_cast< 
-                            QStack < REntity * >
+                            QStack < QSharedPointer < REntity > >
                           >(
                         
                             _q_function.call(__qtscript_self)
@@ -7379,7 +7379,7 @@
         
     
       void REcmaShellFileExporterAdapter::pushEntity(
-                REntity * e
+                QSharedPointer < REntity > e
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::pushEntity", engine);
@@ -7428,10 +7428,10 @@
 
 
 
-    // type: REntity *, copyable: false
-        // REntity *:
-        << REcmaHelper::toScriptValue(engine, 
-          e
+    // type: QSharedPointer < REntity >, copyable: false
+        << qScriptValueFromValue(engine, 
+
+        e
         )
       
                             )

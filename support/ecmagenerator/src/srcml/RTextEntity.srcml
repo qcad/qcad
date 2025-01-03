@@ -88,8 +88,12 @@
         <return>return <expr><call><name><name>RPropertyTypeId</name>::<name>getPropertyTypeIds</name></name><argument_list>(<argument><expr><call><name><name>RTextEntity</name>::<name>getRtti</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>virtual</name> <name>RTextEntity</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr>new <call><name>RTextEntity</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr>;</return>
+    <function><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name><argument_list>(<argument><expr>new <call><name>RTextEntity</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>QSharedPointer<argument_list>&lt;<argument><name>RTextEntity</name></argument>&gt;</argument_list></name></type> <name>cloneToTextEntity</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>QSharedPointer<argument_list>&lt;<argument><name>RTextEntity</name></argument>&gt;</argument_list></name><argument_list>(<argument><expr>new <call><name>RTextEntity</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>virtual</name> <name>RTextData</name>&amp;</type> <name>getData</name><parameter_list>()</parameter_list> <block>{

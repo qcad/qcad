@@ -252,6 +252,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="getPluginsLocation" cppName="getPluginsLocation"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="isGuiEnabled" cppName="isGuiEnabled"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

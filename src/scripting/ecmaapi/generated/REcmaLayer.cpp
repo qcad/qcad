@@ -71,6 +71,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToLayer, "cloneToLayer");
+            
             REcmaHelper::registerFunction(&engine, proto, getParentLayerId, "getParentLayerId");
             
             REcmaHelper::registerFunction(&engine, proto, getName, "getName");
@@ -1509,13 +1511,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLayer *'
-    RLayer * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RLayer *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -1526,6 +1528,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLayer::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::cloneToLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::cloneToLayer", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::cloneToLayer";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayer* self = 
+                        getSelf("cloneToLayer", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLayer >'
+    QSharedPointer < RLayer > cppResult =
+        
+               self->cloneToLayer();
+        // return type: QSharedPointer < RLayer >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.cloneToLayer().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::cloneToLayer", context, engine);
             return result;
         }
          QScriptValue

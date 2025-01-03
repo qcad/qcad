@@ -80,6 +80,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToDimAlignedEntity, "cloneToDimAlignedEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -668,13 +670,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RDimAlignedEntity *'
-    RDimAlignedEntity * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RDimAlignedEntity *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -685,6 +687,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimAlignedEntity::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAlignedEntity::cloneToDimAlignedEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAlignedEntity::cloneToDimAlignedEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAlignedEntity::cloneToDimAlignedEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAlignedEntity* self = 
+                        getSelf("cloneToDimAlignedEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RDimAlignedEntity >'
+    QSharedPointer < RDimAlignedEntity > cppResult =
+        
+               self->cloneToDimAlignedEntity();
+        // return type: QSharedPointer < RDimAlignedEntity >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedEntity.cloneToDimAlignedEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAlignedEntity::cloneToDimAlignedEntity", context, engine);
             return result;
         }
          QScriptValue

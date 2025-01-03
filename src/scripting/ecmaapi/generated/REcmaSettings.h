@@ -136,6 +136,9 @@
         getHomeLocation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPluginsLocation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isGuiEnabled
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

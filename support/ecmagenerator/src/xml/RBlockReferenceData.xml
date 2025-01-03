@@ -222,6 +222,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RBlock::Id" isPureVirtual="false" />
     </method>
+    <method name="hasBlockOwnership" cppName="hasBlockOwnership"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="setReferencedBlockName"
     cppName="setReferencedBlockName" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

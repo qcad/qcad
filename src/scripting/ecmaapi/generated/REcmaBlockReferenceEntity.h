@@ -62,6 +62,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToBlockReferenceEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPropertyTypeIds
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -123,6 +126,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setReferencedBlockName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasBlockOwnership
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getReferencedBlockId

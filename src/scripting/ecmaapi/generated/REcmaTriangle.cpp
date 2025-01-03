@@ -88,6 +88,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToTriangle, "cloneToTriangle");
+            
             REcmaHelper::registerFunction(&engine, proto, setZ, "setZ");
             
             REcmaHelper::registerFunction(&engine, proto, getVectorProperties, "getVectorProperties");
@@ -486,13 +488,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RTriangle *'
-    RTriangle * cppResult =
+    // return type 'QSharedPointer < RShape >'
+    QSharedPointer < RShape > cppResult =
         
                self->clone();
-        // return type: RTriangle *
-                // pointer, copyable 
-                result = qScriptValueFromValue(engine, *cppResult);
+        // return type: QSharedPointer < RShape >
+                // Shared pointer to shape, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -503,6 +505,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTriangle::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTriangle::cloneToTriangle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTriangle::cloneToTriangle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::cloneToTriangle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTriangle* self = 
+                        getSelf("cloneToTriangle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RTriangle >'
+    QSharedPointer < RTriangle > cppResult =
+        
+               self->cloneToTriangle();
+        // return type: QSharedPointer < RTriangle >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.cloneToTriangle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTriangle::cloneToTriangle", context, engine);
             return result;
         }
          QScriptValue

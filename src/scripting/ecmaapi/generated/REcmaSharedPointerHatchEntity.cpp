@@ -76,6 +76,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToHatchEntity, "cloneToHatchEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, setData, "setData");
             
             REcmaHelper::registerFunction(&engine, proto, hasCustomPattern, "hasCustomPattern");
@@ -109,6 +111,10 @@
             REcmaHelper::registerFunction(&engine, proto, isSolid, "isSolid");
             
             REcmaHelper::registerFunction(&engine, proto, setSolid, "setSolid");
+            
+            REcmaHelper::registerFunction(&engine, proto, isWinding, "isWinding");
+            
+            REcmaHelper::registerFunction(&engine, proto, setWinding, "setWinding");
             
             REcmaHelper::registerFunction(&engine, proto, getScale, "getScale");
             
@@ -214,6 +220,10 @@
             
             ctor.setProperty("PropertySolid",
                 qScriptValueFromValue(&engine, RHatchEntity::PropertySolid),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyWinding",
+                qScriptValueFromValue(&engine, RHatchEntity::PropertyWinding),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyTransparency",
@@ -593,13 +603,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RHatchEntity *'
-    RHatchEntity * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RHatchEntity *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -610,6 +620,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerHatchEntity::cloneToHatchEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::cloneToHatchEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::cloneToHatchEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchEntity* self = 
+                        getSelf("cloneToHatchEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RHatchEntity >'
+    QSharedPointer < RHatchEntity > cppResult =
+        
+               self->cloneToHatchEntity();
+        // return type: QSharedPointer < RHatchEntity >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.cloneToHatchEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::cloneToHatchEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -2292,6 +2351,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setSolid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerHatchEntity::isWinding
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::isWinding", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::isWinding";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchEntity* self = 
+                        getSelf("isWinding", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isWinding();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.isWinding().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::isWinding", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerHatchEntity::setWinding
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setWinding", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::setWinding";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchEntity* self = 
+                        getSelf("setWinding", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setWinding(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setWinding().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setWinding", context, engine);
             return result;
         }
          QScriptValue

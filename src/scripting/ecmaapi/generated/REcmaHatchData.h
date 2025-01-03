@@ -124,6 +124,12 @@
         setSolid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isWinding
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setWinding
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

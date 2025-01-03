@@ -62,6 +62,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToDocumentVariables
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

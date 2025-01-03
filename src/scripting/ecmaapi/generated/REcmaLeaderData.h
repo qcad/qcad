@@ -59,6 +59,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToPolyline
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isDirected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -293,9 +296,6 @@
         getClosestVertex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        reverse
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getReversed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -441,6 +441,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         to2D
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        reverse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getBoundingBox

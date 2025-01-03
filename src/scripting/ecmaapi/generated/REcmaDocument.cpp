@@ -353,6 +353,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getTempBlockName, "getTempBlockName");
             
+            REcmaHelper::registerFunction(&engine, proto, getUniqueBlockName, "getUniqueBlockName");
+            
             REcmaHelper::registerFunction(&engine, proto, getBlockName, "getBlockName");
             
             REcmaHelper::registerFunction(&engine, proto, getBlockNameFromHandle, "getBlockNameFromHandle");
@@ -13498,6 +13500,112 @@
             return result;
         }
          QScriptValue
+        REcmaDocument::getUniqueBlockName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getUniqueBlockName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getUniqueBlockName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getUniqueBlockName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getUniqueBlockName(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QStringList */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isArray or QVariantMap
+                    QStringList
+                    a1;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(1),
+                        a1
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getUniqueBlockName(a0
+        ,
+    a1);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getUniqueBlockName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getUniqueBlockName", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDocument::getBlockName
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -13776,6 +13884,52 @@
     QSet < QString > cppResult =
         
                self->getBlockNames(a0);
+        // return type: QSet < QString >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < QString >'
+    QSet < QString > cppResult =
+        
+               self->getBlockNames(a0
+        ,
+    a1);
         // return type: QSet < QString >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);

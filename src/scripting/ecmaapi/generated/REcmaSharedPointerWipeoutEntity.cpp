@@ -80,6 +80,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToWipeoutEntity, "cloneToWipeoutEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, getData, "getData");
             
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
@@ -591,13 +593,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RWipeoutEntity *'
-    RWipeoutEntity * cppResult =
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
         
                self->clone();
-        // return type: RWipeoutEntity *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
             
     } else
 
@@ -608,6 +610,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerWipeoutEntity::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerWipeoutEntity::cloneToWipeoutEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerWipeoutEntity::cloneToWipeoutEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerWipeoutEntity::cloneToWipeoutEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RWipeoutEntity* self = 
+                        getSelf("cloneToWipeoutEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RWipeoutEntity >'
+    QSharedPointer < RWipeoutEntity > cppResult =
+        
+               self->cloneToWipeoutEntity();
+        // return type: QSharedPointer < RWipeoutEntity >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RWipeoutEntity.cloneToWipeoutEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerWipeoutEntity::cloneToWipeoutEntity", context, engine);
             return result;
         }
          QScriptValue

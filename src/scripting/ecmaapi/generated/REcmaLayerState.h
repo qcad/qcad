@@ -60,6 +60,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToLayerState
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         mustAlwaysClone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
