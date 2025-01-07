@@ -55,6 +55,10 @@ public:
         return QSharedPointer<RShape>(new RRay(*this));
     }
 
+    QSharedPointer<RRay> cloneToRay() const {
+        return QSharedPointer<RRay>(new RRay(*this));
+    }
+
     virtual QList<RVector> getVectorProperties() const;
 
     virtual bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false);

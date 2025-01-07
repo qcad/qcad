@@ -49,6 +49,10 @@ public:
         return QSharedPointer<RShape>(new RTextLabel(*this));
     }
 
+    QSharedPointer<RTextLabel> cloneToTextLabel() const {
+        return QSharedPointer<RTextLabel>(new RTextLabel(*this));
+    }
+
     QString getText() const {
         return text;
     }
