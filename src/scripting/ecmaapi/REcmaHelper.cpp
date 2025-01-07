@@ -605,71 +605,72 @@ void REcmaHelper::fromScriptValue(QScriptEngine* engine, QScriptValue scriptValu
 
         if (v.canConvert<RArc>()) {
             RArc obj = v.value<RArc>();
-            QSharedPointer<RArc> p(obj.clone());
-            cppValue.append(p);
+            //QSharedPointer<RArc> p(obj.clone());
+            //cppValue.append(p);
+            cppValue.append(obj.cloneToArc());
             continue;
         }
 
         if (v.canConvert<RCircle>()) {
             RCircle obj = v.value<RCircle>();
-            QSharedPointer<RCircle> p(obj.clone());
-            cppValue.append(p);
+            //QSharedPointer<RCircle> p(obj.clone());
+            cppValue.append(obj.cloneToCircle());
             continue;
         }
 
         if (v.canConvert<RLine>()) {
             RLine obj = v.value<RLine>();
-            QSharedPointer<RLine> p(obj.clone());
-            cppValue.append(p);
+            //QSharedPointer<RLine> p(obj.clone());
+            cppValue.append(obj.cloneToLine());
             continue;
         }
 
         if (v.canConvert<RRay>()) {
             RRay obj = v.value<RRay>();
-            QSharedPointer<RRay> p(obj.clone());
-            cppValue.append(p);
+            //QSharedPointer<RRay> p(obj.clone());
+            cppValue.append(obj.cloneToRay());
             continue;
         }
 
         if (v.canConvert<RXLine>()) {
             RXLine obj = v.value<RXLine>();
-            QSharedPointer<RXLine> p(obj.clone());
-            cppValue.append(p);
+            //QSharedPointer<RXLine> p(obj.clone());
+            cppValue.append(obj.cloneToXLine());
             continue;
         }
 
         if (v.canConvert<RPoint>()) {
             RPoint obj = v.value<RPoint>();
-            QSharedPointer<RPoint> p(obj.clone());
-            cppValue.append(p);
+            //QSharedPointer<RPoint> p(obj.clone());
+            cppValue.append(obj.cloneToPoint());
             continue;
         }
 
         if (v.canConvert<RPolyline>()) {
             RPolyline obj = v.value<RPolyline>();
-            QSharedPointer<RPolyline> p(obj.clone());
-            cppValue.append(p);
+            //QSharedPointer<RPolyline> p(obj.clone());
+            cppValue.append(obj.cloneToPolyline());
             continue;
         }
 
         if (v.canConvert<RSpline>()) {
             RSpline obj = v.value<RSpline>();
-            QSharedPointer<RSpline> p(obj.clone());
-            cppValue.append(p);
+            //QSharedPointer<RSpline> p(obj.clone());
+            cppValue.append(obj.cloneToSpline());
             continue;
         }
 
         if (v.canConvert<RTextLabel>()) {
             RTextLabel obj = v.value<RTextLabel>();
-            QSharedPointer<RTextLabel> p(obj.clone());
-            cppValue.append(p);
+            //QSharedPointer<RTextLabel> p(obj.clone());
+            cppValue.append(obj.cloneToTextLabel());
             continue;
         }
 
         if (v.canConvert<RTriangle>()) {
             RTriangle obj = v.value<RTriangle>();
-            QSharedPointer<RTriangle> p(obj.clone());
-            cppValue.append(p);
+            //QSharedPointer<RTriangle> p(obj.clone());
+            cppValue.append(obj.cloneToTriangle());
             continue;
         }
     }
