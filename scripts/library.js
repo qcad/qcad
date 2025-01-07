@@ -2573,10 +2573,7 @@ function shapeToEntity(document, shape) {
         return undefined;
     }
 
-    var s = shape;
-    if (isFunction(s.data)) {
-        s = s.data();
-    }
+    var s = getPtr(shape);
 
     switch (s.getShapeType()) {
     case RShape.Point:
@@ -2657,21 +2654,15 @@ function modifyEntity(op, entity, shape) {
         (isCircleEntity(entity) && isArcShape(shape))) {
 
         var e = shapeToEntity(entity.getDocument(), shape);
-//        if (isFunction(entity.data)) {
-//            e.copyAttributesFrom(entity.data());
-//            op.deleteObject(entity.data());
-//        }
-//        else {
-            e.copyAttributesFrom(entity);
-            op.deleteObject(entity);
-//        }
+        e.copyAttributesFrom(getPtr(entity));
+        op.deleteObject(entity);
 
         op.addObject(e, false);
         return true;
     }
 
     if (isFunction(entity.setShape)) {
-        entity.setShape(shape);
+        entity.setShape(getPtr(shape));
         op.addObject(entity, false);
         return true;
     }

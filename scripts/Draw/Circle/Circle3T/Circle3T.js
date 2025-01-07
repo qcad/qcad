@@ -297,28 +297,7 @@ Circle3T.prototype.getShapes = function(preview) {
     if (isNull(this.candidates)) {
         Apollonius.constructionShapes = [];
 
-        var s1;
-        if (isFunction(this.shape1.data)) {
-            s1 = this.shape1.data();
-        }
-        else {
-            s1 = this.shape1;
-        }
-        var s2;
-        if (isFunction(this.shape2.data)) {
-            s2 = this.shape2.data();
-        }
-        else {
-            s2 = this.shape2;
-        }
-        var s3;
-        if (isFunction(this.shape3.data)) {
-            s3 = this.shape3.data();
-        }
-        else {
-            s3 = this.shape3;
-        }
-        this.candidates = Apollonius.getSolutions(s1, s2, s3);
+        this.candidates = Apollonius.getSolutions(getPtr(this.shape1), getPtr(this.shape2), getPtr(this.shape3));
         // filter out lines:
         this.candidates = ShapeAlgorithms.getCircleShapes(this.candidates);
     }

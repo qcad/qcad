@@ -158,15 +158,7 @@ LineBisector.prototype.getOperation = function(preview) {
     }
 
     // get intersection of the two chosen lines:
-    var d;
-    if (isFunction(this.line2.data)) {
-        d = this.line2.data();
-    }
-    else {
-        d = this.line2;
-    }
-
-    var ips = this.line1.getIntersectionPoints(d, false);
+    var ips = this.line1.getIntersectionPoints(getPtr(this.line2), false);
 
     if (ips.length===0) {
         return undefined;

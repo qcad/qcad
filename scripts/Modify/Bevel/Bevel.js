@@ -139,7 +139,7 @@ Bevel.bevelShapes = function(shape1, clickPos1, shape2, clickPos2, trim, samePol
         if (i1===-1) {
             return [];
         }
-        simpleShape1 = getPtr(shape1.getSegmentAt(i1));
+        simpleShape1 = shape1.getSegmentAt(i1);
     }
 
     if (isPolylineShape(shape2)) {
@@ -147,11 +147,11 @@ Bevel.bevelShapes = function(shape1, clickPos1, shape2, clickPos2, trim, samePol
         if (i2===-1) {
             return [];
         }
-        simpleShape2 = getPtr(shape2.getSegmentAt(i2));
+        simpleShape2 = shape2.getSegmentAt(i2);
     }
 
     // get intersection point(s) between two shapes:
-    var sol = simpleShape1.getIntersectionPoints(simpleShape2, false);
+    var sol = simpleShape1.getIntersectionPoints(getPtr(simpleShape2), false);
 
     if (sol.length===0) {
         return [];
@@ -273,7 +273,7 @@ Bevel.bevelShapes = function(shape1, clickPos1, shape2, clickPos2, trim, samePol
     var bevel = new RLine(bp1, bp2);
 
     if (samePolyline) {
-        var pl = shape1.modifyPolylineCorner(trimmed1, ending1, i1, trimmed2, ending2, i2, bevel);
+        var pl = shape1.modifyPolylineCorner(getPtr(trimmed1), ending1, i1, getPtr(trimmed2), ending2, i2, bevel);
         return [ pl ];
     }
 

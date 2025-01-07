@@ -250,7 +250,7 @@ Stretch.getStrechOperation = function(document, polygon, preview, offset, layerI
 
         // check if the entity intersects with any of the polygon edges:
         var gotIntersection = false;
-        if (entity.intersectsWith(polygon)) {
+        if (entity.intersectsWith(getPtr(polygon))) {
             gotIntersection = true;
         }
 

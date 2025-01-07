@@ -286,7 +286,7 @@ BreakOutManual.prototype.getOperation = function(preview) {
             op.deleteObject(this.entity);
         }
         else {
-            this.entity.setShape(newSegments[2]);
+            this.entity.setShape(getPtr(newSegments[2]));
             op.addObject(this.entity, false);
         }
     }

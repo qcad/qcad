@@ -184,7 +184,7 @@ Explode.explodeSelection = function(di, toolTitle) {
                 //     storage.setEntityParentId(attributeEntity, newAttributeParentId);
                 // }
                 // else {
-                    storage.setEntityParentId(attributeEntity, blockReferenceEntity.getId());
+                    storage.setEntityParentId(getPtr(attributeEntity), blockReferenceEntity.getId());
                 // }
                 op.addObject(attributeEntity, false);
             }
@@ -428,7 +428,8 @@ Explode.explodeEntity = function(entity, options) {
                     var pl = new RPolyline();
                     for (n=0; n<shapes.length; n++) {
                         shape = shapes[n];
-                        pl.appendShape(shape.clone());
+                        var shapeClone = shape.clone()
+                        pl.appendShape(getPtr(shapeClone));
                         //ret.push(shape.clone());
                     }
                     ret.push(pl);
@@ -455,7 +456,7 @@ Explode.explodeEntity = function(entity, options) {
         shapes = entity.getShapes();
         for (k=0; k<shapes.length; k++) {
             if (shapes[k].isValid()) {
-                ret.push(getPtr(shapes[k]));
+                ret.push(shapes[k]);
             }
         }
         var textData = entity.getData().getTextData();
@@ -593,7 +594,7 @@ Explode.explodeEntity = function(entity, options) {
                         if (textToPolylines) {
                             // explode to polylines:
                             if (!isNull(plText) && plText.getEndPoint().equalsFuzzy(shape.getStartPoint())) {
-                                plText.appendShape(sc);
+                                plText.appendShape(getPtr(sc));
                             }
                             else {
                                 if (!isNull(plText)) {
@@ -602,7 +603,7 @@ Explode.explodeEntity = function(entity, options) {
 
                                 plText = new RPolyline();
                                 ret.push(plText);
-                                plText.appendShape(sc);
+                                plText.appendShape(getPtr(sc));
                             }
                         }
                         else {
@@ -629,12 +630,7 @@ Explode.explodeEntity = function(entity, options) {
         d.setParentId(RObject.INVALID_ID);
         e = new RTextEntity(document, d);
         e.setSelected(true);
-        if (isFunction(entity.data)) {
-            e.copyAttributesFrom(getPtr(entity));
-        }
-        else {
-            e.copyAttributesFrom(entity);
-        }
+        e.copyAttributesFrom(getPtr(entity));
         ret.push(e);
     }
 
@@ -654,7 +650,7 @@ Explode.explodeEntity = function(entity, options) {
                     e.setRowCount(1);
                     e.setColumnCount(1);
                     e.setPosition(pos.operator_add(offset));
-                    storage.setObjectId(e, RObject.INVALID_ID);
+                    storage.setObjectId(getPtr(e), RObject.INVALID_ID);
                     e.setSelected(true);
                     ret.push(e);
                 }
@@ -711,12 +707,7 @@ Explode.explodeEntity = function(entity, options) {
                         else {
                             // hatch pattern: add transformed entity:
                             e.setSelected(true);
-                            if (isFunction(subEntity.data)) {
-                                e.copyAttributesFrom(getPtr(subEntity));
-                            }
-                            else {
-                                e.copyAttributesFrom(subEntity);
-                            }
+                            e.copyAttributesFrom(getPtr(subEntity));
                             ret.push(e);
                         }
                     }
@@ -725,12 +716,7 @@ Explode.explodeEntity = function(entity, options) {
                         // solid hatch: add new solid hatch:
                         e = new RHatchEntity(document, explodedHatchData);
                         e.setSelected(true);
-                        if (isFunction(subEntity.data)) {
-                            e.copyAttributesFrom(getPtr(subEntity));
-                        }
-                        else {
-                            e.copyAttributesFrom(subEntity);
-                        }
+                        e.copyAttributesFrom(getPtr(subEntity));
                         ret.push(e);
                     }
                     continue;

@@ -154,7 +154,7 @@ SplineControlPoints.prototype.getOperation = function(preview) {
 
     var e = new RSplineEntity(
         this.getDocument(),
-        new RSplineData(spline)
+        new RSplineData(getPtr(spline))
     );
 
     if (!e.isValid()) {

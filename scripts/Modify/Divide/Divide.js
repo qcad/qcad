@@ -276,13 +276,13 @@ Divide.divide = function(op, pos1, pos2, entity) {
     var e;
     if (!isNull(shape1)) {
         e = shapeToEntity(entity.getDocument(), shape1);
-        e.copyAttributesFrom(entity);
+        e.copyAttributesFrom(getPtr(entity));
         op.addObject(e, false);
     }
 
     if (!isNull(shape2)) {
         e = shapeToEntity(entity.getDocument(), shape2);
-        e.copyAttributesFrom(entity);
+        e.copyAttributesFrom(getPtr(entity));
         op.addObject(e, false);
     }
 

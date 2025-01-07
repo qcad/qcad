@@ -482,9 +482,9 @@ function addEntity(entity) {
  * transaction.
  */
 function addObject(obj) {
-    if (isFunction(obj.data)) {
-        return addObject(obj.data().clone());
-    }
+//    if (isFunction(obj.data)) {
+//        return addObject(obj.data().clone());
+//    }
 
     if (__simpleUseOp===true) {
         if (isNull(__simpleOp)) {
@@ -508,7 +508,7 @@ function addObject(obj) {
             var id = ids[i];
             var e = doc.queryObject(id);
             if (e.getType()===type) {
-                storage.setObjectId(ret, ids[i]);
+                storage.setObjectId(getPtr(ret), ids[i]);
                 break;
             }
         }

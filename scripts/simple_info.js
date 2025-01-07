@@ -27,24 +27,24 @@ function getIntersectionPoints(e1, e2, limited) {
 
     if (isNumber(e1)) {
         var entity1 = doc.queryEntityDirect(e1);
-        e1 = getPtr(entity1);
+        e1 = entity1;
     }
     if (isNumber(e2)) {
         var entity2 = doc.queryEntityDirect(e2);
-        e2 = getPtr(entity2);
+        e2 = entity2;
     }
 
     if (isEntity(e1) && isEntity(e2)) {
-        return e1.getIntersectionPoints(e2, limited);
+        return e1.getIntersectionPoints(getPtr(e2), limited);
     }
     if (isShape(e1) && isShape(e2)) {
-        return e1.getIntersectionPoints(e2, limited);
+        return e1.getIntersectionPoints(getPtr(e2), limited);
     }
     if (isEntity(e1) && isShape(e2)) {
-        return e1.getIntersectionPointsWithShape(e2, limited);
+        return e1.getIntersectionPointsWithShape(getPtr(e2), limited);
     }
     if (isShape(e1) && isEntity(e2)) {
-        return e2.getIntersectionPointsWithShape(e1, limited);
+        return e2.getIntersectionPointsWithShape(getPtr(e1), limited);
     }
 
     return [];

@@ -383,7 +383,7 @@ Projection.prototype.addTransformedShapes = function(entity, shapes, op, preview
                 continue;
             }
 
-            e.copyAttributesFrom(entity);
+            e.copyAttributesFrom(getPtr(entity));
             //e.move(this.targetPoint);
             flags = flags | RAddObjectsOperation.UseAttributes;
             op.addObject(e, flags);

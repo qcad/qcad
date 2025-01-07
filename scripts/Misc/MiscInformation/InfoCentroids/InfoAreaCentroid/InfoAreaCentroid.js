@@ -1910,7 +1910,7 @@ InfoAreaCentroid.prototype.isSelfIntersectingPoly = function(shape) {
     // Additional intersections with closing line shape:
     if (!shape.isGeometricallyClosed(RS.PointTolerance)) {
         line = new RLine(shape.getEndPoint(), shape.getStartPoint());
-        ipsLine = line.getIntersectionPoints(shape);
+        ipsLine = line.getIntersectionPoints(getPtr(shape));
         // With more intersections than endpoints add the second point found, one will do:
         if (ipsLine.length > 2) ips.push(ipsLine[1]);
     }

@@ -280,11 +280,8 @@ ShapeAlgorithms.getIntersectionPoints = function(shape, otherShapes, onShape, on
     // find all intersection points:
     for (i=0; i<otherShapes.length; i++) {
         var otherShape = otherShapes[i];
-        if (isFunction(otherShape.data)) {
-            otherShape = otherShape.data();
-        }
 
-        var sol = shape.getIntersectionPoints(otherShape, onShape, false, true);
+        var sol = shape.getIntersectionPoints(getPtr(otherShape), onShape, false, true);
         for (k=0; k<sol.length; k++) {
             if (!onOtherShapes || otherShape.isOnShape(sol[k])) {
                 intersections.push(sol[k]);
@@ -1502,7 +1499,7 @@ ShapeAlgorithms.getCompleteQuadrilateralSegments = function(line1, line2, line3,
     // maps vertices to number of intersection points at that vertex:
     var vertices = new MapCompat(function(v1, v2) { return v1.equalsFuzzy(v2); });
 
-    var lines = ShapeAlgorithms.removeSharedPointer([ line1, line2, line3, line4 ]);
+    var lines = [ line1, line2, line3, line4 ];
     var i, k;
 
     for (i=0; i<lines.length; i++) {
@@ -1513,7 +1510,7 @@ ShapeAlgorithms.getCompleteQuadrilateralSegments = function(line1, line2, line3,
                 continue;
             }
 
-            ips = ips.concat(lines[i].getIntersectionPoints(lines[k], false));
+            ips = ips.concat(lines[i].getIntersectionPoints(getPtr(lines[k]), false));
         }
 
         if (ips===0) {
@@ -1770,35 +1767,35 @@ ShapeAlgorithms.lineOrArcToPolyline = function(shape, numSegments) {
     return ret;
 };
 
-ShapeAlgorithms.removeSharedPointer = function(shape) {
-    if (isArray(shape)) {
-        var ret = [];
-        for (var i=0; i<shape.length; i++) {
-            ret.push(ShapeAlgorithms.removeSharedPointer(shape[i]));
-        }
-        return ret;
-    }
+//ShapeAlgorithms.removeSharedPointer = function(shape) {
+//    if (isArray(shape)) {
+//        var ret = [];
+//        for (var i=0; i<shape.length; i++) {
+//            ret.push(ShapeAlgorithms.removeSharedPointer(shape[i]));
+//        }
+//        return ret;
+//    }
 
-    if (isFunction(shape.data)) {
-        return shape.data().clone();
-    }
-    else {
-        return shape;
-    }
-};
+//    if (isFunction(shape.data)) {
+//        return shape.data().clone();
+//    }
+//    else {
+//        return shape;
+//    }
+//};
 
 /**
  * \return Array of shapes of type point, line, arc, circle, ellipse.
  */
 ShapeAlgorithms.explodeToTrimmable = function(shape) {
     if (isSplineShape(shape) && !RSpline.hasProxy()) {
-        return ShapeAlgorithms.removeSharedPointer(shape.getExploded());
+        return shape.getExploded();
     }
     if (isPolylineShape(shape)) {
-        return ShapeAlgorithms.removeSharedPointer(shape.getExploded());
+        return shape.getExploded();
     }
     if (isTriangleShape(shape)) {
-        return ShapeAlgorithms.removeSharedPointer(shape.getExploded());
+        return shape.getExploded();
     }
     return [ shape ];
 };

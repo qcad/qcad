@@ -133,6 +133,8 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
     var circle1 = c1;
     var circle2 = c2;
     var circle3 = c3;
+    var rDiff = undefined;
+    var locus = undefined;
 
     // special case: at least two circles are concentric: no solution:
     // # Enhanced by CVH #
@@ -142,8 +144,8 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
             // Failed: 3 concentric circles
             return [];    // No or infinite solutions
         }
-        var rDiff = c1.getRadius() - c2.getRadius();
-        var locus = c1.clone();
+        rDiff = c1.getRadius() - c2.getRadius();
+        locus = c1.clone();
         circle1 = c3.clone();
     }
     // Verify if circle 1 is concentric with circle 3:
@@ -152,8 +154,8 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
             // Failed: 3 concentric circles
             return [];    // No or infinite solutions
         }
-        var rDiff = c1.getRadius() - c3.getRadius();
-        var locus = c1.clone();
+        rDiff = c1.getRadius() - c3.getRadius();
+        locus = c1.clone();
         circle1 = c2.clone();
     }
     // Verify if circle 2 is concentric with circle 3:
@@ -162,8 +164,8 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
             // Failed: 3 concentric circles
             return [];    // No or infinite solutions
         }
-        var rDiff = c2.getRadius() - c3.getRadius();
-        var locus = c2.clone();
+        rDiff = c2.getRadius() - c3.getRadius();
+        locus = c2.clone();
         circle1 = c1.clone();
     }
 
@@ -179,11 +181,11 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
         // Get intersections of two concentric with the other circle and the locus:
         locus.setRadius(locus.getRadius() - rDiff / 2);
         circle1.setRadius(circle1.getRadius() + Math.abs(rDiff / 2));
-        var ips = locus.getIntersectionPoints(circle1);
+        var ips = locus.getIntersectionPoints(getPtr(circle1));
         circle1.setRadius(circle1.getRadius() - Math.abs(rDiff));
         // Avoid inversion through the center with negative radii:
         if (circle1.getRadius() > 0) {
-          ips = ips.concat(locus.getIntersectionPoints(circle1));
+          ips = ips.concat(locus.getIntersectionPoints(getPtr(circle1)));
         }
 
 
@@ -267,9 +269,9 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
     }
 
     // Count how many times circles are intersecting each other:
-    var nIps12 = circle1.getIntersectionPoints(circle2, false).length;    // Unlimited, avoids RBox test
-    var nIps13 = circle1.getIntersectionPoints(circle3, false).length;    // Unlimited, avoids RBox test
-    var nIps23 = circle2.getIntersectionPoints(circle3, false).length;    // Unlimited, avoids RBox test
+    var nIps12 = circle1.getIntersectionPoints(getPtr(circle2), false).length;    // Unlimited, avoids RBox test
+    var nIps13 = circle1.getIntersectionPoints(getPtr(circle3), false).length;    // Unlimited, avoids RBox test
+    var nIps23 = circle2.getIntersectionPoints(getPtr(circle3), false).length;    // Unlimited, avoids RBox test
 
     // Special case: Each two circles are tangent:
     // # Enhancement by CVH # Avoiding some to dozens false positive candidates
@@ -279,7 +281,7 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
         ret = [];
 
         // Get the tangent point of the smallest two circles:
-        var cInv = circle1.getIntersectionPoints(circle2, false)[0];    // Unlimited, avoids RBox test
+        var cInv = circle1.getIntersectionPoints(getPtr(circle2), false)[0];    // Unlimited, avoids RBox test
         // Relative sized inversion circle (FS#2590), opted for the average of radii:
         var rInv = (c1.radius + c2.radius + c3.radius) / 3;
         // With a valid center construct the circle of inversion:
@@ -362,9 +364,9 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
     if (!intersect && nIps12>0 && nIps13>0 && nIps23>0 &&
         (nIps12===2 || nIps13===2 || nIps23===2)) {
 
-        var ips12 = circle1.getIntersectionPoints(circle2);
-        var ips13 = circle1.getIntersectionPoints(circle3);
-        var ips23 = circle2.getIntersectionPoints(circle3);
+        var ips12 = circle1.getIntersectionPoints(getPtr(circle2));
+        var ips13 = circle1.getIntersectionPoints(getPtr(circle3));
+        var ips23 = circle2.getIntersectionPoints(getPtr(circle3));
 
         var inversionCircles = [];
         var r;
@@ -437,9 +439,9 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
         var ray2 = new RLine(powerCenter, pole2);
         var ray3 = new RLine(powerCenter, pole3);
 
-        var ips1 = ray1.getIntersectionPoints(circle1, false);
-        var ips2 = ray2.getIntersectionPoints(circle2, false);
-        var ips3 = ray3.getIntersectionPoints(circle3, false);
+        var ips1 = ray1.getIntersectionPoints(getPtr(circle1), false);
+        var ips2 = ray2.getIntersectionPoints(getPtr(circle2), false);
+        var ips3 = ray3.getIntersectionPoints(getPtr(circle3), false);
 
         var gotPoints = false;
         if (circle1.contains(powerCenter) || circle2.contains(powerCenter) || circle3.contains(powerCenter)) {
@@ -1115,13 +1117,13 @@ Apollonius.getSolutionsLLL = function(line1, line2, line3) {
 
     var situation = 0;
     var angleBisectors1, angleBisectors2, angleBisectors3;
-    if (line1.intersectsWith(line2, false)) {
+    if (line1.intersectsWith(getPtr(line2), false)) {
         situation+=1;
     }
-    if (line1.intersectsWith(line3, false)) {
+    if (line1.intersectsWith(getPtr(line3), false)) {
         situation+=2;
     }
-    if (line2.intersectsWith(line3, false)) {
+    if (line2.intersectsWith(getPtr(line3), false)) {
         situation+=4;
     }
 
@@ -1418,7 +1420,7 @@ Apollonius.getAllTangents = function(shape1, shape2) {
 
             // Diversify on crossing or not:
             // RLine.isParallel(...) may fail (FS#2495)
-            ips = shape1.getIntersectionPoints(shape2, false);    // unlimited
+            ips = shape1.getIntersectionPoints(getPtr(shape2), false);    // unlimited
             if (ips.isEmpty()) {
                 dC1C2 = c1.getDistanceTo(c2.getStartPoint(), false);    // unlimited
                 // May return NaN, comparing with NaN is always false
@@ -1539,7 +1541,7 @@ Apollonius.getAllTangents = function(shape1, shape2) {
     // Define a perpendicular diameter:
     ips = line.getClosestPointOnShape(c2Center, false);    // unlimited
     if (ips.equalsFuzzy(c2Center)) {    // RS.PointTolerance
-        ips = c2.getIntersectionPoints(line, false);    // unlimited
+        ips = c2.getIntersectionPoints(getPtr(line), false);    // unlimited
         line = new RLine(c2Center, ips[0]);
         line.rotate(Math.PI/2, c2Center);
     }
@@ -1917,13 +1919,13 @@ Apollonius.getSolutionsPLC = function(point, line, circle) {
             var par = line.clone();
             par.moveTo(a);
 
-            ips = da_.getIntersectionPoints(par, false);
+            ips = da_.getIntersectionPoints(getPtr(par), false);
             if (ips.length!==1) {
                 continue;
             }
             var a_ = ips[0];
 
-            ips = da_.getIntersectionPoints(lData, false);
+            ips = da_.getIntersectionPoints(getPtr(lData), false);
             if (ips.length!==1) {
                 continue;
             }
@@ -1934,7 +1936,7 @@ Apollonius.getSolutionsPLC = function(point, line, circle) {
             var f_p = a_e.clone();
             f_p.moveTo(f_);
 
-            ips = f_p.getIntersectionPoints(ortho, false);
+            ips = f_p.getIntersectionPoints(getPtr(ortho), false);
             if (ips.length!==1) {
                 continue;
             }
@@ -1979,7 +1981,7 @@ Apollonius.getSolutionsPLC = function(point, line, circle) {
 
         else {
             var da = new RLine(d, a);
-            ips = da.getIntersectionPoints(lData, false);
+            ips = da.getIntersectionPoints(getPtr(lData), false);
             if (ips.length!==1) {
                 continue;
             }
@@ -2015,9 +2017,9 @@ Apollonius.getSolutionsPLC = function(point, line, circle) {
                 var orthV = line.clone();
                 orthV.rotate(Math.PI/2, v);
 
-                var pps = apOrtho.getIntersectionPoints(orthU, false);
+                var pps = apOrtho.getIntersectionPoints(getPtr(orthU), false);
                 centerCandidates = centerCandidates.concat(pps);
-                pps = apOrtho.getIntersectionPoints(orthV, false);
+                pps = apOrtho.getIntersectionPoints(getPtr(orthV), false);
                 centerCandidates = centerCandidates.concat(pps);
             }
         }
@@ -2042,16 +2044,8 @@ Apollonius.getSolutionsPLL = function(point, line1, line2) {
         return [];
     }
 
-    var line2Data;
-    if (isFunction(line2.data)) {
-        line2Data = line2.data();
-    }
-    else {
-        line2Data = line2;
-    }
-
     // intersection between two lines line1, line2:
-    var ipsLL = line1.getIntersectionPoints(line2Data, false);
+    var ipsLL = line1.getIntersectionPoints(getPtr(line2), false);
 
     var ips;
     var i, k, c;
@@ -2083,7 +2077,7 @@ Apollonius.getSolutionsPLL = function(point, line1, line2) {
         // circle with radius c-s around point:
         circle = new RCircle(point.position, center.getDistanceTo(s));
         // intersections between circle and middle line are candidates:
-        centers = circle.getIntersectionPoints(middleLine, false);
+        centers = circle.getIntersectionPoints(getPtr(middleLine), false);
     }
 
     // point is on line1 or line2:
@@ -2156,7 +2150,7 @@ Apollonius.getSolutionsPLL = function(point, line1, line2) {
                 }
 
                 // intersections between line L and circle C -> G, H:
-                var ipsLC = line.getIntersectionPoints(circle, false);
+                var ipsLC = line.getIntersectionPoints(getPtr(circle), false);
                 if (ipsLC.length!==2) {
                     continue;
                 }
@@ -2277,7 +2271,7 @@ Apollonius.getInverseShape = function(shape, inversionCircle) {
         }
         else if (circle.isOnShape(inversionCircle.center)) {
             var s = new RLine(inversionCircle.center, circle.center);
-            ips = s.getIntersectionPoints(circle, false);
+            ips = s.getIntersectionPoints(getPtr(circle), false);
             if (ips.length<1) {
                 debugger;
                 return undefined;
@@ -2304,7 +2298,7 @@ Apollonius.getInverseShape = function(shape, inversionCircle) {
         else {
             var l = new RLine(inversionCircle.center, circle.center);
 
-            ips = l.getIntersectionPoints(circle, false);
+            ips = l.getIntersectionPoints(getPtr(circle), false);
             if (ips.length<2) {
                 return undefined;
             }
@@ -2420,7 +2414,7 @@ Apollonius.getTangentsThroughPoint = function(circle, p) {
     // point outside circle:
     else {
         var circle2 = RCircle.createFrom2Points(p, circle.center);
-        var touchingPoints = circle2.getIntersectionPoints(circle, false);
+        var touchingPoints = circle2.getIntersectionPoints(getPtr(circle), false);
         var lines = [];
         if (!isNull(touchingPoints[1])) {
             lines[0] = new RLine(p, touchingPoints[1]);
@@ -2584,15 +2578,7 @@ Apollonius.getAngleBisectors = function(line1, line2) {
     var angle1 = (line1.getAngle() + line2.getAngle()) / 2;
     var angle2 = angle1 + Math.PI/2;
 
-    var line2Data;
-    if (isFunction(line2.data)) {
-        line2Data = line2.data();
-    }
-    else {
-        line2Data = line2;
-    }
-
-    var points = line1.getIntersectionPoints(line2Data, false);
+    var points = line1.getIntersectionPoints(getPtr(line2), false);
     if (points.length===0) {
         // lines are parallel:
         return [];
@@ -2668,10 +2654,7 @@ Apollonius.getCircles2TR = function(shape1, shape2, radius, pos, candidates, pre
         for (i=0; i<offset1.length; i++) {
             for (k=0; k<offset2.length; k++) {
                 s = offset2[k];
-                if (isFunction(s.data)) {
-                    s = s.data();
-                }
-                ips = offset1[i].getIntersectionPoints(s, false);
+                ips = offset1[i].getIntersectionPoints(getPtr(s), false);
                 centerPoints = centerPoints.concat(ips);
             }
         }

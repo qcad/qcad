@@ -357,7 +357,7 @@ Scale.prototype.transform = function(entity, k, op, preview, flags) {
 
         e = shapeToEntity(this.getDocument(), shape);
         if (!isNull(e)) {
-            e.copyAttributesFrom(entity);
+            e.copyAttributesFrom(getPtr(entity));
             e.setDrawOrder(entity.getDrawOrder());
             e.setSelected(true);
         }

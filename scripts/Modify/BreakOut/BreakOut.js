@@ -231,7 +231,6 @@ BreakOut.breakOut = function(op, entity, pos, extend, removeSegment) {
                 op.deleteObject(entity);
             }
             else {
-                //modifyEntity(op, entity.data(), newSegments[2]);
                 if (!isNull(newSegments[2])) {
                     modifyEntity(op, entity.clone(), newSegments[2]);
                 }
