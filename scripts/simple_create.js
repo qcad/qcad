@@ -482,10 +482,6 @@ function addEntity(entity) {
  * transaction.
  */
 function addObject(obj) {
-//    if (isFunction(obj.data)) {
-//        return addObject(obj.data().clone());
-//    }
-
     if (__simpleUseOp===true) {
         if (isNull(__simpleOp)) {
             __simpleOp = new RAddObjectsOperation();
@@ -521,10 +517,6 @@ function addObject(obj) {
  * \ingroup ecma_simple
  */
 function deleteObject(obj) {
-    if (isFunction(obj.data)) {
-        deleteObject(obj.data().clone());
-    }
-
     if (__simpleUseOp===true) {
         if (isNull(__simpleOp)) {
             __simpleOp = new RAddObjectsOperation();
