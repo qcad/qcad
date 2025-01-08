@@ -149,6 +149,10 @@ LayerDialog.prototype.show = function() {
         this.layer.setLinetypeId(ltId);
         this.layer.setLineweight(lw);
         this.initLayer(this.dialog, this.layer);
+
+        destrDialog(this.dialog);
+        EAction.activateMainWindow();
+
         return this.layer;
     }
 
