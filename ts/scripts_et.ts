@@ -293,7 +293,6 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -918,7 +917,6 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -3217,7 +3215,6 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -11448,7 +11445,6 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12491,7 +12487,7 @@ is already in the list.</source>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation type="unfinished">Vaikimisi väärtus:</translation>
     </message>
@@ -12676,7 +12672,6 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -12714,7 +12709,7 @@ is already in the list.</source>
         <translation type="unfinished">Sisesta sümbol...</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Source</source>
         <translation type="unfinished">Allikas</translation>
     </message>
@@ -12827,16 +12822,6 @@ is already in the list.</source>
         <location line="+29"/>
         <source>Bottom Right</source>
         <translation type="unfinished">All paremal</translation>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>Cancel</source>
-        <translation type="unfinished">Tühista</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation type="unfinished">OK</translation>
     </message>
 </context>
 <context>
@@ -13120,7 +13105,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Liiguta/pöörake</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14620,3 +14605,4 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+

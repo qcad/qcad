@@ -12496,7 +12496,7 @@ is already in the list.</source>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation type="unfinished">Стойност по подразбиране:</translation>
     </message>
@@ -12720,7 +12720,7 @@ is already in the list.</source>
         <translation type="unfinished">Вмъкване на символ...</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Source</source>
         <translation type="unfinished">Източник</translation>
     </message>
@@ -12833,16 +12833,6 @@ is already in the list.</source>
         <location line="+29"/>
         <source>Bottom Right</source>
         <translation type="unfinished">Долен десен ъгъл</translation>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>Cancel</source>
-        <translation type="unfinished">Отмяна на</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation type="unfinished">OK</translation>
     </message>
 </context>
 <context>
@@ -13126,7 +13116,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Преместване/въртене</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14626,3 +14616,4 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+

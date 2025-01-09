@@ -12505,7 +12505,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation type="unfinished">Noklusējuma vērtība:</translation>
     </message>
@@ -12729,7 +12729,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Ievietot simbolu...</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Source</source>
         <translation type="unfinished">Avots</translation>
     </message>
@@ -12842,16 +12842,6 @@ jau ir sarakstā.</translation>
         <location line="+29"/>
         <source>Bottom Right</source>
         <translation type="unfinished">Apakšējā labajā pusē</translation>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>Cancel</source>
-        <translation type="unfinished">Atcelt</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation type="unfinished">LABI</translation>
     </message>
 </context>
 <context>
@@ -13135,7 +13125,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Pārvietot / pagriezt</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14635,3 +14625,4 @@ jau ir sarakstā.</translation>
     </message>
 </context>
 </TS>
+

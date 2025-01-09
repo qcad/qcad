@@ -12508,7 +12508,7 @@ už existuje v zozname.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation>Prednastavené:</translation>
     </message>
@@ -12732,7 +12732,7 @@ už existuje v zozname.</translation>
         <translation>Vložiť Znak...</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Source</source>
         <translation>Zdrojový text</translation>
     </message>
@@ -12845,16 +12845,6 @@ už existuje v zozname.</translation>
         <location line="-58"/>
         <source>Top Right</source>
         <translation>Vpravo Hore</translation>
-    </message>
-    <message>
-        <location line="+291"/>
-        <source>Cancel</source>
-        <translation>Zrušiť</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -13133,12 +13123,12 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Úprava stránky</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Presun/otáčanie</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14638,3 +14628,4 @@ už existuje v zozname.</translation>
     </message>
 </context>
 </TS>
+

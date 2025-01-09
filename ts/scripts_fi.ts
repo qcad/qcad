@@ -12498,7 +12498,7 @@ on jo luettelossa.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation>Oletusarvo:</translation>
     </message>
@@ -12722,7 +12722,7 @@ on jo luettelossa.</translation>
         <translation>Lisää symboli ...</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Source</source>
         <translation>Lähde</translation>
     </message>
@@ -12835,16 +12835,6 @@ on jo luettelossa.</translation>
         <location line="-58"/>
         <source>Top Right</source>
         <translation>Yläoikea</translation>
-    </message>
-    <message>
-        <location line="+291"/>
-        <source>Cancel</source>
-        <translation>Peruuta</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -13128,7 +13118,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Siirrä/Kierrä</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14628,3 +14618,4 @@ on jo luettelossa.</translation>
     </message>
 </context>
 </TS>
+

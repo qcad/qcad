@@ -12487,7 +12487,7 @@ zaten listede.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation type="unfinished">Varsayılan değer:</translation>
     </message>
@@ -12711,7 +12711,7 @@ zaten listede.</translation>
         <translation>Sembol Ekle...</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Source</source>
         <translation>Kaynak</translation>
     </message>
@@ -12824,16 +12824,6 @@ zaten listede.</translation>
         <location line="+29"/>
         <source>Bottom Right</source>
         <translation>Alt Sağ</translation>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>Cancel</source>
-        <translation>İptal</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation>Tamam</translation>
     </message>
 </context>
 <context>
@@ -13117,7 +13107,7 @@ zaten listede.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Taşı/Döndür</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14617,3 +14607,4 @@ zaten listede.</translation>
     </message>
 </context>
 </TS>
+

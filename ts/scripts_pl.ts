@@ -12508,7 +12508,7 @@ jest już na liście.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation>Domyślna wartość:</translation>
     </message>
@@ -12732,7 +12732,7 @@ jest już na liście.</translation>
         <translation>Wstaw symbol...</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Source</source>
         <translation>Źródło</translation>
     </message>
@@ -12845,16 +12845,6 @@ jest już na liście.</translation>
         <location line="+58"/>
         <source>Bottom Right</source>
         <translation>Prawy dolny róg</translation>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>Cancel</source>
-        <translation>Anuluj</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -13133,22 +13123,22 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Modyfikacja</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Przesuń/Obróć</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Kopia</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Liczba kopii:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -13199,7 +13189,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Użyj okna dialogowego dla opcji narzędzia</translation>
     </message>
 </context>
 <context>
@@ -14638,3 +14628,4 @@ jest już na liście.</translation>
     </message>
 </context>
 </TS>
+

@@ -12498,7 +12498,7 @@ is al in de lijst.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation>Standaardwaarde:</translation>
     </message>
@@ -12722,7 +12722,7 @@ is al in de lijst.</translation>
         <translation>Voeg symbool in...</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Source</source>
         <translation>Bron</translation>
     </message>
@@ -12835,16 +12835,6 @@ is al in de lijst.</translation>
         <location line="-58"/>
         <source>Top Right</source>
         <translation>Bovenkant rechts</translation>
-    </message>
-    <message>
-        <location line="+291"/>
-        <source>Cancel</source>
-        <translation>Annuleren</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -13128,12 +13118,12 @@ is al in de lijst.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Verplaatsen/roteren</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Kopie</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -14628,3 +14618,4 @@ is al in de lijst.</translation>
     </message>
 </context>
 </TS>
+

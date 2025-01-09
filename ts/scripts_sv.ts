@@ -12496,7 +12496,7 @@ finns redan i listan.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation>Standardvärde:</translation>
     </message>
@@ -12720,7 +12720,7 @@ finns redan i listan.</translation>
         <translation>Infoga symbol...</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Source</source>
         <translation>Källa</translation>
     </message>
@@ -12833,16 +12833,6 @@ finns redan i listan.</translation>
         <location line="+29"/>
         <source>Bottom Right</source>
         <translation>Längst ner till höger</translation>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>Cancel</source>
-        <translation>Avbryt</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -13126,7 +13116,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Flytta/rotera</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14626,3 +14616,4 @@ finns redan i listan.</translation>
     </message>
 </context>
 </TS>
+

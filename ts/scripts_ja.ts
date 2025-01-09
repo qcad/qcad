@@ -12488,7 +12488,7 @@ is already in the list.</source>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation>デフォルト:</translation>
     </message>
@@ -12712,7 +12712,7 @@ is already in the list.</source>
         <translation>シンボル挿入...</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Source</source>
         <translation>ソース</translation>
     </message>
@@ -12825,16 +12825,6 @@ is already in the list.</source>
         <location line="+58"/>
         <source>Bottom Right</source>
         <translation>下 右</translation>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>Cancel</source>
-        <translation>キャンセル</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -13113,12 +13103,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">修正</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">移動/回転</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -13128,7 +13118,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">部数</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -13179,7 +13169,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">ツールオプションのダイアログを使用する</translation>
     </message>
 </context>
 <context>
@@ -14618,3 +14608,4 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+

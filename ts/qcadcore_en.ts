@@ -317,7 +317,7 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Owned by Reference</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+874"/>
@@ -1245,3 +1245,4 @@
     </message>
 </context>
 </TS>
+

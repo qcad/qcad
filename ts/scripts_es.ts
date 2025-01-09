@@ -12498,7 +12498,7 @@ ya está en la lista.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation>Por defecto:</translation>
     </message>
@@ -12722,7 +12722,7 @@ ya está en la lista.</translation>
         <translation>Insertar símbolo...</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Source</source>
         <translation>Fuente</translation>
     </message>
@@ -12835,16 +12835,6 @@ ya está en la lista.</translation>
         <location line="+58"/>
         <source>Bottom Right</source>
         <translation>Abajo derecha</translation>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>Cancel</source>
-        <translation>Cancelar</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation>Aceptar</translation>
     </message>
 </context>
 <context>
@@ -13128,7 +13118,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Mover/Rotar</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14628,3 +14618,4 @@ ya está en la lista.</translation>
     </message>
 </context>
 </TS>
+

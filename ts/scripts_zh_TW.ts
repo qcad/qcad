@@ -12488,7 +12488,7 @@ is already in the list.</source>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation type="unfinished">默认值：</translation>
     </message>
@@ -12712,7 +12712,7 @@ is already in the list.</source>
         <translation type="unfinished">插入符号...</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Source</source>
         <translation type="unfinished">来源</translation>
     </message>
@@ -12825,16 +12825,6 @@ is already in the list.</source>
         <location line="+29"/>
         <source>Bottom Right</source>
         <translation type="unfinished">右下角</translation>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>Cancel</source>
-        <translation type="unfinished">取消</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation type="unfinished">认可</translation>
     </message>
 </context>
 <context>

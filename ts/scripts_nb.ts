@@ -12498,7 +12498,7 @@ er allerede i listen.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation type="unfinished">Standardverdi:</translation>
     </message>
@@ -12722,7 +12722,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Sett inn symbol...</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Source</source>
         <translation type="unfinished">Kilde</translation>
     </message>
@@ -12835,16 +12835,6 @@ er allerede i listen.</translation>
         <location line="+29"/>
         <source>Bottom Right</source>
         <translation type="unfinished">Nederst til høyre</translation>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>Cancel</source>
-        <translation type="unfinished">Avbryt</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation type="unfinished">OK</translation>
     </message>
 </context>
 <context>
@@ -13128,7 +13118,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Flytt/roter</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14628,3 +14618,4 @@ er allerede i listen.</translation>
     </message>
 </context>
 </TS>
+

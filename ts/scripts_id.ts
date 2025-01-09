@@ -12488,7 +12488,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation type="unfinished">Nilai default:</translation>
     </message>
@@ -12712,7 +12712,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Sisipkan Simbol...</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Source</source>
         <translation type="unfinished">Sumber</translation>
     </message>
@@ -12825,16 +12825,6 @@ sudah ada dalam daftar.</translation>
         <location line="+29"/>
         <source>Bottom Right</source>
         <translation type="unfinished">Kanan bawah</translation>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>Cancel</source>
-        <translation type="unfinished">Batal</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation type="unfinished">BAIKLAH</translation>
     </message>
 </context>
 <context>
@@ -13118,7 +13108,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Pindahkan / Putar</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14618,3 +14608,4 @@ sudah ada dalam daftar.</translation>
     </message>
 </context>
 </TS>
+

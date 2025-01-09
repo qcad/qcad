@@ -540,7 +540,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">ワインディング</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -948,3 +948,4 @@
     </message>
 </context>
 </TS>
+

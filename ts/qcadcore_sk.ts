@@ -319,7 +319,7 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Vo vlastníctve spoločnosti Reference</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
@@ -1245,3 +1245,4 @@
     </message>
 </context>
 </TS>
+

@@ -12506,7 +12506,7 @@ již v seznamu je.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation>Výchozí hodnota:</translation>
     </message>
@@ -12730,7 +12730,7 @@ již v seznamu je.</translation>
         <translation>Vložit symbol</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Source</source>
         <translation>Zdroj</translation>
     </message>
@@ -12843,16 +12843,6 @@ již v seznamu je.</translation>
         <location line="-58"/>
         <source>Top Right</source>
         <translation>Nahoře vpravo</translation>
-    </message>
-    <message>
-        <location line="+291"/>
-        <source>Cancel</source>
-        <translation>Storno</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -13136,7 +13126,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Přesun/otáčení</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14636,3 +14626,4 @@ již v seznamu je.</translation>
     </message>
 </context>
 </TS>
+

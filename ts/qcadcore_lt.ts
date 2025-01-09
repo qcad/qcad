@@ -317,7 +317,7 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Nuosavybės teise priklausanti nuoroda</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+97"/>
@@ -1245,3 +1245,4 @@
     </message>
 </context>
 </TS>
+

@@ -255,7 +255,7 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="+68"/>
         <source>Pixel Unit</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Pixel egység</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -319,7 +319,7 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Tulajdonos: Hivatkozás</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
@@ -333,7 +333,6 @@
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <source>Scale</source>
         <translatorcomment>Blokk beszúrásakor használja, az eredetinél kisebb vagy nagyobb mérethez</translatorcomment>
-        <translation>Lépték</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -344,25 +343,21 @@
         <location line="+1"/>
         <source>Columns</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
-        <translation>Oszlopok</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rows</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
-        <translation>Sorok</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
-        <translation>Oszloptávolság</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
-        <translation>Sortávolság</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -459,7 +454,7 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Fogantyú</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -610,22 +605,22 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Célpont megtekintése</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Overall</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Általános</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Frozen Layers</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Fagyasztott rétegek</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer ID</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Réteg azonosítója</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-7"/>
@@ -673,47 +668,47 @@
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Off is Freeze</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Tab Order</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Tab Sorrend</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Limits</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Minimális határértékek</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Limits</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Maximális határértékek</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Beillesztési alap</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Minimális kiterjedés</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Maximális kiterjedés</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+874"/>
@@ -754,7 +749,6 @@
         <location line="+1"/>
         <source>Arrow size</source>
         <translatorcomment>Nyíl vagy </translatorcomment>
-        <translation>Méretvonal határoló mérete</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -779,19 +773,17 @@
     <message>
         <location line="+1"/>
         <source>Text horizontal</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Vízszintes szöveg</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tick size</source>
         <translatorcomment>A méretvonal végén nyíl helyett használható ferde vonalszakasz mérete</translatorcomment>
-        <translation>Ferde vonalka mérete</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
         <translatorcomment>Azt adja meg, hogy a méretvonalra írt számot pl 1.5 vagy 1 1/2 stb formátumban írja rá</translatorcomment>
-        <translation>Számformátum</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -836,17 +828,17 @@
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Nyílblokk</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 1</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Nyílblokk 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Nyílblokk 2</translation>
     </message>
 </context>
 <context>
@@ -872,7 +864,7 @@
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Metrikus</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1041,7 +1033,7 @@
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Ütés</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1106,12 +1098,12 @@
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Foul</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Foul Rising</translation>
     </message>
 </context>
 <context>
@@ -1253,3 +1245,4 @@
     </message>
 </context>
 </TS>
+

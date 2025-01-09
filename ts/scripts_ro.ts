@@ -12505,7 +12505,7 @@ este deja în listă.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation type="unfinished">Valoarea implicită:</translation>
     </message>
@@ -12729,7 +12729,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Introduceți simbolul...</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Source</source>
         <translation type="unfinished">Sursa</translation>
     </message>
@@ -12842,16 +12842,6 @@ este deja în listă.</translation>
         <location line="+29"/>
         <source>Bottom Right</source>
         <translation type="unfinished">Partea de jos dreapta</translation>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>Cancel</source>
-        <translation type="unfinished">Anulează</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation type="unfinished">OK</translation>
     </message>
 </context>
 <context>
@@ -13135,7 +13125,7 @@ este deja în listă.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Mișcare/Rotare</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14635,3 +14625,4 @@ este deja în listă.</translation>
     </message>
 </context>
 </TS>
+

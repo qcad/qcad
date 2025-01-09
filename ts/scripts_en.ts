@@ -12498,7 +12498,7 @@ is already in the list.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation>Default value:</translation>
     </message>
@@ -12722,7 +12722,7 @@ is already in the list.</translation>
         <translation>Insert Symbol...</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Source</source>
         <translation>Source</translation>
     </message>
@@ -12835,16 +12835,6 @@ is already in the list.</translation>
         <location line="+29"/>
         <source>Bottom Right</source>
         <translation>Bottom Right</translation>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>Cancel</source>
-        <translation>Cancel</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -13128,7 +13118,7 @@ is already in the list.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Move/Rotate</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14628,3 +14618,4 @@ is already in the list.</translation>
     </message>
 </context>
 </TS>
+

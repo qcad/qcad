@@ -12514,7 +12514,7 @@ je že na seznamu.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation>Privzeta vrednost:</translation>
     </message>
@@ -12738,7 +12738,7 @@ je že na seznamu.</translation>
         <translation>Vstavi simbol...</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Source</source>
         <translation>Vir</translation>
     </message>
@@ -12851,16 +12851,6 @@ je že na seznamu.</translation>
         <location line="-58"/>
         <source>Top Right</source>
         <translation>Zgoraj desno</translation>
-    </message>
-    <message>
-        <location line="+291"/>
-        <source>Cancel</source>
-        <translation>Prekliči</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation>Vredu</translation>
     </message>
 </context>
 <context>
@@ -13139,12 +13129,12 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Spremeni</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Premikanje/obračanje</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -13205,7 +13195,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Uporaba pogovornega okna za možnosti orodja</translation>
     </message>
 </context>
 <context>
@@ -14644,3 +14634,4 @@ je že na seznamu.</translation>
     </message>
 </context>
 </TS>
+
