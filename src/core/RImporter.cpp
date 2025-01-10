@@ -69,8 +69,8 @@ void RImporter::importObjectP(QSharedPointer<RObject> object) {
  * Provided for script importers as importObjectP will loose the object ID.
  */
 void RImporter::importObject(RObject* object) {
-    //QSharedPointer<RObject> pObject = QSharedPointer<RObject>(object->clone());
-    QSharedPointer<RObject> pObject = QSharedPointer<RObject>(object);
+    // we have to clone the object here as it might originate from another shared pointer:
+    QSharedPointer<RObject> pObject = object->clone();
     transaction.addObject(pObject, false);
     *object = *pObject.data();
 }

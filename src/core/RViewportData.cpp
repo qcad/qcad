@@ -173,7 +173,7 @@ QList<QSharedPointer<RShape> > RViewportData::getShapes(const RBox& queryBox, bo
     // border:
     QList<RLine> lines = RBox(position, width, height).getLines2d();
     for (int i=0; i<lines.length(); i++) {
-        ret.append(QSharedPointer<RShape>(lines[i].clone()));
+        ret.append(lines[i].clone());
     }
 
     // shapes inside viewport:

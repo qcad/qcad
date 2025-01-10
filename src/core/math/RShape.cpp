@@ -2453,7 +2453,7 @@ QList<QSharedPointer<RShape> > RShape::trim(
     if (samePolyline && isPolylineShape(trimShape)) {
         const RPolyline& polyline = dynamic_cast<const RPolyline&>(trimShape);
         RPolyline pl = polyline.modifyPolylineCorner(*trimmedTrimShape, ending1, i1, *trimmedLimitingShape, ending2, i2);
-        ret.append(QSharedPointer<RShape>(pl.clone()));
+        ret.append(pl.clone());
     }
     else {
         ret.append(trimmedTrimShape);
@@ -2763,7 +2763,7 @@ QSharedPointer<RShape> RShape::ellipseToArcCircleEllipse(const REllipse& ellipse
         }
     }
     else {
-        return QSharedPointer<RShape>(ellipse.clone());
+        return ellipse.clone();
     }
 }
 

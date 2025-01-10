@@ -392,7 +392,7 @@ SvgImporter.prototype.importFile = function(fileName) {
 };
 
 SvgImporter.prototype.importShape = function(shape) {
-    var shapeP;
+    //var shapeP;
 
     if (isArcShape(shape) || isEllipseShape(shape) || isCircleShape(shape)) {
         var t = this.transform;
@@ -403,13 +403,13 @@ SvgImporter.prototype.importShape = function(shape) {
         );
     }
     else {
-        shapeP = shape.getTransformed(this.transform);
-        if (isFunction(shapeP.data)) {
-            shape = shapeP.data();
-        }
-        else {
-            shape = shapeP;
-        }
+        shape = shape.getTransformed(this.transform);
+        // if (isFunction(shapeP.data)) {
+        //     shape = shapeP.data();
+        // }
+        // else {
+        //     shape = shapeP;
+        // }
     }
 
     shape.scale(new RVector(1.0, -1.0));

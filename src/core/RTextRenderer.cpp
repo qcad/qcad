@@ -2133,7 +2133,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
                 RPainterPath path;
                 path.moveTo(line.getStartPoint());
                 path.lineTo(line.getEndPoint());
-                path.addOriginalShape(QSharedPointer<RShape>(line.clone()));
+                path.addOriginalShape(line.clone());
                 preparePathTransform(path, 0.0, 1.0);
                 ppBlock.addPath(path);
                 line = RLine();

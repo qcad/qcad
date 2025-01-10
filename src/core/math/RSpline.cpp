@@ -1929,7 +1929,7 @@ QList<QSharedPointer<RShape> > RSpline::splitAt(const QList<RVector>& points) co
 
     QList<RSpline> subSplines = splitAtPoints(sortedPoints);
     for (int i=0; i<subSplines.length(); i++) {
-        ret.append(QSharedPointer<RShape>(subSplines[i].clone()));
+        ret.append(subSplines[i].clone());
     }
     return ret;
 }

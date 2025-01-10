@@ -1532,7 +1532,7 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
     if (!continuous) {
         if (getEntity()!=NULL && (getEntity()->getType()!=RS::EntitySpline || RSpline::hasProxy())) {
             // we have a spline proxy:
-            RShapesExporter(*this, QList<QSharedPointer<RShape> >() << QSharedPointer<RShape>(spline.clone()), offset);
+            RShapesExporter(*this, QList<QSharedPointer<RShape> >() << spline.clone(), offset);
         }
         else {
             // fallback if we don't have a spline proxy:
