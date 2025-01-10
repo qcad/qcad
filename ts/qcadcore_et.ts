@@ -317,10 +317,10 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-      <translation type="unfinished">Omanik Viide</translation>
+        <translation type="unfinished">Omanik Viide</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+874"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+884"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation type="unfinished">Avastatud ringikujuline (rekursiivne) plokiviitamine:</translation>
     </message>
@@ -1245,4 +1245,3 @@
     </message>
 </context>
 </TS>
-

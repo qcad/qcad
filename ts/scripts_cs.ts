@@ -412,12 +412,12 @@ aby se změny předvoleb projevily.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation>Neplatný poloměr</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>Žádné řešení</translation>
     </message>
@@ -1834,7 +1834,7 @@ Přejete si ho obnovit?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation>Žádné řešení</translation>
     </message>
@@ -3407,7 +3407,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">Další vrchol</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation type="unfinished">uzavřít</translation>
     </message>
@@ -4094,7 +4094,7 @@ již v seznamu je.</translation>
         <translation>Následující vrchol</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation>uzavřít</translation>
     </message>
@@ -8030,7 +8030,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">vrstva</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation>Počáteční nebo koncové mezery.</translation>
     </message>
@@ -11515,7 +11515,7 @@ již v seznamu je.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Alespoň 2 body jsou identické.</translation>
@@ -12730,7 +12730,7 @@ již v seznamu je.</translation>
         <translation>Vložit symbol</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation>Zdroj</translation>
     </message>
@@ -12755,7 +12755,7 @@ již v seznamu je.</translation>
         <translation>Hodnota:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation>Geometrie textu</translation>
     </message>
@@ -12785,7 +12785,7 @@ již v seznamu je.</translation>
         <translation>Zarovnání</translation>
     </message>
     <message>
-        <location line="+311"/>
+        <location line="+305"/>
         <source>Bottom Left</source>
         <translation>Vlevo dole</translation>
     </message>
@@ -13126,7 +13126,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Přesun/otáčení</translation>
+        <translation type="unfinished">Přesun/otáčení</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14626,4 +14626,3 @@ již v seznamu je.</translation>
     </message>
 </context>
 </TS>
-

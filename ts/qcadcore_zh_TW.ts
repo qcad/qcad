@@ -711,7 +711,7 @@
         <translation type="unfinished">null</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+874"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+884"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation type="unfinished">null</translation>
     </message>

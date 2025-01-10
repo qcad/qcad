@@ -317,10 +317,10 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-      <translation type="unfinished">Deținută de referință</translation>
+        <translation type="unfinished">Deținută de referință</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+874"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+884"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation type="unfinished">A fost detectată o trimitere circulară (recursivă) la blocuri:</translation>
     </message>
@@ -1245,4 +1245,3 @@
     </message>
 </context>
 </TS>
-

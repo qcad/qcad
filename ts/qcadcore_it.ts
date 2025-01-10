@@ -324,7 +324,7 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-      <translation type="unfinished">Di proprietà di Riferimento</translation>
+        <translation type="unfinished">Di proprietà di Riferimento</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
@@ -711,7 +711,7 @@
         <translation>Max estensioni</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+874"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+884"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>È stato rilevato un riferimento circolare (ricorsivo) blocco:</translation>
     </message>
@@ -1245,4 +1245,3 @@
     </message>
 </context>
 </TS>
-

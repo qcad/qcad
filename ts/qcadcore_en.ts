@@ -317,10 +317,10 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-      <translation type="unfinished">Owned by Reference</translation>
+        <translation>Owned by Reference</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+874"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+884"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Circular (recursive) block referencing detected:</translation>
     </message>
@@ -1245,4 +1245,3 @@
     </message>
 </context>
 </TS>
-

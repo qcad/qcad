@@ -412,12 +412,12 @@ um die Änderungen zu übernehmen.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation>Ungültiger Radius</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>Keine Lösung</translation>
     </message>
@@ -1834,7 +1834,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation>Keine Lösung</translation>
     </message>
@@ -3406,7 +3406,7 @@ ist bereits in der Liste.</translation>
         <translation>Nächster Eckpunkt</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -4088,7 +4088,7 @@ ist bereits in der Liste.</translation>
         <translation>Nächster Eckpunkt</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -4108,7 +4108,7 @@ ist bereits in der Liste.</translation>
         <translation>arc</translation>
     </message>
     <message>
-        <location line="-459"/>
+        <location line="-452"/>
         <source>First vertex</source>
         <translation>Erster Eckpunkt</translation>
     </message>
@@ -8057,7 +8057,7 @@ ist bereits in der Liste.</translation>
         <translation>layer</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation>Führende oder nachfolgende Leerzeichen.</translation>
     </message>
@@ -11507,7 +11507,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1437"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1434"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>
@@ -12605,7 +12605,7 @@ ist bereits in der Liste.</translation>
         <translation>Einfügen</translation>
     </message>
     <message>
-        <location line="+302"/>
+        <location line="+296"/>
         <source>Attribute Details</source>
         <translation>Attributdetails</translation>
     </message>
@@ -12625,7 +12625,7 @@ ist bereits in der Liste.</translation>
         <translation>Wert:</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+58"/>
         <source>Line Spacing Factor</source>
         <translation>Linienabstand Faktor</translation>
     </message>
@@ -12645,7 +12645,7 @@ ist bereits in der Liste.</translation>
         <translation>Ausrichtung</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+73"/>
         <source>Top Center</source>
         <translation>Oben zentriert</translation>
     </message>
@@ -12775,7 +12775,7 @@ ist bereits in der Liste.</translation>
         <translation>Kubik</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="-978"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="-963"/>
         <source>Main Font</source>
         <translation>Hauptschriftart</translation>
     </message>
@@ -12822,12 +12822,12 @@ ist bereits in der Liste.</translation>
         <translation>Symbol einfügen...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation>Quelltext</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+104"/>
         <source>Text Geometry</source>
         <translation>Textgeometrie</translation>
     </message>
@@ -13113,27 +13113,27 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-        <translation type="unfinished">Modifizieren</translation>
+        <translation>Modifizieren</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Verschieben/Drehen</translation>
+        <translation>Verschieben/Drehen</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopieren</translation>
+        <translation>Kopieren</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Anzahl Kopien:</translation>
+        <translation>Anzahl Kopien:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">Aktueller Layer / Attribute</translation>
+        <translation>Aktueller Layer / Attribute</translation>
     </message>
 </context>
 <context>
@@ -13179,7 +13179,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">Dialog verwenden für Werkzeugoptionen</translation>
+        <translation>Dialog verwenden für Werkzeugoptionen</translation>
     </message>
 </context>
 <context>
@@ -14618,4 +14618,3 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 </TS>
-

@@ -412,12 +412,12 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation type="unfinished">잘못된 반경</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation type="unfinished">솔루션 없음</translation>
     </message>
@@ -1832,7 +1832,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation type="unfinished">솔루션 없음</translation>
     </message>
@@ -3403,7 +3403,7 @@ is already in the list.</source>
         <translation type="unfinished">다음 버텍스</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation type="unfinished">닫기</translation>
     </message>
@@ -4090,7 +4090,7 @@ is already in the list.</source>
         <translation type="unfinished">다음 버텍스</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation type="unfinished">닫기</translation>
     </message>
@@ -8022,7 +8022,7 @@ is already in the list.</source>
         <translation type="unfinished">레이어</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">선행 또는 후행 공백.</translation>
     </message>
@@ -11497,7 +11497,7 @@ is already in the list.</source>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation type="unfinished">최소 두 개의 포인트가 동일합니다.</translation>
@@ -12712,7 +12712,7 @@ is already in the list.</source>
         <translation type="unfinished">기호 삽입...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation type="unfinished">출처</translation>
     </message>
@@ -12737,7 +12737,7 @@ is already in the list.</source>
         <translation type="unfinished">Value:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation type="unfinished">텍스트 지오메트리</translation>
     </message>
@@ -12767,7 +12767,7 @@ is already in the list.</source>
         <translation type="unfinished">정렬</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+41"/>
         <source>Top Left</source>
         <translation type="unfinished">왼쪽 상단</translation>
     </message>
@@ -13108,7 +13108,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">이동/회전</translation>
+        <translation type="unfinished">이동/회전</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14608,4 +14608,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

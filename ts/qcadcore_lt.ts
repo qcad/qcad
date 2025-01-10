@@ -317,7 +317,7 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-      <translation type="unfinished">Nuosavybės teise priklausanti nuoroda</translation>
+        <translation type="unfinished">Nuosavybės teise priklausanti nuoroda</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+97"/>
@@ -711,7 +711,7 @@
         <translation type="unfinished">Sluoksnio ID</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+874"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+884"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation type="unfinished">Aptikta žiedinė (rekursinė) bloko nuoroda:</translation>
     </message>
@@ -1245,4 +1245,3 @@
     </message>
 </context>
 </TS>
-

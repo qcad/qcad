@@ -412,12 +412,12 @@ musíte znovu spustiť QCAD.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation>Neplatný polomer</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>Žiadne riašenie</translation>
     </message>
@@ -1836,7 +1836,7 @@ Prajete si ho obnoviť?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation>Žiadne riešenie</translation>
     </message>
@@ -3409,7 +3409,7 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Ďalší bod</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation type="unfinished">zavrieť</translation>
     </message>
@@ -4096,7 +4096,7 @@ už existuje v zozname.</translation>
         <translation>Ďalší bod</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation>zavrieť</translation>
     </message>
@@ -8032,7 +8032,7 @@ už existuje v zozname.</translation>
         <translation>vrstva</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation>Na začiatku alebo na konci nesmie byť medzera.</translation>
     </message>
@@ -11517,7 +11517,7 @@ už existuje v zozname.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Minimálne dva body sú rovnaké.</translation>
@@ -12732,7 +12732,7 @@ už existuje v zozname.</translation>
         <translation>Vložiť Znak...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation>Zdrojový text</translation>
     </message>
@@ -12757,7 +12757,7 @@ už existuje v zozname.</translation>
         <translation>Hodnota:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation>Konfigurácia textu</translation>
     </message>
@@ -12787,7 +12787,7 @@ už existuje v zozname.</translation>
         <translation>Zarovnanie</translation>
     </message>
     <message>
-        <location line="+311"/>
+        <location line="+305"/>
         <source>Bottom Left</source>
         <translation>Vľavo Dole</translation>
     </message>
@@ -13123,12 +13123,12 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-      <translation type="unfinished">Úprava stránky</translation>
+        <translation type="unfinished">Úprava stránky</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Presun/otáčanie</translation>
+        <translation type="unfinished">Presun/otáčanie</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14628,4 +14628,3 @@ už existuje v zozname.</translation>
     </message>
 </context>
 </TS>
-

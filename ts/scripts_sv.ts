@@ -412,12 +412,12 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation>Ogiltig radie</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>Ingen lösning</translation>
     </message>
@@ -1832,7 +1832,7 @@ Vill du återställa den?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation>Ingen lösning</translation>
     </message>
@@ -3404,7 +3404,7 @@ finns redan i listan.</translation>
         <translation>Nästa topp</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation>stäng</translation>
     </message>
@@ -4091,7 +4091,7 @@ finns redan i listan.</translation>
         <translation>Nästa topp</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation>stäng</translation>
     </message>
@@ -8025,7 +8025,7 @@ finns redan i listan.</translation>
         <translation>skikt</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation>Ledande eller avslutande mellanslag.</translation>
     </message>
@@ -11505,7 +11505,7 @@ finns redan i listan.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Minst två punkter är identiska.</translation>
@@ -12720,7 +12720,7 @@ finns redan i listan.</translation>
         <translation>Infoga symbol...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation>Källa</translation>
     </message>
@@ -12745,7 +12745,7 @@ finns redan i listan.</translation>
         <translation>Värde:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation>Textgeometri</translation>
     </message>
@@ -12775,7 +12775,7 @@ finns redan i listan.</translation>
         <translation>Justering</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+41"/>
         <source>Top Left</source>
         <translation>Överst till vänster</translation>
     </message>
@@ -13116,7 +13116,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Flytta/rotera</translation>
+        <translation type="unfinished">Flytta/rotera</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14616,4 +14616,3 @@ finns redan i listan.</translation>
     </message>
 </context>
 </TS>
-

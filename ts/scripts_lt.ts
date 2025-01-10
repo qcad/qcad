@@ -412,12 +412,12 @@ nuostatos pakeitimai įsigaliotų.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Neteisingas spindulys</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation type="unfinished">Nėra sprendimo</translation>
     </message>
@@ -1833,7 +1833,7 @@ Ar norite jį atkurti?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation type="unfinished">Nėra sprendimo</translation>
     </message>
@@ -3406,7 +3406,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Kita viršūnė</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation type="unfinished">uždaryti</translation>
     </message>
@@ -4093,7 +4093,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Kita viršūnė</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation type="unfinished">uždaryti</translation>
     </message>
@@ -8029,7 +8029,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">sluoksnis</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Pradiniai arba galiniai tarpai.</translation>
     </message>
@@ -11514,7 +11514,7 @@ jau yra sąraše.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation type="unfinished">Bent du taškai yra vienodi.</translation>
@@ -12729,7 +12729,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Įterpti simbolį...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation type="unfinished">Šaltinis</translation>
     </message>
@@ -12754,7 +12754,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Vertė:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation type="unfinished">Teksto geometrija</translation>
     </message>
@@ -12784,7 +12784,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Suderinimas</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+41"/>
         <source>Top Left</source>
         <translation type="unfinished">Viršuje kairėje</translation>
     </message>
@@ -13125,7 +13125,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Perkelti / pasukti</translation>
+        <translation type="unfinished">Perkelti / pasukti</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14625,4 +14625,3 @@ jau yra sąraše.</translation>
     </message>
 </context>
 </TS>
-

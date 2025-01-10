@@ -412,12 +412,12 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Неправильний радіус</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation type="unfinished">Немає рішення</translation>
     </message>
@@ -1833,7 +1833,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation type="unfinished">Немає рішення</translation>
     </message>
@@ -3406,7 +3406,7 @@ is already in the list.</source>
         <translation type="unfinished">Наступна вершина</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation type="unfinished">близький</translation>
     </message>
@@ -4093,7 +4093,7 @@ is already in the list.</source>
         <translation type="unfinished">Наступна вершина</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation type="unfinished">близький</translation>
     </message>
@@ -8029,7 +8029,7 @@ is already in the list.</source>
         <translation type="unfinished">шар</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Початкові або кінцеві пробіли.</translation>
     </message>
@@ -11514,7 +11514,7 @@ is already in the list.</source>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation type="unfinished">Щонайменше два пункти збігаються.</translation>
@@ -12729,7 +12729,7 @@ is already in the list.</source>
         <translation type="unfinished">Вставити символ...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation type="unfinished">Джерело</translation>
     </message>
@@ -12754,7 +12754,7 @@ is already in the list.</source>
         <translation type="unfinished">Цінність:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation type="unfinished">Геометрія тексту</translation>
     </message>
@@ -12784,7 +12784,7 @@ is already in the list.</source>
         <translation type="unfinished">Вирівнювання</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+41"/>
         <source>Top Left</source>
         <translation type="unfinished">Вгорі зліва</translation>
     </message>
@@ -13125,7 +13125,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Переміщення/обертання</translation>
+        <translation type="unfinished">Переміщення/обертання</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14625,4 +14625,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

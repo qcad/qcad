@@ -412,12 +412,12 @@ de wijzigingen door te voeren.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation>Ongeldig straal</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>Geen oplossing</translation>
     </message>
@@ -1834,7 +1834,7 @@ Wilt u deze herstellen?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation>Geen oplossing</translation>
     </message>
@@ -3406,7 +3406,7 @@ is al in de lijst.</translation>
         <translation>Volgende hoekpunt</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -4093,7 +4093,7 @@ is al in de lijst.</translation>
         <translation>Volgende hoekpunt</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -8027,7 +8027,7 @@ is al in de lijst.</translation>
         <translation>laag</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation>Spaties voor of na.</translation>
     </message>
@@ -11507,7 +11507,7 @@ is al in de lijst.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Ten minste twee punten zijn identiek.</translation>
@@ -12722,7 +12722,7 @@ is al in de lijst.</translation>
         <translation>Voeg symbool in...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation>Bron</translation>
     </message>
@@ -12747,7 +12747,7 @@ is al in de lijst.</translation>
         <translation>Waarde:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation>Tekstgeometrie</translation>
     </message>
@@ -12777,7 +12777,7 @@ is al in de lijst.</translation>
         <translation>Uitlijning</translation>
     </message>
     <message>
-        <location line="+311"/>
+        <location line="+305"/>
         <source>Bottom Left</source>
         <translation>Onder links</translation>
     </message>
@@ -13118,12 +13118,12 @@ is al in de lijst.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Verplaatsen/roteren</translation>
+        <translation type="unfinished">Verplaatsen/roteren</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
         <source>Copy</source>
-      <translation type="unfinished">Kopie</translation>
+        <translation type="unfinished">Kopie</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -14618,4 +14618,3 @@ is al in de lijst.</translation>
     </message>
 </context>
 </TS>
-

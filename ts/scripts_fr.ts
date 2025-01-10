@@ -412,12 +412,12 @@ pour appliquer les modifications.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation>Rayon invalide</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>Aucune solution</translation>
     </message>
@@ -1834,7 +1834,7 @@ Voulez-vous le récupérer ?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation>Aucune solution</translation>
     </message>
@@ -3406,7 +3406,7 @@ est déjà dans la liste.</translation>
         <translation>Sommet suivant</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation>fermer</translation>
     </message>
@@ -4088,7 +4088,7 @@ est déjà dans la liste.</translation>
         <translation>Vertex suivant</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation>fermer</translation>
     </message>
@@ -4108,7 +4108,7 @@ est déjà dans la liste.</translation>
         <translation>arc</translation>
     </message>
     <message>
-        <location line="-459"/>
+        <location line="-452"/>
         <source>First vertex</source>
         <translation>Premier vertex</translation>
     </message>
@@ -8057,7 +8057,7 @@ est déjà dans la liste.</translation>
         <translation>calque</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espaces avant ou après.</translation>
     </message>
@@ -11507,7 +11507,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Au moins deux points sont identiques.</translation>
@@ -12722,7 +12722,7 @@ est déjà dans la liste.</translation>
         <translation>Insérer symbole...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation>Source</translation>
     </message>
@@ -12747,7 +12747,7 @@ est déjà dans la liste.</translation>
         <translation>Valeur :</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation>Géométrie du texte</translation>
     </message>
@@ -12777,7 +12777,7 @@ est déjà dans la liste.</translation>
         <translation>Alignement</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+73"/>
         <source>Top Center</source>
         <translation>En haut au centre</translation>
     </message>
@@ -13118,7 +13118,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Déplacer/rotation</translation>
+        <translation type="unfinished">Déplacer/rotation</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14618,4 +14618,3 @@ est déjà dans la liste.</translation>
     </message>
 </context>
 </TS>
-

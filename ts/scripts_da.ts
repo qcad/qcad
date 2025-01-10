@@ -412,12 +412,12 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation>Ugyldig radius</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>Ingen løsning</translation>
     </message>
@@ -1834,7 +1834,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation>Ingen løsning</translation>
     </message>
@@ -3406,7 +3406,7 @@ er allerede på listen.</translation>
         <translation>Næste toppunkt</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation>luk</translation>
     </message>
@@ -4093,7 +4093,7 @@ er allerede på listen.</translation>
         <translation>Næste toppunkt</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation>luk</translation>
     </message>
@@ -8027,7 +8027,7 @@ er allerede på listen.</translation>
         <translation>lag</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation>Foran eller bagud stående mellemrum.</translation>
     </message>
@@ -11507,7 +11507,7 @@ er allerede på listen.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Mindst to punkter er identiske.</translation>
@@ -12722,7 +12722,7 @@ er allerede på listen.</translation>
         <translation>Indsæt symbol...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation>Kilde</translation>
     </message>
@@ -12747,7 +12747,7 @@ er allerede på listen.</translation>
         <translation>Værdi:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation>Tekstgeometri</translation>
     </message>
@@ -12777,7 +12777,7 @@ er allerede på listen.</translation>
         <translation>Tilpasning</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+41"/>
         <source>Top Left</source>
         <translation>Øverst til venstre</translation>
     </message>
@@ -13118,7 +13118,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Flyt/drej</translation>
+        <translation type="unfinished">Flyt/drej</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14618,4 +14618,3 @@ er allerede på listen.</translation>
     </message>
 </context>
 </TS>
-

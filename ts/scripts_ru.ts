@@ -412,12 +412,12 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation>Недопустимый радиус</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>Нет решения</translation>
     </message>
@@ -1836,7 +1836,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation>Нет решения</translation>
     </message>
@@ -3409,7 +3409,7 @@ is already in the list.</source>
         <translation type="unfinished">Следующая вершина</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation type="unfinished">закрыть</translation>
     </message>
@@ -4096,7 +4096,7 @@ is already in the list.</source>
         <translation>Следующая вершина</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation>закрыть</translation>
     </message>
@@ -8032,7 +8032,7 @@ is already in the list.</source>
         <translation>слой</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation>Начальные или завершающие пробелы.</translation>
     </message>
@@ -11517,7 +11517,7 @@ is already in the list.</source>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>По крайней мере две точки идентичны.</translation>
@@ -12732,7 +12732,7 @@ is already in the list.</source>
         <translation>Вставить символ...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation>Источник</translation>
     </message>
@@ -12757,7 +12757,7 @@ is already in the list.</source>
         <translation>Значение:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation>Геометрия текста</translation>
     </message>
@@ -12787,7 +12787,7 @@ is already in the list.</source>
         <translation>Выравнивание</translation>
     </message>
     <message>
-        <location line="+311"/>
+        <location line="+305"/>
         <source>Bottom Left</source>
         <translation>Снизу слева</translation>
     </message>
@@ -13128,7 +13128,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Перемещение/поворот</translation>
+        <translation type="unfinished">Перемещение/поворот</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14628,4 +14628,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

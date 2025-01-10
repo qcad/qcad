@@ -412,12 +412,12 @@ aby wprowadzić zmiany preferencji.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation>Nieprawidłowy promień</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>Brak rozwiązania</translation>
     </message>
@@ -1836,7 +1836,7 @@ Czy chcesz go odzyskać?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation>Brak rozwiązania</translation>
     </message>
@@ -3409,7 +3409,7 @@ jest już na liście.</translation>
         <translation>Następny wierzchołek</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation>zamknij</translation>
     </message>
@@ -4096,7 +4096,7 @@ jest już na liście.</translation>
         <translation>Następny wierzchołek</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation>zamknij</translation>
     </message>
@@ -8032,7 +8032,7 @@ jest już na liście.</translation>
         <translation>warstwa</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation>Poprzedzające lub końcowe odstępy.</translation>
     </message>
@@ -11517,7 +11517,7 @@ jest już na liście.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Co najmniej dwa punkty są identyczne.</translation>
@@ -12732,7 +12732,7 @@ jest już na liście.</translation>
         <translation>Wstaw symbol...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation>Źródło</translation>
     </message>
@@ -12757,7 +12757,7 @@ jest już na liście.</translation>
         <translation>Wartość:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation>Geometria tekstu</translation>
     </message>
@@ -12787,7 +12787,7 @@ jest już na liście.</translation>
         <translation>Wyrównanie</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+73"/>
         <source>Top Center</source>
         <translation>Górne Centrum</translation>
     </message>
@@ -13123,22 +13123,22 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-      <translation type="unfinished">Modyfikacja</translation>
+        <translation type="unfinished">Modyfikacja</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Przesuń/Obróć</translation>
+        <translation type="unfinished">Przesuń/Obróć</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
         <source>Copy</source>
-      <translation type="unfinished">Kopia</translation>
+        <translation type="unfinished">Kopia</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-      <translation type="unfinished">Liczba kopii:</translation>
+        <translation type="unfinished">Liczba kopii:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -13189,7 +13189,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-      <translation type="unfinished">Użyj okna dialogowego dla opcji narzędzia</translation>
+        <translation type="unfinished">Użyj okna dialogowego dla opcji narzędzia</translation>
     </message>
 </context>
 <context>
@@ -14628,4 +14628,3 @@ jest już na liście.</translation>
     </message>
 </context>
 </TS>
-

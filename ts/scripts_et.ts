@@ -293,6 +293,7 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -410,12 +411,12 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Vale raadius</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation type="unfinished">Lahendus puudub</translation>
     </message>
@@ -917,6 +918,7 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -1828,7 +1830,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation type="unfinished">Lahendus puudub</translation>
     </message>
@@ -3215,6 +3217,7 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3397,7 +3400,7 @@ is already in the list.</source>
         <translation type="unfinished">Järgmine tipp</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation type="unfinished">sulge</translation>
     </message>
@@ -4084,7 +4087,7 @@ is already in the list.</source>
         <translation type="unfinished">Järgmine tipp</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation type="unfinished">sulge</translation>
     </message>
@@ -8018,7 +8021,7 @@ is already in the list.</source>
         <translation type="unfinished">kiht</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Ees- või tagapool olevad tühikud.</translation>
     </message>
@@ -11445,6 +11448,7 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -11496,7 +11500,7 @@ is already in the list.</source>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation type="unfinished">Vähemalt kaks punkti on identsed.</translation>
@@ -12672,6 +12676,7 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -12709,7 +12714,7 @@ is already in the list.</source>
         <translation type="unfinished">Sisesta sümbol...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation type="unfinished">Allikas</translation>
     </message>
@@ -12734,7 +12739,7 @@ is already in the list.</source>
         <translation type="unfinished">Väärtus:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation type="unfinished">Teksti geomeetria</translation>
     </message>
@@ -12764,7 +12769,7 @@ is already in the list.</source>
         <translation type="unfinished">Kohandamine</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+41"/>
         <source>Top Left</source>
         <translation type="unfinished">Ülemine vasakpoolne</translation>
     </message>
@@ -13105,7 +13110,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Liiguta/pöörake</translation>
+        <translation type="unfinished">Liiguta/pöörake</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14605,4 +14610,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

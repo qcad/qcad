@@ -4,7 +4,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/entity/RImageEntity.cpp" line="+92"/>
+        <location filename="../src/entity/RImageEntity.cpp" line="+88"/>
         <source>File</source>
         <translation>Fichier</translation>
     </message>
@@ -85,7 +85,7 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+101"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+97"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="-18"/>
         <location line="+4"/>
@@ -345,7 +345,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-      <translation type="unfinished">Enroulement</translation>
+        <translation type="unfinished">Enroulement</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -948,4 +948,3 @@
     </message>
 </context>
 </TS>
-

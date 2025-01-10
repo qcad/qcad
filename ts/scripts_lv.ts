@@ -412,12 +412,12 @@ lai stātos spēkā preferenču izmaiņas.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Nederīgs rādiuss</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation type="unfinished">Nav risinājuma</translation>
     </message>
@@ -1833,7 +1833,7 @@ Vai vēlaties to atjaunot?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation type="unfinished">Nav risinājuma</translation>
     </message>
@@ -3406,7 +3406,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Nākamā virsotne</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation type="unfinished">aizvērt</translation>
     </message>
@@ -4093,7 +4093,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Nākamā virsotne</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation type="unfinished">aizvērt</translation>
     </message>
@@ -8029,7 +8029,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">slānis</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Vadošās vai aizmugurējās atstarpes.</translation>
     </message>
@@ -11514,7 +11514,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation type="unfinished">Vismaz divi punkti ir identiski.</translation>
@@ -12729,7 +12729,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Ievietot simbolu...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation type="unfinished">Avots</translation>
     </message>
@@ -12754,7 +12754,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Vērtība:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation type="unfinished">Teksta ģeometrija</translation>
     </message>
@@ -12784,7 +12784,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Saskaņošana</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+41"/>
         <source>Top Left</source>
         <translation type="unfinished">Augšējā kreisajā pusē</translation>
     </message>
@@ -13125,7 +13125,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Pārvietot / pagriezt</translation>
+        <translation type="unfinished">Pārvietot / pagriezt</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14625,4 +14625,3 @@ jau ir sarakstā.</translation>
     </message>
 </context>
 </TS>
-

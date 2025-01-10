@@ -412,12 +412,12 @@ modificările preferințelor să intre în vigoare.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Raza invalidă</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation type="unfinished">Nici o soluție</translation>
     </message>
@@ -1833,7 +1833,7 @@ Doriți să îl recuperați?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation type="unfinished">Nici o soluție</translation>
     </message>
@@ -3406,7 +3406,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Vertexul următor</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation type="unfinished">închideți</translation>
     </message>
@@ -4093,7 +4093,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Vertexul următor</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation type="unfinished">închideți</translation>
     </message>
@@ -8029,7 +8029,7 @@ este deja în listă.</translation>
         <translation type="unfinished">strat</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Spații la început sau la sfârșit.</translation>
     </message>
@@ -11514,7 +11514,7 @@ este deja în listă.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation type="unfinished">Cel puțin două puncte sunt identice.</translation>
@@ -12729,7 +12729,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Introduceți simbolul...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation type="unfinished">Sursa</translation>
     </message>
@@ -12754,7 +12754,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Valoare:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation type="unfinished">Text Geometrie</translation>
     </message>
@@ -12784,7 +12784,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Aliniere</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+41"/>
         <source>Top Left</source>
         <translation type="unfinished">În stânga sus</translation>
     </message>
@@ -13125,7 +13125,7 @@ este deja în listă.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Mișcare/Rotare</translation>
+        <translation type="unfinished">Mișcare/Rotare</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14625,4 +14625,3 @@ este deja în listă.</translation>
     </message>
 </context>
 </TS>
-

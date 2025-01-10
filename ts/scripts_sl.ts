@@ -412,12 +412,12 @@ da bodo spremembe začele delovat.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation>Neveljavni polmer</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>Ni rešitve</translation>
     </message>
@@ -1834,7 +1834,7 @@ Ali jo želite obnoviti?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation>Ni rešitve</translation>
     </message>
@@ -3408,7 +3408,7 @@ je že na seznamu.</translation>
         <translation type="unfinished">Naslednji lom</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation type="unfinished">zapri</translation>
     </message>
@@ -4095,7 +4095,7 @@ je že na seznamu.</translation>
         <translation>Naslednji lom</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation>zapri</translation>
     </message>
@@ -8033,7 +8033,7 @@ je že na seznamu.</translation>
         <translation>plast</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation>Presledki spredaj ali zadaj.</translation>
     </message>
@@ -11523,7 +11523,7 @@ je že na seznamu.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vsaj dve točki sta identični.</translation>
@@ -12738,7 +12738,7 @@ je že na seznamu.</translation>
         <translation>Vstavi simbol...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation>Vir</translation>
     </message>
@@ -12763,7 +12763,7 @@ je že na seznamu.</translation>
         <translation>Vrednost:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation>Geometrija besedila</translation>
     </message>
@@ -12793,7 +12793,7 @@ je že na seznamu.</translation>
         <translation>Poravnava</translation>
     </message>
     <message>
-        <location line="+311"/>
+        <location line="+305"/>
         <source>Bottom Left</source>
         <translation>Desno spodaj</translation>
     </message>
@@ -13129,12 +13129,12 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-      <translation type="unfinished">Spremeni</translation>
+        <translation type="unfinished">Spremeni</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Premikanje/obračanje</translation>
+        <translation type="unfinished">Premikanje/obračanje</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -13195,7 +13195,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-      <translation type="unfinished">Uporaba pogovornega okna za možnosti orodja</translation>
+        <translation type="unfinished">Uporaba pogovornega okna za možnosti orodja</translation>
     </message>
 </context>
 <context>
@@ -14634,4 +14634,3 @@ je že na seznamu.</translation>
     </message>
 </context>
 </TS>
-

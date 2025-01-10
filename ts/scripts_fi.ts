@@ -412,12 +412,12 @@ asetuksien muutokset astuvat voimaan.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation>Virheellinen säde</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>Ei ratkaisua</translation>
     </message>
@@ -1834,7 +1834,7 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation>Ei ratkaisua</translation>
     </message>
@@ -3406,7 +3406,7 @@ on jo luettelossa.</translation>
         <translation>Seuraava huippu</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation>sulje</translation>
     </message>
@@ -4093,7 +4093,7 @@ on jo luettelossa.</translation>
         <translation>Seuraava kärkipiste</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation>sulje</translation>
     </message>
@@ -8027,7 +8027,7 @@ on jo luettelossa.</translation>
         <translation>taso</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation>Edeltävät tai lopussa olevat välilyönnit.</translation>
     </message>
@@ -11507,7 +11507,7 @@ on jo luettelossa.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vähintään kaksi pistettä ovat samat.</translation>
@@ -12722,7 +12722,7 @@ on jo luettelossa.</translation>
         <translation>Lisää symboli ...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation>Lähde</translation>
     </message>
@@ -12747,7 +12747,7 @@ on jo luettelossa.</translation>
         <translation>Arvo:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation>Tekstin geometria</translation>
     </message>
@@ -12777,7 +12777,7 @@ on jo luettelossa.</translation>
         <translation>Tasaus</translation>
     </message>
     <message>
-        <location line="+311"/>
+        <location line="+305"/>
         <source>Bottom Left</source>
         <translation>Alavasen</translation>
     </message>
@@ -13118,7 +13118,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Siirrä/Kierrä</translation>
+        <translation type="unfinished">Siirrä/Kierrä</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14618,4 +14618,3 @@ on jo luettelossa.</translation>
     </message>
 </context>
 </TS>
-

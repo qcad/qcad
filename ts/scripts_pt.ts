@@ -412,12 +412,12 @@ para que as mudanças de preferências entrem em vigor.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation>Raio inválido</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>Nenhuma solução</translation>
     </message>
@@ -1834,7 +1834,7 @@ Você deseja recuperá-lo?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation>Nenhuma solução</translation>
     </message>
@@ -3406,7 +3406,7 @@ já se encontra na lista.</translation>
         <translation>Próximo vértice</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation>encerre</translation>
     </message>
@@ -4093,7 +4093,7 @@ já se encontra na lista.</translation>
         <translation>Próximo vértice</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation>encerre</translation>
     </message>
@@ -8027,7 +8027,7 @@ já se encontra na lista.</translation>
         <translation>camada</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espaços à esquerda ou à direita.</translation>
     </message>
@@ -11507,7 +11507,7 @@ já se encontra na lista.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Pelo menos dois pontos são idênticos.</translation>
@@ -12722,7 +12722,7 @@ já se encontra na lista.</translation>
         <translation>Inserir Símbolo...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation>Fonte</translation>
     </message>
@@ -12747,7 +12747,7 @@ já se encontra na lista.</translation>
         <translation>Valor:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation>Geometria de Texto</translation>
     </message>
@@ -12777,7 +12777,7 @@ já se encontra na lista.</translation>
         <translation>Alinhamento</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+73"/>
         <source>Top Center</source>
         <translation>Centro superior</translation>
     </message>
@@ -13118,12 +13118,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Mover/Rotar</translation>
+        <translation type="unfinished">Mover/Rotar</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
         <source>Copy</source>
-      <translation type="unfinished">Cópia</translation>
+        <translation type="unfinished">Cópia</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -14618,4 +14618,3 @@ já se encontra na lista.</translation>
     </message>
 </context>
 </TS>
-

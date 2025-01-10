@@ -412,12 +412,12 @@ agar perubahan preferensi dapat diterapkan.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Radius tidak valid</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation type="unfinished">Tidak ada solusi</translation>
     </message>
@@ -1832,7 +1832,7 @@ Apakah Anda ingin memulihkannya?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation type="unfinished">Tidak ada solusi</translation>
     </message>
@@ -3403,7 +3403,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Simpul berikutnya</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation type="unfinished">tutup</translation>
     </message>
@@ -4090,7 +4090,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Simpul berikutnya</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation type="unfinished">tutup</translation>
     </message>
@@ -8022,7 +8022,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">lapisan</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Spasi di depan atau di belakang spasi.</translation>
     </message>
@@ -11497,7 +11497,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation type="unfinished">Paling tidak, ada dua poin yang identik.</translation>
@@ -12712,7 +12712,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Sisipkan Simbol...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation type="unfinished">Sumber</translation>
     </message>
@@ -12737,7 +12737,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Nilai:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation type="unfinished">Geometri Teks</translation>
     </message>
@@ -12767,7 +12767,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Penjajaran</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+41"/>
         <source>Top Left</source>
         <translation type="unfinished">Kiri Atas</translation>
     </message>
@@ -13108,7 +13108,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Pindahkan / Putar</translation>
+        <translation type="unfinished">Pindahkan / Putar</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14608,4 +14608,3 @@ sudah ada dalam daftar.</translation>
     </message>
 </context>
 </TS>
-

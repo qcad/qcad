@@ -412,12 +412,12 @@ the preference changes to take effect.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation>Invalid radius</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>No solution</translation>
     </message>
@@ -1834,7 +1834,7 @@ Do you wish to recover it?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation>No solution</translation>
     </message>
@@ -3406,7 +3406,7 @@ is already in the list.</translation>
         <translation>Next vertex</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -4093,7 +4093,7 @@ is already in the list.</translation>
         <translation>Next vertex</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -8027,7 +8027,7 @@ is already in the list.</translation>
         <translation>layer</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation>Leading or trailing spaces.</translation>
     </message>
@@ -11507,7 +11507,7 @@ is already in the list.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>At least two points are identical.</translation>
@@ -12722,7 +12722,7 @@ is already in the list.</translation>
         <translation>Insert Symbol...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation>Source</translation>
     </message>
@@ -12747,7 +12747,7 @@ is already in the list.</translation>
         <translation>Value:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation>Text Geometry</translation>
     </message>
@@ -12777,7 +12777,7 @@ is already in the list.</translation>
         <translation>Alignment</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+41"/>
         <source>Top Left</source>
         <translation>Top Left</translation>
     </message>
@@ -13113,27 +13113,27 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-        <translation type="unfinished">Modify</translation>
+        <translation>Modify</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Move/Rotate</translation>
+        <translation>Move/Rotate</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
         <source>Copy</source>
-        <translation type="unfinished">Copy</translation>
+        <translation>Copy</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Number of Copies:</translation>
+        <translation>Number of Copies:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">Use Current Layer and Attributes</translation>
+        <translation>Use Current Layer and Attributes</translation>
     </message>
 </context>
 <context>
@@ -13179,7 +13179,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">Use dialog for tool options</translation>
+        <translation>Use dialog for tool options</translation>
     </message>
 </context>
 <context>
@@ -14618,4 +14618,3 @@ is already in the list.</translation>
     </message>
 </context>
 </TS>
-

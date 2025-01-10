@@ -52,9 +52,9 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+101"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+97"/>
         <location line="+3"/>
-        <location filename="../src/entity/RImageEntity.cpp" line="+94"/>
+        <location filename="../src/entity/RImageEntity.cpp" line="+90"/>
         <location line="+4"/>
         <location line="+3"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+85"/>
@@ -551,7 +551,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-      <translation type="unfinished">Navijanje</translation>
+        <translation type="unfinished">Navijanje</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -948,4 +948,3 @@
     </message>
 </context>
 </TS>
-

@@ -412,12 +412,12 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation>Geçersiz yarıçap</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>Çözüm yok</translation>
     </message>
@@ -1831,7 +1831,7 @@ Kurtarmak ister misiniz?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation>Çözüm yok</translation>
     </message>
@@ -3402,7 +3402,7 @@ zaten listede.</translation>
         <translation type="unfinished">Sonraki tepe</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation type="unfinished">kapat</translation>
     </message>
@@ -4089,7 +4089,7 @@ zaten listede.</translation>
         <translation type="unfinished">Sonraki tepe</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation>kapat</translation>
     </message>
@@ -8021,7 +8021,7 @@ zaten listede.</translation>
         <translation type="unfinished">katman</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Başında veya sonundaki boşluklar.</translation>
     </message>
@@ -11496,7 +11496,7 @@ zaten listede.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation type="unfinished">En az iki nokta aynıdır.</translation>
@@ -12711,7 +12711,7 @@ zaten listede.</translation>
         <translation>Sembol Ekle...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation>Kaynak</translation>
     </message>
@@ -12736,7 +12736,7 @@ zaten listede.</translation>
         <translation type="unfinished">Değer:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation type="unfinished">Metin Geometrisi</translation>
     </message>
@@ -12766,7 +12766,7 @@ zaten listede.</translation>
         <translation>Hizalanma</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+41"/>
         <source>Top Left</source>
         <translation>Üst Sol</translation>
     </message>
@@ -13107,7 +13107,7 @@ zaten listede.</translation>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Taşı/Döndür</translation>
+        <translation type="unfinished">Taşı/Döndür</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14607,4 +14607,3 @@ zaten listede.</translation>
     </message>
 </context>
 </TS>
-

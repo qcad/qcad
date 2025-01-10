@@ -412,12 +412,12 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Μη έγκυρη ακτίνα</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation type="unfinished">Δεν υπάρχει λύση</translation>
     </message>
@@ -1832,7 +1832,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation type="unfinished">Δεν υπάρχει λύση</translation>
     </message>
@@ -3404,7 +3404,7 @@ is already in the list.</source>
         <translation type="unfinished">Επόμενη κορυφή</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation type="unfinished">close</translation>
     </message>
@@ -4091,7 +4091,7 @@ is already in the list.</source>
         <translation type="unfinished">Επόμενη κορυφή</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+424"/>
         <source>close</source>
         <translation type="unfinished">close</translation>
     </message>
@@ -8025,7 +8025,7 @@ is already in the list.</source>
         <translation type="unfinished">στρώμα</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Επικεφαλής ή πίσω διαστήματα.</translation>
     </message>
@@ -11505,7 +11505,7 @@ is already in the list.</source>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation type="unfinished">Τουλάχιστον δύο σημεία είναι πανομοιότυπα.</translation>
@@ -12720,7 +12720,7 @@ is already in the list.</source>
         <translation type="unfinished">Εισαγωγή συμβόλου...</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation type="unfinished">Πηγή</translation>
     </message>
@@ -12745,7 +12745,7 @@ is already in the list.</source>
         <translation type="unfinished">Αξία:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation type="unfinished">Γεωμετρία κειμένου</translation>
     </message>
@@ -12775,7 +12775,7 @@ is already in the list.</source>
         <translation type="unfinished">Ευθυγράμμιση</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+41"/>
         <source>Top Left</source>
         <translation type="unfinished">Επάνω αριστερά</translation>
     </message>
@@ -13116,7 +13116,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-      <translation type="unfinished">Μετακίνηση/Περιστροφή</translation>
+        <translation type="unfinished">Μετακίνηση/Περιστροφή</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -14616,4 +14616,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

@@ -52,9 +52,9 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+101"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+97"/>
         <location line="+3"/>
-        <location filename="../src/entity/RImageEntity.cpp" line="+94"/>
+        <location filename="../src/entity/RImageEntity.cpp" line="+90"/>
         <location line="+4"/>
         <location line="+3"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+85"/>
@@ -282,6 +282,7 @@
         <location line="+1"/>
         <source>Sweep Angle</source>
         <translatorcomment>A megrajzolt ív hossza</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -303,17 +304,18 @@
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+96"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+101"/>
         <source>Tag</source>
-      <translation type="unfinished">Címke</translation>
+        <translation type="unfinished">Címke</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-      <translation type="unfinished">Prompt</translation>
+        <translation type="unfinished">Prompt</translation>
     </message>
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
         <source>Circumference</source>
         <translatorcomment>Kör kerülete</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-10"/>
@@ -342,6 +344,7 @@
         <location line="+1"/>
         <source>Line 1 Start</source>
         <translatorcomment>Szög méretvonalának darabja</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
@@ -408,6 +411,7 @@
         <location line="+1"/>
         <source>Defining Point</source>
         <translatorcomment>Ennek a pontnak írja ki az ordináta &quot;méretvonal&quot; az egyik koordinátájtát (abszcisszát(X) vagy ordinátát(Y))</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -447,7 +451,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Definition Point</source>
-      <translation type="unfinished">Meghatározási pont</translation>
+        <translation type="unfinished">Meghatározási pont</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -551,7 +555,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-      <translation type="unfinished">Tekercselés</translation>
+        <translation type="unfinished">Tekercselés</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -641,13 +645,13 @@
         <location line="+2"/>
         <location line="+1"/>
         <source>U</source>
-      <translation type="unfinished">U</translation>
+        <translation type="unfinished">U</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
-      <translation type="unfinished">V</translation>
+        <translation type="unfinished">V</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -814,6 +818,7 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
         <source>Closed Periodic</source>
         <translatorcomment>Spline esetén a körbezártság</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -876,7 +881,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Base Point</source>
-      <translation type="unfinished">Bázispont</translation>
+        <translation type="unfinished">Bázispont</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -886,7 +891,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Second Point</source>
-      <translation type="unfinished">Második pont</translation>
+        <translation type="unfinished">Második pont</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -896,56 +901,55 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction Vector</source>
-      <translation type="unfinished">Irányvektor</translation>
+        <translation type="unfinished">Irányvektor</translation>
     </message>
     <message>
         <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
-      <translation type="unfinished">Rögzített szög</translation>
+        <translation type="unfinished">Rögzített szög</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="-3"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
         <source>Invisible</source>
-      <translation type="unfinished">Láthatatlan</translation>
+        <translation type="unfinished">Láthatatlan</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+191"/>
         <source>Arc Symbol Type</source>
-      <translation type="unfinished">Ív szimbólum típusa</translation>
+        <translation type="unfinished">Ív szimbólum típusa</translation>
     </message>
     <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-      <translation type="unfinished">Helyszín</translation>
+        <translation type="unfinished">Helyszín</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-      <translation type="unfinished">Irány</translation>
+        <translation type="unfinished">Irány</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text</source>
-      <translation type="unfinished">Szöveg</translation>
+        <translation type="unfinished">Szöveg</translation>
     </message>
     <message>
         <location filename="../src/entity/RLineEntity.cpp" line="-7"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-      <translation type="unfinished">Középső pont</translation>
+        <translation type="unfinished">Középső pont</translation>
     </message>
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
         <source>Frame</source>
-      <translation type="unfinished">Keret</translation>
+        <translation type="unfinished">Keret</translation>
     </message>
 </context>
 </TS>
-
