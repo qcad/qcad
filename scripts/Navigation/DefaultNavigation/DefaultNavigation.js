@@ -347,8 +347,6 @@ DefaultNavigation.prototype.tabletEvent = function(event) {
  * Pans the current view.
  */
 DefaultNavigation.prototype.panGestureEvent = function(gesture) {
-    qDebug("DefaultNavigation.prototype.panGestureEvent");
-
     if (DefaultNavigation.panGesture===false) {
         return;
     }
@@ -359,13 +357,11 @@ DefaultNavigation.prototype.panGestureEvent = function(gesture) {
 
     switch (gesture.state) {
         case Qt.GestureStarted:
-            qDebug("DefaultNavigation.prototype.panGestureEvent: gesture started");
             this.lastCursor = this.view.getCursor();
             this.view.setCursor(new QCursor(Qt.OpenHandCursor));
             break;
 
         case Qt.GestureUpdated:
-            qDebug("DefaultNavigation.prototype.panGestureEvent: gesture updated");
             this.view.setCursor(new QCursor(Qt.ClosedHandCursor));
             break;
 
@@ -377,7 +373,6 @@ DefaultNavigation.prototype.panGestureEvent = function(gesture) {
     }
 
     var delta = gesture.delta;
-    qDebug("DefaultNavigation.prototype.panGestureEvent: delta:" + delta.x() + " / " + delta.y());
     this.view.pan(new RVector(delta.x(), delta.y()));
     this.view.simulateMouseMoveEvent();
 };
