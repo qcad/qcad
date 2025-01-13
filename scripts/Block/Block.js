@@ -26,6 +26,7 @@
  */
 include("scripts/EAction.js");
 include("scripts/Widgets/BlockList/BlockList.js");
+include("scripts/File/Print/Print.js");
 
 /**
  * \class Block
@@ -209,7 +210,16 @@ Block.editBlock = function(di, blockName) {
         var blockZoomOffset = viewWidget.property("BlockZoomOffset_" + blockId);
 
         if (isNull(blockZoomFactor) || isNull(blockZoomOffset)) {
-            view.autoZoom(-1, true);
+            var block = doc.queryBlock(blockId);
+
+            if (block.hasLayout()) {
+                // block is layout block: zoom to page:
+                var pBox = Print.getPaperBox(doc);
+                view.zoomTo(pBox, 50);
+            }
+            else {
+                view.autoZoom(-1, true);
+            }
         }
         else {
             view.setFactor(blockZoomFactor);
