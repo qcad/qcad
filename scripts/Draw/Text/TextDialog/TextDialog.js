@@ -230,7 +230,7 @@ TextDialog.prototype.show =  function(textDataIn) {
         cbSimpleText.visible = false;
         this.tabWidget.removeTab(1);
         this.tabWidget.removeTab(0);
-        this.dialog.resize(0,0);
+        this.dialog.resize(550,550);
 
         if (this.mode === TextDialog.Mode.AttributeDefinition) {
             this.dialog.windowTitle = entityTypeToString(RS.EntityAttributeDefinition, false);
