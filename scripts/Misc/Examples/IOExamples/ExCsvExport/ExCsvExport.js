@@ -67,6 +67,7 @@ ExCsvExport.prototype.beginEvent = function() {
 
     // export points to CSV:
     var ids = document.queryAllEntities();
+    ids = di.getStorage().orderBackToFront(ids);
     for (var i=0; i<ids.length; i++) {
         var id = ids[i];
         var entity = document.queryEntity(id);
