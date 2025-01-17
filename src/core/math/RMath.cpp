@@ -24,6 +24,7 @@
 #endif
 
 #include <complex>
+#include <cerrno>
 
 #if QT_VERSION >= 0x060000
 #  include <QJSEngine>

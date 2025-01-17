@@ -26,7 +26,6 @@
 
 #include <cstdio>
 #include <cmath>
-#include <cerrno>
 #include <limits>
 
 #include "RVector.h"
