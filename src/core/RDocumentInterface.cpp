@@ -48,6 +48,7 @@
 #include "RSnap.h"
 #include "RSnapRestriction.h"
 #include "RSpatialIndexSimple.h"
+#include "RTabletEvent.h"
 #include "RTransaction.h"
 #include "RWheelEvent.h"
 

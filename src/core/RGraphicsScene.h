@@ -22,22 +22,22 @@
 
 #include "core_global.h"
 
-#include <QCursor>
 #include <QDebug>
 
-#include "RDebug.h"
 #include "REntity.h"
 #include "RExporter.h"
-#include "RGraphicsView.h"
-#include "RGraphicsSceneDrawable.h"
-#include "RMouseEvent.h"
-#include "RSpatialIndex.h"
-#include "RTabletEvent.h"
-//#include "RTextLabel.h"
-#include "RWheelEvent.h"
 
 class RDocumentInterface;
-
+class RGraphicsSceneDrawable;
+class RGraphicsView;
+class RMouseEvent;
+class RTabletEvent;
+class RTerminateEvent;
+class RWheelEvent;
+class QCursor;
+class QPanGesture;
+class QPinchGesture;
+class QSwipeGesture;
 
 
 /**
