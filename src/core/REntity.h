@@ -23,24 +23,18 @@
 #include "core_global.h"
 
 #include <QList>
-#include <QStack>
 
 #include "RBox.h"
 #include "RColor.h"
-#include "RDebug.h"
 #include "REntityData.h"
 #include "RLayer.h"
 #include "RLineweight.h"
-#include "RMatrix.h"
 #include "RObject.h"
 #include "RPropertyAttributes.h"
 #include "RPropertyTypeId.h"
 #include "RVector.h"
-#include "RExplodable.h"
 
 class RDocument;
-class REntity;
-class RBlockReferenceEntity;
 class RExporter;
 class RViewportData;
 
