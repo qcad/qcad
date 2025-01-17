@@ -43,6 +43,7 @@
 #include "RView.h"
 #include "RViewportEntity.h"
 
+class RDimStyle;
 class RDocument;
 
 #ifndef RDEFAULT_QSTRING

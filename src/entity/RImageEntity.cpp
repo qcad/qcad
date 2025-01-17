@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RDebug.h"
 #include "RExporter.h"
 #include "RImageEntity.h"
 

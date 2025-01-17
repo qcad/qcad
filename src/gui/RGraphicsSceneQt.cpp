@@ -24,6 +24,7 @@
 #endif
 
 #include "RBlockReferenceEntity.h"
+#include "RDocument.h"
 #include "REntity.h"
 #include "RGraphicsSceneQt.h"
 #include "RGraphicsViewImage.h"

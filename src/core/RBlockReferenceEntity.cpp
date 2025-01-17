@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RBlockReferenceEntity.h"
+#include "RDocument.h"
 #include "RExporter.h"
 #include "RS.h"
 #include "RSettings.h"

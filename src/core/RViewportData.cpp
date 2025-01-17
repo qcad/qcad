@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RViewportData.h"
+#include "RDocument.h"
 #include "RMouseEvent.h"
 
 RViewportData::RViewportData()

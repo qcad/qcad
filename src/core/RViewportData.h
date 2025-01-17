@@ -23,11 +23,12 @@
 #include "core_global.h"
 
 #include "RBox.h"
-#include "RDocument.h"
 #include "REntity.h"
 #include "RPoint.h"
 #include "RVector.h"
 #include "RLine.h"
+
+class RDocument;
 
 /**
  * Stores and manages all data that defines the geometry and

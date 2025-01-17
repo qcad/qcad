@@ -17,7 +17,9 @@
  * along with QCAD.
  */
 #include "RDimensionEntity.h"
+#include "RDimStyle.h"
 #include "RDimStyleProxyBasic.h"
+#include "RDocument.h"
 #include "RExporter.h"
 #include "RPluginLoader.h"
 #include "RStorage.h"

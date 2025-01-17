@@ -18,6 +18,7 @@
  */
 
 #include "RMemoryStorage.h"
+#include "RDimStyle.h"
 #include "RSettings.h"
 #include "RS.h"
 

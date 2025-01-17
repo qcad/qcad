@@ -40,6 +40,7 @@ class RCircle;
 class RDocument;
 class REllipse;
 class RImageData;
+class RLayerState;
 class RLine;
 class RMessageHandler;
 class RPainterPathSource;
