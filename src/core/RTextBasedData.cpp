@@ -23,6 +23,7 @@
 #include "RColor.h"
 #include "RDxfServices.h"
 #include "RFontList.h"
+#include "RLine.h"
 #include "RTextBasedData.h"
 #include "RPolyline.h"
 #include "RTextRenderer.h"

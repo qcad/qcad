@@ -293,9 +293,7 @@ public:
     /**
      * Override to force text rendering mode.
      */
-    virtual bool isTextRenderedAsText() const {
-        return RSettings::isTextRenderedAsText();
-    }
+    virtual bool isTextRenderedAsText() const;
 
     QStack<QSharedPointer<REntity> > getEntityStack();
 

@@ -20,6 +20,7 @@
 #include "RBlockReferenceEntity.h"
 #include "RDimensionData.h"
 #include "RDocument.h"
+#include "RLine.h"
 #include "RUnit.h"
 
 

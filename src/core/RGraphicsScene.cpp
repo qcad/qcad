@@ -21,7 +21,7 @@
 #include "REntity.h"
 #include "RGraphicsScene.h"
 #include "RGraphicsView.h"
-
+#include "RSettings.h"
 
 
 RGraphicsScene::RGraphicsScene(RDocumentInterface& documentInterface)

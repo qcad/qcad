@@ -23,6 +23,7 @@
 #include "RHatchEntity.h"
 #include "RLine.h"
 #include "RPluginLoader.h"
+#include "RSettings.h"
 #include "RSpline.h"
 
 RPropertyTypeId RHatchEntity::PropertyCustom;

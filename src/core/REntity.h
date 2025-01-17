@@ -30,8 +30,10 @@
 #include "RLayer.h"
 #include "RLineweight.h"
 #include "RObject.h"
+#include "RPolyline.h"
 #include "RPropertyAttributes.h"
 #include "RPropertyTypeId.h"
+#include "RRefPoint.h"
 #include "RVector.h"
 
 class RDocument;

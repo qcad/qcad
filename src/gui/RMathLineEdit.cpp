@@ -28,6 +28,7 @@
 #include "RMath.h"
 #include "RMathLineEdit.h"
 #include "RS.h"
+#include "RSettings.h"
 
 RMathLineEdit::RMathLineEdit(QWidget* parent) :
     QLineEdit(parent),

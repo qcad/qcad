@@ -21,7 +21,9 @@
 #include "REntity.h"
 #include "REntityData.h"
 #include "RExplodable.h"
+#include "RLine.h"
 #include "RMouseEvent.h"
+#include "RSettings.h"
 
 REntityData::REntityData(RDocument* document) :
     document(document),
@@ -148,6 +150,12 @@ RColor REntityData::getColor(bool resolve, const QStack<QSharedPointer<REntity> 
     }
 
     return getColor(getColor(), blockRefStack);
+}
+
+QList<RRefPoint> REntityData::getInternalReferencePoints(RS::ProjectionRenderingHint hint, QList<RObject::Id>* subEntityIds) const {
+    Q_UNUSED(subEntityIds)
+
+    return getReferencePoints(hint);
 }
 
 /**

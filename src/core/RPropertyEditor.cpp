@@ -28,6 +28,7 @@
 #include "RMath.h"
 #include "RMainWindow.h"
 #include "RS.h"
+#include "RSettings.h"
 #include "RPropertyEditor.h"
 
 RPropertyEditor* RPropertyEditor::instance = NULL;

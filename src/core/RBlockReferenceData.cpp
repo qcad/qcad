@@ -21,6 +21,7 @@
 #include "RDocument.h"
 #include "RMainWindow.h"
 #include "RMouseEvent.h"
+#include "RSettings.h"
 #include "RStorage.h"
 #include "RTransform.h"
 

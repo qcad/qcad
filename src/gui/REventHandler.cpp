@@ -28,6 +28,7 @@
 #include "RGraphicsView.h"
 #include "RGrid.h"
 #include "RRulerQt.h"
+#include "RSettings.h"
 #include "RSnapRestriction.h"
 #include "RSnap.h"
 #include "RUnit.h"

@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RDimAlignedData.h"
+#include "RLine.h"
 
 RDimAlignedData::RDimAlignedData() {
 }

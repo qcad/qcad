@@ -1756,6 +1756,10 @@ double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
     return factor;
 }
 
+bool RExporter::isTextRenderedAsText() const {
+    return RSettings::isTextRenderedAsText();
+}
+
 void RExporter::setDraftMode(bool on) {
     draftMode = on;
     if (draftMode) {

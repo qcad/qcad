@@ -29,6 +29,7 @@
 #include "RDocument.h"
 #include "RS.h"
 #include "RScriptHandler.h"
+#include "RSettings.h"
 #include "RWidget.h"
 
 

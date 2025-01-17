@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RLine.h"
 #include "RS.h"
 #include "RTextData.h"
 #include "RToleranceData.h"

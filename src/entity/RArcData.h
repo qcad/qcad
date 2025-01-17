@@ -25,6 +25,7 @@
 #include "RBox.h"
 #include "REntityData.h"
 #include "RVector.h"
+#include "RPolyline.h"
 #include "RArc.h"
 
 class RDocument;

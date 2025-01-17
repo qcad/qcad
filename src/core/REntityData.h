@@ -29,18 +29,16 @@
 #include "RBox.h"
 #include "RColor.h"
 #include "RLayer.h"
-#include "RLine.h"
-#include "RMatrix.h"
+#include "RLinetypePattern.h"
+#include "RMath.h"
 #include "RObject.h"
-#include "RPolyline.h"
-#include "RRefPoint.h"
-#include "RSettings.h"
-#include "RView.h"
 
 class RBlockReferenceEntity;
 class RDocument;
 class REntity;
 class RExporter;
+class RPolyline;
+class RRefPoint;
 
 #ifndef RDEFAULT_QSET_INT
 #define RDEFAULT_QSET_INT QSet<int>()
@@ -329,11 +327,7 @@ public:
      * snap to reference points.
      * Default implementation returns same as getReferencePoints().
      */
-    virtual QList<RRefPoint> getInternalReferencePoints(RS::ProjectionRenderingHint hint=RS::RenderTop, QList<RObject::Id>* subEntityIds = NULL) const {
-        Q_UNUSED(subEntityIds)
-
-        return getReferencePoints(hint);
-    }
+    virtual QList<RRefPoint> getInternalReferencePoints(RS::ProjectionRenderingHint hint=RS::RenderTop, QList<RObject::Id>* subEntityIds = NULL) const;
 
     /**
      * \return Vector of reference points of this entity. Reference points
