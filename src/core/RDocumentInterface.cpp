@@ -41,6 +41,7 @@
 #include "RPolyline.h"
 #include "RMainWindow.h"
 #include "ROperation.h"
+#include "RS.h"
 #include "RScriptHandler.h"
 #include "RScriptHandlerRegistry.h"
 #include "RSettings.h"

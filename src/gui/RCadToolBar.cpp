@@ -22,6 +22,7 @@
 #include "RCadToolBar.h"
 #include "RCadToolBarPanel.h"
 #include "RMainWindowQt.h"
+#include "RSettings.h"
 
 RCadToolBar::RCadToolBar(const QString& title, QWidget* parent) :
     QToolBar(title, parent),

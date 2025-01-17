@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RNavigationAction.h"
+#include "RS.h"
 
 RNavigationAction::RNavigationAction(RGuiAction* guiAction) 
     : RActionAdapter(guiAction), 

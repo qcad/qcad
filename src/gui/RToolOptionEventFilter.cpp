@@ -19,6 +19,7 @@
 #include "RToolOptionEventFilter.h"
 #include "RMainWindowQt.h"
 #include "RMathLineEdit.h"
+#include "RSettings.h"
 
 /**
  * Event filter to catch enter and tab pressed in widgets.

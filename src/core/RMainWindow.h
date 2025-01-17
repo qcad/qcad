@@ -31,10 +31,11 @@ class QKeyEvent;
 #include "RInterTransactionListener.h"
 #include "RTransactionListener.h"
 #include "RPropertyEvent.h"
+#include "RLayer.h"
 #include "RMainWindowProxy.h"
 #include "RMessageHandler.h"
 #include "RProgressHandler.h"
-#include "RS.h"
+#include "RSEnums.h"
 
 class RBlockListener;
 class RCoordinateListener;

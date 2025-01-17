@@ -27,6 +27,7 @@
 #include "RBlockReferenceEntity.h"
 #include "RMath.h"
 #include "RMainWindow.h"
+#include "RS.h"
 #include "RPropertyEditor.h"
 
 RPropertyEditor* RPropertyEditor::instance = NULL;

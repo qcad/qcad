@@ -22,6 +22,8 @@
 
 #include "../core_global.h"
 
+#include <QVariant>
+
 #include "RPoint.h"
 #include "RVector.h"
 #include "RBox.h"

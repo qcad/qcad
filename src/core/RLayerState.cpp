@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RLayerState.h"
+#include "RS.h"
 
 RPropertyTypeId RLayerState::PropertyCustom;
 RPropertyTypeId RLayerState::PropertyType;

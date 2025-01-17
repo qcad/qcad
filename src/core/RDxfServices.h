@@ -30,7 +30,7 @@
 
 #include <QColor>
 
-#include "RS.h"
+#include "RSEnums.h"
 #include "RColor.h"
 #include "RLineweight.h"
 #include "RLinetypePattern.h"

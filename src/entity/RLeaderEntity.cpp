@@ -21,6 +21,7 @@
 #include "RExporter.h"
 #include "RLeaderEntity.h"
 #include "RPluginLoader.h"
+#include "RS.h"
 
 RPropertyTypeId RLeaderEntity::PropertyCustom;
 RPropertyTypeId RLeaderEntity::PropertyHandle;

@@ -18,6 +18,7 @@
  */
 #include "RSplineEntity.h"
 #include "RExporter.h"
+#include "RS.h"
 
 RPropertyTypeId RSplineEntity::PropertyCustom;
 RPropertyTypeId RSplineEntity::PropertyHandle;

@@ -2,6 +2,7 @@
 
 #include "RBlock.h"
 #include "RLayout.h"
+#include "RS.h"
 #include "RStorage.h"
 #include "RStorageBlockSort.h"
 

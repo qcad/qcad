@@ -226,9 +226,6 @@ Q_NAMESPACE
 
     int getMetaType(const QVariant& v);
 
-    static const double PointTolerance = 1.0e-9;
-    static const double AngleTolerance = 1.0e-9;
-
 #if QT_VERSION >= 0x060000
     static const Qt::MouseButton MiddleButton = Qt::MiddleButton;
 #else
@@ -259,8 +256,7 @@ Q_DECLARE_METATYPE(RS::IsoProjectionType)
 Q_DECLARE_METATYPE(RS::IsoProjectionType*)
 Q_DECLARE_METATYPE(RS::OrthoMode)
 Q_DECLARE_METATYPE(RS::OrthoMode*)
-Q_DECLARE_METATYPE(RS::KnownVariable)
-Q_DECLARE_METATYPE(RS::KnownVariable*)
+// RS::KnownVariable declarations are in RPropertyTypeId.h
 Q_DECLARE_METATYPE(RS::KnownVariableType)
 Q_DECLARE_METATYPE(RS::KnownVariableType*)
 Q_DECLARE_METATYPE(RS::LinearFormat)

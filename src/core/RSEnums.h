@@ -5,6 +5,10 @@
 
 #include <QEasingCurve>
 
+#if QT_VERSION >= 0x060000
+#include <QMetaType>
+#endif
+
 #define REASING_LINEAR QEasingCurve::Linear
 #define REASING_INQUAD QEasingCurve::InQuad
 #define REASING_OUTQUAD QEasingCurve::OutQuad
@@ -53,7 +57,10 @@
 //#define REASING_BEZIERSPLINE QEasingCurve::BezierSpline
 //#define REASING_TCBSPLINE QEasingCurve::TCBSpline
 
+
 namespace QCADCORE_EXPORT RS {
+    static const double PointTolerance = 1.0e-9;
+    static const double AngleTolerance = 1.0e-9;
 
 #if QT_VERSION >= 0x060000
     // handled as include to avoid inclusion in Qt 4-5 ECMAScript API:

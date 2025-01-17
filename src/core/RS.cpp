@@ -1002,3 +1002,6 @@ int RS::getMetaType(const QVariant& v) {
     return v.type();
 #endif
 }
+
+// work around "error: explicit specialization of 'QMetaTypeId<RS::EntityType>' after instantiation"
+#include "moc_RS.cpp"

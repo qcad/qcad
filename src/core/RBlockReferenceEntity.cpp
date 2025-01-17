@@ -18,6 +18,7 @@
  */
 #include "RBlockReferenceEntity.h"
 #include "RExporter.h"
+#include "RS.h"
 #include "RSettings.h"
 #include "RStorage.h"
 

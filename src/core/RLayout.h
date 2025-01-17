@@ -24,7 +24,7 @@
 
 #include <QString>
 
-#include "RGlobal.h"
+#include "RSEnums.h"
 #include "RObject.h"
 #include "RVector.h"
 #include "RPropertyTypeId.h"

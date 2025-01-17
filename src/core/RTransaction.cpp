@@ -20,6 +20,7 @@
 #include "RLinetype.h"
 #include "RLinkedStorage.h"
 #include "RMainWindow.h"
+#include "RS.h"
 #include "RStorage.h"
 #include "RSpline.h"
 #include "RTransaction.h"

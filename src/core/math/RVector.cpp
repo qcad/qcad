@@ -16,6 +16,8 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <algorithm>
+
 #include <QQuaternion>
 
 #include "RBox.h"
@@ -1185,7 +1187,7 @@ int RVector::getClosestIndex(const QList<RVector>& list, bool ignoreZ) const {
 QList<RVector> RVector::getSortedByDistance(const QList<RVector>& list, const RVector& v) {
     RVectorDistanceSort::v = v;
     QList<RVector> ret = list;
-    qSort(ret.begin(), ret.end(), RVector::RVectorDistanceSort::lessThan);
+    std::sort(ret.begin(), ret.end(), RVector::RVectorDistanceSort::lessThan);
     return ret;
 }
 
@@ -1194,7 +1196,7 @@ QList<RVector> RVector::getSortedByDistance(const QList<RVector>& list, const RV
  */
 QList<RVector> RVector::getSortedLeftRightTopBottom(const QList<RVector>& list) {
     QList<RVector> ret = list;
-    qSort(ret.begin(), ret.end(), RVector::RVectorLeftRightTopBottomSort::lessThan);
+    std::sort(ret.begin(), ret.end(), RVector::RVectorLeftRightTopBottomSort::lessThan);
     return ret;
 }
 
@@ -1205,7 +1207,7 @@ QList<RVector> RVector::getSortedByAngle(const QList<RVector>& list, const RVect
     RVectorAngleSort::center = center;
     RVectorAngleSort::angle = angle;
     QList<RVector> ret = list;
-    qSort(ret.begin(), ret.end(), RVector::RVectorAngleSort::lessThan);
+    std::sort(ret.begin(), ret.end(), RVector::RVectorAngleSort::lessThan);
     return ret;
 }
 

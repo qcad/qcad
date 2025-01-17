@@ -1,6 +1,7 @@
 #include <QSharedPointer>
 
 #include "RLayer.h"
+#include "RS.h"
 #include "RStorage.h"
 #include "RStorageLayerSort.h"
 

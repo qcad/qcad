@@ -22,12 +22,12 @@
 
 #include "core_global.h"
 
+#include <QMetaType>
 #include <QSet>
 #include <QString>
 #include <QPair>
 
-#include "REntity.h"
-
+class REntity;
 class RExporter;
 
 /**
@@ -39,7 +39,7 @@ class RExporter;
  */
 class QCADCORE_EXPORT REntityExportListener {
 public:
-    virtual ~REntityExportListener() {}
+    virtual ~REntityExportListener();
 
     /**
      * Registers the given custom property as trigger. The exportEntity function is only
@@ -49,16 +49,7 @@ public:
         registeredProperties.insert(QPair<QString, QString>(title, regExp));
     }
 
-    virtual bool checkCustomProperty(REntity* e) const {
-        QSet<QPair<QString, QString> >::const_iterator it;
-        for (it=registeredProperties.constBegin(); it!=registeredProperties.constEnd(); it++) {
-            if (e->hasCustomProperty((*it).first, QRegularExpression((*it).second))) {
-                return true;
-            }
-        }
-
-        return false;
-    }
+    virtual bool checkCustomProperty(REntity* e) const;
 
     /**
      * Called by the document whenever an entity is exporter with 

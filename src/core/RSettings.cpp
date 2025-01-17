@@ -21,6 +21,7 @@
 #include <QColor>
 #include <QDir>
 #include <QFileInfo>
+#include <QFont>
 #include <QPrinterInfo>
 #include <QSettings>
 #include <QString>
@@ -36,6 +37,7 @@
 #endif
 
 #include "RMath.h"
+#include "RS.h"
 #include "RSettings.h"
 #include "RUnit.h"
 #include "RVersion.h"

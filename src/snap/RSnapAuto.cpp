@@ -19,6 +19,7 @@
 
 #include "RDocument.h"
 #include "RGraphicsView.h"
+#include "RS.h"
 #include "RSettings.h"
 #include "RSnapAuto.h"
 #include "RSnapCenter.h"

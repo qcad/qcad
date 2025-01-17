@@ -22,6 +22,7 @@
 #include "RAttributeEntity.h"
 #include "RBlockReferenceEntity.h"
 #include "RClipboardOperation.h"
+#include "RS.h"
 #include "RSettings.h"
 #include "RStorage.h"
 #include "RUnit.h"

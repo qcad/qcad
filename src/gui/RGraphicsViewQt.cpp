@@ -29,6 +29,7 @@
 #include "RMainWindow.h"
 #include "RMainWindowQt.h"
 #include "RMouseEvent.h"
+#include "RS.h"
 #include "RSettings.h"
 #include "RTerminateEvent.h"
 #include "RWheelEvent.h"

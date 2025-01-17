@@ -35,7 +35,9 @@
 #endif
 
 #include "RMath.h"
+#include "RS.h"
 #include "RSettings.h"
+#include "RVector.h"
 
 /**
  * Last error encountered.

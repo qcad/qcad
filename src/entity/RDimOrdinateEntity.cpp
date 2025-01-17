@@ -18,6 +18,7 @@
  */
 #include "RDimOrdinateEntity.h"
 #include "RPluginLoader.h"
+#include "RS.h"
 
 RPropertyTypeId RDimOrdinateEntity::PropertyCustom;
 RPropertyTypeId RDimOrdinateEntity::PropertyHandle;

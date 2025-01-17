@@ -27,6 +27,7 @@
 
 #include "RGuiAction.h"
 #include "RDocument.h"
+#include "RS.h"
 #include "RScriptHandler.h"
 #include "RWidget.h"
 

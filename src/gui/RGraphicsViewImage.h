@@ -22,6 +22,7 @@
 
 #include "gui_global.h"
 
+#include <QMutex>
 #include <QTransform>
 #include <QPainter>
 

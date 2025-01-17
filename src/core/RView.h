@@ -26,7 +26,7 @@
 #include <QColor>
 #include <QDebug>
 
-#include "RGlobal.h"
+#include "RSEnums.h"
 #include "RObject.h"
 #include "RBox.h"
 
