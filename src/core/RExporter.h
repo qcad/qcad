@@ -25,15 +25,11 @@
 #include "core_global.h"
 
 #include <QBrush>
-#include <QColor>
 #include <QPen>
 #include <QStack>
-#include <QTextLayout>
 #include <QTransform>
 
 #include "REntity.h"
-#include "RImageData.h"
-#include "RMatrix.h"
 #include "RPainterPath.h"
 #include "RTextBasedData.h"
 #include "RView.h"
@@ -43,13 +39,11 @@ class RArc;
 class RCircle;
 class RDocument;
 class REllipse;
+class RImageData;
 class RLine;
-class RLinetype;
-class RLinetypePattern;
 class RMessageHandler;
 class RPainterPathSource;
 class RPoint;
-class RPolyline;
 class RProgressHandler;
 class RRay;
 class RSpline;
