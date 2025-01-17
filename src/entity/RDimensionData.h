@@ -23,6 +23,7 @@
 #include "entity_global.h"
 
 #include "RColor.h"
+#include "RDimStyleData.h"
 #include "REntityData.h"
 #include "RTextData.h"
 #include "RVector.h"

@@ -22,9 +22,10 @@
 
 #include "entity_global.h"
 
-#include "RDocument.h"
 #include "RTextBasedData.h"
 #include "RVector.h"
+
+class RDocument;
 
 /**
  * Text entity data class.

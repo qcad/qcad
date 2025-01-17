@@ -19,6 +19,7 @@
 #include "RBlockReferenceData.h"
 #include "RBlockReferenceEntity.h"
 #include "RDimensionData.h"
+#include "RDocument.h"
 #include "RUnit.h"
 
 
