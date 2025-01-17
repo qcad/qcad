@@ -18,6 +18,9 @@
  */
 
 #include <QWidget>
+#include <QSwipeGesture>
+#include <QPanGesture>
+#include <QPinchGesture>
 
 #include "RAction.h"
 #include "RDebug.h"
