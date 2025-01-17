@@ -25,6 +25,7 @@
 #include "REventHandler.h"
 #include "RDocumentInterface.h"
 #include "RGraphicsView.h"
+#include "RGrid.h"
 #include "RRulerQt.h"
 #include "RSnapRestriction.h"
 #include "RSnap.h"

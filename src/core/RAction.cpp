@@ -27,6 +27,7 @@
 #include "RGraphicsView.h"
 #include "RGuiAction.h"
 #include "RDocumentInterface.h"
+#include "RTerminateEvent.h"
 
 RAction::RAction(RGuiAction* guiAction)
   : terminated(false),

@@ -35,12 +35,15 @@ class RDocument;
 class RDocumentInterface;
 class RGraphicsSceneQt;
 class RGraphicsSceneDrawable;
+class RImageData;
 class RLine;
 class RSnap;
 class RSnapRestriction;
+class RTextBasedData;
+class RTextLayout;
 class RGraphicsViewImage;
 class RGraphicsViewWorker;
-
+class QTextLayout;
 
 /**
  * \brief QImage based 2d graphics view.

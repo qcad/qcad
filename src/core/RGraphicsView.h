@@ -22,25 +22,28 @@
 
 #include "core_global.h"
 
-#include <QKeyEvent>
 #include <QCursor>
-#include <QSwipeGesture>
-#include <QPanGesture>
-#include <QPinchGesture>
 
-#include "RExporter.h"
-#include "RGrid.h"
+#include "REntity.h"
 #include "RNonCopyable.h"
 #include "RTextLabel.h"
-#include "RTerminateEvent.h"
 
 class RAction;
+class RDocument;
 class RDocumentInterface;
 class RGraphicsScene;
+class RGrid;
 class RLine;
 class RMouseEvent;
+class RRefPoint;
 class RTabletEvent;
+class RTerminateEvent;
 class RWheelEvent;
+class QKeyEvent;
+class QSwipeGesture;
+class QPanGesture;
+class QPinchGesture;
+
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1

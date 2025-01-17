@@ -21,9 +21,11 @@
 #include "RDebug.h"
 #include "RDocument.h"
 #include "RGraphicsScene.h"
+#include "RGrid.h"
 #include "RMouseEvent.h"
 #include "RDocumentInterface.h"
 #include "RSettings.h"
+#include "RTerminateEvent.h"
 #include "RUnit.h"
 
 

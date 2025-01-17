@@ -35,6 +35,7 @@
 #include "RFileImporterRegistry.h"
 #include "RGraphicsScene.h"
 #include "RGraphicsView.h"
+#include "RGrid.h"
 #include "RLayerListener.h"
 #include "RLinkedStorage.h"
 #include "RPolyline.h"

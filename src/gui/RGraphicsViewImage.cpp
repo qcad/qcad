@@ -31,6 +31,7 @@
 #include "RGraphicsViewQt.h"
 #include "RGraphicsViewImage.h"
 #include "RGraphicsViewWorkerPainter.h"
+#include "RGrid.h"
 #include "RLine.h"
 #include "RSettings.h"
 #include "RSnap.h"

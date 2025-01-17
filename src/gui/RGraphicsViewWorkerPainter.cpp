@@ -1,5 +1,7 @@
 #include "RGraphicsViewWorkerPainter.h"
 
+#include <QTextLayout>
+
 RGraphicsViewWorkerPainter::~RGraphicsViewWorkerPainter() {
 }
 
