@@ -22,29 +22,13 @@
 
 #include "core_global.h"
 
-#include <QKeyEvent>
 #include <QList>
 #include <QMap>
-#include <QMutex>
-#include <QSharedPointer>
 #include <QStack>
 #include <QQueue>
-#include <QSwipeGesture>
-#include <QPanGesture>
-#include <QPinchGesture>
 
 #include "RAction.h"
-#include "RBlockListener.h"
-#include "RCommandEvent.h"
-#include "RCoordinateEvent.h"
-#include "RCoordinateListener.h"
 #include "RDocument.h"
-#include "RExporter.h"
-#include "RLayerListener.h"
-#include "RStorage.h"
-#include "RTerminateEvent.h"
-#include "RTextLabel.h"
-#include "RTransactionListener.h"
 #include "RUcs.h"
 #include "RSnap.h"
 
@@ -57,15 +41,21 @@
 #define RDEFAULT_QVARIANTMAP QVariantMap()
 #endif
 
+class RBlockListener;
+class RCoordinateListener;
 class RGraphicsScene;
 class RGraphicsSceneDrawable;
 class RGraphicsView;
+class RLayerListener;
 class RMouseEvent;
 class ROperation;
 class RPropertyEvent;
 class RSnapRestriction;
 class RScriptHandler;
+class RTerminateEvent;
 class RTransaction;
+class RTransactionListener;
+class RViewportEntity;
 class RWheelEvent;
 
 

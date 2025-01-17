@@ -22,6 +22,7 @@
 #include "RMdiArea.h"
 #include "RMdiChildQt.h"
 #include "RRulerQt.h"
+#include "RStorage.h"
 
 
 RDocumentInterface* RMdiChildQt::diLast = NULL;

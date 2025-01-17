@@ -27,6 +27,7 @@
 
 #include <RSingleApplication.h>
 
+#include "RCoordinateEvent.h"
 #include "RDocumentInterface.h"
 #include "RGuiAction.h"
 #include "RGraphicsViewQt.h"

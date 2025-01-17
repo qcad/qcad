@@ -25,6 +25,9 @@
 #endif
 
 #include "RDocumentInterface.h"
+#include "RBlockListener.h"
+#include "RCoordinateEvent.h"
+#include "RCoordinateListener.h"
 #include "REntityPickEvent.h"
 #include "RFileExporter.h"
 #include "RFileExporterRegistry.h"
@@ -32,6 +35,7 @@
 #include "RFileImporterRegistry.h"
 #include "RGraphicsScene.h"
 #include "RGraphicsView.h"
+#include "RLayerListener.h"
 #include "RLinkedStorage.h"
 #include "RPolyline.h"
 #include "RMainWindow.h"

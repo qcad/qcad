@@ -18,6 +18,7 @@
  */
 #include "RModifyObjectsOperation.h"
 #include "RSettings.h"
+#include "RStorage.h"
 #include "RTranslation.h"
 
 void RModifyObjectsOperation::transformSelection(RTransformation* transformation, RDocumentInterface* di, int copies, bool preview, bool selectResult, bool useCurrentAttributes) {

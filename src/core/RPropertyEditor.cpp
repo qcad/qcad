@@ -24,6 +24,7 @@
 #include <qtconcurrentmap.h>
 #endif
 
+#include "RBlockReferenceEntity.h"
 #include "RMath.h"
 #include "RMainWindow.h"
 #include "RPropertyEditor.h"

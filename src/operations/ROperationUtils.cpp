@@ -19,6 +19,7 @@
 #include "RDocumentInterface.h"
 #include "ROperationUtils.h"
 #include "RAddObjectsOperation.h"
+#include "RStorage.h"
 
 /**
  * Normalizes the draw order of all entities,

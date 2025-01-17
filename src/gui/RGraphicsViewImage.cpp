@@ -35,6 +35,7 @@
 #include "RSettings.h"
 #include "RSnap.h"
 #include "RSnapRestriction.h"
+#include "RStorage.h"
 #include "RTextRenderer.h"
 #include "RUnit.h"
 
