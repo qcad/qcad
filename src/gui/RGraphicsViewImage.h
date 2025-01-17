@@ -22,26 +22,20 @@
 
 #include "gui_global.h"
 
-#include <QtCore>
-#include <QPinchGesture>
 #include <QTransform>
 #include <QPainter>
 
 #include "RGraphicsView.h"
 #include "RPainterPath.h"
 
-class RAction;
-class RDocument;
-class RDocumentInterface;
-class RGraphicsSceneQt;
 class RGraphicsSceneDrawable;
+class RGraphicsSceneQt;
 class RImageData;
 class RLine;
 class RSnap;
 class RSnapRestriction;
 class RTextBasedData;
 class RTextLayout;
-class RGraphicsViewImage;
 class RGraphicsViewWorker;
 class QTextLayout;
 
