@@ -2756,6 +2756,11 @@ void RDocumentInterface::setLastKnownViewWithFocus(RGraphicsView* view) {
     }
 }
 
+void RDocumentInterface::setNotifyListeners(bool on) {
+    notifyGlobalListeners = on;
+    document.setNotifyListeners(on);
+}
+
 QVariant RDocumentInterface::eval(const QString& ext, const QString& script) {
     RScriptHandler* handler = getScriptHandler(ext);
     if (handler==NULL) {

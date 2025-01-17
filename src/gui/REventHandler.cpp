@@ -23,6 +23,7 @@
 #include <QWidget>
 
 #include "REventHandler.h"
+#include "RDocument.h"
 #include "RDocumentInterface.h"
 #include "RGraphicsView.h"
 #include "RGrid.h"

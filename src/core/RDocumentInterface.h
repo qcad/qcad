@@ -28,7 +28,6 @@
 #include <QQueue>
 
 #include "RAction.h"
-#include "RDocument.h"
 #include "RUcs.h"
 #include "RSnap.h"
 
@@ -43,6 +42,7 @@
 
 class RBlockListener;
 class RCoordinateListener;
+class RDocument;
 class RGraphicsScene;
 class RGraphicsSceneDrawable;
 class RGraphicsView;
@@ -347,10 +347,7 @@ public:
     bool isSuspended() {
         return suspended;
     }
-    void setNotifyListeners(bool on) {
-        notifyGlobalListeners = on;
-        document.setNotifyListeners(on);
-    }
+    void setNotifyListeners(bool on);
     bool getNotifyListeners() const {
         return notifyGlobalListeners;
     }

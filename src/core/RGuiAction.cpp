@@ -26,6 +26,7 @@
 //#include <QVectorIterator>
 
 #include "RGuiAction.h"
+#include "RDocument.h"
 #include "RScriptHandler.h"
 #include "RWidget.h"
 
