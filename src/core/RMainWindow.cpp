@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include <QCoreApplication>
+#include <QSettings>
 #if QT_VERSION >= 0x060000
 #   include <QScreen>
 #else

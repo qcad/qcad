@@ -23,6 +23,7 @@
 #include <QDir>
 #include <QFileInfo>
 #include <QImageReader>
+#include <QSettings>
 
 #if defined(Q_OS_MAC) || defined(Q_OS_LINUX)
 #include <signal.h>

@@ -16,7 +16,8 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QtGlobal>
+#include <QDir>
+#include <QFileInfo>
 
 #if QT_VERSION < 0x050000
 #include <QTextDocument>

@@ -17,6 +17,8 @@
  * along with QCAD.
  */
 #include <QCryptographicHash>
+#include <QFile>
+#include <QFileInfo>
 
 #ifdef Q_OS_WIN
 // for _isnan:

@@ -19,8 +19,10 @@
 #include <QtDebug>
 #include <QApplication>
 #include <QColor>
+#include <QDir>
 #include <QFileInfo>
 #include <QPrinterInfo>
+#include <QSettings>
 #include <QString>
 #include <QStringList>
 #include <QSysInfo>
