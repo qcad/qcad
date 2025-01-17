@@ -23,6 +23,7 @@
 #else
 #include <QApplication>
 #endif
+#include "RDocument.h"
 #include "RImageData.h"
 
 RImageData::RImageData() :
