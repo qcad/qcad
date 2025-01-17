@@ -23,10 +23,11 @@
 #include "entity_global.h"
 
 #include "RColor.h"
-#include "RDocument.h"
 #include "REntityData.h"
 #include "RTextData.h"
 #include "RVector.h"
+
+class RDocument;
 
 /**
  * Base class for dimension entity data classes.
