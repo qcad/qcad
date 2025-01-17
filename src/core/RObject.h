@@ -27,6 +27,7 @@
 
 class RDocument;
 class RTransaction;
+class RVector;
 
 #ifndef RQMapQStringQString
 typedef QMap<QString, QString> RQMapQStringQString;

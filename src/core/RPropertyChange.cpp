@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RPropertyChange.h"
+#include "RMath.h"
 
 RPropertyChange::RPropertyChange(RPropertyTypeId propertyTypeId, QVariant oldValue, QVariant newValue) :
     propertyTypeId(propertyTypeId) {
