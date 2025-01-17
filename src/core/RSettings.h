@@ -28,6 +28,7 @@
 
 #include "RColor.h"
 #include "RBox.h"
+#include "RMath.h"
 
 // workaround for src2srcml bug:
 #ifndef RDEFAULT_RCOLOR
