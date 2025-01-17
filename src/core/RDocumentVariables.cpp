@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RDocumentVariables.h"
-#include "RDocument.h"
 #include "RDxfServices.h"
 
 RPropertyTypeId RDocumentVariables::PropertyCustom;

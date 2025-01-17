@@ -23,9 +23,6 @@
 #include "RMath.h"
 #include "RMatrix.h"
 
-#include "RMainWindow.h"
-#include "RDocument.h"
-
 REllipseProxy* REllipse::ellipseProxy = NULL;
 
 

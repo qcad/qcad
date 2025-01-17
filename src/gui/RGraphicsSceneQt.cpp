@@ -24,18 +24,13 @@
 #endif
 
 #include "RBlockReferenceEntity.h"
-#include "RDebug.h"
-#include "RDocumentInterface.h"
 #include "REntity.h"
 #include "RGraphicsSceneQt.h"
 #include "RGraphicsViewImage.h"
 #include "RMainWindow.h"
 #include "RPainterPathExporter.h"
-#include "RPainterPathSource.h"
 #include "RSettings.h"
 #include "RShapesExporter.h"
-#include "RSpline.h"
-#include "RTextLabel.h"
 #include "RTriangle.h"
 #include "RUnit.h"
 #include "RViewportEntity.h"

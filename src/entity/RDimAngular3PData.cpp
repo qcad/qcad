@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RDimAngular3PData.h"
-#include "RUnit.h"
 
 RDimAngular3PData::RDimAngular3PData() {
 }

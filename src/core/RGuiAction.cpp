@@ -25,10 +25,8 @@
 #include <QToolBar>
 //#include <QVectorIterator>
 
-#include "RDebug.h"
 #include "RGuiAction.h"
 #include "RScriptHandler.h"
-#include "RSingleApplication.h"
 #include "RWidget.h"
 
 

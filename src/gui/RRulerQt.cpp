@@ -19,10 +19,9 @@
 #include "RDocumentInterface.h"
 #include "RGraphicsView.h"
 #include "RGrid.h"
+#include "RMainWindow.h"
 #include "RRulerQt.h"
 #include "RSettings.h"
-#include "RMainWindowQt.h"
-#include "RMdiChildQt.h"
 
 #include <QApplication>
 #include <QPainter>

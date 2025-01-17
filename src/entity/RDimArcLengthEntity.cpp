@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RDimArcLengthEntity.h"
-#include "RExporter.h"
 #include "RPluginLoader.h"
 
 RPropertyTypeId RDimArcLengthEntity::PropertyCustom;

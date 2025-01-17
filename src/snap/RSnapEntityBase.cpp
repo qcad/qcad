@@ -17,9 +17,7 @@
  * along with QCAD.
  */
 #include "RDocument.h"
-#include "RDocumentInterface.h"
 #include "RGraphicsView.h"
-#include "RMouseEvent.h"
 #include "RSettings.h"
 #include "RSnapEntityBase.h"
 

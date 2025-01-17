@@ -20,7 +20,6 @@
 
 #include "RBlock.h"
 #include "RDocument.h"
-#include "RMetaTypes.h"
 #include "RLayer.h"
 #include "RObject.h"
 #include "RPropertyTypeId.h"

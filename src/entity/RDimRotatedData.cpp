@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RDimRotatedData.h"
-#include "RUnit.h"
 
 RDimRotatedData::RDimRotatedData() : rotation(0.0) {
 }

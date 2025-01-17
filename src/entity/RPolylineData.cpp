@@ -18,7 +18,6 @@
  */
 #include "RArc.h"
 #include "RPolylineData.h"
-#include "RPolylineEntity.h"
 
 RPolylineData::RPolylineData() {
 }

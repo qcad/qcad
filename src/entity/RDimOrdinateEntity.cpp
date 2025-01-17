@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RDimOrdinateEntity.h"
-#include "RExporter.h"
 #include "RPluginLoader.h"
 
 RPropertyTypeId RDimOrdinateEntity::PropertyCustom;

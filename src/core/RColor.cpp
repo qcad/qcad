@@ -21,8 +21,6 @@
 #include <QBrush>
 
 #include "RColor.h"
-#include "RCircle.h"
-#include "RDebug.h"
 #include "RMath.h"
 #include "RPluginLoader.h"
 #include "RSettings.h"

@@ -17,9 +17,7 @@
  * along with QCAD.
  */
 #include "RSplineEntity.h"
-#include "RMetaTypes.h"
 #include "RExporter.h"
-#include "RLine.h"
 
 RPropertyTypeId RSplineEntity::PropertyCustom;
 RPropertyTypeId RSplineEntity::PropertyHandle;

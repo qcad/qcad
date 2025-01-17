@@ -17,8 +17,6 @@
  * along with QCAD.
  */
 
-#include <QtGlobal>
-
 #include "RMemoryStorage.h"
 #include "RSettings.h"
 #include "RS.h"

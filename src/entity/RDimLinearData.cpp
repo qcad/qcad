@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RDimLinearData.h"
-#include "RUnit.h"
 
 RDimLinearData::RDimLinearData(RDocument* document) :
     RDimensionData(document) {

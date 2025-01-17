@@ -17,10 +17,7 @@
  * along with QCAD.
  */
 #include "RCoordinateEvent.h"
-#include "RDocumentInterface.h"
-#include "RGraphicsScene.h"
 #include "RGraphicsView.h"
-#include "RUcs.h"
 
 RCoordinateEvent::RCoordinateEvent(const RVector& position,
    RGraphicsScene& s, RGraphicsView& v) : QEvent((QEvent::Type)(QEvent::User+201)), RInputEvent(position, s, v), mods(Qt::NoModifier) {

@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RSplineData.h"
-#include "RSplineEntity.h"
 
 RSplineData::RSplineData() {
 }

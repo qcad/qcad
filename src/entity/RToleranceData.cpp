@@ -18,7 +18,6 @@
  */
 #include "RTextData.h"
 #include "RToleranceData.h"
-#include "RUnit.h"
 
 RToleranceData::RToleranceData()
     :

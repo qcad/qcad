@@ -21,7 +21,6 @@
 
 #include "RDocument.h"
 #include "RMoveReferencePointOperation.h"
-#include "RExporter.h"
 
 
 RMoveReferencePointOperation::RMoveReferencePointOperation(

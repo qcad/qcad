@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RDimLinearEntity.h"
-#include "RExporter.h"
 #include "RPluginLoader.h"
 
 RPropertyTypeId RDimLinearEntity::PropertyCustom;

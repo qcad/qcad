@@ -18,7 +18,6 @@
  */
 #include <QLabel>
 #include <QMimeData>
-#include <QPainter>
 #include <QScrollBar>
 #include <QUrl>
 #include <QWidget>
@@ -27,7 +26,6 @@
 #include "RDocumentInterface.h"
 #include "RGraphicsView.h"
 #include "RRulerQt.h"
-#include "RMainWindowQt.h"
 #include "RSnapRestriction.h"
 #include "RSnap.h"
 #include "RUnit.h"

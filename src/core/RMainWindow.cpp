@@ -22,19 +22,12 @@
 #else
 #   include <QDesktopWidget>
 #endif
-#include <QDir>
-#include <QObject>
-#include <QThread>
 
 #include "RBlockListener.h"
-#include "RCoordinateEvent.h"
 #include "RCoordinateListener.h"
 #include "RDebug.h"
 #include "RDocumentInterface.h"
 #include "RFocusListener.h"
-#include "RFontList.h"
-#include "RGraphicsView.h"
-#include "RGuiAction.h"
 #include "RKeyListener.h"
 #include "RLayerListener.h"
 #include "RMainWindow.h"
@@ -49,7 +42,6 @@
 #include "RSettings.h"
 #include "RSnapListener.h"
 #include "RUcsListener.h"
-#include "RVector.h"
 #include "RViewFocusListener.h"
 #include "RViewListener.h"
 

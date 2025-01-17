@@ -18,9 +18,7 @@
  */
 #include <QAbstractItemView>
 #include <QSize>
-#include <QPainter>
 
-#include "RDebug.h"
 #include "RLinetypeCombo.h"
 #include "RLinetypeComboDelegate.h"
 

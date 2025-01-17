@@ -23,7 +23,6 @@
 #include "RArcExporter.h"
 #include "RBlockReferenceEntity.h"
 #include "RCircle.h"
-#include "RDebug.h"
 #include "RDocument.h"
 #include "REllipse.h"
 #include "REntity.h"

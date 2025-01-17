@@ -17,11 +17,6 @@
  * along with QCAD.
  */
 
-#include <QtGlobal>
-
-#if QT_VERSION >= 0x060000
-#include <QRandomGenerator>
-#endif
 
 #include "RBox.h"
 #include "RDebug.h"
@@ -40,6 +35,10 @@
 #include "RUcs.h"
 #include "RUnit.h"
 #include "RPolyline.h"
+
+#if QT_VERSION >= 0x060000
+#include <QRandomGenerator>
+#endif
 
 RDocument* RDocument::clipboard = NULL;
 

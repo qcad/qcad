@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RAttributeData.h"
-#include "RAttributeDefinitionData.h"
 
 
 RAttributeData::RAttributeData(RDocument* document, const RAttributeData& data)

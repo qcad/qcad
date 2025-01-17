@@ -18,7 +18,6 @@
  */
 #include <cassert>
 
-#include "RDebug.h"
 #include "RMatrix.h"
 
 /**

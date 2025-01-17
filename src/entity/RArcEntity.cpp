@@ -20,7 +20,6 @@
 #include "RCircleEntity.h"
 #include "REllipseEntity.h"
 #include "RExporter.h"
-#include "RPoint.h"
 
 RPropertyTypeId RArcEntity::PropertyCustom;
 RPropertyTypeId RArcEntity::PropertyHandle;

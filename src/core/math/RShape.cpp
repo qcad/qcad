@@ -17,11 +17,9 @@
  * along with QCAD.
  */
 #include <cmath>
-#include <typeinfo>
 
 #include "RArc.h"
 #include "RCircle.h"
-#include "RDebug.h"
 #include "REllipse.h"
 #include "RLine.h"
 #include "RMath.h"

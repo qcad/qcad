@@ -16,7 +16,6 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QCoreApplication>
 #include <QDir>
 #include <QFileInfo>
 #include <QHostInfo>
@@ -29,7 +28,6 @@
 #endif
 
 #include "RGlobal.h"
-#include "RSettings.h"
 
 #if defined(Q_OS_LINUX)
 #include <X11/Xlib.h>

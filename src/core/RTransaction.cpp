@@ -17,11 +17,9 @@
  * along with QCAD.
  */
 #include "RDocument.h"
-#include "RExporter.h"
 #include "RLinetype.h"
 #include "RLinkedStorage.h"
 #include "RMainWindow.h"
-#include "RMemoryStorage.h"
 #include "RStorage.h"
 #include "RSpline.h"
 #include "RTransaction.h"

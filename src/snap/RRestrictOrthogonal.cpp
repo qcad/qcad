@@ -18,8 +18,6 @@
  */
 #include "RRestrictOrthogonal.h"
 #include "RDocumentInterface.h"
-#include "RGraphicsView.h"
-//#include "ROrthoGrid.h"
 
 RVector RRestrictOrthogonal::restrictSnap(const RVector& position, const RVector& relativeZero) {
     RVector ret = position;

@@ -19,7 +19,6 @@
 #include "RBlockReferenceData.h"
 #include "RBlockReferenceEntity.h"
 #include "RDocument.h"
-#include "RExporter.h"
 #include "RMainWindow.h"
 #include "RMouseEvent.h"
 #include "RStorage.h"

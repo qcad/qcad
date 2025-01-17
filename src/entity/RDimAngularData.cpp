@@ -16,9 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RCircle.h"
 #include "RDimAngularData.h"
-#include "RUnit.h"
 
 RDimAngularData::RDimAngularData() {
 }

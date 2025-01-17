@@ -21,7 +21,6 @@
 #include <QMutex>
 
 #include "RArc.h"
-#include "RDebug.h"
 #include "RLine.h"
 #include "RSpline.h"
 #include "RPainterPath.h"

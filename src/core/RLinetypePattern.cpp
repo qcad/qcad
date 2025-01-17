@@ -21,9 +21,7 @@
 #include "RFontList.h"
 #include "RLinetypePattern.h"
 #include "RMath.h"
-#include "RTextData.h"
 #include "RTextRenderer.h"
-#include "RDebug.h"
 #include "RPluginLoader.h"
 
 QMap<QString, QString> RLinetypePattern::nameMap;

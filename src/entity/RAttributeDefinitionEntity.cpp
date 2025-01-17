@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RAttributeDefinitionEntity.h"
-#include "RExporter.h"
 
 RPropertyTypeId RAttributeDefinitionEntity::PropertyCustom;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyHandle;

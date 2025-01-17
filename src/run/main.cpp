@@ -23,10 +23,6 @@
 #include <QDir>
 #include <QFileInfo>
 #include <QImageReader>
-#include <QTextStream>
-#include <QTime>
-#include <QSqlDatabase>
-#include <QLoggingCategory>
 
 #if defined(Q_OS_MAC) || defined(Q_OS_LINUX)
 #include <signal.h>
@@ -42,7 +38,6 @@
 #include "RAttributeEntity.h"
 #include "RBlockReferenceEntity.h"
 #include "RCircleEntity.h"
-#include "RDebug.h"
 #include "RDimAlignedEntity.h"
 #include "RDimAngularEntity.h"
 #include "RDimAngular2LEntity.h"

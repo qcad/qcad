@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RTextData.h"
-#include "RUnit.h"
 
 RTextData::RTextData() {
 }

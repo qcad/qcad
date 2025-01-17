@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RDimensionData.h"
-#include "RTriangle.h"
 #include "RUnit.h"
 
 

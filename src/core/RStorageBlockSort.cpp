@@ -1,4 +1,4 @@
-#include <Qt>
+#include <QSharedPointer>
 
 #include "RBlock.h"
 #include "RLayout.h"

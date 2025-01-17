@@ -16,7 +16,6 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RAttributeEntity.h"
 #include "RDocument.h"
 #include "RSettings.h"
 #include "RStorage.h"

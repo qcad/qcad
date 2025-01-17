@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RSolidData.h"
-#include "RSolidEntity.h"
 #include "RTriangle.h"
 
 RSolidData::RSolidData()

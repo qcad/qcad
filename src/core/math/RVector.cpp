@@ -19,7 +19,6 @@
 #include <QQuaternion>
 
 #include "RBox.h"
-#include "RDebug.h"
 #include "RLine.h"
 #include "RMath.h"
 #include "RMatrix.h"

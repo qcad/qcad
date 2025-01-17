@@ -21,7 +21,6 @@
 #include "RDocument.h"
 #include "REntity.h"
 #include "RObject.h"
-#include "RStorage.h"
 #include "RMainWindow.h"
 
 RImporter::RImporter() :

@@ -18,10 +18,7 @@
  */
 #include <QColorDialog>
 #include <QColor>
-#include <QMapIterator>
-#include <QCoreApplication>
 
-#include "RDebug.h"
 #include "RColorCombo.h"
 #include "RColor.h"
 

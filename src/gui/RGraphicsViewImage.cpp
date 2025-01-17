@@ -16,7 +16,6 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QtCore>
 #include <QPainter>
 
 #if QT_VERSION >= 0x050000
@@ -25,7 +24,6 @@
 #include <qtconcurrentrun.h>
 #endif
 
-#include "RDebug.h"
 #include "RDocument.h"
 #include "RDocumentInterface.h"
 #include "RGraphicsScene.h"

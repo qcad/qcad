@@ -16,20 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QFileInfo>
+#include <QFile>
 #include <QStringList>
-//#include <QTextCodec>
 #include <QTextStream>
 
-#include "RArc.h"
-#include "RLine.h"
 #include "RPattern.h"
 #include "RS.h"
-#include "RMemoryStorage.h"
-#include "RDocument.h"
-#include "RDocumentInterface.h"
-#include "RFileImporter.h"
-#include "RFileImporterRegistry.h"
 
 
 /**

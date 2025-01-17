@@ -18,7 +18,6 @@
  */
 #include "RPointEntity.h"
 #include "RExporter.h"
-#include "RPoint.h"
 
 RPropertyTypeId RPointEntity::PropertyCustom;
 RPropertyTypeId RPointEntity::PropertyHandle;

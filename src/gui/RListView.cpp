@@ -19,7 +19,6 @@
 
 #include "REventFilter.h"
 #include "RListView.h"
-#include "RMainWindowQt.h"
 
 RListView::RListView(QWidget* parent) :
     QListView(parent) {

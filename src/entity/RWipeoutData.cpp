@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RWipeoutData.h"
-#include "RWipeoutEntity.h"
 
 RWipeoutData::RWipeoutData() {
 }

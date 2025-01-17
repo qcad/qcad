@@ -21,7 +21,6 @@
 
 #include "RDocument.h"
 #include "RClickReferencePointOperation.h"
-#include "RExporter.h"
 
 
 RClickReferencePointOperation::RClickReferencePointOperation(const RVector& referencePoint)

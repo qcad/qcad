@@ -25,7 +25,6 @@
 #include <QMetaType>
 #include <QBuffer>
 #include <QCache>
-#include <QMap>
 
 /**
  * QBuffer based file cache.

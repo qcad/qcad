@@ -20,7 +20,6 @@
 
 #include "RDocument.h"
 #include "RDeleteSelectionOperation.h"
-#include "RExporter.h"
 
 
 RDeleteSelectionOperation::RDeleteSelectionOperation() {

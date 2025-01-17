@@ -19,9 +19,7 @@
 #include "RDimensionEntity.h"
 #include "RExporter.h"
 #include "RToleranceEntity.h"
-#include "RMetaTypes.h"
 #include "RPluginLoader.h"
-#include "RStorage.h"
 
 RPropertyTypeId RToleranceEntity::PropertyCustom;
 RPropertyTypeId RToleranceEntity::PropertyHandle;

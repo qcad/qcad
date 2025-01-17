@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RLeaderData.h"
-#include "RUnit.h"
 
 RLeaderData::RLeaderData()
     : arrowHead(true),

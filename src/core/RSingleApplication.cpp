@@ -16,19 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QAbstractEventDispatcher>
 #include <QFileOpenEvent>
-#include <QLabel>
-#include <QMessageBox>
-#include <QUrl>
-#include <QTimer>
-#include <QThread>
 #include <QWidget>
-#include <QQueue>
 
 #include "RLocalPeer.h"
-#include "RMainWindow.h"
-#include "RSettings.h"
 #include "RSingleApplication.h"
 
 RSingleApplication* RSingleApplication::singleInstance = NULL;

@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RCircleData.h"
-#include "RCircleEntity.h"
 
 RCircleData::RCircleData() {
 }

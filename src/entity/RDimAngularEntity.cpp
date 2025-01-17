@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RDimAngularEntity.h"
-#include "RExporter.h"
 #include "RPluginLoader.h"
 
 RPropertyTypeId RDimAngularEntity::PropertyCustom;

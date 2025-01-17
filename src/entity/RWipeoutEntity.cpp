@@ -17,10 +17,7 @@
  * along with QCAD.
  */
 #include "RWipeoutEntity.h"
-#include "RMetaTypes.h"
 #include "RExporter.h"
-#include "RLine.h"
-#include "RPluginLoader.h"
 
 RPropertyTypeId RWipeoutEntity::PropertyCustom;
 RPropertyTypeId RWipeoutEntity::PropertyHandle;

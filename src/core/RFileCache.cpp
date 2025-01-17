@@ -18,9 +18,8 @@
  */
 #include "RFileCache.h"
 
-#include <QStringList>
+#include <QFile>
 #include <QFileInfo>
-#include <QDebug>
 
 QCache<QString, QBuffer> RFileCache::cache(10e6);
 

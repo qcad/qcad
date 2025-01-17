@@ -19,7 +19,6 @@
 #include "RArcEntity.h"
 #include "RCircleEntity.h"
 #include "RExporter.h"
-#include "RPoint.h"
 
 RPropertyTypeId RCircleEntity::PropertyCustom;
 RPropertyTypeId RCircleEntity::PropertyHandle;

@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RArcData.h"
-#include "RArcEntity.h"
 
 RArcData::RArcData() {
 }

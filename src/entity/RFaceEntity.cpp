@@ -18,7 +18,6 @@
  */
 #include "RFaceEntity.h"
 #include "RExporter.h"
-#include "RLine.h"
 
 RPropertyTypeId RFaceEntity::PropertyCustom;
 RPropertyTypeId RFaceEntity::PropertyHandle;

@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 #include "RRayData.h"
-#include "RLineEntity.h"
+#include "RDocument.h"
 
 RRayData::RRayData() {
 }

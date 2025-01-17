@@ -16,7 +16,6 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QDir>
 #include <QList>
 #include <QFileInfo>
 #if QT_VERSION >= 0x060000
@@ -35,7 +34,6 @@
 #include "RBlockReferenceEntity.h"
 #include "RCircleEntity.h"
 #include "RColor.h"
-#include "RDebug.h"
 #include "RDimAlignedEntity.h"
 #include "RDimAngular2LEntity.h"
 #include "RDimAngular3PEntity.h"
@@ -46,8 +44,6 @@
 #include "RDocument.h"
 #include "RDxfImporter.h"
 #include "REllipseEntity.h"
-#include "RFileImporterRegistry.h"
-#include "RGlobal.h"
 #include "RHatchEntity.h"
 #include "RImageEntity.h"
 #include "RLayer.h"
@@ -64,10 +60,8 @@
 #include "RSplineEntity.h"
 #include "RStorage.h"
 #include "RTextEntity.h"
-#include "RTextRenderer.h"
 #include "RTraceEntity.h"
 #include "RVector.h"
-#include "RView.h"
 #include "RXLineEntity.h"
 
 

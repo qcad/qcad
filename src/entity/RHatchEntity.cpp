@@ -22,9 +22,7 @@
 #include "RExporter.h"
 #include "RHatchEntity.h"
 #include "RLine.h"
-#include "RMetaTypes.h"
 #include "RPluginLoader.h"
-#include "RPoint.h"
 #include "RSpline.h"
 
 RPropertyTypeId RHatchEntity::PropertyCustom;

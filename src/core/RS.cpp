@@ -16,7 +16,6 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-
 #include <QtGlobal>
 
 #if QT_VERSION < 0x050000
@@ -36,7 +35,6 @@
 #include <QPageSize>
 #endif
 
-#include "RColor.h"
 #include "RGlobal.h"
 #include "RLinetype.h"
 #include "RLineweight.h"

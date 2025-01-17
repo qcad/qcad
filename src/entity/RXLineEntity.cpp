@@ -18,7 +18,6 @@
  */
 #include "RXLineEntity.h"
 #include "RExporter.h"
-#include "RLine.h"
 
 RPropertyTypeId RXLineEntity::PropertyCustom;
 RPropertyTypeId RXLineEntity::PropertyHandle;

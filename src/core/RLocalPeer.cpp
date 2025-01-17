@@ -18,7 +18,6 @@
  */
 #include <QCoreApplication>
 #include <QDataStream>
-#include <QTime>
 
 #include "RS.h"
 #include "RLocalPeer.h"

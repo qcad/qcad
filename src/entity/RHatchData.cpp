@@ -26,12 +26,10 @@
 #include "RHatchData.h"
 #include "RPainterPath.h"
 #include "RPainterPathExporter.h"
-#include "RPointEntity.h"
 #include "RPatternListImperial.h"
 #include "RPatternListMetric.h"
 #include "RSettings.h"
 #include "RSpline.h"
-#include "RUnit.h"
 #include "RPolyline.h"
 
 RHatchProxy* RHatchData::hatchProxy = NULL;

@@ -16,11 +16,8 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QSet>
-
 #include "RDocument.h"
 #include "RCopyOperation.h"
-#include "RExporter.h"
 
 
 RCopyOperation::RCopyOperation(const RVector& offset, RDocument& src)

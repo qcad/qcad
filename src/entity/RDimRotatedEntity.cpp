@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RDimRotatedEntity.h"
-#include "RExporter.h"
 #include "RPluginLoader.h"
 
 RPropertyTypeId RDimRotatedEntity::PropertyCustom;

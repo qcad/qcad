@@ -16,12 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RBlockReferenceEntity.h"
 #include "RDocument.h"
 #include "REntity.h"
-#include "RExplodable.h"
 #include "RShape.h"
-#include "RSpline.h"
 #include "RStorage.h"
 
 RPropertyTypeId REntity::PropertyCustom;

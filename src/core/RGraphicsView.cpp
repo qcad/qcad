@@ -22,7 +22,6 @@
 #include "RDocument.h"
 #include "RGraphicsScene.h"
 #include "RMouseEvent.h"
-#include "RWheelEvent.h"
 #include "RDocumentInterface.h"
 #include "RSettings.h"
 #include "RUnit.h"

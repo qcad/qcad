@@ -17,9 +17,8 @@
  * along with QCAD.
  */
 #include "RRestrictAngleLength.h"
-#include "RDocumentInterface.h"
-#include "RGraphicsView.h"
-#include "ROrthoGrid.h"
+#include "RLine.h"
+#include "RMath.h"
 
 RVector RRestrictAngleLength::restrictSnap(const RVector& position, const RVector& relativeZero) {
     RVector ret;

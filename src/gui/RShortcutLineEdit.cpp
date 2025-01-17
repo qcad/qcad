@@ -19,7 +19,6 @@
 #include "RShortcutLineEdit.h"
 #include <QKeyEvent>
 #include <QKeySequence>
-#include <QDebug>
 
 RShortcutLineEdit::RShortcutLineEdit(QWidget* parent) :
     QLineEdit(parent), m_keyNum(0) {
