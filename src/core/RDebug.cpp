@@ -27,6 +27,10 @@
 
 //FILE* RDebug::stream=stderr;
 
+#if !defined(Q_OS_WIN) && !defined(Q_OS_ANDROID)
+#include <execinfo.h>
+#endif
+
 #if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
 QMap<int, uint64_t> RDebug::timerMac;
 #else

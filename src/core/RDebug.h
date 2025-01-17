@@ -22,15 +22,9 @@
 
 #include "core_global.h"
 
-#include <fstream>
-#include <ostream>
-#include <stdarg.h>
-#include <stdio.h>
-
 #include <QString>
 #include <QElapsedTimer>
 #include <QMap>
-#include <QFile>
 #include <QMetaType>
 #include <QMutex>
 
@@ -39,10 +33,6 @@
 #include <mach/mach.h>
 #include <mach/mach_time.h>
 #undef check
-#endif
-
-#if !defined(Q_OS_WIN) && !defined(Q_OS_ANDROID)
-#include <execinfo.h>
 #endif
 
 #ifndef RDEFAULT_QSTRING
