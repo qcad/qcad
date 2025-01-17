@@ -25,6 +25,7 @@
 #include "RPainterPath.h"
 #include "RImageData.h"
 #include "RTextBasedData.h"
+#include "RTransform.h"
 
 /**
  * \scriptable

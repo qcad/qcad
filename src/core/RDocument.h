@@ -26,13 +26,11 @@
 #include <QSharedPointer>
 
 #include "RBlock.h"
-#include "RBlockReferenceEntity.h"
 #include "RDimStyle.h"
 #include "RDocumentVariables.h"
 #include "REntity.h"
 #include "RNonCopyable.h"
 #include "RRequireHeap.h"
-#include "RSpatialIndex.h"
 #include "RTransactionStack.h"
 #include "RUcs.h"
 #include "RLayer.h"
@@ -41,6 +39,7 @@
 #include "RView.h"
 
 class RVector;
+class RSpatialIndex;
 class RStorage;
 
 #ifndef RDEFAULT_QVARIANT

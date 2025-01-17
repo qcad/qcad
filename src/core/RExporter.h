@@ -53,6 +53,7 @@ class RPolyline;
 class RProgressHandler;
 class RRay;
 class RSpline;
+class RTransform;
 class RTriangle;
 class RVector;
 class RXLine;

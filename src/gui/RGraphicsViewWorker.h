@@ -25,6 +25,7 @@
 #include <QThread>
 
 #include "RGraphicsViewImage.h"
+#include "RTransform.h"
 
 /**
  * Thread worker that draws a part of a document.

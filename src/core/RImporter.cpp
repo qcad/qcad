@@ -18,6 +18,7 @@
  */
 #include "RImporter.h"
 
+#include "RBlockReferenceEntity.h"
 #include "RDocument.h"
 #include "REntity.h"
 #include "RObject.h"
