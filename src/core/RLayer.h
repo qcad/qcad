@@ -23,12 +23,8 @@
 #include "core_global.h"
 
 #include <QString>
-#include <QColor>
-#include <QDebug>
 
-#include "RGlobal.h"
 #include "RObject.h"
-#include "RVector.h"
 #include "RPropertyTypeId.h"
 #include "RLayerProxy.h"
 #include "RLinetype.h"
@@ -36,7 +32,9 @@
 #include "RLineweight.h"
 #include "RPropertyAttributes.h"
 
+class QDebug;
 class RDocument;
+class RTransaction;
 
 /**
  * Represents a layer in a drawing.
