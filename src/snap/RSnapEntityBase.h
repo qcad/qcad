@@ -23,9 +23,8 @@
 #include "snap_global.h"
 
 #include "RSnap.h"
-#include "RGraphicsView.h"
 
-class RMouseEvent;
+class RGraphicsView;
 
 /**
  * \brief Base class for entity based snap classes.
