@@ -44,18 +44,6 @@
 #include "RSettings.h"
 #include "RVector.h"
 
-const double RS::PointTolerance = 1.0e-9;
-const double RS::AngleTolerance = 1.0e-9;
-
-#if QT_VERSION >= 0x060000
-    const Qt::MouseButton RS::MiddleButton = Qt::MiddleButton;
-    const QPageLayout::Orientation RS::Portrait = QPageLayout::Portrait;
-    const QPageLayout::Orientation RS::Landscape = QPageLayout::Landscape;
-#else
-    const Qt::MouseButton RS::MiddleButton = Qt::MidButton;
-    const QPrinter::Orientation RS::Portrait = QPrinter::Portrait;
-    const QPrinter::Orientation RS::Landscape = QPrinter::Landscape;
-#endif
 
 /**
  * \return True if the two values are considered to be equal.
@@ -382,6 +370,22 @@ int RS::compareAlphanumerical(const QString& s1, const QString& s2) {
 
 bool RS::lessThanAlphanumerical(const QString& s1, const QString& s2) {
     return RS::compareAlphanumerical(s1, s2)<0;
+}
+
+QString RS::getFontFamily(const QTextCharFormat& format) {
+#if QT_VERSION >= 0x060000
+    // note: QTextCharFormat::fontFamily is deprecated and broken in Qt 6:
+    QVariant v = format.fontFamilies();
+    if (v.isValid()) {
+        QStringList l = v.toStringList();
+        if (!l.isEmpty()) {
+            return l.first();
+        }
+    }
+    return QString();
+#else
+    return format.fontFamily();
+#endif
 }
 
 int RS::getPageSizeId(const QString& name) {
@@ -988,5 +992,13 @@ QString RS::convert(const QByteArray& str, const QString& codecName) {
     else {
         return codec->toUnicode(str);
     }
+#endif
+}
+
+int RS::getMetaType(const QVariant& v) {
+#if QT_VERSION >= 0x060000
+    return v.metaType().id();
+#else
+    return v.type();
 #endif
 }
