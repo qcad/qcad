@@ -22,19 +22,15 @@
 
 #include "core_global.h"
 
-#include <QApplication>
-#include <QDebug>
 #include <QEasingCurve>
 #include <QPair>
 #include <QString>
 #include <QStringList>
-//#include <QTextCodec>
 #include <QVariant>
 #include <QMetaType>
 #include <QTextCharFormat>
 
 #if QT_VERSION >= 0x060000
-#include <QScreen>
 #include <QPageLayout>
 #else
 #include <QPrinter>
@@ -51,7 +47,6 @@
 
 #if QT_VERSION >= 0x050000
 #  include <QRegularExpression>
-#  include <QGuiApplication>
 #else
 #  include <QRegExp>
 #  ifndef QRegularExpression
@@ -65,7 +60,6 @@
 #  endif
 #endif
 
-class RVector;
 class RPropertyAttributes;
 
 /**

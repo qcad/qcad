@@ -23,12 +23,13 @@
 #endif
 
 #if QT_VERSION < 0x060000
+#include <QApplication>
 #include <QTextCodec>
 #include <QDesktopWidget>
-#endif
-
-#if QT_VERSION >= 0x060000
 #include <QStringDecoder>
+#else
+#include <QGuiApplication>
+#include <QScreen>
 #endif
 
 #if QT_VERSION >= 0x050300
