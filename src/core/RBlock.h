@@ -23,7 +23,6 @@
 #include "core_global.h"
 
 #include <QString>
-#include <QDebug>
 
 #include "RLayout.h"
 #include "RGlobal.h"
