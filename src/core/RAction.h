@@ -23,9 +23,8 @@
 #include "core_global.h"
 
 #include <QList>
+#include <QMetaType>
 #include <QString>
-
-#include "RVector.h"
 
 class RPropertyEvent;
 class RGraphicsScene;
@@ -40,6 +39,7 @@ class RWheelEvent;
 class RGuiAction;
 class RStorage;
 class RTabletEvent;
+class RVector;
 class QKeyEvent;
 class QSwipeGesture;
 class QPanGesture;
