@@ -26,6 +26,7 @@
 #include "RFont.h"
 #include "RFontList.h"
 #include "RLine.h"
+#include "RTextBasedData.h"
 #include "RTextRenderer.h"
 #include "RPainterPathDevice.h"
 #include "RSettings.h"

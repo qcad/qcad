@@ -24,9 +24,9 @@
 
 #include <QString>
 
-#include "RDocument.h"
 #include "RExporter.h"
 
+class RDocument;
 class RMessageHandler;
 class RProgressHandler;
 

@@ -24,11 +24,11 @@
 
 #include <QMap>
 
-#include "RDocument.h"
-#include "REntity.h"
-#include "RExporter.h"
 #include "ROperation.h"
-#include "RVector.h"
+
+class RDocument;
+class REntity;
+class RVector;
 
 #ifndef RQMapQStringQString
 typedef QMap<QString, QString> RQMapQStringQString;

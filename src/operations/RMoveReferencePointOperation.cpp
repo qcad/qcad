@@ -20,6 +20,7 @@
 #include <QSharedPointer>
 
 #include "RDocument.h"
+#include "RGraphicsScene.h"
 #include "RMoveReferencePointOperation.h"
 
 

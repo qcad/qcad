@@ -19,6 +19,8 @@
 
 #include "RDxfExporterFactory.h"
 
+#include <QFileInfo>
+
 QStringList RDxfExporterFactory::getFilterStrings() {
     QStringList ret;
 

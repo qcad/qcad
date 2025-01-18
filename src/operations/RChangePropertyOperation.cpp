@@ -20,6 +20,7 @@
 
 #include "RChangePropertyOperation.h"
 #include "RDocument.h"
+#include "RPropertyEvent.h"
 #include "RS.h"
 
 RChangePropertyOperation::RChangePropertyOperation(

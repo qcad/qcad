@@ -24,8 +24,9 @@
 
 #include <QComboBox>
 
-#include "RDocument.h"
 #include "RLinetypePattern.h"
+
+class RDocument;
 
 /**
  * \scriptable

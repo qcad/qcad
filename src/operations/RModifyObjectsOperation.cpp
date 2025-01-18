@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RModifyObjectsOperation.h"
+#include "RDocument.h"
 #include "RDocumentInterface.h"
 #include "RSettings.h"
 #include "RStorage.h"

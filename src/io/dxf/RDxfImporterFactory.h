@@ -22,15 +22,14 @@
 
 #include "dxf_global.h"
 
-#include <QFileInfo>
 #include <QMetaType>
 
-#include "RDocument.h"
 #include "RDxfImporter.h"
 #include "RFileImporter.h"
 #include "RFileImporterFactory.h"
 #include "RFileImporterRegistry.h"
 
+class RDocument;
 class RMessageHandler;
 class RProgressHandler;
 

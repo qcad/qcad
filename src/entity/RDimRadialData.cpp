@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RDimRadialData.h"
+#include "RDocument.h"
 
 RDimRadialData::RDimRadialData() {
 }

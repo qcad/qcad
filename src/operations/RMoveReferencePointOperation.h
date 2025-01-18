@@ -22,13 +22,12 @@
 
 #include "operations_global.h"
 
-#include "RDocument.h"
-#include "RExporter.h"
-#include "RGraphicsScene.h"
 #include "ROperation.h"
 #include "RVector.h"
 
+class RObject;
 class REntity;
+class RGraphicsScene;
 
 /**
  * Implementation of an operation that moves a reference point

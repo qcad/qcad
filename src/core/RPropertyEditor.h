@@ -30,13 +30,13 @@
 #include <QPromise>
 #endif
 
-#include "RDocument.h"
 #include "RLayerListener.h"
-#include "RProperty.h"
 #include "RPropertyListener.h"
 
+class RDocument;
 class RDocumentInterface;
 class RObject;
+class RProperty;
 
 /**
  * Base class for property editors. Provides basic functionality that

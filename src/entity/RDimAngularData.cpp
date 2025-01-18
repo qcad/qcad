@@ -17,6 +17,8 @@
  * along with QCAD.
  */
 #include "RDimAngularData.h"
+#include "RArc.h"
+#include "RDocument.h"
 
 RDimAngularData::RDimAngularData() {
 }

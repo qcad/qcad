@@ -21,6 +21,7 @@
 #include <QAbstractItemView>
 #include <QSize>
 
+#include "RDocument.h"
 #include "RLinetypeCombo.h"
 #include "RLinetypeComboDelegate.h"
 

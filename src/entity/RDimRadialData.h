@@ -22,9 +22,10 @@
 
 #include "entity_global.h"
 
-#include "RDocument.h"
 #include "RDimensionData.h"
 #include "RVector.h"
+
+class RDocument;
 
 /**
  * Radial dimension entity data class.

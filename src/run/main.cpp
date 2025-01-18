@@ -86,6 +86,7 @@
 #include "RViewportEntity.h"
 #include "RWipeoutEntity.h"
 #include "RVersion.h"
+#include "RView.h"
 #include "RXLineEntity.h"
 
 #ifdef Q_OS_MAC

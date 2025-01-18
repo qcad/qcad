@@ -21,6 +21,7 @@
 #include <QTextDocument>
 
 #include "RColor.h"
+#include "RDocument.h"
 #include "RDxfServices.h"
 #include "RFontList.h"
 #include "RLine.h"

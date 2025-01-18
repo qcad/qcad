@@ -22,9 +22,10 @@
 
 #include "entity_global.h"
 
-#include "RDocument.h"
 #include "RDimensionData.h"
 #include "RVector.h"
+
+class RDocument;
 
 /**
  * Diametric dimension entity data class.

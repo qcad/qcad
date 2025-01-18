@@ -29,6 +29,7 @@
 #include "RBlockReferenceEntity.h"
 #include "RCircleEntity.h"
 #include "RColor.h"
+#include "RDocument.h"
 #include "RDimAlignedEntity.h"
 #include "RDimAngular2LEntity.h"
 #include "RDimAngular3PEntity.h"

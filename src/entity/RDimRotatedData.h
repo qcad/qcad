@@ -22,9 +22,10 @@
 
 #include "entity_global.h"
 
-#include "RDocument.h"
 #include "RDimLinearData.h"
-#include "RVector.h"
+
+class RDocument;
+class RVector;
 
 /**
  * Rotated dimension entity data class.

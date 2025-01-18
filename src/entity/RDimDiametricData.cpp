@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RDimDiametricData.h"
+#include "RDocument.h"
 
 RDimDiametricData::RDimDiametricData() {
 }

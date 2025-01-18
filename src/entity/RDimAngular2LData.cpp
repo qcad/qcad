@@ -17,6 +17,8 @@
  * along with QCAD.
  */
 #include "RDimAngular2LData.h"
+#include "RDocument.h"
+#include "RLine.h"
 
 RDimAngular2LData::RDimAngular2LData() {
 }
