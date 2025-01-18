@@ -25,7 +25,6 @@
 #include <QDebug>
 #include <QString>
 #include <QMap>
-#include <QFileInfo>
 
 #include "RS.h"
 

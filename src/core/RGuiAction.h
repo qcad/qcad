@@ -22,7 +22,6 @@
 
 #include "core_global.h"
 
-#include <QFileInfo>
 #include <QMap>
 #include <QMetaType>
 #include <QString>
@@ -322,9 +321,7 @@ public:
         return scriptFile;
     }
 
-    QString getScriptClass() const {
-        return QFileInfo(scriptFile).baseName();
-    }
+    QString getScriptClass() const;
 
     virtual void setGroup(const QString& title);
     QString getGroup();

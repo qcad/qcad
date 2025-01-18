@@ -964,6 +964,10 @@ void RGuiAction::setScriptFile(const QString& sf, bool isSecondary) {
     //}
 }
 
+QString RGuiAction::getScriptClass() const {
+    return QFileInfo(scriptFile).baseName();
+}
+
 void RGuiAction::setFactory(FactoryFunction f) {
     factory = f;
 }
