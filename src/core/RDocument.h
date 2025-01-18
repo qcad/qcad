@@ -26,8 +26,6 @@
 #include <QSharedPointer>
 
 #include "RBlock.h"
-#include "RDimStyle.h"
-#include "RDocumentVariables.h"
 #include "REntity.h"
 #include "RNonCopyable.h"
 #include "RRequireHeap.h"
@@ -38,6 +36,8 @@
 #include "RLinetype.h"
 #include "RView.h"
 
+class RDimStyle;
+class RDocumentVariables;
 class RVector;
 class RSpatialIndex;
 class RStorage;

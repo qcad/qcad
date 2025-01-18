@@ -28,6 +28,7 @@
 #include "RBlockListener.h"
 #include "RCoordinateEvent.h"
 #include "RCoordinateListener.h"
+#include "RDimStyle.h"
 #include "RDocument.h"
 #include "REntityPickEvent.h"
 #include "RFileExporter.h"

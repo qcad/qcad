@@ -20,6 +20,7 @@
 
 #include "RBox.h"
 #include "RDebug.h"
+#include "RDimStyle.h"
 #include "RDocument.h"
 #include "RDocumentVariables.h"
 #include "RLinetypeListImperial.h"

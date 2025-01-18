@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RLeaderData.h"
+#include "RDimStyle.h"
 #include "RDocument.h"
 #include "RTriangle.h"
 

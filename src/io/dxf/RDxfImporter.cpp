@@ -40,6 +40,7 @@
 #include "RDimDiametricEntity.h"
 #include "RDimRadialEntity.h"
 #include "RDimRotatedEntity.h"
+#include "RDimStyle.h"
 #include "RDimOrdinateEntity.h"
 #include "RDocument.h"
 #include "RDxfImporter.h"
