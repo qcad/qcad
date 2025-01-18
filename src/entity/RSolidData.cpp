@@ -17,6 +17,8 @@
  * along with QCAD.
  */
 #include "RSolidData.h"
+#include "RDocument.h"
+#include "RRefPoint.h"
 #include "RTriangle.h"
 
 RSolidData::RSolidData()

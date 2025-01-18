@@ -22,11 +22,12 @@
 
 #include "entity_global.h"
 
-#include "RDocument.h"
-#include "RDimLinearData.h"
+#include "REntity.h"
 #include "RPolyline.h"
-#include "RTriangle.h"
 #include "RVector.h"
+
+class RDocument;
+class RTriangle;
 
 /**
  * Leader entity data class.
@@ -116,64 +117,12 @@ public:
         return REntityData::flipVertical();
     }
 
-    double getDimasz(bool scale = true) const {
-        double v = 2.5;
+    double getDimasz(bool scale = true) const;
 
-        // get value from override:
-        if (dimasz>0.0) {
-            v = dimasz;
-        }
+    void setDimasz(double v);
 
-        else if (document!=NULL) {
-            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
-            if (!dimStyle.isNull()) {
-                // get value from dimension style:
-                v = dimStyle->getDouble(RS::DIMASZ);
-            }
-            else {
-                // TODO: get value from document (should never happen):
-                Q_ASSERT(false);
-            }
-        }
-
-        if (scale) {
-            v *= getDimscale();
-        }
-
-        return v;
-    }
-
-    void setDimasz(double v) {
-        dimasz = v;
-        update();
-    }
-
-    double getDimscale() const {
-        // get value from override:
-        if (dimscale>0.0) {
-            return dimscale;
-        }
-
-        double v = 1.0;
-        if (document!=NULL) {
-            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
-            if (!dimStyle.isNull()) {
-                // get value from dimension style:
-                v = dimStyle->getDouble(RS::DIMSCALE);
-            }
-            else {
-                // TODO: get value from document (should never happen):
-                Q_ASSERT(false);
-            }
-        }
-
-        return v;
-    }
-
-    void setDimscale(double f) {
-        dimscale = f;
-        update();
-    }
+    double getDimscale() const;
+    void setDimscale(double f);
 
     virtual void scaleVisualProperties(double scaleFactor);
 

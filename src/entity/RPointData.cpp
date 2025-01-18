@@ -17,6 +17,8 @@
  * along with QCAD.
  */
 #include "RPointData.h"
+#include "RDocument.h"
+#include "RRefPoint.h"
 
 RPointData::RPointData() {
 }

@@ -17,6 +17,8 @@
  * along with QCAD.
  */
 #include "RLeaderData.h"
+#include "RDocument.h"
+#include "RTriangle.h"
 
 RLeaderData::RLeaderData()
     : arrowHead(true),
@@ -44,6 +46,66 @@ RLeaderData::RLeaderData(const RPolyline& polyline, bool arrowHead)
       splineShaped(false) {
 
 }
+
+double RLeaderData::getDimasz(bool scale) const {
+    double v = 2.5;
+
+    // get value from override:
+    if (dimasz>0.0) {
+        v = dimasz;
+    }
+
+    else if (document!=NULL) {
+        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+        if (!dimStyle.isNull()) {
+            // get value from dimension style:
+            v = dimStyle->getDouble(RS::DIMASZ);
+        }
+        else {
+            // TODO: get value from document (should never happen):
+            Q_ASSERT(false);
+        }
+    }
+
+    if (scale) {
+        v *= getDimscale();
+    }
+
+    return v;
+}
+
+void RLeaderData::setDimasz(double v) {
+    dimasz = v;
+    update();
+}
+
+double RLeaderData::getDimscale() const {
+    // get value from override:
+    if (dimscale>0.0) {
+        return dimscale;
+    }
+
+    double v = 1.0;
+    if (document!=NULL) {
+        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+        if (!dimStyle.isNull()) {
+            // get value from dimension style:
+            v = dimStyle->getDouble(RS::DIMSCALE);
+        }
+        else {
+            // TODO: get value from document (should never happen):
+            Q_ASSERT(false);
+        }
+    }
+
+    return v;
+}
+
+void RLeaderData::setDimscale(double f) {
+    dimscale = f;
+    update();
+}
+
 
 void RLeaderData::scaleVisualProperties(double scaleFactor) {
     setDimscale(getDimscale() * scaleFactor);

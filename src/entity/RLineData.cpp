@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RLineData.h"
+#include "RDocument.h"
 
 RLineData::RLineData() {
 }

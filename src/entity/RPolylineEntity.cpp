@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RPolylineEntity.h"
+#include "RDebug.h"
 #include "RExporter.h"
 #include "RPluginLoader.h"
 

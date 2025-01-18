@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 #include "REllipseData.h"
-//#include "REllipseEntity.h"
+#include "RRefPoint.h"
 
 REllipseData::REllipseData() {
 }

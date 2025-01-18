@@ -23,10 +23,11 @@
 #include "entity_global.h"
 
 #include "RBox.h"
-#include "RDocument.h"
-#include "REntity.h"
+#include "REntityData.h"
 #include "RPolyline.h"
 #include "RVector.h"
+
+class RDocument;
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1

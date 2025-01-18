@@ -22,6 +22,7 @@
 #include "RS.h"
 #include "RSettings.h"
 #include "RStorage.h"
+#include "RTransform.h"
 
 RPropertyTypeId RBlockReferenceEntity::PropertyCustom;
 RPropertyTypeId RBlockReferenceEntity::PropertyHandle;

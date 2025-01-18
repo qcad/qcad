@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RLineEntity.h"
+#include "RDebug.h"
 #include "RExporter.h"
 #include "RLine.h"
 

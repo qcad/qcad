@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RCircleData.h"
+#include "RRefPoint.h"
 
 RCircleData::RCircleData() {
 }

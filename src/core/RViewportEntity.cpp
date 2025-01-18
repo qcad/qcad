@@ -20,6 +20,7 @@
 #include "RExporter.h"
 #include "RSettings.h"
 #include "RStorage.h"
+#include "RTransform.h"
 #include "RViewportEntity.h"
 
 RPropertyTypeId RViewportEntity::PropertyCustom;

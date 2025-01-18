@@ -18,10 +18,14 @@
  */
 #include "RBlockReferenceData.h"
 #include "RBlockReferenceEntity.h"
+#include "RDebug.h"
+#include "RDimStyle.h"
+#include "RDocument.h"
 #include "RExporter.h"
 #include "RLeaderEntity.h"
 #include "RPluginLoader.h"
 #include "RS.h"
+#include "RTriangle.h"
 
 RPropertyTypeId RLeaderEntity::PropertyCustom;
 RPropertyTypeId RLeaderEntity::PropertyHandle;

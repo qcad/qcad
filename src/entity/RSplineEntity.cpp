@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RSplineEntity.h"
+#include "RDebug.h"
 #include "RExporter.h"
 #include "RS.h"
 

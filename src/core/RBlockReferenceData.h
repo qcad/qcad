@@ -25,11 +25,11 @@
 #include "RBlock.h"
 #include "RBox.h"
 #include "REntity.h"
-#include "RTransform.h"
 #include "RVector.h"
 
 class RDocument;
 class RExporter;
+class RTransform;
 
 /**
  * Defines the geometry and appearance of a block reference entity.

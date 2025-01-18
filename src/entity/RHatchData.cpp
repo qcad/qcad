@@ -21,6 +21,7 @@
 
 #include "RArc.h"
 #include "RCircle.h"
+#include "RDocument.h"
 #include "RLine.h"
 #include "REllipse.h"
 #include "RHatchData.h"

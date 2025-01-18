@@ -22,13 +22,11 @@
 
 #include "entity_global.h"
 
-#include <QTextLayout>
-
 #include "RBlockReferenceEntity.h"
-#include "RDocument.h"
-#include "RTextData.h"
+#include "RTextBasedData.h"
 
 class RAttributeDefinitionData;
+class RDocument;
 
 /**
  * Stores and manages all data that defines the geometry and

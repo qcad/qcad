@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RWipeoutEntity.h"
+#include "RDebug.h"
 #include "RExporter.h"
 
 RPropertyTypeId RWipeoutEntity::PropertyCustom;

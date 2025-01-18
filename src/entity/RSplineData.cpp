@@ -17,6 +17,8 @@
  * along with QCAD.
  */
 #include "RSplineData.h"
+#include "RDocument.h"
+#include "RRefPoint.h"
 
 RSplineData::RSplineData() {
 }
