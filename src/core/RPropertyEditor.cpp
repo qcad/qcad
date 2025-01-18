@@ -25,6 +25,7 @@
 #endif
 
 #include "RBlockReferenceEntity.h"
+#include "RDocumentInterface.h"
 #include "RMath.h"
 #include "RMainWindow.h"
 #include "RS.h"

@@ -17,8 +17,10 @@
  * along with QCAD.
  */
 #include "RModifyObjectsOperation.h"
+#include "RDocumentInterface.h"
 #include "RSettings.h"
 #include "RStorage.h"
+#include "RTransformation.h"
 #include "RTranslation.h"
 
 void RModifyObjectsOperation::transformSelection(RTransformation* transformation, RDocumentInterface* di, int copies, bool preview, bool selectResult, bool useCurrentAttributes) {

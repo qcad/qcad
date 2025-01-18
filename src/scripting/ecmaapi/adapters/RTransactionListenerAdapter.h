@@ -22,7 +22,6 @@
 
 #include <QObject>
 
-#include "RDocumentInterface.h"
 #include "RTransactionListener.h"
 
 /**

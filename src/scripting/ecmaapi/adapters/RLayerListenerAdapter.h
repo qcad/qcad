@@ -22,8 +22,9 @@
 
 #include <QObject>
 
-#include "RDocumentInterface.h"
 #include "RLayerListener.h"
+
+class RDocumentInterface;
 
 /**
  * \scriptable

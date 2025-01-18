@@ -22,9 +22,9 @@
 
 #include <QObject>
 
-#include "RDocumentInterface.h"
-#include "RVector.h"
 #include "RBlockListener.h"
+
+class RDocumentInterface;
 
 /**
  * This block listener adapter emits signals on block events.

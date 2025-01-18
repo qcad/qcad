@@ -28,7 +28,6 @@
 
 #include "RArc.h"
 #include "RCircle.h"
-#include "RDocumentInterface.h"
 #include "REllipse.h"
 #include "RGraphicsScene.h"
 #include "RGraphicsSceneDrawable.h"
@@ -42,6 +41,7 @@
 #include "RSpline.h"
 #include "RXLine.h"
 
+class RDocumentInterface;
 class RGraphicsViewImage;
 class RTriangle;
 

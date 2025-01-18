@@ -18,6 +18,7 @@
  */
 #include <QCoreApplication>
 #include <QSettings>
+#include <QTime>
 #if QT_VERSION >= 0x060000
 #   include <QScreen>
 #else

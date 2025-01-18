@@ -22,9 +22,9 @@
 
 #include <QObject>
 
-#include "RDocumentInterface.h"
-#include "RVector.h"
 #include "RViewListener.h"
+
+class RDocumentInterface;
 
 /**
  * \scriptable

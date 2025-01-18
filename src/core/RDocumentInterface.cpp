@@ -36,6 +36,7 @@
 #include "RGraphicsScene.h"
 #include "RGraphicsView.h"
 #include "RGrid.h"
+#include "RGuiAction.h"
 #include "RLayerListener.h"
 #include "RLinkedStorage.h"
 #include "RPolyline.h"

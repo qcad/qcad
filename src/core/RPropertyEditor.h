@@ -22,7 +22,6 @@
 
 #include "core_global.h"
 
-#include <QCoreApplication>
 #include <QList>
 #include <QMap>
 #include <QString>
@@ -32,12 +31,12 @@
 #endif
 
 #include "RDocument.h"
-#include "RDocumentInterface.h"
 #include "RLayerListener.h"
-#include "RObject.h"
 #include "RProperty.h"
 #include "RPropertyListener.h"
 
+class RDocumentInterface;
+class RObject;
 
 /**
  * Base class for property editors. Provides basic functionality that
