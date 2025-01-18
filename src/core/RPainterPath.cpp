@@ -26,6 +26,7 @@
 #include "RMath.h"
 #include "RPainterPath.h"
 #include "RPainterPathExporter.h"
+#include "RPoint.h"
 #include "RSpline.h"
 
 RPainterPath::RPainterPath() :

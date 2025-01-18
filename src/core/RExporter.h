@@ -30,10 +30,7 @@
 #include <QTransform>
 
 #include "REntity.h"
-#include "RPainterPath.h"
-#include "RTextBasedData.h"
 #include "RView.h"
-#include "RViewportEntity.h"
 
 class RArc;
 class RCircle;
@@ -43,14 +40,17 @@ class RImageData;
 class RLayerState;
 class RLine;
 class RMessageHandler;
+class RPainterPath;
 class RPainterPathSource;
 class RPoint;
 class RProgressHandler;
 class RRay;
 class RSpline;
+class RTextBasedData;
 class RTransform;
 class RTriangle;
 class RVector;
+class RViewportEntity;
 class RXLine;
 
 #ifndef RDEFAULT_MIN1

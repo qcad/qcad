@@ -20,6 +20,7 @@
 #include "RDimensionEntity.h"
 #include "RDocument.h"
 #include "RExporter.h"
+#include "RLine.h"
 #include "RToleranceEntity.h"
 #include "RPluginLoader.h"
 

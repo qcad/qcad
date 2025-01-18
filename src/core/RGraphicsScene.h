@@ -35,6 +35,7 @@ class RTabletEvent;
 class RTerminateEvent;
 class RWheelEvent;
 class QCursor;
+class QKeyEvent;
 class QPanGesture;
 class QPinchGesture;
 class QSwipeGesture;

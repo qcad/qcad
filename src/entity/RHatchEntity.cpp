@@ -25,6 +25,7 @@
 #include "RPluginLoader.h"
 #include "RSettings.h"
 #include "RSpline.h"
+#include "RViewportData.h"
 
 RPropertyTypeId RHatchEntity::PropertyCustom;
 RPropertyTypeId RHatchEntity::PropertyHandle;

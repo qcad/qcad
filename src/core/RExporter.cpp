@@ -36,6 +36,7 @@
 #include "RShapesExporter.h"
 #include "RSpline.h"
 #include "RStorage.h"
+#include "RTextBasedData.h"
 #include "RTriangle.h"
 #include "RUnit.h"
 #include "RView.h"
