@@ -27,6 +27,7 @@
 #include "REllipse.h"
 #include "REntity.h"
 #include "RExporter.h"
+#include "RLayer.h"
 #include "RLine.h"
 #include "RLinetype.h"
 #include "RMainWindow.h"

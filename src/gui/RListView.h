@@ -22,10 +22,7 @@
 
 #include "gui_global.h"
 
-#include <QWidget>
 #include <QListView>
-#include <QEvent>
-#include <QHelpEvent>
 
 /**
  * \scriptable

@@ -18,6 +18,9 @@
  */
 #include <QCoreApplication>
 #include <QDataStream>
+#include <QDir>
+#include <QLocalServer>
+#include <QLocalSocket>
 
 #include "RS.h"
 #include "RLocalPeer.h"

@@ -25,7 +25,7 @@
 #include "REventHandler.h"
 #include "RDocument.h"
 #include "RDocumentInterface.h"
-#include "RGraphicsView.h"
+#include "RGraphicsViewImage.h"
 #include "RGrid.h"
 #include "RRulerQt.h"
 #include "RSettings.h"

@@ -23,7 +23,6 @@
 #include "gui_global.h"
 
 #include <QMetaType>
-#include <QEvent>
 #include <QLineEdit>
 
 /**

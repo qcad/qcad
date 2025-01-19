@@ -28,10 +28,12 @@
 
 #include <RSingleApplication.h>
 
+#include "RCloseCurrentEvent.h"
 #include "RCoordinateEvent.h"
 #include "RDocument.h"
 #include "RDocumentInterface.h"
 #include "RGuiAction.h"
+#include "RGraphicsViewImage.h"
 #include "RGraphicsViewQt.h"
 #include "RMainWindowQt.h"
 #include "RMdiArea.h"

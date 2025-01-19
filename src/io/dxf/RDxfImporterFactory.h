@@ -25,7 +25,6 @@
 #include <QMetaType>
 
 #include "RDxfImporter.h"
-#include "RFileImporter.h"
 #include "RFileImporterFactory.h"
 #include "RFileImporterRegistry.h"
 

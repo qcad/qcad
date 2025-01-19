@@ -29,7 +29,6 @@
 class QScrollBar;
 class QUrl;
 class QWidget;
-class QPainter;
 class QMimeData;
 class QDragEnterEvent;
 

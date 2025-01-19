@@ -23,10 +23,8 @@
 #include "core_global.h"
 
 #include <QCoreApplication>
-#include <QObject>
 #include <QColor>
 #include <QMetaType>
-#include <QMap>
 #include <QIcon>
 
 class QDebug;

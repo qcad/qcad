@@ -26,6 +26,7 @@
 #include "RGraphicsView.h"
 #include "RLine.h"
 #include "ROrthoGrid.h"
+#include "RRuler.h"
 #include "RSettings.h"
 #include "RUcs.h"
 #include "RUnit.h"

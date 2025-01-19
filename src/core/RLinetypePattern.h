@@ -22,9 +22,6 @@
 
 #include "core_global.h"
 
-#include <stdarg.h>
-#include <math.h>
-
 #include <QCoreApplication>
 #include <QMetaType>
 #include <QString>

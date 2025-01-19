@@ -25,10 +25,11 @@
 #include <QElapsedTimer>
 #include <QWidget>
 
-#include "RGraphicsViewImage.h"
+#include "RVector.h"
 
 class QFrame;
 class QGestureEvent;
+class RGraphicsViewImage;
 
 /**
  * \brief QWidget based 2d graphics view.

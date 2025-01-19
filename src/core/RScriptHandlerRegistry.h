@@ -23,7 +23,6 @@
 #include "core_global.h"
 
 #include <QList>
-#include <QMap>
 #include <QString>
 
 #include "RSingleton.h"

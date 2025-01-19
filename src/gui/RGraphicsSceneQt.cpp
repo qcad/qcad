@@ -23,6 +23,7 @@
 #include <qtconcurrentrun.h>
 #endif
 
+#include "RArc.h"
 #include "RBlock.h"
 #include "RBlockReferenceEntity.h"
 #include "RDocument.h"
@@ -30,6 +31,7 @@
 #include "RGraphicsSceneQt.h"
 #include "RGraphicsViewImage.h"
 #include "RImageData.h"
+#include "RLayer.h"
 #include "RMainWindow.h"
 #include "RPainterPathExporter.h"
 #include "RSettings.h"

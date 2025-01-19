@@ -36,9 +36,9 @@
 
 #include <QItemDelegate>
 #include <QMetaType>
-#include <QTreeWidget>
-#include <QTreeWidgetItem>
-#include <QWidget>
+#include <QTreeView>
+
+class QTreeView;
 
 /**
  * Tree widget item delegate. Decorates root items of QTreeWidget tool matrices.

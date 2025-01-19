@@ -25,7 +25,6 @@
 #include <QMetaType>
 
 #include "RDxfExporter.h"
-#include "RFileExporter.h"
 #include "RFileExporterFactory.h"
 #include "RFileExporterRegistry.h"
 

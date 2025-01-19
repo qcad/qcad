@@ -23,10 +23,7 @@
 #include "core_global.h"
 
 #include <QString>
-#include <QElapsedTimer>
-#include <QMap>
 #include <QMetaType>
-#include <QMutex>
 
 #if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
 #include <CoreServices/CoreServices.h>
@@ -34,6 +31,11 @@
 #include <mach/mach_time.h>
 #undef check
 #endif
+
+// These only work because the corresponding "member" variables are static
+class QElapsedTimer;
+class QMutex;
+template <class Key, class T> class QMap;
 
 #ifndef RDEFAULT_QSTRING
 #define RDEFAULT_QSTRING QString()

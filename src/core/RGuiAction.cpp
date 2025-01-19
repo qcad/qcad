@@ -19,11 +19,11 @@
 #include <QDir>
 #include <QFileInfo>
 #include <QList>
+#include <QMap>
 #include <QMenu>
 #include <QPainter>
 #include <QSvgRenderer>
 #include <QToolBar>
-//#include <QVectorIterator>
 
 #include "RGuiAction.h"
 #include "RDocument.h"

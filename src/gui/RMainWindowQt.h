@@ -27,7 +27,6 @@
 #include <QMainWindow>
 #include <QToolBar>
 
-#include "RCloseCurrentEvent.h"
 #include "RMainWindow.h"
 #include "RObject.h"
 

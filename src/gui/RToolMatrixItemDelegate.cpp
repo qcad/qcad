@@ -30,7 +30,6 @@
  */
 
 #include <QAbstractItemModel>
-#include <QTreeView>
 #include <QStyle>
 #include <QPainter>
 

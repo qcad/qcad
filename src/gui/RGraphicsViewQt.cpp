@@ -21,8 +21,8 @@
 #include <QGestureEvent>
 #include <QPainter>
 
-#include "RDebug.h"
 #include "RDocumentInterface.h"
+#include "RGraphicsViewImage.h"
 #include "RGraphicsViewQt.h"
 #include "RMainWindow.h"
 #include "RMainWindowQt.h"

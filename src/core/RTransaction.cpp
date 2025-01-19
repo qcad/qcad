@@ -18,6 +18,7 @@
  */
 #include "RBlockReferenceEntity.h"
 #include "RDocument.h"
+#include "RLayer.h"
 #include "RLinetype.h"
 #include "RLinkedStorage.h"
 #include "RMainWindow.h"

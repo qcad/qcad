@@ -23,6 +23,7 @@
 #include "RDimStyle.h"
 #include "RDocument.h"
 #include "RDocumentVariables.h"
+#include "RLayer.h"
 #include "RLayout.h"
 #include "RLinetypeListImperial.h"
 #include "RLinetypeListMetric.h"

@@ -25,9 +25,9 @@
 #include <QMutex>
 class QKeyEvent;
 
-#include "RLayer.h"
 #include "RMainWindowProxy.h"
 #include "RMessageHandler.h"
+#include "RObject.h"
 #include "RProgressHandler.h"
 #include "RSEnums.h"
 
@@ -50,6 +50,7 @@ class RPaletteListener;
 class RPenListener;
 class RPropertyEvent;
 class RPropertyListener;
+class RPropertyTypeId;
 class RPreferencesListener;
 class RSelectionListener;
 class RSnapListener;

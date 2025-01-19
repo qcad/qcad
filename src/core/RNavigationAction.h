@@ -23,6 +23,8 @@
 #include "core_global.h"
 
 #include "RActionAdapter.h"
+#include "RVector.h"
+
 #include "RMouseEvent.h"
 #include "RGraphicsView.h"
 #include "RGuiAction.h"

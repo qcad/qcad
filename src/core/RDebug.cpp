@@ -19,6 +19,10 @@
 #include <stdlib.h>
 
 #include <QDebug>
+#include <QElapsedTimer>
+#include <QMap>
+#include <QMetaType>
+#include <QMutex>
 #include <QStringList>
 #include <QTime>
 

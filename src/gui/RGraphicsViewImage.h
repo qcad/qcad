@@ -24,12 +24,11 @@
 
 #include <QMutex>
 #include <QTransform>
-#include <QPainter>
 
+#include "RGraphicsSceneDrawable.h"
 #include "RGraphicsView.h"
 #include "RPainterPath.h"
 
-class RGraphicsSceneDrawable;
 class RGraphicsSceneQt;
 class RImageData;
 class RLine;
@@ -38,7 +37,6 @@ class RSnapRestriction;
 class RTextBasedData;
 class RTextLayout;
 class RGraphicsViewWorker;
-class QTextLayout;
 
 /**
  * \brief QImage based 2d graphics view.
