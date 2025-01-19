@@ -25,6 +25,7 @@
 #endif
 
 #include "RDocumentInterface.h"
+#include "RBlock.h"
 #include "RBlockListener.h"
 #include "RCoordinateEvent.h"
 #include "RCoordinateListener.h"

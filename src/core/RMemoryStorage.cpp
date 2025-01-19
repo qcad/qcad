@@ -18,6 +18,7 @@
  */
 
 #include "RMemoryStorage.h"
+#include "RBlock.h"
 #include "RBlockReferenceEntity.h"
 #include "RDocumentVariables.h"
 #include "RDimStyle.h"

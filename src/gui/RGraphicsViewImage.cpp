@@ -24,6 +24,7 @@
 #include <qtconcurrentrun.h>
 #endif
 
+#include "RBlock.h"
 #include "RDocument.h"
 #include "RDocumentInterface.h"
 #include "RGraphicsScene.h"

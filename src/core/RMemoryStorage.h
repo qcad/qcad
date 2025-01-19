@@ -176,7 +176,7 @@ public:
     virtual RObject::Id getLayoutId(const QString& layoutName) const;
 
     virtual QString getBlockName(RObject::Id blockId) const;
-    virtual QString getBlockNameFromHandle(RBlock::Handle blockHandle) const;
+    virtual QString getBlockNameFromHandle(RObject::Handle blockHandle) const;
     virtual QString getBlockNameFromLayout(const QString& layoutName) const;
     virtual QString getBlockNameFromLayout(RObject::Id layoutId) const;
     virtual QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING, bool undone = false) const;

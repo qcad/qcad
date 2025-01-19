@@ -20,6 +20,7 @@
 
 #include "RAttributeDefinitionEntity.h"
 #include "RAttributeEntity.h"
+#include "RBlock.h"
 #include "RBlockReferenceEntity.h"
 #include "RClipboardOperation.h"
 #include "RDocument.h"

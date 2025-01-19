@@ -26,6 +26,7 @@
 
 #include "RArcEntity.h"
 #include "RAttributeEntity.h"
+#include "RBlock.h"
 #include "RBlockReferenceEntity.h"
 #include "RCircleEntity.h"
 #include "RColor.h"

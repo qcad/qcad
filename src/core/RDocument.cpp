@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 
+#include "RBlock.h"
 #include "RBlockReferenceEntity.h"
 #include "RBox.h"
 #include "RDebug.h"

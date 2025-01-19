@@ -26,7 +26,6 @@
 #include <QSharedPointer>
 #include <QDateTime>
 
-#include "RBlock.h"
 #include "REntity.h"
 #include "RLinetype.h"
 #include "RLinetypePattern.h"
@@ -34,6 +33,7 @@
 #include "RRequireHeap.h"
 #include "RUcs.h"
 
+class RBlock;
 class RBox;
 class RDimStyle;
 class RDocument;
@@ -395,18 +395,9 @@ public:
         return queryLinetype(getCurrentLinetypeId());
     }
 
-    virtual QSharedPointer<RBlock> queryCurrentBlock() {
-        return queryBlock(getCurrentBlockId());
-    }
+    virtual QSharedPointer<RBlock> queryCurrentBlock();
 
-    virtual void setCurrentBlock(RObject::Id blockId) {
-        if (queryBlockDirect(blockId).isNull()) {
-            currentBlockId = modelSpaceBlockId;
-        }
-        else {
-            currentBlockId = blockId;
-        }
-    }
+    virtual void setCurrentBlock(RObject::Id blockId);
 
     void setCurrentBlock(const QString& blockName) {
         RObject::Id id = getBlockId(blockName);
@@ -689,24 +680,12 @@ public:
     /**
      * \return True if the given block is frozen.
      */
-    virtual bool isBlockFrozen(RObject::Id blockId) const {
-        QSharedPointer<RBlock> b = queryBlockDirect(blockId);
-        if (b.isNull()) {
-            return false;
-        }
-        return b->isFrozen();
-    }
+    virtual bool isBlockFrozen(RObject::Id blockId) const;
 
     /**
      * \return True if the given block is a layout block (i.e. paper space block).
      */
-    virtual bool isLayoutBlock(RObject::Id blockId) const {
-        QSharedPointer<RBlock> b = queryBlockDirect(blockId);
-        if (b.isNull()) {
-            return false;
-        }
-        return b->hasLayout();
-    }
+    virtual bool isLayoutBlock(RObject::Id blockId) const;
 
     virtual void setObjectId(RObject& object, RObject::Id objectId) const;
     virtual void setObjectHandle(RObject& object, RObject::Handle objectHandle);

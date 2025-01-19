@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RBlock.h"
 #include "RBlockReferenceEntity.h"
 #include "RDocument.h"
 #include "RDocumentVariables.h"
@@ -160,6 +161,35 @@ RLayer::Id RStorage::getCurrentLayerId() const {
         return RLayer::INVALID_ID;
     }
     return v->getCurrentLayerId();
+}
+
+QSharedPointer<RBlock> RStorage::queryCurrentBlock() {
+    return queryBlock(getCurrentBlockId());
+}
+
+void RStorage::setCurrentBlock(RObject::Id blockId) {
+    if (queryBlockDirect(blockId).isNull()) {
+        currentBlockId = modelSpaceBlockId;
+    }
+    else {
+        currentBlockId = blockId;
+    }
+}
+
+bool RStorage::isBlockFrozen(RObject::Id blockId) const {
+    QSharedPointer<RBlock> b = queryBlockDirect(blockId);
+    if (b.isNull()) {
+        return false;
+    }
+    return b->isFrozen();
+}
+
+bool RStorage::isLayoutBlock(RObject::Id blockId) const {
+    QSharedPointer<RBlock> b = queryBlockDirect(blockId);
+    if (b.isNull()) {
+        return false;
+    }
+    return b->hasLayout();
 }
 
 void RStorage::setCurrentColor(const RColor& color) {

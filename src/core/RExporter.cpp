@@ -21,6 +21,7 @@
 
 #include "RArc.h"
 #include "RArcExporter.h"
+#include "RBlock.h"
 #include "RBlockReferenceEntity.h"
 #include "RCircle.h"
 #include "RDocument.h"

@@ -385,7 +385,7 @@ bool REntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
  * \return true if this entity is visible (i.e. is on current or given block, is not on a frozen or hidden layer
  * or in a frozen block).
  */
-bool REntity::isVisible(RBlock::Id blockId) const {
+bool REntity::isVisible(RObject::Id blockId) const {
     const RDocument* doc = getDocument();
     if (doc==NULL) {
         return true;

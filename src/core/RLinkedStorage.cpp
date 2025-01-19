@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RLinkedStorage.h"
+#include "RBlock.h"
 #include "RDocumentVariables.h"
 
 RLinkedStorage::RLinkedStorage(RStorage& backStorage) :
