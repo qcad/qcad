@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RBox.h"
 #include "RDocument.h"
 #include "RPasteOperation.h"
 #include "RPolyline.h"

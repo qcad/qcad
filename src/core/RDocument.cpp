@@ -2967,6 +2967,11 @@ void RDocument::removeFromSpatialIndex(QSharedPointer<REntity> entity, const QLi
     }
 }
 
+void RDocument::removeFromSpatialIndex(QSharedPointer<REntity> entity)
+{
+    removeFromSpatialIndex(entity, QList<RBox>());
+}
+
 void RDocument::addToSpatialIndex(QSharedPointer<REntity> entity) {
     //spatialIndex.addToIndex(entity->getId(), entity->getBoundingBoxes());
 

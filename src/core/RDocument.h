@@ -28,11 +28,11 @@
 #include "RNonCopyable.h"
 #include "RRequireHeap.h"
 #include "RTransactionStack.h"
-#include "RBox.h"
 #include "RMath.h"
 #include "RLineweight.h"
 
 class RBlock;
+class RBox;
 class RColor;
 class RDimStyle;
 class RDocumentVariables;
@@ -50,10 +50,6 @@ class RView;
 
 #ifndef RDEFAULT_QVARIANT
 #define RDEFAULT_QVARIANT QVariant()
-#endif
-
-#ifndef RDEFAULT_QLIST_RBOX
-#define RDEFAULT_QLIST_RBOX QList<RBox>()
 #endif
 
 #ifndef RDEFAULT_QSTRINGLIST
@@ -304,8 +300,8 @@ public:
 
     void removeBlockFromSpatialIndex(RObject::Id blockId);
     bool addBlockToSpatialIndex(RObject::Id blockId, RObject::Id ignoreBlockId);
-    virtual void removeFromSpatialIndex(QSharedPointer<REntity> entity, const QList<RBox>& boundingBoxes = RDEFAULT_QLIST_RBOX);
-    //virtual void removeFromSpatialIndex2(QSharedPointer<REntity> entity);
+    virtual void removeFromSpatialIndex(QSharedPointer<REntity> entity, const QList<RBox>& boundingBoxes);
+    void removeFromSpatialIndex(QSharedPointer<REntity> entity);
 
     void updateAllEntities();
 
