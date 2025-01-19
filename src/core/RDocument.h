@@ -28,9 +28,7 @@
 #include "RNonCopyable.h"
 #include "RRequireHeap.h"
 #include "RTransactionStack.h"
-#include "RUcs.h"
 #include "RBox.h"
-#include "RLinetype.h"
 #include "RMath.h"
 #include "RLineweight.h"
 
@@ -42,9 +40,12 @@ class REntity;
 class RLayer;
 class RLayerState;
 class RLayout;
+class RLinetype;
+class RLinetypePattern;
 class RVector;
 class RSpatialIndex;
 class RStorage;
+class RUcs;
 class RView;
 
 #ifndef RDEFAULT_QVARIANT

@@ -23,6 +23,7 @@
 #include "RExplodable.h"
 #include "RLayer.h"
 #include "RLine.h"
+#include "RLinetype.h"
 #include "RMouseEvent.h"
 #include "RSettings.h"
 
