@@ -22,8 +22,11 @@
 
 #include "snap_global.h"
 
+#include <QSet>
+
 #include "RSnap.h"
 
+class REntity;
 class RGraphicsView;
 
 /**
@@ -46,7 +49,7 @@ public:
     virtual RVector snap(
             const RVector& position,
             RGraphicsView& view,
-            const QSet<REntity::Id>& candidates,
+            const QSet<RObject::Id>& candidates,
             const RBox& queryBox);
 
 protected:
@@ -55,7 +58,7 @@ protected:
             const RVector& point,
             const RBox& queryBox,
             RGraphicsView& view,
-            QList<REntity::Id>* subEntityIds = NULL) = 0;
+            QList<RObject::Id>* subEntityIds = NULL) = 0;
 };
 
 Q_DECLARE_METATYPE(RSnapEntityBase*)

@@ -18,6 +18,7 @@
  */
 #include "RRayData.h"
 #include "RDocument.h"
+#include "RRefPoint.h"
 
 RRayData::RRayData() {
 }

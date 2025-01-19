@@ -22,13 +22,13 @@
 
 #include "core_global.h"
 
-#include <QSet>
-
-#include "REntity.h"
+#include "RMath.h"
 #include "RMouseEvent.h"
+#include "RObject.h"
 #include "RVector.h"
 
 class RGraphicsView;
+class RMouseEvent;
 
 /**
  * \brief Abstract base class for all grid and object snap 
@@ -103,7 +103,7 @@ public:
      * \return Set of entity IDs that are relevant for the last performed
      * snap, usually used for highlighting.
      */
-    QList<REntity::Id> getEntityIds() {
+    QList<RObject::Id> getEntityIds() {
         return entityIds;
     }
 
@@ -129,7 +129,7 @@ public:
     }
 
 protected:
-    QList<REntity::Id> entityIds;
+    QList<RObject::Id> entityIds;
     RSnap::Status status;
     RVector lastSnap;
 };

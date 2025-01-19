@@ -24,18 +24,23 @@
 
 #include <QCursor>
 
-#include "REntity.h"
 #include "RNonCopyable.h"
+#include "RObject.h"
 #include "RTextLabel.h"
+#include "RVector.h"
 
 class RAction;
+class RBox;
+class RColor;
 class RDocument;
 class RDocumentInterface;
 class RGraphicsScene;
 class RGrid;
 class RLine;
 class RMouseEvent;
+class RPainterPath;
 class RRefPoint;
+class RShape;
 class RTabletEvent;
 class RTerminateEvent;
 class RWheelEvent;
@@ -151,7 +156,7 @@ public:
     void zoomPrevious();
     void autoZoom(int margin = RDEFAULT_MIN1, bool ignoreEmpty=false, bool ignoreLineweight=false);
     bool zoomToSelection(int margin = RDEFAULT_MIN1);
-    bool zoomToEntities(const QSet<REntity::Id>& ids, int margin = RDEFAULT_MIN1);
+    bool zoomToEntities(const QSet<RObject::Id>& ids, int margin = RDEFAULT_MIN1);
 
     virtual void centerToPoint(const RVector& point);
     virtual void centerToBox(const RBox& box);
@@ -173,7 +178,7 @@ public:
      * \param force True if scene has changed, don't use any optimizations, force regeneration.
      */
     virtual void regenerate(bool force=false) = 0;
-    virtual void regenerate(QSet<REntity::Id>& affectedEntities) {
+    virtual void regenerate(QSet<RObject::Id>& affectedEntities) {
         Q_UNUSED(affectedEntities)
 
         regenerate(true);
@@ -238,9 +243,9 @@ public:
     virtual void setCursor(const QCursor& /*cursor*/) {}
 
     RRefPoint getClosestReferencePoint(const RVector& screenPosition, int range);
-    RRefPoint getClosestReferencePoint(REntity::Id entityId, const RVector& screenPosition);
-    REntity::Id getClosestEntity(const RVector& screenPosition, int range, int strictRange, bool includeLockedLayers=true, bool selectedOnly = false);
-    //REntity::Id getClosestEntityInUcs(const RVector& screenPosition, int range);
+    RRefPoint getClosestReferencePoint(RObject::Id entityId, const RVector& screenPosition);
+    RObject::Id getClosestEntity(const RVector& screenPosition, int range, int strictRange, bool includeLockedLayers=true, bool selectedOnly = false);
+    //RObject::Id getClosestEntityInUcs(const RVector& screenPosition, int range);
 
     virtual void setBackgroundColor(const QColor& col);
     QColor getBackgroundColor();

@@ -18,6 +18,7 @@
  */
 #include "RDebug.h"
 #include "RDimensionEntity.h"
+#include "RDimStyle.h"
 #include "RDocument.h"
 #include "RExporter.h"
 #include "RLine.h"

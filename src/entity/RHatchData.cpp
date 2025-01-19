@@ -29,6 +29,7 @@
 #include "RPainterPathExporter.h"
 #include "RPatternListImperial.h"
 #include "RPatternListMetric.h"
+#include "RRefPoint.h"
 #include "RSettings.h"
 #include "RSpline.h"
 #include "RPolyline.h"

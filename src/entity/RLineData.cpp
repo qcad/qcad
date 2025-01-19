@@ -18,6 +18,8 @@
  */
 #include "RLineData.h"
 #include "RDocument.h"
+#include "RPolyline.h"
+#include "RRefPoint.h"
 
 RLineData::RLineData() {
 }

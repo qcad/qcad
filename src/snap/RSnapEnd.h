@@ -23,7 +23,6 @@
 #include "snap_global.h"
 
 #include "RSnapEntityBase.h"
-#include "REntity.h"
 
 class RMouseEvent;
 
@@ -45,7 +44,7 @@ protected:
             const RVector& point,
             const RBox& queryBox,
             RGraphicsView& view,
-            QList<REntity::Id>* subEntityIds = NULL);
+            QList<RObject::Id>* subEntityIds = NULL);
 };
 
 Q_DECLARE_METATYPE(RSnapEnd*)

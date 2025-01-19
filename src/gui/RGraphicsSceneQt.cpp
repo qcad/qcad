@@ -23,6 +23,7 @@
 #include <qtconcurrentrun.h>
 #endif
 
+#include "RBlock.h"
 #include "RBlockReferenceEntity.h"
 #include "RDocument.h"
 #include "REntity.h"

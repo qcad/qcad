@@ -28,6 +28,7 @@
 
 class RDocument;
 class REntity;
+class RLinetype;
 class RVector;
 
 #ifndef RQMapQStringQString
@@ -192,7 +193,7 @@ public:
     );
 
     QSharedPointer<RBlock> copyBlock(
-        RBlock::Id blockId,
+        RObject::Id blockId,
         RDocument& src,
         RDocument& dest,
         bool overwriteBlocks,
@@ -210,7 +211,7 @@ public:
     );
 
     QSharedPointer<RLayer> copyLayer(
-        RLayer::Id layerId,
+        RObject::Id layerId,
         RDocument& src, RDocument& dest,
         bool overwriteLayers,
         RTransaction& transaction
@@ -225,7 +226,7 @@ public:
             );
 
     QSharedPointer<RLinetype> copyLinetype(
-            RLinetype::Id linetypeId,
+            RObject::Id linetypeId,
             RDocument& src, RDocument& dest,
             bool overwriteLinetypes,
             RTransaction& transaction
@@ -251,7 +252,7 @@ private:
     QMap<QString, QSharedPointer<RLayer> > copiedLayers;
     QMap<QString, QSharedPointer<RLinetype> > copiedLinetypes;
     QMap<QString, QSharedPointer<RBlock> > copiedBlocks;
-    QSet<RBlock::Id> copiedBlockContents;
+    QSet<RObject::Id> copiedBlockContents;
     bool copyEmptyBlocks;
     bool copyAllLayers;
     bool keepSelection;

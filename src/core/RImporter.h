@@ -58,8 +58,8 @@ public:
 
     virtual void importObject(RObject* object);
 
-    virtual void setCurrentBlockId(RBlock::Id id);
-    virtual RBlock::Id getCurrentBlockId();
+    virtual void setCurrentBlockId(RObject::Id id);
+    virtual RObject::Id getCurrentBlockId();
 
     RDocument& getDocument();
     void setDocument(RDocument* d);
@@ -72,7 +72,7 @@ protected:
     RMessageHandler* messageHandler;
     RProgressHandler* progressHandler;
     RTransaction transaction;
-    RBlock::Id blockId;
+    RObject::Id blockId;
 };
 
 Q_DECLARE_METATYPE(RImporter*)

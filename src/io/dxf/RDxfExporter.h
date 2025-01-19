@@ -31,6 +31,7 @@
 class RArc;
 class RArcEntity;
 class RAttributeEntity;
+class RBlockReferenceEntity;
 class RCircleEntity;
 class RDimensionEntity;
 class RDocument;
@@ -76,7 +77,7 @@ public:
     void writeLayer(const RLayer& l);
     void writeBlock(const RBlock& b);
 
-    void writeEntity(REntity::Id id);
+    void writeEntity(RObject::Id id);
     void writeEntity(const REntity& e);
     void writePoint(const RPointEntity& p);
     void writeLine(const RLineEntity& l);

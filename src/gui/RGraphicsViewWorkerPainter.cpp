@@ -1,4 +1,5 @@
 #include "RGraphicsViewWorkerPainter.h"
+#include "RGraphicsViewImage.h"
 
 #include <QTextLayout>
 

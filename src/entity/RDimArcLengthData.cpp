@@ -18,6 +18,7 @@
  */
 #include "RDimArcLengthData.h"
 #include "RDocument.h"
+#include "RRefPoint.h"
 
 RDimArcLengthData::RDimArcLengthData() : arcSymbolType(0) {
 }

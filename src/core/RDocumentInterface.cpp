@@ -30,6 +30,7 @@
 #include "RCoordinateListener.h"
 #include "RDimStyle.h"
 #include "RDocument.h"
+#include "RDocumentVariables.h"
 #include "REntityPickEvent.h"
 #include "RFileExporter.h"
 #include "RFileExporterRegistry.h"
@@ -40,6 +41,7 @@
 #include "RGrid.h"
 #include "RGuiAction.h"
 #include "RLayerListener.h"
+#include "RLayout.h"
 #include "RLinkedStorage.h"
 #include "RPolyline.h"
 #include "RMainWindow.h"
@@ -53,6 +55,8 @@
 #include "RSpatialIndexSimple.h"
 #include "RTabletEvent.h"
 #include "RTransaction.h"
+#include "RView.h"
+#include "RViewportEntity.h"
 #include "RWheelEvent.h"
 
 RDocumentInterface* RDocumentInterface::clipboard = NULL;

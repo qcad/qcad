@@ -1,4 +1,5 @@
 #include "RGraphicsViewWorker.h"
+#include "RGraphicsViewImage.h"
 
 RGraphicsViewWorker::~RGraphicsViewWorker() {
 }
@@ -8,8 +9,8 @@ void RGraphicsViewWorker::run() {
     emit finished();
 }
 
-void RGraphicsViewWorker::init(QList<REntity::Id>& list, int startIndex, int endIndex) {
-    this->list = &list;
+void RGraphicsViewWorker::init(QList<RObject::Id>& entityIds, int startIndex, int endIndex) {
+    this->list = &entityIds;
     this->startIndex = startIndex;
     this->endIndex = endIndex;
 }

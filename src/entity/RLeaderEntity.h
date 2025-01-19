@@ -229,10 +229,10 @@ public:
         return data.getExploded();
     }
 
-    REntity::Id getDimLeaderBlockId() const {
+    RObject::Id getDimLeaderBlockId() const {
         return data.getDimLeaderBlockId();
     }
-    void setDimLeaderBlockId(REntity::Id id) {
+    void setDimLeaderBlockId(RObject::Id id) {
         data.setDimLeaderBlockId(id);
     }
 

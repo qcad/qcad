@@ -208,11 +208,11 @@ public:
         data.setPosition(p);
     }
 
-    QList<RLayer::Id> getFrozenLayerIds() const {
+    QList<RObject::Id> getFrozenLayerIds() const {
         return data.getFrozenLayerIds();
     }
 
-    void setFrozenLayerIds(const QList<RLayer::Id>& ids) {
+    void setFrozenLayerIds(const QList<RObject::Id>& ids) {
         data.setFrozenLayerIds(ids);
     }
 

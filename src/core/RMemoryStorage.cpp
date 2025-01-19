@@ -18,9 +18,13 @@
  */
 
 #include "RMemoryStorage.h"
+#include "RBlockReferenceEntity.h"
+#include "RDocumentVariables.h"
 #include "RDimStyle.h"
 #include "RSettings.h"
 #include "RS.h"
+#include "RView.h"
+#include "RViewportEntity.h"
 
 RMemoryStorage::RMemoryStorage() :
     maxLineweight(RLineweight::Weight000), 

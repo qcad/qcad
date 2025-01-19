@@ -19,13 +19,14 @@
 #include "RLeaderData.h"
 #include "RDimStyle.h"
 #include "RDocument.h"
+#include "RRefPoint.h"
 #include "RTriangle.h"
 
 RLeaderData::RLeaderData()
     : arrowHead(true),
       dimasz(-1.0),
       dimscale(-1.0),
-      dimLeaderBlockId(REntity::INVALID_ID),
+      dimLeaderBlockId(RObject::INVALID_ID),
       splineShaped(false) {
 }
 
@@ -43,7 +44,7 @@ RLeaderData::RLeaderData(const RPolyline& polyline, bool arrowHead)
       arrowHead(arrowHead),
       dimasz(-1.0),
       dimscale(-1.0),
-      dimLeaderBlockId(REntity::INVALID_ID),
+      dimLeaderBlockId(RObject::INVALID_ID),
       splineShaped(false) {
 
 }
@@ -203,11 +204,11 @@ bool RLeaderData::updateArrowHead() const {
     return false;
 }
 
-REntity::Id RLeaderData::getDimLeaderBlockId() const {
+RObject::Id RLeaderData::getDimLeaderBlockId() const {
     return dimLeaderBlockId;
 }
 
-void RLeaderData::setDimLeaderBlockId(REntity::Id id) {
+void RLeaderData::setDimLeaderBlockId(RObject::Id id) {
     dimLeaderBlockId = id;
 }
 

@@ -19,6 +19,7 @@
 #include <QSet>
 
 #include "RDocument.h"
+#include "REntity.h"
 #include "RScaleSelectionOperation.h"
 #include "RSettings.h"
 

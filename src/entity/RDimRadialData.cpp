@@ -18,6 +18,7 @@
  */
 #include "RDimRadialData.h"
 #include "RDocument.h"
+#include "RRefPoint.h"
 
 RDimRadialData::RDimRadialData() {
 }

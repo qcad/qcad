@@ -19,6 +19,7 @@
 #include "RDimAlignedData.h"
 #include "RDocument.h"
 #include "RLine.h"
+#include "RRefPoint.h"
 
 RDimAlignedData::RDimAlignedData() {
 }

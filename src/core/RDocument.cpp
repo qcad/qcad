@@ -17,12 +17,13 @@
  * along with QCAD.
  */
 
-
+#include "RBlockReferenceEntity.h"
 #include "RBox.h"
 #include "RDebug.h"
 #include "RDimStyle.h"
 #include "RDocument.h"
 #include "RDocumentVariables.h"
+#include "RLayout.h"
 #include "RLinetypeListImperial.h"
 #include "RLinetypeListMetric.h"
 #include "RLinkedStorage.h"
@@ -999,7 +1000,7 @@ QList<RLayer::Id> RDocument::sortLayers(const QList<RLayer::Id>& layerIds) const
 /**
  * \copydoc RStorage::setCurrentView
  */
-void RDocument::setCurrentView(RView::Id viewId) {
+void RDocument::setCurrentView(RObject::Id viewId) {
     storage.setCurrentView(viewId);
 }
 
@@ -1013,7 +1014,7 @@ void RDocument::setCurrentView(const QString& viewName) {
 /**
  * \copydoc RStorage::getCurrentViewId
  */
-RView::Id RDocument::getCurrentViewId() const {
+RObject::Id RDocument::getCurrentViewId() const {
     return storage.getCurrentViewId();
 }
 
@@ -1406,7 +1407,7 @@ QList<RBlock::Id> RDocument::queryAllBlocks() const {
 /**
  * \copydoc RStorage::queryAllViews
  */
-QSet<RView::Id> RDocument::queryAllViews() const {
+QSet<RObject::Id> RDocument::queryAllViews() const {
     return storage.queryAllViews();
 }
 
@@ -1488,7 +1489,7 @@ QSet<REntity::Id> RDocument::queryAllViewports() const {
 }
 
 /*
-QSet<REntity::Id> RDocument::queryViewEntities(RView::Id viewId) const {
+QSet<REntity::Id> RDocument::queryViewEntities(RObject::Id viewId) const {
     return storage.queryViewEntities(viewId);
 }
 */
@@ -2426,7 +2427,7 @@ QSharedPointer<RBlock> RDocument::queryBlock(const QString& blockName) const {
  *
  * \return Pointer to the view or NULL.
  */
-QSharedPointer<RView> RDocument::queryView(RView::Id viewId) const {
+QSharedPointer<RView> RDocument::queryView(RObject::Id viewId) const {
     return storage.queryView(viewId);
 }
 

@@ -18,6 +18,7 @@
  */
 #include "RDimAngular3PData.h"
 #include "RDocument.h"
+#include "RRefPoint.h"
 
 RDimAngular3PData::RDimAngular3PData() {
 }

@@ -19,6 +19,7 @@
 #include "RDimRotatedData.h"
 #include "RDocument.h"
 #include "RLine.h"
+#include "RRefPoint.h"
 
 RDimRotatedData::RDimRotatedData() : rotation(0.0) {
 }

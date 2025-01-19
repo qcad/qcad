@@ -25,6 +25,7 @@
 //#endif
 
 #include "RDocument.h"
+#include "REntity.h"
 #include "RMoveSelectionOperation.h"
 #include "RSettings.h"
 

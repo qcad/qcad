@@ -19,6 +19,7 @@
 #include "RDimAngularData.h"
 #include "RArc.h"
 #include "RDocument.h"
+#include "RRefPoint.h"
 
 RDimAngularData::RDimAngularData() {
 }

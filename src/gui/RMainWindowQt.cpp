@@ -35,6 +35,7 @@
 #include "RMainWindowQt.h"
 #include "RMdiArea.h"
 #include "RMdiChildQt.h"
+#include "RPropertyEvent.h"
 #include "RScriptHandler.h"
 #include "RSelectionChangedEvent.h"
 #include "RSettings.h"

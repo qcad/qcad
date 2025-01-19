@@ -18,7 +18,9 @@
  */
 #include "RViewportData.h"
 #include "RDocument.h"
+#include "REntity.h"
 #include "RMouseEvent.h"
+#include "RRefPoint.h"
 
 RViewportData::RViewportData()
     : viewportId(RObject::INVALID_ID),

@@ -17,7 +17,9 @@
  * along with QCAD.
  */
 #include "RDocument.h"
+#include "REntity.h"
 #include "RGraphicsView.h"
+#include "RLayer.h"
 #include "RSettings.h"
 #include "RSnapEntityBase.h"
 
@@ -48,7 +50,7 @@ RVector RSnapEntityBase::snap(
 
     QSet<REntity::Id> candidates =
             document->queryIntersectedEntitiesXY(
-                queryBox, true, true, RBlock::INVALID_ID);
+                queryBox, true, true, RObject::INVALID_ID);
 
     return snap(position, view, candidates, queryBox);
 }

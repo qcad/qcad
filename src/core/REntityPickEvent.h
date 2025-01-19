@@ -23,11 +23,10 @@
 #include "core_global.h"
 
 #include "RInputEvent.h"
-#include "REntity.h"
-#include "RVector.h"
 
 class RGraphicsView;
 class RGraphicsScene;
+class RVector;
 
 /**
  * Entity pick event.
@@ -41,13 +40,13 @@ public:
      * \param entityId ID of picked entity.
      * \param pos Absolute coordinate.
      */
-    REntityPickEvent(REntity::Id entityId, const RVector& position,
+    REntityPickEvent(RObject::Id entityId, const RVector& position,
        RGraphicsScene& s, RGraphicsView& v);
 
     /**
-     * \return The ID of the picked entity or REntity::INVALID_ID.
+     * \return The ID of the picked entity or RObject::INVALID_ID.
      */
-    REntity::Id getEntityId() const {
+    RObject::Id getEntityId() const {
         return entityId;
     }
 
@@ -62,11 +61,11 @@ public:
      * \return true If the entity ID of the event is valid.
      */
     bool isValid() const {
-        return entityId!=REntity::INVALID_ID;
+        return entityId != RObject::INVALID_ID;
     }
 
 private:
-    REntity::Id entityId;
+    RObject::Id entityId;
     Qt::KeyboardModifiers mods;
 };
 

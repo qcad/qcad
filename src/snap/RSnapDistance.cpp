@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RSnapDistance.h"
+#include "REntity.h"
 
 QList<RVector> RSnapDistance::snapEntity(QSharedPointer<REntity> entity,
     const RVector& point, const RBox& queryBox, RGraphicsView& view, QList<REntity::Id>* subEntityIds) {

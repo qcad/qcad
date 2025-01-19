@@ -18,6 +18,7 @@
  */
 #include "RBlock.h"
 #include "RDocument.h"
+#include "RLayout.h"
 
 const QString RBlock::modelSpaceName = "*Model_Space";
 const QString RBlock::paperSpaceName = "*Paper_Space";

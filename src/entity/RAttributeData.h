@@ -22,7 +22,6 @@
 
 #include "entity_global.h"
 
-#include "RBlockReferenceEntity.h"
 #include "RTextBasedData.h"
 
 class RAttributeDefinitionData;
@@ -45,7 +44,7 @@ protected:
 
 public:
     RAttributeData() {}
-    RAttributeData(const RTextBasedData& textData, RBlockReferenceEntity::Id blockReferenceId, const QString& tag);
+    RAttributeData(const RTextBasedData& textData, RObject::Id blockReferenceId, const QString& tag);
     virtual ~RAttributeData() {}
 
     virtual RS::EntityType getType() const {
@@ -69,11 +68,11 @@ public:
         invisible = i;
     }
 
-    virtual RLinetype::Id getLinetypeId() const {
+    virtual RObject::Id getLinetypeId() const {
         return RTextBasedData::getLinetypeId();
     }
 
-    virtual RLinetype::Id getLinetypeId(bool resolve, const QStack<QSharedPointer<REntity> >& blockRefStack) const;
+    virtual RObject::Id getLinetypeId(bool resolve, const QStack<QSharedPointer<REntity> >& blockRefStack) const;
     virtual RLineweight::Lineweight getLineweight() const {
         return RTextBasedData::getLineweight();
     }

@@ -22,10 +22,18 @@
 
 #include "gui_global.h"
 
+#include <QPainter>
+#include <QStack>
 #include <QThread>
 
-#include "RGraphicsViewImage.h"
+#include "RObject.h"
 #include "RTransform.h"
+
+class QTextLayout;
+class RGraphicsViewImage;
+class RImageData;
+class RPainterPath;
+class RTextBasedData;
 
 /**
  * Thread worker that draws a part of a document.
@@ -48,7 +56,7 @@ public:
 
     void run();
 
-    virtual void init(QList<REntity::Id>& list, int start, int end);
+    virtual void init(QList<RObject::Id>& list, int start, int end);
 
     void setClearMode(RGraphicsViewWorker::ClearMode m) {
         clearMode = m;
@@ -147,7 +155,7 @@ signals:
 
 protected:
     int threadId;
-    QList<REntity::Id>* list;
+    QList<RObject::Id>* list;
     int startIndex;
     int endIndex;
     ClearMode clearMode;

@@ -22,7 +22,6 @@
 
 #include "entity_global.h"
 
-#include "RDimStyle.h"
 #include "REntityData.h"
 #include "RVector.h"
 
@@ -163,7 +162,7 @@ private:
     /** Dimension scale */
     //double dimScaleOverride;
     /** Block to use instead of arrow */
-    RBlock::Id dimToleranceBlockId;
+    RObject::Id dimToleranceBlockId;
 
     double dimscale;
     double dimtxt;

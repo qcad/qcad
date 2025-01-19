@@ -19,6 +19,7 @@
 #include "RArc.h"
 #include "RDocument.h"
 #include "RPolylineData.h"
+#include "RRefPoint.h"
 
 RPolylineData::RPolylineData() {
 }

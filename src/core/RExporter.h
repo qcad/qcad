@@ -29,16 +29,23 @@
 #include <QStack>
 #include <QTransform>
 
-#include "REntity.h"
-#include "RView.h"
+#include "RLinetypePattern.h"
+#include "RLineweight.h"
+#include "RObject.h"
+#include "RPolyline.h"
 
 class RArc;
+class RBlock;
 class RCircle;
+class RColor;
 class RDocument;
 class REllipse;
+class REntity;
 class RImageData;
+class RLayer;
 class RLayerState;
 class RLine;
+class RLinetype;
 class RMessageHandler;
 class RPainterPath;
 class RPainterPathSource;
@@ -50,6 +57,7 @@ class RTextBasedData;
 class RTransform;
 class RTriangle;
 class RVector;
+class RView;
 class RViewportEntity;
 class RXLine;
 
@@ -121,12 +129,12 @@ public:
 
     virtual void setLineweight(RLineweight::Lineweight weight);
 
-    virtual void setLinetypeId(RLinetype::Id ltId);
+    virtual void setLinetypeId(RObject::Id ltId);
     virtual void setLinetypePattern(const RLinetypePattern& ltPattern);
     virtual RLinetypePattern getLinetypePattern();
 
     virtual QSharedPointer<REntity> getBlockRefOrEntity();
-    virtual REntity::Id getBlockRefOrEntityId();
+    virtual RObject::Id getBlockRefOrEntityId();
     virtual QSharedPointer<REntity> getEntity();
     virtual QSharedPointer<REntity> getCurrentBlockRef() const;
     virtual QSharedPointer<RViewportEntity> getCurrentViewport() const;
@@ -156,25 +164,25 @@ public:
     virtual void exportLinetypes();
 
     virtual void exportLayer(QSharedPointer<RLayer> /*layer*/) {}
-    virtual void exportLayer(RLayer::Id layerId);
+    virtual void exportLayer(RObject::Id layerId);
     virtual void exportLayerState(QSharedPointer<RLayerState> /*layerState*/) {}
     virtual void exportBlock(QSharedPointer<RBlock> /*block*/) {}
-    virtual void exportBlock(RBlock::Id blockId);
+    virtual void exportBlock(RObject::Id blockId);
     virtual void exportView(QSharedPointer<RView> /*view*/) {}
-    virtual void exportView(RView::Id viewId);
+    virtual void exportView(RObject::Id viewId);
     virtual void exportLinetype(QSharedPointer<RLinetype> /*linetype*/) {}
 
     virtual void exportEntities(bool allBlocks = true, bool undone = false, bool invisible = false);
     virtual void exportEntities(const RBox& box);
-    virtual void exportEntities(QSet<REntity::Id>& entityIds, bool allBlocks = true);
+    virtual void exportEntities(QSet<RObject::Id>& entityIds, bool allBlocks = true);
     virtual void exportEntity(QSharedPointer<REntity> entity, bool preview = false, bool allBlocks = true, bool forceSelected = false, bool invisible = false);
-    virtual void exportEntity(REntity::Id entityId, bool allBlocks = true, bool forceSelected = false);
+    virtual void exportEntity(RObject::Id entityId, bool allBlocks = true, bool forceSelected = false);
     virtual QSharedPointer<RLayer> getEntityLayer(QSharedPointer<REntity> entity);
     virtual bool isVisible(QSharedPointer<REntity> entity);
     virtual void startEntity(bool /*topLevelEntity*/) {}
     virtual void endEntity() {}
     virtual void exportCurrentEntity(bool preview = false, bool forceSelected = false);
-    virtual void unexportEntity(REntity::Id entityId);
+    virtual void unexportEntity(RObject::Id entityId);
 
     virtual void exportShapes(const QList<QSharedPointer<RShape> >& shapes);
     virtual void exportShape(QSharedPointer<RShape> shape);

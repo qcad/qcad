@@ -16,13 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RBlockReferenceEntity.h"
 #include "RDocument.h"
+#include "RDocumentVariables.h"
 #include "RDimStyle.h"
+#include "RModifiedListener.h"
 #include "RS.h"
 #include "RSettings.h"
 #include "RStorage.h"
 #include "RStorageBlockSort.h"
 #include "RStorageLayerSort.h"
+#include "RView.h"
 #include "RMainWindow.h"
 
 RStorage::RStorage() :
@@ -37,7 +41,7 @@ RStorage::RStorage() :
     //currentLayerId(RLayer::INVALID_ID),
     currentViewId(RView::INVALID_ID),
     currentBlockId(RBlock::INVALID_ID),
-    currentViewportId(RViewportEntity::INVALID_ID),
+    currentViewportId(RObject::INVALID_ID),
     modelSpaceBlockId(RBlock::INVALID_ID),
     layer0Id(RLayer::INVALID_ID),
     lastTransactionId(-1),
@@ -56,7 +60,7 @@ void RStorage::clear() {
     currentLinetypeId = RLinetype::INVALID_ID;
     currentViewId = RView::INVALID_ID;
     currentBlockId = RBlock::INVALID_ID;
-    currentViewportId = RViewportEntity::INVALID_ID;
+    currentViewportId = RObject::INVALID_ID;
     lastTransactionId = -1;
     lastTransactionGroup = 1;
     notifyGlobalListeners = true;

@@ -18,6 +18,7 @@
  */
 #include "RDimOrdinateData.h"
 #include "RDocument.h"
+#include "RRefPoint.h"
 
 RDimOrdinateData::RDimOrdinateData() {
 }

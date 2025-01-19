@@ -16,8 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RDimStyle.h"
 #include "RDocument.h"
 #include "RLine.h"
+#include "RRefPoint.h"
 #include "RS.h"
 #include "RTextData.h"
 #include "RToleranceData.h"
@@ -26,7 +28,7 @@ RToleranceData::RToleranceData()
     :
       //dimScaleOverride(0.0),
       direction(1,0,0),
-      dimToleranceBlockId(REntity::INVALID_ID),
+      dimToleranceBlockId(RObject::INVALID_ID),
       dimscale(-1.0),
       dimtxt(-1.0),
       joinFirstField(false) {

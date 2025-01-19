@@ -20,6 +20,7 @@
 #include <QSharedPointer>
 
 #include "RDocument.h"
+#include "REntity.h"
 #include "RClickReferencePointOperation.h"
 
 

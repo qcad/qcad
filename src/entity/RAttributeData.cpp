@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RAttributeData.h"
+#include "RBlockReferenceEntity.h"
 #include "RDocument.h"
 
 

@@ -19,6 +19,7 @@
 #include "RBlockReferenceData.h"
 #include "RBlockReferenceEntity.h"
 #include "RDocument.h"
+#include "RLine.h"
 #include "RMainWindow.h"
 #include "RMouseEvent.h"
 #include "RSettings.h"

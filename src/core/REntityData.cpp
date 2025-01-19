@@ -21,6 +21,7 @@
 #include "REntity.h"
 #include "REntityData.h"
 #include "RExplodable.h"
+#include "RLayer.h"
 #include "RLine.h"
 #include "RMouseEvent.h"
 #include "RSettings.h"
@@ -33,7 +34,7 @@ REntityData::REntityData(RDocument* document) :
     autoUpdatesBlocked(false),
     drawOrder(RMININT),
     layerId(RLayer::INVALID_ID),
-    blockId(RBlock::INVALID_ID), 
+    blockId(RObject::INVALID_ID),
     parentId(REntity::INVALID_ID),
     linetypeId(RLinetype::INVALID_ID),
     linetypeScale(1.0),

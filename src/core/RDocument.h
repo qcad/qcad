@@ -25,22 +25,27 @@
 #include <QString>
 #include <QSharedPointer>
 
-#include "RBlock.h"
-#include "REntity.h"
 #include "RNonCopyable.h"
 #include "RRequireHeap.h"
 #include "RTransactionStack.h"
 #include "RUcs.h"
-#include "RLayer.h"
-#include "RLayerState.h"
+#include "RBox.h"
 #include "RLinetype.h"
-#include "RView.h"
+#include "RMath.h"
+#include "RLineweight.h"
 
+class RBlock;
+class RColor;
 class RDimStyle;
 class RDocumentVariables;
+class REntity;
+class RLayer;
+class RLayerState;
+class RLayout;
 class RVector;
 class RSpatialIndex;
 class RStorage;
+class RView;
 
 #ifndef RDEFAULT_QVARIANT
 #define RDEFAULT_QVARIANT QVariant()
@@ -86,13 +91,13 @@ public:
     const RStorage& getStorage() const;
     RSpatialIndex& getSpatialIndex();
     const RSpatialIndex& getSpatialIndex() const;
-    RSpatialIndex* getSpatialIndexForBlock(RBlock::Id blockId) const;
+    RSpatialIndex* getSpatialIndexForBlock(RObject::Id blockId) const;
     RSpatialIndex* getSpatialIndexForCurrentBlock() const;
     RTransactionStack& getTransactionStack();
 
     void clear(bool beforeLoad=false);
 
-    REntity::Id queryClosestXY(
+    RObject::Id queryClosestXY(
         const RVector& wcsPosition,
         double range,
         bool draft,
@@ -100,7 +105,7 @@ public:
         bool includeLockedLayers = true,
         bool selectedOnly = false
     );
-    QPair<REntity::Id, QSet<int> > queryClosestXYWithIndices(
+    QPair<RObject::Id, QSet<int> > queryClosestXYWithIndices(
         const RVector& wcsPosition,
         double range,
         bool draft,
@@ -109,15 +114,15 @@ public:
         bool selectedOnly = false
     );
 
-    REntity::Id queryClosestXY(
-        QSet<REntity::Id>& candidates,
+    RObject::Id queryClosestXY(
+        QSet<RObject::Id>& candidates,
         const RVector& wcsPosition,
         double range,
         bool draft,
         double strictRange = RMAXDOUBLE
     );
-    QPair<REntity::Id, QSet<int> > queryClosestXYWithIndices(
-            QMap<REntity::Id, QSet<int> >& candidates,
+    QPair<RObject::Id, QSet<int> > queryClosestXYWithIndices(
+            QMap<RObject::Id, QSet<int> >& candidates,
             const RVector& wcsPosition,
             double range,
             bool draft,
@@ -125,66 +130,66 @@ public:
 
     QSet<RObject::Id> queryAllObjects() const;
     QSet<RObject::Id> querySelectedLayers() const;
-    QSet<REntity::Id> queryAllVisibleEntities() const;
-    QSet<REntity::Id> queryAllEntities(bool undone = false, bool allBlocks = false, RS::EntityType type = RS::EntityAll) const;
-    QSet<REntity::Id> queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types) const;
-    QSet<REntity::Id> queryWorkingSetEntities() const;
-    QSet<RUcs::Id> queryAllUcs() const;
-    QSet<RLayer::Id> queryAllLayers() const;
-    QSet<RLayerState::Id> queryAllLayerStates() const;
-    QSet<RBlock::Id> queryAllBlocks() const;
-    QSet<RBlock::Id> queryAllLayoutBlocks(bool includeModelSpace = false) const;
-    QSet<RBlock::Id> queryAllLayouts() const;
-    QSet<RView::Id> queryAllViews() const;
-    QSet<RLinetype::Id> queryAllLinetypes() const;
+    QSet<RObject::Id> queryAllVisibleEntities() const;
+    QSet<RObject::Id> queryAllEntities(bool undone = false, bool allBlocks = false, RS::EntityType type = RS::EntityAll) const;
+    QSet<RObject::Id> queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types) const;
+    QSet<RObject::Id> queryWorkingSetEntities() const;
+    QSet<RObject::Id> queryAllUcs() const;
+    QSet<RObject::Id> queryAllLayers() const;
+    QSet<RObject::Id> queryAllLayerStates() const;
+    QSet<RObject::Id> queryAllBlocks() const;
+    QSet<RObject::Id> queryAllLayoutBlocks(bool includeModelSpace = false) const;
+    QSet<RObject::Id> queryAllLayouts() const;
+    QSet<RObject::Id> queryAllViews() const;
+    QSet<RObject::Id> queryAllLinetypes() const;
 
-    QSet<REntity::Id> queryLayerEntities(RLayer::Id layerId, bool allBlocks = false) const;
-    QSet<REntity::Id> querySelectedLayerEntities(RLayer::Id layerId, bool allBlocks = false) const;
-    bool hasBlockEntities(RBlock::Id blockId) const;
-    QSet<REntity::Id> queryBlockEntities(RBlock::Id blockId) const;
-    QSet<REntity::Id> queryLayerBlockEntities(RLayer::Id layerId, RBlock::Id blockId) const;
-    QSet<REntity::Id> queryChildEntities(REntity::Id parentId, RS::EntityType type = RS::EntityAll) const;
-    bool hasChildEntities(REntity::Id parentId) const;
-    QSet<REntity::Id> queryBlockReferences(RBlock::Id blockId) const;
-    QSet<REntity::Id> queryAllBlockReferences() const;
-    QSet<REntity::Id> queryAllViewports() const;
+    QSet<RObject::Id> queryLayerEntities(RObject::Id layerId, bool allBlocks = false) const;
+    QSet<RObject::Id> querySelectedLayerEntities(RObject::Id layerId, bool allBlocks = false) const;
+    bool hasBlockEntities(RObject::Id blockId) const;
+    QSet<RObject::Id> queryBlockEntities(RObject::Id blockId) const;
+    QSet<RObject::Id> queryLayerBlockEntities(RObject::Id layerId, RObject::Id blockId) const;
+    QSet<RObject::Id> queryChildEntities(RObject::Id parentId, RS::EntityType type = RS::EntityAll) const;
+    bool hasChildEntities(RObject::Id parentId) const;
+    QSet<RObject::Id> queryBlockReferences(RObject::Id blockId) const;
+    QSet<RObject::Id> queryAllBlockReferences() const;
+    QSet<RObject::Id> queryAllViewports() const;
 
-    QSet<REntity::Id> queryContainedEntities(const RBox& box) const;
+    QSet<RObject::Id> queryContainedEntities(const RBox& box) const;
 
-    QSet<REntity::Id> queryInfiniteEntities() const;
+    QSet<RObject::Id> queryInfiniteEntities() const;
 
-    QSet<REntity::Id> queryIntersectedEntitiesXYFast(const RBox& box);
-    QSet<REntity::Id> queryIntersectedShapesXYFast(const RBox& box, bool noInfiniteEntities = false);
+    QSet<RObject::Id> queryIntersectedEntitiesXYFast(const RBox& box);
+    QSet<RObject::Id> queryIntersectedShapesXYFast(const RBox& box, bool noInfiniteEntities = false);
 
-    QSet<REntity::Id> queryIntersectedEntitiesXY(const RBox& box,
+    QSet<RObject::Id> queryIntersectedEntitiesXY(const RBox& box,
         bool checkBoundingBoxOnly=false,
         bool includeLockedLayers=true,
-        RBlock::Id blockId = RBlock::INVALID_ID,
+        RObject::Id blockId = RObject::INVALID_ID,
         const QList<RS::EntityType>& filter = RDEFAULT_QLIST_RS_ENTITYTYPE,
         bool selectedOnly = false,
-        RLayer::Id layerId = RLayer::INVALID_ID) const;
+        RObject::Id layerId = RObject::INVALID_ID) const;
 
-    QMap<REntity::Id, QSet<int> > queryIntersectedEntitiesXYWithIndex(const RBox& box,
+    QMap<RObject::Id, QSet<int> > queryIntersectedEntitiesXYWithIndex(const RBox& box,
          bool checkBoundingBoxOnly=false,
          bool includeLockedLayers=true,
-         RBlock::Id blockId = RBlock::INVALID_ID,
+         RObject::Id blockId = RObject::INVALID_ID,
          const QList<RS::EntityType>& filter = RDEFAULT_QLIST_RS_ENTITYTYPE,
          bool selectedOnly = false,
-         RLayer::Id layerId = RLayer::INVALID_ID) const;
+         RObject::Id layerId = RObject::INVALID_ID) const;
 
-    QMap<REntity::Id, QSet<int> > queryIntersectedShapesXY(const RBox& box,
+    QMap<RObject::Id, QSet<int> > queryIntersectedShapesXY(const RBox& box,
         bool checkBoundingBoxOnly=false,
         bool includeLockedLayers=true,
-        RBlock::Id blockId = RBlock::INVALID_ID,
+        RObject::Id blockId = RObject::INVALID_ID,
         const QList<RS::EntityType>& filter = RDEFAULT_QLIST_RS_ENTITYTYPE,
         bool selectedOnly = false,
-        RLayer::Id layerId = RLayer::INVALID_ID) const;
+        RObject::Id layerId = RObject::INVALID_ID) const;
 
-    QSet<REntity::Id> queryContainedEntitiesXY(const RBox& box) const;
+    QSet<RObject::Id> queryContainedEntitiesXY(const RBox& box) const;
 
-    QSet<REntity::Id> querySelectedEntities() const;
+    QSet<RObject::Id> querySelectedEntities() const;
 
-    QSet<REntity::Id> queryConnectedEntities(REntity::Id entityId, double tolerance = RS::PointTolerance, RLayer::Id layerId = RLayer::INVALID_ID);
+    QSet<RObject::Id> queryConnectedEntities(RObject::Id entityId, double tolerance = RS::PointTolerance, RObject::Id layerId = RObject::INVALID_ID);
 
     QSet<RObject::Id> queryPropertyEditorObjects();
 
@@ -196,97 +201,97 @@ public:
     QSharedPointer<RObject> queryObjectDirect(RObject::Id objectId) const;
     RObject* queryObjectCC(RObject::Id objectId) const;
     QSharedPointer<RObject> queryObjectByHandle(RObject::Handle objectHandle) const;
-    QSharedPointer<REntity> queryEntity(REntity::Id entityId) const;
-    QSharedPointer<REntity> queryEntityDirect(REntity::Id entityId) const;
-    QSharedPointer<REntity> queryVisibleEntityDirect(REntity::Id entityId) const;
-    QSharedPointer<RUcs> queryUcs(RUcs::Id ucsId) const;
+    QSharedPointer<REntity> queryEntity(RObject::Id entityId) const;
+    QSharedPointer<REntity> queryEntityDirect(RObject::Id entityId) const;
+    QSharedPointer<REntity> queryVisibleEntityDirect(RObject::Id entityId) const;
+    QSharedPointer<RUcs> queryUcs(RObject::Id ucsId) const;
     QSharedPointer<RUcs> queryUcs(const QString& ucsName) const;
-    QSharedPointer<RLayer> queryLayer(RLayer::Id layerId) const;
-    QSharedPointer<RLayer> queryLayerDirect(RLayer::Id layerId) const;
+    QSharedPointer<RLayer> queryLayer(RObject::Id layerId) const;
+    QSharedPointer<RLayer> queryLayerDirect(RObject::Id layerId) const;
     QSharedPointer<RLayer> queryLayer(const QString& layerName) const;
-    QSharedPointer<RLayerState> queryLayerState(RLayerState::Id layerStateId) const;
-    QSharedPointer<RLayerState> queryLayerStateDirect(RLayerState::Id layerStateId) const;
+    QSharedPointer<RLayerState> queryLayerState(RObject::Id layerStateId) const;
+    QSharedPointer<RLayerState> queryLayerStateDirect(RObject::Id layerStateId) const;
     QSharedPointer<RLayerState> queryLayerState(const QString& layerStateName) const;
-    QSharedPointer<RLayout> queryLayout(RLayout::Id layoutId) const;
-    QSharedPointer<RLayout> queryLayoutDirect(RLayout::Id layoutId) const;
+    QSharedPointer<RLayout> queryLayout(RObject::Id layoutId) const;
+    QSharedPointer<RLayout> queryLayoutDirect(RObject::Id layoutId) const;
     QSharedPointer<RLayout> queryLayout(const QString& layoutName) const;
-    QSharedPointer<RBlock> queryBlock(RBlock::Id blockId) const;
-    QSharedPointer<RBlock> queryBlockDirect(RBlock::Id blockId) const;
+    QSharedPointer<RBlock> queryBlock(RObject::Id blockId) const;
+    QSharedPointer<RBlock> queryBlockDirect(RObject::Id blockId) const;
     QSharedPointer<RBlock> queryBlockDirect(const QString& blockName) const;
     QSharedPointer<RBlock> queryBlock(const QString& blockName) const;
-    QSharedPointer<RView> queryView(RView::Id viewId) const;
+    QSharedPointer<RView> queryView(RObject::Id viewId) const;
     QSharedPointer<RView> queryView(const QString& viewName) const;
-    QSharedPointer<RLinetype> queryLinetype(RLinetype::Id linetypeId) const;
+    QSharedPointer<RLinetype> queryLinetype(RObject::Id linetypeId) const;
     QSharedPointer<RLinetype> queryLinetype(const QString& linetypeName) const;
 
     int countSelectedEntities() const;
 
     void clearSelection(
-        QSet<REntity::Id>* affectedEntities=NULL
+        QSet<RObject::Id>* affectedEntities=NULL
     );
 
-    void selectAllEntities(QSet<REntity::Id>* affectedEntities = NULL);
+    void selectAllEntities(QSet<RObject::Id>* affectedEntities = NULL);
 
     void selectEntity(
-        REntity::Id entityId,
+        RObject::Id entityId,
         bool add=false,
-        QSet<REntity::Id>* affectedEntities=NULL
+        QSet<RObject::Id>* affectedEntities=NULL
     );
     void deselectEntity(
-        REntity::Id entityId,
-        QSet<REntity::Id>* affectedEntities=NULL
+        RObject::Id entityId,
+        QSet<RObject::Id>* affectedEntities=NULL
     );
     int selectEntities(
-        const QSet<REntity::Id>& entityId,
+        const QSet<RObject::Id>& entityId,
         bool add=false,
-        QSet<REntity::Id>* affectedEntities=NULL
+        QSet<RObject::Id>* affectedEntities=NULL
     );
     int deselectEntities(
-        const QSet<REntity::Id>& entityId,
-        QSet<REntity::Id>* affectedEntities=NULL
+        const QSet<RObject::Id>& entityId,
+        QSet<RObject::Id>* affectedEntities=NULL
     );
-    bool isSelected(REntity::Id entityId);
-    bool isSelectedWorkingSet(REntity::Id entityId);
-    bool isLayerLocked(RLayer::Id layerId) const;
+    bool isSelected(RObject::Id entityId);
+    bool isSelectedWorkingSet(RObject::Id entityId);
+    bool isLayerLocked(RObject::Id layerId) const;
     bool isLayerLocked(const RLayer& layer) const;
-    bool isParentLayerLocked(RLayer::Id layerId) const;
+    bool isParentLayerLocked(RObject::Id layerId) const;
     bool isParentLayerLocked(const RLayer& layer) const;
 
     bool isEntity(RObject::Id objectId) const;
-    bool isEntityEditable(REntity::Id entityId) const;
-    //bool isEntityLayerLocked(REntity::Id entityId) const;
+    bool isEntityEditable(RObject::Id entityId) const;
+    //bool isEntityLayerLocked(RObject::Id entityId) const;
 
-    bool isLayerOff(RLayer::Id layerId) const;
+    bool isLayerOff(RObject::Id layerId) const;
     bool isLayerOff(const RLayer& layer) const;
 
-    bool isLayerOffOrFrozen(RLayer::Id layerId) const;
+    bool isLayerOffOrFrozen(RObject::Id layerId) const;
     bool isLayerOffOrFrozen(const RLayer& layer) const;
 
-    bool isLayerFrozen(RLayer::Id layerId) const;
+    bool isLayerFrozen(RObject::Id layerId) const;
     bool isLayerFrozen(const RLayer& layer) const;
-    bool isLayerPlottable(RLayer::Id layerId) const;
+    bool isLayerPlottable(RObject::Id layerId) const;
     bool isLayerPlottable(const RLayer& layer) const;
-    bool isLayerSnappable(RLayer::Id layerId) const;
+    bool isLayerSnappable(RObject::Id layerId) const;
     bool isLayerSnappable(const RLayer& layer) const;
-    bool isParentLayerFrozen(RLayer::Id layerId) const;
+    bool isParentLayerFrozen(RObject::Id layerId) const;
     bool isParentLayerFrozen(const RLayer& layer) const;
-    bool isBlockFrozen(RBlock::Id blockId) const;
-    bool isLayoutBlock(RBlock::Id blockId) const;
-    bool isEntityLayerFrozen(REntity::Id entityId) const;
+    bool isBlockFrozen(RObject::Id blockId) const;
+    bool isLayoutBlock(RObject::Id blockId) const;
+    bool isEntityLayerFrozen(RObject::Id entityId) const;
 
-    bool isEntityVisible(const REntity& entity, RBlock::Id blockId = RBlock::INVALID_ID) const;
+    bool isEntityVisible(const REntity& entity, RObject::Id blockId = RObject::INVALID_ID) const;
 
-    bool isParentLayerSnappable(RLayer::Id layerId) const;
+    bool isParentLayerSnappable(RObject::Id layerId) const;
     bool isParentLayerSnappable(const RLayer& layer) const;
 
-    bool isParentLayerPlottable(RLayer::Id layerId) const;
+    bool isParentLayerPlottable(RObject::Id layerId) const;
     bool isParentLayerPlottable(const RLayer& layer) const;
 
     bool hasSelection() const;
 
     RBox getBoundingBox(bool ignoreHiddenLayers = true, bool ignoreEmpty = false) const;
     RBox getSelectionBox() const;
-    RBox getEntitiesBox(QSet<REntity::Id>& ids) const;
+    RBox getEntitiesBox(QSet<RObject::Id>& ids) const;
 
     //void addToSpatialIndex(RObject& object, bool isNew = false);
     void clearSpatialIndices();
@@ -294,10 +299,10 @@ public:
     //void addToSpatialIndex(QSharedPointer<REntity> entity);
     void addToSpatialIndex(QSharedPointer<REntity> entity);
 
-    bool blockContainsReferences(RBlock::Id blockId, RBlock::Id referencedBlockId);
+    bool blockContainsReferences(RObject::Id blockId, RObject::Id referencedBlockId);
 
-    void removeBlockFromSpatialIndex(RBlock::Id blockId);
-    bool addBlockToSpatialIndex(RBlock::Id blockId, RObject::Id ignoreBlockId);
+    void removeBlockFromSpatialIndex(RObject::Id blockId);
+    bool addBlockToSpatialIndex(RObject::Id blockId, RObject::Id ignoreBlockId);
     virtual void removeFromSpatialIndex(QSharedPointer<REntity> entity, const QList<RBox>& boundingBoxes = RDEFAULT_QLIST_RBOX);
     //virtual void removeFromSpatialIndex2(QSharedPointer<REntity> entity);
 
@@ -330,13 +335,13 @@ public:
     QString getFileVersion() const;
 
     QSharedPointer<RLayer> queryCurrentLayer();
-//    RTransaction setCurrentLayer(RLayer::Id layerId);
+//    RTransaction setCurrentLayer(RObject::Id layerId);
 //    RTransaction setCurrentLayer(const QString& layerName);
-//    void setCurrentLayer(RTransaction& transaction, RLayer::Id layerId);
+//    void setCurrentLayer(RTransaction& transaction, RObject::Id layerId);
 //    void setCurrentLayer(RTransaction& transaction, const QString& layerName);
-    void setCurrentLayer(RLayer::Id layerId, RTransaction* transaction=NULL);
+    void setCurrentLayer(RObject::Id layerId, RTransaction* transaction=NULL);
     void setCurrentLayer(const QString& layerName, RTransaction* transaction=NULL);
-    RLayer::Id getCurrentLayerId() const;
+    RObject::Id getCurrentLayerId() const;
     QString getCurrentLayerName() const;
 
     void setCurrentColor(const RColor& color);
@@ -345,16 +350,16 @@ public:
     void setCurrentLineweight(RLineweight::Lineweight lw);
     RLineweight::Lineweight getCurrentLineweight() const;
 
-    void setCurrentLinetype(RLinetype::Id ltId);
+    void setCurrentLinetype(RObject::Id ltId);
     void setCurrentLinetype(const QString& name);
     void setCurrentLinetypePattern(const RLinetypePattern& p);
-    RLinetype::Id getCurrentLinetypeId() const;
+    RObject::Id getCurrentLinetypeId() const;
     RLinetypePattern getCurrentLinetypePattern() const;
 
     QSharedPointer<RBlock> queryCurrentBlock();
-    void setCurrentBlock(RBlock::Id blockId);
+    void setCurrentBlock(RObject::Id blockId);
     void setCurrentBlock(const QString& blockName);
-    RBlock::Id getCurrentBlockId() const;
+    RObject::Id getCurrentBlockId() const;
     QString getCurrentBlockName() const;
 
     void setCurrentViewport(RObject::Id viewportId);
@@ -362,29 +367,29 @@ public:
     bool hasCurrentViewport();
     void unsetCurrentViewport();
 
-//    void setSelectedBlock(RBlock::Id blockId);
+//    void setSelectedBlock(RObject::Id blockId);
 //    void setSelectedBlock(const QString& blockName);
-//    RBlock::Id getSelectedBlockId() const;
+//    RObject::Id getSelectedBlockId() const;
 
     QSharedPointer<RView> queryCurrentView();
-    void setCurrentView(RView::Id viewId);
+    void setCurrentView(RObject::Id viewId);
     void setCurrentView(const QString& viewName);
-    RView::Id getCurrentViewId() const;
+    RObject::Id getCurrentViewId() const;
 
     QString getTempBlockName() const;
     QString getUniqueBlockName(const QString& currentName, const QStringList& usedBlockNames = RDEFAULT_QSTRINGLIST) const;
-    QString getBlockName(RBlock::Id blockId) const;
-    QString getBlockNameFromHandle(RBlock::Handle blockHandle) const;
+    QString getBlockName(RObject::Id blockId) const;
+    QString getBlockNameFromHandle(RObject::Handle blockHandle) const;
     QString getBlockNameFromLayout(const QString& layoutName) const;
-    QString getBlockNameFromLayout(RLayout::Id layoutId) const;
+    QString getBlockNameFromLayout(RObject::Id layoutId) const;
     QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING, bool undone = false) const;
-    QList<RBlock::Id> sortBlocks(const QList<RBlock::Id>& blockIds) const;
-    QList<RLayer::Id> sortLayers(const QList<RLayer::Id>& layerIds) const;
-    QString getLayerName(RLayer::Id layerId) const;
+    QList<RObject::Id> sortBlocks(const QList<RObject::Id>& blockIds) const;
+    QList<RObject::Id> sortLayers(const QList<RObject::Id>& layerIds) const;
+    QString getLayerName(RObject::Id layerId) const;
     QSet<QString> getLayerNames(const QString& rxStr = RDEFAULT_QSTRING) const;
-    QString getLayerStateName(RLayerState::Id layerStateId) const;
+    QString getLayerStateName(RObject::Id layerStateId) const;
     QSet<QString> getLayerStateNames(const QString& rxStr = RDEFAULT_QSTRING) const;
-    QString getLayoutName(RLayout::Id layoutId) const;
+    QString getLayoutName(RObject::Id layoutId) const;
     QSet<QString> getViewNames() const;
 
     bool hasLayer(const QString& layerName) const;
@@ -395,29 +400,29 @@ public:
     bool hasView(const QString& viewName) const;
     bool hasLinetype(const QString& linetypeName) const;
 
-    RLayer::Id getLayerId(const QString& layerName) const;
-    RLayer::Id getLayer0Id() const;
+    RObject::Id getLayerId(const QString& layerName) const;
+    RObject::Id getLayer0Id() const;
 
-    RLayerState::Id getLayerStateId(const QString& layerStateName) const;
+    RObject::Id getLayerStateId(const QString& layerStateName) const;
 
-    RBlock::Id getBlockId(const QString& blockName) const;
-    RBlock::Id getBlockIdAuto(const QString& blockLayoutName) const;
-    RBlock::Id getModelSpaceBlockId() const;
+    RObject::Id getBlockId(const QString& blockName) const;
+    RObject::Id getBlockIdAuto(const QString& blockLayoutName) const;
+    RObject::Id getModelSpaceBlockId() const;
 
-    RLinetype::Id getLinetypeId(const QString& linetypeName) const;
-    RLinetype::Id getLinetypeByLayerId() const {
+    RObject::Id getLinetypeId(const QString& linetypeName) const;
+    RObject::Id getLinetypeByLayerId() const {
         return linetypeByLayerId;
     }
-    RLinetype::Id getLinetypeByBlockId() const {
+    RObject::Id getLinetypeByBlockId() const {
         return linetypeByBlockId;
     }
-    QString getLinetypeName(RLinetype::Id linetypeId) const;
-    QString getLinetypeDescription(RLinetype::Id linetypeId) const;
-    QString getLinetypeLabel(RLinetype::Id linetypeId) const;
+    QString getLinetypeName(RObject::Id linetypeId) const;
+    QString getLinetypeDescription(RObject::Id linetypeId) const;
+    QString getLinetypeLabel(RObject::Id linetypeId) const;
     QSet<QString> getLinetypeNames() const;
     QList<RLinetypePattern> getLinetypePatterns() const;
-    bool isByLayer(RLinetype::Id linetypeId) const;
-    bool isByBlock(RLinetype::Id linetypeId) const;
+    bool isByLayer(RObject::Id linetypeId) const;
+    bool isByBlock(RObject::Id linetypeId) const;
 
     RLineweight::Lineweight getMaxLineweight() const;
 
@@ -477,8 +482,8 @@ public:
     void setNotifyListeners(bool on);
     bool getNotifyListeners() const;
 
-//    RBlockReferenceEntity::Id getWorkingSetBlockReferenceId() const;
-//    void setWorkingSetBlockReferenceId(RBlockReferenceEntity::Id id, int group = RDEFAULT_MIN1, RTransaction* transaction = NULL);
+//    RObject::Id getWorkingSetBlockReferenceId() const;
+//    void setWorkingSetBlockReferenceId(RObject::Id id, int group = RDEFAULT_MIN1, RTransaction* transaction = NULL);
 
     /*
     void copyToDocument(const RVector& reference, RDocument& other,
@@ -508,11 +513,11 @@ private:
     RSpatialIndex& spatialIndex;
     bool disableSpatialIndicesByBlock;
     // map of spatial indices (per block):
-    mutable QMap<RBlock::Id, RSpatialIndex*> spatialIndicesByBlock;
+    mutable QMap<RObject::Id, RSpatialIndex*> spatialIndicesByBlock;
     RTransactionStack transactionStack;
-    //RBlock::Id modelSpaceBlockId;
-    RLinetype::Id linetypeByLayerId;
-    RLinetype::Id linetypeByBlockId;
+    //RObject::Id modelSpaceBlockId;
+    RObject::Id linetypeByLayerId;
+    RObject::Id linetypeByBlockId;
 
     bool autoTransactionGroup;
 };

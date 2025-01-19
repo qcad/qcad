@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RDocumentInterface.h"
+#include "REntity.h"
 #include "RGraphicsView.h"
 #include "RSnapPerpendicular.h"
 

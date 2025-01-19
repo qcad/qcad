@@ -22,7 +22,7 @@
 
 #include "entity_global.h"
 
-#include "REntity.h"
+#include "REntityData.h"
 #include "RPolyline.h"
 #include "RVector.h"
 
@@ -180,8 +180,8 @@ public:
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false, QList<RObject::Id>* entityIds = NULL) const;
     RTriangle getArrowShape() const;
 
-    REntity::Id getDimLeaderBlockId() const;
-    void setDimLeaderBlockId(REntity::Id id);
+    RObject::Id getDimLeaderBlockId() const;
+    void setDimLeaderBlockId(RObject::Id id);
 
     virtual void update() const;
 
@@ -199,7 +199,7 @@ private:
     /** Dimension scale */
     double dimscale;
     /** Block to use instead of arrow */
-    RBlock::Id dimLeaderBlockId;
+    RObject::Id dimLeaderBlockId;
     /** Spline shaped leader */
     bool splineShaped;
 };

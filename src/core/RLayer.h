@@ -27,13 +27,12 @@
 #include "RObject.h"
 #include "RPropertyTypeId.h"
 #include "RLayerProxy.h"
-#include "RLinetype.h"
 #include "RColor.h"
 #include "RLineweight.h"
-#include "RPropertyAttributes.h"
 
 class QDebug;
 class RDocument;
+class RPropertyAttributes;
 class RTransaction;
 
 /**
@@ -82,7 +81,7 @@ public:
 
     RLayer(RDocument* document, const QString& name, bool frozen = false,
         bool locked = false, const RColor& color = Qt::black,
-        RLinetype::Id linetypeId = RLinetype::INVALID_ID,
+        RObject::Id linetypeId = RObject::INVALID_ID,
         RLineweight::Lineweight lineweight = RLineweight::Weight000,
         bool off = false);
 
@@ -107,7 +106,7 @@ public:
         return QSharedPointer<RLayer>(new RLayer(*this));
     }
 
-    RLayer::Id getParentLayerId() const;
+    RObject::Id getParentLayerId() const;
 
     QString getName() const {
         return name;
@@ -185,11 +184,11 @@ public:
         color = c;
     }
 
-    RLinetype::Id getLinetypeId() const {
+    RObject::Id getLinetypeId() const {
         return linetypeId;
     }
 
-    void setLinetypeId(RLinetype::Id lt) {
+    void setLinetypeId(RObject::Id lt) {
         linetypeId = lt;
     }
 
@@ -315,7 +314,7 @@ private:
     QString name;
     LayerFlags flags;
     RColor color;
-    RLinetype::Id linetypeId;
+    RObject::Id linetypeId;
     RLineweight::Lineweight lineweight;
 
     static RLayerProxy* layerProxy;

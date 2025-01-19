@@ -22,7 +22,7 @@
 
 #include "core_global.h"
 
-
+#include <QMetaType>
 
 /**
  * Instances of classes derived from this base class cannot be copied.

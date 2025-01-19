@@ -25,11 +25,9 @@
 #include <QList>
 #include <QStack>
 
-#include "RBlock.h"
 #include "RBox.h"
 #include "RColor.h"
-#include "RLayer.h"
-#include "RLinetypePattern.h"
+#include "RLineweight.h"
 #include "RMath.h"
 #include "RObject.h"
 
@@ -37,6 +35,7 @@ class RBlockReferenceEntity;
 class RDocument;
 class REntity;
 class RExporter;
+class RLinetypePattern;
 class RPolyline;
 class RRefPoint;
 
@@ -228,22 +227,22 @@ public:
         this->drawOrder = drawOrder;
     }
 
-    virtual void setLayerId(RLayer::Id layerId) {
+    virtual void setLayerId(RObject::Id layerId) {
         this->layerId = layerId;
     }
 
-    RLayer::Id getLayerId() const {
+    RObject::Id getLayerId() const {
         return layerId;
     }
 
     void setLayerName(const QString& layerName);
     QString getLayerName() const;
 
-    virtual void setBlockId(RBlock::Id blockId) {
+    virtual void setBlockId(RObject::Id blockId) {
         this->blockId = blockId;
     }
 
-    RBlock::Id getBlockId() const {
+    RObject::Id getBlockId() const {
         return blockId;
     }
 
@@ -264,21 +263,21 @@ public:
      * Sets the linetype of this entity to the given linetype ID.
      * \see RDocument::getLinetypeId
      */
-    virtual void setLinetypeId(RLinetype::Id linetypeId) {
+    virtual void setLinetypeId(RObject::Id linetypeId) {
         this->linetypeId = linetypeId;
     }
 
     /**
      * \return Linetype ID of this entity. Note that this might be ByLayer or ByBlock.
      */
-    virtual RLinetype::Id getLinetypeId() const {
+    virtual RObject::Id getLinetypeId() const {
         return linetypeId;
     }
 
     virtual void setLinetypePattern(const RLinetypePattern& p);
     virtual RLinetypePattern getLinetypePattern() const;
 
-    virtual RLinetype::Id getLinetypeId(bool resolve,
+    virtual RObject::Id getLinetypeId(bool resolve,
         const QStack<QSharedPointer<REntity> >& blockRefStack) const;
 
     virtual void setLinetypeScale(double linetypeScale) {
@@ -427,10 +426,10 @@ protected:
     /** Block auto updates is true during imports, undo and redo. */
     bool autoUpdatesBlocked;
     int drawOrder;
-    RLayer::Id layerId;
-    RBlock::Id blockId;
+    RObject::Id layerId;
+    RObject::Id blockId;
     RObject::Id parentId;
-    RLinetype::Id linetypeId;
+    RObject::Id linetypeId;
     double linetypeScale;
     RLineweight::Lineweight lineweight;
     RColor color;

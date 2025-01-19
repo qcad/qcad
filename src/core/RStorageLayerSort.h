@@ -1,16 +1,14 @@
 #ifndef RSTORAGELAYERSORT_H
 #define RSTORAGELAYERSORT_H
 
-#include <QString>
-
-#include "RLayer.h"
+#include "RObject.h"
 
 class RStorage;
 
 class RStorageLayerSort {
 public:
     RStorageLayerSort(const RStorage* storage) : storage(storage) {}
-    bool operator()(RLayer::Id a, RLayer::Id b) const;
+    bool operator()(RObject::Id a, RObject::Id b) const;
     const RStorage* storage;
 };
 

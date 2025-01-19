@@ -27,6 +27,7 @@
 #include "RLine.h"
 #include "RTextBasedData.h"
 #include "RPolyline.h"
+#include "RRefPoint.h"
 #include "RTextRenderer.h"
 #include "RUnit.h"
 

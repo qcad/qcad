@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RLinkedStorage.h"
+#include "RDocumentVariables.h"
 
 RLinkedStorage::RLinkedStorage(RStorage& backStorage) :
     RMemoryStorage(),
@@ -86,7 +87,7 @@ QSet<RLayout::Id> RLinkedStorage::queryAllLayouts(bool undone) {
             .unite(backStorage->queryAllLayouts(undone));
 }
 
-QSet<RView::Id> RLinkedStorage::queryAllViews(bool undone) {
+QSet<RObject::Id> RLinkedStorage::queryAllViews(bool undone) {
     return RMemoryStorage::queryAllViews(undone)
             .unite(backStorage->queryAllViews(undone));
 }
@@ -369,7 +370,7 @@ QString RLinkedStorage::getBlockNameFromLayout(RLayout::Id layoutId) const {
     return ret;
 }
 
-QString RLinkedStorage::getViewName(RView::Id viewId) const {
+QString RLinkedStorage::getViewName(RObject::Id viewId) const {
     QString ret = RMemoryStorage::getViewName(viewId);
     if (ret.isNull()) {
         ret = backStorage->getViewName(viewId);
@@ -377,7 +378,7 @@ QString RLinkedStorage::getViewName(RView::Id viewId) const {
     return ret;
 }
 
-QSharedPointer<RView> RLinkedStorage::queryView(RView::Id viewId) const {
+QSharedPointer<RView> RLinkedStorage::queryView(RObject::Id viewId) const {
     if (!objectMap.contains(viewId)) {
         return backStorage->queryView(viewId);
     }
@@ -484,9 +485,9 @@ RBlock::Id RLinkedStorage::getBlockIdAuto(const QString& blockLayoutName) const 
     return ret;
 }
 
-RView::Id RLinkedStorage::getViewId(const QString& viewName) const {
-    RView::Id ret = RMemoryStorage::getViewId(viewName);
-    if (ret==RView::INVALID_ID) {
+RObject::Id RLinkedStorage::getViewId(const QString& viewName) const {
+    RObject::Id ret = RMemoryStorage::getViewId(viewName);
+    if (ret == RObject::INVALID_ID) {
         ret = backStorage->getViewId(viewName);
     }
     return ret;
@@ -558,7 +559,7 @@ RBlock::Id RLinkedStorage::getCurrentBlockId() const {
     return backStorage->getCurrentBlockId();
 }
 
-RView::Id RLinkedStorage::getCurrentViewId() const {
+RObject::Id RLinkedStorage::getCurrentViewId() const {
     return backStorage->getCurrentViewId();
 }
 

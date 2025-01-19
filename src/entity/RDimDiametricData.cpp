@@ -18,6 +18,7 @@
  */
 #include "RDimDiametricData.h"
 #include "RDocument.h"
+#include "RRefPoint.h"
 
 RDimDiametricData::RDimDiametricData() {
 }
