@@ -22,12 +22,10 @@
 
 #include "core_global.h"
 
-#include <QApplication>
-#include <QObject>
 #include <QMap>
+#include <QMetaType>
 #include <QString>
 #include <typeinfo>
-#include "RDebug.h"
 
 /**
  * \ingroup core
