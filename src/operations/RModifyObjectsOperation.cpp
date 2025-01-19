@@ -19,6 +19,7 @@
 #include "RModifyObjectsOperation.h"
 #include "RDocument.h"
 #include "RDocumentInterface.h"
+#include "REntity.h"
 #include "RSettings.h"
 #include "RStorage.h"
 #include "RTransformation.h"

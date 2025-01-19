@@ -26,9 +26,10 @@
 #include <QSharedPointer>
 #include <QDateTime>
 
-#include "REntity.h"
+#include "RColor.h"
 #include "RLinetype.h"
 #include "RLinetypePattern.h"
+#include "RLineweight.h"
 #include "RNonCopyable.h"
 #include "RRequireHeap.h"
 #include "RUcs.h"
@@ -38,6 +39,7 @@ class RBox;
 class RDimStyle;
 class RDocument;
 class RDocumentVariables;
+class REntity;
 class RLayer;
 class RLayerState;
 class RLayout;
@@ -261,23 +263,9 @@ public:
      */
     virtual QSharedPointer<REntity> queryEntity(RObject::Id entityId) const = 0;
 
-    virtual QSharedPointer<REntity> queryEntityDirect(RObject::Id entityId) const {
-        return queryEntity(entityId);
-    }
+    virtual QSharedPointer<REntity> queryEntityDirect(RObject::Id entityId) const;
 
-    virtual QSharedPointer<REntity> queryVisibleEntityDirect(RObject::Id entityId) const {
-        QSharedPointer<REntity> ret = queryEntityDirect(entityId);
-//        if (ret->isUndone()) {
-//            return QSharedPointer<REntity>();
-//        }
-//        if (ret->getBlockId()!=currentBlockId) {
-//            return QSharedPointer<REntity>();
-//        }
-        if (!ret->isVisible()) {
-            return QSharedPointer<REntity>();
-        }
-        return ret;
-    }
+    virtual QSharedPointer<REntity> queryVisibleEntityDirect(RObject::Id entityId) const;
 
     /**
      * \return A pointer to the UCS with the given \c ucsId
@@ -634,20 +622,11 @@ public:
         QSet<RObject::Id>* affectedEntities=NULL
     ) = 0;
 
-    virtual bool isSelected(RObject::Id entityId) {
-        QSharedPointer<REntity> e = queryEntityDirect(entityId);
-        return (!e.isNull() && e->isSelected());
-    }
+    virtual bool isSelected(RObject::Id entityId);
 
-    virtual bool isSelectedWorkingSet(RObject::Id entityId) {
-        QSharedPointer<REntity> e = queryEntityDirect(entityId);
-        return (!e.isNull() && e->isSelectedWorkingSet());
-    }
+    virtual bool isSelectedWorkingSet(RObject::Id entityId);
 
-    virtual bool isEntity(RObject::Id objectId) {
-        QSharedPointer<REntity> e = queryEntityDirect(objectId);
-        return !e.isNull();
-    }
+    virtual bool isEntity(RObject::Id objectId);
 
     virtual bool isLayerLocked(RObject::Id layerId) const;
     virtual bool isLayerLocked(const RLayer& layer) const;
@@ -690,9 +669,7 @@ public:
     virtual void setObjectId(RObject& object, RObject::Id objectId) const;
     virtual void setObjectHandle(RObject& object, RObject::Handle objectHandle);
 
-    virtual void setEntityParentId(REntity& entity, RObject::Id parentId) {
-        entity.setParentId(parentId);
-    }
+    virtual void setEntityParentId(REntity& entity, RObject::Id parentId);
 
     virtual void setUndoStatus(RObject& object, bool status);
 

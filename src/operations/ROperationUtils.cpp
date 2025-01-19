@@ -18,6 +18,7 @@
  */
 #include "RDocument.h"
 #include "RDocumentInterface.h"
+#include "REntity.h"
 #include "ROperationUtils.h"
 #include "RAddObjectsOperation.h"
 #include "RStorage.h"

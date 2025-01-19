@@ -43,17 +43,17 @@ QSet<RObject::Id> RLinkedStorage::querySelectedLayers() const {
             .unite(backStorage->querySelectedLayers());
 }
 
-QSet<REntity::Id> RLinkedStorage::queryAllVisibleEntities() {
+QSet<RObject::Id> RLinkedStorage::queryAllVisibleEntities() {
     return RMemoryStorage::queryAllVisibleEntities()
             .unite(backStorage->queryAllVisibleEntities());
 }
 
-QSet<REntity::Id> RLinkedStorage::queryAllEntities(bool undone, bool allBlocks, RS::EntityType type) {
+QSet<RObject::Id> RLinkedStorage::queryAllEntities(bool undone, bool allBlocks, RS::EntityType type) {
     return RMemoryStorage::queryAllEntities(undone, allBlocks, type)
             .unite(backStorage->queryAllEntities(undone, allBlocks, type));
 }
 
-QSet<REntity::Id> RLinkedStorage::queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types) {
+QSet<RObject::Id> RLinkedStorage::queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types) {
     return RMemoryStorage::queryAllEntities(undone, allBlocks, types)
             .unite(backStorage->queryAllEntities(undone, allBlocks, types));
 }
@@ -98,22 +98,22 @@ QSet<RLinetype::Id> RLinkedStorage::queryAllLinetypes() {
             .unite(backStorage->queryAllLinetypes());
 }
 
-QSet<REntity::Id> RLinkedStorage::queryInfiniteEntities() const{
+QSet<RObject::Id> RLinkedStorage::queryInfiniteEntities() const{
     return RMemoryStorage::queryInfiniteEntities()
             .unite(backStorage->queryInfiniteEntities());
 }
 
-QSet<REntity::Id> RLinkedStorage::querySelectedEntities() const {
+QSet<RObject::Id> RLinkedStorage::querySelectedEntities() const {
     return RMemoryStorage::querySelectedEntities()
             .unite(backStorage->querySelectedEntities());
 }
 
-QSet<REntity::Id> RLinkedStorage::queryLayerEntities(RObject::Id layerId, bool allBlocks) {
+QSet<RObject::Id> RLinkedStorage::queryLayerEntities(RObject::Id layerId, bool allBlocks) {
     return RMemoryStorage::queryLayerEntities(layerId, allBlocks)
             .unite(backStorage->queryLayerEntities(layerId, allBlocks));
 }
 
-QSet<REntity::Id> RLinkedStorage::querySelectedLayerEntities(RObject::Id layerId, bool allBlocks) {
+QSet<RObject::Id> RLinkedStorage::querySelectedLayerEntities(RObject::Id layerId, bool allBlocks) {
     return RMemoryStorage::querySelectedLayerEntities(layerId, allBlocks)
             .unite(backStorage->querySelectedLayerEntities(layerId, allBlocks));
 }
@@ -129,7 +129,7 @@ bool RLinkedStorage::hasBlockEntities(RBlock::Id blockId) const {
     }
 }
 
-QSet<REntity::Id> RLinkedStorage::queryBlockEntities(RBlock::Id blockId) {
+QSet<RObject::Id> RLinkedStorage::queryBlockEntities(RBlock::Id blockId) {
     if (blockMap.contains(blockId)) {
         // got block, return only block entities from this block:
         return RMemoryStorage::queryBlockEntities(blockId);
@@ -140,12 +140,12 @@ QSet<REntity::Id> RLinkedStorage::queryBlockEntities(RBlock::Id blockId) {
     }
 }
 
-QSet<REntity::Id> RLinkedStorage::queryLayerBlockEntities(RObject::Id layerId, RBlock::Id blockId) {
+QSet<RObject::Id> RLinkedStorage::queryLayerBlockEntities(RObject::Id layerId, RBlock::Id blockId) {
     // TODO: implement
     return RMemoryStorage::queryLayerBlockEntities(layerId, blockId);
 }
 
-QSet<REntity::Id> RLinkedStorage::queryChildEntities(REntity::Id parentId, RS::EntityType type) {
+QSet<RObject::Id> RLinkedStorage::queryChildEntities(RObject::Id parentId, RS::EntityType type) {
     if (entityMap.contains(parentId)) {
         // got parent, return only child entities from this parent:
         return RMemoryStorage::queryChildEntities(parentId, type);
@@ -156,7 +156,7 @@ QSet<REntity::Id> RLinkedStorage::queryChildEntities(REntity::Id parentId, RS::E
     }
 }
 
-bool RLinkedStorage::hasChildEntities(REntity::Id parentId) const {
+bool RLinkedStorage::hasChildEntities(RObject::Id parentId) const {
     if (entityMap.contains(parentId)) {
         return RMemoryStorage::hasChildEntities(parentId);
     }
@@ -165,17 +165,17 @@ bool RLinkedStorage::hasChildEntities(REntity::Id parentId) const {
     }
 }
 
-QSet<REntity::Id> RLinkedStorage::queryBlockReferences(RBlock::Id blockId) const {
+QSet<RObject::Id> RLinkedStorage::queryBlockReferences(RBlock::Id blockId) const {
     return RMemoryStorage::queryBlockReferences(blockId)
             .unite(backStorage->queryBlockReferences(blockId));
 }
 
-QSet<REntity::Id> RLinkedStorage::queryAllBlockReferences() const {
+QSet<RObject::Id> RLinkedStorage::queryAllBlockReferences() const {
     return RMemoryStorage::queryAllBlockReferences()
             .unite(backStorage->queryAllBlockReferences());
 }
 
-QSet<REntity::Id> RLinkedStorage::queryAllViewports() const {
+QSet<RObject::Id> RLinkedStorage::queryAllViewports() const {
     return RMemoryStorage::queryAllViewports()
             .unite(backStorage->queryAllViewports());
 }
@@ -219,7 +219,7 @@ RObject* RLinkedStorage::queryObjectCC(RObject::Id objectId) const {
     return RMemoryStorage::queryObjectCC(objectId);
 }
 
-QSharedPointer<REntity> RLinkedStorage::queryEntity(REntity::Id objectId) const {
+QSharedPointer<REntity> RLinkedStorage::queryEntity(RObject::Id objectId) const {
     if (!entityMap.contains(objectId)) {
         return backStorage->queryEntity(objectId);
     }
@@ -234,7 +234,7 @@ QSharedPointer<RObject> RLinkedStorage::queryObjectByHandle(RObject::Handle obje
     return ret;
 }
 
-QSharedPointer<REntity> RLinkedStorage::queryEntityDirect(REntity::Id objectId) const {
+QSharedPointer<REntity> RLinkedStorage::queryEntityDirect(RObject::Id objectId) const {
     if (!entityMap.contains(objectId)) {
         return backStorage->queryEntityDirect(objectId);
     }

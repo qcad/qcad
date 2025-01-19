@@ -24,6 +24,7 @@
 
 #include <QSharedPointer>
 
+#include "RBox.h"
 #include "RStorage.h"
 #include "RTransaction.h"
 

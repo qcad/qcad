@@ -367,15 +367,15 @@ void RGraphicsViewImage::updateImage() {
 
         //bgColorLightness = getBackgroundColor().lightness();
         isSelected = false;
-        QList<REntity::Id> ids = sceneQt->getPreviewEntityIds();
+        QList<RObject::Id> ids = sceneQt->getPreviewEntityIds();
         for (int i=0; i<ids.length(); i++) {
-            if (ids[i]!=REntity::INVALID_ID) {
+            if (ids[i] != RObject::INVALID_ID) {
                 paintEntityThread(decorationWorker, ids[i], true);
             }
         }
 
         // anonymous previews (aux preview, etc.) on top of everything else:
-        paintEntityThread(decorationWorker, REntity::INVALID_ID, true);
+        paintEntityThread(decorationWorker, RObject::INVALID_ID, true);
 
         //worker->end();
         // TODO: add function RGraphicsViewImage:
@@ -395,10 +395,10 @@ void RGraphicsViewImage::updateImage() {
     decorationWorker->save();
     QTransform t;
     decorationWorker->setTransform(t);
-    QMap<REntity::Id, QList<RRefPoint> >& referencePoints = scene->getReferencePoints();
+    QMap<RObject::Id, QList<RRefPoint> >& referencePoints = scene->getReferencePoints();
     if (getDocument()->countSelectedEntities()<RSettings::getMaxReferencePointEntitiesDisplay()) {
         //QPainter gbPainter(&graphicsBufferWithPreview);
-        QMap<REntity::Id, QList<RRefPoint> >::iterator it;
+        QMap<RObject::Id, QList<RRefPoint> >::iterator it;
         for (it = referencePoints.begin(); it != referencePoints.end(); ++it) {
             QList<RRefPoint>& list = it.value();
             for (int i=0; i<list.length(); i++) {
@@ -903,7 +903,7 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
     // paint selected entities (omitted above) always on top:
     if (!selectedIds.isEmpty()) {
         isSelected = true;
-        QList<REntity::Id> list = document->getStorage().orderBackToFront(selectedIds);
+        QList<RObject::Id> list = document->getStorage().orderBackToFront(selectedIds);
         QListIterator<RObject::Id> i(list);
         while (i.hasNext()) {
             paintEntityThread(workers.last(), i.next());
@@ -1187,7 +1187,7 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
 
     //RDebug::startTimer(60);
     //mutexSi.lock();
-    QSet<REntity::Id> ids;
+    QSet<RObject::Id> ids;
     ids = document->queryIntersectedEntitiesXYFast(qb);
     //qDebug() << "RGraphicsViewImage::paintEntities: ids: " << ids;
     //mutexSi.unlock();
@@ -1207,14 +1207,14 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
 
     if (drawablesCache.isEmpty()) {
         RDebug::startTimer(60);
-        QList<REntity::Id> list = document->getStorage().orderBackToFront(ids);
-        //QList<REntity::Id> list = ids.toList();
+        QList<RObject::Id> list = document->getStorage().orderBackToFront(ids);
+        //QList<RObject::Id> list = ids.toList();
         RDebug::stopTimer(60, "ordering");
 
 
         RDebug::startTimer(60);
         for (int i=0; i<list.length(); i++) {
-            REntity::Id id = list[i];
+            RObject::Id id = list[i];
 
             // get drawables of the given entity:
             QList<RGraphicsSceneDrawable>* drawables = sceneQt->getDrawables(id);
@@ -1228,14 +1228,14 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
     */
 
     //RDebug::startTimer(60);
-    QList<REntity::Id> list = document->getStorage().orderBackToFront(ids);
-    //QList<REntity::Id> list = ids.toList();
+    QList<RObject::Id> list = document->getStorage().orderBackToFront(ids);
+    //QList<RObject::Id> list = ids.toList();
     //RDebug::stopTimer(60, "ordering");
 
     // about 30ms for 50000:
 //    RDebug::startTimer(60);
 //    for (int i=0; i<list.length(); i++) {
-//        REntity::Id id = list[i];
+//        RObject::Id id = list[i];
 
 //        // get drawables of the given entity:
 //        QList<RGraphicsSceneDrawable>* drawables = sceneQt->getDrawables(id);
@@ -1267,7 +1267,7 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
     // regen arcs, xlines, rays, block references if necessary:
     //RDebug::startTimer(61);
     for (int i=0; i<list.length(); i++) {
-        REntity::Id id = list[i];
+        RObject::Id id = list[i];
 
         // get drawables of the given entity:
         QList<RGraphicsSceneDrawable>* drawables = sceneQt->getDrawables(id);
@@ -1430,7 +1430,7 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
 
 }
 
-//void RGraphicsViewImage::paintEntitiesThread(int threadId, const QList<REntity::Id>& list, int start, int end) {
+//void RGraphicsViewImage::paintEntitiesThread(int threadId, const QList<RObject::Id>& list, int start, int end) {
 //    for (int i=start; i<end; i++) {
 //        paintEntityThread(threadId, list[i]);
 //    }
@@ -1449,7 +1449,7 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
 /**
  * Looks up entity drawable and paints it using the given worker.
  */
-void RGraphicsViewImage::paintEntityThread(RGraphicsViewWorker* worker, REntity::Id id, bool preview) {
+void RGraphicsViewImage::paintEntityThread(RGraphicsViewWorker* worker, RObject::Id id, bool preview) {
     RDocument* doc = getDocument();
     if (!preview && !isPrintingOrExporting() && !isSelected && (doc->isSelected(id) || doc->isSelectedWorkingSet(id))) {
         static QMutex m;

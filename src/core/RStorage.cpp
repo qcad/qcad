@@ -21,6 +21,7 @@
 #include "RDocument.h"
 #include "RDocumentVariables.h"
 #include "RDimStyle.h"
+#include "REntity.h"
 #include "RLayerState.h"
 #include "RModifiedListener.h"
 #include "RS.h"
@@ -97,6 +98,44 @@ RObject::Handle RStorage::getNewObjectHandle() {
 
 RObject::Handle RStorage::getMaxObjectHandle() {
     return handleCounter;
+}
+
+QSharedPointer<REntity> RStorage::queryEntityDirect(RObject::Id entityId) const {
+    return queryEntity(entityId);
+}
+
+QSharedPointer<REntity> RStorage::queryVisibleEntityDirect(RObject::Id entityId) const {
+    QSharedPointer<REntity> ret = queryEntityDirect(entityId);
+//    if (ret->isUndone()) {
+//        return QSharedPointer<REntity>();
+//    }
+//    if (ret->getBlockId()!=currentBlockId) {
+//        return QSharedPointer<REntity>();
+//    }
+    if (!ret->isVisible()) {
+        return QSharedPointer<REntity>();
+    }
+    return ret;
+}
+
+bool RStorage::isSelected(RObject::Id entityId) {
+    QSharedPointer<REntity> e = queryEntityDirect(entityId);
+    return (!e.isNull() && e->isSelected());
+}
+
+bool RStorage::isSelectedWorkingSet(RObject::Id entityId) {
+    QSharedPointer<REntity> e = queryEntityDirect(entityId);
+    return (!e.isNull() && e->isSelectedWorkingSet());
+}
+
+bool RStorage::isEntity(RObject::Id objectId) {
+    QSharedPointer<REntity> e = queryEntityDirect(objectId);
+    return !e.isNull();
+}
+
+
+void RStorage::setEntityParentId(REntity& entity, RObject::Id parentId) {
+    entity.setParentId(parentId);
 }
 
 //RTransaction RStorage::setCurrentLayer(RLayer::Id layerId) {
