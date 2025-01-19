@@ -22,10 +22,9 @@
 
 #include "../core_global.h"
 
-#include <QDebug>
 #include <QList>
 #include <QMetaType>
-#include <QTransform>
+#include <QMultiMap>
 
 #include "RSEnums.h"
 
@@ -33,6 +32,7 @@ class RMatrix;
 class RBox;
 class RLine;
 class RPolyline;
+class QDebug;
 class QTransform;
 
 #define RDEFAULT_RVECTOR RVector()

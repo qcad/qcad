@@ -28,7 +28,8 @@
 #include <QMetaType>
 #include <QMap>
 #include <QIcon>
-#include <QDebug>
+
+class QDebug;
 
 #ifndef RDEFAULT_QSIZE_ICON
 #define RDEFAULT_QSIZE_ICON QSize(32,10)

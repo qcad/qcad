@@ -18,6 +18,7 @@
  */
 #include <cmath>
 
+#include <QDebug>
 #include <QMutex>
 
 #include "RArc.h"

@@ -18,6 +18,8 @@
  */
 #include <cassert>
 
+#include <QDebug>
+
 #include "RMatrix.h"
 #include "RVector.h"
 

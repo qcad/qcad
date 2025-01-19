@@ -18,6 +18,8 @@
  */
 #include <cmath>
 
+#include <QDebug>
+
 #include "RBox.h"
 #include "RLine.h"
 #include "RMath.h"

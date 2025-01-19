@@ -25,6 +25,7 @@
 // MSVC <= 2008 does not have this:
 //#include <stdint.h>
 
+#include <QDebug>
 #include <QSet>
 #include <QList>
 

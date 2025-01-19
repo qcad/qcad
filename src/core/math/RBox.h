@@ -23,6 +23,7 @@
 #include "../core_global.h"
 
 #include <QRectF>
+#include <QSharedPointer>
 
 #include "RVector.h"
 

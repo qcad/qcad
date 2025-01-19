@@ -18,6 +18,8 @@
  */
 #include <cmath>
 
+#include <QDebug>
+
 #include "RLine.h"
 #include "RBox.h"
 #include "RPolyline.h"

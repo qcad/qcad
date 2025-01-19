@@ -22,7 +22,7 @@
 
 #include "core_global.h"
 
-#include <QDebug>
+#include <QtGlobal>
 
 #include "REntity.h"
 #include "RExporter.h"
@@ -35,6 +35,7 @@ class RTabletEvent;
 class RTerminateEvent;
 class RWheelEvent;
 class QCursor;
+class QDebug;
 class QKeyEvent;
 class QPanGesture;
 class QPinchGesture;
