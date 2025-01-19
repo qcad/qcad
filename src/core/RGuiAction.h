@@ -32,7 +32,6 @@
 #include "RTransactionListener.h"
 #include "RFocusListener.h"
 #include "RSelectionListener.h"
-#include "RPaletteListener.h"
 
 class QToolBar;
 

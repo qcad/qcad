@@ -1049,7 +1049,7 @@ QSet<QString> RDocument::getLayerNames(const QString& rxStr) const {
 /**
  * \copydoc RStorage::getLayerStateName
  */
-QString RDocument::getLayerStateName(RLayerState::Id layerStateId) const {
+QString RDocument::getLayerStateName(RObject::Id layerStateId) const {
     return storage.getLayerStateName(layerStateId);
 }
 
@@ -1109,7 +1109,7 @@ RLayer::Id RDocument::getLayer0Id() const {
 /**
  * \copydoc RStorage::getLayerStateId
  */
-RLayerState::Id RDocument::getLayerStateId(const QString& layerStateName) const {
+RObject::Id RDocument::getLayerStateId(const QString& layerStateName) const {
     return storage.getLayerStateId(layerStateName);
 }
 
@@ -1363,7 +1363,7 @@ QSet<RLayer::Id> RDocument::queryAllLayers() const {
  *
  * \return Set of layer state IDs.
  */
-QSet<RLayerState::Id> RDocument::queryAllLayerStates() const {
+QSet<RObject::Id> RDocument::queryAllLayerStates() const {
     return storage.queryAllLayerStates();
 }
 
@@ -2329,7 +2329,7 @@ QSharedPointer<RLayer> RDocument::queryLayer(const QString& layerName) const {
  *
  * \return Pointer to the layer state or NULL.
  */
-QSharedPointer<RLayerState> RDocument::queryLayerState(RLayerState::Id layerStateId) const {
+QSharedPointer<RLayerState> RDocument::queryLayerState(RObject::Id layerStateId) const {
     return storage.queryLayerState(layerStateId);
 }
 
@@ -2340,7 +2340,7 @@ QSharedPointer<RLayerState> RDocument::queryLayerState(RLayerState::Id layerStat
  *
  * \return Pointer to the layer state or NULL.
  */
-QSharedPointer<RLayerState> RDocument::queryLayerStateDirect(RLayerState::Id layerStateId) const {
+QSharedPointer<RLayerState> RDocument::queryLayerStateDirect(RObject::Id layerStateId) const {
     return storage.queryLayerStateDirect(layerStateId);
 }
 

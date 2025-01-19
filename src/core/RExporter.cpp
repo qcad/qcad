@@ -585,8 +585,8 @@ void RExporter::exportLayers() {
 }
 
 void RExporter::exportLayerStates() {
-    QSet<RLayerState::Id> ids = document->queryAllLayerStates();
-    QSet<RLayerState::Id>::iterator it;
+    QSet<RObject::Id> ids = document->queryAllLayerStates();
+    QSet<RObject::Id>::iterator it;
     for (it = ids.begin(); it != ids.end(); it++) {
         QSharedPointer<RLayerState> ls = document->queryLayerStateDirect(*it);
         if (!ls.isNull()) {

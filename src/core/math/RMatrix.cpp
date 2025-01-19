@@ -20,6 +20,7 @@
 
 #include <QDebug>
 
+#include "RMath.h"
 #include "RMatrix.h"
 #include "RVector.h"
 

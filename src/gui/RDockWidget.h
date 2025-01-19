@@ -25,7 +25,7 @@
 #include <QMetaType>
 #include <QDockWidget>
 
-#include "RFlowLayout.h"
+class RFlowLayout;
 
 #define RDEFAULT_QT_WINDOWFLAGS Qt::WindowFlags()
 

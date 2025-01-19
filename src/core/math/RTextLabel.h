@@ -25,8 +25,8 @@
 #include <QVariant>
 
 #include "RPoint.h"
-#include "RVector.h"
-#include "RBox.h"
+
+class RVector;
 
 #ifndef RDEFAULT_QVARIANT
 #define RDEFAULT_QVARIANT QVariant()

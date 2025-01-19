@@ -22,7 +22,6 @@
 
 #include "../core_global.h"
 
-#include "RArc.h"
 #include "RBox.h"
 #include "RExplodable.h"
 #include "RShape.h"
@@ -31,6 +30,7 @@
 
 #include "RPolyline.h"
 
+class RArc;
 class RLine;
 
 #ifndef R_NO_OPENNURBS

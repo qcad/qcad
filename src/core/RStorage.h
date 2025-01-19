@@ -28,9 +28,6 @@
 
 #include "RBlock.h"
 #include "REntity.h"
-#include "RLayer.h"
-#include "RLayerState.h"
-#include "RLayout.h"
 #include "RLinetype.h"
 #include "RLinetypePattern.h"
 #include "RNonCopyable.h"
@@ -41,6 +38,9 @@ class RBox;
 class RDimStyle;
 class RDocument;
 class RDocumentVariables;
+class RLayer;
+class RLayerState;
+class RLayout;
 class RModifiedListener;
 class RTransaction;
 class RView;

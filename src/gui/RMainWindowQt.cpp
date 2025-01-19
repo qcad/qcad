@@ -20,6 +20,7 @@
 #include <QLineEdit>
 #include <QMenu>
 #include <QMdiArea>
+#include <QSettings>
 #include <QStatusBar>
 #include <QTabBar>
 #include <QToolBar>

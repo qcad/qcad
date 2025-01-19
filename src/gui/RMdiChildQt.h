@@ -24,7 +24,6 @@
 
 #include <QMdiSubWindow>
 
-#include "RDebug.h"
 #include "RModifiedListener.h"
 
 class RDocument;

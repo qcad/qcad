@@ -24,7 +24,6 @@
 
 #include <QComboBox>
 
-#include "RGlobal.h"
 #include "RLineweight.h"
 
 /**

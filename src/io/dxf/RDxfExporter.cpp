@@ -43,6 +43,7 @@
 #include "REllipseEntity.h"
 #include "RHatchEntity.h"
 #include "RImageEntity.h"
+#include "RLayer.h"
 #include "RLeaderEntity.h"
 #include "RLineEntity.h"
 #include "RPointEntity.h"

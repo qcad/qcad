@@ -24,7 +24,6 @@
 
 #include "RBox.h"
 #include "REntityData.h"
-#include "RPoint.h"
 #include "RVector.h"
 #include "REllipse.h"
 

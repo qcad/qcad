@@ -25,11 +25,7 @@
 #include <QSharedPointer>
 
 #include "RDeleteObjectsOperation.h"
-#include "ROperation.h"
-#include "RVector.h"
 
-class RDocument;
-class RExporter;
 class RObject;
 
 /**

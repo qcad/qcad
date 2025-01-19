@@ -33,7 +33,6 @@
 
 class RBlock;
 class RStorage;
-class RExporter;
 
 #define RDEFAULT_QSET_RPROPERTYTYPEID QSet<RPropertyTypeId> ()
 

@@ -20,6 +20,7 @@
 #include "RDocument.h"
 #include "RDocumentVariables.h"
 #include "RDimStyle.h"
+#include "RLayerState.h"
 #include "RModifiedListener.h"
 #include "RS.h"
 #include "RSettings.h"

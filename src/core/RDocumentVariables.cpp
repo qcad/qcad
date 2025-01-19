@@ -18,6 +18,7 @@
  */
 #include "RDocumentVariables.h"
 #include "RDxfServices.h"
+#include "RVector.h"
 
 RPropertyTypeId RDocumentVariables::PropertyCustom;
 RPropertyTypeId RDocumentVariables::PropertyHandle;

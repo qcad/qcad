@@ -17,6 +17,8 @@
  * along with QCAD.
  */
 #include "RSpatialIndex.h"
+#include "RBox.h"
+#include "RMath.h"
 #include "RS.h"
 
 void RSpatialIndexDebugVisitor::visitData(

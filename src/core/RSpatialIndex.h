@@ -29,11 +29,10 @@
 #include <QSet>
 #include <QList>
 
-#include "RBox.h"
-#include "RDebug.h"
-#include "RMath.h"
 #include "RRequireHeap.h"
 #include "RSpatialIndexVisitor.h"
+
+class RBox;
 
 class QCADCORE_EXPORT RSpatialIndexDebugVisitor : public RSpatialIndexVisitor {
 public:

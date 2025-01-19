@@ -19,6 +19,7 @@
 #include "RBlockReferenceEntity.h"
 #include "RDocument.h"
 #include "RExporter.h"
+#include "RLayer.h"
 #include "RSettings.h"
 #include "RStorage.h"
 #include "RTransform.h"

@@ -16,15 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QtCore>
 #include <QDragMoveEvent>
+#include <QFrame>
+#include <QGestureEvent>
 #include <QPainter>
-#include <QScrollBar>
-#include <QWheelEvent>
 
 #include "RDebug.h"
 #include "RDocumentInterface.h"
-#include "RGraphicsScene.h"
 #include "RGraphicsViewQt.h"
 #include "RMainWindow.h"
 #include "RMainWindowQt.h"
@@ -34,6 +32,7 @@
 #include "RTerminateEvent.h"
 #include "RWheelEvent.h"
 
+class RGraphicsScene;
 
 
 RGraphicsViewQt::RGraphicsViewQt(QWidget* parent, bool showFocus)

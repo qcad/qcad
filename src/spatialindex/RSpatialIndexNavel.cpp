@@ -18,6 +18,7 @@
  */
 #include "RSpatialIndexNavel.h"
 #include "RDebug.h"
+#include "RMath.h"
 
 
 #ifdef _MSC_VER
