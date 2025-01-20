@@ -189,8 +189,17 @@ function isNull(obj) {
         return true;
     }
 
+    if (obj==null) {
+        return true;
+    }
+
+    if (RSettings.getQtVersion() > 0x060000) {
+        if (obj.hasOwnProperty("__PROXY__")) {
+            return isNull(obj.__PROXY__);
+        }
+    }
+
     return (
-        obj==null ||
         // wrapped object is NULL:
         (typeof(obj.isNullWrapper)==="function" && obj.isNullWrapper()===true) ||
         // shared pointer is NULL:
