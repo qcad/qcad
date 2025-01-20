@@ -1,6 +1,6 @@
 function init(basePath) {
     var action = new RGuiAction(qsTranslate("CloseFile", "&Close"), RMainWindowQt.getMainWindow());
-    if (RSettings.getQtVersion() > 0x060000) {
+    if (RSettings.getQtVersion() >= 0x060000) {
         action.setRequiresDocument(false);
     }
     else {

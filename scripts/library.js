@@ -165,7 +165,7 @@ function destrDialog(dlg) {
  * Get pointer from shared pointer object using data() (Qt5) or implicitly (Qt6).
  */
 function getPtr(p) {
-    if (RSettings.getQtVersion() > 0x060000) {
+    if (RSettings.getQtVersion() >= 0x060000) {
         return p;
     }
     else {
@@ -193,7 +193,7 @@ function isNull(obj) {
         return true;
     }
 
-    if (RSettings.getQtVersion() > 0x060000) {
+    if (RSettings.getQtVersion() >= 0x060000) {
         if (obj.hasOwnProperty("__PROXY__")) {
             return isNull(obj.__PROXY__);
         }
