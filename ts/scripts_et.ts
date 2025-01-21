@@ -1232,7 +1232,7 @@ Do you wish to recover it?</source>
 <context>
     <name>Block</name>
     <message>
-        <location filename="../scripts/Block/Block.js" line="+67"/>
+        <location filename="../scripts/Block/Block.js" line="+68"/>
         <source>Block Tools</source>
         <translation type="unfinished">Blokeerimisvahendid</translation>
     </message>
@@ -14018,7 +14018,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1295"/>
+        <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
         <translation type="unfinished">Objektid</translation>
     </message>

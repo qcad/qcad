@@ -1235,7 +1235,7 @@ Vai vēlaties to atjaunot?</translation>
 <context>
     <name>Block</name>
     <message>
-        <location filename="../scripts/Block/Block.js" line="+67"/>
+        <location filename="../scripts/Block/Block.js" line="+68"/>
         <source>Block Tools</source>
         <translation type="unfinished">Bloku rīki</translation>
     </message>
@@ -14033,7 +14033,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1295"/>
+        <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
         <translation type="unfinished">Objekti</translation>
     </message>

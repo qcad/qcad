@@ -1236,7 +1236,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>Block</name>
     <message>
-        <location filename="../scripts/Block/Block.js" line="+67"/>
+        <location filename="../scripts/Block/Block.js" line="+68"/>
         <source>Block Tools</source>
         <translation>Nástroje bloku</translation>
     </message>
@@ -14034,7 +14034,7 @@ již v seznamu je.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1295"/>
+        <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
         <translation>Objektů</translation>
     </message>

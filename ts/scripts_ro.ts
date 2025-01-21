@@ -1235,7 +1235,7 @@ Doriți să îl recuperați?</translation>
 <context>
     <name>Block</name>
     <message>
-        <location filename="../scripts/Block/Block.js" line="+67"/>
+        <location filename="../scripts/Block/Block.js" line="+68"/>
         <source>Block Tools</source>
         <translation type="unfinished">Unelte de bloc</translation>
     </message>
@@ -14033,7 +14033,7 @@ este deja în listă.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1295"/>
+        <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
         <translation type="unfinished">Obiecte</translation>
     </message>
