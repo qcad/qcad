@@ -398,7 +398,7 @@ QSharedPointer<REntity> RExporter::getEntity() {
     if (entityStack.size()>0) {
         return entityStack.top()->cloneToEntity();
     }
-    return NULL;
+    return QSharedPointer<REntity>();
 }
 
 QSharedPointer<REntity> RExporter::getCurrentBlockRef() const {
