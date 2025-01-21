@@ -13123,27 +13123,32 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-        <translation type="unfinished">Modyfikacja</translation>
+        <translation>Modyfikacja</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished">Przesuń/Obróć</translation>
+        <translation>Przesuń/Obróć</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopia</translation>
+        <translation>Kopia</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Liczba kopii:</translation>
+        <translation>Liczba kopii:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">Użyj bieżącej warstwy i atrybutów</translation>
+        <translation>Użyj bieżącej warstwy i atrybutów</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Użyj okna dialogowego dla opcji narzędzia</translation>
     </message>
 </context>
 <context>
@@ -13182,14 +13187,6 @@ jest już na liście.</translation>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Użyj bieżącej warstwy i atrybutów</translation>
-    </message>
-</context>
-<context>
-    <name>TranslateiRotate</name>
-    <message>
-        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation type="unfinished">Użyj okna dialogowego dla opcji narzędzia</translation>
     </message>
 </context>
 <context>

@@ -540,7 +540,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished">Enrolamento</translation>
+        <translation>Enrolamento</translation>
     </message>
     <message>
         <location line="+1"/>

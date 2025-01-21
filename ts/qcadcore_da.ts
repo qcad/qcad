@@ -317,7 +317,7 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation type="unfinished">Ejet af Reference</translation>
+        <translation>Ejet af Reference</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+884"/>

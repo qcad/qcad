@@ -13142,6 +13142,11 @@ jau ir sarakstā.</translation>
         <source>Use Current Layer and Attributes</source>
         <translation type="unfinished">Pašreizējā slāņa un atribūtu izmantošana</translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Darbarīku opciju dialoglodziņa lietošana</translation>
+    </message>
 </context>
 <context>
     <name>TranslateRotateOptions</name>
@@ -13179,14 +13184,6 @@ jau ir sarakstā.</translation>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation type="unfinished">Izmantot pašreizējo slāni un atribūtus</translation>
-    </message>
-</context>
-<context>
-    <name>TranslateiRotate</name>
-    <message>
-        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation type="unfinished">Darbarīku opciju dialoglodziņa lietošana</translation>
     </message>
 </context>
 <context>

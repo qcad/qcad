@@ -540,7 +540,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished">Nawijanie</translation>
+        <translation>Nawijanie</translation>
     </message>
     <message>
         <location line="+1"/>

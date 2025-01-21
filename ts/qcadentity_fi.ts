@@ -551,7 +551,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished">Käämitys</translation>
+        <translation>Käämitys</translation>
     </message>
     <message>
         <location line="+1"/>

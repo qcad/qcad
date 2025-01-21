@@ -619,7 +619,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished">Snoede sig</translation>
+        <translation>Snoede sig</translation>
     </message>
     <message>
         <location line="+1"/>

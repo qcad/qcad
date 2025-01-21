@@ -13126,6 +13126,11 @@ már szerepel a listában.</translation>
         <source>Use Current Layer and Attributes</source>
         <translation type="unfinished">Aktuális réteg és attribútumok használata</translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Eszközbeállítások párbeszédpanel használata</translation>
+    </message>
 </context>
 <context>
     <name>TranslateRotateOptions</name>
@@ -13163,14 +13168,6 @@ már szerepel a listában.</translation>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation type="unfinished">Aktuális réteg és attribútumok használata</translation>
-    </message>
-</context>
-<context>
-    <name>TranslateiRotate</name>
-    <message>
-        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation type="unfinished">Eszközbeállítások párbeszédpanel használata</translation>
     </message>
 </context>
 <context>

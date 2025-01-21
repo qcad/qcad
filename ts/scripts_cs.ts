@@ -13143,6 +13143,11 @@ již v seznamu je.</translation>
         <source>Use Current Layer and Attributes</source>
         <translation type="unfinished">Použití aktuální vrstvy a atributů</translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Použít dialog pro nastavení nástroje</translation>
+    </message>
 </context>
 <context>
     <name>TranslateRotateOptions</name>
@@ -13180,14 +13185,6 @@ již v seznamu je.</translation>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Použít aktuální vrstvu a &amp;vlastnosti</translation>
-    </message>
-</context>
-<context>
-    <name>TranslateiRotate</name>
-    <message>
-        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation type="unfinished">Použít dialog pro nastavení nástroje</translation>
     </message>
 </context>
 <context>
