@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>TranslateiRotate</class>
+ <class>TranslateRotate</class>
  <widget class="QWidget" name="TranslateRotate">
   <property name="geometry">
    <rect>
