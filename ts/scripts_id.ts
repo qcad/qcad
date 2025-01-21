@@ -1234,7 +1234,7 @@ Apakah Anda ingin memulihkannya?</translation>
 <context>
     <name>Block</name>
     <message>
-        <location filename="../scripts/Block/Block.js" line="+67"/>
+        <location filename="../scripts/Block/Block.js" line="+68"/>
         <source>Block Tools</source>
         <translation type="unfinished">Alat Blokir</translation>
     </message>
@@ -14016,7 +14016,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1295"/>
+        <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
         <translation type="unfinished">Objek</translation>
     </message>
