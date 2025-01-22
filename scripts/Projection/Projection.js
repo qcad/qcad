@@ -631,7 +631,7 @@ Projection.prototype.projectShape = function(shape, preview, trim, rec) {
                 // s is a line or polyline that connets to the polyline we have:
                 if (!gotGap && (isLineShape(seg) || isPolylineShape(seg))) {
                     if (seg.getLength()>RS.PointTolerance) {
-                        pl.appendShape(seg);
+                        pl.appendShape(getPtr(seg));
                     }
                 }
 
@@ -659,7 +659,7 @@ Projection.prototype.projectShape = function(shape, preview, trim, rec) {
                     else if (gotGap){
                         pl = new RPolyline();
                         //qDebug("seg:", seg);
-                        pl.appendShape(seg);
+                        pl.appendShape(getPtr(seg));
                         addPl = true;
                     }
                 }
