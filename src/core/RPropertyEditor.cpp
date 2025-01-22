@@ -274,6 +274,8 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         return;
     }
 
+    showOnRequest = showOnRequest || RSettings::getPropertyEditorShowOnRequest()==true;
+
 #if QT_VERSION >= 0x060000
     bool gotSelection = document->hasSelection();
     int lazyUpdate = RSettings::getBoolValue("PropertyEditor/LazyUpdate", true);
