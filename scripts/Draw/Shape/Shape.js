@@ -236,7 +236,7 @@ Shape.getShapes = function(action, vertices) {
     if (action.createPolyline===true) {
         var pl = new RPolyline();
         for (i=0; i<shapes.length; ++i) {
-            pl.appendShape(shapes[i]);
+            pl.appendShape(getPtr(shapes[i]));
         }
         pl.autoClose();
         return [pl];
