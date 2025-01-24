@@ -8801,7 +8801,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+35"/>
         <source>Scale of linetypes matches the scale of each viewport</source>
-        <translation>L&apos;échelle des types de linéatures correspond à l&apos;échelle de chaque fenêtre</translation>
+        <translation>L&apos;échelle des types de linéatures correspond à l&apos;échelle de chaque fenêtre de présentation</translation>
     </message>
 </context>
 <context>
@@ -13494,7 +13494,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
-        <translation>Viewports</translation>
+        <translation>Fenêtres de présentation</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -13517,7 +13517,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+0"/>
         <source>Layout - Viewports</source>
-        <translation>Mise - Viewports</translation>
+        <translation>Mise - Fenêtres de présentation</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13527,7 +13527,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+0"/>
         <source>Viewports</source>
-        <translation>Viewports</translation>
+        <translation>Fenêtres de présentation</translation>
     </message>
 </context>
 <context>
@@ -14438,12 +14438,12 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation>Fenêtres</translation>
+        <translation>Fenêtres de présentation</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation>Fenêtre</translation>
+        <translation>Fenêtre de présentation</translation>
     </message>
     <message>
         <location line="+2"/>
