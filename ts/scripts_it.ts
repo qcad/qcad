@@ -13114,27 +13114,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-        <translation type="unfinished">Modifica CAD</translation>
+        <translation>Modifica CAD</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished">Spostamento/Rotazione</translation>
+        <translation>Spostamento/Rotazione</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
         <source>Copy</source>
-        <translation type="unfinished">Copia</translation>
+        <translation>Copia</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Numero di copie:</translation>
+        <translation>Numero di copie:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">Utilizzare il livello e gli attributi correnti</translation>
+        <translation>Utilizzare il livello e gli attributi correnti</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Usa finestra di dialogo per le opzioni degli strumenti</translation>
     </message>
 </context>
 <context>
@@ -13173,14 +13178,6 @@ is already in the list.</source>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Usa livello e gli &amp;attributi corrente</translation>
-    </message>
-</context>
-<context>
-    <name>TranslateiRotate</name>
-    <message>
-        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation type="unfinished">Usa finestra di dialogo per le opzioni degli strumenti</translation>
     </message>
 </context>
 <context>

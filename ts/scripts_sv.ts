@@ -13111,27 +13111,32 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-        <translation type="unfinished">Ändra</translation>
+        <translation>Ändra</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished">Flytta/rotera</translation>
+        <translation>Flytta/rotera</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopiera</translation>
+        <translation>Kopiera</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Antal kopior:</translation>
+        <translation>Antal kopior:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">Använd nuvarande lager och attribut</translation>
+        <translation>Använd nuvarande lager och attribut</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Använd dialogrutan för verktygsalternativ</translation>
     </message>
 </context>
 <context>
@@ -13170,14 +13175,6 @@ finns redan i listan.</translation>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Använd aktuellt lager och aktuella attribut</translation>
-    </message>
-</context>
-<context>
-    <name>TranslateiRotate</name>
-    <message>
-        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation type="unfinished">Använd dialogrutan för verktygsalternativ</translation>
     </message>
 </context>
 <context>

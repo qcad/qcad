@@ -13113,27 +13113,32 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-        <translation type="unfinished">Muokkaa</translation>
+        <translation>Muokkaa</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished">Siirrä/Kierrä</translation>
+        <translation>Siirrä/Kierrä</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopioi</translation>
+        <translation>Kopioi</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Kopioiden määrä:</translation>
+        <translation>Kopioiden määrä:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">Käytä nykyistä tasoa ja attribuutteja</translation>
+        <translation>Käytä nykyistä tasoa ja attribuutteja</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Käytä työkalun vaihtoehtojen valintaikkunaa</translation>
     </message>
 </context>
 <context>
@@ -13172,14 +13177,6 @@ on jo luettelossa.</translation>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Käytä nykyistä tasoa ja &amp;ominaisuuksia</translation>
-    </message>
-</context>
-<context>
-    <name>TranslateiRotate</name>
-    <message>
-        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation type="unfinished">Käytä työkalun vaihtoehtojen valintaikkunaa</translation>
     </message>
 </context>
 <context>

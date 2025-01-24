@@ -13142,6 +13142,11 @@ este deja în listă.</translation>
         <source>Use Current Layer and Attributes</source>
         <translation type="unfinished">Utilizați stratul și atributele curente</translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Utilizați caseta de dialog pentru opțiunile instrumentelor</translation>
+    </message>
 </context>
 <context>
     <name>TranslateRotateOptions</name>
@@ -13179,14 +13184,6 @@ este deja în listă.</translation>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation type="unfinished">Utilizați stratul și atributele curente</translation>
-    </message>
-</context>
-<context>
-    <name>TranslateiRotate</name>
-    <message>
-        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation type="unfinished">Utilizați caseta de dialog pentru opțiunile instrumentelor</translation>
     </message>
 </context>
 <context>

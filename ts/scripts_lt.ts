@@ -12,7 +12,7 @@
         <location line="+53"/>
         <location line="+123"/>
         <source>Version:</source>
-        <translation type="unfinished">Versija:</translation>
+        <translation>Versija:</translation>
     </message>
     <message>
         <location line="-119"/>
@@ -13142,6 +13142,11 @@ jau yra sąraše.</translation>
         <source>Use Current Layer and Attributes</source>
         <translation type="unfinished">Naudoti dabartinį sluoksnį ir atributus</translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Naudokite dialogo langą įrankio parinktims</translation>
+    </message>
 </context>
 <context>
     <name>TranslateRotateOptions</name>
@@ -13179,14 +13184,6 @@ jau yra sąraše.</translation>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation type="unfinished">Naudoti dabartinį sluoksnį ir atributus</translation>
-    </message>
-</context>
-<context>
-    <name>TranslateiRotate</name>
-    <message>
-        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation type="unfinished">Naudokite dialogo langą įrankio parinktims</translation>
     </message>
 </context>
 <context>

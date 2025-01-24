@@ -345,7 +345,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished">Bobinado</translation>
+        <translation>Bobinado</translation>
     </message>
     <message>
         <location line="+1"/>

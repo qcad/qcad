@@ -884,7 +884,7 @@ SvgImporter.prototype.importPath = function(dData) {
         var shape = shapes[i];
 
         if (isLineShape(shape) || isArcShape(shape)) {
-            pl.appendShape(shape);
+            pl.appendShape(getPtr(shape));
         }
         else {
             // shape cannot be part of a polyline or is undefined (gap):

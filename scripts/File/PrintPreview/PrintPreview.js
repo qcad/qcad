@@ -122,25 +122,29 @@ PrintPreview.start = function(initialAction, instance) {
         }
     }
 
-    var bbPaper = Print.getPaperBox(doc);
-    bbPaper.growXY(bbPaper.getWidth()/100, bbPaper.getHeight()/100);
-    var bbDoc = doc.getBoundingBox();
-    var positionAccepted = doc.getVariable("PageSettings/PositionAccepted");
-    // check if paper contains drawing:
-    if (!bbPaper.containsBox(bbDoc) && !positionAccepted) {
-        var initialZoom = appWin.property("PrintPreview/InitialZoom");
-        if (initialZoom!=="View" && initialZoom!=="Box") {
-            var ret = QMessageBox.warning(appWin,
-                qsTr("Auto fit"),
-                qsTr("Auto fit drawing to paper?"),
-                buttons);
-            // workaround for Qt keyboard focus bug:
-            appWin.activateWindow();
-            if (ret===QMessageBox.Yes) {
-                appWin.setProperty("PrintPreview/InitialZoom", "Auto");
-            }
-            else {
-                doc.setVariable("PageSettings/PositionAccepted", true);
+    // don't apply global scale for layout blocks:
+    var blockId = doc.getCurrentBlockId();
+    if (!doc.isLayoutBlock(blockId) || blockId===doc.getModelSpaceBlockId()) {
+        var bbPaper = Print.getPaperBox(doc);
+        bbPaper.growXY(bbPaper.getWidth()/100, bbPaper.getHeight()/100);
+        var bbDoc = doc.getBoundingBox();
+        var positionAccepted = doc.getVariable("PageSettings/PositionAccepted");
+        // check if paper contains drawing:
+        if (!bbPaper.containsBox(bbDoc) && !positionAccepted) {
+            var initialZoom = appWin.property("PrintPreview/InitialZoom");
+            if (initialZoom!=="View" && initialZoom!=="Box") {
+                var ret = QMessageBox.warning(appWin,
+                    qsTr("Auto fit"),
+                    qsTr("Auto fit drawing to paper?"),
+                    buttons);
+                // workaround for Qt keyboard focus bug:
+                appWin.activateWindow();
+                if (ret===QMessageBox.Yes) {
+                    appWin.setProperty("PrintPreview/InitialZoom", "Auto");
+                }
+                else {
+                    doc.setVariable("PageSettings/PositionAccepted", true);
+                }
             }
         }
     }

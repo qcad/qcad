@@ -13135,6 +13135,11 @@ er allerede i listen.</translation>
         <source>Use Current Layer and Attributes</source>
         <translation type="unfinished">Bruk gjeldende lag og attributter</translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Bruk dialogboksen for verktøyalternativer</translation>
+    </message>
 </context>
 <context>
     <name>TranslateRotateOptions</name>
@@ -13172,14 +13177,6 @@ er allerede i listen.</translation>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation type="unfinished">Bruk gjeldende lag og attributter</translation>
-    </message>
-</context>
-<context>
-    <name>TranslateiRotate</name>
-    <message>
-        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation type="unfinished">Bruk dialogboksen for verktøyalternativer</translation>
     </message>
 </context>
 <context>

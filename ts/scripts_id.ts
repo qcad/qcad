@@ -13125,6 +13125,11 @@ sudah ada dalam daftar.</translation>
         <source>Use Current Layer and Attributes</source>
         <translation type="unfinished">Gunakan Layer dan Atribut Saat Ini</translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Gunakan dialog untuk opsi alat</translation>
+    </message>
 </context>
 <context>
     <name>TranslateRotateOptions</name>
@@ -13162,14 +13167,6 @@ sudah ada dalam daftar.</translation>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation type="unfinished">Gunakan layer dan atribut saat ini</translation>
-    </message>
-</context>
-<context>
-    <name>TranslateiRotate</name>
-    <message>
-        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation type="unfinished">Gunakan dialog untuk opsi alat</translation>
     </message>
 </context>
 <context>

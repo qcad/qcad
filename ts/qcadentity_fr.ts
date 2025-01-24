@@ -345,7 +345,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished">Enroulement</translation>
+        <translation>Enroulement</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -1649,6 +1649,11 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
 
     // TTF text block (CAD text block is painter path):
     else if (drawable.isText()) {
+        if (clipRectangle.isValid()) {
+            // re-enable clipping for image if a path switched it off:
+            worker->setClipping(true);
+        }
+
         RTextBasedData text = drawable.getText();
 
         if (drawable.getPixelUnit()) {

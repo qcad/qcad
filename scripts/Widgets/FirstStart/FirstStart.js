@@ -235,24 +235,25 @@ FirstStart.prototype.changeLanguage = function(code) {
     }
     var index = paperSizeCombo.findText(paperSizeOverride);
     if (index===-1) {
-        var defaultPrinter = new QPrinter();
-        var paperSize;
-        if (isFunction(defaultPrinter.paperSize)) {
-            /// Qt 4, 5:
-            paperSize = defaultPrinter.paperSize(QPrinter.Millimeter);
-        }
-        else {
-            // Qt 6:
-            var pageLayout = defaultPrinter.pageLayout();
-            var pageSize = pageLayout.pageSize();
-            paperSize = pageSize.id();
-        }
+        // this can hang on Windows:
+        // var defaultPrinter = new QPrinter();
+        // var paperSize;
+        // if (isFunction(defaultPrinter.paperSize)) {
+        //     /// Qt 4, 5:
+        //     paperSize = defaultPrinter.paperSize(QPrinter.Millimeter);
+        // }
+        // else {
+        //     // Qt 6:
+        //     var pageLayout = defaultPrinter.pageLayout();
+        //     var pageSize = pageLayout.pageSize();
+        //     paperSize = pageSize.id();
+        // }
 
-        destr(defaultPrinter);
-        index = paperSizeCombo.findData(paperSize, Qt.UserRole + 1);
-        if (index===-1) {
+        // destr(defaultPrinter);
+        // index = paperSizeCombo.findData(paperSize, Qt.UserRole + 1);
+        // if (index===-1) {
             index = paperSizeCombo.findText("ISO A4");
-        }
+        // }
     }
     if (index===-1) {
         index = 0;

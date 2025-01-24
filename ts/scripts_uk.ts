@@ -13142,6 +13142,11 @@ is already in the list.</source>
         <source>Use Current Layer and Attributes</source>
         <translation type="unfinished">Використання поточного шару та атрибутів</translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Діалогове вікно для вибору параметрів інструменту</translation>
+    </message>
 </context>
 <context>
     <name>TranslateRotateOptions</name>
@@ -13179,14 +13184,6 @@ is already in the list.</source>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation type="unfinished">Використовувати поточний шар та атрибути</translation>
-    </message>
-</context>
-<context>
-    <name>TranslateiRotate</name>
-    <message>
-        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation type="unfinished">Діалогове вікно для вибору параметрів інструменту</translation>
     </message>
 </context>
 <context>

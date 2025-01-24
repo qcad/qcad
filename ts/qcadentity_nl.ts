@@ -551,7 +551,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished">Wikkelen</translation>
+        <translation>Wikkelregel</translation>
     </message>
     <message>
         <location line="+1"/>

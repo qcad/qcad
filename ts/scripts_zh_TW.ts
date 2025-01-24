@@ -13125,6 +13125,11 @@ is already in the list.</source>
         <source>Use Current Layer and Attributes</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">使用工具选项的对话框</translation>
+    </message>
 </context>
 <context>
     <name>TranslateRotateOptions</name>
@@ -13162,14 +13167,6 @@ is already in the list.</source>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation type="unfinished">使用当前层和属性</translation>
-    </message>
-</context>
-<context>
-    <name>TranslateiRotate</name>
-    <message>
-        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation type="unfinished">使用工具选项的对话框</translation>
     </message>
 </context>
 <context>

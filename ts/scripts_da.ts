@@ -13113,27 +13113,32 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-        <translation type="unfinished">Ændre</translation>
+        <translation>Ændre</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished">Flyt/drej</translation>
+        <translation>Flyt/drej</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopier</translation>
+        <translation>Kopier</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Antal eksemplarer:</translation>
+        <translation>Antal eksemplarer:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">Brug nuværende lag og attributter</translation>
+        <translation>Brug nuværende lag og attributter</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Brug dialogboks til værktøjsindstillinger</translation>
     </message>
 </context>
 <context>
@@ -13172,14 +13177,6 @@ er allerede på listen.</translation>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Brug det aktuelle lag og &amp;attributter</translation>
-    </message>
-</context>
-<context>
-    <name>TranslateiRotate</name>
-    <message>
-        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation type="unfinished">Brug dialogboks til værktøjsindstillinger</translation>
     </message>
 </context>
 <context>

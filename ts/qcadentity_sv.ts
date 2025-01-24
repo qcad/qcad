@@ -556,7 +556,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished">Lindning</translation>
+        <translation>Lindning</translation>
     </message>
     <message>
         <location line="+1"/>

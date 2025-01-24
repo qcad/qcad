@@ -1930,7 +1930,7 @@ ShapeAlgorithms.appendShapeToPolylineAuto = function(pl, shape) {
     if (pl.countVertices()>0 && pl.getEndPoint().equalsFuzzy(shape.getEndPoint())) {
         shape.reverse();
     }
-    pl.appendShape(shape);
+    pl.appendShape(getPtr(shape));
 };
 
 /**
