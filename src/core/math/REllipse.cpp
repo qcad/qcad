@@ -21,6 +21,7 @@
 #include "REllipse.h"
 #include "RBox.h"
 #include "RMath.h"
+#include "RPolyline.h"
 
 REllipseProxy* REllipse::ellipseProxy = NULL;
 

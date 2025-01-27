@@ -26,6 +26,7 @@
 #include "RArc.h"
 #include "RLine.h"
 #include "RFont.h"
+#include "RPolyline.h"
 #include "RS.h"
 #include "RSpline.h"
 

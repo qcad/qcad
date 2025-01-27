@@ -18,7 +18,6 @@
  */
 #include <QFont>
 #include <QFontMetricsF>
-#include <QTextDocument>
 #include <QMutex>
 
 #include "RColor.h"

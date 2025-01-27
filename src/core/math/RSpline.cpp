@@ -24,6 +24,7 @@
 #include "RArc.h"
 #include "RLine.h"
 #include "RSpline.h"
+#include "RSplineProxy.h"
 #include "RPainterPath.h"
 #include "RPolyline.h"
 
@@ -1942,6 +1943,11 @@ QList<QSharedPointer<RShape> > RSpline::splitAt(const QList<RVector>& points) co
  */
 QList<RVector> RSpline::getSelfIntersectionPoints(double tolerance) const {
     return getIntersectionPointsSS(*this, *this, true, true, tolerance);
+}
+
+void RSpline::setSplineProxy(RSplineProxy* p) {
+    delete splineProxy;
+    splineProxy = p;
 }
 
 void RSpline::print(QDebug dbg) const {

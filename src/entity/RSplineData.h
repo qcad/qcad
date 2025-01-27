@@ -249,13 +249,9 @@ public:
         return RSpline::getAngleAt(distance, from);
     }
 
-    RPolyline toPolyline(int segments) const {
-        return RSpline::toPolyline(segments);
-    }
+    RPolyline toPolyline(int segments) const;
 
-    RPolyline approximateWithArcs(double tolerance, double radiusLimit=RDEFAULT_MIN1) const {
-        return RSpline::approximateWithArcs(tolerance, radiusLimit);
-    }
+    RPolyline approximateWithArcs(double tolerance, double radiusLimit=RDEFAULT_MIN1) const;
 
     void simplify(double tolerance) {
         RSpline s = RSpline::simplify(tolerance);

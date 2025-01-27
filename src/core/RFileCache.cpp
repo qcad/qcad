@@ -18,6 +18,8 @@
  */
 #include "RFileCache.h"
 
+#include <QBuffer>
+#include <QCache>
 #include <QFile>
 #include <QFileInfo>
 

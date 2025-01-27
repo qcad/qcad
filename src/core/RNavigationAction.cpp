@@ -17,6 +17,9 @@
  * along with QCAD.
  */
 #include "RNavigationAction.h"
+
+#include "RGraphicsView.h"
+#include "RMouseEvent.h"
 #include "RS.h"
 
 RNavigationAction::RNavigationAction(RGuiAction* guiAction) 

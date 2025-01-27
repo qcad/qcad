@@ -24,7 +24,6 @@
 
 #include <QMetaType>
 #include <QFont>
-#include <QPoint>
 #include <QSize>
 #include <QString>
 #include <QWidget>

@@ -19,7 +19,6 @@
 #include <QFontDatabase>
 #include <QMouseEvent>
 #include <QPainter>
-#include <QPaintEvent>
 #include <QToolTip>
 
 #include "RCharacterWidget.h"
