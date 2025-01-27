@@ -136,7 +136,7 @@ add_library(qcadcore SHARED
     RShapesExporter.cpp RShapesExporter.h
     RSingleApplication.cpp RSingleApplication.h
     RSingleton.cpp RSingleton.h
-    RSnap.h
+    RSnap.cpp RSnap.h
     RSnapRestriction.h
     RSpatialIndex.cpp RSpatialIndex.h
     RSpatialIndexSimple.cpp RSpatialIndexSimple.h

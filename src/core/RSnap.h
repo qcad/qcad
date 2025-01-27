@@ -23,7 +23,6 @@
 #include "core_global.h"
 
 #include "RMath.h"
-#include "RMouseEvent.h"
 #include "RObject.h"
 #include "RVector.h"
 
@@ -66,8 +65,8 @@ public:
     };
 
 public:
-    RSnap(RSnap::Status s = RSnap::Unknown) : status(s), lastSnap(RVector::invalid) {}
-    virtual ~RSnap() {}
+    RSnap(RSnap::Status s = RSnap::Unknown);
+    ~RSnap();
 
     /**
      * \return The snapped position (closest relevant position)
@@ -85,9 +84,7 @@ public:
      * \overload
      * \nonscriptable
      */
-    virtual RVector snap(RMouseEvent& event) {
-        return snap(event.getModelPosition(), event.getGraphicsView());
-    }
+    virtual RVector snap(RMouseEvent& event);
 
     virtual void showUiOptions() {}
     virtual void hideUiOptions() {}

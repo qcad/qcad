@@ -53,6 +53,7 @@ class REntity;
 class RGraphicsScene;
 class RGraphicsSceneDrawable;
 class RGraphicsView;
+class RInputEvent;
 class RLayer;
 class RLayerListener;
 class RLinetypePattern;

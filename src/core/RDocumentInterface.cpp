@@ -44,6 +44,7 @@
 #include "RLayerListener.h"
 #include "RLayout.h"
 #include "RLinkedStorage.h"
+#include "RMouseEvent.h"
 #include "RPolyline.h"
 #include "RMainWindow.h"
 #include "ROperation.h"
