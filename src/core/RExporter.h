@@ -31,8 +31,8 @@
 
 #include "RLinetypePattern.h"
 #include "RLineweight.h"
+#include "RMath.h"
 #include "RObject.h"
-#include "RPolyline.h"
 
 class RArc;
 class RBlock;
@@ -41,6 +41,7 @@ class RColor;
 class RDocument;
 class REllipse;
 class REntity;
+class RExplodable;
 class RImageData;
 class RLayer;
 class RLayerState;
@@ -50,6 +51,7 @@ class RMessageHandler;
 class RPainterPath;
 class RPainterPathSource;
 class RPoint;
+class RPolyline;
 class RProgressHandler;
 class RRay;
 class RSpline;
@@ -256,11 +258,7 @@ public:
     virtual void exportTransform(const RTransform& t);
     virtual void exportEndTransform();
 
-    virtual void exportThickPolyline(const RPolyline& polyline) {
-        RPolyline pl = polyline;
-        pl.stripWidths();
-        exportPolyline(pl);
-    }
+    virtual void exportThickPolyline(const RPolyline& polyline);
 
 //    virtual void exportThickLine(const RLine& line, double w1, double w2) {
 //        Q_UNUSED(w1)

@@ -1683,6 +1683,12 @@ void RExporter::exportTransform(const RTransform& t) {
 void RExporter::exportEndTransform() {
 }
 
+void RExporter::exportThickPolyline(const RPolyline& polyline) {
+    RPolyline pl = polyline;
+    pl.stripWidths();
+    exportPolyline(pl);
+}
+
 double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
     if (document==NULL) {
         return 1.0;
