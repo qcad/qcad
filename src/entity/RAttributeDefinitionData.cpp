@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 #include "RAttributeDefinitionData.h"
-
+#include "RDocument.h"
 
 RAttributeDefinitionData::RAttributeDefinitionData(RDocument* document, const RAttributeDefinitionData& data)
     : RTextBasedData(document, data), invisible(false) {

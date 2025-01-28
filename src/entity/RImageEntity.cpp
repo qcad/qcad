@@ -16,15 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RArc.h"
-#include "RCircle.h"
-#include "RMetaTypes.h"
-#include "REllipse.h"
+#include "RDebug.h"
 #include "RExporter.h"
 #include "RImageEntity.h"
-#include "RLine.h"
-#include "RPoint.h"
-#include "RSpline.h"
 
 RPropertyTypeId RImageEntity::PropertyCustom;
 RPropertyTypeId RImageEntity::PropertyHandle;

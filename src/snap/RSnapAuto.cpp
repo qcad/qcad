@@ -19,6 +19,8 @@
 
 #include "RDocument.h"
 #include "RGraphicsView.h"
+#include "RMouseEvent.h"
+#include "RS.h"
 #include "RSettings.h"
 #include "RSnapAuto.h"
 #include "RSnapCenter.h"
@@ -66,7 +68,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
     }
 
     // matching ids per query range:
-    QList<QSet<REntity::Id> > idsList;
+    QList<QSet<RObject::Id> > idsList;
     QList<RBox> queryBoxList;
     bool foundEntities = false;
 
@@ -74,8 +76,8 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
         RBox queryBox(position, r);
         queryBoxList.append(queryBox);
 
-        QMap<REntity::Id, QSet<int> > ids = document->queryIntersectedShapesXY(
-                queryBox, true, true, RBlock::INVALID_ID
+        QMap<RObject::Id, QSet<int> > ids = document->queryIntersectedShapesXY(
+                queryBox, true, true, RObject::INVALID_ID
                     // 20151027: allow snapping to hatch end points, etc:
                     /*, QList<RS::EntityType>() << RS::EntityHatch*/);
 
@@ -127,7 +129,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
         for (int k=0; k<idsList.size() && k<queryBoxList.size(); k++) {
             // query box and matching IDs cached from intersection snap:
             RBox queryBox = queryBoxList.at(k);
-            QSet<REntity::Id> ids = idsList.at(k);
+            QSet<RObject::Id> ids = idsList.at(k);
 
             RSnapEnd snapEnd;
             lastSnap = snapEnd.snap(position, view, ids, queryBox);
@@ -145,7 +147,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
         for (int k=0; k<idsList.size() && k<queryBoxList.size(); k++) {
             // query box and matching IDs cached from intersection snap:
             RBox queryBox = queryBoxList.at(k);
-            QSet<REntity::Id> ids = idsList.at(k);
+            QSet<RObject::Id> ids = idsList.at(k);
 
             RSnapMiddle snapMiddle;
             lastSnap = snapMiddle.snap(position, view, ids, queryBox);
@@ -163,7 +165,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
         for (int k=0; k<idsList.size() && k<queryBoxList.size(); k++) {
             // query box and matching IDs cached from intersection snap:
             RBox queryBox = queryBoxList.at(k);
-            QSet<REntity::Id> ids = idsList.at(k);
+            QSet<RObject::Id> ids = idsList.at(k);
 
             RSnapCenter snapCenter;
             lastSnap = snapCenter.snap(position, view, ids, queryBox);
@@ -181,7 +183,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
         for (int k=0; k<idsList.size() && k<queryBoxList.size(); k++) {
             // query box and matching IDs cached from intersection snap:
             RBox queryBox = queryBoxList.at(k);
-            QSet<REntity::Id> ids = idsList.at(k);
+            QSet<RObject::Id> ids = idsList.at(k);
 
             RSnapPerpendicular snapPerpendicular;
             lastSnap = snapPerpendicular.snap(position, view, ids, queryBox);
@@ -199,7 +201,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
         for (int k=0; k<idsList.size() && k<queryBoxList.size(); k++) {
             // query box and matching IDs cached from intersection snap:
             RBox queryBox = queryBoxList.at(k);
-            QSet<REntity::Id> ids = idsList.at(k);
+            QSet<RObject::Id> ids = idsList.at(k);
 
             RSnapTangential snapTangential;
             lastSnap = snapTangential.snap(position, view, ids, queryBox);
@@ -217,7 +219,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
         for (int k=0; k<idsList.size() && k<queryBoxList.size(); k++) {
             // query box and matching IDs cached from intersection snap:
             RBox queryBox = queryBoxList.at(k);
-            QSet<REntity::Id> ids = idsList.at(k);
+            QSet<RObject::Id> ids = idsList.at(k);
 
             RSnapReference snapReference;
             lastSnap = snapReference.snap(position, view, ids, queryBox);
@@ -246,7 +248,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
         for (int k=0; k<idsList.size() && k<queryBoxList.size(); k++) {
             // query box and matching IDs cached from intersection snap:
             RBox queryBox = queryBoxList.at(k);
-            QSet<REntity::Id> ids = idsList.at(k);
+            QSet<RObject::Id> ids = idsList.at(k);
 
             // on entity
             RSnapOnEntity snapOnEntity;

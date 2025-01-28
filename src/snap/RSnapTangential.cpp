@@ -21,6 +21,7 @@
 #include "RSnapTangential.h"
 #include "RArc.h"
 #include "REllipse.h"
+#include "REntity.h"
 #include "RCircle.h"
 
 QList<RVector> RSnapTangential::snapEntity(

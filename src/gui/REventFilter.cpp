@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include <QCoreApplication>
-#include <QWheelEvent>
 
 #include "REventFilter.h"
 

@@ -23,8 +23,9 @@
 #include "operations_global.h"
 
 #include "RAddObjectsOperation.h"
-#include "RDocumentInterface.h"
-#include "RTransformation.h"
+
+class RDocumentInterface;
+class RTransformation;
 
 /**
  * Implementation of an operation that adds entities.

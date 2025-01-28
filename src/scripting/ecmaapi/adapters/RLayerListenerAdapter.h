@@ -22,8 +22,9 @@
 
 #include <QObject>
 
-#include "RDocumentInterface.h"
 #include "RLayerListener.h"
+
+class RDocumentInterface;
 
 /**
  * \scriptable
@@ -36,11 +37,11 @@ public:
     RLayerListenerAdapter(QObject* parent=NULL) : QObject(parent) { }
     virtual ~RLayerListenerAdapter() { }
 
-    virtual void updateLayers(RDocumentInterface* documentInterface, QList<RLayer::Id>& layerIds) {
+    virtual void updateLayers(RDocumentInterface* documentInterface, QList<RObject::Id>& layerIds) {
         emit layersUpdated(documentInterface, layerIds);
     }
 
-    virtual void setCurrentLayer(RDocumentInterface* documentInterface, RLayer::Id previousLayerId) {
+    virtual void setCurrentLayer(RDocumentInterface* documentInterface, RObject::Id previousLayerId) {
         emit currentLayerSet(documentInterface, previousLayerId);
     }
 

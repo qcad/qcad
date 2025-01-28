@@ -22,14 +22,8 @@
 
 #include "core_global.h"
 
-#include <QChar>
-#include <QMap>
-#include <QPainterPath>
 #include <QString>
-#include <QSharedPointer>
 
-#include "RBox.h"
-#include "RShape.h"
 #include "RPatternLine.h"
 
 

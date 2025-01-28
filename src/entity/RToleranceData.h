@@ -22,9 +22,10 @@
 
 #include "entity_global.h"
 
-#include "RDocument.h"
-#include "RDimLinearData.h"
+#include "REntityData.h"
 #include "RVector.h"
+
+class RDocument;
 
 /**
  * Tolerance entity data class.
@@ -83,63 +84,11 @@ public:
 //        text += "^J";
 //    }
 
-    double getDimtxt(bool scale = true) const {
-        double v = 2.5;
+    double getDimtxt(bool scale = true) const;
+    void setDimtxt(double f);
 
-        // get value from override:
-        if (dimtxt>0.0) {
-            v = dimtxt;
-        }
-
-        else if (document!=NULL) {
-            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
-            if (!dimStyle.isNull()) {
-                // get value from dimension style:
-                v = dimStyle->getDouble(RS::DIMTXT);
-            }
-            else {
-                // TODO: get value from document (should never happen):
-                Q_ASSERT(false);
-            }
-        }
-
-        if (scale) {
-            v *= getDimscale();
-        }
-
-        return v;
-    }
-    void setDimtxt(double f) {
-        dimtxt = f;
-        update();
-    }
-
-    double getDimscale() const {
-        // get value from override:
-        if (dimscale>0.0) {
-            return dimscale;
-        }
-
-        double v = 1.0;
-        if (document!=NULL) {
-            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
-            if (!dimStyle.isNull()) {
-                // get value from dimension style:
-                v = dimStyle->getDouble(RS::DIMSCALE);
-            }
-            else {
-                // TODO: get value from document (should never happen):
-                Q_ASSERT(false);
-            }
-        }
-
-        return v;
-    }
-
-    void setDimscale(double f) {
-        dimscale = f;
-        update();
-    }
+    double getDimscale() const;
+    void setDimscale(double f);
 
     //double getDimscale(bool fromDocument=true) const;
     //void setDimScaleOverride(double v);
@@ -213,7 +162,7 @@ private:
     /** Dimension scale */
     //double dimScaleOverride;
     /** Block to use instead of arrow */
-    RBlock::Id dimToleranceBlockId;
+    RObject::Id dimToleranceBlockId;
 
     double dimscale;
     double dimtxt;

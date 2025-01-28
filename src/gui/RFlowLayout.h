@@ -5,7 +5,6 @@
 
 #include <QLayout>
 #include <QMetaType>
-#include <QRect>
 #include <QStyle>
 
 #ifndef RDEFAULT_MIN1

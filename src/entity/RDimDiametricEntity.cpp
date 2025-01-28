@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RDimDiametricEntity.h"
-#include "RExporter.h"
 #include "RPluginLoader.h"
 
 RPropertyTypeId RDimDiametricEntity::PropertyCustom;

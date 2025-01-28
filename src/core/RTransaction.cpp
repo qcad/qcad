@@ -16,15 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RBlock.h"
+#include "RBlockReferenceEntity.h"
 #include "RDocument.h"
-#include "RExporter.h"
+#include "RLayer.h"
 #include "RLinetype.h"
 #include "RLinkedStorage.h"
 #include "RMainWindow.h"
-#include "RMemoryStorage.h"
+#include "RS.h"
 #include "RStorage.h"
 #include "RSpline.h"
 #include "RTransaction.h"
+#include "RView.h"
+#include "RViewportEntity.h"
 
 RTransaction::RTransaction()
     : types(Generic),

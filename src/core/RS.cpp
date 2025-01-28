@@ -16,27 +16,27 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-
-#include <QtGlobal>
+#include <QDir>
+#include <QFileInfo>
 
 #if QT_VERSION < 0x050000
 #include <QTextDocument>
 #endif
 
 #if QT_VERSION < 0x060000
+#include <QApplication>
 #include <QTextCodec>
 #include <QDesktopWidget>
-#endif
-
-#if QT_VERSION >= 0x060000
 #include <QStringDecoder>
+#else
+#include <QGuiApplication>
+#include <QScreen>
 #endif
 
 #if QT_VERSION >= 0x050300
 #include <QPageSize>
 #endif
 
-#include "RColor.h"
 #include "RGlobal.h"
 #include "RLinetype.h"
 #include "RLineweight.h"
@@ -44,18 +44,6 @@
 #include "RSettings.h"
 #include "RVector.h"
 
-const double RS::PointTolerance = 1.0e-9;
-const double RS::AngleTolerance = 1.0e-9;
-
-#if QT_VERSION >= 0x060000
-    const Qt::MouseButton RS::MiddleButton = Qt::MiddleButton;
-    const QPageLayout::Orientation RS::Portrait = QPageLayout::Portrait;
-    const QPageLayout::Orientation RS::Landscape = QPageLayout::Landscape;
-#else
-    const Qt::MouseButton RS::MiddleButton = Qt::MidButton;
-    const QPrinter::Orientation RS::Portrait = QPrinter::Portrait;
-    const QPrinter::Orientation RS::Landscape = QPrinter::Landscape;
-#endif
 
 /**
  * \return True if the two values are considered to be equal.
@@ -382,6 +370,22 @@ int RS::compareAlphanumerical(const QString& s1, const QString& s2) {
 
 bool RS::lessThanAlphanumerical(const QString& s1, const QString& s2) {
     return RS::compareAlphanumerical(s1, s2)<0;
+}
+
+QString RS::getFontFamily(const QTextCharFormat& format) {
+#if QT_VERSION >= 0x060000
+    // note: QTextCharFormat::fontFamily is deprecated and broken in Qt 6:
+    QVariant v = format.fontFamilies();
+    if (v.isValid()) {
+        QStringList l = v.toStringList();
+        if (!l.isEmpty()) {
+            return l.first();
+        }
+    }
+    return QString();
+#else
+    return format.fontFamily();
+#endif
 }
 
 int RS::getPageSizeId(const QString& name) {
@@ -990,3 +994,14 @@ QString RS::convert(const QByteArray& str, const QString& codecName) {
     }
 #endif
 }
+
+int RS::getMetaType(const QVariant& v) {
+#if QT_VERSION >= 0x060000
+    return v.metaType().id();
+#else
+    return v.type();
+#endif
+}
+
+// work around "error: explicit specialization of 'QMetaTypeId<RS::EntityType>' after instantiation"
+#include "moc_RS.cpp"

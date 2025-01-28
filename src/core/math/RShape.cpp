@@ -17,11 +17,9 @@
  * along with QCAD.
  */
 #include <cmath>
-#include <typeinfo>
 
 #include "RArc.h"
 #include "RCircle.h"
-#include "RDebug.h"
 #include "REllipse.h"
 #include "RLine.h"
 #include "RMath.h"
@@ -2771,3 +2769,7 @@ void RShape::dump() const{
     qDebug() << *this;
 }
 
+QDebug operator<<(QDebug dbg, const RShape& s) {
+    s.print(dbg);
+    return dbg;
+}

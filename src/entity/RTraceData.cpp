@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RTraceData.h"
+#include "RDocument.h"
 
 RTraceData::RTraceData() {
 }

@@ -26,13 +26,11 @@
 #include <QSharedPointer>
 #include <QFlags>
 
-#include "RDocument.h"
-#include "RExporter.h"
 #include "ROperation.h"
-#include "RTransaction.h"
-#include "RVector.h"
 
+class RDocument;
 class RObject;
+class RTransaction;
 
 /**
  * Implementation of an operation that adds, modifies and deletes entities.

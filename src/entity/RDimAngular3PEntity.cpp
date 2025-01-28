@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RDimAngular3PEntity.h"
-#include "RExporter.h"
 #include "RPluginLoader.h"
 
 RPropertyTypeId RDimAngular3PEntity::PropertyCustom;

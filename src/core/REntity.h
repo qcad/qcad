@@ -23,25 +23,23 @@
 #include "core_global.h"
 
 #include <QList>
-#include <QStack>
 
 #include "RBox.h"
 #include "RColor.h"
-#include "RDebug.h"
 #include "REntityData.h"
-#include "RLayer.h"
 #include "RLineweight.h"
-#include "RMatrix.h"
+#include "RLinetypePattern.h"
 #include "RObject.h"
-#include "RPropertyAttributes.h"
+#include "RPolyline.h"
 #include "RPropertyTypeId.h"
+#include "RRefPoint.h"
 #include "RVector.h"
-#include "RExplodable.h"
 
+class RBlock;
 class RDocument;
-class REntity;
-class RBlockReferenceEntity;
 class RExporter;
+class RLayer;
+class RPropertyAttributes;
 class RViewportData;
 
 #ifndef RDEFAULT_QSET_INT
@@ -154,7 +152,7 @@ public:
      * as part of the block definition (currently only block attributes).
      * The default implementation returns false.
      */
-//    virtual bool isPartOfBlockReference(REntity::Id blockRefId) const {
+//    virtual bool isPartOfBlockReference(RObject::Id blockRefId) const {
 //        Q_UNUSED(blockRefId)
 
 //        return false;
@@ -218,7 +216,7 @@ public:
     /**
      * \copydoc REntityData::setLayerId
      */
-    void setLayerId(RLayer::Id layerId) {
+    void setLayerId(RObject::Id layerId) {
         getData().setLayerId(layerId);
     }
 
@@ -232,7 +230,7 @@ public:
     /**
      * \copydoc REntityData::getLayerId
      */
-    RLayer::Id getLayerId() const {
+    RObject::Id getLayerId() const {
         return getData().getLayerId();
     }
 
@@ -246,14 +244,14 @@ public:
     /**
      * \copydoc REntityData::setBlockId
      */
-    void setBlockId(RBlock::Id blockId) {
+    void setBlockId(RObject::Id blockId) {
         getData().setBlockId(blockId);
     }
 
     /**
      * \copydoc REntityData::getBlockId
      */
-    RBlock::Id getBlockId() const {
+    RObject::Id getBlockId() const {
         return getData().getBlockId();
     }
 
@@ -267,14 +265,14 @@ public:
     /**
      * \copydoc REntityData::getParentId
      */
-    REntity::Id getParentId() const {
+    RObject::Id getParentId() const {
         return getData().getParentId();
     }
 
     /**
      * \copydoc REntityData::setLinetypeId
      */
-    void setLinetypeId(RLinetype::Id linetypeId) {
+    void setLinetypeId(RObject::Id linetypeId) {
         getData().setLinetypeId(linetypeId);
     }
 
@@ -288,11 +286,11 @@ public:
     /**
      * \copydoc REntityData::getLinetypeId
      */
-    RLinetype::Id getLinetypeId() const {
+    RObject::Id getLinetypeId() const {
         return getData().getLinetypeId();
     }
 
-    RLinetype::Id getLinetypeId(bool resolve, const QStack<QSharedPointer<REntity> >& blockRefStack) const;
+    RObject::Id getLinetypeId(bool resolve, const QStack<QSharedPointer<REntity> >& blockRefStack) const;
 
     /**
      * \copydoc REntityData::getLinetypePattern
@@ -395,7 +393,7 @@ public:
     /**
      * \copydoc REntityData::getIdBoundingBoxes
      */
-//    virtual QList<QPair<REntity::Id, RBox> > getIdBoundingBoxes() const {
+//    virtual QList<QPair<RObject::Id, RBox> > getIdBoundingBoxes() const {
 //        return getData().getIdBoundingBoxes();
 //    }
 
@@ -465,7 +463,7 @@ public:
     /**
      * \copydoc REntityData::getInternalReferencePoints
      */
-    virtual QList<RRefPoint> getInternalReferencePoints(RS::ProjectionRenderingHint hint=RS::RenderTop, QList<REntity::Id>* subEntityIds = NULL) const {
+    virtual QList<RRefPoint> getInternalReferencePoints(RS::ProjectionRenderingHint hint=RS::RenderTop, QList<RObject::Id>* subEntityIds = NULL) const {
         return getData().getInternalReferencePoints(hint, subEntityIds);
     }
 
@@ -500,7 +498,7 @@ public:
     /**
      * \copydoc REntityData::getCenterPoints
      */
-    virtual QList<RVector> getCenterPoints(const RBox& queryBox = RDEFAULT_RBOX, QList<REntity::Id>* subEntityIds = NULL) const {
+    virtual QList<RVector> getCenterPoints(const RBox& queryBox = RDEFAULT_RBOX, QList<RObject::Id>* subEntityIds = NULL) const {
         return getData().getCenterPoints(queryBox, subEntityIds);
     }
 
@@ -508,7 +506,7 @@ public:
      * \copydoc REntityData::getClosestPointOnEntity
      */
     virtual RVector getClosestPointOnEntity(const RVector& point,
-        double range=RNANDOUBLE, bool limited=true, REntity::Id* subEntityId = NULL) const {
+        double range=RNANDOUBLE, bool limited=true, RObject::Id* subEntityId = NULL) const {
 
         return getData().getClosestPointOnEntity(point, range, limited, subEntityId);
     }
@@ -526,7 +524,7 @@ public:
     /**
      * \copydoc REntityData::getIntersectionPoints(const REntity&, bool)
      */
-    virtual QList<RVector> getIntersectionPoints(const REntity& other, bool limited = true, const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = true, QList<QPair<REntity::Id, REntity::Id> >* entityIds = NULL) const;
+    virtual QList<RVector> getIntersectionPoints(const REntity& other, bool limited = true, const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = true, QList<QPair<RObject::Id, RObject::Id> >* entityIds = NULL) const;
 
     /**
      * \copydoc REntityData::getIntersectionPoints(const RShape&, bool)
@@ -670,7 +668,7 @@ public:
     virtual bool setProperty(RPropertyTypeId propertyTypeId,
             const QVariant& value, RTransaction* transaction=NULL);
 
-    virtual bool isVisible(RBlock::Id blockId = RBlock::INVALID_ID) const;
+    virtual bool isVisible(RObject::Id blockId = RObject::INVALID_ID) const;
     virtual bool isEditable(bool allowInvisible = false) const;
     virtual bool isInWorkingSet() const;
 
@@ -683,7 +681,7 @@ protected:
      * \copydoc REntityData::setParentId
      * Use RStorage::setEntityParentId instead.
      */
-    void setParentId(REntity::Id parentId) {
+    void setParentId(RObject::Id parentId) {
         getData().setParentId(parentId);
     }
 

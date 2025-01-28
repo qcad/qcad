@@ -24,8 +24,6 @@
 
 #include "dxflib/src/dl_creationadapter.h"
 
-#include "RDimensionEntity.h"
-#include "RDocument.h"
 #include "RDxfServices.h"
 #include "RFileImporter.h"
 #include "RHatchData.h"
@@ -33,11 +31,10 @@
 #include "RPolyline.h"
 #include "RSpline.h"
 
-class RDxfImporter;
-class RImageEntity;
+class RDimensionData;
 class RMessageHandler;
 class RProgressHandler;
-class RVector;
+class RTextBasedData;
 
 
 /**

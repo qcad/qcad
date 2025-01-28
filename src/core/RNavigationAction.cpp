@@ -18,6 +18,10 @@
  */
 #include "RNavigationAction.h"
 
+#include "RGraphicsView.h"
+#include "RMouseEvent.h"
+#include "RS.h"
+
 RNavigationAction::RNavigationAction(RGuiAction* guiAction) 
     : RActionAdapter(guiAction), 
     panning(false) {

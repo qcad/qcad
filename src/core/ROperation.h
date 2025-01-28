@@ -22,9 +22,10 @@
 
 #include "core_global.h"
 
+#include "RDebug.h"
 #include "RNonCopyable.h"
 #include "RRequireHeap.h"
-#include "RS.h"
+#include "RSEnums.h"
 #include "RTransaction.h"
 
 class RDocument;

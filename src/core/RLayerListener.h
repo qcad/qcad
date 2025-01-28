@@ -44,12 +44,12 @@ public:
      * This method is called whenever at least one layer in the given
      * document has changed.
      */
-    virtual void updateLayers(RDocumentInterface* documentInterface, QList<RLayer::Id>& layerIds) = 0;
+    virtual void updateLayers(RDocumentInterface* documentInterface, QList<RObject::Id>& layerIds) = 0;
 
     /**
      * This method is called when a different layer becomes the new current layer.
      */
-    virtual void setCurrentLayer(RDocumentInterface* documentInterface, RLayer::Id previousLayerId) = 0;
+    virtual void setCurrentLayer(RDocumentInterface* documentInterface, RObject::Id previousLayerId) = 0;
 
     /**
      * This method is called to signal that no document is currently active.

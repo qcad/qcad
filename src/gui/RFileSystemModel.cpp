@@ -18,8 +18,6 @@
  */
 #include "RFileSystemModel.h"
 
-#include <QDebug>
-
 RFileSystemModel::RFileSystemModel(QObject* parent) :
     QFileSystemModel(parent) {
     //setReadOnly(true);

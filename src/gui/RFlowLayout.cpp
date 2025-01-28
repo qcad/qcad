@@ -1,9 +1,7 @@
 #include <QAction>
-#include <QEvent>
 #include <QWidget>
 
 #include "RFlowLayout.h"
-#include "RSettings.h"
 #include "RToolButton.h"
 
 RFlowLayout::RFlowLayout(QWidget* parent, int margin, int hSpacing, int vSpacing)

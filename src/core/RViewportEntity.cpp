@@ -16,9 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RBlock.h"
+#include "RBlockReferenceData.h"
+#include "RDocument.h"
 #include "RExporter.h"
+#include "RLayer.h"
 #include "RSettings.h"
 #include "RStorage.h"
+#include "RTransform.h"
 #include "RViewportEntity.h"
 
 RPropertyTypeId RViewportEntity::PropertyCustom;

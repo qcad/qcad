@@ -21,17 +21,17 @@
 
 #include "RArc.h"
 #include "RCircle.h"
+#include "RDocument.h"
 #include "RLine.h"
 #include "REllipse.h"
 #include "RHatchData.h"
 #include "RPainterPath.h"
 #include "RPainterPathExporter.h"
-#include "RPointEntity.h"
 #include "RPatternListImperial.h"
 #include "RPatternListMetric.h"
+#include "RRefPoint.h"
 #include "RSettings.h"
 #include "RSpline.h"
-#include "RUnit.h"
 #include "RPolyline.h"
 
 RHatchProxy* RHatchData::hatchProxy = NULL;

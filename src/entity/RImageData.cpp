@@ -23,7 +23,10 @@
 #else
 #include <QApplication>
 #endif
+#include "RDocument.h"
 #include "RImageData.h"
+#include "RPolyline.h"
+#include "RRefPoint.h"
 
 RImageData::RImageData() :
     brightness(50),

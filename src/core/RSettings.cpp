@@ -19,10 +19,11 @@
 #include <QtDebug>
 #include <QApplication>
 #include <QColor>
-#include <QCoreApplication>
+#include <QDir>
 #include <QFileInfo>
-#include <QFrame>
+#include <QFont>
 #include <QPrinterInfo>
+#include <QSettings>
 #include <QString>
 #include <QStringList>
 #include <QSysInfo>
@@ -35,8 +36,8 @@
 #  include <QDesktopServices>
 #endif
 
-#include "RDebug.h"
 #include "RMath.h"
+#include "RS.h"
 #include "RSettings.h"
 #include "RUnit.h"
 #include "RVersion.h"

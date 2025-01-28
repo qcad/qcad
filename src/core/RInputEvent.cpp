@@ -17,10 +17,7 @@
  * along with QCAD.
  */
 #include "RInputEvent.h"
-#include "RDocumentInterface.h"
-#include "RGraphicsScene.h"
 #include "RGraphicsView.h"
-#include "RUcs.h"
 
 RInputEvent::RInputEvent(const RVector& position, RGraphicsScene& s, RGraphicsView& v, qreal devicePixelRatio)
     : screenPosition(position*devicePixelRatio), scene(s), view(v) {

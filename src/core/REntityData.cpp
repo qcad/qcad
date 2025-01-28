@@ -21,7 +21,11 @@
 #include "REntity.h"
 #include "REntityData.h"
 #include "RExplodable.h"
+#include "RLayer.h"
+#include "RLine.h"
+#include "RLinetype.h"
 #include "RMouseEvent.h"
+#include "RSettings.h"
 
 REntityData::REntityData(RDocument* document) :
     document(document),
@@ -31,7 +35,7 @@ REntityData::REntityData(RDocument* document) :
     autoUpdatesBlocked(false),
     drawOrder(RMININT),
     layerId(RLayer::INVALID_ID),
-    blockId(RBlock::INVALID_ID), 
+    blockId(RObject::INVALID_ID),
     parentId(REntity::INVALID_ID),
     linetypeId(RLinetype::INVALID_ID),
     linetypeScale(1.0),
@@ -148,6 +152,12 @@ RColor REntityData::getColor(bool resolve, const QStack<QSharedPointer<REntity> 
     }
 
     return getColor(getColor(), blockRefStack);
+}
+
+QList<RRefPoint> REntityData::getInternalReferencePoints(RS::ProjectionRenderingHint hint, QList<RObject::Id>* subEntityIds) const {
+    Q_UNUSED(subEntityIds)
+
+    return getReferencePoints(hint);
 }
 
 /**

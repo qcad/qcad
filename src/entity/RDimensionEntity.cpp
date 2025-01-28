@@ -16,8 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RBlockReferenceEntity.h"
 #include "RDimensionEntity.h"
+#include "RDimStyle.h"
 #include "RDimStyleProxyBasic.h"
+#include "RDocument.h"
 #include "RExporter.h"
 #include "RPluginLoader.h"
 #include "RStorage.h"

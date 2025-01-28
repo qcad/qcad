@@ -16,11 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <algorithm>
+
 #include <QAbstractItemView>
 #include <QSize>
-#include <QPainter>
 
-#include "RDebug.h"
+#include "RDocument.h"
 #include "RLinetypeCombo.h"
 #include "RLinetypeComboDelegate.h"
 
@@ -51,7 +52,7 @@ void RLinetypeCombo::init(RDocument* doc) {
 
     if (doc!=NULL) {
         patterns = doc->getLinetypePatterns();
-        qSort(patterns.begin(), patterns.end());
+        std::sort(patterns.begin(), patterns.end());
     }
 
     // change delegate if document changes to clear preview cache:

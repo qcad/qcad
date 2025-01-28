@@ -22,9 +22,10 @@
 
 #include "entity_global.h"
 
-#include "RDocument.h"
-#include "RDimLinearData.h"
+#include "RDimensionData.h"
 #include "RVector.h"
+
+class RDocument;
 
 /**
  * Ordinate dimension entity data class.

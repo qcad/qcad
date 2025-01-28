@@ -18,7 +18,6 @@
  */
 #include "RTraceEntity.h"
 #include "RExporter.h"
-#include "RLine.h"
 
 RPropertyTypeId RTraceEntity::PropertyCustom;
 RPropertyTypeId RTraceEntity::PropertyHandle;

@@ -22,10 +22,7 @@
 
 #include "gui_global.h"
 
-#include <QWidget>
 #include <QTreeWidget>
-#include <QTreeWidgetItem>
-#include <QtDebug>
 
 /**
  * Tree widget with some additional functionality for icons.

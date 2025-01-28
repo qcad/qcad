@@ -17,11 +17,18 @@
  * along with QCAD.
  */
 
-#include <QtGlobal>
-
 #include "RMemoryStorage.h"
+#include "RBlock.h"
+#include "RBlockReferenceEntity.h"
+#include "RDocumentVariables.h"
+#include "RDimStyle.h"
+#include "RLayer.h"
+#include "RLayerState.h"
+#include "RLayout.h"
 #include "RSettings.h"
 #include "RS.h"
+#include "RView.h"
+#include "RViewportEntity.h"
 
 RMemoryStorage::RMemoryStorage() :
     maxLineweight(RLineweight::Weight000), 

@@ -26,8 +26,6 @@
 #include <QMetaType>
 #include <QString>
 #include <QIcon>
-#include <QPair>
-#include <QMap>
 #include <QList>
 
 #ifndef RDEFAULT_QSIZE_ICON

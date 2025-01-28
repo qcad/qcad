@@ -16,7 +16,6 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RDebug.h"
 #include "RDimStyleData.h"
 #include "RSettings.h"
 

@@ -16,8 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-
-#include <QtGlobal>
+#include <QLineEdit>
 
 #if QT_VERSION >= 0x050000
 #include <QtConcurrent>
@@ -25,14 +24,15 @@
 #include <qtconcurrentmap.h>
 #endif
 
-#include "RColor.h"
-#include "RDebug.h"
-#include "RGlobal.h"
+#include "RBlockReferenceEntity.h"
+#include "RDocument.h"
+#include "RDocumentInterface.h"
 #include "RMath.h"
 #include "RMainWindow.h"
-#include "RMetaTypes.h"
+#include "RProperty.h"
+#include "RS.h"
+#include "RSettings.h"
 #include "RPropertyEditor.h"
-#include "RPropertyEvent.h"
 
 RPropertyEditor* RPropertyEditor::instance = NULL;
 

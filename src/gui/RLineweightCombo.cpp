@@ -16,12 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QDebug>
 #include <QSize>
 
-#include "RDebug.h"
 #include "RLineweightCombo.h"
-#include "RSettings.h"
 
 RLineweightCombo::RLineweightCombo(QWidget *parent) :
     QComboBox(parent), onlyFixed(false), noDefault(false) {

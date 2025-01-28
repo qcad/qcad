@@ -17,10 +17,10 @@
  * along with QCAD.
  */
 #include <QActionEvent>
-#include <QDebug>
 #include <QWidgetAction>
 
 #include "RDockWidget.h"
+#include "RFlowLayout.h"
 #include "RMainWindowQt.h"
 
 

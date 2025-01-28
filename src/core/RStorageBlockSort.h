@@ -1,16 +1,14 @@
 #ifndef RSTORAGEBLOCKSORT_H
 #define RSTORAGEBLOCKSORT_H
 
-#include <QString>
-
-#include "RBlock.h"
+#include "RObject.h"
 
 class RStorage;
 
 class RStorageBlockSort {
 public:
     RStorageBlockSort(const RStorage* storage) : storage(storage) {}
-    bool operator()(RBlock::Id a, RBlock::Id b) const;
+    bool operator()(RObject::Id a, RObject::Id b) const;
     const RStorage* storage;
 };
 

@@ -16,7 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QtGlobal>
+#include <QCryptographicHash>
+#include <QFile>
+#include <QFileInfo>
 
 #ifdef Q_OS_WIN
 // for _isnan:
@@ -24,7 +26,7 @@
 #endif
 
 #include <complex>
-#include <QCryptographicHash>
+#include <cerrno>
 
 #if QT_VERSION >= 0x060000
 #  include <QJSEngine>
@@ -32,9 +34,10 @@
 #  include <QScriptEngine>
 #endif
 
-#include "RDebug.h"
 #include "RMath.h"
+#include "RS.h"
 #include "RSettings.h"
+#include "RVector.h"
 
 /**
  * Last error encountered.

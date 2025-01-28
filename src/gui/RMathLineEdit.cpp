@@ -21,14 +21,14 @@
 #include <QKeyEvent>
 #include <QLabel>
 #include <QPalette>
-#include <QTimer>
 #include <QToolTip>
 
 #include "RDocument.h"
-#include "RMainWindowQt.h"
+#include "RMainWindow.h"
 #include "RMath.h"
 #include "RMathLineEdit.h"
-#include "RUnit.h"
+#include "RS.h"
+#include "RSettings.h"
 
 RMathLineEdit::RMathLineEdit(QWidget* parent) :
     QLineEdit(parent),

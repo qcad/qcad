@@ -22,11 +22,9 @@
 
 #include "snap_global.h"
 
-#include "REntity.h"
 #include "RSnapEntityBase.h"
 
 class RGraphicsView;
-class RMouseEvent;
 
 /**
  * \brief Distance snapper implementation.
@@ -54,7 +52,7 @@ protected:
             const RVector& point,
             const RBox& queryBox,
             RGraphicsView& view,
-            QList<REntity::Id>* subEntityIds = NULL);
+            QList<RObject::Id>* subEntityIds = NULL);
 
 private:
     double distance;

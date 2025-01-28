@@ -16,12 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RBlock.h"
 #include "RBlockReferenceData.h"
 #include "RBlockReferenceEntity.h"
 #include "RDocument.h"
-#include "RExporter.h"
+#include "RLine.h"
 #include "RMainWindow.h"
 #include "RMouseEvent.h"
+#include "RSettings.h"
 #include "RStorage.h"
 #include "RTransform.h"
 

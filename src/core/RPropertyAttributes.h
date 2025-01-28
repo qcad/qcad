@@ -24,12 +24,8 @@
 
 #include <QString>
 #include <QSet>
-#include <QMap>
 #include <QPair>
 #include <QVariant>
-
-#include "RDebug.h"
-#include "RMath.h"
 
 /**
  * Structure to transfer attributes about property types.

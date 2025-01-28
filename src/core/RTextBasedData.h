@@ -22,7 +22,6 @@
 
 #include "core_global.h"
 
-#include "RDocument.h"
 #include "REntityData.h"
 #include "RPainterPath.h"
 #include "RPainterPathSource.h"
@@ -30,6 +29,7 @@
 #include "RTextLayout.h"
 #include "RTextProxy.h"
 
+class RDocument;
 class QTextDocument;
 
 /**

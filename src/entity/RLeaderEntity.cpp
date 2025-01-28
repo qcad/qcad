@@ -16,11 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RBlockReferenceData.h"
+#include "RBlockReferenceEntity.h"
+#include "RDebug.h"
+#include "RDimStyle.h"
+#include "RDocument.h"
 #include "RExporter.h"
 #include "RLeaderEntity.h"
-#include "RMetaTypes.h"
 #include "RPluginLoader.h"
-#include "RStorage.h"
+#include "RS.h"
+#include "RTriangle.h"
 
 RPropertyTypeId RLeaderEntity::PropertyCustom;
 RPropertyTypeId RLeaderEntity::PropertyHandle;

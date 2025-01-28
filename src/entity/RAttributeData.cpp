@@ -17,7 +17,8 @@
  * along with QCAD.
  */
 #include "RAttributeData.h"
-#include "RAttributeDefinitionData.h"
+#include "RBlockReferenceEntity.h"
+#include "RDocument.h"
 
 
 RAttributeData::RAttributeData(RDocument* document, const RAttributeData& data)
@@ -39,7 +40,7 @@ QString RAttributeData::getRenderedText(bool escUnicode) const {
     return RTextBasedData::getRenderedText(escUnicode);
 }
 
-RLinetype::Id RAttributeData::getLinetypeId(bool resolve, const QStack<QSharedPointer<REntity> >& blockRefStack) const {
+RObject::Id RAttributeData::getLinetypeId(bool resolve, const QStack<QSharedPointer<REntity> >& blockRefStack) const {
     if (document!=NULL && linetypeId==document->getLinetypeByBlockId()) {
         RObject::Id parentId = getParentId();
         if (parentId!=RObject::INVALID_ID) {

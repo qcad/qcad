@@ -22,9 +22,10 @@
 
 #include "core_global.h"
 
-#include "RS.h"
+#include "RSEnums.h"
 #include "RColor.h"
-#include "RPropertyTypeId.h"
+
+#include <QVariant>
 
 /**
  * Dimension style data class.

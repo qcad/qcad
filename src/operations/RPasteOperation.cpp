@@ -16,11 +16,8 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QSet>
-
-#include "RBlockReferenceEntity.h"
+#include "RBox.h"
 #include "RDocument.h"
-#include "RExporter.h"
 #include "RPasteOperation.h"
 #include "RPolyline.h"
 

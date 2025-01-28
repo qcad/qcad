@@ -23,9 +23,9 @@
 #include <QMetaType>
 #include <QString>
 
-#include "RDocument.h"
 #include "RFileImporterFactory.h"
 
+class RDocument;
 class RFileImporter;
 class RMessageHandler;
 class RProgressHandler;

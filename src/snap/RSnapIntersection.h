@@ -23,10 +23,8 @@
 #include "snap_global.h"
 
 #include "RSnap.h"
-#include "REntity.h"
 
 class RGraphicsView;
-class RMouseEvent;
 
 /**
  * \brief Intersection snapper implementation.
@@ -48,7 +46,7 @@ public:
     virtual RVector snap(
             const RVector& position,
             RGraphicsView& view,
-            const QMap<REntity::Id, QSet<int> >& candidates,
+            const QMap<RObject::Id, QSet<int> >& candidates,
             const RBox& queryBox);
 };
 

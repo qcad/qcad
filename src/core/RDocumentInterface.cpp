@@ -17,15 +17,21 @@
  * along with QCAD.
  */
 
-#include <QtNetwork>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
+#include <QTimer>
 #if QT_VERSION >= 0x050000
 #include <QTemporaryDir>
 #endif
 
-#include "RArc.h"
-#include "RCircle.h"
 #include "RDocumentInterface.h"
-#include "REllipse.h"
+#include "RBlock.h"
+#include "RBlockListener.h"
+#include "RCoordinateEvent.h"
+#include "RCoordinateListener.h"
+#include "RDimStyle.h"
+#include "RDocument.h"
+#include "RDocumentVariables.h"
 #include "REntityPickEvent.h"
 #include "RFileExporter.h"
 #include "RFileExporterRegistry.h"
@@ -33,28 +39,26 @@
 #include "RFileImporterRegistry.h"
 #include "RGraphicsScene.h"
 #include "RGraphicsView.h"
-#include "RLine.h"
+#include "RGrid.h"
+#include "RGuiAction.h"
+#include "RLayerListener.h"
+#include "RLayout.h"
 #include "RLinkedStorage.h"
+#include "RMouseEvent.h"
 #include "RPolyline.h"
 #include "RMainWindow.h"
-#include "RMemoryStorage.h"
 #include "ROperation.h"
-#include "RPoint.h"
-#include "RPolyline.h"
-#include "RRestrictOrthogonal.h"
-#include "RScriptAction.h"
+#include "RS.h"
 #include "RScriptHandler.h"
 #include "RScriptHandlerRegistry.h"
-#include "RSelectionChangedEvent.h"
 #include "RSettings.h"
-#include "RSingleApplication.h"
 #include "RSnap.h"
 #include "RSnapRestriction.h"
 #include "RSpatialIndexSimple.h"
-#include "RSpline.h"
-#include "RTextLabel.h"
+#include "RTabletEvent.h"
 #include "RTransaction.h"
-#include "RTransactionEvent.h"
+#include "RView.h"
+#include "RViewportEntity.h"
 #include "RWheelEvent.h"
 
 RDocumentInterface* RDocumentInterface::clipboard = NULL;
@@ -2761,6 +2765,11 @@ void RDocumentInterface::setLastKnownViewWithFocus(RGraphicsView* view) {
     if (view!=NULL && view->registerForFocus()) {
         lastKnownViewWithFocus = view;
     }
+}
+
+void RDocumentInterface::setNotifyListeners(bool on) {
+    notifyGlobalListeners = on;
+    document.setNotifyListeners(on);
 }
 
 QVariant RDocumentInterface::eval(const QString& ext, const QString& script) {

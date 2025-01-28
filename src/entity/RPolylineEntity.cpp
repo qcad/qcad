@@ -17,9 +17,8 @@
  * along with QCAD.
  */
 #include "RPolylineEntity.h"
-#include "RMetaTypes.h"
+#include "RDebug.h"
 #include "RExporter.h"
-#include "RLine.h"
 #include "RPluginLoader.h"
 
 RPropertyTypeId RPolylineEntity::PropertyCustom;

@@ -17,7 +17,8 @@
  * along with QCAD.
  */
 #include "RDimOrdinateData.h"
-#include "RUnit.h"
+#include "RDocument.h"
+#include "RRefPoint.h"
 
 RDimOrdinateData::RDimOrdinateData() {
 }

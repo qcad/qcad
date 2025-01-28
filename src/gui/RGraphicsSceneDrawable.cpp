@@ -1,4 +1,6 @@
 #include "RGraphicsSceneDrawable.h"
+#include "RImageData.h"
+#include "RTransform.h"
 
 RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RGraphicsSceneDrawable& other) :
     type(Invalid), modes(NoMode), painterPath(NULL), image(NULL), text(NULL), transform(NULL) {

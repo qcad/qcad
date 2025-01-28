@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QHelpEvent>
 
 #include "REventFilter.h"
 #include "RListView.h"
-#include "RMainWindowQt.h"
 
 RListView::RListView(QWidget* parent) :
     QListView(parent) {

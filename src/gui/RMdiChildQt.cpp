@@ -16,17 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QtGui>
-
-#include "RDebug.h"
 #include "RDocumentInterface.h"
-#include "RGraphicsViewQt.h"
+#include "RGraphicsViewImage.h"
 #include "RMainWindowQt.h"
 #include "RMdiArea.h"
 #include "RMdiChildQt.h"
 #include "RRulerQt.h"
-#include "RScriptHandler.h"
-#include "RSingleApplication.h"
+#include "RStorage.h"
 
 
 RDocumentInterface* RMdiChildQt::diLast = NULL;

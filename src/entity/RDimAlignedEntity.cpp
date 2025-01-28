@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RDimAlignedEntity.h"
-#include "RExporter.h"
 #include "RPluginLoader.h"
 
 RPropertyTypeId RDimAlignedEntity::PropertyCustom;

@@ -22,14 +22,13 @@
 
 #include "core_global.h"
 
-#include "RBlock.h"
 #include "RBox.h"
-#include "REntity.h"
-#include "RTransform.h"
+#include "REntityData.h"
 #include "RVector.h"
 
 class RDocument;
 class RExporter;
+class RTransform;
 
 /**
  * Defines the geometry and appearance of a block reference entity.
@@ -48,7 +47,7 @@ protected:
 
 public:
     RBlockReferenceData();
-    RBlockReferenceData(RBlock::Id referencedBlockId,
+    RBlockReferenceData(RObject::Id referencedBlockId,
             const RVector& position, const RVector& scaleFactors,
             double angle,
             int columnCount=1, int rowCount=1,
@@ -72,7 +71,7 @@ public:
 
     virtual RVector getPointOnEntity() const;
 
-    virtual QList<RRefPoint> getInternalReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop, QList<REntity::Id>* subEntityIds = NULL) const;
+    virtual QList<RRefPoint> getInternalReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop, QList<RObject::Id>* subEntityIds = NULL) const;
     virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
     virtual RVector getVectorTo(const RVector& point,  bool limited = true, double strictRange = RMAXDOUBLE) const;
     virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0,
@@ -92,11 +91,11 @@ public:
 
     virtual void scaleVisualProperties(double scaleFactor);
 
-    void setReferencedBlockId(RBlock::Id blockId);
+    void setReferencedBlockId(RObject::Id blockId);
 
     void groundReferencedBlockId() const;
 
-    RBlock::Id getReferencedBlockId() const {
+    RObject::Id getReferencedBlockId() const {
         return referencedBlockId;
     }
 
@@ -151,7 +150,7 @@ public:
     virtual void update() const;
     virtual void update(RObject::Id entityId) const;
 
-    QSharedPointer<REntity> queryEntity(REntity::Id entityId, bool transform = false, bool ignoreAttDef = true) const;
+    QSharedPointer<REntity> queryEntity(RObject::Id entityId, bool transform = false, bool ignoreAttDef = true) const;
     bool applyTransformationTo(REntity& entity) const;
     /**
      * \nonscriptable
@@ -182,7 +181,7 @@ public:
 #endif
 
 private:
-    mutable RBlock::Id referencedBlockId;
+    mutable RObject::Id referencedBlockId;
     RVector position;
     RVector scaleFactors;
     double rotation;
@@ -195,7 +194,7 @@ private:
 
     mutable QList<RBox> boundingBoxes;
     mutable QList<RBox> boundingBoxesIgnoreEmpty;
-    mutable QMap<REntity::Id, QSharedPointer<REntity> > cache;
+    mutable QMap<RObject::Id, QSharedPointer<REntity> > cache;
 };
 
 Q_DECLARE_METATYPE(RBlockReferenceData)

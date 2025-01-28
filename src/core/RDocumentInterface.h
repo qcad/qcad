@@ -22,29 +22,13 @@
 
 #include "core_global.h"
 
-#include <QKeyEvent>
 #include <QList>
 #include <QMap>
-#include <QMutex>
-#include <QSharedPointer>
 #include <QStack>
 #include <QQueue>
-#include <QSwipeGesture>
-#include <QPanGesture>
-#include <QPinchGesture>
 
 #include "RAction.h"
-#include "RBlockListener.h"
-#include "RCommandEvent.h"
-#include "RCoordinateEvent.h"
-#include "RCoordinateListener.h"
-#include "RDocument.h"
-#include "RExporter.h"
-#include "RLayerListener.h"
-#include "RStorage.h"
-#include "RTerminateEvent.h"
-#include "RTextLabel.h"
-#include "RTransactionListener.h"
+#include "RLineweight.h"
 #include "RUcs.h"
 #include "RSnap.h"
 
@@ -57,15 +41,34 @@
 #define RDEFAULT_QVARIANTMAP QVariantMap()
 #endif
 
+class RAction;
+class RBlock;
+class RBlockListener;
+class RColor;
+class RCommandEvent;
+class RCoordinateEvent;
+class RCoordinateListener;
+class RDocument;
+class REntity;
 class RGraphicsScene;
 class RGraphicsSceneDrawable;
 class RGraphicsView;
+class RInputEvent;
+class RLayer;
+class RLayerListener;
+class RLinetypePattern;
 class RMouseEvent;
 class ROperation;
 class RPropertyEvent;
+class RRefPoint;
 class RSnapRestriction;
 class RScriptHandler;
+class RShape;
+class RStorage;
+class RTerminateEvent;
 class RTransaction;
+class RTransactionListener;
+class RViewportEntity;
 class RWheelEvent;
 
 
@@ -137,7 +140,7 @@ public:
 
     void addLayerListener(RLayerListener* l);
     void removeLayerListener(RLayerListener* l);
-    void notifyLayerListeners(QList<RLayer::Id>& layerIds);
+    void notifyLayerListeners(QList<RObject::Id>& layerIds);
 
     void addBlockListener(RBlockListener* l);
     void removeBlockListener(RBlockListener* l);
@@ -209,14 +212,14 @@ public:
     void updateAllEntities();
 
     void regenerateScenes(bool undone = false, bool invisible = false);
-    void regenerateScenes(QSet<REntity::Id>& entityIds, bool updateViews);
-    void regenerateScenes(REntity::Id entityId, bool updateViews);
+    void regenerateScenes(QSet<RObject::Id>& entityIds, bool updateViews);
+    void regenerateScenes(RObject::Id entityId, bool updateViews);
 
-    void updateSelectionStatus(QSet<REntity::Id>& entityIds, bool updateViews);
-    void updateSelectionStatus(REntity::Id entityId, bool updateViews);
+    void updateSelectionStatus(QSet<RObject::Id>& entityIds, bool updateViews);
+    void updateSelectionStatus(RObject::Id entityId, bool updateViews);
 
     void regenerateViews(bool force=false);
-    void regenerateViews(QSet<REntity::Id>& entityIds);
+    void regenerateViews(QSet<RObject::Id>& entityIds);
     void repaintViews();
 
     void registerScene(RGraphicsScene& scene);
@@ -252,17 +255,17 @@ public:
     RVector snap(RMouseEvent& event, bool preview = false);
     RVector restrictOrtho(const RVector& position, const RVector& relativeZero, RS::OrthoMode mode = RS::Orthogonal);
 
-    REntity::Id getClosestEntity(RInputEvent& event);
-    REntity::Id getClosestEntity(const RVector& position,
+    RObject::Id getClosestEntity(RInputEvent& event);
+    RObject::Id getClosestEntity(const RVector& position,
         double range, double strictRange = RMAXDOUBLE,
         bool includeLockedLayers = true,
         bool selectedOnly = false);
-    void highlightEntity(REntity::Id entityId);
+    void highlightEntity(RObject::Id entityId);
     void highlightReferencePoint(const RRefPoint& position);
-    int selectEntities(const QSet<REntity::Id>& entityIds, bool add = false);
-    void selectEntity(REntity::Id entityId, bool add = false);
-    int deselectEntities(const QSet<REntity::Id>& entityIds);
-    void deselectEntity(REntity::Id entityId);
+    int selectEntities(const QSet<RObject::Id>& entityIds, bool add = false);
+    void selectEntity(RObject::Id entityId, bool add = false);
+    int deselectEntities(const QSet<RObject::Id>& entityIds);
+    void deselectEntity(RObject::Id entityId);
     void selectBoxXY(const RBox& box, bool add = false);
     void selectAll();
     void deselectAll();
@@ -323,16 +326,16 @@ public:
     void setCurrentLineweight(RLineweight::Lineweight lw);
     RLineweight::Lineweight getCurrentLineweight();
 
-    void setCurrentLinetype(RLinetype::Id ltId);
+    void setCurrentLinetype(RObject::Id ltId);
     void setCurrentLinetypePattern(const RLinetypePattern& p);
-    RLinetype::Id getCurrentLinetypeId();
+    RObject::Id getCurrentLinetypeId();
     RLinetypePattern getCurrentLinetypePattern();
 
-    void setCurrentLayer(RLayer::Id layerId);
+    void setCurrentLayer(RObject::Id layerId);
     void setCurrentLayer(const RLayer& layer);
     void setCurrentLayer(const QString& layerName);
 
-    void setCurrentBlock(RBlock::Id blockId);
+    void setCurrentBlock(RObject::Id blockId);
     void setCurrentBlock(const RBlock& block);
     void setCurrentBlock(const QString& blockName);
 
@@ -357,10 +360,7 @@ public:
     bool isSuspended() {
         return suspended;
     }
-    void setNotifyListeners(bool on) {
-        notifyGlobalListeners = on;
-        document.setNotifyListeners(on);
-    }
+    void setNotifyListeners(bool on);
     bool getNotifyListeners() const {
         return notifyGlobalListeners;
     }

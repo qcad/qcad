@@ -22,10 +22,7 @@
 
 #include "gui_global.h"
 
-#include <QWidget>
 #include <QListWidget>
-#include <QListWidgetItem>
-#include <QtDebug>
 
 /**
  * List widget with some additional functionality for icons.

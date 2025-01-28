@@ -25,17 +25,16 @@
 #include "dxflib/src/dl_creationinterface.h"
 #include "dxflib/src/dl_dxf.h"
 
-#include "RArc.h"
-#include "RDocument.h"
 #include "RDxfServices.h"
 #include "RFileExporter.h"
-#include "RRay.h"
-#include "RXLine.h"
 
+class RArc;
 class RArcEntity;
 class RAttributeEntity;
+class RBlockReferenceEntity;
 class RCircleEntity;
 class RDimensionEntity;
+class RDocument;
 class REllipseEntity;
 class RHatchEntity;
 class RImageEntity;
@@ -45,6 +44,7 @@ class RMessageHandler;
 class RPointEntity;
 class RPolylineEntity;
 class RProgressHandler;
+class RRay;
 class RRayEntity;
 class RSolidEntity;
 class RSplineEntity;
@@ -52,6 +52,7 @@ class RTraceEntity;
 class RTextEntity;
 class RTextBasedData;
 class RTextBasedEntity;
+class RXLine;
 class RXLineEntity;
 
 
@@ -76,7 +77,7 @@ public:
     void writeLayer(const RLayer& l);
     void writeBlock(const RBlock& b);
 
-    void writeEntity(REntity::Id id);
+    void writeEntity(RObject::Id id);
     void writeEntity(const REntity& e);
     void writePoint(const RPointEntity& p);
     void writeLine(const RLineEntity& l);

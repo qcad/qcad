@@ -17,11 +17,8 @@
  * along with QCAD.
  */
 #include "REntity.h"
-#include "RDocumentInterface.h"
 #include "REntityPickEvent.h"
-#include "RGraphicsScene.h"
 #include "RGraphicsView.h"
-#include "RUcs.h"
 #include "RVector.h"
 
 

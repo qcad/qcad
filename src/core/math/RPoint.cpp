@@ -18,10 +18,10 @@
  */
 #include <cmath>
 
+#include <QDebug>
+
 #include "RBox.h"
 #include "RPoint.h"
-#include "RLine.h"
-#include "RDebug.h"
 
 /**
  * Creates a point object with an invalid position

@@ -16,30 +16,29 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QtGui>
-//#include <QDesktopWidget>
-#include <QCheckBox>
 #include <QComboBox>
-#include <QSpinBox>
-#include <QLabel>
 #include <QLineEdit>
 #include <QMenu>
 #include <QMdiArea>
+#include <QSettings>
 #include <QStatusBar>
 #include <QTabBar>
 #include <QToolBar>
 #include <QToolButton>
-#include <QIconDragEvent>
 
 #include <RSingleApplication.h>
 
-#include "RDebug.h"
+#include "RCloseCurrentEvent.h"
+#include "RCoordinateEvent.h"
+#include "RDocument.h"
 #include "RDocumentInterface.h"
 #include "RGuiAction.h"
+#include "RGraphicsViewImage.h"
 #include "RGraphicsViewQt.h"
 #include "RMainWindowQt.h"
 #include "RMdiArea.h"
 #include "RMdiChildQt.h"
+#include "RPropertyEvent.h"
 #include "RScriptHandler.h"
 #include "RSelectionChangedEvent.h"
 #include "RSettings.h"

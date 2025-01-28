@@ -16,8 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RBlockReferenceData.h"
+#include "RBlockReferenceEntity.h"
 #include "RDimensionData.h"
-#include "RTriangle.h"
+#include "RDimStyle.h"
+#include "RDocument.h"
+#include "RLine.h"
 #include "RUnit.h"
 
 
@@ -966,7 +970,7 @@ bool RDimensionData::hasDimensionBlockReference() const {
         return false;
     }
 
-    RBlock::Id dimBlockId = doc->getBlockId(dimBlockName);
+    RObject::Id dimBlockId = doc->getBlockId(dimBlockName);
 
     // check if block is empty (ignore):
     if (!doc->hasBlockEntities(dimBlockId)) {
@@ -987,7 +991,7 @@ QSharedPointer<RBlockReferenceEntity> RDimensionData::getDimensionBlockReference
         return QSharedPointer<RBlockReferenceEntity>();
     }
 
-    RBlock::Id dimBlockId = doc->getBlockId(dimBlockName);
+    RObject::Id dimBlockId = doc->getBlockId(dimBlockName);
 
     // check if block is empty (ignore):
     if (!doc->hasBlockEntities(dimBlockId)) {

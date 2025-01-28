@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RSnapEnd.h"
+#include "REntity.h"
 
 QList<RVector> RSnapEnd::snapEntity(QSharedPointer<REntity> entity,
                                     const RVector& point,

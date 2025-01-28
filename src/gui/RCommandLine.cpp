@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include <QClipboard>
-#include <QDebug>
 #include <QEvent>
 #include <QKeyEvent>
 
@@ -28,7 +27,6 @@
 #endif
 
 #include "RCommandLine.h"
-#include "RDebug.h"
 
 RCommandLine::RCommandLine(QWidget* parent) :
     QLineEdit(parent), it(history.end()) {

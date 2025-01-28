@@ -28,8 +28,7 @@
 #include "RDimRadialData.h"
 #include "RDimDiametricData.h"
 #include "RDimAngularData.h"
-#include "REntity.h"
-#include "RStorage.h"
+#include "RLine.h"
 #include "RTriangle.h"
 
 void RDimStyleProxyBasic::render(const RDimStyle& dimStyle, const REntityData& entityData, bool preview, bool forceSelected) {

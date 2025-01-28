@@ -23,7 +23,6 @@
 #include "RDxfServices.h"
 #include "REllipse.h"
 #include "RLinetypeListImperial.h"
-#include "RUnit.h"
 
 QMap<unsigned int, QRgb> RDxfServices::aci;
 QMap<QRgb, unsigned int> RDxfServices::revAci;

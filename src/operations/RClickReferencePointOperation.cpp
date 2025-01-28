@@ -20,8 +20,8 @@
 #include <QSharedPointer>
 
 #include "RDocument.h"
+#include "REntity.h"
 #include "RClickReferencePointOperation.h"
-#include "RExporter.h"
 
 
 RClickReferencePointOperation::RClickReferencePointOperation(const RVector& referencePoint)

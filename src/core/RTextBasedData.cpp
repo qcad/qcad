@@ -21,14 +21,13 @@
 #include <QTextDocument>
 
 #include "RColor.h"
+#include "RDocument.h"
 #include "RDxfServices.h"
-#include "RFont.h"
 #include "RFontList.h"
+#include "RLine.h"
 #include "RTextBasedData.h"
-#include "RPainterPathDevice.h"
-#include "RPointEntity.h"
 #include "RPolyline.h"
-#include "RSettings.h"
+#include "RRefPoint.h"
 #include "RTextRenderer.h"
 #include "RUnit.h"
 

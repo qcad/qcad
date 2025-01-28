@@ -20,13 +20,13 @@
 
 #include <QFontMetrics>
 
-#include "RDebug.h"
+#include "RDocument.h"
 #include "RDocumentInterface.h"
-#include "RExporter.h"
 #include "RGraphicsScene.h"
 #include "RGraphicsView.h"
 #include "RLine.h"
 #include "ROrthoGrid.h"
+#include "RRuler.h"
 #include "RSettings.h"
 #include "RUcs.h"
 #include "RUnit.h"

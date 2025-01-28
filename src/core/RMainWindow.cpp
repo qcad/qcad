@@ -16,25 +16,23 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QCoreApplication>
+#include <QSettings>
+#include <QTime>
 #if QT_VERSION >= 0x060000
 #   include <QScreen>
 #else
 #   include <QDesktopWidget>
 #endif
-#include <QDir>
-#include <QObject>
-#include <QThread>
 
 #include "RBlockListener.h"
-#include "RCoordinateEvent.h"
 #include "RCoordinateListener.h"
 #include "RDebug.h"
 #include "RDocumentInterface.h"
+#include "RExportListener.h"
+#include "REntityExportListener.h"
+#include "RImportListener.h"
+#include "RInterTransactionListener.h"
 #include "RFocusListener.h"
-#include "RFontList.h"
-#include "RGraphicsView.h"
-#include "RGuiAction.h"
 #include "RKeyListener.h"
 #include "RLayerListener.h"
 #include "RMainWindow.h"
@@ -48,8 +46,8 @@
 #include "RSelectionListener.h"
 #include "RSettings.h"
 #include "RSnapListener.h"
+#include "RTransactionListener.h"
 #include "RUcsListener.h"
-#include "RVector.h"
 #include "RViewFocusListener.h"
 #include "RViewListener.h"
 

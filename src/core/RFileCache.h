@@ -23,9 +23,9 @@
 #include "core_global.h"
 
 #include <QMetaType>
-#include <QBuffer>
-#include <QCache>
-#include <QMap>
+#include <QString>
+
+class QBuffer;
 
 /**
  * QBuffer based file cache.

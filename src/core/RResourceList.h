@@ -22,10 +22,8 @@
 
 #include "core_global.h"
 
-#include <QDebug>
 #include <QString>
 #include <QMap>
-#include <QFileInfo>
 
 #include "RS.h"
 

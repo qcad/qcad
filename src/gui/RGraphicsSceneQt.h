@@ -22,28 +22,24 @@
 
 #include "gui_global.h"
 
-#include <QPen>
 #include <QList>
 #include <QMultiMap>
 
-#include "RArc.h"
-#include "RCircle.h"
-#include "RDocumentInterface.h"
-#include "REllipse.h"
 #include "RGraphicsScene.h"
 #include "RGraphicsSceneDrawable.h"
-#include "RImageData.h"
-#include "RLine.h"
 #include "RPainterPath.h"
-#include "RPainterPathSource.h"
-#include "RPoint.h"
-#include "RPolyline.h"
-#include "RRay.h"
-#include "RSpline.h"
-#include "RXLine.h"
 
+class RArc;
+class RDocumentInterface;
 class RGraphicsViewImage;
+class RImageData;
+class RLine;
+class RPoint;
+class RPolyline;
+class RSpline;
+class RRay;
 class RTriangle;
+class RXLine;
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1
@@ -69,20 +65,20 @@ public:
 
     virtual void clear();
 
-    virtual void updateSelectionStatus(QSet<REntity::Id>& affectedEntities, bool updateViews);
+    virtual void updateSelectionStatus(QSet<RObject::Id>& affectedEntities, bool updateViews);
 
     virtual void clearPreview();
 
     virtual void exportEntities(bool allBlocks = true, bool undone = false, bool invisible = false);
-    void exportEntitiesThread(int threadId, QList<REntity::Id>& list, int start, int end);
-    void exportEntityThread(int threadId, REntity::Id id);
+    void exportEntitiesThread(int threadId, QList<RObject::Id>& list, int start, int end);
+    void exportEntityThread(int threadId, RObject::Id id);
 
     bool beginPath();
     void endPath();
 
     void transformAndApplyPatternPath(RPainterPath& path) const;
     
-    virtual void unexportEntity(REntity::Id entityId);
+    virtual void unexportEntity(RObject::Id entityId);
 
     virtual void exportPoint(const RPoint& point);
     virtual double exportLine(const RLine& line, double offset = RNANDOUBLE);
@@ -117,35 +113,35 @@ public:
     /**
      * \nonscriptable
      */
-    QList<RGraphicsSceneDrawable>* getDrawables(REntity::Id entityId);
+    QList<RGraphicsSceneDrawable>* getDrawables(RObject::Id entityId);
 
     /**
      * \nonscriptable
      */
-    QList<RGraphicsSceneDrawable> getDrawablesList(REntity::Id entityId);
+    QList<RGraphicsSceneDrawable> getDrawablesList(RObject::Id entityId);
 
     bool hasPreview() const;
-    QList<REntity::Id> getPreviewEntityIds();
+    QList<RObject::Id> getPreviewEntityIds();
 
     /**
      * \nonscriptable
      */
-    QList<RGraphicsSceneDrawable>* getPreviewDrawables(REntity::Id entityId);
+    QList<RGraphicsSceneDrawable>* getPreviewDrawables(RObject::Id entityId);
 
-    virtual void addToPreview(REntity::Id entityId, QList<RGraphicsSceneDrawable>& drawables);
-    virtual void addToPreview(REntity::Id entityId, RGraphicsSceneDrawable& drawable);
+    virtual void addToPreview(RObject::Id entityId, QList<RGraphicsSceneDrawable>& drawables);
+    virtual void addToPreview(RObject::Id entityId, RGraphicsSceneDrawable& drawable);
 
-    virtual void addPathToPreview(REntity::Id entityId, RPainterPath& pp) {
+    virtual void addPathToPreview(RObject::Id entityId, RPainterPath& pp) {
         RGraphicsSceneDrawable drw(pp);
         addToPreview(entityId, drw);
     }
 
     void addTextToPreview(const RTextBasedData& text);
 
-    bool hasClipRectangleFor(REntity::Id entityId, bool preview = false) const;
-    RBox getClipRectangle(REntity::Id entityId, bool preview = false) const;
+    bool hasClipRectangleFor(RObject::Id entityId, bool preview = false) const;
+    RBox getClipRectangle(RObject::Id entityId, bool preview = false) const;
 
-    void addDrawable(REntity::Id entityId, RGraphicsSceneDrawable& drawable, bool draft = false, bool preview = false);
+    void addDrawable(RObject::Id entityId, RGraphicsSceneDrawable& drawable, bool draft = false, bool preview = false);
 
     virtual void startEntity(bool topLevelEntity);
 
@@ -168,11 +164,11 @@ public:
 private:
     RPainterPath currentPainterPath;
 
-    QMap<REntity::Id, QList<RGraphicsSceneDrawable> > drawables;
-    QMap<REntity::Id, RBox> clipRectangles;
+    QMap<RObject::Id, QList<RGraphicsSceneDrawable> > drawables;
+    QMap<RObject::Id, RBox> clipRectangles;
 
-    QMap<REntity::Id, QList<RGraphicsSceneDrawable> > previewDrawables;
-    QMap<REntity::Id, RBox> previewClipRectangles;
+    QMap<RObject::Id, QList<RGraphicsSceneDrawable> > previewDrawables;
+    QMap<RObject::Id, RBox> previewClipRectangles;
 
     bool decorating;
     bool screenBasedLinetypesOverride;

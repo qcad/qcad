@@ -23,11 +23,12 @@
 #include "core_global.h"
 
 #include "RBox.h"
-#include "RDocument.h"
-#include "REntity.h"
+#include "REntityData.h"
 #include "RPoint.h"
 #include "RVector.h"
 #include "RLine.h"
+
+class RDocument;
 
 /**
  * Stores and manages all data that defines the geometry and
@@ -216,7 +217,7 @@ public:
 
     RVector getViewOffset() const;
 
-    virtual QList<RRefPoint> getInternalReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop, QList<REntity::Id>* subEntityIds = NULL) const;
+    virtual QList<RRefPoint> getInternalReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop, QList<RObject::Id>* subEntityIds = NULL) const;
     virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
 
     virtual bool moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers = Qt::NoModifier);
@@ -229,11 +230,11 @@ public:
 
     virtual bool scale(const RVector& scaleFactors, const RVector& center);
 
-    QList<RLayer::Id> getFrozenLayerIds() const {
+    QList<RObject::Id> getFrozenLayerIds() const {
         return frozenLayerIds;
     }
 
-    void setFrozenLayerIds(const QList<RLayer::Id>& layerIds) {
+    void setFrozenLayerIds(const QList<RObject::Id>& layerIds) {
         frozenLayerIds = layerIds;
     }
 
@@ -261,7 +262,7 @@ private:
     RVector viewCenter;
     RVector viewTarget;
 
-    QList<RLayer::Id> frozenLayerIds;
+    QList<RObject::Id> frozenLayerIds;
 
     bool overall;
 };

@@ -22,11 +22,10 @@
 
 #include "operations_global.h"
 
-#include "RDocument.h"
-#include "REntity.h"
-#include "RExporter.h"
 #include "RClipboardOperation.h"
 #include "RVector.h"
+
+class RDocument;
 
 /**
  * Implementation of an operation that pastes the clipboard

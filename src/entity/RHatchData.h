@@ -23,15 +23,16 @@
 #include "entity_global.h"
 
 #include "RBox.h"
-#include "RDocument.h"
-#include "REntity.h"
+#include "REntityData.h"
 #include "RHatchProxy.h"
-#include "RLine.h"
 #include "RPattern.h"
 #include "RPainterPath.h"
 #include "RPainterPathSource.h"
-#include "RPoint.h"
 #include "RVector.h"
+
+class RDocument;
+class REntity;
+class RLine;
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1

@@ -21,13 +21,14 @@
 
 #include "RArc.h"
 #include "RArcExporter.h"
+#include "RBlock.h"
 #include "RBlockReferenceEntity.h"
 #include "RCircle.h"
-#include "RDebug.h"
 #include "RDocument.h"
 #include "REllipse.h"
 #include "REntity.h"
 #include "RExporter.h"
+#include "RLayer.h"
 #include "RLine.h"
 #include "RLinetype.h"
 #include "RMainWindow.h"
@@ -37,6 +38,7 @@
 #include "RShapesExporter.h"
 #include "RSpline.h"
 #include "RStorage.h"
+#include "RTextBasedData.h"
 #include "RTriangle.h"
 #include "RUnit.h"
 #include "RView.h"
@@ -585,8 +587,8 @@ void RExporter::exportLayers() {
 }
 
 void RExporter::exportLayerStates() {
-    QSet<RLayerState::Id> ids = document->queryAllLayerStates();
-    QSet<RLayerState::Id>::iterator it;
+    QSet<RObject::Id> ids = document->queryAllLayerStates();
+    QSet<RObject::Id>::iterator it;
     for (it = ids.begin(); it != ids.end(); it++) {
         QSharedPointer<RLayerState> ls = document->queryLayerStateDirect(*it);
         if (!ls.isNull()) {
@@ -1681,6 +1683,12 @@ void RExporter::exportTransform(const RTransform& t) {
 void RExporter::exportEndTransform() {
 }
 
+void RExporter::exportThickPolyline(const RPolyline& polyline) {
+    RPolyline pl = polyline;
+    pl.stripWidths();
+    exportPolyline(pl);
+}
+
 double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
     if (document==NULL) {
         return 1.0;
@@ -1755,6 +1763,10 @@ double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
     //qDebug() << "factor: " << factor;
 
     return factor;
+}
+
+bool RExporter::isTextRenderedAsText() const {
+    return RSettings::isTextRenderedAsText();
 }
 
 void RExporter::setDraftMode(bool on) {

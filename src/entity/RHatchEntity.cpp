@@ -22,10 +22,10 @@
 #include "RExporter.h"
 #include "RHatchEntity.h"
 #include "RLine.h"
-#include "RMetaTypes.h"
 #include "RPluginLoader.h"
-#include "RPoint.h"
+#include "RSettings.h"
 #include "RSpline.h"
+#include "RViewportData.h"
 
 RPropertyTypeId RHatchEntity::PropertyCustom;
 RPropertyTypeId RHatchEntity::PropertyHandle;

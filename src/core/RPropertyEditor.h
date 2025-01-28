@@ -22,7 +22,6 @@
 
 #include "core_global.h"
 
-#include <QCoreApplication>
 #include <QList>
 #include <QMap>
 #include <QString>
@@ -31,13 +30,13 @@
 #include <QPromise>
 #endif
 
-#include "RDocument.h"
-#include "RDocumentInterface.h"
 #include "RLayerListener.h"
-#include "RObject.h"
-#include "RProperty.h"
 #include "RPropertyListener.h"
 
+class RDocument;
+class RDocumentInterface;
+class RObject;
+class RProperty;
 
 /**
  * Base class for property editors. Provides basic functionality that
@@ -92,9 +91,9 @@ public:
         return QStringList();
     }
 
-    virtual void updateLayers(RDocumentInterface* documentInterface, QList<RLayer::Id>& layerIds);
+    virtual void updateLayers(RDocumentInterface* documentInterface, QList<RObject::Id>& layerIds);
     virtual void updateLayers(RDocumentInterface* documentInterface);
-    virtual void setCurrentLayer(RDocumentInterface* documentInterface, RLayer::Id previousLayerId);
+    virtual void setCurrentLayer(RDocumentInterface* documentInterface, RObject::Id previousLayerId);
     virtual void clearLayers();
 
     void propertyChanged(RPropertyTypeId propertyTypeId, QVariant propertyValue,

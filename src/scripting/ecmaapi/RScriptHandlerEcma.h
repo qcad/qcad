@@ -23,14 +23,11 @@
 #include "ecmaapi_global.h"
 
 #include <QString>
-#include <QtScript>
-#include <QMainWindow>
 
 #include "RScriptHandler.h"
-#include "RDocumentInterface.h"
-#include "RGuiAction.h"
-#include "REcmaFocusListenerAdapter.h"
 
+class RDocumentInterface;
+class RGuiAction;
 class QScriptEngineDebugger;
 
 

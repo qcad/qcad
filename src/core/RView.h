@@ -23,13 +23,12 @@
 #include "core_global.h"
 
 #include <QString>
-#include <QColor>
-#include <QDebug>
 
-#include "RGlobal.h"
+#include "RSEnums.h"
 #include "RObject.h"
 #include "RBox.h"
 
+class QDebug;
 class RDocument;
 
 /**

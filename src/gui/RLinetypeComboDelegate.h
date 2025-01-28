@@ -24,7 +24,7 @@
 
 #include <QStyledItemDelegate>
 
-#include "RLinetypePattern.h"
+class RLinetypePattern;
 
 /**
  * \ingroup gui

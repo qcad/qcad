@@ -20,8 +20,9 @@
 #include <QSharedPointer>
 
 #include "RDocument.h"
+#include "REntity.h"
+#include "RGraphicsScene.h"
 #include "RMoveReferencePointOperation.h"
-#include "RExporter.h"
 
 
 RMoveReferencePointOperation::RMoveReferencePointOperation(

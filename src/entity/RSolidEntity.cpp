@@ -18,7 +18,6 @@
  */
 #include "RSolidEntity.h"
 #include "RExporter.h"
-#include "RLine.h"
 
 RPropertyTypeId RSolidEntity::PropertyCustom;
 RPropertyTypeId RSolidEntity::PropertyHandle;

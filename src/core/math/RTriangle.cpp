@@ -16,11 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <cassert>
 #include <cmath>
 
+#include <QDebug>
+
 #include "RBox.h"
-#include "RDebug.h"
 #include "RLine.h"
 #include "RMath.h"
 #include "RTriangle.h"
@@ -158,7 +158,6 @@ double RTriangle::getDistanceTo(const RVector& point, bool limited, double stric
 }
 
 RVector RTriangle::getVectorTo(const RVector& point, bool limited, double strictRange) const {
-    //assert(false);
     RLine l1(corner[0], corner[1]);
     RLine l2(corner[1], corner[2]);
     RLine l3(corner[2], corner[0]);
@@ -184,7 +183,6 @@ RVector RTriangle::getVectorTo(const RVector& point, bool limited, double strict
 
 /*
 RVector RTriangle::getVectorTo(const RLine& / *line* /, bool / *limited* /) const {
-    assert(false);
     return RVector();
 }
 */

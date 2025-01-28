@@ -22,11 +22,10 @@
 
 #include "operations_global.h"
 
-#include "RDocument.h"
-#include "RExporter.h"
 #include "ROperation.h"
 #include "RVector.h"
 
+class RDocument;
 class REntity;
 
 /**

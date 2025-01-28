@@ -18,6 +18,8 @@
  */
 #include <cmath>
 
+#include <QDebug>
+
 #include "RArc.h"
 #include "RCircle.h"
 #include "RBox.h"

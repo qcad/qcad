@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include <QDebug>
+#include <QMap>
 
 #include "RPropertyTypeId.h"
 #include "RPropertyAttributes.h"

@@ -18,7 +18,6 @@
  */
 #include "RGraphicsView.h"
 #include "RGrid.h"
-#include "RMouseEvent.h"
 #include "RSnapGrid.h"
 
 

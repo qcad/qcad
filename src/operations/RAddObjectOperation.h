@@ -25,8 +25,6 @@
 #include <QSharedPointer>
 
 #include "RAddObjectsOperation.h"
-#include "ROperation.h"
-#include "RVector.h"
 
 class RObject;
 

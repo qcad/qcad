@@ -23,9 +23,10 @@
 #include "core_global.h"
 
 #include "RActionAdapter.h"
-#include "RMouseEvent.h"
-#include "RGraphicsView.h"
-#include "RGuiAction.h"
+#include "RVector.h"
+
+class RGuiAction;
+class RMouseEvent;
 
 /**
  * \ingroup core

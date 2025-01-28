@@ -22,12 +22,6 @@
 
 #include "entity_global.h"
 
-#include "RBox.h"
-#include "RDocument.h"
-#include "REntity.h"
-#include "RPolyline.h"
-#include "RVector.h"
-#include "RPainterPathSource.h"
 #include "RPolylineData.h"
 
 #ifndef RDEFAULT_MIN1

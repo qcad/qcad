@@ -24,7 +24,6 @@
 
 #include <QVariant>
 
-#include "RObject.h"
 #include "RPropertyTypeId.h"
 
 class RStorage;

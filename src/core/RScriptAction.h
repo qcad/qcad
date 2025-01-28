@@ -23,7 +23,6 @@
 #include "core_global.h"
 
 #include "RAction.h"
-#include "RMainWindow.h"
 
 /**
  * Script backed action.

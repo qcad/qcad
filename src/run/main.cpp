@@ -23,10 +23,7 @@
 #include <QDir>
 #include <QFileInfo>
 #include <QImageReader>
-#include <QTextStream>
-#include <QTime>
-#include <QSqlDatabase>
-#include <QLoggingCategory>
+#include <QSettings>
 
 #if defined(Q_OS_MAC) || defined(Q_OS_LINUX)
 #include <signal.h>
@@ -40,9 +37,9 @@
 #include "RArcEntity.h"
 #include "RAttributeDefinitionEntity.h"
 #include "RAttributeEntity.h"
+#include "RBlock.h"
 #include "RBlockReferenceEntity.h"
 #include "RCircleEntity.h"
-#include "RDebug.h"
 #include "RDimAlignedEntity.h"
 #include "RDimAngularEntity.h"
 #include "RDimAngular2LEntity.h"
@@ -63,8 +60,10 @@
 #include "RImageEntity.h"
 #include "RLayer.h"
 #include "RLayerState.h"
+#include "RLayout.h"
 #include "RLeaderEntity.h"
 #include "RLineEntity.h"
+#include "RLinetype.h"
 #include "RLinetypeListImperial.h"
 #include "RLinetypeListMetric.h"
 #include "RPatternListImperial.h"
@@ -90,6 +89,7 @@
 #include "RViewportEntity.h"
 #include "RWipeoutEntity.h"
 #include "RVersion.h"
+#include "RView.h"
 #include "RXLineEntity.h"
 
 #ifdef Q_OS_MAC

@@ -22,12 +22,12 @@
 
 #include "core_global.h"
 
-#include <QDir>
-#include <QSettings>
-#include <QFont>
+#include <QStringList>
+#include <QVariant>
 
 #include "RColor.h"
 #include "RBox.h"
+#include "RMath.h"
 
 // workaround for src2srcml bug:
 #ifndef RDEFAULT_RCOLOR
@@ -53,6 +53,9 @@
 #ifndef RDEFAULT_QLISTINT
 #define RDEFAULT_QLISTINT QList<int>()
 #endif
+
+class QFont;
+class QSettings;
 
 /**
  * \ingroup core

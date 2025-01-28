@@ -16,15 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RDimStyle.h"
+#include "RDocument.h"
+#include "RLine.h"
+#include "RRefPoint.h"
+#include "RS.h"
 #include "RTextData.h"
 #include "RToleranceData.h"
-#include "RUnit.h"
 
 RToleranceData::RToleranceData()
     :
       //dimScaleOverride(0.0),
       direction(1,0,0),
-      dimToleranceBlockId(REntity::INVALID_ID),
+      dimToleranceBlockId(RObject::INVALID_ID),
       dimscale(-1.0),
       dimtxt(-1.0),
       joinFirstField(false) {
@@ -45,15 +49,65 @@ RToleranceData::RToleranceData(RDocument* document, const RToleranceData& data)
 //    dimScaleOverride = v;
 //}
 
-//double RToleranceData::getDimscale(bool fromDocument) const {
-//    double ret = dimScaleOverride;
 
-//    if (document!=NULL && fromDocument && RMath::fuzzyCompare(ret, 0.0)) {
-//        ret = document->getKnownVariable(RS::DIMSCALE, 1.0).toDouble();
-//    }
+double RToleranceData::getDimtxt(bool scale) const {
+    double v = 2.5;
 
-//    return ret;
-//}
+    // get value from override:
+    if (dimtxt>0.0) {
+        v = dimtxt;
+    }
+
+    else if (document!=NULL) {
+        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+        if (!dimStyle.isNull()) {
+            // get value from dimension style:
+            v = dimStyle->getDouble(RS::DIMTXT);
+        }
+        else {
+            // TODO: get value from document (should never happen):
+            Q_ASSERT(false);
+        }
+    }
+
+    if (scale) {
+        v *= getDimscale();
+    }
+
+    return v;
+}
+void RToleranceData::setDimtxt(double f) {
+    dimtxt = f;
+    update();
+}
+
+double RToleranceData::getDimscale() const {
+    // get value from override:
+    if (dimscale>0.0) {
+        return dimscale;
+    }
+
+    double v = 1.0;
+    if (document!=NULL) {
+        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+        if (!dimStyle.isNull()) {
+            // get value from dimension style:
+            v = dimStyle->getDouble(RS::DIMSCALE);
+        }
+        else {
+            // TODO: get value from document (should never happen):
+            Q_ASSERT(false);
+        }
+    }
+
+    return v;
+}
+
+void RToleranceData::setDimscale(double f) {
+    dimscale = f;
+    update();
+}
+
 
 //void RToleranceData::scaleVisualProperties(double scaleFactor) {
 //    if (dimScaleOverride>RS::PointTolerance) {

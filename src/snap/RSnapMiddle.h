@@ -44,7 +44,7 @@ protected:
         const RVector& point,
         const RBox& queryBox,
         RGraphicsView& view,
-        QList<REntity::Id>* subEntityIds = NULL);
+        QList<RObject::Id>* subEntityIds = NULL);
 };
 
 Q_DECLARE_METATYPE(RSnapMiddle*)

@@ -22,8 +22,6 @@
 
 #include "core_global.h"
 
-#include <QFileInfo>
-#include <QMap>
 #include <QMetaType>
 #include <QString>
 #include <QStringList>
@@ -33,7 +31,6 @@
 #include "RTransactionListener.h"
 #include "RFocusListener.h"
 #include "RSelectionListener.h"
-#include "RPaletteListener.h"
 
 class QToolBar;
 
@@ -322,9 +319,7 @@ public:
         return scriptFile;
     }
 
-    QString getScriptClass() const {
-        return QFileInfo(scriptFile).baseName();
-    }
+    QString getScriptClass() const;
 
     virtual void setGroup(const QString& title);
     QString getGroup();

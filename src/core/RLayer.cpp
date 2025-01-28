@@ -17,7 +17,9 @@
  * along with QCAD.
  */
 #include "RLayer.h"
+#include "RDebug.h"
 #include "RDocument.h"
+#include "RLinetype.h"
 
 RLayerProxy* RLayer::layerProxy = NULL;
 

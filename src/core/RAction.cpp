@@ -17,21 +17,15 @@
  * along with QCAD.
  */
 
+#include <QCoreApplication>
 #include <QWidget>
 
 #include "RAction.h"
 #include "RDebug.h"
-#include "RDocument.h"
-#include "REntity.h"
-#include "RGraphicsScene.h"
 #include "RGraphicsView.h"
-#include "RGraphicsViewImage.h"
 #include "RGuiAction.h"
-#include "RMouseEvent.h"
-#include "RTransaction.h"
-#include "RWheelEvent.h"
-#include "RMainWindow.h"
 #include "RDocumentInterface.h"
+#include "RTerminateEvent.h"
 
 RAction::RAction(RGuiAction* guiAction)
   : terminated(false),

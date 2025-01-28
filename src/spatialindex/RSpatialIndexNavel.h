@@ -27,6 +27,7 @@
 #include <QList>
 
 #include "RSpatialIndex.h"
+#include "RBox.h"
 
 #include "include/spatialindex/SpatialIndex.h"
 

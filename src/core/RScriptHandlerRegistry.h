@@ -23,17 +23,11 @@
 #include "core_global.h"
 
 #include <QList>
-#include <QMetaType>
 #include <QString>
 
-#include "RNonCopyable.h"
-#include "RDocumentInterface.h"
-#include "RAction.h"
-#include "RGuiAction.h"
-#include "RScriptAction.h"
-#include "RMainWindow.h"
 #include "RSingleton.h"
 
+class RScriptHandler;
 
 /**
  * Script Handler Registry for global Script Handlers.

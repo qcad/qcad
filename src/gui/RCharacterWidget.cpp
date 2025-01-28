@@ -16,7 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QtGui>
+#include <QFontDatabase>
+#include <QMouseEvent>
+#include <QPainter>
 #include <QToolTip>
 
 #include "RCharacterWidget.h"

@@ -16,13 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QMap>
 #include <QPainter>
 #include <QPixmap>
 #include <QBrush>
 
 #include "RColor.h"
-#include "RCircle.h"
-#include "RDebug.h"
 #include "RMath.h"
 #include "RPluginLoader.h"
 #include "RSettings.h"

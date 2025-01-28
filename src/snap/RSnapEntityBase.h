@@ -22,10 +22,12 @@
 
 #include "snap_global.h"
 
-#include "RSnap.h"
-#include "RGraphicsView.h"
+#include <QSet>
 
-class RMouseEvent;
+#include "RSnap.h"
+
+class REntity;
+class RGraphicsView;
 
 /**
  * \brief Base class for entity based snap classes.
@@ -47,7 +49,7 @@ public:
     virtual RVector snap(
             const RVector& position,
             RGraphicsView& view,
-            const QSet<REntity::Id>& candidates,
+            const QSet<RObject::Id>& candidates,
             const RBox& queryBox);
 
 protected:
@@ -56,7 +58,7 @@ protected:
             const RVector& point,
             const RBox& queryBox,
             RGraphicsView& view,
-            QList<REntity::Id>* subEntityIds = NULL) = 0;
+            QList<RObject::Id>* subEntityIds = NULL) = 0;
 };
 
 Q_DECLARE_METATYPE(RSnapEntityBase*)

@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RArcExporter.h"
+#include "RLine.h"
 
 RArcExporter::RArcExporter(RExporter& exporter, const RArc& arc, double offset) :
     RExporter(exporter.getDocument()), exporter(exporter), arc(arc) {

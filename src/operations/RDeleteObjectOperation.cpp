@@ -16,7 +16,6 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RDocument.h"
 #include "RDeleteObjectOperation.h"
 
 RDeleteObjectOperation::RDeleteObjectOperation(QSharedPointer<RObject> object, bool undoable) :
