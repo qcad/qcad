@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2011-2018 by Andrew Mustun. All rights reserved.
- * 
+ *
  * This file is part of the QCAD project.
  *
  * QCAD is free software: you can redistribute it and/or modify
@@ -16,8 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QDir>
-#include <QFileInfo>
+#include <QtGlobal>
 
 #if QT_VERSION < 0x050000
 #include <QTextDocument>
@@ -37,6 +36,9 @@
 #include <QPageSize>
 #endif
 
+#include <QDir>
+#include <QFileInfo>
+
 #include "RGlobal.h"
 #include "RLinetype.h"
 #include "RLineweight.h"
@@ -44,6 +46,18 @@
 #include "RSettings.h"
 #include "RVector.h"
 
+const double RS::PointTolerance = 1.0e-9;
+const double RS::AngleTolerance = 1.0e-9;
+
+#if QT_VERSION >= 0x060000
+const Qt::MouseButton RS::MiddleButton = Qt::MiddleButton;
+const QPageLayout::Orientation RS::Portrait = QPageLayout::Portrait;
+const QPageLayout::Orientation RS::Landscape = QPageLayout::Landscape;
+#else
+const Qt::MouseButton RS::MiddleButton = Qt::MidButton;
+const QPrinter::Orientation RS::Portrait = QPrinter::Portrait;
+const QPrinter::Orientation RS::Landscape = QPrinter::Landscape;
+#endif
 
 /**
  * \return True if the two values are considered to be equal.
@@ -143,7 +157,7 @@ bool RS::compare(const QVariant& v1, const QVariant& v2, bool noTolerance) {
 }
 
 bool RS::compare(const QPair<QVariant, RPropertyAttributes>& p1, const QPair<
-                 QVariant, RPropertyAttributes>& p2, bool noTolerance) {
+                                                                     QVariant, RPropertyAttributes>& p2, bool noTolerance) {
     return compare(p1.first, p2.first, noTolerance);
 }
 
@@ -286,7 +300,7 @@ QStringList RS::sortAlphanumerical(const QStringList& list) {
         ret.begin(),
         ret.end(),
         RS::lessThanAlphanumerical
-    );
+        );
 
     return ret;
 }
@@ -370,22 +384,6 @@ int RS::compareAlphanumerical(const QString& s1, const QString& s2) {
 
 bool RS::lessThanAlphanumerical(const QString& s1, const QString& s2) {
     return RS::compareAlphanumerical(s1, s2)<0;
-}
-
-QString RS::getFontFamily(const QTextCharFormat& format) {
-#if QT_VERSION >= 0x060000
-    // note: QTextCharFormat::fontFamily is deprecated and broken in Qt 6:
-    QVariant v = format.fontFamilies();
-    if (v.isValid()) {
-        QStringList l = v.toStringList();
-        if (!l.isEmpty()) {
-            return l.first();
-        }
-    }
-    return QString();
-#else
-    return format.fontFamily();
-#endif
 }
 
 int RS::getPageSizeId(const QString& name) {
@@ -994,14 +992,3 @@ QString RS::convert(const QByteArray& str, const QString& codecName) {
     }
 #endif
 }
-
-int RS::getMetaType(const QVariant& v) {
-#if QT_VERSION >= 0x060000
-    return v.metaType().id();
-#else
-    return v.type();
-#endif
-}
-
-// work around "error: explicit specialization of 'QMetaTypeId<RS::EntityType>' after instantiation"
-#include "moc_RS.cpp"

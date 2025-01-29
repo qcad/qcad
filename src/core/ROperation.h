@@ -25,7 +25,7 @@
 #include "RDebug.h"
 #include "RNonCopyable.h"
 #include "RRequireHeap.h"
-#include "RSEnums.h"
+#include "RS.h"
 #include "RTransaction.h"
 
 class RDocument;

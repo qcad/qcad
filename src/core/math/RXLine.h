@@ -23,7 +23,7 @@
 #include "../core_global.h"
 
 #include "RLine.h"
-#include "RSEnums.h"
+#include "RS.h"
 #include "RShape.h"
 #include "RVector.h"
 

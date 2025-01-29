@@ -26,7 +26,7 @@
 #include <QSet>
 #include <QString>
 
-#include "RSEnums.h"
+#include "RS.h"
 #include "RPropertyAttributes.h"
 
 /**
@@ -143,14 +143,6 @@ private:
 QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RPropertyTypeId& p);
 
 QCADCORE_EXPORT uint qHash(const RPropertyTypeId& propertyTypeId);
-
-// Q_DECLARE_METATYPE(RS::KnownVariable) must go here (not RS.h) because of the declaration
-// for _RPairRPropertyTypeIdRSKnownVariable which contains KnownVariable.
-// If the declaration for KnownVariable comes after that one, there is a multiple definition error
-// about QMetaTypeId<KnownVariable>.
-// The pointer declaration is not affected by the problem, it is only here for consistency.
-Q_DECLARE_METATYPE(RS::KnownVariable)
-Q_DECLARE_METATYPE(RS::KnownVariable*)
 
 Q_DECLARE_METATYPE(RPropertyTypeId)
 Q_DECLARE_METATYPE(RPropertyTypeId*)

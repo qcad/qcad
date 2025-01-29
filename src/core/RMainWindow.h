@@ -29,7 +29,7 @@ class QKeyEvent;
 #include "RMessageHandler.h"
 #include "RObject.h"
 #include "RProgressHandler.h"
-#include "RSEnums.h"
+#include "RS.h"
 
 class RBlockListener;
 class RCoordinateListener;

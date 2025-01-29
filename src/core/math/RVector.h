@@ -26,7 +26,7 @@
 #include <QMetaType>
 #include <QMultiMap>
 
-#include "RSEnums.h"
+#include "RS.h"
 
 class RMatrix;
 class RBox;

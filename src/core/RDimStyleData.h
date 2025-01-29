@@ -22,7 +22,7 @@
 
 #include "core_global.h"
 
-#include "RSEnums.h"
+#include "RS.h"
 #include "RColor.h"
 
 #include <QVariant>

@@ -24,7 +24,7 @@
 
 #include <QEvent>
 
-#include "RSEnums.h"
+#include "RS.h"
 #include "RTransaction.h"
 
 /**
