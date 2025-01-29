@@ -22,8 +22,8 @@
 
 #include "../core_global.h"
 
-#include <RS.h>
-#include <RVector.h>
+#include "RS.h"
+#include "RVector.h"
 
 class REllipse;
 class RSpline;

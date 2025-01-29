@@ -124,7 +124,6 @@ add_library(qcadcore SHARED
     RResourceList.cpp RResourceList.h
     RRuler.h
     RRunner.h
-    RSEnums.h
     RS.cpp RS.h
     RSPlatform.cpp
     RScriptAction.cpp RScriptAction.h

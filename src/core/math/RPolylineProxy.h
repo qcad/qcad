@@ -22,8 +22,8 @@
 
 #include "../core_global.h"
 
-#include <RSEnums.h>
-#include <RMath.h>
+#include "RS.h"
+#include "RMath.h"
 
 class RArc;
 class RExporter;
