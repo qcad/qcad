@@ -20,6 +20,8 @@
 #include "REntity.h"
 #include "RGraphicsView.h"
 #include "RSnapPerpendicular.h"
+#include "RLine.h"
+#include "RCircle.h"
 
 QList<RVector> RSnapPerpendicular::snapEntity(
         QSharedPointer<REntity> entity,
@@ -41,10 +43,22 @@ QList<RVector> RSnapPerpendicular::snapEntity(
         return ret;
     }
 
-    ret.append(shape->getClosestPointOnShape(di->getLastPosition(), false));
+    QSharedPointer<RCircle> circle = shape.dynamicCast<RCircle>();
+    if (!circle.isNull()) {
+        RVector closestPoint = shape->getClosestPointOnShape(di->getLastPosition());
+        // find two perpendicular points:
+        RLine line(di->getLastPosition(), closestPoint);
+        QList<RVector> ips = line.getIntersectionPoints(*circle.data(), false);
+        ret = ips;
+    }
+    else {
+        ret.append(shape->getClosestPointOnShape(di->getLastPosition(), false));
+    }
+
     if (subEntityIds!=NULL) {
         subEntityIds->append(subEntityId);
     }
+
 
     return ret;
 }
