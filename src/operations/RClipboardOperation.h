@@ -28,6 +28,7 @@
 
 class RDocument;
 class REntity;
+class RLayer;
 class RLinetype;
 class RVector;
 
@@ -248,6 +249,10 @@ public:
         blockOwnership = on;
     }
 
+    void setCustomEntity(bool on) {
+        customEntity = on;
+    }
+
 private:
     QMap<QString, QSharedPointer<RLayer> > copiedLayers;
     QMap<QString, QSharedPointer<RLinetype> > copiedLinetypes;
@@ -257,6 +262,7 @@ private:
     bool copyAllLayers;
     bool keepSelection;
     bool blockOwnership;
+    bool customEntity;
 };
 
 Q_DECLARE_METATYPE(RClipboardOperation*)

@@ -1705,7 +1705,7 @@ void RDocumentInterface::highlightEntity(REntity::Id entityId) {
         return;
     }
 
-    if (entity->getType()==RS::EntityViewport && document.isLayerOffOrFrozen(entity->getLayerId())) {
+    if (entity->isOfType(RS::EntityViewport) && document.isLayerOffOrFrozen(entity->getLayerId())) {
         return;
     }
 

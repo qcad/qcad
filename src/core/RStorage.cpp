@@ -1292,7 +1292,7 @@ bool RStorage::isEntityVisible(const REntity& entity, RObject::Id blockId) const
     // check if layer is off and this is not a block reference:
     // block references on layer X remain visible if X is off but not frozen:
     if (isLayerOff(*layer) && !ignoreLayerVisibility) {
-        if (entity.getType()!=RS::EntityBlockRef && entity.getType()!=RS::EntityViewport) {
+        if (!entity.isOfType(RS::EntityBlockRef) && !entity.isOfType(RS::EntityViewport)) {
             return false;
         }
     }
@@ -1302,7 +1302,7 @@ bool RStorage::isEntityVisible(const REntity& entity, RObject::Id blockId) const
     // -> this is implemented in RBlockReference::exportEntity
 
     // check if block is frozen:
-    if (entity.getType()==RS::EntityBlockRef) {
+    if (entity.isOfType(RS::EntityBlockRef)) {
         const RBlockReferenceEntity* blockRef = dynamic_cast<const RBlockReferenceEntity*>(&entity);
         if (blockRef!=NULL) {
             RBlock::Id refBlockId = blockRef->getReferencedBlockId();

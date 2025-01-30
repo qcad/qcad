@@ -22,6 +22,7 @@
 #include "RAttributeEntity.h"
 #include "RBlock.h"
 #include "RBlockReferenceEntity.h"
+#include "RCustomEntity.h"
 #include "RClipboardOperation.h"
 #include "RDocument.h"
 #include "RLayer.h"
@@ -119,9 +120,18 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
 
         // create new block reference that references new, overwritten or existing block
         // (insert later, when block is complete, so we have bounding box for spatial index):
-        RBlockReferenceEntity* ref = new RBlockReferenceEntity(&dest,
+        //RBlockReferenceEntity* ref = new RBlockReferenceEntity(&dest,
+        RBlockReferenceEntity* ref;
+        if (customEntity) {
+            ref = new RCustomEntity(&dest,
                 RBlockReferenceData(block->getId(), RVector(0,0,0),
                                     RVector(1.0, 1.0, 1.0), 0.0));
+        }
+        else {
+            ref = new RBlockReferenceEntity(&dest,
+                RBlockReferenceData(block->getId(), RVector(0,0,0),
+                                    RVector(1.0, 1.0, 1.0), 0.0));
+        }
         refp = QSharedPointer<RBlockReferenceEntity>(ref);
         refp->setBlockId(dest.getCurrentBlockId());
         off = RVector(0, 0, 0);

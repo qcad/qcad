@@ -292,11 +292,11 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
         }
 
         // prevent recursions:
-        if (entity->getType()==RS::EntityViewport) {
+        if (entity->isOfType(RS::EntityViewport)) {
             continue;
         }
 
-//        if (entity->getType()==RS::EntityBlockRef) {
+//        if (entity->isOfType(RS::EntityBlockRef)) {
 //            QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
 //            blockRef->scaleVisualProperties(blockRef->getScaleFactors().x);
 //        }

@@ -216,7 +216,7 @@ QList<RVector> REntity::getIntersectionPoints(
             }
         }
 
-        if (getType()==RS::EntityBlockRef || getType()==RS::EntityViewport) {
+        if (isOfType(RS::EntityBlockRef) || isOfType(RS::EntityViewport)) {
             same = true;
         }
 

@@ -693,18 +693,32 @@ bool RMemoryStorage::hasChildEntities(REntity::Id parentId) const {
 QSet<REntity::Id> RMemoryStorage::queryBlockReferences(RBlock::Id blockId) const {
     QSet<REntity::Id> result;
 
-    if (!typeObjectMap.contains(RS::EntityBlockRef)) {
+    if (!typeObjectMap.contains(RS::EntityBlockRef) && !typeObjectMap.contains(RS::EntityCustom)) {
         return result;
     }
 
-    const QHash<RObject::Id, QSharedPointer<RObject> >& map = typeObjectMap[RS::EntityBlockRef];
-    QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
-    for (it = map.constBegin(); it != map.constEnd(); ++it) {
-        QSharedPointer<RBlockReferenceEntity> e = it->dynamicCast<RBlockReferenceEntity>();
-        if (!e.isNull() && e->getReferencedBlockId() == blockId && !e->isUndone()) {
-            result.insert(e->getId());
+    {
+        const QHash<RObject::Id, QSharedPointer<RObject> >& map = typeObjectMap[RS::EntityBlockRef];
+        QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
+        for (it = map.constBegin(); it != map.constEnd(); ++it) {
+            QSharedPointer<RBlockReferenceEntity> e = it->dynamicCast<RBlockReferenceEntity>();
+            if (!e.isNull() && e->getReferencedBlockId() == blockId && !e->isUndone()) {
+                result.insert(e->getId());
+            }
         }
     }
+
+    {
+        const QHash<RObject::Id, QSharedPointer<RObject> >& map = typeObjectMap[RS::EntityCustom];
+        QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
+        for (it = map.constBegin(); it != map.constEnd(); ++it) {
+            QSharedPointer<RBlockReferenceEntity> e = it->dynamicCast<RBlockReferenceEntity>();
+            if (!e.isNull() && e->getReferencedBlockId() == blockId && !e->isUndone()) {
+                result.insert(e->getId());
+            }
+        }
+    }
+
     return result;
 }
 
@@ -721,16 +735,29 @@ QSet<REntity::Id> RMemoryStorage::queryAllBlockReferences() const {
 
     QSet<REntity::Id> result;
 
-    if (!typeObjectMap.contains(RS::EntityBlockRef)) {
+    if (!typeObjectMap.contains(RS::EntityBlockRef) && !typeObjectMap.contains(RS::EntityCustom)) {
         return result;
     }
 
-    const QHash<RObject::Id, QSharedPointer<RObject> >& map = typeObjectMap[RS::EntityBlockRef];
-    QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
-    for (it = map.constBegin(); it != map.constEnd(); ++it) {
-        QSharedPointer<RBlockReferenceEntity> e = it->dynamicCast<RBlockReferenceEntity>();
-        if (!e->isUndone()) {
-            result.insert(e->getId());
+    {
+        const QHash<RObject::Id, QSharedPointer<RObject> >& map = typeObjectMap[RS::EntityBlockRef];
+        QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
+        for (it = map.constBegin(); it != map.constEnd(); ++it) {
+            QSharedPointer<RBlockReferenceEntity> e = it->dynamicCast<RBlockReferenceEntity>();
+            if (!e->isUndone()) {
+                result.insert(e->getId());
+            }
+        }
+    }
+
+    {
+        const QHash<RObject::Id, QSharedPointer<RObject> >& map = typeObjectMap[RS::EntityCustom];
+        QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
+        for (it = map.constBegin(); it != map.constEnd(); ++it) {
+            QSharedPointer<RBlockReferenceEntity> e = it->dynamicCast<RBlockReferenceEntity>();
+            if (!e->isUndone()) {
+                result.insert(e->getId());
+            }
         }
     }
 
@@ -1357,7 +1384,7 @@ void RMemoryStorage::setEntitySelected(QSharedPointer<REntity> entity, bool on,
     // if this is a parent, select all child entities (attributes for block ref):
     // only block references can have child entities (attributes):
     // TODO: improve performance for selecting block references (cache child ids):
-    if (entity->getType()==RS::EntityBlockRef && hasChildEntities(entity->getId())) {
+    if (entity->isOfType(RS::EntityBlockRef) && hasChildEntities(entity->getId())) {
         QSet<REntity::Id> childIds = queryChildEntities(entity->getId());
         QSet<REntity::Id>::iterator it;
         for (it=childIds.begin(); it!=childIds.end(); it++) {
@@ -1548,7 +1575,7 @@ bool RMemoryStorage::removeObject(QSharedPointer<RObject> object) {
 //        }
 //    }
 
-//    if (object->getType()==RS::EntityBlockRef) {
+//    if (object->isOfType(RS::EntityBlockRef)) {
 //        QSharedPointer<RBlockReferenceEntity> blockRef = object.dynamicCast<RBlockReferenceEntity>();
 //        if (!blockRef.isNull()) {
 //            blockRefMap.remove(blockRef->getId());

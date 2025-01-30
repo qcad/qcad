@@ -28,6 +28,7 @@ add_library(qcadentity SHARED
     RAttributeEntity.cpp RAttributeEntity.h
     RCircleData.cpp RCircleData.h
     RCircleEntity.cpp RCircleEntity.h
+    RCustomEntity.cpp RCustomEntity.h
     RDimAlignedData.cpp RDimAlignedData.h
     RDimAlignedEntity.cpp RDimAlignedEntity.h
     RDimAngular2LData.cpp RDimAngular2LData.h

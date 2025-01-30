@@ -476,7 +476,7 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
 
                         if (document->getLayerName(blockRef->getLayerId())!="0" || i==0) {
                             if (document->isLayerOff(blockRef->getLayerId())) {
-                                if (entity->getType()!=RS::EntityBlockRef) {
+                                if (!entity->isOfType(RS::EntityBlockRef)) {
                                     skip = true;
                                 }
                             }

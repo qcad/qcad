@@ -103,6 +103,13 @@ public:
         return RS::ObjectUnknown;
     }
 
+    /**
+     * Override to indicate that this entity is of a certain type, e.g. a block reference even if type ID is different.
+     */
+    virtual bool isOfType(RS::EntityType t) const {
+        return getType()==t;
+    }
+
     virtual RS::EntityType getType() const {
         return RS::ObjectUnknown;
     }
