@@ -27,6 +27,7 @@
 
 class RDocument;
 class RLine;
+class RRefPoint;
 
 /**
  * Arc length dimension entity data class.

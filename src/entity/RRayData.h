@@ -26,6 +26,7 @@
 #include "RRay.h"
 
 class RLine;
+class RRefPoint;
 
 /**
  * Stores and manages all data that defines the geometry and

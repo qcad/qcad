@@ -27,6 +27,7 @@
 class RDocument;
 class RLine;
 class RVector;
+class RRefPoint;
 
 /**
  * Rotated dimension entity data class.

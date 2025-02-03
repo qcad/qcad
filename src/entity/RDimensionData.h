@@ -30,6 +30,7 @@
 
 class RDocument;
 class RLine;
+class RRefPoint;
 
 /**
  * Base class for dimension entity data classes.

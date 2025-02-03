@@ -65,6 +65,7 @@
 #include "RDocumentVariables.h"
 #include "RUcs.h"
 #include "RTriangle.h"
+#include "RLayer.h"
 
 #include "REcmaHelper.h"
 

@@ -27,6 +27,7 @@
 #include "RVector.h"
 
 class RDocument;
+class RRefPoint;
 
 /**
  * Ordinate dimension entity data class.

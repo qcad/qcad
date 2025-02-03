@@ -29,6 +29,7 @@
 
 class RDocument;
 class RLine;
+class RRefPoint;
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1

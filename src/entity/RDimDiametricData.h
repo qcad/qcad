@@ -27,6 +27,7 @@
 
 class RDocument;
 class RLine;
+class RRefPoint;
 
 /**
  * Diametric dimension entity data class.

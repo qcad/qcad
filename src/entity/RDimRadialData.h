@@ -27,6 +27,7 @@
 
 class RDocument;
 class RLine;
+class RRefPoint;
 
 /**
  * Radial dimension entity data class.

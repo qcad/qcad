@@ -27,6 +27,7 @@
 
 class RDocument;
 class RLine;
+class RRefPoint;
 
 /**
  * Tolerance entity data class.

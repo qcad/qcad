@@ -29,6 +29,7 @@
 class RDocument;
 class RLine;
 class RTriangle;
+class RRefPoint;
 
 /**
  * Leader entity data class.

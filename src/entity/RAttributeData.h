@@ -28,6 +28,7 @@ class RAttributeDefinitionData;
 class REntity;
 class RLine;
 class RDocument;
+class RRefPoint;
 
 /**
  * Stores and manages all data that defines the geometry and

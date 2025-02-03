@@ -28,6 +28,7 @@
 #include "RVector.h"
 
 class RDocument;
+class RRefPoint;
 
 /**
  * Stores and manages all data that defines the geometry and

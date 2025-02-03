@@ -27,6 +27,7 @@
 
 class RDocument;
 class RLine;
+class RRefPoint;
 
 /**
  * Angular dimension entity data class.

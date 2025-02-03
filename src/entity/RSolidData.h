@@ -30,6 +30,7 @@
 class RDocument;
 class RLine;
 class RTriangle;
+class RRefPoint;
 
 /**
  * Stores and manages all data that defines the geometry and
