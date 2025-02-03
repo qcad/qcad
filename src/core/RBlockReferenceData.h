@@ -28,6 +28,7 @@
 
 class RDocument;
 class RExporter;
+class RLine;
 class RTransform;
 
 /**

@@ -20,6 +20,7 @@
 
 #include <QBuffer>
 #include <QCache>
+#include <QDebug>
 #include <QFile>
 #include <QFileInfo>
 

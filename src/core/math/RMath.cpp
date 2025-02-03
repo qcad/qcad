@@ -16,7 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QDebug>
 #include <QCryptographicHash>
+#include <QLocale>
 #include <QFile>
 #include <QFileInfo>
 

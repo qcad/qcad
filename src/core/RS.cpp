@@ -26,10 +26,10 @@
 #include <QApplication>
 #include <QTextCodec>
 #include <QDesktopWidget>
-#include <QStringDecoder>
 #else
 #include <QGuiApplication>
 #include <QScreen>
+#include <QStringDecoder>
 #endif
 
 #if QT_VERSION >= 0x050300

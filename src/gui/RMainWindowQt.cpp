@@ -21,6 +21,7 @@
 #include <QMenu>
 #include <QMdiArea>
 #include <QSettings>
+#include <QScreen>
 #include <QStatusBar>
 #include <QTabBar>
 #include <QToolBar>

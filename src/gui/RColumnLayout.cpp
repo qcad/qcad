@@ -19,6 +19,7 @@
 #include "RColumnLayout.h"
 #include "RSettings.h"
 
+#include <QDebug>
 #include <QAction>
 #include <QToolButton>
 #include <QLayoutItem>

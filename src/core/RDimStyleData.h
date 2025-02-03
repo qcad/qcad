@@ -25,6 +25,7 @@
 #include "RS.h"
 #include "RColor.h"
 
+#include <QDebug>
 #include <QVariant>
 
 /**

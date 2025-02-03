@@ -2702,6 +2702,7 @@
     <file alias="scripts/library.js">../../scripts/library.js</file>
     <file alias="scripts/map.js">../../scripts/map.js</file>
     <file alias="scripts/mimetype.png">../../scripts/mimetype.png</file>
+    <file alias="scripts/org.qcad.QCAD.png">../../scripts/org.qcad.QCAD.png</file>
     <file alias="scripts/qcad_icon.png">../../scripts/qcad_icon.png</file>
     <file alias="scripts/qcad_icon.svg">../../scripts/qcad_icon.svg</file>
     <file alias="scripts/simple.js">../../scripts/simple.js</file>

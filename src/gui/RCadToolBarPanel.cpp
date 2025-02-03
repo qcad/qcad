@@ -1,3 +1,4 @@
+#include <QDebug>
 #include <QFileInfo>
 #include <QSizePolicy>
 #include <QToolButton>

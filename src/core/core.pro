@@ -73,6 +73,7 @@ SOURCES += \
     RShapesExporter.cpp \
     RSingleApplication.cpp \
     RSingleton.cpp \
+    RSnap.cpp \
     RSpatialIndex.cpp \
     RSpatialIndexSimple.cpp \
     RStorage.cpp \

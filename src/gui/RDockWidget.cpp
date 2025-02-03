@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include <QActionEvent>
+#include <QApplication>
 #include <QWidgetAction>
 
 #include "RDockWidget.h"

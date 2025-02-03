@@ -8,6 +8,8 @@ SOURCES = \
     RAttributeDefinitionEntity.cpp \
     RCircleData.cpp \
     RCircleEntity.cpp \
+    RCustomEntity.cpp \
+    RCustomEntityRegistry.cpp \
     RDimAlignedData.cpp \
     RDimAlignedEntity.cpp \
     RDimAngular2LData.cpp \
@@ -73,6 +75,9 @@ HEADERS = \
     RAttributeDefinitionEntity.h \
     RCircleData.h \
     RCircleEntity.h \
+    RCustomEntity.h \
+    RCustomEntityHandler.h \
+    RCustomEntityRegistry.h \
     RDimAlignedData.h \
     RDimAlignedEntity.h \
     RDimAngular2LData.h \

@@ -22,6 +22,8 @@
 
 #include "core_global.h"
 
+#include <QDebug>
+
 #include "RPropertyAttributes.h"
 #include "RPropertyTypeId.h"
 

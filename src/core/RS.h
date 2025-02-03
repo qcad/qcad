@@ -60,6 +60,7 @@
 #  endif
 #endif
 
+class QTextStream;
 class RPropertyAttributes;
 
 /**

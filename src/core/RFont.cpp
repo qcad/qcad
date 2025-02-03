@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QDebug>
 #include <QFileInfo>
 #include <QStringList>
 #if QT_VERSION < 0x060000
