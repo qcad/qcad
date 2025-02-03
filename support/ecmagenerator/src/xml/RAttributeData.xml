@@ -3,6 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RAttributeDefinitionData" />
   <class_decl name="REntity" />
+  <class_decl name="RLine" />
   <class_decl name="RDocument" />
   <class name="RAttributeData"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"

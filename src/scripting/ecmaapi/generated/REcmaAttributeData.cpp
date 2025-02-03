@@ -11,6 +11,8 @@
             
                 #include "REntity.h"
             
+                #include "RLine.h"
+            
                 #include "RDocument.h"
             
             

@@ -9,6 +9,8 @@
         
                 #include "RDocument.h"
             
+                #include "RLine.h"
+            
                 #include "RVector.h"
             
             

@@ -65,5 +65,7 @@
             <param><decl><type><name>bool</name></type> <name>noAttributes</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 </public>}</block>;</class>
 
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RCustomEntityHandler*</argument>)</argument_list></macro>
+
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

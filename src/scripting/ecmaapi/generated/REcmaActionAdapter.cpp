@@ -10,7 +10,8 @@
                 #include "RPropertyEvent.h"
             
                 #include "RGraphicsScene.h"
-#include "RGraphicsView.h"
+            
+                #include "RGraphicsView.h"
             
                 #include "RDocumentInterface.h"
             

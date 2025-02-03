@@ -3,6 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class_decl name="RExporter" />
+  <class_decl name="RRefPoint" />
   <class name="RDimAlignedEntity"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="true" isQObject="false"

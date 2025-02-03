@@ -26,6 +26,7 @@
 
 <class_decl>class <name>RPropertyEvent</name>;</class_decl>
 <class_decl>class <name>RGraphicsScene</name>;</class_decl>
+<class_decl>class <name>RGraphicsView</name>;</class_decl>
 <class_decl>class <name>RDocumentInterface</name>;</class_decl>
 <class_decl>class <name>RCommandEvent</name>;</class_decl>
 <class_decl>class <name>RCoordinateEvent</name>;</class_decl>

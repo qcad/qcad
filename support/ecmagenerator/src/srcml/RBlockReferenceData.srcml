@@ -29,8 +29,10 @@
 
 <class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>RExporter</name>;</class_decl>
+<class_decl>class <name>REntity</name>;</class_decl>
 <class_decl>class <name>RLine</name>;</class_decl>
 <class_decl>class <name>RTransform</name>;</class_decl>
+<class_decl>class <name>RRefPoint</name>;</class_decl>
 
 <comment type="block">/**
  * Defines the geometry and appearance of a block reference entity.

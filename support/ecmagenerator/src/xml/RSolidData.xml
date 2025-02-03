@@ -2,6 +2,7 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
+  <class_decl name="RLine" />
   <class_decl name="RTriangle" />
   <class name="RSolidData"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"

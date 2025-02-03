@@ -48,7 +48,7 @@
     <decl_stmt><decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>RCustomEntityHandler</name>*</argument>&gt;</argument_list></name></type> <name>handlers</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
-<comment type="line">//Q_DECLARE_METATYPE(RCustomEntityHandler*)</comment>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RCustomEntityRegistry*</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 

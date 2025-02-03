@@ -3,6 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RPropertyEvent" />
   <class_decl name="RGraphicsScene" />
+  <class_decl name="RGraphicsView" />
   <class_decl name="RDocumentInterface" />
   <class_decl name="RCommandEvent" />
   <class_decl name="RCoordinateEvent" />

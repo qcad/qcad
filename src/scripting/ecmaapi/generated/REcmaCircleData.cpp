@@ -9,6 +9,8 @@
         
                 #include "RDocument.h"
             
+                #include "REntity.h"
+            
                 #include "RLine.h"
             
                 #include "RPolyline.h"

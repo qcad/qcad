@@ -13,7 +13,6 @@
 
         
                 #include "RCircleData.h"
-#include "REntity.h"
             
 
         /**

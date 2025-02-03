@@ -8,7 +8,8 @@
         // forwards declarations mapped to includes
         
                 #include "RDocument.h"
-#include "RRefPoint.h"
+            
+                #include "RRefPoint.h"
             
             
         // includes for base ecma wrapper classes
