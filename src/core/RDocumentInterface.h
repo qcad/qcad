@@ -136,6 +136,7 @@ public:
     RGraphicsScene* getGraphicsSceneWithFocus();
 
     void addCoordinateListener(RCoordinateListener* l);
+    void removeCoordinateListener(RCoordinateListener* l);
     void notifyCoordinateListeners();
 
     void addLayerListener(RLayerListener* l);

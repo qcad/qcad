@@ -223,6 +223,10 @@ void RDocumentInterface::addCoordinateListener(RCoordinateListener* l) {
     coordinateListeners.push_back(l);
 }
 
+void RDocumentInterface::removeCoordinateListener(RCoordinateListener* l) {
+    coordinateListeners.removeAll(l);
+}
+
 /**
  * Notifies all coordinate listeners that the coordinate has changed to \c position.
  */
