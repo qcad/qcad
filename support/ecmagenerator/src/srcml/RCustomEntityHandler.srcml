@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./entity" filename="RCustomEntityHandler.h"><comment type="block">/**
+ * Copyright (c) 2011-2025 by Andrew Mustun. All rights reserved.
+ *
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RCUSTOMENTITYHANDLER_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RCUSTOMENTITYHANDLER_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBlockReferenceEntity.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBlockReferenceData.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RExporter</name>;</class_decl>
+<class_decl>class <name>RCustomEntity</name>;</class_decl>
+
+<comment type="block">/**
+ * Interface for custom entity handlers that implement rendering of custom entities.
+ *
+ * \scriptable
+ * \ingroup core
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RCustomEntityHandler</name> <block>{<private type="default">
+
+</private><public>public:
+    <destructor><specifier>virtual</specifier> <name>~RCustomEntityHandler</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+
+    <comment type="block">/**
+     * \return The type of the custom entity handled by this handler.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getEntityType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Renders the entity into the block of the given block reference.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>render</name><parameter_list>(<param><decl><type><name>const</name> <name>RBlockReferenceEntity</name>*</type> <name>entity</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Sets the given property for the custom entity.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setProperty</name><parameter_list>(<param><decl><type><name>RCustomEntity</name>&amp;</type> <name>entity</name></decl></param>, <param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>,
+        <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return The value of the given property for the custom entity.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QPair<argument_list>&lt;<argument><name>QVariant</name></argument>, <argument><name>RPropertyAttributes</name></argument>&gt;</argument_list></name></type> <name>getProperty</name><parameter_list>(<param><decl><type><name>RCustomEntity</name>&amp;</type> <name>entity</name></decl></param>,
+            <param><decl><type><name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>, <param><decl><type><name>bool</name></type> <name>humanReadable</name> =<init> <expr><name>false</name></expr></init></decl></param>,
+            <param><decl><type><name>bool</name></type> <name>noAttributes</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+</public>}</block>;</class>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

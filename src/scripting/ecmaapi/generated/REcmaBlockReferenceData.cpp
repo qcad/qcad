@@ -11,6 +11,8 @@
             
                 #include "RExporter.h"
             
+                #include "RLine.h"
+            
                 #include "RTransform.h"
             
             

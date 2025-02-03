@@ -23,6 +23,8 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
+
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyAttributes.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
 

@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include <QTextStream>
+            
                 #include "RPropertyAttributes.h"
             
             

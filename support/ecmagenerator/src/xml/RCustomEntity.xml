@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class_decl name="RExporter" />
+  <class name="RCustomEntity"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="true" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RBlockReferenceEntity" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="customEntityType" isConst="false" />
+        <arg type="RBlockReferenceData &amp;"
+        typeName="RBlockReferenceData" name="data"
+        isConst="true" />
+      </variant>
+      <variant>
+        <arg type="RCustomEntity &amp;" typeName="RCustomEntity"
+        name="other" isConst="true" />
+      </variant>
+    </constructor>
+    <method name="init" cppName="init" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="isOfType" cppName="isOfType" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="t" isConst="false" />
+      </variant>
+    </method>
+    <method name="getType" cppName="getType" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RS::EntityType" isPureVirtual="false" />
+    </method>
+    <method name="getRtti" cppName="getRtti" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RS::EntityType" isPureVirtual="false" />
+    </method>
+    <method name="getStaticPropertyTypeIds"
+    cppName="getStaticPropertyTypeIds" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSet &lt; RPropertyTypeId &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="clone" cppName="clone" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RObject &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="cloneToCustomEntity"
+    cppName="cloneToCustomEntity" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RCustomEntity &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="update" cppName="update" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="setProperty" cppName="setProperty"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="QVariant &amp;" typeName="QVariant" name="value"
+        isConst="true" />
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="transaction" hasDefault="true" default="NULL"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getProperty" cppName="getProperty"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QPair &lt; QVariant , RPropertyAttributes &gt;"
+      isPureVirtual="false">
+        <arg type="RPropertyTypeId &amp;"
+        typeName="RPropertyTypeId" name="propertyTypeId"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="humanReadable"
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="noAttributes"
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="showOnRequest"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
+    <method name="exportEntity" cppName="exportEntity"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RExporter &amp;" typeName="RExporter" name="e"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="preview"
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="forceSelected"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
+    <property name="PropertyCustom" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyHandle" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyProtected" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyWorkingSet" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyType" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyBlock" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyLayer" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyLinetype" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyLinetypeScale" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyLineweight" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyColor" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDisplayedColor" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDrawOrder" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyReferencedBlock" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyPositionX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyPositionY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyPositionZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyScaleX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyScaleY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyScaleZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyRotation" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+  </class>
+</unit>

@@ -61,6 +61,7 @@
 <cpp:endif>#  <cpp:directive>endif</cpp:directive></cpp:endif>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
+<class_decl>class <name>QTextStream</name>;</class_decl>
 <class_decl>class <name>RPropertyAttributes</name>;</class_decl>
 
 <comment type="block">/**
