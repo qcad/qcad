@@ -9,7 +9,15 @@
         
                 #include "RArc.h"
             
+                #include "RBox.h"
+            
                 #include "RDocumentInterface.h"
+            
+                #include "REntity.h"
+            
+                #include "RGraphicView.h"
+            
+                #include "RGraphicsSceneQt.h"
             
                 #include "RGraphicsViewImage.h"
             
@@ -17,19 +25,27 @@
             
                 #include "RLine.h"
             
+                #include "RLinetypePattern.h"
+            
+                #include "RObject.h"
+            
                 #include "RPoint.h"
             
                 #include "RPolyline.h"
             
+                #include "RRay.h"
+            
                 #include "RSpline.h"
             
-                #include "RRay.h"
+                #include "RTextBasedData.h"
+            
+                #include "RTransform.h"
             
                 #include "RTriangle.h"
             
-                #include "RXLine.h"
+                #include "RVector.h"
             
-                #include "RTransform.h"
+                #include "RXLine.h"
             
             
         // includes for base ecma wrapper classes

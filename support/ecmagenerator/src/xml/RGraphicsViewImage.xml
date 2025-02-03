@@ -2,6 +2,7 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RAction" />
+  <class_decl name="RColor" />
   <class_decl name="RBox" />
   <class_decl name="RDocument" />
   <class_decl name="RDocumentInterface" />
@@ -15,15 +16,19 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RLine" />
   <class_decl name="RMouseEvent" />
   <class_decl name="RObject" />
+  <class_decl name="RPainterPath" />
   <class_decl name="RRefPoint" />
+  <class_decl name="RShape" />
   <class_decl name="RSnap" />
   <class_decl name="RSnapRestriction" />
+  <class_decl name="RTabletEvent" />
   <class_decl name="RTerminateEvent" />
   <class_decl name="RTextBasedData" />
   <class_decl name="RTextLabel" />
   <class_decl name="RTextLayout" />
   <class_decl name="RTransform" />
   <class_decl name="RVector" />
+  <class_decl name="RWheelEvent" />
   <class name="RGraphicsViewImage"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="true"

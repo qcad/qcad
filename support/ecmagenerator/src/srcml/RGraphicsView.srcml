@@ -45,6 +45,7 @@
 <class_decl>class <name>RTabletEvent</name>;</class_decl>
 <class_decl>class <name>RTerminateEvent</name>;</class_decl>
 <class_decl>class <name>RWheelEvent</name>;</class_decl>
+
 <class_decl>class <name>QKeyEvent</name>;</class_decl>
 <class_decl>class <name>QSwipeGesture</name>;</class_decl>
 <class_decl>class <name>QPanGesture</name>;</class_decl>

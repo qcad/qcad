@@ -7,30 +7,61 @@
 
         // forwards declarations mapped to includes
         
-                #include "RGraphicsSceneQt.h"
+                #include "RAction.h"
             
-                #include "RImageData.h"
+                #include "RColor.h"
             
-                #include "RLine.h"
-            
-                #include "RSnap.h"
-            
-                #include "RSnapRestriction.h"
-            
-                #include "RTextBasedData.h"
-            
-                #include "RTextLayout.h"
-            
-                #include "RGraphicsViewWorker.h"
+                #include "RBox.h"
             
                 #include "RDocument.h"
             
                 #include "RDocumentInterface.h"
             
-                #include "RTerminateEvent.h"
+                #include "RGraphicsScene.h"
+            
+                #include "RGraphicsSceneQt.h"
+            
+                #include "RGraphicsViewImage.h"
+            
+                #include "RGraphicsViewQt.h"
+            
+                #include "RGraphicsViewWorker.h"
+            
+                #include "RGrid.h"
+            
+                #include "RImageData.h"
+            
+                #include "RLine.h"
             
                 #include "RMouseEvent.h"
-#include "RWheelEvent.h"
+            
+                #include "RObject.h"
+            
+                #include "RPainterPath.h"
+            
+                #include "RRefPoint.h"
+            
+                #include "RShape.h"
+            
+                #include "RSnap.h"
+            
+                #include "RSnapRestriction.h"
+            
+                #include "RTabletEvent.h"
+            
+                #include "RTerminateEvent.h"
+            
+                #include "RTextBasedData.h"
+            
+                #include "RTextLabel.h"
+            
+                #include "RTextLayout.h"
+            
+                #include "RTransform.h"
+            
+                #include "RVector.h"
+            
+                #include "RWheelEvent.h"
             
             
         // includes for base ecma wrapper classes
