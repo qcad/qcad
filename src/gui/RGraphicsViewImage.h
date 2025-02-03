@@ -29,18 +29,29 @@
 #include "RGraphicsView.h"
 #include "RPainterPath.h"
 
-class RGraphicsSceneQt;
-class RImageData;
-class RLine;
-class RSnap;
-class RSnapRestriction;
-class RTextBasedData;
-class RTextLayout;
-class RGraphicsViewWorker;
+class RAction;
+class RBox;
 class RDocument;
 class RDocumentInterface;
-class RTerminateEvent;
+class RGraphicsScene;
+class RGraphicsSceneQt;
+class RGraphicsViewImage;
+class RGraphicsViewQt;
+class RGraphicsViewWorker;
+class RGrid;
+class RImageData;
+class RLine;
 class RMouseEvent;
+class RObject;
+class RRefPoint;
+class RSnap;
+class RSnapRestriction;
+class RTerminateEvent;
+class RTextBasedData;
+class RTextLabel;
+class RTextLayout;
+class RTransform;
+class RVector;
 
 /**
  * \brief QImage based 2d graphics view.

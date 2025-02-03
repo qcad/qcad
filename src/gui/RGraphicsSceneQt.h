@@ -30,17 +30,25 @@
 #include "RPainterPath.h"
 
 class RArc;
+class RBox;
 class RDocumentInterface;
+class REntity;
+class RGraphicView;
+class RGraphicsSceneQt;
 class RGraphicsViewImage;
 class RImageData;
 class RLine;
+class RLinetypePattern;
+class RObject;
 class RPoint;
 class RPolyline;
-class RSpline;
 class RRay;
-class RTriangle;
-class RXLine;
+class RSpline;
+class RTextBasedData;
 class RTransform;
+class RTriangle;
+class RVector;
+class RXLine;
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1
