@@ -2,17 +2,25 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RArc" />
+  <class_decl name="RBox" />
   <class_decl name="RDocumentInterface" />
+  <class_decl name="REntity" />
+  <class_decl name="RGraphicView" />
+  <class_decl name="RGraphicsSceneQt" />
   <class_decl name="RGraphicsViewImage" />
   <class_decl name="RImageData" />
   <class_decl name="RLine" />
+  <class_decl name="RLinetypePattern" />
+  <class_decl name="RObject" />
   <class_decl name="RPoint" />
   <class_decl name="RPolyline" />
-  <class_decl name="RSpline" />
   <class_decl name="RRay" />
-  <class_decl name="RTriangle" />
-  <class_decl name="RXLine" />
+  <class_decl name="RSpline" />
+  <class_decl name="RTextBasedData" />
   <class_decl name="RTransform" />
+  <class_decl name="RTriangle" />
+  <class_decl name="RVector" />
+  <class_decl name="RXLine" />
   <class name="RGraphicsSceneQt"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"

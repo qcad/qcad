@@ -30,18 +30,29 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGraphicsView.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
 
-<class_decl>class <name>RGraphicsSceneQt</name>;</class_decl>
-<class_decl>class <name>RImageData</name>;</class_decl>
-<class_decl>class <name>RLine</name>;</class_decl>
-<class_decl>class <name>RSnap</name>;</class_decl>
-<class_decl>class <name>RSnapRestriction</name>;</class_decl>
-<class_decl>class <name>RTextBasedData</name>;</class_decl>
-<class_decl>class <name>RTextLayout</name>;</class_decl>
-<class_decl>class <name>RGraphicsViewWorker</name>;</class_decl>
+<class_decl>class <name>RAction</name>;</class_decl>
+<class_decl>class <name>RBox</name>;</class_decl>
 <class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>RDocumentInterface</name>;</class_decl>
-<class_decl>class <name>RTerminateEvent</name>;</class_decl>
+<class_decl>class <name>RGraphicsScene</name>;</class_decl>
+<class_decl>class <name>RGraphicsSceneQt</name>;</class_decl>
+<class_decl>class <name>RGraphicsViewImage</name>;</class_decl>
+<class_decl>class <name>RGraphicsViewQt</name>;</class_decl>
+<class_decl>class <name>RGraphicsViewWorker</name>;</class_decl>
+<class_decl>class <name>RGrid</name>;</class_decl>
+<class_decl>class <name>RImageData</name>;</class_decl>
+<class_decl>class <name>RLine</name>;</class_decl>
 <class_decl>class <name>RMouseEvent</name>;</class_decl>
+<class_decl>class <name>RObject</name>;</class_decl>
+<class_decl>class <name>RRefPoint</name>;</class_decl>
+<class_decl>class <name>RSnap</name>;</class_decl>
+<class_decl>class <name>RSnapRestriction</name>;</class_decl>
+<class_decl>class <name>RTerminateEvent</name>;</class_decl>
+<class_decl>class <name>RTextBasedData</name>;</class_decl>
+<class_decl>class <name>RTextLabel</name>;</class_decl>
+<class_decl>class <name>RTextLayout</name>;</class_decl>
+<class_decl>class <name>RTransform</name>;</class_decl>
+<class_decl>class <name>RVector</name>;</class_decl>
 
 <comment type="block">/**
  * \brief QImage based 2d graphics view.
