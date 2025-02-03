@@ -26,6 +26,7 @@
 #include "RVector.h"
 
 class RDocument;
+class RLine;
 
 /**
  * Radial dimension entity data class.

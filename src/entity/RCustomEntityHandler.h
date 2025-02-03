@@ -64,4 +64,6 @@ public:
             bool noAttributes = false, bool showOnRequest = false) = 0;
 };
 
+Q_DECLARE_METATYPE(RCustomEntityHandler*)
+
 #endif

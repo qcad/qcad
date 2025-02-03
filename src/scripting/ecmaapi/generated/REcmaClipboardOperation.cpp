@@ -8,6 +8,7 @@
         // forwards declarations mapped to includes
         
                 #include "RDocument.h"
+#include "RBlock.h"
             
                 #include "REntity.h"
             

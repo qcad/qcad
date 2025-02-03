@@ -10,6 +10,7 @@
                 #include "RDocument.h"
             
                 #include "RLine.h"
+#include "RRefPoint.h"
             
             
         // includes for base ecma wrapper classes

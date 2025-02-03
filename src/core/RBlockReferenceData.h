@@ -28,8 +28,10 @@
 
 class RDocument;
 class RExporter;
+class REntity;
 class RLine;
 class RTransform;
+class RRefPoint;
 
 /**
  * Defines the geometry and appearance of a block reference entity.

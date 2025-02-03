@@ -29,6 +29,7 @@
 #include "RVector.h"
 
 class RDocument;
+class RLine;
 
 /**
  * Base class for dimension entity data classes.

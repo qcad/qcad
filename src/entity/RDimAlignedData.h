@@ -26,6 +26,7 @@
 #include "RVector.h"
 
 class RDocument;
+class RRefPoint;
 
 /**
  * Aligned dimension entity data class.

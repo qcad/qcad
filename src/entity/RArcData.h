@@ -29,6 +29,7 @@
 #include "RArc.h"
 
 class RDocument;
+class REntity;
 class RLine;
 
 /**

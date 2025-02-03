@@ -13,6 +13,7 @@
 
         
                 #include "RBlockReferenceData.h"
+#include "REntity.h"
             
 
         /**

@@ -26,6 +26,7 @@
 #include "RVector.h"
 
 class RDocument;
+class RLine;
 
 /**
  * Diametric dimension entity data class.

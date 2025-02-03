@@ -27,6 +27,7 @@
 
 class RDocument;
 class RExporter;
+class RRefPoint;
 
 /**
  * Aligned dimension entity class.

@@ -25,6 +25,7 @@
 
 class RPropertyEvent;
 class RGraphicsScene;
+class RGraphicsView;
 class RDocumentInterface;
 class RCommandEvent;
 class RCoordinateEvent;

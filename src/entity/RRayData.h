@@ -25,6 +25,8 @@
 #include "REntityData.h"
 #include "RRay.h"
 
+class RLine;
+
 /**
  * Stores and manages all data that defines the geometry and
  * appearance of a ray entity.

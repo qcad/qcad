@@ -26,6 +26,7 @@
 #include "RVector.h"
 
 class RDocument;
+class RLine;
 
 /**
  * Tolerance entity data class.

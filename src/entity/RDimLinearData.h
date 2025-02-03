@@ -26,6 +26,7 @@
 #include "RVector.h"
 
 class RDocument;
+class RLine;
 
 /**
  * Linear dimension entity data base class.

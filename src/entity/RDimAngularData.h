@@ -26,6 +26,7 @@
 
 class RArc;
 class RDocument;
+class RRefPoint;
 class RVector;
 
 /**

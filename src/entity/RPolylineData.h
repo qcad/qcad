@@ -28,6 +28,7 @@
 #include "RVector.h"
 
 class RDocument;
+class RLine;
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1

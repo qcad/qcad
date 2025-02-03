@@ -28,6 +28,7 @@
 #include "RCircle.h"
 
 class RDocument;
+class REntity;
 class RLine;
 class RPolyline;
 

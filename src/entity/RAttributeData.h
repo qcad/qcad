@@ -26,6 +26,7 @@
 
 class RAttributeDefinitionData;
 class REntity;
+class RLine;
 class RDocument;
 
 /**

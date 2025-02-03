@@ -28,6 +28,7 @@
 #include "RXLine.h"
 
 class RDocument;
+class RLine;
 
 /**
  * Stores and manages all data that defines the geometry and

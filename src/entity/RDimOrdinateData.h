@@ -23,6 +23,7 @@
 #include "entity_global.h"
 
 #include "RDimensionData.h"
+#include "RLine.h"
 #include "RVector.h"
 
 class RDocument;

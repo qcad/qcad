@@ -25,6 +25,7 @@
 #include "RDimLinearData.h"
 
 class RDocument;
+class RLine;
 class RVector;
 
 /**

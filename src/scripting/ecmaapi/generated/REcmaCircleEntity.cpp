@@ -10,6 +10,7 @@
                 #include "RDocument.h"
             
                 #include "RExporter.h"
+#include "REntity.h"
             
             
         // includes for base ecma wrapper classes

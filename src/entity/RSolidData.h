@@ -28,6 +28,7 @@
 #include "RVector.h"
 
 class RDocument;
+class RLine;
 class RTriangle;
 
 /**

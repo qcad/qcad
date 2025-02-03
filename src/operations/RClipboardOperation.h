@@ -27,6 +27,7 @@
 #include "ROperation.h"
 
 class RDocument;
+class RBlock;
 class REntity;
 class RLayer;
 class RLinetype;

@@ -47,7 +47,7 @@ private:
     static QList<RCustomEntityHandler*> handlers;
 };
 
-//Q_DECLARE_METATYPE(RCustomEntityHandler*)
+Q_DECLARE_METATYPE(RCustomEntityRegistry*)
 
 #endif
 
