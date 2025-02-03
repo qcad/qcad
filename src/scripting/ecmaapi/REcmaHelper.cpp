@@ -66,6 +66,8 @@
 #include "RUcs.h"
 #include "RTriangle.h"
 #include "RLayer.h"
+#include "RBlock.h"
+#include "RLinetype.h"
 
 #include "REcmaHelper.h"
 

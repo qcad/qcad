@@ -28,6 +28,7 @@
 
 class RDocument;
 class RRefPoint;
+class RPolyline;
 
 /**
  * Ordinate dimension entity data class.

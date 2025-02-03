@@ -27,6 +27,7 @@
 
 class RDocument;
 class RLine;
+class RPolyline;
 
 /**
  * Linear dimension entity data base class.

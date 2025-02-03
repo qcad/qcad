@@ -34,6 +34,7 @@ class RDocument;
 class REntity;
 class RLine;
 class RRefPoint;
+class RPolyline;
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1

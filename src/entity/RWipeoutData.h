@@ -24,6 +24,8 @@
 
 #include "RPolylineData.h"
 
+class RPolyline;
+
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1
 #endif

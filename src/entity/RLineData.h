@@ -29,6 +29,7 @@
 
 class RDocument;
 class RRefPoint;
+class RPolyline;
 
 /**
  * Stores and manages all data that defines the geometry and
