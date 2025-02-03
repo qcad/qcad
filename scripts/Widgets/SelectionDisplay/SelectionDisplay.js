@@ -61,7 +61,6 @@ SelectionDisplay.selectionChanged = function(documentInterface) {
 
     var typesSingular = [];
     var layers = [];
-    var pt = new RPropertyTypeId(0);
     for (var i = 0; i < count; ++i) {
         var entityId = entities[i];
         if (entityId == undefined || entityId == "") {
