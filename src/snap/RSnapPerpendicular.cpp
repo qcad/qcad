@@ -43,12 +43,11 @@ QList<RVector> RSnapPerpendicular::snapEntity(
         return ret;
     }
 
-    QSharedPointer<RCircle> circle = shape.dynamicCast<RCircle>();
-    if (!circle.isNull()) {
+    if (shape->getShapeType()==RShape::Circle || shape->getShapeType()==RShape::Arc) {
         RVector closestPoint = shape->getClosestPointOnShape(di->getLastPosition());
         // find two perpendicular points:
         RLine line(di->getLastPosition(), closestPoint);
-        QList<RVector> ips = line.getIntersectionPoints(*circle.data(), false);
+        QList<RVector> ips = line.getIntersectionPoints(*shape.data(), false);
         ret = ips;
     }
     else {
