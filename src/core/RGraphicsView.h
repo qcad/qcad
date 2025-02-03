@@ -44,6 +44,7 @@ class RShape;
 class RTabletEvent;
 class RTerminateEvent;
 class RWheelEvent;
+
 class QKeyEvent;
 class QSwipeGesture;
 class QPanGesture;

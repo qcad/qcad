@@ -30,6 +30,7 @@
 #include "RPainterPath.h"
 
 class RAction;
+class RColor;
 class RBox;
 class RDocument;
 class RDocumentInterface;
@@ -43,15 +44,19 @@ class RImageData;
 class RLine;
 class RMouseEvent;
 class RObject;
+class RPainterPath;
 class RRefPoint;
+class RShape;
 class RSnap;
 class RSnapRestriction;
+class RTabletEvent;
 class RTerminateEvent;
 class RTextBasedData;
 class RTextLabel;
 class RTextLayout;
 class RTransform;
 class RVector;
+class RWheelEvent;
 
 /**
  * \brief QImage based 2d graphics view.

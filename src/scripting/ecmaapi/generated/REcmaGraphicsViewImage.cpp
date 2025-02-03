@@ -30,6 +30,7 @@
                 #include "RTerminateEvent.h"
             
                 #include "RMouseEvent.h"
+#include "RWheelEvent.h"
             
             
         // includes for base ecma wrapper classes
