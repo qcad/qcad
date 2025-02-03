@@ -25,6 +25,7 @@
 #include "RTextBasedData.h"
 
 class RAttributeDefinitionData;
+class REntity;
 class RDocument;
 
 /**
