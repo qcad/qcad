@@ -29,6 +29,8 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RCircle.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RLine</name>;</class_decl>
+<class_decl>class <name>RPolyline</name>;</class_decl>
 
 <comment type="block">/**
  * Stores and manages all data that defines the geometry and
