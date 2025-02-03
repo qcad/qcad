@@ -7,7 +7,13 @@
 
         // forwards declarations mapped to includes
         
+                #include <QDebug>
+            
                 #include "RDocument.h"
+            
+                #include "RPropertyAttributes.h"
+            
+                #include "RTransaction.h"
             
             
         // includes for base ecma wrapper classes
@@ -794,7 +800,7 @@
                         context->argument(
                         5
                         ).isNumber()
-                ) /* type: RLinetype::Id */
+                ) /* type: RObject::Id */
             
     ){
     // prepare arguments:
@@ -855,9 +861,9 @@
                     *ap4;
                 
                     // argument isStandardType
-                    RLinetype::Id
+                    RObject::Id
                     a5 =
-                    (RLinetype::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 5 ).
                     toNumber();
@@ -952,7 +958,7 @@
                         context->argument(
                         5
                         ).isNumber()
-                ) /* type: RLinetype::Id */
+                ) /* type: RObject::Id */
             
                 && (
                 
@@ -1020,9 +1026,9 @@
                     *ap4;
                 
                     // argument isStandardType
-                    RLinetype::Id
+                    RObject::Id
                     a5 =
-                    (RLinetype::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 5 ).
                     toNumber();
@@ -1127,7 +1133,7 @@
                         context->argument(
                         5
                         ).isNumber()
-                ) /* type: RLinetype::Id */
+                ) /* type: RObject::Id */
             
                 && (
                 
@@ -1202,9 +1208,9 @@
                     *ap4;
                 
                     // argument isStandardType
-                    RLinetype::Id
+                    RObject::Id
                     a5 =
-                    (RLinetype::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 5 ).
                     toNumber();
@@ -1290,8 +1296,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLayer: Argument 0 is not of type RLayer*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RLayer: Argument 0 is not of type RLayer* or QSharedPointer<RLayer>.",
+                               context);
                     }
                     RLayer& a0 = *ap0;
                 
@@ -1610,11 +1617,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLayer::Id'
-    RLayer::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getParentLayerId();
-        // return type: RLayer::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -2656,11 +2663,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLinetype::Id'
-    RLinetype::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getLinetypeId();
-        // return type: RLinetype::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -2700,15 +2707,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLinetype::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLinetype::Id
+                    RObject::Id
                     a0 =
-                    (RLinetype::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -4238,8 +4245,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLayer: Argument 0 is not of type QDebug*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RLayer: Argument 0 is not of type QDebug* or QSharedPointer<QDebug>.",
+                               context);
                     }
                     QDebug& a0 = *ap0;
                 

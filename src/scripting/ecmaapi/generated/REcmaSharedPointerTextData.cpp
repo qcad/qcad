@@ -7,6 +7,10 @@
 
         // forwards declarations mapped to includes
         
+                #include "RDocument.h"
+            
+                #include "RVector.h"
+            
             
         // includes for base ecma wrapper classes
         

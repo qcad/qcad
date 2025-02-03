@@ -7,6 +7,10 @@
 
         // forwards declarations mapped to includes
         
+                #include "RGuiAction.h"
+            
+                #include "RMouseEvent.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -282,8 +286,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RNavigationAction: Argument 0 is not of type RMouseEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RNavigationAction: Argument 0 is not of type RMouseEvent* or QSharedPointer<RMouseEvent>.",
+                               context);
                     }
                     RMouseEvent& a0 = *ap0;
                 
@@ -347,8 +352,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RNavigationAction: Argument 0 is not of type RMouseEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RNavigationAction: Argument 0 is not of type RMouseEvent* or QSharedPointer<RMouseEvent>.",
+                               context);
                     }
                     RMouseEvent& a0 = *ap0;
                 
@@ -412,8 +418,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RNavigationAction: Argument 0 is not of type RMouseEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RNavigationAction: Argument 0 is not of type RMouseEvent* or QSharedPointer<RMouseEvent>.",
+                               context);
                     }
                     RMouseEvent& a0 = *ap0;
                 

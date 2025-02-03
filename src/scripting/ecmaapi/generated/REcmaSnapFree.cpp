@@ -248,8 +248,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSnapFree: Argument 1 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSnapFree: Argument 1 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a1 = *ap1;
                 
@@ -318,8 +319,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSnapFree: Argument 1 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSnapFree: Argument 1 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a1 = *ap1;
                 

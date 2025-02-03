@@ -67,6 +67,9 @@
         addCoordinateListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removeCoordinateListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         notifyCoordinateListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

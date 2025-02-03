@@ -11,6 +11,8 @@
             
                 #include "RGraphicsView.h"
             
+                #include "RVector.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -291,8 +293,9 @@
                         )
                     );
                     if( ap5 == NULL ){
-                           return REcmaHelper::throwError("RMouseEvent: Argument 5 is not of type RGraphicsScene*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RMouseEvent: Argument 5 is not of type RGraphicsScene* or QSharedPointer<RGraphicsScene>.",
+                               context);
                     }
                     RGraphicsScene& a5 = *ap5;
                 
@@ -307,8 +310,9 @@
                         )
                     );
                     if( ap6 == NULL ){
-                           return REcmaHelper::throwError("RMouseEvent: Argument 6 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RMouseEvent: Argument 6 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a6 = *ap6;
                 
@@ -399,8 +403,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RMouseEvent: Argument 0 is not of type QMouseEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RMouseEvent: Argument 0 is not of type QMouseEvent* or QSharedPointer<QMouseEvent>.",
+                               context);
                     }
                     QMouseEvent& a0 = *ap0;
                 
@@ -415,8 +420,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RMouseEvent: Argument 1 is not of type RGraphicsScene*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RMouseEvent: Argument 1 is not of type RGraphicsScene* or QSharedPointer<RGraphicsScene>.",
+                               context);
                     }
                     RGraphicsScene& a1 = *ap1;
                 
@@ -431,8 +437,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RMouseEvent: Argument 2 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RMouseEvent: Argument 2 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a2 = *ap2;
                 
@@ -522,8 +529,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RMouseEvent: Argument 0 is not of type QMouseEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RMouseEvent: Argument 0 is not of type QMouseEvent* or QSharedPointer<QMouseEvent>.",
+                               context);
                     }
                     QMouseEvent& a0 = *ap0;
                 
@@ -538,8 +546,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RMouseEvent: Argument 1 is not of type RGraphicsScene*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RMouseEvent: Argument 1 is not of type RGraphicsScene* or QSharedPointer<RGraphicsScene>.",
+                               context);
                     }
                     RGraphicsScene& a1 = *ap1;
                 
@@ -554,8 +563,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RMouseEvent: Argument 2 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RMouseEvent: Argument 2 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a2 = *ap2;
                 
@@ -1257,8 +1267,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RMouseEvent: Argument 0 is not of type QPoint*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RMouseEvent: Argument 0 is not of type QPoint* or QSharedPointer<QPoint>.",
+                               context);
                     }
                     QPoint& a0 = *ap0;
                 

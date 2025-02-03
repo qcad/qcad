@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include "RArc.h"
+            
                 #include "RDocument.h"
             
                 #include "RExporter.h"

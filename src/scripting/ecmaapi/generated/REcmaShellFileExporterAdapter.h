@@ -234,7 +234,7 @@
         
     
       void setLinetypeId(
-                RLinetype::Id ltId
+                RObject::Id ltId
             );
         
     
@@ -253,7 +253,7 @@
             );
         
     
-      REntity::Id getBlockRefOrEntityId(
+      RObject::Id getBlockRefOrEntityId(
                 
             );
         
@@ -349,7 +349,7 @@
             );
         
       void exportLayer(
-                RLayer::Id layerId
+                RObject::Id layerId
             );
         
     
@@ -363,7 +363,7 @@
             );
         
       void exportBlock(
-                RBlock::Id blockId
+                RObject::Id blockId
             );
         
     
@@ -372,7 +372,7 @@
             );
         
       void exportView(
-                RView::Id viewId
+                RObject::Id viewId
             );
         
     
@@ -393,7 +393,7 @@
             );
         
       void exportEntities(
-                QSet < REntity::Id > & entityIds, bool allBlocks
+                QSet < RObject::Id > & entityIds, bool allBlocks
         = true
             );
         
@@ -407,7 +407,7 @@
             );
         
       void exportEntity(
-                REntity::Id entityId, bool allBlocks
+                RObject::Id entityId, bool allBlocks
         = true, bool forceSelected
         = false
             );
@@ -441,7 +441,7 @@
         
     
       void unexportEntity(
-                REntity::Id entityId
+                RObject::Id entityId
             );
         
     

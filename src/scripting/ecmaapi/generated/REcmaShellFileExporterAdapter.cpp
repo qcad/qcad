@@ -2633,7 +2633,7 @@
         
     
       void REcmaShellFileExporterAdapter::setLinetypeId(
-                RLinetype::Id ltId
+                RObject::Id ltId
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::setLinetypeId", engine);
@@ -2682,7 +2682,7 @@
 
 
 
-    // type: RLinetype::Id, copyable: true
+    // type: RObject::Id, copyable: true
         << qScriptValueFromValue(engine, 
 
         ltId
@@ -2898,7 +2898,7 @@
             }
         
     
-      REntity::Id REcmaShellFileExporterAdapter::getBlockRefOrEntityId(
+      RObject::Id REcmaShellFileExporterAdapter::getBlockRefOrEntityId(
                 
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
@@ -2924,7 +2924,7 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        REntity::Id ret =
+                        RObject::Id ret =
                         RFileExporterAdapter::getBlockRefOrEntityId(
                             
                         );
@@ -2942,10 +2942,10 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    REntity::Id res;
+                    RObject::Id res;
                       
                           res = qscriptvalue_cast< 
-                            REntity::Id
+                            RObject::Id
                           >(
                         
                             _q_function.call(__qtscript_self)
@@ -4130,7 +4130,7 @@
             }
         
       void REcmaShellFileExporterAdapter::exportLayer(
-                RLayer::Id layerId
+                RObject::Id layerId
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportLayer", engine);
@@ -4179,7 +4179,7 @@
 
 
 
-    // type: RLayer::Id, copyable: true
+    // type: RObject::Id, copyable: true
         << qScriptValueFromValue(engine, 
 
         layerId
@@ -4330,7 +4330,7 @@
             }
         
       void REcmaShellFileExporterAdapter::exportBlock(
-                RBlock::Id blockId
+                RObject::Id blockId
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportBlock", engine);
@@ -4379,7 +4379,7 @@
 
 
 
-    // type: RBlock::Id, copyable: true
+    // type: RObject::Id, copyable: true
         << qScriptValueFromValue(engine, 
 
         blockId
@@ -4463,7 +4463,7 @@
             }
         
       void REcmaShellFileExporterAdapter::exportView(
-                RView::Id viewId
+                RObject::Id viewId
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportView", engine);
@@ -4512,7 +4512,7 @@
 
 
 
-    // type: RView::Id, copyable: true
+    // type: RObject::Id, copyable: true
         << qScriptValueFromValue(engine, 
 
         viewId
@@ -4749,7 +4749,7 @@
             }
         
       void REcmaShellFileExporterAdapter::exportEntities(
-                QSet < REntity::Id > & entityIds, bool allBlocks
+                QSet < RObject::Id > & entityIds, bool allBlocks
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportEntities", engine);
@@ -4798,7 +4798,7 @@
 
 
 
-    // type: QSet < REntity::Id > &, copyable: false
+    // type: QSet < RObject::Id > &, copyable: false
         << qScriptValueFromValue(engine, 
 
         &entityIds
@@ -4927,7 +4927,7 @@
             }
         
       void REcmaShellFileExporterAdapter::exportEntity(
-                REntity::Id entityId, bool allBlocks, bool forceSelected
+                RObject::Id entityId, bool allBlocks, bool forceSelected
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportEntity", engine);
@@ -4976,7 +4976,7 @@
 
 
 
-    // type: REntity::Id, copyable: true
+    // type: RObject::Id, copyable: true
         << qScriptValueFromValue(engine, 
 
         entityId
@@ -5364,7 +5364,7 @@
         
     
       void REcmaShellFileExporterAdapter::unexportEntity(
-                REntity::Id entityId
+                RObject::Id entityId
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::unexportEntity", engine);
@@ -5413,7 +5413,7 @@
 
 
 
-    // type: REntity::Id, copyable: true
+    // type: RObject::Id, copyable: true
         << qScriptValueFromValue(engine, 
 
         entityId

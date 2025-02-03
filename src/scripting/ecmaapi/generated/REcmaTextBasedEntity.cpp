@@ -1145,8 +1145,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTextBasedEntity: Argument 0 is not of type RExporter*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTextBasedEntity: Argument 0 is not of type RExporter* or QSharedPointer<RExporter>.",
+                               context);
                     }
                     RExporter& a0 = *ap0;
                 
@@ -1185,8 +1186,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTextBasedEntity: Argument 0 is not of type RExporter*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTextBasedEntity: Argument 0 is not of type RExporter* or QSharedPointer<RExporter>.",
+                               context);
                     }
                     RExporter& a0 = *ap0;
                 
@@ -1238,8 +1240,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTextBasedEntity: Argument 0 is not of type RExporter*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTextBasedEntity: Argument 0 is not of type RExporter* or QSharedPointer<RExporter>.",
+                               context);
                     }
                     RExporter& a0 = *ap0;
                 
@@ -3977,8 +3980,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTextBasedEntity: Argument 0 is not of type RTextBasedEntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTextBasedEntity: Argument 0 is not of type RTextBasedEntity* or QSharedPointer<RTextBasedEntity>.",
+                               context);
                     }
                     RTextBasedEntity& a0 = *ap0;
                 

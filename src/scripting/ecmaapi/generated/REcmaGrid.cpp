@@ -11,6 +11,10 @@
             
                 #include "RGraphicsView.h"
             
+                #include "RRuler.h"
+            
+                #include "RVector.h"
+            
             
         // includes for base ecma wrapper classes
          void REcmaGrid::initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -527,8 +531,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGrid: Argument 0 is not of type RRuler*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGrid: Argument 0 is not of type RRuler* or QSharedPointer<RRuler>.",
+                               context);
                     }
                     RRuler& a0 = *ap0;
                 
@@ -567,8 +572,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGrid: Argument 0 is not of type RRuler*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGrid: Argument 0 is not of type RRuler* or QSharedPointer<RRuler>.",
+                               context);
                     }
                     RRuler& a0 = *ap0;
                 

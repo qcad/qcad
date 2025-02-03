@@ -127,14 +127,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLayout::Id" typeName="RLayout::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="layoutId" isConst="false" />
       </variant>
     </method>
     <method name="getLayoutId" cppName="getLayoutId"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="RLayout::Id" isPureVirtual="false" />
+      <variant returnType="RObject::Id" isPureVirtual="false" />
     </method>
     <method name="getLayoutName" cppName="getLayoutName"
     specifier="public" isStatic="false" isVirtual="false"

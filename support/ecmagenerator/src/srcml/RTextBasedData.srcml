@@ -23,7 +23,6 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntityData.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPathSource.h"</cpp:file></cpp:include>
@@ -31,6 +30,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextLayout.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextProxy.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>QTextDocument</name>;</class_decl>
 
 <comment type="block">/**

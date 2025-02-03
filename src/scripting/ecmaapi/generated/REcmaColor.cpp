@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include <QDebug>
+            
             
         // includes for base ecma wrapper classes
          void REcmaColor::initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -1378,8 +1380,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RColor: Argument 1 is not of type QSize*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RColor: Argument 1 is not of type QSize* or QSharedPointer<QSize>.",
+                               context);
                     }
                     QSize& a1 = *ap1;
                 

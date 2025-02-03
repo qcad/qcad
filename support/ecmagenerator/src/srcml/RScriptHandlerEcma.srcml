@@ -24,14 +24,11 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"ecmaapi_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QtScript&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMainWindow&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RScriptHandler.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocumentInterface.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGuiAction.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REcmaFocusListenerAdapter.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>RDocumentInterface</name>;</class_decl>
+<class_decl>class <name>RGuiAction</name>;</class_decl>
 <class_decl>class <name>QScriptEngineDebugger</name>;</class_decl>
 
 

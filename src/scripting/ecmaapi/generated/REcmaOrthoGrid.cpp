@@ -179,8 +179,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("ROrthoGrid: Argument 0 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("ROrthoGrid: Argument 0 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a0 = *ap0;
                 
@@ -831,8 +832,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("ROrthoGrid: Argument 0 is not of type RRuler*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("ROrthoGrid: Argument 0 is not of type RRuler* or QSharedPointer<RRuler>.",
+                               context);
                     }
                     RRuler& a0 = *ap0;
                 
@@ -871,8 +873,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("ROrthoGrid: Argument 0 is not of type RRuler*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("ROrthoGrid: Argument 0 is not of type RRuler* or QSharedPointer<RRuler>.",
+                               context);
                     }
                     RRuler& a0 = *ap0;
                 
@@ -1316,8 +1319,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("ROrthoGrid: Argument 0 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("ROrthoGrid: Argument 0 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a0 = *ap0;
                 

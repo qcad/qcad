@@ -23,22 +23,25 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QCursor&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QtGlobal&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDebug.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RExporter.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGraphicsView.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGraphicsSceneDrawable.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMouseEvent.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSpatialIndex.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTabletEvent.h"</cpp:file></cpp:include>
-<comment type="line">//#include "RTextLabel.h"</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RWheelEvent.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RRefPoint.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RDocumentInterface</name>;</class_decl>
-
+<class_decl>class <name>REntity</name>;</class_decl>
+<class_decl>class <name>RGraphicsSceneDrawable</name>;</class_decl>
+<class_decl>class <name>RGraphicsView</name>;</class_decl>
+<class_decl>class <name>RMouseEvent</name>;</class_decl>
+<class_decl>class <name>RTabletEvent</name>;</class_decl>
+<class_decl>class <name>RTerminateEvent</name>;</class_decl>
+<class_decl>class <name>RWheelEvent</name>;</class_decl>
+<class_decl>class <name>QCursor</name>;</class_decl>
+<class_decl>class <name>QDebug</name>;</class_decl>
+<class_decl>class <name>QKeyEvent</name>;</class_decl>
+<class_decl>class <name>QPanGesture</name>;</class_decl>
+<class_decl>class <name>QPinchGesture</name>;</class_decl>
+<class_decl>class <name>QSwipeGesture</name>;</class_decl>
 
 
 <comment type="block">/**
@@ -76,8 +79,8 @@
     <function><type><name>virtual</name> <name>bool</name></type> <name>exportDocumentSettings</name><parameter_list>()</parameter_list> <block>{ <return>return <expr><name>true</name></expr>;</return> }</block></function>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>regenerate</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undone</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>invisible</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>regenerate</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>affectedEntities</name></decl></param>, <param><decl><type><name>bool</name></type> <name>updateViews</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateSelectionStatus</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>affectedEntities</name></decl></param>, <param><decl><type><name>bool</name></type> <name>updateViews</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>regenerate</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>affectedEntities</name></decl></param>, <param><decl><type><name>bool</name></type> <name>updateViews</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateSelectionStatus</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>affectedEntities</name></decl></param>, <param><decl><type><name>bool</name></type> <name>updateViews</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>regenerateViews</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>force</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>regenerateViews</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>affectedEntities</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>repaintViews</name><parameter_list>()</parameter_list>;</function_decl>
@@ -105,15 +108,15 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>clearPreview</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isPreviewEmpty</name><parameter_list>()</parameter_list>;</function_decl>
 
-    <function><type><name>virtual</name> <name>void</name></type> <name>addToPreview</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>QList<argument_list>&lt;<argument><name>RGraphicsSceneDrawable</name></argument>&gt;</argument_list></name>&amp;</type> <name>drawables</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>virtual</name> <name>void</name></type> <name>addToPreview</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>QList<argument_list>&lt;<argument><name>RGraphicsSceneDrawable</name></argument>&gt;</argument_list></name>&amp;</type> <name>drawables</name></decl></param>)</parameter_list> <block>{
         <macro><name>Q_UNUSED</name><argument_list>(<argument>entityId</argument>)</argument_list></macro>
         <macro><name>Q_UNUSED</name><argument_list>(<argument>drawables</argument>)</argument_list></macro>
     }</block></function>
-    <function><type><name>virtual</name> <name>void</name></type> <name>addToPreview</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>RGraphicsSceneDrawable</name>&amp;</type> <name>drawable</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>virtual</name> <name>void</name></type> <name>addToPreview</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>RGraphicsSceneDrawable</name>&amp;</type> <name>drawable</name></decl></param>)</parameter_list> <block>{
         <macro><name>Q_UNUSED</name><argument_list>(<argument>entityId</argument>)</argument_list></macro>
         <macro><name>Q_UNUSED</name><argument_list>(<argument>drawable</argument>)</argument_list></macro>
     }</block></function>
-    <function><type><name>virtual</name> <name>void</name></type> <name>addPathToPreview</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>RPainterPath</name>&amp;</type> <name>pp</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>virtual</name> <name>void</name></type> <name>addPathToPreview</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>RPainterPath</name>&amp;</type> <name>pp</name></decl></param>)</parameter_list> <block>{
         <macro><name>Q_UNUSED</name><argument_list>(<argument>entityId</argument>)</argument_list></macro>
         <macro><name>Q_UNUSED</name><argument_list>(<argument>pp</argument>)</argument_list></macro>
     }</block></function>
@@ -141,14 +144,14 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>selectReferencePoints</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>, <param><decl><type><name>bool</name></type> <name>add</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportCurrentEntity</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>unexportEntity</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>unexportEntity</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>int</name></type> <name>countReferencePoints</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <comment type="block">/**
      * \nonscriptable
      */</comment>
-    <function><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RRefPoint</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>getReferencePoints</name><parameter_list>()</parameter_list> <block>{
+    <function><type><name>QMap<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RRefPoint</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>getReferencePoints</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>referencePoints</name></expr>;</return>
     }</block></function>
 
@@ -183,7 +186,7 @@
      * Internal map of reference points for every selected entity in the scene.
      * Used for drawing reference points.
      */</comment>
-    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RRefPoint</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>referencePoints</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RRefPoint</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>referencePoints</name></decl>;</decl_stmt>
 
 </protected><private>private:
     <decl_stmt><decl><type><name>bool</name></type> <name>deleting</name></decl>;</decl_stmt>

@@ -14,7 +14,11 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RGuiAction" />
   <class_decl name="RStorage" />
   <class_decl name="RTabletEvent" />
-  <class_decl name="ROperation" />
+  <class_decl name="RVector" />
+  <class_decl name="QKeyEvent" />
+  <class_decl name="QSwipeGesture" />
+  <class_decl name="QPanGesture" />
+  <class_decl name="QPinchGesture" />
   <class name="RAction"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"

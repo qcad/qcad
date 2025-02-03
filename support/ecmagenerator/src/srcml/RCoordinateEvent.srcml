@@ -23,11 +23,13 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QEvent&gt;</cpp:file></cpp:include>
+
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RInputEvent.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RGraphicsView</name>;</class_decl>
 <class_decl>class <name>RGraphicsScene</name>;</class_decl>
+<class_decl>class <name>RVector</name>;</class_decl>
 
 <comment type="block">/**
  * Coordinate Event.

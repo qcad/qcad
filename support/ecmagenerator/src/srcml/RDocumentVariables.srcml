@@ -23,9 +23,9 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLayer.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RObject.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>RColor</name>;</class_decl>
 <class_decl>class <name>RDocument</name>;</class_decl>
 
 <comment type="block">/**
@@ -87,11 +87,11 @@
     <function_decl><type><name>QVariant</name></type> <name>getKnownVariable</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>hasKnownVariable</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>getCurrentLayerId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getCurrentLayerId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>currentLayerId</name></expr>;</return>
     }</block></function>
 
-    <function><type><name>void</name></type> <name>setCurrentLayerId</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>id</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>void</name></type> <name>setCurrentLayerId</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>id</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>currentLayerId</name> = <name>id</name></expr>;</expr_stmt>
     }</block></function>
 
@@ -154,9 +154,9 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>print</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
 </public><private>private:
-    <decl_stmt><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>currentLayerId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>currentLayerId</name></decl>;</decl_stmt>
     <comment type="line">// TODO:</comment>
-    <comment type="line">//RLayer::Id currentBlockId;</comment>
+    <comment type="line">//RObject::Id currentBlockId;</comment>
     <comment type="line">//...</comment>
     <decl_stmt><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RS</name>::<name>Measurement</name></name></type> <name>measurement</name></decl>;</decl_stmt>

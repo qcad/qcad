@@ -3,8 +3,6 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class_decl name="RExporter" />
-  <class_decl name="RArc" />
-  <class_decl name="RLine" />
   <class name="RWipeoutEntity"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="true" isQObject="false"

@@ -23,7 +23,7 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMath.h"</cpp:file></cpp:include>
+<class_decl>class <name>RVector</name>;</class_decl>
 
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RMATRIX_TOLERANCE</name> 1.0e-8</cpp:define>
 

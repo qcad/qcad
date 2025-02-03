@@ -23,11 +23,12 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"entity_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDimLinearData.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntityData.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTriangle.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RTriangle</name>;</class_decl>
 
 <comment type="block">/**
  * Leader entity data class.
@@ -117,64 +118,12 @@
         <return>return <expr><call><name><name>REntityData</name>::<name>flipVertical</name></name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>double</name></type> <name>getDimasz</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>scale</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <decl_stmt><decl><type><name>double</name></type> <name>v</name> =<init> <expr>2.5</expr></init></decl>;</decl_stmt>
+    <function_decl><type><name>double</name></type> <name>getDimasz</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>scale</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
-        <comment type="line">// get value from override:</comment>
-        <if>if <condition>(<expr><name>dimasz</name>&gt;0.0</expr>)</condition><then> <block>{
-            <expr_stmt><expr><name>v</name> = <name>dimasz</name></expr>;</expr_stmt>
-        }</block></then>
+    <function_decl><type><name>void</name></type> <name>setDimasz</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
 
-        <else>else <if>if <condition>(<expr><name>document</name>!=<name>NULL</name></expr>)</condition><then> <block>{
-            <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RDimStyle</name></argument>&gt;</argument_list></name></type> <name>dimStyle</name> =<init> <expr><name>document</name>-&gt;<call><name>queryDimStyleDirect</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
-            <if>if <condition>(<expr>!<name>dimStyle</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
-                <comment type="line">// get value from dimension style:</comment>
-                <expr_stmt><expr><name>v</name> = <name>dimStyle</name>-&gt;<call><name>getDouble</name><argument_list>(<argument><expr><name><name>RS</name>::<name>DIMASZ</name></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-            }</block></then>
-            <else>else <block>{
-                <comment type="line">// TODO: get value from document (should never happen):</comment>
-                <constructor_decl><name>Q_ASSERT</name><parameter_list>(<param><decl><type><name>false</name></type></decl></param>)</parameter_list>;</constructor_decl>
-            }</block></else></if>
-        }</block></then></if></else></if>
-
-        <if>if <condition>(<expr><name>scale</name></expr>)</condition><then> <block>{
-            <expr_stmt><expr><name>v</name> *= <call><name>getDimscale</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
-        }</block></then></if>
-
-        <return>return <expr><name>v</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>void</name></type> <name>setDimasz</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>dimasz</name> = <name>v</name></expr>;</expr_stmt>
-        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
-    }</block></function>
-
-    <function><type><name>double</name></type> <name>getDimscale</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <comment type="line">// get value from override:</comment>
-        <if>if <condition>(<expr><name>dimscale</name>&gt;0.0</expr>)</condition><then> <block>{
-            <return>return <expr><name>dimscale</name></expr>;</return>
-        }</block></then></if>
-
-        <decl_stmt><decl><type><name>double</name></type> <name>v</name> =<init> <expr>1.0</expr></init></decl>;</decl_stmt>
-        <if>if <condition>(<expr><name>document</name>!=<name>NULL</name></expr>)</condition><then> <block>{
-            <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RDimStyle</name></argument>&gt;</argument_list></name></type> <name>dimStyle</name> =<init> <expr><name>document</name>-&gt;<call><name>queryDimStyleDirect</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
-            <if>if <condition>(<expr>!<name>dimStyle</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
-                <comment type="line">// get value from dimension style:</comment>
-                <expr_stmt><expr><name>v</name> = <name>dimStyle</name>-&gt;<call><name>getDouble</name><argument_list>(<argument><expr><name><name>RS</name>::<name>DIMSCALE</name></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-            }</block></then>
-            <else>else <block>{
-                <comment type="line">// TODO: get value from document (should never happen):</comment>
-                <constructor_decl><name>Q_ASSERT</name><parameter_list>(<param><decl><type><name>false</name></type></decl></param>)</parameter_list>;</constructor_decl>
-            }</block></else></if>
-        }</block></then></if>
-
-        <return>return <expr><name>v</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>void</name></type> <name>setDimscale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>f</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>dimscale</name> = <name>f</name></expr>;</expr_stmt>
-        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
-    }</block></function>
+    <function_decl><type><name>double</name></type> <name>getDimscale</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimscale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>f</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>scaleVisualProperties</name><parameter_list>(<param><decl><type><name>double</name></type> <name>scaleFactor</name></decl></param>)</parameter_list>;</function_decl>
 
@@ -232,8 +181,8 @@
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getShapes</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name> =<init> <expr><name>RDEFAULT_RBOX</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreComplex</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>segment</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>QList<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>*</type> <name>entityIds</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RTriangle</name></type> <name>getArrowShape</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function_decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>getDimLeaderBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>setDimLeaderBlockId</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>id</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getDimLeaderBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimLeaderBlockId</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>id</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>update</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
@@ -251,7 +200,7 @@
     <comment type="block">/** Dimension scale */</comment>
     <decl_stmt><decl><type><name>double</name></type> <name>dimscale</name></decl>;</decl_stmt>
     <comment type="block">/** Block to use instead of arrow */</comment>
-    <decl_stmt><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>dimLeaderBlockId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>dimLeaderBlockId</name></decl>;</decl_stmt>
     <comment type="block">/** Spline shaped leader */</comment>
     <decl_stmt><decl><type><name>bool</name></type> <name>splineShaped</name></decl>;</decl_stmt>
 </private>}</block>;</class>

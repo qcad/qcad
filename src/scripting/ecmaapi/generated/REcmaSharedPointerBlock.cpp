@@ -1369,15 +1369,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayout::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayout::Id
+                    RObject::Id
                     a0 =
-                    (RLayout::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -1429,11 +1429,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLayout::Id'
-    RLayout::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getLayoutId();
-        // return type: RLayout::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             

@@ -404,8 +404,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type RBlockReferenceEntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type RBlockReferenceEntity* or QSharedPointer<RBlockReferenceEntity>.",
+                               context);
                     }
                     RBlockReferenceEntity& a0 = *ap0;
                 
@@ -761,8 +762,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type RPropertyAttributes::Option*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type RPropertyAttributes::Option* or QSharedPointer<RPropertyAttributes::Option>.",
+                               context);
                     }
                     RPropertyAttributes::Option& a0 = *ap0;
                 
@@ -1360,8 +1362,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type RExporter*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type RExporter* or QSharedPointer<RExporter>.",
+                               context);
                     }
                     RExporter& a0 = *ap0;
                 
@@ -1400,8 +1403,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type RExporter*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type RExporter* or QSharedPointer<RExporter>.",
+                               context);
                     }
                     RExporter& a0 = *ap0;
                 
@@ -1453,8 +1457,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type RExporter*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type RExporter* or QSharedPointer<RExporter>.",
+                               context);
                     }
                     RExporter& a0 = *ap0;
                 
@@ -2344,15 +2349,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -2508,11 +2513,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RBlock::Id'
-    RBlock::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getReferencedBlockId();
-        // return type: RBlock::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -2617,15 +2622,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -2672,15 +2677,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -2704,7 +2709,7 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isBool()
         ) /* type: bool */
@@ -2713,9 +2718,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -2749,7 +2754,7 @@
     if( context->argumentCount() ==
     3 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isBool()
         ) /* type: bool */
@@ -2761,9 +2766,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -2853,8 +2858,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type REntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
                     }
                     REntity& a0 = *ap0;
                 

@@ -7,18 +7,26 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class_decl name="RDocumentInterface" />
   <class_decl name="REntity" />
+  <class_decl name="REntityExportListener" />
+  <class_decl name="RExporter" />
+  <class_decl name="RExportListener" />
   <class_decl name="RFocusListener" />
   <class_decl name="RGraphicsView" />
+  <class_decl name="RImportListener" />
+  <class_decl name="RInterTransactionListener" />
   <class_decl name="RKeyListener" />
   <class_decl name="RLayerListener" />
   <class_decl name="RNewDocumentListener" />
   <class_decl name="RPaletteListener" />
   <class_decl name="RPenListener" />
+  <class_decl name="RPropertyEvent" />
   <class_decl name="RPropertyListener" />
+  <class_decl name="RPropertyTypeId" />
   <class_decl name="RPreferencesListener" />
   <class_decl name="RSelectionListener" />
   <class_decl name="RSnapListener" />
   <class_decl name="RTransaction" />
+  <class_decl name="RTransactionListener" />
   <class_decl name="RUcsListener" />
   <class_decl name="RVector" />
   <class_decl name="RViewFocusListener" />
@@ -577,8 +585,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocumentInterface *"
         typeName="RDocumentInterface *" name="documentInterface"
         isConst="false" />
-        <arg type="QList &lt; RLayer::Id &gt; &amp;"
-        typeName="QList &lt; RLayer::Id &gt;" name="layerIds"
+        <arg type="QList &lt; RObject::Id &gt; &amp;"
+        typeName="QList &lt; RObject::Id &gt;" name="layerIds"
         isConst="false" />
       </variant>
     </method>
@@ -589,7 +597,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocumentInterface *"
         typeName="RDocumentInterface *" name="documentInterface"
         isConst="false" />
-        <arg type="RLayer::Id" typeName="RLayer::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="previousLayerId" isConst="false" />
       </variant>
     </method>

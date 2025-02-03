@@ -7,9 +7,9 @@
 
         // forwards declarations mapped to includes
         
-                #include "RStorage.h"
+                #include "RBlock.h"
             
-                #include "RExporter.h"
+                #include "RStorage.h"
             
             
         // includes for base ecma wrapper classes
@@ -286,8 +286,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTransaction: Argument 0 is not of type RStorage*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTransaction: Argument 0 is not of type RStorage* or QSharedPointer<RStorage>.",
+                               context);
                     }
                     RStorage& a0 = *ap0;
                 
@@ -377,8 +378,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTransaction: Argument 0 is not of type RStorage*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTransaction: Argument 0 is not of type RStorage* or QSharedPointer<RStorage>.",
+                               context);
                     }
                     RStorage& a0 = *ap0;
                 
@@ -418,8 +420,9 @@
                         )
                     );
                     if( ap4 == NULL ){
-                           return REcmaHelper::throwError("RTransaction: Argument 4 is not of type QMap < RObject::Id , QList < RPropertyChange > >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTransaction: Argument 4 is not of type QMap < RObject::Id , QList < RPropertyChange > >* or QSharedPointer<QMap < RObject::Id , QList < RPropertyChange > >>.",
+                               context);
                     }
                     QMap < RObject::Id , QList < RPropertyChange > >& a4 = *ap4;
                 
@@ -486,8 +489,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTransaction: Argument 0 is not of type RStorage*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTransaction: Argument 0 is not of type RStorage* or QSharedPointer<RStorage>.",
+                               context);
                     }
                     RStorage& a0 = *ap0;
                 
@@ -563,8 +567,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTransaction: Argument 0 is not of type RStorage*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTransaction: Argument 0 is not of type RStorage* or QSharedPointer<RStorage>.",
+                               context);
                     }
                     RStorage& a0 = *ap0;
                 
@@ -3190,8 +3195,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTransaction: Argument 0 is not of type RTransaction::Types*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTransaction: Argument 0 is not of type RTransaction::Types* or QSharedPointer<RTransaction::Types>.",
+                               context);
                     }
                     RTransaction::Types& a0 = *ap0;
                 

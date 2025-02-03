@@ -2,7 +2,7 @@
 <unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RSMetaType.h"><cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RSMETATYPE_H</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RSMETATYPE_H</name></cpp:define>
 
-    <comment type="line">// included by RS.h</comment>
+    <comment type="line">// included by RSEnums.h</comment>
     <enum>enum <name>MetaType</name> <block>{
         <expr><name>Bool</name> = <name><name>QMetaType</name>::<name>Bool</name></name></expr>,
         <expr><name>Char</name> = <name><name>QMetaType</name>::<name>Char</name></name></expr>,

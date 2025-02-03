@@ -13,8 +13,6 @@
             
                 #include <QWidget>
             
-                #include <QPainter>
-            
                 #include <QMimeData>
             
                 #include <QDragEnterEvent>

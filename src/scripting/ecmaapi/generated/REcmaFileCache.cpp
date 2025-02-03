@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include <QBuffer>
+            
             
         // includes for base ecma wrapper classes
          void REcmaFileCache::initEcma(QScriptEngine& engine, QScriptValue* proto 

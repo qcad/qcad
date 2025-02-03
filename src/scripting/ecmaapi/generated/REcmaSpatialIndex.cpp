@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include "RBox.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -261,8 +263,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSpatialIndex: Argument 0 is not of type qint64*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSpatialIndex: Argument 0 is not of type qint64* or QSharedPointer<qint64>.",
+                               context);
                     }
                     qint64& a0 = *ap0;
                 
@@ -321,8 +324,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSpatialIndex: Argument 0 is not of type qint64*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSpatialIndex: Argument 0 is not of type qint64* or QSharedPointer<qint64>.",
+                               context);
                     }
                     qint64& a0 = *ap0;
                 

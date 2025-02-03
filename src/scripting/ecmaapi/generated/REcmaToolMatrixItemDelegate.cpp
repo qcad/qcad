@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include <QTreeView>
+            
             
         // includes for base ecma wrapper classes
          void REcmaToolMatrixItemDelegate::initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -306,8 +308,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RToolMatrixItemDelegate: Argument 1 is not of type QStyleOptionViewItem*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RToolMatrixItemDelegate: Argument 1 is not of type QStyleOptionViewItem* or QSharedPointer<QStyleOptionViewItem>.",
+                               context);
                     }
                     QStyleOptionViewItem& a1 = *ap1;
                 
@@ -322,8 +325,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RToolMatrixItemDelegate: Argument 2 is not of type QModelIndex*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RToolMatrixItemDelegate: Argument 2 is not of type QModelIndex* or QSharedPointer<QModelIndex>.",
+                               context);
                     }
                     QModelIndex& a2 = *ap2;
                 
@@ -396,8 +400,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RToolMatrixItemDelegate: Argument 0 is not of type QStyleOptionViewItem*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RToolMatrixItemDelegate: Argument 0 is not of type QStyleOptionViewItem* or QSharedPointer<QStyleOptionViewItem>.",
+                               context);
                     }
                     QStyleOptionViewItem& a0 = *ap0;
                 
@@ -412,8 +417,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RToolMatrixItemDelegate: Argument 1 is not of type QModelIndex*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RToolMatrixItemDelegate: Argument 1 is not of type QModelIndex* or QSharedPointer<QModelIndex>.",
+                               context);
                     }
                     QModelIndex& a1 = *ap1;
                 

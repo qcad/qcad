@@ -9,8 +9,6 @@
         
                 #include "RGraphicsView.h"
             
-                #include "RMouseEvent.h"
-            
             
         // includes for base ecma wrapper classes
         
@@ -248,8 +246,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSnapIntersection: Argument 1 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSnapIntersection: Argument 1 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a1 = *ap1;
                 
@@ -318,8 +317,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSnapIntersection: Argument 1 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSnapIntersection: Argument 1 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a1 = *ap1;
                 
@@ -366,7 +366,7 @@
             context->argument(2).isVariant() || 
             context->argument(2).isQObject() || 
             context->argument(2).isNull()
-        ) /* type: QMap < REntity::Id , QSet < int > > */
+        ) /* type: QMap < RObject::Id , QSet < int > > */
      && (
             context->argument(3).isVariant() || 
             context->argument(3).isQObject() || 
@@ -405,26 +405,28 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSnapIntersection: Argument 1 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSnapIntersection: Argument 1 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a1 = *ap1;
                 
                     // argument is reference
-                    QMap < REntity::Id , QSet < int > >*
+                    QMap < RObject::Id , QSet < int > >*
                     ap2 =
                     qscriptvalue_cast<
-                    QMap < REntity::Id , QSet < int > >*
+                    QMap < RObject::Id , QSet < int > >*
                         >(
                         context->argument(
                         2
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RSnapIntersection: Argument 2 is not of type QMap < REntity::Id , QSet < int > >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSnapIntersection: Argument 2 is not of type QMap < RObject::Id , QSet < int > >* or QSharedPointer<QMap < RObject::Id , QSet < int > >>.",
+                               context);
                     }
-                    QMap < REntity::Id , QSet < int > >& a2 = *ap2;
+                    QMap < RObject::Id , QSet < int > >& a2 = *ap2;
                 
                     // argument isCopyable and has default constructor and isSimpleClass 
                     RBox*

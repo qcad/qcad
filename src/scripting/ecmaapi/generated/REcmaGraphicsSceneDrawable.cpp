@@ -7,6 +7,10 @@
 
         // forwards declarations mapped to includes
         
+                #include "RImageData.h"
+            
+                #include "RTransform.h"
+            
             
         // includes for base ecma wrapper classes
          void REcmaGraphicsSceneDrawable::initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -1205,8 +1209,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsSceneDrawable: Argument 0 is not of type RGraphicsSceneDrawable::Mode*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsSceneDrawable: Argument 0 is not of type RGraphicsSceneDrawable::Mode* or QSharedPointer<RGraphicsSceneDrawable::Mode>.",
+                               context);
                     }
                     RGraphicsSceneDrawable::Mode& a0 = *ap0;
                 
@@ -1245,8 +1250,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsSceneDrawable: Argument 0 is not of type RGraphicsSceneDrawable::Mode*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsSceneDrawable: Argument 0 is not of type RGraphicsSceneDrawable::Mode* or QSharedPointer<RGraphicsSceneDrawable::Mode>.",
+                               context);
                     }
                     RGraphicsSceneDrawable::Mode& a0 = *ap0;
                 
@@ -1320,8 +1326,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsSceneDrawable: Argument 0 is not of type RGraphicsSceneDrawable::Mode*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsSceneDrawable: Argument 0 is not of type RGraphicsSceneDrawable::Mode* or QSharedPointer<RGraphicsSceneDrawable::Mode>.",
+                               context);
                     }
                     RGraphicsSceneDrawable::Mode& a0 = *ap0;
                 

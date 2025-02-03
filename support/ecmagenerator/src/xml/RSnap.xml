@@ -2,6 +2,7 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RGraphicsView" />
+  <class_decl name="RMouseEvent" />
   <class name="RSnap" xsi:noNamespaceSchemaLocation="../class.xsd"
   isCopyable="false" hasShell="true" sharedPointerSupport="false"
   isQObject="false" hasStreamOperator="false" isAbstract="false"
@@ -64,7 +65,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getEntityIds" cppName="getEntityIds"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="QList &lt; REntity::Id &gt;"
+      <variant returnType="QList &lt; RObject::Id &gt;"
       isPureVirtual="false" />
     </method>
     <method name="getStatus" cppName="getStatus" specifier="public"

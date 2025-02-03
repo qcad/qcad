@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include "RVector.h"
+            
             
         // includes for base ecma wrapper classes
          void REcmaMatrix::initEcma(QScriptEngine& engine, QScriptValue* proto 

@@ -27,9 +27,6 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSpatialIndex.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDebug.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMath.h"</cpp:file></cpp:include>
-
 
 
 <comment type="block">/**
@@ -85,8 +82,6 @@
     <comment type="line">//QMultiHash&lt;RBox, int&gt; si;</comment>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>si</name></decl>;</decl_stmt>
 </protected>}</block>;</class>
-
-<comment type="line">//QDebug operator&lt;&lt;(QDebug dbg, RSpatialIndexSimple&amp; si);</comment>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RSpatialIndexSimple*</argument>)</argument_list></macro>
 

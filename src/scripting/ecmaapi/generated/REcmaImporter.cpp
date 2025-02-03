@@ -170,8 +170,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RImporter: Argument 0 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RImporter: Argument 0 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a0 = *ap0;
                 
@@ -243,8 +244,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RImporter: Argument 0 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RImporter: Argument 0 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a0 = *ap0;
                 
@@ -348,8 +350,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RImporter: Argument 0 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RImporter: Argument 0 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a0 = *ap0;
                 
@@ -612,15 +615,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -672,11 +675,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RBlock::Id'
-    RBlock::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getCurrentBlockId();
-        // return type: RBlock::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             

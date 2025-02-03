@@ -23,25 +23,21 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QtCore&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPinchGesture&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMutex&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTransform&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPainter&gt;</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGraphicsSceneDrawable.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGraphicsView.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
 
-<class_decl>class <name>RAction</name>;</class_decl>
-<class_decl>class <name>RDocument</name>;</class_decl>
-<class_decl>class <name>RDocumentInterface</name>;</class_decl>
 <class_decl>class <name>RGraphicsSceneQt</name>;</class_decl>
-<class_decl>class <name>RGraphicsSceneDrawable</name>;</class_decl>
+<class_decl>class <name>RImageData</name>;</class_decl>
 <class_decl>class <name>RLine</name>;</class_decl>
 <class_decl>class <name>RSnap</name>;</class_decl>
 <class_decl>class <name>RSnapRestriction</name>;</class_decl>
-<class_decl>class <name>RGraphicsViewImage</name>;</class_decl>
+<class_decl>class <name>RTextBasedData</name>;</class_decl>
+<class_decl>class <name>RTextLayout</name>;</class_decl>
 <class_decl>class <name>RGraphicsViewWorker</name>;</class_decl>
-
 
 <comment type="block">/**
  * \brief QImage based 2d graphics view.
@@ -270,10 +266,10 @@
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintEntities</name><parameter_list>(<param><decl><type><name>QPainter</name>*</type> <name>painter</name></decl></param>, <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>paintEntitiesMulti</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name></decl></param>)</parameter_list>;</function_decl>
-    <comment type="line">//void paintEntitiesThread(int threadId, const QList&lt;REntity::Id&gt;&amp; list, int start, int end);</comment>
+    <comment type="line">//void paintEntitiesThread(int threadId, const QList&lt;RObject::Id&gt;&amp; list, int start, int end);</comment>
     <comment type="line">//void paintDrawablesThread(int threadId, const QList&lt;RGraphicsSceneDrawable&gt;&amp; list, int start, int end);</comment>
 
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintEntityThread</name><parameter_list>(<param><decl><type><name>RGraphicsViewWorker</name>*</type> <name>worker</name></decl></param>, <param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>id</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintEntityThread</name><parameter_list>(<param><decl><type><name>RGraphicsViewWorker</name>*</type> <name>worker</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>id</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintDrawableThread</name><parameter_list>(<param><decl><type><name>RGraphicsViewWorker</name>*</type> <name>worker</name></decl></param>, <param><decl><type><name>RGraphicsSceneDrawable</name>&amp;</type> <name>drawable</name></decl></param>, <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>clipRectangle</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintOverlay</name><parameter_list>()</parameter_list>;</function_decl>

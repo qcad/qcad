@@ -2,21 +2,32 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RArc" />
+  <class_decl name="RBlock" />
   <class_decl name="RCircle" />
+  <class_decl name="RColor" />
   <class_decl name="RDocument" />
   <class_decl name="REllipse" />
+  <class_decl name="REntity" />
+  <class_decl name="RExplodable" />
+  <class_decl name="RImageData" />
+  <class_decl name="RLayer" />
+  <class_decl name="RLayerState" />
   <class_decl name="RLine" />
   <class_decl name="RLinetype" />
-  <class_decl name="RLinetypePattern" />
   <class_decl name="RMessageHandler" />
+  <class_decl name="RPainterPath" />
   <class_decl name="RPainterPathSource" />
   <class_decl name="RPoint" />
   <class_decl name="RPolyline" />
   <class_decl name="RProgressHandler" />
   <class_decl name="RRay" />
   <class_decl name="RSpline" />
+  <class_decl name="RTextBasedData" />
+  <class_decl name="RTransform" />
   <class_decl name="RTriangle" />
   <class_decl name="RVector" />
+  <class_decl name="RView" />
+  <class_decl name="RViewportEntity" />
   <class_decl name="RXLine" />
   <class name="RExporter"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
@@ -219,8 +230,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLinetype::Id" typeName="RLinetype::Id"
-        name="ltId" isConst="false" />
+        <arg type="RObject::Id" typeName="RObject::Id" name="ltId"
+        isConst="false" />
       </variant>
     </method>
     <method name="setLinetypePattern" cppName="setLinetypePattern"
@@ -247,7 +258,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getBlockRefOrEntityId"
     cppName="getBlockRefOrEntityId" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="REntity::Id" isPureVirtual="false" />
+      <variant returnType="RObject::Id" isPureVirtual="false" />
     </method>
     <method name="getEntity" cppName="getEntity" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
@@ -366,8 +377,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
-        isConst="false" />
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="layerId" isConst="false" />
       </variant>
     </method>
     <method name="exportLayerState" cppName="exportLayerState"
@@ -388,8 +399,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
-        isConst="false" />
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="blockId" isConst="false" />
       </variant>
     </method>
     <method name="exportView" cppName="exportView"
@@ -401,8 +412,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RView::Id" typeName="RView::Id" name="viewId"
-        isConst="false" />
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="viewId" isConst="false" />
       </variant>
     </method>
     <method name="exportLinetype" cppName="exportLinetype"
@@ -430,8 +441,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QSet &lt; REntity::Id &gt; &amp;"
-        typeName="QSet &lt; REntity::Id &gt;" name="entityIds"
+        <arg type="QSet &lt; RObject::Id &gt; &amp;"
+        typeName="QSet &lt; RObject::Id &gt;" name="entityIds"
         isConst="false" />
         <arg type="bool" typeName="bool" name="allBlocks"
         hasDefault="true" default="true" isConst="false" />
@@ -454,7 +465,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="entityId" isConst="false" />
         <arg type="bool" typeName="bool" name="allBlocks"
         hasDefault="true" default="true" isConst="false" />
@@ -505,7 +516,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="entityId" isConst="false" />
       </variant>
     </method>

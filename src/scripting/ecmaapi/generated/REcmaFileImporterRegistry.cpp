@@ -330,8 +330,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RFileImporterRegistry: Argument 2 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFileImporterRegistry: Argument 2 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a2 = *ap2;
                 
@@ -403,8 +404,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RFileImporterRegistry: Argument 2 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFileImporterRegistry: Argument 2 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a2 = *ap2;
                 
@@ -496,8 +498,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RFileImporterRegistry: Argument 2 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFileImporterRegistry: Argument 2 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a2 = *ap2;
                 

@@ -379,8 +379,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RCharacterWidget: Argument 0 is not of type QFont*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RCharacterWidget: Argument 0 is not of type QFont* or QSharedPointer<QFont>.",
+                               context);
                     }
                     QFont& a0 = *ap0;
                 

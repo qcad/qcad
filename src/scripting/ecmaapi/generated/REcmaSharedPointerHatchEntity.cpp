@@ -1141,8 +1141,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RHatchEntity: Argument 0 is not of type RObject::XYZ*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RHatchEntity: Argument 0 is not of type RObject::XYZ* or QSharedPointer<RObject::XYZ>.",
+                               context);
                     }
                     RObject::XYZ& a0 = *ap0;
                 
@@ -1268,8 +1269,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RHatchEntity: Argument 2 is not of type RObject::XYZ*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RHatchEntity: Argument 2 is not of type RObject::XYZ* or QSharedPointer<RObject::XYZ>.",
+                               context);
                     }
                     RObject::XYZ& a2 = *ap2;
                 
@@ -1688,8 +1690,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RHatchEntity: Argument 0 is not of type RExporter*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RHatchEntity: Argument 0 is not of type RExporter* or QSharedPointer<RExporter>.",
+                               context);
                     }
                     RExporter& a0 = *ap0;
                 
@@ -1728,8 +1731,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RHatchEntity: Argument 0 is not of type RExporter*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RHatchEntity: Argument 0 is not of type RExporter* or QSharedPointer<RExporter>.",
+                               context);
                     }
                     RExporter& a0 = *ap0;
                 
@@ -1781,8 +1785,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RHatchEntity: Argument 0 is not of type RExporter*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RHatchEntity: Argument 0 is not of type RExporter* or QSharedPointer<RExporter>.",
+                               context);
                     }
                     RExporter& a0 = *ap0;
                 

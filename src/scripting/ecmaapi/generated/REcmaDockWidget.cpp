@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include "RFlowLayout.h"
+            
             
         // includes for base ecma wrapper classes
          void REcmaDockWidget::initEcma(QScriptEngine& engine, QScriptValue* proto 

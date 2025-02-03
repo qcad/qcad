@@ -865,8 +865,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGuiAction: Argument 0 is not of type QKeySequence*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGuiAction: Argument 0 is not of type QKeySequence* or QSharedPointer<QKeySequence>.",
+                               context);
                     }
                     QKeySequence& a0 = *ap0;
                 
@@ -974,8 +975,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGuiAction: Argument 0 is not of type QKeySequence*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGuiAction: Argument 0 is not of type QKeySequence* or QSharedPointer<QKeySequence>.",
+                               context);
                     }
                     QKeySequence& a0 = *ap0;
                 
@@ -1039,8 +1041,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGuiAction: Argument 0 is not of type QKeySequence*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGuiAction: Argument 0 is not of type QKeySequence* or QSharedPointer<QKeySequence>.",
+                               context);
                     }
                     QKeySequence& a0 = *ap0;
                 
@@ -1538,8 +1541,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RGuiAction: Argument 1 is not of type QKeySequence::SequenceFormat*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGuiAction: Argument 1 is not of type QKeySequence::SequenceFormat* or QSharedPointer<QKeySequence::SequenceFormat>.",
+                               context);
                     }
                     QKeySequence::SequenceFormat& a1 = *ap1;
                 

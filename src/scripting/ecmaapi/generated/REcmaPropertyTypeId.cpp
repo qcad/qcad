@@ -1053,8 +1053,9 @@
                         )
                     );
                     if( ap4 == NULL ){
-                           return REcmaHelper::throwError("RPropertyTypeId: Argument 4 is not of type RPropertyAttributes::Options*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RPropertyTypeId: Argument 4 is not of type RPropertyAttributes::Options* or QSharedPointer<RPropertyAttributes::Options>.",
+                               context);
                     }
                     RPropertyAttributes::Options& a4 = *ap4;
                 

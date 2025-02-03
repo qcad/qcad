@@ -7,7 +7,11 @@
 
         // forwards declarations mapped to includes
         
+                #include "RDocument.h"
+            
                 #include "RObject.h"
+            
+                #include "RTransaction.h"
             
             
         // includes for base ecma wrapper classes
@@ -275,8 +279,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDeleteAllEntitiesOperation: Argument 0 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDeleteAllEntitiesOperation: Argument 0 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a0 = *ap0;
                 
@@ -320,8 +325,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDeleteAllEntitiesOperation: Argument 0 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDeleteAllEntitiesOperation: Argument 0 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a0 = *ap0;
                 

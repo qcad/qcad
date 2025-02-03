@@ -2,9 +2,7 @@
 <unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./io/dxf" filename="RDxfPlugin.h"><cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDXFPLUGIN_H_</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDXFPLUGIN_H_</name></cpp:define>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QObject&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPluginInterface.h"</cpp:file></cpp:include>
 

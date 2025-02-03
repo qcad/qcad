@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class_decl name="REntity" />
+  <class_decl name="RLayer" />
+  <class_decl name="RLinetype" />
+  <class_decl name="RVector" />
   <class name="RClipboardOperation"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
@@ -128,8 +133,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QSharedPointer &lt; RBlock &gt;"
       isPureVirtual="false">
-        <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
-        isConst="false" />
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="blockId" isConst="false" />
         <arg type="RDocument &amp;" typeName="RDocument" name="src"
         isConst="false" />
         <arg type="RDocument &amp;" typeName="RDocument"
@@ -165,8 +170,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QSharedPointer &lt; RLayer &gt;"
       isPureVirtual="false">
-        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
-        isConst="false" />
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="layerId" isConst="false" />
         <arg type="RDocument &amp;" typeName="RDocument" name="src"
         isConst="false" />
         <arg type="RDocument &amp;" typeName="RDocument"
@@ -199,7 +204,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QSharedPointer &lt; RLinetype &gt;"
       isPureVirtual="false">
-        <arg type="RLinetype::Id" typeName="RLinetype::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="linetypeId" isConst="false" />
         <arg type="RDocument &amp;" typeName="RDocument" name="src"
         isConst="false" />
@@ -241,6 +246,14 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="on"
         isConst="false" />
+      </variant>
+    </method>
+    <method name="setCustomEntityType"
+    cppName="setCustomEntityType" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="t" isConst="false" />
       </variant>
     </method>
   </class>

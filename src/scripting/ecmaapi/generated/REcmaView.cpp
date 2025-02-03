@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include <QDebug>
+            
                 #include "RDocument.h"
             
             

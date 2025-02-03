@@ -23,15 +23,13 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"dxf_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFileInfo&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDxfExporter.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RFileExporter.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RFileExporterFactory.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RFileExporterRegistry.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>RMessageHandler</name>;</class_decl>
 <class_decl>class <name>RProgressHandler</name>;</class_decl>
 

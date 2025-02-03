@@ -88,6 +88,9 @@
         ;static  QScriptValue
         setBlockOwnership
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCustomEntityType
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

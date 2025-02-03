@@ -4,7 +4,6 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="QScrollBar" />
   <class_decl name="QUrl" />
   <class_decl name="QWidget" />
-  <class_decl name="QPainter" />
   <class_decl name="QMimeData" />
   <class_decl name="QDragEnterEvent" />
   <class_decl name="RDocumentInterface" />

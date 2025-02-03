@@ -7,6 +7,10 @@
 
         // forwards declarations mapped to includes
         
+                #include "RDocumentInterface.h"
+            
+                #include "RTransformation.h"
+            
             
         // includes for base ecma wrapper classes
         

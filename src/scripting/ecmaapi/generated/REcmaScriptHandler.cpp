@@ -7,7 +7,11 @@
 
         // forwards declarations mapped to includes
         
+                #include "RAction.h"
+            
                 #include "RFileImporterAdapter.h"
+            
+                #include "RGuiAction.h"
             
             
         // includes for base ecma wrapper classes
@@ -657,8 +661,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RScriptHandler: Argument 1 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RScriptHandler: Argument 1 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a1 = *ap1;
                 

@@ -13,8 +13,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocumentInterface *"
         typeName="RDocumentInterface *" name="documentInterface"
         isConst="false" />
-        <arg type="QList &lt; RLayer::Id &gt; &amp;"
-        typeName="QList &lt; RLayer::Id &gt;" name="layerIds"
+        <arg type="QList &lt; RObject::Id &gt; &amp;"
+        typeName="QList &lt; RObject::Id &gt;" name="layerIds"
         isConst="false" />
       </variant>
     </method>
@@ -25,7 +25,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocumentInterface *"
         typeName="RDocumentInterface *" name="documentInterface"
         isConst="false" />
-        <arg type="RLayer::Id" typeName="RLayer::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="previousLayerId" isConst="false" />
       </variant>
     </method>

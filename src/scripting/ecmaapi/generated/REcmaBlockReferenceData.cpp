@@ -11,6 +11,8 @@
             
                 #include "RExporter.h"
             
+                #include "RTransform.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -240,7 +242,7 @@
                         context->argument(
                         0
                         ).isNumber()
-                ) /* type: RBlock::Id */
+                ) /* type: RObject::Id */
             
                 && (
                 
@@ -287,9 +289,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -366,7 +368,7 @@
                         context->argument(
                         0
                         ).isNumber()
-                ) /* type: RBlock::Id */
+                ) /* type: RObject::Id */
             
                 && (
                 
@@ -420,9 +422,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -509,7 +511,7 @@
                         context->argument(
                         0
                         ).isNumber()
-                ) /* type: RBlock::Id */
+                ) /* type: RObject::Id */
             
                 && (
                 
@@ -570,9 +572,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -669,7 +671,7 @@
                         context->argument(
                         0
                         ).isNumber()
-                ) /* type: RBlock::Id */
+                ) /* type: RObject::Id */
             
                 && (
                 
@@ -737,9 +739,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -846,7 +848,7 @@
                         context->argument(
                         0
                         ).isNumber()
-                ) /* type: RBlock::Id */
+                ) /* type: RObject::Id */
             
                 && (
                 
@@ -921,9 +923,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -1040,7 +1042,7 @@
                         context->argument(
                         0
                         ).isNumber()
-                ) /* type: RBlock::Id */
+                ) /* type: RObject::Id */
             
                 && (
                 
@@ -1122,9 +1124,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -1764,7 +1766,7 @@
         ) /* type: RS::ProjectionRenderingHint */
      && (
             context->argument(1).isArray()
-        ) /* type: QList < REntity::Id > * */
+        ) /* type: QList < RObject::Id > * */
     
     ){
     // prepare arguments:
@@ -1778,16 +1780,16 @@
                     toNumber();
                 
                     // argument is pointer
-                    QList < REntity::Id > * a1 = NULL;
+                    QList < RObject::Id > * a1 = NULL;
 
                     a1 = 
-                        REcmaHelper::scriptValueTo<QList < REntity::Id > >(
+                        REcmaHelper::scriptValueTo<QList < RObject::Id > >(
                             context->argument(1)
                         );
                     
                     if (a1==NULL && 
                         !context->argument(1).isNull()) {
-                        return REcmaHelper::throwError("RBlockReferenceData: Argument 1 is not of type QList < REntity::Id > *QList < REntity::Id > *.", context);                    
+                        return REcmaHelper::throwError("RBlockReferenceData: Argument 1 is not of type QList < RObject::Id > *QList < RObject::Id > *.", context);                    
                     }
                 
     // end of arguments
@@ -3513,15 +3515,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -3617,11 +3619,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RBlock::Id'
-    RBlock::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getReferencedBlockId();
-        // return type: RBlock::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -4637,15 +4639,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -4669,7 +4671,7 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isBool()
         ) /* type: bool */
@@ -4678,9 +4680,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -4714,7 +4716,7 @@
     if( context->argumentCount() ==
     3 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isBool()
         ) /* type: bool */
@@ -4726,9 +4728,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -4818,8 +4820,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RBlockReferenceData: Argument 0 is not of type REntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RBlockReferenceData: Argument 0 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
                     }
                     REntity& a0 = *ap0;
                 
@@ -5165,8 +5168,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RBlockReferenceData: Argument 0 is not of type REntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RBlockReferenceData: Argument 0 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
                     }
                     REntity& a0 = *ap0;
                 
@@ -5231,8 +5235,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RBlockReferenceData: Argument 0 is not of type REntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RBlockReferenceData: Argument 0 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
                     }
                     REntity& a0 = *ap0;
                 

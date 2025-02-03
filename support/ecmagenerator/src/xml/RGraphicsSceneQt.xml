@@ -1,8 +1,17 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RArc" />
+  <class_decl name="RDocumentInterface" />
   <class_decl name="RGraphicsViewImage" />
+  <class_decl name="RImageData" />
+  <class_decl name="RLine" />
+  <class_decl name="RPoint" />
+  <class_decl name="RPolyline" />
+  <class_decl name="RSpline" />
+  <class_decl name="RRay" />
   <class_decl name="RTriangle" />
+  <class_decl name="RXLine" />
   <class name="RGraphicsSceneQt"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
@@ -29,8 +38,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="updateSelectionStatus" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QSet &lt; REntity::Id &gt; &amp;"
-        typeName="QSet &lt; REntity::Id &gt;"
+        <arg type="QSet &lt; RObject::Id &gt; &amp;"
+        typeName="QSet &lt; RObject::Id &gt;"
         name="affectedEntities" isConst="false" />
         <arg type="bool" typeName="bool" name="updateViews"
         isConst="false" />
@@ -59,8 +68,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="int" typeName="int" name="threadId"
         isConst="false" />
-        <arg type="QList &lt; REntity::Id &gt; &amp;"
-        typeName="QList &lt; REntity::Id &gt;" name="list"
+        <arg type="QList &lt; RObject::Id &gt; &amp;"
+        typeName="QList &lt; RObject::Id &gt;" name="list"
         isConst="false" />
         <arg type="int" typeName="int" name="start"
         isConst="false" />
@@ -74,7 +83,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="int" typeName="int" name="threadId"
         isConst="false" />
-        <arg type="REntity::Id" typeName="REntity::Id" name="id"
+        <arg type="RObject::Id" typeName="RObject::Id" name="id"
         isConst="false" />
       </variant>
     </method>
@@ -98,7 +107,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="entityId" isConst="false" />
       </variant>
     </method>
@@ -309,21 +318,21 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getPreviewEntityIds"
     cppName="getPreviewEntityIds" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="QList &lt; REntity::Id &gt;"
+      <variant returnType="QList &lt; RObject::Id &gt;"
       isPureVirtual="false" />
     </method>
     <method name="addToPreview" cppName="addToPreview"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="entityId" isConst="false" />
         <arg type="QList &lt; RGraphicsSceneDrawable &gt; &amp;"
         typeName="QList &lt; RGraphicsSceneDrawable &gt;"
         name="drawables" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="entityId" isConst="false" />
         <arg type="RGraphicsSceneDrawable &amp;"
         typeName="RGraphicsSceneDrawable" name="drawable"
@@ -334,7 +343,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="entityId" isConst="false" />
         <arg type="RPainterPath &amp;" typeName="RPainterPath"
         name="pp" isConst="false" />
@@ -352,7 +361,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="hasClipRectangleFor" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="entityId" isConst="false" />
         <arg type="bool" typeName="bool" name="preview"
         hasDefault="true" default="false" isConst="false" />
@@ -362,7 +371,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RBox" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="entityId" isConst="false" />
         <arg type="bool" typeName="bool" name="preview"
         hasDefault="true" default="false" isConst="false" />
@@ -372,7 +381,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="entityId" isConst="false" />
         <arg type="RGraphicsSceneDrawable &amp;"
         typeName="RGraphicsSceneDrawable" name="drawable"

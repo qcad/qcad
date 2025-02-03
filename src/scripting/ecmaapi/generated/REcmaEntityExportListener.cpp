@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include "REntity.h"
+            
                 #include "RExporter.h"
             
             

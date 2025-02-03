@@ -477,8 +477,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RLineweight: Argument 1 is not of type QSize*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RLineweight: Argument 1 is not of type QSize* or QSharedPointer<QSize>.",
+                               context);
                     }
                     QSize& a1 = *ap1;
                 

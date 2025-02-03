@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="QDebug" />
   <class_decl name="RDocument" />
+  <class_decl name="RPropertyAttributes" />
+  <class_decl name="RTransaction" />
   <class name="RLayer" xsi:noNamespaceSchemaLocation="../class.xsd"
   isCopyable="false" hasShell="false" sharedPointerSupport="true"
   isQObject="false" hasStreamOperator="false" isAbstract="false"
@@ -29,9 +32,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
         <arg type="RColor &amp;" typeName="RColor" name="color"
         hasDefault="true" default="Qt :: black" isConst="true" />
-        <arg type="RLinetype::Id" typeName="RLinetype::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="linetypeId" hasDefault="true"
-        default="RLinetype :: INVALID_ID" isConst="false" />
+        default="RObject :: INVALID_ID" isConst="false" />
         <arg type="RLineweight::Lineweight"
         typeName="RLineweight::Lineweight" name="lineweight"
         hasDefault="true" default="RLineweight :: Weight000"
@@ -70,7 +73,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getParentLayerId" cppName="getParentLayerId"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="RLayer::Id" isPureVirtual="false" />
+      <variant returnType="RObject::Id" isPureVirtual="false" />
     </method>
     <method name="getName" cppName="getName" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -187,14 +190,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getLinetypeId" cppName="getLinetypeId"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="RLinetype::Id" isPureVirtual="false" />
+      <variant returnType="RObject::Id" isPureVirtual="false" />
     </method>
     <method name="setLinetypeId" cppName="setLinetypeId"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLinetype::Id" typeName="RLinetype::Id"
-        name="lt" isConst="false" />
+        <arg type="RObject::Id" typeName="RObject::Id" name="lt"
+        isConst="false" />
       </variant>
     </method>
     <method name="getLineweight" cppName="getLineweight"

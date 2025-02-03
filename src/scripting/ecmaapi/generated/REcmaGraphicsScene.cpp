@@ -9,6 +9,32 @@
         
                 #include "RDocumentInterface.h"
             
+                #include "REntity.h"
+            
+                #include "RGraphicsSceneDrawable.h"
+            
+                #include "RGraphicsView.h"
+            
+                #include "RMouseEvent.h"
+            
+                #include "RTabletEvent.h"
+            
+                #include "RTerminateEvent.h"
+            
+                #include "RWheelEvent.h"
+            
+                #include <QCursor>
+            
+                #include <QDebug>
+            
+                #include <QKeyEvent>
+            
+                #include <QPanGesture>
+            
+                #include <QPinchGesture>
+            
+                #include <QSwipeGesture>
+            
             
         // includes for base ecma wrapper classes
         
@@ -523,7 +549,7 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isArray()
-        ) /* type: QSet < REntity::Id > */
+        ) /* type: QSet < RObject::Id > */
      && (
             context->argument(1).isBool()
         ) /* type: bool */
@@ -532,7 +558,7 @@
     // prepare arguments:
     
                     // argument isArray or QVariantMap
-                    QSet < REntity::Id >
+                    QSet < RObject::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
                         engine,
@@ -592,7 +618,7 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isArray()
-        ) /* type: QSet < REntity::Id > */
+        ) /* type: QSet < RObject::Id > */
      && (
             context->argument(1).isBool()
         ) /* type: bool */
@@ -601,7 +627,7 @@
     // prepare arguments:
     
                     // argument isArray or QVariantMap
-                    QSet < REntity::Id >
+                    QSet < RObject::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
                         engine,
@@ -822,8 +848,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type QCursor*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type QCursor* or QSharedPointer<QCursor>.",
+                               context);
                     }
                     QCursor& a0 = *ap0;
                 
@@ -887,8 +914,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type RTerminateEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type RTerminateEvent* or QSharedPointer<RTerminateEvent>.",
+                               context);
                     }
                     RTerminateEvent& a0 = *ap0;
                 
@@ -950,8 +978,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type QKeyEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type QKeyEvent* or QSharedPointer<QKeyEvent>.",
+                               context);
                     }
                     QKeyEvent& a0 = *ap0;
                 
@@ -1013,8 +1042,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type QKeyEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type QKeyEvent* or QSharedPointer<QKeyEvent>.",
+                               context);
                     }
                     QKeyEvent& a0 = *ap0;
                 
@@ -1078,8 +1108,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type RMouseEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type RMouseEvent* or QSharedPointer<RMouseEvent>.",
+                               context);
                     }
                     RMouseEvent& a0 = *ap0;
                 
@@ -1143,8 +1174,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type RMouseEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type RMouseEvent* or QSharedPointer<RMouseEvent>.",
+                               context);
                     }
                     RMouseEvent& a0 = *ap0;
                 
@@ -1208,8 +1240,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type RMouseEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type RMouseEvent* or QSharedPointer<RMouseEvent>.",
+                               context);
                     }
                     RMouseEvent& a0 = *ap0;
                 
@@ -1273,8 +1306,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type RMouseEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type RMouseEvent* or QSharedPointer<RMouseEvent>.",
+                               context);
                     }
                     RMouseEvent& a0 = *ap0;
                 
@@ -1338,8 +1372,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type RWheelEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type RWheelEvent* or QSharedPointer<RWheelEvent>.",
+                               context);
                     }
                     RWheelEvent& a0 = *ap0;
                 
@@ -1403,8 +1438,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type RTabletEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type RTabletEvent* or QSharedPointer<RTabletEvent>.",
+                               context);
                     }
                     RTabletEvent& a0 = *ap0;
                 
@@ -1468,8 +1504,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type QSwipeGesture*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type QSwipeGesture* or QSharedPointer<QSwipeGesture>.",
+                               context);
                     }
                     QSwipeGesture& a0 = *ap0;
                 
@@ -1533,8 +1570,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type QPanGesture*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type QPanGesture* or QSharedPointer<QPanGesture>.",
+                               context);
                     }
                     QPanGesture& a0 = *ap0;
                 
@@ -1598,8 +1636,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type QPinchGesture*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type QPinchGesture* or QSharedPointer<QPinchGesture>.",
+                               context);
                     }
                     QPinchGesture& a0 = *ap0;
                 
@@ -1997,7 +2036,7 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isArray()
         ) /* type: QList < RGraphicsSceneDrawable > */
@@ -2006,9 +2045,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -2038,7 +2077,7 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
@@ -2049,9 +2088,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -2118,7 +2157,7 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
@@ -2129,9 +2168,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -2402,8 +2441,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type REntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
                     }
                     REntity& a0 = *ap0;
                 
@@ -2707,15 +2747,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();

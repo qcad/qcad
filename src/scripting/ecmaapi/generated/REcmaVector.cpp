@@ -15,6 +15,10 @@
             
                 #include "RPolyline.h"
             
+                #include <QDebug>
+            
+                #include <QTransform>
+            
             
         // includes for base ecma wrapper classes
          void REcmaVector::initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -3017,8 +3021,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RVector: Argument 0 is not of type QQuaternion*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RVector: Argument 0 is not of type QQuaternion* or QSharedPointer<QQuaternion>.",
+                               context);
                     }
                     QQuaternion& a0 = *ap0;
                 
@@ -4146,8 +4151,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RVector: Argument 0 is not of type QTransform*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RVector: Argument 0 is not of type QTransform* or QSharedPointer<QTransform>.",
+                               context);
                     }
                     QTransform& a0 = *ap0;
                 
@@ -4360,8 +4366,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RVector: Argument 0 is not of type QTransform*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RVector: Argument 0 is not of type QTransform* or QSharedPointer<QTransform>.",
+                               context);
                     }
                     QTransform& a0 = *ap0;
                 

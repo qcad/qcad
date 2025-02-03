@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
-  <class_decl name="RDocument" />
-  <class_decl name="RExporter" />
   <class_decl name="RObject" />
   <class name="RDeleteObjectOperation"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"

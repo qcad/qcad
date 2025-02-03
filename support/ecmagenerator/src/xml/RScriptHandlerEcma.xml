@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocumentInterface" />
+  <class_decl name="RGuiAction" />
   <class_decl name="QScriptEngineDebugger" />
   <class name="RScriptHandlerEcma"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"

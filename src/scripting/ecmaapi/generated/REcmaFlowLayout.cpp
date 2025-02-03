@@ -714,8 +714,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFlowLayout: Argument 0 is not of type QSize*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFlowLayout: Argument 0 is not of type QSize* or QSharedPointer<QSize>.",
+                               context);
                     }
                     QSize& a0 = *ap0;
                 
@@ -1310,8 +1311,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFlowLayout: Argument 0 is not of type QRect*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFlowLayout: Argument 0 is not of type QRect* or QSharedPointer<QRect>.",
+                               context);
                     }
                     QRect& a0 = *ap0;
                 

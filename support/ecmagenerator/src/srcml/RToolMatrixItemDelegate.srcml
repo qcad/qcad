@@ -37,9 +37,9 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QItemDelegate&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTreeWidget&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTreeWidgetItem&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QWidget&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTreeView&gt;</cpp:file></cpp:include>
+
+<class_decl>class <name>QTreeView</name>;</class_decl>
 
 <comment type="block">/**
  * Tree widget item delegate. Decorates root items of QTreeWidget tool matrices.

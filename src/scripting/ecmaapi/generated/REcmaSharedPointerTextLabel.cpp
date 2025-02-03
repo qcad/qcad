@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include "RVector.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -74,6 +76,8 @@
     // methods:
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
+            
+            REcmaHelper::registerFunction(&engine, proto, cloneToTextLabel, "cloneToTextLabel");
             
             REcmaHelper::registerFunction(&engine, proto, getText, "getText");
             
@@ -401,6 +405,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerTextLabel::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerTextLabel::cloneToTextLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerTextLabel::cloneToTextLabel", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextLabel::cloneToTextLabel";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextLabel* self = 
+                        getSelf("cloneToTextLabel", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RTextLabel >'
+    QSharedPointer < RTextLabel > cppResult =
+        
+               self->cloneToTextLabel();
+        // return type: QSharedPointer < RTextLabel >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextLabel.cloneToTextLabel().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerTextLabel::cloneToTextLabel", context, engine);
             return result;
         }
          QScriptValue

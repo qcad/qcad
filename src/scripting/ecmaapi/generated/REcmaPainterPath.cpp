@@ -9,6 +9,8 @@
         
                 #include "RArc.h"
             
+                #include "RBox.h"
+            
                 #include "RLine.h"
             
                 #include "RShape.h"
@@ -464,8 +466,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type QPainterPath*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type QPainterPath* or QSharedPointer<QPainterPath>.",
+                               context);
                     }
                     QPainterPath& a0 = *ap0;
                 
@@ -629,8 +632,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type QPainterPath*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type QPainterPath* or QSharedPointer<QPainterPath>.",
+                               context);
                     }
                     QPainterPath& a0 = *ap0;
                 
@@ -2153,8 +2157,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type QRectF*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type QRectF* or QSharedPointer<QRectF>.",
+                               context);
                     }
                     QRectF& a0 = *ap0;
                 
@@ -2738,8 +2743,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type QPen*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type QPen* or QSharedPointer<QPen>.",
+                               context);
                     }
                     QPen& a0 = *ap0;
                 
@@ -2852,8 +2858,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type QBrush*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type QBrush* or QSharedPointer<QBrush>.",
+                               context);
                     }
                     QBrush& a0 = *ap0;
                 
@@ -2917,8 +2924,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type RPainterPath::Mode*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type RPainterPath::Mode* or QSharedPointer<RPainterPath::Mode>.",
+                               context);
                     }
                     RPainterPath::Mode& a0 = *ap0;
                 
@@ -2957,8 +2965,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type RPainterPath::Mode*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type RPainterPath::Mode* or QSharedPointer<RPainterPath::Mode>.",
+                               context);
                     }
                     RPainterPath::Mode& a0 = *ap0;
                 
@@ -3032,8 +3041,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type RPainterPath::Mode*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type RPainterPath::Mode* or QSharedPointer<RPainterPath::Mode>.",
+                               context);
                     }
                     RPainterPath::Mode& a0 = *ap0;
                 
@@ -5371,8 +5381,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type QTransform*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type QTransform* or QSharedPointer<QTransform>.",
+                               context);
                     }
                     QTransform& a0 = *ap0;
                 

@@ -26,36 +26,17 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDockWidget&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QElapsedTimer&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMainWindow&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QKeyEvent&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QToolBar&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RCloseCurrentEvent.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMainWindow.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RObject.h"</cpp:file></cpp:include>
 
-<class_decl>class <name>QMdiArea</name>;</class_decl>
 <class_decl>class <name>QMdiSubWindow</name>;</class_decl>
 
-<class_decl>class <name>RBlockListener</name>;</class_decl>
-<class_decl>class <name>RCoordinateListener</name>;</class_decl>
 <class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>RDocumentInterface</name>;</class_decl>
-<class_decl>class <name>RFocusListener</name>;</class_decl>
-<class_decl>class <name>RGraphicsView</name>;</class_decl>
-<class_decl>class <name>RKeyListener</name>;</class_decl>
-<class_decl>class <name>RLayerListener</name>;</class_decl>
 <class_decl>class <name>RMdiArea</name>;</class_decl>
 <class_decl>class <name>RMdiChildQt</name>;</class_decl>
-<class_decl>class <name>RNewDocumentListener</name>;</class_decl>
-<class_decl>class <name>RPaletteListener</name>;</class_decl>
-<class_decl>class <name>RPenListener</name>;</class_decl>
-<class_decl>class <name>RPreferencesListener</name>;</class_decl>
-<class_decl>class <name>RPropertyListener</name>;</class_decl>
-<class_decl>class <name>RSelectionListener</name>;</class_decl>
-<class_decl>class <name>RSnapListener</name>;</class_decl>
-<class_decl>class <name>RUcsListener</name>;</class_decl>
-<class_decl>class <name>RViewFocusListener</name>;</class_decl>
-<class_decl>class <name>RViewListener</name>;</class_decl>
 
 <comment type="block">/**
  * \brief Base class for a Qt based MDI main application window.

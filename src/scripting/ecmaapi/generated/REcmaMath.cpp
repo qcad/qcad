@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include "RVector.h"
+            
             
         // includes for base ecma wrapper classes
          void REcmaMath::initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -2793,38 +2795,6 @@
 
             QScriptValue result = engine->undefinedValue();
             
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isString()
-        ) /* type: QString */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    QString
-                    a0 =
-                    (QString)
-                    
-                    context->argument( 0 ).
-                    toString();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'RVector'
-    RVector cppResult =
-        RMath::
-       parseCoordinate(a0);
-        // return type: RVector
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
-    } else
-
-
-        
     
     if( context->argumentCount() ==
     2 && (

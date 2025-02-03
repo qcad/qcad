@@ -3991,8 +3991,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RUnit: Argument 1 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RUnit: Argument 1 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a1 = *ap1;
                 
@@ -4049,8 +4050,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RUnit: Argument 1 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RUnit: Argument 1 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a1 = *ap1;
                 
@@ -4120,8 +4122,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RUnit: Argument 1 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RUnit: Argument 1 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a1 = *ap1;
                 
@@ -4204,8 +4207,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RUnit: Argument 1 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RUnit: Argument 1 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a1 = *ap1;
                 
@@ -4301,8 +4305,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RUnit: Argument 1 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RUnit: Argument 1 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a1 = *ap1;
                 

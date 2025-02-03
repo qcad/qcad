@@ -7,6 +7,12 @@
 
         // forwards declarations mapped to includes
         
+                #include "RDocument.h"
+            
+                #include "REntity.h"
+            
+                #include "RLine.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -1390,8 +1396,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RHatchData: Argument 0 is not of type RShape*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RHatchData: Argument 0 is not of type RShape* or QSharedPointer<RShape>.",
+                               context);
                     }
                     RShape& a0 = *ap0;
                 
@@ -4646,8 +4653,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RHatchData: Argument 1 is not of type QStack < QSharedPointer < REntity > >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RHatchData: Argument 1 is not of type QStack < QSharedPointer < REntity > >* or QSharedPointer<QStack < QSharedPointer < REntity > >>.",
+                               context);
                     }
                     QStack < QSharedPointer < REntity > >& a1 = *ap1;
                 
@@ -4701,8 +4709,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RHatchData: Argument 1 is not of type QStack < QSharedPointer < REntity > >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RHatchData: Argument 1 is not of type QStack < QSharedPointer < REntity > >* or QSharedPointer<QStack < QSharedPointer < REntity > >>.",
+                               context);
                     }
                     QStack < QSharedPointer < REntity > >& a1 = *ap1;
                 

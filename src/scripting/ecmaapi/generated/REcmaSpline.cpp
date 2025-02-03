@@ -7,7 +7,13 @@
 
         // forwards declarations mapped to includes
         
+                #include "RArc.h"
+            
                 #include "RLine.h"
+            
+                #include "RPolyline.h"
+            
+                #include "RSplineProxy.h"
             
             
         // includes for base ecma wrapper classes
@@ -5986,8 +5992,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSpline: Argument 0 is not of type QTransform*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSpline: Argument 0 is not of type QTransform* or QSharedPointer<QTransform>.",
+                               context);
                     }
                     QTransform& a0 = *ap0;
                 

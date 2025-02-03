@@ -23,12 +23,12 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSet&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPair&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
-
+<class_decl>class <name>REntity</name>;</class_decl>
 <class_decl>class <name>RExporter</name>;</class_decl>
 
 <comment type="block">/**
@@ -40,7 +40,7 @@
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>REntityExportListener</name> <block>{<private type="default">
 </private><public>public:
-    <destructor><specifier>virtual</specifier> <name>~REntityExportListener</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+    <destructor_decl><specifier>virtual</specifier> <name>~REntityExportListener</name><parameter_list>()</parameter_list>;</destructor_decl>
 
     <comment type="block">/**
      * Registers the given custom property as trigger. The exportEntity function is only
@@ -50,16 +50,7 @@
         <expr_stmt><expr><name>registeredProperties</name>.<call><name>insert</name><argument_list>(<argument><expr><call><name>QPair<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name><argument_list>(<argument><expr><name>title</name></expr></argument>, <argument><expr><name>regExp</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name>virtual</name> <name>bool</name></type> <name>checkCustomProperty</name><parameter_list>(<param><decl><type><name>REntity</name>*</type> <name>e</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <decl_stmt><decl><type><name><name>QSet<argument_list>&lt;<argument><name>QPair<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>::<name>const_iterator</name></name></type> <name>it</name></decl>;</decl_stmt>
-        <for>for (<init><expr><name>it</name>=<name>registeredProperties</name>.<call><name>constBegin</name><argument_list>()</argument_list></call></expr>;</init> <condition><expr><name>it</name>!=<name>registeredProperties</name>.<call><name>constEnd</name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>it</name>++</expr></incr>) <block>{
-            <if>if <condition>(<expr><name>e</name>-&gt;<call><name>hasCustomProperty</name><argument_list>(<argument><expr>(*<name>it</name>).<name>first</name></expr></argument>, <argument><expr><call><name>QRegularExpression</name><argument_list>(<argument><expr>(*<name>it</name>).<name>second</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
-                <return>return <expr><name>true</name></expr>;</return>
-            }</block></then></if>
-        }</block></for>
-
-        <return>return <expr><name>false</name></expr>;</return>
-    }</block></function>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>checkCustomProperty</name><parameter_list>(<param><decl><type><name>REntity</name>*</type> <name>e</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <comment type="block">/**
      * Called by the document whenever an entity is exporter with 

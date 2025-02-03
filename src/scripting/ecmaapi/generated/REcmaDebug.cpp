@@ -7,6 +7,10 @@
 
         // forwards declarations mapped to includes
         
+                #include <QElapsedTimer>
+            
+                #include <QMutex>
+            
             
         // includes for base ecma wrapper classes
          void REcmaDebug::initEcma(QScriptEngine& engine, QScriptValue* proto 

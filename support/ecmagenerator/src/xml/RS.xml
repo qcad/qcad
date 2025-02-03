@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
-  <class_decl name="RVector" />
   <class_decl name="RPropertyAttributes" />
   <class name="QRegularExpressionMatch"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
@@ -124,6 +123,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="EntityTolerance" />
       <value name="EntityWipeout" />
       <value name="EntityXRef" />
+      <value name="EntityCustom" />
       <value name="EntityUser" />
     </enum>
     <enum name="ProjectionRenderingHint">

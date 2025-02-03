@@ -26,6 +26,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDimensionEntity.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDimAngularData.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>RArc</name>;</class_decl>
 <class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>RExporter</name>;</class_decl>
 
@@ -143,9 +144,7 @@
         <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getDimArcPosition</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>virtual</name> <name>RArc</name></type> <name>getDimensionArc</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getDimensionArc</name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+    <function_decl><type><name>virtual</name> <name>RArc</name></type> <name>getDimensionArc</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
 </public><protected>protected:
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>print</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>

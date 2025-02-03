@@ -332,8 +332,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFontChooserWidget: Argument 0 is not of type QFont*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFontChooserWidget: Argument 0 is not of type QFont* or QSharedPointer<QFont>.",
+                               context);
                     }
                     QFont& a0 = *ap0;
                 
@@ -605,8 +606,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFontChooserWidget: Argument 0 is not of type QFont*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFontChooserWidget: Argument 0 is not of type QFont* or QSharedPointer<QFont>.",
+                               context);
                     }
                     QFont& a0 = *ap0;
                 

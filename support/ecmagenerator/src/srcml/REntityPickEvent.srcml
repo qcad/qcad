@@ -24,11 +24,10 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RInputEvent.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RGraphicsView</name>;</class_decl>
 <class_decl>class <name>RGraphicsScene</name>;</class_decl>
+<class_decl>class <name>RVector</name>;</class_decl>
 
 <comment type="block">/**
  * Entity pick event.
@@ -42,13 +41,13 @@
      * \param entityId ID of picked entity.
      * \param pos Absolute coordinate.
      */</comment>
-    <constructor_decl><name>REntityPickEvent</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>,
+    <constructor_decl><name>REntityPickEvent</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>,
        <param><decl><type><name>RGraphicsScene</name>&amp;</type> <name>s</name></decl></param>, <param><decl><type><name>RGraphicsView</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</constructor_decl>
 
     <comment type="block">/**
-     * \return The ID of the picked entity or REntity::INVALID_ID.
+     * \return The ID of the picked entity or RObject::INVALID_ID.
      */</comment>
-    <function><type><name><name>REntity</name>::<name>Id</name></name></type> <name>getEntityId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getEntityId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>entityId</name></expr>;</return>
     }</block></function>
 
@@ -63,11 +62,11 @@
      * \return true If the entity ID of the event is valid.
      */</comment>
     <function><type><name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>entityId</name>!=<name><name>REntity</name>::<name>INVALID_ID</name></name></expr>;</return>
+        <return>return <expr><name>entityId</name> != <name><name>RObject</name>::<name>INVALID_ID</name></name></expr>;</return>
     }</block></function>
 
 </public><private>private:
-    <decl_stmt><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>Qt</name>::<name>KeyboardModifiers</name></name></type> <name>mods</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 

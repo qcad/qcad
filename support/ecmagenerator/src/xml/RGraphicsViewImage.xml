@@ -1,15 +1,13 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
-  <class_decl name="RAction" />
-  <class_decl name="RDocument" />
-  <class_decl name="RDocumentInterface" />
   <class_decl name="RGraphicsSceneQt" />
-  <class_decl name="RGraphicsSceneDrawable" />
+  <class_decl name="RImageData" />
   <class_decl name="RLine" />
   <class_decl name="RSnap" />
   <class_decl name="RSnapRestriction" />
-  <class_decl name="RGraphicsViewImage" />
+  <class_decl name="RTextBasedData" />
+  <class_decl name="RTextLayout" />
   <class_decl name="RGraphicsViewWorker" />
   <class name="RGraphicsViewImage"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
@@ -237,7 +235,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RGraphicsViewWorker *"
         typeName="RGraphicsViewWorker *" name="worker"
         isConst="false" />
-        <arg type="REntity::Id" typeName="REntity::Id" name="id"
+        <arg type="RObject::Id" typeName="RObject::Id" name="id"
         isConst="false" />
         <arg type="bool" typeName="bool" name="preview"
         hasDefault="true" default="false" isConst="false" />

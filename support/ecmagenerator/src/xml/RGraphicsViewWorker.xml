@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="QTextLayout" />
+  <class_decl name="RGraphicsViewImage" />
+  <class_decl name="RImageData" />
+  <class_decl name="RPainterPath" />
+  <class_decl name="RTextBasedData" />
   <class name="RGraphicsViewWorker"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="true"
@@ -27,8 +32,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="init" cppName="init" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QList &lt; REntity::Id &gt; &amp;"
-        typeName="QList &lt; REntity::Id &gt;" name="list"
+        <arg type="QList &lt; RObject::Id &gt; &amp;"
+        typeName="QList &lt; RObject::Id &gt;" name="list"
         isConst="false" />
         <arg type="int" typeName="int" name="start"
         isConst="false" />

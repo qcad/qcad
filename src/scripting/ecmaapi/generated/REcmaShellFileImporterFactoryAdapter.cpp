@@ -9,6 +9,8 @@
 
         // forwards declarations mapped to includes
         
+                #include "RDocument.h"
+            
                 #include "RFileImporter.h"
             
                 #include "RMessageHandler.h"

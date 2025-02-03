@@ -3,6 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RGraphicsView" />
   <class_decl name="RGraphicsScene" />
+  <class_decl name="RVector" />
   <class name="REntityPickEvent"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
@@ -10,7 +11,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <baseClass name="RInputEvent" specifier="public" />
     <constructor>
       <variant>
-        <arg type="REntity::Id" typeName="REntity::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="entityId" isConst="false" />
         <arg type="RVector &amp;" typeName="RVector"
         name="position" isConst="true" />
@@ -23,7 +24,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getEntityId" cppName="getEntityId"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="REntity::Id" isPureVirtual="false" />
+      <variant returnType="RObject::Id" isPureVirtual="false" />
     </method>
     <method name="setModifiers" cppName="setModifiers"
     specifier="public" isStatic="false" isVirtual="false"

@@ -193,8 +193,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RPatternList: Argument 1 is not of type RResourceList < RPattern >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RPatternList: Argument 1 is not of type RResourceList < RPattern >* or QSharedPointer<RResourceList < RPattern >>.",
+                               context);
                     }
                     RResourceList < RPattern >& a1 = *ap1;
                 

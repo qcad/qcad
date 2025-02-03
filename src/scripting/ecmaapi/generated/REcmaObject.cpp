@@ -11,6 +11,8 @@
             
                 #include "RTransaction.h"
             
+                #include "RVector.h"
+            
             
         // includes for base ecma wrapper classes
          void REcmaObject::initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -51,6 +53,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, isOfType, "isOfType");
+            
             REcmaHelper::registerFunction(&engine, proto, getType, "getType");
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
@@ -364,6 +368,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaObject::getRtti", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaObject::isOfType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaObject::isOfType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaObject::isOfType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("isOfType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::EntityType */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::EntityType
+                    a0 =
+                    (RS::EntityType)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isOfType(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.isOfType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaObject::isOfType", context, engine);
             return result;
         }
          QScriptValue
@@ -1428,8 +1492,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RObject: Argument 0 is not of type RPropertyAttributes::Option*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RObject: Argument 0 is not of type RPropertyAttributes::Option* or QSharedPointer<RPropertyAttributes::Option>.",
+                               context);
                     }
                     RPropertyAttributes::Option& a0 = *ap0;
                 

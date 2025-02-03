@@ -23,24 +23,14 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QtCore&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFrame&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFocusFrame&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QElapsedTimer&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QWidget&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPinchGesture&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGraphicsViewImage.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
-<class_decl>class <name>RAction</name>;</class_decl>
-<class_decl>class <name>RDocument</name>;</class_decl>
-<class_decl>class <name>RDocumentInterface</name>;</class_decl>
-<class_decl>class <name>RFocusFrame</name>;</class_decl>
-<class_decl>class <name>RGraphicsSceneQt</name>;</class_decl>
-<class_decl>class <name>RLine</name>;</class_decl>
-<class_decl>class <name>RSnap</name>;</class_decl>
-<class_decl>class <name>RSnapRestriction</name>;</class_decl>
-
-
+<class_decl>class <name>QFrame</name>;</class_decl>
+<class_decl>class <name>QGestureEvent</name>;</class_decl>
+<class_decl>class <name>RGraphicsViewImage</name>;</class_decl>
 
 <comment type="block">/**
  * \brief QWidget based 2d graphics view.

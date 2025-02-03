@@ -7,13 +7,15 @@
 
         // forwards declarations mapped to includes
         
+                #include "RBlock.h"
+            
                 #include "RDocument.h"
             
-                #include "REntity.h"
-            
-                #include "RBlockReferenceEntity.h"
-            
                 #include "RExporter.h"
+            
+                #include "RLayer.h"
+            
+                #include "RPropertyAttributes.h"
             
                 #include "RViewportData.h"
             
@@ -1641,15 +1643,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -1756,11 +1758,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLayer::Id'
-    RLayer::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getLayerId();
-        // return type: RLayer::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -1849,15 +1851,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -1909,11 +1911,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RBlock::Id'
-    RBlock::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getBlockId();
-        // return type: RBlock::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -2007,11 +2009,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'REntity::Id'
-    REntity::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getParentId();
-        // return type: REntity::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -2051,15 +2053,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLinetype::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLinetype::Id
+                    RObject::Id
                     a0 =
-                    (RLinetype::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -2178,11 +2180,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLinetype::Id'
-    RLinetype::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getLinetypeId();
-        // return type: RLinetype::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -2223,21 +2225,22 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < QSharedPointer < REntity > >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < QSharedPointer < REntity > >* or QSharedPointer<QStack < QSharedPointer < REntity > >>.",
+                               context);
                     }
                     QStack < QSharedPointer < REntity > >& a1 = *ap1;
                 
     // end of arguments
 
     // call C++ function:
-    // return type 'RLinetype::Id'
-    RLinetype::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getLinetypeId(a0
         ,
     a1);
-        // return type: RLinetype::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -2535,8 +2538,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < QSharedPointer < REntity > >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < QSharedPointer < REntity > >* or QSharedPointer<QStack < QSharedPointer < REntity > >>.",
+                               context);
                     }
                     QStack < QSharedPointer < REntity > >& a1 = *ap1;
                 
@@ -2607,8 +2611,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type QStack < QSharedPointer < REntity > >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type QStack < QSharedPointer < REntity > >* or QSharedPointer<QStack < QSharedPointer < REntity > >>.",
+                               context);
                     }
                     QStack < QSharedPointer < REntity > >& a0 = *ap0;
                 
@@ -2788,8 +2793,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < QSharedPointer < REntity > >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < QSharedPointer < REntity > >* or QSharedPointer<QStack < QSharedPointer < REntity > >>.",
+                               context);
                     }
                     QStack < QSharedPointer < REntity > >& a1 = *ap1;
                 
@@ -2843,8 +2849,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < QSharedPointer < REntity > >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < QSharedPointer < REntity > >* or QSharedPointer<QStack < QSharedPointer < REntity > >>.",
+                               context);
                     }
                     QStack < QSharedPointer < REntity > >& a1 = *ap1;
                 
@@ -3045,8 +3052,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type REntityData*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type REntityData* or QSharedPointer<REntityData>.",
+                               context);
                     }
                     REntityData& a0 = *ap0;
                 
@@ -3085,8 +3093,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type REntityData*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type REntityData* or QSharedPointer<REntityData>.",
+                               context);
                     }
                     REntityData& a0 = *ap0;
                 
@@ -4670,8 +4679,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RShape*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RShape* or QSharedPointer<RShape>.",
+                               context);
                     }
                     RShape& a0 = *ap0;
                 
@@ -5355,7 +5365,7 @@
         ) /* type: RS::ProjectionRenderingHint */
      && (
             context->argument(1).isArray()
-        ) /* type: QList < REntity::Id > * */
+        ) /* type: QList < RObject::Id > * */
     
     ){
     // prepare arguments:
@@ -5369,16 +5379,16 @@
                     toNumber();
                 
                     // argument is pointer
-                    QList < REntity::Id > * a1 = NULL;
+                    QList < RObject::Id > * a1 = NULL;
 
                     a1 = 
-                        REcmaHelper::scriptValueTo<QList < REntity::Id > >(
+                        REcmaHelper::scriptValueTo<QList < RObject::Id > >(
                             context->argument(1)
                         );
                     
                     if (a1==NULL && 
                         !context->argument(1).isNull()) {
-                        return REcmaHelper::throwError("REntity: Argument 1 is not of type QList < REntity::Id > *QList < REntity::Id > *.", context);                    
+                        return REcmaHelper::throwError("REntity: Argument 1 is not of type QList < RObject::Id > *QList < RObject::Id > *.", context);                    
                     }
                 
     // end of arguments
@@ -5940,7 +5950,7 @@
         ) /* type: RBox */
      && (
             context->argument(1).isArray()
-        ) /* type: QList < REntity::Id > * */
+        ) /* type: QList < RObject::Id > * */
     
     ){
     // prepare arguments:
@@ -5964,16 +5974,16 @@
                     *ap0;
                 
                     // argument is pointer
-                    QList < REntity::Id > * a1 = NULL;
+                    QList < RObject::Id > * a1 = NULL;
 
                     a1 = 
-                        REcmaHelper::scriptValueTo<QList < REntity::Id > >(
+                        REcmaHelper::scriptValueTo<QList < RObject::Id > >(
                             context->argument(1)
                         );
                     
                     if (a1==NULL && 
                         !context->argument(1).isNull()) {
-                        return REcmaHelper::throwError("REntity: Argument 1 is not of type QList < REntity::Id > *QList < REntity::Id > *.", context);                    
+                        return REcmaHelper::throwError("REntity: Argument 1 is not of type QList < RObject::Id > *QList < RObject::Id > *.", context);                    
                     }
                 
     // end of arguments
@@ -6207,7 +6217,7 @@
         ) /* type: bool */
      && (
             context->argument(3).isNumber()
-        ) /* type: REntity::Id * */
+        ) /* type: RObject::Id * */
     
     ){
     // prepare arguments:
@@ -6247,9 +6257,9 @@
                     toBool();
                 
                     // argument isStandardType
-                    REntity::Id *
+                    RObject::Id *
                     a3 =
-                    (REntity::Id *)
+                    (RObject::Id *)
                     (int)
                     context->argument( 3 ).
                     toNumber();
@@ -6588,8 +6598,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type REntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
                     }
                     REntity& a0 = *ap0;
                 
@@ -6633,8 +6644,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type REntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
                     }
                     REntity& a0 = *ap0;
                 
@@ -6693,8 +6705,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type REntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
                     }
                     REntity& a0 = *ap0;
                 
@@ -6776,8 +6789,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type REntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
                     }
                     REntity& a0 = *ap0;
                 
@@ -6856,7 +6870,7 @@
         ) /* type: bool */
      && (
             context->argument(4).isArray()
-        ) /* type: QList < QPair < REntity::Id , REntity::Id > > * */
+        ) /* type: QList < QPair < RObject::Id , RObject::Id > > * */
     
     ){
     // prepare arguments:
@@ -6872,8 +6886,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type REntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
                     }
                     REntity& a0 = *ap0;
                 
@@ -6912,16 +6927,16 @@
                     toBool();
                 
                     // argument is pointer
-                    QList < QPair < REntity::Id , REntity::Id > > * a4 = NULL;
+                    QList < QPair < RObject::Id , RObject::Id > > * a4 = NULL;
 
                     a4 = 
-                        REcmaHelper::scriptValueTo<QList < QPair < REntity::Id , REntity::Id > > >(
+                        REcmaHelper::scriptValueTo<QList < QPair < RObject::Id , RObject::Id > > >(
                             context->argument(4)
                         );
                     
                     if (a4==NULL && 
                         !context->argument(4).isNull()) {
-                        return REcmaHelper::throwError("REntity: Argument 4 is not of type QList < QPair < REntity::Id , REntity::Id > > *QList < QPair < REntity::Id , REntity::Id > > *.", context);                    
+                        return REcmaHelper::throwError("REntity: Argument 4 is not of type QList < QPair < RObject::Id , RObject::Id > > *QList < QPair < RObject::Id , RObject::Id > > *.", context);                    
                     }
                 
     // end of arguments
@@ -6969,8 +6984,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RShape*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RShape* or QSharedPointer<RShape>.",
+                               context);
                     }
                     RShape& a0 = *ap0;
                 
@@ -7014,8 +7030,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RShape*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RShape* or QSharedPointer<RShape>.",
+                               context);
                     }
                     RShape& a0 = *ap0;
                 
@@ -7074,8 +7091,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RShape*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RShape* or QSharedPointer<RShape>.",
+                               context);
                     }
                     RShape& a0 = *ap0;
                 
@@ -7157,8 +7175,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RShape*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RShape* or QSharedPointer<RShape>.",
+                               context);
                     }
                     RShape& a0 = *ap0;
                 
@@ -7267,8 +7286,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RShape*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RShape* or QSharedPointer<RShape>.",
+                               context);
                     }
                     RShape& a0 = *ap0;
                 
@@ -7312,8 +7332,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RShape*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RShape* or QSharedPointer<RShape>.",
+                               context);
                     }
                     RShape& a0 = *ap0;
                 
@@ -7372,8 +7393,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RShape*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RShape* or QSharedPointer<RShape>.",
+                               context);
                     }
                     RShape& a0 = *ap0;
                 
@@ -8834,8 +8856,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RExporter*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RExporter* or QSharedPointer<RExporter>.",
+                               context);
                     }
                     RExporter& a0 = *ap0;
                 
@@ -8874,8 +8897,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RExporter*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RExporter* or QSharedPointer<RExporter>.",
+                               context);
                     }
                     RExporter& a0 = *ap0;
                 
@@ -8927,8 +8951,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RExporter*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RExporter* or QSharedPointer<RExporter>.",
+                               context);
                     }
                     RExporter& a0 = *ap0;
                 
@@ -9598,15 +9623,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();

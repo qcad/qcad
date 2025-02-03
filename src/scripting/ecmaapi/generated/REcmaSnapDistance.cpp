@@ -9,8 +9,6 @@
         
                 #include "RGraphicsView.h"
             
-                #include "RMouseEvent.h"
-            
             
         // includes for base ecma wrapper classes
         

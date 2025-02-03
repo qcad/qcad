@@ -245,15 +245,15 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getFrozenLayerIds" cppName="getFrozenLayerIds"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="QList &lt; RLayer::Id &gt;"
+      <variant returnType="QList &lt; RObject::Id &gt;"
       isPureVirtual="false" />
     </method>
     <method name="setFrozenLayerIds" cppName="setFrozenLayerIds"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QList &lt; RLayer::Id &gt; &amp;"
-        typeName="QList &lt; RLayer::Id &gt;" name="ids"
+        <arg type="QList &lt; RObject::Id &gt; &amp;"
+        typeName="QList &lt; RObject::Id &gt;" name="ids"
         isConst="true" />
       </variant>
     </method>

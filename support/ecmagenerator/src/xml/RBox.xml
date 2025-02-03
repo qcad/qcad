@@ -2,6 +2,7 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RLine" />
+  <class_decl name="RShape" />
   <class_decl name="RTriangle" />
   <class_decl name="RPolyline" />
   <class name="RBox" xsi:noNamespaceSchemaLocation="../class.xsd"

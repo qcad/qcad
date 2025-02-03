@@ -71,11 +71,11 @@
         
     
       void setCurrentBlockId(
-                RBlock::Id id
+                RObject::Id id
             );
         
     
-      RBlock::Id getCurrentBlockId(
+      RObject::Id getCurrentBlockId(
                 
             );
         

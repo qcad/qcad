@@ -7,49 +7,15 @@
 
         // forwards declarations mapped to includes
         
-                #include <QMdiArea>
-            
                 #include <QMdiSubWindow>
-            
-                #include "RBlockListener.h"
-            
-                #include "RCoordinateListener.h"
             
                 #include "RDocument.h"
             
                 #include "RDocumentInterface.h"
             
-                #include "RFocusListener.h"
-            
-                #include "RGraphicsView.h"
-            
-                #include "RKeyListener.h"
-            
-                #include "RLayerListener.h"
-            
                 #include "RMdiArea.h"
             
                 #include "RMdiChildQt.h"
-            
-                #include "RNewDocumentListener.h"
-            
-                #include "RPaletteListener.h"
-            
-                #include "RPenListener.h"
-            
-                #include "RPreferencesListener.h"
-            
-                #include "RPropertyListener.h"
-            
-                #include "RSelectionListener.h"
-            
-                #include "RSnapListener.h"
-            
-                #include "RUcsListener.h"
-            
-                #include "RViewFocusListener.h"
-            
-                #include "RViewListener.h"
             
             
         // includes for base ecma wrapper classes
@@ -1486,8 +1452,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a0 = *ap0;
                 
@@ -1502,8 +1469,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RMainWindow: Argument 1 is not of type REntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RMainWindow: Argument 1 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
                     }
                     REntity& a1 = *ap1;
                 
@@ -4340,7 +4308,7 @@
         ) /* type: RDocumentInterface * */
      && (
             context->argument(1).isArray()
-        ) /* type: QList < RLayer::Id > */
+        ) /* type: QList < RObject::Id > */
     
     ){
     // prepare arguments:
@@ -4359,7 +4327,7 @@
                     }
                 
                     // argument isArray or QVariantMap
-                    QList < RLayer::Id >
+                    QList < RObject::Id >
                     a1;
                     REcmaHelper::fromScriptValue(
                         engine,
@@ -4416,7 +4384,7 @@
         ) /* type: RDocumentInterface * */
      && (
             context->argument(1).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
@@ -4435,9 +4403,9 @@
                     }
                 
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a1 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 1 ).
                     toNumber();
@@ -7839,8 +7807,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RMainWindowQt: Argument 0 is not of type QCursor*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RMainWindowQt: Argument 0 is not of type QCursor* or QSharedPointer<QCursor>.",
+                               context);
                     }
                     QCursor& a0 = *ap0;
                 
