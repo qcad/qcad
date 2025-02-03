@@ -36,6 +36,7 @@
 <class_decl>class <name>RLine</name>;</class_decl>
 <class_decl>class <name>RShape</name>;</class_decl>
 <class_decl>class <name>RSpline</name>;</class_decl>
+<class_decl>class <name>RPolyline</name>;</class_decl>
 
 
 <comment type="block">/**

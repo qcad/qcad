@@ -6,6 +6,15 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocumentInterface" />
   <class_decl name="RMdiArea" />
   <class_decl name="RMdiChildQt" />
+  <class_decl name="RPropertyEvent" />
+  <class_decl name="RCoordinateListener" />
+  <class_decl name="RSelectionListener" />
+  <class_decl name="RPropertyListener" />
+  <class_decl name="REntity" />
+  <class_decl name="RExportListener" />
+  <class_decl name="REntityExportListener" />
+  <class_decl name="RExporter" />
+  <class_decl name="RImportListener" />
   <class name="RMainWindowQt"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="true"

@@ -10,7 +10,8 @@
                 #include "RColor.h"
             
                 #include "RDocument.h"
-#include "RVector.h"
+            
+                #include "RVector.h"
             
             
         // includes for base ecma wrapper classes

@@ -21,6 +21,8 @@
             
                 #include "RRefPoint.h"
             
+                #include "RLine.h"
+            
             
         // includes for base ecma wrapper classes
          void REcmaSharedPointerEntityData::initEcma(QScriptEngine& engine, QScriptValue* proto 

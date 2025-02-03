@@ -20,7 +20,8 @@
                 #include "RPolyline.h"
             
                 #include "RRefPoint.h"
-#include "RLine.h"
+            
+                #include "RLine.h"
             
             
         // includes for base ecma wrapper classes

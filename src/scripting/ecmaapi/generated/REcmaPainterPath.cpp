@@ -16,7 +16,8 @@
                 #include "RShape.h"
             
                 #include "RSpline.h"
-#include "RPolyline.h"
+            
+                #include "RPolyline.h"
             
             
         // includes for base ecma wrapper classes

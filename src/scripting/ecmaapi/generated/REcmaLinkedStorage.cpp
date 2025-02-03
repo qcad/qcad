@@ -7,17 +7,41 @@
 
         // forwards declarations mapped to includes
         
-#include "RDocumentVariables.h"
-#include "RDimStyle.h"
-#include "RLayer.h"
-#include "RLayerState.h"
-#include "RLayout.h"
-#include "RBlock.h"
-#include "RView.h"
-#include "RUcs.h"
-#include "RLinetype.h"
-#include "RBlock.h"
-
+                #include "RBlock.h"
+            
+                #include "RColor.h"
+            
+                #include "RDimStyle.h"
+            
+                #include "RDocumentVariables.h"
+            
+                #include "REntity.h"
+            
+                #include "RLayer.h"
+            
+                #include "RLayerState.h"
+            
+                #include "RLayout.h"
+            
+                #include "RLinetype.h"
+            
+                #include "RLinetypePattern.h"
+            
+                #include "RLineweight.h"
+            
+                #include "RLinkedStorage.h"
+            
+                #include "RMemoryStorage.h"
+            
+                #include "RObject.h"
+            
+                #include "RStorage.h"
+            
+                #include "RUcs.h"
+            
+                #include "RView.h"
+            
+            
         // includes for base ecma wrapper classes
         
                   #include "REcmaMemoryStorage.h"

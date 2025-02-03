@@ -10,7 +10,8 @@
                 #include "RImageData.h"
             
                 #include "RTransform.h"
-#include "RDocument.h"
+            
+                #include "RDocument.h"
             
             
         // includes for base ecma wrapper classes

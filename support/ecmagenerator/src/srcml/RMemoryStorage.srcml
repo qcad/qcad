@@ -29,7 +29,20 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RStorage.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTransaction.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>RBlock</name>;</class_decl>
+<class_decl>class <name>RDimStyle</name>;</class_decl>
 <class_decl>class <name>RDocumentVariables</name>;</class_decl>
+<class_decl>class <name>REntity</name>;</class_decl>
+<class_decl>class <name>RLayer</name>;</class_decl>
+<class_decl>class <name>RLayerState</name>;</class_decl>
+<class_decl>class <name>RLayout</name>;</class_decl>
+<class_decl>class <name>RLinetype</name>;</class_decl>
+<class_decl>class <name>RLinetypePattern</name>;</class_decl>
+<class_decl>class <name>RLineweight</name>;</class_decl>
+<class_decl>class <name>RMemoryStorage</name>;</class_decl>
+<class_decl>class <name>RObject</name>;</class_decl>
+<class_decl>class <name>RUcs</name>;</class_decl>
+<class_decl>class <name>RView</name>;</class_decl>
 
 <comment type="block">/**
  * Basic memory based storage.

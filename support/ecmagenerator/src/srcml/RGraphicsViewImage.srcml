@@ -38,6 +38,10 @@
 <class_decl>class <name>RTextBasedData</name>;</class_decl>
 <class_decl>class <name>RTextLayout</name>;</class_decl>
 <class_decl>class <name>RGraphicsViewWorker</name>;</class_decl>
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RDocumentInterface</name>;</class_decl>
+<class_decl>class <name>RTerminateEvent</name>;</class_decl>
+<class_decl>class <name>RMouseEvent</name>;</class_decl>
 
 <comment type="block">/**
  * \brief QImage based 2d graphics view.

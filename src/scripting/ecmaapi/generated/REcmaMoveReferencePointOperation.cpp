@@ -12,7 +12,8 @@
                 #include "REntity.h"
             
                 #include "RGraphicsScene.h"
-#include "RDocument.h"
+            
+                #include "RDocument.h"
             
             
         // includes for base ecma wrapper classes

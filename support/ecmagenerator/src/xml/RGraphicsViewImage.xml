@@ -9,6 +9,10 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RTextBasedData" />
   <class_decl name="RTextLayout" />
   <class_decl name="RGraphicsViewWorker" />
+  <class_decl name="RDocument" />
+  <class_decl name="RDocumentInterface" />
+  <class_decl name="RTerminateEvent" />
+  <class_decl name="RMouseEvent" />
   <class name="RGraphicsViewImage"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="true"

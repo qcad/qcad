@@ -27,6 +27,7 @@
 
 <class_decl>class <name>RColor</name>;</class_decl>
 <class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RVector</name>;</class_decl>
 
 <comment type="block">/**
  * This type of object is used to store document wide variables.

@@ -8,6 +8,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RLinetypePattern" />
   <class_decl name="RPolyline" />
   <class_decl name="RRefPoint" />
+  <class_decl name="RLine" />
   <class name="REntityData"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="true" isQObject="false"

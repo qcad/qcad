@@ -6,9 +6,11 @@
         #include "../REcmaHelper.h"
 
         // forwards declarations mapped to includes
-
-#include "RDocument.h"
-#include "RTransaction.h"
+        
+                #include "RDocument.h"
+            
+                #include "RTransaction.h"
+            
             
         // includes for base ecma wrapper classes
         

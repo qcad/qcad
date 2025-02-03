@@ -29,6 +29,7 @@
 <class_decl>class <name>RObject</name>;</class_decl>
 <class_decl>class <name>REntity</name>;</class_decl>
 <class_decl>class <name>RGraphicsScene</name>;</class_decl>
+<class_decl>class <name>RDocument</name>;</class_decl>
 
 <comment type="block">/**
  * Implementation of an operation that moves a reference point

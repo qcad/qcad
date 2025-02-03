@@ -39,6 +39,7 @@
 <class_decl>class <name>RLinetypePattern</name>;</class_decl>
 <class_decl>class <name>RPolyline</name>;</class_decl>
 <class_decl>class <name>RRefPoint</name>;</class_decl>
+<class_decl>class <name>RLine</name>;</class_decl>
 
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_QSET_INT</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QSET_INT</name> <name>QSet</name>&lt;int&gt;()</cpp:define>

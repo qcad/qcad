@@ -11,6 +11,8 @@
             
                 #include "RExporter.h"
             
+                #include "RViewportData.h"
+            
             
         // includes for base ecma wrapper classes
         

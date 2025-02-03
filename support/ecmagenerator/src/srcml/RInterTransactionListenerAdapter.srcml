@@ -25,6 +25,9 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RInterTransactionListener.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RTransaction</name>;</class_decl>
+
 <comment type="block">/**
  * \scriptable
  * \ingroup ecma

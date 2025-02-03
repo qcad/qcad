@@ -4,6 +4,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RObject" />
   <class_decl name="REntity" />
   <class_decl name="RGraphicsScene" />
+  <class_decl name="RDocument" />
   <class name="RMoveReferencePointOperation"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"

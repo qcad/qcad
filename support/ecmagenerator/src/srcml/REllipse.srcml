@@ -30,6 +30,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RBox</name>;</class_decl>
+<class_decl>class <name>RPolyline</name>;</class_decl>
 
 <comment type="block">/**
  * Low-level mathematical representation of an ellipse or ellipse arc.

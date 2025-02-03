@@ -12,6 +12,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RRay" />
   <class_decl name="RTriangle" />
   <class_decl name="RXLine" />
+  <class_decl name="RTransform" />
   <class name="RGraphicsSceneQt"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"

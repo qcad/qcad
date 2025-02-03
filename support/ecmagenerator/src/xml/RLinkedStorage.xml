@@ -1,6 +1,23 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RBlock" />
+  <class_decl name="RColor" />
+  <class_decl name="RDimStyle" />
+  <class_decl name="RDocumentVariables" />
+  <class_decl name="REntity" />
+  <class_decl name="RLayer" />
+  <class_decl name="RLayerState" />
+  <class_decl name="RLayout" />
+  <class_decl name="RLinetype" />
+  <class_decl name="RLinetypePattern" />
+  <class_decl name="RLineweight" />
+  <class_decl name="RLinkedStorage" />
+  <class_decl name="RMemoryStorage" />
+  <class_decl name="RObject" />
+  <class_decl name="RStorage" />
+  <class_decl name="RUcs" />
+  <class_decl name="RView" />
   <class name="RLinkedStorage"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"

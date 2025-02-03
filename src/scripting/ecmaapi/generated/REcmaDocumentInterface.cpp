@@ -7,11 +7,11 @@
 
         // forwards declarations mapped to includes
         
-                #include "RAction.h"
-            
                 #include "RBlock.h"
             
                 #include "RBlockListener.h"
+            
+                #include "RBox.h"
             
                 #include "RColor.h"
             
@@ -22,6 +22,8 @@
                 #include "RCoordinateListener.h"
             
                 #include "RDocument.h"
+            
+                #include "RDocumentInterface.h"
             
                 #include "REntity.h"
             
@@ -41,19 +43,23 @@
             
                 #include "RMouseEvent.h"
             
+                #include "RObject.h"
+            
                 #include "ROperation.h"
             
                 #include "RPropertyEvent.h"
             
                 #include "RRefPoint.h"
             
-                #include "RSnapRestriction.h"
-            
                 #include "RScriptHandler.h"
             
                 #include "RShape.h"
             
+                #include "RSnapRestriction.h"
+            
                 #include "RStorage.h"
+            
+                #include "RTabletEvent.h"
             
                 #include "RTerminateEvent.h"
             
@@ -61,10 +67,11 @@
             
                 #include "RTransactionListener.h"
             
+                #include "RVector.h"
+            
                 #include "RViewportEntity.h"
             
                 #include "RWheelEvent.h"
-#include "RTabletEvent.h"
             
             
         // includes for base ecma wrapper classes

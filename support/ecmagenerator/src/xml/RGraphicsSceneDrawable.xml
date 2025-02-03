@@ -3,6 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RImageData" />
   <class_decl name="RTransform" />
+  <class_decl name="RDocument" />
   <class name="RGraphicsSceneDrawable"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"

@@ -30,6 +30,7 @@
 <class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>RDocumentInterface</name>;</class_decl>
 <class_decl>class <name>RGraphicsViewImage</name>;</class_decl>
+<class_decl>class <name>RStorage</name>;</class_decl>
 
 <comment type="block">/**
  * \brief MDI child window.

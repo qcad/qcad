@@ -42,14 +42,15 @@
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QVARIANTMAP</name> <name>QVariantMap</name>()</cpp:define>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
-<class_decl>class <name>RAction</name>;</class_decl>
 <class_decl>class <name>RBlock</name>;</class_decl>
 <class_decl>class <name>RBlockListener</name>;</class_decl>
+<class_decl>class <name>RBox</name>;</class_decl>
 <class_decl>class <name>RColor</name>;</class_decl>
 <class_decl>class <name>RCommandEvent</name>;</class_decl>
 <class_decl>class <name>RCoordinateEvent</name>;</class_decl>
 <class_decl>class <name>RCoordinateListener</name>;</class_decl>
 <class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RDocumentInterface</name>;</class_decl>
 <class_decl>class <name>REntity</name>;</class_decl>
 <class_decl>class <name>RGraphicsScene</name>;</class_decl>
 <class_decl>class <name>RGraphicsSceneDrawable</name>;</class_decl>
@@ -59,16 +60,19 @@
 <class_decl>class <name>RLayerListener</name>;</class_decl>
 <class_decl>class <name>RLinetypePattern</name>;</class_decl>
 <class_decl>class <name>RMouseEvent</name>;</class_decl>
+<class_decl>class <name>RObject</name>;</class_decl>
 <class_decl>class <name>ROperation</name>;</class_decl>
 <class_decl>class <name>RPropertyEvent</name>;</class_decl>
 <class_decl>class <name>RRefPoint</name>;</class_decl>
-<class_decl>class <name>RSnapRestriction</name>;</class_decl>
 <class_decl>class <name>RScriptHandler</name>;</class_decl>
 <class_decl>class <name>RShape</name>;</class_decl>
+<class_decl>class <name>RSnapRestriction</name>;</class_decl>
 <class_decl>class <name>RStorage</name>;</class_decl>
+<class_decl>class <name>RTabletEvent</name>;</class_decl>
 <class_decl>class <name>RTerminateEvent</name>;</class_decl>
 <class_decl>class <name>RTransaction</name>;</class_decl>
 <class_decl>class <name>RTransactionListener</name>;</class_decl>
+<class_decl>class <name>RVector</name>;</class_decl>
 <class_decl>class <name>RViewportEntity</name>;</class_decl>
 <class_decl>class <name>RWheelEvent</name>;</class_decl>
 
