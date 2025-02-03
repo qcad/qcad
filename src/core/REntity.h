@@ -632,7 +632,7 @@ public:
     /**
      * \copydoc REntityData::update
      */
-    void update() const {
+    virtual void update() const {
         getData().update();
     }
 

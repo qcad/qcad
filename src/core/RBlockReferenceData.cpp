@@ -124,7 +124,7 @@ RVector RBlockReferenceData::getVectorTo(const RVector& point, bool limited, dou
                     continue;
                 }
 
-                if (entity->getType()!=RS::EntityBlockRef) {
+                if (!entity->isOfType(RS::EntityBlockRef)) {
                     entity->scaleVisualProperties(getScaleFactors().x);
                 }
 
@@ -200,7 +200,7 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
                     continue;
                 }
 
-                if (entity->getType()!=RS::EntityBlockRef) {
+                if (!entity->isOfType(RS::EntityBlockRef)) {
                     entity->scaleVisualProperties(getScaleFactors().x);
                 }
 
@@ -383,7 +383,7 @@ RVector RBlockReferenceData::getPointOnEntity() const {
             continue;
         }
 
-        if (entity->getType()!=RS::EntityBlockRef) {
+        if (!entity->isOfType(RS::EntityBlockRef)) {
             entity->scaleVisualProperties(getScaleFactors().x);
         }
 
@@ -778,7 +778,7 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
                     continue;
                 }
 
-                if (entity->getType()!=RS::EntityBlockRef) {
+                if (!entity->isOfType(RS::EntityBlockRef)) {
                     entity->scaleVisualProperties(getScaleFactors().x);
                 }
 

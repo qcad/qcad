@@ -36,7 +36,8 @@ RClipboardOperation::RClipboardOperation() :
     copyEmptyBlocks(false),
     copyAllLayers(false),
     keepSelection(false),
-    blockOwnership(false) {
+    blockOwnership(false),
+    customEntityType(RS::EntityUnknown) {
 }
 
 void RClipboardOperation::copy(RDocument& src, RDocument& dest,
@@ -122,8 +123,8 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
         // (insert later, when block is complete, so we have bounding box for spatial index):
         //RBlockReferenceEntity* ref = new RBlockReferenceEntity(&dest,
         RBlockReferenceEntity* ref;
-        if (customEntity) {
-            ref = new RCustomEntity(&dest,
+        if (customEntityType!=RS::EntityUnknown) {
+            ref = new RCustomEntity(&dest, customEntityType,
                 RBlockReferenceData(block->getId(), RVector(0,0,0),
                                     RVector(1.0, 1.0, 1.0), 0.0));
         }

@@ -249,8 +249,8 @@ public:
         blockOwnership = on;
     }
 
-    void setCustomEntity(bool on) {
-        customEntity = on;
+    void setCustomEntityType(RS::EntityType t) {
+        customEntityType = t;
     }
 
 private:
@@ -262,7 +262,7 @@ private:
     bool copyAllLayers;
     bool keepSelection;
     bool blockOwnership;
-    bool customEntity;
+    RS::EntityType customEntityType;
 };
 
 Q_DECLARE_METATYPE(RClipboardOperation*)

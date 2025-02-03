@@ -277,9 +277,9 @@ public:
         EntityTolerance,    /**< Tolerance */
         EntityWipeout,      /**< Wipeout */
         EntityXRef,         /**< XRef */
-        EntityCustom,       /**< Custom entity with custom renderer */
+        EntityCustom = 1000000,   /**< Custom entity with custom renderer */
 
-        EntityUser          /**< User defined entity. Use this to identify
+        EntityUser = 2000000 /**< User defined entity. Use this to identify
                                  entities that are added in a separate library
                                  and resort to C++ RTTI for RTTI. */
     };
