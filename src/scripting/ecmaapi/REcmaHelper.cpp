@@ -68,6 +68,7 @@
 #include "RLayer.h"
 #include "RBlock.h"
 #include "RLinetype.h"
+#include "RView.h"
 
 #include "REcmaHelper.h"
 

@@ -8,6 +8,8 @@
         // forwards declarations mapped to includes
         
                 #include "RDocument.h"
+#include "RPolyline.h"
+#include "RTransaction.h"
             
             
         // includes for base ecma wrapper classes

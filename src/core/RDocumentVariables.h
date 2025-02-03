@@ -26,6 +26,7 @@
 
 class RColor;
 class RDocument;
+class RVector;
 
 /**
  * This type of object is used to store document wide variables.

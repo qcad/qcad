@@ -24,6 +24,8 @@
 
 #include <QMetaType>
 
+#include "RS.h"
+
 class RDocument;
 class RGraphicsView;
 class RRuler;

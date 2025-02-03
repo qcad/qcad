@@ -38,6 +38,7 @@ class RExporter;
 class RLinetypePattern;
 class RPolyline;
 class RRefPoint;
+class RLine;
 
 #ifndef RDEFAULT_QSET_INT
 #define RDEFAULT_QSET_INT QSet<int>()

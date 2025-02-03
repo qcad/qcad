@@ -31,6 +31,7 @@
 class RDocument;
 class RLine;
 class RRefPoint;
+class RBlockReferenceEntity;
 
 /**
  * Base class for dimension entity data classes.

@@ -8,6 +8,15 @@
         // forwards declarations mapped to includes
         
                 #include "RDocumentVariables.h"
+#include "RDimStyle.h"
+#include "RLayer.h"
+#include "RLayerState.h"
+#include "RLayout.h"
+#include "RView.h"
+#include "RUcs.h"
+#include "RLinetype.h"
+#include "RBlock.h"
+#include "REntity.h"
             
             
         // includes for base ecma wrapper classes

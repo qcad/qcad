@@ -28,7 +28,20 @@
 #include "RStorage.h"
 #include "RTransaction.h"
 
+class RBlock;
+class RDimStyle;
 class RDocumentVariables;
+class REntity;
+class RLayer;
+class RLayerState;
+class RLayout;
+class RLinetype;
+class RLinetypePattern;
+class RLineweight;
+class RMemoryStorage;
+class RObject;
+class RUcs;
+class RView;
 
 /**
  * Basic memory based storage.

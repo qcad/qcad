@@ -12,6 +12,7 @@
                 #include "RDocumentInterface.h"
             
                 #include "RGraphicsViewImage.h"
+#include "RStorage.h"
             
             
         // includes for base ecma wrapper classes

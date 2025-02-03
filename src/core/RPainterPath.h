@@ -35,6 +35,7 @@ class RBox;
 class RLine;
 class RShape;
 class RSpline;
+class RPolyline;
 
 
 /**

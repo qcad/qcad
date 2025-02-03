@@ -37,6 +37,10 @@ class RSnapRestriction;
 class RTextBasedData;
 class RTextLayout;
 class RGraphicsViewWorker;
+class RDocument;
+class RDocumentInterface;
+class RTerminateEvent;
+class RMouseEvent;
 
 /**
  * \brief QImage based 2d graphics view.

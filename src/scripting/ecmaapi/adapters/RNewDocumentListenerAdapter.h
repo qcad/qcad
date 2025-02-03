@@ -24,6 +24,9 @@
 
 #include "RNewDocumentListener.h"
 
+class RDocument;
+class RTransaction;
+
 /**
  * \scriptable
  * \ingroup ecma

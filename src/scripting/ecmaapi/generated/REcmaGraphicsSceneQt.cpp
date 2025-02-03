@@ -28,6 +28,7 @@
                 #include "RTriangle.h"
             
                 #include "RXLine.h"
+#include "RTransform.h"
             
             
         // includes for base ecma wrapper classes

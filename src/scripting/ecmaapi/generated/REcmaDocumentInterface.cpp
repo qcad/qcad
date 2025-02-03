@@ -64,6 +64,7 @@
                 #include "RViewportEntity.h"
             
                 #include "RWheelEvent.h"
+#include "RTabletEvent.h"
             
             
         // includes for base ecma wrapper classes

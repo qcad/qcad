@@ -27,6 +27,7 @@
 
 class RImageData;
 class RTransform;
+class RDocument;
 
 
 /**

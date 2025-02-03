@@ -8,6 +8,7 @@
         // forwards declarations mapped to includes
         
                 #include "RBox.h"
+#include "RPolyline.h"
             
             
         // includes for base ecma wrapper classes

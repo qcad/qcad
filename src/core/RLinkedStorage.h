@@ -26,6 +26,24 @@
 
 #include "RMemoryStorage.h"
 
+class RBlock;
+class RColor;
+class RDimStyle;
+class RDocumentVariables;
+class REntity;
+class RLayer;
+class RLayerState;
+class RLayout;
+class RLinetype;
+class RLinetypePattern;
+class RLineweight;
+class RLinkedStorage;
+class RMemoryStorage;
+class RObject;
+class RStorage;
+class RUcs;
+class RView;
+
 /**
  * Memory based storage that is linked to another storage.
  * The other storage is read only and only used to read objects

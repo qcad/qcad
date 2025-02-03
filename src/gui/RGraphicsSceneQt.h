@@ -40,6 +40,7 @@ class RSpline;
 class RRay;
 class RTriangle;
 class RXLine;
+class RTransform;
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1

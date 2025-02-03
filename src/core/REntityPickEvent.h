@@ -23,6 +23,7 @@
 #include "core_global.h"
 
 #include "RInputEvent.h"
+#include "RObject.h"
 
 class RGraphicsView;
 class RGraphicsScene;

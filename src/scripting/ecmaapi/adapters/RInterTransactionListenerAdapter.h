@@ -24,6 +24,9 @@
 
 #include "RInterTransactionListener.h"
 
+class RDocument;
+class RTransaction;
+
 /**
  * \scriptable
  * \ingroup ecma

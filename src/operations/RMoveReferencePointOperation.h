@@ -28,6 +28,7 @@
 class RObject;
 class REntity;
 class RGraphicsScene;
+class RDocument;
 
 /**
  * Implementation of an operation that moves a reference point

@@ -16,6 +16,16 @@
                 #include "RMdiArea.h"
             
                 #include "RMdiChildQt.h"
+#include "RPropertyEvent.h"
+#include "RCoordinateListener.h"
+#include "RSelectionListener.h"
+#include "RPropertyListener.h"
+#include "REntity.h"
+#include "RExportListener.h"
+#include "RExporter.h"
+#include "REntityExportListener.h"
+#include "RImportListener.h"
+
             
             
         // includes for base ecma wrapper classes

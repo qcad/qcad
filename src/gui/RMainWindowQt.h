@@ -36,6 +36,15 @@ class RDocument;
 class RDocumentInterface;
 class RMdiArea;
 class RMdiChildQt;
+class RPropertyEvent;
+class RCoordinateListener;
+class RSelectionListener;
+class RPropertyListener;
+class REntity;
+class RExportListener;
+class REntityExportListener;
+class RExporter;
+class RImportListener;
 
 /**
  * \brief Base class for a Qt based MDI main application window.

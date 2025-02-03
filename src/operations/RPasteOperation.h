@@ -26,6 +26,8 @@
 #include "RVector.h"
 
 class RDocument;
+class RPolyline;
+class RTransaction;
 
 /**
  * Implementation of an operation that pastes the clipboard

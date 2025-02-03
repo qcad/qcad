@@ -12,6 +12,7 @@
                 #include "RLine.h"
             
                 #include "RRefPoint.h"
+#include "RBlockReferenceEntity.h"
             
             
         // includes for base ecma wrapper classes

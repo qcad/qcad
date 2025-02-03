@@ -29,6 +29,7 @@
 class RDocument;
 class RDocumentInterface;
 class RGraphicsViewImage;
+class RStorage;
 
 /**
  * \brief MDI child window.

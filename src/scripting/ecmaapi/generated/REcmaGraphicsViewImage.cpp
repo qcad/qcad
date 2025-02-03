@@ -22,6 +22,10 @@
                 #include "RTextLayout.h"
             
                 #include "RGraphicsViewWorker.h"
+#include "RDocument.h"
+#include "RDocumentInterface.h"
+#include "RTerminateEvent.h"
+#include "RMouseEvent.h"
             
             
         // includes for base ecma wrapper classes

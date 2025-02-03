@@ -41,14 +41,15 @@
 #define RDEFAULT_QVARIANTMAP QVariantMap()
 #endif
 
-class RAction;
 class RBlock;
 class RBlockListener;
+class RBox;
 class RColor;
 class RCommandEvent;
 class RCoordinateEvent;
 class RCoordinateListener;
 class RDocument;
+class RDocumentInterface;
 class REntity;
 class RGraphicsScene;
 class RGraphicsSceneDrawable;
@@ -58,16 +59,19 @@ class RLayer;
 class RLayerListener;
 class RLinetypePattern;
 class RMouseEvent;
+class RObject;
 class ROperation;
 class RPropertyEvent;
 class RRefPoint;
-class RSnapRestriction;
 class RScriptHandler;
 class RShape;
+class RSnapRestriction;
 class RStorage;
+class RTabletEvent;
 class RTerminateEvent;
 class RTransaction;
 class RTransactionListener;
+class RVector;
 class RViewportEntity;
 class RWheelEvent;
 

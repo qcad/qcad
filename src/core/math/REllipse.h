@@ -29,6 +29,7 @@
 #include "RVector.h"
 
 class RBox;
+class RPolyline;
 
 /**
  * Low-level mathematical representation of an ellipse or ellipse arc.
