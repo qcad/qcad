@@ -283,7 +283,7 @@ void RMainWindowQt::closeEvent(QCloseEvent* e) {
     // dock widget state not persistent between sessions
     // dock widget closes if user cancels close dialog
 #ifdef Q_OS_MAC
-#if (QT_VERSION >= 0x050601 && QT_VERSION <= 0x050602) || (QT_VERSION >= 0x050F00 && QT_VERSION < 0x060000)
+#if (QT_VERSION >= 0x050601 && QT_VERSION <= 0x050602) || (QT_VERSION >= 0x050F00 && QT_VERSION < 0x060000) || (QT_VERSION >= 0x060600 && QT_VERSION < 0x060801)
     // restore dock widgets that were already closed by the same event due to
     // a Qt bug:
     QString eventAddr = QString("0x%1").arg((qlonglong)e, 0, 16);
