@@ -28,6 +28,7 @@
 
 <class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>RLine</name>;</class_decl>
+<class_decl>class <name>RPolyline</name>;</class_decl>
 
 <comment type="block">/**
  * Linear dimension entity data base class.

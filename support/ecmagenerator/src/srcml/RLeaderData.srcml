@@ -31,6 +31,7 @@
 <class_decl>class <name>RLine</name>;</class_decl>
 <class_decl>class <name>RTriangle</name>;</class_decl>
 <class_decl>class <name>RRefPoint</name>;</class_decl>
+<class_decl>class <name>RPolyline</name>;</class_decl>
 
 <comment type="block">/**
  * Leader entity data class.

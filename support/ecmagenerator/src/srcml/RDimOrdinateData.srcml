@@ -29,6 +29,7 @@
 
 <class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>RRefPoint</name>;</class_decl>
+<class_decl>class <name>RPolyline</name>;</class_decl>
 
 <comment type="block">/**
  * Ordinate dimension entity data class.

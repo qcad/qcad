@@ -5,6 +5,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RLine" />
   <class_decl name="RTriangle" />
   <class_decl name="RRefPoint" />
+  <class_decl name="RPolyline" />
   <class name="RSolidData"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
