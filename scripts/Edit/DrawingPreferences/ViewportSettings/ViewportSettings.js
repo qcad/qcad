@@ -109,7 +109,6 @@ ViewportSettings.applyPreferences = function(doc) {
         }
         ++c;
 
-
         var hruler = vpWidget.findChild("HorizontalRuler");
         var vruler = vpWidget.findChild("VerticalRuler");
 
