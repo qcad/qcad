@@ -9,6 +9,8 @@
         
                 #include "RAttributeDefinitionData.h"
             
+                #include "REntity.h"
+            
                 #include "RDocument.h"
             
             
