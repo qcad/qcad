@@ -28,6 +28,8 @@
 #include "RCircle.h"
 
 class RDocument;
+class RLine;
+class RPolyline;
 
 /**
  * Stores and manages all data that defines the geometry and
