@@ -33,7 +33,7 @@ class RArc;
 class RBox;
 class RDocumentInterface;
 class REntity;
-class RGraphicView;
+class RGraphicsView;
 class RGraphicsSceneQt;
 class RGraphicsViewImage;
 class RImageData;

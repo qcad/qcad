@@ -29,6 +29,11 @@ class RDocument;
 class RLine;
 class RRefPoint;
 class RPolyline;
+class RTextData;
+
+#ifndef RDEFAULT_MIN1
+#define RDEFAULT_MIN1 -1
+#endif
 
 /**
  * Tolerance entity data class.

@@ -27,6 +27,13 @@
 
 #include "RSpatialIndex.h"
 
+class RBox;
+class RRequireHeap;
+class RSpatialIndex;
+class RSpatialIndexDebugVisitor;
+class RSpatialIndexVisitor;
+
+
 
 /**
  * \brief Simple spatial index implementation.

@@ -14,6 +14,7 @@
                 #include "RRefPoint.h"
             
                 #include "RPolyline.h"
+                #include "RTextData.h"
             
             
         // includes for base ecma wrapper classes

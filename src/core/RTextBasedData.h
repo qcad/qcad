@@ -29,8 +29,32 @@
 #include "RTextLayout.h"
 #include "RTextProxy.h"
 
-class RDocument;
 class QTextDocument;
+
+class RBox;
+class RColor;
+class RDebug;
+class RDocument;
+class RDxfServices;
+class REntityData;
+class RFontList;
+class RLine;
+class RMath;
+class RObject;
+class RPainterPath;
+class RPainterPathSource;
+class RPolyline;
+class RRefPoint;
+class RShape;
+class RTextBasedData;
+class RTextBasedEntity;
+class RTextLayout;
+class RTextProxy;
+class RTextRenderer;
+class RUnit;
+class RVector;
+
+
 
 /**
  * Stores and manages all data that defines the geometry and

@@ -8,6 +8,19 @@
         // forwards declarations mapped to includes
         
                 #include "RDocument.h"
+                #include "RBox.h"
+#include "RDocument.h"
+#include "REntityData.h"
+#include "RLine.h"
+#include "RObject.h"
+#include "RPoint.h"
+#include "RPolyline.h"
+#include "RRefPoint.h"
+#include "RShape.h"
+#include "RVector.h"
+#include "RViewportData.h"
+#include "RViewportEntity.h"
+
             
             
         // includes for base ecma wrapper classes

@@ -27,10 +27,20 @@
 #include "RSpline.h"
 #include "RVector.h"
 
+class RBox;
 class RDocument;
+class REntityData;
 class RLine;
-class RRefPoint;
+class RObject;
 class RPolyline;
+class RRefPoint;
+class RShape;
+class RSpline;
+class RSplineData;
+class RSplineEntity;
+class RVector;
+class RArc;
+
 
 /**
  * Stores and manages all data that defines the geometry and

@@ -31,8 +31,14 @@
 #include "RMainWindow.h"
 
 class RAction;
+class RDocument;
+class RDocumentInterface;
 class RFileImporterAdapter;
 class RGuiAction;
+class RMainWindow;
+class RScriptAction;
+class RScriptHandler;
+
 
 #ifndef RDEFAULT_QSTRING
 #define RDEFAULT_QSTRING QString()

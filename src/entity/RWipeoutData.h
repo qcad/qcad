@@ -24,7 +24,15 @@
 
 #include "RPolylineData.h"
 
+class RBox;
+class RDocument;
 class RPolyline;
+class RPolylineData;
+class RRefPoint;
+class RVector;
+class RWipeoutData;
+class RWipeoutEntity;
+
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1

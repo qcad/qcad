@@ -28,7 +28,19 @@
 #include "RVector.h"
 #include "RLine.h"
 
+class RBox;
 class RDocument;
+class REntityData;
+class RLine;
+class RObject;
+class RPoint;
+class RPolyline;
+class RRefPoint;
+class RShape;
+class RVector;
+class RViewportData;
+class RViewportEntity;
+
 
 /**
  * Stores and manages all data that defines the geometry and

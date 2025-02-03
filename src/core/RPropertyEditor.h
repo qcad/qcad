@@ -35,8 +35,16 @@
 
 class RDocument;
 class RDocumentInterface;
+class RLayerListener;
 class RObject;
 class RProperty;
+class RPropertyAttributes;
+class RPropertyEditor;
+class RPropertyGroupMap;
+class RPropertyListener;
+class RPropertyMap;
+class RPropertyTypeId;
+
 
 /**
  * Base class for property editors. Provides basic functionality that

@@ -16,6 +16,7 @@ SOURCES += \
     RDxfServices.cpp \
     REntity.cpp \
     REntityData.cpp \
+    REntityExportListener.cpp \
     REntityPickEvent.cpp \
     RExporter.cpp \
     RFileCache.cpp \

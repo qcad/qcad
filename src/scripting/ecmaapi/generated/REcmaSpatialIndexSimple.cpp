@@ -7,6 +7,10 @@
 
         // forwards declarations mapped to includes
         
+        #include "RBox.h"
+#include "RRequireHeap.h"
+#include "RSpatialIndex.h"
+
             
         // includes for base ecma wrapper classes
         

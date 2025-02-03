@@ -34,7 +34,46 @@
                 #include "RExporter.h"
             
                 #include "RImportListener.h"
-            
+
+#include "RBlockListener.h"
+#include "RCoordinateListener.h"
+#include "RDocument.h"
+#include "RDocumentInterface.h"
+#include "REntity.h"
+#include "REntityExportListener.h"
+#include "RExportListener.h"
+#include "RExporter.h"
+#include "RFocusListener.h"
+#include "RGraphicsView.h"
+#include "RImportListener.h"
+#include "RInterTransactionListener.h"
+#include "RKeyListener.h"
+#include "RLayerListener.h"
+#include "RMainWindow.h"
+#include "RMainWindowProxy.h"
+#include "RMainWindowQt.h"
+#include "RMdiArea.h"
+#include "RMdiChildQt.h"
+#include "RMessageHandler.h"
+#include "RNewDocumentListener.h"
+#include "RObject.h"
+#include "RPaletteListener.h"
+#include "RPenListener.h"
+#include "RPreferencesListener.h"
+#include "RProgressHandler.h"
+#include "RPropertyEvent.h"
+#include "RPropertyListener.h"
+#include "RPropertyTypeId.h"
+#include "RSelectionListener.h"
+#include "RSnapListener.h"
+#include "RTransaction.h"
+#include "RTransactionListener.h"
+#include "RUcsListener.h"
+#include "RVector.h"
+#include "RViewFocusListener.h"
+#include "RViewListener.h"
+
+
             
         // includes for base ecma wrapper classes
         

@@ -26,6 +26,12 @@
 #include "RPropertyListener.h"
 
 class RDocumentInterface;
+class RDocument;
+class RDocumentInterface;
+class RObject;
+class RPropertyListener;
+class RPropertyListenerAdapter;
+
 
 /**
  * \ingroup ecma

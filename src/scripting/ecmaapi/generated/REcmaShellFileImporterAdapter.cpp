@@ -14,6 +14,22 @@
                 #include "RMessageHandler.h"
             
                 #include "RProgressHandler.h"
+                #include "RDocument.h"
+#include "RFileImporter.h"
+#include "RFileImporterAdapter.h"
+#include "RMessageHandler.h"
+#include "RProgressHandler.h"
+#include "RVector.h"
+#include "RDocument.h"
+#include "REntity.h"
+#include "RImporter.h"
+#include "RMessageHandler.h"
+#include "RObject.h"
+#include "RProgressHandler.h"
+#include "RTransaction.h"
+#include "RVector.h"
+
+
             
             
         // includes for base ecma wrapper classes

@@ -24,6 +24,12 @@
 
 #include "RTransactionListener.h"
 
+class RDocument;
+class RTransaction;
+class RTransactionListener;
+class RTransactionListenerAdapter;
+
+
 /**
  * \scriptable
  * \ingroup ecma

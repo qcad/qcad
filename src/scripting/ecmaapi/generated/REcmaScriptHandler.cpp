@@ -12,6 +12,15 @@
                 #include "RFileImporterAdapter.h"
             
                 #include "RGuiAction.h"
+                #include "RAction.h"
+#include "RDocument.h"
+#include "RDocumentInterface.h"
+#include "RFileImporterAdapter.h"
+#include "RGuiAction.h"
+#include "RMainWindow.h"
+#include "RScriptAction.h"
+#include "RScriptHandler.h"
+
             
             
         // includes for base ecma wrapper classes

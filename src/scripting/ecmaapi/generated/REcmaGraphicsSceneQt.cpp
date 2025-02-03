@@ -15,7 +15,7 @@
             
                 #include "REntity.h"
             
-                #include "RGraphicView.h"
+                #include "RGraphicsView.h"
             
                 #include "RGraphicsSceneQt.h"
             
