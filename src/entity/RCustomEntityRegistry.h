@@ -20,7 +20,7 @@
 #ifndef RCUSTOMENTITYREGISTRY_H
 #define RCUSTOMENTITYREGISTRY_H
 
-#include "core_global.h"
+#include "entity_global.h"
 
 #include <QList>
 #include <QMetaType>
@@ -38,7 +38,7 @@ class RCustomEntityHandler;
  * \ingroup core
  * \scriptable
  */
-class QCADCORE_EXPORT RCustomEntityRegistry {
+class QCADENTITY_EXPORT RCustomEntityRegistry {
 public:
     static void registerHandler(RCustomEntityHandler* handler);
     static RCustomEntityHandler* getHandler(RS::EntityType entityType);

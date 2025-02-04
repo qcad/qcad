@@ -28,6 +28,7 @@
 #endif
 
 #include "RGlobal.h"
+#include "RSettings.h"
 
 #if defined(Q_OS_LINUX)
 #include <X11/Xlib.h>

@@ -20,7 +20,7 @@
 #ifndef RCUSTOMENTITYHANDLER_H
 #define RCUSTOMENTITYHANDLER_H
 
-#include "core_global.h"
+#include "entity_global.h"
 
 #include "RBlockReferenceEntity.h"
 #include "RBlockReferenceData.h"
@@ -35,7 +35,7 @@ class RCustomEntity;
  * \scriptable
  * \ingroup core
  */
-class QCADCORE_EXPORT RCustomEntityHandler {
+class QCADENTITY_EXPORT RCustomEntityHandler {
 
 public:
     virtual ~RCustomEntityHandler() {}

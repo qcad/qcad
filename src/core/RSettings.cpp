@@ -16,18 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QtDebug>
 #include <QApplication>
 #include <QColor>
 #include <QDir>
 #include <QFileInfo>
 #include <QFont>
+#include <QPalette>
 #include <QPrinterInfo>
 #include <QSettings>
 #include <QString>
 #include <QStringList>
 #include <QSysInfo>
 #include <QTranslator>
+#include <QDebug>
 
 #if QT_VERSION >= 0x050000
 #  include <QWindow>
