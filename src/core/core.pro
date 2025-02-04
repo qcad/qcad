@@ -71,6 +71,7 @@ SOURCES += \
     RScriptAction.cpp \
     RScriptHandler.cpp \
     RScriptHandlerRegistry.cpp \
+    RSelectionChangedEvent.cpp \
     RSettings.cpp \
     RShapesExporter.cpp \
     RSingleApplication.cpp \
@@ -88,6 +89,7 @@ SOURCES += \
     RTextRenderer.cpp \
     RThread.cpp \
     RTransaction.cpp \
+    RTransactionEvent.cpp \
     RTransactionStack.cpp \
     RUcs.cpp \
     RUnit.cpp \
