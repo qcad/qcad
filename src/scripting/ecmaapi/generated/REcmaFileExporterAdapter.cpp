@@ -9,13 +9,35 @@
         
                 #include "RArc.h"
             
+                #include "RBlock.h"
+            
+                #include "RBox.h"
+            
                 #include "RCircle.h"
+            
+                #include "RColor.h"
             
                 #include "RDocument.h"
             
                 #include "REllipse.h"
             
+                #include "REntity.h"
+            
+                #include "RExplodable.h"
+            
+                #include "RExporter.h"
+            
+                #include "RFileExporter.h"
+            
+                #include "RFileExporterFactory.h"
+            
+                #include "RFileExporterFactoryAdapter.h"
+            
                 #include "RImageData.h"
+            
+                #include "RLayer.h"
+            
+                #include "RLayerState.h"
             
                 #include "RLine.h"
             
@@ -23,7 +45,17 @@
             
                 #include "RLinetypePattern.h"
             
+                #include "RLineweight.h"
+            
+                #include "RMath.h"
+            
                 #include "RMessageHandler.h"
+            
+                #include "RObject.h"
+            
+                #include "RPainterPath.h"
+            
+                #include "RPainterPathSource.h"
             
                 #include "RPoint.h"
             
@@ -33,11 +65,21 @@
             
                 #include "RRay.h"
             
+                #include "RShape.h"
+            
                 #include "RSpline.h"
+            
+                #include "RTextBasedData.h"
+            
+                #include "RTransform.h"
             
                 #include "RTriangle.h"
             
                 #include "RVector.h"
+            
+                #include "RView.h"
+            
+                #include "RViewportEntity.h"
             
                 #include "RXLine.h"
             

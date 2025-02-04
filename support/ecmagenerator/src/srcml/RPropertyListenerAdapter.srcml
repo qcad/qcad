@@ -27,6 +27,12 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyListener.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RDocumentInterface</name>;</class_decl>
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RDocumentInterface</name>;</class_decl>
+<class_decl>class <name>RObject</name>;</class_decl>
+<class_decl>class <name>RPropertyListener</name>;</class_decl>
+<class_decl>class <name>RPropertyListenerAdapter</name>;</class_decl>
+
 
 <comment type="block">/**
  * \ingroup ecma

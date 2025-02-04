@@ -2,8 +2,13 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RAction" />
+  <class_decl name="RDocument" />
+  <class_decl name="RDocumentInterface" />
   <class_decl name="RFileImporterAdapter" />
   <class_decl name="RGuiAction" />
+  <class_decl name="RMainWindow" />
+  <class_decl name="RScriptAction" />
+  <class_decl name="RScriptHandler" />
   <class name="RScriptHandler"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"

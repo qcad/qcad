@@ -29,7 +29,20 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RToleranceData.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>REntity</name>;</class_decl>
 <class_decl>class <name>RExporter</name>;</class_decl>
+<class_decl>class <name>RLine</name>;</class_decl>
+<class_decl>class <name>RObject</name>;</class_decl>
+<class_decl>class <name>RPropertyAttributes</name>;</class_decl>
+<class_decl>class <name>RPropertyTypeId</name>;</class_decl>
+<class_decl>class <name>RShape</name>;</class_decl>
+<class_decl>class <name>RTextData</name>;</class_decl>
+<class_decl>class <name>RToleranceData</name>;</class_decl>
+<class_decl>class <name>RToleranceEntity</name>;</class_decl>
+<class_decl>class <name>RTransaction</name>;</class_decl>
+<class_decl>class <name>RVector</name>;</class_decl>
+
+
 
 <comment type="block">/**
  * Tolerance entity class.

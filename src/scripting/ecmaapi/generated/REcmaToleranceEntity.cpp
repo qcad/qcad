@@ -9,22 +9,29 @@
         
                 #include "RDocument.h"
             
+                #include "REntity.h"
+            
                 #include "RExporter.h"
+            
+                #include "RLine.h"
+            
+                #include "RObject.h"
+            
+                #include "RPropertyAttributes.h"
+            
+                #include "RPropertyTypeId.h"
+            
+                #include "RShape.h"
+            
                 #include "RTextData.h"
-                #include "RDocument.h"
-#include "REntity.h"
-#include "RExporter.h"
-#include "RLine.h"
-#include "RObject.h"
-#include "RPropertyAttributes.h"
-#include "RPropertyTypeId.h"
-#include "RShape.h"
-#include "RTextData.h"
-#include "RToleranceData.h"
-#include "RToleranceEntity.h"
-#include "RTransaction.h"
-#include "RVector.h"
-
+            
+                #include "RToleranceData.h"
+            
+                #include "RToleranceEntity.h"
+            
+                #include "RTransaction.h"
+            
+                #include "RVector.h"
             
             
         // includes for base ecma wrapper classes

@@ -33,19 +33,44 @@
 
 <class_decl>class <name>QMdiSubWindow</name>;</class_decl>
 
+<class_decl>class <name>RBlockListener</name>;</class_decl>
+<class_decl>class <name>RCoordinateListener</name>;</class_decl>
 <class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>RDocumentInterface</name>;</class_decl>
+<class_decl>class <name>REntity</name>;</class_decl>
+<class_decl>class <name>REntityExportListener</name>;</class_decl>
+<class_decl>class <name>RExportListener</name>;</class_decl>
+<class_decl>class <name>RExporter</name>;</class_decl>
+<class_decl>class <name>RFocusListener</name>;</class_decl>
+<class_decl>class <name>RGraphicsView</name>;</class_decl>
+<class_decl>class <name>RImportListener</name>;</class_decl>
+<class_decl>class <name>RInterTransactionListener</name>;</class_decl>
+<class_decl>class <name>RKeyListener</name>;</class_decl>
+<class_decl>class <name>RLayerListener</name>;</class_decl>
+<class_decl>class <name>RMainWindow</name>;</class_decl>
+<class_decl>class <name>RMainWindowProxy</name>;</class_decl>
+<class_decl>class <name>RMainWindowQt</name>;</class_decl>
 <class_decl>class <name>RMdiArea</name>;</class_decl>
 <class_decl>class <name>RMdiChildQt</name>;</class_decl>
+<class_decl>class <name>RMessageHandler</name>;</class_decl>
+<class_decl>class <name>RNewDocumentListener</name>;</class_decl>
+<class_decl>class <name>RObject</name>;</class_decl>
+<class_decl>class <name>RPaletteListener</name>;</class_decl>
+<class_decl>class <name>RPenListener</name>;</class_decl>
+<class_decl>class <name>RPreferencesListener</name>;</class_decl>
+<class_decl>class <name>RProgressHandler</name>;</class_decl>
 <class_decl>class <name>RPropertyEvent</name>;</class_decl>
-<class_decl>class <name>RCoordinateListener</name>;</class_decl>
-<class_decl>class <name>RSelectionListener</name>;</class_decl>
 <class_decl>class <name>RPropertyListener</name>;</class_decl>
-<class_decl>class <name>REntity</name>;</class_decl>
-<class_decl>class <name>RExportListener</name>;</class_decl>
-<class_decl>class <name>REntityExportListener</name>;</class_decl>
-<class_decl>class <name>RExporter</name>;</class_decl>
-<class_decl>class <name>RImportListener</name>;</class_decl>
+<class_decl>class <name>RPropertyTypeId</name>;</class_decl>
+<class_decl>class <name>RSelectionListener</name>;</class_decl>
+<class_decl>class <name>RSnapListener</name>;</class_decl>
+<class_decl>class <name>RTransaction</name>;</class_decl>
+<class_decl>class <name>RTransactionListener</name>;</class_decl>
+<class_decl>class <name>RUcsListener</name>;</class_decl>
+<class_decl>class <name>RVector</name>;</class_decl>
+<class_decl>class <name>RViewFocusListener</name>;</class_decl>
+<class_decl>class <name>RViewListener</name>;</class_decl>
+
 
 <comment type="block">/**
  * \brief Base class for a Qt based MDI main application window.

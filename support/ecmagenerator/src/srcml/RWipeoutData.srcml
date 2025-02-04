@@ -25,7 +25,15 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPolylineData.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>RBox</name>;</class_decl>
+<class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>RPolyline</name>;</class_decl>
+<class_decl>class <name>RPolylineData</name>;</class_decl>
+<class_decl>class <name>RRefPoint</name>;</class_decl>
+<class_decl>class <name>RVector</name>;</class_decl>
+<class_decl>class <name>RWipeoutData</name>;</class_decl>
+<class_decl>class <name>RWipeoutEntity</name>;</class_decl>
+
 
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_MIN1</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_MIN1</name> -1</cpp:define>

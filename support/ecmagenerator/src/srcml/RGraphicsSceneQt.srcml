@@ -34,7 +34,7 @@
 <class_decl>class <name>RBox</name>;</class_decl>
 <class_decl>class <name>RDocumentInterface</name>;</class_decl>
 <class_decl>class <name>REntity</name>;</class_decl>
-<class_decl>class <name>RGraphicView</name>;</class_decl>
+<class_decl>class <name>RGraphicsView</name>;</class_decl>
 <class_decl>class <name>RGraphicsSceneQt</name>;</class_decl>
 <class_decl>class <name>RGraphicsViewImage</name>;</class_decl>
 <class_decl>class <name>RImageData</name>;</class_decl>

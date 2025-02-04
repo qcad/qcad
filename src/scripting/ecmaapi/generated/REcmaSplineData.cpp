@@ -7,27 +7,31 @@
 
         // forwards declarations mapped to includes
         
+                #include "RBox.h"
+            
                 #include "RDocument.h"
+            
+                #include "REntityData.h"
             
                 #include "RLine.h"
             
-                #include "RRefPoint.h"
+                #include "RObject.h"
             
                 #include "RPolyline.h"
-                #include "RBox.h"
-#include "RDocument.h"
-#include "REntityData.h"
-#include "RLine.h"
-#include "RObject.h"
-#include "RPolyline.h"
-#include "RRefPoint.h"
-#include "RShape.h"
-#include "RSpline.h"
-#include "RSplineData.h"
-#include "RSplineEntity.h"
-#include "RVector.h"
-#include "RArc.h"
-
+            
+                #include "RRefPoint.h"
+            
+                #include "RShape.h"
+            
+                #include "RSpline.h"
+            
+                #include "RSplineData.h"
+            
+                #include "RSplineEntity.h"
+            
+                #include "RVector.h"
+            
+                #include "RArc.h"
             
             
         // includes for base ecma wrapper classes

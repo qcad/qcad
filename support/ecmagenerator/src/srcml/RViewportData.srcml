@@ -29,7 +29,19 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLine.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>RBox</name>;</class_decl>
 <class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>REntityData</name>;</class_decl>
+<class_decl>class <name>RLine</name>;</class_decl>
+<class_decl>class <name>RObject</name>;</class_decl>
+<class_decl>class <name>RPoint</name>;</class_decl>
+<class_decl>class <name>RPolyline</name>;</class_decl>
+<class_decl>class <name>RRefPoint</name>;</class_decl>
+<class_decl>class <name>RShape</name>;</class_decl>
+<class_decl>class <name>RVector</name>;</class_decl>
+<class_decl>class <name>RViewportData</name>;</class_decl>
+<class_decl>class <name>RViewportEntity</name>;</class_decl>
+
 
 <comment type="block">/**
  * Stores and manages all data that defines the geometry and

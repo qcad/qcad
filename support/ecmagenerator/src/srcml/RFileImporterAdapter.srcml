@@ -24,8 +24,16 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RFileImporter.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>REntity</name>;</class_decl>
+<class_decl>class <name>RFileImporter</name>;</class_decl>
+<class_decl>class <name>RFileImporterAdapter</name>;</class_decl>
+<class_decl>class <name>RImporter</name>;</class_decl>
 <class_decl>class <name>RMessageHandler</name>;</class_decl>
+<class_decl>class <name>RObject</name>;</class_decl>
 <class_decl>class <name>RProgressHandler</name>;</class_decl>
+<class_decl>class <name>RTransaction</name>;</class_decl>
+<class_decl>class <name>RVector</name>;</class_decl>
+
 
 <comment type="block">/**
  * \brief Base class for file importers. 

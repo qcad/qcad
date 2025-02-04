@@ -7,11 +7,14 @@
 
         // forwards declarations mapped to includes
         
-        #include "RDocument.h"
-#include "RTransaction.h"
-#include "RTransactionListener.h"
-#include "RTransactionListenerAdapter.h"
-
+                #include "RDocument.h"
+            
+                #include "RTransaction.h"
+            
+                #include "RTransactionListener.h"
+            
+                #include "RTransactionListenerAdapter.h"
+            
             
         // includes for base ecma wrapper classes
         

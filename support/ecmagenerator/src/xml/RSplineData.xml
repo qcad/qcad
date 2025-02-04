@@ -1,10 +1,19 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RBox" />
   <class_decl name="RDocument" />
+  <class_decl name="REntityData" />
   <class_decl name="RLine" />
-  <class_decl name="RRefPoint" />
+  <class_decl name="RObject" />
   <class_decl name="RPolyline" />
+  <class_decl name="RRefPoint" />
+  <class_decl name="RShape" />
+  <class_decl name="RSpline" />
+  <class_decl name="RSplineData" />
+  <class_decl name="RSplineEntity" />
+  <class_decl name="RVector" />
+  <class_decl name="RArc" />
   <class name="RSplineData"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"

@@ -21,7 +21,7 @@
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RCUSTOMENTITY_H</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RCUSTOMENTITY_H</name></cpp:define>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"entity_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBlockReferenceEntity.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBlockReferenceData.h"</cpp:file></cpp:include>
@@ -36,7 +36,7 @@
  * \sharedPointerSupport
  * \ingroup core
  */</comment>
-<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RCustomEntity</name><super>: <specifier>public</specifier> <name>RBlockReferenceEntity</name></super> <block>{<private type="default">
+<class>class <macro><name>QCADENTITY_EXPORT</name></macro> <name>RCustomEntity</name><super>: <specifier>public</specifier> <name>RBlockReferenceEntity</name></super> <block>{<private type="default">
 
 </private><public>public:
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyCustom</name></decl>;</decl_stmt>

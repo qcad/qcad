@@ -36,8 +36,16 @@
 
 <class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>RDocumentInterface</name>;</class_decl>
+<class_decl>class <name>RLayerListener</name>;</class_decl>
 <class_decl>class <name>RObject</name>;</class_decl>
 <class_decl>class <name>RProperty</name>;</class_decl>
+<class_decl>class <name>RPropertyAttributes</name>;</class_decl>
+<class_decl>class <name>RPropertyEditor</name>;</class_decl>
+<class_decl>class <name>RPropertyGroupMap</name>;</class_decl>
+<class_decl>class <name>RPropertyListener</name>;</class_decl>
+<class_decl>class <name>RPropertyMap</name>;</class_decl>
+<class_decl>class <name>RPropertyTypeId</name>;</class_decl>
+
 
 <comment type="block">/**
  * Base class for property editors. Provides basic functionality that

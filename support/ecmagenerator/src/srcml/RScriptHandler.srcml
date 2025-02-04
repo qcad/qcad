@@ -32,8 +32,14 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMainWindow.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RAction</name>;</class_decl>
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RDocumentInterface</name>;</class_decl>
 <class_decl>class <name>RFileImporterAdapter</name>;</class_decl>
 <class_decl>class <name>RGuiAction</name>;</class_decl>
+<class_decl>class <name>RMainWindow</name>;</class_decl>
+<class_decl>class <name>RScriptAction</name>;</class_decl>
+<class_decl>class <name>RScriptHandler</name>;</class_decl>
+
 
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_QSTRING</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QSTRING</name> <name>QString</name>()</cpp:define>

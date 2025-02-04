@@ -24,22 +24,46 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RFileExporter.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RArc</name>;</class_decl>
+<class_decl>class <name>RBlock</name>;</class_decl>
+<class_decl>class <name>RBox</name>;</class_decl>
 <class_decl>class <name>RCircle</name>;</class_decl>
+<class_decl>class <name>RColor</name>;</class_decl>
 <class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>REllipse</name>;</class_decl>
+<class_decl>class <name>REntity</name>;</class_decl>
+<class_decl>class <name>RExplodable</name>;</class_decl>
+<class_decl>class <name>RExporter</name>;</class_decl>
+<class_decl>class <name>RFileExporter</name>;</class_decl>
+<class_decl>class <name>RFileExporterFactory</name>;</class_decl>
+<class_decl>class <name>RFileExporterFactoryAdapter</name>;</class_decl>
 <class_decl>class <name>RImageData</name>;</class_decl>
+<class_decl>class <name>RLayer</name>;</class_decl>
+<class_decl>class <name>RLayerState</name>;</class_decl>
 <class_decl>class <name>RLine</name>;</class_decl>
 <class_decl>class <name>RLinetype</name>;</class_decl>
 <class_decl>class <name>RLinetypePattern</name>;</class_decl>
+<class_decl>class <name>RLineweight</name>;</class_decl>
+<class_decl>class <name>RMath</name>;</class_decl>
 <class_decl>class <name>RMessageHandler</name>;</class_decl>
+<class_decl>class <name>RObject</name>;</class_decl>
+<class_decl>class <name>RPainterPath</name>;</class_decl>
+<class_decl>class <name>RPainterPathSource</name>;</class_decl>
 <class_decl>class <name>RPoint</name>;</class_decl>
 <class_decl>class <name>RPolyline</name>;</class_decl>
 <class_decl>class <name>RProgressHandler</name>;</class_decl>
 <class_decl>class <name>RRay</name>;</class_decl>
+<class_decl>class <name>RShape</name>;</class_decl>
 <class_decl>class <name>RSpline</name>;</class_decl>
+<class_decl>class <name>RTextBasedData</name>;</class_decl>
+<class_decl>class <name>RTransform</name>;</class_decl>
 <class_decl>class <name>RTriangle</name>;</class_decl>
 <class_decl>class <name>RVector</name>;</class_decl>
+<class_decl>class <name>RView</name>;</class_decl>
+<class_decl>class <name>RViewportEntity</name>;</class_decl>
 <class_decl>class <name>RXLine</name>;</class_decl>
+
+
+
 
 <comment type="block">/**
  * \brief Base class for file exporters, including script file exporters. 

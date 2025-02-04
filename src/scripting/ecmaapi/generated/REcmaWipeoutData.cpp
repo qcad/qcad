@@ -7,16 +7,21 @@
 
         // forwards declarations mapped to includes
         
-                #include "RPolyline.h"
                 #include "RBox.h"
-#include "RDocument.h"
-#include "RPolyline.h"
-#include "RPolylineData.h"
-#include "RRefPoint.h"
-#include "RVector.h"
-#include "RWipeoutData.h"
-#include "RWipeoutEntity.h"
-
+            
+                #include "RDocument.h"
+            
+                #include "RPolyline.h"
+            
+                #include "RPolylineData.h"
+            
+                #include "RRefPoint.h"
+            
+                #include "RVector.h"
+            
+                #include "RWipeoutData.h"
+            
+                #include "RWipeoutEntity.h"
             
             
         // includes for base ecma wrapper classes

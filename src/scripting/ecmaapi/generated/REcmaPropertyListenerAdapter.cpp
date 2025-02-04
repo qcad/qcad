@@ -8,11 +8,16 @@
         // forwards declarations mapped to includes
         
                 #include "RDocumentInterface.h"
+            
                 #include "RDocument.h"
-#include "RObject.h"
-#include "RPropertyListener.h"
-#include "RPropertyListenerAdapter.h"
-
+            
+                #include "RDocumentInterface.h"
+            
+                #include "RObject.h"
+            
+                #include "RPropertyListener.h"
+            
+                #include "RPropertyListenerAdapter.h"
             
             
         // includes for base ecma wrapper classes

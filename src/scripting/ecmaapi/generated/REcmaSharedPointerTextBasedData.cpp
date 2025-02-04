@@ -7,31 +7,51 @@
 
         // forwards declarations mapped to includes
         
+                #include <QTextDocument>
+            
+                #include "RBox.h"
+            
+                #include "RColor.h"
+            
+                #include "RDebug.h"
+            
                 #include "RDocument.h"
             
-                #include <QTextDocument>
-
-                #include "RBox.h"
-#include "RColor.h"
-#include "RDebug.h"
-#include "RDocument.h"
-#include "RDxfServices.h"
-#include "REntityData.h"
-#include "RFontList.h"
-#include "RLine.h"
-#include "RMath.h"
-#include "RObject.h"
-#include "RPainterPath.h"
-#include "RPolyline.h"
-#include "RRefPoint.h"
-#include "RShape.h"
-#include "RTextBasedData.h"
-#include "RTextLayout.h"
-#include "RTextProxy.h"
-#include "RTextRenderer.h"
-#include "RUnit.h"
-#include "RVector.h"
-
+                #include "RDxfServices.h"
+            
+                #include "REntityData.h"
+            
+                #include "RFontList.h"
+            
+                #include "RLine.h"
+            
+                #include "RMath.h"
+            
+                #include "RObject.h"
+            
+                #include "RPainterPath.h"
+            
+                #include "RPainterPathSource.h"
+            
+                #include "RPolyline.h"
+            
+                #include "RRefPoint.h"
+            
+                #include "RShape.h"
+            
+                #include "RTextBasedData.h"
+            
+                #include "RTextBasedEntity.h"
+            
+                #include "RTextLayout.h"
+            
+                #include "RTextProxy.h"
+            
+                #include "RTextRenderer.h"
+            
+                #include "RUnit.h"
+            
+                #include "RVector.h"
             
             
         // includes for base ecma wrapper classes

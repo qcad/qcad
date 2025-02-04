@@ -23,6 +23,7 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QEvent&gt;</cpp:file></cpp:include>
 
 <comment type="block">/**
@@ -33,8 +34,8 @@
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RSelectionChangedEvent</name> <super>: <specifier>public</specifier> <name>QEvent</name></super> <block>{<private type="default">
 </private><public>public:
-    <constructor><name>RSelectionChangedEvent</name><parameter_list>()</parameter_list> <member_list>: <call><name>QEvent</name><argument_list>(<argument><expr>(<name><name>QEvent</name>::<name>Type</name></name>)(<name><name>QEvent</name>::<name>User</name></name>+100)</expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
-    <destructor><specifier>virtual</specifier> <name>~RSelectionChangedEvent</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+    <constructor_decl><name>RSelectionChangedEvent</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RSelectionChangedEvent</name><parameter_list>()</parameter_list>;</destructor_decl>
 </public>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RSelectionChangedEvent*</argument>)</argument_list></macro>
