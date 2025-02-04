@@ -47,6 +47,8 @@
 <class_decl>class <name>RPropertyTypeId</name>;</class_decl>
 
 
+
+
 <comment type="block">/**
  * Base class for property editors. Provides basic functionality that
  * is common to any property editor implementation.
