@@ -31,7 +31,6 @@
 <class_decl>class <name>RBox</name>;</class_decl>
 <class_decl>class <name>RRequireHeap</name>;</class_decl>
 <class_decl>class <name>RSpatialIndex</name>;</class_decl>
-<class_decl>class <name>RSpatialIndexDebugVisitor</name>;</class_decl>
 <class_decl>class <name>RSpatialIndexVisitor</name>;</class_decl>
 
 

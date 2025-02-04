@@ -13,8 +13,6 @@
             
                 #include "RSpatialIndex.h"
             
-                #include "RSpatialIndexDebugVisitor.h"
-            
                 #include "RSpatialIndexVisitor.h"
             
             
