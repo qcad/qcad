@@ -43,19 +43,9 @@ public:
     virtual ~RRuler() {
     }
 
-    void setGraphicsView(RGraphicsView* view) {
-        this->view = view;
-        updateViewport();
-    }
-
-    Qt::Orientation getOrientation() const {
-        return orientation;
-    }
-
-    void setOrientation(Qt::Orientation orientation) {
-        this->orientation = orientation;
-        updateViewport();
-    }
+    void setGraphicsView(RGraphicsView* view);
+    Qt::Orientation getOrientation() const;
+    void setOrientation(Qt::Orientation orientation);
 
     virtual void paintTick(int pos, bool major, const QString& label) = 0;
 

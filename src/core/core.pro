@@ -6,6 +6,7 @@ SOURCES += \
     RBlockReferenceData.cpp \
     RBlockReferenceEntity.cpp \
     RColor.cpp \
+    RCommandEvent.cpp \
     RCoordinateEvent.cpp \
     RDebug.cpp \
     RDimStyle.cpp \
@@ -68,6 +69,7 @@ SOURCES += \
     RResourceList.cpp \
     RS.cpp \
     RSPlatform.cpp \
+    RRuler.cpp \
     RScriptAction.cpp \
     RScriptHandler.cpp \
     RScriptHandlerRegistry.cpp \
