@@ -643,12 +643,11 @@ void RSettings::loadTranslations(const QString& module, const QStringList& dirs)
     QString locale = RSettings::getLocale();
 
     QStringList translationsDirs = dirs;
-    if (translationsDirs.isEmpty()) {
-        translationsDirs = RS::getDirectoryList("ts");
-    }
+    translationsDirs.append(RS::getDirectoryList("ts"));
 
+    // prioritize user provided translations in application data directory over standard translations:
     QTranslator* translator = new QTranslator(qApp);
-    for (int i=0; i<translationsDirs.size(); ++i) {
+    for (int i=translationsDirs.size()-1; i>=0; --i) {
         QString name = module + "_" + locale;
         if (translator->load(name, translationsDirs[i])) {
             QCoreApplication::installTranslator(translator);
