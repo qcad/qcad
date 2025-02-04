@@ -63,6 +63,7 @@ SOURCES += \
     RPropertyAttributes.cpp \
     RPropertyChange.cpp \
     RPropertyEditor.cpp \
+    RPropertyEvent.cpp \
     RPropertyTypeId.cpp \
     RResourceList.cpp \
     RS.cpp \

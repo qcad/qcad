@@ -506,7 +506,7 @@ public:
     /**
      * \nonscriptable
      */
-    friend QDebug operator<<(QDebug dbg, const RShape& s);
+    friend QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RShape& s);
 
     static bool hasProxy() {
         return shapeProxy!=NULL;

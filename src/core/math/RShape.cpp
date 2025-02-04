@@ -2770,7 +2770,7 @@ void RShape::dump() const{
     qDebug() << *this;
 }
 
-QDebug operator<<(QDebug dbg, const RShape& s) {
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RShape& s) {
     s.print(dbg);
     return dbg;
 }

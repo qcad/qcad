@@ -59,9 +59,7 @@ public:
     /**
      * \return The position of the event in real graphic measures.
      */
-    RPropertyTypeId getPropertyTypeId() const {
-        return propertyTypeId;
-    }
+    RPropertyTypeId getPropertyTypeId() const;
 
     /**
      * \return true If the position of the coordinate event is valid.
