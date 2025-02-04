@@ -21,9 +21,12 @@
 #include <QApplication>
 #include <QDebug>
 #include <QDir>
+#include <QLoggingCategory>
 #include <QFileInfo>
 #include <QImageReader>
 #include <QSettings>
+#include <QSqlDatabase>
+#include <QTime>
 
 #if defined(Q_OS_MAC) || defined(Q_OS_LINUX)
 #include <signal.h>
