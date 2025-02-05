@@ -117,7 +117,7 @@ add_library(qcadcore SHARED
     RPropertyAttributes.cpp RPropertyAttributes.h
     RPropertyChange.cpp RPropertyChange.h
     RPropertyEditor.cpp RPropertyEditor.h
-    RPropertyEvent.h
+    RPropertyEvent.cpp RPropertyEvent.h
     RPropertyListener.h
     RPropertyTypeId.cpp RPropertyTypeId.h
     RRequireHeap.h
@@ -129,7 +129,7 @@ add_library(qcadcore SHARED
     RScriptAction.cpp RScriptAction.h
     RScriptHandler.cpp RScriptHandler.h
     RScriptHandlerRegistry.cpp RScriptHandlerRegistry.h
-    RSelectionChangedEvent.h
+    RSelectionChangedEvent.cpp RSelectionChangedEvent.h
     RSelectionListener.h
     RSettings.cpp RSettings.h
     RShapesExporter.cpp RShapesExporter.h
@@ -151,7 +151,7 @@ add_library(qcadcore SHARED
     RTextRenderer.cpp RTextRenderer.h
     RThread.cpp RThread.h
     RTransaction.cpp RTransaction.h
-    RTransactionEvent.h
+    RTransactionEvent.cpp RTransactionEvent.h
     RTransactionListener.h
     RTransactionStack.cpp RTransactionStack.h
     RUcs.cpp RUcs.h
