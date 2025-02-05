@@ -8801,7 +8801,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+35"/>
         <source>Scale of linetypes matches the scale of each viewport</source>
-        <translation>Schaal van linetypes komt overeen met de schaal van elke weergavegebied</translation>
+        <translation>Schaal van linetypes komt overeen met de schaal van elke viewport</translation>
     </message>
 </context>
 <context>
