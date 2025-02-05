@@ -1,7 +1,7 @@
 #ifndef RSMETATYPE_H
 #define RSMETATYPE_H
 
-    // included by RSEnums.h
+    // included by RS.h
     enum MetaType {
         Bool = QMetaType::Bool,
         Char = QMetaType::Char,

@@ -35,7 +35,7 @@ add_library(qcadcore SHARED
     RBlockReferenceEntity.cpp RBlockReferenceEntity.h
     RColor.cpp RColor.h
     RColorCodes.h
-    RCommandEvent.h
+    RCommandEvent.cpp RCommandEvent.h
     RCoordinateEvent.cpp RCoordinateEvent.h
     RCoordinateListener.h
     RDebug.cpp RDebug.h
@@ -122,7 +122,7 @@ add_library(qcadcore SHARED
     RPropertyTypeId.cpp RPropertyTypeId.h
     RRequireHeap.h
     RResourceList.cpp RResourceList.h
-    RRuler.h
+    RRuler.cpp RRuler.h
     RRunner.h
     RS.cpp RS.h
     RSPlatform.cpp
