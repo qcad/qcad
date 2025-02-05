@@ -48,7 +48,7 @@ add_library(qcadcore SHARED
     RDxfServices.cpp RDxfServices.h
     REntity.cpp REntity.h
     REntityData.cpp REntityData.h
-    REntityExportListener.h
+    REntityExportListener.cpp REntityExportListener.h
     REntityPickEvent.cpp REntityPickEvent.h
     RExportListener.h
     RExporter.cpp RExporter.h
@@ -135,7 +135,7 @@ add_library(qcadcore SHARED
     RShapesExporter.cpp RShapesExporter.h
     RSingleApplication.cpp RSingleApplication.h
     RSingleton.cpp RSingleton.h
-    RSnap.h
+    RSnap.cpp RSnap.h
     RSnapRestriction.h
     RSpatialIndex.cpp RSpatialIndex.h
     RSpatialIndexSimple.cpp RSpatialIndexSimple.h

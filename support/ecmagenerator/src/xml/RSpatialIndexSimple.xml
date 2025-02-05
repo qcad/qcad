@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RBox" />
+  <class_decl name="RRequireHeap" />
+  <class_decl name="RSpatialIndex" />
+  <class_decl name="RSpatialIndexVisitor" />
   <class name="RSpatialIndexSimple"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"

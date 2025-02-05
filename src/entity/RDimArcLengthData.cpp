@@ -17,7 +17,8 @@
  * along with QCAD.
  */
 #include "RDimArcLengthData.h"
-#include "RUnit.h"
+#include "RDocument.h"
+#include "RRefPoint.h"
 
 RDimArcLengthData::RDimArcLengthData() : arcSymbolType(0) {
 }

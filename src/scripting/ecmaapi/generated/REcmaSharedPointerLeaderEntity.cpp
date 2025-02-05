@@ -417,8 +417,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLeaderEntity: Argument 0 is not of type RLeaderEntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RLeaderEntity: Argument 0 is not of type RLeaderEntity* or QSharedPointer<RLeaderEntity>.",
+                               context);
                     }
                     RLeaderEntity& a0 = *ap0;
                 
@@ -3183,11 +3184,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'REntity::Id'
-    REntity::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getDimLeaderBlockId();
-        // return type: REntity::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -3227,15 +3228,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -3344,8 +3345,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLeaderEntity: Argument 0 is not of type RExporter*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RLeaderEntity: Argument 0 is not of type RExporter* or QSharedPointer<RExporter>.",
+                               context);
                     }
                     RExporter& a0 = *ap0;
                 
@@ -3384,8 +3386,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLeaderEntity: Argument 0 is not of type RExporter*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RLeaderEntity: Argument 0 is not of type RExporter* or QSharedPointer<RExporter>.",
+                               context);
                     }
                     RExporter& a0 = *ap0;
                 
@@ -3437,8 +3440,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLeaderEntity: Argument 0 is not of type RExporter*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RLeaderEntity: Argument 0 is not of type RExporter* or QSharedPointer<RExporter>.",
+                               context);
                     }
                     RExporter& a0 = *ap0;
                 

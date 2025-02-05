@@ -23,9 +23,9 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QObject&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocumentInterface.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBlockListener.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RDocumentInterface</name>;</class_decl>
 
 <comment type="block">/**
  * This block listener adapter emits signals on block events.

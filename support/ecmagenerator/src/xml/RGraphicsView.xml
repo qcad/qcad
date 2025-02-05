@@ -2,12 +2,24 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RAction" />
+  <class_decl name="RBox" />
+  <class_decl name="RColor" />
+  <class_decl name="RDocument" />
   <class_decl name="RDocumentInterface" />
   <class_decl name="RGraphicsScene" />
+  <class_decl name="RGrid" />
   <class_decl name="RLine" />
   <class_decl name="RMouseEvent" />
+  <class_decl name="RPainterPath" />
+  <class_decl name="RRefPoint" />
+  <class_decl name="RShape" />
   <class_decl name="RTabletEvent" />
+  <class_decl name="RTerminateEvent" />
   <class_decl name="RWheelEvent" />
+  <class_decl name="QKeyEvent" />
+  <class_decl name="QSwipeGesture" />
+  <class_decl name="QPanGesture" />
+  <class_decl name="QPinchGesture" />
   <class name="RGraphicsView"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
@@ -333,8 +345,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
-        <arg type="QSet &lt; REntity::Id &gt; &amp;"
-        typeName="QSet &lt; REntity::Id &gt;" name="ids"
+        <arg type="QSet &lt; RObject::Id &gt; &amp;"
+        typeName="QSet &lt; RObject::Id &gt;" name="ids"
         isConst="true" />
         <arg type="int" typeName="int" name="margin"
         hasDefault="true" default="RDEFAULT_MIN1"
@@ -406,8 +418,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QSet &lt; REntity::Id &gt; &amp;"
-        typeName="QSet &lt; REntity::Id &gt;"
+        <arg type="QSet &lt; RObject::Id &gt; &amp;"
+        typeName="QSet &lt; RObject::Id &gt;"
         name="affectedEntities" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="true">
@@ -538,7 +550,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
       <variant returnType="RRefPoint" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="entityId" isConst="false" />
         <arg type="RVector &amp;" typeName="RVector"
         name="screenPosition" isConst="true" />
@@ -547,7 +559,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getClosestEntity" cppName="getClosestEntity"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="REntity::Id" isPureVirtual="false">
+      <variant returnType="RObject::Id" isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector"
         name="screenPosition" isConst="true" />
         <arg type="int" typeName="int" name="range"

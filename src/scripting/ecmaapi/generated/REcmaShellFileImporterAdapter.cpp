@@ -11,9 +11,23 @@
         
                 #include "RDocument.h"
             
+                #include "REntity.h"
+            
+                #include "RFileImporter.h"
+            
+                #include "RFileImporterAdapter.h"
+            
+                #include "RImporter.h"
+            
                 #include "RMessageHandler.h"
             
+                #include "RObject.h"
+            
                 #include "RProgressHandler.h"
+            
+                #include "RTransaction.h"
+            
+                #include "RVector.h"
             
             
         // includes for base ecma wrapper classes
@@ -374,7 +388,7 @@
         
     
       void REcmaShellFileImporterAdapter::setCurrentBlockId(
-                RBlock::Id id
+                RObject::Id id
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileImporterAdapter::setCurrentBlockId", engine);
@@ -423,7 +437,7 @@
 
 
 
-    // type: RBlock::Id, copyable: true
+    // type: RObject::Id, copyable: true
         << qScriptValueFromValue(engine, 
 
         id
@@ -440,7 +454,7 @@
             }
         
     
-      RBlock::Id REcmaShellFileImporterAdapter::getCurrentBlockId(
+      RObject::Id REcmaShellFileImporterAdapter::getCurrentBlockId(
                 
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
@@ -466,7 +480,7 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        RBlock::Id ret =
+                        RObject::Id ret =
                         RFileImporterAdapter::getCurrentBlockId(
                             
                         );
@@ -484,10 +498,10 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    RBlock::Id res;
+                    RObject::Id res;
                       
                           res = qscriptvalue_cast< 
-                            RBlock::Id
+                            RObject::Id
                           >(
                         
                             _q_function.call(__qtscript_self)

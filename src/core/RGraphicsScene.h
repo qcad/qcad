@@ -22,22 +22,25 @@
 
 #include "core_global.h"
 
-#include <QCursor>
-#include <QDebug>
+#include <QtGlobal>
 
-#include "RDebug.h"
-#include "REntity.h"
 #include "RExporter.h"
-#include "RGraphicsView.h"
-#include "RGraphicsSceneDrawable.h"
-#include "RMouseEvent.h"
-#include "RSpatialIndex.h"
-#include "RTabletEvent.h"
-//#include "RTextLabel.h"
-#include "RWheelEvent.h"
+#include "RRefPoint.h"
 
 class RDocumentInterface;
-
+class REntity;
+class RGraphicsSceneDrawable;
+class RGraphicsView;
+class RMouseEvent;
+class RTabletEvent;
+class RTerminateEvent;
+class RWheelEvent;
+class QCursor;
+class QDebug;
+class QKeyEvent;
+class QPanGesture;
+class QPinchGesture;
+class QSwipeGesture;
 
 
 /**
@@ -75,8 +78,8 @@ public:
     virtual bool exportDocumentSettings() { return true; }
 
     virtual void regenerate(bool undone = false, bool invisible = false);
-    virtual void regenerate(QSet<REntity::Id>& affectedEntities, bool updateViews);
-    virtual void updateSelectionStatus(QSet<REntity::Id>& affectedEntities, bool updateViews);
+    virtual void regenerate(QSet<RObject::Id>& affectedEntities, bool updateViews);
+    virtual void updateSelectionStatus(QSet<RObject::Id>& affectedEntities, bool updateViews);
     virtual void regenerateViews(bool force=false);
     virtual void regenerateViews(QSet<RObject::Id>& affectedEntities);
     virtual void repaintViews();
@@ -104,15 +107,15 @@ public:
     virtual void clearPreview();
     virtual bool isPreviewEmpty();
 
-    virtual void addToPreview(REntity::Id entityId, QList<RGraphicsSceneDrawable>& drawables) {
+    virtual void addToPreview(RObject::Id entityId, QList<RGraphicsSceneDrawable>& drawables) {
         Q_UNUSED(entityId)
         Q_UNUSED(drawables)
     }
-    virtual void addToPreview(REntity::Id entityId, RGraphicsSceneDrawable& drawable) {
+    virtual void addToPreview(RObject::Id entityId, RGraphicsSceneDrawable& drawable) {
         Q_UNUSED(entityId)
         Q_UNUSED(drawable)
     }
-    virtual void addPathToPreview(REntity::Id entityId, RPainterPath& pp) {
+    virtual void addPathToPreview(RObject::Id entityId, RPainterPath& pp) {
         Q_UNUSED(entityId)
         Q_UNUSED(pp)
     }
@@ -140,14 +143,14 @@ public:
     virtual void selectReferencePoints(const RBox& box, bool add);
 
     virtual void exportCurrentEntity(bool preview = false, bool forceSelected = false);
-    virtual void unexportEntity(REntity::Id entityId);
+    virtual void unexportEntity(RObject::Id entityId);
 
     int countReferencePoints() const;
 
     /**
      * \nonscriptable
      */
-    QMap<REntity::Id, QList<RRefPoint> >& getReferencePoints() {
+    QMap<RObject::Id, QList<RRefPoint> >& getReferencePoints() {
         return referencePoints;
     }
 
@@ -182,7 +185,7 @@ protected:
      * Internal map of reference points for every selected entity in the scene.
      * Used for drawing reference points.
      */
-    QMap<REntity::Id, QList<RRefPoint> > referencePoints;
+    QMap<RObject::Id, QList<RRefPoint> > referencePoints;
 
 private:
     bool deleting;

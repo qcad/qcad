@@ -20,8 +20,13 @@
 
 #include "RAttributeDefinitionEntity.h"
 #include "RAttributeEntity.h"
+#include "RBlock.h"
 #include "RBlockReferenceEntity.h"
+#include "RCustomEntity.h"
 #include "RClipboardOperation.h"
+#include "RDocument.h"
+#include "RLayer.h"
+#include "RS.h"
 #include "RSettings.h"
 #include "RStorage.h"
 #include "RUnit.h"
@@ -31,7 +36,8 @@ RClipboardOperation::RClipboardOperation() :
     copyEmptyBlocks(false),
     copyAllLayers(false),
     keepSelection(false),
-    blockOwnership(false) {
+    blockOwnership(false),
+    customEntityType(RS::EntityUnknown) {
 }
 
 void RClipboardOperation::copy(RDocument& src, RDocument& dest,
@@ -115,9 +121,18 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
 
         // create new block reference that references new, overwritten or existing block
         // (insert later, when block is complete, so we have bounding box for spatial index):
-        RBlockReferenceEntity* ref = new RBlockReferenceEntity(&dest,
+        //RBlockReferenceEntity* ref = new RBlockReferenceEntity(&dest,
+        RBlockReferenceEntity* ref;
+        if (customEntityType!=RS::EntityUnknown) {
+            ref = new RCustomEntity(&dest, customEntityType,
                 RBlockReferenceData(block->getId(), RVector(0,0,0),
                                     RVector(1.0, 1.0, 1.0), 0.0));
+        }
+        else {
+            ref = new RBlockReferenceEntity(&dest,
+                RBlockReferenceData(block->getId(), RVector(0,0,0),
+                                    RVector(1.0, 1.0, 1.0), 0.0));
+        }
         refp = QSharedPointer<RBlockReferenceEntity>(ref);
         refp->setBlockId(dest.getCurrentBlockId());
         off = RVector(0, 0, 0);

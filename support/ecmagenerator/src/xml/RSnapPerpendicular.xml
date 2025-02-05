@@ -24,8 +24,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="RGraphicsView &amp;" typeName="RGraphicsView"
         name="view" isConst="false" />
-        <arg type="QList &lt; REntity::Id &gt; *"
-        typeName="QList &lt; REntity::Id &gt; *"
+        <arg type="QList &lt; RObject::Id &gt; *"
+        typeName="QList &lt; RObject::Id &gt; *"
         name="subEntityIds" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>

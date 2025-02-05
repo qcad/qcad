@@ -22,18 +22,9 @@
 
 #include "core_global.h"
 
-#include <QKeyEvent>
 #include <QList>
-#include <QMap>
-#include <QObject>
+#include <QMetaType>
 #include <QString>
-#include <QSwipeGesture>
-#include <QPanGesture>
-#include <QPinchGesture>
-
-#include "RDebug.h"
-#include "REntity.h"
-#include "RVector.h"
 
 class RPropertyEvent;
 class RGraphicsScene;
@@ -48,7 +39,11 @@ class RWheelEvent;
 class RGuiAction;
 class RStorage;
 class RTabletEvent;
-class ROperation;
+class RVector;
+class QKeyEvent;
+class QSwipeGesture;
+class QPanGesture;
+class QPinchGesture;
 
 /**
  * \brief Abstract base class for all action classes.

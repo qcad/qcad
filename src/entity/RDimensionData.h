@@ -23,10 +23,15 @@
 #include "entity_global.h"
 
 #include "RColor.h"
-#include "RDocument.h"
+#include "RDimStyleData.h"
 #include "REntityData.h"
 #include "RTextData.h"
 #include "RVector.h"
+
+class RDocument;
+class RLine;
+class RRefPoint;
+class RBlockReferenceEntity;
 
 /**
  * Base class for dimension entity data classes.

@@ -1,3 +1,5 @@
+#include <QDebug>
+
 #include "RRefPoint.h"
 
 QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RRefPoint& v) {

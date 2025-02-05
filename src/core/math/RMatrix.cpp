@@ -18,8 +18,11 @@
  */
 #include <cassert>
 
-#include "RDebug.h"
+#include <QDebug>
+
+#include "RMath.h"
 #include "RMatrix.h"
+#include "RVector.h"
 
 /**
  * Creates and empty matrix (zero columns and zero rows).

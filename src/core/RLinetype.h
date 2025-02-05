@@ -22,16 +22,12 @@
 
 #include "core_global.h"
 
-#include <QColor>
-#include <QCoreApplication>
-#include <QIcon>
 #include <QMetaType>
 #include <QString>
 
 #include "RLinetypePattern.h"
 #include "RObject.h"
 #include "RPropertyTypeId.h"
-#include "RVector.h"
 
 class RDocument;
 class RTransaction;

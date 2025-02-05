@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include "RDocumentInterface.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -281,7 +283,7 @@
         ) /* type: RDocumentInterface * */
      && (
             context->argument(1).isArray()
-        ) /* type: QList < RLayer::Id > */
+        ) /* type: QList < RObject::Id > */
     
     ){
     // prepare arguments:
@@ -300,7 +302,7 @@
                     }
                 
                     // argument isArray or QVariantMap
-                    QList < RLayer::Id >
+                    QList < RObject::Id >
                     a1;
                     REcmaHelper::fromScriptValue(
                         engine,
@@ -357,7 +359,7 @@
         ) /* type: RDocumentInterface * */
      && (
             context->argument(1).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
@@ -376,9 +378,9 @@
                     }
                 
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a1 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 1 ).
                     toNumber();

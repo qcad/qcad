@@ -1636,8 +1636,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RRefPoint: Argument 0 is not of type RRefPoint::Flag*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RRefPoint: Argument 0 is not of type RRefPoint::Flag* or QSharedPointer<RRefPoint::Flag>.",
+                               context);
                     }
                     RRefPoint::Flag& a0 = *ap0;
                 
@@ -1711,8 +1712,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RRefPoint: Argument 0 is not of type RRefPoint::Flag*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RRefPoint: Argument 0 is not of type RRefPoint::Flag* or QSharedPointer<RRefPoint::Flag>.",
+                               context);
                     }
                     RRefPoint::Flag& a0 = *ap0;
                 

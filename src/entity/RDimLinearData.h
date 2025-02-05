@@ -22,9 +22,12 @@
 
 #include "entity_global.h"
 
-#include "RDocument.h"
 #include "RDimensionData.h"
 #include "RVector.h"
+
+class RDocument;
+class RLine;
+class RPolyline;
 
 /**
  * Linear dimension entity data base class.

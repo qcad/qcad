@@ -9,6 +9,8 @@
         
                 #include "RGraphicsView.h"
             
+                #include "RMouseEvent.h"
+            
             
         // includes for base ecma wrapper classes
          void REcmaSnap::initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -361,8 +363,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSnap: Argument 1 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSnap: Argument 1 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a1 = *ap1;
                 
@@ -431,8 +434,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSnap: Argument 1 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSnap: Argument 1 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a1 = *ap1;
                 
@@ -676,11 +680,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QList < REntity::Id >'
-    QList < REntity::Id > cppResult =
+    // return type 'QList < RObject::Id >'
+    QList < RObject::Id > cppResult =
         
                self->getEntityIds();
-        // return type: QList < REntity::Id >
+        // return type: QList < RObject::Id >
                 // List of ...:
                 result = REcmaHelper::listToScriptValue(engine, cppResult);
             

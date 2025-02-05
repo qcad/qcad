@@ -577,8 +577,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RFileSystemModel: Argument 2 is not of type QModelIndex*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFileSystemModel: Argument 2 is not of type QModelIndex* or QSharedPointer<QModelIndex>.",
+                               context);
                     }
                     QModelIndex& a2 = *ap2;
                 
@@ -651,8 +652,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex* or QSharedPointer<QModelIndex>.",
+                               context);
                     }
                     QModelIndex& a0 = *ap0;
                 
@@ -721,8 +723,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QDir::Filters*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QDir::Filters* or QSharedPointer<QDir::Filters>.",
+                               context);
                     }
                     QDir::Filters& a0 = *ap0;
                 
@@ -786,8 +789,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex* or QSharedPointer<QModelIndex>.",
+                               context);
                     }
                     QModelIndex& a0 = *ap0;
                 
@@ -1183,8 +1187,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex* or QSharedPointer<QModelIndex>.",
+                               context);
                     }
                     QModelIndex& a0 = *ap0;
                 
@@ -1486,8 +1491,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex* or QSharedPointer<QModelIndex>.",
+                               context);
                     }
                     QModelIndex& a0 = *ap0;
                 
@@ -1502,8 +1508,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RFileSystemModel: Argument 1 is not of type QMap < int , QVariant >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFileSystemModel: Argument 1 is not of type QMap < int , QVariant >* or QSharedPointer<QMap < int , QVariant >>.",
+                               context);
                     }
                     QMap < int , QVariant >& a1 = *ap1;
                 
@@ -1552,8 +1559,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex* or QSharedPointer<QModelIndex>.",
+                               context);
                     }
                     QModelIndex& a0 = *ap0;
                 
@@ -1620,8 +1628,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex* or QSharedPointer<QModelIndex>.",
+                               context);
                     }
                     QModelIndex& a0 = *ap0;
                 
@@ -1720,8 +1729,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex* or QSharedPointer<QModelIndex>.",
+                               context);
                     }
                     QModelIndex& a0 = *ap0;
                 
@@ -1790,8 +1800,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex* or QSharedPointer<QModelIndex>.",
+                               context);
                     }
                     QModelIndex& a0 = *ap0;
                 
@@ -1860,8 +1871,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex* or QSharedPointer<QModelIndex>.",
+                               context);
                     }
                     QModelIndex& a0 = *ap0;
                 
@@ -1925,8 +1937,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex* or QSharedPointer<QModelIndex>.",
+                               context);
                     }
                     QModelIndex& a0 = *ap0;
                 
@@ -1970,8 +1983,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RFileSystemModel: Argument 0 is not of type QModelIndex* or QSharedPointer<QModelIndex>.",
+                               context);
                     }
                     QModelIndex& a0 = *ap0;
                 

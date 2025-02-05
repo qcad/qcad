@@ -58,6 +58,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToRay
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getVectorProperties
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

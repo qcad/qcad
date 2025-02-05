@@ -19,7 +19,6 @@
 #include "RArcEntity.h"
 #include "REllipseEntity.h"
 #include "RExporter.h"
-#include "RPoint.h"
 
 RPropertyTypeId REllipseEntity::PropertyCustom;
 RPropertyTypeId REllipseEntity::PropertyHandle;

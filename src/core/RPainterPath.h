@@ -28,13 +28,14 @@
 #include <QPen>
 #include <QSharedPointer>
 
-#include "RBox.h"
 #include "RVector.h"
 
 class RArc;
+class RBox;
 class RLine;
 class RShape;
 class RSpline;
+class RPolyline;
 
 
 /**

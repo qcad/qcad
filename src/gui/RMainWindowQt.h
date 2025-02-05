@@ -25,36 +25,51 @@
 #include <QDockWidget>
 #include <QElapsedTimer>
 #include <QMainWindow>
-#include <QKeyEvent>
 #include <QToolBar>
 
-#include "RCloseCurrentEvent.h"
 #include "RMainWindow.h"
 #include "RObject.h"
 
-class QMdiArea;
 class QMdiSubWindow;
 
 class RBlockListener;
 class RCoordinateListener;
 class RDocument;
 class RDocumentInterface;
+class REntity;
+class REntityExportListener;
+class RExportListener;
+class RExporter;
 class RFocusListener;
 class RGraphicsView;
+class RImportListener;
+class RInterTransactionListener;
 class RKeyListener;
 class RLayerListener;
+class RMainWindow;
+class RMainWindowProxy;
+class RMainWindowQt;
 class RMdiArea;
 class RMdiChildQt;
+class RMessageHandler;
 class RNewDocumentListener;
+class RObject;
 class RPaletteListener;
 class RPenListener;
 class RPreferencesListener;
+class RProgressHandler;
+class RPropertyEvent;
 class RPropertyListener;
+class RPropertyTypeId;
 class RSelectionListener;
 class RSnapListener;
+class RTransaction;
+class RTransactionListener;
 class RUcsListener;
+class RVector;
 class RViewFocusListener;
 class RViewListener;
+
 
 /**
  * \brief Base class for a Qt based MDI main application window.

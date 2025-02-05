@@ -16,7 +16,6 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RDocument.h"
 #include "RAddObjectOperation.h"
 
 RAddObjectOperation::RAddObjectOperation(QSharedPointer<RObject> object, const QString& text,

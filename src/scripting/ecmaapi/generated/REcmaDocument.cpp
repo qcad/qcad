@@ -7,9 +7,37 @@
 
         // forwards declarations mapped to includes
         
+                #include "RBlock.h"
+            
+                #include "RBox.h"
+            
+                #include "RColor.h"
+            
+                #include "RDimStyle.h"
+            
+                #include "RDocumentVariables.h"
+            
+                #include "REntity.h"
+            
+                #include "RLayer.h"
+            
+                #include "RLayerState.h"
+            
+                #include "RLayout.h"
+            
+                #include "RLinetype.h"
+            
+                #include "RLinetypePattern.h"
+            
                 #include "RVector.h"
             
+                #include "RSpatialIndex.h"
+            
                 #include "RStorage.h"
+            
+                #include "RUcs.h"
+            
+                #include "RView.h"
             
             
         // includes for base ecma wrapper classes
@@ -606,8 +634,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RStorage*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RStorage* or QSharedPointer<RStorage>.",
+                               context);
                     }
                     RStorage& a0 = *ap0;
                 
@@ -622,8 +651,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 1 is not of type RSpatialIndex*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 1 is not of type RSpatialIndex* or QSharedPointer<RSpatialIndex>.",
+                               context);
                     }
                     RSpatialIndex& a1 = *ap1;
                 
@@ -704,8 +734,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RStorage*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RStorage* or QSharedPointer<RStorage>.",
+                               context);
                     }
                     RStorage& a0 = *ap0;
                 
@@ -720,8 +751,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 1 is not of type RSpatialIndex*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 1 is not of type RSpatialIndex* or QSharedPointer<RSpatialIndex>.",
+                               context);
                     }
                     RSpatialIndex& a1 = *ap1;
                 
@@ -1169,15 +1201,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -1449,15 +1481,15 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'REntity::Id'
-    REntity::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->queryClosestXY(a0
         ,
     a1
         ,
     a2);
-        // return type: REntity::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -1530,8 +1562,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'REntity::Id'
-    REntity::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->queryClosestXY(a0
         ,
@@ -1540,7 +1572,7 @@
     a2
         ,
     a3);
-        // return type: REntity::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -1624,8 +1656,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'REntity::Id'
-    REntity::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->queryClosestXY(a0
         ,
@@ -1636,7 +1668,7 @@
     a3
         ,
     a4);
-        // return type: REntity::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -1731,8 +1763,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'REntity::Id'
-    REntity::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->queryClosestXY(a0
         ,
@@ -1745,7 +1777,7 @@
     a4
         ,
     a5);
-        // return type: REntity::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -1757,7 +1789,7 @@
     if( context->argumentCount() ==
     4 && (
             context->argument(0).isArray()
-        ) /* type: QSet < REntity::Id > */
+        ) /* type: QSet < RObject::Id > */
      && (
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
@@ -1774,7 +1806,7 @@
     // prepare arguments:
     
                     // argument isArray or QVariantMap
-                    QSet < REntity::Id >
+                    QSet < RObject::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
                         engine,
@@ -1819,8 +1851,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'REntity::Id'
-    REntity::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->queryClosestXY(a0
         ,
@@ -1829,7 +1861,7 @@
     a2
         ,
     a3);
-        // return type: REntity::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -1841,7 +1873,7 @@
     if( context->argumentCount() ==
     5 && (
             context->argument(0).isArray()
-        ) /* type: QSet < REntity::Id > */
+        ) /* type: QSet < RObject::Id > */
      && (
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
@@ -1861,7 +1893,7 @@
     // prepare arguments:
     
                     // argument isArray or QVariantMap
-                    QSet < REntity::Id >
+                    QSet < RObject::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
                         engine,
@@ -1914,8 +1946,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'REntity::Id'
-    REntity::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->queryClosestXY(a0
         ,
@@ -1926,7 +1958,7 @@
     a3
         ,
     a4);
-        // return type: REntity::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -2016,15 +2048,15 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QPair < REntity::Id , QSet < int > >'
-    QPair < REntity::Id , QSet < int > > cppResult =
+    // return type 'QPair < RObject::Id , QSet < int > >'
+    QPair < RObject::Id , QSet < int > > cppResult =
         
                self->queryClosestXYWithIndices(a0
         ,
     a1
         ,
     a2);
-        // return type: QPair < REntity::Id , QSet < int > >
+        // return type: QPair < RObject::Id , QSet < int > >
                 // Pair of ...:
                 //result = REcmaHelper::pairToScriptValue(engine, cppResult);
                 QVariantList vl;
@@ -2107,8 +2139,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QPair < REntity::Id , QSet < int > >'
-    QPair < REntity::Id , QSet < int > > cppResult =
+    // return type 'QPair < RObject::Id , QSet < int > >'
+    QPair < RObject::Id , QSet < int > > cppResult =
         
                self->queryClosestXYWithIndices(a0
         ,
@@ -2117,7 +2149,7 @@
     a2
         ,
     a3);
-        // return type: QPair < REntity::Id , QSet < int > >
+        // return type: QPair < RObject::Id , QSet < int > >
                 // Pair of ...:
                 //result = REcmaHelper::pairToScriptValue(engine, cppResult);
                 QVariantList vl;
@@ -2211,8 +2243,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QPair < REntity::Id , QSet < int > >'
-    QPair < REntity::Id , QSet < int > > cppResult =
+    // return type 'QPair < RObject::Id , QSet < int > >'
+    QPair < RObject::Id , QSet < int > > cppResult =
         
                self->queryClosestXYWithIndices(a0
         ,
@@ -2223,7 +2255,7 @@
     a3
         ,
     a4);
-        // return type: QPair < REntity::Id , QSet < int > >
+        // return type: QPair < RObject::Id , QSet < int > >
                 // Pair of ...:
                 //result = REcmaHelper::pairToScriptValue(engine, cppResult);
                 QVariantList vl;
@@ -2328,8 +2360,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QPair < REntity::Id , QSet < int > >'
-    QPair < REntity::Id , QSet < int > > cppResult =
+    // return type 'QPair < RObject::Id , QSet < int > >'
+    QPair < RObject::Id , QSet < int > > cppResult =
         
                self->queryClosestXYWithIndices(a0
         ,
@@ -2342,7 +2374,7 @@
     a4
         ,
     a5);
-        // return type: QPair < REntity::Id , QSet < int > >
+        // return type: QPair < RObject::Id , QSet < int > >
                 // Pair of ...:
                 //result = REcmaHelper::pairToScriptValue(engine, cppResult);
                 QVariantList vl;
@@ -2366,7 +2398,7 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: QMap < REntity::Id , QSet < int > > */
+        ) /* type: QMap < RObject::Id , QSet < int > > */
      && (
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
@@ -2383,20 +2415,21 @@
     // prepare arguments:
     
                     // argument is reference
-                    QMap < REntity::Id , QSet < int > >*
+                    QMap < RObject::Id , QSet < int > >*
                     ap0 =
                     qscriptvalue_cast<
-                    QMap < REntity::Id , QSet < int > >*
+                    QMap < RObject::Id , QSet < int > >*
                         >(
                         context->argument(
                         0
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type QMap < REntity::Id , QSet < int > >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type QMap < RObject::Id , QSet < int > >* or QSharedPointer<QMap < RObject::Id , QSet < int > >>.",
+                               context);
                     }
-                    QMap < REntity::Id , QSet < int > >& a0 = *ap0;
+                    QMap < RObject::Id , QSet < int > >& a0 = *ap0;
                 
                     // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
@@ -2435,8 +2468,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QPair < REntity::Id , QSet < int > >'
-    QPair < REntity::Id , QSet < int > > cppResult =
+    // return type 'QPair < RObject::Id , QSet < int > >'
+    QPair < RObject::Id , QSet < int > > cppResult =
         
                self->queryClosestXYWithIndices(a0
         ,
@@ -2445,7 +2478,7 @@
     a2
         ,
     a3);
-        // return type: QPair < REntity::Id , QSet < int > >
+        // return type: QPair < RObject::Id , QSet < int > >
                 // Pair of ...:
                 //result = REcmaHelper::pairToScriptValue(engine, cppResult);
                 QVariantList vl;
@@ -2469,7 +2502,7 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: QMap < REntity::Id , QSet < int > > */
+        ) /* type: QMap < RObject::Id , QSet < int > > */
      && (
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
@@ -2489,20 +2522,21 @@
     // prepare arguments:
     
                     // argument is reference
-                    QMap < REntity::Id , QSet < int > >*
+                    QMap < RObject::Id , QSet < int > >*
                     ap0 =
                     qscriptvalue_cast<
-                    QMap < REntity::Id , QSet < int > >*
+                    QMap < RObject::Id , QSet < int > >*
                         >(
                         context->argument(
                         0
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type QMap < REntity::Id , QSet < int > >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type QMap < RObject::Id , QSet < int > >* or QSharedPointer<QMap < RObject::Id , QSet < int > >>.",
+                               context);
                     }
-                    QMap < REntity::Id , QSet < int > >& a0 = *ap0;
+                    QMap < RObject::Id , QSet < int > >& a0 = *ap0;
                 
                     // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
@@ -2549,8 +2583,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QPair < REntity::Id , QSet < int > >'
-    QPair < REntity::Id , QSet < int > > cppResult =
+    // return type 'QPair < RObject::Id , QSet < int > >'
+    QPair < RObject::Id , QSet < int > > cppResult =
         
                self->queryClosestXYWithIndices(a0
         ,
@@ -2561,7 +2595,7 @@
     a3
         ,
     a4);
-        // return type: QPair < REntity::Id , QSet < int > >
+        // return type: QPair < RObject::Id , QSet < int > >
                 // Pair of ...:
                 //result = REcmaHelper::pairToScriptValue(engine, cppResult);
                 QVariantList vl;
@@ -2716,11 +2750,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryAllVisibleEntities();
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -2766,11 +2800,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryAllEntities();
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -2799,11 +2833,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryAllEntities(a0);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -2843,13 +2877,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryAllEntities(a0
         ,
     a1);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -2900,15 +2934,15 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryAllEntities(a0
         ,
     a1
         ,
     a2);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -2960,15 +2994,15 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryAllEntities(a0
         ,
     a1
         ,
     a2);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -3014,11 +3048,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryWorkingSetEntities();
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -3064,11 +3098,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < RUcs::Id >'
-    QSet < RUcs::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryAllUcs();
-        // return type: QSet < RUcs::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -3114,11 +3148,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < RLayer::Id >'
-    QSet < RLayer::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryAllLayers();
-        // return type: QSet < RLayer::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -3164,11 +3198,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < RLayerState::Id >'
-    QSet < RLayerState::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryAllLayerStates();
-        // return type: QSet < RLayerState::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -3214,11 +3248,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < RBlock::Id >'
-    QSet < RBlock::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryAllBlocks();
-        // return type: QSet < RBlock::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -3264,11 +3298,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < RBlock::Id >'
-    QSet < RBlock::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryAllLayoutBlocks();
-        // return type: QSet < RBlock::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -3297,11 +3331,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < RBlock::Id >'
-    QSet < RBlock::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryAllLayoutBlocks(a0);
-        // return type: QSet < RBlock::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -3347,11 +3381,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < RBlock::Id >'
-    QSet < RBlock::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryAllLayouts();
-        // return type: QSet < RBlock::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -3397,11 +3431,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < RView::Id >'
-    QSet < RView::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryAllViews();
-        // return type: QSet < RView::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -3447,11 +3481,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < RLinetype::Id >'
-    QSet < RLinetype::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryAllLinetypes();
-        // return type: QSet < RLinetype::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -3492,15 +3526,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -3508,11 +3542,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryLayerEntities(a0);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -3525,7 +3559,7 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isBool()
         ) /* type: bool */
@@ -3534,9 +3568,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -3552,13 +3586,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryLayerEntities(a0
         ,
     a1);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -3599,15 +3633,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -3615,11 +3649,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->querySelectedLayerEntities(a0);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -3632,7 +3666,7 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isBool()
         ) /* type: bool */
@@ -3641,9 +3675,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -3659,13 +3693,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->querySelectedLayerEntities(a0
         ,
     a1);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -3706,15 +3740,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -3766,15 +3800,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -3782,11 +3816,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryBlockEntities(a0);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -3827,26 +3861,26 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
                 
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a1 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 1 ).
                     toNumber();
@@ -3854,13 +3888,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryLayerBlockEntities(a0
         ,
     a1);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -3901,15 +3935,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -3917,11 +3951,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryChildEntities(a0);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -3934,7 +3968,7 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isNumber()
         ) /* type: RS::EntityType */
@@ -3943,9 +3977,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -3961,13 +3995,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryChildEntities(a0
         ,
     a1);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -4008,15 +4042,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -4068,15 +4102,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -4084,11 +4118,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryBlockReferences(a0);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -4134,11 +4168,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryAllBlockReferences();
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -4184,11 +4218,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryAllViewports();
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -4257,11 +4291,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryContainedEntities(a0);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -4307,11 +4341,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryInfiniteEntities();
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -4380,11 +4414,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryIntersectedEntitiesXYFast(a0);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -4453,11 +4487,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryIntersectedShapesXYFast(a0);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -4509,13 +4543,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryIntersectedShapesXYFast(a0
         ,
     a1);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -4584,11 +4618,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryIntersectedEntitiesXY(a0);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -4640,13 +4674,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryIntersectedEntitiesXY(a0
         ,
     a1);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -4709,15 +4743,15 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryIntersectedEntitiesXY(a0
         ,
     a1
         ,
     a2);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -4741,7 +4775,7 @@
         ) /* type: bool */
      && (
             context->argument(3).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
@@ -4781,9 +4815,9 @@
                     toBool();
                 
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a3 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 3 ).
                     toNumber();
@@ -4791,8 +4825,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryIntersectedEntitiesXY(a0
         ,
@@ -4801,7 +4835,7 @@
     a2
         ,
     a3);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -4825,7 +4859,7 @@
         ) /* type: bool */
      && (
             context->argument(3).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(4).isArray()
         ) /* type: QList < RS::EntityType > */
@@ -4868,9 +4902,9 @@
                     toBool();
                 
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a3 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 3 ).
                     toNumber();
@@ -4887,8 +4921,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryIntersectedEntitiesXY(a0
         ,
@@ -4899,7 +4933,7 @@
     a3
         ,
     a4);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -4923,7 +4957,7 @@
         ) /* type: bool */
      && (
             context->argument(3).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(4).isArray()
         ) /* type: QList < RS::EntityType > */
@@ -4969,9 +5003,9 @@
                     toBool();
                 
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a3 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 3 ).
                     toNumber();
@@ -4996,8 +5030,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryIntersectedEntitiesXY(a0
         ,
@@ -5010,7 +5044,7 @@
     a4
         ,
     a5);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -5034,7 +5068,7 @@
         ) /* type: bool */
      && (
             context->argument(3).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(4).isArray()
         ) /* type: QList < RS::EntityType > */
@@ -5043,7 +5077,7 @@
         ) /* type: bool */
      && (
             context->argument(6).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
@@ -5083,9 +5117,9 @@
                     toBool();
                 
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a3 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 3 ).
                     toNumber();
@@ -5108,9 +5142,9 @@
                     toBool();
                 
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a6 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 6 ).
                     toNumber();
@@ -5118,8 +5152,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryIntersectedEntitiesXY(a0
         ,
@@ -5134,7 +5168,7 @@
     a5
         ,
     a6);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -5203,11 +5237,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QMap < REntity::Id , QSet < int > >'
-    QMap < REntity::Id , QSet < int > > cppResult =
+    // return type 'QMap < RObject::Id , QSet < int > >'
+    QMap < RObject::Id , QSet < int > > cppResult =
         
                self->queryIntersectedEntitiesXYWithIndex(a0);
-        // return type: QMap < REntity::Id , QSet < int > >
+        // return type: QMap < RObject::Id , QSet < int > >
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -5258,13 +5292,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QMap < REntity::Id , QSet < int > >'
-    QMap < REntity::Id , QSet < int > > cppResult =
+    // return type 'QMap < RObject::Id , QSet < int > >'
+    QMap < RObject::Id , QSet < int > > cppResult =
         
                self->queryIntersectedEntitiesXYWithIndex(a0
         ,
     a1);
-        // return type: QMap < REntity::Id , QSet < int > >
+        // return type: QMap < RObject::Id , QSet < int > >
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -5326,15 +5360,15 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QMap < REntity::Id , QSet < int > >'
-    QMap < REntity::Id , QSet < int > > cppResult =
+    // return type 'QMap < RObject::Id , QSet < int > >'
+    QMap < RObject::Id , QSet < int > > cppResult =
         
                self->queryIntersectedEntitiesXYWithIndex(a0
         ,
     a1
         ,
     a2);
-        // return type: QMap < REntity::Id , QSet < int > >
+        // return type: QMap < RObject::Id , QSet < int > >
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -5357,7 +5391,7 @@
         ) /* type: bool */
      && (
             context->argument(3).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
@@ -5397,9 +5431,9 @@
                     toBool();
                 
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a3 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 3 ).
                     toNumber();
@@ -5407,8 +5441,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QMap < REntity::Id , QSet < int > >'
-    QMap < REntity::Id , QSet < int > > cppResult =
+    // return type 'QMap < RObject::Id , QSet < int > >'
+    QMap < RObject::Id , QSet < int > > cppResult =
         
                self->queryIntersectedEntitiesXYWithIndex(a0
         ,
@@ -5417,7 +5451,7 @@
     a2
         ,
     a3);
-        // return type: QMap < REntity::Id , QSet < int > >
+        // return type: QMap < RObject::Id , QSet < int > >
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -5440,7 +5474,7 @@
         ) /* type: bool */
      && (
             context->argument(3).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(4).isArray()
         ) /* type: QList < RS::EntityType > */
@@ -5483,9 +5517,9 @@
                     toBool();
                 
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a3 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 3 ).
                     toNumber();
@@ -5502,8 +5536,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QMap < REntity::Id , QSet < int > >'
-    QMap < REntity::Id , QSet < int > > cppResult =
+    // return type 'QMap < RObject::Id , QSet < int > >'
+    QMap < RObject::Id , QSet < int > > cppResult =
         
                self->queryIntersectedEntitiesXYWithIndex(a0
         ,
@@ -5514,7 +5548,7 @@
     a3
         ,
     a4);
-        // return type: QMap < REntity::Id , QSet < int > >
+        // return type: QMap < RObject::Id , QSet < int > >
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -5537,7 +5571,7 @@
         ) /* type: bool */
      && (
             context->argument(3).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(4).isArray()
         ) /* type: QList < RS::EntityType > */
@@ -5583,9 +5617,9 @@
                     toBool();
                 
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a3 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 3 ).
                     toNumber();
@@ -5610,8 +5644,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QMap < REntity::Id , QSet < int > >'
-    QMap < REntity::Id , QSet < int > > cppResult =
+    // return type 'QMap < RObject::Id , QSet < int > >'
+    QMap < RObject::Id , QSet < int > > cppResult =
         
                self->queryIntersectedEntitiesXYWithIndex(a0
         ,
@@ -5624,7 +5658,7 @@
     a4
         ,
     a5);
-        // return type: QMap < REntity::Id , QSet < int > >
+        // return type: QMap < RObject::Id , QSet < int > >
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -5647,7 +5681,7 @@
         ) /* type: bool */
      && (
             context->argument(3).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(4).isArray()
         ) /* type: QList < RS::EntityType > */
@@ -5656,7 +5690,7 @@
         ) /* type: bool */
      && (
             context->argument(6).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
@@ -5696,9 +5730,9 @@
                     toBool();
                 
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a3 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 3 ).
                     toNumber();
@@ -5721,9 +5755,9 @@
                     toBool();
                 
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a6 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 6 ).
                     toNumber();
@@ -5731,8 +5765,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QMap < REntity::Id , QSet < int > >'
-    QMap < REntity::Id , QSet < int > > cppResult =
+    // return type 'QMap < RObject::Id , QSet < int > >'
+    QMap < RObject::Id , QSet < int > > cppResult =
         
                self->queryIntersectedEntitiesXYWithIndex(a0
         ,
@@ -5747,7 +5781,7 @@
     a5
         ,
     a6);
-        // return type: QMap < REntity::Id , QSet < int > >
+        // return type: QMap < RObject::Id , QSet < int > >
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -5815,11 +5849,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QMap < REntity::Id , QSet < int > >'
-    QMap < REntity::Id , QSet < int > > cppResult =
+    // return type 'QMap < RObject::Id , QSet < int > >'
+    QMap < RObject::Id , QSet < int > > cppResult =
         
                self->queryIntersectedShapesXY(a0);
-        // return type: QMap < REntity::Id , QSet < int > >
+        // return type: QMap < RObject::Id , QSet < int > >
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -5870,13 +5904,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QMap < REntity::Id , QSet < int > >'
-    QMap < REntity::Id , QSet < int > > cppResult =
+    // return type 'QMap < RObject::Id , QSet < int > >'
+    QMap < RObject::Id , QSet < int > > cppResult =
         
                self->queryIntersectedShapesXY(a0
         ,
     a1);
-        // return type: QMap < REntity::Id , QSet < int > >
+        // return type: QMap < RObject::Id , QSet < int > >
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -5938,15 +5972,15 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QMap < REntity::Id , QSet < int > >'
-    QMap < REntity::Id , QSet < int > > cppResult =
+    // return type 'QMap < RObject::Id , QSet < int > >'
+    QMap < RObject::Id , QSet < int > > cppResult =
         
                self->queryIntersectedShapesXY(a0
         ,
     a1
         ,
     a2);
-        // return type: QMap < REntity::Id , QSet < int > >
+        // return type: QMap < RObject::Id , QSet < int > >
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -5969,7 +6003,7 @@
         ) /* type: bool */
      && (
             context->argument(3).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
@@ -6009,9 +6043,9 @@
                     toBool();
                 
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a3 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 3 ).
                     toNumber();
@@ -6019,8 +6053,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QMap < REntity::Id , QSet < int > >'
-    QMap < REntity::Id , QSet < int > > cppResult =
+    // return type 'QMap < RObject::Id , QSet < int > >'
+    QMap < RObject::Id , QSet < int > > cppResult =
         
                self->queryIntersectedShapesXY(a0
         ,
@@ -6029,7 +6063,7 @@
     a2
         ,
     a3);
-        // return type: QMap < REntity::Id , QSet < int > >
+        // return type: QMap < RObject::Id , QSet < int > >
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -6052,7 +6086,7 @@
         ) /* type: bool */
      && (
             context->argument(3).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(4).isArray()
         ) /* type: QList < RS::EntityType > */
@@ -6095,9 +6129,9 @@
                     toBool();
                 
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a3 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 3 ).
                     toNumber();
@@ -6114,8 +6148,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QMap < REntity::Id , QSet < int > >'
-    QMap < REntity::Id , QSet < int > > cppResult =
+    // return type 'QMap < RObject::Id , QSet < int > >'
+    QMap < RObject::Id , QSet < int > > cppResult =
         
                self->queryIntersectedShapesXY(a0
         ,
@@ -6126,7 +6160,7 @@
     a3
         ,
     a4);
-        // return type: QMap < REntity::Id , QSet < int > >
+        // return type: QMap < RObject::Id , QSet < int > >
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -6149,7 +6183,7 @@
         ) /* type: bool */
      && (
             context->argument(3).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(4).isArray()
         ) /* type: QList < RS::EntityType > */
@@ -6195,9 +6229,9 @@
                     toBool();
                 
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a3 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 3 ).
                     toNumber();
@@ -6222,8 +6256,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QMap < REntity::Id , QSet < int > >'
-    QMap < REntity::Id , QSet < int > > cppResult =
+    // return type 'QMap < RObject::Id , QSet < int > >'
+    QMap < RObject::Id , QSet < int > > cppResult =
         
                self->queryIntersectedShapesXY(a0
         ,
@@ -6236,7 +6270,7 @@
     a4
         ,
     a5);
-        // return type: QMap < REntity::Id , QSet < int > >
+        // return type: QMap < RObject::Id , QSet < int > >
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -6259,7 +6293,7 @@
         ) /* type: bool */
      && (
             context->argument(3).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(4).isArray()
         ) /* type: QList < RS::EntityType > */
@@ -6268,7 +6302,7 @@
         ) /* type: bool */
      && (
             context->argument(6).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
@@ -6308,9 +6342,9 @@
                     toBool();
                 
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a3 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 3 ).
                     toNumber();
@@ -6333,9 +6367,9 @@
                     toBool();
                 
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a6 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 6 ).
                     toNumber();
@@ -6343,8 +6377,8 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QMap < REntity::Id , QSet < int > >'
-    QMap < REntity::Id , QSet < int > > cppResult =
+    // return type 'QMap < RObject::Id , QSet < int > >'
+    QMap < RObject::Id , QSet < int > > cppResult =
         
                self->queryIntersectedShapesXY(a0
         ,
@@ -6359,7 +6393,7 @@
     a5
         ,
     a6);
-        // return type: QMap < REntity::Id , QSet < int > >
+        // return type: QMap < RObject::Id , QSet < int > >
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -6427,11 +6461,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryContainedEntitiesXY(a0);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -6477,11 +6511,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->querySelectedEntities();
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -6522,15 +6556,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -6538,11 +6572,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryConnectedEntities(a0);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -6555,7 +6589,7 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isNumber()
         ) /* type: double */
@@ -6564,9 +6598,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -6582,13 +6616,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryConnectedEntities(a0
         ,
     a1);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -6601,21 +6635,21 @@
     if( context->argumentCount() ==
     3 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isNumber()
         ) /* type: double */
      && (
             context->argument(2).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -6629,9 +6663,9 @@
                     toNumber();
                 
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a2 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 2 ).
                     toNumber();
@@ -6639,15 +6673,15 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
         
                self->queryConnectedEntities(a0
         ,
     a1
         ,
     a2);
-        // return type: QSet < REntity::Id >
+        // return type: QSet < RObject::Id >
                 // QSet (convert to QVariantList):
                 result = REcmaHelper::setToScriptValue(engine, cppResult);
 
@@ -7174,15 +7208,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -7234,15 +7268,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -7294,15 +7328,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -7354,15 +7388,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RUcs::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RUcs::Id
+                    RObject::Id
                     a0 =
-                    (RUcs::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -7446,15 +7480,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -7538,15 +7572,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -7598,15 +7632,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayerState::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayerState::Id
+                    RObject::Id
                     a0 =
-                    (RLayerState::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -7690,15 +7724,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayerState::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayerState::Id
+                    RObject::Id
                     a0 =
-                    (RLayerState::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -7750,15 +7784,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayout::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayout::Id
+                    RObject::Id
                     a0 =
-                    (RLayout::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -7842,15 +7876,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayout::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayout::Id
+                    RObject::Id
                     a0 =
-                    (RLayout::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -7902,15 +7936,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -7994,15 +8028,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -8086,15 +8120,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RView::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RView::Id
+                    RObject::Id
                     a0 =
-                    (RView::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -8178,15 +8212,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLinetype::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLinetype::Id
+                    RObject::Id
                     a0 =
-                    (RLinetype::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -8335,22 +8369,22 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isArray()
-        ) /* type: QSet < REntity::Id > * */
+        ) /* type: QSet < RObject::Id > * */
     
     ){
     // prepare arguments:
     
                     // argument is pointer
-                    QSet < REntity::Id > * a0 = NULL;
+                    QSet < RObject::Id > * a0 = NULL;
 
                     a0 = 
-                        REcmaHelper::scriptValueTo<QSet < REntity::Id > >(
+                        REcmaHelper::scriptValueTo<QSet < RObject::Id > >(
                             context->argument(0)
                         );
                     
                     if (a0==NULL && 
                         !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("RDocument: Argument 0 is not of type QSet < REntity::Id > *QSet < REntity::Id > *.", context);                    
+                        return REcmaHelper::throwError("RDocument: Argument 0 is not of type QSet < RObject::Id > *QSet < RObject::Id > *.", context);                    
                     }
                 
     // end of arguments
@@ -8411,22 +8445,22 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isArray()
-        ) /* type: QSet < REntity::Id > * */
+        ) /* type: QSet < RObject::Id > * */
     
     ){
     // prepare arguments:
     
                     // argument is pointer
-                    QSet < REntity::Id > * a0 = NULL;
+                    QSet < RObject::Id > * a0 = NULL;
 
                     a0 = 
-                        REcmaHelper::scriptValueTo<QSet < REntity::Id > >(
+                        REcmaHelper::scriptValueTo<QSet < RObject::Id > >(
                             context->argument(0)
                         );
                     
                     if (a0==NULL && 
                         !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("RDocument: Argument 0 is not of type QSet < REntity::Id > *QSet < REntity::Id > *.", context);                    
+                        return REcmaHelper::throwError("RDocument: Argument 0 is not of type QSet < RObject::Id > *QSet < RObject::Id > *.", context);                    
                     }
                 
     // end of arguments
@@ -8471,15 +8505,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -8498,7 +8532,7 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isBool()
         ) /* type: bool */
@@ -8507,9 +8541,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -8538,21 +8572,21 @@
     if( context->argumentCount() ==
     3 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isBool()
         ) /* type: bool */
      && (
             context->argument(2).isArray()
-        ) /* type: QSet < REntity::Id > * */
+        ) /* type: QSet < RObject::Id > * */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -8566,16 +8600,16 @@
                     toBool();
                 
                     // argument is pointer
-                    QSet < REntity::Id > * a2 = NULL;
+                    QSet < RObject::Id > * a2 = NULL;
 
                     a2 = 
-                        REcmaHelper::scriptValueTo<QSet < REntity::Id > >(
+                        REcmaHelper::scriptValueTo<QSet < RObject::Id > >(
                             context->argument(2)
                         );
                     
                     if (a2==NULL && 
                         !context->argument(2).isNull()) {
-                        return REcmaHelper::throwError("RDocument: Argument 2 is not of type QSet < REntity::Id > *QSet < REntity::Id > *.", context);                    
+                        return REcmaHelper::throwError("RDocument: Argument 2 is not of type QSet < RObject::Id > *QSet < RObject::Id > *.", context);                    
                     }
                 
     // end of arguments
@@ -8624,15 +8658,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -8651,33 +8685,33 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isArray()
-        ) /* type: QSet < REntity::Id > * */
+        ) /* type: QSet < RObject::Id > * */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
                 
                     // argument is pointer
-                    QSet < REntity::Id > * a1 = NULL;
+                    QSet < RObject::Id > * a1 = NULL;
 
                     a1 = 
-                        REcmaHelper::scriptValueTo<QSet < REntity::Id > >(
+                        REcmaHelper::scriptValueTo<QSet < RObject::Id > >(
                             context->argument(1)
                         );
                     
                     if (a1==NULL && 
                         !context->argument(1).isNull()) {
-                        return REcmaHelper::throwError("RDocument: Argument 1 is not of type QSet < REntity::Id > *QSet < REntity::Id > *.", context);                    
+                        return REcmaHelper::throwError("RDocument: Argument 1 is not of type QSet < RObject::Id > *QSet < RObject::Id > *.", context);                    
                     }
                 
     // end of arguments
@@ -8724,13 +8758,13 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isArray()
-        ) /* type: QSet < REntity::Id > */
+        ) /* type: QSet < RObject::Id > */
     
     ){
     // prepare arguments:
     
                     // argument isArray or QVariantMap
-                    QSet < REntity::Id >
+                    QSet < RObject::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
                         engine,
@@ -8757,7 +8791,7 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isArray()
-        ) /* type: QSet < REntity::Id > */
+        ) /* type: QSet < RObject::Id > */
      && (
             context->argument(1).isBool()
         ) /* type: bool */
@@ -8766,7 +8800,7 @@
     // prepare arguments:
     
                     // argument isArray or QVariantMap
-                    QSet < REntity::Id >
+                    QSet < RObject::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
                         engine,
@@ -8803,19 +8837,19 @@
     if( context->argumentCount() ==
     3 && (
             context->argument(0).isArray()
-        ) /* type: QSet < REntity::Id > */
+        ) /* type: QSet < RObject::Id > */
      && (
             context->argument(1).isBool()
         ) /* type: bool */
      && (
             context->argument(2).isArray()
-        ) /* type: QSet < REntity::Id > * */
+        ) /* type: QSet < RObject::Id > * */
     
     ){
     // prepare arguments:
     
                     // argument isArray or QVariantMap
-                    QSet < REntity::Id >
+                    QSet < RObject::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
                         engine,
@@ -8832,16 +8866,16 @@
                     toBool();
                 
                     // argument is pointer
-                    QSet < REntity::Id > * a2 = NULL;
+                    QSet < RObject::Id > * a2 = NULL;
 
                     a2 = 
-                        REcmaHelper::scriptValueTo<QSet < REntity::Id > >(
+                        REcmaHelper::scriptValueTo<QSet < RObject::Id > >(
                             context->argument(2)
                         );
                     
                     if (a2==NULL && 
                         !context->argument(2).isNull()) {
-                        return REcmaHelper::throwError("RDocument: Argument 2 is not of type QSet < REntity::Id > *QSet < REntity::Id > *.", context);                    
+                        return REcmaHelper::throwError("RDocument: Argument 2 is not of type QSet < RObject::Id > *QSet < RObject::Id > *.", context);                    
                     }
                 
     // end of arguments
@@ -8895,13 +8929,13 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isArray()
-        ) /* type: QSet < REntity::Id > */
+        ) /* type: QSet < RObject::Id > */
     
     ){
     // prepare arguments:
     
                     // argument isArray or QVariantMap
-                    QSet < REntity::Id >
+                    QSet < RObject::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
                         engine,
@@ -8928,16 +8962,16 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isArray()
-        ) /* type: QSet < REntity::Id > */
+        ) /* type: QSet < RObject::Id > */
      && (
             context->argument(1).isArray()
-        ) /* type: QSet < REntity::Id > * */
+        ) /* type: QSet < RObject::Id > * */
     
     ){
     // prepare arguments:
     
                     // argument isArray or QVariantMap
-                    QSet < REntity::Id >
+                    QSet < RObject::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
                         engine,
@@ -8946,16 +8980,16 @@
                     );
                 
                     // argument is pointer
-                    QSet < REntity::Id > * a1 = NULL;
+                    QSet < RObject::Id > * a1 = NULL;
 
                     a1 = 
-                        REcmaHelper::scriptValueTo<QSet < REntity::Id > >(
+                        REcmaHelper::scriptValueTo<QSet < RObject::Id > >(
                             context->argument(1)
                         );
                     
                     if (a1==NULL && 
                         !context->argument(1).isNull()) {
-                        return REcmaHelper::throwError("RDocument: Argument 1 is not of type QSet < REntity::Id > *QSet < REntity::Id > *.", context);                    
+                        return REcmaHelper::throwError("RDocument: Argument 1 is not of type QSet < RObject::Id > *QSet < RObject::Id > *.", context);                    
                     }
                 
     // end of arguments
@@ -9007,15 +9041,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -9067,15 +9101,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -9127,15 +9161,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -9177,8 +9211,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer* or QSharedPointer<RLayer>.",
+                               context);
                     }
                     RLayer& a0 = *ap0;
                 
@@ -9229,15 +9264,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -9279,8 +9314,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer* or QSharedPointer<RLayer>.",
+                               context);
                     }
                     RLayer& a0 = *ap0;
                 
@@ -9391,15 +9427,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -9451,15 +9487,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -9501,8 +9537,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer* or QSharedPointer<RLayer>.",
+                               context);
                     }
                     RLayer& a0 = *ap0;
                 
@@ -9553,15 +9590,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -9603,8 +9640,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer* or QSharedPointer<RLayer>.",
+                               context);
                     }
                     RLayer& a0 = *ap0;
                 
@@ -9655,15 +9693,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -9705,8 +9743,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer* or QSharedPointer<RLayer>.",
+                               context);
                     }
                     RLayer& a0 = *ap0;
                 
@@ -9757,15 +9796,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -9807,8 +9846,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer* or QSharedPointer<RLayer>.",
+                               context);
                     }
                     RLayer& a0 = *ap0;
                 
@@ -9859,15 +9899,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -9909,8 +9949,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer* or QSharedPointer<RLayer>.",
+                               context);
                     }
                     RLayer& a0 = *ap0;
                 
@@ -9961,15 +10002,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -10011,8 +10052,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer* or QSharedPointer<RLayer>.",
+                               context);
                     }
                     RLayer& a0 = *ap0;
                 
@@ -10063,15 +10105,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -10123,15 +10165,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -10183,15 +10225,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: REntity::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -10261,8 +10303,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type REntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
                     }
                     REntity& a0 = *ap0;
                 
@@ -10290,7 +10333,7 @@
         ) /* type: REntity */
      && (
             context->argument(1).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
@@ -10306,15 +10349,16 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type REntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
                     }
                     REntity& a0 = *ap0;
                 
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a1 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 1 ).
                     toNumber();
@@ -10368,15 +10412,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -10418,8 +10462,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer* or QSharedPointer<RLayer>.",
+                               context);
                     }
                     RLayer& a0 = *ap0;
                 
@@ -10470,15 +10515,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -10520,8 +10565,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLayer* or QSharedPointer<RLayer>.",
+                               context);
                     }
                     RLayer& a0 = *ap0;
                 
@@ -10796,13 +10842,13 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isArray()
-        ) /* type: QSet < REntity::Id > */
+        ) /* type: QSet < RObject::Id > */
     
     ){
     // prepare arguments:
     
                     // argument isArray or QVariantMap
-                    QSet < REntity::Id >
+                    QSet < RObject::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
                         engine,
@@ -11031,26 +11077,26 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
                 
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a1 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 1 ).
                     toNumber();
@@ -11104,15 +11150,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -11159,7 +11205,7 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isNumber()
         ) /* type: RObject::Id */
@@ -11168,9 +11214,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -11228,64 +11274,6 @@
                     return REcmaHelper::throwError("self is NULL", context);
                 }
                 
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: QSharedPointer < REntity > */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument is SharedPointer
-                    QSharedPointer < REntity > 
-                    a0;
-
-                    // argument might be a simple pointer:
-                     REntity * o0 = 
-                    qscriptvalue_cast < REntity * > (context->argument(0));
-
-                    if (o0!=NULL) {
-                        a0 =
-                        
-                          // never clone RObject based object:
-                          QSharedPointer < REntity >(o0);
-                        
-                    }
-                    else {
-                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
-                        QSharedPointer < REntity >*
-                        p0;
-
-                        p0 =
-                        qscriptvalue_cast <QSharedPointer < REntity >* > (context->argument(0));
-
-                        if (p0==NULL) {
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type  REntity .", context);                    
-                        }
-
-                        a0 = *p0;
-
-                           //return REcmaHelper::throwError("RDocument: Argument 0 is not of type  REntity .",
-                           //    context);                    
-                    }
-
-                    //QSharedPointer < REntity > 
-                    //a0 =
-                    //QSharedPointer < REntity >(o0->clone());
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->removeFromSpatialIndex(a0);
-    } else
-
-
-        
     
     if( context->argumentCount() ==
     2 && (
@@ -11354,6 +11342,64 @@
                self->removeFromSpatialIndex(a0
         ,
     a1);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSharedPointer < REntity > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is SharedPointer
+                    QSharedPointer < REntity > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     REntity * o0 = 
+                    qscriptvalue_cast < REntity * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < REntity >(o0);
+                        
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < REntity >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < REntity >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type  REntity .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RDocument: Argument 0 is not of type  REntity .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < REntity > 
+                    //a0 =
+                    //QSharedPointer < REntity >(o0->clone());
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeFromSpatialIndex(a0);
     } else
 
 
@@ -12128,15 +12174,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -12155,7 +12201,7 @@
     if( context->argumentCount() ==
     2 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
@@ -12166,9 +12212,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -12309,11 +12355,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLayer::Id'
-    RLayer::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getCurrentLayerId();
-        // return type: RLayer::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -12622,15 +12668,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLinetype::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLinetype::Id
+                    RObject::Id
                     a0 =
-                    (RLinetype::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -12776,11 +12822,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLinetype::Id'
-    RLinetype::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getCurrentLinetypeId();
-        // return type: RLinetype::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -12918,15 +12964,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -13005,11 +13051,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RBlock::Id'
-    RBlock::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getCurrentBlockId();
-        // return type: RBlock::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -13344,15 +13390,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RView::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RView::Id
+                    RObject::Id
                     a0 =
-                    (RView::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -13431,11 +13477,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RView::Id'
-    RView::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getCurrentViewId();
-        // return type: RView::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -13630,15 +13676,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -13690,15 +13736,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Handle */
+        ) /* type: RObject::Handle */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Handle
+                    RObject::Handle
                     a0 =
-                    (RBlock::Handle)
+                    (RObject::Handle)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -13782,15 +13828,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayout::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayout::Id
+                    RObject::Id
                     a0 =
-                    (RLayout::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -13971,13 +14017,13 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isArray()
-        ) /* type: QList < RBlock::Id > */
+        ) /* type: QList < RObject::Id > */
     
     ){
     // prepare arguments:
     
                     // argument isArray or QVariantMap
-                    QList < RBlock::Id >
+                    QList < RObject::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
                         engine,
@@ -13988,11 +14034,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QList < RBlock::Id >'
-    QList < RBlock::Id > cppResult =
+    // return type 'QList < RObject::Id >'
+    QList < RObject::Id > cppResult =
         
                self->sortBlocks(a0);
-        // return type: QList < RBlock::Id >
+        // return type: QList < RObject::Id >
                 // List of ...:
                 result = REcmaHelper::listToScriptValue(engine, cppResult);
             
@@ -14032,13 +14078,13 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isArray()
-        ) /* type: QList < RLayer::Id > */
+        ) /* type: QList < RObject::Id > */
     
     ){
     // prepare arguments:
     
                     // argument isArray or QVariantMap
-                    QList < RLayer::Id >
+                    QList < RObject::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
                         engine,
@@ -14049,11 +14095,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QList < RLayer::Id >'
-    QList < RLayer::Id > cppResult =
+    // return type 'QList < RObject::Id >'
+    QList < RObject::Id > cppResult =
         
                self->sortLayers(a0);
-        // return type: QList < RLayer::Id >
+        // return type: QList < RObject::Id >
                 // List of ...:
                 result = REcmaHelper::listToScriptValue(engine, cppResult);
             
@@ -14093,15 +14139,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -14236,15 +14282,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayerState::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayerState::Id
+                    RObject::Id
                     a0 =
-                    (RLayerState::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -14379,15 +14425,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayout::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayout::Id
+                    RObject::Id
                     a0 =
-                    (RLayout::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -14914,11 +14960,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLayer::Id'
-    RLayer::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getLayerId(a0);
-        // return type: RLayer::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -14963,11 +15009,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLayer::Id'
-    RLayer::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getLayer0Id();
-        // return type: RLayer::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -15023,11 +15069,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLayerState::Id'
-    RLayerState::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getLayerStateId(a0);
-        // return type: RLayerState::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -15083,11 +15129,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RBlock::Id'
-    RBlock::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getBlockId(a0);
-        // return type: RBlock::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -15143,11 +15189,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RBlock::Id'
-    RBlock::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getBlockIdAuto(a0);
-        // return type: RBlock::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -15192,11 +15238,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RBlock::Id'
-    RBlock::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getModelSpaceBlockId();
-        // return type: RBlock::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -15252,11 +15298,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLinetype::Id'
-    RLinetype::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getLinetypeId(a0);
-        // return type: RLinetype::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -15301,11 +15347,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLinetype::Id'
-    RLinetype::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getLinetypeByLayerId();
-        // return type: RLinetype::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -15350,11 +15396,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLinetype::Id'
-    RLinetype::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getLinetypeByBlockId();
-        // return type: RLinetype::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -15394,15 +15440,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLinetype::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLinetype::Id
+                    RObject::Id
                     a0 =
-                    (RLinetype::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -15454,15 +15500,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLinetype::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLinetype::Id
+                    RObject::Id
                     a0 =
-                    (RLinetype::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -15514,15 +15560,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLinetype::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLinetype::Id
+                    RObject::Id
                     a0 =
-                    (RLinetype::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -15673,15 +15719,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLinetype::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLinetype::Id
+                    RObject::Id
                     a0 =
-                    (RLinetype::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -15733,15 +15779,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLinetype::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLinetype::Id
+                    RObject::Id
                     a0 =
-                    (RLinetype::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -18206,8 +18252,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a0 = *ap0;
                 

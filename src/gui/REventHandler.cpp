@@ -18,16 +18,17 @@
  */
 #include <QLabel>
 #include <QMimeData>
-#include <QPainter>
 #include <QScrollBar>
 #include <QUrl>
 #include <QWidget>
 
 #include "REventHandler.h"
+#include "RDocument.h"
 #include "RDocumentInterface.h"
-#include "RGraphicsView.h"
+#include "RGraphicsViewImage.h"
+#include "RGrid.h"
 #include "RRulerQt.h"
-#include "RMainWindowQt.h"
+#include "RSettings.h"
 #include "RSnapRestriction.h"
 #include "RSnap.h"
 #include "RUnit.h"

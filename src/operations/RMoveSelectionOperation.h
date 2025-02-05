@@ -22,12 +22,10 @@
 
 #include "operations_global.h"
 
-#include "RDocument.h"
-#include "REntity.h"
-#include "RExporter.h"
 #include "ROperation.h"
 #include "RVector.h"
 
+class RDocument;
 
 /**
  * Implementation of an operation that moves a selection
@@ -47,7 +45,7 @@ public:
     virtual RTransaction apply(RDocument& document, bool preview = false);
 
 //protected:
-//    void move(RDocument& document, RTransaction& transaction, REntity::Id entityId);
+//    void move(RDocument& document, RTransaction& transaction, RObject::Id entityId);
 
 private:
 

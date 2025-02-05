@@ -23,14 +23,14 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RS.h"</cpp:file></cpp:include>
+
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cstdio&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cmath&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cerrno&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;limits&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+<class_decl>class <name>RVector</name>;</class_decl>
 
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>M_PI</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>M_PI</name>        3.14159265358979323846264338327950288</cpp:define>
@@ -158,7 +158,7 @@
     <function_decl><type><name>static</name> <name>bool</name></type> <name>containsFuzzy</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name>&amp;</type> <name>values</name></decl></param>, <param><decl><type><name>double</name></type> <name>v</name></decl></param>, <param><decl><type><name>double</name></type> <name>tol</name> =<init> <expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>double</name></type> <name>parseScale</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scaleString</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>static</name> <name>RVector</name></type> <name>parseCoordinate</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>coordinateString</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>relativeZero</name> =<init> <expr><name><name>RVector</name>::<name>nullVector</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RVector</name></type> <name>parseCoordinate</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>coordinateString</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>relativeZero</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getMd5Hash</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>data</name></decl></param>)</parameter_list>;</function_decl>
 

@@ -25,11 +25,14 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RExporter.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"ROperation.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RBlock</name>;</class_decl>
+<class_decl>class <name>REntity</name>;</class_decl>
+<class_decl>class <name>RLayer</name>;</class_decl>
+<class_decl>class <name>RLinetype</name>;</class_decl>
+<class_decl>class <name>RVector</name>;</class_decl>
 
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RQMapQStringQString</name></cpp:ifndef>
 <typedef>typedef <type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>RQMapQStringQString</name>;</typedef>
@@ -193,7 +196,7 @@
     )</parameter_list>;</function_decl>
 
     <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RBlock</name></argument>&gt;</argument_list></name></type> <name>copyBlock</name><parameter_list>(
-        <param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>,
+        <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>,
         <param><decl><type><name>RDocument</name>&amp;</type> <name>src</name></decl></param>,
         <param><decl><type><name>RDocument</name>&amp;</type> <name>dest</name></decl></param>,
         <param><decl><type><name>bool</name></type> <name>overwriteBlocks</name></decl></param>,
@@ -211,7 +214,7 @@
     )</parameter_list>;</function_decl>
 
     <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></type> <name>copyLayer</name><parameter_list>(
-        <param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>,
+        <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>,
         <param><decl><type><name>RDocument</name>&amp;</type> <name>src</name></decl></param>, <param><decl><type><name>RDocument</name>&amp;</type> <name>dest</name></decl></param>,
         <param><decl><type><name>bool</name></type> <name>overwriteLayers</name></decl></param>,
         <param><decl><type><name>RTransaction</name>&amp;</type> <name>transaction</name></decl></param>
@@ -226,7 +229,7 @@
             )</parameter_list>;</function_decl>
 
     <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RLinetype</name></argument>&gt;</argument_list></name></type> <name>copyLinetype</name><parameter_list>(
-            <param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl></param>,
+            <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>linetypeId</name></decl></param>,
             <param><decl><type><name>RDocument</name>&amp;</type> <name>src</name></decl></param>, <param><decl><type><name>RDocument</name>&amp;</type> <name>dest</name></decl></param>,
             <param><decl><type><name>bool</name></type> <name>overwriteLinetypes</name></decl></param>,
             <param><decl><type><name>RTransaction</name>&amp;</type> <name>transaction</name></decl></param>
@@ -248,15 +251,20 @@
         <expr_stmt><expr><name>blockOwnership</name> = <name>on</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setCustomEntityType</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>t</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>customEntityType</name> = <name>t</name></expr>;</expr_stmt>
+    }</block></function>
+
 </public><private>private:
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>copiedLayers</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RLinetype</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>copiedLinetypes</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RBlock</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>copiedBlocks</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>QSet<argument_list>&lt;<argument><name><name>RBlock</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>copiedBlockContents</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>copiedBlockContents</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>copyEmptyBlocks</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>copyAllLayers</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>keepSelection</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>blockOwnership</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>customEntityType</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RClipboardOperation*</argument>)</argument_list></macro>

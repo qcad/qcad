@@ -24,16 +24,13 @@
 
 #include <QTextLayout>
 #include <QMutex>
+#include <QStack>
 
-#include "RDocument.h"
-#include "REntityData.h"
 #include "RPainterPath.h"
-#include "RPainterPathSource.h"
-#include "RTextBasedData.h"
 #include "RTextLayout.h"
-#include "RVector.h"
 
-//class QTextDocument;
+class RColor;
+class RTextBasedData;
 
 /**
  * Renders formatted text into painter paths.

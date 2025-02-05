@@ -22,7 +22,6 @@
 
 #include "gui_global.h"
 
-#include <QEvent>
 #include <QMetaType>
 #include <QObject>
 

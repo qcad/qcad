@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RCustomEntityHandler" />
+  <class name="RCustomEntityRegistry"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <method name="registerHandler" cppName="registerHandler"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RCustomEntityHandler *"
+        typeName="RCustomEntityHandler *" name="handler"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getHandler" cppName="getHandler"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RCustomEntityHandler *"
+      isPureVirtual="false">
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="entityType" isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

@@ -24,9 +24,24 @@
 
 #include <QSharedPointer>
 
+#include "RBox.h"
 #include "RStorage.h"
-#include "RBlockReferenceEntity.h"
-#include "RDocumentVariables.h"
+#include "RTransaction.h"
+
+class RBlock;
+class RDimStyle;
+class RDocumentVariables;
+class REntity;
+class RLayer;
+class RLayerState;
+class RLayout;
+class RLinetype;
+class RLinetypePattern;
+class RLineweight;
+class RMemoryStorage;
+class RObject;
+class RUcs;
+class RView;
 
 /**
  * Basic memory based storage.
@@ -41,42 +56,42 @@ public:
 
     virtual void clear();
 
-    virtual void setCurrentBlock(RBlock::Id blockId);
+    virtual void setCurrentBlock(RObject::Id blockId);
 
     virtual void beginTransaction();
     virtual void commitTransaction();
     virtual void rollbackTransaction();
 
-    //virtual QList<REntity::Id> orderBackToFront(const QSet<REntity::Id>& entityIds);
+    //virtual QList<RObject::Id> orderBackToFront(const QSet<RObject::Id>& entityIds);
 
     virtual QSet<RObject::Id> queryAllObjects() const;
     virtual QSet<RObject::Id> querySelectedLayers() const;
-    virtual QSet<REntity::Id> queryAllVisibleEntities();
-    virtual QSet<REntity::Id> queryAllEntities(bool undone = false, bool allBlocks = false, RS::EntityType type = RS::EntityAll);
-    virtual QSet<REntity::Id> queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types);
-    virtual QSet<REntity::Id> queryWorkingSetEntities();
-    virtual QSet<RUcs::Id> queryAllUcs();
-    virtual QSet<RLayer::Id> queryAllLayers(bool undone = false);
-    virtual QSet<RLayerState::Id> queryAllLayerStates(bool undone = false) const;
-    virtual QSet<RBlock::Id> queryAllBlocks(bool undone = false);
-    virtual QSet<RBlock::Id> queryAllLayoutBlocks(bool includeModelSpace = false, bool undone = false) const;
-    virtual QSet<RBlock::Id> queryAllLayouts(bool undone);
-    virtual QSet<RView::Id> queryAllViews(bool undone = false);
-    virtual QSet<RLinetype::Id> queryAllLinetypes();
-    virtual QSet<REntity::Id> queryInfiniteEntities() const;
-    virtual QSet<REntity::Id> querySelectedEntities() const;
+    virtual QSet<RObject::Id> queryAllVisibleEntities();
+    virtual QSet<RObject::Id> queryAllEntities(bool undone = false, bool allBlocks = false, RS::EntityType type = RS::EntityAll);
+    virtual QSet<RObject::Id> queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types);
+    virtual QSet<RObject::Id> queryWorkingSetEntities();
+    virtual QSet<RObject::Id> queryAllUcs();
+    virtual QSet<RObject::Id> queryAllLayers(bool undone = false);
+    virtual QSet<RObject::Id> queryAllLayerStates(bool undone = false) const;
+    virtual QSet<RObject::Id> queryAllBlocks(bool undone = false);
+    virtual QSet<RObject::Id> queryAllLayoutBlocks(bool includeModelSpace = false, bool undone = false) const;
+    virtual QSet<RObject::Id> queryAllLayouts(bool undone);
+    virtual QSet<RObject::Id> queryAllViews(bool undone = false);
+    virtual QSet<RObject::Id> queryAllLinetypes();
+    virtual QSet<RObject::Id> queryInfiniteEntities() const;
+    virtual QSet<RObject::Id> querySelectedEntities() const;
 
-    virtual QSet<REntity::Id> queryLayerEntities(RLayer::Id layerId, bool allBlocks = false);
-    virtual QSet<REntity::Id> querySelectedLayerEntities(RLayer::Id layerId, bool allBlocks = false);
-    virtual bool hasBlockEntities(RBlock::Id blockId) const;
-    virtual QSet<REntity::Id> queryBlockEntities(RBlock::Id blockId);
-    virtual QSet<REntity::Id> queryLayerBlockEntities(RLayer::Id layerId, RBlock::Id blockId);
-    virtual QSet<REntity::Id> queryChildEntities(REntity::Id parentId, RS::EntityType type = RS::EntityAll);
-    virtual bool hasChildEntities(REntity::Id parentId) const;
-    virtual QSet<REntity::Id> queryBlockReferences(RBlock::Id blockId) const;
-    virtual QSet<REntity::Id> queryAllBlockReferences() const;
-    virtual QSet<REntity::Id> queryAllViewports() const;
-    //virtual QSet<REntity::Id> queryViewEntities(RView::Id viewId);
+    virtual QSet<RObject::Id> queryLayerEntities(RObject::Id layerId, bool allBlocks = false);
+    virtual QSet<RObject::Id> querySelectedLayerEntities(RObject::Id layerId, bool allBlocks = false);
+    virtual bool hasBlockEntities(RObject::Id blockId) const;
+    virtual QSet<RObject::Id> queryBlockEntities(RObject::Id blockId);
+    virtual QSet<RObject::Id> queryLayerBlockEntities(RObject::Id layerId, RObject::Id blockId);
+    virtual QSet<RObject::Id> queryChildEntities(RObject::Id parentId, RS::EntityType type = RS::EntityAll);
+    virtual bool hasChildEntities(RObject::Id parentId) const;
+    virtual QSet<RObject::Id> queryBlockReferences(RObject::Id blockId) const;
+    virtual QSet<RObject::Id> queryAllBlockReferences() const;
+    virtual QSet<RObject::Id> queryAllViewports() const;
+    //virtual QSet<RObject::Id> queryViewEntities(RObject::Id viewId);
 
     virtual QSharedPointer<RDocumentVariables> queryDocumentVariables() const;
     virtual QSharedPointer<RDocumentVariables> queryDocumentVariablesDirect() const;
@@ -85,22 +100,22 @@ public:
     virtual QSharedPointer<RObject> queryObject(RObject::Id objectId) const;
     virtual QSharedPointer<RObject> queryObjectByHandle(RObject::Handle objectHandle) const;
     virtual QSharedPointer<RObject> queryObjectByHandleDirect(RObject::Handle objectHandle) const;
-    virtual QSharedPointer<REntity> queryEntity(REntity::Id objectId) const;
-    virtual QSharedPointer<RLayer> queryLayer(RLayer::Id layerId) const;
+    virtual QSharedPointer<REntity> queryEntity(RObject::Id objectId) const;
+    virtual QSharedPointer<RLayer> queryLayer(RObject::Id layerId) const;
     virtual QSharedPointer<RLayer> queryLayer(const QString& layerName) const;
-    virtual QSharedPointer<RLayerState> queryLayerState(RLayerState::Id layerStateId) const;
+    virtual QSharedPointer<RLayerState> queryLayerState(RObject::Id layerStateId) const;
     virtual QSharedPointer<RLayerState> queryLayerState(const QString& layerStateName) const;
-    virtual QSharedPointer<RLayout> queryLayout(RLayout::Id layoutId) const;
+    virtual QSharedPointer<RLayout> queryLayout(RObject::Id layoutId) const;
     virtual QSharedPointer<RLayout> queryLayout(const QString& layoutName) const;
-    virtual QSharedPointer<RBlock> queryBlock(RBlock::Id blockId) const;
+    virtual QSharedPointer<RBlock> queryBlock(RObject::Id blockId) const;
     virtual QSharedPointer<RBlock> queryBlock(const QString& blockName) const;
     virtual QSharedPointer<RBlock> queryBlockDirect(const QString& blockName) const;
-    virtual QSharedPointer<RView> queryView(RView::Id viewId) const;
+    virtual QSharedPointer<RView> queryView(RObject::Id viewId) const;
     virtual QSharedPointer<RView> queryView(const QString& viewName) const;
-    virtual QSharedPointer<RUcs> queryUcs(RUcs::Id ucsId) const;
+    virtual QSharedPointer<RUcs> queryUcs(RObject::Id ucsId) const;
     virtual QSharedPointer<RUcs> queryUcs(const QString& ucsName) const;
-    virtual QSharedPointer<RLinetype> queryLinetypeDirect(RLinetype::Id linetypeId) const;
-    virtual QSharedPointer<RLinetype> queryLinetype(RLinetype::Id linetypeId) const;
+    virtual QSharedPointer<RLinetype> queryLinetypeDirect(RObject::Id linetypeId) const;
+    virtual QSharedPointer<RLinetype> queryLinetype(RObject::Id linetypeId) const;
     virtual QSharedPointer<RLinetype> queryLinetype(const QString& linetypeName) const;
 
     void clearVisibleCache();
@@ -111,21 +126,21 @@ public:
     void updateSelectedLayerMap() const;
 
     virtual int countSelectedEntities() const;
-    virtual void clearEntitySelection(QSet<REntity::Id>* affectedEntities = NULL);
-    virtual void selectAllEntities(QSet<REntity::Id>* affectedEntities = NULL);
-    virtual void selectEntity(REntity::Id entityId, bool add = false,
-        QSet<REntity::Id>* affectedEntities = NULL);
-    virtual void deselectEntity(REntity::Id entityId,
-        QSet<REntity::Id>* affectedEntities=NULL);
-    virtual int selectEntities(const QSet<REntity::Id>& entityIds,
+    virtual void clearEntitySelection(QSet<RObject::Id>* affectedEntities = NULL);
+    virtual void selectAllEntities(QSet<RObject::Id>* affectedEntities = NULL);
+    virtual void selectEntity(RObject::Id entityId, bool add = false,
+        QSet<RObject::Id>* affectedEntities = NULL);
+    virtual void deselectEntity(RObject::Id entityId,
+        QSet<RObject::Id>* affectedEntities=NULL);
+    virtual int selectEntities(const QSet<RObject::Id>& entityIds,
             bool add = false,
-            QSet<REntity::Id>* affectedEntities = NULL);
-    virtual int deselectEntities(const QSet<REntity::Id>& entityIds,
-            QSet<REntity::Id>* affectedEntities = NULL);
+            QSet<RObject::Id>* affectedEntities = NULL);
+    virtual int deselectEntities(const QSet<RObject::Id>& entityIds,
+            QSet<RObject::Id>* affectedEntities = NULL);
     void setEntitySelected(QSharedPointer<REntity> entity, bool on,
-        QSet<REntity::Id>* affectedEntities = NULL, bool onlyDescend = false);
-    virtual bool isSelected(REntity::Id entityId);
-    virtual bool isSelectedWorkingSet(REntity::Id entityId);
+        QSet<RObject::Id>* affectedEntities = NULL, bool onlyDescend = false);
+    virtual bool isSelected(RObject::Id entityId);
+    virtual bool isSelectedWorkingSet(RObject::Id entityId);
 
     virtual bool isEntityVisible(const REntity& entity) const;
 
@@ -133,12 +148,12 @@ public:
 
     virtual RBox getBoundingBox(bool ignoreHiddenLayers = true, bool ignoreEmpty=false) const;
     virtual RBox getSelectionBox() const;
-    virtual RBox getEntitiesBox(QSet<REntity::Id>& ids) const;
+    virtual RBox getEntitiesBox(QSet<RObject::Id>& ids) const;
 
     virtual bool removeObject(QSharedPointer<RObject> object);
     virtual bool saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion = true, bool keepHandles = false, bool *overwrite = NULL);
     bool checkRecursion(
-        RBlock::Id blockId, RBlock::Id potentialChildBlockId
+        RObject::Id blockId, RObject::Id potentialChildBlockId
     );
     virtual bool deleteObject(RObject::Id objectId);
     virtual void saveTransaction(RTransaction& transaction);
@@ -162,46 +177,46 @@ public:
     virtual void setKnownVariable(RS::KnownVariable key, const QVariant& value, RTransaction* transaction = NULL);
     virtual QVariant getKnownVariable(RS::KnownVariable key) const;
 
-    virtual QString getLayerName(RLayer::Id layerId) const;
+    virtual QString getLayerName(RObject::Id layerId) const;
     virtual QSet<QString> getLayerNames(const QString& rxStr = RDEFAULT_QSTRING) const;
-    virtual RLayer::Id getLayerId(const QString& layerName) const;
+    virtual RObject::Id getLayerId(const QString& layerName) const;
 
-    virtual QString getLayerStateName(RLayerState::Id layerStateId) const;
+    virtual QString getLayerStateName(RObject::Id layerStateId) const;
     virtual QSet<QString> getLayerStateNames(const QString& rxStr = RDEFAULT_QSTRING) const;
-    virtual RLayerState::Id getLayerStateId(const QString& layerStateName) const;
+    virtual RObject::Id getLayerStateId(const QString& layerStateName) const;
 
-    virtual QString getLayoutName(RLayout::Id layoutId) const;
+    virtual QString getLayoutName(RObject::Id layoutId) const;
     virtual QSet<QString> getLayoutNames(const QString& rxStr = RDEFAULT_QSTRING) const;
-    virtual RLayout::Id getLayoutId(const QString& layoutName) const;
+    virtual RObject::Id getLayoutId(const QString& layoutName) const;
 
-    virtual QString getBlockName(RBlock::Id blockId) const;
-    virtual QString getBlockNameFromHandle(RBlock::Handle blockHandle) const;
+    virtual QString getBlockName(RObject::Id blockId) const;
+    virtual QString getBlockNameFromHandle(RObject::Handle blockHandle) const;
     virtual QString getBlockNameFromLayout(const QString& layoutName) const;
-    virtual QString getBlockNameFromLayout(RLayout::Id layoutId) const;
+    virtual QString getBlockNameFromLayout(RObject::Id layoutId) const;
     virtual QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING, bool undone = false) const;
-    virtual RBlock::Id getBlockId(const QString& blockName) const;
-    virtual RBlock::Id getBlockIdAuto(const QString& blockLayoutName) const;
+    virtual RObject::Id getBlockId(const QString& blockName) const;
+    virtual RObject::Id getBlockIdAuto(const QString& blockLayoutName) const;
 
-    virtual QString getViewName(RView::Id viewId) const;
+    virtual QString getViewName(RObject::Id viewId) const;
     virtual QSet<QString> getViewNames() const;
-    virtual RView::Id getViewId(const QString& viewName) const;
+    virtual RObject::Id getViewId(const QString& viewName) const;
 
-    virtual QString getLinetypeName(RLinetype::Id linetypeId) const;
-    virtual QString getLinetypeDescription(RLinetype::Id linetypeId) const;
-    virtual QString getLinetypeLabel(RLinetype::Id linetypeId) const;
+    virtual QString getLinetypeName(RObject::Id linetypeId) const;
+    virtual QString getLinetypeDescription(RObject::Id linetypeId) const;
+    virtual QString getLinetypeLabel(RObject::Id linetypeId) const;
     virtual QSet<QString> getLinetypeNames() const;
     virtual QList<RLinetypePattern> getLinetypePatterns() const;
-    virtual RLinetype::Id getLinetypeId(const QString& linetypeName) const;
+    virtual RObject::Id getLinetypeId(const QString& linetypeName) const;
 
     virtual QSharedPointer<RObject> queryObjectDirect(RObject::Id objectId) const;
     virtual RObject* queryObjectCC(RObject::Id objectId) const;
-    virtual QSharedPointer<REntity> queryEntityDirect(REntity::Id objectId) const;
-    virtual QSharedPointer<REntity> queryVisibleEntityDirect(REntity::Id objectId) const;
-    virtual QSharedPointer<RUcs> queryUcsDirect(RUcs::Id ucsId) const;
-    virtual QSharedPointer<RLayer> queryLayerDirect(RLayer::Id layerId) const;
-    virtual QSharedPointer<RLayerState> queryLayerStateDirect(RLayerState::Id layerStateId) const;
-    virtual QSharedPointer<RLayout> queryLayoutDirect(RLayout::Id layoutId) const;
-    virtual QSharedPointer<RBlock> queryBlockDirect(RBlock::Id blockId) const;
+    virtual QSharedPointer<REntity> queryEntityDirect(RObject::Id objectId) const;
+    virtual QSharedPointer<REntity> queryVisibleEntityDirect(RObject::Id objectId) const;
+    virtual QSharedPointer<RUcs> queryUcsDirect(RObject::Id ucsId) const;
+    virtual QSharedPointer<RLayer> queryLayerDirect(RObject::Id layerId) const;
+    virtual QSharedPointer<RLayerState> queryLayerStateDirect(RObject::Id layerStateId) const;
+    virtual QSharedPointer<RLayout> queryLayoutDirect(RObject::Id layoutId) const;
+    virtual QSharedPointer<RBlock> queryBlockDirect(RObject::Id blockId) const;
 
     virtual void setObjectHandle(RObject& object, RObject::Handle objectHandle);
     virtual RObject::Handle getNewObjectHandle();
@@ -212,7 +227,7 @@ public:
 
     virtual void update();
 
-    virtual void setEntityParentId(REntity& entity, REntity::Id parentId);
+    virtual void setEntityParentId(REntity& entity, RObject::Id parentId);
 
     //virtual void setUnit(RS::Unit unit, RTransaction* transaction = NULL);
     //virtual RS::Unit getUnit() const;
@@ -237,23 +252,23 @@ protected:
     bool inTransaction;
     QHash<RObject::Id, QSharedPointer<RObject> > objectMap;
     QHash<RObject::Handle, QSharedPointer<RObject> > objectHandleMap;
-    QHash<REntity::Id, QSharedPointer<REntity> > entityMap;
-    mutable QHash<REntity::Id, QSharedPointer<REntity> > selectedEntityMap;
+    QHash<RObject::Id, QSharedPointer<REntity> > entityMap;
+    mutable QHash<RObject::Id, QSharedPointer<REntity> > selectedEntityMap;
     mutable bool selectedEntityMapDirty;
-    mutable QHash<REntity::Id, QSharedPointer<REntity> > visibleEntityMap;
+    mutable QHash<RObject::Id, QSharedPointer<REntity> > visibleEntityMap;
     mutable bool visibleEntityMapDirty;
-    mutable QHash<RLayer::Id, QSharedPointer<RLayer> > selectedLayerMap;
+    mutable QHash<RObject::Id, QSharedPointer<RLayer> > selectedLayerMap;
     mutable bool selectedLayerMapDirty;
-    mutable QHash<RBlock::Id, QHash<REntity::Id, QSharedPointer<REntity> > > blockEntityMap;
-    QHash<RBlock::Id, QSharedPointer<RBlock> > blockMap;
+    mutable QHash<RObject::Id, QHash<RObject::Id, QSharedPointer<REntity> > > blockEntityMap;
+    QHash<RObject::Id, QSharedPointer<RBlock> > blockMap;
     QHash<RS::EntityType, QHash<RObject::Id, QSharedPointer<RObject> > > typeObjectMap;
-    QHash<RLayer::Id, QSharedPointer<RLayer> > layerMap;
+    QHash<RObject::Id, QSharedPointer<RLayer> > layerMap;
     QHash<QString, QSharedPointer<RLayer> > layerNameMap;
-    QHash<RLayerState::Id, QSharedPointer<RLayerState> > layerStateMap;
-    QHash<RLayout::Id, QSharedPointer<RLayout> > layoutMap;
-    QHash<RLinetype::Id, QSharedPointer<RLinetype> > linetypeMap;
+    QHash<RObject::Id, QSharedPointer<RLayerState> > layerStateMap;
+    QHash<RObject::Id, QSharedPointer<RLayout> > layoutMap;
+    QHash<RObject::Id, QSharedPointer<RLinetype> > linetypeMap;
     /** maps parent entity IDs to child entity IDs */
-    QMultiHash<REntity::Id, REntity::Id> childMap;
+    QMultiHash<RObject::Id, RObject::Id> childMap;
     QHash<int, RTransaction> transactionMap;
 
     // document wide variables are stored as custom properties in this object:

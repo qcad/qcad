@@ -17,13 +17,16 @@
  * along with QCAD.
  */
 #include "RLeaderData.h"
-#include "RUnit.h"
+#include "RDimStyle.h"
+#include "RDocument.h"
+#include "RRefPoint.h"
+#include "RTriangle.h"
 
 RLeaderData::RLeaderData()
     : arrowHead(true),
       dimasz(-1.0),
       dimscale(-1.0),
-      dimLeaderBlockId(REntity::INVALID_ID),
+      dimLeaderBlockId(RObject::INVALID_ID),
       splineShaped(false) {
 }
 
@@ -41,10 +44,70 @@ RLeaderData::RLeaderData(const RPolyline& polyline, bool arrowHead)
       arrowHead(arrowHead),
       dimasz(-1.0),
       dimscale(-1.0),
-      dimLeaderBlockId(REntity::INVALID_ID),
+      dimLeaderBlockId(RObject::INVALID_ID),
       splineShaped(false) {
 
 }
+
+double RLeaderData::getDimasz(bool scale) const {
+    double v = 2.5;
+
+    // get value from override:
+    if (dimasz>0.0) {
+        v = dimasz;
+    }
+
+    else if (document!=NULL) {
+        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+        if (!dimStyle.isNull()) {
+            // get value from dimension style:
+            v = dimStyle->getDouble(RS::DIMASZ);
+        }
+        else {
+            // TODO: get value from document (should never happen):
+            Q_ASSERT(false);
+        }
+    }
+
+    if (scale) {
+        v *= getDimscale();
+    }
+
+    return v;
+}
+
+void RLeaderData::setDimasz(double v) {
+    dimasz = v;
+    update();
+}
+
+double RLeaderData::getDimscale() const {
+    // get value from override:
+    if (dimscale>0.0) {
+        return dimscale;
+    }
+
+    double v = 1.0;
+    if (document!=NULL) {
+        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+        if (!dimStyle.isNull()) {
+            // get value from dimension style:
+            v = dimStyle->getDouble(RS::DIMSCALE);
+        }
+        else {
+            // TODO: get value from document (should never happen):
+            Q_ASSERT(false);
+        }
+    }
+
+    return v;
+}
+
+void RLeaderData::setDimscale(double f) {
+    dimscale = f;
+    update();
+}
+
 
 void RLeaderData::scaleVisualProperties(double scaleFactor) {
     setDimscale(getDimscale() * scaleFactor);
@@ -141,11 +204,11 @@ bool RLeaderData::updateArrowHead() const {
     return false;
 }
 
-REntity::Id RLeaderData::getDimLeaderBlockId() const {
+RObject::Id RLeaderData::getDimLeaderBlockId() const {
     return dimLeaderBlockId;
 }
 
-void RLeaderData::setDimLeaderBlockId(REntity::Id id) {
+void RLeaderData::setDimLeaderBlockId(RObject::Id id) {
     dimLeaderBlockId = id;
 }
 

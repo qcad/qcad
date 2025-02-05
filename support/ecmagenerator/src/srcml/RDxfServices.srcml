@@ -29,14 +29,13 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"dxf_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QColor&gt;</cpp:file></cpp:include>
-
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RS.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RColor.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLineweight.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLinetypePattern.h"</cpp:file></cpp:include>
+
 
 <class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RLinetypePattern</name>;</class_decl>
 
 <comment type="block">/**
  * \brief DXF support tools, mainly for QCAD 2 DXF imports.

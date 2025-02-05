@@ -7,6 +7,12 @@
 
         // forwards declarations mapped to includes
         
+                #include "RDocument.h"
+            
+                #include "RLine.h"
+            
+                #include "RRefPoint.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -273,8 +279,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimArcLengthData: Argument 0 is not of type RDimensionData*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDimArcLengthData: Argument 0 is not of type RDimensionData* or QSharedPointer<RDimensionData>.",
+                               context);
                     }
                     RDimensionData& a0 = *ap0;
                 

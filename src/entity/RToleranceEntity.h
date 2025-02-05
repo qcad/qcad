@@ -28,7 +28,20 @@
 #include "RToleranceData.h"
 
 class RDocument;
+class REntity;
 class RExporter;
+class RLine;
+class RObject;
+class RPropertyAttributes;
+class RPropertyTypeId;
+class RShape;
+class RTextData;
+class RToleranceData;
+class RToleranceEntity;
+class RTransaction;
+class RVector;
+
+
 
 /**
  * Tolerance entity class.

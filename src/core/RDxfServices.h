@@ -28,14 +28,13 @@
 
 #include "dxf_global.h"
 
-#include <QColor>
-
 #include "RS.h"
 #include "RColor.h"
 #include "RLineweight.h"
-#include "RLinetypePattern.h"
+
 
 class RDocument;
+class RLinetypePattern;
 
 /**
  * \brief DXF support tools, mainly for QCAD 2 DXF imports.

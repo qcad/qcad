@@ -23,10 +23,24 @@
 #include "entity_global.h"
 
 #include "RBox.h"
-#include "RDocument.h"
-#include "REntity.h"
+#include "REntityData.h"
 #include "RSpline.h"
 #include "RVector.h"
+
+class RBox;
+class RDocument;
+class REntityData;
+class RLine;
+class RObject;
+class RPolyline;
+class RRefPoint;
+class RShape;
+class RSpline;
+class RSplineData;
+class RSplineEntity;
+class RVector;
+class RArc;
+
 
 /**
  * Stores and manages all data that defines the geometry and
@@ -248,13 +262,9 @@ public:
         return RSpline::getAngleAt(distance, from);
     }
 
-    RPolyline toPolyline(int segments) const {
-        return RSpline::toPolyline(segments);
-    }
+    RPolyline toPolyline(int segments) const;
 
-    RPolyline approximateWithArcs(double tolerance, double radiusLimit=RDEFAULT_MIN1) const {
-        return RSpline::approximateWithArcs(tolerance, radiusLimit);
-    }
+    RPolyline approximateWithArcs(double tolerance, double radiusLimit=RDEFAULT_MIN1) const;
 
     void simplify(double tolerance) {
         RSpline s = RSpline::simplify(tolerance);

@@ -16,30 +16,30 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QtGui>
-//#include <QDesktopWidget>
-#include <QCheckBox>
 #include <QComboBox>
-#include <QSpinBox>
-#include <QLabel>
 #include <QLineEdit>
 #include <QMenu>
 #include <QMdiArea>
+#include <QSettings>
+#include <QScreen>
 #include <QStatusBar>
 #include <QTabBar>
 #include <QToolBar>
 #include <QToolButton>
-#include <QIconDragEvent>
 
 #include <RSingleApplication.h>
 
-#include "RDebug.h"
+#include "RCloseCurrentEvent.h"
+#include "RCoordinateEvent.h"
+#include "RDocument.h"
 #include "RDocumentInterface.h"
 #include "RGuiAction.h"
+#include "RGraphicsViewImage.h"
 #include "RGraphicsViewQt.h"
 #include "RMainWindowQt.h"
 #include "RMdiArea.h"
 #include "RMdiChildQt.h"
+#include "RPropertyEvent.h"
 #include "RScriptHandler.h"
 #include "RSelectionChangedEvent.h"
 #include "RSettings.h"
@@ -284,7 +284,7 @@ void RMainWindowQt::closeEvent(QCloseEvent* e) {
     // dock widget state not persistent between sessions
     // dock widget closes if user cancels close dialog
 #ifdef Q_OS_MAC
-#if (QT_VERSION >= 0x050601 && QT_VERSION <= 0x050602) || (QT_VERSION >= 0x050F00 && QT_VERSION < 0x060000)
+#if (QT_VERSION >= 0x050601 && QT_VERSION <= 0x050602) || (QT_VERSION >= 0x050F00 && QT_VERSION < 0x060000) || (QT_VERSION >= 0x060600 && QT_VERSION < 0x060801)
     // restore dock widgets that were already closed by the same event due to
     // a Qt bug:
     QString eventAddr = QString("0x%1").arg((qlonglong)e, 0, 16);

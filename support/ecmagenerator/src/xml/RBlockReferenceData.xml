@@ -3,6 +3,10 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class_decl name="RExporter" />
+  <class_decl name="REntity" />
+  <class_decl name="RLine" />
+  <class_decl name="RTransform" />
+  <class_decl name="RRefPoint" />
   <class name="RBlockReferenceData"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
@@ -11,7 +15,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant />
       <variant>
-        <arg type="RBlock::Id" typeName="RBlock::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="referencedBlockId" isConst="false" />
         <arg type="RVector &amp;" typeName="RVector"
         name="position" isConst="true" />
@@ -80,8 +84,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RS::ProjectionRenderingHint" name="hint"
         hasDefault="true" default="RS :: RenderTop"
         isConst="false" />
-        <arg type="QList &lt; REntity::Id &gt; *"
-        typeName="QList &lt; REntity::Id &gt; *"
+        <arg type="QList &lt; RObject::Id &gt; *"
+        typeName="QList &lt; RObject::Id &gt; *"
         name="subEntityIds" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
@@ -208,8 +212,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="setReferencedBlockId" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
-        isConst="false" />
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="blockId" isConst="false" />
       </variant>
     </method>
     <method name="groundReferencedBlockId"
@@ -220,7 +224,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getReferencedBlockId"
     cppName="getReferencedBlockId" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="RBlock::Id" isPureVirtual="false" />
+      <variant returnType="RObject::Id" isPureVirtual="false" />
     </method>
     <method name="hasBlockOwnership" cppName="hasBlockOwnership"
     specifier="public" isStatic="false" isVirtual="false"
@@ -342,7 +346,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QSharedPointer &lt; REntity &gt;"
       isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="entityId" isConst="false" />
         <arg type="bool" typeName="bool" name="transform"
         hasDefault="true" default="false" isConst="false" />

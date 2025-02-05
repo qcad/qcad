@@ -23,16 +23,15 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RArc.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBox.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RExplodable.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RShape.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSplineProxy.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
-
+<class_decl>class <name>RArc</name>;</class_decl>
 <class_decl>class <name>RLine</name>;</class_decl>
+<class_decl>class <name>RPolyline</name>;</class_decl>
+<class_decl>class <name>RSplineProxy</name>;</class_decl>
 
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>R_NO_OPENNURBS</name></cpp:ifndef>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"opennurbs/opennurbs.h"</cpp:file></cpp:include>
@@ -247,12 +246,7 @@
     <comment type="block">/**
      * \nonscriptable
      */</comment>
-    <function><type><name>static</name> <name>void</name></type> <name>setSplineProxy</name><parameter_list>(<param><decl><type><name>RSplineProxy</name>*</type> <name>p</name></decl></param>)</parameter_list> <block>{
-        <if>if <condition>(<expr><name>splineProxy</name>!=<name>NULL</name></expr>)</condition><then> <block>{
-            <expr_stmt><expr>delete <name>splineProxy</name></expr>;</expr_stmt>
-        }</block></then></if>
-        <expr_stmt><expr><name>splineProxy</name> = <name>p</name></expr>;</expr_stmt>
-    }</block></function>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>setSplineProxy</name><parameter_list>(<param><decl><type><name>RSplineProxy</name>*</type> <name>p</name></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * \nonscriptable

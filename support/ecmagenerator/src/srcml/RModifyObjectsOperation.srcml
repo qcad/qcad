@@ -24,8 +24,9 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"operations_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RAddObjectsOperation.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocumentInterface.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTransformation.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RDocumentInterface</name>;</class_decl>
+<class_decl>class <name>RTransformation</name>;</class_decl>
 
 <comment type="block">/**
  * Implementation of an operation that adds entities.

@@ -22,13 +22,17 @@
 
 #include "entity_global.h"
 
-#include "RBox.h"
-#include "RDocument.h"
-#include "REntity.h"
-#include "RPolyline.h"
-#include "RVector.h"
-#include "RPainterPathSource.h"
 #include "RPolylineData.h"
+
+class RBox;
+class RDocument;
+class RPolyline;
+class RPolylineData;
+class RRefPoint;
+class RVector;
+class RWipeoutData;
+class RWipeoutEntity;
+
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1

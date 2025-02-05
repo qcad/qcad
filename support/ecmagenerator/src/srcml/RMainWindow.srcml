@@ -26,14 +26,9 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMutex&gt;</cpp:file></cpp:include>
 <class_decl>class <name>QKeyEvent</name>;</class_decl>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntityExportListener.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RExportListener.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RImportListener.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RInterTransactionListener.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTransactionListener.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyEvent.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMainWindowProxy.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMessageHandler.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RObject.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RProgressHandler.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RS.h"</cpp:file></cpp:include>
 
@@ -42,18 +37,26 @@
 <class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>RDocumentInterface</name>;</class_decl>
 <class_decl>class <name>REntity</name>;</class_decl>
+<class_decl>class <name>REntityExportListener</name>;</class_decl>
+<class_decl>class <name>RExporter</name>;</class_decl>
+<class_decl>class <name>RExportListener</name>;</class_decl>
 <class_decl>class <name>RFocusListener</name>;</class_decl>
 <class_decl>class <name>RGraphicsView</name>;</class_decl>
+<class_decl>class <name>RImportListener</name>;</class_decl>
+<class_decl>class <name>RInterTransactionListener</name>;</class_decl>
 <class_decl>class <name>RKeyListener</name>;</class_decl>
 <class_decl>class <name>RLayerListener</name>;</class_decl>
 <class_decl>class <name>RNewDocumentListener</name>;</class_decl>
 <class_decl>class <name>RPaletteListener</name>;</class_decl>
 <class_decl>class <name>RPenListener</name>;</class_decl>
+<class_decl>class <name>RPropertyEvent</name>;</class_decl>
 <class_decl>class <name>RPropertyListener</name>;</class_decl>
+<class_decl>class <name>RPropertyTypeId</name>;</class_decl>
 <class_decl>class <name>RPreferencesListener</name>;</class_decl>
 <class_decl>class <name>RSelectionListener</name>;</class_decl>
 <class_decl>class <name>RSnapListener</name>;</class_decl>
 <class_decl>class <name>RTransaction</name>;</class_decl>
+<class_decl>class <name>RTransactionListener</name>;</class_decl>
 <class_decl>class <name>RUcsListener</name>;</class_decl>
 <class_decl>class <name>RVector</name>;</class_decl>
 <class_decl>class <name>RViewFocusListener</name>;</class_decl>
@@ -185,8 +188,8 @@
 
     <function_decl><type><name>void</name></type> <name>addLayerListener</name><parameter_list>(<param><decl><type><name>RLayerListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>removeLayerListener</name><parameter_list>(<param><decl><type><name>RLayerListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>notifyLayerListeners</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>, <param><decl><type><name>QList<argument_list>&lt;<argument><name><name>RLayer</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>layerIds</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>notifyLayerListenersCurrentLayer</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>, <param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>previousLayerId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>notifyLayerListeners</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>, <param><decl><type><name>QList<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>layerIds</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>notifyLayerListenersCurrentLayer</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>previousLayerId</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>addBlockListener</name><parameter_list>(<param><decl><type><name>RBlockListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>removeBlockListener</name><parameter_list>(<param><decl><type><name>RBlockListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>

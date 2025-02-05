@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RFaceData.h"
+#include "RDocument.h"
 
 RFaceData::RFaceData() {
 }

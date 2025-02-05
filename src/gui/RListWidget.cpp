@@ -18,7 +18,6 @@
  */
 #include "REventFilter.h"
 #include "RListWidget.h"
-#include "RMainWindowQt.h"
 
 #include <QContextMenuEvent>
 

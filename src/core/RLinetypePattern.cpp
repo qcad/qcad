@@ -16,14 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QFile>
 #include <QMap>
 
 #include "RFontList.h"
 #include "RLinetypePattern.h"
 #include "RMath.h"
-#include "RTextData.h"
+#include "RTextBasedData.h"
 #include "RTextRenderer.h"
-#include "RDebug.h"
 #include "RPluginLoader.h"
 
 QMap<QString, QString> RLinetypePattern::nameMap;

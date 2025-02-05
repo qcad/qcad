@@ -20,7 +20,8 @@
 #ifndef RSPATIALINDEXVISITORADAPTER_H
 #define RSPATIALINDEXVISITORADAPTER_H
 
-#include "RDebug.h"
+#include <QMetaType>
+
 #include "RSpatialIndexVisitor.h"
 
 

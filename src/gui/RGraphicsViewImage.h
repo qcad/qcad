@@ -22,25 +22,41 @@
 
 #include "gui_global.h"
 
-#include <QtCore>
-#include <QPinchGesture>
+#include <QMutex>
 #include <QTransform>
-#include <QPainter>
 
+#include "RGraphicsSceneDrawable.h"
 #include "RGraphicsView.h"
 #include "RPainterPath.h"
 
 class RAction;
+class RColor;
+class RBox;
 class RDocument;
 class RDocumentInterface;
+class RGraphicsScene;
 class RGraphicsSceneQt;
-class RGraphicsSceneDrawable;
+class RGraphicsViewImage;
+class RGraphicsViewQt;
+class RGraphicsViewWorker;
+class RGrid;
+class RImageData;
 class RLine;
+class RMouseEvent;
+class RObject;
+class RPainterPath;
+class RRefPoint;
+class RShape;
 class RSnap;
 class RSnapRestriction;
-class RGraphicsViewImage;
-class RGraphicsViewWorker;
-
+class RTabletEvent;
+class RTerminateEvent;
+class RTextBasedData;
+class RTextLabel;
+class RTextLayout;
+class RTransform;
+class RVector;
+class RWheelEvent;
 
 /**
  * \brief QImage based 2d graphics view.
@@ -269,10 +285,10 @@ public:
 
     virtual void paintEntities(QPainter* painter, const RBox& queryBox);
     void paintEntitiesMulti(const RBox& queryBox);
-    //void paintEntitiesThread(int threadId, const QList<REntity::Id>& list, int start, int end);
+    //void paintEntitiesThread(int threadId, const QList<RObject::Id>& list, int start, int end);
     //void paintDrawablesThread(int threadId, const QList<RGraphicsSceneDrawable>& list, int start, int end);
 
-    virtual void paintEntityThread(RGraphicsViewWorker* worker, REntity::Id id, bool preview = false);
+    virtual void paintEntityThread(RGraphicsViewWorker* worker, RObject::Id id, bool preview = false);
     virtual void paintDrawableThread(RGraphicsViewWorker* worker, RGraphicsSceneDrawable& drawable, const RBox& clipRectangle, bool preview = false);
 
     virtual void paintOverlay();

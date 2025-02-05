@@ -22,8 +22,10 @@
 
 #include <QObject>
 
-#include "RDocumentInterface.h"
 #include "RInterTransactionListener.h"
+
+class RDocument;
+class RTransaction;
 
 /**
  * \scriptable

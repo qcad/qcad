@@ -19,6 +19,8 @@
 #include "RLineweight.h"
 #include "RSettings.h"
 
+#include <QMap>
+#include <QPair>
 #include <QPainter>
 #include <QPainterPath>
 

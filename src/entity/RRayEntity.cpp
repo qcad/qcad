@@ -18,7 +18,6 @@
  */
 #include "RRayEntity.h"
 #include "RExporter.h"
-#include "RLine.h"
 
 RPropertyTypeId RRayEntity::PropertyCustom;
 RPropertyTypeId RRayEntity::PropertyHandle;

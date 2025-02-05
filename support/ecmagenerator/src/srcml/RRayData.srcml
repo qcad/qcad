@@ -26,6 +26,10 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntityData.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RRay.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>RLine</name>;</class_decl>
+<class_decl>class <name>RRefPoint</name>;</class_decl>
+<class_decl>class <name>RPolyline</name>;</class_decl>
+
 <comment type="block">/**
  * Stores and manages all data that defines the geometry and
  * appearance of a ray entity.

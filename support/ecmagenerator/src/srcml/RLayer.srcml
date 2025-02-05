@@ -24,20 +24,17 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QColor&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGlobal.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RObject.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLayerProxy.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLinetype.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RColor.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLineweight.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyAttributes.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>QDebug</name>;</class_decl>
 <class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RPropertyAttributes</name>;</class_decl>
+<class_decl>class <name>RTransaction</name>;</class_decl>
 
 <comment type="block">/**
  * Represents a layer in a drawing.
@@ -85,7 +82,7 @@
 
     <constructor_decl><name>RLayer</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>, <param><decl><type><name>bool</name></type> <name>frozen</name> =<init> <expr><name>false</name></expr></init></decl></param>,
         <param><decl><type><name>bool</name></type> <name>locked</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>color</name> =<init> <expr><name><name>Qt</name>::<name>black</name></name></expr></init></decl></param>,
-        <param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name> =<init> <expr><name><name>RLinetype</name>::<name>INVALID_ID</name></name></expr></init></decl></param>,
+        <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>linetypeId</name> =<init> <expr><name><name>RObject</name>::<name>INVALID_ID</name></name></expr></init></decl></param>,
         <param><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lineweight</name> =<init> <expr><name><name>RLineweight</name>::<name>Weight000</name></name></expr></init></decl></param>,
         <param><decl><type><name>bool</name></type> <name>off</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
 
@@ -110,7 +107,7 @@
         <return>return <expr><call><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name><argument_list>(<argument><expr>new <call><name>RLayer</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function_decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>getParentLayerId</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getParentLayerId</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function><type><name>QString</name></type> <name>getName</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>name</name></expr>;</return>
@@ -188,11 +185,11 @@
         <expr_stmt><expr><name>color</name> = <name>c</name></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>linetypeId</name></expr>;</return>
     }</block></function>
 
-    <function><type><name>void</name></type> <name>setLinetypeId</name><parameter_list>(<param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>lt</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>void</name></type> <name>setLinetypeId</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>lt</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>linetypeId</name> = <name>lt</name></expr>;</expr_stmt>
     }</block></function>
 
@@ -318,7 +315,7 @@
     <decl_stmt><decl><type><name>QString</name></type> <name>name</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>LayerFlags</name></type> <name>flags</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RColor</name></type> <name>color</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>linetypeId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lineweight</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>static</name> <name>RLayerProxy</name>*</type> <name>layerProxy</name></decl>;</decl_stmt>

@@ -19,16 +19,17 @@
 #include <QDir>
 #include <QFileInfo>
 #include <QList>
+#include <QMap>
 #include <QMenu>
 #include <QPainter>
 #include <QSvgRenderer>
 #include <QToolBar>
-//#include <QVectorIterator>
 
-#include "RDebug.h"
 #include "RGuiAction.h"
+#include "RDocument.h"
+#include "RS.h"
 #include "RScriptHandler.h"
-#include "RSingleApplication.h"
+#include "RSettings.h"
 #include "RWidget.h"
 
 
@@ -961,6 +962,10 @@ void RGuiAction::setScriptFile(const QString& sf, bool isSecondary) {
     //if (QFileInfo(iconFilePath).exists()) {
         setIcon(iconFilePath);
     //}
+}
+
+QString RGuiAction::getScriptClass() const {
+    return QFileInfo(scriptFile).baseName();
 }
 
 void RGuiAction::setFactory(FactoryFunction f) {

@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QCoreApplication>
-#include <QLineEdit>
+#include <QKeyEvent>
 
 #include "RToolOptionEventFilter.h"
 #include "RMainWindowQt.h"
 #include "RMathLineEdit.h"
+#include "RSettings.h"
 
 /**
  * Event filter to catch enter and tab pressed in widgets.

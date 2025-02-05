@@ -23,9 +23,18 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"entity_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDimLinearData.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntityData.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RLine</name>;</class_decl>
+<class_decl>class <name>RRefPoint</name>;</class_decl>
+<class_decl>class <name>RPolyline</name>;</class_decl>
+<class_decl>class <name>RTextData</name>;</class_decl>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_MIN1</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_MIN1</name> -1</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
 <comment type="block">/**
  * Tolerance entity data class.
@@ -84,63 +93,11 @@
 <comment type="line">//        text += "^J";</comment>
 <comment type="line">//    }</comment>
 
-    <function><type><name>double</name></type> <name>getDimtxt</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>scale</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <decl_stmt><decl><type><name>double</name></type> <name>v</name> =<init> <expr>2.5</expr></init></decl>;</decl_stmt>
+    <function_decl><type><name>double</name></type> <name>getDimtxt</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>scale</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimtxt</name><parameter_list>(<param><decl><type><name>double</name></type> <name>f</name></decl></param>)</parameter_list>;</function_decl>
 
-        <comment type="line">// get value from override:</comment>
-        <if>if <condition>(<expr><name>dimtxt</name>&gt;0.0</expr>)</condition><then> <block>{
-            <expr_stmt><expr><name>v</name> = <name>dimtxt</name></expr>;</expr_stmt>
-        }</block></then>
-
-        <else>else <if>if <condition>(<expr><name>document</name>!=<name>NULL</name></expr>)</condition><then> <block>{
-            <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RDimStyle</name></argument>&gt;</argument_list></name></type> <name>dimStyle</name> =<init> <expr><name>document</name>-&gt;<call><name>queryDimStyleDirect</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
-            <if>if <condition>(<expr>!<name>dimStyle</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
-                <comment type="line">// get value from dimension style:</comment>
-                <expr_stmt><expr><name>v</name> = <name>dimStyle</name>-&gt;<call><name>getDouble</name><argument_list>(<argument><expr><name><name>RS</name>::<name>DIMTXT</name></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-            }</block></then>
-            <else>else <block>{
-                <comment type="line">// TODO: get value from document (should never happen):</comment>
-                <constructor_decl><name>Q_ASSERT</name><parameter_list>(<param><decl><type><name>false</name></type></decl></param>)</parameter_list>;</constructor_decl>
-            }</block></else></if>
-        }</block></then></if></else></if>
-
-        <if>if <condition>(<expr><name>scale</name></expr>)</condition><then> <block>{
-            <expr_stmt><expr><name>v</name> *= <call><name>getDimscale</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
-        }</block></then></if>
-
-        <return>return <expr><name>v</name></expr>;</return>
-    }</block></function>
-    <function><type><name>void</name></type> <name>setDimtxt</name><parameter_list>(<param><decl><type><name>double</name></type> <name>f</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>dimtxt</name> = <name>f</name></expr>;</expr_stmt>
-        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
-    }</block></function>
-
-    <function><type><name>double</name></type> <name>getDimscale</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <comment type="line">// get value from override:</comment>
-        <if>if <condition>(<expr><name>dimscale</name>&gt;0.0</expr>)</condition><then> <block>{
-            <return>return <expr><name>dimscale</name></expr>;</return>
-        }</block></then></if>
-
-        <decl_stmt><decl><type><name>double</name></type> <name>v</name> =<init> <expr>1.0</expr></init></decl>;</decl_stmt>
-        <if>if <condition>(<expr><name>document</name>!=<name>NULL</name></expr>)</condition><then> <block>{
-            <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RDimStyle</name></argument>&gt;</argument_list></name></type> <name>dimStyle</name> =<init> <expr><name>document</name>-&gt;<call><name>queryDimStyleDirect</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
-            <if>if <condition>(<expr>!<name>dimStyle</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
-                <comment type="line">// get value from dimension style:</comment>
-                <expr_stmt><expr><name>v</name> = <name>dimStyle</name>-&gt;<call><name>getDouble</name><argument_list>(<argument><expr><name><name>RS</name>::<name>DIMSCALE</name></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-            }</block></then>
-            <else>else <block>{
-                <comment type="line">// TODO: get value from document (should never happen):</comment>
-                <constructor_decl><name>Q_ASSERT</name><parameter_list>(<param><decl><type><name>false</name></type></decl></param>)</parameter_list>;</constructor_decl>
-            }</block></else></if>
-        }</block></then></if>
-
-        <return>return <expr><name>v</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>void</name></type> <name>setDimscale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>f</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>dimscale</name> = <name>f</name></expr>;</expr_stmt>
-        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
-    }</block></function>
+    <function_decl><type><name>double</name></type> <name>getDimscale</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimscale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>f</name></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="line">//double getDimscale(bool fromDocument=true) const;</comment>
     <comment type="line">//void setDimScaleOverride(double v);</comment>
@@ -214,7 +171,7 @@
     <comment type="block">/** Dimension scale */</comment>
     <comment type="line">//double dimScaleOverride;</comment>
     <comment type="block">/** Block to use instead of arrow */</comment>
-    <decl_stmt><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>dimToleranceBlockId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>dimToleranceBlockId</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>double</name></type> <name>dimscale</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>dimtxt</name></decl>;</decl_stmt>

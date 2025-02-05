@@ -1,9 +1,7 @@
 #ifndef RDXFPLUGIN_H_
 #define RDXFPLUGIN_H_
 
-#include <QDebug>
 #include <QObject>
-#include <QStringList>
 
 #include "RPluginInterface.h"
 

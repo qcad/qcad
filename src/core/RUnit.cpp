@@ -23,7 +23,6 @@
 
 #include "RDocument.h"
 #include "RMath.h"
-#include "RSettings.h"
 
 /**
  * \return A presentable label for the given value. The number locale

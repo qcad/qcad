@@ -9,6 +9,8 @@
 
         // forwards declarations mapped to includes
         
+                #include <QTreeView>
+            
             
         // includes for base ecma wrapper classes
         

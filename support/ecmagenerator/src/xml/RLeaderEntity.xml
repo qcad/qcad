@@ -286,13 +286,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getDimLeaderBlockId"
     cppName="getDimLeaderBlockId" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="REntity::Id" isPureVirtual="false" />
+      <variant returnType="RObject::Id" isPureVirtual="false" />
     </method>
     <method name="setDimLeaderBlockId"
     cppName="setDimLeaderBlockId" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id" name="id"
+        <arg type="RObject::Id" typeName="RObject::Id" name="id"
         isConst="false" />
       </variant>
     </method>

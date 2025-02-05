@@ -24,8 +24,6 @@
 
 #include <QSharedPointer>
 
-#include "RShape.h"
-
 /**
  * Interface for directed shape classes.
  *

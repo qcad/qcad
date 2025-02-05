@@ -2437,8 +2437,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLayout: Argument 0 is not of type RLayout::PlotPaperUnits*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RLayout: Argument 0 is not of type RLayout::PlotPaperUnits* or QSharedPointer<RLayout::PlotPaperUnits>.",
+                               context);
                     }
                     RLayout::PlotPaperUnits& a0 = *ap0;
                 
@@ -2502,8 +2503,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLayout: Argument 0 is not of type RLayout::PlotRotation*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RLayout: Argument 0 is not of type RLayout::PlotRotation* or QSharedPointer<RLayout::PlotRotation>.",
+                               context);
                     }
                     RLayout::PlotRotation& a0 = *ap0;
                 
@@ -2567,8 +2569,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLayout: Argument 0 is not of type RLayout::PlotType*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RLayout: Argument 0 is not of type RLayout::PlotType* or QSharedPointer<RLayout::PlotType>.",
+                               context);
                     }
                     RLayout::PlotType& a0 = *ap0;
                 
@@ -2742,8 +2745,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLayout: Argument 0 is not of type RLayout::StandardScaleType*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RLayout: Argument 0 is not of type RLayout::StandardScaleType* or QSharedPointer<RLayout::StandardScaleType>.",
+                               context);
                     }
                     RLayout::StandardScaleType& a0 = *ap0;
                 

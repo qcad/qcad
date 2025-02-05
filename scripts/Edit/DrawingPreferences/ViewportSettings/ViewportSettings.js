@@ -89,6 +89,7 @@ ViewportSettings.applyPreferences = function(doc) {
     }
     
     var mdiChild = EAction.getMdiChild();
+    var di = mdiChild.getDocumentInterface();
     // doc preferences
     //qDebug("ViewportSettings.js:", "applyPreferences(): appPreferences: doc:",doc);
     var uiFileName = doc.getVariable("Viewport/ViewportList.data");
@@ -97,9 +98,28 @@ ViewportSettings.applyPreferences = function(doc) {
         uiFileName = RSettings.getStringValue("Viewport/ViewportList.data", "00_Single.ui");
     }
 
+    // remove coordinate listeners:
+    // fix FS#2637 - Crash when changing layout viewports
+    var c = 0;
+    do {
+        var vpName = sprintf("Viewport%02d", c);
+        var vpWidget = mdiChild.findChild(vpName);
+        if (isNull(vpWidget)) {
+            break;
+        }
+        ++c;
+
+        var hruler = vpWidget.findChild("HorizontalRuler");
+        var vruler = vpWidget.findChild("VerticalRuler");
+
+        di.removeCoordinateListener(hruler);
+        di.removeCoordinateListener(vruler);
+    } while (!isNull(vpWidget));
+
+
     ViewportWidget.initMdiChild(mdiChild, uiFileName);
 
-    var viewports = ViewportWidget.getViewports(mdiChild, mdiChild.getDocumentInterface());
+    var viewports = ViewportWidget.getViewports(mdiChild, di);
     mdiChild.viewports = viewports;
     for ( var i = 0; i < viewports.length; ++i) {
         viewports[i].init();

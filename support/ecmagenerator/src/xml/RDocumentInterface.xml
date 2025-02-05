@@ -1,15 +1,38 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RBlock" />
+  <class_decl name="RBlockListener" />
+  <class_decl name="RBox" />
+  <class_decl name="RColor" />
+  <class_decl name="RCommandEvent" />
+  <class_decl name="RCoordinateEvent" />
+  <class_decl name="RCoordinateListener" />
+  <class_decl name="RDocument" />
+  <class_decl name="RDocumentInterface" />
+  <class_decl name="REntity" />
   <class_decl name="RGraphicsScene" />
   <class_decl name="RGraphicsSceneDrawable" />
   <class_decl name="RGraphicsView" />
+  <class_decl name="RInputEvent" />
+  <class_decl name="RLayer" />
+  <class_decl name="RLayerListener" />
+  <class_decl name="RLinetypePattern" />
   <class_decl name="RMouseEvent" />
+  <class_decl name="RObject" />
   <class_decl name="ROperation" />
   <class_decl name="RPropertyEvent" />
-  <class_decl name="RSnapRestriction" />
+  <class_decl name="RRefPoint" />
   <class_decl name="RScriptHandler" />
+  <class_decl name="RShape" />
+  <class_decl name="RSnapRestriction" />
+  <class_decl name="RStorage" />
+  <class_decl name="RTabletEvent" />
+  <class_decl name="RTerminateEvent" />
   <class_decl name="RTransaction" />
+  <class_decl name="RTransactionListener" />
+  <class_decl name="RVector" />
+  <class_decl name="RViewportEntity" />
   <class_decl name="RWheelEvent" />
   <class name="RDocumentInterface"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
@@ -73,6 +96,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="removeCoordinateListener"
+    cppName="removeCoordinateListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RCoordinateListener *"
+        typeName="RCoordinateListener *" name="l"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="notifyCoordinateListeners"
     cppName="notifyCoordinateListeners" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -98,8 +130,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="notifyLayerListeners" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QList &lt; RLayer::Id &gt; &amp;"
-        typeName="QList &lt; RLayer::Id &gt;" name="layerIds"
+        <arg type="QList &lt; RObject::Id &gt; &amp;"
+        typeName="QList &lt; RObject::Id &gt;" name="layerIds"
         isConst="false" />
       </variant>
     </method>
@@ -481,14 +513,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QSet &lt; REntity::Id &gt; &amp;"
-        typeName="QSet &lt; REntity::Id &gt;" name="entityIds"
+        <arg type="QSet &lt; RObject::Id &gt; &amp;"
+        typeName="QSet &lt; RObject::Id &gt;" name="entityIds"
         isConst="false" />
         <arg type="bool" typeName="bool" name="updateViews"
         isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="entityId" isConst="false" />
         <arg type="bool" typeName="bool" name="updateViews"
         isConst="false" />
@@ -498,14 +530,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="updateSelectionStatus" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QSet &lt; REntity::Id &gt; &amp;"
-        typeName="QSet &lt; REntity::Id &gt;" name="entityIds"
+        <arg type="QSet &lt; RObject::Id &gt; &amp;"
+        typeName="QSet &lt; RObject::Id &gt;" name="entityIds"
         isConst="false" />
         <arg type="bool" typeName="bool" name="updateViews"
         isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="entityId" isConst="false" />
         <arg type="bool" typeName="bool" name="updateViews"
         isConst="false" />
@@ -519,8 +551,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QSet &lt; REntity::Id &gt; &amp;"
-        typeName="QSet &lt; REntity::Id &gt;" name="entityIds"
+        <arg type="QSet &lt; RObject::Id &gt; &amp;"
+        typeName="QSet &lt; RObject::Id &gt;" name="entityIds"
         isConst="false" />
       </variant>
     </method>
@@ -697,11 +729,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getClosestEntity" cppName="getClosestEntity"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="REntity::Id" isPureVirtual="false">
+      <variant returnType="RObject::Id" isPureVirtual="false">
         <arg type="RInputEvent &amp;" typeName="RInputEvent"
         name="event" isConst="false" />
       </variant>
-      <variant returnType="REntity::Id" isPureVirtual="false">
+      <variant returnType="RObject::Id" isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector"
         name="position" isConst="true" />
         <arg type="double" typeName="double" name="range"
@@ -718,7 +750,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="entityId" isConst="false" />
       </variant>
     </method>
@@ -734,8 +766,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false">
-        <arg type="QSet &lt; REntity::Id &gt; &amp;"
-        typeName="QSet &lt; REntity::Id &gt;" name="entityIds"
+        <arg type="QSet &lt; RObject::Id &gt; &amp;"
+        typeName="QSet &lt; RObject::Id &gt;" name="entityIds"
         isConst="true" />
         <arg type="bool" typeName="bool" name="add"
         hasDefault="true" default="false" isConst="false" />
@@ -745,7 +777,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="entityId" isConst="false" />
         <arg type="bool" typeName="bool" name="add"
         hasDefault="true" default="false" isConst="false" />
@@ -755,8 +787,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false">
-        <arg type="QSet &lt; REntity::Id &gt; &amp;"
-        typeName="QSet &lt; REntity::Id &gt;" name="entityIds"
+        <arg type="QSet &lt; RObject::Id &gt; &amp;"
+        typeName="QSet &lt; RObject::Id &gt;" name="entityIds"
         isConst="true" />
       </variant>
     </method>
@@ -764,7 +796,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="entityId" isConst="false" />
       </variant>
     </method>
@@ -1055,8 +1087,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLinetype::Id" typeName="RLinetype::Id"
-        name="ltId" isConst="false" />
+        <arg type="RObject::Id" typeName="RObject::Id" name="ltId"
+        isConst="false" />
       </variant>
     </method>
     <method name="setCurrentLinetypePattern"
@@ -1070,7 +1102,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getCurrentLinetypeId"
     cppName="getCurrentLinetypeId" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="RLinetype::Id" isPureVirtual="false" />
+      <variant returnType="RObject::Id" isPureVirtual="false" />
     </method>
     <method name="getCurrentLinetypePattern"
     cppName="getCurrentLinetypePattern" specifier="public"
@@ -1082,8 +1114,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
-        isConst="false" />
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="layerId" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
         <arg type="RLayer &amp;" typeName="RLayer" name="layer"
@@ -1098,8 +1130,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
-        isConst="false" />
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="blockId" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
         <arg type="RBlock &amp;" typeName="RBlock" name="block"

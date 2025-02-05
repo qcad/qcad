@@ -1,6 +1,15 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class_decl name="RDocumentInterface" />
+  <class_decl name="RLayerListener" />
+  <class_decl name="RObject" />
+  <class_decl name="RProperty" />
+  <class_decl name="RPropertyAttributes" />
+  <class_decl name="RPropertyEditor" />
+  <class_decl name="RPropertyListener" />
+  <class_decl name="RPropertyTypeId" />
   <class name="RPropertyEditor"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="true" sharedPointerSupport="false" isQObject="false"

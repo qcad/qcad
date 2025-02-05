@@ -21,13 +21,14 @@
 
 #include "RArc.h"
 #include "RArcExporter.h"
+#include "RBlock.h"
 #include "RBlockReferenceEntity.h"
 #include "RCircle.h"
-#include "RDebug.h"
 #include "RDocument.h"
 #include "REllipse.h"
 #include "REntity.h"
 #include "RExporter.h"
+#include "RLayer.h"
 #include "RLine.h"
 #include "RLinetype.h"
 #include "RMainWindow.h"
@@ -37,6 +38,7 @@
 #include "RShapesExporter.h"
 #include "RSpline.h"
 #include "RStorage.h"
+#include "RTextBasedData.h"
 #include "RTriangle.h"
 #include "RUnit.h"
 #include "RView.h"
@@ -585,8 +587,8 @@ void RExporter::exportLayers() {
 }
 
 void RExporter::exportLayerStates() {
-    QSet<RLayerState::Id> ids = document->queryAllLayerStates();
-    QSet<RLayerState::Id>::iterator it;
+    QSet<RObject::Id> ids = document->queryAllLayerStates();
+    QSet<RObject::Id>::iterator it;
     for (it = ids.begin(); it != ids.end(); it++) {
         QSharedPointer<RLayerState> ls = document->queryLayerStateDirect(*it);
         if (!ls.isNull()) {
@@ -707,7 +709,7 @@ void RExporter::exportEntity(QSharedPointer<REntity> entity, bool preview, bool 
     bool blockRefOrViewportSet = false;
     // check if this entity is a block reference, viewport or leader
     // (which can all serve as container for other entities):
-    if (entity->getType()==RS::EntityBlockRef || entity->getType()==RS::EntityViewport || entity->getType()==RS::EntityLeader) {
+    if (entity->isOfType(RS::EntityBlockRef) || entity->isOfType(RS::EntityViewport) || entity->isOfType(RS::EntityLeader)) {
         blockRefViewportStack.push(entity);
         blockRefOrViewportSet = true;
     }
@@ -743,10 +745,10 @@ void RExporter::exportEntity(QSharedPointer<REntity> entity, bool preview, bool 
         if (visualExporter) {
             if ((forceSelected || (entity->isSelected() || entity->isSelectedWorkingSet())) &&
                 RSettings::getUseSecondarySelectionColor() &&
-                entity->getType()!=RS::EntityBlockRef &&
-                entity->getType()!=RS::EntityText &&
-                entity->getType()!=RS::EntityAttribute &&
-                entity->getType()!=RS::EntityAttributeDefinition) {
+                !entity->isOfType(RS::EntityBlockRef) &&
+                !entity->isOfType(RS::EntityText) &&
+                !entity->isOfType(RS::EntityAttribute) &&
+                !entity->isOfType(RS::EntityAttributeDefinition)) {
 
                 RColor secondarySelectionColor = RSettings::getColor("GraphicsViewColors/SecondarySelectionColor", RColor(Qt::white));
                 setColor(secondarySelectionColor);
@@ -1681,6 +1683,12 @@ void RExporter::exportTransform(const RTransform& t) {
 void RExporter::exportEndTransform() {
 }
 
+void RExporter::exportThickPolyline(const RPolyline& polyline) {
+    RPolyline pl = polyline;
+    pl.stripWidths();
+    exportPolyline(pl);
+}
+
 double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
     if (document==NULL) {
         return 1.0;
@@ -1725,8 +1733,8 @@ double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
         // if top level entity is viewport and second level entity is block ref, we are rendering a block reference in a viewport:
         QSharedPointer<REntity> topLevel0 = blockRefViewportStack[0];
         QSharedPointer<REntity> topLevel1 = blockRefViewportStack[1];
-        if (!topLevel0.isNull() && topLevel0->getType()==RS::EntityViewport &&
-            !topLevel1.isNull() && topLevel1->getType()==RS::EntityBlockRef) {
+        if (!topLevel0.isNull() && topLevel0->isOfType(RS::EntityViewport) &&
+            !topLevel1.isNull() && topLevel1->isOfType(RS::EntityBlockRef)) {
 
             factor *= topLevel1->getLinetypeScale();
         }
@@ -1755,6 +1763,10 @@ double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
     //qDebug() << "factor: " << factor;
 
     return factor;
+}
+
+bool RExporter::isTextRenderedAsText() const {
+    return RSettings::isTextRenderedAsText();
 }
 
 void RExporter::setDraftMode(bool on) {
@@ -1889,7 +1901,7 @@ double RExporter::getCurrentPixelSizeHint() const {
             continue;
         }
 
-        if (e->getType()==RS::EntityBlockRef) {
+        if (e->isOfType(RS::EntityBlockRef)) {
             QSharedPointer<RBlockReferenceEntity> br = e.dynamicCast<RBlockReferenceEntity>();
             if (!br.isNull()) {
                 double sf = qMax(br->getScaleFactors().x, br->getScaleFactors().y);
@@ -1898,7 +1910,7 @@ double RExporter::getCurrentPixelSizeHint() const {
                 }
             }
         }
-        else if (e->getType()==RS::EntityViewport) {
+        else if (e->isOfType(RS::EntityViewport)) {
             QSharedPointer<RViewportEntity> vp = e.dynamicCast<RViewportEntity>();
             if (!vp.isNull()) {
                 double sf = vp->getScale();

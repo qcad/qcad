@@ -23,11 +23,14 @@
 #include "entity_global.h"
 
 #include "RBox.h"
-#include "RDocument.h"
-#include "REntity.h"
-#include "RPoint.h"
+#include "REntityData.h"
 #include "RVector.h"
 #include "REllipse.h"
+
+class RDocument;
+class RLine;
+class RRefPoint;
+class RPolyline;
 
 /**
  * Stores and manages all data that defines the geometry and

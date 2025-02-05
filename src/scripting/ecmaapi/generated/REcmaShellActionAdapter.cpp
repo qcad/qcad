@@ -13,6 +13,8 @@
             
                 #include "RGraphicsScene.h"
             
+                #include "RGraphicsView.h"
+            
                 #include "RDocumentInterface.h"
             
                 #include "RCommandEvent.h"

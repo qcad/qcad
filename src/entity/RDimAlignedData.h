@@ -22,9 +22,11 @@
 
 #include "entity_global.h"
 
-#include "RDocument.h"
 #include "RDimLinearData.h"
 #include "RVector.h"
+
+class RDocument;
+class RRefPoint;
 
 /**
  * Aligned dimension entity data class.

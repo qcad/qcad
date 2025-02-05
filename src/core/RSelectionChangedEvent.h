@@ -22,6 +22,7 @@
 
 #include "core_global.h"
 
+#include <QMetaType>
 #include <QEvent>
 
 /**
@@ -32,8 +33,8 @@
  */
 class QCADCORE_EXPORT RSelectionChangedEvent : public QEvent {
 public:
-    RSelectionChangedEvent() : QEvent((QEvent::Type)(QEvent::User+100)) {}
-    virtual ~RSelectionChangedEvent() {}
+    RSelectionChangedEvent();
+    virtual ~RSelectionChangedEvent();
 };
 
 Q_DECLARE_METATYPE(RSelectionChangedEvent*)

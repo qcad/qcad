@@ -24,12 +24,12 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QRectF&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RShape.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
-<comment type="line">//#include "RTriangle.h"</comment>
 
 <class_decl>class <name>RLine</name>;</class_decl>
+<class_decl>class <name>RShape</name>;</class_decl>
 <class_decl>class <name>RTriangle</name>;</class_decl>
 <class_decl>class <name>RPolyline</name>;</class_decl>
 

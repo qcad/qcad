@@ -18,17 +18,16 @@
  */
 #include <QFont>
 #include <QFontMetricsF>
-//#include <QTextBlock>
-#include <QTextDocument>
 #include <QMutex>
 
 #include "RColor.h"
 #include "RDxfServices.h"
 #include "RFont.h"
 #include "RFontList.h"
+#include "RLine.h"
+#include "RTextBasedData.h"
 #include "RTextRenderer.h"
 #include "RPainterPathDevice.h"
-#include "RPolyline.h"
 #include "RSettings.h"
 
 QChar RTextRenderer::chDegree = QChar(0x00b0);

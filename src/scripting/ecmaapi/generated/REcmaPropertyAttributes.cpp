@@ -423,8 +423,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPropertyAttributes: Argument 0 is not of type RPropertyAttributes::Options*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RPropertyAttributes: Argument 0 is not of type RPropertyAttributes::Options* or QSharedPointer<RPropertyAttributes::Options>.",
+                               context);
                     }
                     RPropertyAttributes::Options& a0 = *ap0;
                 
@@ -525,8 +526,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPropertyAttributes: Argument 0 is not of type RPropertyAttributes::Option*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RPropertyAttributes: Argument 0 is not of type RPropertyAttributes::Option* or QSharedPointer<RPropertyAttributes::Option>.",
+                               context);
                     }
                     RPropertyAttributes::Option& a0 = *ap0;
                 

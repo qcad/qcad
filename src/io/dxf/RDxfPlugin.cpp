@@ -1,5 +1,3 @@
-#include <QtPlugin>
-
 #include "RDxfExporterFactory.h"
 #include "RDxfImporterFactory.h"
 #include "RDxfPlugin.h"

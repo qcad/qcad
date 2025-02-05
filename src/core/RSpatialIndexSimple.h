@@ -26,8 +26,12 @@
 #include <QList>
 
 #include "RSpatialIndex.h"
-#include "RDebug.h"
-#include "RMath.h"
+
+class RBox;
+class RRequireHeap;
+class RSpatialIndex;
+class RSpatialIndexDebugVisitor;
+class RSpatialIndexVisitor;
 
 
 
@@ -84,8 +88,6 @@ protected:
     //QMultiHash<RBox, int> si;
     QMap<int, QList<RBox> > si;
 };
-
-//QDebug operator<<(QDebug dbg, RSpatialIndexSimple& si);
 
 Q_DECLARE_METATYPE(RSpatialIndexSimple*)
 

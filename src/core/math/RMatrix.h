@@ -22,7 +22,7 @@
 
 #include "../core_global.h"
 
-#include "RMath.h"
+class RVector;
 
 #define RMATRIX_TOLERANCE 1.0e-8
 

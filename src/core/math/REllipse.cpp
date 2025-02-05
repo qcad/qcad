@@ -17,14 +17,12 @@
  * along with QCAD.
  */
 #include <cmath>
+#include <QDebug>
 
 #include "REllipse.h"
 #include "RBox.h"
 #include "RMath.h"
-#include "RMatrix.h"
-
-#include "RMainWindow.h"
-#include "RDocument.h"
+#include "RPolyline.h"
 
 REllipseProxy* REllipse::ellipseProxy = NULL;
 

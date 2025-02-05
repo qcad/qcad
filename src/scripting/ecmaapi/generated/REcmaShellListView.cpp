@@ -1358,8 +1358,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RListView: Argument 0 is not of type QItemSelection*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RListView: Argument 0 is not of type QItemSelection* or QSharedPointer<QItemSelection>.",
+                               context);
                     }
                     QItemSelection& a0 = *ap0;
                 
@@ -1374,8 +1375,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RListView: Argument 1 is not of type QItemSelection*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RListView: Argument 1 is not of type QItemSelection* or QSharedPointer<QItemSelection>.",
+                               context);
                     }
                     QItemSelection& a1 = *ap1;
                 
@@ -1446,8 +1448,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RListView: Argument 0 is not of type QModelIndex*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RListView: Argument 0 is not of type QModelIndex* or QSharedPointer<QModelIndex>.",
+                               context);
                     }
                     QModelIndex& a0 = *ap0;
                 
@@ -1462,8 +1465,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RListView: Argument 1 is not of type QModelIndex*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RListView: Argument 1 is not of type QModelIndex* or QSharedPointer<QModelIndex>.",
+                               context);
                     }
                     QModelIndex& a1 = *ap1;
                 

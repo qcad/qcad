@@ -35,25 +35,13 @@
  */
 class QCADCORE_EXPORT RTransactionEvent : public QEvent {
 public:
-    RTransactionEvent(RTransaction& t, bool onlyChanges=false, RS::EntityType entityTypeFilter = RS::EntityAll) :
-        QEvent((QEvent::Type)(QEvent::User+300)),
-        transaction(t),
-        onlyChanges(onlyChanges),
-        entityTypeFilter(entityTypeFilter) {}
+    RTransactionEvent(RTransaction& t, bool onlyChanges=false, RS::EntityType entityTypeFilter = RS::EntityAll);
+    virtual ~RTransactionEvent();
 
-    virtual ~RTransactionEvent() {}
+    bool hasOnlyChanges();
 
-    bool hasOnlyChanges() {
-        return onlyChanges;
-    }
-
-    RS::EntityType getEntityTypeFilter() const {
-        return entityTypeFilter;
-    }
-
-    RTransaction getTransaction() const {
-        return transaction;
-    }
+    RS::EntityType getEntityTypeFilter() const;
+    RTransaction getTransaction() const;
 
 private:
     RTransaction transaction;

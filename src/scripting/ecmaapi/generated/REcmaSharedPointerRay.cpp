@@ -81,6 +81,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToRay, "cloneToRay");
+            
             REcmaHelper::registerFunction(&engine, proto, getVectorProperties, "getVectorProperties");
             
             REcmaHelper::registerFunction(&engine, proto, trimEndPoint, "trimEndPoint");
@@ -547,6 +549,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerRay::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerRay::cloneToRay
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerRay::cloneToRay", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerRay::cloneToRay";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRay* self = 
+                        getSelf("cloneToRay", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RRay >'
+    QSharedPointer < RRay > cppResult =
+        
+               self->cloneToRay();
+        // return type: QSharedPointer < RRay >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRay.cloneToRay().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerRay::cloneToRay", context, engine);
             return result;
         }
          QScriptValue

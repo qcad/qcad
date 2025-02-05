@@ -23,29 +23,13 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QKeyEvent&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMutex&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStack&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QQueue&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSwipeGesture&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPanGesture&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPinchGesture&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RAction.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBlockListener.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RCommandEvent.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RCoordinateEvent.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RCoordinateListener.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RExporter.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLayerListener.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RStorage.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTerminateEvent.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextLabel.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTransactionListener.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLineweight.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RUcs.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSnap.h"</cpp:file></cpp:include>
 
@@ -58,15 +42,38 @@
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QVARIANTMAP</name> <name>QVariantMap</name>()</cpp:define>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
+<class_decl>class <name>RBlock</name>;</class_decl>
+<class_decl>class <name>RBlockListener</name>;</class_decl>
+<class_decl>class <name>RBox</name>;</class_decl>
+<class_decl>class <name>RColor</name>;</class_decl>
+<class_decl>class <name>RCommandEvent</name>;</class_decl>
+<class_decl>class <name>RCoordinateEvent</name>;</class_decl>
+<class_decl>class <name>RCoordinateListener</name>;</class_decl>
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RDocumentInterface</name>;</class_decl>
+<class_decl>class <name>REntity</name>;</class_decl>
 <class_decl>class <name>RGraphicsScene</name>;</class_decl>
 <class_decl>class <name>RGraphicsSceneDrawable</name>;</class_decl>
 <class_decl>class <name>RGraphicsView</name>;</class_decl>
+<class_decl>class <name>RInputEvent</name>;</class_decl>
+<class_decl>class <name>RLayer</name>;</class_decl>
+<class_decl>class <name>RLayerListener</name>;</class_decl>
+<class_decl>class <name>RLinetypePattern</name>;</class_decl>
 <class_decl>class <name>RMouseEvent</name>;</class_decl>
+<class_decl>class <name>RObject</name>;</class_decl>
 <class_decl>class <name>ROperation</name>;</class_decl>
 <class_decl>class <name>RPropertyEvent</name>;</class_decl>
-<class_decl>class <name>RSnapRestriction</name>;</class_decl>
+<class_decl>class <name>RRefPoint</name>;</class_decl>
 <class_decl>class <name>RScriptHandler</name>;</class_decl>
+<class_decl>class <name>RShape</name>;</class_decl>
+<class_decl>class <name>RSnapRestriction</name>;</class_decl>
+<class_decl>class <name>RStorage</name>;</class_decl>
+<class_decl>class <name>RTabletEvent</name>;</class_decl>
+<class_decl>class <name>RTerminateEvent</name>;</class_decl>
 <class_decl>class <name>RTransaction</name>;</class_decl>
+<class_decl>class <name>RTransactionListener</name>;</class_decl>
+<class_decl>class <name>RVector</name>;</class_decl>
+<class_decl>class <name>RViewportEntity</name>;</class_decl>
 <class_decl>class <name>RWheelEvent</name>;</class_decl>
 
 
@@ -134,11 +141,12 @@
     <function_decl><type><name>RGraphicsScene</name>*</type> <name>getGraphicsSceneWithFocus</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>addCoordinateListener</name><parameter_list>(<param><decl><type><name>RCoordinateListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>removeCoordinateListener</name><parameter_list>(<param><decl><type><name>RCoordinateListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>notifyCoordinateListeners</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>addLayerListener</name><parameter_list>(<param><decl><type><name>RLayerListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>removeLayerListener</name><parameter_list>(<param><decl><type><name>RLayerListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>notifyLayerListeners</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name><name>RLayer</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>layerIds</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>notifyLayerListeners</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>layerIds</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>addBlockListener</name><parameter_list>(<param><decl><type><name>RBlockListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>removeBlockListener</name><parameter_list>(<param><decl><type><name>RBlockListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
@@ -210,14 +218,14 @@
     <function_decl><type><name>void</name></type> <name>updateAllEntities</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>regenerateScenes</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undone</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>invisible</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>regenerateScenes</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>entityIds</name></decl></param>, <param><decl><type><name>bool</name></type> <name>updateViews</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>regenerateScenes</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>bool</name></type> <name>updateViews</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>regenerateScenes</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>entityIds</name></decl></param>, <param><decl><type><name>bool</name></type> <name>updateViews</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>regenerateScenes</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>bool</name></type> <name>updateViews</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function_decl><type><name>void</name></type> <name>updateSelectionStatus</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>entityIds</name></decl></param>, <param><decl><type><name>bool</name></type> <name>updateViews</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>updateSelectionStatus</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>bool</name></type> <name>updateViews</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>updateSelectionStatus</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>entityIds</name></decl></param>, <param><decl><type><name>bool</name></type> <name>updateViews</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>updateSelectionStatus</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>bool</name></type> <name>updateViews</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>regenerateViews</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>force</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>regenerateViews</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>entityIds</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>regenerateViews</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>entityIds</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>repaintViews</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>registerScene</name><parameter_list>(<param><decl><type><name>RGraphicsScene</name>&amp;</type> <name>scene</name></decl></param>)</parameter_list>;</function_decl>
@@ -253,17 +261,17 @@
     <function_decl><type><name>RVector</name></type> <name>snap</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>restrictOrtho</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>relativeZero</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>OrthoMode</name></name></type> <name>mode</name> =<init> <expr><name><name>RS</name>::<name>Orthogonal</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
-    <function_decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>getClosestEntity</name><parameter_list>(<param><decl><type><name>RInputEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>getClosestEntity</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>,
+    <function_decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getClosestEntity</name><parameter_list>(<param><decl><type><name>RInputEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getClosestEntity</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>,
         <param><decl><type><name>double</name></type> <name>range</name></decl></param>, <param><decl><type><name>double</name></type> <name>strictRange</name> =<init> <expr><name>RMAXDOUBLE</name></expr></init></decl></param>,
         <param><decl><type><name>bool</name></type> <name>includeLockedLayers</name> =<init> <expr><name>true</name></expr></init></decl></param>,
         <param><decl><type><name>bool</name></type> <name>selectedOnly</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>highlightEntity</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>highlightEntity</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>highlightReferencePoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RRefPoint</name>&amp;</type> <name>position</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>int</name></type> <name>selectEntities</name><parameter_list>(<param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>entityIds</name></decl></param>, <param><decl><type><name>bool</name></type> <name>add</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>selectEntity</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>bool</name></type> <name>add</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>int</name></type> <name>deselectEntities</name><parameter_list>(<param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>entityIds</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>deselectEntity</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>selectEntities</name><parameter_list>(<param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>entityIds</name></decl></param>, <param><decl><type><name>bool</name></type> <name>add</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>selectEntity</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>bool</name></type> <name>add</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>deselectEntities</name><parameter_list>(<param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>entityIds</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>deselectEntity</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>selectBoxXY</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>, <param><decl><type><name>bool</name></type> <name>add</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>selectAll</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>deselectAll</name><parameter_list>()</parameter_list>;</function_decl>
@@ -324,16 +332,16 @@
     <function_decl><type><name>void</name></type> <name>setCurrentLineweight</name><parameter_list>(<param><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lw</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>getCurrentLineweight</name><parameter_list>()</parameter_list>;</function_decl>
 
-    <function_decl><type><name>void</name></type> <name>setCurrentLinetype</name><parameter_list>(<param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>ltId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setCurrentLinetype</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>ltId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setCurrentLinetypePattern</name><parameter_list>(<param><decl><type><name>const</name> <name>RLinetypePattern</name>&amp;</type> <name>p</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>getCurrentLinetypeId</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getCurrentLinetypeId</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>RLinetypePattern</name></type> <name>getCurrentLinetypePattern</name><parameter_list>()</parameter_list>;</function_decl>
 
-    <function_decl><type><name>void</name></type> <name>setCurrentLayer</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setCurrentLayer</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setCurrentLayer</name><parameter_list>(<param><decl><type><name>const</name> <name>RLayer</name>&amp;</type> <name>layer</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setCurrentLayer</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function_decl><type><name>void</name></type> <name>setCurrentBlock</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setCurrentBlock</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setCurrentBlock</name><parameter_list>(<param><decl><type><name>const</name> <name>RBlock</name>&amp;</type> <name>block</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setCurrentBlock</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>)</parameter_list>;</function_decl>
 
@@ -358,10 +366,7 @@
     <function><type><name>bool</name></type> <name>isSuspended</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>suspended</name></expr>;</return>
     }</block></function>
-    <function><type><name>void</name></type> <name>setNotifyListeners</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>notifyGlobalListeners</name> = <name>on</name></expr>;</expr_stmt>
-        <expr_stmt><expr><name>document</name>.<call><name>setNotifyListeners</name><argument_list>(<argument><expr><name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-    }</block></function>
+    <function_decl><type><name>void</name></type> <name>setNotifyListeners</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function><type><name>bool</name></type> <name>getNotifyListeners</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>notifyGlobalListeners</name></expr>;</return>
     }</block></function>

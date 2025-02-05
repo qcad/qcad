@@ -7,6 +7,32 @@
 
         // forwards declarations mapped to includes
         
+                #include "RBox.h"
+            
+                #include "RDocument.h"
+            
+                #include "REntityData.h"
+            
+                #include "RLine.h"
+            
+                #include "RObject.h"
+            
+                #include "RPolyline.h"
+            
+                #include "RRefPoint.h"
+            
+                #include "RShape.h"
+            
+                #include "RSpline.h"
+            
+                #include "RSplineData.h"
+            
+                #include "RSplineEntity.h"
+            
+                #include "RVector.h"
+            
+                #include "RArc.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -3183,8 +3209,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSpline: Argument 0 is not of type QTransform*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSpline: Argument 0 is not of type QTransform* or QSharedPointer<QTransform>.",
+                               context);
                     }
                     QTransform& a0 = *ap0;
                 
@@ -5564,8 +5591,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type REntityData*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type REntityData* or QSharedPointer<REntityData>.",
+                               context);
                     }
                     REntityData& a0 = *ap0;
                 
@@ -5609,8 +5637,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type REntityData*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type REntityData* or QSharedPointer<REntityData>.",
+                               context);
                     }
                     REntityData& a0 = *ap0;
                 
@@ -5667,8 +5696,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type REntityData*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type REntityData* or QSharedPointer<REntityData>.",
+                               context);
                     }
                     REntityData& a0 = *ap0;
                 
@@ -5740,8 +5770,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type REntityData*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type REntityData* or QSharedPointer<REntityData>.",
+                               context);
                     }
                     REntityData& a0 = *ap0;
                 
@@ -5836,8 +5867,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type REntityData*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type REntityData* or QSharedPointer<REntityData>.",
+                               context);
                     }
                     REntityData& a0 = *ap0;
                 
@@ -5945,8 +5977,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type REntityData*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type REntityData* or QSharedPointer<REntityData>.",
+                               context);
                     }
                     REntityData& a0 = *ap0;
                 
@@ -6052,8 +6085,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type RShape*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type RShape* or QSharedPointer<RShape>.",
+                               context);
                     }
                     RShape& a0 = *ap0;
                 
@@ -6097,8 +6131,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type RShape*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type RShape* or QSharedPointer<RShape>.",
+                               context);
                     }
                     RShape& a0 = *ap0;
                 
@@ -6157,8 +6192,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type RShape*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type RShape* or QSharedPointer<RShape>.",
+                               context);
                     }
                     RShape& a0 = *ap0;
                 
@@ -6240,8 +6276,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type RShape*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type RShape* or QSharedPointer<RShape>.",
+                               context);
                     }
                     RShape& a0 = *ap0;
                 
@@ -6927,8 +6964,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type RShape*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSplineData: Argument 0 is not of type RShape* or QSharedPointer<RShape>.",
+                               context);
                     }
                     RShape& a0 = *ap0;
                 

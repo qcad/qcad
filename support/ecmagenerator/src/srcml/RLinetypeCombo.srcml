@@ -25,8 +25,9 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QComboBox&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLinetypePattern.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RDocument</name>;</class_decl>
 
 <comment type="block">/**
  * \scriptable

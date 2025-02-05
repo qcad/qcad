@@ -22,12 +22,10 @@
 
 #include "core_global.h"
 #include "RAction.h"
-#include "RVector.h"
-#include "RDebug.h"
-#include "REntity.h"
 
 class RPropertyEvent;
 class RGraphicsScene;
+class RGraphicsView;
 class RDocumentInterface;
 class RCommandEvent;
 class RCoordinateEvent;

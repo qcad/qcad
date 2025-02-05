@@ -16,18 +16,8 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QColor>
-#include <QKeyEvent>
-#include <QPalette>
-#include <QTimer>
-#include <QToolTip>
-
-#include "RDocument.h"
-#include "RMainWindowQt.h"
-#include "RMath.h"
 #include "RMathComboBox.h"
 #include "RMathLineEdit.h"
-#include "RUnit.h"
 
 RMathComboBox::RMathComboBox(QWidget* parent) :
     QComboBox(parent) {

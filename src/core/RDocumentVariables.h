@@ -22,10 +22,11 @@
 
 #include "core_global.h"
 
-#include "RLayer.h"
 #include "RObject.h"
 
+class RColor;
 class RDocument;
+class RVector;
 
 /**
  * This type of object is used to store document wide variables.
@@ -86,11 +87,11 @@ public:
     QVariant getKnownVariable(RS::KnownVariable key) const;
     bool hasKnownVariable(RS::KnownVariable key) const;
 
-    RLayer::Id getCurrentLayerId() const {
+    RObject::Id getCurrentLayerId() const {
         return currentLayerId;
     }
 
-    void setCurrentLayerId(RLayer::Id id) {
+    void setCurrentLayerId(RObject::Id id) {
         currentLayerId = id;
     }
 
@@ -153,9 +154,9 @@ public:
     virtual void print(QDebug dbg) const;
 
 private:
-    RLayer::Id currentLayerId;
+    RObject::Id currentLayerId;
     // TODO:
-    //RLayer::Id currentBlockId;
+    //RObject::Id currentBlockId;
     //...
     RS::Unit unit;
     RS::Measurement measurement;

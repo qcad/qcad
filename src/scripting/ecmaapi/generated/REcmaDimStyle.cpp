@@ -2743,8 +2743,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimStyle: Argument 0 is not of type REntityData*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDimStyle: Argument 0 is not of type REntityData* or QSharedPointer<REntityData>.",
+                               context);
                     }
                     REntityData& a0 = *ap0;
                 

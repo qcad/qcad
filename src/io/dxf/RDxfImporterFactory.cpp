@@ -19,6 +19,8 @@
 
 #include "RDxfImporterFactory.h"
 
+#include <QFileInfo>
+
 QStringList RDxfImporterFactory::getFilterStrings() {
     QStringList ret;
     ret << QString("DXF Files [dxflib] (*.dxf)");

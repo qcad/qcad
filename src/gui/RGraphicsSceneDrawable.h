@@ -23,8 +23,12 @@
 #include "gui_global.h"
 
 #include "RPainterPath.h"
-#include "RImageData.h"
 #include "RTextBasedData.h"
+
+class RImageData;
+class RTransform;
+class RDocument;
+
 
 /**
  * \scriptable

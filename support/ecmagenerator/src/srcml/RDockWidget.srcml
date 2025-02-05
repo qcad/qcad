@@ -26,7 +26,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDockWidget&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RFlowLayout.h"</cpp:file></cpp:include>
+<class_decl>class <name>RFlowLayout</name>;</class_decl>
 
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QT_WINDOWFLAGS</name> <name>Qt</name>::WindowFlags()</cpp:define>
 

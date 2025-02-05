@@ -26,22 +26,20 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStack&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBlock.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBox.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RColor.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLayer.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLine.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMatrix.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLineweight.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMath.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RObject.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RRefPoint.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSettings.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RView.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RBlockReferenceEntity</name>;</class_decl>
 <class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>REntity</name>;</class_decl>
 <class_decl>class <name>RExporter</name>;</class_decl>
+<class_decl>class <name>RLinetypePattern</name>;</class_decl>
+<class_decl>class <name>RPolyline</name>;</class_decl>
+<class_decl>class <name>RRefPoint</name>;</class_decl>
+<class_decl>class <name>RLine</name>;</class_decl>
 
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_QSET_INT</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QSET_INT</name> <name>QSet</name>&lt;int&gt;()</cpp:define>
@@ -231,22 +229,22 @@
         <expr_stmt><expr><name>this</name>-&gt;<name>drawOrder</name> = <name>drawOrder</name></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name>virtual</name> <name>void</name></type> <name>setLayerId</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>virtual</name> <name>void</name></type> <name>setLayerId</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>this</name>-&gt;<name>layerId</name> = <name>layerId</name></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>getLayerId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getLayerId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>layerId</name></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>void</name></type> <name>setLayerName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>QString</name></type> <name>getLayerName</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function><type><name>virtual</name> <name>void</name></type> <name>setBlockId</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>virtual</name> <name>void</name></type> <name>setBlockId</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>this</name>-&gt;<name>blockId</name> = <name>blockId</name></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>getBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>blockId</name></expr>;</return>
     }</block></function>
 
@@ -267,21 +265,21 @@
      * Sets the linetype of this entity to the given linetype ID.
      * \see RDocument::getLinetypeId
      */</comment>
-    <function><type><name>virtual</name> <name>void</name></type> <name>setLinetypeId</name><parameter_list>(<param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>virtual</name> <name>void</name></type> <name>setLinetypeId</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>linetypeId</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>this</name>-&gt;<name>linetypeId</name> = <name>linetypeId</name></expr>;</expr_stmt>
     }</block></function>
 
     <comment type="block">/**
      * \return Linetype ID of this entity. Note that this might be ByLayer or ByBlock.
      */</comment>
-    <function><type><name>virtual</name> <name><name>RLinetype</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>virtual</name> <name><name>RObject</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>linetypeId</name></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setLinetypePattern</name><parameter_list>(<param><decl><type><name>const</name> <name>RLinetypePattern</name>&amp;</type> <name>p</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>RLinetypePattern</name></type> <name>getLinetypePattern</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function_decl><type><name>virtual</name> <name><name>RLinetype</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>resolve</name></decl></param>,
+    <function_decl><type><name>virtual</name> <name><name>RObject</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>resolve</name></decl></param>,
         <param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function><type><name>virtual</name> <name>void</name></type> <name>setLinetypeScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>linetypeScale</name></decl></param>)</parameter_list> <block>{
@@ -330,11 +328,7 @@
      * snap to reference points.
      * Default implementation returns same as getReferencePoints().
      */</comment>
-    <function><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RRefPoint</name></argument>&gt;</argument_list></name></type> <name>getInternalReferencePoints</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>ProjectionRenderingHint</name></name></type> <name>hint</name>=<init><expr><name><name>RS</name>::<name>RenderTop</name></name></expr></init></decl></param>, <param><decl><type><name>QList<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>*</type> <name>subEntityIds</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <macro><name>Q_UNUSED</name><argument_list>(<argument>subEntityIds</argument>)</argument_list></macro>
-
-        <return>return <expr><call><name>getReferencePoints</name><argument_list>(<argument><expr><name>hint</name></expr></argument>)</argument_list></call></expr>;</return>
-    }</block></function>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RRefPoint</name></argument>&gt;</argument_list></name></type> <name>getInternalReferencePoints</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>ProjectionRenderingHint</name></name></type> <name>hint</name>=<init><expr><name><name>RS</name>::<name>RenderTop</name></name></expr></init></decl></param>, <param><decl><type><name>QList<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>*</type> <name>subEntityIds</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <comment type="block">/**
      * \return Vector of reference points of this entity. Reference points
@@ -434,10 +428,10 @@
     <comment type="block">/** Block auto updates is true during imports, undo and redo. */</comment>
     <decl_stmt><decl><type><name>bool</name></type> <name>autoUpdatesBlocked</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>int</name></type> <name>drawOrder</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>layerId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>blockId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>parentId</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>linetypeId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>linetypeScale</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lineweight</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RColor</name></type> <name>color</name></decl>;</decl_stmt>

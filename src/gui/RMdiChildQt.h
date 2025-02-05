@@ -24,12 +24,12 @@
 
 #include <QMdiSubWindow>
 
-#include "RDebug.h"
 #include "RModifiedListener.h"
 
 class RDocument;
 class RDocumentInterface;
 class RGraphicsViewImage;
+class RStorage;
 
 /**
  * \brief MDI child window.

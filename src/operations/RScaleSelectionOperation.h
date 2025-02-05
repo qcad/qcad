@@ -22,12 +22,10 @@
 
 #include "operations_global.h"
 
-#include "RDocument.h"
-#include "REntity.h"
-#include "RExporter.h"
 #include "ROperation.h"
 #include "RVector.h"
 
+class RDocument;
 
 /**
  * Implementation of an operation that scales a selection

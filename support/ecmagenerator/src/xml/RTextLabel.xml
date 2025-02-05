@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RVector" />
   <class name="RTextLabel"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="true" isQObject="false"
@@ -21,6 +22,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QSharedPointer &lt; RShape &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="cloneToTextLabel" cppName="cloneToTextLabel"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RTextLabel &gt;"
       isPureVirtual="false" />
     </method>
     <method name="getText" cppName="getText" specifier="public"

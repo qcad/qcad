@@ -24,7 +24,9 @@
 
 #include "RS.h"
 #include "RColor.h"
-#include "RPropertyTypeId.h"
+
+#include <QDebug>
+#include <QVariant>
 
 /**
  * Dimension style data class.

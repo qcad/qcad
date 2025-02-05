@@ -22,7 +22,7 @@
 
 #include "core_global.h"
 
-#include "RDebug.h"
+#include <QMetaType>
 
 /**
  * \ingroup core

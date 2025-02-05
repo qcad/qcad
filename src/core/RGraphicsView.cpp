@@ -20,11 +20,13 @@
 #include "RAction.h"
 #include "RDebug.h"
 #include "RDocument.h"
+#include "REntity.h"
 #include "RGraphicsScene.h"
+#include "RGrid.h"
 #include "RMouseEvent.h"
-#include "RWheelEvent.h"
 #include "RDocumentInterface.h"
 #include "RSettings.h"
+#include "RTerminateEvent.h"
 #include "RUnit.h"
 
 

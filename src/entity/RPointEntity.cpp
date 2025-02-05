@@ -17,8 +17,8 @@
  * along with QCAD.
  */
 #include "RPointEntity.h"
+#include "RDebug.h"
 #include "RExporter.h"
-#include "RPoint.h"
 
 RPropertyTypeId RPointEntity::PropertyCustom;
 RPropertyTypeId RPointEntity::PropertyHandle;

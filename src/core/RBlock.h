@@ -23,11 +23,9 @@
 #include "core_global.h"
 
 #include <QString>
-#include <QDebug>
 
-#include "RLayout.h"
-#include "RGlobal.h"
 #include "RObject.h"
+#include "RS.h"
 #include "RVector.h"
 #include "RPropertyTypeId.h"
 
@@ -135,14 +133,14 @@ public:
     }
 
     bool hasLayout() const {
-        return layoutId!=RLayout::INVALID_ID;
+        return layoutId != RObject::INVALID_ID;
     }
 
-    void setLayoutId(RLayout::Id layoutId) {
+    void setLayoutId(RObject::Id layoutId) {
         this->layoutId = layoutId;
     }
 
-    RLayout::Id getLayoutId() const {
+    RObject::Id getLayoutId() const {
         return layoutId;
     }
 
@@ -171,7 +169,7 @@ private:
     bool anonymous;
     bool pixelUnit;
     RVector origin;
-    RLayout::Id layoutId;
+    RObject::Id layoutId;
     bool ownedByReference;
 };
 

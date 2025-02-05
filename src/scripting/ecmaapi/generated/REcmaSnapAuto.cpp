@@ -362,8 +362,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSnapAuto: Argument 1 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSnapAuto: Argument 1 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a1 = *ap1;
                 
@@ -432,8 +433,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSnapAuto: Argument 1 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSnapAuto: Argument 1 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a1 = *ap1;
                 
@@ -652,8 +654,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSnapAuto: Argument 0 is not of type RSnapAuto::Mode*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSnapAuto: Argument 0 is not of type RSnapAuto::Mode* or QSharedPointer<RSnapAuto::Mode>.",
+                               context);
                     }
                     RSnapAuto::Mode& a0 = *ap0;
                 
@@ -717,8 +720,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSnapAuto: Argument 0 is not of type RSnapAuto::Mode*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSnapAuto: Argument 0 is not of type RSnapAuto::Mode* or QSharedPointer<RSnapAuto::Mode>.",
+                               context);
                     }
                     RSnapAuto::Mode& a0 = *ap0;
                 

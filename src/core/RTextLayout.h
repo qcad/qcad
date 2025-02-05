@@ -27,6 +27,7 @@
 #include <QList>
 #include <QTransform>
 
+#include "RBox.h"
 #include "RPainterPath.h"
 
 /**

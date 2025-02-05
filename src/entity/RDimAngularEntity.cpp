@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 #include "RDimAngularEntity.h"
-#include "RExporter.h"
+#include "RArc.h"
 #include "RPluginLoader.h"
 
 RPropertyTypeId RDimAngularEntity::PropertyCustom;
@@ -169,6 +169,10 @@ void RDimAngularEntity::init() {
     RDimAngularEntity::PropertyDimArcPositionX.generateId(RDimAngularEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
     RDimAngularEntity::PropertyDimArcPositionY.generateId(RDimAngularEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
     RDimAngularEntity::PropertyDimArcPositionZ.generateId(RDimAngularEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
+}
+
+RArc RDimAngularEntity::getDimensionArc() const {
+    return getData().getDimensionArc();
 }
 
 void RDimAngularEntity::print(QDebug dbg) const {

@@ -30,7 +30,6 @@
 <class_decl>class <name>QScrollBar</name>;</class_decl>
 <class_decl>class <name>QUrl</name>;</class_decl>
 <class_decl>class <name>QWidget</name>;</class_decl>
-<class_decl>class <name>QPainter</name>;</class_decl>
 <class_decl>class <name>QMimeData</name>;</class_decl>
 <class_decl>class <name>QDragEnterEvent</name>;</class_decl>
 

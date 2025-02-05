@@ -17,7 +17,8 @@
  * along with QCAD.
  */
 #include "RXLineData.h"
-#include "RLineEntity.h"
+#include "RDocument.h"
+#include "RRefPoint.h"
 
 RXLineData::RXLineData() {
 }

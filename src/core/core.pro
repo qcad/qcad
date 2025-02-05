@@ -6,6 +6,7 @@ SOURCES += \
     RBlockReferenceData.cpp \
     RBlockReferenceEntity.cpp \
     RColor.cpp \
+    RCommandEvent.cpp \
     RCoordinateEvent.cpp \
     RDebug.cpp \
     RDimStyle.cpp \
@@ -16,6 +17,7 @@ SOURCES += \
     RDxfServices.cpp \
     REntity.cpp \
     REntityData.cpp \
+    REntityExportListener.cpp \
     REntityPickEvent.cpp \
     RExporter.cpp \
     RFileCache.cpp \
@@ -62,17 +64,21 @@ SOURCES += \
     RPropertyAttributes.cpp \
     RPropertyChange.cpp \
     RPropertyEditor.cpp \
+    RPropertyEvent.cpp \
     RPropertyTypeId.cpp \
     RResourceList.cpp \
     RS.cpp \
     RSPlatform.cpp \
+    RRuler.cpp \
     RScriptAction.cpp \
     RScriptHandler.cpp \
     RScriptHandlerRegistry.cpp \
+    RSelectionChangedEvent.cpp \
     RSettings.cpp \
     RShapesExporter.cpp \
     RSingleApplication.cpp \
     RSingleton.cpp \
+    RSnap.cpp \
     RSpatialIndex.cpp \
     RSpatialIndexSimple.cpp \
     RStorage.cpp \
@@ -85,6 +91,7 @@ SOURCES += \
     RTextRenderer.cpp \
     RThread.cpp \
     RTransaction.cpp \
+    RTransactionEvent.cpp \
     RTransactionStack.cpp \
     RUcs.cpp \
     RUnit.cpp \

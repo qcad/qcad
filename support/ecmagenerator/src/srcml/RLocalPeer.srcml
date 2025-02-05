@@ -23,11 +23,9 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QLocalServer&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QLocalSocket&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDir&gt;</cpp:file></cpp:include>
-
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLockedFile.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>QLocalServer</name>;</class_decl>
 
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RLocalPeer</name> <super>: <specifier>public</specifier> <name>QObject</name></super> <block>{<private type="default">
     <macro><name>Q_OBJECT</name></macro>

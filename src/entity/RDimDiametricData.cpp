@@ -17,7 +17,8 @@
  * along with QCAD.
  */
 #include "RDimDiametricData.h"
-#include "RUnit.h"
+#include "RDocument.h"
+#include "RRefPoint.h"
 
 RDimDiametricData::RDimDiametricData() {
 }

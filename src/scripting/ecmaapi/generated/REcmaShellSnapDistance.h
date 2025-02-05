@@ -64,7 +64,7 @@
             );
         
       RVector snap(
-                const RVector & position, RGraphicsView & view, const QSet < REntity::Id > & candidates, const RBox & queryBox
+                const RVector & position, RGraphicsView & view, const QSet < RObject::Id > & candidates, const RBox & queryBox
             );
         
     
@@ -80,7 +80,7 @@
             );
         
     
-      QList < REntity::Id > getEntityIds(
+      QList < RObject::Id > getEntityIds(
                 
             );
         

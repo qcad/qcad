@@ -17,7 +17,9 @@
  * along with QCAD.
  */
 #include "RDocument.h"
+#include "REntity.h"
 #include "RGraphicsView.h"
+#include "RLayer.h"
 #include "RMouseEvent.h"
 #include "RSnapIntersection.h"
 #include "RSettings.h"
@@ -44,7 +46,7 @@ RVector RSnapIntersection::snap(
 
     QMap<REntity::Id, QSet<int> > ids =
         document->queryIntersectedShapesXY(
-            queryBox, true /*false?*/, true, RBlock::INVALID_ID,
+            queryBox, true /*false?*/, true, RObject::INVALID_ID,
                 QList<RS::EntityType>() << RS::EntityHatch);
     
     return snap(position, view, ids, queryBox);

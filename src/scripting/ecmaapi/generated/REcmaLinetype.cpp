@@ -375,8 +375,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLinetype: Argument 0 is not of type RLinetype*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RLinetype: Argument 0 is not of type RLinetype* or QSharedPointer<RLinetype>.",
+                               context);
                     }
                     RLinetype& a0 = *ap0;
                 
@@ -1866,8 +1867,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLinetype: Argument 0 is not of type RLinetype*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RLinetype: Argument 0 is not of type RLinetype* or QSharedPointer<RLinetype>.",
+                               context);
                     }
                     RLinetype& a0 = *ap0;
                 
@@ -1936,8 +1938,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLinetype: Argument 0 is not of type RLinetype*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RLinetype: Argument 0 is not of type RLinetype* or QSharedPointer<RLinetype>.",
+                               context);
                     }
                     RLinetype& a0 = *ap0;
                 
@@ -2006,8 +2009,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLinetype: Argument 0 is not of type RLinetype*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RLinetype: Argument 0 is not of type RLinetype* or QSharedPointer<RLinetype>.",
+                               context);
                     }
                     RLinetype& a0 = *ap0;
                 
@@ -2076,8 +2080,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLinetype: Argument 0 is not of type QDebug*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RLinetype: Argument 0 is not of type QDebug* or QSharedPointer<QDebug>.",
+                               context);
                     }
                     QDebug& a0 = *ap0;
                 

@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class_decl name="RLine" />
+  <class_decl name="RTriangle" />
+  <class_decl name="RRefPoint" />
+  <class_decl name="RPolyline" />
   <class name="RLeaderData"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
@@ -401,13 +406,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getDimLeaderBlockId"
     cppName="getDimLeaderBlockId" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="REntity::Id" isPureVirtual="false" />
+      <variant returnType="RObject::Id" isPureVirtual="false" />
     </method>
     <method name="setDimLeaderBlockId"
     cppName="setDimLeaderBlockId" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id" name="id"
+        <arg type="RObject::Id" typeName="RObject::Id" name="id"
         isConst="false" />
       </variant>
     </method>

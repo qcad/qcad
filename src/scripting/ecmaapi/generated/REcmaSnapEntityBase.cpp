@@ -7,7 +7,9 @@
 
         // forwards declarations mapped to includes
         
-                #include "RMouseEvent.h"
+                #include "REntity.h"
+            
+                #include "RGraphicsView.h"
             
             
         // includes for base ecma wrapper classes
@@ -209,8 +211,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSnapEntityBase: Argument 1 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSnapEntityBase: Argument 1 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a1 = *ap1;
                 
@@ -279,8 +282,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSnapEntityBase: Argument 1 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSnapEntityBase: Argument 1 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a1 = *ap1;
                 
@@ -325,7 +329,7 @@
         ) /* type: RGraphicsView */
      && (
             context->argument(2).isArray()
-        ) /* type: QSet < REntity::Id > */
+        ) /* type: QSet < RObject::Id > */
      && (
             context->argument(3).isVariant() || 
             context->argument(3).isQObject() || 
@@ -364,13 +368,14 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSnapEntityBase: Argument 1 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSnapEntityBase: Argument 1 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a1 = *ap1;
                 
                     // argument isArray or QVariantMap
-                    QSet < REntity::Id >
+                    QSet < RObject::Id >
                     a2;
                     REcmaHelper::fromScriptValue(
                         engine,

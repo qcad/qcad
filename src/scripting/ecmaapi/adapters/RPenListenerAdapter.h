@@ -22,8 +22,9 @@
 
 #include <QObject>
 
-#include "RDocumentInterface.h"
 #include "RPenListener.h"
+
+class RDocumentInterface;
 
 /**
  * \scriptable

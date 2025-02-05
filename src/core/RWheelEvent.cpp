@@ -18,10 +18,6 @@
  */
 #include "RWheelEvent.h"
 
-#include "RGraphicsScene.h"
-#include "RGraphicsView.h"
-#include "RUcs.h"
-#include "RDocumentInterface.h"
 
 RWheelEvent::RWheelEvent(const RVector& position, int delta,
         Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,

@@ -17,8 +17,9 @@
  * along with QCAD.
  */
 #include "RArc.h"
+#include "RDocument.h"
 #include "RPolylineData.h"
-#include "RPolylineEntity.h"
+#include "RRefPoint.h"
 
 RPolylineData::RPolylineData() {
 }

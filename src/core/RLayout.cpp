@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RLayout.h"
-#include "RDocument.h"
 
 RPropertyTypeId RLayout::PropertyType;
 RPropertyTypeId RLayout::PropertyCustom;

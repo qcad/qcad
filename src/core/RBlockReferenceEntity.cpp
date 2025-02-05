@@ -17,9 +17,13 @@
  * along with QCAD.
  */
 #include "RBlockReferenceEntity.h"
+#include "RDebug.h"
+#include "RDocument.h"
 #include "RExporter.h"
+#include "RS.h"
 #include "RSettings.h"
 #include "RStorage.h"
+#include "RTransform.h"
 
 RPropertyTypeId RBlockReferenceEntity::PropertyCustom;
 RPropertyTypeId RBlockReferenceEntity::PropertyHandle;
@@ -388,7 +392,7 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
         return;
     }
 
-    RLayer::Id layer0Id = document->getLayer0Id();
+    RObject::Id layer0Id = document->getLayer0Id();
     //bool layerIsOff = document->isLayerOff(getLayerId());
     //bool layer0IsOff = document->isLayerOff(layer0Id);
 
@@ -472,7 +476,7 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
 
                         if (document->getLayerName(blockRef->getLayerId())!="0" || i==0) {
                             if (document->isLayerOff(blockRef->getLayerId())) {
-                                if (entity->getType()!=RS::EntityBlockRef) {
+                                if (!entity->isOfType(RS::EntityBlockRef)) {
                                     skip = true;
                                 }
                             }

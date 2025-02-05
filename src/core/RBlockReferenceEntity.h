@@ -160,7 +160,7 @@ public:
         data.setRowSpacing(s);
     }
 
-    void setReferencedBlockId(RBlock::Id blockId) {
+    void setReferencedBlockId(RObject::Id blockId) {
         data.setReferencedBlockId(blockId);
     }
 
@@ -172,7 +172,7 @@ public:
         return data.hasBlockOwnership();
     }
 
-    RBlock::Id getReferencedBlockId() const {
+    RObject::Id getReferencedBlockId() const {
         return data.getReferencedBlockId();
     }
 
@@ -186,11 +186,11 @@ public:
         data.update();
     }
 
-    void update(REntity::Id entityId) const {
+    void update(RObject::Id entityId) const {
         data.update(entityId);
     }
 
-    QSharedPointer<REntity> queryEntity(REntity::Id entityId, bool transform = false, bool ignoreAttDef = true) const {
+    QSharedPointer<REntity> queryEntity(RObject::Id entityId, bool transform = false, bool ignoreAttDef = true) const {
         return data.queryEntity(entityId, transform, ignoreAttDef);
     }
 

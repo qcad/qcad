@@ -29,12 +29,11 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RObject.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyChange.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>RBlock</name>;</class_decl>
 <class_decl>class <name>RStorage</name>;</class_decl>
-<class_decl>class <name>RExporter</name>;</class_decl>
 
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QSET_RPROPERTYTYPEID</name> <name>QSet</name>&lt;RPropertyTypeId&gt; ()</cpp:define>
 

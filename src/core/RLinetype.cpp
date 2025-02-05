@@ -17,9 +17,6 @@
  * along with QCAD.
  */
 #include "RLinetype.h"
-#include "RSettings.h"
-#include "RMetaTypes.h"
-
 
 RPropertyTypeId RLinetype::PropertyType;
 RPropertyTypeId RLinetype::PropertyName;

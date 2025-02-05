@@ -24,12 +24,13 @@
 
 #include <QVariant>
 
-#include "RDocument.h"
-#include "RExporter.h"
 #include "ROperation.h"
-#include "RPropertyEvent.h"
 #include "RPropertyTypeId.h"
-#include "RTransaction.h"
+
+class RDocument;
+class RObject;
+class RPropertyEvent;
+class RTransaction;
 
 /**
  * Implementation of an operation that changes a given property to

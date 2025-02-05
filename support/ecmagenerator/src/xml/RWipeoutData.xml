@@ -1,6 +1,14 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RBox" />
+  <class_decl name="RDocument" />
+  <class_decl name="RPolyline" />
+  <class_decl name="RPolylineData" />
+  <class_decl name="RRefPoint" />
+  <class_decl name="RVector" />
+  <class_decl name="RWipeoutData" />
+  <class_decl name="RWipeoutEntity" />
   <class name="RWipeoutData"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"

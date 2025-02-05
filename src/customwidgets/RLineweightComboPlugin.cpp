@@ -16,9 +16,6 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QtPlugin>
-#include <QComboBox>
-
 #include "RLineweightComboPlugin.h"
 #include "RLineweightCombo.h"
 

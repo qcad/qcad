@@ -24,7 +24,6 @@
 
 #include "REntity.h"
 #include "REllipseData.h"
-#include "RLineweight.h"
 
 class RDocument;
 class RExporter;

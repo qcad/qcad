@@ -23,8 +23,16 @@
 #include "RFileImporter.h"
 
 class RDocument;
+class REntity;
+class RFileImporter;
+class RFileImporterAdapter;
+class RImporter;
 class RMessageHandler;
+class RObject;
 class RProgressHandler;
+class RTransaction;
+class RVector;
+
 
 /**
  * \brief Base class for file importers. 

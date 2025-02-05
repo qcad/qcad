@@ -4,6 +4,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class_decl name="RDocumentInterface" />
   <class_decl name="RGraphicsViewImage" />
+  <class_decl name="RStorage" />
   <class name="RMdiChildQt"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="true"

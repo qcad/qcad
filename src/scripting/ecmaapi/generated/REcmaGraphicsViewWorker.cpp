@@ -7,6 +7,16 @@
 
         // forwards declarations mapped to includes
         
+                #include <QTextLayout>
+            
+                #include "RGraphicsViewImage.h"
+            
+                #include "RImageData.h"
+            
+                #include "RPainterPath.h"
+            
+                #include "RTextBasedData.h"
+            
             
         // includes for base ecma wrapper classes
          void REcmaGraphicsViewWorker::initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -326,7 +336,7 @@
     if( context->argumentCount() ==
     3 && (
             context->argument(0).isArray()
-        ) /* type: QList < REntity::Id > */
+        ) /* type: QList < RObject::Id > */
      && (
             context->argument(1).isNumber()
         ) /* type: int */
@@ -338,7 +348,7 @@
     // prepare arguments:
     
                     // argument isArray or QVariantMap
-                    QList < REntity::Id >
+                    QList < RObject::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
                         engine,
@@ -426,8 +436,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type RGraphicsViewWorker::ClearMode*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type RGraphicsViewWorker::ClearMode* or QSharedPointer<RGraphicsViewWorker::ClearMode>.",
+                               context);
                     }
                     RGraphicsViewWorker::ClearMode& a0 = *ap0;
                 
@@ -589,8 +600,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QImage*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QImage* or QSharedPointer<QImage>.",
+                               context);
                     }
                     QImage& a0 = *ap0;
                 
@@ -703,8 +715,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QSize*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QSize* or QSharedPointer<QSize>.",
+                               context);
                     }
                     QSize& a0 = *ap0;
                 
@@ -1322,8 +1335,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QPainter::CompositionMode*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QPainter::CompositionMode* or QSharedPointer<QPainter::CompositionMode>.",
+                               context);
                     }
                     QPainter::CompositionMode& a0 = *ap0;
                 
@@ -1387,8 +1401,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QFont*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QFont* or QSharedPointer<QFont>.",
+                               context);
                     }
                     QFont& a0 = *ap0;
                 
@@ -1452,8 +1467,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QRectF*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QRectF* or QSharedPointer<QRectF>.",
+                               context);
                     }
                     QRectF& a0 = *ap0;
                 
@@ -1517,8 +1533,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QRectF*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QRectF* or QSharedPointer<QRectF>.",
+                               context);
                     }
                     QRectF& a0 = *ap0;
                 
@@ -1829,8 +1846,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QTransform*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QTransform* or QSharedPointer<QTransform>.",
+                               context);
                     }
                     QTransform& a0 = *ap0;
                 
@@ -1869,8 +1887,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QTransform*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QTransform* or QSharedPointer<QTransform>.",
+                               context);
                     }
                     QTransform& a0 = *ap0;
                 
@@ -2129,8 +2148,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QTransform*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QTransform* or QSharedPointer<QTransform>.",
+                               context);
                     }
                     QTransform& a0 = *ap0;
                 
@@ -2169,8 +2189,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QTransform*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QTransform* or QSharedPointer<QTransform>.",
+                               context);
                     }
                     QTransform& a0 = *ap0;
                 
@@ -2244,8 +2265,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QBrush*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QBrush* or QSharedPointer<QBrush>.",
+                               context);
                     }
                     QBrush& a0 = *ap0;
                 
@@ -2358,8 +2380,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QPen*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QPen* or QSharedPointer<QPen>.",
+                               context);
                     }
                     QPen& a0 = *ap0;
                 
@@ -2423,8 +2446,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QPointF*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QPointF* or QSharedPointer<QPointF>.",
+                               context);
                     }
                     QPointF& a0 = *ap0;
                 
@@ -2590,8 +2614,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 2 is not of type QImage*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 2 is not of type QImage* or QSharedPointer<QImage>.",
+                               context);
                     }
                     QImage& a2 = *ap2;
                 
@@ -2745,8 +2770,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QRectF*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QRectF* or QSharedPointer<QRectF>.",
+                               context);
                     }
                     QRectF& a0 = *ap0;
                 
@@ -2830,8 +2856,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QTextLayout*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QTextLayout* or QSharedPointer<QTextLayout>.",
+                               context);
                     }
                     QTextLayout& a0 = *ap0;
                 
@@ -2918,8 +2945,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 1 is not of type QBrush*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 1 is not of type QBrush* or QSharedPointer<QBrush>.",
+                               context);
                     }
                     QBrush& a1 = *ap1;
                 
@@ -3057,8 +3085,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QPointF*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QPointF* or QSharedPointer<QPointF>.",
+                               context);
                     }
                     QPointF& a0 = *ap0;
                 
@@ -3073,8 +3102,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 1 is not of type QPointF*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 1 is not of type QPointF* or QSharedPointer<QPointF>.",
+                               context);
                     }
                     QPointF& a1 = *ap1;
                 
@@ -3112,8 +3142,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QLineF*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QLineF* or QSharedPointer<QLineF>.",
+                               context);
                     }
                     QLineF& a0 = *ap0;
                 
@@ -3182,8 +3213,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QPainterPath*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QPainterPath* or QSharedPointer<QPainterPath>.",
+                               context);
                     }
                     QPainterPath& a0 = *ap0;
                 
@@ -3198,8 +3230,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 1 is not of type QPen*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 1 is not of type QPen* or QSharedPointer<QPen>.",
+                               context);
                     }
                     QPen& a1 = *ap1;
                 
@@ -3271,8 +3304,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QPointF*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QPointF* or QSharedPointer<QPointF>.",
+                               context);
                     }
                     QPointF& a0 = *ap0;
                 
@@ -3328,8 +3362,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QRectF*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QRectF* or QSharedPointer<QRectF>.",
+                               context);
                     }
                     QRectF& a0 = *ap0;
                 
@@ -3393,8 +3428,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QRectF*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QRectF* or QSharedPointer<QRectF>.",
+                               context);
                     }
                     QRectF& a0 = *ap0;
                 
@@ -3463,8 +3499,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QRectF*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QRectF* or QSharedPointer<QRectF>.",
+                               context);
                     }
                     QRectF& a0 = *ap0;
                 
@@ -3479,8 +3516,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 1 is not of type QBrush*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 1 is not of type QBrush* or QSharedPointer<QBrush>.",
+                               context);
                     }
                     QBrush& a1 = *ap1;
                 

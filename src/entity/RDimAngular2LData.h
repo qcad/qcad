@@ -22,11 +22,12 @@
 
 #include "entity_global.h"
 
-#include "RArc.h"
-#include "RDocument.h"
 #include "RDimAngularData.h"
-#include "RLine.h"
 #include "RVector.h"
+
+class RDocument;
+class RLine;
+class RRefPoint;
 
 /**
  * Angular dimension entity from 2 lines data class.

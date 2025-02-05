@@ -7,10 +7,6 @@
 
         // forwards declarations mapped to includes
         
-                #include "RDocument.h"
-            
-                #include "RExporter.h"
-            
                 #include "RObject.h"
             
             

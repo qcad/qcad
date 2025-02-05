@@ -2,6 +2,28 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="QTextDocument" />
+  <class_decl name="RBox" />
+  <class_decl name="RColor" />
+  <class_decl name="RDebug" />
+  <class_decl name="RDocument" />
+  <class_decl name="RDxfServices" />
+  <class_decl name="REntityData" />
+  <class_decl name="RFontList" />
+  <class_decl name="RLine" />
+  <class_decl name="RMath" />
+  <class_decl name="RObject" />
+  <class_decl name="RPainterPath" />
+  <class_decl name="RPainterPathSource" />
+  <class_decl name="RPolyline" />
+  <class_decl name="RRefPoint" />
+  <class_decl name="RShape" />
+  <class_decl name="RTextBasedData" />
+  <class_decl name="RTextBasedEntity" />
+  <class_decl name="RTextLayout" />
+  <class_decl name="RTextProxy" />
+  <class_decl name="RTextRenderer" />
+  <class_decl name="RUnit" />
+  <class_decl name="RVector" />
   <class name="RTextBasedData"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="true" isQObject="false"

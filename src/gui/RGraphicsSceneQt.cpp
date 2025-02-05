@@ -23,19 +23,20 @@
 #include <qtconcurrentrun.h>
 #endif
 
+#include "RArc.h"
+#include "RBlock.h"
 #include "RBlockReferenceEntity.h"
-#include "RDebug.h"
-#include "RDocumentInterface.h"
+#include "RDocument.h"
 #include "REntity.h"
 #include "RGraphicsSceneQt.h"
 #include "RGraphicsViewImage.h"
+#include "RImageData.h"
+#include "RLayer.h"
 #include "RMainWindow.h"
 #include "RPainterPathExporter.h"
-#include "RPainterPathSource.h"
 #include "RSettings.h"
 #include "RShapesExporter.h"
-#include "RSpline.h"
-#include "RTextLabel.h"
+#include "RTransform.h"
 #include "RTriangle.h"
 #include "RUnit.h"
 #include "RViewportEntity.h"
@@ -1018,7 +1019,7 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
             if (e.isNull()) {
                 continue;
             }
-            if (e->getType()==RS::EntityViewport) {
+            if (e->isOfType(RS::EntityViewport)) {
                 // entities in non-plottable viewports are plottable:
                 continue;
             }
@@ -1033,7 +1034,7 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
     }
 
     QSharedPointer<REntity> blockRefEntity = getBlockRefOrEntity();
-    if (blockRefEntity!=NULL && blockRefEntity->getType()==RS::EntityBlockRef) {
+    if (blockRefEntity!=NULL && blockRefEntity->isOfType(RS::EntityBlockRef)) {
         QSharedPointer<RBlockReferenceEntity> blockRef = blockRefEntity.dynamicCast<RBlockReferenceEntity>();
         if (blockRef!=NULL) {
             //qDebug() << "exporting entity in blockref:" << blockRef->getId();

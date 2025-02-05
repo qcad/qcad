@@ -22,16 +22,15 @@
 
 #include "../core_global.h"
 
-#include "RArc.h"
 #include "RBox.h"
 #include "RExplodable.h"
 #include "RShape.h"
-#include "RSplineProxy.h"
 #include "RVector.h"
 
-#include "RPolyline.h"
-
+class RArc;
 class RLine;
+class RPolyline;
+class RSplineProxy;
 
 #ifndef R_NO_OPENNURBS
 #include "opennurbs/opennurbs.h"
@@ -246,12 +245,7 @@ public:
     /**
      * \nonscriptable
      */
-    static void setSplineProxy(RSplineProxy* p) {
-        if (splineProxy!=NULL) {
-            delete splineProxy;
-        }
-        splineProxy = p;
-    }
+    static void setSplineProxy(RSplineProxy* p);
 
     /**
      * \nonscriptable

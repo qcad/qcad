@@ -37,6 +37,7 @@
 #include "RGraphicsScene.h"
 #include "RGraphicsSceneQt.h"
 #include "RGraphicsView.h"
+#include "RGraphicsViewImage.h"
 #include "RGraphicsViewQt.h"
 #include "RHatchEntity.h"
 #include "RImageEntity.h"
@@ -61,6 +62,13 @@
 #include "RTraceEntity.h"
 #include "RViewportEntity.h"
 #include "RXLineEntity.h"
+#include "RDocumentVariables.h"
+#include "RUcs.h"
+#include "RTriangle.h"
+#include "RLayer.h"
+#include "RBlock.h"
+#include "RLinetype.h"
+#include "RView.h"
 
 #include "REcmaHelper.h"
 

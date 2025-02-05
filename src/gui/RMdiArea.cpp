@@ -16,17 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RDocument.h"
-#include "RMainWindowQt.h"
 #include "RMdiArea.h"
 #include "RMdiChildQt.h"
+#include "RSettings.h"
 
-#include <QDebug>
-#include <QEvent>
+#include <QKeyEvent>
 #include <QTabBar>
 #include <QToolButton>
-#include <QVBoxLayout>
-#include <QScrollArea>
 
 /**
  * Default Constructor.

@@ -22,9 +22,9 @@
 
 #include <QObject>
 
-#include "RDocumentInterface.h"
 #include "RSelectionListener.h"
-#include "RMainWindow.h"
+
+class RDocumentInterface;
 
 /**
  * \scriptable

@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QDebug>
 #include <QFileInfo>
 #include <QStringList>
 #if QT_VERSION < 0x060000
@@ -26,6 +27,7 @@
 #include "RArc.h"
 #include "RLine.h"
 #include "RFont.h"
+#include "RPolyline.h"
 #include "RS.h"
 #include "RSpline.h"
 

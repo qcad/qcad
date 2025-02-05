@@ -23,12 +23,12 @@
 #include "../core_global.h"
 
 #include <QRectF>
+#include <QSharedPointer>
 
-#include "RShape.h"
 #include "RVector.h"
-//#include "RTriangle.h"
 
 class RLine;
+class RShape;
 class RTriangle;
 class RPolyline;
 

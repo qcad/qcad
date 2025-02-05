@@ -9,6 +9,14 @@
         
                 #include "RAttributeDefinitionData.h"
             
+                #include "REntity.h"
+            
+                #include "RLine.h"
+            
+                #include "RDocument.h"
+            
+                #include "RRefPoint.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -185,7 +193,7 @@
                         context->argument(
                         1
                         ).isNumber()
-                ) /* type: RBlockReferenceEntity::Id */
+                ) /* type: RObject::Id */
             
                 && (
                 
@@ -216,9 +224,9 @@
                     *ap0;
                 
                     // argument isStandardType
-                    RBlockReferenceEntity::Id
+                    RObject::Id
                     a1 =
-                    (RBlockReferenceEntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 1 ).
                     toNumber();
@@ -687,11 +695,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLinetype::Id'
-    RLinetype::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getLinetypeId();
-        // return type: RLinetype::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -732,21 +740,22 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RAttributeData: Argument 1 is not of type QStack < QSharedPointer < REntity > >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RAttributeData: Argument 1 is not of type QStack < QSharedPointer < REntity > >* or QSharedPointer<QStack < QSharedPointer < REntity > >>.",
+                               context);
                     }
                     QStack < QSharedPointer < REntity > >& a1 = *ap1;
                 
     // end of arguments
 
     // call C++ function:
-    // return type 'RLinetype::Id'
-    RLinetype::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getLinetypeId(a0
         ,
     a1);
-        // return type: RLinetype::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -836,8 +845,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RAttributeData: Argument 1 is not of type QStack < QSharedPointer < REntity > >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RAttributeData: Argument 1 is not of type QStack < QSharedPointer < REntity > >* or QSharedPointer<QStack < QSharedPointer < REntity > >>.",
+                               context);
                     }
                     QStack < QSharedPointer < REntity > >& a1 = *ap1;
                 
@@ -940,8 +950,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RAttributeData: Argument 1 is not of type QStack < QSharedPointer < REntity > >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RAttributeData: Argument 1 is not of type QStack < QSharedPointer < REntity > >* or QSharedPointer<QStack < QSharedPointer < REntity > >>.",
+                               context);
                     }
                     QStack < QSharedPointer < REntity > >& a1 = *ap1;
                 

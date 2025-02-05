@@ -22,10 +22,7 @@
 
 #include "core_global.h"
 
-#include <QMap>
-#include <QPair>
-#include <QSet>
-#include <QString>
+#include <QMetaType>
 
 #include "RLinetypePattern.h"
 #include "RResourceList.h"

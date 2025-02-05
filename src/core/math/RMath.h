@@ -22,14 +22,14 @@
 
 #include "../core_global.h"
 
+#include "RS.h"
+
 #include <QMetaType>
 
-#include <cstdio>
 #include <cmath>
-#include <cerrno>
 #include <limits>
 
-#include "RVector.h"
+class RVector;
 
 #ifndef M_PI
 #define M_PI        3.14159265358979323846264338327950288
@@ -157,7 +157,7 @@ public:
     static bool containsFuzzy(const QList<double>& values, double v, double tol = RS::PointTolerance);
 
     static double parseScale(const QString& scaleString);
-    static RVector parseCoordinate(const QString& coordinateString, const RVector& relativeZero = RVector::nullVector);
+    static RVector parseCoordinate(const QString& coordinateString, const RVector& relativeZero);
 
     static QString getMd5Hash(const QString& data);
 

@@ -9,6 +9,8 @@
         
                 #include "RBox.h"
             
+                #include "RPolyline.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -5493,8 +5495,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REllipse: Argument 0 is not of type QTransform*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REllipse: Argument 0 is not of type QTransform* or QSharedPointer<QTransform>.",
+                               context);
                     }
                     QTransform& a0 = *ap0;
                 

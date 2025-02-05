@@ -25,14 +25,9 @@
 #include <QMutex>
 class QKeyEvent;
 
-#include "REntityExportListener.h"
-#include "RExportListener.h"
-#include "RImportListener.h"
-#include "RInterTransactionListener.h"
-#include "RTransactionListener.h"
-#include "RPropertyEvent.h"
 #include "RMainWindowProxy.h"
 #include "RMessageHandler.h"
+#include "RObject.h"
 #include "RProgressHandler.h"
 #include "RS.h"
 
@@ -41,18 +36,26 @@ class RCoordinateListener;
 class RDocument;
 class RDocumentInterface;
 class REntity;
+class REntityExportListener;
+class RExporter;
+class RExportListener;
 class RFocusListener;
 class RGraphicsView;
+class RImportListener;
+class RInterTransactionListener;
 class RKeyListener;
 class RLayerListener;
 class RNewDocumentListener;
 class RPaletteListener;
 class RPenListener;
+class RPropertyEvent;
 class RPropertyListener;
+class RPropertyTypeId;
 class RPreferencesListener;
 class RSelectionListener;
 class RSnapListener;
 class RTransaction;
+class RTransactionListener;
 class RUcsListener;
 class RVector;
 class RViewFocusListener;
@@ -184,8 +187,8 @@ public:
 
     void addLayerListener(RLayerListener* l);
     void removeLayerListener(RLayerListener* l);
-    void notifyLayerListeners(RDocumentInterface* documentInterface, QList<RLayer::Id>& layerIds);
-    void notifyLayerListenersCurrentLayer(RDocumentInterface* documentInterface, RLayer::Id previousLayerId);
+    void notifyLayerListeners(RDocumentInterface* documentInterface, QList<RObject::Id>& layerIds);
+    void notifyLayerListenersCurrentLayer(RDocumentInterface* documentInterface, RObject::Id previousLayerId);
 
     void addBlockListener(RBlockListener* l);
     void removeBlockListener(RBlockListener* l);

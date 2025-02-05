@@ -22,6 +22,9 @@
 
 #include "core_global.h"
 
+#include <QMetaType>
+#include <QString>
+
 /**
  * Command Event.
  *

@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include "RDocument.h"
+            
                 #include "RMessageHandler.h"
             
                 #include "RProgressHandler.h"

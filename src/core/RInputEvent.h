@@ -22,8 +22,6 @@
 
 #include "core_global.h"
 
-#include <QMouseEvent>
-
 #include "RVector.h"
 
 class RGraphicsScene;

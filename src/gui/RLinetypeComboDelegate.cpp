@@ -21,6 +21,7 @@
 #include "RLinetypeCombo.h"
 #include "RLinetypeComboDelegate.h"
 #include "RPainterPathExporter.h"
+#include "RSettings.h"
 
 //QMap<int, QMap<QString, QImage> > RLinetypeComboDelegate::previewCache;
 int RLinetypeComboDelegate::previewHeight = 20;

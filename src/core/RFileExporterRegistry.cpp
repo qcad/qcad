@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 
-#include "RDebug.h"
 #include "RFileExporterFactory.h"
 #include "RFileExporterRegistry.h"
 

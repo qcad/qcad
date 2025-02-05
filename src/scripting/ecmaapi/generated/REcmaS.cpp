@@ -7,7 +7,7 @@
 
         // forwards declarations mapped to includes
         
-                #include "RVector.h"
+                #include <QTextStream>
             
                 #include "RPropertyAttributes.h"
             
@@ -680,6 +680,11 @@
 
     ctor.setProperty("EntityXRef",
     QScriptValue(RS::EntityXRef),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EntityCustom",
+    QScriptValue(RS::EntityCustom),
     QScriptValue::ReadOnly);
 
 
@@ -2754,8 +2759,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RS: Argument 0 is not of type QPair < QVariant , RPropertyAttributes >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RS: Argument 0 is not of type QPair < QVariant , RPropertyAttributes >* or QSharedPointer<QPair < QVariant , RPropertyAttributes >>.",
+                               context);
                     }
                     QPair < QVariant , RPropertyAttributes >& a0 = *ap0;
                 
@@ -2770,8 +2776,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RS: Argument 1 is not of type QPair < QVariant , RPropertyAttributes >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RS: Argument 1 is not of type QPair < QVariant , RPropertyAttributes >* or QSharedPointer<QPair < QVariant , RPropertyAttributes >>.",
+                               context);
                     }
                     QPair < QVariant , RPropertyAttributes >& a1 = *ap1;
                 
@@ -2822,8 +2829,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RS: Argument 0 is not of type QPair < QVariant , RPropertyAttributes >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RS: Argument 0 is not of type QPair < QVariant , RPropertyAttributes >* or QSharedPointer<QPair < QVariant , RPropertyAttributes >>.",
+                               context);
                     }
                     QPair < QVariant , RPropertyAttributes >& a0 = *ap0;
                 
@@ -2838,8 +2846,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RS: Argument 1 is not of type QPair < QVariant , RPropertyAttributes >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RS: Argument 1 is not of type QPair < QVariant , RPropertyAttributes >* or QSharedPointer<QPair < QVariant , RPropertyAttributes >>.",
+                               context);
                     }
                     QPair < QVariant , RPropertyAttributes >& a1 = *ap1;
                 
@@ -3712,8 +3721,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RS: Argument 0 is not of type QTextCharFormat*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RS: Argument 0 is not of type QTextCharFormat* or QSharedPointer<QTextCharFormat>.",
+                               context);
                     }
                     QTextCharFormat& a0 = *ap0;
                 
@@ -3872,8 +3882,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RS: Argument 0 is not of type QTextStream*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RS: Argument 0 is not of type QTextStream* or QSharedPointer<QTextStream>.",
+                               context);
                     }
                     QTextStream& a0 = *ap0;
                 

@@ -16,12 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RBlock.h"
 #include "RBlockReferenceData.h"
 #include "RBlockReferenceEntity.h"
 #include "RDocument.h"
-#include "RExporter.h"
+#include "RLine.h"
 #include "RMainWindow.h"
 #include "RMouseEvent.h"
+#include "RSettings.h"
 #include "RStorage.h"
 #include "RTransform.h"
 
@@ -122,7 +124,7 @@ RVector RBlockReferenceData::getVectorTo(const RVector& point, bool limited, dou
                     continue;
                 }
 
-                if (entity->getType()!=RS::EntityBlockRef) {
+                if (!entity->isOfType(RS::EntityBlockRef)) {
                     entity->scaleVisualProperties(getScaleFactors().x);
                 }
 
@@ -198,7 +200,7 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
                     continue;
                 }
 
-                if (entity->getType()!=RS::EntityBlockRef) {
+                if (!entity->isOfType(RS::EntityBlockRef)) {
                     entity->scaleVisualProperties(getScaleFactors().x);
                 }
 
@@ -381,7 +383,7 @@ RVector RBlockReferenceData::getPointOnEntity() const {
             continue;
         }
 
-        if (entity->getType()!=RS::EntityBlockRef) {
+        if (!entity->isOfType(RS::EntityBlockRef)) {
             entity->scaleVisualProperties(getScaleFactors().x);
         }
 
@@ -776,7 +778,7 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
                     continue;
                 }
 
-                if (entity->getType()!=RS::EntityBlockRef) {
+                if (!entity->isOfType(RS::EntityBlockRef)) {
                     entity->scaleVisualProperties(getScaleFactors().x);
                 }
 

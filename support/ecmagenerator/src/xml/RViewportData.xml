@@ -1,6 +1,18 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RBox" />
+  <class_decl name="RDocument" />
+  <class_decl name="REntityData" />
+  <class_decl name="RLine" />
+  <class_decl name="RObject" />
+  <class_decl name="RPoint" />
+  <class_decl name="RPolyline" />
+  <class_decl name="RRefPoint" />
+  <class_decl name="RShape" />
+  <class_decl name="RVector" />
+  <class_decl name="RViewportData" />
+  <class_decl name="RViewportEntity" />
   <class name="RViewportData"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
@@ -355,8 +367,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RS::ProjectionRenderingHint" name="hint"
         hasDefault="true" default="RS :: RenderTop"
         isConst="false" />
-        <arg type="QList &lt; REntity::Id &gt; *"
-        typeName="QList &lt; REntity::Id &gt; *"
+        <arg type="QList &lt; RObject::Id &gt; *"
+        typeName="QList &lt; RObject::Id &gt; *"
         name="subEntityIds" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
@@ -434,15 +446,15 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getFrozenLayerIds" cppName="getFrozenLayerIds"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="QList &lt; RLayer::Id &gt;"
+      <variant returnType="QList &lt; RObject::Id &gt;"
       isPureVirtual="false" />
     </method>
     <method name="setFrozenLayerIds" cppName="setFrozenLayerIds"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QList &lt; RLayer::Id &gt; &amp;"
-        typeName="QList &lt; RLayer::Id &gt;" name="layerIds"
+        <arg type="QList &lt; RObject::Id &gt; &amp;"
+        typeName="QList &lt; RObject::Id &gt;" name="layerIds"
         isConst="true" />
       </variant>
     </method>

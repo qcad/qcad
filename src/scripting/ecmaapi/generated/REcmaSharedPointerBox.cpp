@@ -9,6 +9,8 @@
         
                 #include "RLine.h"
             
+                #include "RShape.h"
+            
                 #include "RTriangle.h"
             
                 #include "RPolyline.h"
@@ -251,8 +253,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RBox: Argument 0 is not of type QRectF*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RBox: Argument 0 is not of type QRectF* or QSharedPointer<QRectF>.",
+                               context);
                     }
                     QRectF& a0 = *ap0;
                 
@@ -1955,8 +1958,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RBox: Argument 0 is not of type RShape*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RBox: Argument 0 is not of type RShape* or QSharedPointer<RShape>.",
+                               context);
                     }
                     RShape& a0 = *ap0;
                 
@@ -2000,8 +2004,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RBox: Argument 0 is not of type RShape*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RBox: Argument 0 is not of type RShape* or QSharedPointer<RShape>.",
+                               context);
                     }
                     RShape& a0 = *ap0;
                 
@@ -3516,8 +3521,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RBox: Argument 0 is not of type QTransform*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RBox: Argument 0 is not of type QTransform* or QSharedPointer<QTransform>.",
+                               context);
                     }
                     QTransform& a0 = *ap0;
                 

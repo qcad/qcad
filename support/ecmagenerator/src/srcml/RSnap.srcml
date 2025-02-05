@@ -23,13 +23,12 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSet&gt;</cpp:file></cpp:include>
-
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMouseEvent.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMath.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RObject.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RGraphicsView</name>;</class_decl>
+<class_decl>class <name>RMouseEvent</name>;</class_decl>
 
 <comment type="block">/**
  * \brief Abstract base class for all grid and object snap 
@@ -67,8 +66,8 @@
     }</block>;</enum>
 
 </public><public>public:
-    <constructor><name>RSnap</name><parameter_list>(<param><decl><type><name><name>RSnap</name>::<name>Status</name></name></type> <name>s</name> =<init> <expr><name><name>RSnap</name>::<name>Unknown</name></name></expr></init></decl></param>)</parameter_list> <member_list>: <call><name>status</name><argument_list>(<argument><expr><name>s</name></expr></argument>)</argument_list></call>, <call><name>lastSnap</name><argument_list>(<argument><expr><name><name>RVector</name>::<name>invalid</name></name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
-    <destructor><specifier>virtual</specifier> <name>~RSnap</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+    <constructor_decl><name>RSnap</name><parameter_list>(<param><decl><type><name><name>RSnap</name>::<name>Status</name></name></type> <name>s</name> =<init> <expr><name><name>RSnap</name>::<name>Unknown</name></name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><name>~RSnap</name><parameter_list>()</parameter_list>;</destructor_decl>
 
     <comment type="block">/**
      * \return The snapped position (closest relevant position)
@@ -86,9 +85,7 @@
      * \overload
      * \nonscriptable
      */</comment>
-    <function><type><name>virtual</name> <name>RVector</name></type> <name>snap</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><call><name>snap</name><argument_list>(<argument><expr><name>event</name>.<call><name>getModelPosition</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><name>event</name>.<call><name>getGraphicsView</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
-    }</block></function>
+    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>snap</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
 
     <function><type><name>virtual</name> <name>void</name></type> <name>showUiOptions</name><parameter_list>()</parameter_list> <block>{}</block></function>
     <function><type><name>virtual</name> <name>void</name></type> <name>hideUiOptions</name><parameter_list>()</parameter_list> <block>{}</block></function>
@@ -104,7 +101,7 @@
      * \return Set of entity IDs that are relevant for the last performed
      * snap, usually used for highlighting.
      */</comment>
-    <function><type><name>QList<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>getEntityIds</name><parameter_list>()</parameter_list> <block>{
+    <function><type><name>QList<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>getEntityIds</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>entityIds</name></expr>;</return>
     }</block></function>
 
@@ -130,7 +127,7 @@
     }</block></function>
 
 </public><protected>protected:
-    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>entityIds</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>entityIds</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RSnap</name>::<name>Status</name></name></type> <name>status</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>lastSnap</name></decl>;</decl_stmt>
 </protected>}</block>;</class>

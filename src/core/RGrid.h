@@ -22,12 +22,14 @@
 
 #include "core_global.h"
 
-#include "RVector.h"
-#include "RBox.h"
-#include "RRuler.h"
+#include <QMetaType>
+
+#include "RS.h"
 
 class RDocument;
 class RGraphicsView;
+class RRuler;
+class RVector;
 
 /**
  * Abstract base class for grid implementations. A grid class

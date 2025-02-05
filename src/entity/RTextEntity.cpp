@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RTextEntity.h"
-#include "RExporter.h"
 
 RPropertyTypeId RTextEntity::PropertyCustom;
 RPropertyTypeId RTextEntity::PropertyHandle;

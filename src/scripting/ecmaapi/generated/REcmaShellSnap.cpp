@@ -11,6 +11,8 @@
         
                 #include "RGraphicsView.h"
             
+                #include "RMouseEvent.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -419,7 +421,7 @@
         
     
     
-      QList < REntity::Id > REcmaShellSnap::getEntityIds(
+      QList < RObject::Id > REcmaShellSnap::getEntityIds(
                 
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
@@ -445,7 +447,7 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        QList < REntity::Id > ret =
+                        QList < RObject::Id > ret =
                         RSnap::getEntityIds(
                             
                         );
@@ -463,7 +465,7 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    QList < REntity::Id > res;
+                    QList < RObject::Id > res;
                       
                           REcmaHelper::fromScriptValue(engine, 
                         

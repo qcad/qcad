@@ -3,6 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RGraphicsView" />
   <class_decl name="RGraphicsScene" />
+  <class_decl name="RVector" />
   <class name="RCoordinateEvent"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"

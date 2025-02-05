@@ -193,8 +193,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RLinetypeList: Argument 1 is not of type RResourceList < RLinetypePattern >*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RLinetypeList: Argument 1 is not of type RResourceList < RLinetypePattern >* or QSharedPointer<RResourceList < RLinetypePattern >>.",
+                               context);
                     }
                     RResourceList < RLinetypePattern >& a1 = *ap1;
                 

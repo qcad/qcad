@@ -54,6 +54,9 @@
         getRtti
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isOfType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

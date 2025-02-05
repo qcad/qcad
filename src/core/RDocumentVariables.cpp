@@ -17,8 +17,8 @@
  * along with QCAD.
  */
 #include "RDocumentVariables.h"
-#include "RDocument.h"
 #include "RDxfServices.h"
+#include "RVector.h"
 
 RPropertyTypeId RDocumentVariables::PropertyCustom;
 RPropertyTypeId RDocumentVariables::PropertyHandle;
@@ -31,7 +31,7 @@ RPropertyTypeId RDocumentVariables::PropertyWorkingSetBlockReferenceId;
 
 RDocumentVariables::RDocumentVariables(RDocument* document)
         : RObject(document),
-        currentLayerId(RLayer::INVALID_ID),
+        currentLayerId(RObject::INVALID_ID),
         unit(RS::None),
         measurement(RS::UnknownMeasurement),
         linetypeScale(1.0),

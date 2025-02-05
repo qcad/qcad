@@ -23,8 +23,6 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFileInfo&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
@@ -34,7 +32,6 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTransactionListener.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RFocusListener.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSelectionListener.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPaletteListener.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>QToolBar</name>;</class_decl>
 
@@ -323,9 +320,7 @@
         <return>return <expr><name>scriptFile</name></expr>;</return>
     }</block></function>
 
-    <function><type><name>QString</name></type> <name>getScriptClass</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name>QFileInfo</name><argument_list>(<argument><expr><name>scriptFile</name></expr></argument>)</argument_list></call>.<call><name>baseName</name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+    <function_decl><type><name>QString</name></type> <name>getScriptClass</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setGroup</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>QString</name></type> <name>getGroup</name><parameter_list>()</parameter_list>;</function_decl>

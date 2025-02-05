@@ -22,13 +22,13 @@
 
 #include "entity_global.h"
 
-#include <QTextLayout>
-
-#include "RBlockReferenceEntity.h"
-#include "RDocument.h"
-#include "RTextData.h"
+#include "RTextBasedData.h"
 
 class RAttributeDefinitionData;
+class REntity;
+class RLine;
+class RDocument;
+class RRefPoint;
 
 /**
  * Stores and manages all data that defines the geometry and
@@ -47,7 +47,7 @@ protected:
 
 public:
     RAttributeData() {}
-    RAttributeData(const RTextBasedData& textData, RBlockReferenceEntity::Id blockReferenceId, const QString& tag);
+    RAttributeData(const RTextBasedData& textData, RObject::Id blockReferenceId, const QString& tag);
     virtual ~RAttributeData() {}
 
     virtual RS::EntityType getType() const {
@@ -71,11 +71,11 @@ public:
         invisible = i;
     }
 
-    virtual RLinetype::Id getLinetypeId() const {
+    virtual RObject::Id getLinetypeId() const {
         return RTextBasedData::getLinetypeId();
     }
 
-    virtual RLinetype::Id getLinetypeId(bool resolve, const QStack<QSharedPointer<REntity> >& blockRefStack) const;
+    virtual RObject::Id getLinetypeId(bool resolve, const QStack<QSharedPointer<REntity> >& blockRefStack) const;
     virtual RLineweight::Lineweight getLineweight() const {
         return RTextBasedData::getLineweight();
     }

@@ -11,8 +11,6 @@
         
                 #include "RGraphicsView.h"
             
-                #include "RMouseEvent.h"
-            
             
         // includes for base ecma wrapper classes
         
@@ -364,7 +362,7 @@
             }
         
       RVector REcmaShellSnapDistance::snap(
-                const RVector & position, RGraphicsView & view, const QSet < REntity::Id > & candidates, const RBox & queryBox
+                const RVector & position, RGraphicsView & view, const QSet < RObject::Id > & candidates, const RBox & queryBox
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellSnapDistance::snap", engine);
@@ -439,12 +437,12 @@
 
 
 
-    // type: QSet < REntity::Id > &, copyable: false
+    // type: QSet < RObject::Id > &, copyable: false
         << qScriptValueFromValue(engine, 
 
         
             // const reference argument - make a new object:
-            new QSet < REntity::Id >(candidates)
+            new QSet < RObject::Id >(candidates)
         )
       
 
@@ -585,7 +583,7 @@
             }
         
     
-      QList < REntity::Id > REcmaShellSnapDistance::getEntityIds(
+      QList < RObject::Id > REcmaShellSnapDistance::getEntityIds(
                 
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
@@ -611,7 +609,7 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        QList < REntity::Id > ret =
+                        QList < RObject::Id > ret =
                         RSnapDistance::getEntityIds(
                             
                         );
@@ -629,7 +627,7 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    QList < REntity::Id > res;
+                    QList < RObject::Id > res;
                       
                           REcmaHelper::fromScriptValue(engine, 
                         

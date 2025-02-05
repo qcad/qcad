@@ -209,11 +209,11 @@
         <expr_stmt><expr><name>data</name>.<call><name>setPosition</name><argument_list>(<argument><expr><name>p</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name>QList<argument_list>&lt;<argument><name><name>RLayer</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>getFrozenLayerIds</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>QList<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>getFrozenLayerIds</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>data</name>.<call><name>getFrozenLayerIds</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>void</name></type> <name>setFrozenLayerIds</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name><name>RLayer</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>ids</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>void</name></type> <name>setFrozenLayerIds</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>ids</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>data</name>.<call><name>setFrozenLayerIds</name><argument_list>(<argument><expr><name>ids</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 

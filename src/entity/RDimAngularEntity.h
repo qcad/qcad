@@ -25,6 +25,7 @@
 #include "RDimensionEntity.h"
 #include "RDimAngularData.h"
 
+class RArc;
 class RDocument;
 class RExporter;
 
@@ -142,9 +143,7 @@ public:
         return getData().getDimArcPosition();
     }
 
-    virtual RArc getDimensionArc() const {
-        return getData().getDimensionArc();
-    }
+    virtual RArc getDimensionArc() const;
 
 protected:
     virtual void print(QDebug dbg) const;

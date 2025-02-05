@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RVector" />
   <class name="RMath" xsi:noNamespaceSchemaLocation="../class.xsd"
   isCopyable="false" hasShell="false" sharedPointerSupport="false"
   isQObject="false" hasStreamOperator="false" isAbstract="false"
@@ -336,8 +337,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QString &amp;" typeName="QString"
         name="coordinateString" isConst="true" />
         <arg type="RVector &amp;" typeName="RVector"
-        name="relativeZero" hasDefault="true"
-        default="RVector :: nullVector" isConst="true" />
+        name="relativeZero" isConst="true" />
       </variant>
     </method>
     <method name="getMd5Hash" cppName="getMd5Hash"

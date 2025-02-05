@@ -55,6 +55,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToTextLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

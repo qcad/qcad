@@ -23,22 +23,46 @@
 #include "RFileExporter.h"
 
 class RArc;
+class RBlock;
+class RBox;
 class RCircle;
+class RColor;
 class RDocument;
 class REllipse;
+class REntity;
+class RExplodable;
+class RExporter;
+class RFileExporter;
+class RFileExporterFactory;
+class RFileExporterFactoryAdapter;
 class RImageData;
+class RLayer;
+class RLayerState;
 class RLine;
 class RLinetype;
 class RLinetypePattern;
+class RLineweight;
+class RMath;
 class RMessageHandler;
+class RObject;
+class RPainterPath;
+class RPainterPathSource;
 class RPoint;
 class RPolyline;
 class RProgressHandler;
 class RRay;
+class RShape;
 class RSpline;
+class RTextBasedData;
+class RTransform;
 class RTriangle;
 class RVector;
+class RView;
+class RViewportEntity;
 class RXLine;
+
+
+
 
 /**
  * \brief Base class for file exporters, including script file exporters. 

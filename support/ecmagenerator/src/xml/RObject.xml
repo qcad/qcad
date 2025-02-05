@@ -3,6 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class_decl name="RTransaction" />
+  <class_decl name="RVector" />
   <class name="RObject"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="true" isQObject="false"
@@ -38,6 +39,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getRtti" cppName="getRtti" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RS::EntityType" isPureVirtual="false" />
+    </method>
+    <method name="isOfType" cppName="isOfType" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="t" isConst="false" />
+      </variant>
     </method>
     <method name="getType" cppName="getType" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

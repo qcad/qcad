@@ -19,9 +19,19 @@
             
                 #include "REntity.h"
             
+                #include "REntityExportListener.h"
+            
+                #include "RExporter.h"
+            
+                #include "RExportListener.h"
+            
                 #include "RFocusListener.h"
             
                 #include "RGraphicsView.h"
+            
+                #include "RImportListener.h"
+            
+                #include "RInterTransactionListener.h"
             
                 #include "RKeyListener.h"
             
@@ -33,7 +43,11 @@
             
                 #include "RPenListener.h"
             
+                #include "RPropertyEvent.h"
+            
                 #include "RPropertyListener.h"
+            
+                #include "RPropertyTypeId.h"
             
                 #include "RPreferencesListener.h"
             
@@ -42,6 +56,8 @@
                 #include "RSnapListener.h"
             
                 #include "RTransaction.h"
+            
+                #include "RTransactionListener.h"
             
                 #include "RUcsListener.h"
             
@@ -1939,8 +1955,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a0 = *ap0;
                 
@@ -1955,8 +1972,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RMainWindow: Argument 1 is not of type REntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RMainWindow: Argument 1 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
                     }
                     REntity& a1 = *ap1;
                 
@@ -4793,7 +4811,7 @@
         ) /* type: RDocumentInterface * */
      && (
             context->argument(1).isArray()
-        ) /* type: QList < RLayer::Id > */
+        ) /* type: QList < RObject::Id > */
     
     ){
     // prepare arguments:
@@ -4812,7 +4830,7 @@
                     }
                 
                     // argument isArray or QVariantMap
-                    QList < RLayer::Id >
+                    QList < RObject::Id >
                     a1;
                     REcmaHelper::fromScriptValue(
                         engine,
@@ -4869,7 +4887,7 @@
         ) /* type: RDocumentInterface * */
      && (
             context->argument(1).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
@@ -4888,9 +4906,9 @@
                     }
                 
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a1 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 1 ).
                     toNumber();
@@ -5844,8 +5862,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type QCursor*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type QCursor* or QSharedPointer<QCursor>.",
+                               context);
                     }
                     QCursor& a0 = *ap0;
                 

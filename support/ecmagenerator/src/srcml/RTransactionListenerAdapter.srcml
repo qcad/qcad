@@ -23,8 +23,13 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QObject&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocumentInterface.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTransactionListener.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RTransaction</name>;</class_decl>
+<class_decl>class <name>RTransactionListener</name>;</class_decl>
+<class_decl>class <name>RTransactionListenerAdapter</name>;</class_decl>
+
 
 <comment type="block">/**
  * \scriptable

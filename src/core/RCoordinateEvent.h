@@ -22,11 +22,13 @@
 
 #include "core_global.h"
 
+#include <QEvent>
+
 #include "RInputEvent.h"
-#include "RVector.h"
 
 class RGraphicsView;
 class RGraphicsScene;
+class RVector;
 
 /**
  * Coordinate Event.

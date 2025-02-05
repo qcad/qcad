@@ -11,6 +11,8 @@
             
                 #include "RGraphicsScene.h"
             
+                #include "RVector.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -229,8 +231,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RCoordinateEvent: Argument 1 is not of type RGraphicsScene*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RCoordinateEvent: Argument 1 is not of type RGraphicsScene* or QSharedPointer<RGraphicsScene>.",
+                               context);
                     }
                     RGraphicsScene& a1 = *ap1;
                 
@@ -245,8 +248,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RCoordinateEvent: Argument 2 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RCoordinateEvent: Argument 2 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a2 = *ap2;
                 

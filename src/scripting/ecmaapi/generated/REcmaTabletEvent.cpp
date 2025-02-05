@@ -177,8 +177,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTabletEvent: Argument 0 is not of type QTabletEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTabletEvent: Argument 0 is not of type QTabletEvent* or QSharedPointer<QTabletEvent>.",
+                               context);
                     }
                     QTabletEvent& a0 = *ap0;
                 
@@ -193,8 +194,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RTabletEvent: Argument 1 is not of type RGraphicsScene*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTabletEvent: Argument 1 is not of type RGraphicsScene* or QSharedPointer<RGraphicsScene>.",
+                               context);
                     }
                     RGraphicsScene& a1 = *ap1;
                 
@@ -209,8 +211,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RTabletEvent: Argument 2 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTabletEvent: Argument 2 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a2 = *ap2;
                 

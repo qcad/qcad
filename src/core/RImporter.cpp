@@ -18,17 +18,17 @@
  */
 #include "RImporter.h"
 
+#include "RBlockReferenceEntity.h"
 #include "RDocument.h"
 #include "REntity.h"
 #include "RObject.h"
-#include "RStorage.h"
 #include "RMainWindow.h"
 
 RImporter::RImporter() :
     document(NULL),
     messageHandler(NULL),
     progressHandler(NULL),
-    blockId(RBlock::INVALID_ID) {
+    blockId(RObject::INVALID_ID) {
 }
 
 RImporter::RImporter(RDocument& document, RMessageHandler* messageHandler, RProgressHandler* progressHandler) :
@@ -36,7 +36,7 @@ RImporter::RImporter(RDocument& document, RMessageHandler* messageHandler, RProg
     messageHandler(messageHandler),
     progressHandler(progressHandler),
     transaction(document.getStorage(), "Importing", false),
-    blockId(RBlock::INVALID_ID) {
+    blockId(RObject::INVALID_ID) {
 
     transaction.setRecordAffectedObjects(false);
     transaction.setAllowAll(true);
@@ -86,10 +86,10 @@ void RImporter::endImport() {
     // ground all directly recursive block references:
     int counter = 0;
     QList<QPair<QString, QString> >  blockNames;
-    QSet<RBlock::Id> blockIds = document->queryAllBlocks();
-    QSet<RBlock::Id>::const_iterator it;
+    QSet<RObject::Id> blockIds = document->queryAllBlocks();
+    QSet<RObject::Id>::const_iterator it;
     for (it=blockIds.constBegin(); it!=blockIds.constEnd(); it++) {
-        RBlock::Id blockId = *it;
+        RObject::Id blockId = *it;
 
         QSet<REntity::Id> ids = document->queryBlockEntities(blockId);
         QSet<REntity::Id>::const_iterator it2;
@@ -103,11 +103,11 @@ void RImporter::endImport() {
                 continue;
             }
 
-            RBlock::Id refBlockId = blockRef->getReferencedBlockId();
+            RObject::Id refBlockId = blockRef->getReferencedBlockId();
 
             if (refBlockId==blockId) {
                 blockNames.append(QPair<QString, QString>(document->getBlockName(refBlockId), document->getBlockName(refBlockId)));
-                blockRef->setReferencedBlockId(RBlock::INVALID_ID);
+                blockRef->setReferencedBlockId(RObject::INVALID_ID);
                 counter++;
             }
         }
@@ -144,11 +144,11 @@ void RImporter::endImport() {
     }
 }
 
-void RImporter::setCurrentBlockId(RBlock::Id id) {
+void RImporter::setCurrentBlockId(RObject::Id id) {
     this->blockId = id;
 }
 
-RBlock::Id RImporter::getCurrentBlockId() {
+RObject::Id RImporter::getCurrentBlockId() {
     return blockId;
 }
 

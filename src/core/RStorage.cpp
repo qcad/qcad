@@ -16,12 +16,20 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RAttributeEntity.h"
+#include "RBlock.h"
+#include "RBlockReferenceEntity.h"
 #include "RDocument.h"
+#include "RDocumentVariables.h"
+#include "RDimStyle.h"
+#include "REntity.h"
+#include "RLayerState.h"
+#include "RModifiedListener.h"
+#include "RS.h"
 #include "RSettings.h"
 #include "RStorage.h"
 #include "RStorageBlockSort.h"
 #include "RStorageLayerSort.h"
+#include "RView.h"
 #include "RMainWindow.h"
 
 RStorage::RStorage() :
@@ -36,7 +44,7 @@ RStorage::RStorage() :
     //currentLayerId(RLayer::INVALID_ID),
     currentViewId(RView::INVALID_ID),
     currentBlockId(RBlock::INVALID_ID),
-    currentViewportId(RViewportEntity::INVALID_ID),
+    currentViewportId(RObject::INVALID_ID),
     modelSpaceBlockId(RBlock::INVALID_ID),
     layer0Id(RLayer::INVALID_ID),
     lastTransactionId(-1),
@@ -55,7 +63,7 @@ void RStorage::clear() {
     currentLinetypeId = RLinetype::INVALID_ID;
     currentViewId = RView::INVALID_ID;
     currentBlockId = RBlock::INVALID_ID;
-    currentViewportId = RViewportEntity::INVALID_ID;
+    currentViewportId = RObject::INVALID_ID;
     lastTransactionId = -1;
     lastTransactionGroup = 1;
     notifyGlobalListeners = true;
@@ -90,6 +98,44 @@ RObject::Handle RStorage::getNewObjectHandle() {
 
 RObject::Handle RStorage::getMaxObjectHandle() {
     return handleCounter;
+}
+
+QSharedPointer<REntity> RStorage::queryEntityDirect(RObject::Id entityId) const {
+    return queryEntity(entityId);
+}
+
+QSharedPointer<REntity> RStorage::queryVisibleEntityDirect(RObject::Id entityId) const {
+    QSharedPointer<REntity> ret = queryEntityDirect(entityId);
+//    if (ret->isUndone()) {
+//        return QSharedPointer<REntity>();
+//    }
+//    if (ret->getBlockId()!=currentBlockId) {
+//        return QSharedPointer<REntity>();
+//    }
+    if (!ret->isVisible()) {
+        return QSharedPointer<REntity>();
+    }
+    return ret;
+}
+
+bool RStorage::isSelected(RObject::Id entityId) {
+    QSharedPointer<REntity> e = queryEntityDirect(entityId);
+    return (!e.isNull() && e->isSelected());
+}
+
+bool RStorage::isSelectedWorkingSet(RObject::Id entityId) {
+    QSharedPointer<REntity> e = queryEntityDirect(entityId);
+    return (!e.isNull() && e->isSelectedWorkingSet());
+}
+
+bool RStorage::isEntity(RObject::Id objectId) {
+    QSharedPointer<REntity> e = queryEntityDirect(objectId);
+    return !e.isNull();
+}
+
+
+void RStorage::setEntityParentId(REntity& entity, RObject::Id parentId) {
+    entity.setParentId(parentId);
 }
 
 //RTransaction RStorage::setCurrentLayer(RLayer::Id layerId) {
@@ -154,6 +200,35 @@ RLayer::Id RStorage::getCurrentLayerId() const {
         return RLayer::INVALID_ID;
     }
     return v->getCurrentLayerId();
+}
+
+QSharedPointer<RBlock> RStorage::queryCurrentBlock() {
+    return queryBlock(getCurrentBlockId());
+}
+
+void RStorage::setCurrentBlock(RObject::Id blockId) {
+    if (queryBlockDirect(blockId).isNull()) {
+        currentBlockId = modelSpaceBlockId;
+    }
+    else {
+        currentBlockId = blockId;
+    }
+}
+
+bool RStorage::isBlockFrozen(RObject::Id blockId) const {
+    QSharedPointer<RBlock> b = queryBlockDirect(blockId);
+    if (b.isNull()) {
+        return false;
+    }
+    return b->isFrozen();
+}
+
+bool RStorage::isLayoutBlock(RObject::Id blockId) const {
+    QSharedPointer<RBlock> b = queryBlockDirect(blockId);
+    if (b.isNull()) {
+        return false;
+    }
+    return b->hasLayout();
 }
 
 void RStorage::setCurrentColor(const RColor& color) {
@@ -1217,7 +1292,7 @@ bool RStorage::isEntityVisible(const REntity& entity, RObject::Id blockId) const
     // check if layer is off and this is not a block reference:
     // block references on layer X remain visible if X is off but not frozen:
     if (isLayerOff(*layer) && !ignoreLayerVisibility) {
-        if (entity.getType()!=RS::EntityBlockRef && entity.getType()!=RS::EntityViewport) {
+        if (!entity.isOfType(RS::EntityBlockRef) && !entity.isOfType(RS::EntityViewport)) {
             return false;
         }
     }
@@ -1227,7 +1302,7 @@ bool RStorage::isEntityVisible(const REntity& entity, RObject::Id blockId) const
     // -> this is implemented in RBlockReference::exportEntity
 
     // check if block is frozen:
-    if (entity.getType()==RS::EntityBlockRef) {
+    if (entity.isOfType(RS::EntityBlockRef)) {
         const RBlockReferenceEntity* blockRef = dynamic_cast<const RBlockReferenceEntity*>(&entity);
         if (blockRef!=NULL) {
             RBlock::Id refBlockId = blockRef->getReferencedBlockId();

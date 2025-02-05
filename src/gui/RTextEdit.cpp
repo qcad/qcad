@@ -16,12 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QtPlugin>
-#include <QPainter>
 #include <QSize>
 
 #include "RTextEdit.h"
-#include "RDebug.h"
 
 RTextEdit::RTextEdit(QWidget* parent) :
     QTextBrowser(parent) {

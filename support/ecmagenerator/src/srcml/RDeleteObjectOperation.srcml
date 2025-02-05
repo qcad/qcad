@@ -26,11 +26,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDeleteObjectsOperation.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"ROperation.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
-<class_decl>class <name>RDocument</name>;</class_decl>
-<class_decl>class <name>RExporter</name>;</class_decl>
 <class_decl>class <name>RObject</name>;</class_decl>
 
 <comment type="block">/**

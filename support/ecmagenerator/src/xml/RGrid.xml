@@ -3,6 +3,8 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class_decl name="RGraphicsView" />
+  <class_decl name="RRuler" />
+  <class_decl name="RVector" />
   <class name="RGrid" xsi:noNamespaceSchemaLocation="../class.xsd"
   isCopyable="false" hasShell="false" sharedPointerSupport="false"
   isQObject="false" hasStreamOperator="false" isAbstract="true"

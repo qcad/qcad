@@ -7,6 +7,12 @@
 
         // forwards declarations mapped to includes
         
+                #include "RDocument.h"
+            
+                #include "RLine.h"
+            
+                #include "RPolyline.h"
+            
             
         // includes for base ecma wrapper classes
         

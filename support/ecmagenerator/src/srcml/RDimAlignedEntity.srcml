@@ -28,6 +28,7 @@
 
 <class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>RExporter</name>;</class_decl>
+<class_decl>class <name>RRefPoint</name>;</class_decl>
 
 <comment type="block">/**
  * Aligned dimension entity class.

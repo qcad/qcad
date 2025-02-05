@@ -230,10 +230,10 @@
         <return>return <expr><name>data</name>.<call><name>getExploded</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name><name>REntity</name>::<name>Id</name></name></type> <name>getDimLeaderBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getDimLeaderBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>data</name>.<call><name>getDimLeaderBlockId</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
-    <function><type><name>void</name></type> <name>setDimLeaderBlockId</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>id</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>void</name></type> <name>setDimLeaderBlockId</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>id</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>data</name>.<call><name>setDimLeaderBlockId</name><argument_list>(<argument><expr><name>id</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 

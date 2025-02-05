@@ -16,15 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RBlock.h"
+#include "RBlockReferenceEntity.h"
 #include "RDocument.h"
-#include "RExporter.h"
+#include "RLayer.h"
 #include "RLinetype.h"
 #include "RLinkedStorage.h"
 #include "RMainWindow.h"
-#include "RMemoryStorage.h"
+#include "RS.h"
 #include "RStorage.h"
 #include "RSpline.h"
 #include "RTransaction.h"
+#include "RView.h"
+#include "RViewportEntity.h"
 
 RTransaction::RTransaction()
     : types(Generic),
@@ -241,7 +245,7 @@ void RTransaction::redo() {
                 QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
                 if (!spatialIndexDisabled && !entity.isNull()) {
                     // entity of the block might have changed (in block drag and drop):
-                    if (entity->getType()==RS::EntityBlockRef) {
+                    if (entity->isOfType(RS::EntityBlockRef)) {
                         //entity->update();
                         affectedBlockReferenceIds.insert(objId);
                     }
@@ -332,7 +336,7 @@ void RTransaction::undo() {
                 QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
                 if (!spatialIndexDisabled && !entity.isNull()) {
                     // entity of the block might have changed (in block drag and drop):
-                    if (entity->getType()==RS::EntityBlockRef) {
+                    if (entity->isOfType(RS::EntityBlockRef)) {
                         //entity->update();
                         affectedBlockReferenceIds.insert(objId);
                     }
@@ -706,7 +710,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
 
     // if object is a new block reference that owns its block, add a new block for this block reference to own:
     if (object->getId()==RObject::INVALID_ID) {
-        if (object->getType()==RS::EntityBlockRef) {
+        if (object->isOfType(RS::EntityBlockRef)) {
             QSharedPointer<RBlockReferenceEntity> blockRef = object.dynamicCast<RBlockReferenceEntity>();
             if (!blockRef.isNull()) {
                 QString referencedBlockName = blockRef->getReferencedBlockName();

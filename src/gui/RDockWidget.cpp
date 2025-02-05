@@ -17,10 +17,11 @@
  * along with QCAD.
  */
 #include <QActionEvent>
-#include <QDebug>
+#include <QApplication>
 #include <QWidgetAction>
 
 #include "RDockWidget.h"
+#include "RFlowLayout.h"
 #include "RMainWindowQt.h"
 
 
@@ -54,7 +55,7 @@ void RDockWidget::hideEvent(QHideEvent* event) {
 // dock widget closes if user cancels close dialog
 void RDockWidget::closeEvent(QCloseEvent* event) {
 #ifdef Q_OS_MAC
-#if (QT_VERSION >= 0x050601 && QT_VERSION <= 0x050602) || (QT_VERSION >= 0x050F00 && QT_VERSION < 0x060000)
+#if (QT_VERSION >= 0x050601 && QT_VERSION <= 0x050602) || (QT_VERSION >= 0x050F00 && QT_VERSION < 0x060000) || (QT_VERSION >= 0x060600 && QT_VERSION < 0x060801)
     // remember that this dock was closed by this event:
     RMainWindowQt* mw = RMainWindowQt::getMainWindow();
     if (mw) {

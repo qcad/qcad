@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
-  <class_decl name="RMouseEvent" />
+  <class_decl name="REntity" />
+  <class_decl name="RGraphicsView" />
   <class name="RSnapEntityBase"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
@@ -28,8 +29,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="position" isConst="true" />
         <arg type="RGraphicsView &amp;" typeName="RGraphicsView"
         name="view" isConst="false" />
-        <arg type="QSet &lt; REntity::Id &gt; &amp;"
-        typeName="QSet &lt; REntity::Id &gt;" name="candidates"
+        <arg type="QSet &lt; RObject::Id &gt; &amp;"
+        typeName="QSet &lt; RObject::Id &gt;" name="candidates"
         isConst="true" />
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         isConst="true" />
@@ -49,8 +50,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="RGraphicsView &amp;" typeName="RGraphicsView"
         name="view" isConst="false" />
-        <arg type="QList &lt; REntity::Id &gt; *"
-        typeName="QList &lt; REntity::Id &gt; *"
+        <arg type="QList &lt; RObject::Id &gt; *"
+        typeName="QList &lt; RObject::Id &gt; *"
         name="subEntityIds" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>

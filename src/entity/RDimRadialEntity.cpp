@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RDimRadialEntity.h"
-#include "RExporter.h"
 #include "RPluginLoader.h"
 
 RPropertyTypeId RDimRadialEntity::PropertyCustom;

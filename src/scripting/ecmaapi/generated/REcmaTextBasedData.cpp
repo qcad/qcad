@@ -9,6 +9,50 @@
         
                 #include <QTextDocument>
             
+                #include "RBox.h"
+            
+                #include "RColor.h"
+            
+                #include "RDebug.h"
+            
+                #include "RDocument.h"
+            
+                #include "RDxfServices.h"
+            
+                #include "REntityData.h"
+            
+                #include "RFontList.h"
+            
+                #include "RLine.h"
+            
+                #include "RMath.h"
+            
+                #include "RObject.h"
+            
+                #include "RPainterPath.h"
+            
+                #include "RPainterPathSource.h"
+            
+                #include "RPolyline.h"
+            
+                #include "RRefPoint.h"
+            
+                #include "RShape.h"
+            
+                #include "RTextBasedData.h"
+            
+                #include "RTextBasedEntity.h"
+            
+                #include "RTextLayout.h"
+            
+                #include "RTextProxy.h"
+            
+                #include "RTextRenderer.h"
+            
+                #include "RUnit.h"
+            
+                #include "RVector.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -925,8 +969,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTextBasedData: Argument 0 is not of type RTextBasedData::TextFlag*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTextBasedData: Argument 0 is not of type RTextBasedData::TextFlag* or QSharedPointer<RTextBasedData::TextFlag>.",
+                               context);
                     }
                     RTextBasedData::TextFlag& a0 = *ap0;
                 
@@ -965,8 +1010,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTextBasedData: Argument 0 is not of type RTextBasedData::TextFlag*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTextBasedData: Argument 0 is not of type RTextBasedData::TextFlag* or QSharedPointer<RTextBasedData::TextFlag>.",
+                               context);
                     }
                     RTextBasedData::TextFlag& a0 = *ap0;
                 
@@ -1040,8 +1086,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTextBasedData: Argument 0 is not of type RTextBasedData::TextFlag*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTextBasedData: Argument 0 is not of type RTextBasedData::TextFlag* or QSharedPointer<RTextBasedData::TextFlag>.",
+                               context);
                     }
                     RTextBasedData::TextFlag& a0 = *ap0;
                 
@@ -2384,8 +2431,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTextBasedData: Argument 0 is not of type RShape*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTextBasedData: Argument 0 is not of type RShape* or QSharedPointer<RShape>.",
+                               context);
                     }
                     RShape& a0 = *ap0;
                 
@@ -6743,8 +6791,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTextBasedData: Argument 0 is not of type QTextDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTextBasedData: Argument 0 is not of type QTextDocument* or QSharedPointer<QTextDocument>.",
+                               context);
                     }
                     QTextDocument& a0 = *ap0;
                 
@@ -6813,8 +6862,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTextBasedData: Argument 0 is not of type QTextDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTextBasedData: Argument 0 is not of type QTextDocument* or QSharedPointer<QTextDocument>.",
+                               context);
                     }
                     QTextDocument& a0 = *ap0;
                 
@@ -6896,8 +6946,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RTextBasedData: Argument 0 is not of type QTextDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTextBasedData: Argument 0 is not of type QTextDocument* or QSharedPointer<QTextDocument>.",
+                               context);
                     }
                     QTextDocument& a0 = *ap0;
                 
@@ -7007,8 +7058,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RTextBasedData: Argument 1 is not of type QFont*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTextBasedData: Argument 1 is not of type QFont* or QSharedPointer<QFont>.",
+                               context);
                     }
                     QFont& a1 = *ap1;
                 
@@ -7065,8 +7117,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RTextBasedData: Argument 1 is not of type QFont*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTextBasedData: Argument 1 is not of type QFont* or QSharedPointer<QFont>.",
+                               context);
                     }
                     QFont& a1 = *ap1;
                 

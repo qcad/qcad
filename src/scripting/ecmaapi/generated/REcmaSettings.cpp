@@ -7,6 +7,10 @@
 
         // forwards declarations mapped to includes
         
+                #include <QFont>
+            
+                #include <QSettings>
+            
             
         // includes for base ecma wrapper classes
          void REcmaSettings::initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -2962,8 +2966,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSettings: Argument 0 is not of type QFont*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSettings: Argument 0 is not of type QFont* or QSharedPointer<QFont>.",
+                               context);
                     }
                     QFont& a0 = *ap0;
                 
@@ -3056,8 +3061,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RSettings: Argument 0 is not of type QFont*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RSettings: Argument 0 is not of type QFont* or QSharedPointer<QFont>.",
+                               context);
                     }
                     QFont& a0 = *ap0;
                 

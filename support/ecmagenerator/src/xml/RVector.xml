@@ -5,6 +5,8 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RBox" />
   <class_decl name="RLine" />
   <class_decl name="RPolyline" />
+  <class_decl name="QDebug" />
+  <class_decl name="QTransform" />
   <class name="RVector"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"

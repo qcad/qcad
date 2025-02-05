@@ -17,16 +17,15 @@
  * along with QCAD.
  */
 
-#include <QtGlobal>
-
-#if QT_VERSION >= 0x060000
-#include <QRandomGenerator>
-#endif
-
+#include "RBlock.h"
+#include "RBlockReferenceEntity.h"
 #include "RBox.h"
 #include "RDebug.h"
+#include "RDimStyle.h"
 #include "RDocument.h"
 #include "RDocumentVariables.h"
+#include "RLayer.h"
+#include "RLayout.h"
 #include "RLinetypeListImperial.h"
 #include "RLinetypeListMetric.h"
 #include "RLinkedStorage.h"
@@ -40,6 +39,10 @@
 #include "RUcs.h"
 #include "RUnit.h"
 #include "RPolyline.h"
+
+#if QT_VERSION >= 0x060000
+#include <QRandomGenerator>
+#endif
 
 RDocument* RDocument::clipboard = NULL;
 
@@ -999,7 +1002,7 @@ QList<RLayer::Id> RDocument::sortLayers(const QList<RLayer::Id>& layerIds) const
 /**
  * \copydoc RStorage::setCurrentView
  */
-void RDocument::setCurrentView(RView::Id viewId) {
+void RDocument::setCurrentView(RObject::Id viewId) {
     storage.setCurrentView(viewId);
 }
 
@@ -1013,7 +1016,7 @@ void RDocument::setCurrentView(const QString& viewName) {
 /**
  * \copydoc RStorage::getCurrentViewId
  */
-RView::Id RDocument::getCurrentViewId() const {
+RObject::Id RDocument::getCurrentViewId() const {
     return storage.getCurrentViewId();
 }
 
@@ -1048,7 +1051,7 @@ QSet<QString> RDocument::getLayerNames(const QString& rxStr) const {
 /**
  * \copydoc RStorage::getLayerStateName
  */
-QString RDocument::getLayerStateName(RLayerState::Id layerStateId) const {
+QString RDocument::getLayerStateName(RObject::Id layerStateId) const {
     return storage.getLayerStateName(layerStateId);
 }
 
@@ -1108,7 +1111,7 @@ RLayer::Id RDocument::getLayer0Id() const {
 /**
  * \copydoc RStorage::getLayerStateId
  */
-RLayerState::Id RDocument::getLayerStateId(const QString& layerStateName) const {
+RObject::Id RDocument::getLayerStateId(const QString& layerStateName) const {
     return storage.getLayerStateId(layerStateName);
 }
 
@@ -1362,7 +1365,7 @@ QSet<RLayer::Id> RDocument::queryAllLayers() const {
  *
  * \return Set of layer state IDs.
  */
-QSet<RLayerState::Id> RDocument::queryAllLayerStates() const {
+QSet<RObject::Id> RDocument::queryAllLayerStates() const {
     return storage.queryAllLayerStates();
 }
 
@@ -1406,7 +1409,7 @@ QList<RBlock::Id> RDocument::queryAllBlocks() const {
 /**
  * \copydoc RStorage::queryAllViews
  */
-QSet<RView::Id> RDocument::queryAllViews() const {
+QSet<RObject::Id> RDocument::queryAllViews() const {
     return storage.queryAllViews();
 }
 
@@ -1488,7 +1491,7 @@ QSet<REntity::Id> RDocument::queryAllViewports() const {
 }
 
 /*
-QSet<REntity::Id> RDocument::queryViewEntities(RView::Id viewId) const {
+QSet<REntity::Id> RDocument::queryViewEntities(RObject::Id viewId) const {
     return storage.queryViewEntities(viewId);
 }
 */
@@ -2328,7 +2331,7 @@ QSharedPointer<RLayer> RDocument::queryLayer(const QString& layerName) const {
  *
  * \return Pointer to the layer state or NULL.
  */
-QSharedPointer<RLayerState> RDocument::queryLayerState(RLayerState::Id layerStateId) const {
+QSharedPointer<RLayerState> RDocument::queryLayerState(RObject::Id layerStateId) const {
     return storage.queryLayerState(layerStateId);
 }
 
@@ -2339,7 +2342,7 @@ QSharedPointer<RLayerState> RDocument::queryLayerState(RLayerState::Id layerStat
  *
  * \return Pointer to the layer state or NULL.
  */
-QSharedPointer<RLayerState> RDocument::queryLayerStateDirect(RLayerState::Id layerStateId) const {
+QSharedPointer<RLayerState> RDocument::queryLayerStateDirect(RObject::Id layerStateId) const {
     return storage.queryLayerStateDirect(layerStateId);
 }
 
@@ -2426,7 +2429,7 @@ QSharedPointer<RBlock> RDocument::queryBlock(const QString& blockName) const {
  *
  * \return Pointer to the view or NULL.
  */
-QSharedPointer<RView> RDocument::queryView(RView::Id viewId) const {
+QSharedPointer<RView> RDocument::queryView(RObject::Id viewId) const {
     return storage.queryView(viewId);
 }
 
@@ -2962,6 +2965,11 @@ void RDocument::removeFromSpatialIndex(QSharedPointer<REntity> entity, const QLi
         //qWarning() << "RDocument::removeFromSpatialIndex: removing entity: " << *entity;
         //qWarning() << "failed to remove entity from spatial index";
     }
+}
+
+void RDocument::removeFromSpatialIndex(QSharedPointer<REntity> entity)
+{
+    removeFromSpatialIndex(entity, QList<RBox>());
 }
 
 void RDocument::addToSpatialIndex(QSharedPointer<REntity> entity) {

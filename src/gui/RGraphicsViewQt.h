@@ -22,24 +22,14 @@
 
 #include "gui_global.h"
 
-#include <QtCore>
-#include <QFrame>
-#include <QFocusFrame>
+#include <QElapsedTimer>
 #include <QWidget>
-#include <QPinchGesture>
 
-#include "RGraphicsViewImage.h"
+#include "RVector.h"
 
-class RAction;
-class RDocument;
-class RDocumentInterface;
-class RFocusFrame;
-class RGraphicsSceneQt;
-class RLine;
-class RSnap;
-class RSnapRestriction;
-
-
+class QFrame;
+class QGestureEvent;
+class RGraphicsViewImage;
 
 /**
  * \brief QWidget based 2d graphics view.

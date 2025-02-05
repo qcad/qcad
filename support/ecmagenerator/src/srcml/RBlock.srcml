@@ -24,11 +24,9 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLayout.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGlobal.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RObject.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RS.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
 
@@ -136,14 +134,14 @@
     }</block></function>
 
     <function><type><name>bool</name></type> <name>hasLayout</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>layoutId</name>!=<name><name>RLayout</name>::<name>INVALID_ID</name></name></expr>;</return>
+        <return>return <expr><name>layoutId</name> != <name><name>RObject</name>::<name>INVALID_ID</name></name></expr>;</return>
     }</block></function>
 
-    <function><type><name>void</name></type> <name>setLayoutId</name><parameter_list>(<param><decl><type><name><name>RLayout</name>::<name>Id</name></name></type> <name>layoutId</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>void</name></type> <name>setLayoutId</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>layoutId</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>this</name>-&gt;<name>layoutId</name> = <name>layoutId</name></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name><name>RLayout</name>::<name>Id</name></name></type> <name>getLayoutId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getLayoutId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>layoutId</name></expr>;</return>
     }</block></function>
 
@@ -172,7 +170,7 @@
     <decl_stmt><decl><type><name>bool</name></type> <name>anonymous</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>pixelUnit</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>origin</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name><name>RLayout</name>::<name>Id</name></name></type> <name>layoutId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>layoutId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>ownedByReference</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 

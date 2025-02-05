@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RDebug.h"
+#include "RDocument.h"
 #include "RDocumentInterface.h"
 #include "REntity.h"
 #include "RGraphicsScene.h"
 #include "RGraphicsView.h"
-
+#include "RSettings.h"
 
 
 RGraphicsScene::RGraphicsScene(RDocumentInterface& documentInterface)

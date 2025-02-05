@@ -17,7 +17,9 @@
  * along with QCAD.
  */
 #include "RSplineData.h"
-#include "RSplineEntity.h"
+#include "RDocument.h"
+#include "RPolyline.h"
+#include "RRefPoint.h"
 
 RSplineData::RSplineData() {
 }
@@ -103,6 +105,14 @@ bool RSplineData::moveReferencePoint(const RVector& referencePoint, const RVecto
     }
 
     return ret;
+}
+
+RPolyline RSplineData::toPolyline(int segments) const {
+    return RSpline::toPolyline(segments);
+}
+
+RPolyline RSplineData::approximateWithArcs(double tolerance, double radiusLimit) const {
+    return RSpline::approximateWithArcs(tolerance, radiusLimit);
 }
 
 QList<QSharedPointer<RShape> > RSplineData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment, QList<RObject::Id>* entityIds) const {

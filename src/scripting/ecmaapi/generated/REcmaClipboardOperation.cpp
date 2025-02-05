@@ -7,6 +7,18 @@
 
         // forwards declarations mapped to includes
         
+                #include "RDocument.h"
+            
+                #include "RBlock.h"
+            
+                #include "REntity.h"
+            
+                #include "RLayer.h"
+            
+                #include "RLinetype.h"
+            
+                #include "RVector.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -93,6 +105,8 @@
             REcmaHelper::registerFunction(&engine, proto, setKeepSelection, "setKeepSelection");
             
             REcmaHelper::registerFunction(&engine, proto, setBlockOwnership, "setBlockOwnership");
+            
+            REcmaHelper::registerFunction(&engine, proto, setCustomEntityType, "setCustomEntityType");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RClipboardOperation*>(), *proto);
@@ -259,8 +273,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a0 = *ap0;
                 
@@ -304,8 +319,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a0 = *ap0;
                 
@@ -446,8 +462,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a0 = *ap0;
                 
@@ -462,8 +479,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a1 = *ap1;
                 
@@ -790,8 +808,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type REntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
                     }
                     REntity& a0 = *ap0;
                 
@@ -806,8 +825,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a1 = *ap1;
                 
@@ -822,8 +842,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a2 = *ap2;
                 
@@ -1095,8 +1116,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type REntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
                     }
                     REntity& a0 = *ap0;
                 
@@ -1111,8 +1133,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a1 = *ap1;
                 
@@ -1127,8 +1150,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a2 = *ap2;
                 
@@ -1233,7 +1257,7 @@
     if( context->argumentCount() ==
     7 && (
             context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
@@ -1263,9 +1287,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlock::Id
+                    RObject::Id
                     a0 =
-                    (RBlock::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -1281,8 +1305,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a1 = *ap1;
                 
@@ -1297,8 +1322,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a2 = *ap2;
                 
@@ -1439,8 +1465,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type REntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
                     }
                     REntity& a0 = *ap0;
                 
@@ -1455,8 +1482,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a1 = *ap1;
                 
@@ -1471,8 +1499,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a2 = *ap2;
                 
@@ -1557,7 +1586,7 @@
     if( context->argumentCount() ==
     5 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
@@ -1581,9 +1610,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -1599,8 +1628,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a1 = *ap1;
                 
@@ -1615,8 +1645,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a2 = *ap2;
                 
@@ -1737,8 +1768,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type REntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
                     }
                     REntity& a0 = *ap0;
                 
@@ -1753,8 +1785,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a1 = *ap1;
                 
@@ -1769,8 +1802,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a2 = *ap2;
                 
@@ -1855,7 +1889,7 @@
     if( context->argumentCount() ==
     5 && (
             context->argument(0).isNumber()
-        ) /* type: RLinetype::Id */
+        ) /* type: RObject::Id */
      && (
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
@@ -1879,9 +1913,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    RLinetype::Id
+                    RObject::Id
                     a0 =
-                    (RLinetype::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -1897,8 +1931,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a1 = *ap1;
                 
@@ -1913,8 +1948,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a2 = *ap2;
                 
@@ -2192,6 +2228,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaClipboardOperation::setBlockOwnership", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaClipboardOperation::setCustomEntityType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaClipboardOperation::setCustomEntityType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::setCustomEntityType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RClipboardOperation* self = 
+                        getSelf("setCustomEntityType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::EntityType */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::EntityType
+                    a0 =
+                    (RS::EntityType)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCustomEntityType(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.setCustomEntityType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::setCustomEntityType", context, engine);
             return result;
         }
          QScriptValue REcmaClipboardOperation::toString

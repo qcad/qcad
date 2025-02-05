@@ -16,17 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QColorDialog>
-#include <QColor>
-#include <QMapIterator>
-#include <QCoreApplication>
-#include <QHBoxLayout>
 #include <QFontComboBox>
+#include <QGridLayout>
 #include <QComboBox>
 #include <QLabel>
 #include <QDebug>
 
-#include "RDebug.h"
 #include "RFontChooserWidget.h"
 
 // TODO non-TTF fonts fails to save / load

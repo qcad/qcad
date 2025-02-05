@@ -24,11 +24,11 @@
 
 #include <QMouseEvent>
 
-#include "RVector.h"
 #include "RInputEvent.h"
 
 class RGraphicsScene;
 class RGraphicsView;
+class RVector;
 
 /**
  * \brief A mouse event for a \ref RGraphicsScene "graphics scene".

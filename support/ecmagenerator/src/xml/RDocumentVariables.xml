@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RColor" />
   <class_decl name="RDocument" />
+  <class_decl name="RVector" />
   <class name="RDocumentVariables"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="true" isQObject="false"
@@ -116,13 +118,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getCurrentLayerId" cppName="getCurrentLayerId"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="RLayer::Id" isPureVirtual="false" />
+      <variant returnType="RObject::Id" isPureVirtual="false" />
     </method>
     <method name="setCurrentLayerId" cppName="setCurrentLayerId"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLayer::Id" typeName="RLayer::Id" name="id"
+        <arg type="RObject::Id" typeName="RObject::Id" name="id"
         isConst="false" />
       </variant>
     </method>

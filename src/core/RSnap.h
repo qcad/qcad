@@ -22,13 +22,12 @@
 
 #include "core_global.h"
 
-#include <QSet>
-
-#include "REntity.h"
-#include "RMouseEvent.h"
+#include "RMath.h"
+#include "RObject.h"
 #include "RVector.h"
 
 class RGraphicsView;
+class RMouseEvent;
 
 /**
  * \brief Abstract base class for all grid and object snap 
@@ -66,8 +65,8 @@ public:
     };
 
 public:
-    RSnap(RSnap::Status s = RSnap::Unknown) : status(s), lastSnap(RVector::invalid) {}
-    virtual ~RSnap() {}
+    RSnap(RSnap::Status s = RSnap::Unknown);
+    ~RSnap();
 
     /**
      * \return The snapped position (closest relevant position)
@@ -85,9 +84,7 @@ public:
      * \overload
      * \nonscriptable
      */
-    virtual RVector snap(RMouseEvent& event) {
-        return snap(event.getModelPosition(), event.getGraphicsView());
-    }
+    virtual RVector snap(RMouseEvent& event);
 
     virtual void showUiOptions() {}
     virtual void hideUiOptions() {}
@@ -103,7 +100,7 @@ public:
      * \return Set of entity IDs that are relevant for the last performed
      * snap, usually used for highlighting.
      */
-    QList<REntity::Id> getEntityIds() {
+    QList<RObject::Id> getEntityIds() {
         return entityIds;
     }
 
@@ -129,7 +126,7 @@ public:
     }
 
 protected:
-    QList<REntity::Id> entityIds;
+    QList<RObject::Id> entityIds;
     RSnap::Status status;
     RVector lastSnap;
 };

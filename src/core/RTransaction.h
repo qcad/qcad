@@ -28,12 +28,11 @@
 #include <QSharedPointer>
 
 #include "RObject.h"
-#include "REntity.h"
 #include "RPropertyTypeId.h"
 #include "RPropertyChange.h"
 
+class RBlock;
 class RStorage;
-class RExporter;
 
 #define RDEFAULT_QSET_RPROPERTYTYPEID QSet<RPropertyTypeId> ()
 

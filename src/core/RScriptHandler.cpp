@@ -18,7 +18,6 @@
  */
 #include <QDir>
 
-#include "RDebug.h"
 #include "RScriptHandler.h"
 #include "RScriptHandlerRegistry.h"
 #include "RSettings.h"

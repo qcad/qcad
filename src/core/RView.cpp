@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RView.h"
-#include "RDocument.h"
 
 RPropertyTypeId RView::PropertyName;
 RPropertyTypeId RView::PropertyCenterPoint;

@@ -161,7 +161,7 @@
         <expr_stmt><expr><name>data</name>.<call><name>setRowSpacing</name><argument_list>(<argument><expr><name>s</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name>void</name></type> <name>setReferencedBlockId</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>void</name></type> <name>setReferencedBlockId</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>data</name>.<call><name>setReferencedBlockId</name><argument_list>(<argument><expr><name>blockId</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
@@ -173,7 +173,7 @@
         <return>return <expr><name>data</name>.<call><name>hasBlockOwnership</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>getReferencedBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getReferencedBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>data</name>.<call><name>getReferencedBlockId</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
@@ -187,11 +187,11 @@
         <expr_stmt><expr><name>data</name>.<call><name>update</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name>void</name></type> <name>update</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>void</name></type> <name>update</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
         <expr_stmt><expr><name>data</name>.<call><name>update</name><argument_list>(<argument><expr><name>entityId</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></type> <name>queryEntity</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>bool</name></type> <name>transform</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreAttDef</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></type> <name>queryEntity</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>bool</name></type> <name>transform</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreAttDef</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>data</name>.<call><name>queryEntity</name><argument_list>(<argument><expr><name>entityId</name></expr></argument>, <argument><expr><name>transform</name></expr></argument>, <argument><expr><name>ignoreAttDef</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 

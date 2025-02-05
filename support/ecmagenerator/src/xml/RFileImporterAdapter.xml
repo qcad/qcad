@@ -2,8 +2,15 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
+  <class_decl name="REntity" />
+  <class_decl name="RFileImporter" />
+  <class_decl name="RFileImporterAdapter" />
+  <class_decl name="RImporter" />
   <class_decl name="RMessageHandler" />
+  <class_decl name="RObject" />
   <class_decl name="RProgressHandler" />
+  <class_decl name="RTransaction" />
+  <class_decl name="RVector" />
   <class name="RFileImporterAdapter"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="true" sharedPointerSupport="false" isQObject="false"

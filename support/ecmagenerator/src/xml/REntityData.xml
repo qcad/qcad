@@ -5,6 +5,10 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class_decl name="REntity" />
   <class_decl name="RExporter" />
+  <class_decl name="RLinetypePattern" />
+  <class_decl name="RPolyline" />
+  <class_decl name="RRefPoint" />
+  <class_decl name="RLine" />
   <class name="REntityData"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="true" isQObject="false"
@@ -202,14 +206,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
-        isConst="false" />
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="layerId" isConst="false" />
       </variant>
     </method>
     <method name="getLayerId" cppName="getLayerId"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="RLayer::Id" isPureVirtual="false" />
+      <variant returnType="RObject::Id" isPureVirtual="false" />
     </method>
     <method name="setLayerName" cppName="setLayerName"
     specifier="public" isStatic="false" isVirtual="false"
@@ -228,14 +232,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
-        isConst="false" />
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="blockId" isConst="false" />
       </variant>
     </method>
     <method name="getBlockId" cppName="getBlockId"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="RBlock::Id" isPureVirtual="false" />
+      <variant returnType="RObject::Id" isPureVirtual="false" />
     </method>
     <method name="setParentId" cppName="setParentId"
     specifier="public" isStatic="false" isVirtual="true"
@@ -259,15 +263,15 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLinetype::Id" typeName="RLinetype::Id"
+        <arg type="RObject::Id" typeName="RObject::Id"
         name="linetypeId" isConst="false" />
       </variant>
     </method>
     <method name="getLinetypeId" cppName="getLinetypeId"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
-      <variant returnType="RLinetype::Id" isPureVirtual="false" />
-      <variant returnType="RLinetype::Id" isPureVirtual="false">
+      <variant returnType="RObject::Id" isPureVirtual="false" />
+      <variant returnType="RObject::Id" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="resolve"
         isConst="false" />
         <arg type="QStack &lt; QSharedPointer &lt; REntity &gt; &gt; &amp;"

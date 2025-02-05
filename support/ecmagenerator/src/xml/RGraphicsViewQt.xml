@@ -1,14 +1,9 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
-  <class_decl name="RAction" />
-  <class_decl name="RDocument" />
-  <class_decl name="RDocumentInterface" />
-  <class_decl name="RFocusFrame" />
-  <class_decl name="RGraphicsSceneQt" />
-  <class_decl name="RLine" />
-  <class_decl name="RSnap" />
-  <class_decl name="RSnapRestriction" />
+  <class_decl name="QFrame" />
+  <class_decl name="QGestureEvent" />
+  <class_decl name="RGraphicsViewImage" />
   <class name="RGraphicsViewQt"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="true" sharedPointerSupport="false" isQObject="true"

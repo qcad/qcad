@@ -25,6 +25,7 @@
 #include "REntityExportListener.h"
 
 class RExporter;
+class REntity;
 
 /**
  * This entity decorator adapter emits signals on block events.

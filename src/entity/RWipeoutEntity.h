@@ -27,8 +27,6 @@
 
 class RDocument;
 class RExporter;
-class RArc;
-class RLine;
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1

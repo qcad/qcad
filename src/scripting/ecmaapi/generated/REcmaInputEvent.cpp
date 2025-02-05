@@ -197,8 +197,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RInputEvent: Argument 1 is not of type RGraphicsScene*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RInputEvent: Argument 1 is not of type RGraphicsScene* or QSharedPointer<RGraphicsScene>.",
+                               context);
                     }
                     RGraphicsScene& a1 = *ap1;
                 
@@ -213,8 +214,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RInputEvent: Argument 2 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RInputEvent: Argument 2 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a2 = *ap2;
                 
@@ -332,8 +334,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RInputEvent: Argument 1 is not of type RGraphicsScene*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RInputEvent: Argument 1 is not of type RGraphicsScene* or QSharedPointer<RGraphicsScene>.",
+                               context);
                     }
                     RGraphicsScene& a1 = *ap1;
                 
@@ -348,8 +351,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RInputEvent: Argument 2 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RInputEvent: Argument 2 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a2 = *ap2;
                 

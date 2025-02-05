@@ -86,7 +86,7 @@
         
     
     
-      QList < REntity::Id > getEntityIds(
+      QList < RObject::Id > getEntityIds(
                 
             );
         

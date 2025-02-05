@@ -18,12 +18,12 @@
  */
 #include <cmath>
 
+#include <QDebug>
+
 #include "RArc.h"
 #include "RBox.h"
 #include "RCircle.h"
 #include "RLine.h"
-#include "RTriangle.h"
-#include "RPolyline.h"
 
 /**
  * Creates a circle object with invalid center and 0 radius.

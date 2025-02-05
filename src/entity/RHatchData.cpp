@@ -16,22 +16,23 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QDebug>
 #include <QPen>
 #include <QElapsedTimer>
 
 #include "RArc.h"
 #include "RCircle.h"
+#include "RDocument.h"
 #include "RLine.h"
 #include "REllipse.h"
 #include "RHatchData.h"
 #include "RPainterPath.h"
 #include "RPainterPathExporter.h"
-#include "RPointEntity.h"
 #include "RPatternListImperial.h"
 #include "RPatternListMetric.h"
+#include "RRefPoint.h"
 #include "RSettings.h"
 #include "RSpline.h"
-#include "RUnit.h"
 #include "RPolyline.h"
 
 RHatchProxy* RHatchData::hatchProxy = NULL;
@@ -682,6 +683,7 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
 
     painterPaths.clear();
 
+
     // for solids, return boundary path, which can be filled:
     // in draft mode, return boundary path to be shown without fill:
     if (isSolid() || draft) {
@@ -716,6 +718,12 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
 
     // drop hatch patterns with very small scale factor:
     if (scaleFactor<RS::PointTolerance) {
+        return painterPaths;
+    }
+
+    int timeOut = RSettings::getMaxHatchTime();
+    if (timeOut==0) {
+        // time out of 0 disables hatch rendering:
         return painterPaths;
     }
 
@@ -780,7 +788,6 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
 
     QElapsedTimer timer;
     timer.start();
-    int timeOut = -1;
 
     QList<RPatternLine> patternLines = localPattern.getPatternLines();
     for (int i=0; i<patternLines.length(); i++) {
@@ -970,9 +977,6 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
             }
 
             //if (timer.elapsed()>500) {
-                if (timeOut==-1) {
-                    timeOut = RSettings::getMaxHatchTime();
-                }
                 if (timer.elapsed()>timeOut) {
                     qWarning() << "RHatchData::getPainterPaths: hatch pattern too dense. hatch pattern generation aborted (timeout set to " << timeOut << ")...";
                     painterPaths.clear();

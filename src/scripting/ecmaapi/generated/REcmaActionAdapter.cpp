@@ -11,6 +11,8 @@
             
                 #include "RGraphicsScene.h"
             
+                #include "RGraphicsView.h"
+            
                 #include "RDocumentInterface.h"
             
                 #include "RCommandEvent.h"
@@ -672,8 +674,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type QKeyEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type QKeyEvent* or QSharedPointer<QKeyEvent>.",
+                               context);
                     }
                     QKeyEvent& a0 = *ap0;
                 
@@ -735,8 +738,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type QKeyEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type QKeyEvent* or QSharedPointer<QKeyEvent>.",
+                               context);
                     }
                     QKeyEvent& a0 = *ap0;
                 
@@ -800,8 +804,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RMouseEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RMouseEvent* or QSharedPointer<RMouseEvent>.",
+                               context);
                     }
                     RMouseEvent& a0 = *ap0;
                 
@@ -865,8 +870,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RMouseEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RMouseEvent* or QSharedPointer<RMouseEvent>.",
+                               context);
                     }
                     RMouseEvent& a0 = *ap0;
                 
@@ -930,8 +936,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RMouseEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RMouseEvent* or QSharedPointer<RMouseEvent>.",
+                               context);
                     }
                     RMouseEvent& a0 = *ap0;
                 
@@ -995,8 +1002,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RMouseEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RMouseEvent* or QSharedPointer<RMouseEvent>.",
+                               context);
                     }
                     RMouseEvent& a0 = *ap0;
                 
@@ -1060,8 +1068,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RWheelEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RWheelEvent* or QSharedPointer<RWheelEvent>.",
+                               context);
                     }
                     RWheelEvent& a0 = *ap0;
                 
@@ -1125,8 +1134,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RTabletEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RTabletEvent* or QSharedPointer<RTabletEvent>.",
+                               context);
                     }
                     RTabletEvent& a0 = *ap0;
                 
@@ -1190,8 +1200,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type QSwipeGesture*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type QSwipeGesture* or QSharedPointer<QSwipeGesture>.",
+                               context);
                     }
                     QSwipeGesture& a0 = *ap0;
                 
@@ -1255,8 +1266,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type QPanGesture*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type QPanGesture* or QSharedPointer<QPanGesture>.",
+                               context);
                     }
                     QPanGesture& a0 = *ap0;
                 
@@ -1320,8 +1332,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type QPinchGesture*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type QPinchGesture* or QSharedPointer<QPinchGesture>.",
+                               context);
                     }
                     QPinchGesture& a0 = *ap0;
                 
@@ -1385,8 +1398,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RCommandEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RCommandEvent* or QSharedPointer<RCommandEvent>.",
+                               context);
                     }
                     RCommandEvent& a0 = *ap0;
                 
@@ -1450,8 +1464,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RCommandEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RCommandEvent* or QSharedPointer<RCommandEvent>.",
+                               context);
                     }
                     RCommandEvent& a0 = *ap0;
                 
@@ -1515,8 +1530,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RCoordinateEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RCoordinateEvent* or QSharedPointer<RCoordinateEvent>.",
+                               context);
                     }
                     RCoordinateEvent& a0 = *ap0;
                 
@@ -1580,8 +1596,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RCoordinateEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RCoordinateEvent* or QSharedPointer<RCoordinateEvent>.",
+                               context);
                     }
                     RCoordinateEvent& a0 = *ap0;
                 
@@ -1645,8 +1662,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type REntityPickEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type REntityPickEvent* or QSharedPointer<REntityPickEvent>.",
+                               context);
                     }
                     REntityPickEvent& a0 = *ap0;
                 
@@ -1710,8 +1728,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type REntityPickEvent*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type REntityPickEvent* or QSharedPointer<REntityPickEvent>.",
+                               context);
                     }
                     REntityPickEvent& a0 = *ap0;
                 
@@ -1842,8 +1861,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a0 = *ap0;
                 

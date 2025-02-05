@@ -7,7 +7,13 @@
 
         // forwards declarations mapped to includes
         
+                #include "RObject.h"
+            
                 #include "REntity.h"
+            
+                #include "RGraphicsScene.h"
+            
+                #include "RDocument.h"
             
             
         // includes for base ecma wrapper classes
@@ -330,8 +336,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RMoveReferencePointOperation: Argument 0 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RMoveReferencePointOperation: Argument 0 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a0 = *ap0;
                 
@@ -375,8 +382,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RMoveReferencePointOperation: Argument 0 is not of type RDocument*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RMoveReferencePointOperation: Argument 0 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
                     }
                     RDocument& a0 = *ap0;
                 

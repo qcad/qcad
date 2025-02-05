@@ -16,8 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QDebug>
 #include "RPropertyChange.h"
-#include "RMetaTypes.h"
+#include "RMath.h"
 
 RPropertyChange::RPropertyChange(RPropertyTypeId propertyTypeId, QVariant oldValue, QVariant newValue) :
     propertyTypeId(propertyTypeId) {

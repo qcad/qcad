@@ -9,6 +9,24 @@
 
         // forwards declarations mapped to includes
         
+                #include "RDocument.h"
+            
+                #include "RDocumentInterface.h"
+            
+                #include "RLayerListener.h"
+            
+                #include "RObject.h"
+            
+                #include "RProperty.h"
+            
+                #include "RPropertyAttributes.h"
+            
+                #include "RPropertyEditor.h"
+            
+                #include "RPropertyListener.h"
+            
+                #include "RPropertyTypeId.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -2561,8 +2579,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RPropertyEditor: Argument 1 is not of type RObject*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RPropertyEditor: Argument 1 is not of type RObject* or QSharedPointer<RObject>.",
+                               context);
                     }
                     RObject& a1 = *ap1;
                 
@@ -2646,8 +2665,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RPropertyEditor: Argument 1 is not of type RObject*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RPropertyEditor: Argument 1 is not of type RObject* or QSharedPointer<RObject>.",
+                               context);
                     }
                     RObject& a1 = *ap1;
                 
@@ -2738,8 +2758,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RPropertyAttributes::Option*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RPropertyAttributes::Option* or QSharedPointer<RPropertyAttributes::Option>.",
+                               context);
                     }
                     RPropertyAttributes::Option& a0 = *ap0;
                 
@@ -2798,8 +2819,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RProperty*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RProperty* or QSharedPointer<RProperty>.",
+                               context);
                     }
                     RProperty& a0 = *ap0;
                 

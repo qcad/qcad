@@ -16,12 +16,8 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <cmath>
-
-#include "RBox.h"
+#include <QDebug>
 #include "RTextLabel.h"
-#include "RLine.h"
-#include "RDebug.h"
 
 /**
  * Creates a point object with an invalid position

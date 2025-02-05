@@ -23,13 +23,13 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"entity_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTextLayout&gt;</cpp:file></cpp:include>
-
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBlockReferenceEntity.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextData.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextBasedData.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RAttributeDefinitionData</name>;</class_decl>
+<class_decl>class <name>REntity</name>;</class_decl>
+<class_decl>class <name>RLine</name>;</class_decl>
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RRefPoint</name>;</class_decl>
 
 <comment type="block">/**
  * Stores and manages all data that defines the geometry and
@@ -48,7 +48,7 @@
 
 </protected><public>public:
     <constructor><name>RAttributeData</name><parameter_list>()</parameter_list> <block>{}</block></constructor>
-    <constructor_decl><name>RAttributeData</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>textData</name></decl></param>, <param><decl><type><name><name>RBlockReferenceEntity</name>::<name>Id</name></name></type> <name>blockReferenceId</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>tag</name></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RAttributeData</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>textData</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>blockReferenceId</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>tag</name></decl></param>)</parameter_list>;</constructor_decl>
     <destructor><specifier>virtual</specifier> <name>~RAttributeData</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
     <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -72,11 +72,11 @@
         <expr_stmt><expr><name>invisible</name> = <name>i</name></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name>virtual</name> <name><name>RLinetype</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>virtual</name> <name><name>RObject</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name><name>RTextBasedData</name>::<name>getLinetypeId</name></name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function_decl><type><name>virtual</name> <name><name>RLinetype</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>resolve</name></decl></param>, <param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name><name>RObject</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>resolve</name></decl></param>, <param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function><type><name>virtual</name> <name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>getLineweight</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name><name>RTextBasedData</name>::<name>getLineweight</name></name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>

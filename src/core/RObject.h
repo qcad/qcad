@@ -22,11 +22,14 @@
 
 #include "core_global.h"
 
+#include <QDebug>
+
 #include "RPropertyAttributes.h"
 #include "RPropertyTypeId.h"
 
 class RDocument;
 class RTransaction;
+class RVector;
 
 #ifndef RQMapQStringQString
 typedef QMap<QString, QString> RQMapQStringQString;
@@ -100,6 +103,13 @@ public:
 
     static RS::EntityType getRtti() {
         return RS::ObjectUnknown;
+    }
+
+    /**
+     * Override to indicate that this entity is of a certain type, e.g. a block reference even if type ID is different.
+     */
+    virtual bool isOfType(RS::EntityType t) const {
+        return getType()==t;
     }
 
     virtual RS::EntityType getType() const {

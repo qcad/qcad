@@ -23,7 +23,6 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntityData.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPathSource.h"</cpp:file></cpp:include>
@@ -32,6 +31,31 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextProxy.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>QTextDocument</name>;</class_decl>
+
+<class_decl>class <name>RBox</name>;</class_decl>
+<class_decl>class <name>RColor</name>;</class_decl>
+<class_decl>class <name>RDebug</name>;</class_decl>
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RDxfServices</name>;</class_decl>
+<class_decl>class <name>REntityData</name>;</class_decl>
+<class_decl>class <name>RFontList</name>;</class_decl>
+<class_decl>class <name>RLine</name>;</class_decl>
+<class_decl>class <name>RMath</name>;</class_decl>
+<class_decl>class <name>RObject</name>;</class_decl>
+<class_decl>class <name>RPainterPath</name>;</class_decl>
+<class_decl>class <name>RPainterPathSource</name>;</class_decl>
+<class_decl>class <name>RPolyline</name>;</class_decl>
+<class_decl>class <name>RRefPoint</name>;</class_decl>
+<class_decl>class <name>RShape</name>;</class_decl>
+<class_decl>class <name>RTextBasedData</name>;</class_decl>
+<class_decl>class <name>RTextBasedEntity</name>;</class_decl>
+<class_decl>class <name>RTextLayout</name>;</class_decl>
+<class_decl>class <name>RTextProxy</name>;</class_decl>
+<class_decl>class <name>RTextRenderer</name>;</class_decl>
+<class_decl>class <name>RUnit</name>;</class_decl>
+<class_decl>class <name>RVector</name>;</class_decl>
+
+
 
 <comment type="block">/**
  * Stores and manages all data that defines the geometry and

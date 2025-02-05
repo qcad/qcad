@@ -7,6 +7,10 @@
 
         // forwards declarations mapped to includes
         
+                #include "RColor.h"
+            
+                #include "RTextBasedData.h"
+            
             
         // includes for base ecma wrapper classes
          void REcmaTextRenderer::initEcma(QScriptEngine& engine, QScriptValue* proto 

@@ -11,10 +11,6 @@
             
                 #include "RExporter.h"
             
-                #include "RArc.h"
-            
-                #include "RLine.h"
-            
             
         // includes for base ecma wrapper classes
         
@@ -369,8 +365,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RWipeoutEntity: Argument 0 is not of type RWipeoutEntity*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RWipeoutEntity: Argument 0 is not of type RWipeoutEntity* or QSharedPointer<RWipeoutEntity>.",
+                               context);
                     }
                     RWipeoutEntity& a0 = *ap0;
                 
@@ -1304,8 +1301,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RWipeoutEntity: Argument 0 is not of type RExporter*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RWipeoutEntity: Argument 0 is not of type RExporter* or QSharedPointer<RExporter>.",
+                               context);
                     }
                     RExporter& a0 = *ap0;
                 
@@ -1344,8 +1342,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RWipeoutEntity: Argument 0 is not of type RExporter*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RWipeoutEntity: Argument 0 is not of type RExporter* or QSharedPointer<RExporter>.",
+                               context);
                     }
                     RExporter& a0 = *ap0;
                 
@@ -1397,8 +1396,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RWipeoutEntity: Argument 0 is not of type RExporter*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RWipeoutEntity: Argument 0 is not of type RExporter* or QSharedPointer<RExporter>.",
+                               context);
                     }
                     RExporter& a0 = *ap0;
                 

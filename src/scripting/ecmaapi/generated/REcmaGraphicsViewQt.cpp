@@ -7,21 +7,11 @@
 
         // forwards declarations mapped to includes
         
-                #include "RAction.h"
+                #include <QFrame>
             
-                #include "RDocument.h"
+                #include <QGestureEvent>
             
-                #include "RDocumentInterface.h"
-            
-                #include "RFocusFrame.h"
-            
-                #include "RGraphicsSceneQt.h"
-            
-                #include "RLine.h"
-            
-                #include "RSnap.h"
-            
-                #include "RSnapRestriction.h"
+                #include "RGraphicsViewImage.h"
             
             
         // includes for base ecma wrapper classes

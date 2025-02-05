@@ -23,9 +23,9 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QObject&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocumentInterface.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RViewListener.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RDocumentInterface</name>;</class_decl>
 
 <comment type="block">/**
  * \scriptable

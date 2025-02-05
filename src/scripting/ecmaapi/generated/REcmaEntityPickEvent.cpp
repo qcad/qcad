@@ -11,6 +11,8 @@
             
                 #include "RGraphicsScene.h"
             
+                #include "RVector.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -127,7 +129,7 @@
                         context->argument(
                         0
                         ).isNumber()
-                ) /* type: REntity::Id */
+                ) /* type: RObject::Id */
             
                 && (
                 
@@ -184,9 +186,9 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    REntity::Id
+                    RObject::Id
                     a0 =
-                    (REntity::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -220,8 +222,9 @@
                         )
                     );
                     if( ap2 == NULL ){
-                           return REcmaHelper::throwError("REntityPickEvent: Argument 2 is not of type RGraphicsScene*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntityPickEvent: Argument 2 is not of type RGraphicsScene* or QSharedPointer<RGraphicsScene>.",
+                               context);
                     }
                     RGraphicsScene& a2 = *ap2;
                 
@@ -236,8 +239,9 @@
                         )
                     );
                     if( ap3 == NULL ){
-                           return REcmaHelper::throwError("REntityPickEvent: Argument 3 is not of type RGraphicsView*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("REntityPickEvent: Argument 3 is not of type RGraphicsView* or QSharedPointer<RGraphicsView>.",
+                               context);
                     }
                     RGraphicsView& a3 = *ap3;
                 
@@ -342,11 +346,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'REntity::Id'
-    REntity::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getEntityId();
-        // return type: REntity::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             

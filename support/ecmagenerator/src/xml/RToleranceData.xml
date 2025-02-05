@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class_decl name="RLine" />
+  <class_decl name="RRefPoint" />
+  <class_decl name="RPolyline" />
+  <class_decl name="RTextData" />
   <class name="RToleranceData"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"

@@ -16,12 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RDebug.h"
 #include "RDimensionEntity.h"
+#include "RDimStyle.h"
+#include "RDocument.h"
 #include "RExporter.h"
+#include "RLine.h"
 #include "RToleranceEntity.h"
-#include "RMetaTypes.h"
 #include "RPluginLoader.h"
-#include "RStorage.h"
 
 RPropertyTypeId RToleranceEntity::PropertyCustom;
 RPropertyTypeId RToleranceEntity::PropertyHandle;

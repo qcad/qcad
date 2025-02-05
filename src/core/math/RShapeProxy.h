@@ -22,8 +22,7 @@
 
 #include "../core_global.h"
 
-#include <RS.h>
-#include <RMath.h>
+#include "RS.h"
 
 class RShape;
 

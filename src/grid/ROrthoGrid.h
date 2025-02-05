@@ -22,6 +22,7 @@
 
 #include "grid_global.h"
 
+#include "RBox.h"
 #include "RGrid.h"
 
 class RGraphicsView;

@@ -423,8 +423,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RTransform: Argument 1 is not of type Qt::Axis*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTransform: Argument 1 is not of type Qt::Axis* or QSharedPointer<Qt::Axis>.",
+                               context);
                     }
                     Qt::Axis& a1 = *ap1;
                 
@@ -540,8 +541,9 @@
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RTransform: Argument 1 is not of type Qt::Axis*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RTransform: Argument 1 is not of type Qt::Axis* or QSharedPointer<Qt::Axis>.",
+                               context);
                     }
                     Qt::Axis& a1 = *ap1;
                 

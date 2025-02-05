@@ -16,15 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QFileInfo>
+#include <QDebug>
 
 #include "RFileImporterRegistry.h"
-#include "RFileImporter.h"
 #include "RFileImporterFactory.h"
-#include "RMessageHandler.h"
-#include "RProgressHandler.h"
-#include "RScriptHandler.h"
-#include "RScriptHandlerRegistry.h"
+#include "RS.h"
 
 
 QList<RFileImporterFactory*> RFileImporterRegistry::factories;

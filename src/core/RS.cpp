@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2011-2018 by Andrew Mustun. All rights reserved.
- * 
+ *
  * This file is part of the QCAD project.
  *
  * QCAD is free software: you can redistribute it and/or modify
@@ -16,7 +16,6 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-
 #include <QtGlobal>
 
 #if QT_VERSION < 0x050000
@@ -24,11 +23,12 @@
 #endif
 
 #if QT_VERSION < 0x060000
+#include <QApplication>
 #include <QTextCodec>
 #include <QDesktopWidget>
-#endif
-
-#if QT_VERSION >= 0x060000
+#else
+#include <QGuiApplication>
+#include <QScreen>
 #include <QStringDecoder>
 #endif
 
@@ -36,7 +36,9 @@
 #include <QPageSize>
 #endif
 
-#include "RColor.h"
+#include <QDir>
+#include <QFileInfo>
+
 #include "RGlobal.h"
 #include "RLinetype.h"
 #include "RLineweight.h"
@@ -48,13 +50,13 @@ const double RS::PointTolerance = 1.0e-9;
 const double RS::AngleTolerance = 1.0e-9;
 
 #if QT_VERSION >= 0x060000
-    const Qt::MouseButton RS::MiddleButton = Qt::MiddleButton;
-    const QPageLayout::Orientation RS::Portrait = QPageLayout::Portrait;
-    const QPageLayout::Orientation RS::Landscape = QPageLayout::Landscape;
+const Qt::MouseButton RS::MiddleButton = Qt::MiddleButton;
+const QPageLayout::Orientation RS::Portrait = QPageLayout::Portrait;
+const QPageLayout::Orientation RS::Landscape = QPageLayout::Landscape;
 #else
-    const Qt::MouseButton RS::MiddleButton = Qt::MidButton;
-    const QPrinter::Orientation RS::Portrait = QPrinter::Portrait;
-    const QPrinter::Orientation RS::Landscape = QPrinter::Landscape;
+const Qt::MouseButton RS::MiddleButton = Qt::MidButton;
+const QPrinter::Orientation RS::Portrait = QPrinter::Portrait;
+const QPrinter::Orientation RS::Landscape = QPrinter::Landscape;
 #endif
 
 /**
@@ -155,7 +157,7 @@ bool RS::compare(const QVariant& v1, const QVariant& v2, bool noTolerance) {
 }
 
 bool RS::compare(const QPair<QVariant, RPropertyAttributes>& p1, const QPair<
-                 QVariant, RPropertyAttributes>& p2, bool noTolerance) {
+                                                                     QVariant, RPropertyAttributes>& p2, bool noTolerance) {
     return compare(p1.first, p2.first, noTolerance);
 }
 
@@ -298,7 +300,7 @@ QStringList RS::sortAlphanumerical(const QStringList& list) {
         ret.begin(),
         ret.end(),
         RS::lessThanAlphanumerical
-    );
+        );
 
     return ret;
 }

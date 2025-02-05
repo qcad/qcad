@@ -26,14 +26,14 @@
 <comment type="line">// MSVC &lt;= 2008 does not have this:</comment>
 <comment type="line">//#include &lt;stdint.h&gt;</comment>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSet&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBox.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDebug.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMath.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RRequireHeap.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSpatialIndexVisitor.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RBox</name>;</class_decl>
 
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RSpatialIndexDebugVisitor</name> <super>: <specifier>public</specifier> <name>RSpatialIndexVisitor</name></super> <block>{<private type="default">
 </private><public>public:

@@ -1,9 +1,4 @@
-#include <QTime>
-
-#include "RGuiAction.h"
-#include "RPluginLoader.h"
 #include "RScriptsPlugin.h"
-#include "RS.h"
 #include "RSettings.h"
 #include "RVersion.h"
 

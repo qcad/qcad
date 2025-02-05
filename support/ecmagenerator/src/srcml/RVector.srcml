@@ -23,17 +23,18 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTransform&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMultiMap&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGlobal.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RS.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RMatrix</name>;</class_decl>
 <class_decl>class <name>RBox</name>;</class_decl>
 <class_decl>class <name>RLine</name>;</class_decl>
 <class_decl>class <name>RPolyline</name>;</class_decl>
+<class_decl>class <name>QDebug</name>;</class_decl>
+<class_decl>class <name>QTransform</name>;</class_decl>
 
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_RVECTOR</name> <name>RVector</name>()</cpp:define>
 
@@ -68,7 +69,7 @@
      */</comment>
     <constructor_decl><name>RVector</name><parameter_list>(<param><decl><type><name>double</name></type> <name>vx</name></decl></param>, <param><decl><type><name>double</name></type> <name>vy</name></decl></param>, <param><decl><type><name>double</name></type> <name>vz</name> =<init> <expr>0.0</expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>valid_in</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
 
-    <constructor_decl><name>RVector</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name>&amp;</type> <name>tuples</name></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><specifier>explicit</specifier> <name>RVector</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name>&amp;</type> <name>tuples</name></decl></param>)</parameter_list>;</constructor_decl>
 
     <destructor_decl><name>~RVector</name><parameter_list>()</parameter_list>;</destructor_decl>
 

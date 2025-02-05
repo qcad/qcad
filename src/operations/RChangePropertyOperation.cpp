@@ -20,6 +20,9 @@
 
 #include "RChangePropertyOperation.h"
 #include "RDocument.h"
+#include "REntity.h"
+#include "RPropertyEvent.h"
+#include "RS.h"
 
 RChangePropertyOperation::RChangePropertyOperation(
     const RPropertyTypeId& propertyTypeId,
@@ -71,8 +74,8 @@ RTransaction RChangePropertyOperation::apply(RDocument& document, bool preview) 
         if (entityTypeFilter!=RS::EntityAll) {
             // special filter for block references and attributes:
             if (entityTypeFilter==RS::EntityBlockRefAttr) {
-                if (obj->getType()!=RS::EntityBlockRef &&
-                    obj->getType()!=RS::EntityAttribute) {
+                if (!obj->isOfType(RS::EntityBlockRef) &&
+                    !obj->isOfType(RS::EntityAttribute)) {
                     continue;
                 }
             }

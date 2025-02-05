@@ -23,25 +23,34 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QKeyEvent&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QCursor&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSwipeGesture&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPanGesture&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPinchGesture&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RExporter.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGrid.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RNonCopyable.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RObject.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextLabel.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTerminateEvent.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RAction</name>;</class_decl>
+<class_decl>class <name>RBox</name>;</class_decl>
+<class_decl>class <name>RColor</name>;</class_decl>
+<class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>RDocumentInterface</name>;</class_decl>
 <class_decl>class <name>RGraphicsScene</name>;</class_decl>
+<class_decl>class <name>RGrid</name>;</class_decl>
 <class_decl>class <name>RLine</name>;</class_decl>
 <class_decl>class <name>RMouseEvent</name>;</class_decl>
+<class_decl>class <name>RPainterPath</name>;</class_decl>
+<class_decl>class <name>RRefPoint</name>;</class_decl>
+<class_decl>class <name>RShape</name>;</class_decl>
 <class_decl>class <name>RTabletEvent</name>;</class_decl>
+<class_decl>class <name>RTerminateEvent</name>;</class_decl>
 <class_decl>class <name>RWheelEvent</name>;</class_decl>
+
+<class_decl>class <name>QKeyEvent</name>;</class_decl>
+<class_decl>class <name>QSwipeGesture</name>;</class_decl>
+<class_decl>class <name>QPanGesture</name>;</class_decl>
+<class_decl>class <name>QPinchGesture</name>;</class_decl>
+
 
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_MIN1</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_MIN1</name> -1</cpp:define>
@@ -149,7 +158,7 @@
     <function_decl><type><name>void</name></type> <name>zoomPrevious</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>autoZoom</name><parameter_list>(<param><decl><type><name>int</name></type> <name>margin</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreEmpty</name>=<init><expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreLineweight</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>zoomToSelection</name><parameter_list>(<param><decl><type><name>int</name></type> <name>margin</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>bool</name></type> <name>zoomToEntities</name><parameter_list>(<param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>ids</name></decl></param>, <param><decl><type><name>int</name></type> <name>margin</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>zoomToEntities</name><parameter_list>(<param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>ids</name></decl></param>, <param><decl><type><name>int</name></type> <name>margin</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>centerToPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>centerToBox</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>)</parameter_list>;</function_decl>
@@ -171,7 +180,7 @@
      * \param force True if scene has changed, don't use any optimizations, force regeneration.
      */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>regenerate</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>force</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
-    <function><type><name>virtual</name> <name>void</name></type> <name>regenerate</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>affectedEntities</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>virtual</name> <name>void</name></type> <name>regenerate</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>affectedEntities</name></decl></param>)</parameter_list> <block>{
         <macro><name>Q_UNUSED</name><argument_list>(<argument>affectedEntities</argument>)</argument_list></macro>
 
         <constructor_decl><name>regenerate</name><parameter_list>(<param><decl><type><name>true</name></type></decl></param>)</parameter_list>;</constructor_decl>
@@ -236,9 +245,9 @@
     <function><type><name>virtual</name> <name>void</name></type> <name>setCursor</name><parameter_list>(<param><decl><type><name>const</name> <name>QCursor</name>&amp;</type></decl></param> <comment type="block">/*cursor*/</comment>)</parameter_list> <block>{}</block></function>
 
     <function_decl><type><name>RRefPoint</name></type> <name>getClosestReferencePoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>screenPosition</name></decl></param>, <param><decl><type><name>int</name></type> <name>range</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>RRefPoint</name></type> <name>getClosestReferencePoint</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>screenPosition</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>getClosestEntity</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>screenPosition</name></decl></param>, <param><decl><type><name>int</name></type> <name>range</name></decl></param>, <param><decl><type><name>int</name></type> <name>strictRange</name></decl></param>, <param><decl><type><name>bool</name></type> <name>includeLockedLayers</name>=<init><expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>selectedOnly</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <comment type="line">//REntity::Id getClosestEntityInUcs(const RVector&amp; screenPosition, int range);</comment>
+    <function_decl><type><name>RRefPoint</name></type> <name>getClosestReferencePoint</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>screenPosition</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getClosestEntity</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>screenPosition</name></decl></param>, <param><decl><type><name>int</name></type> <name>range</name></decl></param>, <param><decl><type><name>int</name></type> <name>strictRange</name></decl></param>, <param><decl><type><name>bool</name></type> <name>includeLockedLayers</name>=<init><expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>selectedOnly</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <comment type="line">//RObject::Id getClosestEntityInUcs(const RVector&amp; screenPosition, int range);</comment>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setBackgroundColor</name><parameter_list>(<param><decl><type><name>const</name> <name>QColor</name>&amp;</type> <name>col</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>QColor</name></type> <name>getBackgroundColor</name><parameter_list>()</parameter_list>;</function_decl>

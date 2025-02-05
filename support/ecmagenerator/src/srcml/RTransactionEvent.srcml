@@ -36,25 +36,13 @@
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RTransactionEvent</name> <super>: <specifier>public</specifier> <name>QEvent</name></super> <block>{<private type="default">
 </private><public>public:
-    <constructor><name>RTransactionEvent</name><parameter_list>(<param><decl><type><name>RTransaction</name>&amp;</type> <name>t</name></decl></param>, <param><decl><type><name>bool</name></type> <name>onlyChanges</name>=<init><expr><name>false</name></expr></init></decl></param>, <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>)</parameter_list> <member_list>:
-        <call><name>QEvent</name><argument_list>(<argument><expr>(<name><name>QEvent</name>::<name>Type</name></name>)(<name><name>QEvent</name>::<name>User</name></name>+300)</expr></argument>)</argument_list></call>,
-        <call><name>transaction</name><argument_list>(<argument><expr><name>t</name></expr></argument>)</argument_list></call>,
-        <call><name>onlyChanges</name><argument_list>(<argument><expr><name>onlyChanges</name></expr></argument>)</argument_list></call>,
-        <call><name>entityTypeFilter</name><argument_list>(<argument><expr><name>entityTypeFilter</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+    <constructor_decl><name>RTransactionEvent</name><parameter_list>(<param><decl><type><name>RTransaction</name>&amp;</type> <name>t</name></decl></param>, <param><decl><type><name>bool</name></type> <name>onlyChanges</name>=<init><expr><name>false</name></expr></init></decl></param>, <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RTransactionEvent</name><parameter_list>()</parameter_list>;</destructor_decl>
 
-    <destructor><specifier>virtual</specifier> <name>~RTransactionEvent</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+    <function_decl><type><name>bool</name></type> <name>hasOnlyChanges</name><parameter_list>()</parameter_list>;</function_decl>
 
-    <function><type><name>bool</name></type> <name>hasOnlyChanges</name><parameter_list>()</parameter_list> <block>{
-        <return>return <expr><name>onlyChanges</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>getEntityTypeFilter</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>entityTypeFilter</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>RTransaction</name></type> <name>getTransaction</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>transaction</name></expr>;</return>
-    }</block></function>
+    <function_decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>getEntityTypeFilter</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RTransaction</name></type> <name>getTransaction</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
 </public><private>private:
     <decl_stmt><decl><type><name>RTransaction</name></type> <name>transaction</name></decl>;</decl_stmt>

@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2011-2018 by Andrew Mustun. All rights reserved.
- * 
+ *
  * This file is part of the QCAD project.
  *
  * QCAD is free software: you can redistribute it and/or modify
@@ -22,19 +22,15 @@
 
 #include "core_global.h"
 
-#include <QApplication>
-#include <QDebug>
 #include <QEasingCurve>
 #include <QPair>
 #include <QString>
 #include <QStringList>
-//#include <QTextCodec>
 #include <QVariant>
 #include <QMetaType>
 #include <QTextCharFormat>
 
 #if QT_VERSION >= 0x060000
-#include <QScreen>
 #include <QPageLayout>
 #else
 #include <QPrinter>
@@ -51,7 +47,6 @@
 
 #if QT_VERSION >= 0x050000
 #  include <QRegularExpression>
-#  include <QGuiApplication>
 #else
 #  include <QRegExp>
 #  ifndef QRegularExpression
@@ -65,7 +60,7 @@
 #  endif
 #endif
 
-class RVector;
+class QTextStream;
 class RPropertyAttributes;
 
 /**
@@ -155,8 +150,8 @@ class QCADCORE_EXPORT RS {
 public:
 
 #if QT_VERSION >= 0x060000
-    // handled as include to avoid inclusion in Qt 4-5 ECMAScript API:
-    #include "RSMetaType.h"
+        // handled as include to avoid inclusion in Qt 4-5 ECMAScript API:
+#include "RSMetaType.h"
 #else
     enum MetaType {
         Bool = QVariant::Bool,
@@ -218,11 +213,11 @@ public:
      * Message type for debugging and displaying user messages.
      */
     enum MessageType {
-       Print,
-       Debug,
-       Warning,
-       Critical,
-       Command
+        Print,
+        Debug,
+        Warning,
+        Critical,
+        Command
     };
 
     /**
@@ -283,8 +278,9 @@ public:
         EntityTolerance,    /**< Tolerance */
         EntityWipeout,      /**< Wipeout */
         EntityXRef,         /**< XRef */
+        EntityCustom = 1000000,   /**< Custom entity with custom renderer */
 
-        EntityUser          /**< User defined entity. Use this to identify
+        EntityUser = 2000000 /**< User defined entity. Use this to identify
                                  entities that are added in a separate library
                                  and resort to C++ RTTI for RTTI. */
     };

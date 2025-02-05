@@ -24,7 +24,6 @@
 
 #include <QTransform>
 
-#include "RGlobal.h"
 #include "RTransformOp.h"
 
 

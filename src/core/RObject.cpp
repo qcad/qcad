@@ -20,10 +20,11 @@
 
 #include "RBlock.h"
 #include "RDocument.h"
-#include "RMetaTypes.h"
 #include "RLayer.h"
 #include "RObject.h"
 #include "RPropertyTypeId.h"
+#include "RS.h"
+#include "RSettings.h"
 
 const RObject::Id RObject::INVALID_ID = -1;
 const RObject::Handle RObject::INVALID_HANDLE = -1;

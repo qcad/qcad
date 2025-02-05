@@ -16,12 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RBlockReferenceEntity.h"
+#include "RDebug.h"
 #include "RDocument.h"
 #include "REntity.h"
-#include "RExplodable.h"
 #include "RShape.h"
-#include "RSpline.h"
 #include "RStorage.h"
 
 RPropertyTypeId REntity::PropertyCustom;
@@ -218,7 +216,7 @@ QList<RVector> REntity::getIntersectionPoints(
             }
         }
 
-        if (getType()==RS::EntityBlockRef || getType()==RS::EntityViewport) {
+        if (isOfType(RS::EntityBlockRef) || isOfType(RS::EntityViewport)) {
             same = true;
         }
 
@@ -387,7 +385,7 @@ bool REntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
  * \return true if this entity is visible (i.e. is on current or given block, is not on a frozen or hidden layer
  * or in a frozen block).
  */
-bool REntity::isVisible(RBlock::Id blockId) const {
+bool REntity::isVisible(RObject::Id blockId) const {
     const RDocument* doc = getDocument();
     if (doc==NULL) {
         return true;

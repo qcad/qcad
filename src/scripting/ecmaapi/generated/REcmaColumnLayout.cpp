@@ -833,8 +833,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RColumnLayout: Argument 0 is not of type QRect*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RColumnLayout: Argument 0 is not of type QRect* or QSharedPointer<QRect>.",
+                               context);
                     }
                     QRect& a0 = *ap0;
                 

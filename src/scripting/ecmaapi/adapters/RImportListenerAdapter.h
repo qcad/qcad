@@ -22,8 +22,9 @@
 
 #include <QObject>
 
-#include "RDocumentInterface.h"
 #include "RImportListener.h"
+
+class RDocumentInterface;
 
 /**
  * \scriptable

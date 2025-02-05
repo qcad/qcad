@@ -22,10 +22,6 @@
 
 #include "core_global.h"
 
-#include <QString>
-#include <QMap>
-#include <QPair>
-
 #include "RPattern.h"
 #include "RResourceList.h"
 

@@ -23,7 +23,6 @@
 #include "entity_global.h"
 
 #include "RTextBasedEntity.h"
-#include "RAttributeDefinitionEntity.h"
 #include "RAttributeData.h"
 
 class RDocument;

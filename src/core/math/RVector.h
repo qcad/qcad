@@ -22,17 +22,18 @@
 
 #include "../core_global.h"
 
-#include <QDebug>
 #include <QList>
 #include <QMetaType>
-#include <QTransform>
+#include <QMultiMap>
 
-#include "RGlobal.h"
+#include "RS.h"
 
 class RMatrix;
 class RBox;
 class RLine;
 class RPolyline;
+class QDebug;
+class QTransform;
 
 #define RDEFAULT_RVECTOR RVector()
 
@@ -67,7 +68,7 @@ public:
      */
     RVector(double vx, double vy, double vz = 0.0, bool valid_in = true);
 
-    RVector(const QList<double>& tuples);
+    explicit RVector(const QList<double>& tuples);
 
     ~RVector();
 

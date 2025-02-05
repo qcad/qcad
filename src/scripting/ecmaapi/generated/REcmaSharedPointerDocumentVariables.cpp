@@ -7,7 +7,11 @@
 
         // forwards declarations mapped to includes
         
+                #include "RColor.h"
+            
                 #include "RDocument.h"
+            
+                #include "RVector.h"
             
             
         // includes for base ecma wrapper classes
@@ -1467,11 +1471,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLayer::Id'
-    RLayer::Id cppResult =
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
         
                self->getCurrentLayerId();
-        // return type: RLayer::Id
+        // return type: RObject::Id
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -1511,15 +1515,15 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
-        ) /* type: RLayer::Id */
+        ) /* type: RObject::Id */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RLayer::Id
+                    RObject::Id
                     a0 =
-                    (RLayer::Id)
+                    (RObject::Id)
                     (int)
                     context->argument( 0 ).
                     toNumber();
@@ -2109,8 +2113,9 @@
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocumentVariables: Argument 0 is not of type QDebug*.",
-                               context);                    
+
+                           return REcmaHelper::throwError("RDocumentVariables: Argument 0 is not of type QDebug* or QSharedPointer<QDebug>.",
+                               context);
                     }
                     QDebug& a0 = *ap0;
                 
