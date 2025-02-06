@@ -13128,7 +13128,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ツールオプションのダイアログを使用する</translation>
     </message>
 </context>
 <context>
