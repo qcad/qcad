@@ -24,7 +24,7 @@
    <item>
     <widget class="RMathLineEdit" name="Radius">
      <property name="text">
-      <string>1</string>
+      <string notr="true">1</string>
      </property>
      <property name="angle" stdset="0">
       <bool>false</bool>
@@ -37,7 +37,7 @@
    <item>
     <widget class="Line" name="line">
      <property name="orientation">
-      <enum>Qt::Vertical</enum>
+      <enum>Qt::Orientation::Vertical</enum>
      </property>
     </widget>
    </item>
