@@ -650,13 +650,16 @@ void RSettings::loadTranslations(const QString& module, const QStringList& dirs)
     QTranslator* translator = new QTranslator(qApp);
     for (int i=translationsDirs.size()-1; i>=0; --i) {
         QString name = module + "_" + locale;
+        if (!QFileInfo(translationsDirs[i] + "/" + name + ".qm").exists()) {
+            continue;
+        }
         if (translator->load(name, translationsDirs[i])) {
             QCoreApplication::installTranslator(translator);
             break;
         }
         else {
             if (locale!="en") {
-                qWarning() << "Cannot load translation:" << name;
+                qWarning() << "Cannot load translation:" << name << " from: " << translationsDirs[i];
             }
         }
     }
