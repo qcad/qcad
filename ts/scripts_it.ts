@@ -1660,7 +1660,7 @@ Vuoi recuperarlo?</translation>
         <translation>Raggio:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation>Soluzione:</translation>
     </message>
@@ -5166,7 +5166,7 @@ is already in the list.</source>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+276"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+277"/>
         <source>Black</source>
         <translation>Nero</translation>
     </message>
@@ -5181,8 +5181,8 @@ is already in the list.</source>
         <translation>Lingua:</translation>
     </message>
     <message>
-        <location line="-245"/>
-        <location line="+243"/>
+        <location line="-246"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation>%1 primo avvio</translation>
     </message>
@@ -9971,7 +9971,7 @@ is already in the list.</source>
         <translation>Il formato carta è impostato su un formato personalizzato (%1x%2mm). Vuoi cambiarlo con il formato carta predefinito della tua stampante (%3)?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation>Auto adatta</translation>
     </message>
@@ -9981,7 +9981,7 @@ is already in the list.</source>
         <translation>Adattare automaticamente il disegno alla carta?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation>Trascinare per spostare la carta</translation>
     </message>
@@ -11412,7 +11412,7 @@ is already in the list.</source>
         <translation>Nessun entità selezionate.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation>%1 %2 su livello &quot;%3&quot;</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>RCadToolBar</name>
     <message>
-        <location filename="../src/gui/RCadToolBar.cpp" line="+138"/>
+        <location filename="../src/gui/RCadToolBar.cpp" line="+139"/>
         <source>Vertical/Horizontal</source>
         <translation type="unfinished">Vertikāli/horizontāli</translation>
     </message>
@@ -12,7 +12,7 @@
 <context>
     <name>RCadToolBarPanel</name>
     <message>
-        <location filename="../src/gui/RCadToolBarPanel.cpp" line="+21"/>
+        <location filename="../src/gui/RCadToolBarPanel.cpp" line="+23"/>
         <location line="+63"/>
         <source>Back</source>
         <translation type="unfinished">Atpakaļ</translation>
@@ -21,7 +21,7 @@
 <context>
     <name>RColorCombo</name>
     <message>
-        <location filename="../src/gui/RColorCombo.cpp" line="+157"/>
+        <location filename="../src/gui/RColorCombo.cpp" line="+154"/>
         <source>Custom</source>
         <translation type="unfinished">Pielāgots</translation>
     </message>
@@ -29,7 +29,7 @@
 <context>
     <name>REventHandler</name>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="+210"/>
+        <location filename="../src/gui/REventHandler.cpp" line="+211"/>
         <source>Grid</source>
         <translation type="unfinished">Tīkls</translation>
     </message>

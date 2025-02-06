@@ -1682,7 +1682,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Polomer:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation>Možnosť:</translation>
     </message>
@@ -5172,7 +5172,7 @@ už existuje v zozname.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation>%1 - Prvé spustenie</translation>
     </message>
@@ -9978,7 +9978,7 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Veľkosť papiera je nastavená na vlastnú veľkosť (%1x%2mm). Chcete ju zmeniť na predvolenú veľkosť papiera vašej tlačiarne (%3)?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation type="unfinished">Automatické prispôsobenie</translation>
     </message>
@@ -9988,7 +9988,7 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Automatické prispôsobenie výkresu papieru?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation>Chyťte a hýbte papierom</translation>
     </message>
@@ -11419,7 +11419,7 @@ už existuje v zozname.</translation>
         <translation>Žiadne vybrané prvky.</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>%1 %2 on %3 Layers</source>
         <translation>%1 %2 na %3 Vrstvách</translation>
     </message>

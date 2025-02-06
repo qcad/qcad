@@ -1682,7 +1682,7 @@ Czy chcesz go odzyskać?</translation>
         <translation>Promień:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation>Rozwiązanie:</translation>
     </message>
@@ -5172,7 +5172,7 @@ jest już na liście.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation>%1 Pierwszy start</translation>
     </message>
@@ -9978,7 +9978,7 @@ jest już na liście.</translation>
         <translation>Rozmiar papieru jest ustawiony na rozmiar niestandardowy (%1x%2mm). Czy chcesz zmienić go na domyślny rozmiar papieru drukarki (%3)?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation>Automatyczne dopasowanie</translation>
     </message>
@@ -9988,7 +9988,7 @@ jest już na liście.</translation>
         <translation>Automatyczne dopasowywanie rysunku do papieru?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation>Przeciągnij, aby przesunąć papier</translation>
     </message>
@@ -11419,7 +11419,7 @@ jest już na liście.</translation>
         <translation>Nie zaznaczono obiektów.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation>%1 %2 na warstwie &quot;%3&quot;</translation>
     </message>

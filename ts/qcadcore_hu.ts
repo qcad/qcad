@@ -4,7 +4,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="+273"/>
+        <location filename="../src/core/RUnit.cpp" line="+272"/>
         <source>None</source>
         <translation>Nincs</translation>
     </message>
@@ -238,22 +238,22 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+97"/>
+        <location filename="../src/core/REntity.cpp" line="+95"/>
         <source>Block</source>
         <translation>Blokk</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+95"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+99"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+75"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+80"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
         <translation>Pozíció</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+68"/>
+        <location filename="../src/core/RBlock.cpp" line="+69"/>
         <source>Pixel Unit</source>
         <translation type="unfinished">Pixel egység</translation>
     </message>
@@ -261,7 +261,7 @@
         <location line="+1"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/core/RLayout.cpp" line="+84"/>
+        <location filename="../src/core/RLayout.cpp" line="+83"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -371,7 +371,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="-1"/>
-        <location filename="../src/core/RObject.cpp" line="+69"/>
+        <location filename="../src/core/RObject.cpp" line="+70"/>
         <source>Type</source>
         <translation>Típus</translation>
     </message>
@@ -382,7 +382,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+102"/>
+        <location filename="../src/core/RLayer.cpp" line="+104"/>
         <source>Linetype</source>
         <translation>Vonaltípus</translation>
     </message>
@@ -452,7 +452,7 @@
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+161"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+162"/>
         <source>Custom</source>
         <translation>Egyéni</translation>
     </message>
@@ -716,7 +716,7 @@
         <translation type="unfinished">Maximális kiterjedés</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+884"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+886"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Körkörös (rekurzív) blokkreferencia észlelve:</translation>
     </message>
@@ -852,7 +852,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+202"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+203"/>
         <source>Requires selection</source>
         <translation>Kijelölést igényel</translation>
     </message>
@@ -860,7 +860,7 @@
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+54"/>
+        <location filename="../src/core/RLinetype.cpp" line="+51"/>
         <source>Name</source>
         <translation>Név</translation>
     </message>
@@ -1117,7 +1117,7 @@
 <context>
     <name>RLineweight</name>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="+35"/>
+        <location filename="../src/core/RLineweight.cpp" line="+37"/>
         <source>By Layer</source>
         <translation>Réteg szerint</translation>
     </message>

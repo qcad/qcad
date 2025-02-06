@@ -1676,7 +1676,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Raadius:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation type="unfinished">Lahendus:</translation>
     </message>
@@ -5161,7 +5161,7 @@ is already in the list.</source>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation type="unfinished">%1 Esimene algus</translation>
     </message>
@@ -9965,7 +9965,7 @@ is already in the list.</source>
         <translation type="unfinished">Paberi suurus on määratud kohandatud suuruseks (%1x%2mm). Kas soovite selle muuta oma printeri vaikimisi paberisuuruseks (%3)?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation type="unfinished">Automaatne paigaldus</translation>
     </message>
@@ -9975,7 +9975,7 @@ is already in the list.</source>
         <translation type="unfinished">Automaatselt paberile sobiv joonis?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Paberi liigutamiseks lohistage</translation>
     </message>
@@ -11406,7 +11406,7 @@ is already in the list.</source>
         <translation type="unfinished">Ükski üksus ei ole valitud.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation type="unfinished">%1 %2 kihil &quot;%3&quot;</translation>
     </message>

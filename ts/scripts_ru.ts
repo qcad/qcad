@@ -1682,7 +1682,7 @@ Do you wish to recover it?</source>
         <translation>Радиус:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation>Решение:</translation>
     </message>
@@ -5172,7 +5172,7 @@ is already in the list.</source>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation>%1 первый запуск</translation>
     </message>
@@ -9978,7 +9978,7 @@ is already in the list.</source>
         <translation type="unfinished">Размер бумаги установлен на пользовательский размер (%1x%2 мм). Вы хотите изменить его на размер бумаги по умолчанию для вашего принтера (%3)?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation type="unfinished">Автоматическая подгонка</translation>
     </message>
@@ -9988,7 +9988,7 @@ is already in the list.</source>
         <translation type="unfinished">Автоматическая подгонка рисунка к бумаге?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation>Для перемещения бумаги перетащите её</translation>
     </message>
@@ -11419,7 +11419,7 @@ is already in the list.</source>
         <translation>Нет выбранных объектов.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation>%1 %2 на слое «%3»</translation>
     </message>

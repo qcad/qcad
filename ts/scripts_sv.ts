@@ -1678,7 +1678,7 @@ Vill du återställa den?</translation>
         <translation>Radie:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation>Lösning:</translation>
     </message>
@@ -5165,7 +5165,7 @@ finns redan i listan.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation>%1 Första start</translation>
     </message>
@@ -9969,7 +9969,7 @@ finns redan i listan.</translation>
         <translation>Pappersstorleken är inställd på en anpassad storlek (%1x%2mm). Vill du ändra den till skrivarens standardpappersstorlek (%3)?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation>Automatisk anpassning</translation>
     </message>
@@ -9979,7 +9979,7 @@ finns redan i listan.</translation>
         <translation>Automatisk anpassning av ritning till papper?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation>Dra för att flytta papper</translation>
     </message>
@@ -11410,7 +11410,7 @@ finns redan i listan.</translation>
         <translation>Inga enheter har valts ut.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation>%1 %2 på lager &quot;%3&quot;</translation>
     </message>

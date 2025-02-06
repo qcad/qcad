@@ -1688,7 +1688,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">半径：</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation type="unfinished">解决方案：</translation>
     </message>
@@ -5162,7 +5162,7 @@ is already in the list.</source>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation type="unfinished">%1 首次启动</translation>
     </message>
@@ -9964,7 +9964,7 @@ is already in the list.</source>
         <translation type="unfinished">纸张尺寸被设置为自定义尺寸（%1x%2mm）。你想把它改成你的打印机的默认纸张尺寸（%3）吗？</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation type="unfinished">自动配合</translation>
     </message>
@@ -9974,7 +9974,7 @@ is already in the list.</source>
         <translation type="unfinished">自动将图画贴在纸上？</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">拖动以移动纸张</translation>
     </message>
@@ -11405,7 +11405,7 @@ is already in the list.</source>
         <translation type="unfinished">没有选择实体。</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation type="unfinished">在&quot;%3 &quot;层上的%1 %2</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="+273"/>
+        <location filename="../src/core/RUnit.cpp" line="+272"/>
         <source>None</source>
         <translation type="unfinished">无</translation>
     </message>
@@ -238,22 +238,22 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+97"/>
+        <location filename="../src/core/REntity.cpp" line="+95"/>
         <source>Block</source>
         <translation>块</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+95"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+99"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+75"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+80"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
         <translation>位置</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+68"/>
+        <location filename="../src/core/RBlock.cpp" line="+69"/>
         <source>Pixel Unit</source>
         <translation>像素单位</translation>
     </message>
@@ -261,7 +261,7 @@
         <location line="+1"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/core/RLayout.cpp" line="+84"/>
+        <location filename="../src/core/RLayout.cpp" line="+83"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -366,7 +366,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="-1"/>
-        <location filename="../src/core/RObject.cpp" line="+69"/>
+        <location filename="../src/core/RObject.cpp" line="+70"/>
         <source>Type</source>
         <translation>类型</translation>
     </message>
@@ -377,7 +377,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+102"/>
+        <location filename="../src/core/RLayer.cpp" line="+104"/>
         <source>Linetype</source>
         <translation>线型</translation>
     </message>
@@ -447,7 +447,7 @@
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+161"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+162"/>
         <source>Custom</source>
         <translation>自定义</translation>
     </message>
@@ -711,7 +711,7 @@
         <translation>最大扩展</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+884"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+886"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>检测到循环（递归）块引用：</translation>
     </message>
@@ -844,7 +844,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+202"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+203"/>
         <source>Requires selection</source>
         <translation>需要选择</translation>
     </message>
@@ -852,7 +852,7 @@
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+54"/>
+        <location filename="../src/core/RLinetype.cpp" line="+51"/>
         <source>Name</source>
         <translation type="unfinished">名称</translation>
     </message>
@@ -1109,7 +1109,7 @@
 <context>
     <name>RLineweight</name>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="+35"/>
+        <location filename="../src/core/RLineweight.cpp" line="+37"/>
         <source>By Layer</source>
         <translation>按图层</translation>
     </message>

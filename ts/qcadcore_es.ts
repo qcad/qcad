@@ -4,7 +4,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="+273"/>
+        <location filename="../src/core/RUnit.cpp" line="+272"/>
         <source>None</source>
         <translation>Ninguno</translation>
     </message>
@@ -238,26 +238,26 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+97"/>
+        <location filename="../src/core/REntity.cpp" line="+95"/>
         <source>Block</source>
         <translation>Bloque</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+98"/>
         <source>Referenced Block</source>
         <translation>Bloqueo referido</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+69"/>
+        <location filename="../src/core/RBlock.cpp" line="+70"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+1"/>
         <location line="+3"/>
-        <location filename="../src/core/RLayout.cpp" line="+84"/>
+        <location filename="../src/core/RLayout.cpp" line="+83"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+75"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+75"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+80"/>
         <location line="+8"/>
         <location line="+2"/>
         <source>X</source>
@@ -366,7 +366,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="-1"/>
-        <location filename="../src/core/RObject.cpp" line="+69"/>
+        <location filename="../src/core/RObject.cpp" line="+70"/>
         <source>Type</source>
         <translation>Tipo</translation>
     </message>
@@ -377,7 +377,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+102"/>
+        <location filename="../src/core/RLayer.cpp" line="+104"/>
         <source>Linetype</source>
         <translation>Tipo de línea</translation>
     </message>
@@ -447,7 +447,7 @@
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+161"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+162"/>
         <source>Custom</source>
         <translation>Personalizado</translation>
     </message>
@@ -711,7 +711,7 @@
         <translation>Max extensión</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+884"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+886"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Se detectó una referencia de bloque circular (recursiva):</translation>
     </message>
@@ -844,7 +844,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+202"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+203"/>
         <source>Requires selection</source>
         <translation>Requiere una selección</translation>
     </message>
@@ -852,7 +852,7 @@
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+54"/>
+        <location filename="../src/core/RLinetype.cpp" line="+51"/>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
@@ -1109,7 +1109,7 @@
 <context>
     <name>RLineweight</name>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="+35"/>
+        <location filename="../src/core/RLineweight.cpp" line="+37"/>
         <source>By Layer</source>
         <translation>Por Capa</translation>
     </message>

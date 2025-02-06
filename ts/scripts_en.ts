@@ -1680,7 +1680,7 @@ Do you wish to recover it?</translation>
         <translation>Radius:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation>Solution:</translation>
     </message>
@@ -5167,7 +5167,7 @@ is already in the list.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation>%1 First Start</translation>
     </message>
@@ -9971,7 +9971,7 @@ is already in the list.</translation>
         <translation>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation>Auto fit</translation>
     </message>
@@ -9981,7 +9981,7 @@ is already in the list.</translation>
         <translation>Auto fit drawing to paper?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation>Drag to move paper</translation>
     </message>
@@ -11412,7 +11412,7 @@ is already in the list.</translation>
         <translation>No entities selected.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation>%1 %2 on Layer &quot;%3&quot;</translation>
     </message>

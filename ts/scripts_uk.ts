@@ -1679,7 +1679,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Радіус:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation type="unfinished">Рішення:</translation>
     </message>
@@ -5169,7 +5169,7 @@ is already in the list.</source>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation type="unfinished">%1 Перший старт</translation>
     </message>
@@ -9975,7 +9975,7 @@ is already in the list.</source>
         <translation type="unfinished">Розмір паперу встановлено на користувацький розмір (%1x%2мм). Ви хочете змінити його на розмір паперу за замовчуванням вашого принтера (%3)?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation type="unfinished">Автоматична підгонка</translation>
     </message>
@@ -9985,7 +9985,7 @@ is already in the list.</source>
         <translation type="unfinished">Автоматичне припасування креслення до паперу?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Перетягування для переміщення паперу</translation>
     </message>
@@ -11416,7 +11416,7 @@ is already in the list.</source>
         <translation type="unfinished">Не обрано жодного суб&apos;єкта господарювання.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation type="unfinished">%1 %2 на шарі &quot;%3&quot;</translation>
     </message>

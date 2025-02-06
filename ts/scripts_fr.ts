@@ -1660,7 +1660,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Rayon :</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation>Solution :</translation>
     </message>
@@ -5166,7 +5166,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+276"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+277"/>
         <source>Black</source>
         <translation>Noir</translation>
     </message>
@@ -5181,8 +5181,8 @@ est déjà dans la liste.</translation>
         <translation>Langue :</translation>
     </message>
     <message>
-        <location line="-245"/>
-        <location line="+243"/>
+        <location line="-246"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation>%1 premier démarrage</translation>
     </message>
@@ -9971,7 +9971,7 @@ est déjà dans la liste.</translation>
         <translation>Le format du papier est défini sur un format personnalisé (%1x%2mm). Voulez-vous le changer pour le format de papier par défaut de votre imprimante (%3) ?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation>Ajustement automatique</translation>
     </message>
@@ -9981,7 +9981,7 @@ est déjà dans la liste.</translation>
         <translation>Adapter automatiquement le dessin au papier ?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation>Faites glisser pour déplacer le papier</translation>
     </message>
@@ -11412,7 +11412,7 @@ est déjà dans la liste.</translation>
         <translation>Aucune des entités sélectionnées.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation>%1 %2 sur calque &quot;%3&quot;</translation>
     </message>

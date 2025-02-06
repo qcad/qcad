@@ -1677,7 +1677,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>Yarıçap:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation>Çözüm:</translation>
     </message>
@@ -5161,7 +5161,7 @@ zaten listede.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation type="unfinished">1 İlk Başlangıç</translation>
     </message>
@@ -9963,7 +9963,7 @@ zaten listede.</translation>
         <translation type="unfinished">Kağıt boyutu özel bir boyuta ayarlanmış (%1x%2mm). Bunu yazıcınızın varsayılan kağıt boyutuna (%3) değiştirmek istiyor musunuz?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation type="unfinished">Otomatik uyum</translation>
     </message>
@@ -9973,7 +9973,7 @@ zaten listede.</translation>
         <translation type="unfinished">Çizimi kağıda otomatik sığdırma?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation>Kağıt taşımak için sürükleyin</translation>
     </message>
@@ -11404,7 +11404,7 @@ zaten listede.</translation>
         <translation type="unfinished">Hiçbir kuruluş seçilmemiştir.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation type="unfinished">&quot;%3&quot; Katmanında %1 %2</translation>
     </message>

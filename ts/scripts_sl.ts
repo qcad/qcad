@@ -1680,7 +1680,7 @@ Ali jo želite obnoviti?</translation>
         <translation>Polmer:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation>Rešitev:</translation>
     </message>
@@ -5173,7 +5173,7 @@ je že na seznamu.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation>%1 prvi začetek</translation>
     </message>
@@ -9981,7 +9981,7 @@ je že na seznamu.</translation>
         <translation type="unfinished">Velikost papirja je nastavljena na velikost po meri (%1x%2mm). Ali jo želite spremeniti na privzeto velikost papirja vašega tiskalnika (%3)?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation type="unfinished">Samodejno prileganje</translation>
     </message>
@@ -9991,7 +9991,7 @@ je že na seznamu.</translation>
         <translation type="unfinished">Samodejno prileganje risbe na papir?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation>Povleci za premik papirja</translation>
     </message>
@@ -11422,7 +11422,7 @@ je že na seznamu.</translation>
         <translation>Ni izbranih entitet.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation>%1 %2 na plasti &quot;%3&quot;</translation>
     </message>

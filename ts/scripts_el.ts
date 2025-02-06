@@ -1678,7 +1678,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Ακτίνα:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation type="unfinished">Λύση:</translation>
     </message>
@@ -5165,7 +5165,7 @@ is already in the list.</source>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation type="unfinished">%1 Πρώτη εκκίνηση</translation>
     </message>
@@ -9969,7 +9969,7 @@ is already in the list.</source>
         <translation type="unfinished">Το μέγεθος χαρτιού έχει οριστεί σε προσαρμοσμένο μέγεθος (%1x%2mm). Θέλετε να το αλλάξετε στο προεπιλεγμένο μέγεθος χαρτιού του εκτυπωτή σας (%3)</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation type="unfinished">Αυτόματη προσαρμογή</translation>
     </message>
@@ -9979,7 +9979,7 @@ is already in the list.</source>
         <translation type="unfinished">Αυτόματη προσαρμογή σχεδίου στο χαρτί</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Σύρετε για να μετακινήσετε το χαρτί</translation>
     </message>
@@ -11410,7 +11410,7 @@ is already in the list.</source>
         <translation type="unfinished">Δεν έχουν επιλεγεί οντότητες.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation type="unfinished">%1 %2 στο στρώμα &quot;%3&quot;</translation>
     </message>

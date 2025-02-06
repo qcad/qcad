@@ -1678,7 +1678,7 @@ Do you wish to recover it?</source>
         <translation>半径:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation>ソリューション:</translation>
     </message>
@@ -5162,7 +5162,7 @@ is already in the list.</source>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation>%1 初回実行</translation>
     </message>
@@ -9964,7 +9964,7 @@ is already in the list.</source>
         <translation type="unfinished">用紙サイズがカスタムサイズ(%1x%2mm)に設定されています。お使いのプリンターのデフォルトの用紙サイズ（%3）に変更しますか？</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation type="unfinished">オートフィット</translation>
     </message>
@@ -9974,7 +9974,7 @@ is already in the list.</source>
         <translation type="unfinished">図面を用紙にオートフィットさせる？</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation>用紙を移動するためドラッグしてください</translation>
     </message>
@@ -11405,7 +11405,7 @@ is already in the list.</source>
         <translation>エンティティが選択されていません。</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation>%1 %2 on 画層 &quot;%3&quot;</translation>
     </message>

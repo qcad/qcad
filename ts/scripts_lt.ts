@@ -1689,7 +1689,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Spindulys:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation type="unfinished">Sprendimas:</translation>
     </message>
@@ -5169,7 +5169,7 @@ jau yra sąraše.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation type="unfinished">%1 Pirmasis paleidimas</translation>
     </message>
@@ -9975,7 +9975,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Nustatytas pasirinktinis popieriaus dydis (%1x%2mm). Ar norite jį pakeisti į numatytąjį spausdintuvo popieriaus dydį (%3)?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation type="unfinished">Automatinis montavimas</translation>
     </message>
@@ -9985,7 +9985,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Automatinis brėžinio pritaikymas prie popieriaus?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Vilkite, kad perkeltumėte popierių</translation>
     </message>
@@ -11416,7 +11416,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Subjektų nepasirinkta.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation type="unfinished">%1 %2 sluoksnyje &quot;%3&quot;</translation>
     </message>

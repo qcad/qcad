@@ -1680,7 +1680,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Säde:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation>Ratkaisu:</translation>
     </message>
@@ -5167,7 +5167,7 @@ on jo luettelossa.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation>%1 Ensimmäinen aloitus</translation>
     </message>
@@ -9971,7 +9971,7 @@ on jo luettelossa.</translation>
         <translation>Paperikoko on asetettu mukautettuun kokoon (%1x%2mm). Haluatko vaihtaa sen tulostimen oletuspaperikokoon (%3)?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation>Automaattinen sovitus</translation>
     </message>
@@ -9981,7 +9981,7 @@ on jo luettelossa.</translation>
         <translation>Sovita piirustus automaattisesti paperille?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation>Siirrä paperia vetämällä</translation>
     </message>
@@ -11412,7 +11412,7 @@ on jo luettelossa.</translation>
         <translation>Ei valittuja kohteita.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation>%1 %2 on tasolla &quot;%3&quot;</translation>
     </message>

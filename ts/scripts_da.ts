@@ -1680,7 +1680,7 @@ Do you wish to recover it?</source>
         <translation>Radius:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation>Løsning:</translation>
     </message>
@@ -5167,7 +5167,7 @@ er allerede på listen.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation>%1 Første start</translation>
     </message>
@@ -9971,7 +9971,7 @@ er allerede på listen.</translation>
         <translation>Papirstørrelsen er indstillet til en brugerdefineret størrelse (%1x%2mm). Ønsker du at ændre den til printerens standardpapirstørrelse (%3)?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation>Automatisk tilpasning</translation>
     </message>
@@ -9981,7 +9981,7 @@ er allerede på listen.</translation>
         <translation>Automatisk tilpasning af tegning til papir?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation>Træk for at flytte papiret</translation>
     </message>
@@ -11412,7 +11412,7 @@ er allerede på listen.</translation>
         <translation>Der er ikke valgt nogen enheder.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation>%1 %2 på lag &quot;%3&quot;</translation>
     </message>

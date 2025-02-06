@@ -1685,17 +1685,17 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Kreis von zwei Punkten und Radius</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.ui" line="+54"/>
+        <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.ui" line="+57"/>
         <source>Center Left of Line P1 - P2</source>
         <translation>Zentrum links der Linie P1-P2</translation>
     </message>
     <message>
-        <location line="-37"/>
+        <location line="-40"/>
         <source>Radius:</source>
         <translation>Radius:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation>Variante:</translation>
     </message>
@@ -5166,7 +5166,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+276"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+277"/>
         <source>Black</source>
         <translation>Schwarz</translation>
     </message>
@@ -5181,8 +5181,8 @@ ist bereits in der Liste.</translation>
         <translation>Sprache:</translation>
     </message>
     <message>
-        <location line="-245"/>
-        <location line="+243"/>
+        <location line="-246"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation>%1 Erster Start</translation>
     </message>
@@ -9961,7 +9961,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+346"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+350"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -9996,7 +9996,7 @@ ist bereits in der Liste.</translation>
         <translation>Drucken ...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-728"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-732"/>
         <source>Auto Paper Size</source>
         <translation>Auto Papiergrösse</translation>
     </message>
@@ -10006,7 +10006,7 @@ ist bereits in der Liste.</translation>
         <translation>Das Papierformat ist auf ein benutzerdefiniertes Format (%1x%2mm) eingestellt. Möchten Sie es auf das Standardpapierformat Ihres Druckers (%3) ändern?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation>Automatisch einpassen</translation>
     </message>
@@ -10016,7 +10016,7 @@ ist bereits in der Liste.</translation>
         <translation>Automatische Skalierung der Zeichnung auf die Papiergrösse?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation>Ziehen zum Verschieben des Papiers</translation>
     </message>
@@ -11412,7 +11412,7 @@ ist bereits in der Liste.</translation>
         <translation>Keine Objekte selektiert.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation>%1 %2 auf Layer &quot;%3&quot;</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="+273"/>
+        <location filename="../src/core/RUnit.cpp" line="+272"/>
         <source>None</source>
         <translation type="unfinished">Nav</translation>
     </message>
@@ -238,10 +238,10 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+66"/>
-        <location filename="../src/core/RLayer.cpp" line="+93"/>
+        <location filename="../src/core/RBlock.cpp" line="+67"/>
+        <location filename="../src/core/RLayer.cpp" line="+95"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
-        <location filename="../src/core/RLayout.cpp" line="+82"/>
+        <location filename="../src/core/RLayout.cpp" line="+81"/>
         <source>Name</source>
         <translation type="unfinished">Nosaukums</translation>
     </message>
@@ -264,7 +264,7 @@
     </message>
     <message>
         <location line="-2"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+95"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+99"/>
         <location line="+3"/>
         <location filename="../src/core/RLayout.cpp" line="+2"/>
         <location line="+3"/>
@@ -272,7 +272,7 @@
         <location line="+3"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+75"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+75"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+80"/>
         <location line="+8"/>
         <location line="+2"/>
         <source>X</source>
@@ -320,7 +320,7 @@
         <translation type="unfinished">Pieder Reference</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+884"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+886"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation type="unfinished">Atklāta cirkulāra (rekursīva) bloka atsauce:</translation>
     </message>
@@ -503,8 +503,8 @@
         <translation type="unfinished">Bultu bloks 2</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+96"/>
-        <location filename="../src/core/RObject.cpp" line="+69"/>
+        <location filename="../src/core/REntity.cpp" line="+94"/>
+        <location filename="../src/core/RObject.cpp" line="+70"/>
         <source>Type</source>
         <translation type="unfinished">Tips</translation>
     </message>
@@ -685,7 +685,7 @@
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+161"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+162"/>
         <source>Custom</source>
         <translation type="unfinished">Pielāgots</translation>
     </message>
@@ -844,7 +844,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+202"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+203"/>
         <source>Requires selection</source>
         <translation type="unfinished">Nepieciešama atlase</translation>
     </message>
@@ -852,7 +852,7 @@
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+54"/>
+        <location filename="../src/core/RLinetype.cpp" line="+51"/>
         <source>Name</source>
         <translation type="unfinished">Nosaukums</translation>
     </message>
@@ -1109,7 +1109,7 @@
 <context>
     <name>RLineweight</name>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="+35"/>
+        <location filename="../src/core/RLineweight.cpp" line="+37"/>
         <source>By Layer</source>
         <translation type="unfinished">Pēc slāņa</translation>
     </message>

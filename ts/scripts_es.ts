@@ -1660,7 +1660,7 @@ Do you wish to recover it?</source>
         <translation>Radio:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation>Solución:</translation>
     </message>
@@ -5166,7 +5166,7 @@ ya está en la lista.</translation>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+276"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+277"/>
         <source>Black</source>
         <translation>Negro</translation>
     </message>
@@ -5181,8 +5181,8 @@ ya está en la lista.</translation>
         <translation>Idioma:</translation>
     </message>
     <message>
-        <location line="-245"/>
-        <location line="+243"/>
+        <location line="-246"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation>Primera puesta en %1</translation>
     </message>
@@ -9971,7 +9971,7 @@ ya está en la lista.</translation>
         <translation>El tamaño del papel está ajustado a un tamaño personalizado (%1x%2mm). ¿Desea cambiarlo al tamaño de papel por defecto de su impresora (%3)?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation>Ajuste automático</translation>
     </message>
@@ -9981,7 +9981,7 @@ ya está en la lista.</translation>
         <translation>¿Autoajuste del dibujo al papel?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation>Arrastre para mover el papel</translation>
     </message>
@@ -11412,7 +11412,7 @@ ya está en la lista.</translation>
         <translation>No hay entidades seleccionadas.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation>%1 %2 en capa &quot;%3&quot;</translation>
     </message>

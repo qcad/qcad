@@ -1678,7 +1678,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Радиус:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation type="unfinished">Решение:</translation>
     </message>
@@ -5165,7 +5165,7 @@ is already in the list.</source>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation type="unfinished">%1 Първо стартиране</translation>
     </message>
@@ -9969,7 +9969,7 @@ is already in the list.</source>
         <translation type="unfinished">Размерът на хартията е зададен на потребителски размер (%1x%2mm). Искате ли да го промените на размера на хартията по подразбиране на вашия принтер (%3)?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation type="unfinished">Автоматичен монтаж</translation>
     </message>
@@ -9979,7 +9979,7 @@ is already in the list.</source>
         <translation type="unfinished">Автоматично напасване на чертежа към хартията?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Плъзнете, за да преместите хартията</translation>
     </message>
@@ -11410,7 +11410,7 @@ is already in the list.</source>
         <translation type="unfinished">Няма избрани субекти.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation type="unfinished">%1 %2 на слой &quot;%3&quot;</translation>
     </message>

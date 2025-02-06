@@ -1678,7 +1678,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">반경:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation type="unfinished">솔루션:</translation>
     </message>
@@ -5162,7 +5162,7 @@ is already in the list.</source>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation type="unfinished">1 첫 시작</translation>
     </message>
@@ -9964,7 +9964,7 @@ is already in the list.</source>
         <translation type="unfinished">용지 크기가 사용자 지정 크기(%1x%2mm)로 설정되어 있습니다. 프린터의 기본 용지 크기(%3)로 변경하시겠습니까?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation type="unfinished">자동 맞춤</translation>
     </message>
@@ -9974,7 +9974,7 @@ is already in the list.</source>
         <translation type="unfinished">도면을 종이에 자동으로 맞추시겠습니까?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">드래그하여 용지 이동</translation>
     </message>
@@ -11405,7 +11405,7 @@ is already in the list.</source>
         <translation type="unfinished">선택한 엔티티가 없습니다.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation type="unfinished">레이어 &quot;%3&quot;의 %1 %2</translation>
     </message>

@@ -1678,7 +1678,7 @@ Szeretné helyreállítani?</translation>
         <translation>Sugár:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation>Megoldás:</translation>
     </message>
@@ -5163,7 +5163,7 @@ már szerepel a listában.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation type="unfinished">%1 Első indítás</translation>
     </message>
@@ -9965,7 +9965,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">A papírméret egyéni méretre van beállítva (%1x%2mm). Meg akarja változtatni a nyomtató alapértelmezett papírméretére (%3)?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation type="unfinished">Automatikus illesztés</translation>
     </message>
@@ -9975,7 +9975,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Automatikusan illeszkedő rajz a papírra?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Húzás a papír mozgatásához</translation>
     </message>
@@ -11406,7 +11406,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Nincs kiválasztott szervezet.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation type="unfinished">%1 %2 a &quot;%3&quot; rétegen %1 %2&quot;</translation>
     </message>
