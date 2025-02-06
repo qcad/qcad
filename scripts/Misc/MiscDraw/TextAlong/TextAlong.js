@@ -333,7 +333,8 @@ TextAlong.prototype.alongLine = function() {
 
         }
     } else {
-        op.addObject(this.text);
+        var te = new RTextEntity(this.getDocument(), this.textData);
+        op.addObject(te);
     }
     return op;
 }
