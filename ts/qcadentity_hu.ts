@@ -282,7 +282,6 @@
         <location line="+1"/>
         <source>Sweep Angle</source>
         <translatorcomment>A megrajzolt ív hossza</translatorcomment>
-        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -315,7 +314,6 @@
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
         <source>Circumference</source>
         <translatorcomment>Kör kerülete</translatorcomment>
-        <translation></translation>
     </message>
     <message>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-10"/>
@@ -344,7 +342,6 @@
         <location line="+1"/>
         <source>Line 1 Start</source>
         <translatorcomment>Szög méretvonalának darabja</translatorcomment>
-        <translation></translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
@@ -411,7 +408,6 @@
         <location line="+1"/>
         <source>Defining Point</source>
         <translatorcomment>Ennek a pontnak írja ki az ordináta &quot;méretvonal&quot; az egyik koordinátájtát (abszcisszát(X) vagy ordinátát(Y))</translatorcomment>
-        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -818,7 +814,6 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
         <source>Closed Periodic</source>
         <translatorcomment>Spline esetén a körbezártság</translatorcomment>
-        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -953,3 +948,4 @@
     </message>
 </context>
 </TS>
+

@@ -4433,7 +4433,6 @@ már szerepel a listában.</translation>
         <location filename="../scripts/Block/EditMainDrawing/EditMainDrawingInit.js" line="+2"/>
         <source>&amp;Return to Main Drawing</source>
         <translatorcomment>Szerepel a &quot;DefaultAction&quot; egy szövegében is!</translatorcomment>
-        <translation></translation>
     </message>
 </context>
 <context>
@@ -14606,3 +14605,4 @@ már szerepel a listában.</translation>
     </message>
 </context>
 </TS>
+
