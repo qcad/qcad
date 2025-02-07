@@ -2584,7 +2584,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location filename="../scripts/Block/DeselectBlockReferences/DeselectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Deselect Block References</source>
-        <translation>&amp;Deselecteer blok referenties</translation>
+        <translation>&amp;Blokreferenties deselecteren</translation>
     </message>
 </context>
 <context>
@@ -11129,7 +11129,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Block/SelectBlockReferences/SelectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Select Block References</source>
-        <translation>Blokreferentie &amp;selecteren</translation>
+        <translation>Blokreferenties &amp;selecteren</translation>
     </message>
 </context>
 <context>
