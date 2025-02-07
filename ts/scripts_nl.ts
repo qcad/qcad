@@ -2584,7 +2584,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location filename="../scripts/Block/DeselectBlockReferences/DeselectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Deselect Block References</source>
-        <translation>&amp;Deselecteer block referenties</translation>
+        <translation>&amp;Deselecteer blok referenties</translation>
     </message>
 </context>
 <context>
