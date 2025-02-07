@@ -1382,7 +1382,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
         <source>Export Block References List (CSV)</source>
-        <translation>Lijst met blokverwijzingen exporteren (CSV)</translation>
+        <translation>Lijst met blokreferenties exporteren (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1392,7 +1392,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation>Lijst met blokverwijzingen &amp;exporteren</translation>
+        <translation>Lijst met blokreferenties &amp;exporteren</translation>
     </message>
 </context>
 <context>
@@ -5678,12 +5678,12 @@ is al in de lijst.</translation>
     <message>
         <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation>Dubbelklik op blokverwijzing opent blok</translation>
+        <translation>Dubbelklik op blokreferentie opent blok</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation>Bewerk blokverwijzing ter plekke</translation>
+        <translation>Bewerk blokreferentie ter plekke</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -11129,7 +11129,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Block/SelectBlockReferences/SelectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Select Block References</source>
-        <translation>Blokverwijzing &amp;selecteren</translation>
+        <translation>Blokreferentie &amp;selecteren</translation>
     </message>
 </context>
 <context>
