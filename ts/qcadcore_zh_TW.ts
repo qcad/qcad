@@ -332,7 +332,7 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">擁有者 參考</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
@@ -663,12 +663,12 @@
     <message>
         <location line="+2"/>
         <source>Frozen Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">冷凍層</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer ID</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">層 ID</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="-23"/>
@@ -1245,3 +1245,4 @@
     </message>
 </context>
 </TS>
+

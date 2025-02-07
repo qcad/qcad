@@ -465,7 +465,7 @@
     <message>
         <location line="+3"/>
         <source>Text Rotation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">文字旋轉</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -562,7 +562,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">繞線</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -944,7 +944,8 @@
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
         <source>Frame</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">框架</translation>
     </message>
 </context>
 </TS>
+

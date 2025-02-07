@@ -1091,12 +1091,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+17"/>
         <source>Length 1:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">長度 1：</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Length 2:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">長度 2：</translation>
     </message>
 </context>
 <context>
@@ -2748,7 +2748,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">使用最大角度</translation>
     </message>
 </context>
 <context>
@@ -3440,7 +3440,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">帶半徑的弧線：</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -4127,12 +4127,12 @@ is already in the list.</source>
     <message>
         <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">帶半徑的弧線：</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">掃描：</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -4310,7 +4310,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">實體不是圓、橢圓、花線或多重線。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4320,7 +4320,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a closed polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">實體不是封閉的多重曲線。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4724,7 +4724,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">匯出 CSV</translation>
     </message>
 </context>
 <context>
@@ -5738,7 +5738,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">高亮（並提升）範圍內的影像</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -5908,7 +5908,7 @@ is already in the list.</source>
     <message>
         <location line="+209"/>
         <source>Allocation limit for bitmaps (MB):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">位圖的分配限制 (MB)：</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -5923,7 +5923,7 @@ is already in the list.</source>
     <message>
         <location line="-121"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">始終以至少 1 像素寬的自訂寬度呈現多重曲線</translation>
     </message>
     <message>
         <location line="+182"/>
@@ -5973,7 +5973,7 @@ is already in the list.</source>
     <message>
         <location line="+219"/>
         <source>Maximum complexity for solid fills at high quality:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">最高複雜度的高品質實心填充：</translation>
     </message>
     <message>
         <location line="+114"/>
@@ -6473,7 +6473,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">如 Block：</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6513,17 +6513,17 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">至目前圖層</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">覆寫圖層</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">覆寫區塊</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -7412,12 +7412,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">新增測量至繪圖</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">文字高度：</translation>
     </message>
 </context>
 <context>
@@ -7679,12 +7679,12 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">覆寫圖層</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">覆寫區塊</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -7819,7 +7819,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">方法：</translation>
     </message>
 </context>
 <context>
@@ -8241,7 +8241,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">線路使用固定長度</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8251,7 +8251,7 @@ is already in the list.</source>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">線條使用固定角度</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8299,7 +8299,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">線長</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8309,7 +8309,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Line angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">線角度</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8400,7 +8400,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Style:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">風格：</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -8905,7 +8905,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">使用目前的圖層與屬性</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
@@ -9472,37 +9472,37 @@ is already in the list.</source>
     <message>
         <location line="+66"/>
         <source>Margins</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">邊界</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Left:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">左邊</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Top:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">頂端：</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">對</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Bottom:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">底部：</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Set to Printer Margins</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">設定為印表機邊距</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Scale and Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">規模與位置</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9598,17 +9598,17 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">至目前圖層</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">覆寫圖層</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">覆寫區塊</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -9987,7 +9987,7 @@ is already in the list.</source>
         <location line="+198"/>
         <location line="+3"/>
         <source>Page Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">頁面設定</translation>
     </message>
     <message>
         <location line="+277"/>
@@ -10240,12 +10240,12 @@ is already in the list.</source>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">自動計算艙口長度的最大複雜度：</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Update delay [ms]:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">更新延遲 [ms]：</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -10260,7 +10260,7 @@ is already in the list.</source>
     <message>
         <location line="+113"/>
         <source>Only update when nothing changes during update delay</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">僅在更新延遲期間無任何變更時更新</translation>
     </message>
     <message>
         <location line="-154"/>
@@ -10534,7 +10534,7 @@ is already in the list.</source>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">無效旋轉角</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -10559,7 +10559,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">使用目前的圖層與屬性</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10963,7 +10963,7 @@ is already in the list.</source>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">無效比例係數</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -10988,7 +10988,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">使用目前的圖層與屬性</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11818,12 +11818,12 @@ is already in the list.</source>
     <message>
         <location line="-19"/>
         <source>x:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">x:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">y:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -11838,7 +11838,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">相對</translation>
     </message>
 </context>
 <context>
@@ -11856,7 +11856,7 @@ is already in the list.</source>
     <message>
         <location line="-22"/>
         <source>r:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">r:</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -11866,7 +11866,7 @@ is already in the list.</source>
     <message>
         <location line="+29"/>
         <source>&lt;:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;:</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -11881,7 +11881,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">相對</translation>
     </message>
 </context>
 <context>
@@ -11894,7 +11894,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snap 距離：</translation>
     </message>
 </context>
 <context>
@@ -11922,7 +11922,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snap 距離：</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12288,7 +12288,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Import groups as layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">匯入群組為圖層</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>
@@ -12348,7 +12348,7 @@ is already in the list.</source>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Text:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">文字：</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -13051,7 +13051,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">使用目前的圖層與屬性</translation>
     </message>
 </context>
 <context>
@@ -13108,7 +13108,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">移動/旋轉</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -13123,7 +13123,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">使用目前的圖層與屬性</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
@@ -14205,22 +14205,22 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Lines)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">角度尺寸（2 行）</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Lines)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">角度尺寸（2 行）</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Points)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">角度尺寸 (3 分)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Points)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">角度尺寸 (3 分)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14435,22 +14435,22 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">毀滅</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">毀滅</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">外部參考資料</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">外部參考</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14605,3 +14605,4 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+

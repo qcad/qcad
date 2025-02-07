@@ -713,7 +713,7 @@
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+886"/>
         <source>Circular (recursive) block referencing detected:</source>
-        <translation>Circulaire (recursieve) blokverwijzingen gedetecteerd:</translation>
+        <translation>Circulaire (recursieve) blokreferenties gedetecteerd:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1245,3 +1245,4 @@
     </message>
 </context>
 </TS>
+

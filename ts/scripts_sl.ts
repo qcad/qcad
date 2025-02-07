@@ -13154,7 +13154,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uporaba pogovornega okna za možnosti orodja</translation>
     </message>
 </context>
 <context>
@@ -14631,3 +14631,4 @@ je že na seznamu.</translation>
     </message>
 </context>
 </TS>
+
