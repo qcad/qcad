@@ -813,7 +813,8 @@ void RDocumentInterface::repaintViews() {
 }
 
 void RDocumentInterface::terminateEvent(RTerminateEvent& event) {
-    Q_UNUSED(event)
+    // MSVC:
+    //Q_UNUSED(event)
 
     deleteTerminatedActions();
 }

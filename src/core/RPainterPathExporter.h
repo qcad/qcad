@@ -27,6 +27,7 @@
 #include "RRay.h"
 #include "RXLine.h"
 
+class RPoint;
 class RTriangle;
 
 /**
@@ -52,7 +53,8 @@ public:
     }
 
     virtual void exportPoint(const RPoint& point) {
-        Q_UNUSED(point)
+        // MSVC:
+        //Q_UNUSED(point)
     }
     virtual void exportTriangle(const RTriangle& triangle) {
         //Q_UNUSED(triangle)

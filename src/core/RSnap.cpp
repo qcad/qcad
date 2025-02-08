@@ -4,7 +4,7 @@
 
 RSnap::RSnap(RSnap::Status s) : status(s), lastSnap(RVector::invalid) {}
 
-RSnap::~RSnap() = default;
+RSnap::~RSnap() {}
 
 RVector RSnap::snap(RMouseEvent& event) {
     return snap(event.getModelPosition(), event.getGraphicsView());

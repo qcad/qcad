@@ -113,7 +113,8 @@ public:
     }
     virtual void addToPreview(RObject::Id entityId, RGraphicsSceneDrawable& drawable) {
         Q_UNUSED(entityId)
-        Q_UNUSED(drawable)
+        // MSVC:
+        //Q_UNUSED(drawable)
     }
     virtual void addPathToPreview(RObject::Id entityId, RPainterPath& pp) {
         Q_UNUSED(entityId)

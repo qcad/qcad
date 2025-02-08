@@ -1656,7 +1656,8 @@ void RExporter::exportBoundingBoxPaths(const QList<RPainterPath>& paths) {
 }
 
 void RExporter::exportImage(const RImageData& image, bool forceSelected) {
-    Q_UNUSED(image)
+    // MSVC:
+    //Q_UNUSED(image)
     Q_UNUSED(forceSelected)
 }
 
