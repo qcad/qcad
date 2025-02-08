@@ -238,6 +238,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, splitAtSegmentTypeChange, "splitAtSegmentTypeChange");
             
+            REcmaHelper::registerFunction(&engine, proto, insertVerticesAtSelfIntersections, "insertVerticesAtSelfIntersections");
+            
             REcmaHelper::registerFunction(&engine, proto, getBaseAngle, "getBaseAngle");
             
             REcmaHelper::registerFunction(&engine, proto, getWidth, "getWidth");
@@ -6070,6 +6072,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolylineData::splitAtSegmentTypeChange", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::insertVerticesAtSelfIntersections
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::insertVerticesAtSelfIntersections", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::insertVerticesAtSelfIntersections";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("insertVerticesAtSelfIntersections", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->insertVerticesAtSelfIntersections();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.insertVerticesAtSelfIntersections().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::insertVerticesAtSelfIntersections", context, engine);
             return result;
         }
          QScriptValue

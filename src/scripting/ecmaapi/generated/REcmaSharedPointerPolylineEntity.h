@@ -106,6 +106,9 @@
         insertVertexAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        insertVerticesAtSelfIntersections
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getVertexAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

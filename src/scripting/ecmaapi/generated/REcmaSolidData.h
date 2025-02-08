@@ -380,6 +380,9 @@
         splitAtSegmentTypeChange
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        insertVerticesAtSelfIntersections
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBaseAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

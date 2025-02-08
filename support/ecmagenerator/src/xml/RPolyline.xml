@@ -1053,6 +1053,11 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; RPolyline &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="insertVerticesAtSelfIntersections"
+    cppName="insertVerticesAtSelfIntersections" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getBaseAngle" cppName="getBaseAngle"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

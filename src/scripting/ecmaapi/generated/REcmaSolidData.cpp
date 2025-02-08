@@ -306,6 +306,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, splitAtSegmentTypeChange, "splitAtSegmentTypeChange");
             
+            REcmaHelper::registerFunction(&engine, proto, insertVerticesAtSelfIntersections, "insertVerticesAtSelfIntersections");
+            
             REcmaHelper::registerFunction(&engine, proto, getBaseAngle, "getBaseAngle");
             
             REcmaHelper::registerFunction(&engine, proto, getWidth, "getWidth");
@@ -8893,6 +8895,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSolidData::splitAtSegmentTypeChange", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSolidData::insertVerticesAtSelfIntersections
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSolidData::insertVerticesAtSelfIntersections", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSolidData::insertVerticesAtSelfIntersections";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSolidData* self = 
+                        getSelf("insertVerticesAtSelfIntersections", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->insertVerticesAtSelfIntersections();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSolidData.insertVerticesAtSelfIntersections().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSolidData::insertVerticesAtSelfIntersections", context, engine);
             return result;
         }
          QScriptValue
