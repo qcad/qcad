@@ -2259,6 +2259,13 @@ QList<RPolyline> RPolyline::splitAtSegmentTypeChange() const {
     return QList<RPolyline>() << *this;
 }
 
+bool RPolyline::insertVerticesAtSelfIntersections() {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->insertVerticesAtSelfIntersections(*this);
+    }
+    return false;
+}
+
 double RPolyline::getBaseAngle() const {
     if (polylineProxy!=NULL) {
         return polylineProxy->getBaseAngle(*this);

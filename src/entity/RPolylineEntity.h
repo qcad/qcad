@@ -157,6 +157,10 @@ public:
         data.insertVertexAt(vertex);
     }
 
+    bool insertVerticesAtSelfIntersections() {
+        return data.insertVerticesAtSelfIntersections();
+    }
+
     RVector getVertexAt(int i) const {
         return data.getVertexAt(i);
     }
