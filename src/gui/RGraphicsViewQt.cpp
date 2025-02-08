@@ -29,6 +29,7 @@
 #include "RMouseEvent.h"
 #include "RS.h"
 #include "RSettings.h"
+#include "RTabletEvent.h"
 #include "RTerminateEvent.h"
 #include "RWheelEvent.h"
 

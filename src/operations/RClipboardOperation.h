@@ -49,7 +49,8 @@ public:
     virtual ~RClipboardOperation() {}
 
     virtual RTransaction apply(RDocument& document, bool preview = false) {
-        Q_UNUSED(document)
+        // MSVC:
+        //Q_UNUSED(document)
         Q_UNUSED(preview)
         return RTransaction();
     }

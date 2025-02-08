@@ -51,7 +51,8 @@ public:
         RMessageHandler* messageHandler = NULL,
         RProgressHandler* progressHandler = NULL) {
 
-        Q_UNUSED(document)
+        // MSVC:
+        //QQ_UNUSED(document)
         Q_UNUSED(messageHandler)
         Q_UNUSED(progressHandler)
         return NULL;

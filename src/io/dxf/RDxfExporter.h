@@ -107,28 +107,34 @@ public:
     void writeImageDef(const RImageEntity& img);
 
     virtual void exportPoint(const RPoint& point) {
-        Q_UNUSED(point)
+        // MSVC:
+        //Q_UNUSED(point)
     }
 
     virtual void exportArcSegment(const RArc& arc, bool allowForZeroLength = false) {
-        Q_UNUSED(arc)
+        // MSVC:
+        //QQ_UNUSED(arc)
         Q_UNUSED(allowForZeroLength)
     }
 
     virtual void exportLineSegment(const RLine& line, double angle = RNANDOUBLE) {
-        Q_UNUSED(line)
+        // MSVC:
+        //QQ_UNUSED(line)
         Q_UNUSED(angle)
     }
 
     virtual void exportXLine(const RXLine& xLine) {
-        Q_UNUSED(xLine)
+        // MSVC:
+        //QQ_UNUSED(xLine)
     }
 
     virtual void exportRay(const RRay& ray) {
-        Q_UNUSED(ray)
+        // MSVC:
+        //QQ_UNUSED(ray)
     }
 
     virtual void exportTriangle(const RTriangle& triangle) {
+        // MSVC:
         //Q_UNUSED(triangle)
     }
 
