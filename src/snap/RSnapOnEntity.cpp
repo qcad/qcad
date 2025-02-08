@@ -25,7 +25,8 @@ QList<RVector> RSnapOnEntity::snapEntity(QSharedPointer<REntity> entity,
                                          RGraphicsView& view,
                                          QList<REntity::Id>* subEntityIds) {
 
-    Q_UNUSED(view)
+    // MSVC:
+    //QQ_UNUSED(view)
 
     QList<RVector> ret;
     REntity::Id subEntityId;

@@ -23,7 +23,8 @@ QList<RVector> RSnapDistance::snapEntity(QSharedPointer<REntity> entity,
     const RVector& point, const RBox& queryBox, RGraphicsView& view, QList<REntity::Id>* subEntityIds) {
 
     Q_UNUSED(point)
-    Q_UNUSED(view)
+    // MSVC:
+    //QQ_UNUSED(view)
 
     return entity->getPointsWithDistanceToEnd(distance, RS::FromAny, queryBox, subEntityIds);
 }

@@ -2,7 +2,7 @@
 #include "REntity.h"
 #include "RS.h"
 
-REntityExportListener::~REntityExportListener() = default;
+REntityExportListener::~REntityExportListener() {}
 
 bool REntityExportListener::checkCustomProperty(REntity* e) const {
     QSet<QPair<QString, QString> >::const_iterator it;

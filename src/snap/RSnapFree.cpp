@@ -19,7 +19,8 @@
 #include "RSnapFree.h"
 
 RVector RSnapFree::snap(const RVector& position, RGraphicsView& view, double range) {
-    Q_UNUSED(view);
+    // MSVC:
+    //QQ_UNUSED(view);
     Q_UNUSED(range);
 
     lastSnap = position;

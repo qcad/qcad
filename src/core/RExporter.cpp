@@ -1678,7 +1678,8 @@ void RExporter::clearClipRectangles() {
 }
 
 void RExporter::exportTransform(const RTransform& t) {
-    Q_UNUSED(t)
+    // MSVC:
+    //Q_UNUSED(t)
 }
 
 void RExporter::exportEndTransform() {

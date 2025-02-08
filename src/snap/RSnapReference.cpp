@@ -26,7 +26,8 @@ QList<RVector> RSnapReference::snapEntity(QSharedPointer<REntity> entity,
                                           QList<REntity::Id>* subEntityIds) {
     Q_UNUSED(point)
     Q_UNUSED(queryBox)
-    Q_UNUSED(view)
+    // MSVC:
+    //Q_UNUSED(view)
 
     // 20210716: TODO: add subEntityIds:
     QList<RRefPoint> ret = entity->getInternalReferencePoints(RS::RenderTop, subEntityIds);

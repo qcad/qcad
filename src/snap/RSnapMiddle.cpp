@@ -26,7 +26,8 @@ QList<RVector> RSnapMiddle::snapEntity(QSharedPointer<REntity> entity,
                                        QList<REntity::Id>* subEntityIds) {
 
     Q_UNUSED(point)
-    Q_UNUSED(view)
+    // MSVC:
+    //Q_UNUSED(view)
 
     return entity->getMiddlePoints(queryBox, subEntityIds);
 }
