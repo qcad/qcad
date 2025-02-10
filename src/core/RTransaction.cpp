@@ -16,6 +16,8 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <typeinfo>
+
 #include "RBlock.h"
 #include "RBlockReferenceEntity.h"
 #include "RDocument.h"
