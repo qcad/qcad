@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>356</width>
-    <height>587</height>
+    <height>637</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -190,7 +190,7 @@
    <item>
     <widget class="QGroupBox" name="Color">
      <property name="title">
-      <string>Color</string>
+      <string comment="Title of group box">Color</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
@@ -213,7 +213,7 @@
       <item>
        <widget class="QRadioButton" name="ColorFull">
         <property name="text">
-         <string>Color</string>
+         <string comment="Radio button choice">Color</string>
         </property>
         <property name="checked">
          <bool>true</bool>
