@@ -22,7 +22,7 @@
 #include "RAttributeEntity.h"
 #include "RBlock.h"
 #include "RBlockReferenceEntity.h"
-cu#include "RClipboardOperation.h"
+#include "RClipboardOperation.h"
 #include "RDocument.h"
 #include "RLayer.h"
 #include "RS.h"
