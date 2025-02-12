@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+450"/>
+        <location line="+451"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-425"/>
+        <location line="-426"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Kreditter</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+170"/>
         <source>Licenses</source>
         <translation>Licenser</translation>
     </message>
@@ -1175,12 +1175,12 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+23"/>
         <source>Color</source>
-        <translation>Farve</translation>
+        <comment>Title of group box</comment>
+        <translation type="unfinished">Farve</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+6"/>
         <source>Monochrome</source>
         <translation>Monokrom</translation>
     </message>
@@ -1190,7 +1190,13 @@ Do you wish to recover it?</source>
         <translation>Gråskala</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>Color</source>
+        <comment>Radio button choice</comment>
+        <translation type="unfinished">Farve</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Anti-aliasing</source>
         <translation>Anti-aliasing</translation>
     </message>
@@ -14615,4 +14621,3 @@ er allerede på listen.</translation>
     </message>
 </context>
 </TS>
-

@@ -55,12 +55,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+450"/>
+        <location line="+451"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-425"/>
+        <location line="-426"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -77,12 +77,12 @@
         <translation>Desconocido</translation>
     </message>
     <message>
-        <location line="+295"/>
+        <location line="+296"/>
         <source>Licenses</source>
         <translation>Licencias</translation>
     </message>
     <message>
-        <location line="-425"/>
+        <location line="-426"/>
         <location line="+123"/>
         <source>Version:</source>
         <translation>Versión:</translation>
@@ -1165,12 +1165,12 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+23"/>
         <source>Color</source>
-        <translation>Color</translation>
+        <comment>Title of group box</comment>
+        <translation type="unfinished">Color</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+6"/>
         <source>Monochrome</source>
         <translation>Monocromo</translation>
     </message>
@@ -1180,7 +1180,13 @@ Do you wish to recover it?</source>
         <translation>Escala de grises</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>Color</source>
+        <comment>Radio button choice</comment>
+        <translation type="unfinished">Color</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Anti-aliasing</source>
         <translation>Antialiasing</translation>
     </message>
@@ -14615,4 +14621,3 @@ ya está en la lista.</translation>
     </message>
 </context>
 </TS>
-

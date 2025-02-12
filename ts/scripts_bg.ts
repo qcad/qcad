@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+450"/>
+        <location line="+451"/>
         <source>Plugin:</source>
         <translation type="unfinished">Плъгин:</translation>
     </message>
     <message>
-        <location line="-425"/>
+        <location line="-426"/>
         <source>ID:</source>
         <translation type="unfinished">ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation type="unfinished">Кредити</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+170"/>
         <source>Licenses</source>
         <translation type="unfinished">Лицензи</translation>
     </message>
@@ -1173,12 +1173,12 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+23"/>
         <source>Color</source>
+        <comment>Title of group box</comment>
         <translation type="unfinished">Цвят</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+6"/>
         <source>Monochrome</source>
         <translation type="unfinished">Монохромен</translation>
     </message>
@@ -1188,7 +1188,13 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Степен на сивото</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>Color</source>
+        <comment>Radio button choice</comment>
+        <translation type="unfinished">Цвят</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Anti-aliasing</source>
         <translation type="unfinished">Противодействие на изглаждането</translation>
     </message>
@@ -14613,4 +14619,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+450"/>
+        <location line="+451"/>
         <source>Plugin:</source>
         <translation type="unfinished">Spraudnis:</translation>
     </message>
     <message>
-        <location line="-425"/>
+        <location line="-426"/>
         <source>ID:</source>
         <translation type="unfinished">ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation type="unfinished">Kredīti</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+170"/>
         <source>Licenses</source>
         <translation type="unfinished">Licences</translation>
     </message>
@@ -1174,12 +1174,12 @@ Vai vēlaties to atjaunot?</translation>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+23"/>
         <source>Color</source>
+        <comment>Title of group box</comment>
         <translation type="unfinished">Krāsa</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+6"/>
         <source>Monochrome</source>
         <translation type="unfinished">Vienkrāsains</translation>
     </message>
@@ -1189,7 +1189,13 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Sarkanās krāsas</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>Color</source>
+        <comment>Radio button choice</comment>
+        <translation type="unfinished">Krāsa</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Anti-aliasing</source>
         <translation type="unfinished">Izlīdzināšanas novēršana</translation>
     </message>
@@ -14622,4 +14628,3 @@ jau ir sarakstā.</translation>
     </message>
 </context>
 </TS>
-

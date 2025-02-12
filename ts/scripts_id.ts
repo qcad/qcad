@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+450"/>
+        <location line="+451"/>
         <source>Plugin:</source>
         <translation type="unfinished">Plugin:</translation>
     </message>
     <message>
-        <location line="-425"/>
+        <location line="-426"/>
         <source>ID:</source>
         <translation type="unfinished">ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation type="unfinished">Kredit</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+170"/>
         <source>Licenses</source>
         <translation type="unfinished">Lisensi</translation>
     </message>
@@ -1173,12 +1173,12 @@ Apakah Anda ingin memulihkannya?</translation>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+23"/>
         <source>Color</source>
+        <comment>Title of group box</comment>
         <translation type="unfinished">Warna</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+6"/>
         <source>Monochrome</source>
         <translation type="unfinished">Monokrom</translation>
     </message>
@@ -1188,7 +1188,13 @@ Apakah Anda ingin memulihkannya?</translation>
         <translation type="unfinished">Skala abu-abu</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>Color</source>
+        <comment>Radio button choice</comment>
+        <translation type="unfinished">Warna</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Anti-aliasing</source>
         <translation type="unfinished">Anti-aliasing</translation>
     </message>
@@ -14605,4 +14611,3 @@ sudah ada dalam daftar.</translation>
     </message>
 </context>
 </TS>
-
