@@ -275,6 +275,11 @@ InsertBlockItem.prototype.getOperation = function(preview) {
     }
 
     var op = new RPasteOperation(this.docItem);
+    this.initOp(op);
+    return op;
+};
+
+InsertBlockItem.prototype.initOp = function(op) {
     op.setText(this.getToolTitle());
 
     if (this.referencePoint.isZero()) {
@@ -301,7 +306,7 @@ InsertBlockItem.prototype.getOperation = function(preview) {
         op.setLayerName(this.layerName);
     }
     op.setScale(this.scale);
-    op.setRotation(rotation);
+    op.setRotation(this.getRotation());
     op.setFlipHorizontal(this.flipHorizontal);
     op.setFlipVertical(this.flipVertical);
     op.setToCurrentLayer(this.toCurrentLayer);
@@ -322,7 +327,6 @@ InsertBlockItem.prototype.getOperation = function(preview) {
             op.setAttribute(tag, this.attributes[tag]);
         }
     }
-    return op;
 };
 
 InsertBlockItem.prototype.slotScaleChanged = function(value) {
