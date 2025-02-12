@@ -3,6 +3,7 @@ SUBDIRS = \
     3rdparty \
     core \
     entity \
+    customentity \
     grid \
     scripts \
     snap \
