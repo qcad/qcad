@@ -451,6 +451,7 @@ About.prototype.initAboutSystem = function(textEdit) {
     text += "\nArchitecture: " + RS.getBuildCpuArchitecture();
     text += "\nDevice pixel ratio: " + RSettings.getDevicePixelRatio();
     text += "\nConfiguration file: " + RSettings.getFileName();
+    text += "\nData directory: " + RSettings.getDataLocation();
 
     text += "\nOS: ";
     if (RS.getSystemId()==="win") {
