@@ -127,6 +127,15 @@ public:
         clearCustomPattern();
     }
 
+    bool getAutoRegen() const {
+        return autoRegen;
+    }
+
+    void setAutoRegen(bool on) {
+        autoRegen = on;
+        clearCustomPattern();
+    }
+
     double getScale() const {
         return scaleFactor;
     }
@@ -265,6 +274,7 @@ protected:
 private:
     bool solid;
     bool winding;
+    bool autoRegen;
     double scaleFactor;
     double angle;
     QString patternName;
