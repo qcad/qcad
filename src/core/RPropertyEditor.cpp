@@ -284,6 +284,8 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         static QFuture<void> future = QFuture<void>();
 
         if (future.isRunning()) {
+            // selection has changed before the property editor started to update:
+            // cancel and restart timer:
             terminate = true;
             future.cancel();
             future.waitForFinished();
@@ -554,9 +556,9 @@ void RPropertyEditor::updateFromDocumentNow(RDocument* document, bool onlyChange
     QtConcurrent::blockingMap(ccProperties, RPropertyEditor::computePropertyValue);
 
     // serial:
-//    for (int i=0; i<ccProperties.length(); i++) {
-//        RPropertyEditor::computePropertyValue(ccProperties[i]);
-//    }
+    // for (int i=0; i<ccProperties.length(); i++) {
+    //     RPropertyEditor::computePropertyValue(ccProperties[i]);
+    // }
 
     // update combined properties map:
     for (int i=0; i<ccProperties.length(); i++) {
