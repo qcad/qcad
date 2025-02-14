@@ -112,6 +112,9 @@ public:
         return getType()==t;
     }
 
+    /**
+     * \return The unique entity type, usually the same as RTTI, different for custom entities.
+     */
     virtual RS::EntityType getType() const {
         return RS::ObjectUnknown;
     }
