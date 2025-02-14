@@ -88,6 +88,7 @@ public:
     virtual QSet<RObject::Id> queryLayerBlockEntities(RObject::Id layerId, RObject::Id blockId);
     virtual QSet<RObject::Id> queryChildEntities(RObject::Id parentId, RS::EntityType type = RS::EntityAll);
     virtual bool hasChildEntities(RObject::Id parentId) const;
+    bool hasBlockReferenceEntities() const;
     virtual QSet<RObject::Id> queryBlockReferences(RObject::Id blockId) const;
     virtual QSet<RObject::Id> queryAllBlockReferences() const;
     virtual QSet<RObject::Id> queryAllViewports() const;
