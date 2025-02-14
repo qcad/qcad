@@ -1396,13 +1396,12 @@ function entityTypeToString(type, plural) {
     default:
         if (type>=RS.EntityCustom && type<RS.EntityUser) {
             var handler = RCustomEntityRegistry.getHandler(type);
-            var name = handler.getEntityName(plural);
-            return qsTranslate("RCustomEntity", name);
+            if (!isNull(handler)) {
+                var name = handler.getEntityName(plural);
+                return qsTranslate("RCustomEntity", name);
+            }
         }
-        else {
-            return plural ? qsTr("Unknown Entities") : qsTr("Unknown Entity");
-        }
-        break;
+        return plural ? qsTr("Unknown Entities") : qsTr("Unknown Entity");
     }
 }
 
