@@ -74,7 +74,8 @@ public:
         Area = 0x4000000,                //!< Property is area (relevant for formatting of value)
         UnitLess = 0x8000000,            //!< Property has no unit (linetype scale, draw order, ...)
         DimStyleOverride = 0x10000000,   //!< Property is advanced dimension style override (can be hidden)
-        CustomApp001 = 0x20000000        //!< Property attribute for custom application
+        CustomApp001 = 0x20000000,       //!< Property attribute for custom application
+        StoreIndex = 0x40000000          //!< Store index instead of text of a property with choices
     };
     Q_DECLARE_FLAGS(Options, Option)
 
@@ -151,16 +152,21 @@ public:
         return options.testFlag(AllowMixedValue);
     }
 
-    QSet<QString> getChoices() const {
+    QStringList getChoices() const {
         return choices;
     }
 
-    void setChoices(QSet<QString> choices) {
+    void setChoices(const QStringList& choices, bool storeIndex = false) {
         this->choices = choices;
+        setOption(StoreIndex, storeIndex);
     }
 
     bool hasChoices() {
         return !choices.isEmpty();
+    }
+
+    bool getStoreIndex() const {
+        return options.testFlag(StoreIndex);
     }
 
 //    QList<QVariant> getEnumChoices() const {
@@ -328,7 +334,7 @@ public:
 
 private:
     RPropertyAttributes::Options options;
-    QSet<QString> choices;
+    QStringList choices;
     QString label;
 };
 

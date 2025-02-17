@@ -233,10 +233,10 @@ QPair<QVariant, RPropertyAttributes> RSplineEntity::getProperty(
     }
     else if (propertyTypeId == PropertyDegree) {
         RPropertyAttributes attr;
-        QSet<QString> choices;
+        QStringList choices;
         for (int d=1; d<=data.controlPoints.count()-1; d++) {
             if (d==3 || !data.hasFitPoints()) {
-                choices.insert(QString("%1").arg(d));
+                choices.append(QString("%1").arg(d));
             }
         }
         attr.setChoices(choices);

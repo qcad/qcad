@@ -251,7 +251,9 @@ QPair<QVariant, RPropertyAttributes> REntity::getProperty(
                 RPropertyAttributes attr;
                 if (!noAttributes) {
                     // TODO: filter out locked layers:
-                    attr.setChoices(document->getLayerNames());
+                    QSet<QString> set = document->getLayerNames();
+                    QStringList list(set.begin(), set.end());
+                    attr.setChoices(list);
                 }
                 return qMakePair(QVariant(document->getLayerName(
                         getData().getLayerId())), attr);

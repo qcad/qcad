@@ -163,7 +163,7 @@ QPair<QVariant, RPropertyAttributes> RDimOrdinateEntity::getProperty(
         if (humanReadable) {
             RPropertyAttributes attr;
             if (!noAttributes) {
-                attr.setChoices(QSet<QString>() << "X" << "Y");
+                attr.setChoices(QStringList() << "X" << "Y");
             }
             return qMakePair(QVariant(data.xType ? "X" : "Y"), attr);
         }
