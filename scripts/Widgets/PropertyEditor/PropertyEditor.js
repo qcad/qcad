@@ -72,11 +72,17 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
     else if (isComboBox(this.sender)) {
         // value is index of combo box:
         if (isNumber(value)) {
-            if (this.sender.itemData(value)===PropertyEditor.varies) {
+            var data = this.sender.itemData(value);
+            if (isNull(data)) {
+                // no data, use index as value:
+                this.propertyEditor.propertyChanged(this.propertyType, value);
                 return;
             }
-            this.propertyEditor.propertyChanged(this.propertyType, 
-                                                this.sender.itemData(value));
+            if (data===PropertyEditor.varies) {
+                // value is *VARIES*, don't change anything:
+                return;
+            }
+            this.propertyEditor.propertyChanged(this.propertyType, data);
             return;
         }
 
@@ -534,10 +540,11 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
         var titles = this.getPropertyTitles(group);
         for (var pi=0; pi<titles.length; ++pi) {
             var title = titles[pi];
-            //qDebug("title: ", title);
+            //qDebug("  title: ", title);
 
             var value = this.getPropertyValue(group, title);
-            //qDebug("value: ", value);
+
+            //qDebug("    value: ", value);
 
             var attributes = this.getPropertyAttributes(group, title);
             //var propertyTypeId = attributes.getPropertyTypeId();
@@ -907,25 +914,25 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
     //else
     if (propertyTypeId.getId()===RTextEntity.PropertyHAlign.getId()) {
         controls = this.initChoiceControls(
-                    objectName, propertyTypeId, onlyChanges, control, false, true);
+                    objectName, propertyTypeId, onlyChanges, control, [], []);
     }
 
     // Vertical alignment: combo box:
     else if (propertyTypeId.getId()===RTextEntity.PropertyVAlign.getId()) {
         controls = this.initChoiceControls(
-                    objectName, propertyTypeId, onlyChanges, control, false, true);
+                    objectName, propertyTypeId, onlyChanges, control, [], []);
     }
 
     // Polyline orientation: combo box:
     else if (propertyTypeId.getId()===RPolylineEntity.PropertyOrientation.getId()) {
         controls = this.initChoiceControls(
-                    objectName, propertyTypeId, onlyChanges, control, false, true);
+                    objectName, propertyTypeId, onlyChanges, control, [], []);
     }
 
     // Arc dimension arc symbol type: combo box:
     else if (propertyTypeId.getId()===RDimArcLengthEntity.PropertyDimArcSymbolType.getId()) {
         controls = this.initChoiceControls(
-                    objectName, propertyTypeId, onlyChanges, control, false, true);
+                    objectName, propertyTypeId, onlyChanges, control, [], []);
     }
 
     // DIMLUNIT: combo box with DIMLUNIT choices:
@@ -938,7 +945,7 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
              propertyTypeId.getId()===RDimensionEntity.PropertyDimazin.getId() ||
              propertyTypeId.getId()===RDimensionEntity.PropertyDimadec.getId()) {
         controls = this.initChoiceControls(
-                    objectName, propertyTypeId, onlyChanges, control, false, true);
+                    objectName, propertyTypeId, onlyChanges, control, [], []);
     }
 
     else if (propertyTypeId.getId()===RDimensionEntity.PropertyDimdsep.getId()) {
@@ -1016,7 +1023,12 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
 
     // Choices: combo box:
     else if (attributes.hasChoices() || isComboBox(control)) {
-        controls = this.initChoiceControls(objectName, propertyTypeId, onlyChanges, control);
+        if (attributes.getStoreIndex()) {
+            controls = this.initChoiceControls(objectName, propertyTypeId, onlyChanges, control, undefined, []);
+        }
+        else {
+            controls = this.initChoiceControls(objectName, propertyTypeId, onlyChanges, control);
+        }
     }
 
     // String: line edit:
@@ -1413,8 +1425,17 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
                 control.addItems(cs);
             }
             else {
-                control.addItems(attributes.getChoices());
-                control.model().sort(0);
+                if (isNull(choicesData)) {
+                    control.addItems(attributes.getChoices());
+                    control.model().sort(0);
+                }
+                else {
+                    var ch = attributes.getChoices();
+                    for (i=0; i<ch.length; ++i) {
+                        // use choicesData as data of index if choicesData is empty:
+                        control.addItem(ch[i], isNull(choicesData[i]) ? i : choicesData[i]);
+                    }
+                }
             }
         }
         else {
@@ -1447,17 +1468,26 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
         control.removeItem(variesIndex);
     }
 
+    // find out index of combo box for the given value:
     var index = -1;
     if (typeof(value)==="string") {
         index = control.findText(value);
         if (index===-1) {
-            control.addItem(value);
-            index = control.findText(value);
+            var i = parseInt(value);
+            if (!isNaN(i) && i>=0 && i<control.count) {
+                // value is the index of the combo box as string (from custom property of custom entity):
+                index = i;
+            }
+            else {
+                control.addItem(value);
+                index = control.findText(value);
+            }
         }
     }
     else {
         for (i=0; i<control.count; ++i) {
             var data = control.itemData(i);
+
             var match = false;
 
             // for some types (e.g. RColor, RLinetype), we have to use equals here:
@@ -1502,6 +1532,7 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
     }
     else {
         var signalsBlocked = control.blockSignals(true);
+
         control.currentIndex = index;
         control.blockSignals(signalsBlocked);
 
