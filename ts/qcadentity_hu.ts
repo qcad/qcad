@@ -282,7 +282,11 @@
         <location line="+1"/>
         <source>Sweep Angle</source>
         <translatorcomment>A megrajzolt ív hossza</translatorcomment>
+<<<<<<< HEAD
         <translation></translation>
+=======
+        <translation>Átfogott szög</translation>
+>>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+1"/>
@@ -304,18 +308,22 @@
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+95"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+101"/>
         <source>Tag</source>
-        <translation type="unfinished">Címke</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation type="unfinished">Prompt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
         <source>Circumference</source>
         <translatorcomment>Kör kerülete</translatorcomment>
+<<<<<<< HEAD
         <translation></translation>
+=======
+        <translation>Kerület</translation>
+>>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-10"/>
@@ -344,7 +352,11 @@
         <location line="+1"/>
         <source>Line 1 Start</source>
         <translatorcomment>Szög méretvonalának darabja</translatorcomment>
+<<<<<<< HEAD
         <translation></translation>
+=======
+        <translation>1. vonal eleje</translation>
+>>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
@@ -411,14 +423,18 @@
         <location line="+1"/>
         <source>Defining Point</source>
         <translatorcomment>Ennek a pontnak írja ki az ordináta &quot;méretvonal&quot; az egyik koordinátájtát (abszcisszát(X) vagy ordinátát(Y))</translatorcomment>
+<<<<<<< HEAD
         <translation></translation>
+=======
+        <translation>Meghatározott pont</translation>
+>>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>Vonal végpontja</translation>
+        <translation>Mutató vonal végpontja</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
@@ -434,7 +450,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Tolerance</source>
-        <translation>Tolerancia</translation>
+        <translation>Tűréshatár</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -451,7 +467,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Definition Point</source>
-        <translation type="unfinished">Meghatározási pont</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -510,7 +526,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation>Fókuszpont</translation>
+        <translation>Főtengely pontja</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -555,7 +571,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished">Tekercselés</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -645,13 +661,13 @@
         <location line="+2"/>
         <location line="+1"/>
         <source>U</source>
-        <translation type="unfinished">U</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
-        <translation type="unfinished">V</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -818,7 +834,11 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
         <source>Closed Periodic</source>
         <translatorcomment>Spline esetén a körbezártság</translatorcomment>
+<<<<<<< HEAD
         <translation></translation>
+=======
+        <translation>Körbezárt</translation>
+>>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+1"/>
@@ -881,7 +901,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Base Point</source>
-        <translation type="unfinished">Bázispont</translation>
+        <translation>Bázispont</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -891,7 +911,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Second Point</source>
-        <translation type="unfinished">Második pont</translation>
+        <translation>Második pont</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -901,55 +921,55 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction Vector</source>
-        <translation type="unfinished">Irányvektor</translation>
+        <translation>Irányvektor</translation>
     </message>
     <message>
         <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
-        <translation type="unfinished">Rögzített szög</translation>
+        <translation>Fix szög</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="-3"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
         <source>Invisible</source>
-        <translation type="unfinished">Láthatatlan</translation>
+        <translation>Láthatatlan</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+190"/>
         <source>Arc Symbol Type</source>
-        <translation type="unfinished">Ív szimbólum típusa</translation>
+        <translation>Ív szimbólum típusa</translation>
     </message>
     <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation type="unfinished">Helyszín</translation>
+        <translation>Hely</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-        <translation type="unfinished">Irány</translation>
+        <translation>Irány</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation type="unfinished">Szöveg</translation>
+        <translation>Szöveg</translation>
     </message>
     <message>
         <location filename="../src/entity/RLineEntity.cpp" line="-7"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-        <translation type="unfinished">Középső pont</translation>
+        <translation>Felezőpont</translation>
     </message>
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
         <source>Frame</source>
-        <translation type="unfinished">Keret</translation>
+        <translation>Keret</translation>
     </message>
 </context>
 </TS>

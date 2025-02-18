@@ -299,11 +299,11 @@ QPair<QVariant, RPropertyAttributes> RBlockReferenceEntity::getProperty(
                 // TODO
                 if (!noAttributes) {
                     QSet<QString> blockNames = document->getBlockNames();
-                    QSet<QString> filtered;
+                    QStringList filtered;
                     QSet<QString>::iterator it;
                     for (it=blockNames.begin(); it!=blockNames.end(); it++) {
                         if (!(*it).startsWith("*")) {
-                            filtered.insert(*it);
+                            filtered.append(*it);
                         }
                     }
                     attr.setChoices(filtered);

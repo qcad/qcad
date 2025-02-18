@@ -43,7 +43,6 @@
 #include "RBlock.h"
 #include "RBlockReferenceEntity.h"
 #include "RCircleEntity.h"
-#include "RCustomEntity.h"
 #include "RDimAlignedEntity.h"
 #include "RDimAngularEntity.h"
 #include "RDimAngular2LEntity.h"
@@ -350,7 +349,6 @@ int main(int argc, char *argv[]) {
 
     RArcEntity::init();
     RBlockReferenceEntity::init();
-    RCustomEntity::init();
     RCircleEntity::init();
 
     REllipseEntity::init();

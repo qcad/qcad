@@ -838,6 +838,9 @@ public:
         return notifyGlobalListeners;
     }
 
+    static void registerCustomEntityType(RS::EntityType type);
+    static void unregisterCustomEntityType(RS::EntityType type);
+
 //    RObject::Id getWorkingSetBlockReferenceId() const;
 //    void setWorkingSetBlockReferenceId(RObject::Id id, int group = -1, RTransaction* transaction = NULL);
 
@@ -845,6 +848,8 @@ protected:
     QDateTime lastModified;
     bool modified;
     RObject::Handle handleCounter;
+
+    static QList<RS::EntityType> customEntityTypes;
 
 private:
     RDocument* document;
@@ -864,6 +869,7 @@ private:
 
     QList<RModifiedListener*> modifiedListeners;
     bool notifyGlobalListeners;
+
 };
 
 Q_DECLARE_METATYPE(RStorage*)

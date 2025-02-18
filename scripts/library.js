@@ -1392,7 +1392,15 @@ function entityTypeToString(type, plural) {
     case RS.EntityXRef:
         return plural ? qsTr("External References") : qsTr("External Reference");
     case RS.EntityUnknown:
+        return plural ? qsTr("Unknown Entities") : qsTr("Unknown Entity");
     default:
+        if (type>=RS.EntityCustom && type<RS.EntityUser) {
+            var handler = RCustomEntityRegistry.getHandler(type);
+            if (!isNull(handler)) {
+                var name = handler.getEntityName(plural);
+                return qsTranslate("RCustomEntity", name);
+            }
+        }
         return plural ? qsTr("Unknown Entities") : qsTr("Unknown Entity");
     }
 }

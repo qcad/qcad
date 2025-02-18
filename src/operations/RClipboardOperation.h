@@ -28,6 +28,8 @@
 
 class RDocument;
 class RBlock;
+class RBlockReferenceEntity;
+class RBlockReferenceData;
 class REntity;
 class RLayer;
 class RLinetype;
@@ -254,6 +256,8 @@ public:
     void setCustomEntityType(RS::EntityType t) {
         customEntityType = t;
     }
+
+    virtual RBlockReferenceEntity* createBlockReferenceEntity(RDocument& doc, RS::EntityType customEntityType, const RBlockReferenceData& data);
 
 private:
     QMap<QString, QSharedPointer<RLayer> > copiedLayers;

@@ -813,3 +813,7 @@ QSharedPointer<RShape> REntityData::getClosestShape(const RVector& pos, double r
 void REntityData::setAutoUpdatesBlocked(bool on) {
     autoUpdatesBlocked = on;
 }
+
+bool REntityData::getAutoUpdatesBlocked() const {
+    return autoUpdatesBlocked;
+}

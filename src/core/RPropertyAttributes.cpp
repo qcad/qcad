@@ -21,7 +21,18 @@
 void RPropertyAttributes::mixWith(const RPropertyAttributes & other) {
     setAffectsOtherProperties(affectsOtherProperties() || other.affectsOtherProperties());
     setInvisible(isInvisible() || other.isInvisible());
-    choices.intersect(other.choices);
+
+    QSet<QString> otherSet(other.choices.begin(), other.choices.end());
+
+    // Store intersection while preserving order of first choices list:
+    QStringList res;
+    for (int i=0; i<choices.length(); ++i) {
+        if (otherSet.contains(choices[i])) {
+            res.append(choices[i]);
+        }
+    }
+
+    choices = res;
 }
 
 

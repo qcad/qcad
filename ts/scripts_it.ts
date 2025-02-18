@@ -55,12 +55,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+450"/>
+        <location line="+451"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-425"/>
+        <location line="-426"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -77,12 +77,12 @@
         <translation>Sconosciuto</translation>
     </message>
     <message>
-        <location line="+295"/>
+        <location line="+296"/>
         <source>Licenses</source>
         <translation>Licenze</translation>
     </message>
     <message>
-        <location line="-425"/>
+        <location line="-426"/>
         <location line="+123"/>
         <source>Version:</source>
         <translation>Versione:</translation>

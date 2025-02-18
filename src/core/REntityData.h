@@ -414,6 +414,7 @@ public:
      */
     virtual void update() const {}
     void setAutoUpdatesBlocked(bool on);
+    bool getAutoUpdatesBlocked() const;
 
     static int getDefaultDrawOrder() {
         return RMININT;

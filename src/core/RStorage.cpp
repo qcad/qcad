@@ -32,6 +32,10 @@
 #include "RView.h"
 #include "RMainWindow.h"
 
+
+QList<RS::EntityType> RStorage::customEntityTypes;
+
+
 RStorage::RStorage() :
     modified(false),
     handleCounter(0),
@@ -1336,3 +1340,11 @@ bool RStorage::isEntityVisible(const REntity& entity, RObject::Id blockId) const
 //    docVars->setWorkingSetBlockReferenceId(id);
 //    endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 //}
+
+void RStorage::registerCustomEntityType(RS::EntityType type) {
+    customEntityTypes.append(type);
+}
+
+void RStorage::unregisterCustomEntityType(RS::EntityType type) {
+    customEntityTypes.removeAll(type);
+}

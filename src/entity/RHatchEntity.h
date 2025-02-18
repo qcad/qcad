@@ -171,6 +171,14 @@ public:
         data.setWinding(on);
     }
 
+    bool getAutoRegen() const {
+        return data.getAutoRegen();
+    }
+
+    void setAutoRegen(bool on) {
+        data.setAutoRegen(on);
+    }
+
     double getScale() const {
         return data.getScale();
     }

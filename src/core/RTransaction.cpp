@@ -235,6 +235,8 @@ void RTransaction::redo() {
 
             storage->removeObject(storage->queryObjectDirect(objId));
 
+            object->setAutoUpdatesBlocked(true);
+
             QList<RPropertyChange> objectChanges = propertyChanges.value(objId);
             for (int i=0; i<objectChanges.size(); ++i) {
                 RPropertyTypeId propertyTypeId = objectChanges.at(i).propertyTypeId;
@@ -255,6 +257,8 @@ void RTransaction::redo() {
                     document->addToSpatialIndex(entity);
                 }
             }
+
+            object->setAutoUpdatesBlocked(false);
         }
     }
 
@@ -731,7 +735,8 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
 
                 // only clone block if block reference owns block and block exists already and was not added in this transaction:
                 // block might not exist when copying from one document to another (e.g. clipboard):
-                if (blockRef->hasBlockOwnership() && doc->hasBlock(referencedBlockName) && !blockAdded) {
+                // don't clone blocks during imports (keepHandles is true):
+                if (blockRef->hasBlockOwnership() && doc->hasBlock(referencedBlockName) && !blockAdded && !keepHandles) {
                     QSharedPointer<RBlock> block = doc->queryBlock(blockRef->getReferencedBlockId());
                     if (block.isNull()) {
                         qWarning() << "RTransaction::addObject: "
@@ -1220,6 +1225,7 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, bool force) {
             // if block reference with ownership of block is deleted, delete block:
             if (blockRef->hasBlockOwnership()) {
                 // delete block:
+                // deleting the block will also delete all references to it:
                 deleteObject(blockRef->getReferencedBlockId(), true);
                 return;
             }

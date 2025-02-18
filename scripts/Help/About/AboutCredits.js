@@ -106,6 +106,7 @@ var credits =
         [ "Andrew Mustun",       "Dutch (nl) translation" ],
         [ "Timo Seppola, Jarmo", "Finnish (fi) translation" ],
         [ "Andrew Mustun",       "German (de) translation" ],
+        [ "Feri",                "Hungarian (hu) translation" ],
         [ "Fabrizio Margini",    "Italian (it) translation" ],
         [ "Tanaka Hidemune",     "Japanese (ja) translation and Japanese user reference manual" ],
         [ "Евгений, AlexL",      "Russian (ru) translation" ],

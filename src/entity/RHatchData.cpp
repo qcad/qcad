@@ -40,6 +40,7 @@ RHatchProxy* RHatchData::hatchProxy = NULL;
 RHatchData::RHatchData() :
     solid(true),
     winding(false),
+    autoRegen(true),
     scaleFactor(1.0),
     angle(0.0),
     patternName("SOLID"),
@@ -69,6 +70,7 @@ RHatchData::RHatchData(const RHatchData& other) : REntityData(other), RPainterPa
 RHatchData::RHatchData(bool solid, double scaleFactor, double angle, const QString& patternName) :
     solid(solid),
     winding(false),
+    autoRegen(true),
     scaleFactor(scaleFactor),
     angle(angle),
     patternName(patternName),
@@ -81,6 +83,7 @@ RHatchData& RHatchData::operator =(const RHatchData& other) {
 
     solid = other.solid;
     winding = other.winding;
+    autoRegen = other.autoRegen;
     scaleFactor = other.scaleFactor;
     angle = other.angle;
     transparency = other.transparency;
@@ -1006,8 +1009,11 @@ RPainterPath RHatchData::getBoundaryPath(double pixelSizeHint) const {
     }
 
     boundaryPath = RPainterPath();
-    gotPixelSizeHint = pixelSizeHint;
-    boundaryPath.setPixelSizeHint(pixelSizeHint);
+
+    if (getAutoRegen()) {
+        gotPixelSizeHint = pixelSizeHint;
+        boundaryPath.setPixelSizeHint(pixelSizeHint);
+    }
 
     for (int i=0; i<boundary.size(); ++i) {
         QList<QSharedPointer<RShape> > loop = boundary.at(i);
@@ -1058,7 +1064,9 @@ RPainterPath RHatchData::getBoundaryPath(double pixelSizeHint) const {
 
                 RPainterPathExporter exp;
                 exp.setExportZeroLinesAsPoints(false);
-                exp.setPixelSizeHint(pixelSizeHint*2);
+                if (getAutoRegen()) {
+                    exp.setPixelSizeHint(pixelSizeHint*2);
+                }
                 exp.exportArcSegment(*arc);
                 RPainterPath p = exp.getPainterPath();
                 boundaryPath.appendPath(p);
