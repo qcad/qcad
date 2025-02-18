@@ -1162,12 +1162,12 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+23"/>
         <source>Color</source>
-        <translation>Цвет</translation>
+        <comment>Title of group box</comment>
+        <translation type="unfinished">Цвет</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+6"/>
         <source>Monochrome</source>
         <translation>Монохромный</translation>
     </message>
@@ -1177,7 +1177,13 @@ Do you wish to recover it?</source>
         <translation>Градации серого</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>Color</source>
+        <comment>Radio button choice</comment>
+        <translation type="unfinished">Цвет</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Anti-aliasing</source>
         <translation>Сглаживание</translation>
     </message>
@@ -14625,4 +14631,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

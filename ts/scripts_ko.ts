@@ -1173,12 +1173,12 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+23"/>
         <source>Color</source>
+        <comment>Title of group box</comment>
         <translation type="unfinished">색상</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+6"/>
         <source>Monochrome</source>
         <translation type="unfinished">모노크롬</translation>
     </message>
@@ -1188,7 +1188,13 @@ Do you wish to recover it?</source>
         <translation type="unfinished">그레이스케일</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>Color</source>
+        <comment>Radio button choice</comment>
+        <translation type="unfinished">색상</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Anti-aliasing</source>
         <translation type="unfinished">앤티 앨리어싱</translation>
     </message>
@@ -14605,4 +14611,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

@@ -1165,12 +1165,12 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+23"/>
         <source>Color</source>
-        <translation>Farbe</translation>
+        <comment>Title of group box</comment>
+        <translation type="unfinished">Farbe</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+6"/>
         <source>Monochrome</source>
         <translation>Monochrom</translation>
     </message>
@@ -1180,7 +1180,13 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Graustufen</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>Color</source>
+        <comment>Radio button choice</comment>
+        <translation type="unfinished">Farbe</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Anti-aliasing</source>
         <translation>Antialiasing</translation>
     </message>
@@ -14615,4 +14621,3 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 </TS>
-

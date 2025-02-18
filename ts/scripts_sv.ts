@@ -1178,12 +1178,12 @@ Vill du återställa den?</translation>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+23"/>
         <source>Color</source>
-        <translation>Färg</translation>
+        <comment>Title of group box</comment>
+        <translation type="unfinished">Färg</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+6"/>
         <source>Monochrome</source>
         <translation>Monokrom</translation>
     </message>
@@ -1193,7 +1193,13 @@ Vill du återställa den?</translation>
         <translation>Gråskala</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>Color</source>
+        <comment>Radio button choice</comment>
+        <translation type="unfinished">Färg</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Anti-aliasing</source>
         <translation>Anti-aliasing</translation>
     </message>
@@ -14613,4 +14619,3 @@ finns redan i listan.</translation>
     </message>
 </context>
 </TS>
-

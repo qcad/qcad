@@ -1172,12 +1172,12 @@ Kurtarmak ister misiniz?</translation>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+23"/>
         <source>Color</source>
-        <translation>Renk</translation>
+        <comment>Title of group box</comment>
+        <translation type="unfinished">Renk</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+6"/>
         <source>Monochrome</source>
         <translation>Tek renkli</translation>
     </message>
@@ -1187,7 +1187,13 @@ Kurtarmak ister misiniz?</translation>
         <translation>Gri tonlama</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>Color</source>
+        <comment>Radio button choice</comment>
+        <translation type="unfinished">Renk</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Anti-aliasing</source>
         <translation>Kenar yumuşatma</translation>
     </message>
@@ -14604,4 +14610,3 @@ zaten listede.</translation>
     </message>
 </context>
 </TS>
-

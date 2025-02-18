@@ -333,6 +333,7 @@
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <source>Scale</source>
         <translatorcomment>Blokk beszúrásakor használja, az eredetinél kisebb vagy nagyobb mérethez</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -343,21 +344,25 @@
         <location line="+1"/>
         <source>Columns</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rows</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+3"/>
@@ -749,6 +754,7 @@
         <location line="+1"/>
         <source>Arrow size</source>
         <translatorcomment>Nyíl vagy </translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -779,11 +785,13 @@
         <location line="+1"/>
         <source>Tick size</source>
         <translatorcomment>A méretvonal végén nyíl helyett használható ferde vonalszakasz mérete</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
         <translatorcomment>Azt adja meg, hogy a méretvonalra írt számot pl 1.5 vagy 1 1/2 stb formátumban írja rá</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1245,4 +1253,3 @@
     </message>
 </context>
 </TS>
-

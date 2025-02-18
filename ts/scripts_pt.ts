@@ -1165,12 +1165,12 @@ Você deseja recuperá-lo?</translation>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+23"/>
         <source>Color</source>
-        <translation>Cor</translation>
+        <comment>Title of group box</comment>
+        <translation type="unfinished">Cor</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+6"/>
         <source>Monochrome</source>
         <translation>Monocromático</translation>
     </message>
@@ -1180,7 +1180,13 @@ Você deseja recuperá-lo?</translation>
         <translation>Escala de cinzas</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>Color</source>
+        <comment>Radio button choice</comment>
+        <translation type="unfinished">Cor</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Anti-aliasing</source>
         <translation>Suavização</translation>
     </message>
@@ -14615,4 +14621,3 @@ já se encontra na lista.</translation>
     </message>
 </context>
 </TS>
-

@@ -1160,12 +1160,12 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+23"/>
         <source>Color</source>
-        <translation>Väri</translation>
+        <comment>Title of group box</comment>
+        <translation type="unfinished">Väri</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+6"/>
         <source>Monochrome</source>
         <translation>Yksivärinen</translation>
     </message>
@@ -1175,7 +1175,13 @@ Haluatko palauttaa sen?</translation>
         <translation>Harmaasävy</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>Color</source>
+        <comment>Radio button choice</comment>
+        <translation type="unfinished">Väri</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Anti-aliasing</source>
         <translation>Pehmennys</translation>
     </message>
@@ -14615,4 +14621,3 @@ on jo luettelossa.</translation>
     </message>
 </context>
 </TS>
-

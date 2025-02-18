@@ -1179,12 +1179,12 @@ Ar norite jį atkurti?</translation>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+23"/>
         <source>Color</source>
+        <comment>Title of group box</comment>
         <translation type="unfinished">Spalva</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+6"/>
         <source>Monochrome</source>
         <translation type="unfinished">Vienspalvis</translation>
     </message>
@@ -1194,7 +1194,13 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Pilka skalė</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>Color</source>
+        <comment>Radio button choice</comment>
+        <translation type="unfinished">Spalva</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Anti-aliasing</source>
         <translation type="unfinished">Išlyginimo mažinimas</translation>
     </message>
@@ -14622,4 +14628,3 @@ jau yra sąraše.</translation>
     </message>
 </context>
 </TS>
-

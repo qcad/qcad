@@ -1160,12 +1160,12 @@ Přejete si ho obnovit?</translation>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+23"/>
         <source>Color</source>
-        <translation>Barva</translation>
+        <comment>Title of group box</comment>
+        <translation type="unfinished">Barva</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+6"/>
         <source>Monochrome</source>
         <translation>Černobílá</translation>
     </message>
@@ -1175,7 +1175,13 @@ Přejete si ho obnovit?</translation>
         <translation>Stupně šedi</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>Color</source>
+        <comment>Radio button choice</comment>
+        <translation type="unfinished">Barva</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Anti-aliasing</source>
         <translation>Vyhlazování</translation>
     </message>
@@ -14623,4 +14629,3 @@ již v seznamu je.</translation>
     </message>
 </context>
 </TS>
-

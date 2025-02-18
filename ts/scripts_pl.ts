@@ -1162,12 +1162,12 @@ Czy chcesz go odzyskać?</translation>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+23"/>
         <source>Color</source>
-        <translation>Kolor</translation>
+        <comment>Title of group box</comment>
+        <translation type="unfinished">Kolor</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+6"/>
         <source>Monochrome</source>
         <translation>Monochromatyczny</translation>
     </message>
@@ -1177,7 +1177,13 @@ Czy chcesz go odzyskać?</translation>
         <translation>Skala szarości</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>Color</source>
+        <comment>Radio button choice</comment>
+        <translation type="unfinished">Kolor</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Anti-aliasing</source>
         <translation>Antyaliasing</translation>
     </message>
@@ -14625,4 +14631,3 @@ jest już na liście.</translation>
     </message>
 </context>
 </TS>
-

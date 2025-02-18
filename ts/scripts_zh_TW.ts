@@ -1178,12 +1178,12 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+23"/>
         <source>Color</source>
+        <comment>Title of group box</comment>
         <translation type="unfinished">颜色</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+6"/>
         <source>Monochrome</source>
         <translation type="unfinished">单色的</translation>
     </message>
@@ -1193,7 +1193,13 @@ Do you wish to recover it?</source>
         <translation type="unfinished">灰度</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>Color</source>
+        <comment>Radio button choice</comment>
+        <translation type="unfinished">颜色</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Anti-aliasing</source>
         <translation type="unfinished">抗锯齿</translation>
     </message>
@@ -14605,4 +14611,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

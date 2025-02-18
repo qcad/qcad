@@ -1178,12 +1178,12 @@ Szeretné helyreállítani?</translation>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+23"/>
         <source>Color</source>
-        <translation>Színek</translation>
+        <comment>Title of group box</comment>
+        <translation type="unfinished">Színek</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+6"/>
         <source>Monochrome</source>
         <translation>Monokróm</translation>
     </message>
@@ -1193,7 +1193,13 @@ Szeretné helyreállítani?</translation>
         <translation>Szürkeárnyalatos</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>Color</source>
+        <comment>Radio button choice</comment>
+        <translation type="unfinished">Színes</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Anti-aliasing</source>
         <translation>Élsimítás</translation>
     </message>
@@ -4433,6 +4439,7 @@ már szerepel a listában.</translation>
         <location filename="../scripts/Block/EditMainDrawing/EditMainDrawingInit.js" line="+2"/>
         <source>&amp;Return to Main Drawing</source>
         <translatorcomment>Szerepel a &quot;DefaultAction&quot; egy szövegében is!</translatorcomment>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -14605,4 +14612,3 @@ már szerepel a listában.</translation>
     </message>
 </context>
 </TS>
-
