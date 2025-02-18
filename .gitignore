@@ -79,3 +79,4 @@ build
 *_autogen
 .rcc
 qrc_*.cpp
+meta_types
