@@ -219,7 +219,7 @@
         <translation>Çeviriler</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Şablonlar</translation>
     </message>
@@ -14458,12 +14458,14 @@ zaten listede.</translation>
         <translation type="unfinished">Dış Referans</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation type="unfinished">Bilinmeyen Varlıklar</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation type="unfinished">Bilinmeyen Varlık</translation>
     </message>

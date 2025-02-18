@@ -219,7 +219,7 @@
         <translation>Tłumaczenia</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Szablony</translation>
     </message>
@@ -14479,12 +14479,14 @@ jest już na liście.</translation>
         <translation>Odniesienie zewnętrzne</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation>Podmioty nieznane</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation>Podmiot nieznany</translation>
     </message>

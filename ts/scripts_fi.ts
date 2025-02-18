@@ -219,7 +219,7 @@
         <translation>Käännökset</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Mallit</translation>
     </message>
@@ -14469,12 +14469,14 @@ on jo luettelossa.</translation>
         <translation>Ulkoinen viite</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation>Tuntemattomat kohteet</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation>Tuntematon kohde</translation>
     </message>

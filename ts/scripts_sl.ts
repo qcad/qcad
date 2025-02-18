@@ -219,7 +219,7 @@
         <translation>Prevodi</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Predloge</translation>
     </message>
@@ -14485,12 +14485,14 @@ je že na seznamu.</translation>
         <translation type="unfinished">Zunanja referenca</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation>Neznane entitete</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation>Neznana entiteta</translation>
     </message>

@@ -219,7 +219,7 @@
         <translation>翻译</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>模板</translation>
     </message>
@@ -14459,12 +14459,14 @@ is already in the list.</source>
         <translation type="unfinished">外部参考</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation type="unfinished">未知的实体</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation type="unfinished">未知的实体</translation>
     </message>

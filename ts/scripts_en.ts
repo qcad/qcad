@@ -219,7 +219,7 @@
         <translation>Translations</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Templates</translation>
     </message>
@@ -1177,7 +1177,7 @@ Do you wish to recover it?</translation>
         <location line="+10"/>
         <source>Color</source>
         <comment>Title of group box</comment>
-        <translation type="unfinished">Color</translation>
+        <translation>Color</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1193,7 +1193,7 @@ Do you wish to recover it?</translation>
         <location line="+7"/>
         <source>Color</source>
         <comment>Radio button choice</comment>
-        <translation type="unfinished">Color</translation>
+        <translation>Color</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -14469,12 +14469,14 @@ is already in the list.</translation>
         <translation>External Reference</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation>Unknown Entities</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation>Unknown Entity</translation>
     </message>

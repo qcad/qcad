@@ -219,7 +219,7 @@
         <translation>Vertalingen</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Sjablonen</translation>
     </message>
@@ -14469,12 +14469,14 @@ is al in de lijst.</translation>
         <translation>Externe referentie</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation>Onbekende objecten</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation>Onbekende object</translation>
     </message>

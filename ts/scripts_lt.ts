@@ -219,7 +219,7 @@
         <translation type="unfinished">Vertimai</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation type="unfinished">Šablonai</translation>
     </message>
@@ -14476,12 +14476,14 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Išorinė nuoroda</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation type="unfinished">Nežinomi subjektai</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation type="unfinished">Nežinomas subjektas</translation>
     </message>

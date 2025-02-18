@@ -219,7 +219,7 @@
         <translation>Översättning</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Mallar</translation>
     </message>
@@ -14467,12 +14467,14 @@ finns redan i listan.</translation>
         <translation>Extern referens</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation>Okända enheter</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation>Okänd enhet</translation>
     </message>

@@ -219,7 +219,7 @@
         <translation type="unfinished">Terjemahan</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation type="unfinished">Templat</translation>
     </message>
@@ -14459,12 +14459,14 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Referensi Eksternal</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation type="unfinished">Entitas yang tidak dikenal</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation type="unfinished">Entitas yang tidak diketahui</translation>
     </message>

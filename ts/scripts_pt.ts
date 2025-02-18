@@ -219,7 +219,7 @@
         <translation>Traduções</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Modelos</translation>
     </message>
@@ -14469,12 +14469,14 @@ já se encontra na lista.</translation>
         <translation>Referência externa</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation>Entidades desconhecidas</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation>Entidade desconhecida</translation>
     </message>

@@ -219,7 +219,7 @@
         <translation>Oversættelser</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Skabeloner</translation>
     </message>
@@ -14469,12 +14469,14 @@ er allerede på listen.</translation>
         <translation>Ekstern reference</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation>Ukendte enheder</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation>Ukendt enhed</translation>
     </message>

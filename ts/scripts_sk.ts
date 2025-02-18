@@ -219,7 +219,7 @@
         <translation>Preklady</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Šablóny</translation>
     </message>
@@ -14479,12 +14479,14 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Externý odkaz</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation>Neznáme Prvky</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation>Neznámy Prvok</translation>
     </message>

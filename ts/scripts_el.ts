@@ -219,7 +219,7 @@
         <translation type="unfinished">Μεταφράσεις</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation type="unfinished">Πρότυπα</translation>
     </message>
@@ -14467,12 +14467,14 @@ is already in the list.</source>
         <translation type="unfinished">Εξωτερική αναφορά</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation type="unfinished">Άγνωστες οντότητες</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation type="unfinished">Άγνωστη οντότητα</translation>
     </message>

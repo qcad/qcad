@@ -219,7 +219,7 @@
         <translation type="unfinished">Tulkojumi</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation type="unfinished">Šabloni</translation>
     </message>
@@ -14476,12 +14476,14 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Ārējā atsauce</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation type="unfinished">Nezināmas vienības</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation type="unfinished">Nezināms subjekts</translation>
     </message>

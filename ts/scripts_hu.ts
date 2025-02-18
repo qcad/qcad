@@ -219,7 +219,7 @@
         <translation>Fordítások</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Sablonok</translation>
     </message>
@@ -14460,12 +14460,14 @@ már szerepel a listában.</translation>
         <translation>Külső referencia</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation>Ismeretlen elemek</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation>Ismeretlen elem</translation>
     </message>

@@ -219,7 +219,7 @@
         <translation type="unfinished">번역</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation type="unfinished">템플릿</translation>
     </message>
@@ -14459,12 +14459,14 @@ is already in the list.</source>
         <translation type="unfinished">외부 참조</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation type="unfinished">알 수 없는 엔티티</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation type="unfinished">알 수 없는 엔티티</translation>
     </message>

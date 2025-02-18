@@ -219,7 +219,7 @@
         <translation>Übersetzungen</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Vorlagen</translation>
     </message>
@@ -1167,7 +1167,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <location line="+10"/>
         <source>Color</source>
         <comment>Title of group box</comment>
-        <translation type="unfinished">Farbe</translation>
+        <translation>Farbe</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1183,7 +1183,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <location line="+7"/>
         <source>Color</source>
         <comment>Radio button choice</comment>
-        <translation type="unfinished">Farbe</translation>
+        <translation>Farbe</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -14469,12 +14469,14 @@ ist bereits in der Liste.</translation>
         <translation>Externe Referenz</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation>Unbekannte Elemente</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation>Unbekanntes Element</translation>
     </message>

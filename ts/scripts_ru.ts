@@ -219,7 +219,7 @@
         <translation>Переводы</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Шаблоны</translation>
     </message>
@@ -14479,12 +14479,14 @@ is already in the list.</source>
         <translation type="unfinished">Внешняя ссылка</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation>Неизвестные объекты</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation>Неизвестный объект</translation>
     </message>
