@@ -333,7 +333,11 @@
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <source>Scale</source>
         <translatorcomment>Blokk beszúrásakor használja, az eredetinél kisebb vagy nagyobb mérethez</translatorcomment>
+<<<<<<< HEAD
+        <translation></translation>
+=======
         <translation>Lépték</translation>
+>>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+1"/>
@@ -344,25 +348,41 @@
         <location line="+1"/>
         <source>Columns</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
+<<<<<<< HEAD
+        <translation></translation>
+=======
         <translation>Oszlopok</translation>
+>>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+1"/>
         <source>Rows</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
+<<<<<<< HEAD
+        <translation></translation>
+=======
         <translation>Sorok</translation>
+>>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
+<<<<<<< HEAD
+        <translation></translation>
+=======
         <translation>Oszloptávolság</translation>
+>>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
+<<<<<<< HEAD
+        <translation></translation>
+=======
         <translation>Sortávolság</translation>
+>>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+3"/>
@@ -754,7 +774,11 @@
         <location line="+1"/>
         <source>Arrow size</source>
         <translatorcomment>Nyíl vagy </translatorcomment>
+<<<<<<< HEAD
+        <translation></translation>
+=======
         <translation>Méretvonal határoló mérete</translation>
+>>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+1"/>
@@ -785,13 +809,21 @@
         <location line="+1"/>
         <source>Tick size</source>
         <translatorcomment>A méretvonal végén nyíl helyett használható ferde vonalszakasz mérete</translatorcomment>
+<<<<<<< HEAD
+        <translation></translation>
+=======
         <translation>Ferde vonalka mérete</translation>
+>>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
         <translatorcomment>Azt adja meg, hogy a méretvonalra írt számot pl 1.5 vagy 1 1/2 stb formátumban írja rá</translatorcomment>
+<<<<<<< HEAD
+        <translation></translation>
+=======
         <translation>Számformátum</translation>
+>>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+1"/>

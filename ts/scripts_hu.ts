@@ -4439,7 +4439,11 @@ már szerepel a listában.</translation>
         <location filename="../scripts/Block/EditMainDrawing/EditMainDrawingInit.js" line="+2"/>
         <source>&amp;Return to Main Drawing</source>
         <translatorcomment>Szerepel a &quot;DefaultAction&quot; egy szövegében is!</translatorcomment>
+<<<<<<< HEAD
+        <translation></translation>
+=======
         <translation>&amp;Vissza a fő rajzhoz</translation>
+>>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
 </context>
 <context>
