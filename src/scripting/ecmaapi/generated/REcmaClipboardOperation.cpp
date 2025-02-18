@@ -11,6 +11,10 @@
             
                 #include "RBlock.h"
             
+                #include "RBlockReferenceEntity.h"
+            
+                #include "RBlockReferenceData.h"
+            
                 #include "REntity.h"
             
                 #include "RLayer.h"
@@ -107,6 +111,8 @@
             REcmaHelper::registerFunction(&engine, proto, setBlockOwnership, "setBlockOwnership");
             
             REcmaHelper::registerFunction(&engine, proto, setCustomEntityType, "setCustomEntityType");
+            
+            REcmaHelper::registerFunction(&engine, proto, createBlockReferenceEntity, "createBlockReferenceEntity");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RClipboardOperation*>(), *proto);
@@ -2283,6 +2289,115 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaClipboardOperation::setCustomEntityType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaClipboardOperation::createBlockReferenceEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaClipboardOperation::createBlockReferenceEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::createBlockReferenceEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RClipboardOperation* self = 
+                        getSelf("createBlockReferenceEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocument */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RS::EntityType */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: RBlockReferenceData */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RDocument*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type RDocument* or QSharedPointer<RDocument>.",
+                               context);
+                    }
+                    RDocument& a0 = *ap0;
+                
+                    // argument isStandardType
+                    RS::EntityType
+                    a1 =
+                    (RS::EntityType)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBlockReferenceData*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RBlockReferenceData*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if (ap2 == NULL) {
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RBlockReferenceData.",
+                               context);                    
+                    }
+                    RBlockReferenceData 
+                    a2 = 
+                    *ap2;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RBlockReferenceEntity *'
+    RBlockReferenceEntity * cppResult =
+        
+               self->createBlockReferenceEntity(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: RBlockReferenceEntity *
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.createBlockReferenceEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::createBlockReferenceEntity", context, engine);
             return result;
         }
          QScriptValue REcmaClipboardOperation::toString

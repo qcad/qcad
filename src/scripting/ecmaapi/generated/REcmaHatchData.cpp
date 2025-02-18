@@ -140,6 +140,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setWinding, "setWinding");
             
+            REcmaHelper::registerFunction(&engine, proto, getAutoRegen, "getAutoRegen");
+            
+            REcmaHelper::registerFunction(&engine, proto, setAutoRegen, "setAutoRegen");
+            
             REcmaHelper::registerFunction(&engine, proto, getScale, "getScale");
             
             REcmaHelper::registerFunction(&engine, proto, setScale, "setScale");
@@ -2799,6 +2803,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaHatchData::setWinding", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::getAutoRegen
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::getAutoRegen", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::getAutoRegen";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("getAutoRegen", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getAutoRegen();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.getAutoRegen().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::getAutoRegen", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::setAutoRegen
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::setAutoRegen", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::setAutoRegen";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("setAutoRegen", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAutoRegen(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.setAutoRegen().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::setAutoRegen", context, engine);
             return result;
         }
          QScriptValue

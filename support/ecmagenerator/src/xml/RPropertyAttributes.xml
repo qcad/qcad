@@ -38,6 +38,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="UnitLess" />
       <value name="DimStyleOverride" />
       <value name="CustomApp001" />
+      <value name="StoreIndex" />
     </enum>
     <constructor>
       <variant />
@@ -162,19 +163,24 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getChoices" cppName="getChoices"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="QSet &lt; QString &gt;"
-      isPureVirtual="false" />
+      <variant returnType="QStringList" isPureVirtual="false" />
     </method>
     <method name="setChoices" cppName="setChoices"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QSet &lt; QString &gt;"
-        typeName="QSet &lt; QString &gt;" name="choices"
-        isConst="false" />
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="choices" isConst="true" />
+        <arg type="bool" typeName="bool" name="storeIndex"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="hasChoices" cppName="hasChoices"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getStoreIndex" cppName="getStoreIndex"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />

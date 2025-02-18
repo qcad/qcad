@@ -676,6 +676,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getAutoUpdatesBlocked"
+    cppName="getAutoUpdatesBlocked" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getDefaultDrawOrder"
     cppName="getDefaultDrawOrder" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

@@ -623,6 +623,12 @@
         ;static  QScriptValue
         getNotifyListeners
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        registerCustomEntityType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        unregisterCustomEntityType
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

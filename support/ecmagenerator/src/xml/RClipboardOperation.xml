@@ -3,6 +3,8 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class_decl name="RBlock" />
+  <class_decl name="RBlockReferenceEntity" />
+  <class_decl name="RBlockReferenceData" />
   <class_decl name="REntity" />
   <class_decl name="RLayer" />
   <class_decl name="RLinetype" />
@@ -255,6 +257,20 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RS::EntityType" typeName="RS::EntityType"
         name="t" isConst="false" />
+      </variant>
+    </method>
+    <method name="createBlockReferenceEntity"
+    cppName="createBlockReferenceEntity" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RBlockReferenceEntity *"
+      isPureVirtual="false">
+        <arg type="RDocument &amp;" typeName="RDocument" name="doc"
+        isConst="false" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="customEntityType" isConst="false" />
+        <arg type="RBlockReferenceData &amp;"
+        typeName="RBlockReferenceData" name="data"
+        isConst="true" />
       </variant>
     </method>
   </class>

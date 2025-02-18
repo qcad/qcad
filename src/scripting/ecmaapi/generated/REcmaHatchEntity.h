@@ -122,6 +122,12 @@
         setWinding
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getAutoRegen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setAutoRegen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

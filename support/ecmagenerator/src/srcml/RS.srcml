@@ -279,9 +279,9 @@
         <expr><name>EntityTolerance</name></expr>,    <comment type="block">/**&lt; Tolerance */</comment>
         <expr><name>EntityWipeout</name></expr>,      <comment type="block">/**&lt; Wipeout */</comment>
         <expr><name>EntityXRef</name></expr>,         <comment type="block">/**&lt; XRef */</comment>
-        <expr><name>EntityCustom</name> = 1000000</expr>,   <comment type="block">/**&lt; Custom entity with custom renderer */</comment>
+        <expr><name>EntityCustom</name> = 1000</expr>,   <comment type="block">/**&lt; Custom entity with custom renderer */</comment>
 
-        <expr><name>EntityUser</name> = 2000000</expr> <comment type="block">/**&lt; User defined entity. Use this to identify
+        <expr><name>EntityUser</name> = 2000</expr>   <comment type="block">/**&lt; User defined entity. Use this to identify
                                  entities that are added in a separate library
                                  and resort to C++ RTTI for RTTI. */</comment>
     }</block>;</enum>

@@ -37,6 +37,9 @@ HEADERS += \
     $$PWD/REcmaCoordinateListener.h \
     $$PWD/REcmaCoordinateListenerAdapter.h \
     $$PWD/REcmaCopyOperation.h \
+    $$PWD/REcmaCustomEntity.h \
+    $$PWD/REcmaCustomEntityHandler.h \
+    $$PWD/REcmaCustomEntityRegistry.h \
     $$PWD/REcmaDebug.h \
     $$PWD/REcmaDeleteAllEntitiesOperation.h \
     $$PWD/REcmaDeleteObjectOperation.h \
@@ -238,6 +241,7 @@ HEADERS += \
     $$PWD/REcmaSharedPointerBox.h \
     $$PWD/REcmaSharedPointerCircle.h \
     $$PWD/REcmaSharedPointerCircleEntity.h \
+    $$PWD/REcmaSharedPointerCustomEntity.h \
     $$PWD/REcmaSharedPointerDimAlignedEntity.h \
     $$PWD/REcmaSharedPointerDimAngular2LEntity.h \
     $$PWD/REcmaSharedPointerDimAngular3PEntity.h \
@@ -430,6 +434,9 @@ SOURCES += \
     $$PWD/REcmaCoordinateListener.cpp \
     $$PWD/REcmaCoordinateListenerAdapter.cpp \
     $$PWD/REcmaCopyOperation.cpp \
+    $$PWD/REcmaCustomEntity.cpp \
+    $$PWD/REcmaCustomEntityHandler.cpp \
+    $$PWD/REcmaCustomEntityRegistry.cpp \
     $$PWD/REcmaDebug.cpp \
     $$PWD/REcmaDeleteAllEntitiesOperation.cpp \
     $$PWD/REcmaDeleteObjectOperation.cpp \
@@ -631,6 +638,7 @@ SOURCES += \
     $$PWD/REcmaSharedPointerBox.cpp \
     $$PWD/REcmaSharedPointerCircle.cpp \
     $$PWD/REcmaSharedPointerCircleEntity.cpp \
+    $$PWD/REcmaSharedPointerCustomEntity.cpp \
     $$PWD/REcmaSharedPointerDimAlignedEntity.cpp \
     $$PWD/REcmaSharedPointerDimAngular2LEntity.cpp \
     $$PWD/REcmaSharedPointerDimAngular3PEntity.cpp \

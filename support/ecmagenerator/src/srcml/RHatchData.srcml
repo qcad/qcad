@@ -128,6 +128,15 @@
         <constructor_decl><name>clearCustomPattern</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
+    <function><type><name>bool</name></type> <name>getAutoRegen</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>autoRegen</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setAutoRegen</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>autoRegen</name> = <name>on</name></expr>;</expr_stmt>
+        <constructor_decl><name>clearCustomPattern</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
     <function><type><name>double</name></type> <name>getScale</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>scaleFactor</name></expr>;</return>
     }</block></function>
@@ -266,6 +275,7 @@
 </protected><private>private:
     <decl_stmt><decl><type><name>bool</name></type> <name>solid</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>winding</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>autoRegen</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>scaleFactor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>angle</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>patternName</name></decl>;</decl_stmt>

@@ -75,7 +75,8 @@
         <expr><name>Area</name> = 0x4000000</expr>,                <comment type="line">//!&lt; Property is area (relevant for formatting of value)</comment>
         <expr><name>UnitLess</name> = 0x8000000</expr>,            <comment type="line">//!&lt; Property has no unit (linetype scale, draw order, ...)</comment>
         <expr><name>DimStyleOverride</name> = 0x10000000</expr>,   <comment type="line">//!&lt; Property is advanced dimension style override (can be hidden)</comment>
-        <expr><name>CustomApp001</name> = 0x20000000</expr>        <comment type="line">//!&lt; Property attribute for custom application</comment>
+        <expr><name>CustomApp001</name> = 0x20000000</expr>,       <comment type="line">//!&lt; Property attribute for custom application</comment>
+        <expr><name>StoreIndex</name> = 0x40000000</expr>          <comment type="line">//!&lt; Store index instead of text of a property with choices</comment>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Options</argument>, <argument>Option</argument>)</argument_list></macro>
 
@@ -152,16 +153,21 @@
         <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>AllowMixedValue</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getChoices</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>QStringList</name></type> <name>getChoices</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>choices</name></expr>;</return>
     }</block></function>
 
-    <function><type><name>void</name></type> <name>setChoices</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>choices</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>void</name></type> <name>setChoices</name><parameter_list>(<param><decl><type><name>const</name> <name>QStringList</name>&amp;</type> <name>choices</name></decl></param>, <param><decl><type><name>bool</name></type> <name>storeIndex</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>this</name>-&gt;<name>choices</name> = <name>choices</name></expr>;</expr_stmt>
+        <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>StoreIndex</name></type></decl></param>, <param><decl><type><name>storeIndex</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>hasChoices</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr>!<name>choices</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>getStoreIndex</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>StoreIndex</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
 <comment type="line">//    QList&lt;QVariant&gt; getEnumChoices() const {</comment>
@@ -329,7 +335,7 @@
 
 </public><private>private:
     <decl_stmt><decl><type><name><name>RPropertyAttributes</name>::<name>Options</name></name></type> <name>options</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>choices</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QStringList</name></type> <name>choices</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>label</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 

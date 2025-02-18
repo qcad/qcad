@@ -131,6 +131,9 @@
         hasChildEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasBlockReferenceEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryBlockReferences
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
