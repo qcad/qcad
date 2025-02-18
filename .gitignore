@@ -80,3 +80,5 @@ build
 .rcc
 qrc_*.cpp
 meta_types
+CMakeLists.txt.user.*
+CMakeCache.txt.prev
