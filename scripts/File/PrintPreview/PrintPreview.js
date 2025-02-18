@@ -495,7 +495,12 @@ PrintPreviewImpl.showPageSettings = function() {
     var action = RGuiAction.getByScriptFile("scripts/Edit/DrawingPreferences/DrawingPreferences.js");
     var appWin = EAction.getMainWindow();
     appWin.setProperty("PreferencesPage", "PageSettings");
-    action.trigger();
+
+    // temporarily always force global execution for preferences:
+    var fg = action.getForceGlobal();
+    action.setForceGlobal(true);
+    action.slotTrigger();
+    action.setForceGlobal(fg);
 };
 
 /**
