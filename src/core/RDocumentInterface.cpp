@@ -1266,13 +1266,20 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
     if (fileName.startsWith(":scripts") || fileName.startsWith(":/scripts")) {
         QString resourceFileName = fileName;
         QString tmpPath;
+
+        // make sure application name does not contain "/" (QCAD/CAM) 
+        // as this fails to create a temporary file under Linux:
+        QString appName = QCoreApplication::applicationName();
+        QCoreApplication::setApplicationName("QCAD");
+
 #if QT_VERSION >= 0x050000
         // QTemporaryFile would not work here since Teigha wouldn't be
         // able to open the locked file that is produced:
+
         QTemporaryDir tmpDir;
         resourceFileName = "qcad_resource_file.dxf";
         if (!tmpDir.isValid()) {
-            qWarning() << "cannot create temporary directory:" << tmpDir.path();
+            qWarning() << "cannot create temporary directory:" << tmpDir.path() << " error:" << tmpDir.errorString();
             qWarning() << "using current directory instead";
             //return RDocumentInterface::IoErrorGeneralImportUrlError;
             tmpPath = ".";
@@ -1285,6 +1292,9 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
         resourceFileName = QString("qcad%1.dxf").arg(ts);
         tmpPath = tmpDir.path();
 #endif
+
+        QCoreApplication::setApplicationName(appName);
+
         resourceFileName = tmpPath + "/" + resourceFileName;
         if (QFile::exists(resourceFileName) && !QFile::remove(resourceFileName)) {
             qWarning() << "cannot remove file:" << resourceFileName;
