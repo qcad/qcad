@@ -20,6 +20,8 @@ StretchTest10.prototype.test00 = function() {
     this.setToolOption('Shape/Fill', 'false');
     this.setToolOption('Shape/RoundCorners', 'false');
     this.setToolOption('Shape/Radius', '1');
+    this.setToolOption('ShapeRectanglePP/Rotate', 'false');
+    this.setToolOption('ShapeRectanglePP/Rotation', '0');
     this.updateToolOptions();
     var p = new RVector(10.1, 30);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
