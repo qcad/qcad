@@ -702,7 +702,6 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         QSharedPointer<RBlock> block = object.dynamicCast<RBlock>();
         // blocks that are owned by references are copied with the reference:
         if (!block.isNull() && !block->isOwnedByReference()) {
-            qDebug() << "addObject: block:" << block->getName();
             objectIsBlock = true;
 
             if (!existingBlockDetectionDisabled) {
