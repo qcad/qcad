@@ -114,7 +114,8 @@
     }</block></function>
     <function><type><name>virtual</name> <name>void</name></type> <name>addToPreview</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>RGraphicsSceneDrawable</name>&amp;</type> <name>drawable</name></decl></param>)</parameter_list> <block>{
         <macro><name>Q_UNUSED</name><argument_list>(<argument>entityId</argument>)</argument_list></macro>
-        <macro><name>Q_UNUSED</name><argument_list>(<argument>drawable</argument>)</argument_list></macro>
+        <comment type="line">// MSVC:</comment>
+        <comment type="line">//Q_UNUSED(drawable)</comment>
     }</block></function>
     <function><type><name>virtual</name> <name>void</name></type> <name>addPathToPreview</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>RPainterPath</name>&amp;</type> <name>pp</name></decl></param>)</parameter_list> <block>{
         <macro><name>Q_UNUSED</name><argument_list>(<argument>entityId</argument>)</argument_list></macro>

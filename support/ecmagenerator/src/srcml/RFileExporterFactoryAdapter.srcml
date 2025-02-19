@@ -52,7 +52,8 @@
         <param><decl><type><name>RMessageHandler</name>*</type> <name>messageHandler</name> =<init> <expr><name>NULL</name></expr></init></decl></param>,
         <param><decl><type><name>RProgressHandler</name>*</type> <name>progressHandler</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <block>{
 
-        <macro><name>Q_UNUSED</name><argument_list>(<argument>document</argument>)</argument_list></macro>
+        <comment type="line">// MSVC:</comment>
+        <comment type="line">//QQ_UNUSED(document)</comment>
         <macro><name>Q_UNUSED</name><argument_list>(<argument>messageHandler</argument>)</argument_list></macro>
         <macro><name>Q_UNUSED</name><argument_list>(<argument>progressHandler</argument>)</argument_list></macro>
         <return>return <expr><name>NULL</name></expr>;</return>

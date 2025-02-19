@@ -90,6 +90,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, hasChoices, "hasChoices");
             
+            REcmaHelper::registerFunction(&engine, proto, getStoreIndex, "getStoreIndex");
+            
             REcmaHelper::registerFunction(&engine, proto, isRichText, "isRichText");
             
             REcmaHelper::registerFunction(&engine, proto, setRichText, "setRichText");
@@ -336,6 +338,11 @@
 
     ctor.setProperty("CustomApp001",
     QScriptValue(RPropertyAttributes::CustomApp001),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("StoreIndex",
+    QScriptValue(RPropertyAttributes::StoreIndex),
     QScriptValue::ReadOnly);
 
 
@@ -1421,15 +1428,14 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < QString >'
-    QSet < QString > cppResult =
+    // return type 'QStringList'
+    QStringList cppResult =
         
                self->getChoices();
-        // return type: QSet < QString >
-                // QSet (convert to QVariantList):
-                result = REcmaHelper::setToScriptValue(engine, cppResult);
-
-                
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
     } else
 
 
@@ -1466,13 +1472,13 @@
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isArray()
-        ) /* type: QSet < QString > */
+        ) /* type: QStringList */
     
     ){
     // prepare arguments:
     
                     // argument isArray or QVariantMap
-                    QSet < QString >
+                    QStringList
                     a0;
                     REcmaHelper::fromScriptValue(
                         engine,
@@ -1486,6 +1492,47 @@
     // return type 'void'
     
                self->setChoices(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isArray()
+        ) /* type: QStringList */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray or QVariantMap
+                    QStringList
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setChoices(a0
+        ,
+    a1);
     } else
 
 
@@ -1544,6 +1591,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyAttributes::hasChoices", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::getStoreIndex
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::getStoreIndex", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::getStoreIndex";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("getStoreIndex", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getStoreIndex();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.getStoreIndex().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::getStoreIndex", context, engine);
             return result;
         }
          QScriptValue

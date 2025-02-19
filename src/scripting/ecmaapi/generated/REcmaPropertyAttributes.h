@@ -106,6 +106,9 @@
         hasChoices
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getStoreIndex
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isRichText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

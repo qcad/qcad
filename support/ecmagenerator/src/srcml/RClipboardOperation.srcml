@@ -29,6 +29,8 @@
 
 <class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>RBlock</name>;</class_decl>
+<class_decl>class <name>RBlockReferenceEntity</name>;</class_decl>
+<class_decl>class <name>RBlockReferenceData</name>;</class_decl>
 <class_decl>class <name>REntity</name>;</class_decl>
 <class_decl>class <name>RLayer</name>;</class_decl>
 <class_decl>class <name>RLinetype</name>;</class_decl>
@@ -50,7 +52,8 @@
     <destructor><specifier>virtual</specifier> <name>~RClipboardOperation</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
     <function><type><name>virtual</name> <name>RTransaction</name></type> <name>apply</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <block>{
-        <macro><name>Q_UNUSED</name><argument_list>(<argument>document</argument>)</argument_list></macro>
+        <comment type="line">// MSVC:</comment>
+        <comment type="line">//Q_UNUSED(document)</comment>
         <macro><name>Q_UNUSED</name><argument_list>(<argument>preview</argument>)</argument_list></macro>
         <return>return <expr><call><name>RTransaction</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
@@ -254,6 +257,8 @@
     <function><type><name>void</name></type> <name>setCustomEntityType</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>t</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>customEntityType</name> = <name>t</name></expr>;</expr_stmt>
     }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>RBlockReferenceEntity</name>*</type> <name>createBlockReferenceEntity</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>doc</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>customEntityType</name></decl></param>, <param><decl><type><name>const</name> <name>RBlockReferenceData</name>&amp;</type> <name>data</name></decl></param>)</parameter_list>;</function_decl>
 
 </public><private>private:
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>copiedLayers</name></decl>;</decl_stmt>

@@ -1664,5 +1664,21 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="registerCustomEntityType"
+    cppName="registerCustomEntityType" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="type" isConst="false" />
+      </variant>
+    </method>
+    <method name="unregisterCustomEntityType"
+    cppName="unregisterCustomEntityType" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="type" isConst="false" />
+      </variant>
+    </method>
   </class>
 </unit>

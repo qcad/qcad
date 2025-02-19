@@ -150,6 +150,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, hasChildEntities, "hasChildEntities");
             
+            REcmaHelper::registerFunction(&engine, proto, hasBlockReferenceEntities, "hasBlockReferenceEntities");
+            
             REcmaHelper::registerFunction(&engine, proto, queryBlockReferences, "queryBlockReferences");
             
             REcmaHelper::registerFunction(&engine, proto, queryAllBlockReferences, "queryAllBlockReferences");
@@ -2437,6 +2439,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::hasChildEntities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::hasBlockReferenceEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::hasBlockReferenceEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::hasBlockReferenceEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("hasBlockReferenceEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasBlockReferenceEntities();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.hasBlockReferenceEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::hasBlockReferenceEntities", context, engine);
             return result;
         }
          QScriptValue

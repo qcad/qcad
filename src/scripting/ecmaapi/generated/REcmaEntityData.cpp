@@ -209,6 +209,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setAutoUpdatesBlocked, "setAutoUpdatesBlocked");
             
+            REcmaHelper::registerFunction(&engine, proto, getAutoUpdatesBlocked, "getAutoUpdatesBlocked");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<REntityData*>(), *proto);
 
@@ -7844,6 +7846,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEntityData::setAutoUpdatesBlocked", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEntityData::getAutoUpdatesBlocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEntityData::getAutoUpdatesBlocked", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntityData::getAutoUpdatesBlocked";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntityData* self = 
+                        getSelf("getAutoUpdatesBlocked", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getAutoUpdatesBlocked();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntityData.getAutoUpdatesBlocked().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEntityData::getAutoUpdatesBlocked", context, engine);
             return result;
         }
          QScriptValue

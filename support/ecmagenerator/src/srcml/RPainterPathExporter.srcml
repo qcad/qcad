@@ -28,6 +28,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RRay.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RXLine.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>RPoint</name>;</class_decl>
 <class_decl>class <name>RTriangle</name>;</class_decl>
 
 <comment type="block">/**
@@ -53,7 +54,8 @@
     }</block></function>
 
     <function><type><name>virtual</name> <name>void</name></type> <name>exportPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RPoint</name>&amp;</type> <name>point</name></decl></param>)</parameter_list> <block>{
-        <macro><name>Q_UNUSED</name><argument_list>(<argument>point</argument>)</argument_list></macro>
+        <comment type="line">// MSVC:</comment>
+        <comment type="line">//Q_UNUSED(point)</comment>
     }</block></function>
     <function><type><name>virtual</name> <name>void</name></type> <name>exportTriangle</name><parameter_list>(<param><decl><type><name>const</name> <name>RTriangle</name>&amp;</type> <name>triangle</name></decl></param>)</parameter_list> <block>{
         <comment type="line">//Q_UNUSED(triangle)</comment>

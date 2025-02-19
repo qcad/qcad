@@ -485,6 +485,10 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, getKnownVariableName, "getKnownVariableName");
             
+            REcmaHelper::registerFunction(&engine, &ctor, registerCustomEntityType, "registerCustomEntityType");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, unregisterCustomEntityType, "unregisterCustomEntityType");
+            
 
     // static properties:
     
@@ -14264,6 +14268,96 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::getNotifyListeners", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::registerCustomEntityType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::registerCustomEntityType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::registerCustomEntityType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::EntityType */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::EntityType
+                    a0 =
+                    (RS::EntityType)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RStorage::
+       registerCustomEntityType(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.registerCustomEntityType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::registerCustomEntityType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::unregisterCustomEntityType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::unregisterCustomEntityType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::unregisterCustomEntityType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::EntityType */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::EntityType
+                    a0 =
+                    (RS::EntityType)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RStorage::
+       unregisterCustomEntityType(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.unregisterCustomEntityType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::unregisterCustomEntityType", context, engine);
             return result;
         }
          QScriptValue REcmaStorage::toString
