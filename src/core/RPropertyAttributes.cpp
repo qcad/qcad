@@ -22,7 +22,11 @@ void RPropertyAttributes::mixWith(const RPropertyAttributes & other) {
     setAffectsOtherProperties(affectsOtherProperties() || other.affectsOtherProperties());
     setInvisible(isInvisible() || other.isInvisible());
 
+#if QT_VERSION >= 0x060000
     QSet<QString> otherSet(other.choices.begin(), other.choices.end());
+#else
+    QSet<QString> otherSet = other.choices.toSet();
+#endif
 
     // Store intersection while preserving order of first choices list:
     QStringList res;
