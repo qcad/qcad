@@ -1279,7 +1279,11 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
         QTemporaryDir tmpDir;
         resourceFileName = "qcad_resource_file.dxf";
         if (!tmpDir.isValid()) {
+#if QT_VERSION >= 0x050600
             qWarning() << "cannot create temporary directory:" << tmpDir.path() << " error:" << tmpDir.errorString();
+#else
+            qWarning() << "cannot create temporary directory:" << tmpDir.path();
+#endif
             qWarning() << "using current directory instead";
             //return RDocumentInterface::IoErrorGeneralImportUrlError;
             tmpPath = ".";
