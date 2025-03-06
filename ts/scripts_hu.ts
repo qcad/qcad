@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+451"/>
+        <location line="+450"/>
         <source>Plugin:</source>
         <translation>Bővítmény:</translation>
     </message>
     <message>
-        <location line="-426"/>
+        <location line="-425"/>
         <source>ID:</source>
         <translation>Azonosító:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Készítők</translation>
     </message>
     <message>
-        <location line="+170"/>
+        <location line="+169"/>
         <source>Licenses</source>
         <translation>Licencek</translation>
     </message>
@@ -219,7 +219,7 @@
         <translation>Fordítások</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+15"/>
         <source>Templates</source>
         <translation>Sablonok</translation>
     </message>
@@ -412,12 +412,12 @@ indítsa újra a QCAD-et.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2623"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation>Érvénytelen sugár</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+51"/>
         <source>No solution</source>
         <translation>Nincs megoldás</translation>
     </message>
@@ -1178,12 +1178,12 @@ Szeretné helyreállítani?</translation>
     </message>
     <message>
         <location line="+10"/>
+        <location line="+23"/>
         <source>Color</source>
-        <comment>Title of group box</comment>
-        <translation type="unfinished">Színek</translation>
+        <translation>Színek</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="-17"/>
         <source>Monochrome</source>
         <translation>Monokróm</translation>
     </message>
@@ -1193,13 +1193,7 @@ Szeretné helyreállítani?</translation>
         <translation>Szürkeárnyalatos</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Color</source>
-        <comment>Radio button choice</comment>
-        <translation type="unfinished">Színes</translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+20"/>
         <source>Anti-aliasing</source>
         <translation>Élsimítás</translation>
     </message>
@@ -1240,7 +1234,7 @@ Szeretné helyreállítani?</translation>
 <context>
     <name>Block</name>
     <message>
-        <location filename="../scripts/Block/Block.js" line="+68"/>
+        <location filename="../scripts/Block/Block.js" line="+67"/>
         <source>Block Tools</source>
         <translation>Blokk eszközök</translation>
     </message>
@@ -1404,22 +1398,22 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+59"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
-        <translation>Válasszon vonal-, ív-, kör-, ellipszis-, spline- vagy vonallánc szegmenst</translation>
+        <translation>Válasszon vonal-, ív-, kör-, ellipszis-, spline- vagy vonallánc szakaszt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse segment</source>
-        <translation>Válasszon vonal-, ív-, kör- vagy ellipszis szegmenst</translation>
+        <translation>Válasszon vonal-, ív-, kör- vagy ellipszis szakaszt</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
-        <translation>Szegmens &amp;kitörése</translation>
+        <translation>Szakasz &amp;kitörése</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation>Szegmens eltávolítása</translation>
+        <translation>Szakasz eltávolítása</translation>
     </message>
 </context>
 <context>
@@ -1480,7 +1474,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation>Szegmens eltávolítása</translation>
+        <translation>Szakasz eltávolítása</translation>
     </message>
 </context>
 <context>
@@ -1684,7 +1678,7 @@ Szeretné helyreállítani?</translation>
         <translation>Sugár:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+27"/>
         <source>Solution:</source>
         <translation>Megoldás:</translation>
     </message>
@@ -1838,7 +1832,7 @@ Szeretné helyreállítani?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+63"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation>Nincs megoldás</translation>
     </message>
@@ -2642,13 +2636,13 @@ Szeretné helyreállítani?</translation>
     <message>
         <location line="+8"/>
         <source>into polyline with arc segments</source>
-        <translation>vonallánccá, ív szegmensekkel</translation>
+        <translation>vonallánccá, ívszakaszokkal</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+16"/>
         <source>into polyline with line segments</source>
-        <translation>vonallánccá, vonal szegmensekkel</translation>
+        <translation>vonallánccá, vonalszakaszokkal</translation>
     </message>
     <message>
         <location line="-8"/>
@@ -3409,7 +3403,7 @@ már szerepel a listában.</translation>
         <translation>Következő csúcs</translation>
     </message>
     <message>
-        <location line="+525"/>
+        <location line="+532"/>
         <source>close</source>
         <translation>bezárás</translation>
     </message>
@@ -3436,12 +3430,12 @@ már szerepel a listában.</translation>
     <message>
         <location line="+27"/>
         <source>Undo Previous Segment</source>
-        <translation>Előző szegmens visszavonása</translation>
+        <translation>Előző szakasz visszavonása</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Szegmens újra</translation>
+        <translation>Szakasz újra</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3461,12 +3455,12 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;FMS sávok rajzolása</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation type="unfinished"></translation>
+        <translation>FMS sávok (bordázat) rajzolása</translation>
     </message>
 </context>
 <context>
@@ -4096,7 +4090,7 @@ már szerepel a listában.</translation>
         <translation>Következő csúcs</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+431"/>
         <source>close</source>
         <translation>bezárás</translation>
     </message>
@@ -4123,7 +4117,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
-        <translation>Vonallánc szerkesztése vonal- és ív szegmensekből</translation>
+        <translation>Vonallánc szerkesztése vonal- és ívszakaszokból</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.ui" line="+23"/>
@@ -4143,12 +4137,12 @@ már szerepel a listában.</translation>
     <message>
         <location line="-71"/>
         <source>Undo Previous Segment</source>
-        <translation>Előző szegmens visszavonása</translation>
+        <translation>Előző szakasz visszavonása</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Szegmens újra</translation>
+        <translation>Szakasz újra</translation>
     </message>
     <message>
         <location line="+93"/>
@@ -4439,11 +4433,7 @@ már szerepel a listában.</translation>
         <location filename="../scripts/Block/EditMainDrawing/EditMainDrawingInit.js" line="+2"/>
         <source>&amp;Return to Main Drawing</source>
         <translatorcomment>Szerepel a &quot;DefaultAction&quot; egy szövegében is!</translatorcomment>
-<<<<<<< HEAD
-        <translation></translation>
-=======
         <translation>&amp;Vissza a fő rajzhoz</translation>
->>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
 </context>
 <context>
@@ -5094,12 +5084,12 @@ már szerepel a listában.</translation>
     <message>
         <location line="-118"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation>Spline-ok szétvetése egyenesekből álló vonallánccá</translation>
+        <translation>Spline-ok szétvetése vonalszakaszokból álló vonallánccá</translation>
     </message>
     <message>
         <location line="+111"/>
         <source>Ellipse segments (per full ellipse):</source>
-        <translation>Ellipszis szegmensek (teljes ellipszisenként):</translation>
+        <translation>Ellipszisszakaszok (teljes ellipszisenként):</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -5124,7 +5114,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="-41"/>
         <source>Spline segments:</source>
-        <translation>Spline szegmensek:</translation>
+        <translation>Spline-szakaszok:</translation>
     </message>
 </context>
 <context>
@@ -5173,7 +5163,7 @@ már szerepel a listában.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+244"/>
+        <location line="+243"/>
         <source>%1 First Start</source>
         <translation>%1 első indítása</translation>
     </message>
@@ -5521,7 +5511,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+10"/>
         <source>Centered</source>
-        <translation type="unfinished">Középre igazított</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -5974,7 +5964,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+437"/>
         <source>Maximum selected entities with reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Maximálisan kijelölt elemek referenciapontokkal:</translation>
     </message>
     <message>
         <location line="+217"/>
@@ -5984,7 +5974,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Maximálisan kijelölt elemekek megjelenített referenciapontokkal:</translation>
     </message>
     <message>
         <location line="+333"/>
@@ -6740,7 +6730,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+10"/>
         <source>Calculate Area of Segment</source>
-        <translation>Szegmens területének számítása</translation>
+        <translation>Szakasz területének számítása</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -7285,7 +7275,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+1"/>
         <source>wire length (Informational):</source>
-        <translation type="unfinished"></translation>
+        <translation>váz hossza (informatív):</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -7344,12 +7334,12 @@ már szerepel a listában.</translation>
     <message>
         <location line="-71"/>
         <source>Wire 2D Centroid script (v0.32) by CVH</source>
-        <translation type="unfinished"></translation>
+        <translation>Váz 2D súlypont szkript (v0.32), készítő: CVH</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>2D Centroid markers circle in selection. No results.</source>
-        <translation type="unfinished"></translation>
+        <translation>Körkörös 2D súlypont jelölők a kijelölésben. Nincs eredmény.</translation>
     </message>
     <message>
         <location line="+55"/>
@@ -7359,7 +7349,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+13"/>
         <source>2D wire Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation>2D váz súlypont</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -7395,12 +7385,12 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+19"/>
         <source>&amp;Wire Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Váz súlypont</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Egy váz 2D súlypontot hoz létre a kijelöléshez</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8033,7 +8023,7 @@ már szerepel a listában.</translation>
         <translation>réteg</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+149"/>
         <source>Leading or trailing spaces.</source>
         <translation>Szóközök az elején vagy a végén.</translation>
     </message>
@@ -8386,47 +8376,47 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Doboz&amp;csapolás szerkesztése 2 pontból</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation type="unfinished"></translation>
+        <translation>Dobozcsapolások szerkesztése, csapokkal, nútokkal és lyukakkal</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
         <source>Depth:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mélység:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Finger Width:</source>
-        <translation type="unfinished"></translation>
+        <translation>Csap szélessége:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Finger/Slot Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Csap-nút arány:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Stílus:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Finger first</source>
-        <translation type="unfinished"></translation>
+        <translation>Csappal kezd</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Slot first</source>
-        <translation type="unfinished"></translation>
+        <translation>Núttal kezd</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Tenons</source>
-        <translation type="unfinished"></translation>
+        <translation>Lyukak</translation>
     </message>
 </context>
 <context>
@@ -9134,7 +9124,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation type="unfinished"></translation>
+        <translation>Adja meg a pontot</translation>
     </message>
 </context>
 <context>
@@ -9975,7 +9965,7 @@ már szerepel a listában.</translation>
         <translation>A papírméret egyéni értékre van állítva (%1 x %2 mm). Kívánja átállítani a nyomtató alapértelmezett papírméretére (%3)?</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+37"/>
         <source>Auto fit</source>
         <translation>Automatikus illesztés</translation>
     </message>
@@ -9985,7 +9975,7 @@ már szerepel a listában.</translation>
         <translation>A rajz automatikus illesztése a papírhoz?</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation>Húzza a papír mozgatásához</translation>
     </message>
@@ -11416,7 +11406,7 @@ már szerepel a listában.</translation>
         <translation>Nincs elem kijelölve.</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+23"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation>%1 %2 a(z) &quot;%3&quot; rétegen</translation>
     </message>
@@ -11508,7 +11498,7 @@ már szerepel a listában.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Legalább két pont azonos.</translation>
@@ -12499,7 +12489,7 @@ már szerepel a listában.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
         <source>Default value:</source>
         <translation>Alapértelmezett érték:</translation>
     </message>
@@ -12723,7 +12713,7 @@ már szerepel a listában.</translation>
         <translation>Szimbólum beszúrása...</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+43"/>
         <source>Source</source>
         <translation>Forrás</translation>
     </message>
@@ -12748,7 +12738,7 @@ már szerepel a listában.</translation>
         <translation>Érték:</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+42"/>
         <source>Text Geometry</source>
         <translation>Szöveg geometriája</translation>
     </message>
@@ -12778,7 +12768,7 @@ már szerepel a listában.</translation>
         <translation>Igazítás</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+47"/>
         <source>Top Left</source>
         <translation>Bal fent</translation>
     </message>
@@ -12836,6 +12826,16 @@ már szerepel a listában.</translation>
         <location line="+29"/>
         <source>Bottom Right</source>
         <translation>Jobb lent</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>Cancel</source>
+        <translation>Mégse</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>OK</source>
+        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -13136,11 +13136,6 @@ már szerepel a listában.</translation>
         <source>Use Current Layer and Attributes</source>
         <translation>A jelenlegi réteg és tulajdonságok használata</translation>
     </message>
-    <message>
-        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation type="unfinished">Eszközbeállítások megjelenítése ablakban</translation>
-    </message>
 </context>
 <context>
     <name>TranslateRotateOptions</name>
@@ -13172,12 +13167,21 @@ már szerepel a listában.</translation>
     <message>
         <location line="+97"/>
         <source>&amp;Angle (a):</source>
+        <translatorcomment>&quot;(a)&quot; refers to the angle that indicated as angle &quot;a&quot; in the figure of the dialog</translatorcomment>
         <translation>&amp;Szög (a):</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>A jelenlegi réteg és &amp;tulajdonságok használata</translation>
+    </message>
+</context>
+<context>
+    <name>TranslateiRotate</name>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Eszközbeállítások megjelenítése ablakban</translation>
     </message>
 </context>
 <context>
@@ -13684,7 +13688,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+6"/>
         <source>Property Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Területhatár</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13709,7 +13713,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+1"/>
         <source>Stacked text</source>
-        <translation type="unfinished"></translation>
+        <translation>Felső index</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -14024,7 +14028,7 @@ már szerepel a listában.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1304"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation>Objektumok</translation>
     </message>
@@ -14391,12 +14395,13 @@ már szerepel a listában.</translation>
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation>Nyomvonalak</translation>
+        <translation>Nyomok</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation>Nyomvonal</translation>
+        <translatorcomment>A trace is a filled area with 3 or 4 corners.</translatorcomment>
+        <translation>Nyom</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14406,6 +14411,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+0"/>
         <source>Face</source>
+        <translatorcomment>A face is the same as Trace but can also be 3D.</translatorcomment>
         <translation>Felület</translation>
     </message>
     <message>
@@ -14464,14 +14470,12 @@ már szerepel a listában.</translation>
         <translation>Külső referencia</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <location line="+9"/>
+        <location line="+3"/>
         <source>Unknown Entities</source>
         <translation>Ismeretlen elemek</translation>
     </message>
     <message>
-        <location line="-9"/>
-        <location line="+9"/>
+        <location line="+0"/>
         <source>Unknown Entity</source>
         <translation>Ismeretlen elem</translation>
     </message>

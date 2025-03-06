@@ -4,7 +4,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="+272"/>
+        <location filename="../src/core/RUnit.cpp" line="+273"/>
         <source>None</source>
         <translation>Nincs</translation>
     </message>
@@ -238,30 +238,31 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+95"/>
+        <location filename="../src/core/REntity.cpp" line="+97"/>
         <source>Block</source>
         <translation>Blokk</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+99"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+95"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+80"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+75"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
         <translation>Pozíció</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+69"/>
+        <location filename="../src/core/RBlock.cpp" line="+68"/>
         <source>Pixel Unit</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>The units of the entity are measured in pixels rather than drawing units, i.e. 10 means 10 pixels on the screen.</translatorcomment>
+        <translation>Képpont egység</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/core/RLayout.cpp" line="+83"/>
+        <location filename="../src/core/RLayout.cpp" line="+84"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -333,11 +334,7 @@
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <source>Scale</source>
         <translatorcomment>Blokk beszúrásakor használja, az eredetinél kisebb vagy nagyobb mérethez</translatorcomment>
-<<<<<<< HEAD
-        <translation></translation>
-=======
         <translation>Lépték</translation>
->>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+1"/>
@@ -348,41 +345,25 @@
         <location line="+1"/>
         <source>Columns</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
-<<<<<<< HEAD
-        <translation></translation>
-=======
         <translation>Oszlopok</translation>
->>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+1"/>
         <source>Rows</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
-<<<<<<< HEAD
-        <translation></translation>
-=======
         <translation>Sorok</translation>
->>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
-<<<<<<< HEAD
-        <translation></translation>
-=======
         <translation>Oszloptávolság</translation>
->>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
-<<<<<<< HEAD
-        <translation></translation>
-=======
         <translation>Sortávolság</translation>
->>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+3"/>
@@ -391,7 +372,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="-1"/>
-        <location filename="../src/core/RObject.cpp" line="+70"/>
+        <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
         <translation>Típus</translation>
     </message>
@@ -402,7 +383,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+104"/>
+        <location filename="../src/core/RLayer.cpp" line="+102"/>
         <source>Linetype</source>
         <translation>Vonaltípus</translation>
     </message>
@@ -472,7 +453,7 @@
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+162"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+161"/>
         <source>Custom</source>
         <translation>Egyéni</translation>
     </message>
@@ -630,12 +611,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>The point at the center of a viewport, the point we are looking at.</translatorcomment>
+        <translation>Nézet célpontja</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Overall</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>The main viewport used to display the whole drawing.</translatorcomment>
+        <translation>Áttekintő</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -693,12 +676,13 @@
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Switching a layer off means that it will also be frozen.</translatorcomment>
+        <translation>A kikapcsolás fagyasztás</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Tab Order</source>
-        <translation type="unfinished"></translation>
+        <translation>Tab sorrend</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -736,7 +720,7 @@
         <translation>Max. kiterjedés</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+886"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+874"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Körkörös (rekurzív) blokkreferencia észlelve:</translation>
     </message>
@@ -774,11 +758,7 @@
         <location line="+1"/>
         <source>Arrow size</source>
         <translatorcomment>Nyíl vagy </translatorcomment>
-<<<<<<< HEAD
-        <translation></translation>
-=======
         <translation>Méretvonal határoló mérete</translation>
->>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+1"/>
@@ -803,27 +783,20 @@
     <message>
         <location line="+1"/>
         <source>Text horizontal</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>A preference to show the dimension label always horizontally rather than aligned with the dimension line.</translatorcomment>
+        <translation>Vízszintes szöveg</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tick size</source>
         <translatorcomment>A méretvonal végén nyíl helyett használható ferde vonalszakasz mérete</translatorcomment>
-<<<<<<< HEAD
-        <translation></translation>
-=======
         <translation>Ferde vonalka mérete</translation>
->>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
         <translatorcomment>Azt adja meg, hogy a méretvonalra írt számot pl 1.5 vagy 1 1/2 stb formátumban írja rá</translatorcomment>
-<<<<<<< HEAD
-        <translation></translation>
-=======
         <translation>Számformátum</translation>
->>>>>>> 98767dd9b946225d0c1f83c3a7d32b83dad10cec
     </message>
     <message>
         <location line="+1"/>
@@ -868,23 +841,24 @@
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>A block containing the arrow of a dimension.</translatorcomment>
+        <translation>Nyíl blokk</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nyíl blokk 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Nyíl blokk 2</translation>
     </message>
 </context>
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+203"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+202"/>
         <source>Requires selection</source>
         <translation>Kijelölést igényel</translation>
     </message>
@@ -892,7 +866,7 @@
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+51"/>
+        <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
         <translation>Név</translation>
     </message>
@@ -1138,18 +1112,20 @@
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>A line type used for foul (dirty) water.</translatorcomment>
+        <translation>Szennyvíz</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>A line type used for foul (dirty) water that is rising.</translatorcomment>
+        <translation>Emelkedő szennyvíz</translation>
     </message>
 </context>
 <context>
     <name>RLineweight</name>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="+37"/>
+        <location filename="../src/core/RLineweight.cpp" line="+35"/>
         <source>By Layer</source>
         <translation>Réteg szerint</translation>
     </message>
