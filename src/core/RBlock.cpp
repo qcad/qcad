@@ -159,12 +159,12 @@ QPair<QVariant, RPropertyAttributes> RBlock::getProperty(RPropertyTypeId& proper
 
 void RBlock::setCustomProperty(const QString& title, const QString& key, const QVariant& value) {
     // set custom property PixelUnit as flag:
-    if (title=="QCAD" && key=="PixelUnit") {
-        if (value.toString()=="1") {
-            pixelUnit = true;
-            return;
-        }
-    }
+    // if (title=="QCAD" && key=="PixelUnit") {
+    //     if (value.toString()=="1") {
+    //         pixelUnit = true;
+    //         return;
+    //     }
+    // }
 
     RObject::setCustomProperty(title, key, value);
 }
