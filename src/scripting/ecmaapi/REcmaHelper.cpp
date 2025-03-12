@@ -69,6 +69,7 @@
 #include "RBlock.h"
 #include "RLinetype.h"
 #include "RView.h"
+#include "RWipeoutEntity.h"
 
 #include "REcmaHelper.h"
 
@@ -316,6 +317,10 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RE
         v = tryCast<RToleranceEntity>(engine, cppValue);
         if (v.isValid()) return v;
         break;
+    case RS::EntityWipeout:
+        v = tryCast<RWipeoutEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
     }
 
     return qScriptValueFromValue(engine, cppValue);
@@ -439,6 +444,10 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, REntity* cppValue
         break;
     case RS::EntityTolerance:
         v = tryCast<RToleranceEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityWipeout:
+        v = tryCast<RWipeoutEntity>(engine, cppValue);
         if (v.isValid()) return v;
         break;
     }
