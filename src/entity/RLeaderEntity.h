@@ -107,6 +107,10 @@ public:
         return data;
     }
 
+    int getClosestSegment(const RVector& point) const {
+        return data.getClosestSegment(point);
+    }
+
     bool reverse() {
         return data.reverse();
     }
@@ -151,6 +155,10 @@ public:
 
     void insertVertex(int index, const RVector& vertex) {
         data.insertVertex(index, vertex);
+    }
+
+    void insertVertexAt(const RVector& vertex) {
+        data.insertVertexAt(vertex);
     }
 
     RVector getVertexAt(int i) const {
