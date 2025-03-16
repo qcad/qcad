@@ -182,7 +182,7 @@ public:
     virtual QSharedPointer<RLayer> getEntityLayer(QSharedPointer<REntity> entity);
     virtual bool isVisible(QSharedPointer<REntity> entity);
     virtual void startEntity(bool /*topLevelEntity*/) {}
-    virtual void endEntity() {}
+    virtual void endEntity(bool /*topLevelEntity*/) {}
     virtual void exportCurrentEntity(bool preview = false, bool forceSelected = false);
     virtual void unexportEntity(RObject::Id entityId);
 

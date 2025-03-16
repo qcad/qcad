@@ -739,7 +739,7 @@ void RExporter::exportEntity(QSharedPointer<REntity> entity, bool preview, bool 
 
         startEntity(/* topLevelEntity = */ blockRefOrViewportSet || blockRefViewportStack.isEmpty());
         exportCurrentEntity(preview, forceSelected);
-        endEntity();
+        endEntity(blockRefOrViewportSet || blockRefViewportStack.isEmpty());
 
         // export again, with secondary selection color:
         if (visualExporter) {
