@@ -1970,7 +1970,9 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
 
     if (!path.getNoColorMode()) {
         applyColorMode(pen);
-        applyColorMode(brush);
+        if (!path.getWipeout()) {
+            applyColorMode(brush);
+        }
     }
 
     worker->setBrush(brush);
