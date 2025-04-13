@@ -18,6 +18,7 @@
  */
 
 include("scripts/EAction.js");
+include("scripts/File/File.js");
 
 /**
  * \ingroup ecma_misc_examples_ioexamples
