@@ -128,8 +128,8 @@ public:
             DL_CreationInterface* creationInterface);
     bool readDxfGroups(FILE* fp,
                        DL_CreationInterface* creationInterface);
-    static bool getStrippedLine(std::string& s, unsigned int size,
-                               FILE* stream, bool stripSpace = true);
+    static bool getStrippedLine(std::string& s, FILE* stream,
+                                bool stripSpace = true);
     
     bool readDxfGroups(std::istream& stream,
                        DL_CreationInterface* creationInterface);
