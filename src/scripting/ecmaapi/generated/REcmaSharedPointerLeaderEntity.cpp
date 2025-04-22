@@ -86,6 +86,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setData, "setData");
             
+            REcmaHelper::registerFunction(&engine, proto, getClosestSegment, "getClosestSegment");
+            
             REcmaHelper::registerFunction(&engine, proto, reverse, "reverse");
             
             REcmaHelper::registerFunction(&engine, proto, setArrowHead, "setArrowHead");
@@ -107,6 +109,8 @@
             REcmaHelper::registerFunction(&engine, proto, prependVertex, "prependVertex");
             
             REcmaHelper::registerFunction(&engine, proto, insertVertex, "insertVertex");
+            
+            REcmaHelper::registerFunction(&engine, proto, insertVertexAt, "insertVertexAt");
             
             REcmaHelper::registerFunction(&engine, proto, getVertexAt, "getVertexAt");
             
@@ -1378,6 +1382,78 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerLeaderEntity::getClosestSegment
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerLeaderEntity::getClosestSegment", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLeaderEntity::getClosestSegment";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderEntity* self = 
+                        getSelf("getClosestSegment", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RLeaderEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getClosestSegment(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderEntity.getClosestSegment().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerLeaderEntity::getClosestSegment", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerLeaderEntity::reverse
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2087,6 +2163,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerLeaderEntity::insertVertex", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerLeaderEntity::insertVertexAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerLeaderEntity::insertVertexAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLeaderEntity::insertVertexAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderEntity* self = 
+                        getSelf("insertVertexAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RLeaderEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->insertVertexAt(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderEntity.insertVertexAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerLeaderEntity::insertVertexAt", context, engine);
             return result;
         }
          QScriptValue

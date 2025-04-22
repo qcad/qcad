@@ -5275,7 +5275,7 @@
         
     
       void REcmaShellFileExporterAdapter::endEntity(
-                
+                bool arg1
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::endEntity", engine);
@@ -5288,7 +5288,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=0*/
+                    || _q_function.property("length").toInt32()!=1*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::endEntity";
@@ -5301,7 +5301,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RFileExporterAdapter::endEntity(
-                            
+                            arg1
                         );
 
                         // block recursion again:
@@ -5318,7 +5318,19 @@
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
                     
-                            _q_function.call(__qtscript_self)
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        arg1
+        )
+      
+                            )
                         
                     ;
                     _q_function.setData(QScriptValue(engine, prev));

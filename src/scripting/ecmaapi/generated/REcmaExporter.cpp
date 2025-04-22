@@ -4778,16 +4778,27 @@
                 
     
     if( context->argumentCount() ==
-    0
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
     ){
     // prepare arguments:
     
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     
-               self->endEntity();
+               self->endEntity(a0);
     } else
 
 
