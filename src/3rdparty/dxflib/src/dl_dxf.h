@@ -459,11 +459,7 @@ public:
         // make sure the real value uses '.' not ',':
         std::string str2 = str;
         std::replace(str2.begin(), str2.end(), ',', '.');
-        // make sure c++ expects '.' not ',':
-        std::istringstream istr(str2);
-        //istr.imbue(std::locale("C"));
-        istr >> ret;
-        return ret;
+        return ::atof(str2.c_str());
     }
 
 private:
