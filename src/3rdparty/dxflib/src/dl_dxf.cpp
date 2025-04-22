@@ -798,7 +798,7 @@ void DL_Dxf::addDictionaryEntry(DL_CreationInterface* creationInterface) {
  */
 void DL_Dxf::addSetting(DL_CreationInterface* creationInterface) {
     int c = -1;
-    std::map<int,std::string>::iterator it = values.begin();
+    std::unordered_map<int,std::string>::iterator it = values.begin();
     if (it!=values.end()) {
         c = it->first;
     }

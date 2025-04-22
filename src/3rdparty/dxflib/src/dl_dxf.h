@@ -32,7 +32,7 @@
 #include <stdlib.h>
 #include <string>
 #include <sstream>
-#include <map>
+#include <unordered_map>
 
 #include "dl_attributes.h"
 #include "dl_codes.h"
@@ -513,7 +513,9 @@ private:
     // Key of the current setting (e.g. "$ACADVER")
     std::string settingKey;
     // Stores the group codes
-    std::map<int, std::string> values;
+    // Inserting entries into an unordered_map is faster, but lookup of entries is slower.
+    // Since we are inserting entries more often than accessing them, using unordered_map increases performance.
+    std::unordered_map<int, std::string> values;
     // First call of this method. We initialize all group values in
     //  the first call.
     bool firstCall;
