@@ -22,6 +22,14 @@
 **
 **********************************************************************/
 
+// For feof_unlocked and fgets_unlocked
+#if !defined(_GNU_SOURCE)
+#define _DEFAULT_SOURCE
+#endif
+#if !defined(_GNU_SOURCE)
+#define _GNU_SOURCE
+#endif
+
 #include "dl_dxf.h"
 
 #include <algorithm>
@@ -187,7 +195,13 @@ bool DL_Dxf::readDxfGroups(FILE *fp, DL_CreationInterface* creationInterface) {
         processDXFGroup(creationInterface, groupCode, groupValue);
     }
 
+    // Nonlocking stdio functions are not thread-safe but they are faster.
+    // Thread safety shouldn't be a concern since we are accessing the file only in one thread.
+#ifdef __GLIBC__
+    return !feof_unlocked(fp);
+#else
     return !feof(fp);
+#endif
 }
 
 
@@ -232,13 +246,21 @@ bool DL_Dxf::readDxfGroups(std::istream& stream,
  *      Then, when function returns, (s==NULL).
  */
 bool DL_Dxf::getStrippedLine(std::string& s, unsigned int size, FILE *fp, bool stripSpace) {
+#ifdef __GLIBC__
+    if (!feof_unlocked(fp)) {
+#else
     if (!feof(fp)) {
+#endif
         // The whole line in the file.  Includes space for NULL.
         char* wholeLine = new char[size];
         // Only the useful part of the line
         char* line;
 
+#ifdef __GLIBC__
+        line = fgets_unlocked(wholeLine, size, fp);
+#else
         line = fgets(wholeLine, size, fp);
+#endif
 
         if (line!=NULL && line[0] != '\0') { // Evaluates to fgets() retval
             // line == wholeLine at this point.
