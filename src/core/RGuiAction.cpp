@@ -370,9 +370,13 @@ void RGuiAction::addShortcut(const QKeySequence& shortcut) {
     }
 
     QString key;
+#if QT_VERSION >= 0x060900
+    key = shortcut.toString(QKeySequence::NativeText);
+#else
     for (int i=0; i<shortcut.count(); i++) {
         key += QChar(shortcut[i]);
     }
+#endif
     key = key.toLower();
     actionsByShortcut.insert(key, this);
 
