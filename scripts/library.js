@@ -3057,11 +3057,6 @@ function getDontUseNativeDialog() {
         return true;
     }
 
-    if (RS.getSystemId()==="osx" && RSettings.getQtVersion()>=0x060900) {
-        // native file dialogs are broken (don't show at all) in Qt 6.9 on macOS:
-        return true;
-    }
-
     return RSettings.getBoolValue("SaveAs/UseSystemFileDialog", true)===false;
 };
 
