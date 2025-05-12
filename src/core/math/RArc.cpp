@@ -159,7 +159,27 @@ RArc RArc::createFrom2PBulge(const RVector& startPoint,
 }
 
 RArc RArc::createTangential(const RVector& startPoint, const RVector& pos,
-                            double direction, double radius) {
+                            double direction, double radius, bool autoRadius) {
+
+    if (autoRadius) {
+        RLine choord = RLine(startPoint, pos);
+        RLine midLine = RLine(choord.getMiddlePoint(), choord.getAngle() + M_PI/2, 1.0);
+        RLine ortho = RLine(startPoint, direction + M_PI/2, 1.0);
+
+        RVector center = RVector::invalid;
+        QList<RVector> ips = midLine.getIntersectionPoints(ortho, false);
+        if (ips.length()>0) {
+            center = ips[0];
+        }
+
+        if (center.isValid()) {
+            return createTangential(startPoint, pos, direction, center.getDistanceTo(startPoint), false);
+        }
+        else {
+            return RArc();
+        }
+    }
+
     RArc arc;
 
     arc.radius = radius;

@@ -80,7 +80,8 @@ public:
     static RArc createTangential(const RVector& startPoint,
                                  const RVector& pos,
                                  double direction,
-                                 double radius);
+                                 double radius,
+                                 bool autoRadius = false);
     static QList<RArc> createBiarc(const RVector& startPoint, double startDirection,
                                    const RVector& endPoint, double endDirection, bool secondTry = false);
 
