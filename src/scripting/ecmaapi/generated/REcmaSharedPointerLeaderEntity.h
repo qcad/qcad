@@ -79,6 +79,9 @@
         setData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getClosestSegment
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         reverse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -110,6 +113,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         insertVertex
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        insertVertexAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getVertexAt

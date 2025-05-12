@@ -429,7 +429,7 @@
         
     
       void endEntity(
-                
+                bool arg1
             );
         
     

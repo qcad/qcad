@@ -500,7 +500,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="endEntity" cppName="endEntity" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="" isConst="false" />
+      </variant>
     </method>
     <method name="exportCurrentEntity"
     cppName="exportCurrentEntity" specifier="public"
