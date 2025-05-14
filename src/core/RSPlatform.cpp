@@ -22,6 +22,7 @@
 #include <QProcess>
 #include <QThread>
 #ifdef Q_OS_WIN
+#include <QSettings>
 #include <Windows.h>
 #else
 #include <unistd.h>
@@ -315,19 +316,33 @@ bool RS::showInFileManager(const QString& filePath) {
   * This only works for Windows and might not even be possible on all systems.
   */
 QString RS::getFontFamilyFromFileName(const QString& fileName) {
+    qDebug() << "RS::getFontFamilyFromFileName: " << fileName;
 #ifdef Q_OS_WIN
     // registry path where Windows stores font info
-    QSettings fontReg("HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts", QSettings::NativeFormat);
+    QStringList rootKeys;
+    rootKeys.append("HKEY_LOCAL_MACHINE");
+    rootKeys.append("HKEY_CURRENT_USER");
 
-    QStringList keys = fontReg.allKeys();
-    for (int i=0; i<keys.length(); i++) {
-        QString key = keys[i];
-        QString value = fontReg.value(key).toString();
-        if (value.compare(fileName, Qt::CaseInsensitive) == 0) {
-            // extract family name from the registry key (may contain style)
-            QString family = key;
-            family.remove(QRegExp("\\s*\\(.*\\)$")); // Remove things like (TrueType)
-            return family.trimmed();
+    for (int i=0; i<rootKeys.length(); i++) {
+        QString rootKey = rootKeys[i];
+
+        QSettings fontReg(rootKey + "\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts", QSettings::NativeFormat);
+
+        QStringList keys = fontReg.allKeys();
+        for (int i=0; i<keys.length(); i++) {
+            QString key = keys[i];
+            qDebug() << "key:" << key;
+            QString value = fontReg.value(key).toString();
+            qDebug() << "value:" << value;
+            value = QFileInfo(value).fileName();
+            qDebug() << "value (filename):" << value;
+
+            if (value.compare(fileName, Qt::CaseInsensitive) == 0) {
+                // extract family name from the registry key (may contain style)
+                QString family = key;
+                family.remove(QRegExp("\\s*\\(.*\\)$")); // Remove things like (TrueType)
+                return family.trimmed();
+            }
         }
     }
 
