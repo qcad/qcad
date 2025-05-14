@@ -309,3 +309,49 @@ bool RS::showInFileManager(const QString& filePath) {
 
     return true;
 }
+
+/**
+  * \return Font family name from the given font file name.
+  * This only works for Windows and might not even be possible on all systems.
+  */
+QString RS::getFontFamilyFromFileName(const QString& fileName) {
+#ifdef Q_OS_WIN
+    // registry path where Windows stores font info
+    QSettings fontReg("HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts", QSettings::NativeFormat);
+
+    QStringList keys = fontReg.allKeys();
+    for (int i=0; i<keys.length(); i++) {
+        QString key = keys[i];
+        QString value = fontReg.value(key).toString();
+        if (value.compare(fileName, Qt::CaseInsensitive) == 0) {
+            // extract family name from the registry key (may contain style)
+            QString family = key;
+            family.remove(QRegExp("\\s*\\(.*\\)$")); // Remove things like (TrueType)
+            return family.trimmed();
+        }
+    }
+
+    return fileName;
+#elif defined(Q_OS_MAC)
+    return fileName;
+#else
+    // TODO: Linux: use fc-list
+    // QProcess process;
+    // process.start("fc-list", QStringList() << QString(":%{file} %{family}"));
+    // process.waitForFinished();
+    // QString output = process.readAllStandardOutput();
+
+    // for (const QString &line : output.split('\n')) {
+    //     if (line.contains(fileName, Qt::CaseInsensitive)) {
+    //         // Example line: /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf: DejaVu Sans
+    //         QStringList parts = line.split(":");
+    //         if (parts.size() >= 2) {
+    //             return parts[1].trimmed();
+    //         }
+    //     }
+    // }
+    // return QString();
+
+    return fileName;
+#endif
+}
