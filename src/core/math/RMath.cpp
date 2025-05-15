@@ -47,6 +47,21 @@
 QString RMath::lastError = "";
 QString RMath::mathExt = QString();
 
+#if QT_VERSION >= 0x060000
+QJSEngine* RMath::jsEngine = NULL;
+#endif
+
+
+void RMath::init() {
+}
+
+void RMath::uninit() {
+    if (jsEngine!=NULL) {
+        delete jsEngine;
+        jsEngine = NULL;
+    }
+}
+
 /**
  * \return Absolute modulus.
  */
@@ -464,9 +479,7 @@ double RMath::eval(const QString& expression, bool* ok) {
         } while(idx!=-1);
     }
 
-#if QT_VERSION >= 0x060000
-    static QJSEngine e;
-#else
+#if QT_VERSION < 0x060000
     static QScriptEngine e;
 #endif
 
@@ -486,11 +499,15 @@ double RMath::eval(const QString& expression, bool* ok) {
             qDebug() << "file not found: input.js";
         }
     }
-    e.evaluate(mathExt);
 
 #if QT_VERSION >= 0x060000
-    QJSValue res = e.evaluate(expr);
+    if (jsEngine==NULL) {
+        jsEngine = new QJSEngine();
+    }
+    jsEngine->evaluate(mathExt);
+    QJSValue res = jsEngine->evaluate(expr);
 #else
+    e.evaluate(mathExt);
     QScriptValue res = e.evaluate(expr);
 #endif
 

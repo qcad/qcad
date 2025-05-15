@@ -738,7 +738,10 @@ function main() {
     // don't use RSettings below this point
 
     // and we're done:
-    destr(appWin);
+    if (RSettings.getQtVersion()<0x060900) {
+        // Crashes Qt 6.9:
+        destr(appWin);
+    }
     qDebug("done");
 }
 
