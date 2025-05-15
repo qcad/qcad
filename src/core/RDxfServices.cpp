@@ -2247,33 +2247,54 @@ QString RDxfServices::escapeUnicode(const QString& str) {
     return ret;
 }
 
-QString RDxfServices::parseUnicode(const QString& str) {
-    QString ret = str;
-    QRegularExpression reg;
-    reg.setPattern("\\\\[Uu]\\+([0-9a-fA-F]{4})");
-    bool ok = true;
-    int uc = 0;
-#if QT_VERSION >= 0x050000
-    qsizetype ucPos = 0;
-    QRegularExpressionMatch match;
-    while ((ucPos = (int)ret.indexOf(reg, 0, &match)) != -1) {
-        uc = match.captured(1).toInt(&ok, 16);
-        if (!ok) {
-            break;
-        }
-        ret.replace(ucPos, match.capturedLength(), QChar(uc));
+QString RDxfServices::parseUnicode(const QString& input) {
+    // Perform a quick check first. If the trigger sequence doesn't exist,
+    // we can return the original string immediately.
+    if (!input.contains(QLatin1String("\\U+"))) {
+        return input;
     }
-#else
-    int ucPos = 0;
-    while ((ucPos = reg.indexIn(ret, 0)) != -1) {
-        uc = reg.cap(1).toInt(&ok, 16);
-        if (!ok) {
-            break;
-        }
-        ret.replace(ucPos, reg.matchedLength(), QChar(uc));
+
+    static const QRegularExpression regex(QStringLiteral("\\\\U\\+([0-9A-Fa-f]{4})"), QRegularExpression::CaseInsensitiveOption);
+
+    QRegularExpressionMatchIterator iterator = regex.globalMatch(input);
+    QString result;
+    int lastPos = 0;
+
+    if (!iterator.hasNext()) {
+        // Should technically be caught by the 'contains' check, but good for robustness.
+        return input;
     }
-#endif
-    return ret;
+
+    result.reserve(input.length());
+
+    while (iterator.hasNext()) {
+        QRegularExpressionMatch match = iterator.next();
+
+        // Append the part of the string before the current match
+        result.append(input.mid(lastPos, match.capturedStart() - lastPos));
+
+        QStringView hexCodeView = match.capturedView(1);
+
+        bool conversionOk = false;
+        uint codePoint = hexCodeView.toUInt(&conversionOk, 16);
+
+        if (conversionOk) {
+            result.append(QChar(codePoint));
+        } else {
+            // Should not happen with the strict regex, but as a fallback,
+            // append the original matched sequence if conversion fails.
+            result.append(match.capturedView(0)); // Append the whole \U+xxxx
+        }
+
+        lastPos = match.capturedEnd();
+    }
+
+    // Append the remaining part of the string after the last match
+    if (lastPos < input.length()) {
+        result.append(input.mid(lastPos));
+    }
+
+    return result;
 }
 
 void RDxfServices::autoFixLinetypePattern(RLinetypePattern& pattern) {

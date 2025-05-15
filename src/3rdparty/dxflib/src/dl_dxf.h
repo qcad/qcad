@@ -32,7 +32,7 @@
 #include <stdlib.h>
 #include <string>
 #include <sstream>
-#include <map>
+#include <unordered_map>
 
 #include "dl_attributes.h"
 #include "dl_codes.h"
@@ -128,8 +128,8 @@ public:
             DL_CreationInterface* creationInterface);
     bool readDxfGroups(FILE* fp,
                        DL_CreationInterface* creationInterface);
-    static bool getStrippedLine(std::string& s, unsigned int size,
-                               FILE* stream, bool stripSpace = true);
+    static bool getStrippedLine(std::string& s, FILE* stream,
+                                bool stripSpace = true);
     
     bool readDxfGroups(std::istream& stream,
                        DL_CreationInterface* creationInterface);
@@ -459,11 +459,7 @@ public:
         // make sure the real value uses '.' not ',':
         std::string str2 = str;
         std::replace(str2.begin(), str2.end(), ',', '.');
-        // make sure c++ expects '.' not ',':
-        std::istringstream istr(str2);
-        //istr.imbue(std::locale("C"));
-        istr >> ret;
-        return ret;
+        return ::atof(str2.c_str());
     }
 
 private:
@@ -513,7 +509,9 @@ private:
     // Key of the current setting (e.g. "$ACADVER")
     std::string settingKey;
     // Stores the group codes
-    std::map<int, std::string> values;
+    // Inserting entries into an unordered_map is faster, but lookup of entries is slower.
+    // Since we are inserting entries more often than accessing them, using unordered_map increases performance.
+    std::unordered_map<int, std::string> values;
     // First call of this method. We initialize all group values in
     //  the first call.
     bool firstCall;

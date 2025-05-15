@@ -118,15 +118,18 @@ void RDebug::hexDump(const QString& str) {
 }
 
 void RDebug::incCounter(const QString& id) {
+#ifdef QT_DEBUG
     mutexCounter.lock();
     if (!counter.contains(id)) {
         counter[id] = 0;
     }
     counter[id]++;
     mutexCounter.unlock();
+#endif
 }
 
 void RDebug::decCounter(const QString& id) {
+#ifdef QT_DEBUG
     mutexCounter.lock();
     if (!counter.contains(id)) {
         Q_ASSERT(false);
@@ -135,6 +138,7 @@ void RDebug::decCounter(const QString& id) {
     //qDebug() << id << "-";
     counter[id]--;
     mutexCounter.unlock();
+#endif
 }
 
 int RDebug::getCounter(const QString& id) {
