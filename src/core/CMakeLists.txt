@@ -166,6 +166,7 @@ add_library(qcadcore SHARED
     RWheelEvent.cpp RWheelEvent.h
     RWidget.cpp RWidget.h
     math/RArc.cpp math/RArc.h
+    math/RArcProxy.h
     math/RBox.cpp math/RBox.h
     math/RCircle.cpp math/RCircle.h
     math/RDirected.cpp math/RDirected.h

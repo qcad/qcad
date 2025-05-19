@@ -34,7 +34,7 @@
    <item>
     <widget class="Line" name="SeparatorClose">
      <property name="orientation">
-      <enum>Qt::Vertical</enum>
+      <enum>Qt::Orientation::Vertical</enum>
      </property>
     </widget>
    </item>
@@ -75,12 +75,12 @@
    <item>
     <widget class="Line" name="SeparatorRedo">
      <property name="orientation">
-      <enum>Qt::Vertical</enum>
+      <enum>Qt::Orientation::Vertical</enum>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QCheckBox" name="ArcSegment">
+    <widget class="QCheckBox" name="ArcMode">
      <property name="text">
       <string>Arc with Radius:</string>
      </property>
@@ -108,7 +108,7 @@
    <item>
     <widget class="Line" name="line">
      <property name="orientation">
-      <enum>Qt::Vertical</enum>
+      <enum>Qt::Orientation::Vertical</enum>
      </property>
     </widget>
    </item>
@@ -144,7 +144,7 @@
    <item>
     <widget class="Line" name="line_3">
      <property name="orientation">
-      <enum>Qt::Vertical</enum>
+      <enum>Qt::Orientation::Vertical</enum>
      </property>
     </widget>
    </item>
@@ -183,7 +183,7 @@
  <resources/>
  <connections>
   <connection>
-   <sender>ArcSegment</sender>
+   <sender>ArcMode</sender>
    <signal>toggled(bool)</signal>
    <receiver>Radius</receiver>
    <slot>setEnabled(bool)</slot>
@@ -199,7 +199,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>ArcSegment</sender>
+   <sender>ArcMode</sender>
    <signal>toggled(bool)</signal>
    <receiver>sweepLabel</receiver>
    <slot>setEnabled(bool)</slot>
@@ -215,7 +215,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>ArcSegment</sender>
+   <sender>ArcMode</sender>
    <signal>toggled(bool)</signal>
    <receiver>Sweep</receiver>
    <slot>setEnabled(bool)</slot>
