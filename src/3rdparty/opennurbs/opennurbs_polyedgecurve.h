@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2008 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(ON_POLYEDGECURVE_INC_)
 #define ON_POLYEDGECURVE_INC_
@@ -28,13 +26,13 @@ public:
   // default copy constructor and operator= are fine.
 
   // virtual ON_Object::DestroyRuntimeCache override
-  void DestroyRuntimeCache( bool bDelete = true );
+  void DestroyRuntimeCache( bool bDelete = true ) override;
 
   // virtual ON_Curve::IsClosed override
-  ON_BOOL32 IsClosed() const;
+  bool IsClosed() const override;
 
   // virtual ON_Curve::DuplicateCurve override
-  ON_Curve* DuplicateCurve() const;
+  ON_Curve* DuplicateCurve() const override;
 
   /*
   Description:
@@ -64,15 +62,15 @@ public:
 
   ON_PolyEdgeSegment* operator[](int) const;
 
-  ON_BOOL32 Prepend( ON_PolyEdgeSegment* new_segment ); // Prepend curve.
-  ON_BOOL32 Append( ON_PolyEdgeSegment* new_segment );  // Append curve.
-  ON_BOOL32 Insert( 
+  bool Prepend( ON_PolyEdgeSegment* new_segment ); // Prepend curve.
+  bool Append( ON_PolyEdgeSegment* new_segment );  // Append curve.
+  bool Insert( 
            int segment_index,
            ON_PolyEdgeSegment* new_segment
            );
 
   // if the segment is an edge, the following
-  // return non-NULL pointers.
+  // return non-nullptr pointers.
   const ON_BrepEdge* EdgeAt(double t) const;
   const ON_BrepTrim* TrimAt(double t) const;
   const ON_Brep*     BrepAt(double t) const;
@@ -81,75 +79,12 @@ public:
   ON_Surface::ISO    IsoType( double t) const;
 
   double EdgeParameter(double t) const;
-  double TrimParameter(double t) const;
-  ON_2dPoint SurfaceParameter(double t) const;
 
   // Test if there are any surface edges in the polyedge
   bool ContainsAnyEdges() const;
   // Test if all segments of the polyedge are surface edges
   bool ContainsAllEdges() const;
   
-  /*
-  Description:
-    Evaluate surface binormal and normal.
-  Parameters:
-    t - [in] ON_PolyEdgeCurve curve parameter
-    bIsoDir - [in] (if true, the tangent will be parallel to an isodir)
-    srfpoint - [out] location on surface
-    srftangent - [out] "binormal" tangent to the surface.
-         The direction of this tangent is controled by
-         the surface tangent mode setting.
-    srfnormal - [out] normal to surface,
-  See Also:
-    ON_PolyEdgeCurve::SetSrfTangentMode    
-  */
-  bool EvSrfTangent( 
-          double t,
-          bool bIsoDir,
-          ON_3dPoint& srfpoint,
-          ON_3dVector& srftangent,
-          ON_3dVector& srfnormal
-          ) const;
-
-  /*
-  Description:
-    Evaluate surface normal curvature
-  Parameters:
-    t - [in] ON_PolyEdgeCurve curve parameter
-    srftangent - [in] tangent to the surface
-    srfnormalcurvature - [out] normal curvature
-    srfnormal - [out] normal to surface
-  See Also:
-    ON_PolyEdgeCurve::EvSrfTangent    
-  */
-  bool EvSrfNormalCurvature( 
-            double t,
-            ON_3dVector srftangent,
-            ON_3dVector& srfnormalcurvature,
-            ON_3dVector& srfnormal
-            ) const;
-
-  /*
-  Description:
-    Evaluate surface derivatives.
-  Parameters:
-    t - [in] ON_PolyEdgeCurve curve parameter
-    srfpoint - [out] location on surface
-    du - [out]
-    dv - [out]
-    duu - [out]
-    duv - [out]
-    dvv - [out]
-  */
-  bool EvSrfDerivatives(
-          double t,
-          ON_3dPoint& srfpoint,
-          ON_3dVector& du,
-          ON_3dVector& dv,
-          ON_3dVector& duu,
-          ON_3dVector& duv,
-          ON_3dVector& dvv
-          ) const;
 
   /*
   Description:
@@ -190,16 +125,16 @@ public:
 
   // virtual ON_Curve overrides do nothing
   // to prevent changing edge
-  ON_BOOL32 SetStartPoint(ON_3dPoint start_point);
-  ON_BOOL32 SetEndPoint(ON_3dPoint end_point);
-  ON_BOOL32 ChangeClosedCurveSeam( double t );
-  ON_BOOL32 PrependAndMatch(ON_Curve*);
-  ON_BOOL32 AppendAndMatch(ON_Curve*);
+  bool SetStartPoint(ON_3dPoint start_point) override;
+  bool SetEndPoint(ON_3dPoint end_point) override;
+  bool ChangeClosedCurveSeam( double t ) override;
+  bool PrependAndMatch(ON_Curve*);
+  bool AppendAndMatch(ON_Curve*);
 
   // 7-1-03 lw added override to unset cached closed flag
   // when a segment is removed
-  ON_BOOL32 Remove(); // remove last
-  ON_BOOL32 Remove( int index);
+  bool Remove(); // remove last
+  bool Remove( int index);
 };
 
 class ON_CLASS ON_PolyEdgeSegment : public ON_CurveProxy
@@ -213,18 +148,18 @@ public:
   // default copy constructor and operator= are fine.
 
   // virtual ON_Object::DestroyRuntimeCache override
-  void DestroyRuntimeCache( bool bDelete = true );
+  void DestroyRuntimeCache( bool bDelete = true ) override;
 
-  ON_BOOL32 Write( ON_BinaryArchive& ) const;
+  bool Write( ON_BinaryArchive& ) const override;
 
-  ON_BOOL32 Read( ON_BinaryArchive& );
+  bool Read( ON_BinaryArchive& ) override;
 
   // virtual ON_Curve::IsClosed override
-  ON_BOOL32 IsClosed() const;
+  bool IsClosed() const override;
 
 
   // virtual ON_Curve::DuplicateCurve override
-  ON_Curve* DuplicateCurve() const;
+  ON_Curve* DuplicateCurve() const override;
 
   /*
   Description:
@@ -258,16 +193,14 @@ public:
           const ON_UUID& object_id
           );
 
-  const ON_BrepEdge* Edge() const;
-  const ON_BrepTrim* Trim() const;
+  const ON_BrepEdge* BrepEdge() const;
+  const ON_BrepTrim* BrepTrim() const;
   const ON_Brep*     Brep() const;
-  const ON_BrepFace* Face() const;
+  const ON_BrepFace* BrepFace() const;
   const ON_Surface*  Surface() const;
   ON_Surface::ISO    IsoType() const;
 
   double EdgeParameter(double t) const;
-  double TrimParameter(double t) const;
-  ON_2dPoint SurfaceParameter(double t) const;
 
   /*
   Returns:
@@ -279,7 +212,7 @@ public:
   /*
   Returns:
     True if this segment has an ON_BrepTrim and the direction of
-    the ON_BrepTrime is the reverse of the direction of the segment.
+    the ON_BrepTrim is the reverse of the direction of the segment.
   */
   bool ReversedTrimDir() const;
 
@@ -297,15 +230,6 @@ public:
   */
   ON_Interval TrimDomain() const;
 
-  ON_BOOL32 Trim(
-    const ON_Interval& domain
-    );
-
-  ON_BOOL32 Split(
-      double t,
-      ON_Curve*& left_side,
-      ON_Curve*& right_side
-    ) const;
 
   // m_object_id = id of a brep or curve object in Rhino
   ON_UUID m_object_id; 
@@ -313,9 +237,9 @@ public:
   // refers to either an edge or a trim.
   ON_COMPONENT_INDEX m_component_index;
   // corresponding domain of the edge - see note below
-  ON_Interval m_edge_domain;  
+  ON_Interval m_edge_domain = ON_Interval::EmptyInterval;  
   // corresponding domain of the trim - see note below
-  ON_Interval m_trim_domain;   
+  ON_Interval m_trim_domain = ON_Interval::EmptyInterval;   
 
 
   // When m_component_index refers to an ON_BrepTrim, there
@@ -354,7 +278,6 @@ public:
   const ON_BrepFace* m_face;
   const ON_Surface* m_surface;
 
-  void SetTrimDomainFromEdgeDomain();
 
 private:
   friend class ON_PolyEdgeCurve;

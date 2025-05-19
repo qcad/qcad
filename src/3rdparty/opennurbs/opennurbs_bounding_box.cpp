@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,31 +10,33 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
 
-ON_BoundingBox::ON_BoundingBox()
-                : m_min(1.0,0.0,0.0), 
-                  m_max(-1.0,0.0,0.0)
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
+
+ON_BoundingBox::ON_BoundingBox() ON_NOEXCEPT
+  : m_min(1.0,0.0,0.0)
+  , m_max(-1.0,0.0,0.0)
 {}
 
-const ON_BoundingBox ON_BoundingBox::EmptyBoundingBox;
-
-ON_BoundingBox::ON_BoundingBox( const ON_3dPoint& min_pt, const ON_3dPoint& max_pt )
-                : m_min( min_pt ), 
-                  m_max( max_pt )
-{}
-
-ON_BoundingBox::~ON_BoundingBox()
+ON_BoundingBox::ON_BoundingBox(
+  const ON_3dPoint& min_pt,
+  const ON_3dPoint& max_pt 
+  )
+  : m_min( min_pt )
+  , m_max( max_pt )
 {}
 
 void ON_BoundingBox::Destroy()
 {
-  m_min.Zero();
-  m_max.Zero();
-  m_min.x = 1.0;
-  m_max.x = -1.0;
+  *this = ON_BoundingBox::EmptyBoundingBox;
 }
 
 //////////
@@ -131,6 +132,64 @@ ON_BoundingBox::GetCorners(
   return (8==n);
 }
 
+ON_Line ON_BoundingBox::Edge(unsigned int index) const
+{
+  switch (index)
+  {
+  case 0u:
+    return ON_Line(ON_3dPoint(m_min.x, m_min.y, m_min.z), ON_3dPoint(m_max.x, m_min.y, m_min.z));
+  case 1u:
+    return ON_Line(ON_3dPoint(m_min.x, m_min.y, m_min.z), ON_3dPoint(m_min.x, m_max.y, m_min.z));
+  case 2u:
+    return ON_Line(ON_3dPoint(m_min.x, m_min.y, m_min.z), ON_3dPoint(m_min.x, m_min.y, m_max.z));
+  case 3u:
+    return ON_Line(ON_3dPoint(m_min.x, m_min.y, m_max.z), ON_3dPoint(m_max.x, m_min.y, m_max.z));
+  case 4u:
+    return ON_Line(ON_3dPoint(m_min.x, m_min.y, m_max.z), ON_3dPoint(m_min.x, m_max.y, m_max.z));
+  case 5u:
+    return ON_Line(ON_3dPoint(m_min.x, m_max.y, m_min.z), ON_3dPoint(m_max.x, m_max.y, m_min.z));
+  case 6u:
+    return ON_Line(ON_3dPoint(m_min.x, m_max.y, m_min.z), ON_3dPoint(m_min.x, m_max.y, m_max.z));
+  case 7u:
+    return ON_Line(ON_3dPoint(m_max.x, m_min.y, m_min.z), ON_3dPoint(m_max.x, m_min.y, m_max.z));
+  case 8u:
+    return ON_Line(ON_3dPoint(m_max.x, m_min.y, m_min.z), ON_3dPoint(m_max.x, m_max.y, m_min.z));
+  case 9u:
+    return ON_Line(ON_3dPoint(m_min.x, m_max.y, m_max.z), ON_3dPoint(m_max.x, m_max.y, m_max.z));
+  case 10u:
+    return ON_Line(ON_3dPoint(m_max.x, m_min.y, m_max.z), ON_3dPoint(m_max.x, m_max.y, m_max.z));
+  case 11u:
+    return ON_Line(ON_3dPoint(m_max.x, m_max.y, m_min.z), ON_3dPoint(m_max.x, m_max.y, m_max.z));
+  default:
+    index %= 12; return Edge(index);
+  }
+}
+
+bool ON_BoundingBox::GetEdges( 
+  ON_Line edges[12] 
+  ) const
+{
+  ON_Line line;
+  bool rc = IsValid();
+  if (rc)
+  {
+    for (unsigned i = 0U; i < 12; i++ )
+    {
+      edges[i] = Edge(i);
+    }
+  }
+  else
+  {
+    edges[0].from = ON_3dPoint::UnsetPoint;
+    edges[0].to   = ON_3dPoint::UnsetPoint;
+    for (unsigned i = 1U; i < 12; i++ )
+      edges[i] = edges[0];
+  }
+
+  return rc;
+}
+
+
 bool
 ON_BoundingBox::GetCorners( 
   ON_3dPointArray& corners// returns list of 8 corner points
@@ -147,6 +206,70 @@ ON_BoundingBox::GetCorners(
 ON_ClippingRegion::ON_ClippingRegion()
 {
   memset(this,0,sizeof(*this));
+}
+
+
+bool ON_ClippingRegion::SetObjectToClipTransformation(
+  const ON_Xform object_to_clip
+  )
+{
+  m_xform = object_to_clip;
+  m_inverse_xform = m_xform.Inverse();
+  bool rc = m_xform.IsValid() && m_inverse_xform.IsValid();
+  if (false == rc)
+    m_inverse_xform = ON_Xform::ZeroTransformation;
+  return rc;
+}
+
+bool ON_ClippingRegion::SetObjectToClipTransformation(
+  const ON_Viewport& viewport
+  )
+{
+  if (false == viewport.GetXform(
+    ON::coordinate_system::world_cs,
+    ON::coordinate_system::clip_cs,
+    m_xform
+    ))
+  {
+    m_xform = ON_Xform::IdentityTransformation;
+    m_inverse_xform = ON_Xform::IdentityTransformation;
+    return false;
+  }
+
+  if (false == viewport.GetXform(
+    ON::coordinate_system::clip_cs,
+    ON::coordinate_system::world_cs,
+    m_inverse_xform
+    ))
+  {
+    m_inverse_xform = ON_Xform::ZeroTransformation;
+    return false;
+  }
+
+  return true;
+}
+
+ON_Xform ON_ClippingRegion::ObjectToClipTransformation() const
+{
+  return m_xform;
+}
+
+ON_Xform ON_ClippingRegion::InverseObjectToClipTransformation() const
+{
+  return m_inverse_xform;
+}
+
+void ON_ClippingRegion::SetClipPlaneTolerance( double clip_plane_tolerance )
+{
+  if ( clip_plane_tolerance > 0.0 && ON_IsValid(clip_plane_tolerance) )
+    m_clip_plane_tolerance = clip_plane_tolerance;
+  else
+    m_clip_plane_tolerance = 0.0;
+}
+
+double ON_ClippingRegion::ClipPlaneTolerance() const
+{
+  return m_clip_plane_tolerance;
 }
 
 int ON_ClippingRegion::InViewFrustum( 
@@ -361,6 +484,14 @@ int ON_ClippingRegion::InClipPlaneRegion(
   unsigned int out, all_out, some_out, cpbit;
   int i, j;
 
+  // 14 May 2012 Dale Lear
+  //   Fix http://dev.mcneel.com/bugtrack/?q=102481
+  //   Picking hatches that are coplanar with clipping planes.
+  //   The "fix" was to set clipping_plane_tolerance = same
+  //   tolerance the display code uses.  Before the fix,
+  //   0.0 was used as the clipping_plane_tolerance.
+  const double clip_plane_tolerance = ClipPlaneTolerance();
+
   if ( count <= 0 || !p )
     return 0;
 
@@ -381,10 +512,10 @@ int ON_ClippingRegion::InClipPlaneRegion(
       while (j--)
       {
         x = cpeqn->x*cv[0] + cpeqn->y*cv[1] + cpeqn->z*cv[2] + cpeqn->d;
-        if ( x < 0.0 )
+        if ( x < -clip_plane_tolerance )
           out |= cpbit;
         cpbit <<= 1;
-        cpeqn++;;
+        cpeqn++;
       }
     }
     some_out |= out;
@@ -423,6 +554,14 @@ int ON_ClippingRegion::InClipPlaneRegion(
   if ( m_clip_plane_count <= 0 )
     return 2;
 
+  // 14 May 2012 Dale Lear
+  //   Fix http://dev.mcneel.com/bugtrack/?q=102481
+  //   Picking hatches that are coplanar with clipping planes.
+  //   The "fix" was to set clipping_plane_tolerance = same
+  //   tolerance the display code uses.  Before the fix,
+  //   0.0 was used as the clipping_plane_tolerance.
+  const double clip_plane_tolerance = ClipPlaneTolerance();
+
   some_out = 0;
   all_out  = 0xFFFFFFFF;
   cv = &p[0].x;
@@ -437,10 +576,10 @@ int ON_ClippingRegion::InClipPlaneRegion(
       while (j--)
       {
         x = cpeqn->x*cv[0] + cpeqn->y*cv[1] + cpeqn->z*cv[2] + cpeqn->d;
-        if ( x < 0.0 )
+        if ( x < -clip_plane_tolerance )
           out |= cpbit;
         cpbit <<= 1;
-        cpeqn++;;
+        cpeqn++;
       }
     }
     some_out |= out;
@@ -479,6 +618,14 @@ int ON_ClippingRegion::InClipPlaneRegion(
   if ( m_clip_plane_count <= 0 )
     return 2;
 
+  // 14 May 2012 Dale Lear
+  //   Fix http://dev.mcneel.com/bugtrack/?q=102481
+  //   Picking hatches that are coplanar with clipping planes.
+  //   The "fix" was to set clipping_plane_tolerance = same
+  //   tolerance the display code uses.  Before the fix,
+  //   0.0 was used as the clipping_plane_tolerance.
+  const double clip_plane_tolerance = ClipPlaneTolerance();
+
   some_out = 0;
   all_out  = 0xFFFFFFFF;
   cv = &p[0].x;
@@ -493,10 +640,10 @@ int ON_ClippingRegion::InClipPlaneRegion(
       while (j--)
       {
         x = cpeqn->x*cv[0] + cpeqn->y*cv[1] + cpeqn->z*cv[2] + cpeqn->d*cv[3];
-        if ( x < 0.0 )
+        if ( x < -clip_plane_tolerance )
           out |= cpbit;
         cpbit <<= 1;
-        cpeqn++;;
+        cpeqn++;
       }
     }
     some_out |= out;
@@ -556,6 +703,14 @@ int ON_ClippingRegion::IsVisible( int count, const ON_3fPoint* p ) const
   unsigned int out, all_out, some_out, cpbit;
   int i, j;
 
+  // 14 May 2012 Dale Lear
+  //   Fix http://dev.mcneel.com/bugtrack/?q=102481
+  //   Picking hatches that are coplanar with clipping planes.
+  //   The "fix" was to set clipping_plane_tolerance = same
+  //   tolerance the display code uses.  Before the fix,
+  //   0.0 was used as the clipping_plane_tolerance.
+  const double clip_plane_tolerance = ClipPlaneTolerance();
+
   some_out = 0;
   all_out  = 0xFFFFFFFF;
   xform = &m_xform.m_xform[0][0];
@@ -571,10 +726,10 @@ int ON_ClippingRegion::IsVisible( int count, const ON_3fPoint* p ) const
       while (j--)
       {
         x = cpeqn->x*cv[0] + cpeqn->y*cv[1] + cpeqn->z*cv[2] + cpeqn->d;
-        if ( x < 0.0 )
+        if ( x < -clip_plane_tolerance )
           out |= cpbit;
         cpbit <<= 1;
-        cpeqn++;;
+        cpeqn++;
       }
     }
     w = xform[12]*cv[0] + xform[13]*cv[1] + xform[14]*cv[2] + xform[15];
@@ -612,6 +767,14 @@ int ON_ClippingRegion::IsVisible( int count, const ON_3dPoint* p ) const
   unsigned int out, all_out, some_out, cpbit;
   int i, j;
 
+  // 14 May 2012 Dale Lear
+  //   Fix http://dev.mcneel.com/bugtrack/?q=102481
+  //   Picking hatches that are coplanar with clipping planes.
+  //   The "fix" was to set clipping_plane_tolerance = same
+  //   tolerance the display code uses.  Before the fix,
+  //   0.0 was used as the clipping_plane_tolerance.
+  const double clip_plane_tolerance = ClipPlaneTolerance();
+
   some_out = 0;
   all_out  = 0xFFFFFFFF;
   xform = &m_xform.m_xform[0][0];
@@ -627,10 +790,10 @@ int ON_ClippingRegion::IsVisible( int count, const ON_3dPoint* p ) const
       while (j--)
       {
         x = cpeqn->x*cv[0] + cpeqn->y*cv[1] + cpeqn->z*cv[2] + cpeqn->d;
-        if ( x < 0.0 )
+        if ( x < -clip_plane_tolerance )
           out |= cpbit;
         cpbit <<= 1;
-        cpeqn++;;
+        cpeqn++;
       }
     }
     w = xform[12]*cv[0] + xform[13]*cv[1] + xform[14]*cv[2] + xform[15];
@@ -669,6 +832,14 @@ int ON_ClippingRegion::IsVisible( int count, const ON_4dPoint* p ) const
   unsigned int out, all_out, some_out, cpbit;
   int i, j;
 
+  // 14 May 2012 Dale Lear
+  //   Fix http://dev.mcneel.com/bugtrack/?q=102481
+  //   Picking hatches that are coplanar with clipping planes.
+  //   The "fix" was to set clipping_plane_tolerance = same
+  //   tolerance the display code uses.  Before the fix,
+  //   0.0 was used as the clipping_plane_tolerance.
+  const double clip_plane_tolerance = ClipPlaneTolerance();
+
   some_out = 0;
   all_out  = 0xFFFFFFFF;
   xform = &m_xform.m_xform[0][0];
@@ -684,10 +855,10 @@ int ON_ClippingRegion::IsVisible( int count, const ON_4dPoint* p ) const
       while (j--)
       {
         x = cpeqn->x*cv[0] + cpeqn->y*cv[1] + cpeqn->z*cv[2] + cpeqn->d*cv[3];
-        if ( x < 0.0 )
+        if ( x < -clip_plane_tolerance )
           out |= cpbit;
         cpbit <<= 1;
-        cpeqn++;;
+        cpeqn++;
       }
     }
     w = xform[12]*cv[0] + xform[13]*cv[1] + xform[14]*cv[2] + xform[15]*cv[3];
@@ -727,6 +898,15 @@ unsigned int ON_ClippingRegion::TransformPoint(
   const ON_PlaneEquation* cpeqn;
   int j;
   double x,y,z,w;
+
+  // 14 May 2012 Dale Lear
+  //   Fix http://dev.mcneel.com/bugtrack/?q=102481
+  //   Picking hatches that are coplanar with clipping planes.
+  //   The "fix" was to set clipping_plane_tolerance = same
+  //   tolerance the display code uses.  Before the fix,
+  //   0.0 was used as the clipping_plane_tolerance.
+  const double clip_plane_tolerance = ClipPlaneTolerance();
+
   out = 0;
   if ( m_clip_plane_count )
   {
@@ -736,10 +916,10 @@ unsigned int ON_ClippingRegion::TransformPoint(
     while (j--)
     {
       x = cpeqn->x*cv[0] + cpeqn->y*cv[1] + cpeqn->z*cv[2] + cpeqn->d*cv[3];
-      if ( x < 0.0 )
+      if ( x < -clip_plane_tolerance )
         out |= cpbit;
       cpbit <<= 1;
-      cpeqn++;;
+      cpeqn++;
     }
   }
   w = xform[12]*cv[0] + xform[13]*cv[1] + xform[14]*cv[2] + xform[15]*cv[3];
@@ -766,6 +946,15 @@ unsigned int ON_ClippingRegion::TransformPoint(
   const ON_PlaneEquation* cpeqn;
   int j;
   double x,y,z,w;
+
+  // 14 May 2012 Dale Lear
+  //   Fix http://dev.mcneel.com/bugtrack/?q=102481
+  //   Picking hatches that are coplanar with clipping planes.
+  //   The "fix" was to set clipping_plane_tolerance = same
+  //   tolerance the display code uses.  Before the fix,
+  //   0.0 was used as the clipping_plane_tolerance.
+  const double clip_plane_tolerance = ClipPlaneTolerance();
+
   out = 0;
   if ( m_clip_plane_count )
   {
@@ -775,10 +964,10 @@ unsigned int ON_ClippingRegion::TransformPoint(
     while (j--)
     {
       x = cpeqn->x*cv[0] + cpeqn->y*cv[1] + cpeqn->z*cv[2] + cpeqn->d;
-      if ( x < 0.0 )
+      if ( x < -clip_plane_tolerance )
         out |= cpbit;
       cpbit <<= 1;
-      cpeqn++;;
+      cpeqn++;
     }
   }
   w = xform[12]*cv[0] + xform[13]*cv[1] + xform[14]*cv[2] + xform[15];
@@ -788,16 +977,13 @@ unsigned int ON_ClippingRegion::TransformPoint(
   if (y < -w) out |= 0x04; else if (y > w) out |= 0x08;
   z = xform[8]*cv[0] + xform[9]*cv[1] + xform[10]*cv[2] + xform[11];
   if (z < -w) out |= 0x10; else if (z > w) out |= 0x20;
-  if ( w <= 0.0 )
+  if ( false == (w > 0.0) )
   {
-    w = (0.0==w) ? 1.0 : 1.0/w;
+    if (0.0 == w || false == ON_IsValid(w))
+      w = 1.0;
     out |= 0x80000000;
   }
-  else
-  {
-    w = 1.0/w;
-  }
-  Q.x = x*w; Q.y = y*w; Q.z = z*w;
+  Q.x = x/w; Q.y = y/w; Q.z = z/w;
   return out;
 }
 
@@ -820,6 +1006,14 @@ int ON_ClippingRegion::TransformPoints( int count, ON_4dPoint* p, unsigned int* 
   unsigned int out, all_out, some_out, cpbit;
   int i, j;
 
+  // 14 May 2012 Dale Lear
+  //   Fix http://dev.mcneel.com/bugtrack/?q=102481
+  //   Picking hatches that are coplanar with clipping planes.
+  //   The "fix" was to set clipping_plane_tolerance = same
+  //   tolerance the display code uses.  Before the fix,
+  //   0.0 was used as the clipping_plane_tolerance.
+  const double clip_plane_tolerance = ClipPlaneTolerance();
+
   some_out = 0;
   all_out  = 0xFFFFFFFF;
   xform = &m_xform.m_xform[0][0];
@@ -836,10 +1030,10 @@ int ON_ClippingRegion::TransformPoints( int count, ON_4dPoint* p, unsigned int* 
       while (j--)
       {
         x = cpeqn->x*cv[0] + cpeqn->y*cv[1] + cpeqn->z*cv[2] + cpeqn->d*cv[3];
-        if ( x < 0.0 )
+        if ( x < -clip_plane_tolerance )
           out |= cpbit;
         cpbit <<= 1;
-        cpeqn++;;
+        cpeqn++;
       }
     }
     w = xform[12]*cv[0] + xform[13]*cv[1] + xform[14]*cv[2] + xform[15]*cv[3];
@@ -876,6 +1070,14 @@ int ON_ClippingRegion::TransformPoints( int count, ON_4dPoint* p ) const
   double x, y, z, w;
   unsigned int out, all_out, some_out, cpbit;
   int i, j;
+  
+  // 14 May 2012 Dale Lear
+  //   Fix http://dev.mcneel.com/bugtrack/?q=102481
+  //   Picking hatches that are coplanar with clipping planes.
+  //   The "fix" was to set clipping_plane_tolerance = same
+  //   tolerance the display code uses.  Before the fix,
+  //   0.0 was used as the clipping_plane_tolerance.
+  const double clip_plane_tolerance = ClipPlaneTolerance();
 
   some_out = 0;
   all_out  = 0xFFFFFFFF;
@@ -893,10 +1095,10 @@ int ON_ClippingRegion::TransformPoints( int count, ON_4dPoint* p ) const
       while (j--)
       {
         x = cpeqn->x*cv[0] + cpeqn->y*cv[1] + cpeqn->z*cv[2] + cpeqn->d*cv[3];
-        if ( x < 0.0 )
+        if ( x < -clip_plane_tolerance )
           out |= cpbit;
         cpbit <<= 1;
-        cpeqn++;;
+        cpeqn++;
       }
     }
     w = xform[12]*cv[0] + xform[13]*cv[1] + xform[14]*cv[2] + xform[15]*cv[3];
@@ -950,6 +1152,7 @@ bool ON_ClippingRegion::GetLineClipPlaneParamters(
     s0 = 0.0;
     s1 = 1.0;
     eqn = m_clip_plane;
+    const double clip_plane_tolerance = ClipPlaneTolerance();
     for ( i = 0; i < m_clip_plane_count; i++, eqn++ )
     {
       x0 = eqn->x*P0.x + eqn->y*P0.y + eqn->z*P0.z + eqn->d*P0.w;
@@ -957,25 +1160,37 @@ bool ON_ClippingRegion::GetLineClipPlaneParamters(
       if ( x0 < 0.0)
       {
         if ( x1 <= 0.0 )
-          return false;
-        s = x0/(x0-x1);
-        if ( s > s0 )
         {
-          s0 = s;
-          if ( s0 >= s1 )
+          if ( x0 < -clip_plane_tolerance && x1 <= - clip_plane_tolerance )
             return false;
+        }
+        if ( x0 != x1 )
+        {
+          s = x0/(x0-x1);
+          if ( s > s0 )
+          {
+            s0 = s;
+            if ( s0 >= s1 )
+              return false;
+          }
         }
       }
       else if ( x1 < 0.0 )
       {
         if ( x0 <= 0.0 )
-          return false;
-        s = x1/(x1-x0);
-        if ( s < s1 )
         {
-          s1 = s;
-          if ( s0 >= s1 )
+          if ( x1 < -clip_plane_tolerance && x0 <= - clip_plane_tolerance )
             return false;
+        }
+        if ( x0 != x1 )
+        {
+          s = x0/(x0-x1);
+          if ( s < s1 )
+          {
+            s1 = s;
+            if ( s0 >= s1 )
+              return false;
+          }
         }
       }
     }
@@ -990,15 +1205,339 @@ bool ON_ClippingRegion::GetLineClipPlaneParamters(
   return true;
 }
 
+ON_ClippingRegionPoints::~ON_ClippingRegionPoints()
+{
+  Destroy();
+}
 
-int ON_BoundingBox::IsVisible( 
-  const ON_Xform& bbox2c
+ON_ClippingRegionPoints::ON_ClippingRegionPoints(const ON_ClippingRegionPoints& src)
+{
+  // All "this" members are initialized in the class definition.
+  *this = src;
+}
+
+ON_ClippingRegionPoints& ON_ClippingRegionPoints::operator=(const ON_ClippingRegionPoints& src)
+{
+  if (this != &src)
+  {
+    Clear();
+    if (src.m_point_count > 0 && nullptr != src.m_clip_points && nullptr != src.m_clip_flags)
+    {
+      ReserveBufferPointCapacity(src.m_point_count);
+
+      const unsigned int* src_f = src.m_clip_flags;
+      unsigned int* f = m_clip_flags;
+      unsigned int* f1 = f + src.m_point_count;
+      while (f < f1 )
+        *f++ = *src_f++;
+
+      const ON_3dPoint* src_p = src.m_clip_points;
+      ON_3dPoint* p = m_clip_points;
+      ON_3dPoint* p1 = p + src.m_point_count;
+      while (p < p1)
+        *p++ = *src_p++;
+
+      m_point_count = src.m_point_count;
+      m_point_capacity = src.m_point_capacity;
+      m_clip_points = src.m_clip_points;
+      m_clip_flags = src.m_clip_flags;
+      m_and_clip_flags = src.m_and_clip_flags;
+      m_or_clip_flags = src.m_or_clip_flags;
+    }
+  }
+  return *this;
+}
+
+#if defined(ON_HAS_RVALUEREF)
+
+ON_ClippingRegionPoints::ON_ClippingRegionPoints( ON_ClippingRegionPoints&& src) ON_NOEXCEPT
+{
+  m_point_count = src.m_point_count;
+  m_point_capacity = src.m_point_capacity;
+  m_clip_points = src.m_clip_points;
+  m_clip_flags = src.m_clip_flags;
+  m_and_clip_flags = src.m_and_clip_flags;
+  m_or_clip_flags = src.m_or_clip_flags;
+
+  m_buffer_point_capacity = src.m_buffer_point_capacity;
+  m_buffer = src.m_buffer;
+
+  src.m_buffer_point_capacity = 0;
+  src.m_buffer = nullptr;
+  src.Destroy();
+}
+
+ON_ClippingRegionPoints& ON_ClippingRegionPoints::operator=(ON_ClippingRegionPoints&& src)
+{
+  if (this != &src)
+  {
+    Destroy();
+    m_point_count = src.m_point_count;
+    m_point_capacity = src.m_point_capacity;
+    m_clip_points = src.m_clip_points;
+    m_clip_flags = src.m_clip_flags;
+    m_and_clip_flags = src.m_and_clip_flags;
+    m_or_clip_flags = src.m_or_clip_flags;
+
+    m_buffer_point_capacity = src.m_buffer_point_capacity;
+    m_buffer = src.m_buffer;
+
+    src.m_buffer_point_capacity = 0;
+    src.m_buffer = nullptr;
+    src.Destroy();
+  }
+  return *this;
+}
+
+#endif
+
+unsigned int ON_ClippingRegionPoints::PointCapacity() const
+{
+  return m_point_capacity;
+}
+
+unsigned int ON_ClippingRegionPoints::PointCout() const
+{
+  return m_point_count;
+}
+
+/*
+Description:
+  Sets point count to zero but does not deallocate the memory buffer
+  to the heap.  When an ON_ClippingRegionPoints will be used
+  multiple times, it is ore efficient to call Clear() between
+  uses than calling Destroy().
+*/
+void ON_ClippingRegionPoints::Clear()
+{
+  m_point_count = 0;
+  m_and_clip_flags = 0;
+  m_or_clip_flags = 0;
+}
+
+/*
+Description:
+  Sets point count to zero and deallocates the memory buffer.
+*/
+void ON_ClippingRegionPoints::Destroy()
+{
+  if (m_buffer_point_capacity > 0 && nullptr != m_buffer)
+  {
+    double* p = (double*)m_buffer;
+    delete p;
+  }
+  memset(this, 0, sizeof(*this));
+}
+
+ON_3dPoint ON_ClippingRegionPoints::ClipPoint(
+  unsigned int point_index
   ) const
 {
-  int i,j,k,n;
-  unsigned int all_out, some_out, out;
-  double bx,by,bz,x,w;
-  const double* p;
+  return
+    (point_index < m_point_count && nullptr != m_clip_points)
+    ? m_clip_points[point_index]
+    : ON_3dPoint::UnsetPoint;
+}
+
+unsigned int ON_ClippingRegionPoints::ClipFlag(
+  unsigned int point_index
+  ) const
+{
+  return
+    (point_index < m_point_count && nullptr != m_clip_flags)
+    ? m_clip_flags[point_index]
+    : 0xFFFFFFFFU;
+}
+
+bool ON_ClippingRegionPoints::AppendClipPoint(
+  const class ON_ClippingRegion& clipping_region,
+  ON_3dPoint world_point
+  )
+{
+  return AppendClipPoints(clipping_region,1,3,&world_point.x);
+}
+
+bool ON_ClippingRegionPoints::AppendClipPoints(
+  const class ON_ClippingRegion& clipping_region,
+  const ON_SimpleArray<ON_3dPoint>& world_points
+  )
+{
+  return AppendClipPoints(clipping_region,world_points.UnsignedCount(),world_points.Array());
+}
+
+bool ON_ClippingRegionPoints::AppendClipPoints(
+  const class ON_ClippingRegion& clipping_region,
+  size_t world_point_count,
+  const ON_3dPoint* world_points
+  )
+{
+  return AppendClipPoints(clipping_region,world_point_count,3,(const double*)world_points);
+}
+
+bool ON_ClippingRegionPoints::AppendClipPoints(
+  const class ON_ClippingRegion& clipping_region,
+  size_t world_point_count,
+  size_t world_point_stride,
+  const double* world_points
+  )
+{
+  if ( 0 == world_point_count )
+    return true;
+  if (world_point_stride < 3 || nullptr == world_points )
+    return false;
+  const double* P = world_points;
+  unsigned int clip_flags;
+  ON_3dPoint clip_point;
+  for (const double* P1 = world_points + world_point_stride*world_point_count; P < P1; P += world_point_stride)
+  {
+    clip_flags = clipping_region.TransformPoint(*((const ON_3dPoint*)P),clip_point);
+    AppendClipPoint(clip_point,clip_flags);
+  }
+  return true;
+}
+
+
+bool ON_ClippingRegionPoints::AppendClipPoint(
+  ON_3dPoint clip_point,
+  unsigned int clip_flag
+  )
+{
+  if (m_point_count >= m_point_capacity)
+  {
+    size_t buffer_point_capacity = (0 == m_buffer_point_capacity) ? 32 : 2*m_buffer_point_capacity;
+    if ( buffer_point_capacity < m_point_count )
+      buffer_point_capacity = m_point_count+32;
+
+    if (false == ReserveBufferPointCapacity(buffer_point_capacity))
+      return false;
+  }
+
+  m_clip_points[m_point_count] = clip_point;
+  m_clip_flags[m_point_count] = clip_flag;
+  if (0 == m_point_count)
+  {
+    m_and_clip_flags = clip_flag;
+    m_or_clip_flags = clip_flag;
+  }
+  else
+  {
+    m_and_clip_flags &= clip_flag;
+    m_or_clip_flags |= clip_flag;
+  }
+
+  m_point_count++;
+
+  return true;
+}
+
+
+bool ON_ClippingRegionPoints::ReserveBufferPointCapacity(
+  size_t buffer_point_capacity
+  )
+{
+  void* b;
+  if (buffer_point_capacity > m_buffer_point_capacity)
+  {
+    b = (void*)(new (std::nothrow) double[3 * buffer_point_capacity + buffer_point_capacity / 2 + 1]);
+  }
+  else
+  {
+    b = m_buffer;
+    buffer_point_capacity = m_buffer_point_capacity;
+  }
+  if (nullptr == b)
+    return false;
+
+  ON_3dPoint* p0 = (ON_3dPoint*)b;
+  unsigned int* f0 = (unsigned int*)(p0 + buffer_point_capacity);
+  if (m_point_count > 0 && m_point_count <= m_point_capacity && nullptr != m_clip_points && nullptr != m_clip_flags)
+  {
+    if (p0 != m_clip_points)
+    {
+      const ON_3dPoint* src_p = m_clip_points;
+      ON_3dPoint* p = p0;
+      ON_3dPoint* p1 = p0 + m_point_count;
+      while (p < p1)
+        *p++ = *src_p++;
+    }
+    if (f0 != m_clip_flags)
+    {
+      const unsigned int* src_f = m_clip_flags;
+      unsigned int* f = f0;
+      unsigned int* f1 = f0 + m_point_count;
+      while (f < f1)
+        *f++ = *src_f++;
+    }
+  }
+  else
+  {
+    Clear();
+  }
+
+  if (m_buffer_point_capacity > 0 && nullptr != m_buffer && b != m_buffer)
+  {
+    double* p = (double*)m_buffer;
+    delete[] p;
+  }
+
+  m_buffer_point_capacity = buffer_point_capacity;
+  m_buffer = b;
+  m_point_capacity = (unsigned int)m_buffer_point_capacity;
+  m_clip_points = p0;
+  m_clip_flags = f0;
+
+  return true;
+}
+
+
+bool ON_PickPoint::IsSet() const
+{
+  return (ON_UNSET_VALUE != m_point.x && m_depth > ON_UNSET_VALUE && m_distance < 1.0e300);
+}
+
+bool ON_PickPoint::IsNotSet() const
+{
+  return (false == IsSet());
+}
+
+
+int ON_PickPoint::Compare(
+  const ON_PickPoint& a,
+  const ON_PickPoint& b
+  )
+{
+  if (false == a.IsSet())
+    return b.IsSet() ? -1 : 0;
+
+  if (false == b.IsSet())
+    return 1;
+
+  if (a.m_distance > 0.0001 || b.m_distance >= 0.0001)
+  {
+    if (a.m_distance < b.m_distance)
+      return 1;
+    if (b.m_distance < a.m_distance)
+      return -1;
+  }
+
+  if (a.m_depth > b.m_depth)
+    return 1;
+  if (b.m_depth > a.m_depth)
+    return -1;
+
+  return 0;
+}
+
+
+
+int ON_BoundingBox::IsVisible( 
+const ON_Xform& bbox2c
+) const
+{
+int i,j,k,n;
+unsigned int all_out, some_out, out;
+double bx,by,bz,x,w;
+const double* p;
 
   if ( !ON_IsValid(m_min.x) || !ON_IsValid(m_max.x) || m_min.x > m_max.x)
     return 0;
@@ -1027,7 +1566,7 @@ int ON_BoundingBox::IsVisible(
         all_out  &= out;
         if ( some_out && !all_out )
         {
-          // box intersects visble region but is not completely inside it.
+          // box intersects visible region but is not completely inside it.
           return  1;
         }
         bz = m_max.z;
@@ -1113,14 +1652,14 @@ int ON_BoundingBox::GetClosestPoint(
 
 
 
-	// Step 1.  Check for an intersection of the infinte line with the box
+	// Step 1.  Check for an intersection of the infinite line with the box
 	ON_Interval overlap(-ON_DBL_MAX, ON_DBL_MAX);	
 	bool nonempty=true;
   int i;
 	for( i=0;i<3 && nonempty;i++)
 		nonempty = overlap.Intersection(over[i]);
 	
-	if(nonempty){	// infinte line intersects box
+	if(nonempty){	// infinite line intersects box
 		if( overlap.Intersection( ON_Interval(0,1) ) ){
 			// Box & Line segment  intersect
 			if(t0) *t0 = overlap[0];
@@ -1215,7 +1754,8 @@ int ON_BoundingBox::GetClosestPoint(
 	for(i=0; i<2; i++){
 		closest = ClosestPoint(line[i]);
 		double dot = (closest - line[i]) * line.Direction();
-		if( i==0 && dot<= 0 || i==1 && dot>=0 ){
+		if( (i==0 && dot<= 0) || (i==1 && dot>=0) )
+    {
 			if(t0) *t0 = i;
 			if(t1) *t1 = i;
 			box_point = closest;
@@ -1223,7 +1763,7 @@ int ON_BoundingBox::GetClosestPoint(
 		}
 	}
 
-	ON_ASSERT(false);		//Should never get here
+  ON_ERROR("Should never get here.");
 	return 0;  
 }				
 
@@ -1267,10 +1807,8 @@ bool Intersect( ON_Interval A, ON_Interval B, ON_Interval& AB){
 		AB.Set(B.m_t[0], B.m_t[1]);
 	} else if( B.m_t[0] <= A.m_t[0] && A.m_t[0] <= A.m_t[1] && A.m_t[1]<= B.m_t[1]){
 		AB.Set(A.m_t[0], A.m_t[1]);
-	} else if( B.m_t[0] <= A.m_t[0]  && A.m_t[0] <= A.m_t[1]  && A.m_t[1]<= B.m_t[1]){
-		AB.Set(A.m_t[0], A.m_t[1]);
 	} else if(A.m_t[1] < B.m_t[0] || B.m_t[1] < A.m_t[0] ){
-		AB.Destroy();
+		AB = ON_Interval::EmptyInterval;
 		NotEmpty = false;
 	}
 	return NotEmpty;
@@ -1348,6 +1886,24 @@ bool ON_BoundingBox::GetFarPoint(
 	return true;
 }
 
+ON_DECL
+bool operator==(const ON_BoundingBox& lhs, const ON_BoundingBox& rhs)
+{
+  // returns false if any coordinate is a nan.
+  return (lhs.m_min == rhs.m_min && lhs.m_max == rhs.m_max);
+}
+
+ON_DECL
+bool operator!=( const ON_BoundingBox& lhs, const ON_BoundingBox& rhs )
+{
+  // returns false if any coordinate is a nan.
+  if (lhs.m_min != rhs.m_min || lhs.m_max != rhs.m_max)
+  {
+    return (false == lhs.IsNan() && false == rhs.IsNan());
+  }
+  return false;
+}
+
 bool ON_BoundingBox::SwapCoordinates( int i, int j )
 {
   bool rc = false;
@@ -1359,6 +1915,24 @@ bool ON_BoundingBox::SwapCoordinates( int i, int j )
     }
   }
   return rc;
+}
+
+bool ON_BoundingBox::Expand(ON_3dVector delta)
+{
+  m_min -= delta;
+  m_max += delta;
+  return IsValid();
+}
+
+bool ON_BoundingBox::Shrink(ON_3dVector delta)
+{
+  m_min += delta;
+  m_max -= delta;
+  if (m_max.x < m_min.x) m_max.x = m_min.x = (m_max.x + m_min.x) * 0.5;
+  if (m_max.y < m_min.y) m_max.y = m_min.y = (m_max.y + m_min.y) * 0.5;
+  if (m_max.z < m_min.z) m_max.z = m_min.z = (m_max.z + m_min.z) * 0.5;
+
+  return IsValid();
 }
 
 bool ON_BoundingBox::IsDisjoint( const ON_BoundingBox& other_bbox ) const
@@ -1382,6 +1956,33 @@ bool ON_BoundingBox::IsDisjoint( const ON_BoundingBox& other_bbox ) const
     return true;
   }
   return false;
+}
+
+bool ON_BoundingBox::IsDisjoint(const ON_Line& line) const
+{
+  return IsDisjoint(line, false);
+}
+
+bool ON_BoundingBox::IsDisjoint(const ON_Line& line, bool infinite) const
+{
+  ON_3dPoint center = Center();
+  ON_3dPoint halfdiag = Diagonal() * 0.5;
+
+  ON_3dVector lc = line.PointAt(0.5) - center;
+  ON_3dVector halfdir = (line.to-line.from) * 0.5;
+  ON_3dVector absdir{ fabs(halfdir.x), fabs(halfdir.y), fabs(halfdir.z) };
+
+  if (!infinite &&
+       (halfdiag.x + absdir.x < fabs(lc.x) ||
+        halfdiag.y + absdir.y < fabs(lc.y) ||
+        halfdiag.z + absdir.z < fabs(lc.z))
+    )
+    return true;
+
+  ON_3dVector cross = ON_3dVector::CrossProduct(halfdir, lc);
+  return ((halfdiag.y * absdir.z + halfdiag.z * absdir.y < fabs(cross.x)) ||
+          (halfdiag.x * absdir.z + halfdiag.z * absdir.x < fabs(cross.y)) ||
+          (halfdiag.x * absdir.y + halfdiag.y * absdir.x < fabs(cross.z)));
 }
 
 bool ON_BoundingBox::Intersection(
@@ -1543,25 +2144,115 @@ bool ON_BoundingBox::Union(
   return IsValid();
 }
 
+bool ON_BoundingBox::IsValid() const
+{
+  return IsNotEmpty();
+}
+
+bool ON_BoundingBox::IsEmpty() const
+{
+  return (m_min.x > m_max.x || m_min.y > m_max.y || m_min.z > m_max.z) && IsSet();
+}
+
+bool ON_BoundingBox::IsNotEmpty() const 
+{
+  return (m_min.x <= m_max.x && m_min.y <= m_max.y && m_min.z <= m_max.z) && IsSet();
+};
+
+bool ON_BoundingBox::IsPoint() const
+{
+  return (m_min.x == m_max.x  && m_min.y == m_max.y && m_min.z == m_max.z) && IsSet();
+}
+
+bool ON_BoundingBox::IsSet() const
+{
+	return ( ON_IS_VALID(m_min.x)
+          && ON_IS_VALID(m_max.x)
+          && ON_IS_VALID(m_min.y)
+          && ON_IS_VALID(m_max.y)
+          && ON_IS_VALID(m_min.z)
+          && ON_IS_VALID(m_max.z)
+         );
+}
+
+bool ON_BoundingBox::IsNan() const
+{
+	return !( m_min.x == m_min.x
+          && m_min.y == m_min.y
+          && m_min.z == m_min.z
+          && m_max.x == m_max.x
+          && m_max.y == m_max.y
+          && m_max.z == m_max.z
+         );
+}
+
+bool ON_BoundingBox::IsUnset() const
+{
+	return ( ON_UNSET_POSITIVE_VALUE == fabs(m_min.x)
+          || ON_UNSET_POSITIVE_VALUE == fabs(m_max.x)
+          || ON_UNSET_POSITIVE_VALUE == fabs(m_min.y)
+          || ON_UNSET_POSITIVE_VALUE == fabs(m_max.y)
+          || ON_UNSET_POSITIVE_VALUE == fabs(m_min.z)
+          || ON_UNSET_POSITIVE_VALUE == fabs(m_max.z)
+         );
+}
+
+bool ON_BoundingBox::IsUnsetOrNan() const
+{
+  return IsUnset() || IsNan();
+}
+
+
+void ON_BoundingBox::Dump(ON_TextLog& text_log) const
+{
+  text_log.Print("Bounding box: ");
+  if ( !IsValid() )
+  {
+    text_log.Print("not valid ");
+  }
+  text_log.Print("%.17g to %.17g, %.17g to %.17g, %.17g to %.17g\n",
+    m_min.x,m_max.x,
+    m_min.y,m_max.y,
+    m_min.z,m_max.z
+    );
+}
+
 double ON_BoundingBox::Volume() const
 {
-  double dx = m_max.x - m_min.x;
-  double dy = m_max.y - m_min.y;
-  double dz = m_max.z - m_min.z;
-  return (dx > 0.0 && dy > 0.0 && dz > 0.0) ? dx*dy*dz : 0.0;
+  if (IsNotEmpty())
+  {
+    const double dx = m_max.x - m_min.x;
+    const double dy = m_max.y - m_min.y;
+    const double dz = m_max.z - m_min.z;
+    return (dx > 0.0 && dy > 0.0 && dz > 0.0) ? dx*dy*dz : 0.0;
+  }
+  return 0.0;
 }
 
 double ON_BoundingBox::Area() const
 {
-  double dx = m_max.x - m_min.x;
-  double dy = m_max.y - m_min.y;
-  double dz = m_max.z - m_min.z;
-  return (dx >= 0.0 && dy >= 0.0 && dz >= 0.0) ? 2.0*(dx*dy + dy*dz + dz*dx) : 0.0;
+  if (IsNotEmpty())
+  {
+    const double dx = m_max.x - m_min.x;
+    const double dy = m_max.y - m_min.y;
+    const double dz = m_max.z - m_min.z;
+    return (dx >= 0.0 && dy >= 0.0 && dz >= 0.0) ? 2.0*(dx*dy + dy*dz + dz*dx) : 0.0;
+  }
+  return 0.0;
 }
 
 bool ON_BoundingBox::Set(     
-    int dim, int is_rat, int count, int stride, 
+    int dim, bool is_rat, int count, int stride, 
     const double* points, 
+    int bGrowBox
+  )
+{
+  return ON_GetPointListBoundingBox(dim, is_rat, count, stride, points, *this, bGrowBox!=0, 0 );
+}
+
+bool ON_BoundingBox::Set(     
+    int dim, bool is_rat, int count, int stride, 
+    const float* points, 
     int bGrowBox
   )
 {
@@ -1582,6 +2273,24 @@ bool ON_BoundingBox::Set ( const ON_3dPoint& P, int bGrowBox )
     if ( P.z < m_min.z ) m_min.z = P.z; else if ( m_max.z < P.z ) m_max.z = P.z;
   }
   return true;
+}
+
+bool ON_BoundingBox::Set ( const ON_2dPoint& P, int bGrowBox )
+{
+  const ON_3dPoint dP(P.x,P.y,0.0);
+  return Set(dP,bGrowBox);
+}
+
+bool ON_BoundingBox::Set ( const ON_3fPoint& P, int bGrowBox )
+{
+  const ON_3dPoint dP(P);
+  return Set(dP,bGrowBox);
+}
+
+bool ON_BoundingBox::Set ( const ON_2fPoint& P, int bGrowBox )
+{
+  const ON_3dPoint dP(P.x,P.y,0.0);
+  return Set(dP,bGrowBox);
 }
 
 
@@ -1606,8 +2315,29 @@ bool ON_BoundingBox::Set( const ON_SimpleArray<ON_2dPoint>& a, int bGrowBox )
   return ON_GetPointListBoundingBox(2, 0, count, 2, p, *this, bGrowBox!=0, 0 );
 }
 
+bool ON_BoundingBox::Set( const ON_SimpleArray<ON_4fPoint>& a, int bGrowBox )
+{
+  const int count = a.Count();
+  const float* p = (count>0) ? &a.Array()->x : 0;
+  return ON_GetPointListBoundingBox(3, 1, count, 4, p, *this, bGrowBox!=0, 0 );
+}
+
+bool ON_BoundingBox::Set( const ON_SimpleArray<ON_3fPoint>& a, int bGrowBox )
+{
+  const int count = a.Count();
+  const float* p = (count>0) ? &a.Array()->x : 0;
+  return ON_GetPointListBoundingBox(3, 0, count, 3, p, *this, bGrowBox!=0, 0 );
+}
+
+bool ON_BoundingBox::Set( const ON_SimpleArray<ON_2fPoint>& a, int bGrowBox )
+{
+  const int count = a.Count();
+  const float* p = (count>0) ? &a.Array()->x : 0;
+  return ON_GetPointListBoundingBox(2, 0, count, 2, p, *this, bGrowBox!=0, 0 );
+}
+
 ON_BoundingBox ON_PointListBoundingBox(
-    int dim, int is_rat, int count, int stride, const double* points
+    int dim, bool is_rat, int count, int stride, const double* points
     )
 {
   ON_BoundingBox bbox;
@@ -1616,7 +2346,7 @@ ON_BoundingBox ON_PointListBoundingBox(
 }
 
 bool ON_GetPointListBoundingBox( 
-    int dim, int is_rat, int count, int stride, const double* points, 
+    int dim, bool is_rat, int count, int stride, const double* points, 
     ON_BoundingBox& tight_bbox,
     int bGrowBox,
     const ON_Xform* xform
@@ -1778,7 +2508,7 @@ bool ON_GetPointListBoundingBox(
 }
 
 bool ON_GetPointListBoundingBox( 
-    int dim, int is_rat, int count, int stride, const float* points, 
+    int dim, bool is_rat, int count, int stride, const float* points, 
     ON_BoundingBox& tight_bbox,
     int bGrowBox,
     const ON_Xform* xform
@@ -1948,7 +2678,7 @@ bool ON_GetPointListBoundingBox(
 
 
 bool ON_GetPointListBoundingBox( 
-    int dim, int is_rat, int count, int stride, const double* points, 
+    int dim, bool is_rat, int count, int stride, const double* points, 
     double* boxmin, double* boxmax,
     int bGrowBox
     )
@@ -2073,7 +2803,7 @@ OUTPUT:
 
 
 ON_BoundingBox ON_PointListBoundingBox(
-    int dim, int is_rat, int count, int stride, const float* points
+    int dim, bool is_rat, int count, int stride, const float* points
     )
 {
   ON_BoundingBox bbox;
@@ -2083,7 +2813,7 @@ ON_BoundingBox ON_PointListBoundingBox(
 
 
 bool ON_GetPointListBoundingBox( 
-    int dim, int is_rat, int count, int stride, const float* points, 
+    int dim, bool is_rat, int count, int stride, const float* points, 
     float* boxmin, float* boxmax,
     int bGrowBox
     )
@@ -2185,7 +2915,7 @@ OUTPUT:
 
 ON_BoundingBox ON_PointGridBoundingBox(
         int dim,
-        ON_BOOL32 is_rat,
+        bool is_rat,
         int point_count0, int point_count1,
         int point_stride0, int point_stride1,
         const double* p
@@ -2207,7 +2937,7 @@ ON_BoundingBox ON_PointGridBoundingBox(
 
 bool ON_GetPointGridBoundingBox(
         int dim,
-        int is_rat,
+        bool is_rat,
         int point_count0, int point_count1,
         int point_stride0, int point_stride1,
         const double* p,
@@ -2238,6 +2968,100 @@ bool ON_GetPointGridBoundingBox(
   return rc;
 }
 
+bool ON_BeyondSinglePrecision( const ON_BoundingBox& bbox, ON_Xform* xform )
+{
+  bool rc = false;
+
+  if ( bbox.IsValid() )
+  {
+    // 31 March 2011:
+    //   The values of too_far = 262144.0 and too_big = 1048576.0
+    //   are first guesses.  If you changes these values,
+    //   you must append a comment containing your name,
+    //   the date, the values your are using, a bug number
+    //   of a bug report containing a file that demonstrates
+    //   why you changed the number.  You must retest all 
+    //   previous bugs before committing your changes.
+    //
+    //   DATE: 31 March 2011
+    //   NAME: Dale Lear
+    //   COMMENT: First guess at values for too_far and too
+    //   VALUES:  too_far = 262144.0 from tests with simple mesh sphere
+    //            too_big = 1048576.0
+    //   BUG: http://dev.mcneel.com/bugtrack/?q=83437
+    //
+    //   DATE: 7 July 2017
+    //   NAME: Steve Baer
+    //   COMMENT: Reduced too_far to 131072 based on "flickering" shaded
+    //            mode in the model from RH-40220
+    const double too_far = 131072.0;  // should be a power of 2
+    const double too_big = 1048576.0; // MUST be a power of 2
+    bool bTooFar = (    bbox.m_min.x >=  too_far 
+                     || bbox.m_min.y >=  too_far 
+                     || bbox.m_min.z >=  too_far 
+                     || bbox.m_max.x <= -too_far
+                     || bbox.m_max.y <= -too_far
+                     || bbox.m_max.z <= -too_far
+                   );
+    bool bTooBig = (   bbox.m_min.x <= -too_big 
+                     || bbox.m_min.y <= -too_big 
+                     || bbox.m_min.z <= -too_big 
+                     || bbox.m_max.x >=  too_big
+                     || bbox.m_max.y >=  too_big
+                     || bbox.m_max.z >=  too_big
+                     );
+    if ( bTooFar || bTooBig )
+    {
+      rc = true;
+      if ( 0 != xform )
+      {
+        ON_3dVector C = bbox.Center();
+        // Any modification of coordinates contributes to 
+        // less precision in calculations.  These tests 
+        // remove small components of translations that 
+        // do not help matters and may add more fuzz to 
+        // calculations.
+        if ( fabs(C.x) <= 100.0 )
+          C.x = 0.0;
+        if ( fabs(C.y) <= 100.0 )
+          C.y = 0.0;
+        if ( fabs(C.z) <= 100.0 )
+          C.z = 0.0;
+        double r = 0.5*bbox.m_max.DistanceTo(bbox.m_min);
+        // T = translate center of bbox to origin
+        ON_Xform T(ON_Xform::TranslationTransformation(-C));
+
+        // S = scale to shrink things that are too big 
+        //     to have a maximum coordinate of 1024.
+        //     The scale is a power of 2 to preserve as much 
+        //     precision as possible.
+        double s = 1.0;
+        if ( r > too_big/16.0 )
+        {
+          // also apply a power of 2 scale to shrink large 
+          // object so its coordinates are <= 1024.0
+          s = too_big;
+          while ( r > s*1024.0 )
+            s *= 2.0;
+          s = 1.0/s;
+        }
+        ON_Xform S(ON_Xform::DiagonalTransformation(s));
+
+        // xform positions bbox in a region of space
+        // where single precision coordinates should
+        // work for most calculations.
+        *xform = S*T;
+      }
+    }
+  }
+
+  if (!rc && 0 != xform )
+    *xform = ON_Xform::IdentityTransformation;
+
+  return rc;
+}
+
+
 double ON_BoundingBoxTolerance(
         int dim,
         const double* bboxmin,
@@ -2248,19 +3072,19 @@ double ON_BoundingBoxTolerance(
   double x, tolerance=0.0;
 
 #if defined(ON_COMPILER_MSC)
-#pragma warning( push )
+#pragma ON_PRAGMA_WARNING_PUSH
 // Disable the MSC /W4 "conditional expression is constant" warning
 // generated by the do {...} while(0) in the ON_ASSERT_OR_RETURN macro.
-#pragma warning( disable : 4127 )
+#pragma ON_PRAGMA_WARNING_DISABLE_MSC( 4127 )
 #endif
 
-  ON_ASSERT_OR_RETURN( dim > 0 && bboxmin != NULL && bboxmax != NULL,tolerance);
+  ON_ASSERT_OR_RETURN( dim > 0 && bboxmin != nullptr && bboxmax != nullptr,tolerance);
   for ( i = 0; i < dim; i++ ) {
     ON_ASSERT_OR_RETURN(bboxmin[i] <= bboxmax[i],tolerance);
   }
 
 #if defined(ON_COMPILER_MSC)
-#pragma warning( pop )
+#pragma ON_PRAGMA_WARNING_POP
 #endif
 
   tolerance = ON_ArrayDistance(dim,bboxmin,bboxmax)*ON_EPSILON;
@@ -2282,7 +3106,7 @@ int ON_BoundingBox::IsDegenerate( double tolerance ) const
   ON_3dVector diag = Diagonal();
   if ( tolerance < 0.0 )
   {
-    // compute scale invarient tolerance
+    // compute scale invariant tolerance
     tolerance = diag.MaximumCoordinate()*ON_SQRT_EPSILON;
   }
   int rc = 0;
@@ -2336,15 +3160,14 @@ double ON_BoundingBox::MinimumDistanceTo( const ON_3dPoint& P ) const
 
 double ON_BoundingBox::MaximumDistanceTo( const ON_3dPoint& P ) const
 {
-  // 8 Feb 2005 - new function - not tested yet
   // this function must be fast
   // If Q = any point in box, then
   // P.DistanceTo(Q) <= MaximumDistanceTo(P).
   ON_3dVector V;
 
   V.x = ( (P.x < 0.5*(m_min.x+m_max.x)) ? m_max.x : m_min.x) - P.x;
-  V.y = ( (P.y < 0.5*(m_min.x+m_max.y)) ? m_max.y : m_min.y) - P.y;
-  V.z = ( (P.z < 0.5*(m_min.x+m_max.z)) ? m_max.z : m_min.z) - P.z;
+  V.y = ( (P.y < 0.5*(m_min.y+m_max.y)) ? m_max.y : m_min.y) - P.y;
+  V.z = ( (P.z < 0.5*(m_min.z+m_max.z)) ? m_max.z : m_min.z) - P.z;
 
   return V.Length();
 }
@@ -2992,5 +3815,249 @@ bool ON_BoundingBox::IsFartherThan( double d, const ON_BoundingBox& other ) cons
   return (d < MinimumDistanceTo(other));
 }
 
+void ON_BoundingBoxAndHash::Set(
+  const ON_BoundingBox& bbox,
+  const ON_SHA1_Hash& hash
+)
+{
+  m_bbox = bbox;
+  m_hash = hash;
+}
 
+const ON_BoundingBox& ON_BoundingBoxAndHash::BoundingBox() const
+{
+  return m_bbox;
+}
+
+const ON_SHA1_Hash& ON_BoundingBoxAndHash::Hash() const
+{
+  return m_hash;
+}
+
+bool ON_BoundingBoxAndHash::IsSet() const
+{
+  return m_bbox.IsSet() && ON_SHA1_Hash::EmptyContentHash != m_hash;
+}
+
+
+bool ON_BoundingBoxAndHash::Write(
+  class ON_BinaryArchive& archive
+) const
+{
+  const int version = 1;
+  if ( false == archive.BeginWrite3dmAnonymousChunk(version) )
+    return false;
+
+  bool rc = false;
+  for (;;)
+  {
+    if (false == archive.WriteBoundingBox(m_bbox))
+      break;
+
+    if (false == m_hash.Write(archive))
+      break;
+
+    rc = true;
+    break;
+  }
+
+  if (false == archive.EndWrite3dmChunk())
+    rc = false;
+
+  return rc;
+}
+
+
+bool ON_BoundingBoxAndHash::Read(
+  class ON_BinaryArchive& archive
+)
+{
+  int version = 0;
+  if ( false == archive.BeginRead3dmAnonymousChunk(&version) )
+    return false;
+
+  bool rc = false;
+  for (;;)
+  {
+    if (version < 1)
+      break;
+
+    if (false == archive.ReadBoundingBox(m_bbox))
+      break;
+
+    if (false == m_hash.Read(archive))
+      break;
+
+    rc = true;
+    break;
+  }
+
+  if (false == archive.EndRead3dmChunk())
+    rc = false;
+
+  return rc;
+}
+
+
+unsigned int ON_BoundingBoxCache::Internal_CacheIndex(const ON_SHA1_Hash& hash) const
+{
+  for (unsigned int i = 0; i < m_count; i++)
+  {
+    if (hash == m_cache[i].Hash())
+      return i;
+  }
+  return ON_UNSET_UINT_INDEX;
+}
+
+void ON_BoundingBoxCache::AddBoundingBox(
+  const ON_BoundingBoxAndHash& bbox_and_hash
+)
+{
+  return AddBoundingBox(bbox_and_hash.BoundingBox(), bbox_and_hash.Hash());
+}
+
+void ON_BoundingBoxCache::AddBoundingBox(
+  const ON_BoundingBox& bbox,
+  const ON_SHA1_Hash& hash
+  )
+{
+  unsigned int i = Internal_CacheIndex(hash);
+  if (ON_UNSET_UINT_INDEX == i)
+  {
+    m_capacity = (unsigned int)(sizeof(m_cache) / sizeof(m_cache[0]));
+    if (m_count < m_capacity)
+      i = m_count++;
+    else
+      i = (m_capacity - 1);
+  }
+  while (i > 0)
+  {
+    m_cache[i] = m_cache[i - 1];
+    i--;
+  }
+  m_cache[0].Set(bbox, hash);
+}
+
+bool ON_BoundingBoxCache::GetBoundingBox(
+  const ON_SHA1_Hash& hash,
+  ON_BoundingBox& bbox
+  ) const
+{
+  unsigned int i = Internal_CacheIndex(hash);
+  if (ON_UNSET_UINT_INDEX == i)
+  {
+    bbox = ON_BoundingBox::NanBoundingBox;
+    return false;
+  }
+
+  if (i > 0)
+  {
+    const ON_BoundingBoxAndHash t = m_cache[i];
+    while (i > 0)
+    {
+      m_cache[i] = m_cache[i - 1];
+      i--;
+    }
+    m_cache[0] = t;
+  }
+
+  bbox = m_cache[0].BoundingBox();
+  return true;
+}
+
+void ON_BoundingBoxCache::RemoveAllBoundingBoxes()
+{
+  m_count = 0;
+}
+
+unsigned int ON_BoundingBoxCache::BoundingBoxCount() const
+{
+  return m_count;
+}
+
+
+bool ON_BoundingBoxCache::RemoveBoundingBox(
+  const ON_SHA1_Hash& hash
+  )
+{
+  unsigned int i = Internal_CacheIndex(hash);
+  if (ON_UNSET_UINT_INDEX == i)
+    return false;
+  m_count--;
+  while (i < m_count)
+  {
+    m_cache[i] = m_cache[i+1];
+    i++;
+  }
+  return true;
+}
+
+bool ON_BoundingBoxCache::Write(
+  class ON_BinaryArchive& archive
+) const
+{
+  const int version = 1;
+  if ( false == archive.BeginWrite3dmAnonymousChunk(version) )
+    return false;
+
+  bool rc = false;
+  for (;;)
+  {
+    if (false == archive.WriteInt(m_count))
+      break;
+
+    rc = true;
+    for (unsigned i = 0; rc && i < m_count; i++)
+    {
+      rc = m_cache[i].Write(archive);
+    }
+
+    break;
+  }
+
+  if (false == archive.EndWrite3dmChunk())
+    rc = false;
+
+  return rc;
+}
+
+bool ON_BoundingBoxCache::Read(
+  class ON_BinaryArchive& archive
+)
+{
+  m_count = 0;
+  m_capacity = (unsigned int)(sizeof(m_cache) / sizeof(m_cache[0]));
+
+  int version = 0;
+  if (false == archive.BeginRead3dmAnonymousChunk(&version))
+    return false;
+
+  bool rc = false;
+  for (;;)
+  {
+    if (version < 1)
+      break;
+
+    unsigned int count = 0;
+    if (false == archive.ReadInt(&count))
+      break;
+
+    if (count > m_capacity)
+      count = m_capacity;
+
+    rc = true;
+    for (unsigned i = 0; rc && i < count; i++)
+    {
+      rc = m_cache[m_count].Read(archive);
+      m_count++;
+    }
+
+    break;
+  }
+
+  if (false == archive.EndWrite3dmChunk())
+    rc = false;
+
+  return rc;
+}
 

@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(ON_PLANE_INC_)
 #define ON_PLANE_INC_
@@ -36,7 +34,7 @@ public:
     normal - [in] non-zero normal to the plane
   Remarks:
     origin = point, zaxis = unitized normal, xaxis
-    xaxis set with xaxis.PerpindicularTo(zaxis).
+    xaxis set with xaxis.PerpendicularTo(zaxis).
   See Also:
     ON_Plane::CreateFromNormal
   */
@@ -44,6 +42,8 @@ public:
     const ON_3dPoint& origin,
     const ON_3dVector& normal
     );
+
+
 
   /*
   Description:
@@ -55,7 +55,7 @@ public:
         determines the xaxis direction.
     y_dir - [in] non-zero vector not parallel to x_dir
         that is used to determine the yaxis direction.
-        y_dir does not have to be perpindicular to x_dir.
+        y_dir does not have to be perpendicular to x_dir.
   */
   ON_Plane(
     const ON_3dPoint& origin,
@@ -65,13 +65,13 @@ public:
 
   /*
   Description:
-    Construct a plane from three non-colinear points.
+    Construct a plane from three non-collinear points.
   Parameters:
     origin - [in] point on the plane
     x_point - [in] second point in the plane.
         The xaxis will be parallel to x_point-origin.
     y_point - [in] third point on the plane that is
-        not colinear with the first two points.
+        not collinear with the first two points.
         yaxis*(y_point-origin) will be > 0.
   */
   ON_Plane(
@@ -92,6 +92,10 @@ public:
     const double equation[4]
     );
 
+  ON_Plane(
+    const ON_PlaneEquation& plane_equation
+    );
+
   ~ON_Plane();
 
   bool operator==(const ON_Plane&) const;
@@ -105,14 +109,40 @@ public:
     normal - [in] non-zero normal to the plane
   Remarks:
     origin = point, zaxis = unitized normal, xaxis
-    xaxis set with xaxis.PerpindicularTo(zaxis).
+    xaxis set with xaxis.PerpendicularTo(zaxis).
   Returns:
     true if valid plane is created.
+  See Also:
+    ON_Plane::CreateFromNormalYup
   */
   bool CreateFromNormal(
     const ON_3dPoint& origin,
     const ON_3dVector& normal
     );
+
+  /*
+Description:
+  Construct a plane from a point and normal vector and a vector that
+  projects to the positive y-axis.
+Parameters:
+  origin - [in] point on the plane
+  normal - [in] non-zero normal to the plane
+  y-up - [in] vector linearly independent from normal that projects
+              to the positive y-axis of the plane
+Remarks:
+  origin = point,
+  zaxis = unitized normal,
+  xaxis = unitized ( y-up X normal )
+  yaxis = zaxis X xaxis
+See Also:
+  ON_Plane::CreateFromNormal
+*/
+ bool CreateFromNormalYup(
+    const ON_3dPoint& origin,
+    const ON_3dVector& normal,
+    const ON_3dVector& y_up
+  );
+
 
   /*
   Description:
@@ -124,7 +154,7 @@ public:
         determines the xaxis direction.
     y_dir - [in] non-zero vector not parallel to x_dir
         that is used to determine the yaxis direction.
-        y_dir does not have to be perpindicular to x_dir.
+        y_dir does not have to be perpendicular to x_dir.
   Returns:
     true if valid plane is created.
   */
@@ -136,13 +166,13 @@ public:
 
   /*
   Description:
-    Construct a plane from three non-colinear points.
+    Construct a plane from three non-collinear points.
   Parameters:
     origin - [in] point on the plane
     point_on_x - [in] second point in the plane.
         The xaxis will be parallel to x_point-origin.
     point_on - [in] third point on the plane that is
-        not colinear with the first two points.
+        not collinear with the first two points.
         yaxis*(y_point-origin) will be > 0.
   Returns:
     true if valid plane is created.
@@ -166,8 +196,72 @@ public:
   Returns:
     true if valid plane is created.
   */
-  bool CreateFromEquation( 
+  bool CreateFromEquation(
     const double equation[4]
+    );
+
+  bool CreateFromEquation(
+    const class ON_PlaneEquation& plane_equation
+    );
+
+  /*
+  Returns:
+    ON_Plane::UnsetPlane if input is not valid.
+  */
+  static ON_Plane FromPointList(
+    size_t point_list_count,
+    const ON_3dPoint* point_list
+    );
+
+  /*
+  Returns:
+    ON_Plane::UnsetPlane if input is not valid.
+  */
+  static ON_Plane FromPointList(
+    const ON_SimpleArray< ON_3dPoint >& point_list
+    );
+
+
+  /*
+  Returns:
+    ON_Plane::UnsetPlane if input is not valid.
+  */
+  static ON_Plane FromPointList(
+    size_t point_list_count,
+    const ON_3fPoint* point_list
+    );
+
+  /*
+  Returns:
+    ON_Plane::UnsetPlane if input is not valid.
+  */
+  static ON_Plane FromPointList(
+    const ON_SimpleArray< ON_3fPoint >& point_list
+    );
+
+  /*
+  Returns:
+    ON_Plane::UnsetPlane if input is not valid.
+  */
+  static ON_Plane FromPointList(
+    const class ON_3dPointListRef& point_list
+    );
+
+  /*
+  Returns:
+    ON_Plane::UnsetPlane if input is not valid.
+  */
+  static ON_Plane FromPointList(
+    size_t point_index_count,
+    const unsigned int* point_index_list,
+    const class ON_3dPointListRef& point_list
+    );
+
+  static ON_Plane FromPointList(
+    size_t point_index_count,
+    size_t point_index_stride,
+    const unsigned int* point_index_list,
+    const class ON_3dPointListRef& point_list
     );
 
   /*
@@ -178,6 +272,8 @@ public:
     information and equation jibes with point and zaxis.
   */
   bool IsValid() const;
+
+  void Dump(class ON_TextLog&) const;
 
   /*
   Returns:
@@ -217,7 +313,7 @@ public:
     Evaluate a point on the plane
   Parameters:
     u - [in]
-    v - [in] evaulation parameters
+    v - [in] evaluation parameters
   Returns:
     plane.origin + u*plane.xaxis + v*plane.yaxis
   */
@@ -287,16 +383,6 @@ public:
            double* max     //max signed dist from plane to box
            ) const;
 
-  // OBSOLETE - use plane_equation.ValueAt()
-  //__declspec(deprecated) double EquationAt( 
-  //      const ON_3dPoint& point
-  //      ) const;
-
-  // OBSOLETE - use plane_equation.ValueAt()
-  //__declspec(deprecated) double EquationAt( 
-  //      const ON_4dPoint& point
-  //      ) const;
-
   /*
   Description:
     Update the plane equation based on the current values
@@ -352,17 +438,6 @@ public:
         const ON_Xform& xform
         );
 
-  /*
-  Description:
-    Morph plane.
-  Parameters:
-    morph - [in] morph to apply to plane
-  Returns:
-    true if successful
-  Remarks:
-    The resulting plane still has an orthonormal frame
-  */
-  bool Morph( const ON_SpaceMorph& morph );
 
   /*
   Description:
@@ -464,9 +539,21 @@ public:
   */
   bool Flip();
 
-// world plane coordinate system ON_Plane(ON_origin, ON_xaxis, ON_yaxis); 
+  // world coordinate system ON_Plane(ON_3dPoint::Origin, ON_3dVector::XAxis, ON_3dVector::YAxis); 
+  const static ON_Plane World_xy;
+
+  // world coordinate system ON_Plane(ON_3dPoint::Origin, ON_3dVector::YAxis, ON_3dVector::ZAxis); 
+  const static ON_Plane World_yz;
+
+  // world coordinate system ON_Plane(ON_3dPoint::Origin, ON_3dVector::ZAxis, ON_3dVector::XAxis); 
+  const static ON_Plane World_zx;
+
+  // All values are ON_UNSET_VALUE.
 	const static
-	ON_Plane World_xy;	
+	ON_Plane UnsetPlane;
+
+  // All values are ON_DBL_QNAN.
+	const static ON_Plane NanPlane;
 
 public:
   // origin of plane
@@ -489,12 +576,56 @@ public:
 class ON_CLASS ON_ClippingPlaneInfo
 {
 public:
-  // C++ defaults for construction, destruction, copys, and operator=
-  // work fine.
+  // C++ defaults for construction, destruction, copy construction
+  // and operator= work fine.
 
+  // A point is visible if m_plane_equation.ValueAt(point) <= 0.
+  // (This is the opposite convention from what OpenGL uses.)
   ON_PlaneEquation m_plane_equation;
-  ON_UUID m_plane_id;
-  bool m_bEnabled;
+  ON_UUID m_plane_id = ON_nil_uuid;
+  bool m_bEnabled = false;
+
+  // A distance where the clipping plane does not clip geometry.
+  // A positive value is equivalent to placing another clipping plane at a
+  // distance from this clipping plane along it's normal and then flipping it
+  //
+  // The depth must also be enabled to be effective
+  double Depth() const;
+
+  // Negative depth values are currently not allowed. If a negative depth value
+  // is passed to this function, it will not the the internal depth value
+  void SetDepth(double depth);
+
+  // Default is false
+  bool DepthEnabled() const;
+  void SetDepthEnabled(bool on);
+
+  void Default();
+  bool Write( ON_BinaryArchive& ) const;
+  bool Read( ON_BinaryArchive& );
+
+private:
+  bool m_depth_enabled = false;
+  char m_reserved[2] = {};
+
+  // This should be a double, but is a float in order to not change
+  // the class size. When the Rhino SDK can break, this data type should change.
+  float m_depth = 0;
+};
+
+// The only reason this class exists is to maintain extra information on ON_ClippingPlane
+// without changing the size of the ON_ClippingPlane class (to not break the SDK). This
+// class helps maintain a list of additional information associated with an ON_ClippingPlane.
+// Pretend it does not exist
+class ON_CLASS ON_ClippingPlaneDataStore
+{
+public:
+  ON_ClippingPlaneDataStore();
+  ON_ClippingPlaneDataStore(const ON_ClippingPlaneDataStore& src);
+  ~ON_ClippingPlaneDataStore();
+  ON_ClippingPlaneDataStore& operator=(const ON_ClippingPlaneDataStore& src);
+  
+  unsigned int m_sn=0;
 };
 
 class ON_CLASS ON_ClippingPlane
@@ -512,23 +643,50 @@ public:
 
   ON_ClippingPlaneInfo ClippingPlaneInfo() const;
 
+  // A distance where the clipping plane does not clip geometry.
+  // A positive value is equivalent to placing another clipping plane at a
+  // distance from this clipping plane along it's normal and then flipping it
+  //
+  // The depth must also be enabled to be effective
+  double Depth() const;
+
+  // Negative depth values are currently not allowed. If a negative depth value
+  // is passed to this function, it will not the the internal depth value
+  void SetDepth(double depth);
+
+  // Default is false
+  bool DepthEnabled() const;
+  void SetDepthEnabled(bool on);
+
+  // Default is false
+  bool ParticipationListsEnabled() const;
+  void SetParticipationListsEnabled(bool on);
+
+  void SetParticipationLists(
+    const ON_SimpleArray<ON_UUID>* objectIds,
+    const ON_SimpleArray<int>* layerIndices,
+    bool isExclusionList);
+
+  const ON_UuidList* ObjectClipParticipationList() const;
+  const ON_SimpleArray<int>* LayerClipParticipationList() const;
+  bool ClipParticipationListsAreExclusionLists() const;
+
   bool Read( class ON_BinaryArchive& );
   bool Write( class ON_BinaryArchive& ) const;
+
+private:
+  bool m_depth_enabled = false;
+  bool m_participation_lists_enabled = false;
+  char m_reserved;
+  
+  ON_ClippingPlaneDataStore m_data_store;
 };
 
 
 #if defined(ON_DLL_TEMPLATE)
-
-// This stuff is here because of a limitation in the way Microsoft
-// handles templates and DLLs.  See Microsoft's knowledge base 
-// article ID Q168958 for details.
-#pragma warning( push )
-#pragma warning( disable : 4231 )
 ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_Plane>;
 ON_DLL_TEMPLATE template class ON_CLASS ON_ClassArray<ON_ClippingPlane>;
 ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_ClippingPlaneInfo>;
-#pragma warning( pop )
-
 #endif
 
 extern ON_EXTERN_DECL const ON_Plane ON_xy_plane;
@@ -549,7 +707,7 @@ Parameters:
     every plane equation.
 Returns:
   Number of equations appended to hull[] array.
-  If 0, then the points are coincident or colinear.
+  If 0, then the points are coincident or collinear.
   If 2, then the points are coplanar and the returned
   planes are parallel.
   If >= 4, then the points are in a 3d convex hull.

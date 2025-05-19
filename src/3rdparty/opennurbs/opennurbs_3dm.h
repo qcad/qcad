@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(OPENNURBS_THREEDM_INC_)
 #define OPENNURBS_THREEDM_INC_
@@ -86,7 +84,16 @@
 
 #define TCODE_CRC                 0x8000
 
-#define TCODE_ANONYMOUS_CHUNK     (TCODE_USER | TCODE_CRC | 0x0000 )
+#define TCODE_ANONYMOUS_CHUNK        (TCODE_USER | TCODE_CRC | 0x0000 )
+#define TCODE_UTF8_STRING_CHUNK      (TCODE_USER | TCODE_CRC | 0x0001 )
+#define TCODE_MODEL_ATTRIBUTES_CHUNK (TCODE_USER | TCODE_CRC | 0x0002 )
+
+#define TCODE_DICTIONARY             (TCODE_USER | TCODE_CRC   | 0x0010)
+#define TCODE_DICTIONARY_ID          (TCODE_USER | TCODE_CRC   | 0x0011)
+#define TCODE_DICTIONARY_ENTRY       (TCODE_USER | TCODE_CRC   | 0x0012)
+#define TCODE_DICTIONARY_END         (TCODE_USER | TCODE_SHORT | 0x0013)
+#define TCODE_XDATA                  (TCODE_USER | 0x0001)
+
 
 /* The openNURBS toolkit allows users to write all openNURBS classed that are
 // derived from ON_Object using using TCODE_OPENNURBS_CLASS chunks.
@@ -144,6 +151,7 @@
 #define TCODE_PROPERTIES_APPLICATION     (TCODE_TABLEREC | TCODE_CRC | 0x0024)
 #define TCODE_PROPERTIES_COMPRESSED_PREVIEWIMAGE (TCODE_TABLEREC | TCODE_CRC | 0x0025)
 #define TCODE_PROPERTIES_OPENNURBS_VERSION (TCODE_TABLEREC | TCODE_SHORT | 0x0026)
+#define TCODE_PROPERTIES_AS_FILE_NAME     (TCODE_TABLEREC | TCODE_CRC | 0x0027 )
 
 /* records in settings table */
 #define TCODE_SETTINGS_PLUGINLIST             (TCODE_TABLEREC | TCODE_CRC   | 0x0135)
@@ -166,7 +174,8 @@
 #define TCODE_SETTINGS_CURRENT_DIMSTYLE_INDEX (TCODE_TABLEREC | TCODE_SHORT | 0x0133)
 /* added 29 October 2002 as a chunk to hold new and future ON_3dmSettings information */
 #define TCODE_SETTINGS_ATTRIBUTES             (TCODE_TABLEREC | TCODE_CRC   | 0x0134)
-
+/* 2016-Nov-28 RH-33298 ON_3dmRenderSettings user data in ON_3dmSettings.m_RenderSettings */
+#define TCODE_SETTINGS_RENDER_USERDATA (TCODE_TABLEREC | TCODE_CRC | 0x0136)
 
 /* views are subrecords in the settings table */
 #define TCODE_VIEW_RECORD            (TCODE_TABLEREC | TCODE_CRC   | 0x003B)
@@ -180,7 +189,7 @@
 #define TCODE_VIEW_WALLPAPER         (TCODE_TABLEREC | TCODE_CRC   | 0x073B)
 #define TCODE_VIEW_WALLPAPER_V3      (TCODE_TABLEREC | TCODE_CRC   | 0x074B)
 #define TCODE_VIEW_TARGET            (TCODE_TABLEREC | TCODE_CRC   | 0x083B)
-#define TCODE_VIEW_DISPLAYMODE       (TCODE_TABLEREC | TCODE_SHORT | 0x093B)
+#define TCODE_VIEW_V3_DISPLAYMODE    (TCODE_TABLEREC | TCODE_SHORT | 0x093B)
 #define TCODE_VIEW_NAME              (TCODE_TABLEREC | TCODE_CRC   | 0x0A3B)
 #define TCODE_VIEW_POSITION          (TCODE_TABLEREC | TCODE_CRC   | 0x0B3B)
 
@@ -191,7 +200,7 @@
 #define TCODE_VIEW_VIEWPORT_USERDATA (TCODE_TABLEREC | TCODE_CRC   | 0x0D3B)
 
 /* records in bitmap table */
-#define TCODE_BITMAP_RECORD (TCODE_TABLEREC | TCODE_CRC | 0x0090) /* material table record derived from ON_Bitmap */
+#define TCODE_BITMAP_RECORD (TCODE_TABLEREC | TCODE_CRC | 0x0090) /* bitmap table record derived from ON_Bitmap */
 
 /* records in material table */
 #define TCODE_MATERIAL_RECORD (TCODE_TABLEREC | TCODE_CRC | 0x0040) /* material table record derived from ON_Material */
@@ -207,7 +216,7 @@
 #define TCODE_LIGHT_RECORD_END        (TCODE_INTERFACE | TCODE_SHORT | 0x006F)
 
 /* records in user table 
-     Each user table entery has two top level chunks, a TCODE_USER_TABLE_UUID chunk
+     Each user table entry has two top level chunks, a TCODE_USER_TABLE_UUID chunk
      and a TCODE_USER_RECORD chunk.
 */
 
@@ -395,6 +404,8 @@
 #define TCODE_RHINOIO_OBJECT_DATA          (TCODE_OPENNURBS_OBJECT | 0xFFFE) /* obsolete - don't confuse with TCODE_OPENNURBS_OBJECT_DATA */
 #define TCODE_RHINOIO_OBJECT_END           (TCODE_OPENNURBS_OBJECT | 0xFFFF) /* obsolete - don't confuse with TCODE_OPENNURBS_OBJECT_END */
 
+/* OpenNURBS classes the require a unique tcode */
+#define TCODE_OPENNURBS_BUFFER (TCODE_OPENNURBS_OBJECT | TCODE_CRC | 0x0100) /* chunk stores ON_Buffer classes */
 
 /* legacy objects from Rhino 1.x */
 #define TCODE_LEGACY_ASM          (TCODE_LEGACY_GEOMETRY | 0x0001)
@@ -463,13 +474,11 @@
 
 #define TCODE_SUMMARY             (TCODE_INTERFACE | 0x0013)
 #define TCODE_BITMAPPREVIEW       (TCODE_INTERFACE | 0x0014)
-#define TCODE_VIEWPORT_DISPLAY_MODE  (TCODE_SHORT | TCODE_INTERFACE | 0x0015)
+#define TCODE_VIEWPORT_V1_DISPLAYMODE  (TCODE_SHORT | TCODE_INTERFACE | 0x0015)
 
 
 #define TCODE_LAYERTABLE          (TCODE_SHORT   | TCODE_TABLE    | 0x0001) /* obsolete - do not use */
 #define TCODE_LAYERREF            (TCODE_SHORT   | TCODE_TABLEREC | 0x0001)
-
-#define TCODE_XDATA               (TCODE_USER | 0x0001)
 
 #define TCODE_RGB                 (TCODE_SHORT   | TCODE_DISPLAY | 0x0001)
 #define TCODE_TEXTUREMAP          (TCODE_DISPLAY | 0x0002)
@@ -516,10 +525,5 @@
 
 #define TCODE_LEGACY_TOL_FIT      (TCODE_TOLERANCE | 0x0001)
 #define TCODE_LEGACY_TOL_ANGLE    (TCODE_TOLERANCE | 0x0002)
-
-#define TCODE_DICTIONARY          (TCODE_USER | TCODE_CRC   | 0x0010)
-#define TCODE_DICTIONARY_ID       (TCODE_USER | TCODE_CRC   | 0x0011)
-#define TCODE_DICTIONARY_ENTRY    (TCODE_USER | TCODE_CRC   | 0x0012)
-#define TCODE_DICTIONARY_END      (TCODE_USER | TCODE_SHORT | 0x0013)
 
 #endif

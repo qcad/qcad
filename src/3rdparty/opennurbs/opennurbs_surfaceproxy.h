@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 ////////////////////////////////////////////////////////////////
 //
@@ -22,13 +20,11 @@
 #if !defined(OPENNURBS_SURFACEPROXY_INC_)
 #define OPENNURBS_SURFACEPROXY_INC_
 
-class ON_Curve;
-class ON_NurbsSurface;
 class ON_CLASS ON_SurfaceProxy : public ON_Surface
 {
 public:
   // virtual ON_Object::DestroyRuntimeCache override
-  void DestroyRuntimeCache( bool bDelete = true );
+  void DestroyRuntimeCache( bool bDelete = true ) override;
 
 public:
   ON_SurfaceProxy();
@@ -60,74 +56,47 @@ public:
     geometry and, if necessary, transposes the result to that
     the returned surfaces's parameterization and locus match the proxy surface's.
   */
-  virtual
-  ON_Surface* DuplicateSurface() const;
+  ON_Surface* DuplicateSurface() const override;
 
   /////////////////////////////////////////////////////////////////
   // ON_Object overrides
 
   // virtual ON_Object::SizeOf override
-  unsigned int SizeOf() const;
+  unsigned int SizeOf() const override;
 
   // virtual ON_Object::DataCRC override
-  ON__UINT32 DataCRC(ON__UINT32 current_remainder) const;
+  ON__UINT32 DataCRC(ON__UINT32 current_remainder) const override;
 
-  /*
-  Description:
-    Tests an object to see if its data members are correctly
-    initialized.
-  Parameters:
-    text_log - [in] if the object is not valid and text_log
-        is not NULL, then a brief englis description of the
-        reason the object is not valid is appened to the log.
-        The information appended to text_log is suitable for 
-        low-level debugging purposes by programmers and is 
-        not intended to be useful as a high level user 
-        interface tool.
-  Returns:
-    @untitled table
-    true     object is valid
-    false    object is invalid, uninitialized, etc.
-  Remarks:
-    Overrides virtual ON_Object::IsValid
-  */
-  ON_BOOL32 IsValid( ON_TextLog* text_log = NULL ) const;
+  bool IsValid( class ON_TextLog* text_log = nullptr ) const override;
 
-  void Dump( ON_TextLog& ) const; // for debugging
+  void Dump( ON_TextLog& ) const override; // for debugging
 
-  ON_BOOL32 Write(
+  bool Write(
          ON_BinaryArchive&  // open binary file
-       ) const;
+       ) const override;
 
-  ON_BOOL32 Read(
+  bool Read(
          ON_BinaryArchive&  // open binary file
-       );
+       ) override;
 
   /////////////////////////////////////////////////////////////////
   // ON_Geometry overrides
 
-  int Dimension() const;
+  int Dimension() const override;
 
-  ON_BOOL32 GetBBox( // returns true if successful
-         double*,    // minimum
-         double*,    // maximum
-         ON_BOOL32 = false  // true means grow box
-         ) const;
+  // virtual ON_Geometry GetBBox override		
+  bool GetBBox( double* boxmin, double* boxmax, bool bGrowBox = false ) const override;
 
-  ON_BOOL32 Transform( 
+  bool Transform( 
          const ON_Xform&
-         );
+         ) override;
 
   /////////////////////////////////////////////////////////////////
   // ON_Surface overrides
-  ON_Mesh* CreateMesh( 
-             const ON_MeshParameters& mp,
-             ON_Mesh* mesh = NULL
-             ) const;
 
   ON_Interval Domain(
     int // 0 gets first parameter's domain, 1 gets second parameter's domain
-    ) const;
+    ) const override;
 
 
   /*
@@ -142,49 +111,49 @@ public:
   Returns:
     true if successful.
   */
-  ON_BOOL32 GetSurfaceSize( 
+  bool GetSurfaceSize( 
       double* width, 
       double* height 
-      ) const;
+      ) const override;
 
   int SpanCount(
     int // 0 gets first parameter's domain, 1 gets second parameter's domain
-    ) const; // number of smooth spans in curve
+    ) const override; // number of smooth spans in curve
 
-  ON_BOOL32 GetSpanVector( // span "knots" 
+  bool GetSpanVector( // span "knots" 
     int, // 0 gets first parameter's domain, 1 gets second parameter's domain
     double* // array of length SpanCount() + 1 
-    ) const; // 
+    ) const override; // 
 
   int Degree( // returns maximum algebraic degree of any span 
                   // ( or a good estimate if curve spans are not algebraic )
     int // 0 gets first parameter's domain, 1 gets second parameter's domain
-    ) const; 
+    ) const override; 
 
 
-  ON_BOOL32 GetParameterTolerance( // returns tminus < tplus: parameters tminus <= s <= tplus
+  bool GetParameterTolerance( // returns tminus < tplus: parameters tminus <= s <= tplus
          int,     // 0 gets first parameter, 1 gets second parameter
          double,  // t = parameter in domain
          double*, // tminus
          double*  // tplus
-         ) const;
+         ) const override;
 
   // override virtual ON_Surface::IsIsoparametric
-  ISO IsIsoparametric(
+  ON_Surface::ISO IsIsoparametric(
         const ON_Curve& curve,
-        const ON_Interval* curve_domain = NULL
-        ) const;
+        const ON_Interval* curve_domain = nullptr
+        ) const override;
 
   // override virtual ON_Surface::IsIsoparametric
-  ISO IsIsoparametric(
+  ON_Surface::ISO IsIsoparametric(
         const ON_BoundingBox& bbox
-        ) const;
+        ) const override;
 
   /*
   Description:
     Test a surface to see if it is planar.
   Parameters:
-    plane - [out] if not NULL and true is returned,
+    plane - [out] if not nullptr and true is returned,
                   the plane parameters are filled in.
     tolerance - [in] tolerance to use when checking
   Returns:
@@ -193,57 +162,57 @@ public:
   Remarks:
     Overrides virtual ON_Surface::IsPlanar.
   */
-  ON_BOOL32 IsPlanar(
-        ON_Plane* plane = NULL,
+  bool IsPlanar(
+        ON_Plane* plane = nullptr,
         double tolerance = ON_ZERO_TOLERANCE
-        ) const;
+        ) const override;
 
-  ON_BOOL32 IsClosed(   // true if surface is closed in direction
+  bool IsClosed(   // true if surface is closed in direction
         int        // dir  0 = "s", 1 = "t"
-        ) const;
+        ) const override;
 
-  ON_BOOL32 IsPeriodic( // true if surface is periodic in direction
+  bool IsPeriodic( // true if surface is periodic in direction
         int        // dir  0 = "s", 1 = "t"
-        ) const;
+        ) const override;
 
-  ON_BOOL32 IsSingular( // true if surface side is collapsed to a point
+  bool IsSingular( // true if surface side is collapsed to a point
         int        // side of parameter space to test
                    // 0 = south, 1 = east, 2 = north, 3 = west
-        ) const;
+        ) const override;
   
   /*
   Description:
-    Search for a derivatitive, tangent, or curvature 
+    Search for a derivative, tangent, or curvature
     discontinuity.
   Parameters:
     dir - [in] If 0, then "u" parameter is checked.  If 1, then
                the "v" parameter is checked.
-    c - [in] type of continity to test for.
+    c - [in] type of continuity to test for.
     t0 - [in] Search begins at t0. If there is a discontinuity
               at t0, it will be ignored.  This makes it 
               possible to repeatedly call GetNextDiscontinuity
               and step through the discontinuities.
     t1 - [in] (t0 != t1)  If there is a discontinuity at t1 is 
-              will be ingored unless c is a locus discontinuity
+              will be ignored unless c is a locus discontinuity
               type and t1 is at the start or end of the curve.
     t - [out] if a discontinuity is found, then *t reports the
           parameter at the discontinuity.
     hint - [in/out] if GetNextDiscontinuity will be called 
        repeatedly, passing a "hint" with initial value *hint=0
        will increase the speed of the search.       
-    dtype - [out] if not NULL, *dtype reports the kind of 
+    dtype - [out] if not nullptr, *dtype reports the kind of 
         discontinuity found at *t.  A value of 1 means the first 
         derivative or unit tangent was discontinuous.  A value 
         of 2 means the second derivative or curvature was 
-        discontinuous.  A value of 0 means teh curve is not
+        discontinuous.  A value of 0 means the curve is not
         closed, a locus discontinuity test was applied, and
         t1 is at the start of end of the curve.
     cos_angle_tolerance - [in] default = cos(1 degree) Used only
-        when c is ON::G1_continuous or ON::G2_continuous.  If the
+        when c is ON::continuity::G1_continuous or ON::continuity::G2_continuous.  If the
         cosine of the angle between two tangent vectors is 
         <= cos_angle_tolerance, then a G1 discontinuity is reported.
     curvature_tolerance - [in] (default = ON_SQRT_EPSILON) Used 
-        only when c is ON::G2_continuous.  If K0 and K1 are 
+        only when c is ON::continuity::G2_continuous.  If K0 and K1 are 
         curvatures evaluated from above and below and 
         |K0 - K1| > curvature_tolerance, then a curvature 
         discontinuity is reported.
@@ -269,11 +238,11 @@ public:
                   double t0,
                   double t1,
                   double* t,
-                  int* hint=NULL,
-                  int* dtype=NULL,
-                  double cos_angle_tolerance=0.99984769515639123915701155881391,
+                  int* hint=nullptr,
+                  int* dtype=nullptr,
+                  double cos_angle_tolerance=ON_DEFAULT_ANGLE_TOLERANCE_COSINE,
                   double curvature_tolerance=ON_SQRT_EPSILON
-                  ) const;
+                  ) const override;
 
   /*
   Description:
@@ -290,11 +259,11 @@ public:
     d2_tolerance - [in] if the difference between two second derivatives is
         greater than d2_tolerance, then the surface is not C2.
     cos_angle_tolerance - [in] default = cos(1 degree) Used only when
-        c is ON::G1_continuous or ON::G2_continuous.  If the cosine
+        c is ON::continuity::G1_continuous or ON::continuity::G2_continuous.  If the cosine
         of the angle between two normal vectors 
         is <= cos_angle_tolerance, then a G1 discontinuity is reported.
     curvature_tolerance - [in] (default = ON_SQRT_EPSILON) Used only when
-        c is ON::G2_continuous.  If K0 and K1 are curvatures evaluated
+        c is ON::continuity::G2_continuous.  If K0 and K1 are curvatures evaluated
         from above and below and |K0 - K1| > curvature_tolerance,
         then a curvature discontinuity is reported.
   Returns:
@@ -306,22 +275,22 @@ public:
     ON::continuity c,
     double s, 
     double t, 
-    int* hint = NULL,
+    int* hint = nullptr,
     double point_tolerance=ON_ZERO_TOLERANCE,
     double d1_tolerance=ON_ZERO_TOLERANCE,
     double d2_tolerance=ON_ZERO_TOLERANCE,
-    double cos_angle_tolerance=0.99984769515639123915701155881391,
+    double cos_angle_tolerance=ON_DEFAULT_ANGLE_TOLERANCE_COSINE,
     double curvature_tolerance=ON_SQRT_EPSILON
-    ) const;
+    ) const override;
 
-  ON_BOOL32 Reverse(  // reverse parameterizatrion, Domain changes from [a,b] to [-b,-a]
+  bool Reverse(  // reverse parameterization, Domain changes from [a,b] to [-b,-a]
     int // dir  0 = "s", 1 = "t"
-    );
+    ) override;
 
-  ON_BOOL32 Transpose(); // transpose surface parameterization (swap "s" and "t")
+  bool Transpose() override; // transpose surface parameterization (swap "s" and "t")
 
   // work horse evaluator
-  ON_BOOL32 Evaluate( // returns false if unable to evaluate
+  bool Evaluate( // returns false if unable to evaluate
          double, double, // evaluation parameters
          int,            // number of derivatives (>=0)
          int,            // array stride (>=Dimension())
@@ -334,102 +303,19 @@ public:
                          //         4 from SE quadrant
          int* = 0        // optional - evaluation hint (int[2]) used to speed
                          //            repeated evaluations
-         ) const;
+         ) const override;
 
 
   ON_Curve* IsoCurve(
          int dir,
          double c
-         ) const;
+         ) const override;
 
-  ON_Curve* Pushup( const ON_Curve& curve_2d,
-                    double tolerance,
-                    const ON_Interval* curve_2d_subdomain = NULL
-                    ) const;
-
-  ON_Curve* Pullback( const ON_Curve& curve_3d,
-                    double tolerance,
-                    const ON_Interval* curve_3d_subdomain = NULL,
-                    ON_3dPoint start_uv = ON_UNSET_POINT,
-                    ON_3dPoint end_uv = ON_UNSET_POINT
-                    ) const;
-
-
-  /*
-  Description:
-    Get the parameters of the point on the surface that is closest to P.
-  Parameters:
-    P - [in] 
-            test point
-    s - [out]
-    t - [out] 
-            (*s,*t) = parameters of the surface point that 
-            is closest to P.
-    maximum_distance = 0.0 - [in] 
-            optional upper bound on the distance from P to 
-            the surface.  If you are only interested in 
-            finding a point Q on the surface when 
-            P.DistanceTo(Q) < maximum_distance, then set
-            maximum_distance to that value.
-    sdomain = 0 - [in] optional domain restriction
-    tdomain = 0 - [in] optional domain restriction
-  Returns:
-    True if successful.  If false, the values of *s and *t
-    are undefined.
-  See Also:
-    ON_Surface::GetLocalClosestPoint.
-  */
-  bool GetClosestPoint( 
-          const ON_3dPoint& P,
-          double* s,
-          double* t,
-          double maximum_distance = 0.0,
-          const ON_Interval* sdomain = 0,
-          const ON_Interval* tdomain = 0
-          ) const;
-
-  //////////
-  // Find parameters of the point on a surface that is locally closest to 
-  // the test_point.  The search for a local close point starts at 
-  // seed parameters. If a sub_domain parameter is not NULL, then
-  // the search is restricted to the specified portion of the surface.
-  //
-  // true if returned if the search is successful.  false is returned if
-  // the search fails.
-  ON_BOOL32 GetLocalClosestPoint( const ON_3dPoint&, // test_point
-          double,double,     // seed_parameters
-          double*,double*,   // parameters of local closest point returned here
-          const ON_Interval* = NULL, // first parameter sub_domain
-          const ON_Interval* = NULL  // second parameter sub_domain
-          ) const;
-
-  /*
-  Description:
-    Offset surface.
-  Parameters:
-    offset_distance - [in] offset distance
-    tolerance - [in] Some surfaces do not have an exact offset that
-      can be represented using the same class of surface definition.
-      In that case, the tolerance specifies the desired accuracy.
-    max_deviation - [out] If this parameter is not NULL, the maximum
-      deviation from the returned offset to the true offset is returned
-      here.  This deviation is zero except for cases where an exact
-      offset cannot be computed using the same class of surface definition.
-  Remarks:
-    Overrides virtual ON_Surface::Offset.
-  Returns:
-    Offset surface.
-  */
-  ON_Surface* Offset(
-        double offset_distance, 
-        double tolerance, 
-        double* max_deviation = NULL
-        ) const;
 
   int GetNurbForm( // returns 0: unable to create NURBS representation
                    //            with desired accuracy.
                    //         1: success - returned NURBS parameterization
-                   //            matches the surface's to wthe desired accuracy
+                   //            matches the surface's to the desired accuracy
                    //         2: success - returned NURBS point locus matches
                    //            the surfaces's to the desired accuracy but, on
                    //            the interior of the surface's domain, the 
@@ -438,29 +324,29 @@ public:
                    //            desired accuracy.
         ON_NurbsSurface&,
         double = 0.0
-        ) const;
+        ) const override;
 
   int HasNurbForm( // returns 0: unable to create NURBS representation
                    //            with desired accuracy.
                    //         1: success - returned NURBS parameterization
-                   //            matches the surface's to wthe desired accuracy
+                   //            matches the surface's to the desired accuracy
                    //         2: success - returned NURBS point locus matches
                    //            the surfaces's to the desired accuracy but, on
                    //            the interior of the surface's domain, the 
                    //            surface's parameterization and the NURBS
                    //            parameterization may not match to the 
                    //            desired accuracy.
-        ) const;
+        ) const override;
 
   bool GetSurfaceParameterFromNurbFormParameter(
         double nurbs_s, double nurbs_t,
         double* surface_s, double* surface_t
-        ) const;
+        ) const override;
 
   bool GetNurbFormParameterFromSurfaceParameter(
         double surface_s, double surface_t,
         double* nurbs_s,  double* nurbs_t
-        ) const;
+        ) const override;
 
 private:
 

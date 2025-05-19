@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,71 +10,71 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(OPENNURBS_GROUP_INC_)
 #define OPENNURBS_GROUP_INC_
 
-class ON_CLASS ON_Group : public ON_Object
+class ON_CLASS ON_Group : public ON_ModelComponent
 {
   ON_OBJECT_DECLARE(ON_Group);
-public:
-  ON_Group();
-  ~ON_Group();
-  // C++ default copy construction and operator= work fine.
-  // Do not add custom versions.
 
+public:
+  static const ON_Group Unset;   // nil id
+                                    
+  /*
+  Parameters:
+    model_component_reference - [in]
+    none_return_value - [in]
+      value to return if ON_Material::Cast(model_component_ref.ModelComponent())
+      is nullptr
+  Returns:
+    If ON_Material::Cast(model_component_ref.ModelComponent()) is not nullptr,
+    that pointer is returned.  Otherwise, none_return_value is returned. 
+  */
+  static const ON_Group* FromModelComponentRef(
+    const class ON_ModelComponentReference& model_component_reference,
+    const ON_Group* none_return_value
+    );
+
+public:
+  ON_Group() ON_NOEXCEPT;
+  ON_Group(const ON_Group& src);
+  ~ON_Group() = default;
+  ON_Group& operator=(const ON_Group& src) = default;
+
+private:
+  
   //////////////////////////////////////////////////////////////////////
   //
   // ON_Object overrides
+  bool IsValid( class ON_TextLog* text_log = nullptr ) const override;
 
-  /*
-  Description:
-    Tests an object to see if its data members are correctly
-    initialized.
-  Parameters:
-    text_log - [in] if the object is not valid and text_log
-        is not NULL, then a brief englis description of the
-        reason the object is not valid is appened to the log.
-        The information appended to text_log is suitable for 
-        low-level debugging purposes by programmers and is 
-        not intended to be useful as a high level user 
-        interface tool.
-  Returns:
-    @untitled table
-    true     object is valid
-    false    object is invalid, uninitialized, etc.
-  Remarks:
-    Overrides virtual ON_Object::IsValid
-  */
-  ON_BOOL32 IsValid( ON_TextLog* text_log = NULL ) const;
+  void Dump(
+    ON_TextLog& text_log
+    ) const override;
 
-  void Dump( ON_TextLog& ) const; // for debugging
+  bool Write(
+    ON_BinaryArchive& archive
+    ) const override;
 
-  ON_BOOL32 Write(
-         ON_BinaryArchive&  // serialize definition to binary archive
-       ) const;
+  bool Read(
+    ON_BinaryArchive& archive
+    ) override;
 
-  ON_BOOL32 Read(
-         ON_BinaryArchive&  // restore definition from binary archive
-       );
+private:
+  bool Internal_WriteV5(
+    ON_BinaryArchive& archive
+    ) const;
 
-  //////////////////////////////////////////////////////////////////////
-  //
-  // Obsolete interface - just work on the public members
-  void SetGroupName( const wchar_t* );
-  void SetGroupName( const char* );
-  
-  void GetGroupName( ON_wString& ) const;
-  const wchar_t* GroupName() const;
-
-  void SetGroupIndex(int);
-  int GroupIndex() const;
-
-public:
-  ON_wString m_group_name;
-  int m_group_index;
-  ON_UUID m_group_id;
+  bool Internal_ReadV5(
+    ON_BinaryArchive& archive
+    );
 };
+
+#if defined(ON_DLL_TEMPLATE)
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_Group*>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<const ON_Group*>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_ObjectArray<ON_Group>;
+#endif
 
 #endif

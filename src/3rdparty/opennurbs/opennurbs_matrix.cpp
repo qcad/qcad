@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,9 +10,16 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
+
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
 
 // 8 July 2003 Dale Lear
 //    changed ON_Matrix to use multiple allocations
@@ -151,6 +157,89 @@ ON_Matrix::~ON_Matrix()
   }
 }
 
+#if defined(ON_HAS_RVALUEREF)
+
+ON_Matrix::ON_Matrix(ON_Matrix&& src) ON_NOEXCEPT
+  : m(src.m)
+  , m_row_count(src.m_row_count)
+  , m_col_count(src.m_col_count)
+  , m_rowmem(std::move(src.m_rowmem))
+  , m_Mmem(src.m_Mmem)
+  , m_row_offset(src.m_row_offset)
+  , m_cmem(src.m_cmem)
+{
+  src.m = nullptr;
+  src.m_row_count = 0;
+  src.m_col_count = 0;
+  // src.m_rowmem - std::move insures src.m_rowmem is zeroed
+  src.m_Mmem = nullptr;
+  src.m_row_offset = 0;
+  src.m_cmem = nullptr;
+}
+
+ON_Matrix& ON_Matrix::operator=(ON_Matrix&& src)
+{
+  if (this != &src)
+  {
+    m = src.m;
+    m_row_count = src.m_row_count;
+    m_col_count = src.m_col_count;
+    m_rowmem = std::move(src.m_rowmem);
+    m_Mmem = src.m_Mmem;
+    m_row_offset = src.m_row_offset;
+    m_cmem = src.m_cmem;
+
+    src.m = nullptr;
+    src.m_row_count = 0;
+    src.m_col_count = 0;
+    src.m_Mmem = nullptr;
+    src.m_row_offset = 0;
+    src.m_cmem = nullptr;
+  }
+  return *this;
+}
+
+#endif
+
+
+double** ON_Matrix::Allocate(
+  unsigned int row_count,
+  unsigned int col_count
+  )
+{
+  if (row_count < 1 || row_count >= ON_UNSET_UINT_INDEX / 2)
+    return nullptr;
+  if (col_count < 1 || col_count >= ON_UNSET_UINT_INDEX / 2)
+    return nullptr;
+  double** M;
+  size_t sizeof_element = sizeof(M[0][0]);
+  size_t sizeof_ptr = sizeof(M[0]);
+  size_t sz0 = row_count*sizeof_ptr;
+  if (0 != sz0 % sizeof_element)
+    sz0 += sizeof_ptr;
+  size_t sz1 = row_count*col_count*sizeof_element;
+  if (0 != sz1 % sizeof_ptr)
+    sz1 += sizeof_ptr;
+  M = new (std::nothrow) double*[(sz0 + sz1) / sizeof_ptr];
+  if (nullptr == M)
+    return nullptr;
+  double* row = (double*)(((char*)M) + sz0);
+  for (unsigned int i = 0; i < row_count; i++)
+  {
+    M[i] = row;
+    row += col_count;
+  }
+  return M;
+}
+
+void ON_Matrix::Deallocate(double** M)
+{
+  if (nullptr != M)
+  {
+    delete[] M;
+  }
+}
+
 int ON_Matrix::RowCount() const
 {
   return m_row_count;
@@ -169,6 +258,28 @@ int ON_Matrix::MinCount() const
 int ON_Matrix::MaxCount() const
 {
   return (m_row_count >= m_col_count) ? m_row_count : m_col_count;
+}
+
+unsigned int ON_Matrix::UnsignedRowCount() const
+{
+  return (m_row_count>0) ? (unsigned int)m_row_count : 0;
+}
+
+unsigned int ON_Matrix::UnsignedColCount() const
+{
+  return (m_col_count>0) ? (unsigned int)m_col_count : 0;
+}
+
+unsigned int ON_Matrix::UnsignedMinCount() const
+{
+  const unsigned int rc[2] = { UnsignedRowCount(), UnsignedColCount() };
+  return (rc[0] < rc[1]) ? rc[0] : rc[1];
+}
+
+unsigned int ON_Matrix::UnsignedMaxCount() const
+{
+  const unsigned int rc[2] = { UnsignedRowCount(), UnsignedColCount() };
+  return (rc[0] > rc[1]) ? rc[0] : rc[1];
 }
 
 bool ON_Matrix::Create( int row_count, int col_count)
@@ -210,6 +321,7 @@ bool ON_Matrix::Create( int row_count, int col_count)
         if ( i < rows_per_block )
           rows_per_block = i;
         int dblblk_count = rows_per_block*col_count;
+        // TODO: Make this malloc size a static on the DBLBLK class, this is too ugly
         struct DBLBLK* p = (struct DBLBLK*)onmalloc(sizeof(*p) + dblblk_count*sizeof(p->a[0]));
         p->a = (double*)(p+1);
         p->count = dblblk_count;
@@ -526,9 +638,12 @@ ON_Matrix::RowReduce(
     }
     rank++;
 
-    // swap rows
-    SwapRows( ix, k );
-    det = -det;
+    if ( ix != k )
+    {
+      // swap rows
+      SwapRows( ix, k );
+      det = -det;
+    }
 
     // scale row k of matrix and B
     det *= this_m[k][k];
@@ -583,9 +698,12 @@ ON_Matrix::RowReduce(
       break;
     rank++;
 
-    // swap rows of matrix and B
-    SwapRows( ix, k );
-    t = B[ix]; B[ix] = B[k]; B[k] = t;
+    if ( ix != k )
+    {
+      // swap rows of matrix and B
+      SwapRows( ix, k );
+      t = B[ix]; B[ix] = B[k]; B[k] = t;
+    }
 
     // scale row k of matrix and B
     x = 1.0/this_m[k][k];
@@ -643,9 +761,12 @@ ON_Matrix::RowReduce(
       break;
     rank++;
 
-    // swap rows of matrix and B
-    SwapRows( ix, k );
-    t = B[ix]; B[ix] = B[k]; B[k] = t;
+    if ( ix != k )
+    {
+      // swap rows of matrix and B
+      SwapRows( ix, k );
+      t = B[ix]; B[ix] = B[k]; B[k] = t;
+    }
 
     // scale row k of matrix and B
     x = 1.0/this_m[k][k];
@@ -905,6 +1026,7 @@ void ON_Matrix::Zero()
     {
       memset( cmem->a, 0, cmem->count*sizeof(cmem->a[0]) );
     }
+    onmalloc(0);  // allow canceling
     cmem = cmem->next;
   }
 
@@ -1336,92 +1458,539 @@ int ON_RowReduce( int row_count,
 }
 
 
-int ON_InvertSVDW(
-  int count, 
-  const double* W,
-  double*& invW
+unsigned int ON_RowReduce(
+  unsigned int row_count,
+  unsigned int col_count,
+  double zero_pivot_tolerance,
+  const double*const* constA,
+  bool bInitializeB,
+  bool bInitializeColumnPermutation,
+  double** A,
+  double** B,
+  unsigned int* column_permutation,
+  double pivots[3]
   )
 {
-  double w, maxw;
-  int i;
+  double pivots_buffer[3];
+  if (nullptr == pivots)
+    pivots = pivots_buffer;
+  pivots[0] = pivots[1] = -1.0;
+  pivots[2] = 0.0;
 
-  if ( 0 == W || count <= 0 )
-    return -1;
+  if (row_count < 1 || ON_UNSET_UINT_INDEX == row_count)
+    return ON_UNSET_UINT_INDEX;
 
-  if ( 0 == invW )
-  {
-    invW = (double*)onmalloc(count*sizeof(invW[0]));
-  }
-  maxw = fabs(W[0]);
-  for (i = 1; i < count; i++) {
-    w = fabs(W[i]);
-    if (w > maxw) maxw = w;
-  }
-  if (maxw == 0.0)
-  {
-    if ( W != invW )
-      memset(invW,0,count*sizeof(invW[0]));
-    return 0;
-  }
+  if (col_count < 1 || ON_UNSET_UINT_INDEX == col_count)
+    return ON_UNSET_UINT_INDEX;
 
-  i = 0;
-  maxw *= ON_SQRT_EPSILON;
-  while (count--) 
+  if (nullptr == B)
+    return ON_UNSET_UINT_INDEX;
+
+  unsigned int i, j;
+  double* a;
+  double* b;
+
+  if (bInitializeB)
   {
-    if (fabs(W[count]) > maxw) 
+    for (i = 0; i < row_count; i++)
     {
-      i++;
-      invW[count] = 1.0/W[count];
+      b = B[i];
+      for (j = 0; j < row_count; j++)
+        b[j] = 0.0;
+      b[i] = 1.0;
+    }
+  }
+
+  if (bInitializeColumnPermutation && nullptr != column_permutation)
+  {
+    for (j = 0; j < row_count; j++)
+      column_permutation[j] = j;
+  }
+
+  if (!(zero_pivot_tolerance >= 0.0))
+    zero_pivot_tolerance = 0.0;
+
+  std::unique_ptr< ON_Matrix > uA;
+  if (nullptr == A)
+  {
+    if (nullptr == constA)
+      return ON_UNSET_UINT_INDEX;
+    uA = std::unique_ptr< ON_Matrix >(new ON_Matrix(row_count, col_count));
+    A = uA.get()->m;
+  }
+
+  if (nullptr != constA && nullptr != A)
+  {
+    for (i = 0; i < row_count; i++)
+    {
+      const double* c = constA[i];
+      a = A[i];
+      for (j = 0; j < row_count; j++)
+        a[j] = c[j];
+    }
+  }
+
+  double* r;
+  double* s;
+  double x, xx;
+  unsigned int ii, jj;
+  ii = jj = 0;
+  xx = fabs(A[ii][jj]);
+  unsigned int rank;
+  for (rank = 0; rank < row_count; rank++)
+  {
+    if (rank >= col_count)
+      return rank;
+
+    xx = -1.0;
+    ii = jj = rank;
+    for (i = rank; i < row_count; i++)
+    {
+      r = A[i];
+      for (j = rank; j < col_count; j++)
+      {
+        x = fabs(r[j]);
+        if (x > xx)
+        {
+          ii = i;
+          jj = j;
+          xx = x;
+        }
+      }
+    }
+
+    if (!(xx >= 0.0))
+      return ON_UNSET_UINT_INDEX;
+
+    if (pivots[0] < 0.0)
+      pivots[0] = pivots[1] = xx;
+
+    if (xx <= zero_pivot_tolerance)
+    {
+      pivots[2] = xx;
+      return rank;
+    }
+
+    if (xx > pivots[0])
+      pivots[0] = xx;
+    else if (xx < pivots[1])
+      pivots[1] = xx;
+
+
+    a = A[ii];
+    b = B[ii];
+    if (ii > rank)
+    {
+      // swap rows M[ii] and M[rank] so maximum coefficient is in M[rank][jj]
+      A[ii] = A[rank];
+      A[rank] = a;
+      B[ii] = B[rank];
+      B[rank] = b;
+      if (nullptr != column_permutation)
+      {
+        j = column_permutation[ii];
+        column_permutation[ii] = column_permutation[rank];
+        column_permutation[rank] = j;
+      }
+    }
+
+    // swap columns M[jj] and M[rank] to maximum coefficient is in M[rank][rank]
+    xx = -a[jj];
+    a[jj] = a[rank];
+    //a[rank] = -xx; // DEBUG
+
+    for (i = rank + 1; i < row_count; i++)
+    {
+      // swap columns M[jj] and M[rank] 
+      r = A[i];
+      x = r[jj] / xx;
+      //double dd = r[jj]; // DEBUG
+      r[jj] = r[rank];
+      //r[rank] = dd; // DEBUG
+
+      // Use row operation
+      // M[i] = M[i] - (row[i]/M[rank][rank])*M[rank]
+      // to M[i][rank]
+      if (0.0 != x)
+      {
+        s = B[i];
+        for (j = 0; j <= rank; j++)
+        {
+          s[j] += x*b[j];
+          //r[j] += x*a[j]; // DEBUG
+        }
+        for (/*empty init*/; j < col_count; j++)
+        {
+          s[j] += x*b[j];
+          r[j] += x*a[j];
+        }
+      }
+    }
+  }
+  return rank;
+}
+
+
+double ON_EigenvectorPrecision(
+  const unsigned int N,
+  const double*const* M,
+  bool bTransposeM,
+  double lambda,
+  const double* eigenvector
+  )
+{
+  double delta = 0.0;
+  double len = 0.0;
+  if ( bTransposeM )
+  {
+    for (unsigned int i = 0; i < N; i++)
+    {
+      len += (eigenvector[i] * eigenvector[i]);
+      const double* e = eigenvector;
+      double Mei = 0.0;
+      for (unsigned int j = 0; j < N; j++)
+        Mei += M[j][i]*(*e++);
+      double d = fabs(Mei - lambda*eigenvector[i]);
+      if (d > delta)
+        delta = d;
+    }
+  }
+  else
+  {
+    const double* e0 = eigenvector + N;
+    for (unsigned int i = 0; i < N; i++)
+    {
+      len += (eigenvector[i] * eigenvector[i]);
+      const double* Mi = M[i];
+      const double* e = eigenvector;
+      double Mei = 0.0;
+      while (e < e0)
+        Mei += (*Mi++)*(*e++);
+      double d = fabs(Mei - lambda*eigenvector[i]);
+      if (d > delta)
+        delta = d;
+    }
+  }
+  if (delta > 0.0 && len > 0.0)
+    delta /= sqrt(len);
+
+  return delta;
+}
+
+
+double ON_MatrixSolutionPrecision(
+  const unsigned int N,
+  const double*const* M,
+  bool bTransposeM,
+  double lambda,
+  const double* X,
+  const double* B
+  )
+{
+  double delta = 0.0;
+  if (bTransposeM)
+  {
+    for (unsigned int i = 0; i < N; i++)
+    {
+      const double* e = X;
+      double Mei = -(lambda*e[i]);
+      for ( unsigned int j = 0; j < N; j++ )
+        Mei += M[j][i]*(*e++);
+      double d = fabs(Mei - B[i]);
+      if (d > delta)
+        delta = d;
+    }
+  }
+  else
+  {
+    const double* e0 = X + N;
+    for (unsigned int i = 0; i < N; i++)
+    {
+      const double* Mi = M[i];
+      const double* e = X;
+      double Mei = -(lambda*e[i]);
+      while (e < e0)
+        Mei += (*Mi++)*(*e++);
+      double d = fabs(Mei - B[i]);
+      if (d > delta)
+        delta = d;
+    }
+  }
+
+  return delta;
+}
+
+static int CompareDoubleIncreasing(const void* a, const void* b)
+{
+  double x = *((const double*)a);
+  double y = *((const double*)b);
+  if (x < y)
+    return -1;
+  if (x > y)
+    return 1;
+  return 0;
+}
+
+unsigned int ON_GetEigenvectors(
+  const unsigned int N,
+  const double*const* M,
+  bool bTransposeM,
+  double lambda,
+  unsigned int lambda_multiplicity,
+  const double* termination_tolerances,
+  double** eigenvectors,
+  double* eigenprecision,
+  double* eigenpivots
+  )
+{
+  if (N < 1 || ON_UNSET_UINT_INDEX == N)
+    return ON_UNSET_UINT_INDEX;
+
+  if (1 == N)
+  {
+    eigenvectors[0][0] = 1.0;
+    if (nullptr != eigenpivots)
+    {
+      eigenpivots[0] = M[0][0];
+      eigenpivots[1] = M[0][0];
+      eigenpivots[2] = 0.0;
+    }
+    if (nullptr != eigenprecision)
+    {
+      eigenprecision[3] = fabs(lambda - M[0][0]);
+    }
+    return (1 == lambda_multiplicity) ? 1 : 0;
+  }
+
+  double tols[3] = { 1.0e-12, 1.0e-3, 1.0e4 };
+  if (nullptr != termination_tolerances)
+  {
+    if (termination_tolerances[0] > 0.0)
+      tols[0] = termination_tolerances[0];
+    if (termination_tolerances[1] > 0.0)
+      tols[1] = termination_tolerances[0];
+    if (termination_tolerances[2] > 0.0)
+      tols[2] = termination_tolerances[2];
+  }
+
+
+  ON_Matrix Abuffer(N, N);
+  double** A = Abuffer.m;
+
+  ON_Matrix Bbuffer(N, N);
+  double** B = Bbuffer.m;
+
+  unsigned int i, j;
+  double pivots[3] = { 0.0, 0.0, 0.0 };
+  double zero_pivot_tolerance0 = 0.0;
+  double zero_pivot_tolerance = 0.0;
+  const bool bUnknownLambdaMultiplicity = (lambda_multiplicity < 1 || lambda_multiplicity > N);
+  if (bUnknownLambdaMultiplicity)
+    lambda_multiplicity = 1;
+  unsigned int rank = N + 1;
+  bool bLastTry = false;
+  for(unsigned int rank0 = N+1; rank0 > 0; /*empty increment*/)
+  {
+    if (bTransposeM)
+    {
+      // A = (M - lambda*I);
+      for (i = 0; i < N; i++)
+      {
+        double* r = A[i];
+        for (j = 0; j < N; j++)
+        {
+          r[j] = M[i][j];
+        }
+        r[i] -= lambda;
+      }
     }
     else
-      invW[count] = 0.0;
+    {
+      // A = Transpose(M - lambda*I);
+      for (i = 0; i < N; i++)
+      {
+        double* r = A[i];
+        for (j = 0; j < N; j++)
+        {
+          r[j] = M[j][i];
+        }
+        r[i] -= lambda;
+      }
+    }
+
+    zero_pivot_tolerance = pivots[1];
+    if (!(zero_pivot_tolerance >= 0.0))
+    {
+      // This should never happen.  The test is here because
+      // it has no performance penalty and will detect bugs
+      // if this code is incorrectly modified.
+      ON_ERROR("invalid zero_pivot_tolerance value");
+      break;
+    }
+
+    pivots[0] = 0.0; // maximum pivot
+    pivots[1] = 0.0; // minimum "nonzero" pivot
+    pivots[2] = 0.0; // maximum "zero" pivot
+    rank = ON_RowReduce(N, N, zero_pivot_tolerance, nullptr, true, false, A, B, nullptr, pivots);
+
+    if (bLastTry)
+    {
+      // For an explanation, see the code below where bLastTry is set to true.
+      break;
+    }
+
+    if (rank >= rank0 || rank > N)
+    {
+      // failure
+      break;
+    }
+
+    if (rank == N - lambda_multiplicity)
+    {
+      // We found exactly lambda_multiplicity eigenvectors.
+      // If the value of zero_pivot_tolerance was appropriate
+      // and double precision arithmetic is appropriate for
+      // the matrix, then we are returning reliable 
+      // eigenvectors.
+      break;
+    }
+
+    if (rank < N - lambda_multiplicity)
+    {
+      // Theoretically, the dimension of the eigenspace cannot be larger than
+      // the multiplicity of the eigenvalue.
+      //
+      // Either we have an unstable case (perhaps there is another
+      // eigenvalue that is close to lambda), or the value of
+      // zero_pivot_tolerance was too big, or double precision 
+      // arithmetic is not good enough for the matrix.
+      if (rank0 > 0 && rank0 < N && zero_pivot_tolerance > zero_pivot_tolerance0 && zero_pivot_tolerance0 >= 0.0)
+      {
+        // We will use the previous result.
+        pivots[1] = zero_pivot_tolerance0;
+        bLastTry = true;
+        continue;
+      }
+
+      if (bUnknownLambdaMultiplicity)
+      {
+        lambda_multiplicity = N - rank;
+      }
+      // Otherwise, we will pick the best eigenvectors below.
+      break;
+    }
+
+    if (!(pivots[1] > 0.0 && pivots[0] >= pivots[1] && pivots[1] > pivots[2] && pivots[2] <= zero_pivot_tolerance))
+    {
+      // Basic sanity check failed.
+      // - should have a positive minimum "nonzero" pivot
+      // - maximum "nonzero" should be >= minimum "nonzero"
+      // - maximum "zero" should be < minimum "nonzero"
+      // - maximum "zero" should be <= zero_pivot_tolerance
+      break;
+    }
+
+    if (!(pivots[1] > zero_pivot_tolerance))
+    {
+      // If we don't increase zero_pivot_tolerance,
+      // we will note get a smaller rank from ON_RowReduce().
+      break;
+    }
+
+    double r1 = pivots[1] / pivots[0];
+    // At this point,
+    //
+    // pivot[0] = maximum pivot
+    // pivot[1] = minimum "nonzero" pivot > zero_pivot_tolerance
+    // pivot[2] = maximum "zero" pivot <= zero_pivot_tolerance
+    //
+    // from the call to ON_RowReduce and we have found
+    // (N - rank) eigenvectors.  Assuming the input is valid,
+    // that is lambda really is an eigenvalue with multiplicity
+    // lambda_multiplicity, then there are more eigenvectors or
+    // we are in the case where the dimension of the eigenspace
+    // is less than the multiplicity of the eigenvalue 
+    // (there are 1s on the super diagonal in Jordan decomposition).
+    //
+    // In order for an additional pass to be useful, the value
+    // of zero_pivot_tolerance needs to be increased but it
+    // must still be reasonable numerically.
+    //
+    // The value of pivot[1] is the smallest value for the
+    // next candidate for zero_pivot_tolerance.
+    //
+    // If pivots[1] / pivots[0] <= tols[0](1.0e-12), pivots[1] is "tiny"
+    // with respect to pivot[0], from the point of view of a
+    // double and addition.  If the entries in the matrix
+    // are numerically reasonable for double precision
+    // calculations, then pivot[1] is a reasonable choice for
+    // a zero tolerance.
+    if (!(r1 <= tols[0]))
+    {
+      double d1 = pivots[0] - pivots[1];
+
+      // If r1 < tols[0](1.0e-3), there are at least 3 orders of
+      // magnitude between the maximum pivot and pivot[1].
+      // If d1 > tols[2](1.0e4) *pivots[1], pivot[1] is substantially closer to
+      // zero than it is to pivot[0].
+      if (!(r1 <= tols[1] && d1 > tols[2]*pivots[1]))
+      {
+        break;
+      }
+    }
+
+    rank0 = rank;
   }
-  return i; // number of nonzero terms in invW[]
+
+  if (nullptr != eigenpivots)
+  {
+    eigenpivots[0] = pivots[0];
+    eigenpivots[1] = pivots[1];
+    eigenpivots[2] = pivots[2];
+  }
+
+
+  if (rank >= N)
+    return 0;
+
+  if (nullptr == B)
+    return 0;
+
+  // Return the best eigenvector candidates first.
+  ON_SimpleArray< double > Bprecision(N - rank);
+  for (unsigned int k = rank; k < N; k++)
+    Bprecision.Append(ON_EigenvectorPrecision(N, M, bTransposeM, lambda, B[k]));
+  ON_SimpleArray< unsigned int > _Bdex(Bprecision.UnsignedCount());
+  unsigned int* Bdex = _Bdex.Array();
+  ON_Sort(ON::sort_algorithm::quick_sort, Bdex, Bprecision.Array(), Bprecision.UnsignedCount(), sizeof(double), CompareDoubleIncreasing);
+
+  const unsigned int Bi0 = rank;
+  if (rank < N - lambda_multiplicity)
+  {
+    // we had too many candidates - return the best ones.
+    rank = N - lambda_multiplicity;
+  }
+
+  // B is a nonsingular row operation matrix and the last (N-rank) rows of B*A are zero.
+  // Therefore, the last (N-rank) columns of Transpose(A)*Transpose(B) are zero.
+  // Therefore, the last (N-rank) columns of Transpose(B) are a basis for the kernel of Transpose(A).
+  // Therefore, the last (N-rank) rows of B are a basis for the kernel of Transpose(A).
+  // Therefore, the last (N-rank) rows of B are a basis for the kernel of of (M - lambda*I).
+  // Therefore, the last (N-rank) rows of B are a basis for the lambda eigenspace of M.
+  for (unsigned int k = rank; k < N; k++)
+  {
+    const unsigned int ei = k - rank;
+    const unsigned int Bi = Bdex[ei];
+    double* V = eigenvectors[ei];
+    for (j = 0; j < N; j++)
+      V[j] = B[Bi0 + Bi][j];
+
+    if (nullptr != eigenprecision)
+      eigenprecision[ei] = Bprecision[Bi];
+  }
+
+  return (rank < N) ? (N - rank) : 0U;
 }
 
-bool ON_SolveSVD(
-  int row_count,
-  int col_count,
-  double const * const * U,
-  const double* invW,
-  double const * const * V,
-  const double* B,
-  double*& X
-  )  
-{
-  int i, j;
-  double *Y;
-  const double* p0;
-  double workY[128], x;
 
-  if ( row_count < 1 || col_count < 1 || 0 == U || 0 == invW || 0 == V || 0 == B)
-    return false;
 
-  if ( 0 == X )
-    X = (double*)onmalloc(col_count*sizeof(X[0]));
-  Y = (col_count > 128)
-    ? ( (double*)onmalloc(col_count*sizeof(*Y)) )
-    : workY;
-  for (i = 0; i < col_count; i++)
-  {
-    double y = 0.0;
-    for (j = 0; j < row_count; j++)
-      y += U[j][i] * *B++;
-    B -= row_count;
-    Y[i] = invW[i] * y;
-  }
-  for (i = 0; i < col_count; i++)
-  {
-    p0 = V[i];
-    j = col_count;
-    x = 0.0;
-    while (j--)
-      x += *p0++ * *Y++;
-    Y -= col_count;
-    X[i] = x;
-  }
-  if (Y != workY) 
-    onfree(Y);
-
-  return true;
-}

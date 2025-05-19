@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 ////////////////////////////////////////////////////////////////
 //				
@@ -31,16 +29,18 @@
 
 // Windows Open GL files require windows.h to be included before the
 // Open GL header files.
+#pragma ON_PRAGMA_WARNING_PUSH
 #include <windows.h>
 #include <GL/gl.h>      // Open GL basic definitions
 #include <GL/glu.h>     // Open GL utilities (for GL NURBS stuff)
+#pragma ON_PRAGMA_WARNING_POP
 
-#elif defined(ON_COMPILER_XCODE)
+#elif defined(ON_COMPILER_CLANG)
 
 // Tested compilers:
-//   Apple XCode 2.4.1
+//   Apple Xcode 2.4.1
 //   Support for other Apple compilers is not available.
-#include <GLUT/glut.h>   // Open GL auxillary functions
+#include <GLUT/glut.h>   // Open GL auxiliary functions
 
 #else
 
@@ -86,7 +86,7 @@ void ON_GL(
       const ON_Curve&,   // 
       GLUnurbsObj*,      // created with gluNewNurbsRenderer
       GLenum = 0,        // type of curve (if 0, type is automatically set)
-      double[][4] = NULL // optional transformation applied to curve
+      double[][4] = nullptr // optional transformation applied to curve
       );
 
 // must be bracketed by calls to gluBeginSurface( nobj )/gluEndSurface( nobj )
@@ -110,10 +110,10 @@ void ON_GL(
       GLenum = 0,           // type of curve (if 0, type is automatically set)
       int = 1,              // bPermitKnotScaling - If true, curve knots may
                             // be rescaled to avoid knot vectors GL cannot handle.
-      double* = NULL,       // knot_scale[2] - If not NULL and bPermitKnotScaling,
+      double* = nullptr,       // knot_scale[2] - If not nullptr and bPermitKnotScaling,
                             // the scaling applied to the knot vector is
                             // returned here.
-      double[][4] = NULL    // optional transformation applied to curve
+      double[][4] = nullptr    // optional transformation applied to curve
       );
 
 void ON_GL( // low level NURBS curve renderer
@@ -125,10 +125,10 @@ void ON_GL( // low level NURBS curve renderer
       GLenum = 0,         // type of curve (if 0, type is automatically set)
       int = 1,            // bPermitKnotScaling - If true, curve knots may
                           // be rescaled to avoid knot vectors GL cannot handle.
-      double* = NULL,     // knot_scale[2] - If not NULL and bPermitKnotScaling,
+      double* = nullptr,     // knot_scale[2] - If not nullptr and bPermitKnotScaling,
                           // the scaling applied to the knot vector is
                           // returned here.
-      double[][4] = NULL  // optional transformation applied to curve
+      double[][4] = nullptr  // optional transformation applied to curve
       );
 
 
@@ -148,11 +148,11 @@ void ON_GL(
                                  // (if 0, type is automatically set)
       int = 1,           // bPermitKnotScaling - If true, surface knots may
                          // be rescaled to avoid knot vectors GL cannot handle.
-      double* = NULL,    // knot_scale0[2] - If not NULL and bPermitKnotScaling,
-                         // the scaleing applied to the first parameter is
+      double* = nullptr,    // knot_scale0[2] - If not nullptr and bPermitKnotScaling,
+                         // the scaling applied to the first parameter is
                          // returned here.
-      double* = NULL     // knot_scale0[2] - If not NULL and bPermitKnotScaling,
-                         // the scaleing applied to the second parameter is
+      double* = nullptr     // knot_scale0[2] - If not nullptr and bPermitKnotScaling,
+                         // the scaling applied to the second parameter is
                          // returned here.
       );
 
@@ -182,13 +182,13 @@ void ON_GL(
       );
 
 void ON_GL( 
-      const ON_Material* // pass NULL to get OpenNURBS's default material
+      const ON_Material* // pass nullptr to get OpenNURBS's default material
       );
 
 // Use ON_GL( const ON_Light, ...) to add OpenNURBS spotlights to
 // GL lighting model
 void ON_GL( 
-      const ON_Light*, // pass NULL to disable the light
+      const ON_Light*, // pass nullptr to disable the light
       GLenum                  // GL_LIGHTi where 0 <= i <= GL_MAX_LIGHTS
                               // See glLight*() documentation for details
       );
@@ -235,7 +235,7 @@ void ON_GL(
           const double*, // knot, ON_NurbsCurve... knot vector
           GLfloat*,      // glknot[] - GL knot vector
           int = 0,       // bPermitScaling - true if re-scaling is allowed
-          double* = NULL // scale[2] - If not NULL and bPermitScaling is true,
+          double* = nullptr // scale[2] - If not nullptr and bPermitScaling is true,
                          // then the scaling parameters are returned here.
                          // ( glknot = (knot = scale[0])*scale[1] )
           );

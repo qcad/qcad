@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(OPENNURBS_RENDERING_INC_)
 #define OPENNURBS_RENDERING_INC_
@@ -62,7 +60,7 @@ public:
     plugin_id - [in]
   Returns:
     A pointer to the plug-in's mapping reference, if there
-    is one. Otherwise NULL is returned.
+    is one. Otherwise nullptr is returned.
   */
   const ON_MappingRef* MappingRef( 
     const ON_UUID& plugin_id 
@@ -99,7 +97,7 @@ public:
       ON_TextureMapping id
   Returns:
     A pointer to the plug-in's mapping channel, if there
-    is one. Otherwise NULL is returned.
+    is one. Otherwise nullptr is returned.
   */
   const ON_MappingChannel* MappingChannel( 
     const ON_UUID& plugin_id, 
@@ -111,6 +109,12 @@ public:
     const ON_UUID& mapping_id
     ) const;
 
+  /*
+  Returns:
+    The mapping channel id to use when calling MappingChannel to retrieve the OCS mapping if there is one.
+    See CRhinoTextureMapping::OcsMappingTransformForObject for an easy helper function to get the transform per object
+  */
+  static int OCSMappingChannelId(void);
 
   /*
   Parameters:
@@ -119,7 +123,7 @@ public:
     mapping_id - [in]
       ON_TextureMapping id
   Returns:
-    True if the mapping channel was added or a pefect
+    True if the mapping channel was added or a perfect
     match already existed.  False if a mapping channel 
     with a different mapping_id already exists for this
     plug-in and channel.
@@ -170,21 +174,40 @@ public:
   // a distinct value of ON_MappingRef.m_plugin_id.
   ON_ClassArray<ON_MappingRef> m_mappings;
 
+  /*
+  Parameters:
+    bEnable - [in]
+      false - (default)
+       Do not generate bitmap textures that 
+       approximate procedural textures.
+      true - 
+       generate bitmap textures that approximate
+       procedural textures and use these for
+       quick previews.
+  Returns:
+    True if advanced texture preview is enabled.
+  */
+  void EnableAdvancedTexturePreview(bool b);
+
+  /*
+  Returns:
+    True if advanced texture preview is enabled.
+  */
+  bool AdvancedTexturePreview() const;
+
   bool m_bCastsShadows;    // default is true
   bool m_bReceivesShadows; // default is true
-  bool m_bReserved1;
-  bool m_bReserved2;
+
+private:
+  // m_bits encodes 8 true/false settings
+  unsigned char m_bits; // (m_bits & 1) == AdvancedTexturePreview();
+
+  unsigned char m_reserved1;
 };
 
 #if defined(ON_DLL_TEMPLATE)
-// This stuff is here because of a limitation in the way Microsoft
-// handles templates and DLLs.  See Microsoft's knowledge base 
-// article ID Q168958 for details.
-#pragma warning( push )
-#pragma warning( disable : 4231 )
 ON_DLL_TEMPLATE template class ON_CLASS ON_ClassArray<ON_RenderingAttributes>;
 ON_DLL_TEMPLATE template class ON_CLASS ON_ClassArray<ON_ObjectRenderingAttributes>;
-#pragma warning( pop )
 #endif
 
 

@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(ON_CIRCLE_INC_)
 #define ON_CIRCLE_INC_
@@ -20,7 +18,7 @@ class ON_NurbsCurve;
 
 /*
 Description:
-	ON_Circle is a circle in 3d.  The cirle is represented by a radius and an 
+	ON_Circle is a circle in 3d.  The circle is represented by a radius and an 
 	orthonormal frame	of the plane containing the circle, with origin at the center.
 
 	An Is_Valid() circle has positive radius and an Is_ Valid() plane defining the frame.
@@ -32,9 +30,16 @@ Description:
 class ON_CLASS ON_Circle
 {
 public:
-  // Creates a radius one circle with center (0,0,0)
-  // in the world XY plane
-  ON_Circle();
+
+  ON_Plane plane = ON_Plane::World_xy;
+  double   radius = 1.0;
+
+  ON_Circle() = default;
+  ~ON_Circle() = default;
+  ON_Circle(const ON_Circle&) = default;
+  ON_Circle& operator=(const ON_Circle&) = default;
+
+  static const ON_Circle UnitCircle; // unit circle in the xy plane
 
   // Creates a circle in the plane with center at
   // plane.origin.
@@ -73,8 +78,6 @@ public:
     const ON_3dPoint& Q,
     const ON_3dPoint& R
     );
-
-  ~ON_Circle();
 
   // Creates a circle in the plane with center at
   // plane.origin.
@@ -157,16 +160,16 @@ public:
       If true and the input tight_bbox is valid, then returned
       tight_bbox is the union of the input tight_bbox and the 
       arc's tight bounding box.
-		xform -[in] (default=NULL)
-      If not NULL, the tight bounding box of the transformed
+		xform -[in] (default=nullptr)
+      If not nullptr, the tight bounding box of the transformed
       arc is calculated.  The arc is not modified.
 	Returns:
     True if a valid tight_bbox is returned.
   */
 	bool GetTightBoundingBox( 
 			ON_BoundingBox& tight_bbox, 
-      int bGrowBox = false,
-			const ON_Xform* xform = 0
+      bool bGrowBox = false,
+			const ON_Xform* xform = nullptr
       ) const;
 
   bool Transform( const ON_Xform& );
@@ -231,6 +234,9 @@ public:
 
   bool Reverse();
 
+  // // absolute value of maximum coordinate
+  double MaximumCoordinate() const;
+
   // Description:
   //   Get a four span rational degree 2 NURBS circle representation
   //   of the circle.
@@ -238,7 +244,7 @@ public:
   //   2 for success, 0 for failure
   // Remarks:
   //   Note that the parameterization of NURBS curve
-  //   does not match  circle's transcendental paramaterization.  
+  //   does not match  circle's transcendental parameterization.
   //   Use ON_Circle::GetRadianFromNurbFormParameter() and
   //   ON_Circle::GetParameterFromRadian() to convert between 
   //   the NURBS curve parameter and the transcendental parameter.
@@ -312,11 +318,6 @@ public:
         double* nurbs_parameter
         ) const;
 
-public:
-  // circle is in the plane with center at plane.m_origin.
-  ON_Plane   plane;  
-  double     radius;   // radius
-  //ON_3dPoint m_point[3]; // 3 points on the circle
 };
 
 

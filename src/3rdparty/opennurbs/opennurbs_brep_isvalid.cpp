@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,9 +10,16 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
+
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
 
 bool
 ON_Brep::IsValidVertexTopology( int vertex_index, ON_TextLog* text_log ) const
@@ -281,7 +287,7 @@ ON_Brep::IsValidFaceTopology( int face_index, ON_TextLog* text_log  ) const
     {
       text_log->Print("brep.m_F[%d] face is not valid.\n",face_index);
       text_log->PushIndent();
-      text_log->Print("brep.m_S[face.m_si=%d] is NULL\n",face.m_si);
+      text_log->Print("brep.m_S[face.m_si=%d] is nullptr\n",face.m_si);
       text_log->PopIndent();
     }
     return false;
@@ -293,7 +299,7 @@ ON_Brep::IsValidFaceTopology( int face_index, ON_TextLog* text_log  ) const
     {
       text_log->Print("brep.m_F[%d] face is not valid.\n",face_index);
       text_log->PushIndent();
-      text_log->Print("face.ProxySurface() is NULL\n");
+      text_log->Print("face.ProxySurface() is nullptr\n");
       text_log->PopIndent();
     }
     return false;
@@ -394,14 +400,14 @@ ON_Brep::IsValidEdgeTopology( int edge_index, ON_TextLog* text_log ) const
   if ( 0 == m_C3[c3i] )
   {
     if ( text_log )
-      text_log->Print("ON_Brep.m_E[%d].m_c3i = %d, but m_C3[%d] is NULL.\n",edge_index,c3i,c3i);
+      text_log->Print("ON_Brep.m_E[%d].m_c3i = %d, but m_C3[%d] is nullptr.\n",edge_index,c3i,c3i);
     return false;
   }
 
   if ( 0 == edge.ProxyCurve() )
   {
     if ( text_log )
-      text_log->Print("brep.m_E[%d].m_c3i = %d, but edge.ProxyCurve() is NULL.\n",edge_index,c3i);
+      text_log->Print("brep.m_E[%d].m_c3i = %d, but edge.ProxyCurve() is nullptr.\n",edge_index,c3i);
     return false;
   }
 
@@ -505,7 +511,7 @@ ON_Brep::IsValidEdgeTopology( int edge_index, ON_TextLog* text_log ) const
 
 
     const int vertex_edge_count = vertex.m_ei.Count();
-    ON_BOOL32 bFoundIt = false;
+    bool bFoundIt = false;
     int vei;
     for ( vei = 0; vei < vertex_edge_count && !bFoundIt; vei++ ) 
     {
@@ -802,14 +808,14 @@ ON_Brep::IsValidTrimTopology( int trim_index, ON_TextLog* text_log ) const
   if ( 0 == m_C2[trim.m_c2i] )
   {
     if ( text_log )
-      text_log->Print("ON_Brep.m_T[%d].m_c2i = %d, but m_C2[%d] is NULL.\n",trim_index,trim.m_c2i,trim.m_c2i);
+      text_log->Print("ON_Brep.m_T[%d].m_c2i = %d, but m_C2[%d] is nullptr.\n",trim_index,trim.m_c2i,trim.m_c2i);
     return false;
   }
 
   if ( 0 == trim.ProxyCurve() )
   {
     if ( text_log )
-      text_log->Print("brep.m_T[%d].m_c2i = %d, but trim.ProxyCurve() is NULL.\n",trim_index,trim.m_c2i);
+      text_log->Print("brep.m_T[%d].m_c2i = %d, but trim.ProxyCurve() is nullptr.\n",trim_index,trim.m_c2i);
     return false;
   }
 
@@ -1082,7 +1088,7 @@ ON_Brep::IsValidTopology( ON_TextLog* text_log ) const
       if ( edge.ProxyCurve() )
       {
         if ( text_log )
-          text_log->Print( "ON_Brep.m_E[%d] is deleted (m_edge_index = -1) but edge.m_curve is not NULL.\n",
+          text_log->Print( "ON_Brep.m_E[%d] is deleted (m_edge_index = -1) but edge.m_curve is not nullptr.\n",
                            ei );
         return false;
       }
@@ -1210,7 +1216,7 @@ ON_Brep::IsValidTopology( ON_TextLog* text_log ) const
       if ( face.ProxySurface() )
       {
         if ( text_log )
-          text_log->Print( "ON_Brep.m_F[%d] is deleted (m_face_index = -1) but face.ProxySurface() is not NULL.\n",
+          text_log->Print( "ON_Brep.m_F[%d] is deleted (m_face_index = -1) but face.ProxySurface() is not nullptr.\n",
                            fi );
         return false;
       }
@@ -1494,7 +1500,7 @@ ON_Brep::IsValidGeometry( ON_TextLog* text_log ) const
     if ( !m_C2[c2i] )
     {
       continue;
-      // NULL 2d curves are ok if they are not referenced
+      // nullptr 2d curves are ok if they are not referenced
     }
     if ( !m_C2[c2i]->IsValid(text_log) )
     {
@@ -1516,7 +1522,7 @@ ON_Brep::IsValidGeometry( ON_TextLog* text_log ) const
     if ( !m_C3[c3i] )
     {
       continue;
-      // NULL 3d curves are ok if they are not referenced
+      // nullptr 3d curves are ok if they are not referenced
     }
     if ( !m_C3[c3i]->IsValid(text_log) )
     {
@@ -1538,7 +1544,7 @@ ON_Brep::IsValidGeometry( ON_TextLog* text_log ) const
     if ( !m_S[si] )
     {
       continue;
-      // NULL 3d surfaces are ok if they are not referenced
+      // nullptr 3d surfaces are ok if they are not referenced
     }
     if ( !m_S[si]->IsValid(text_log) )
     {

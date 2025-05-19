@@ -1,0 +1,38 @@
+// This file contains the version resources for freetype263.vcxproj
+// The version numbers and copyright information comes from the header file below.
+// Please do not modify this file unless you are certain you know what you are doing!
+#include "..\opennurbs_public_version.h"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION VERSION_WITH_COMMAS
+ PRODUCTVERSION VERSION_WITH_COMMAS
+ FILEFLAGSMASK RHINO_FILE_FLAGS_MASK
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Robert McNeel & Associates"
+            VALUE "FileDescription", "freetype263 Dynamic Link Library"
+            VALUE "FileVersion", VERSION_WITH_PERIODS
+            VALUE "InternalName", "freetype263"
+            VALUE "LegalCopyright", COPYRIGHT
+            VALUE "LegalTrademarks", "Rhinoceros is a registered trademark of Robert McNeel & Associates."
+            VALUE "OriginalFilename", "freetype263.dll"
+            VALUE "ProductName", "freetype263"
+            VALUE "ProductVersion", RMA_VERSION_WITH_PERIODS_STRING
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

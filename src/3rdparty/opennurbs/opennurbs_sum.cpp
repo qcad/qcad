@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,9 +10,16 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
+
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
 
 ON_Sum::ON_Sum()
 {
@@ -40,6 +46,15 @@ void ON_Sum::Begin( double starting_value )
   m_neg_count = 0;
   m_zero_count = 0;
 
+  // initialize memory. Fixes https://mcneel.myjetbrains.com/youtrack/issue/RH-85423
+  memset(m_pos_sum1, 0, sizeof(double) * sum1_max_count);
+  memset(m_pos_sum2, 0, sizeof(double) * sum2_max_count);
+  memset(m_pos_sum3, 0, sizeof(double) * sum3_max_count);
+
+  memset(m_neg_sum1, 0, sizeof(double) * sum1_max_count);
+  memset(m_neg_sum2, 0, sizeof(double) * sum2_max_count);
+  memset(m_neg_sum3, 0, sizeof(double) * sum3_max_count);
+
   if ( starting_value > 0.0 )
   {
     m_pos_sum = starting_value;
@@ -59,12 +74,14 @@ double ON_Sum::SortAndSum( int count, double* a )
   {
     if ( count >= 2 )
     {
-      ON_SortDoubleArray( ON::quick_sort, a, count );
+      ON_SortDoubleArray( ON::sort_algorithm::quick_sort, a, count );
       //double a0 = fabs(a[0]);
       //double a1 = fabs(a[count-1]);
       m_sum_err += ON_EPSILON*( fabs(a[count-1]) + count*fabs(a[0]) );
     }
-    if ( a[count] < 0.0 )
+    // test first item in the array for sign
+    // fixes https://mcneel.myjetbrains.com/youtrack/issue/RH-85423
+    if ( a[0] < 0.0 ) 
     {
       a += count-1;
       while (count--)
@@ -77,6 +94,13 @@ double ON_Sum::SortAndSum( int count, double* a )
     }
   }
   return s;
+}
+
+void ON_Sum::Plus( double x, double dx )
+{
+  Plus(x);
+  if ( ON_IsValid(dx) )
+    m_sum_err += fabs(dx);
 }
 
 void ON_Sum::Plus( double x )

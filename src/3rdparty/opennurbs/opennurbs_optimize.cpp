@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,10 +10,16 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
 
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
 
 
 int ON_FindLocalMinimum(
@@ -69,7 +74,7 @@ int ON_FindLocalMinimum(
 
   if ( 0 == t_addr )
   {
-    ON_ERROR("t_addr is NULL");
+    ON_ERROR("t_addr is nullptr");
     return 0;
   }
 
@@ -190,15 +195,22 @@ int ON_FindLocalMinimum(
 
 
 ON_LocalZero1::ON_LocalZero1() 
-               : m_t0(ON_UNSET_VALUE), m_t1(ON_UNSET_VALUE),
-                 m_f_tolerance(0.0), m_t_tolerance(0.0),
-                 m_k(NULL), m_k_count(0)
+: m_t0(ON_UNSET_VALUE)
+, m_t1(ON_UNSET_VALUE)
+, m_f_tolerance(0.0)
+, m_t_tolerance(0.0)
+, m_k(nullptr)
+, m_k_count(0)
+, m_s0(ON_UNSET_VALUE)
+, m_f0(ON_UNSET_VALUE)
+, m_s1(ON_UNSET_VALUE)
+, m_f1(ON_UNSET_VALUE)
 {}
 
 ON_LocalZero1::~ON_LocalZero1()
 {}
 
-ON_BOOL32
+bool
 ON_LocalZero1::BracketZero( double s0, double f0, 
                              double s1, double f1,
                              int level )
@@ -255,12 +267,12 @@ ON_LocalZero1::BracketZero( double s0, double f0,
   return false;
 }
 
-ON_BOOL32
+bool
 ON_LocalZero1::BracketSpan( double s0, double f0, double s1, double f1 )
 {
   int i0, i1, i;
   double fm, fp;
-  ON_BOOL32 rc = true;
+  bool rc = true;
   if ( m_k && m_k_count >= 3 ) {
     i0 = ON_SearchMonotoneArray(m_k,m_k_count,s0);
     if ( i0 < 0 )
@@ -276,8 +288,8 @@ ON_LocalZero1::BracketSpan( double s0, double f0, double s1, double f1 )
       i0++;
     if ( i0 <= i1 ) {
       // we have s0 < m_k[i0] <= ... <= m_k[i1] < s1
-      Evaluate( m_k[i0], &fm, NULL,-1 ); // gaurd against C0 discontinuities
-      Evaluate( m_k[i0], &fp, NULL, 1 );
+      Evaluate( m_k[i0], &fm, nullptr,-1 ); // guard against C0 discontinuities
+      Evaluate( m_k[i0], &fp, nullptr, 1 );
       if ( (f0 <= 0.0 && fm >= 0.0) || (f0 >= 0.0 && fm <= 0.0) ) {
         m_s1 = m_k[i0];
         m_f1 = fm;
@@ -286,8 +298,8 @@ ON_LocalZero1::BracketSpan( double s0, double f0, double s1, double f1 )
         m_s0 = m_k[i0];
         m_f0 = fp;
         if ( i0 < i1 ) {
-          Evaluate( m_k[i1], &fm, NULL, -1 );
-          Evaluate( m_k[i1], &fp, NULL,  1 );
+          Evaluate( m_k[i1], &fm, nullptr, -1 );
+          Evaluate( m_k[i1], &fp, nullptr,  1 );
           if ( (f1 <= 0.0 && fp >= 0.0) || (f1 >= 0.0 && fp <= 0.0) ) {
             m_s0 = m_k[i1];
             m_f0 = fp;
@@ -301,8 +313,8 @@ ON_LocalZero1::BracketSpan( double s0, double f0, double s1, double f1 )
               // m_k[i],m_k[i+1].  We need to do this in order to make sure
               // we are passing a C2 function to the repeated zero finders.
               i = (i0+i1)>>1;
-              Evaluate( m_k[i], &fm, NULL, -1 );
-              Evaluate( m_k[i], &fp, NULL,  1 );
+              Evaluate( m_k[i], &fm, nullptr, -1 );
+              Evaluate( m_k[i], &fp, nullptr,  1 );
               if ( (f0 <= 0.0 && fm >= 0.0) || (f0 >= 0.0 && fm <= 0.0) ) {
                 m_s1 = m_k[i];
                 m_f1 = fm;
@@ -339,71 +351,111 @@ ON_LocalZero1::BracketSpan( double s0, double f0, double s1, double f1 )
   return rc;
 }
 
-ON_BOOL32 ON_LocalZero1::FindZero( double* t )
+bool ON_LocalZero1::FindZero( double* t )
 {
-  // Find values of m_t0 and m_t1 between t0 and t1 such that
+  // Find values of m_s0 and m_s1 between m_t0 and m_t1 such that
   // f(m_t0) and f(m_t1) have different signs
-  ON_BOOL32 rc = ( m_t0 == ON_UNSET_VALUE || m_t0 == ON_UNSET_VALUE ) ? true : false;
 
-  if ( rc ) {
-    if ( m_t0 < m_t0 ) {
-      m_s0 = m_t0;
-      m_s1 = m_t0;
+  if ( !ON_IsValid(m_t0) )
+  {
+    if ( !ON_IsValid(m_t1) )
+    {
+      ON_ERROR("Illegal input - m_t0 and m_t1 are not valid.");
+      return false;
     }
-    else {
-      m_s0 = m_t1;
-      m_s1 = m_t0;
-      if ( m_t0 == m_t1 ) {
-        if ( Evaluate( m_t0, &m_f0, NULL, 1 ) ) {
-          m_f1 = m_f0;
-          if ( fabs(m_f0) <= m_f_tolerance ) {
-            *t = m_t0;
-            return true;
-          }
-        }
-        ON_ERROR("Illegal input");
-        return false;
+    m_s0 = m_s1 = m_t1;
+  }
+  else if ( !ON_IsValid(m_t1) )
+  {
+    m_s0 = m_s1 = m_t0;
+  }
+  else if ( m_t0 <= m_t1 )
+  {
+    m_s0 = m_t0;
+    m_s1 = m_t1;
+  }
+  else if ( m_t1 < m_t0 )
+  {
+    m_s0 = m_t1;
+    m_s1 = m_t0;
+  }
+  else
+  {
+    ON_ERROR("Illegal input - m_t0 and m_t1 are not valid.");
+    return false;
+  }
+
+  if ( m_s0 == m_s1 )
+  {
+    if ( Evaluate( m_s0, &m_f0, nullptr, 1 ) ) 
+    {
+      m_f1 = m_f0;
+      if ( fabs(m_f0) <= m_f_tolerance ) 
+      {
+        *t = m_s0;
+        return true;
       }
+      ON_ERROR("Illegal input - m_t0 = m_t1 and the function value is not zero at m_t0.");
+      return false;
     }
+    ON_ERROR("Evaluation failed.");
+    return false;
   }
 
-  if (rc)
-    rc = Evaluate( m_s0, &m_f0, NULL, 1 );
-  if (rc)
-    rc = Evaluate( m_s1, &m_f1, NULL, -1 );
-
-  if (rc)
-    rc = BracketZero( m_s0, m_f0, m_s1, m_f1 );
-  if ( rc ) {
-    if ( fabs(m_f0) <= m_f_tolerance && fabs(m_f0) <= fabs(m_f1) ) {
-      // |f(s0)| <= user specified stopping tolerance
-      *t = m_s0;
-    }
-    else if ( fabs(m_f1) <= m_f_tolerance ) {
-      // |f(s1)| <= user specified stopping tolerance
-      *t = m_s1;
-    }
-    else {
-      if (rc)
-        rc = BracketSpan( m_s0, m_f0, m_s1, m_f1 );
-      if (rc)
-        rc = NewtonRaphson( m_s0, m_f0, m_s1, m_f1, 128, t );
-    }
-  }
-  if (!rc) {
-    ON_ERROR("ON_LocalZero1::FindZero() failed");
+  if ( !Evaluate( m_s0, &m_f0, nullptr, 1 ) )
+  {
+    ON_ERROR("Evaluation failed at m_s0.");
+    return false;
   }
 
-  return rc;
+  if ( !Evaluate( m_s1, &m_f1, nullptr, -1 ) )
+  {
+    ON_ERROR("Evaluation failed at m_s1.");
+    return false;
+  }
+
+  if ( !BracketZero( m_s0, m_f0, m_s1, m_f1 ) )
+  {
+    ON_ERROR("Unable to bracket a zero of the function.");
+    return false;
+  }
+
+  if ( fabs(m_f0) <= m_f_tolerance && fabs(m_f0) <= fabs(m_f1) )
+  {
+    // |f(s0)| <= user specified stopping tolerance
+    *t = m_s0;
+    return true;
+  }
+  
+  if ( fabs(m_f1) <= m_f_tolerance ) 
+  {
+    // |f(s1)| <= user specified stopping tolerance
+    *t = m_s1;
+    return true;
+  }
+
+  if ( !BracketSpan( m_s0, m_f0, m_s1, m_f1 ) )
+  {
+    ON_ERROR("Unable to bracket the function in a span of m_k[].  m_k[] may be invalid.");
+    return false;
+  }
+
+  if ( !NewtonRaphson( m_s0, m_f0, m_s1, m_f1, 128, t ) )
+  {
+    ON_ERROR("Newton-Raphson failed to converge.  Is your function C2?");
+    return false;
+  }
+
+  return true;
 }
 
-ON_BOOL32 ON_LocalZero1::NewtonRaphson( double s0, double f0,
+bool ON_LocalZero1::NewtonRaphson( double s0, double f0,
                                     double s1, double f1,
                                     int maxit, double* t )
 {
   // private function - input must satisfy
   //
-  // 1) t is not NULL
+  // 1) t is not nullptr
   //
   // 2) maxit >= 2
   //
@@ -525,7 +577,7 @@ ON_BOOL32 ON_LocalZero1::NewtonRaphson( double s0, double f0,
 
     if ( fabs(s1-s0) <= m_t_tolerance ) {
       // a root has been bracketed to an interval that is small enough
-      // to satisify user.
+      // to satisfy user.
       *t = (fabs(f0) <= fabs(f1)) ? s0 : s1;
       return true;
     }

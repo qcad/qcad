@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(OPENNURBS_LIGHT_INC_)
 #define OPENNURBS_LIGHT_INC_
@@ -23,72 +21,55 @@ class ON_CLASS ON_Light : public ON_Geometry
 public:
   ON_Light();
   ~ON_Light();
-  // C++ defaults work fine
-  //ON_Light& operator=(const ON_Light&);
-  //ON_Light(const ON_Light&);
+  ON_Light& operator=(const ON_Light&) = default;
+  ON_Light(const ON_Light&) = default;
+
+  static const ON_Light Unset;
 
   /////////////////////////////////////////////////////////////////
   //
   // ON_Object virtual functions 
   //
 
-  /*
-  Description:
-    Tests an object to see if its data members are correctly
-    initialized.
-  Parameters:
-    text_log - [in] if the object is not valid and text_log
-        is not NULL, then a brief englis description of the
-        reason the object is not valid is appened to the log.
-        The information appended to text_log is suitable for 
-        low-level debugging purposes by programmers and is 
-        not intended to be useful as a high level user 
-        interface tool.
-  Returns:
-    @untitled table
-    true     object is valid
-    false    object is invalid, uninitialized, etc.
-  Remarks:
-    Overrides virtual ON_Object::IsValid
-  */
-  ON_BOOL32 IsValid( ON_TextLog* text_log = NULL ) const;
+  bool IsValid( class ON_TextLog* text_log = nullptr ) const override;
 
-  void Dump( ON_TextLog& ) const; // for debugging
+  void Dump( ON_TextLog& ) const override; // for debugging
 
   // Use ON_BinaryArchive::WriteObject() and ON_BinaryArchive::ReadObject()
   // for top level serialization.  These Read()/Write() members should just
   // write/read specific definitions.  In particular, they should not write/
   // read any chunk typecode or length information.  The default 
   // implementations return false and do nothing.
-  ON_BOOL32 Write(
+  bool Write(
          ON_BinaryArchive&  // serialize definition to binary archive
-       ) const;
+       ) const override;
 
-  ON_BOOL32 Read(
+  bool Read(
          ON_BinaryArchive&  // restore definition from binary archive
-       );
+       ) override;
 
-  ON::object_type ObjectType() const;
+  ON::object_type ObjectType() const override;
 
   // virtual
-  ON_UUID ModelObjectId() const;
+  ON_UUID ModelObjectId() const override;
 
 
   /////////////////////////////////////////////////////////////////
   //
   // ON_Geometry virtual functions 
   //
-  int Dimension() const;
+  int Dimension() const override;
 
-  ON_BOOL32 GetBBox( // returns true if successful
-         double*,    // boxmin[dim]
-         double*,    // boxmax[dim]
-         ON_BOOL32 = false  // true means grow box
-         ) const;
+  // virtual ON_Geometry GetBBox override		
+  bool GetBBox( double* boxmin, double* boxmax, bool bGrowBox = false ) const override;
 
-  ON_BOOL32 Transform( 
+  // virtual ON_Geometry GetTightBoundingBox override		
+  bool GetTightBoundingBox(ON_BoundingBox& tight_bbox, bool bGrowBoxAsInt, const ON_Xform* xform) const override;
+
+
+  bool Transform( 
          const ON_Xform&
-         );
+         ) override;
  
   /////////////////////////////////////////////////////////
   //
@@ -101,8 +82,8 @@ public:
   //
   // turn light on/off
   //
-  ON_BOOL32 Enable( ON_BOOL32 = true ); // returns previous state
-  ON_BOOL32 IsEnabled() const;
+  bool Enable( bool = true ); // returns previous state
+  bool IsEnabled() const;
   
   /////////////////////////////////////////////////////////
   //
@@ -112,11 +93,11 @@ public:
   void SetStyle(ON::light_style);
   ON::light_style Style() const;
 
-  const ON_BOOL32 IsPointLight() const;
-  const ON_BOOL32 IsDirectionalLight() const;
-  const ON_BOOL32 IsSpotLight() const;
-  const ON_BOOL32 IsLinearLight() const;
-  const ON_BOOL32 IsRectangularLight() const;
+  const bool IsPointLight() const;
+  const bool IsDirectionalLight() const;
+  const bool IsSpotLight() const;
+  const bool IsLinearLight() const;
+  const bool IsRectangularLight() const;
 
   ON::coordinate_system CoordinateSystem() const; // determined by style
 
@@ -135,7 +116,7 @@ public:
   Returns:
     true if successful.
   */
-  ON_BOOL32 GetLightXform( 
+  bool GetLightXform( 
            const ON_Viewport& vp,
            ON::coordinate_system dest_cs, 
            ON_Xform& xform 
@@ -148,7 +129,7 @@ public:
   ON_3dVector Direction() const;
   ON_3dVector PerpindicularDirection() const;
 
-  double Intensity() const; // 0.0 = 0%  1.0 = 100%
+  double Intensity() const; // 0.0 = 0%  1.0 = 100%  Only clamped above zero - no maximum.
   void SetIntensity(double);
 
   double PowerWatts() const;
@@ -196,7 +177,7 @@ public:
 
   //////////
   // The spot exponent varies from 0.0 to 128.0 and provides
-  // an exponential interface for controling the focus or 
+  // an exponential interface for controlling the focus or 
   // concentration of a spotlight (like the 
   // OpenGL GL_SPOT_EXPONENT parameter).  The spot exponent
   // and hot spot parameters are linked; changing one will
@@ -208,7 +189,7 @@ public:
 
   //////////
   // The hot spot setting runs from 0.0 to 1.0 and is used to
-  // provides a linear interface for controling the focus or 
+  // provides a linear interface for controlling the focus or 
   // concentration of a spotlight.
   // A hot spot setting of 0.0 corresponds to a spot exponent of 128.
   // A hot spot setting of 1.0 corresponds to a spot exponent of 0.0.
@@ -248,14 +229,6 @@ public:
   void SetLightIndex( int );
   int LightIndex() const;
 
-  // m_light_id is set and maintained by Rhino - if your
-  // plug-in is messing with this field, fix the plugin
-  //__declspec(deprecated) void SetLightUuid( const ON_UUID& );
-
-  // m_light_id is set and maintained by Rhino - if your
-  // plug-in is messing with this field, fix the plugin
-  //__declspec(deprecated) const ON_UUID& LightUuid() const;
-
   /////////////////////////////////////////////////////////
   //
   // light name
@@ -269,7 +242,7 @@ public:
   ON_UUID       m_light_id;
   ON_wString    m_light_name;
 
-  ON_BOOL32                 m_bOn;   // true if light is on
+  bool                 m_bOn;   // true if light is on
   ON::light_style      m_style; // style of light
 
   ON_Color m_ambient;
@@ -284,8 +257,15 @@ public:
                            // corners of rectangular lights are m_location, m_location+m_length,
                            // m_location+m_width, m_location+m_width+m_length
 
-  double      m_intensity; // 0.0 = 0%, 1.0 = 100% 
-  double      m_watts;     // ignored if 0
+  double      m_intensity; // Linear dimming/brightening factor: 0.0 = off, 1.0 = 100%.
+                           // Values < 0.0 and values > 1.0 are permitted but are
+                           // not consistently interpreted by various renderers.
+                           // Renderers should clamp the range to [0.0, 1.0] if their
+                           // lighting model does not support more exotic interpretations
+                           // of m_intensity.
+  double      m_watts;     // Used by lighting models that reference lighting fixtures.
+                           // Values < 0.0 are invalid.  If m_watts is 0.0, the
+                           // value is ignored.
 
   // spot settings - ignored for non-spot lights
   double       m_spot_angle;    // 0.0 to 90.0

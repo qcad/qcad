@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(ON_POLYLINE_INC_)
 #define ON_POLYLINE_INC_
@@ -20,9 +18,10 @@ class ON_CLASS ON_Polyline : public ON_3dPointArray
 {
 public:
   ON_Polyline();
+  ~ON_Polyline();
   ON_Polyline(const ON_3dPointArray&);
   ON_Polyline& operator=(const ON_3dPointArray&);
-  ~ON_Polyline();
+
 
   // Description:
   //   Create a regular polygon inscribed in a circle.
@@ -40,7 +39,7 @@ public:
 
   // Description:
   //   Create a regular polygon circumscribe about a circle.
-  //   The midpoints of the polygon's edges will be tanget to the
+  //   The midpoints of the polygon's edges will be tangent to the
   //   circle.
   // Parameters:
   //   circle - [in]
@@ -120,10 +119,33 @@ public:
     double tolerance = 0.0 
     ) const;
 
+  /*
+  Description:
+    Determine if a polyline is convex.
+  Parameters:
+    bStrictlyConvex - [in]
+      If false, collinear segments are considered convex.
+  Returns
+    True if the polyline is a closed, convex loop.
+  */
+  bool IsConvexLoop(
+    bool bStrictlyConvex
+  ) const;
+
 
   // Returns:
   //   Length of the polyline.
   double Length() const;
+
+
+  // Parameters:
+  //   segment_index - [in] zero based segment index
+  // Returns:
+  //   line = point[segment_index] -> point[segment_index+1]
+  ON_Line Segment(
+    int segment_index
+  ) const;
+
 
   // Parameters:
   //   segment_index - [in] zero based segment index
@@ -165,7 +187,7 @@ public:
   // Parameters:
   //   test_point - [in]
   //   t - [out] parameter for a point on the polyline that
-  //             is closest to test_point.  If mulitple solutions
+  //             is closest to test_point.  If multiple solutions
   //             exist, then the smallest solution is returned.
   // Returns:
   //   true if successful.
@@ -180,7 +202,7 @@ public:
   // Parameters:
   //   test_point - [in]
   //   t - [out] parameter for a point on the polyline that
-  //             is closest to test_point.  If mulitple solutions
+  //             is closest to test_point.  If multiple solutions
   //             exist, then the smallest solution is returned.
   //   segment_index0 - [in] index of segment where search begins
   //   segment_index1 - [in] index of segment where search ends
@@ -210,5 +232,63 @@ public:
     ) const;
 
 };
+
+/*
+Description:
+  Join all contiguous polylines of an array of ON_Polylines.
+Parameters:
+  InPlines - [in] Array of polylines to be joined (not modified)
+  OutPlines - [out] Resulting joined polylines and copies of polylines that were not joined to anything
+                    are appended.
+  join_tol - [in] Distance tolerance used to decide if endpoints are close enough. Curves or segments with length
+                  less than join_tol are NOT collapsed and can cause problems when endpoints do not match exactly.
+  kink_tol - [in] Angle in radians.  If > 0.0, then curves within join_tol will only be joined if the angle between them
+                  is less than kink_tol. If <= 0, then the angle will be ignored and only join_tol will be used.
+  bUseTanAngle - [in] If true, choose the best match using angle between tangents.  
+                      If false, best match is the closest. This is used whether or not kink_tol is positive.
+  bPreserveDirection - [in] If true, polylines endpoints will be compared to polylines startpoints.
+                            If false, all start and endpoints will be compared, and copies of input 
+                            curves may be reversed in output.
+  key     -  [out] if key is not null, InPlines[i] was joined into OutPlines[key[i]].
+Returns:
+  Number of polylines added to OutPlines
+Remarks:
+  Closed polylines are copied to OutPlines. 
+  Plines that cannot be joined to others are copied to OutPlines.  
+  */
+ON_DECL int ON_JoinPolylines(
+  const ON_SimpleArray<const ON_Polyline*>& InPlines,
+  ON_SimpleArray<ON_Polyline*>& OutPlines,
+  double join_tol,
+  double kink_tol,
+  bool bUseTanAngle,
+  bool bPreserveDirection = false,
+  ON_SimpleArray<int>* key = 0
+);
+
+
+/*
+Description:
+  Join an array of lines into one or more polylines.
+Parameters:
+  InLines - [in] Array of lines to be joined (not modified)
+  OutPolylines - [out] Array of resulting joined polylines.
+  tolerance - [in] Distance tolerance used to decide if end points are close enough. 
+                  Lines with length less than join_tol are NOT collapsed and can
+                  cause problems when end points do not match exactly.
+  bPreserveDirection - [in] If true, line end points will be compared to line start points.
+                            If false, all start and end points will be compared, and copies
+                            of input curves may be reversed in output.
+  key     -  [out] if key is not nullptr, InLines[i] was joined into OutPolylines[key[i]].
+Returns:
+  Number of polylines added to OutPolylines
+*/
+ON_DECL int ON_JoinLines(
+  const ON_SimpleArray<ON_Line>& InLines,
+  ON_ClassArray<ON_Polyline>& OutPolylines,
+  double tolerance,
+  bool bPreserveDirection,
+  ON_SimpleArray<int>* pKey
+);
 
 #endif

@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,11 +10,18 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
 
-class ON_CLASS ON_Value
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
+
+class ON_Value
 {
 public:
 
@@ -38,12 +44,12 @@ public:
     geometry_value        = 10,
     uuid_value            = 11,
     point_on_object_value = 12,
+    polyedge_value        = 13,
+    subd_edge_chain_value = 14,
 
     // each value type must have a case in ON_Value::CreateValue().
 
-    // andrew: case value evaluates to 4294967295, which cannot be narrowed to type 'int' [-Wc++11-narrowing]
-    //force_32bit_enum = 0xFFFFFFFF
-    force_32bit_enum = 0xFFFFFFF
+    force_32bit_enum = 0xFFFFFFFF
   };
 
   static
@@ -56,11 +62,12 @@ public:
   // The valid id is a nonzero integer the developer
   // assigns to this value.  Developers are responsible
   // for ensuring the 
-  int m_value_id;
+  int m_value_id = -1;
   
   const VALUE_TYPE m_value_type;
 
-  ON_Value( VALUE_TYPE );
+  ON_Value(VALUE_TYPE);
+  ON_Value(const ON_Value& src);
   virtual ~ON_Value();
 
   virtual ON_Value* Duplicate() const=0;
@@ -79,19 +86,24 @@ public:
   virtual int  GetUuids( const ON_UUID*& ) const;
   virtual int  GetObjRefs( ON_ClassArray<ON_ObjRef>& ) const;
   virtual int  GetGeometryPointers( const ON_Geometry* const*& ) const;
+  virtual int  GetSubDEdgeChainPointers(const ON_SubDEdgeChain* const*&) const;
   virtual int  GetStrings( ON_ClassArray<ON_wString>& ) const;
+  virtual int  GetPolyEdgePointers(ON_ClassArray<ON_PolyEdgeHistory>&) const;
 
 private:
   // no implementation
-  ON_Value(); 
-  ON_Value& operator=(const ON_Value&);
+  ON_Value() = delete; 
+  ON_Value& operator=(const ON_Value&) = delete; 
 };
 
 ON_Value::ON_Value( ON_Value::VALUE_TYPE value_type )
          : m_value_type(value_type)
-{
-  m_value_id = -1;
-}
+{}
+
+ON_Value::ON_Value(const ON_Value& src)
+  : m_value_id(src.m_value_id)
+  , m_value_type(src.m_value_type)
+{}
 
 ON_Value::~ON_Value()
 {}
@@ -107,7 +119,9 @@ int  ON_Value::GetXforms( const ON_Xform*& ) const {return 0;}
 int  ON_Value::GetUuids( const ON_UUID*& ) const {return 0;}
 int  ON_Value::GetObjRefs( ON_ClassArray<ON_ObjRef>& ) const {return 0;}
 int  ON_Value::GetGeometryPointers( const ON_Geometry* const*& ) const {return 0;}
+int  ON_Value::GetSubDEdgeChainPointers(const ON_SubDEdgeChain* const*&) const { return 0; }
 int  ON_Value::GetStrings( ON_ClassArray<ON_wString>& ) const {return 0;}
+int  ON_Value::GetPolyEdgePointers(ON_ClassArray<ON_PolyEdgeHistory>&) const { return 0; }
 
 class ON_DummyValue : public ON_Value
 {
@@ -1207,11 +1221,377 @@ int ON_GeometryValue::GetGeometryPointers( const ON_Geometry* const*&a ) const
   return m_value.Count();
 }
 
+
+///////////////////////////////////////////////////////////////////////
+//
+// ON_PolyEdgeHistoryValue saves geometry values in the ON_HistoryRecord::m_value[] array
+//
+
+class ON_PolyEdgeHistoryValue : public ON_Value
+{
+public:
+  ON_PolyEdgeHistoryValue();
+  ~ON_PolyEdgeHistoryValue();
+
+  ON_ClassArray<ON_PolyEdgeHistory> m_value;
+
+  // virtual 
+  class ON_Value* Duplicate() const;
+
+  // virtual
+  int Count() const;
+
+  // virtual 
+  bool ReadHelper(ON_BinaryArchive& archive );
+
+  // virtual 
+  bool WriteHelper(ON_BinaryArchive& archive ) const;
+
+  // virtual 
+  bool ReportHelper(ON_TextLog& text_log ) const;
+
+  // virtual 
+  int  GetPolyEdgePointers( ON_ClassArray<ON_PolyEdgeHistory>& ) const;
+};
+
+ON_PolyEdgeHistoryValue::ON_PolyEdgeHistoryValue() 
+             : ON_Value(ON_Value::polyedge_value) 
+{
+}
+
+ON_PolyEdgeHistoryValue::~ON_PolyEdgeHistoryValue()
+{
+  m_value.Destroy();
+}
+
+//ON_PolyEdgeHistoryValue::ON_PolyEdgeHistoryValue(const ON_PolyEdgeHistoryValue& src) : ON_Value(src)
+//{
+//  *this = src;
+//}
+//
+//ON_PolyEdgeHistoryValue& ON_PolyEdgeHistoryValue::operator=(const ON_PolyEdgeHistoryValue& src)
+//{
+//  if ( this != &src )
+//  {
+//    int i, count = m_value.Count();
+//    for ( i = 0; i < count; i++ )
+//    {
+//      ON_Geometry* p = m_value[i];
+//      m_value[i] = 0;
+//      if (p)
+//      {
+//        delete p;
+//      }
+//    }
+//    m_value.Destroy();
+//
+//    m_value_id = src.m_value_id;
+//
+//    count = src.m_value.Count();
+//    m_value.Reserve(count);
+//    for ( i = 0; i < count; i++ )
+//    {
+//      const ON_Geometry* src_ptr = src.m_value[i];
+//      if ( !src_ptr )
+//        continue;
+//      ON_Geometry* ptr = src_ptr->Duplicate();
+//      if ( ptr )
+//        m_value.Append(ptr);
+//    }
+//  }
+//  return *this;
+//}
+
+// virtual 
+class ON_Value* ON_PolyEdgeHistoryValue::Duplicate() const
+{
+  return new ON_PolyEdgeHistoryValue(*this);
+}
+
+// virtual
+int ON_PolyEdgeHistoryValue::Count() const 
+{
+  return m_value.Count();
+}
+
+// virtual 
+bool ON_PolyEdgeHistoryValue::ReadHelper(ON_BinaryArchive& archive )
+{
+  m_value.Destroy();
+
+  int major_version = 0;
+  int minor_version = 0;
+  bool rc = archive.BeginRead3dmChunk(TCODE_ANONYMOUS_CHUNK,&major_version,&minor_version);
+  if (!rc)
+    return false;
+
+  for(;;)
+  {
+    int count = 0;
+    rc = archive.ReadInt(&count);
+    if (!rc) break;
+    m_value.Reserve(count);
+    
+    for( int i = 0; i < count && rc; i++ )
+    {
+      if ( !m_value.AppendNew().Read(archive) )
+      {
+        m_value.Destroy();
+        rc = false;
+        break;
+      }
+    }
+    if (!rc) break;
+
+    break;
+  }
+
+  if ( !archive.EndRead3dmChunk() )
+    rc = false;
+  return rc;
+}
+
+// virtual 
+bool ON_PolyEdgeHistoryValue::WriteHelper(ON_BinaryArchive& archive ) const
+{
+  bool rc = archive.BeginWrite3dmChunk(TCODE_ANONYMOUS_CHUNK,1,0);
+  if (!rc)
+    return false;
+
+  for(;;)
+  {
+    rc = archive.WriteInt(m_value.Count());
+    if (!rc) break;
+    
+    int i, count = m_value.Count();
+    for( i = 0; i < count && rc; i++ )
+    {
+      rc = m_value[i].Write(archive);
+    }
+    if (!rc) break;
+
+    break;
+  }
+
+  if ( !archive.EndWrite3dmChunk() )
+    rc = false;
+  return rc;
+}
+
+// virtual 
+bool ON_PolyEdgeHistoryValue::ReportHelper(ON_TextLog& text_log ) const
+{
+  text_log.Print("polyedge value\n");
+  text_log.PushIndent();
+  int i, count = m_value.Count();
+  for ( i = 0; i < count; i++ )
+  {
+    m_value[i].Dump(text_log);
+  }
+  text_log.PopIndent();
+  return true;
+}
+
+// virtual 
+int ON_PolyEdgeHistoryValue::GetPolyEdgePointers( ON_ClassArray<ON_PolyEdgeHistory>& a ) const
+{
+  a = m_value;
+  return m_value.Count();
+}
+
+
+///////////////////////////////////////////////////////////////////////
+//
+// ON_SubDEdgeChainHistoryValue saves geometry values in the ON_HistoryRecord::m_value[] array
+//
+
+class ON_SubDEdgeChainHistoryValue : public ON_Value
+{
+public:
+  ON_SubDEdgeChainHistoryValue();
+  ~ON_SubDEdgeChainHistoryValue();
+  ON_SubDEdgeChainHistoryValue(const ON_SubDEdgeChainHistoryValue&);
+  ON_SubDEdgeChainHistoryValue& operator=(const ON_SubDEdgeChainHistoryValue&);
+
+  ON_SimpleArray<ON_SubDEdgeChain*> m_value;
+
+  class ON_Value* Duplicate() const override;
+  int Count() const override;
+  bool ReadHelper(ON_BinaryArchive& archive) override;
+  bool WriteHelper(ON_BinaryArchive& archive) const override;
+  bool ReportHelper(ON_TextLog& text_log) const override;
+  int GetSubDEdgeChainPointers(const ON_SubDEdgeChain* const*&) const override;
+};
+
+ON_SubDEdgeChainHistoryValue::ON_SubDEdgeChainHistoryValue()
+  : ON_Value(ON_Value::subd_edge_chain_value)
+{
+}
+
+ON_SubDEdgeChainHistoryValue::~ON_SubDEdgeChainHistoryValue()
+{
+  int i, count = m_value.Count();
+  for (i = 0; i < count; i++)
+  {
+    ON_SubDEdgeChain* p = m_value[i];
+    if (nullptr != p)
+    {
+      m_value[i] = nullptr;
+      delete p;
+    }
+  }
+}
+
+ON_SubDEdgeChainHistoryValue::ON_SubDEdgeChainHistoryValue(const ON_SubDEdgeChainHistoryValue& src) : ON_Value(src)
+{
+  *this = src;
+}
+
+ON_SubDEdgeChainHistoryValue& ON_SubDEdgeChainHistoryValue::operator=(const ON_SubDEdgeChainHistoryValue& src)
+{
+  if (this != &src)
+  {
+    int i, count = m_value.Count();
+    for (i = 0; i < count; i++)
+    {
+      ON_SubDEdgeChain* p = m_value[i];
+      if (nullptr != p)
+      {
+        m_value[i] = nullptr;
+        delete p;
+      }
+    }
+    m_value.Destroy();
+
+    m_value_id = src.m_value_id;
+
+    count = src.m_value.Count();
+    m_value.Reserve(count);
+    for (i = 0; i < count; i++)
+    {
+      const ON_SubDEdgeChain* src_ptr = src.m_value[i];
+      if (!src_ptr)
+        continue;
+      ON_SubDEdgeChain* ptr = new ON_SubDEdgeChain(*src_ptr);
+      if (ptr)
+        m_value.Append(ptr);
+    }
+  }
+  return *this;
+}
+
+// virtual 
+class ON_Value* ON_SubDEdgeChainHistoryValue::Duplicate() const
+{
+  return new ON_SubDEdgeChainHistoryValue(*this);
+}
+
+// virtual
+int ON_SubDEdgeChainHistoryValue::Count() const
+{
+  return m_value.Count();
+}
+
+// virtual 
+bool ON_SubDEdgeChainHistoryValue::ReadHelper(ON_BinaryArchive& archive)
+{
+  m_value.Destroy();
+
+  int chunk_version = 0;
+  if (false == archive.BeginRead3dmAnonymousChunk(&chunk_version))
+    return false;
+
+  bool rc = false;
+  for (;;)
+  {
+    if (chunk_version < 1)
+      break;
+    int count = 0;
+    if (false == archive.ReadInt(&count))
+      break;
+
+    m_value.Reserve(count);
+    for (int i = 0; i < count; i++)
+    {
+      ON_SubDEdgeChain* c = new ON_SubDEdgeChain();
+      if (false == c->Read(archive))
+        break;
+      m_value.Append(c);
+    }
+    if (count == m_value.Count())
+      rc = true;
+    else
+      m_value.Destroy();
+
+    break;
+  }
+
+  if (!archive.EndRead3dmChunk())
+    rc = false;
+  return rc;
+}
+
+// virtual 
+bool ON_SubDEdgeChainHistoryValue::WriteHelper(ON_BinaryArchive& archive) const
+{
+  if (false == archive.BeginWrite3dmAnonymousChunk(1))
+    return false;
+
+  bool rc = false;
+  for (;;)
+  {
+    int count = m_value.Count();
+    for (int i = 0; i < count; ++i)
+    {
+      if (nullptr == m_value[i])
+        count = 0;
+    }
+    if (false == archive.WriteInt(count))
+      break;
+
+    rc = true;
+    for (int i = 0; i < count && rc; i++)
+      rc = m_value[i]->Write(archive);
+
+    break;
+  }
+
+  if (!archive.EndWrite3dmChunk())
+    rc = false;
+  return rc;
+}
+
+// virtual 
+bool ON_SubDEdgeChainHistoryValue::ReportHelper(ON_TextLog& text_log) const
+{
+  text_log.Print("SubD edge chain value\n");
+  text_log.PushIndent();
+  int i, count = m_value.Count();
+  for (i = 0; i < count; i++)
+  {
+    if( nullptr != m_value[i])
+      m_value[i]->Dump(text_log);
+  }
+  text_log.PopIndent();
+  return true;
+}
+
+// virtual 
+int ON_SubDEdgeChainHistoryValue::GetSubDEdgeChainPointers(const ON_SubDEdgeChain* const*& a) const
+{
+  a = m_value.Array();
+  return m_value.Count();
+}
+
+
+///////////////////////////////////////////////////////////////////////
+//
+
 // static
 ON_Value* ON_Value::CreateValue( int value_type )
 {
   ON_Value* value = 0;
-  switch(value_type)
+  switch((unsigned int)value_type)
   {
   case no_value_type:
     break;
@@ -1251,6 +1631,12 @@ ON_Value* ON_Value::CreateValue( int value_type )
   case point_on_object_value:
     //value = new ON_PointOnObjectValue();
     break;
+  case polyedge_value:
+    value = new ON_PolyEdgeHistoryValue();
+    break;
+  case subd_edge_chain_value:
+    value = new ON_SubDEdgeChainHistoryValue();
+    break;
   case force_32bit_enum:
     break;
   default:
@@ -1259,61 +1645,64 @@ ON_Value* ON_Value::CreateValue( int value_type )
   return value;
 }
 
-
 ///////////////////////////////////////////////////////////////////////
 //
 // ON_HistoryRecord implementation
 //
 
-ON_OBJECT_IMPLEMENT(ON_HistoryRecord,ON_Object,"ECD0FD2F-2088-49dc-9641-9CF7A28FFA6B");
+ON_OBJECT_IMPLEMENT(ON_HistoryRecord,ON_ModelComponent,"ECD0FD2F-2088-49dc-9641-9CF7A28FFA6B");
 
-ON_HistoryRecord::ON_HistoryRecord() 
-                 : m_antecedents(2),
-                   m_descendants(1)                   
-{
-  m_command_id    = ON_nil_uuid;
-  m_version       = 0;
-  m_record_type   = history_parameters;
-  m_record_id     = ON_nil_uuid;
-  m_bValuesSorted = true;
-}
+ON_HistoryRecord::ON_HistoryRecord() ON_NOEXCEPT
+  : ON_ModelComponent(ON_ModelComponent::Type::HistoryRecord)
+{}
 
 ON_HistoryRecord::~ON_HistoryRecord()
 {
-  int i, count = m_value.Count();
-  m_value.SetCount(0);
-  for ( i = 0; i < count; i++ )
-  {
-    ON_Value* v = m_value[i];
-    if ( v )
-      delete v;
-  }
+  Internal_Destroy();
 }
 
-void  ON_HistoryRecord::CopyHelper(const ON_HistoryRecord& src)
+ON_HistoryRecord::ON_HistoryRecord(const ON_HistoryRecord& src)
+  : ON_ModelComponent(ON_ModelComponent::Type::HistoryRecord,src)
+{
+  Internal_Copy(src);
+}
+
+ON_HistoryRecord& ON_HistoryRecord::operator=(const ON_HistoryRecord& src)
+{
+  if ( this != &src && false == this->IsSystemComponent() )
+  {
+    ON_ModelComponent::operator=(*this);
+    Internal_Destroy();
+    ON_Object::operator=(src);
+    Internal_Copy(src);
+  }
+  return *this;
+}
+
+void ON_HistoryRecord::Internal_Copy(const ON_HistoryRecord& src)
 {
   // input value of this->m_value[] is known to be empty
-  m_command_id   = src.m_command_id;
-  m_version      = src.m_version;
-  m_record_type  = src.m_record_type;
-  m_record_id    = src.m_record_id;
-  m_descendants  = src.m_descendants;
-  m_antecedents  = src.m_antecedents;
+  m_command_id = src.m_command_id;
+  m_version = src.m_version;
+  m_record_type = src.m_record_type;
+  m_descendants = src.m_descendants;
+  m_antecedents = src.m_antecedents;
   m_bValuesSorted = true;
+  m_bCopyOnReplaceObject = src.m_bCopyOnReplaceObject;
 
-  int i, count = src.m_value.Count();
+  const unsigned int count = src.m_value.UnsignedCount();
   m_value.SetCapacity(count);
   const ON_Value* prev_v = 0;
-  for ( i = 0; i < count; i++ )
+  for (unsigned int i = 0; i < count; i++)
   {
     const ON_Value* src_v = src.m_value[i];
-    if ( src_v )
+    if (src_v)
     {
       ON_Value* v = src_v->Duplicate();
-      if ( v )
+      if (v)
       {
         m_value.Append(v);
-        if ( m_bValuesSorted && prev_v && prev_v->m_value_id > v->m_value_id )
+        if (m_bValuesSorted && prev_v && prev_v->m_value_id > v->m_value_id)
           m_bValuesSorted = false;
         prev_v = v;
       }
@@ -1321,52 +1710,38 @@ void  ON_HistoryRecord::CopyHelper(const ON_HistoryRecord& src)
   }
 }
 
-ON_HistoryRecord::ON_HistoryRecord(const ON_HistoryRecord& src) : ON_Object(src)
-{
-  CopyHelper(src);
-}
-
-ON_HistoryRecord& ON_HistoryRecord::operator=(const ON_HistoryRecord& src)
-{
-  if ( this != &src )
-  {
-    Destroy();
-    ON_Object::operator =(src);
-    CopyHelper(src);
-  }
-  return *this;
-}
-
-ON_BOOL32 ON_HistoryRecord::IsValid( ON_TextLog* text_log ) const
+bool ON_HistoryRecord::IsValid( ON_TextLog* text_log ) const
 {
   return true;
 }
 
-void ON_HistoryRecord::Destroy()
+void ON_HistoryRecord::Internal_Destroy()
 {
-  int i, count = m_value.Count();
-  for ( i = 0; i < count; i++ )
+  const unsigned int count = m_value.UnsignedCount();
+  for ( unsigned int i = 0; i < count; i++ )
   {
     ON_Value* v = m_value[i];
-    m_value[i] = 0;
-    if (v)
+    if (nullptr != v)
+    {
+      m_value[i] = nullptr;
       delete v;
+    }
   }
-  m_value.SetCount(0);
-  m_record_id = ON_nil_uuid;
-  m_record_type = ON_HistoryRecord::history_parameters;
-  m_version = 0;
-  m_command_id = ON_nil_uuid;
-  m_antecedents.Empty();
-  m_descendants.Empty();
+  m_value.Empty();
 }
 
 ON_HistoryRecord::RECORD_TYPE ON_HistoryRecord::RecordType(int i)
 {
-  RECORD_TYPE rc = ( ON_HistoryRecord::feature_parameters == i )
-                 ? ON_HistoryRecord::feature_parameters
-                 : ON_HistoryRecord::history_parameters;
-  return rc;
+  switch (i)
+  {
+  case (int)ON_HistoryRecord::RECORD_TYPE::history_parameters:
+    return ON_HistoryRecord::RECORD_TYPE::history_parameters;
+
+  case (int)ON_HistoryRecord::RECORD_TYPE::feature_parameters:
+    return ON_HistoryRecord::RECORD_TYPE::feature_parameters;
+  }
+
+  return ON_HistoryRecord::RECORD_TYPE::history_parameters;
 }
 
 bool ON_HistoryRecord::SetBoolValue( int value_id, bool b)
@@ -1426,7 +1801,13 @@ bool ON_HistoryRecord::SetGeometryValue( int value_id, ON_Geometry* g)
 {
   ON_SimpleArray<ON_Geometry*> a(1);
   a.Append(g);
-  return ( 1 == SetGeometryValues(value_id, a) );
+  return SetGeometryValues(value_id, a);
+}
+
+
+bool ON_HistoryRecord::SetPolyEdgeValue( int value_id, const ON_PolyEdgeHistory& polyedge )
+{
+  return ( 1 == SetPolyEdgeValues(value_id, 1, &polyedge) );
 }
 
 bool ON_HistoryRecord::SetUuidValue( int value_id, ON_UUID uuid )
@@ -1468,7 +1849,7 @@ ON_Value* ON_HistoryRecord::FindValueHelper( int value_id, int value_type, bool 
   {
     if ( !m_bValuesSorted )
     {
-      vp->m_value.HeapSort(CompareValueId);
+      vp->m_value.QuickSort(CompareValueId);
       vp->m_bValuesSorted = true;
     }
 
@@ -1670,25 +2051,48 @@ bool ON_HistoryRecord::SetObjRefValues( int value_id, int count, const ON_ObjRef
   {
     v->m_value.Destroy();
     v->m_value.Reserve(count);
-    int i;
-    for ( i = 0; i < count; i++ )
+
+    if(count)
     {
-      // The call to DecrementProxyReferenceCount() is critical.
-      // It makes sure there are no active runtime pointers 
-      // saved in the history record.  If this call is not here,
-      // you will eventually crash and history update will never
-      // work right even when it doesn't crash.
-      ON_ObjRef& vor = v->m_value.AppendNew();
-      vor = oref[i];
-      vor.DecrementProxyReferenceCount();
-      // Feb 12 2010 - Fixing bug in ExtrudeCrv history
-      //  and probably lots of other subtle history bugs.
-      //  History must lookup by UUID and not by runtime serial number.
-      vor.m_runtime_sn = 0; 
-      ON_UUID object_id = v->m_value[i].m_uuid;
-      if ( !ON_UuidIsNil(object_id) )
+      // 2019-01-23 - kike@mcneel.com
+      // Objects in instance definitions can not be modified in that case
+      // I add the root instance reference and all the instance definitions as 'antecedents'
+      const bool idef_geometry = oref && (oref->m__iref.Count() > 0);
+
+      for(int i = 0; i < count; i++)
       {
-        m_antecedents.AddUuid(object_id);
+        // The call to DecrementProxyReferenceCount() is critical.
+        // It makes sure there are no active runtime pointers 
+        // saved in the history record.  If this call is not here,
+        // you will eventually crash and history update will never
+        // work right even when it doesn't crash.
+        ON_ObjRef& vor = v->m_value.AppendNew();
+        vor = oref[i];
+        vor.DecrementProxyReferenceCount();
+        // Feb 12 2010 - Fixing bug in ExtrudeCrv history
+        //  and probably lots of other subtle history bugs.
+        //  History must lookup by UUID and not by runtime serial number.
+        vor.m_runtime_sn = 0;
+
+        // 2019-01-23 - kike@mcneel.com
+        if(!idef_geometry)
+        {
+          ON_UUID object_id = v->m_value[i].m_uuid;
+          if(!ON_UuidIsNil(object_id))
+          {
+            m_antecedents.AddUuid(object_id);
+          }
+        }
+      }
+
+      // 2019-01-23 - kike@mcneel.com
+      if(idef_geometry)
+      {
+        if(auto iref = oref->m__iref.Last())
+          m_antecedents.AddUuid(iref->m_iref_uuid);
+
+        for(int r = 0; r < oref->m__iref.Count(); ++r)
+          m_antecedents.AddUuid(oref->m__iref[r].m_idef_uuid);
       }
     }
   }
@@ -1696,12 +2100,87 @@ bool ON_HistoryRecord::SetObjRefValues( int value_id, int count, const ON_ObjRef
 }
 
 
-bool ON_HistoryRecord::SetGeometryValues( int value_id, const ON_SimpleArray<ON_Geometry*> a)
+bool ON_HistoryRecord::SetGeometryValues(int value_id, const ON_SimpleArray<ON_Geometry*> a)
 {
-  ON_GeometryValue* v = static_cast<ON_GeometryValue*>(FindValueHelper(value_id,ON_Value::geometry_value,true));
-  if ( v )
+  ON_GeometryValue* v = static_cast<ON_GeometryValue*>(FindValueHelper(value_id, ON_Value::geometry_value, true));
+  if (v)
   {
     v->m_value = a;
+  }
+  return (0 != v);
+}
+
+bool ON_HistoryRecord::SetSubDEdgeChainValue(int value_id, const ON_SubDEdgeChain& edge_chain)
+{
+  ON_SimpleArray<const ON_SubDEdgeChain*> a;
+  a.Append(&edge_chain);
+  return ON_HistoryRecord::SetSubDEdgeChainValues(value_id, a);
+}
+
+bool ON_HistoryRecord::SetSubDEdgeChainValues(int value_id, const ON_ClassArray<ON_SubDEdgeChain>& edge_chains)
+{
+  const unsigned count = edge_chains.UnsignedCount();
+  ON_SimpleArray<const ON_SubDEdgeChain*> a(count);
+  for (unsigned i = 0; i < count; ++i)
+    a.Append(&edge_chains[i]);
+  return ON_HistoryRecord::SetSubDEdgeChainValues(value_id, a);
+}
+
+bool ON_HistoryRecord::SetSubDEdgeChainValues(int value_id, const ON_SimpleArray<const ON_SubDEdgeChain*>& edge_chains)
+{
+  // validate
+  const unsigned count = edge_chains.UnsignedCount();
+  if (count <= 0)
+    return false;
+
+  for (unsigned i = 0; i < count; ++i)
+  {
+    const ON_SubDEdgeChain* c = edge_chains[i];
+    if (nullptr == c)
+      return false;
+    const ON_UUID parent_subd_id = c->PersistentSubDId();
+    if (ON_nil_uuid == parent_subd_id)
+      return false; // a persistent id is required so that update history can find the new subd and update the runtime ON_SubDEdgePtr values.
+    if (c->EdgeCount() <= 0)
+      return false;
+    if (false == c->HasPersistentEdgeIds())
+    {
+      c->SetPersistentEdgeIdsFromRuntimeEdgePtrs();
+      if (false == c->HasPersistentEdgeIds())
+        return false;
+    }
+    m_antecedents.AddUuid(parent_subd_id, true);
+  }
+
+  // copy edge chains and add
+  ON_SubDEdgeChainHistoryValue* v = static_cast<ON_SubDEdgeChainHistoryValue*>(FindValueHelper(value_id, ON_Value::subd_edge_chain_value, true));
+  if ( nullptr != v )
+  {
+    v->m_value.Reserve(count);
+    for (unsigned i = 0; i < count; ++i)
+      v->m_value.Append(new ON_SubDEdgeChain(*edge_chains[i]));
+  }
+
+  return (nullptr != v);
+}
+
+bool ON_HistoryRecord::SetPolyEdgeValues( int value_id,  int count, const ON_PolyEdgeHistory* a )
+{
+  ON_PolyEdgeHistoryValue* v = static_cast<ON_PolyEdgeHistoryValue*>(FindValueHelper(value_id,ON_Value::polyedge_value,true));
+  if ( v )
+  {
+    v->m_value.Destroy();
+    v->m_value.Append(count,a);
+
+    for ( int i = 0; i < count; i++ )
+    {
+      const ON_PolyEdgeHistory& pe_history = a[i];
+      for ( int j = 0; j < pe_history.m_segment.Count(); j++ )
+      {
+        const ON_CurveProxyHistory& segment = pe_history.m_segment[j];
+        m_antecedents.AddUuid(segment.m_curve_ref.m_uuid);
+      }
+    }
   }
   return (0 != v);
 }
@@ -1822,6 +2301,32 @@ bool ON_HistoryRecord::GetGeometryValue( int value_id, const ON_Geometry*& g ) c
   if ( v && 1 == v->m_value.Count())
   {
     g = v->m_value[0];
+    rc = true;
+  }
+  return rc;
+}
+
+bool ON_HistoryRecord::GetSubDEdgeChainValue(int value_id, const ON_SubDEdgeChain*& edge_chain) const
+{
+  bool rc = false;
+  edge_chain = 0;
+  const ON_SubDEdgeChainHistoryValue* v = static_cast<ON_SubDEdgeChainHistoryValue*>(FindValueHelper(value_id, ON_Value::subd_edge_chain_value, 0));
+  if (v && 1 == v->m_value.Count())
+  {
+    edge_chain = v->m_value[0];
+    rc = true;
+  }
+  return rc;
+}
+
+bool ON_HistoryRecord::GetPolyEdgeValue( int value_id, const ON_PolyEdgeHistory*& polyedge ) const
+{
+  bool rc = false;
+  polyedge = 0;
+  const ON_PolyEdgeHistoryValue* v = static_cast<ON_PolyEdgeHistoryValue*>(FindValueHelper(value_id,ON_Value::polyedge_value,0));
+  if ( v && 1 == v->m_value.Count())
+  {
+    polyedge = &v->m_value[0];
     rc = true;
   }
   return rc;
@@ -1998,6 +2503,34 @@ int ON_HistoryRecord::GetGeometryValues( int value_id, ON_SimpleArray<const ON_G
   return a.Count();
 }
 
+int ON_HistoryRecord::GetSubDEdgeChainValues(int value_id, ON_SimpleArray<const ON_SubDEdgeChain*>& a) const
+{
+  a.SetCount(0);
+  const ON_SubDEdgeChainHistoryValue* v = static_cast<ON_SubDEdgeChainHistoryValue*>(FindValueHelper(value_id, ON_Value::subd_edge_chain_value, 0));
+  if (v)
+  {
+    int i, count = v->m_value.Count();
+    a.Reserve(count);
+    for (i = 0; i < count; i++)
+      a.Append(v->m_value[i]);
+  }
+  return a.Count();
+}
+
+int ON_HistoryRecord::GetPolyEdgeValues( int value_id, ON_SimpleArray<const ON_PolyEdgeHistory*>& a) const
+{
+  a.SetCount(0);
+  const ON_PolyEdgeHistoryValue* v = static_cast<ON_PolyEdgeHistoryValue*>(FindValueHelper(value_id,ON_Value::polyedge_value,0));
+  if ( v )
+  {
+    int i, count = v->m_value.Count();
+    a.Reserve(count);
+    for ( i = 0; i < count; i++ )
+      a.Append(&v->m_value[i]);
+  }
+  return a.Count();
+}
+
 int ON_HistoryRecord::GetUuidValues( int value_id, ON_SimpleArray<ON_UUID>& a) const
 {
   a.SetCount(0);
@@ -2025,7 +2558,7 @@ int ON_HistoryRecord::ValueReport( ON_TextLog& text_log ) const
   vi_list.SetCount(count);
   vi_list.Zero();
 
-  m_value.Sort( ON::heap_sort, vi_list.Array(), CompareValueId );
+  m_value.Sort( ON::sort_algorithm::quick_sort, vi_list.Array(), CompareValueId );
 
   for ( i = 0; i < count; i++ )
   {
@@ -2044,6 +2577,8 @@ int ON_HistoryRecord::ValueReport( ON_TextLog& text_log ) const
 
 void ON_HistoryRecord::Dump( ON_TextLog& text_log ) const
 {
+  ON_ModelComponent::Dump(text_log);
+
   int i, count;
   ON_SimpleArray<ON_UUID> uuid_list;
 
@@ -2054,14 +2589,14 @@ void ON_HistoryRecord::Dump( ON_TextLog& text_log ) const
   text_log.Print("Version %d\n",m_version);
 
   text_log.Print("Record ID: ");
-  text_log.Print(m_record_id);
+  text_log.Print(Id());
   text_log.Print("\n");
 
   text_log.Print("Record type: %s\n",
-                 (m_record_type == ON_HistoryRecord::feature_parameters) 
+                 (m_record_type == ON_HistoryRecord::RECORD_TYPE::feature_parameters) 
                  ? "feature parameters" : "history parameters");
 
-  // list antededents
+  // list antecedents
   uuid_list.SetCount(0);
   m_antecedents.GetUuids(uuid_list);
   count = uuid_list.Count();
@@ -2115,7 +2650,7 @@ void ON_HistoryRecord::DestroyValue( int value_id )
   {
     if ( !m_bValuesSorted )
     {
-      m_value.HeapSort(CompareValueId);
+      m_value.QuickSort(CompareValueId);
       m_bValuesSorted = true;
     }
     ON_DummyValue dummy_value;
@@ -2131,9 +2666,14 @@ void ON_HistoryRecord::DestroyValue( int value_id )
   }
 }
 
-ON_BOOL32 ON_HistoryRecord::Read( ON_BinaryArchive& archive )
+bool ON_HistoryRecord::Read(ON_BinaryArchive& archive)
 {
-  Destroy();
+  return Internal_ReadV5(archive);
+}
+
+bool ON_HistoryRecord::Internal_ReadV5( ON_BinaryArchive& archive )
+{
+  *this = ON_HistoryRecord::Empty;
 
   // put entire history record in a chunk
   int major_version = 0;
@@ -2147,8 +2687,10 @@ ON_BOOL32 ON_HistoryRecord::Read( ON_BinaryArchive& archive )
     rc = (1 == major_version);
     if (!rc) break;
 
-    rc = archive.ReadUuid(m_record_id);
+    ON_UUID record_id = ON_nil_uuid;
+    rc = archive.ReadUuid(record_id);
     if(!rc) break;
+    SetId(record_id);
 
     rc = archive.ReadInt(&m_version);
     if(!rc) break;
@@ -2156,7 +2698,12 @@ ON_BOOL32 ON_HistoryRecord::Read( ON_BinaryArchive& archive )
     rc = archive.ReadUuid(m_command_id);
     if(!rc) break;
 
-    rc = m_descendants.Read(archive);
+    // 16 October 2012 Dale Lear
+    //   Fixing http://dev.mcneel.com/bugtrack/?q=101403
+    // Changing bSortDescendantsAfterRead from true to false
+    // per discussion in the bug report. 
+    const bool bSortDescendantsAferRead = false;
+    rc = m_descendants.Read(archive,bSortDescendantsAferRead);
     if(!rc) break;
 
     rc = m_antecedents.Read(archive);
@@ -2164,6 +2711,7 @@ ON_BOOL32 ON_HistoryRecord::Read( ON_BinaryArchive& archive )
 
     // all values are in a chunk
     int mjvs=0,mnvs=0;
+    int value_id0 = 0;
     rc = archive.BeginRead3dmChunk(TCODE_ANONYMOUS_CHUNK,&mjvs,&mnvs);
     if (rc)
     {
@@ -2207,6 +2755,10 @@ ON_BOOL32 ON_HistoryRecord::Read( ON_BinaryArchive& archive )
               break;
             }
             m_value.Append(value);
+            if ( value->m_value_id <= value_id0 )
+              m_bValuesSorted = false;
+            else
+              value_id0 = value->m_value_id;
           }
 
           break;
@@ -2223,11 +2775,16 @@ ON_BOOL32 ON_HistoryRecord::Read( ON_BinaryArchive& archive )
     if ( rc && minor_version >= 1 )
     {
       // 1.1 fields added to opennurbs version 200603200
-      int rec_type = ON_HistoryRecord::history_parameters;
+      int rec_type = (int)ON_HistoryRecord::RECORD_TYPE::history_parameters;
       if (rc)
         rc = archive.ReadInt( &rec_type );
       if (rc )
         m_record_type = RecordType(rec_type);
+
+      if (rc && minor_version >= 2)
+      {
+        archive.ReadBool(&m_bCopyOnReplaceObject);
+      }
 
     }
 
@@ -2240,15 +2797,29 @@ ON_BOOL32 ON_HistoryRecord::Read( ON_BinaryArchive& archive )
   return rc;
 }
 
-ON_BOOL32 ON_HistoryRecord::Write( ON_BinaryArchive& archive ) const
+
+bool ON_HistoryRecord::Write(ON_BinaryArchive& archive) const
 {
-  bool rc = archive.BeginWrite3dmChunk(TCODE_ANONYMOUS_CHUNK,1,1);
+  return Internal_WriteV5(archive);
+}
+
+bool ON_HistoryRecord::Internal_WriteV5( ON_BinaryArchive& archive ) const
+{
+  // 2015-06-01 Dale Lear
+  //   Save m_bCopyOnReplaceObject in the file in chunk version 1.2
+
+  const int minor_version 
+    = (archive.Archive3dmVersion() >= 60)
+    ? 2  // V6 after 2015-06-01 or later file
+    : 1; // V5 or earlier file
+
+  bool rc = archive.BeginWrite3dmChunk(TCODE_ANONYMOUS_CHUNK,1,minor_version);
   if (!rc)
     return false;
 
   for(;;)
   {
-    rc = archive.WriteUuid(m_record_id);
+    rc = archive.WriteUuid(Id());
     if(!rc) break;
 
     rc = archive.WriteInt(m_version);
@@ -2257,7 +2828,12 @@ ON_BOOL32 ON_HistoryRecord::Write( ON_BinaryArchive& archive ) const
     rc = archive.WriteUuid(m_command_id);
     if(!rc) break;
 
-    rc = m_descendants.Write(archive);
+    // 30 October 2012 Dale Lear
+    //   Fixing http://dev.mcneel.com/bugtrack/?q=101403
+    // Changing bSortDescendantsBeforeWrite from true to false
+    // per discussion in the bug report. 
+    const bool bSortDescendantsBeforeWrite = false;
+    rc = m_descendants.Write(archive,bSortDescendantsBeforeWrite);
     if(!rc) break;
 
     rc = m_antecedents.Write(archive);
@@ -2306,7 +2882,15 @@ ON_BOOL32 ON_HistoryRecord::Write( ON_BinaryArchive& archive ) const
 
     // 1.1 fields added to opennurbs version 200603200
     if (rc)
-      rc = archive.WriteInt( m_record_type );
+    {
+      int i = (int)m_record_type;
+      rc = archive.WriteInt(i);
+    }
+
+    if (rc && minor_version >= 2)
+    {
+      rc = archive.WriteBool(m_bCopyOnReplaceObject);
+    }
 
     break;
   }
@@ -2314,11 +2898,6 @@ ON_BOOL32 ON_HistoryRecord::Write( ON_BinaryArchive& archive ) const
   if (!archive.EndWrite3dmChunk())
     rc = false;
   return rc;
-}
-
-ON_UUID ON_HistoryRecord::ModelObjectId() const
-{
-  return m_record_id;
 }
 
 void ON_HistoryRecord::RemapObjectIds( const ON_SimpleArray<ON_UuidPair>& id_remap )
@@ -2339,6 +2918,262 @@ void ON_HistoryRecord::RemapObjectIds( const ON_SimpleArray<ON_UuidPair>& id_rem
           objrev_v->m_value[j].RemapObjectId(id_remap);
         }
       }
+      // 24 May 2021, Mikko, RH-56171:
+      // Some commands like Offset use an UUID list to map inputs and outputs.
+      // Similar to remapping the objref ids, the uuid lists also need to be
+      // updated to use new ids.
+      // Other commands that currently use UUID lists are Divide, Slab, Ribbon, 
+      // FilletSrf, ChamferSrf, ArrayCrv, Hatch.
+      else if (v && ON_Value::uuid_value == v->m_value_type)
+      {
+        ON_UuidValue* uuid_v = static_cast<ON_UuidValue*>(v);
+        for (j = 0; j < uuid_v->m_value.Count(); j++)
+        {
+          int index = id_remap.BinarySearch((const ON_UuidPair*)&uuid_v->m_value[j], ON_UuidPair::CompareFirstUuid);
+          if (index >= 0)
+            uuid_v->m_value[j] = id_remap[index].m_uuid[1];
+        }
+      }
+      // 27 Oct 2021, Mikko, RH-66102:
+      // Polyedge values contain objrefs and also need remapping.
+      // This fixes history replay not working properly on BlendSrf and others
+      // when importing/pasting.
+      else if (v && ON_Value::polyedge_value == v->m_value_type)
+      {
+        ON_PolyEdgeHistoryValue* objrev_v = static_cast<ON_PolyEdgeHistoryValue*>(v);
+        for (j = 0; j < objrev_v->m_value.Count(); j++)
+        {
+          int k;
+          for (k = 0; k < objrev_v->m_value[j].m_segment.Count(); k++)
+          {
+            objrev_v->m_value[j].m_segment[k].m_curve_ref.RemapObjectId(id_remap);
+          }
+        }
+      }
     }
   }
+}
+
+bool ON_HistoryRecord::CopyOnReplaceObject() const
+{
+  return m_bCopyOnReplaceObject;
+}
+void ON_HistoryRecord::SetCopyOnReplaceObject(
+  bool bCopyOnReplaceObject
+  )
+{
+  m_bCopyOnReplaceObject = (bCopyOnReplaceObject) ? true : false;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////
+//
+// ON_CurveProxyHistory
+//
+
+ON_CurveProxyHistory::ON_CurveProxyHistory()
+{
+}
+
+ON_CurveProxyHistory::~ON_CurveProxyHistory()
+{
+}
+
+void ON_CurveProxyHistory::Destroy()
+{
+  m_curve_ref.Destroy();
+  m_bReversed = false;
+  m_full_real_curve_domain = ON_Interval::EmptyInterval;
+  m_sub_real_curve_domain = ON_Interval::EmptyInterval;
+  m_proxy_curve_domain = ON_Interval::EmptyInterval;
+  m_segment_edge_domain = ON_Interval::EmptyInterval;
+  m_segment_trim_domain = ON_Interval::EmptyInterval;
+}
+
+
+bool ON_CurveProxyHistory::Write( ON_BinaryArchive& file ) const
+{
+  if ( !file.BeginWrite3dmChunk( TCODE_ANONYMOUS_CHUNK,1,1) )
+    return false;
+
+  bool rc = false;
+  for(;;)
+  {
+    if ( !m_curve_ref.Write(file) )
+      break;
+    if ( !file.WriteBool(m_bReversed) )
+      break;
+    if ( !file.WriteInterval(m_full_real_curve_domain) )
+      break;
+    if ( !file.WriteInterval(m_sub_real_curve_domain) )
+      break;
+    if (!file.WriteInterval(m_proxy_curve_domain))
+      break;
+    // Added in version 1,1
+    if (!file.WriteInterval(m_segment_edge_domain))
+      break;
+    if (!file.WriteInterval(m_segment_trim_domain))
+      break;
+    rc = true;
+    break;
+  }
+
+  if ( !file.EndWrite3dmChunk() )
+    rc = false;
+  return rc;
+}
+
+bool ON_CurveProxyHistory::Read( ON_BinaryArchive& file )
+{
+  int version_major = 0;
+  int version_minor = 0;
+  Destroy();
+
+  if ( !file.BeginRead3dmChunk( TCODE_ANONYMOUS_CHUNK,&version_major,&version_minor) )
+    return false;
+
+  bool rc = false;
+  for(;;)
+  {
+    if ( 1 != version_major )
+      break;
+    if ( !m_curve_ref.Read(file) )
+      break;
+    if ( !file.ReadBool(&m_bReversed) )
+      break;
+    if ( !file.ReadInterval(m_full_real_curve_domain) )
+      break;
+    if ( !file.ReadInterval(m_sub_real_curve_domain) )
+      break;
+    if (!file.ReadInterval(m_proxy_curve_domain))
+      break;
+    if (version_minor > 0)
+    {
+      if (!file.ReadInterval(m_segment_edge_domain))
+        break;
+      if (!file.ReadInterval(m_segment_trim_domain))
+        break;
+    }
+    rc = true;
+    break;
+  }
+
+  if ( !file.EndRead3dmChunk() )
+    rc = false;
+
+  return rc;
+}
+
+void ON_CurveProxyHistory::Dump( ON_TextLog& ) const
+{
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+//
+// ON_PolyEdgeHistory
+//
+
+ON_PolyEdgeHistory::ON_PolyEdgeHistory()
+: m_evaluation_mode(0)
+{
+}
+
+ON_PolyEdgeHistory::~ON_PolyEdgeHistory()
+{
+}
+
+void ON_PolyEdgeHistory::Destroy()
+{
+  m_segment.Destroy();
+  m_t.Destroy();
+  m_evaluation_mode = 0;
+}
+
+
+bool ON_PolyEdgeHistory::Write( ON_BinaryArchive& file ) const
+{
+  int i;
+  if ( !file.BeginWrite3dmChunk( TCODE_ANONYMOUS_CHUNK,1,0) )
+    return false;
+
+  bool rc = false;
+  for(;;)
+  {
+    if ( !file.WriteInt(m_segment.Count()) )
+      break;
+    for ( i = 0; i < m_segment.Count(); i++ )
+    {
+      if ( !m_segment[i].Write(file) )
+        break;
+    }
+    if ( i < m_segment.Count() )
+      break;
+    if ( !file.WriteInt(m_t.Count()) )
+      break;
+    if ( m_t.Count() > 0 )
+    {
+      if ( !file.WriteDouble(m_t.Count(),m_t.Array()) )
+        break;
+    }
+    if ( !file.WriteInt(m_evaluation_mode) )
+      break;
+    rc = true;
+    break;
+  }
+
+  if ( !file.EndWrite3dmChunk() )
+    rc = false;
+  return rc;
+}
+
+bool ON_PolyEdgeHistory::Read( ON_BinaryArchive& file )
+{
+  int count, i;
+  int version_major = 0;
+  int version_minor = 0;
+
+  Destroy();
+
+  if ( !file.BeginRead3dmChunk( TCODE_ANONYMOUS_CHUNK,&version_major,&version_minor) )
+    return false;
+
+  bool rc = false;
+  for(;;)
+  {
+    if ( 1 != version_major )
+      break;
+    count = 0;
+    if ( !file.ReadInt(&count) )
+      break;
+    m_segment.Reserve(count);
+    for ( i = 0; i < count; i++ )
+    {
+      if ( !m_segment.AppendNew().Read(file) )
+        break;
+    }
+    if ( i < count )
+      break;
+    count = 0;
+    if ( !file.ReadInt(&count) )
+      break;
+    if ( count > 0 )
+    {
+      m_t.Reserve(count);
+      m_t.SetCount(count);
+      if ( !file.ReadDouble(count,m_t.Array()) )
+        break;
+    }
+    if ( !file.ReadInt(&m_evaluation_mode) )
+      break;
+    rc = true;
+    break;
+  }
+
+  if ( !file.EndRead3dmChunk() )
+    rc = false;
+  return rc;
+}
+
+void ON_PolyEdgeHistory::Dump( ON_TextLog& ) const
+{
 }

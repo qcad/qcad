@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,9 +10,16 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
+
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
 
 ON_OBJECT_IMPLEMENT(ON_OffsetSurface,ON_SurfaceProxy,"00C61749-D430-4ecc-83A8-29130A20CF9C");
 
@@ -121,13 +127,13 @@ const ON_Surface* ON_OffsetSurface::BaseSurface() const
   return ProxySurface();
 }
 
-ON_BOOL32 ON_OffsetSurface::GetBBox(
+bool ON_OffsetSurface::GetBBox(
        double* bbox_min,
        double* bbox_max,
-       ON_BOOL32 bGrowBox
+       bool bGrowBox
        ) const
 {
-  ON_BOOL32 rc = ON_SurfaceProxy::GetBBox(bbox_min,bbox_max);
+  bool rc = ON_SurfaceProxy::GetBBox(bbox_min,bbox_max);
   if ( rc )
   {
     double d, distance = 0.0;
@@ -156,7 +162,7 @@ ON_BOOL32 ON_OffsetSurface::GetBBox(
 }
 
 
-ON_BOOL32 ON_OffsetSurface::Evaluate(
+bool ON_OffsetSurface::Evaluate(
        double s, double t,
        int der_count,
        int v_stride,
@@ -174,7 +180,7 @@ ON_BOOL32 ON_OffsetSurface::Evaluate(
     vv_stride = 3;
   }
 
-  ON_BOOL32 rc = ON_SurfaceProxy::Evaluate(s,t,(der_count>2?der_count:2),vv_stride,vv,side,hint);
+  bool rc = ON_SurfaceProxy::Evaluate(s,t,(der_count>2?der_count:2),vv_stride,vv,side,hint);
 
   if ( v != vv )
   {
@@ -243,7 +249,7 @@ ON_BOOL32 ON_OffsetSurface::Evaluate(
 }
 
 
-void ON_BumpFunction::EvaluateHelperLinearBump(double t, double dt, int der_count, double* value) const
+void ON_BumpFunction::Internal_EvaluateLinearBump(double t, double dt, int der_count, double* value) const
 {
   value[0] = t;
   if (der_count>0)
@@ -259,7 +265,7 @@ void ON_BumpFunction::EvaluateHelperLinearBump(double t, double dt, int der_coun
   }
 }
 
-void ON_BumpFunction::EvaluateHelperQuinticBump(double t, double dt, int der_count, double* value) const
+void ON_BumpFunction::Internal_EvaluateQuinticBump(double t, double dt, int der_count, double* value) const
 {
   // c(t) = (1-t)^3 * (1 + 3t + 6t^2)
   //bool neg = (t<0.0);
@@ -352,19 +358,19 @@ void ON_BumpFunction::Evaluate(double s, double t, int der_count, double* value)
 
   if ( 5 == m_type[0] )
   {
-    EvaluateHelperQuinticBump(x,dx,der_count,xvalue);
+    Internal_EvaluateQuinticBump(x,dx,der_count,xvalue);
   }
   else
   {
-    EvaluateHelperLinearBump(x,dx,der_count,xvalue);
+    Internal_EvaluateLinearBump(x,dx,der_count,xvalue);
   }
   if ( 5 == m_type[1] )
   {
-    EvaluateHelperQuinticBump(y,dy,der_count,yvalue);
+    Internal_EvaluateQuinticBump(y,dy,der_count,yvalue);
   }
   else
   {
-    EvaluateHelperLinearBump(y,dy,der_count,yvalue);
+    Internal_EvaluateLinearBump(y,dy,der_count,yvalue);
   }
 
   int n, i, j;
@@ -441,8 +447,7 @@ bool ON_OffsetSurfaceFunction::EvaluateDistance(
       ) const
 {
   const int vcnt = ((num_der+1)*(num_der+2))/2;
-  int vi;
-  for ( vi = 0; vi < vcnt; vi++ )
+  for ( int vi = 0; vi < vcnt; vi++ )
   {
     value[vi] = 0;
   }
@@ -456,11 +461,11 @@ bool ON_OffsetSurfaceFunction::EvaluateDistance(
                        ? (double*)onmalloc(vcnt*sizeof(bump_value[0]))
                        : barray;
     const int bump_count = m_bumps.Count();
-    int bump_index, vi;
+    int bump_index;
     for ( bump_index = 0; bump_index < bump_count; bump_index++ )
     {
       m_bumps[bump_index].Evaluate( s, t, num_der, bump_value );
-      for ( vi = 0; vi < vcnt; vi++ )
+      for ( int vi = 0; vi < vcnt; vi++ )
       {
         value[vi] += bump_value[vi];
       }
@@ -478,8 +483,8 @@ ON_3dPoint ON_OffsetSurfaceFunction::PointAt(
   ) const
 {
   //double d = 0.0;
-  ON_3dPoint P;
-  ON_3dVector N;
+  ON_3dPoint P(ON_3dPoint::NanPoint);
+  ON_3dVector N(ON_3dVector::NanVector);
   if ( 0 != m_srf )
   {
     if ( m_srf->EvNormal(s,t,P,N) )
@@ -621,8 +626,8 @@ void ON_OffsetSurfaceFunction::Destroy()
   m_bZeroSideDerivative[2] = false;
   m_bZeroSideDerivative[3] = false;
 
-  m_domain[0].Destroy();
-  m_domain[1].Destroy();
+  m_domain[0] = ON_Interval::EmptyInterval;
+  m_domain[1] = ON_Interval::EmptyInterval;
   m_bumps.SetCount(0);
   m_bValid = false;
 }
@@ -860,32 +865,12 @@ bool ON_OffsetSurfaceFunction::Initialize()
 
 ON_BumpFunction::ON_BumpFunction()
 {
-  m_point.x = ON_UNSET_VALUE;
-  m_point.y = ON_UNSET_VALUE;
   m_type[0] = 0;
   m_type[1] = 0;
-  m_x0 = 0.0;
-  m_y0 = 0.0;
   m_sx[0] = 0.0;
   m_sx[1] = 0.0;
   m_sy[0] = 0.0;
   m_sy[1] = 0.0;
-  m_a = 0.0;
-}
-
-bool ON_BumpFunction::operator==(const ON_BumpFunction& other) const
-{
-  return ( m_point.x == other.m_point.x && m_point.y == other.m_point.y );
-}
-
-bool ON_BumpFunction::operator<(const ON_BumpFunction& other) const
-{
-  return ( (m_point.x < other.m_point.x) || (m_point.x == other.m_point.x && m_point.y < other.m_point.y) );
-}
-
-bool ON_BumpFunction::operator>(const ON_BumpFunction& other) const
-{
-  return ( (m_point.x > other.m_point.x) || (m_point.x == other.m_point.x && m_point.y > other.m_point.y) );
 }
 
 double ON_BumpFunction::ValueAt(

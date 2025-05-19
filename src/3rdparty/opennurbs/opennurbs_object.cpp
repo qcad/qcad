@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,117 +10,19 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
 
-
-
-#if defined(ON_DLL_EXPORTS)
-
-#if defined(ON_COMPILER_MSC)
-// Force this module to be inited first so the important globals
-// are initialized before there is any possibility they are used.
-#pragma warning( push )
-#pragma warning( disable : 4073 )
-#pragma init_seg(lib)
-#pragma warning( pop )
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
 #endif
 
-////////////////////////////////////////////////////////////////////////////////
-//
-// When openNURBS is used as a MS Windows DLL, it is possible 
-// for new/delete to allocate memory in one executable and delete
-// it in another.  Because MS Windows has incompatible memory 
-// managers in its plethora of C libraries and the choice of which
-// C library actually gets used depends on the code generation 
-// options you choose,  we get lots of support questions asking
-// about hard to trace crashes.
-//
-// If you are using openNURBS as a Windows DLL, you are sure you know
-// what you are doing, and you promise never to ask for support, then
-// feel free to delete these overrides.
-//
-//
-#pragma message( " --- OpenNURBS overriding ON_Object new and delete" )
+#if defined(OPENNURBS_EXPORTS)
 
-void* ON_Object::operator new(size_t sz)
-{
-  // ON_Object new
-
-  // The else "sz?sz:1" is there because section 3.7.3.1, 
-  // paragraph 2 of the C++ "standard" says something along
-  // the lines of:
-  //
-  //   The function shall return the address of the start of a 
-  //   block of storage whose length in bytes shall be at least
-  //   as large as the requested size. There are no constraints
-  //   on the contents of the allocated storage on return from 
-  //   the allocation function. The order, contiguity, and initial
-  //   value of storage allocated by successive calls to an 
-  //   allocation function is unspecified. The pointer returned 
-  //   shall be suitably aligned so that it can be converted to a 
-  //   pointer of any complete object type and then used to
-  //   access the object or array in the storage allocated (until
-  //   the storage is explicitly deallocated by a call to a 
-  //   corresponding deallocation function). If the size of the 
-  //   space requested is zero, the value returned shall not be a
-  //   null pointer value. The results of dereferencing a pointer
-  //   returned as a request for zero size are undefined.
-  
-  return onmalloc(sz?sz:1);
-}
-
-void ON_Object::operator delete(void* p)
-{
-  // ON_Object delete
-  onfree(p);
-}
-
-void* ON_Object::operator new[] (size_t sz)
-{
-  // ON_Object array new
-
-  // The else "sz?sz:1" is there because section 3.7.3.1, 
-  // paragraph 2 of the C++ "standard" says something along
-  // the lines of:
-  //
-  //   The function shall return the address of the start of a 
-  //   block of storage whose length in bytes shall be at least
-  //   as large as the requested size. There are no constraints
-  //   on the contents of the allocated storage on return from 
-  //   the allocation function. The order, contiguity, and initial
-  //   value of storage allocated by successive calls to an 
-  //   allocation function is unspecified. The pointer returned 
-  //   shall be suitably aligned so that it can be converted to a 
-  //   pointer of any complete object type and then used to
-  //   access the object or array in the storage allocated (until
-  //   the storage is explicitly deallocated by a call to a 
-  //   corresponding deallocation function). If the size of the 
-  //   space requested is zero, the value returned shall not be a
-  //   null pointer value. The results of dereferencing a pointer
-  //   returned as a request for zero size are undefined.
-  
-  return onmalloc(sz?sz:1);
-}
-
-void ON_Object::operator delete[] (void* p)
-{
-  // ON_Object array delete
-  onfree(p);
-}
-
-void* ON_Object::operator new(size_t, void* p)
-{
-  // ON_Object placement new
-  return p;
-}
-
-void ON_Object::operator delete(void*, void*)
-{
-  // ON_Object placement delete
-  return;
-}
 
 //
 //
@@ -129,250 +30,198 @@ void ON_Object::operator delete(void*, void*)
 
 #endif
 
-const ON_UUID ON_nil_uuid = {0,0,0,{0,0,0,0,0,0,0,0}};
-const ON_UUID ON_max_uuid = {0xFFFFFFFF,0xFFFF,0xFFFF,{0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF}};
-
-const ON_UUID ON_rhino2_id = { 0x16d0eca6, 0x359, 0x4e4c, { 0x9f, 0xe, 0xf2, 0x69, 0xfd, 0x47, 0x6c, 0xc4 } };
-
-const ON_UUID ON_rhino3_id = { 0xA7BBFF3C, 0xFF19, 0x4883, { 0x85, 0x8D, 0xB1, 0xE7, 0xDB, 0x4F, 0x1A, 0x7E } };
-
-// {E2143A46-BB01-4b0c-AC4D-C34B5652FAE0}
-const ON_UUID ON_rhino4_id = { 0xe2143a46, 0xbb01, 0x4b0c, { 0xac, 0x4d, 0xc3, 0x4b, 0x56, 0x52, 0xfa, 0xe0 } };
-
-// {60515F84-8F7F-41da-801D-1C87E32F88F5}
-const ON_UUID ON_rhino5_id = { 0x60515f84, 0x8f7f, 0x41da, { 0x80, 0x1d, 0x1c, 0x87, 0xe3, 0x2f, 0x88, 0xf5 } };
-
-// ON_rhino_id is always set to the value for the current version
-// of Rhino.  ON_rhino_id is the id that should be used as the
-// userdata application id for userdata class definitions that are
-// in the core Rhino executable.
-const ON_UUID ON_rhino_id = ON_rhino5_id;
-
-// Used to identifiy userdata read from V2 files
-// which were written before userdata had application ids.
-// {132F2340-DB90-494e-BF02-C36F0EA3197C}
-const ON_UUID ON_v2_userdata_id = { 0x132f2340, 0xdb90, 0x494e, { 0xbf, 0x2, 0xc3, 0x6f, 0xe, 0xa3, 0x19, 0x7c } };
-
-// Used to identifiy userdata read from V3 files
-// which were written before userdata had application ids.
-// {4307B91D-6A9D-478e-B0A2-7C577997C663}
-const ON_UUID ON_v3_userdata_id = { 0x4307b91d, 0x6a9d, 0x478e, { 0xb0, 0xa2, 0x7c, 0x57, 0x79, 0x97, 0xc6, 0x63 } };
-
-// Used to identifiy userdata read from V4 files
-// which were written before opennurbs 200609190
-// required application ids.
-// {F73F2953-A244-44c2-B7C2-7E27390D1196}
-const ON_UUID ON_v4_userdata_id = { 0xf73f2953, 0xa244, 0x44c2, { 0xb7, 0xc2, 0x7e, 0x27, 0x39, 0xd, 0x11, 0x96 } };
-
-// {17B3ECDA-17BA-4e45-9E67-A2B8D9BE520D}
-const ON_UUID ON_opennurbs4_id = { 0x17b3ecda, 0x17ba, 0x4e45, { 0x9e, 0x67, 0xa2, 0xb8, 0xd9, 0xbe, 0x52, 0xd } };
-
-// {C8CDA597-D957-4625-A4B3-A0B510FC30D4}
-const ON_UUID ON_opennurbs5_id = { 0xc8cda597, 0xd957, 0x4625, { 0xa4, 0xb3, 0xa0, 0xb5, 0x10, 0xfc, 0x30, 0xd4 } };
-
-// ON_opennurbs_id is always set to the value for the current version
-// of opennurbs.  ON_opennurbs_id is the id that should be used as
-// the userdata application id for userdata classes definitions that
-// are in the opennurbs library.
-const ON_UUID ON_opennurbs_id = ON_opennurbs5_id;
-
-/*
-IEEE 754
-
-Storage
-           size      sign     exponent         fraction
-  float    4 bytes   bit 31    8 bits (30-23)  23 bits (22-0)
-  double   8 bytes   bit 63   11 bits (62-52)  52 bits (51-0)
-
-sign bit = 1 indicates negative
-sign bit = 0 indicates positive
-
-float  absolute value = 2^(e-127)  * 1+(f/2^23)
-  e = value of the 8 bit number in the exponent field
-  f = value of the 23 bit number in the fraction field
-
-double absolute value = 2^(e-1023) * 1+(f/2^51)
-  e = value of the 11 bit number in the exponent field
-  f = value of the 51 bit number in the fraction field
-
-Exceptions:
-  If all exponent bits are all 0 (e = 0) and the fraction bits
-  are all zero, then the value of the number is zero.
-
-  If all exponent bits are all 0 (e = 0) and at least one fraction
-  bits is not zero, then the representaion is "denormalized".
-  In this case, the float absolute value is 0.f*2^-126 and the
-  double absolute value is 0.f*2^-1022.
-
-  If all exponent bits are 1 (float e = 11111111binary = 255decimal
-  or double e = 11111111111 binary = 2047 decimal) and the fraction
-  bits are all zero, the number is infinity.  The sign bit
-  determines the sign of infinity.
-  
-  If all exponent bits are 1 and at least one fraction bit is
-  not zero, the number is a "NaN" (not a number).  If the most
-  significant fraction bit is 1, the number is a quiet NaN or
-  "QNaN".  If the most significan fraction bit is 0, the number
-  is a signalling NaN or "SNaN".
-  
-  Some authors (SH)   QNaNs are used to indicate
-  indeterminant operations, like sqrt(-1.0).  SNaNs are used
-  to indicate invalid operations.
-
-  SH - http://steve.hollasch.net/cgindex/coding/ieeefloat.html
-  Intel - 
-*/
-static double ON__dblinithelper(int i)
+unsigned int ON_IsRhinoApplicationId(
+  ON_UUID id
+  )
 {
-  // called twice - performance is not important
-  union 
-  {
-    double x;
-    unsigned char b[8];
-  } u;
-  unsigned int i7, i6;
-
-  // different bytes on
-  u.x = 2.0; // sign = 0; fraction = 0; exponent = 100 0000 0000 binary
-
-  if ( 0x40 == u.b[7] && 0 == u.b[0]
-       && 0 == u.b[1] && 0 == u.b[2] && 0 == u.b[3]
-       && 0 == u.b[4] && 0 == u.b[5] && 0 == u.b[6] 
-     )
-  {
-    // little endian doubles
-    i7 = 7; i6 = 6;
-  }
-  else if ( 0x40 == u.b[0]  && 0 == u.b[7]
-            && 0 == u.b[1] && 0 == u.b[2] && 0 == u.b[3]
-            && 0 == u.b[4] && 0 == u.b[5] && 0 == u.b[6] 
-          )
-  {
-    // big endian doubles
-    i7 = 0; i6 = 1;
-  }
-  else
-  {
-    // this sitation is not handled by this algorithm
-    // and that is a bug in the algorithm.
-    ON_ERROR("CPU has unexpected bit pattern in double 2.0.");
-    i7 = 0;
-    i6 = 0;
-    i = 99;
-  }
-
-  if      ( 1 == i ) // positive quiet NaN
-  {
-    // all exponent bits = 1
-    // fraction bits = 100...0
-    u.b[i7]   = 0x7F; // 0111 1111
-    u.b[i6]   = 0xF8; // 1111 1000
-    u.b[5]    = 0;    // 0...
-    u.b[4]    = 0;
-    u.b[3]    = 0;
-    u.b[2]    = 0;
-    u.b[7-i6] = 0;
-    u.b[7-i7] = 0;
-  }
-  else if ( 2 == i ) // positive infinity
-  {
-    // all exponent bits = 1
-    // all fraction bits = 0
-    u.b[i7]   = 0x7F; // 0111 1111
-    u.b[i6]   = 0xF0; // 1111 0000
-    u.b[5]    = 0;    // 0...
-    u.b[4]    = 0;
-    u.b[3]    = 0;
-    u.b[2]    = 0;
-    u.b[7-i6] = 0;
-    u.b[7-i7] = 0;
-  }
-  else
-  {
-    // invalid input 
-    u.b[0] = 0xFF;
-    u.b[1] = 0xFF;
-    u.b[2] = 0xFF;
-    u.b[3] = 0xFF;
-    u.b[4] = 0xFF;
-    u.b[5] = 0xFF;
-    u.b[6] = 0xFF;
-    u.b[7] = 0xFF;
-  }
-
-  return u.x;
+  if (ON_rhino2_id == id)
+    return 2;
+  if (ON_rhino3_id == id)
+    return 3;
+  if (ON_rhino4_id == id)
+    return 4;
+  if (ON_rhino5_id == id)
+    return 5;
+  if (ON_rhino6_id == id)
+    return 6;
+  if (ON_rhino7_id == id)
+    return 7;
+  if (ON_rhino8_id == id)
+    return 8;
+  return 0;
 }
 
-
-static float ON__fltinithelper(int i)
+unsigned int ON_IsOpennurbsApplicationId(
+  ON_UUID id
+  )
 {
-  // called twice - performance is not important
-  union 
-  {
-    float x;
-    unsigned char b[4];
-  } u;
-  unsigned int i3, i2;
-
-  // different bytes on
-  u.x = 2.0f; // sign = 0; mantissa = 0; exponent = 1000 0000
-  if ( 0x40 == u.b[3] && 0 == u.b[0] && 0 == u.b[1] && 0 == u.b[2] )
-  {
-    // little endian doubles
-    i3 = 3; i2 = 2;
-  }
-  else if ( 0x40 == u.b[0] && 0 == u.b[3] && 0 == u.b[1] && 0 == u.b[2] )
-  {
-    // big endian doubles
-    i3 = 0; i2 = 1;
-  }
-  else
-  {
-    // this sitation is not handled by this algorithm
-    // and that is a bug in the algorithm.
-    ON_ERROR("CPU has unexpected bit pattern in float 2.0f.");
-    i3 = 0;
-    i2 = 0;
-    i = 99;
-  }
-
-  if      ( 1 == i ) // positive quiet NaN
-  {
-    // all exponent bits = 1
-    // fraction bits = 100...0
-    u.b[i3]   = 0x7F; // 0111 1111
-    u.b[i2]   = 0xC0; // 1100 0000
-    u.b[3-i2] = 0;    // 0...
-    u.b[3-i3] = 0;
-  }
-  else if ( 2 == i ) // positive infinity
-  {
-    // all exponent bits = 1
-    // all fraction bits = 0
-    u.b[i3]   = 0x7F; // 0111 1111
-    u.b[i2]   = 0x80; // 1000 0000
-    u.b[3-i2] = 0;    // 0...
-    u.b[3-i3] = 0;
-  }
-  else
-  {
-    // invalid input 
-    u.b[0] = 0xFF;
-    u.b[1] = 0xFF;
-    u.b[2] = 0xFF;
-    u.b[3] = 0xFF;
-  }
-
-  return u.x;
+  if (ON_opennurbs4_id == id)
+    return 4;
+  if (ON_opennurbs5_id == id)
+    return 5;
+  if (ON_opennurbs6_id == id)
+    return 6;
+  if (ON_opennurbs7_id == id)
+    return 7;
+  if (ON_opennurbs8_id == id)
+    return 8;
+  return 0;
 }
 
-const double ON_DBL_QNAN =  ON__dblinithelper(1);
-const double ON_DBL_PINF =  ON__dblinithelper(2);
-const double ON_DBL_NINF = -ON__dblinithelper(2);
+static int ON__isnand(const double* x)
+{
+  const unsigned char* b = (const unsigned char*)x;
+  static unsigned int b7 = 0;
+  static unsigned int b6 = 0;
+  if (0 == b6)
+  {
+    // different bytes on
+    union
+    {
+      double x;
+      unsigned char b[8];
+    } u;  u.x = 2.0; // sign = 0; fraction = 0; exponent = 100 0000 0000 binary
 
-const float  ON_FLT_QNAN =  ON__fltinithelper(1);
-const float  ON_FLT_PINF =  ON__fltinithelper(2);
-const float  ON_FLT_NINF = -ON__fltinithelper(2);
+    if (0x40 == u.b[7] && 0 == u.b[0]
+      && 0 == u.b[1] && 0 == u.b[2] && 0 == u.b[3]
+      && 0 == u.b[4] && 0 == u.b[5] && 0 == u.b[6]
+      )
+    {
+      // little endian doubles
+      b7 = 7;
+      b6 = 6;
+    }
+    else if (0x40 == u.b[0] && 0 == u.b[7]
+      && 0 == u.b[1] && 0 == u.b[2] && 0 == u.b[3]
+      && 0 == u.b[4] && 0 == u.b[5] && 0 == u.b[6]
+      )
+    {
+      // big endian doubles
+      b7 = 0;
+      b6 = 1;
+    }
+    else
+    {
+      // This situation is not handled by this algorithm
+      // and that is a bug in the algorithm.
+      ON_ERROR("Unexpected bit pattern in double 2.0.");
+      // assume little endian doubles
+      b7 = 7;
+      b6 = 6;
+    }
+  }
+
+  if (0x7F == (0x7F & b[b7]) && (0xF0 == (0xF0 & b[b6])))
+  {
+    // All exponent bits are set
+    if (0x08 & b[b6])
+    {
+      // The most significant fraction bit is set.
+      // This must be a QNaN
+      return 2;
+    }
+    else
+    {
+      // The most significant fraction bit is is clear.  
+      // If any other fraction bits are set, it's an SNaN
+      if (0 != (0x0F & b[b6]))
+        return 1;
+      if (6 == b6)
+      {
+        // little endian
+        return
+          (0 != b[0] || 0 != b[1] || 0 != b[2] || 0 != b[3] || 0 != b[4] || 0 != b[5])
+          ? 1  // some fraction bit is set
+          : 0; // all fraction bits are clear.
+      }
+      else
+      {
+        // big endian
+        return
+          (0 != b[2] || 0 != b[3] || 0 != b[4] || 0 != b[5] || 0 != b[6] || 0 != b[7])
+          ? 1  // some fraction bit is set
+          : 0; // all fraction bits are clear.
+      }
+    }
+  }
+
+  return 0; // not a NaN
+}
+
+static int ON__isnanf(const float* x)
+{
+  const unsigned char* b = (const unsigned char*)x;
+
+  static unsigned int b3 = 0;
+  static unsigned int b2 = 0;
+
+  if (0 == b2)
+  {
+    union
+    {
+      float x;
+      unsigned char b[4];
+    } u;
+
+    // different bytes on
+    u.x = 2.0f; // sign = 0; mantissa = 0; exponent = 1000 0000
+    if (0x40 == u.b[3] && 0 == u.b[0] && 0 == u.b[1] && 0 == u.b[2])
+    {
+      // little endian floats
+      b3 = 3; b2 = 2;
+    }
+    else if (0x40 == u.b[0] && 0 == u.b[3] && 0 == u.b[1] && 0 == u.b[2])
+    {
+      // big endian floats
+      b3 = 0; b2 = 1;
+    }
+    else
+    {
+      // This situation is not handled by this algorithm
+      // and that is a bug in the algorithm.
+      ON_ERROR("Unexpected bit pattern in float 2.0f.");
+      // assume little endian floats
+      b3 = 3; b2 = 2;
+    }
+  }
+
+  if (0x7F == (0x7F & b[b3]) && (0x80 == (0x80 & b[b2])))
+  {
+    // All exponent bits are set
+
+    if (0x7F & b[b2])
+    {
+      // The most significant fraction bit is set.
+      // This must be a QNaN
+      return 2;
+    }
+    else
+    {
+      // The most significant fraction bit is is clear.  
+      // If any other fraction bits are set, it's an SNaN
+      if (0 != (0x0F & b[b2]))
+        return 1;
+      if (2 == b2)
+      {
+        // little endian
+        return
+          (0 != b[0] || 0 != b[1])
+          ? 1  // some fraction bit is set
+          : 0; // all fraction bits are clear.
+      }
+      else
+      {
+        // big endian
+        return
+          (0 != b[2] || 0 != b[3])
+          ? 1  // some fraction bit is set
+          : 0; // all fraction bits are clear.
+      }
+    }
+  }
+
+  return 0; // not a NaN
+}
 
 void ON_DBL_SNAN( double* x)
 {
@@ -439,7 +288,7 @@ void ON_DBL_SNAN( double* x)
 
 
   // must use memcpy().  On Intel FPU, assignment using x = u.x 
-  // will set x to qnan and invalid op exception occures.
+  // will set x to qnan and invalid op exception occurs.
   memcpy(x,&u.x,sizeof(*x));
 }
 
@@ -495,39 +344,78 @@ void ON_FLT_SNAN( float* x)
 #endif
 
   // must use memcpy().  On Intel FPU, assignment using x = u.x 
-  // will set x to qnan and invalid op exception occures.
+  // will set x to qnan and invalid op exception occurs.
   memcpy(x,&u.x,sizeof(*x));
 }
 
-void ON::End()
+bool ON_IsNaNd(double x)
 {
+  return 0 != ON__isnand(&x);
+}
+
+bool ON_IsQNaNd(double x)
+{
+  return 2 == ON__isnand(&x);
+}
+
+bool ON_IsSNaNd(double x)
+{
+  return 1 == ON__isnand(&x);
+}
+
+bool ON_IsNaNf(float x)
+{
+  return 0 != ON__isnanf(&x);
+}
+
+bool ON_IsQNaNf(float x)
+{
+  return 2 == ON__isnanf(&x);
+}
+
+bool ON_IsSNaNf(float x)
+{
+  return 1 == ON__isnanf(&x);
+}
+
+float ON_FloatFromDouble(
+  double x
+)
+{
+  if (ON_UNSET_VALUE == x)
+    return ON_UNSET_FLOAT;
+  if (ON_UNSET_POSITIVE_VALUE == x)
+    return ON_UNSET_POSITIVE_FLOAT;
+  return static_cast<float>(x);
+}
+
+double ON_DoubleFromFloat(
+  float x
+)
+{
+  if (ON_UNSET_FLOAT == x)
+    return ON_UNSET_VALUE;
+  if (ON_UNSET_POSITIVE_FLOAT == x)
+    return ON_UNSET_POSITIVE_VALUE;
+  return static_cast<double>(x);
 }
 
 
-#if 8 == ON_SIZEOF_POINTER
+bool ON_IsNullPtr(const void* ptr)
+{
+  return (nullptr == ptr);
+}
 
-#if !defined(ON_64BIT_POINTER)
-#error 8 = ON_SIZEOF_POINTER and ON_64BIT_POINTER is not defined
-#endif
-#if defined(ON_32BIT_POINTER)
-#error 8 = ON_SIZEOF_POINTER and ON_32BIT_POINTER is defined
-#error
-#endif
+bool ON_IsNullPtr(const ON__UINT_PTR ptr)
+{
+  return (0 == ptr);
+}
 
-#elif 4 == ON_SIZEOF_POINTER
+bool ON_IsNullPtr(const ON__INT_PTR ptr)
+{
+  return (0 == ptr);
+}
 
-#if !defined(ON_32BIT_POINTER)
-#error 4 = ON_SIZEOF_POINTER and ON_32BIT_POINTER is not defined
-#endif
-#if defined(ON_64BIT_POINTER)
-#error 4 = ON_SIZEOF_POINTER and ON_64BIT_POINTER is defined
-#endif
-
-#else
-
-#error OpenNURBS assumes sizeof(void*) is 4 or 8 bytes
-
-#endif
 
 static void ValidateSizesHelper()
 {
@@ -542,9 +430,9 @@ static void ValidateSizesHelper()
     // code will fail and probably crash.
 
 #if defined(ON_COMPILER_MSC)
-#pragma warning( push )
+#pragma ON_PRAGMA_WARNING_PUSH
 // Disable warning C4127: conditional expression is constant
-#pragma warning( disable : 4127 )
+#pragma ON_PRAGMA_WARNING_DISABLE_MSC( 4127 )
 #endif
 
     if ( ON_SIZEOF_POINTER != sizeof(void*) )
@@ -585,90 +473,121 @@ static void ValidateSizesHelper()
     }
 
 #if defined(ON_COMPILER_MSC)
-#pragma warning( pop )
+#pragma ON_PRAGMA_WARNING_POP
 #endif
   }
 }
 
+
+unsigned int ON::LibraryStatus()
+{
+  return ON::m_opennurbs_library_status;
+}
+
+void ON::SetLibraryStatus(unsigned int status)
+{
+  ON::m_opennurbs_library_status = status;
+}
+
+
 void ON::Begin()
 {
+  if ( 0 != ON::m_opennurbs_library_status )
+    return;
+
+  ON::m_opennurbs_library_status = 1;
+
   ValidateSizesHelper();
 
-  ON_MemoryManagerBegin();
 
-
-#if !defined(ON_DLL_EXPORTS)
-  // Some statically linked library optimization discard
+#if !defined(OPENNURBS_EXPORTS)
+  // Some statically linked library optimizations discard
   // object code that is not explicitly referenced.
   // By explicitly calling all the ON_Object::Cast overrides,
   // we can insure that the class definitions get linked in
   // by making a single call to ON::Begin().  These definitions
   // are needed for the file reading code to work right.
-  static bool bRunning = false;
-  if ( !bRunning )
-  {
-    bRunning = true;
-    const ON_Object* p=0;
-    ON_Annotation::Cast(p);
-    ON_Annotation2::Cast(p);
-    ON_Bitmap::Cast(p);
-    ON_Curve::Cast(p);
-    ON_Geometry::Cast(p);
-    ON_Object::Cast(p);
-    ON_Surface::Cast(p);
-    ON_UserData::Cast(p);
-    ON_LinearDimension::Cast(p);
-    ON_RadialDimension::Cast(p);
-    ON_AngularDimension::Cast(p);
-    ON_TextEntity::Cast(p);
-    ON_Leader::Cast(p);
-    ON_AnnotationTextDot::Cast(p);
-    ON_AnnotationArrow::Cast(p);
-    ON_LinearDimension2::Cast(p);
-    ON_RadialDimension2::Cast(p);
-    ON_AngularDimension2::Cast(p);
-    ON_TextEntity2::Cast(p);
-    ON_Leader2::Cast(p);
-    ON_TextDot::Cast(p);
-    ON_ArcCurve::Cast(p);
-    ON_WindowsBitmap::Cast(p);
-    ON_BrepVertex::Cast(p);
-    ON_BrepEdge::Cast(p);
-    ON_BrepTrim::Cast(p);
-    ON_BrepLoop::Cast(p);
-    ON_BrepFace::Cast(p);
-    ON_Brep::Cast(p);
-    ON_CurveOnSurface::Cast(p);
-    ON_CurveProxy::Cast(p);
-    ON_DimStyle::Cast(p);
-    ON_Font::Cast(p);
-    ON_Group::Cast(p);
-    ON_Layer::Cast(p);
-    ON_Light::Cast(p);
-    ON_LineCurve::Cast(p);
-    ON_Material::Cast(p);
-    ON_Mesh::Cast(p);
-    ON_NurbsCurve::Cast(p);
-    ON_NurbsSurface::Cast(p);
-    ON_PlaneSurface::Cast(p);
-    ON_PointCloud::Cast(p);
-    ON_Point::Cast(p);
-    ON_PointGrid::Cast(p);
-    ON_PolyCurve::Cast(p);
-    ON_PolylineCurve::Cast(p);
-    ON_RevSurface::Cast(p);
-    ON_SumSurface::Cast(p);
-    ON_SurfaceProxy::Cast(p);
-    ON_UnknownUserData::Cast(p);
-    ON_Viewport::Cast(p);
-  }
+  const ON_Object* p=0;
+
+  ON_Object::Cast(p);
+  ON_3dmObjectAttributes::Cast(p);
+  ON_Bitmap::Cast(p);
+  ON_EmbeddedBitmap::Cast(p);
+  ON_WindowsBitmap::Cast(p);
+  ON_WindowsBitmapEx::Cast(p);
+  ON_DimStyle::Cast(p);
+  ON_DocumentUserStringList::Cast(p);
+  ON_TextStyle::Cast(p);
+  ON_Geometry::Cast(p);
+  ON_Annotation::Cast(p);
+  ON_Text::Cast(p);
+  ON_Leader::Cast(p);
+  ON_Dimension::Cast(p);
+  ON_DimLinear::Cast(p);
+  ON_DimAngular::Cast(p);
+  ON_DimRadial::Cast(p);
+  ON_DimOrdinate::Cast(p);
+  ON_Centermark::Cast(p);
+  ON_Brep::Cast(p);
+  ON_BrepLoop::Cast(p);
+  ON_Curve::Cast(p);
+  ON_ArcCurve::Cast(p);
+  ON_CurveOnSurface::Cast(p);
+  ON_CurveProxy::Cast(p);
+  ON_BrepEdge::Cast(p);
+  ON_BrepTrim::Cast(p);
+  ON_LineCurve::Cast(p);
+  ON_NurbsCurve::Cast(p);
+  ON_PolyCurve::Cast(p);
+  ON_PolylineCurve::Cast(p);
+  ON_DetailView::Cast(p);
+  ON_Hatch::Cast(p);
+  ON_InstanceDefinition::Cast(p);
+  ON_InstanceRef::Cast(p);
+  ON_Light::Cast(p);
+  ON_Mesh::Cast(p);
+  ON_MeshComponentRef::Cast(p);
+  ON_MorphControl::Cast(p);
+  ON_NurbsCage::Cast(p);
+  ON_Point::Cast(p);
+  ON_BrepVertex::Cast(p);
+  ON_PointCloud::Cast(p);
+  ON_PointGrid::Cast(p);
+  ON_Surface::Cast(p);
+  ON_Extrusion::Cast(p);
+  ON_NurbsSurface::Cast(p);
+  ON_PlaneSurface::Cast(p);
+  ON_ClippingPlaneSurface::Cast(p);
+  ON_RevSurface::Cast(p);
+  ON_SumSurface::Cast(p);
+  ON_SurfaceProxy::Cast(p);
+  ON_BrepFace::Cast(p);
+  ON_OffsetSurface::Cast(p);
+  ON_TextDot::Cast(p);
+  ON_Viewport::Cast(p);
+  ON_Group::Cast(p);
+  ON_HatchPattern::Cast(p);
+  ON_HistoryRecord::Cast(p);
+  ON_Layer::Cast(p);
+  ON_Linetype::Cast(p);
+  ON_Material::Cast(p);
+  ON_Texture::Cast(p);
+  ON_TextureMapping::Cast(p);
+  ON_UserData::Cast(p);
+  ON_UnknownUserData::Cast(p);
+  ON_UserStringList::Cast(p);
+
 #endif
+
+  // Lock and mark all constant system components
+  ON_ModelComponent::Internal_SystemComponentHelper();
+
+  ON::m_opennurbs_library_status = 2;
 }
 
-
-ON_ClassId* ON_ClassId::m_p0 = 0; // static pointer to first id in list
-ON_ClassId* ON_ClassId::m_p1 = 0; // static pointer to last id in list
-int ON_ClassId::m_mark0 = 0;
+void ON::End()
+{
+}
 
 int ON_ClassId::CurrentMark()
 {
@@ -736,7 +655,7 @@ bool ON_ClassId::PurgeAfter(const ON_ClassId* pClassId)
 
 //////////////////////////////////////////////////////////////////////////////
 
-static ON_BOOL32 g_bDisableDemotion = false;
+static bool g_bDisableDemotion = false;
 
 static void IntToString( int i, char s[7] )
 {
@@ -774,15 +693,14 @@ static void IntToString( int i, char s[7] )
 ON_ClassId::ON_ClassId( const char* sClassName, 
                         const char* sBaseClassName, 
                         ON_Object* (*create)(),
-                        bool (*copy)( const ON_Object*, ON_Object* ),
                         const char* sUUID // UUID in registry format from guidgen
                         ) 
                         : m_pNext(0),
                           m_pBaseClassId(0),
                           m_create(create),
                           m_mark(m_mark0),
-                          m_class_id_version(1),
-                          m_copy(copy),
+                          m_class_id_version(0),
+                          m_f1(0),
                           m_f2(0),
                           m_f3(0),
                           m_f4(0),
@@ -795,24 +713,6 @@ ON_ClassId::ON_ClassId( const char* sClassName,
   ConstructorHelper(sClassName,sBaseClassName,sUUID);
   m_mark |= 0x80000000; // This bit of m_mark is a flag that indicates 
                         // the new constructor was called.
-}
-
-
-ON_ClassId::ON_ClassId( const char* sClassName, 
-                        const char* sBaseClassName, 
-                        ON_Object* (*create)(),
-                        const char* sUUID // UUID in registry format from guidgen
-                        ) 
-                        : m_pNext(0),
-                          m_pBaseClassId(0),
-                          m_create(create),
-                          m_mark(m_mark0)
-{
-  // Code COMPILED before opennurbs 200703060 calls this constructor.
-  // DO NOT INITIALIZE m_class_id_version or any ON_ClassId fields
-  // after m_class_id_version because the executable calling this 
-  // constructor did not allocate room for this these members.
-  ConstructorHelper(sClassName,sBaseClassName,sUUID);
 }
 
 void ON_ClassId::ConstructorHelper( const char* sClassName, 
@@ -902,8 +802,13 @@ void ON_ClassId::ConstructorHelper( const char* sClassName,
   {
     for ( ON_ClassId* p = m_p0; p; p = p->m_pNext )
     {
-      if ( !p->m_pBaseClassId && p->m_sBaseClassName ) {
-        if ( !strcmp( m_sClassName, p->m_sBaseClassName ) )
+      if ( 
+        0 == p->m_pBaseClassId 
+        && 0 != p->m_sBaseClassName[0] 
+        && 0 == p->m_sBaseClassName[sizeof(p->m_sBaseClassName)/sizeof(p->m_sBaseClassName[0]) - 1] 
+        )
+      {
+        if ( 0 == strcmp( m_sClassName, p->m_sBaseClassName ) )
           p->m_pBaseClassId = this;
       }
     }
@@ -937,7 +842,7 @@ ON_UUID ON_GetMostRecentClassIdCreateUuid()
 ON_Object* ON_ClassId::Create() const
 {
   // Save the uuid so that Rhino's .NET SDK
-  // can create approprate class.  The C++
+  // can create appropriate class.  The C++
   // opennurbs toolkit never uses this value.
   s_most_recent_class_id_create_uuid = m_uuid;
   return m_create ? m_create() : 0;
@@ -951,9 +856,9 @@ const ON_ClassId* ON_ClassId::ClassId( const char* sClassName )
   const char* s0;
   const char* s1;
   if ( !sClassName || !sClassName[0] || sClassName[0] == '0' )
-    return NULL;
+    return nullptr;
   for(p = m_p0; p; p = p->m_pNext) {
-    // avoid strcmp() because it crashes on NULL strings
+    // avoid strcmp() because it crashes on nullptr strings
     s0 = sClassName;
     s1 = p->m_sClassName;
     if ( s0 && s1 && *s0 ) {
@@ -981,7 +886,7 @@ const ON_ClassId* ON_ClassId::ClassId( ON_UUID uuid )
       break;
   }
 
-  if ( !p && !g_bDisableDemotion) 
+  if ( nullptr == p && false == g_bDisableDemotion) 
   {
     // enable OpenNURBS toolkit to read files that contain old uuids even when
     // old class definitions are not loaded.
@@ -1017,19 +922,24 @@ const ON_ClassId* ON_ClassId::ClassId( ON_UUID uuid )
     ON_UUID sumsrf = { 0x665f6331, 0x2a66, 0x4cce, { 0x81, 0xd0, 0xb5, 0xee, 0xbd, 0x9b, 0x54, 0x17 } };
 
     if      ( !ON_UuidCompare( &uuid, &nc0 ) || !ON_UuidCompare( &uuid, &nc1 ) )
-      p = &ON_NurbsCurve::m_ON_NurbsCurve_class_id;
+      p = &ON_CLASS_RTTI(ON_NurbsCurve);
     else if ( !ON_UuidCompare( &uuid, &ns0 ) || !ON_UuidCompare( &uuid, &ns1 ) )
-      p = &ON_NurbsSurface::m_ON_NurbsSurface_class_id;
+      p = &ON_CLASS_RTTI(ON_NurbsSurface);
     else if ( !ON_UuidCompare( &uuid, &pc0 ) )
-      p = &ON_PolyCurve::m_ON_PolyCurve_class_id;
+      p = &ON_CLASS_RTTI(ON_PolyCurve);
     else if ( !ON_UuidCompare( &uuid, &br0 ) || !ON_UuidCompare( &uuid, &br1 ) || !ON_UuidCompare( &uuid, &br2 ) )
-      p = &ON_Brep::m_ON_Brep_class_id;
+      p = &ON_CLASS_RTTI(ON_Brep);
     else if ( !ON_UuidCompare( &uuid, &revsrf ) )
-      p = &ON_RevSurface::m_ON_RevSurface_class_id;
+      p = &ON_CLASS_RTTI(ON_RevSurface);
     else if ( !ON_UuidCompare( &uuid, &sumsrf ) )
-      p = &ON_SumSurface::m_ON_SumSurface_class_id;
+      p = &ON_CLASS_RTTI(ON_SumSurface);
     else
-      p = 0; // <- does nothing but it's a good place for debugger breakpoint
+    {
+      // The p = nullptr line does nothing (p is already nullptr) but, if you're working on
+      // file reading bugs or other cases that involving rtti bugs, then it's a good 
+      // location for a debugger breakpoint.
+      p = nullptr;
+    }
   }
   return p;
 }
@@ -1194,7 +1104,7 @@ bool ON__ClassIdDumpNode::Dump( int depth, ON_TextLog& text_log )
     if ( count > 0 )
     {
       // dump children names alphabetically
-      m_child_nodes.HeapSort( ON__ClassIdDumpNode_CompareName );
+      m_child_nodes.QuickSort( ON__ClassIdDumpNode_CompareName );
 
       text_log.PushIndent();
       for ( i = 0; i < count; i++ )
@@ -1237,7 +1147,7 @@ void ON_ClassId::Dump( ON_TextLog& dump )
     }
 
     // sort nodes by class id's uuid
-    nodes.HeapSort(ON__ClassIdDumpNode_CompareUuid);
+    nodes.QuickSort(ON__ClassIdDumpNode_CompareUuid);
 
     // fill in m_parent_node and m_child_nodes[]
     for ( i = 0; i < count; i++ )
@@ -1258,7 +1168,7 @@ void ON_ClassId::Dump( ON_TextLog& dump )
     }
 
     // print class tree
-	tmp_node.m_class_id = &ON_Object::m_ON_Object_class_id;
+	  tmp_node.m_class_id = &ON_CLASS_RTTI(ON_Object);
     i = nodes.BinarySearch(&tmp_node,ON__ClassIdDumpNode_CompareUuid);
     bool rc = false;
     if ( i >= 0 )
@@ -1317,10 +1227,10 @@ const ON_ClassId* ON_ClassId::BaseClass() const
   return m_pBaseClassId;
 }
 
-ON_BOOL32 ON_ClassId::IsDerivedFrom( const ON_ClassId* pBaseClassId ) const
+bool ON_ClassId::IsDerivedFrom( const ON_ClassId* pBaseClassId ) const
 {
   // determine if this is derived from pBaseClassId
-  ON_BOOL32 b = false;
+  bool b = false;
   if ( pBaseClassId ) {
     const ON_ClassId* p = this;
     for(;p;) {
@@ -1338,40 +1248,48 @@ ON_BOOL32 ON_ClassId::IsDerivedFrom( const ON_ClassId* pBaseClassId ) const
 
 ON_VIRTUAL_OBJECT_IMPLEMENT(ON_Object,0,"60B5DBBD-E660-11d3-BFE4-0010830122F0");
 
-bool ON_Object::CopyFrom( const ON_Object* src )
-{
-  // In V6 this will be a virtual function that will be
-  // declared in the ON_OBJECT_DECLARE macro and defined
-  // in the ON_OBJECT_IMPLEMENT macro.  The check for
-  // cid->ClassIdVersion() >= 1 is CRITICAL and it must
-  // happen before looking at the cid->m_copy member.
-  // See the comments in the ON_ClassId constructors for
-  // details.
-  const ON_ClassId* cid = ClassId();
-  return (cid && cid->ClassIdVersion() >= 1 && cid->m_copy) ? cid->m_copy(src,this) : false;
-}
-
-ON_Object::ON_Object() : m_mempool(0), m_userdata_list(0)
+ON_Object::ON_Object() ON_NOEXCEPT
+: m_userdata_list(0)
 {}
 
-ON_Object::ON_Object(const ON_Object& src) : m_mempool(0), m_userdata_list(0)
+ON_Object::ON_Object(const ON_Object& src)
+  : m_userdata_list(0)
 {
-  CopyUserData(src);
+  this->CopyUserData(src);
 }
 
 ON_Object& ON_Object::operator=(const ON_Object& src)
 {
   // DO NOT MODIFY this->m_mempool here
-  if ( this !=&src ) {
-    PurgeUserData();
-    CopyUserData(src);
+  if ( this != &src ) 
+  {
+    this->PurgeUserData();
+    this->CopyUserData(src);
   }
   return *this;
 }
 
+#if defined(ON_HAS_RVALUEREF)
+ON_Object::ON_Object( ON_Object&& src ) ON_NOEXCEPT
+  : m_userdata_list(0)
+{
+  this->MoveUserData(src);
+}
+
+ON_Object& ON_Object::operator=( ON_Object&& src )
+{
+  if ( this != &src )
+  {
+    this->PurgeUserData();
+    this->MoveUserData(src);
+  }
+  return *this;
+}
+#endif
+
 ON_Object::~ON_Object()
 {
-  PurgeUserData();
+  this->PurgeUserData();
 }
 
 // DO NOT PUT THIS DECL IN A HEADER FILE.
@@ -1388,32 +1306,39 @@ bool ON__EnableLeakUserData(bool bEnable)
   return b;
 }
 
+void ON_Object::EmergencyDestroy()
+{
+  m_userdata_list = 0;
+}
+
+
 void ON_Object::PurgeUserData()
 {
-  if ( m_userdata_list ) 
+  ON_UserData* p;
+  ON_UserData* next;
+  bool bDeleteUserData;
+  if ( 0 != (next=m_userdata_list) ) 
   {
-    ON_UserData* p = m_userdata_list;
-    ON_UserData* next;
-    while(p) 
+    m_userdata_list = 0;
+    bDeleteUserData = !g__bLeakUserData;
+    while( 0 != (p=next) ) 
     {
       next = p->m_userdata_next;
       p->m_userdata_owner = 0;
       p->m_userdata_next = 0;
-      if ( !g__bLeakUserData )
+      if ( bDeleteUserData )
         delete p;
-      p = next;
     }
-    m_userdata_list = 0;
   }
 }
 
-ON_BOOL32 ON_Object::AttachUserData( ON_UserData* p )
+bool ON_Object::AttachUserData( ON_UserData* p )
 {
-  ON_BOOL32 rc = false;
+  bool rc = false;
   if ( p 
-       && NULL == p->m_userdata_owner
+       && nullptr == p->m_userdata_owner
        && ON_UuidCompare( &ON_nil_uuid, &p->m_userdata_uuid) 
-       && NULL == GetUserData( p->m_userdata_uuid )
+       && nullptr == GetUserData( p->m_userdata_uuid )
        ) {
     if ( p->IsUnknownUserData() ) {
       // make sure we have valid user data - the first beta release of Rhino 2.0 
@@ -1437,9 +1362,9 @@ ON_BOOL32 ON_Object::AttachUserData( ON_UserData* p )
   return rc;
 }
 
-ON_BOOL32 ON_Object::DetachUserData( ON_UserData* p )
+bool ON_Object::DetachUserData( ON_UserData* p )
 {
-  ON_BOOL32 rc = false;
+  bool rc = false;
   if ( p && p->m_userdata_owner == this ) 
   {
     ON_UserData* prev = 0;
@@ -1466,8 +1391,8 @@ ON_BOOL32 ON_Object::DetachUserData( ON_UserData* p )
 
 
 ON_UserData* ON_Object::GetUserData( const ON_UUID& userdata_uuid ) const
-{
-  ON_UserData* prev = NULL;
+ {
+  ON_UserData* prev = nullptr;
   ON_UserData* p;
   for ( p = m_userdata_list; p; prev = p, p = p->m_userdata_next ) 
   {
@@ -1528,69 +1453,273 @@ void ON_Object::TransformUserData( const ON_Xform& x )
   }
 }
 
-void ON_Object::CopyUserData( const ON_Object& src )
+ON_UserData* ON_Object::TransferUserDataItem(
+  const ON_UserData* source_ud_copy_this,
+  ON_UserData* source_ud_move_this,
+  bool bPerformConflictCheck,
+  ON_Object::UserDataConflictResolution userdata_conflict_resolution
+  )
 {
-  const ON_UserData* p;
-  for ( p = src.m_userdata_list; p; p = p->m_userdata_next ) {
-    if ( p->m_userdata_copycount ) {
-      ON_Object* o = p->Duplicate();
-      if ( o ) {
-        if ( !AttachUserData(ON_UserData::Cast(o)) )
-          delete o;
-      }
+  const ON_UserData* source_ud; // do not initialize so compiler will detect future bugs
+
+  if (nullptr != source_ud_move_this)
+  {
+    if (nullptr != source_ud_copy_this)
+    {
+      ON_ERROR("At most one source_ud pointer can be not null.");
+      return nullptr;
+    }
+    if (nullptr != source_ud_move_this->m_userdata_owner || nullptr != source_ud_move_this->m_userdata_next)
+    {
+      ON_ERROR("Cannot move userdata that is attached to another object.");
+      return nullptr;
+    }
+    source_ud = source_ud_move_this;
+  }
+  else if ( nullptr != source_ud_copy_this )
+  {
+    if (this == source_ud_copy_this->m_userdata_owner)
+    {
+      ON_ERROR("source_ud_copy_this is already attached to this object.");
+      return nullptr;
+    }
+    source_ud = source_ud_copy_this;
+  }
+  else
+  {
+    // nothing to do
+    return nullptr;
+  }
+
+  if (source_ud->IsUnknownUserData())
+  {
+    // make sure we have valid user data - the first beta release of Rhino 2.0 
+    // created empty user data.
+    const ON_UnknownUserData* uud = ON_UnknownUserData::Cast(source_ud);
+    if (nullptr == uud && false == uud->IsValid())
+    {
+      return nullptr;
     }
   }
+  
+  ON_UserData* dest_ud = bPerformConflictCheck ? GetUserData(source_ud->m_userdata_uuid) : nullptr;
+
+  bool bDeleteDestinationItem = false;
+  bool bTransferSourceItem; // no initialization
+  if (nullptr == dest_ud)
+  {
+    bTransferSourceItem = true;
+  }
+  else
+  {
+    switch (userdata_conflict_resolution)
+    {
+    case ON_Object::UserDataConflictResolution::destination_object:
+      bTransferSourceItem = false;
+      break;
+
+    case ON_Object::UserDataConflictResolution::source_object:
+      bTransferSourceItem = true;
+      break;
+
+    case ON_Object::UserDataConflictResolution::source_copycount_gt:
+      bTransferSourceItem = (source_ud->m_userdata_copycount > dest_ud->m_userdata_copycount);
+      break;
+
+    case ON_Object::UserDataConflictResolution::source_copycount_ge:
+      bTransferSourceItem =  (source_ud->m_userdata_copycount >= dest_ud->m_userdata_copycount);
+      break;
+
+    case ON_Object::UserDataConflictResolution::destination_copycount_gt:
+      bTransferSourceItem = (dest_ud->m_userdata_copycount > source_ud->m_userdata_copycount);
+      break;
+
+    case ON_Object::UserDataConflictResolution::destination_copycount_ge:
+      bTransferSourceItem =  (dest_ud->m_userdata_copycount >= source_ud->m_userdata_copycount);
+      break;
+
+    case ON_Object::UserDataConflictResolution::delete_item:
+      bTransferSourceItem = false;
+      bDeleteDestinationItem = true;
+      break;
+
+    default:
+      bTransferSourceItem = false;
+      break;
+    }
+  }
+
+  if (false == bTransferSourceItem)
+  {
+    if (bDeleteDestinationItem && nullptr != dest_ud)
+    {
+      delete dest_ud;
+    }
+    return nullptr;
+  }
+
+
+  if (nullptr != source_ud_copy_this)
+  {
+    ON_Object* p = source_ud_copy_this->Duplicate();
+    if ( nullptr == p )
+      return nullptr;
+    source_ud_move_this = ON_UserData::Cast(p);
+
+    if (nullptr == source_ud_move_this)
+    {
+      delete p;
+      return nullptr;
+    }
+    source_ud_move_this->m_userdata_owner = nullptr;
+  }
+
+  if (nullptr == source_ud_move_this)
+  {
+    ON_ERROR("Bug in the code above.");
+    return nullptr;
+  }
+
+  if (nullptr != dest_ud)
+  {
+    delete dest_ud;
+  }
+
+  source_ud_move_this->m_userdata_owner = this;
+  source_ud_move_this->m_userdata_next = m_userdata_list;
+  m_userdata_list = source_ud_move_this;
+  
+  return m_userdata_list;
+};
+
+unsigned int ON_Object::CopyUserData(
+  const ON_Object& source_object,
+  ON_UUID source_userdata_item_id,
+  ON_Object::UserDataConflictResolution userdata_conflict_resolution
+  )
+{
+  unsigned int copied_item_count = 0;
+
+  if (this == &source_object)
+    return copied_item_count;
+
+  const bool bPerformConflictCheck = (nullptr != m_userdata_list);
+
+  const bool bIgnoreUserDataItemId = (ON_nil_uuid == source_userdata_item_id);
+
+  for (const ON_UserData* source_ud = source_object.m_userdata_list; nullptr != source_ud; source_ud = source_ud->m_userdata_next)
+  {
+    if (source_ud->m_userdata_copycount <= 0)
+      continue;
+    if (bIgnoreUserDataItemId || source_ud->m_userdata_uuid == source_userdata_item_id)
+    {
+      if (nullptr != TransferUserDataItem(source_ud, nullptr, bPerformConflictCheck, userdata_conflict_resolution))
+        copied_item_count++;
+    }
+  }
+  return copied_item_count;
 }
 
-void ON_Object::MoveUserData( ON_Object& src )
-{
-  ON_UserData *p, *next;
 
-  if ( 0 == m_userdata_list )
+unsigned int ON_Object::MoveUserData(
+  ON_Object& source_object,
+  ON_UUID source_userdata_item_id,
+  ON_Object::UserDataConflictResolution userdata_conflict_resolution,
+  bool bDeleteAllSourceItems)
+{
+  unsigned int moved_item_count = 0;
+
+  const bool bIgnoreUserDataItemId = (ON_nil_uuid == source_userdata_item_id);
+
+  if ( nullptr == m_userdata_list && bIgnoreUserDataItemId )
   {
     // quick and simple when the "this" doesn't
     // have any user data.
-    if ( 0 != src.m_userdata_list )
+    if ( nullptr != source_object.m_userdata_list )
     {
-      m_userdata_list = src.m_userdata_list;
-      src.m_userdata_list = 0;
-      for ( p = m_userdata_list; p; p = p->m_userdata_next )
+      m_userdata_list = source_object.m_userdata_list;
+      source_object.m_userdata_list = nullptr;
+      for (ON_UserData* dest_ud = m_userdata_list; nullptr != dest_ud; dest_ud = dest_ud->m_userdata_next)
       {
-        p->m_userdata_owner = this;
+        dest_ud->m_userdata_owner = this;
+        moved_item_count++;
       }
     }
   }
   else
   {    
-    // Carefully move userdata an item at a time to
-    // avoid conflicts with existing items on "this".
-
-    // delete source user data that already exists on this
-    for ( p = src.m_userdata_list; p; p = next ) {
-      next = p->m_userdata_next;
-      if ( GetUserData( p->m_userdata_uuid ) )
-        delete p;
-    }
-
-    // append source user data to this user data
-    next = src.m_userdata_list;
-    src.m_userdata_list = 0;
-    for ( p = next; p; p = p->m_userdata_next ) {
-      p->m_userdata_owner = this;
-    }
-
-    if ( !m_userdata_list ) 
-      m_userdata_list = next;
-    else 
+    // Carefully move userdata an item at a time from source_object to "this"
+    const bool bPerformConflictCheck = true;
+    ON_UserData* source_ud_next = source_object.m_userdata_list;
+    source_object.m_userdata_list = nullptr;
+    ON_UserData* source_object_userdata_last = nullptr;
+    for ( ON_UserData* source_ud = source_ud_next; nullptr != source_ud; source_ud = source_ud_next)
     {
-      p = m_userdata_list;
-      while ( p->m_userdata_next )
-        p = p->m_userdata_next;
-      p->m_userdata_next = next;
+      source_ud_next = source_ud->m_userdata_next;
+      source_ud->m_userdata_next = nullptr;
+      source_ud->m_userdata_owner = nullptr;
+
+      if (bIgnoreUserDataItemId || source_ud->m_userdata_uuid == source_userdata_item_id)
+      {
+        if (TransferUserDataItem(nullptr, source_ud, bPerformConflictCheck, userdata_conflict_resolution))
+        {
+          moved_item_count++;
+          continue;
+        }
+      }
+
+      // The transfer did not occur.  Resolve state of orphaned source_ud.
+      if (nullptr != source_ud->m_userdata_owner || nullptr != source_ud->m_userdata_next)
+      {
+        ON_ERROR("There is a serious bug in this code.");
+        continue;
+      }
+      if (bDeleteAllSourceItems)
+      {
+        // delete the orphan
+        delete source_ud;
+      }
+      else
+      {
+        // reattach the orphan to source_object
+        source_ud->m_userdata_owner = &source_object;
+        if (nullptr == source_object.m_userdata_list)
+        {
+          source_object.m_userdata_list = source_ud;
+        }
+        else if (nullptr != source_object_userdata_last)
+        {
+          source_object_userdata_last->m_userdata_next = source_ud;
+        }
+        source_object_userdata_last = source_ud;
+      }
     }
   }
+
+  return moved_item_count;
 }
 
+
+void ON_Object::CopyUserData( const ON_Object& src )
+{
+  CopyUserData(src,ON_nil_uuid,ON_Object::UserDataConflictResolution::destination_object);
+}
+
+void ON_Object::MoveUserData( ON_Object& src )
+{
+  MoveUserData(src,ON_nil_uuid,ON_Object::UserDataConflictResolution::destination_object,true);
+}
+
+
+
+bool ON_Object::UpdateReferencedComponents(
+  const class ON_ComponentManifest& source_manifest,
+  const class ON_ComponentManifest& destination_manifest,
+  const class ON_ManifestMap& manifest_map
+  )
+{
+  return true;
+}
 
 void ON_Object::MemoryRelocate()
 {
@@ -1603,9 +1732,9 @@ void ON_Object::MemoryRelocate()
   }
 }
 
-ON_BOOL32 ON_Object::IsKindOf( const ON_ClassId* pBaseClassId ) const
+bool ON_Object::IsKindOf( const ON_ClassId* pBaseClassId ) const
 {
-  ON_BOOL32 b = false;
+  bool b = false;
   const ON_ClassId* p = ClassId();
   if ( p )
     b = p->IsDerivedFrom( pBaseClassId );
@@ -1624,54 +1753,9 @@ ON_UUID ON_Object::ModelObjectId() const
   return ON_nil_uuid;
 }
 
-ON_UUID ON_Material::ModelObjectId() const
-{
-  return m_material_id;
-}
-
-ON_UUID ON_Layer::ModelObjectId() const
-{
-  return m_layer_id;
-}
-
-ON_UUID ON_Font::ModelObjectId() const
-{
-  return m_font_id;
-}
-
-ON_UUID ON_DimStyle::ModelObjectId() const
-{
-  return m_dimstyle_id;
-}
-
-ON_UUID ON_HatchPattern::ModelObjectId() const
-{
-  return m_hatchpattern_id;
-}
-
-ON_UUID ON_Linetype::ModelObjectId() const
-{
-  return m_linetype_id;
-}
-
-ON_UUID ON_Bitmap::ModelObjectId() const
-{
-  return m_bitmap_id;
-}
-
 ON_UUID ON_Light::ModelObjectId() const
 {
   return m_light_id;
-}
-
-ON_UUID ON_TextureMapping::ModelObjectId() const
-{
-  return m_mapping_id;
-}
-
-ON_UUID ON_InstanceDefinition::ModelObjectId() const
-{
-  return m_uuid;
 }
 
 unsigned int ON_Object::SizeOf() const
@@ -1690,6 +1774,72 @@ ON__UINT32 ON_Object::DataCRC(ON__UINT32 current_remainder) const
 {
   // do not include user data.
   return current_remainder;
+}
+
+bool ON_Object::IsValid(ON_TextLog* text_log) const
+{
+  return true;
+}
+
+bool ON_Object::ThisIsNullptr(
+  bool bSilentError
+) const
+{
+  // CLang warns that these tests may be omitted because in "well-defined C++ code"
+  // they are always false. 
+  //
+  // Earth to CLang: 
+  //   This tool to find code that is not well formed, alert us to that fact, 
+  //   but not potentiall not crash so our loyal customers don't loose their work.
+  //
+  // return (this == nullptr);
+  // return ( nullptr == this );
+  if (0 != ((ON__UINT_PTR)this))
+    return false;
+
+  if (false == bSilentError)
+    ON_ERROR("this is nullptr.");
+
+  return true;
+}
+
+bool ON_Object::IsCorrupt(
+  bool bRepair,
+  bool bSilentError,
+  class ON_TextLog* text_log
+) const
+{
+  bool rc = true;
+  if (false == ThisIsNullptr(bSilentError) )
+  {
+    switch (ObjectType())
+    {
+    case ON::object_type::brep_object:
+      {
+        const ON_Brep* brep = ON_Brep::Cast(this);
+        if (brep)
+          rc = brep->ON_Brep::IsCorrupt(bRepair, bSilentError, text_log);
+        else if ( false == bSilentError )
+          ON_ERROR("ON_Brep::Cast(this) failed.");
+      }
+      break;
+
+    case ON::object_type::mesh_object:
+      {
+        const ON_Mesh* mesh = ON_Mesh::Cast(this);
+        if (mesh)
+          rc = mesh->ON_Mesh::IsCorrupt(bRepair, bSilentError, text_log);
+        else if ( false == bSilentError )
+          ON_ERROR("ON_Mesh::Cast(this) failed.");
+      }
+      break;
+
+    default:
+      rc = false;
+      break;
+    }
+  }
+  return rc;
 }
 
 void ON_Object::Dump( ON_TextLog& dump ) const
@@ -1711,7 +1861,7 @@ void ON_Object::Dump( ON_TextLog& dump ) const
   }
 }
 
-ON_BOOL32 ON_Object::Write(
+bool ON_Object::Write(
        ON_BinaryArchive&
      ) const
 {
@@ -1722,7 +1872,7 @@ ON_BOOL32 ON_Object::Write(
   // something like
 
   /*
-  ON_BOOL32 rc = file.Write3dmChunkVersion(1,0);
+  bool rc = file.Write3dmChunkVersion(1,0);
   if (rc) {
     // TODO
   }
@@ -1731,7 +1881,7 @@ ON_BOOL32 ON_Object::Write(
 
 }
 
-ON_BOOL32 ON_Object::Read(
+bool ON_Object::Read(
        ON_BinaryArchive&
      )
 {
@@ -1744,7 +1894,7 @@ ON_BOOL32 ON_Object::Read(
   /*
   int major_version = 0;
   int minor_version = 0;
-  ON_BOOL32 rc = file.Read3dmChunkVersion(&major_version,&minor_version);
+  bool rc = file.Read3dmChunkVersion(&major_version,&minor_version);
   if (rc && major_version==1) {
     // common to all 1.x versions
     // TODO
@@ -1760,27 +1910,12 @@ void ON_Object::DestroyRuntimeCache( bool bDelete )
 
 void ON_Curve::DestroyRuntimeCache( bool bDelete )
 {
-  if ( m_ctree ) 
-  {
-#if defined(OPENNURBS_PLUS_INC_)
-    if ( bDelete )
-      delete m_ctree;
-#endif
-    m_ctree = 0;
-  }
 }
 
 
 void ON_CurveProxy::DestroyRuntimeCache( bool bDelete )
 {
-  if ( m_ctree ) 
-  {
-#if defined(OPENNURBS_PLUS_INC_)
-    if ( bDelete )
-      delete m_ctree;
-#endif
-    m_ctree = 0;
-  }
+  ON_Curve::DestroyRuntimeCache(bDelete);
   if ( 0 != m_real_curve && m_real_curve != this )
   {
     ON_Curve* curve = const_cast<ON_Curve*>(m_real_curve);
@@ -1789,30 +1924,13 @@ void ON_CurveProxy::DestroyRuntimeCache( bool bDelete )
   }
 }
 
-
 void ON_Surface::DestroyRuntimeCache( bool bDelete )
 {
-  if ( m_stree ) 
-  {
-#if defined(OPENNURBS_PLUS_INC_)
-    if ( bDelete )
-      delete m_stree;
-#endif
-    m_stree = 0;
-  }
 }
-
 
 void ON_SurfaceProxy::DestroyRuntimeCache( bool bDelete )
 {
-  if ( m_stree ) 
-  {
-#if defined(OPENNURBS_PLUS_INC_)
-    if ( bDelete )
-      delete m_stree;
-#endif
-    m_stree = 0;
-  }
+  ON_Surface::DestroyRuntimeCache( bDelete );
   if ( 0 != m_surface && m_surface != this )
   {
     ON_Surface* surface = const_cast<ON_Surface*>(m_surface);
@@ -1873,9 +1991,349 @@ void ON_Brep::DestroyRuntimeCache( bool bDelete )
   m_bbox.Destroy();
 }
 
-struct ON_Vtable* ON_ClassVtable(void* p)
+
+template <class T> class ON_ArrayIterator
 {
-  void* vtable_ptr = *((void**)p);
-  struct ON_Vtable* the_vtable = (ON_Vtable*)vtable_ptr;
-  return the_vtable;
+public:
+  ON_ArrayIterator() = default;
+  ~ON_ArrayIterator() = default;
+  ON_ArrayIterator(const ON_ArrayIterator<T>&) = default;
+  ON_ArrayIterator& operator=(const ON_ArrayIterator<T>&) = default;
+
+  ON_ArrayIterator(
+    T* first,
+    size_t count
+    )
+  {
+    m_first = (count > 0) ? first : nullptr;
+    m_last = (nullptr != m_first) ? (m_first+(count-1)) : nullptr;
+    m_current = m_first;
+  }
+
+  ON_ArrayIterator(
+    T* first,
+    T* last
+    )
+  {
+    m_first = (nullptr != first && first <= last) ? first : nullptr;
+    m_last = (nullptr != m_first) ? last : nullptr;
+    m_current = m_first;
+  }
+
+  ON_ArrayIterator(
+    ON_SimpleArray < T >& a
+    )
+  {
+    unsigned int count = a.UnsignedCount();
+    T* first = a.Array();
+    m_first = (count > 0) ? first : nullptr;
+    m_last = (nullptr != m_first) ? (m_first+(count-1)) : nullptr;
+    m_current = m_first;
+  }
+
+  ON_ArrayIterator(
+    ON_ClassArray < T >& a
+    )
+  {
+    unsigned int count = a.UnsignedCount();
+    T* first = a.Array();
+    m_first = (count > 0) ? first : nullptr;
+    m_last = (nullptr != m_first) ? (m_first+(count-1)) : nullptr;
+    m_current = m_first;
+  }
+
+  ON_ArrayIterator(
+    ON_ObjectArray < T >& a
+    )
+  {
+    unsigned int count = a.UnsignedCount();
+    T* first = a.Array();
+    m_first = (count > 0) ? first : nullptr;
+    m_last = (nullptr != m_first) ? (m_first+(count-1)) : nullptr;
+    m_current = m_first;
+  }
+
+  T* First()
+  {
+    m_current = m_first;
+    return m_first;
+  }
+
+  T* Next()
+  {
+    if (m_current < m_last)
+      m_current++;
+    else
+      m_current = nullptr;
+    return m_current;
+  }
+
+  T* Current() const
+  {
+    return m_current;
+  }
+
+  size_t Count() const
+  {
+    return (m_last - m_first);
+  }
+
+private:
+  T* m_first = nullptr;
+  T* m_last = nullptr;
+  T* m_current = nullptr;
+};
+
+//virtual
+unsigned int ON_Brep::ClearComponentStates(
+  ON_ComponentStatus states_to_clear
+  ) const
+{
+  if (states_to_clear.IsClear())
+    return 0U;
+
+  m_aggregate_status = ON_AggregateComponentStatus::NotCurrent;
+
+  unsigned int rc = 0;
+
+  ON_ArrayIterator< const ON_BrepVertex > vit( m_V.Array(), m_V.UnsignedCount() );
+  for ( const ON_BrepVertex* p = vit.First(); nullptr != p; p = vit.Next())
+  {
+    rc += p->m_status.ClearStates(states_to_clear);
+  }
+
+  ON_ArrayIterator< const ON_BrepEdge > eit( m_E.Array(), m_E.UnsignedCount() );
+  for ( const ON_BrepEdge* p = eit.First(); nullptr != p; p = eit.Next())
+  {
+    rc += p->m_status.ClearStates(states_to_clear);
+  }
+
+  ON_ArrayIterator< const ON_BrepTrim > tit( m_T.Array(), m_T.UnsignedCount() );
+  for ( const ON_BrepTrim* p = tit.First(); nullptr != p; p = tit.Next())
+  {
+    rc += p->m_status.ClearStates(states_to_clear);
+  }
+
+  ON_ArrayIterator< const ON_BrepLoop > lit( m_L.Array(), m_L.UnsignedCount() );
+  for ( const ON_BrepLoop* p = lit.First(); nullptr != p; p = lit.Next())
+  {
+    rc += p->m_status.ClearStates(states_to_clear);
+  }
+
+  ON_ArrayIterator< const ON_BrepFace > fit( m_F.Array(), m_F.UnsignedCount() );
+  for ( const ON_BrepFace* p = fit.First(); nullptr != p; p = fit.Next())
+  {
+    rc += p->m_status.ClearStates(states_to_clear);
+  }
+
+  return rc;
 }
+
+//virtual
+unsigned int ON_Brep::GetComponentsWithSetStates(
+  ON_ComponentStatus states_filter,
+  bool bAllEqualStates,
+  ON_SimpleArray< ON_COMPONENT_INDEX >& components
+  ) const
+{
+  components.SetCount(0);
+
+  if (states_filter.IsClear())
+    return 0;
+
+  ON_AggregateComponentStatus acs = AggregateComponentStatus();
+
+  ON_ComponentStatus as = acs.AggregateStatus();
+  if (bAllEqualStates)
+  {
+    if ( false == as.AllEqualStates(states_filter, states_filter) )
+      return 0;
+  }
+  else
+  {
+    if ( false == as.SomeEqualStates(states_filter, states_filter) )
+      return 0;
+  }
+
+  unsigned int c = 0;
+  if ( states_filter.IsSelected() && c < m_aggregate_status.SelectedCount() )
+    c = m_aggregate_status.SelectedCount();
+  if ( states_filter.IsHighlighted() && c < m_aggregate_status.HighlightedCount() )
+    c = m_aggregate_status.HighlightedCount();
+  if ( states_filter.IsHidden() && c < m_aggregate_status.HiddenCount() )
+    c = m_aggregate_status.HiddenCount();
+  if ( states_filter.IsLocked() && c < m_aggregate_status.LockedCount() )
+    c = m_aggregate_status.LockedCount();
+  if ( states_filter.IsDamaged() && c < m_aggregate_status.DamagedCount() )
+    c = m_aggregate_status.DamagedCount();
+  if ( states_filter.IsSelected() && c < m_aggregate_status.SelectedCount() )
+    c = m_aggregate_status.SelectedCount();
+  components.Reserve(c);
+
+  ON_ArrayIterator< const ON_BrepVertex > vit( m_V.Array(), m_V.UnsignedCount() );
+  for ( const ON_BrepVertex* p = vit.First(); nullptr != p; p = vit.Next())
+  {
+    if (bAllEqualStates ? p->m_status.AllEqualStates(states_filter, states_filter) : p->m_status.SomeEqualStates(states_filter, states_filter))
+      components.Append(p->ComponentIndex());
+  }
+
+  ON_ArrayIterator< const ON_BrepEdge > eit( m_E.Array(), m_E.UnsignedCount() );
+  for ( const ON_BrepEdge* p = eit.First(); nullptr != p; p = eit.Next())
+  {
+    if (bAllEqualStates ? p->m_status.AllEqualStates(states_filter, states_filter) : p->m_status.SomeEqualStates(states_filter, states_filter))
+      components.Append(p->ComponentIndex());
+  }
+
+  ON_ArrayIterator< const ON_BrepTrim > tit( m_T.Array(), m_T.UnsignedCount() );
+  for ( const ON_BrepTrim* p = tit.First(); nullptr != p; p = tit.Next())
+  {
+    if (bAllEqualStates ? p->m_status.AllEqualStates(states_filter, states_filter) : p->m_status.SomeEqualStates(states_filter, states_filter))
+      components.Append(p->ComponentIndex());
+  }
+
+  ON_ArrayIterator< const ON_BrepLoop > lit( m_L.Array(), m_L.UnsignedCount() );
+  for ( const ON_BrepLoop* p = lit.First(); nullptr != p; p = lit.Next())
+  {
+    if (bAllEqualStates ? p->m_status.AllEqualStates(states_filter, states_filter) : p->m_status.SomeEqualStates(states_filter, states_filter))
+      components.Append(p->ComponentIndex());
+  }
+
+  ON_ArrayIterator< const ON_BrepFace > fit( m_F.Array(), m_F.UnsignedCount() );
+  for ( const ON_BrepFace* p = fit.First(); nullptr != p; p = fit.Next())
+  {
+    if (bAllEqualStates ? p->m_status.AllEqualStates(states_filter, states_filter) : p->m_status.SomeEqualStates(states_filter, states_filter))
+      components.Append(p->ComponentIndex());
+  }
+
+  return components.UnsignedCount();
+}
+
+static ON_ComponentStatus* BrepComponentStatus(
+  const ON_Brep& brep,
+  ON_COMPONENT_INDEX component_index
+  )
+{
+  if (component_index.m_index >= 0)
+  {
+    switch (component_index.m_type)
+    {
+    case ON_COMPONENT_INDEX::TYPE::brep_vertex:
+      if ( component_index.m_index < brep.m_V.Count() )
+        return &brep.m_V[component_index.m_index].m_status;
+      break;
+    case ON_COMPONENT_INDEX::TYPE::brep_edge:
+      if ( component_index.m_index < brep.m_E.Count() )
+        return &brep.m_E[component_index.m_index].m_status;
+      break;
+    case ON_COMPONENT_INDEX::TYPE::brep_trim:
+      if ( component_index.m_index < brep.m_T.Count() )
+        return &brep.m_T[component_index.m_index].m_status;
+      break;
+    case ON_COMPONENT_INDEX::TYPE::brep_loop:
+      if ( component_index.m_index < brep.m_L.Count() )
+        return &brep.m_L[component_index.m_index].m_status;
+      break;
+    case ON_COMPONENT_INDEX::TYPE::brep_face:
+      if ( component_index.m_index < brep.m_F.Count() )
+        return &brep.m_F[component_index.m_index].m_status;
+      break;
+    default:
+      break;
+    }
+  }
+  return nullptr;
+}
+  
+//virtual
+unsigned int ON_Brep::SetComponentStates(
+  ON_COMPONENT_INDEX component_index,
+  ON_ComponentStatus states_to_set
+  ) const
+{
+  ON_ComponentStatus* s = BrepComponentStatus(*this,component_index);
+  return 
+    (nullptr == s)
+    ? 0U
+    : s->SetStates(states_to_set);
+}
+
+//virtual
+unsigned int ON_Brep::ClearComponentStates(
+  ON_COMPONENT_INDEX component_index,
+  ON_ComponentStatus states_to_clear
+  ) const
+{
+  ON_ComponentStatus* s = BrepComponentStatus(*this,component_index);
+  return 
+    (nullptr == s)
+    ? 0U
+    : s->ClearStates(states_to_clear);
+}
+  
+//virtual
+unsigned int ON_Brep::SetComponentStatus(
+  ON_COMPONENT_INDEX component_index,
+  ON_ComponentStatus status_to_copy
+  ) const
+{
+  ON_ComponentStatus* s = BrepComponentStatus(*this,component_index);
+  return 
+    (nullptr == s)
+    ? 0U
+    : s->SetStatus(status_to_copy);
+}
+
+//virtual
+ON_AggregateComponentStatus ON_Brep::AggregateComponentStatus() const
+{
+  if (false == m_aggregate_status.IsCurrent())
+  {
+    if (m_V.UnsignedCount() == 0 )
+      return ON_AggregateComponentStatus::Empty;
+
+    ON_AggregateComponentStatus a = ON_AggregateComponentStatus::Empty;
+
+    ON_ArrayIterator< const ON_BrepVertex > vit( m_V.Array(), m_V.UnsignedCount() );
+    for ( const ON_BrepVertex* p = vit.First(); nullptr != p; p = vit.Next())
+    {
+      a.Add(p->m_status);
+    }
+
+    ON_ArrayIterator< const ON_BrepEdge > eit( m_E.Array(), m_E.UnsignedCount() );
+    for ( const ON_BrepEdge* p = eit.First(); nullptr != p; p = eit.Next())
+    {
+      a.Add(p->m_status);
+    }
+
+    ON_ArrayIterator< const ON_BrepTrim > tit( m_T.Array(), m_T.UnsignedCount() );
+    for ( const ON_BrepTrim* p = tit.First(); nullptr != p; p = tit.Next())
+    {
+      a.Add(p->m_status);
+    }
+
+    ON_ArrayIterator< const ON_BrepLoop > lit( m_L.Array(), m_L.UnsignedCount() );
+    for ( const ON_BrepLoop* p = lit.First(); nullptr != p; p = lit.Next())
+    {
+      a.Add(p->m_status);
+    }
+
+    ON_ArrayIterator< const ON_BrepFace > fit( m_F.Array(), m_F.UnsignedCount() );
+    for ( const ON_BrepFace* p = fit.First(); nullptr != p; p = fit.Next())
+    {
+      a.Add(p->m_status);
+    }
+
+    m_aggregate_status = a;
+  }
+
+  return m_aggregate_status;
+}
+
+//virtual
+void ON_Brep::MarkAggregateComponentStatusAsNotCurrent() const
+{
+  this->m_aggregate_status.MarkAsNotCurrent();
+}
+
+
+

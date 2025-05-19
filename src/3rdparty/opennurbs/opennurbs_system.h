@@ -1,97 +1,92 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
 // MERCHANTABILITY ARE HEREBY DISCLAIMED.
-//				
+//
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
-/*
 ////////////////////////////////////////////////////////////////
 //
 //   Includes all system headers required to use the openNURBS toolkit.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(OPENNURBS_SYSTEM_INC_)
 #define OPENNURBS_SYSTEM_INC_
 
-#if defined(TL_PURIFY_BUILD) || defined(RHINO_PURIFY_BUILD)
-#if !defined(ON_PURIFY_BUILD)
-#define ON_PURIFY_BUILD
+
+
+
+
+#define OPENNURBS_PP2STR_HELPER(s) #s
+#define OPENNURBS_PP2STR(s) OPENNURBS_PP2STR_HELPER(s)
+/*
+// To print the value of a preprocessor macro, do something like:
+//
+//   #pragma message( "MY_MACRO = " OPENNURBS_PP2STR(MY_MACRO) )
+//
+// Typically something mysterious is defining a macro whose value
+// you would like to see at compile time so you can fix a issue
+// involving the preprocessor macro's value.
+*/
+
+#if defined(ON_DLL_EXPORTS)
+#error "ON_DLL_EXPORTS" is obsolete. V6 uses "OPENNURBS_EXPORTS".
+#endif
+
+#if defined(ON_EXPORTS)
+#error "ON_EXPORTS" is obsolete. V6 uses "OPENNURBS_EXPORTS".
+#endif
+
+#if defined(ON_DLL_IMPORTS)
+#error "ON_DLL_IMPORTS" is obsolete. V6 uses "OPENNURBS_IMPORTS".
+#endif
+
+#if defined(ON_IMPORTS)
+#error "ON_IMPORTS" is obsolete. V6 uses "OPENNURBS_IMPORTS".
+#endif
+
+#if defined(OPENNURBS_EXPORTS) && defined(OPENNURBS_IMPORTS)
+/*
+// - When compiling opennurbs as a dll, define OPENNURBS_EXPORTS.
+// - When using opennurbs as a dll, define OPENNURBS_IMPORTS.
+// - When compiling opennurbs as a static library, ON_COMPILING_OPENNURBS
+//   should be defined and neither OPENNURBS_EXPORTS nor OPENNURBS_IMPORTS
+//   should be defined.
+// - When using opennurbs as a static library, neither
+//   ON_COMPILING_OPENNURBS nor OPENNURBS_EXPORTS nor OPENNURBS_IMPORTS
+//   should be defined.
+*/
+#error At most one of OPENNURBS_EXPORTS or OPENNURBS_IMPORTS can be defined.
+#endif
+
+#if defined(OPENNURBS_EXPORTS)
+#if !defined(ON_COMPILING_OPENNURBS)
+#define ON_COMPILING_OPENNURBS
 #endif
 #endif
 
-/* compiler choice */
-#if defined(_MSC_VER)
-
-/* using a Microsoft compiler */
-#define ON_COMPILER_MSC
-
-#if _MSC_VER >= 1300
-#define ON_COMPILER_MSC1300
-// If you are using VC7/.NET and are having trouble linking 
-// to functions that have whcar_t types in arguments, then
-// read the documentation about the wchar_t type and
-// the /Zc:wchar_t compiler option.
-
-#if _MSC_VER >= 1400
-#define ON_COMPILER_MSC1400
-
-// We are using /W4 wrning levels and disable
-// these warnings.  I would prefer to use
-// /W3 and enable the level 4 warnings we want,
-// but microsoft does not have a way to use pragmas
-// to enable specific warnings.
-
-#if defined(ON_COMPILING_OPENNURBS)
-#pragma warning(disable:4100) // C4100: 'identifier' : unreferenced formal parameter
-#endif
-
-#if !defined(_CRT_SECURE_NO_DEPRECATE)
-#define _CRT_SECURE_NO_DEPRECATE
-// Visual Studio 2005 issues a C4996 warning for lots of
-// standard C runtime functions that take string pointers.
-// The _CRT_SECURE_NO_DEPRECATE suppresses these warnings.
-// If you are an IT manager type and really care about these
-// sorts of things, then comment out the define.
-#endif
-
-#endif
-
-#endif
-
-#endif
-
-#if defined(__GNUG_) || defined(__GNUG__) || defined(__GNUC_) || defined(__GNUC__) || defined(_GNU_SOURCE) || defined(__GNU_SOURCE)
-/* using Gnu's compiler */
-#if !defined(ON_COMPILER_GNU)
-#define ON_COMPILER_GNU
-#endif
-#if !defined(_GNU_SOURCE)
-#define _GNU_SOURCE
+#if defined(_DEBUG)
+/* enable OpenNurbs debugging code */
+#if !defined(ON_DEBUG)
+#define ON_DEBUG
 #endif
 #endif
 
-
-#if defined(_GNU_SOURCE) && defined(__APPLE__)
-/* using Apple's OSX XCode compiler */
-#if !defined(ON_COMPILER_XCODE)
-#define ON_COMPILER_XCODE
-#endif
-#endif
-
-#if defined(__BORLANDC__)
-/* using Borland's compiler */
-#define ON_COMPILER_BORLAND
+#if defined(ON_COMPILING_OPENNURBS) && defined(OPENNURBS_IMPORTS)
+/*
+// - If you are using opennurbs as library, do not define
+//   ON_COMPILING_OPENNURBS.
+// - If you are compiling an opennurbs library, define
+//   ON_COMPILING_OPENNURBS.
+*/
+#error At most one of ON_COMPILING_OPENNURBS or OPENNURBS_IMPORTS can be defined.
 #endif
 
 /*
@@ -99,19 +94,252 @@
 // to explicitly exclude inclusion of windows.h.
 */
 
-#if !defined(ON_NO_WINDOWS)
+#if defined(ON_COMPILING_OPENNURBS)
+#if !defined(OPENNURBS_WALL)
+/*
+// When OPENNURBS_WALL is defined, warnings and deprications that
+// encourage the highest quality of code are used.
+*/
+#define OPENNURBS_WALL
+#endif
+#endif
+
+
+#include "opennurbs_system_compiler.h"
+
+#include "opennurbs_system_runtime.h"
+
+#pragma ON_PRAGMA_WARNING_PUSH
+
+/* compiler choice */
+#if defined(ON_COMPILER_MSC)
+#include "opennurbs_windows_targetver.h"
+#endif
+
+#if defined(ON_RUNTIME_APPLE) && defined(__OBJC__)
+
+// The header file opennurbs_system_runtime.h is included in several
+// places before opennurbs.h or opennurbs_system.h is included.
+// Therefore, this define cannot be in opennurbs_system_runtime.h
+//
+// When ON_RUNTIME_APPLE_OBJECTIVE_C_AVAILABLE is defined and
+// ON_RUNTIME_APPLE_IOS is NOT defined
+// <Cocoa/Cocoa.h> is included by opennurbs_system.h and
+// your project must link with the Apple Cocoa Framework.
+#define ON_RUNTIME_APPLE_OBJECTIVE_C_AVAILABLE
+
+#endif
+
+#if defined(ON_RUNTIME_APPLE) && defined(ON_RUNTIME_APPLE_OBJECTIVE_C_AVAILABLE)
+
+// TODO:
+//   Requiring ON_RUNTIME_APPLE_OBJECTIVE_C_AVAILABLE is too strong,
+//   Determine exactly when ON_RUNTIME_APPLE_CORE_TEXT_AVAILABLE should
+//   be defined so opennurbs font / glyph tools will work on iOS.
+
+// The header file opennurbs_system_runtime.h is included in several
+// places before opennurbs.h or opennurbs_system.h is included.
+// Therefore, this define cannot be in opennurbs_system_runtime.h
+//
+// When ON_RUNTIME_APPLE_CORE_TEXT_AVAILABLE is defined,
+// Apple Core Text and Core Graphics SDK can be used.
+#define ON_RUNTIME_APPLE_CORE_TEXT_AVAILABLE
+#include <CoreText/CoreText.h>
+
+#endif
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <stdint.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+typedef int8_t       ON__INT8;
+typedef uint8_t      ON__UINT8;
+typedef int16_t      ON__INT16;
+typedef uint16_t     ON__UINT16;
+typedef int32_t      ON__INT32;
+typedef uint32_t     ON__UINT32;
+typedef int64_t      ON__INT64;
+typedef uint64_t     ON__UINT64;
+
+#define ON_MAX_SIZE_T SIZE_MAX
+
+#if defined(ON_64BIT_RUNTIME)
+
+/* 64 bit (8 byte) pointers */
+#define ON_SIZEOF_POINTER 8
+#define ON__UINT_PTR_MAX  UINT64_MAX
+
+typedef ON__INT64   ON__INT_PTR;
+typedef ON__UINT64  ON__UINT_PTR;
+
+#elif defined(ON_32BIT_RUNTIME)
+
+/* 32 bit (4 byte) pointers */
+#define ON_SIZEOF_POINTER 4
+#define ON__UINT_PTR_MAX  UINT32_MAX
+
+typedef ON__INT32   ON__INT_PTR;
+typedef ON__UINT32  ON__UINT_PTR;
+
+#else
+#error Update OpenNURBS to work with new pointer size.
+#endif
+
+ON_STATIC_ASSERT(sizeof(ON__INT8)     == 1);
+ON_STATIC_ASSERT(sizeof(ON__UINT8)    == 1);
+ON_STATIC_ASSERT(sizeof(ON__INT16)    == 2);
+ON_STATIC_ASSERT(sizeof(ON__UINT16)   == 2);
+ON_STATIC_ASSERT(sizeof(ON__INT32)    == 4);
+ON_STATIC_ASSERT(sizeof(ON__UINT32)   == 4);
+ON_STATIC_ASSERT(sizeof(ON__INT64)    == 8);
+ON_STATIC_ASSERT(sizeof(ON__UINT64)   == 8);
+
+ON_STATIC_ASSERT_MSG(sizeof(ON__INT_PTR)  == sizeof(void*), "ON_INT_PTR must be an integer type with sizeof(ON_INT_PTR) = sizeof(void*)");
+ON_STATIC_ASSERT_MSG(sizeof(ON__UINT_PTR) == sizeof(void*), "ON_UINT_PTR must be an integer type with sizeof(ON_UINT_PTR) = sizeof(void*)");
+ON_STATIC_ASSERT_MSG(ON_SIZEOF_POINTER    == sizeof(void*), "ON_SIZEOF_POINTER must be equal to sizeof(void*)");
+
+/*
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+//
+// BEGIN - fill in missing types and defines
+//
+// If you are using an old compiler, then define ON_NEED_* when
+// you define ON_COMPILER_* above.
+//
+*/
+#if defined(ON_NEED_BOOL_TYPEDEF)
+#undef ON_NEED_BOOL_TYPEDEF
+typedef ON__UINT8 bool;
+#endif
+
+#if defined(ON_NEED_TRUEFALSE_DEFINE)
+#undef ON_NEED_TRUEFALSE_DEFINE
+#define true ((bool)1)
+#define false ((bool)0)
+#endif
+
+#if defined(ON_NEED_NULLPTR_DEFINE)
+#undef ON_NEED_NULLPTR_DEFINE
+#define nullptr 0
+#endif
+
+#if defined(ON_NEED_UTF8_WCHAR_T_TYPEDEF)
+#if defined(ON_NEED_UTF16_WCHAR_T_TYPEDEF) || defined(ON_NEED_UTF32_WCHAR_T_TYPEDEF)
+#error You may define at most one of ON_NEED_UTF8_WCHAR_T_TYPEDEF, ON_NEED_UTF16_WCHAR_T_TYPEDEF and ON_NEED_UTF16_WCHAR_T_TYPEDEF
+#endif
+#undef ON_NEED_UTF8_WCHAR_T_TYPEDEF
+typedef ON__UINT8 wchar_t;
+#define ON_SIZEOF_WCHAR_T 1
+
+#elif defined(ON_NEED_UTF16_WCHAR_T_TYPEDEF)
+#if defined(ON_NEED_UTF32_WCHAR_T_TYPEDEF)
+#error You may define at most one of ON_NEED_UTF8_WCHAR_T_TYPEDEF, ON_NEED_UTF16_WCHAR_T_TYPEDEF and ON_NEED_UTF16_WCHAR_T_TYPEDEF
+#endif
+#undef ON_NEED_UTF16_WCHAR_T_TYPEDEF
+typedef ON__UINT16 wchar_t;
+#define ON_SIZEOF_WCHAR_T 2
+
+#elif defined(ON_NEED_UTF32_WCHAR_T_TYPEDEF)
+#undef ON_NEED_UTF32_WCHAR_T_TYPEDEF
+typedef ON__UINT32 wchar_t;
+#define ON_SIZEOF_WCHAR_T 4
+
+#endif
+
+/*
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+//
+// Validate ON_SIZEOF_WCHAR_T and set ON_WCHAR_T_ENCODING
+//
+*/
+
+#if !defined(ON_SIZEOF_WCHAR_T)
+#error unknown sizeof(wchar_t)
+#endif
+
+#if !defined(ON_WCHAR_T_ENCODING)
+
+#if (1 == ON_SIZEOF_WCHAR_T)
+#define ON_WCHAR_T_ENCODING ON_UnicodeEncoding::ON_UTF_8
+#elif (2 == ON_SIZEOF_WCHAR_T)
+#if defined(ON_LITTLE_ENDIAN)
+#define ON_WCHAR_T_ENCODING ON_UnicodeEncoding::ON_UTF_16LE
+#elif  defined(ON_BIG_ENDIAN)
+#define ON_WCHAR_T_ENCODING ON_UnicodeEncoding::ON_UTF_16BE
+#endif
+#elif (4 == ON_SIZEOF_WCHAR_T)
+#if defined(ON_LITTLE_ENDIAN)
+#define ON_WCHAR_T_ENCODING ON_UnicodeEncoding::ON_UTF_32LE
+#elif  defined(ON_BIG_ENDIAN)
+#define ON_WCHAR_T_ENCODING ON_UnicodeEncoding::ON_UTF_32BE
+#endif
+#endif
+
+#if !defined(ON_WCHAR_T_ENCODING)
+#error unable to automatically set ON_WCHAR_T_ENCODING
+#endif
+
+#endif
+
+
+/*
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+//
+// BEGIN - OBSOLETE  defines
+//
+// These legacy defines will be removed from V6
+//
+*/
+
+#if defined(__APPLE__) && (defined(_GNU_SOURCE) || defined(ON_COMPILER_CLANG))
+/* Poorly named and used define that indicated using Apple's OSX compiler and/or runtime */
+#if !defined(ON_COMPILER_XCODE)
+#define ON_COMPILER_XCODE
+#endif
+#endif
+
+#if defined (ON_RUNTIME_WIN) && !defined(ON_OS_WINDOWS)
+#define ON_OS_WINDOWS
+#endif
+
+#define ON_MSC_CDECL ON_CALLBACK_CDECL
+
+#if defined(ON_64BIT_RUNTIME)
+#define ON_64BIT_POINTER
+#elif defined(ON_32BIT_RUNTIME)
+#define ON_32BIT_POINTER
+#endif
+
+/*
+//
+// END - OBSOLETE  defines
+//
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+*/
+
+// To debug linking pragma path issues, uncomment the following line
+//#pragma message( "OPENNURBS_OUTPUT_DIR = " OPENNURBS_PP2STR(OPENNURBS_OUTPUT_DIR) )
+
+#if defined(ON_RUNTIME_WIN) && !defined(ON_NO_WINDOWS)
 
 /*
 /////////////////////////////////////////////////////////////////////////
 //
-// Begin Windows system includes - 
+// Begin Windows system includes -
 */
-#if defined(_WIN32) || defined(WIN32) || defined(_WIN64) || defined(WIN64)
+
 
 #if defined(_M_X64) && defined(WIN32) && defined(WIN64)
 // 23 August 2007 Dale Lear
 
-// andrew: begin: fix for compilation on win64 / msvc2013:
 #if defined(_INC_WINDOWS)
 // The user has included Microsoft's windows.h before opennurbs.h,
 // and windows.h has nested includes that unconditionally define WIN32.
@@ -119,111 +347,175 @@
 // windows.h has to fight with this Microsoft bug.
 #undef WIN32
 #else
-//#error do not define WIN32 for x64 builds
+#error do not define WIN32 for x64 builds
 #endif
-//#undef WIN32
-// andrew: end
-
 // NOTE _WIN32 is defined for any type of Windows build
 #endif
-
-/*
-// From windows.h openNURBS only needs definitions of ON_BOOL32, true,
-// and false, and a declarations of OutputDebugString(), and
-// WideCharToMultiByte().  These 
-// defines disable the inclusion of most of the Windows garbage.
-*/
 
 #if !defined(_WINDOWS_)
 /* windows.h has not been read - read just what we need */
 #define WIN32_LEAN_AND_MEAN  /* Exclude rarely-used stuff from Windows headers */
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
 #include <windows.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
 #endif
 
-#if defined(_M_X64) && defined(WIN32) && defined(WIN64)
+#if (defined(_M_X64) || defined(_M_ARM64)) && defined(WIN32) && defined(WIN64)
 // 23 August 2007 Dale Lear
 //   windows.h unconditionally defines WIN32  This is a bug
 //   and the hope is this simple undef will let us continue.
 #undef WIN32
 #endif
 
+#if defined(ON_RUNTIME_WIN) && !defined(NOGDI)
 /*
-// if ON_OS_WINDOWS is defined, debugging and error
-// handing uses some Windows calls and ON_String
-// includes resource support.
+// ok to use Windows GDI RECT, LOGFONT, ... structs.
 */
-
-#if !defined(ON_OS_WINDOWS)
-#define ON_OS_WINDOWS
-#endif
-
-#if defined(ON_OS_WINDOWS) && !defined(NOGDI)
-// ok to use Windows GDI RECT, LOGFONT, ... stucts.
 #define ON_OS_WINDOWS_GDI
 #endif
 
-#if defined(_MSC_VER)
-/* 
-  Microsoft's Visual C/C++ requires some functions, including those that
-  use vargs to be declared with __cdecl 
-  Since this code must also compile with non-Micorosoft compilers, 
-  the ON_MSC_CDECL macro is used to insert __cdecl when needed.
-*/
-#define ON_MSC_CDECL __cdecl
-
 #endif
 
-#endif
-
-#endif
-
-// NOTE: Do not use rand_s() - it crashes Win2000.
-//
-//#if defined(_MSC_VER) && !defined(_CRT_RAND_S)
-//// In order to get high quality random numbers out of
-//// Microsoft Visual Studio, you have to define _CRT_RAND_S
-//// before including system header files.
-//#define _CRT_RAND_S
-//#endif
-
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
 #include <stdlib.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
 #include <memory.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#if defined(ON_COMPILER_CLANG) && defined(ON_RUNTIME_APPLE)
+#include <malloc/malloc.h>
+#else
+#include <malloc.h>
+#endif
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
 #include <string.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
 #include <math.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
 #include <stdio.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
 #include <stdarg.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
 #include <float.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
 #include <time.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
 #include <limits.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
 #include <ctype.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
 
 #if defined(ON_COMPILER_IRIX)
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
 #include <alloca.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
 #endif
 
-#if !defined(ON_COMPILER_BORLAND)
+#if !defined(ON_COMPILER_BORLANDC)
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
 #include <wchar.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
 #endif
 
-#if defined(ON_OS_WINDOWS)
+#if defined(ON_COMPILER_MSC)
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
 #include <io.h>
-#include <sys\stat.h>
-#include <tchar.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
 
-// ON_CreateUuid calls Windows's ::UuidCreate() which
-// is declared in Rpcdce.h and defined in Rpcrt4.lib.
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <sys/stat.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <tchar.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
 #include <Rpc.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
 
 #endif
 
 #if defined(ON_COMPILER_GNU)
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
 #include <sys/types.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
 #include <sys/stat.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
 #include <wctype.h>
-#if defined(ON_COMPILER_XCODE)
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <dirent.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#endif
+
+#if defined(ON_COMPILER_CLANG)
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <sys/types.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <sys/stat.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <wctype.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <dirent.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#if defined(ON_RUNTIME_ANDROID) || defined(ON_RUNTIME_LINUX) || defined(ON_RUNTIME_WASM)
+#include "android_uuid/uuid.h"
+#else
 #include <uuid/uuid.h>
 #endif
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
 #endif
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <errno.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+// For definition of PRIu64 to print 64-bit ints portably.
+#include <inttypes.h>
+#if !defined(PRIu64)
+#error no PRIu64
+#endif
+
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
 
 #if defined (cplusplus) || defined(_cplusplus) || defined(__cplusplus)
 // C++ system includes
@@ -232,198 +524,183 @@
 #define ON_CPLUSPLUS
 #endif
 
-#include <new> // for declaration of placement versions of new used in onClassArray<>.
+// Standard C++ tools
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <new>     // for declaration of placement versions of new used in ON_ClassArray<>.
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <memory>  // for std::shared_ptr
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <utility> // std::move
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <string>  // std::string, std::wstring
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <locale>  // for call create_locale(LC_ALL,"C") in ON_Locale().
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <atomic>  // for std:atomic<type>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <chrono>  // for std:chrono::high_resolution_clock
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#if !defined(OPENNURBS_NO_STD_THREAD)
+#include <thread>  // for std::this_thread::sleep_for
+#endif
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#if !defined(OPENNURBS_NO_STD_MUTEX)
+#include <mutex>  // for std:mutex
+#endif
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+
+#define ON_NO_SHARED_PTR_DTOR(T) [=](T*){}
+#define ON_MANAGED_SHARED_PTR(T, p) std::shared_ptr<T>(p)
+#define ON_UNMANAGED_SHARED_PTR(T, p) std::shared_ptr<T>(p,[=](T*){})
+
+#if defined(ON_RUNTIME_APPLE)
+
+
+#if defined(ON_COMPILER_CLANG)
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <wchar.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <xlocale.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
 
 #endif
 
-#if !defined(ON_MSC_CDECL)
-#define ON_MSC_CDECL
+#if defined(ON_RUNTIME_APPLE_OBJECTIVE_C_AVAILABLE) && !defined(ON_RUNTIME_APPLE_IOS)
+// Opennurbs uses CTFont and NSString to load Apple fonts
+// int the ON_Font and freetype internals.
+// When ON_RUNTIME_APPLE_OBJECTIVE_C_AVAILABLE is defined, you
+// must link with the Apple Foundation and CoreText frameworks.
+#define ON_RUNTIME_COCOA_AVAILABLE
+#pragma ON_PRAGMA_WARNING_BEFORE_DIRTY_INCLUDE
+#include <Cocoa/Cocoa.h>
+#pragma ON_PRAGMA_WARNING_AFTER_DIRTY_INCLUDE
+
 #endif
-
-#if !defined(ON_OS_WINDOWS)
-
-/* define wchar_t, true, false, NULL */
-
-#if !defined(true)
-#define true true
-#endif
-
-#if !defined(false)
-#define false false
-#endif
-
-#if !defined(NULL)
-#define NULL 0
-#endif
-
-#if !defined(_WCHAR_T_DEFINED)
-// If you are using VC7/.NET and are having trouble linking 
-// to functions that have whcar_t types in arguments, then
-// read the documentation about the wchar_t type and
-// the /Zc:wchar_t compiler option.  Since 
-
-/* 16-bit wide character ("UNICODE") */
-
-#if !defined(_WCHAR_T)
-//typedef unsigned short wchar_t;
-//typedef unsigned wchar_t;
-#endif
-
-#define _WCHAR_T_DEFINED
 #endif
 
 #endif
 
+#if !defined(ON_RUNTIME_WIN) && !defined(ON_RUNTIME_APPLE)
 
-// As 64 bit compilers become more common, the definitions
-// of the next 6 typedefs may need to vary with compiler.
-// As much as possible, the size of runtime types is left 
-// up to the compiler so performance and ease of use can 
-// be maximized.  In the rare cases where it is critical 
-// to use an integer that is exactly 16 bits, 32 bits 
-// or 64 bits, the ON__INT16, ON__INT32, and ON__INT64
-// typedefs are used.
+// As of September, 2018 Freetype is not reliable on Windows, MacOS, and iOS.
+//   Its mapping from UNICODE code points to glyph indices is buggy.
+//   It does not support OpenType variable fonts like Windows 10 Bahnschrift.
+//   It does not support font simulation (Windows does a great job here.)
+//   Its support for multiple locale names is limited.
+//   Its support for PANOSE1 is limited.
+//   It does not support font substitution.
+// Windows uses the Direct Write SDK for font and glyph calculations.
+// MacOS and iOS use the Apple Core Text SDK for font and glyph calculations.
 
-#if defined(_M_X64) || defined(_WIN64) || defined(__LP64__)
-// 64 bit (8 byte) pointers
-#define ON_SIZEOF_POINTER 8
-#define ON_64BIT_POINTER
-#else
-// 32 bit (4 byte) pointers
-#define ON_SIZEOF_POINTER 4
-#define ON_32BIT_POINTER
-#endif
-
-#if defined(ON_PURIFY_BUILD)
-// ON_PURIFY_BUILD is defined in the DebugPurify
-// build configuration.  
-#pragma message(" --- OpenNURBS Purify build.")
-#if defined(ON_32BIT_POINTER) && defined(ON_COMPILING_OPENNURBS)
-// The header file ..\PurifyAPI\pure.h contains delclarations
-// of the Purify API functions.
-// The file ..\PurifyAPI\pure_api.c contains the definitions.
-// The versions we have only work in WIN32.
-#include "../PurifyAPI/pure.h"
-#endif
-#endif
-
-// 8 bit integer
-typedef char ON__INT8;
-
-// 8 bit unsigned integer
-typedef unsigned char ON__UINT8;
-
-// 16 bit integer
-typedef short ON__INT16;
-
-// 16 bit unsigned integer
-typedef unsigned short ON__UINT16;
-
-// 32 bit integer
-typedef int ON__INT32;
-
-// 32 bit unsigned integer
-typedef unsigned int ON__UINT32;
-
-#if defined(ON_COMPILER_MSC)
-
-// Microsoft uses __int64
-
-// 64 bit integer
-typedef __int64 ON__INT64;
-
-// 64 bit unsigned integer
-typedef unsigned __int64 ON__UINT64;
-
-#elif defined(ON_COMPILER_GNU)
-
-// GNU uses long long
-
-// 64 bit integer
-typedef long long ON__INT64;
-
-// 64 bit unsigned integer
-typedef unsigned long long ON__UINT64;
-
+#if defined(ON_RUNTIME_ANDROID)
+// May work reasonably for Android versions < 8-ish as of Sep 2018.
+// Test carefully if working right is important.
+#define OPENNURBS_FREETYPE_SUPPORT
 #else
 
-#error Verify that long long is a 64 bit integer with your compiler!
+// not Windows, Apple, or Android
 
-// 64 bit integer
-typedef long long ON__INT64;
+// To disable freetype support, comment out the following define.
+// To enable freetype support, define OPENNURBS_FREETYPE_SUPPORT
+// NOTE WELL: freetype is not delivered in a 32-bit version.
 
-// 64 bit unsigned integer
-typedef unsigned long long ON__UINT64;
+// Whenever possible use native OS tools for font and glyph support.
+// Things like names, outlines, metrics, UNICODE mapping will generally
+// work better align with user's experiences on that platform.
+// Freetype is basically a platform neutral font file file reading toolkit
+// and has all the limitations that arise from that approach to complex
+// information modern OSs manage in complicated ways.
+
+//#define OPENNURBS_FREETYPE_SUPPORT
 
 #endif
+#endif
 
-// 32 bit boolean (true/false) value
-// When we can break the SDK, this will be replaced with "bool", which is 1 byte on windows.
-typedef int ON_BOOL32;
+/*
+/////////////////////////////////////////////////////////////////////////////////
+//
+// Validate defines
+//
+*/
 
-// ON_INT_PTR must be an integer type with sizeof(ON_INT_PTR) = sizeof(void*).
+/*
+// Validate ON_x_ENDIAN defines
+*/
+#if defined(ON_LITTLE_ENDIAN) && defined(ON_BIG_ENDIAN)
+#error Exactly one of ON_LITTLE_ENDIAN or ON_BIG_ENDIAN must be defined.
+#endif
+
+#if !defined(ON_LITTLE_ENDIAN) && !defined(ON_BIG_ENDIAN)
+#error Either ON_LITTLE_ENDIAN or ON_BIG_ENDIAN must be defined.
+#endif
+
+/*
+// Validate ON_xBIT_RUNTIME defines
+*/
+#if defined(ON_64BIT_RUNTIME) && defined(ON_32BIT_RUNTIME)
+#error Exactly one of ON_64BIT_RUNTIME or ON_32BIT_RUNTIME must be defined.
+#endif
+
+#if !defined(ON_64BIT_RUNTIME) && !defined(ON_32BIT_RUNTIME)
+#error Either ON_64BIT_RUNTIME or ON_32BIT_RUNTIME must be defined.
+#endif
+
+/*
+// Validate ON_SIZEOF_POINTER defines
+*/
 #if 8 == ON_SIZEOF_POINTER
 
-#if defined(ON_COMPILER_GNU)
-typedef long long ON__INT_PTR;
-typedef unsigned long long ON__UINT_PTR;
-#else
-typedef __int64 ON__INT_PTR;
-typedef unsigned __int64 ON__UINT_PTR;
+#if !defined(ON_64BIT_RUNTIME)
+#error 8 = ON_SIZEOF_POINTER and ON_64BIT_RUNTIME is not defined
+#endif
+#if defined(ON_32BIT_RUNTIME)
+#error 8 = ON_SIZEOF_POINTER and ON_32BIT_RUNTIME is defined
+#error
 #endif
 
 #elif 4 == ON_SIZEOF_POINTER
 
-typedef int ON__INT_PTR;
-typedef unsigned int ON__UINT_PTR;
+#if !defined(ON_32BIT_RUNTIME)
+#error 4 = ON_SIZEOF_POINTER and ON_32BIT_RUNTIME is not defined
+#endif
+#if defined(ON_64BIT_RUNTIME)
+#error 4 = ON_SIZEOF_POINTER and ON_64BIT_RUNTIME is defined
+#endif
 
 #else
-#error Update OpenNURBS to work with new pointer size.
-#endif
 
-
-
-// In some functions, performance is slightly increased 
-// when the endianess of the CPU is known at compile time.
-// If the endianness is not known, it is quickly detected
-// at runtime and all opennurbs code still works.
-//
-// If ON_LITTLE_ENDIAN is defined, then the code will
-// is compiled assuming little endian byte order.
-//
-// If ON_BIG_ENDIAN is defined, then the code will
-// is compiled assuming big endian byte order.
-//
-// If neither is defined, the endianess is determined at
-// runtime.
-//
-// If both are defined, a compile error occures.
-
-#if defined(ON_OS_WINDOWS) && defined(ON_COMPILER_MSC)
-
-#if defined(_M_X64) || defined(_M_IX86)
-#if !defined(ON_LITTLE_ENDIAN)
-#define ON_LITTLE_ENDIAN
-#endif
-#endif
+#error OpenNURBS assumes sizeof(void*) is 4 or 8 bytes
 
 #endif
 
-
-
-
-#if defined(ON_LITTLE_ENDIAN) && defined(ON_BIG_ENDIAN)
-#error At most one of ON_LITTLE_ENDIAN and ON_BIG_ENDIAN can be defined.
+#if defined(__FUNCTION__)
+#define OPENNURBS__FUNCTION__ __FUNCTION__
+#elif defined(__func__)
+#define OPENNURBS__FUNCTION__ __func__
+#else
+#define OPENNURBS__FUNCTION__ ""
 #endif
 
-
-// on_vsnprintf()/on_vsnwprintf() call _vsnprintf()/_vsnwprintf() in Windows
-// and something equivalent in other OSs
-
-int on_vsnprintf( char *buffer, size_t count, const char *format, va_list argptr );
-
-int on_vsnwprintf( wchar_t *buffer, size_t count, const wchar_t *format, va_list argptr );
+#pragma ON_PRAGMA_WARNING_POP
 
 
 #endif
-

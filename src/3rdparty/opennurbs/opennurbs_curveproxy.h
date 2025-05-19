@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 ////////////////////////////////////////////////////////////////
 //
@@ -39,24 +37,35 @@ class ON_CLASS ON_CurveProxy : public ON_Curve
   ON_OBJECT_DECLARE(ON_CurveProxy);
 
 public:
-  // virtual ON_Object::DestroyRuntimeCache override
-  void DestroyRuntimeCache( bool bDelete = true );
+  ON_CurveProxy() ON_NOEXCEPT;
+  virtual ~ON_CurveProxy();
+  ON_CurveProxy( const ON_CurveProxy& );
+  ON_CurveProxy& operator=(const ON_CurveProxy&);
+
+#if defined(ON_HAS_RVALUEREF)
+  // rvalue copy constructor
+  ON_CurveProxy( ON_CurveProxy&& ) ON_NOEXCEPT;
+
+  // The rvalue assignment operator calls ON_Object::operator=(ON_Object&&)
+  // which could throw exceptions.  See the implementation of
+  // ON_Object::operator=(ON_Object&&) for details.
+  ON_CurveProxy& operator=( ON_CurveProxy&& );
+#endif
 
 public:
-  ON_CurveProxy();
-  ON_CurveProxy( const ON_CurveProxy& );
+  // virtual ON_Object::DestroyRuntimeCache override
+  void DestroyRuntimeCache( bool bDelete = true ) override;
+
+
+
   ON_CurveProxy( const ON_Curve* );
   ON_CurveProxy( const ON_Curve*, ON_Interval );
 
-  ON_CurveProxy& operator=(const ON_CurveProxy&);
-
-  virtual ~ON_CurveProxy();
-
   // virtual ON_Object::SizeOf override
-  unsigned int SizeOf() const;
+  unsigned int SizeOf() const override;
 
   // virtual ON_Object::DataCRC override
-  ON__UINT32 DataCRC(ON__UINT32 current_remainder) const;
+  ON__UINT32 DataCRC(ON__UINT32 current_remainder) const override;
 
   /*
   Description:
@@ -126,6 +135,12 @@ public:
   */
   bool ProxyCurveIsReversed() const;
 
+protected:
+  // Used by CRhinoPolyEdgeSegment::Create() to restore the
+  // value of ON_CurveProxy::m_bReversed.
+  void SetProxyCurveIsReversed(bool bReversed);
+
+public:
   /*
   Parameters:
     t - [in] parameter for "this" curve
@@ -145,19 +160,18 @@ public:
 private:
   // "real" curve geometry that "this" is a proxy for.
   const ON_Curve* m_real_curve;
-
   // If true, the parameterization of "this" proxy is
   // the reverse of the m_curve parameterization.
-  bool m_bReversed;
+  bool m_bReversed; 
 
-  // The m_domain interval is always increasing and included in 
-  // m_curve->Domain().  The m_domain interval defines the portion
-  // of m_curve that "this" proxy uses and it can be a proper
-  // sub-interval of m_curve->Domain().
+  // The m_real_curve_domain interval is always increasing and included in 
+  // m_real_curve->Domain().  The m_real_curve_domain interval defines the portion
+  // of m_real_curve that "this" proxy uses and it can be a proper
+  // sub-interval of m_real_curve->Domain().
   ON_Interval m_real_curve_domain;
 
   // The evaluation domain of this curve.  If "t" is a parameter for
-  // "this" and "r" is a parameter for m_curve, then when m_bReversed==false
+  // "this" and "r" is a parameter for m_real_curve, then when m_bReversed==false
 	// we have 
   // t = m_this_domain.ParameterAt(m_real_curve_domain.NormalizedParameterAt(r))
   // r = m_real_curve_domain.ParameterAt(m_this_domain.NormalizedParameterAt(t))
@@ -183,56 +197,34 @@ public:
     geometry and, if necessary, trims and reverse the result to that
     the returned curve's parameterization and locus match the proxy curve's.
   */
-  ON_Curve* DuplicateCurve() const;
+  ON_Curve* DuplicateCurve() const override;
   
   /////////////////////////////////////////////////////////////////
   // ON_Object overrides
 
-  /*
-  Description:
-    Tests an object to see if its data members are correctly
-    initialized.
-  Parameters:
-    text_log - [in] if the object is not valid and text_log
-        is not NULL, then a brief englis description of the
-        reason the object is not valid is appened to the log.
-        The information appended to text_log is suitable for 
-        low-level debugging purposes by programmers and is 
-        not intended to be useful as a high level user 
-        interface tool.
-  Returns:
-    @untitled table
-    true     object is valid
-    false    object is invalid, uninitialized, etc.
-  Remarks:
-    Overrides virtual ON_Object::IsValid
-  */
-  ON_BOOL32 IsValid( ON_TextLog* text_log = NULL ) const;
+  bool IsValid( class ON_TextLog* text_log = nullptr ) const override;
 
-  void Dump( ON_TextLog& ) const; // for debugging
+  void Dump( ON_TextLog& ) const override; // for debugging
 
-  ON_BOOL32 Write( // returns false - nothing serialized
+  bool Write( // returns false - nothing serialized
          ON_BinaryArchive&  // open binary file 
-       ) const;
+       ) const override;
 
-  ON_BOOL32 Read( // returns false - nothing serialized
+  bool Read( // returns false - nothing serialized
          ON_BinaryArchive&  // open binary file
-       );
+       ) override;
 
   /////////////////////////////////////////////////////////////////
   // ON_Geometry overrides
 
-  int Dimension() const;
+  int Dimension() const override;
 
-  ON_BOOL32 GetBBox( // returns true if successful
-         double*,    // minimum
-         double*,    // maximum
-         ON_BOOL32 = false  // true means grow box
-         ) const;
+  // virtual ON_Geometry GetBBox override		
+  bool GetBBox( double* boxmin, double* boxmax, bool bGrowBox = false ) const override;
 
-  ON_BOOL32 Transform( 
+  bool Transform( 
          const ON_Xform&
-         );
+         ) override;
 
   /////////////////////////////////////////////////////////////////
   // ON_Curve overrides
@@ -242,77 +234,77 @@ public:
   // Remarks:
   //   If m_bReverse is true, this returns the reverse
   //   of m_domain.
-  ON_Interval Domain() const;
+  ON_Interval Domain() const override;
 
   /* virtual ON_Curve::SetDomain() override */
-  ON_BOOL32 SetDomain( 
+  bool SetDomain( 
         double t0, 
         double t1 
-        );
+        ) override;
 
   bool SetDomain( ON_Interval domain );
 
-  int SpanCount() const; // number of smooth spans in curve
+  int SpanCount() const override; // number of smooth spans in curve
 
-  ON_BOOL32 GetSpanVector(
+  bool GetSpanVector(
     double*
-    ) const; 
+    ) const override; 
 
   int Degree( // returns maximum algebraic degree of any span 
                   // ( or a good estimate if curve spans are not algebraic )
-    ) const; 
+    ) const override; 
 
   // (optional - override if curve is piecewise smooth)
-  ON_BOOL32 GetParameterTolerance( // returns tminus < tplus: parameters tminus <= s <= tplus
+  bool GetParameterTolerance( // returns tminus < tplus: parameters tminus <= s <= tplus
          double,  // t = parameter in domain
          double*, // tminus
          double*  // tplus
-         ) const;
+         ) const override;
 
-  ON_BOOL32 IsLinear( // true if curve locus is a line segment between
+  bool IsLinear( // true if curve locus is a line segment between
                  // between specified points
         double = ON_ZERO_TOLERANCE // tolerance to use when checking linearity
-        ) const;
+        ) const override;
 
   // virtual override of ON_Curve::IsPolyline
   int IsPolyline(
-        ON_SimpleArray<ON_3dPoint>* pline_points = NULL,
-        ON_SimpleArray<double>* pline_t = NULL
-        ) const;
+        ON_SimpleArray<ON_3dPoint>* pline_points = nullptr,
+        ON_SimpleArray<double>* pline_t = nullptr
+        ) const override;
 
-  ON_BOOL32 IsArc( // ON_Arc.m_angle > 0 if curve locus is an arc between
+  bool IsArc( // ON_Arc.m_angle > 0 if curve locus is an arc between
               // specified points
-        const ON_Plane* = NULL, // if not NULL, test is performed in this plane
-        ON_Arc* = NULL, // if not NULL and true is returned, then arc parameters
+        const ON_Plane* = nullptr, // if not nullptr, test is performed in this plane
+        ON_Arc* = nullptr, // if not nullptr and true is returned, then arc parameters
                          // are filled in
         double = ON_ZERO_TOLERANCE    // tolerance to use when checking
-        ) const;
+        ) const override;
 
-  ON_BOOL32 IsPlanar(
-        ON_Plane* = NULL, // if not NULL and true is returned, then plane parameters
+  bool IsPlanar(
+        ON_Plane* = nullptr, // if not nullptr and true is returned, then plane parameters
                            // are filled in
         double = ON_ZERO_TOLERANCE    // tolerance to use when checking
-        ) const;
+        ) const override;
 
-  ON_BOOL32 IsInPlane(
+  bool IsInPlane(
         const ON_Plane&, // plane to test
         double = ON_ZERO_TOLERANCE    // tolerance to use when checking
-        ) const;
+        ) const override;
 
-  ON_BOOL32 IsClosed(  // true if curve is closed (either curve has
+  bool IsClosed(  // true if curve is closed (either curve has
         void      // clamped end knots and euclidean location of start
-        ) const;  // CV = euclidean location of end CV, or curve is
+        ) const override;  // CV = euclidean location of end CV, or curve is
                   // periodic.)
 
-  ON_BOOL32 IsPeriodic(  // true if curve is a single periodic segment
+  bool IsPeriodic(  // true if curve is a single periodic segment
         void 
-        ) const;
+        ) const override;
   
   /*
   Description:
-    Search for a derivatitive, tangent, or curvature discontinuity.
+    Search for a derivative, tangent, or curvature discontinuity.
   Parameters:
-    c - [in] type of continity to test for.  If ON::C1_continuous
+    c - [in] type of continuity to test for.  If ON::continuity::C1_continuous
     t0 - [in] search begins at t0
     t1 - [in] (t0 < t1) search ends at t1
     t - [out] if a discontinuity is found, the *t reports the
@@ -320,18 +312,25 @@ public:
     hint - [in/out] if GetNextDiscontinuity will be called repeatedly,
        passing a "hint" with initial value *hint=0 will increase the speed
        of the search.       
-    dtype - [out] if not NULL, *dtype reports the kind of discontinuity
+    dtype - [out] if not nullptr, *dtype reports the kind of discontinuity
         found at *t.  A value of 1 means the first derivative or unit tangent
         was discontinuous.  A value of 2 means the second derivative or
         curvature was discontinuous.
     cos_angle_tolerance - [in] default = cos(1 degree) Used only when
-        c is ON::G1_continuous or ON::G2_continuous.  If the cosine
+        c is ON::continuity::G1_continuous or ON::continuity::G2_continuous.  If the cosine
         of the angle between two tangent vectors 
         is <= cos_angle_tolerance, then a G1 discontinuity is reported.
     curvature_tolerance - [in] (default = ON_SQRT_EPSILON) Used only when
-        c is ON::G2_continuous.  If K0 and K1 are curvatures evaluated
-        from above and below and |K0 - K1| > curvature_tolerance,
-        then a curvature discontinuity is reported.
+        c is ON::continuity::G2_continuous or ON::continuity::Gsmooth_continuous.  
+        ON::continuity::G2_continuous:
+          If K0 and K1 are curvatures evaluated
+          from above and below and |K0 - K1| > curvature_tolerance,
+          then a curvature discontinuity is reported.
+        ON::continuity::Gsmooth_continuous:
+          If K0 and K1 are curvatures evaluated from above and below
+          and the angle between K0 and K1 is at least twice angle tolerance
+          or ||K0| - |K1|| > (max(|K0|,|K1|) > curvature_tolerance,
+          then a curvature discontinuity is reported.
   Returns:
     true if a discontinuity was found on the interior of the interval (t0,t1).
   Remarks:
@@ -342,11 +341,11 @@ public:
                   double t0,
                   double t1,
                   double* t,
-                  int* hint=NULL,
-                  int* dtype=NULL,
-                  double cos_angle_tolerance=0.99984769515639123915701155881391,
+                  int* hint=nullptr,
+                  int* dtype=nullptr,
+                  double cos_angle_tolerance=ON_DEFAULT_ANGLE_TOLERANCE_COSINE,
                   double curvature_tolerance=ON_SQRT_EPSILON
-                  ) const;
+                  ) const override;
 
   /*
   Description:
@@ -362,13 +361,20 @@ public:
     d2_tolerance - [in] if the difference between two second derivatives is
         greater than d2_tolerance, then the curve is not C2.
     cos_angle_tolerance - [in] default = cos(1 degree) Used only when
-        c is ON::G1_continuous or ON::G2_continuous.  If the cosine
+        c is ON::continuity::G1_continuous or ON::continuity::G2_continuous.  If the cosine
         of the angle between two tangent vectors 
         is <= cos_angle_tolerance, then a G1 discontinuity is reported.
     curvature_tolerance - [in] (default = ON_SQRT_EPSILON) Used only when
-        c is ON::G2_continuous.  If K0 and K1 are curvatures evaluated
-        from above and below and |K0 - K1| > curvature_tolerance,
-        then a curvature discontinuity is reported.
+        c is ON::continuity::G2_continuous or ON::continuity::Gsmooth_continuous.  
+        ON::continuity::G2_continuous:
+          If K0 and K1 are curvatures evaluated
+          from above and below and |K0 - K1| > curvature_tolerance,
+          then a curvature discontinuity is reported.
+        ON::continuity::Gsmooth_continuous:
+          If K0 and K1 are curvatures evaluated from above and below
+          and the angle between K0 and K1 is at least twice angle tolerance
+          or ||K0| - |K1|| > (max(|K0|,|K1|) > curvature_tolerance,
+          then a curvature discontinuity is reported.
   Returns:
     true if the curve has at least the c type continuity at the parameter t.
   Remarks:
@@ -377,18 +383,18 @@ public:
   bool IsContinuous(
     ON::continuity c,
     double t, 
-    int* hint = NULL,
+    int* hint = nullptr,
     double point_tolerance=ON_ZERO_TOLERANCE,
     double d1_tolerance=ON_ZERO_TOLERANCE,
     double d2_tolerance=ON_ZERO_TOLERANCE,
-    double cos_angle_tolerance=0.99984769515639123915701155881391,
+    double cos_angle_tolerance=ON_DEFAULT_ANGLE_TOLERANCE_COSINE,
     double curvature_tolerance=ON_SQRT_EPSILON
-    ) const;
+    ) const override;
 
-  ON_BOOL32 Reverse();       // reverse parameterizatrion
+  bool Reverse() override;       // reverse parameterization
                         // Domain changes from [a,b] to [-b,-a]
 
-  ON_BOOL32 Evaluate( // returns false if unable to evaluate
+  bool Evaluate( // returns false if unable to evaluate
          double,         // evaluation parameter
          int,            // number of derivatives (>=0)
          int,            // array stride (>=Dimension())
@@ -399,105 +405,20 @@ public:
                          //      >  0 to evaluate from above
          int* = 0        // optional - evaluation hint (int) used to speed
                          //            repeated evaluations
-         ) const;
+         ) const override;
 
-  //////////
-  // Find parameter of the point on a curve that is closest to test_point.
-  // If the maximum_distance parameter is > 0, then only points whose distance
-  // to the given point is <= maximum_distance will be returned.  Using a 
-  // positive value of maximum_distance can substantially speed up the search.
-  // If the sub_domain parameter is not NULL, then the search is restricted
-  // to the specified portion of the curve.
-  //
-  // true if returned if the search is successful.  false is returned if
-  // the search fails.
-  bool GetClosestPoint( const ON_3dPoint&, // test_point
-          double*,       // parameter of local closest point returned here
-          double = 0.0,  // maximum_distance
-          const ON_Interval* = NULL // sub_domain
-          ) const;
-
-  //////////
-  // Find parameter of the point on a curve that is locally closest to 
-  // the test_point.  The search for a local close point starts at 
-  // seed_parameter. If the sub_domain parameter is not NULL, then
-  // the search is restricted to the specified portion of the curve.
-  //
-  // true if returned if the search is successful.  false is returned if
-  // the search fails.
-  ON_BOOL32 GetLocalClosestPoint( const ON_3dPoint&, // test_point
-          double,    // seed_parameter
-          double*,   // parameter of local closest point returned here
-          const ON_Interval* = NULL // sub_domain
-          ) const;
-
-  //////////
-  // Length of curve.
-  // true if returned if the length calculation is successful.
-  // false is returned if the length is not calculated.
-  //
-  // The arc length will be computed so that
-  // (returned length - real length)/(real length) <= fractional_tolerance
-  // More simply, if you want N significant figures in the answer, set the
-  // fractional_tolerance to 1.0e-N.  For "nice" curves, 1.0e-8 works
-  // fine.  For very high degree nurbs and nurbs with bad parameterizations,
-  // use larger values of fractional_tolerance.
-  ON_BOOL32 GetLength( // returns true if length successfully computed
-          double*,                   // length returned here
-          double = 1.0e-8,           // fractional_tolerance
-          const ON_Interval* = NULL  // (optional) sub_domain
-          ) const;
-
-  /*
-  Description:
-    Used to quickly find short curves.
-  Parameters:
-    tolerance - [in] (>=0)
-    sub_domain - [in] If not NULL, the test is performed
-      on the interval that is the intersection of 
-      sub_domain with Domain().
-  Returns:
-    True if the length of the curve is <= tolerance.
-  Remarks:
-    Faster than calling Length() and testing the
-    result.
-  */
-  bool IsShort(
-    double tolerance,
-    const ON_Interval* sub_domain = NULL
-    ) const;
-
-  // override of virtual ON_Curve::GetNormalizedArcLengthPoint(...)
-  virtual
-  ON_BOOL32 GetNormalizedArcLengthPoint(
-          double s,
-          double* t,
-          double fractional_tolerance = 1.0e-8,
-          const ON_Interval* sub_domain = NULL
-          ) const;
-
-  // override of virtual ON_Curve::GetNormalizedArcLengthPoints(...)
-  virtual
-  ON_BOOL32 GetNormalizedArcLengthPoints(
-          int count,
-          const double* s,
-          double* t,
-          double absolute_tolerance = 0.0,
-          double fractional_tolerance = 1.0e-8,
-          const ON_Interval* sub_domain = NULL
-          ) const;
 
   // override of virtual ON_Curve::Trim
-  ON_BOOL32 Trim(
+  bool Trim(
     const ON_Interval& domain
-    );
+    ) override;
 
   // override of virtual ON_Curve::Split
-  ON_BOOL32 Split(
+  bool Split(
       double t,
       ON_Curve*& left_side,
       ON_Curve*& right_side
-    ) const;
+    ) const override;
 
   int GetNurbForm( // returns 0: unable to create NURBS representation
                    //            with desired accuracy.
@@ -511,8 +432,8 @@ public:
                    //            desired accuracy.
         ON_NurbsCurve&,
         double = 0.0,
-        const ON_Interval* = NULL // OPTIONAL subdomain of ON_CurveProxy::Domain()
-        ) const;
+        const ON_Interval* = nullptr // OPTIONAL subdomain of ON_CurveProxy::Domain()
+        ) const override;
 
   int HasNurbForm( // returns 0: unable to create NURBS representation
                    //            with desired accuracy.
@@ -524,19 +445,19 @@ public:
                    //            curve's parameterization and the NURBS
                    //            parameterization may not match to the 
                    //            desired accuracy.
-        ) const;
+        ) const override;
 
   // virtual ON_Curve::GetCurveParameterFromNurbFormParameter override
-  ON_BOOL32 GetCurveParameterFromNurbFormParameter(
+  bool GetCurveParameterFromNurbFormParameter(
         double, // nurbs_t
         double* // curve_t
-        ) const;
+        ) const override;
 
   // virtual ON_Curve::GetNurbFormParameterFromCurveParameter override
-  ON_BOOL32 GetNurbFormParameterFromCurveParameter(
+  bool GetNurbFormParameterFromCurveParameter(
         double, // curve_t
         double* // nurbs_t
-        ) const;
+        ) const override;
 };
 
 

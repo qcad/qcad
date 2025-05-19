@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,19 +10,42 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(OPENNURBS_CURVE_ON_SURFACE_INC_)
 #define OPENNURBS_CURVE_ON_SURFACE_INC_
 
-class ON_CurveOnSurface;
 class ON_CLASS ON_CurveOnSurface : public ON_Curve
 {
   ON_OBJECT_DECLARE(ON_CurveOnSurface);
 
 public:
-  ON_CurveOnSurface();
+  ON_CurveOnSurface() ON_NOEXCEPT;
 
+  /*
+  Remarks:
+    Deletes m_c2, m_c3, and m_s.  Use ON_CurveProxy or ON_SurfaceProxy
+    if you need to use curves or a surface that you do not want deleted.
+  */
+  virtual ~ON_CurveOnSurface();
+
+private:
+  ON_CurveOnSurface(const ON_CurveOnSurface&); // no implementation
+
+private:
+  ON_CurveOnSurface& operator=(const ON_CurveOnSurface&); // no implementation
+
+#if defined(ON_HAS_RVALUEREF)
+public:
+  // rvalue copy constructor
+  ON_CurveOnSurface( ON_CurveOnSurface&& ) ON_NOEXCEPT;
+
+  // The rvalue assignment operator calls ON_Object::operator=(ON_Object&&)
+  // which could throw exceptions.  See the implementation of
+  // ON_Object::operator=(ON_Object&&) for details.
+  ON_CurveOnSurface& operator=( ON_CurveOnSurface&& );
+#endif
+
+public:
   /*
   Parameters:
     p2dCurve - [in] ~ON_CurveOnSurface() will delete this curve.
@@ -37,134 +59,103 @@ public:
                      ON_Curve* p3dCurve,  // optional 3d curve
                      ON_Surface* pSurface // required surface
                      );
-  ON_CurveOnSurface(const ON_CurveOnSurface&); // no implementation
-  ON_CurveOnSurface& operator=(const ON_CurveOnSurface&); // no implementation
-
-  /*
-  Remarks:
-    Deletes m_c2, m_c3, and m_s.  Use ON_CurveProxy or ON_SurfaceProxy
-    if you need to use curves or a surface that you do not want deleted.
-  */
-  virtual ~ON_CurveOnSurface();
 
   // virtual ON_Object::SizeOf override
-  unsigned int SizeOf() const;
+  unsigned int SizeOf() const override;
 
 
   /////////////////////////////////////////////////////////////////
   // ON_Object overrides
 
-  /*
-  Description:
-    Tests an object to see if its data members are correctly
-    initialized.
-  Parameters:
-    text_log - [in] if the object is not valid and text_log
-        is not NULL, then a brief englis description of the
-        reason the object is not valid is appened to the log.
-        The information appended to text_log is suitable for 
-        low-level debugging purposes by programmers and is 
-        not intended to be useful as a high level user 
-        interface tool.
-  Returns:
-    @untitled table
-    true     object is valid
-    false    object is invalid, uninitialized, etc.
-  Remarks:
-    Overrides virtual ON_Object::IsValid
-  */
-  ON_BOOL32 IsValid( ON_TextLog* text_log = NULL ) const;
+  bool IsValid( class ON_TextLog* text_log = nullptr ) const override;
 
-  void Dump( ON_TextLog& ) const; // for debugging
+  void Dump( ON_TextLog& ) const override; // for debugging
 
-  ON_BOOL32 Write(
+  bool Write(
          ON_BinaryArchive&  // open binary file
-       ) const;
+       ) const override;
 
-  ON_BOOL32 Read(
+  bool Read(
          ON_BinaryArchive&  // open binary file
-       );
+       ) override;
 
   /////////////////////////////////////////////////////////////////
   // ON_Geometry overrides
 
-  int Dimension() const;
+  int Dimension() const override;
 
-  ON_BOOL32 GetBBox( // returns true if successful
-         double*,    // minimum
-         double*,    // maximum
-         ON_BOOL32 = false  // true means grow box
-         ) const;
+  // virtual ON_Geometry GetBBox override		
+  bool GetBBox( double* boxmin, double* boxmax, bool bGrowBox = false ) const override;
 
-  ON_BOOL32 Transform( 
+  bool Transform( 
          const ON_Xform&
-         );
+         ) override;
 
   // (optional - default uses Transform for 2d and 3d objects)
-  ON_BOOL32 SwapCoordinates(
+  bool SwapCoordinates(
         int, int        // indices of coords to swap
-        );
+        ) override;
 
   /////////////////////////////////////////////////////////////////
   // ON_Curve overrides
 
-  ON_Interval Domain() const;
+  ON_Interval Domain() const override;
 
-  int SpanCount() const; // number of smooth spans in curve
+  int SpanCount() const override; // number of smooth spans in curve
 
-  ON_BOOL32 GetSpanVector( // span "knots" 
+  bool GetSpanVector( // span "knots" 
          double* // array of length SpanCount() + 1 
-         ) const; // 
+         ) const override; // 
 
   int Degree( // returns maximum algebraic degree of any span 
                   // ( or a good estimate if curve spans are not algebraic )
-    ) const; 
+    ) const override; 
 
 
   // (optional - override if curve is piecewise smooth)
-  ON_BOOL32 GetParameterTolerance( // returns tminus < tplus: parameters tminus <= s <= tplus
+  bool GetParameterTolerance( // returns tminus < tplus: parameters tminus <= s <= tplus
          double,  // t = parameter in domain
          double*, // tminus
          double*  // tplus
-         ) const;
+         ) const override;
 
-  ON_BOOL32 IsLinear( // true if curve locus is a line segment between
+  bool IsLinear( // true if curve locus is a line segment between
                  // between specified points
         double = ON_ZERO_TOLERANCE // tolerance to use when checking linearity
-        ) const;
+        ) const override;
 
-  ON_BOOL32 IsArc( // ON_Arc.m_angle > 0 if curve locus is an arc between
+  bool IsArc( // ON_Arc.m_angle > 0 if curve locus is an arc between
               // specified points
-        const ON_Plane* = NULL, // if not NULL, test is performed in this plane
-        ON_Arc* = NULL, // if not NULL and true is returned, then arc parameters
+        const ON_Plane* = nullptr, // if not nullptr, test is performed in this plane
+        ON_Arc* = nullptr, // if not nullptr and true is returned, then arc parameters
                          // are filled in
         double = ON_ZERO_TOLERANCE    // tolerance to use when checking
-        ) const;
+        ) const override;
 
-  ON_BOOL32 IsPlanar(
-        ON_Plane* = NULL, // if not NULL and true is returned, then plane parameters
+  bool IsPlanar(
+        ON_Plane* = nullptr, // if not nullptr and true is returned, then plane parameters
                            // are filled in
         double = ON_ZERO_TOLERANCE    // tolerance to use when checking
-        ) const;
+        ) const override;
 
-  ON_BOOL32 IsInPlane(
+  bool IsInPlane(
         const ON_Plane&, // plane to test
         double = ON_ZERO_TOLERANCE    // tolerance to use when checking
-        ) const;
+        ) const override;
 
-  ON_BOOL32 IsClosed(  // true if curve is closed (either curve has
+  bool IsClosed(  // true if curve is closed (either curve has
         void      // clamped end knots and euclidean location of start
-        ) const;  // CV = euclidean location of end CV, or curve is
+        ) const override;  // CV = euclidean location of end CV, or curve is
                   // periodic.)
 
-  ON_BOOL32 IsPeriodic(  // true if curve is a single periodic segment
+  bool IsPeriodic(  // true if curve is a single periodic segment
         void 
-        ) const;
+        ) const override;
   
-  ON_BOOL32 Reverse();       // reverse parameterizatrion
+  bool Reverse() override;       // reverse parameterization
                         // Domain changes from [a,b] to [-b,-a]
 
-  ON_BOOL32 Evaluate( // returns false if unable to evaluate
+  bool Evaluate( // returns false if unable to evaluate
          double,         // evaluation parameter
          int,            // number of derivatives (>=0)
          int,            // array stride (>=Dimension())
@@ -175,12 +166,12 @@ public:
                          //      >  0 to evaluate from above
          int* = 0        // optional - evaluation hint (int) used to speed
                          //            repeated evaluations
-         ) const;
+         ) const override;
 
   int GetNurbForm( // returns 0: unable to create NURBS representation
                    //            with desired accuracy.
                    //         1: success - returned NURBS parameterization
-                   //            matches the curve's to wthe desired accuracy
+                   //            matches the curve's to the desired accuracy
                    //         2: success - returned NURBS point locus matches
                    //            the curve's to the desired accuracy but, on
                    //            the interior of the curve's domain, the 
@@ -189,8 +180,8 @@ public:
                    //            desired accuracy.
         ON_NurbsCurve&,
         double = 0.0,
-        const ON_Interval* = NULL     // OPTIONAL subdomain of 2d curve
-        ) const;
+        const ON_Interval* = nullptr     // OPTIONAL subdomain of 2d curve
+        ) const override;
 
   /////////////////////////////////////////////////////////////////
   // Interface

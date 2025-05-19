@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,9 +10,16 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
+
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
 
 ON_Cone::ON_Cone() 
 {
@@ -33,7 +39,7 @@ ON_Cone::~ON_Cone()
 {}
 
 
-ON_BOOL32 ON_Cone::Create(
+bool ON_Cone::Create(
     const ON_Plane& p,
     double h,
     double r
@@ -45,7 +51,7 @@ ON_BOOL32 ON_Cone::Create(
   return IsValid();
 }
 
-ON_BOOL32 ON_Cone::IsValid() const
+bool ON_Cone::IsValid() const
 {
   return (plane.IsValid() && height != 0.0 && radius != 0.0);
 }
@@ -123,10 +129,10 @@ ON_3dVector ON_Cone::NormalAt( double radial_parameter, double height_parameter 
   return N;
 }
 
-ON_BOOL32 ON_Cone::Transform( const ON_Xform& xform )
+bool ON_Cone::Transform( const ON_Xform& xform )
 {
   ON_Circle xc(plane,radius);
-  ON_BOOL32 rc = xc.Transform(xform);
+  bool rc = xc.Transform(xform);
   if (rc)
   {
     ON_3dPoint xH = xform*(plane.origin + height*plane.zaxis);
@@ -181,7 +187,7 @@ bool ON_Cone::ClosestPointTo(
     v.Unitize();
     v.x *= radius;
     v.y *= radius;
-    ON_Line line(ON_origin, v.x*plane.xaxis + v.y*plane.yaxis + height*plane.zaxis );
+    ON_Line line(ON_3dPoint::Origin, v.x*plane.xaxis + v.y*plane.yaxis + height*plane.zaxis );
     rc = line.ClosestPointTo(point,&z);
     if (rc)
     {
@@ -213,11 +219,11 @@ ON_3dPoint ON_Cone::ClosestPointTo(
   v.Unitize();
   v.x *= radius;
   v.y *= radius;
-  ON_Line line(ON_origin, v.x*plane.xaxis + v.y*plane.yaxis + height*plane.zaxis );
+  ON_Line line(ON_3dPoint::Origin, v.x*plane.xaxis + v.y*plane.yaxis + height*plane.zaxis );
   return line.ClosestPointTo(point);
 }
 
-ON_BOOL32 ON_Cone::Rotate(
+bool ON_Cone::Rotate(
       double sin_angle,
       double cos_angle,
       const ON_3dVector& axis_of_rotation
@@ -226,7 +232,7 @@ ON_BOOL32 ON_Cone::Rotate(
   return Rotate( sin_angle, cos_angle, axis_of_rotation, plane.origin );
 }
 
-ON_BOOL32 ON_Cone::Rotate(
+bool ON_Cone::Rotate(
       double angle,
       const ON_3dVector& axis_of_rotation
       )
@@ -235,7 +241,7 @@ ON_BOOL32 ON_Cone::Rotate(
 }
 
 // rotate plane about a point and axis
-ON_BOOL32 ON_Cone::Rotate(
+bool ON_Cone::Rotate(
       double sin_angle,
       double cos_angle,
       const ON_3dVector& axis_of_rotation,
@@ -245,7 +251,7 @@ ON_BOOL32 ON_Cone::Rotate(
   return plane.Rotate( sin_angle, cos_angle, axis_of_rotation, center_of_rotation );
 }
 
-ON_BOOL32 ON_Cone::Rotate(
+bool ON_Cone::Rotate(
       double angle,              // angle in radians
       const ON_3dVector& axis, // axis of rotation
       const ON_3dPoint&  point  // center of rotation
@@ -254,7 +260,7 @@ ON_BOOL32 ON_Cone::Rotate(
   return Rotate( sin(angle), cos(angle), axis, point );
 }
 
-ON_BOOL32 ON_Cone::Translate(
+bool ON_Cone::Translate(
       const ON_3dVector& delta
       )
 {
@@ -306,7 +312,7 @@ ON_RevSurface* ON_Cone::RevSurfaceForm( ON_RevSurface* srf ) const
 {
   if ( srf )
     srf->Destroy();
-  ON_RevSurface* pRevSurface = NULL;
+  ON_RevSurface* pRevSurface = nullptr;
   if ( IsValid() )
   {
     ON_Line line;
@@ -374,7 +380,7 @@ ON_Brep* ON_Cone::BrepForm( ON_Brep* brep ) const
       pCapSurface->m_knot[0][1] =  fabs(radius);
       pCapSurface->m_knot[1][0] = pCapSurface->m_knot[0][0];
       pCapSurface->m_knot[1][1] = pCapSurface->m_knot[0][1];
-      circle.Create( ON_xy_plane, ON_origin, radius );
+      circle.Create( ON_xy_plane, ON_3dPoint::Origin, radius );
       ON_NurbsCurve* c2 = new ON_NurbsCurve();
       circle.GetNurbForm(*c2);
       c2->ChangeDimension(2);

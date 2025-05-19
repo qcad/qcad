@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,9 +10,18 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
+
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
+
+#include "opennurbs_internal_defines.h"
 
 // {EA2EFFD2-C9A9-4cb1-BE15-D2F46290F1A1}
 //const ON_UUID ON_MaterialRef::material_from_layer = 
@@ -31,7 +39,7 @@
 // depending on OS.
 int on_stricmp(const char * s1, const char * s2)
 {
-#if defined(ON_OS_WINDOWS)
+#if defined(ON_RUNTIME_WIN)
   //return stricmp(s1,s2);
   return _stricmp(s1,s2);
 #else
@@ -42,11 +50,13 @@ int on_stricmp(const char * s1, const char * s2)
 // on_strupr() calls _strupr() or strupr() depending on OS
 char* on_strupr(char* s)
 {
-#if defined(ON_OS_WINDOWS)
+#if defined(ON_RUNTIME_WIN)
   return _strupr(s); // ANSI name
 #else
-  if (s) {
-    while (*s) {
+  if (s) 
+  {
+    while (*s) 
+    {
       *s = toupper(*s);
       s++;
     }
@@ -58,11 +68,12 @@ char* on_strupr(char* s)
 // on_strlwr() calls _strlwr() or strlwr() depending on OS
 char* on_strlwr(char* s)
 {
-#if defined(ON_OS_WINDOWS)
+#if defined(ON_RUNTIME_WIN)
   return _strlwr(s); // ANSI name
 #else
   if (s) {
-    while (*s) {
+    while (*s)
+    {
       *s = tolower(*s);
       s++;
     }
@@ -74,12 +85,12 @@ char* on_strlwr(char* s)
 // on_strrev() calls _strrev() or strrev() depending on OS
 char* on_strrev(char* s)
 {
-#if defined(ON_OS_WINDOWS)
+#if defined(ON_RUNTIME_WIN)
   return _strrev(s); // ANSI name
 #else
   int i, j;
   char c;
-  for ( i = 0, j = strlen(s)-1; i < j; i++, j-- ) {
+  for ( i = 0, j = ((int)strlen(s))-1; i < j; i++, j-- ) {
     c = s[i];
     s[i] = s[j];
     s[j] = c;
@@ -88,628 +99,50 @@ char* on_strrev(char* s)
 #endif
 }
 
-// Windows code page support 
-//   Only ON_SetStringConversionWindowsLocaleID,
-//   ON_GetStringConversionWindowsLocaleID, and 
-//   on_wcsicmp should look at g_s__windows_locale_id
-//   and g_s__windows_locale_os.
-static unsigned int g_s__windows_locale_id = 0;
-static unsigned int g_s__windows_locale_os = 0; // 0 = Win 95/98/ME...
-                                              // 1 = Win NT/2000/XP...
-
-unsigned int ON_SetStringConversionWindowsLocaleID(unsigned int locale_id, ON_BOOL32 bWin9X)
-{
-  unsigned int rc = g_s__windows_locale_id;
-  g_s__windows_locale_os = bWin9X ? 0 : 1;
-  g_s__windows_locale_id = locale_id?true:false;
-  return rc;
-}
-
-unsigned int ON_GetStringConversionWindowsLocaleID()
-{
-  return g_s__windows_locale_id;
-}
-
-
-static int on__hack__tolower(int c)
-{
-  // This tolower is a simple "hack" to provide something that
-  // sort of works when OpenNURBS is used with a compiler that
-  // fails to provide functional localization tools.
-
-
-  // TODO: 
-  //   Expand these switch statments as users provide support
-  //   for symbols.  This is not the correct way to solve this
-  //   problem, but it will work in some simple cases.
-  //   If you are using Microsoft Developer studio in Windows,
-  //   then this code is never called.
-  //  
-  // Before you get too carried away, study 
-  //
-  //  http://www.microsoft.com/globaldev/wrguide/WRG_sort.asp
-  //
-  // and make sure what you are attempting to do is worth the
-  // trouble.  In short, this approach is doomed to fail
-  // and is not good enough for robust applications that want
-  // to work well with most languages.
-  //
-  // That said, please post your additions to the OpenNURBS
-  // newsgroup so they can be included in future
-  // distrubutions.
-
-  int i;
-  if ( c <= 0 )
-  {
-    i = c;
-  }
-  else if ( c <= 127 )
-  {
-    // ASCII character
-    i = tolower(c);
-  }
-  else if ( c <= 255 )
-  {
-    // "extended" ASCII character
-    switch(c)
-    {
-      case 192:  // UNICODE Latin capital letter A with grave  (A`)
-        i = 224; // UNICODE Latin small letter A with grave    (a`)
-        break;
-
-      case 193:  // UNICODE Latin capital letter A with acute  (A')
-        i = 225; // UNICODE Latin small letter A with acute    (a')
-        break;
-
-      case 194:  // UNICODE Latin capital letter A with circumflex (A^)
-        i = 226; // UNICODE Latin small letter A with circumflex   (a^)
-        break;
-
-      case 195:  // UNICODE Latin capital letter A with tilde (A~)
-        i = 227; // UNICODE Latin small letter A with tilde   (a~)
-        break;
-
-      case 196:  // UNICODE Latin capital letter A with diaeresis (A")
-        i = 228; // UNICODE Latin small letter A with diaeresis   (a")
-        break;
-
-      case 197:  // UNICODE Latin capital letter A with ring above (A ring above)
-        i = 229; // UNICODE Latin small letter A with ring above   (a ring above)
-        break;
-
-      case 198:  // UNICODE Latin capital letter Ae
-        i = 230; // UNICODE Latin small letter Ae
-        break;
-
-      case 199:  // UNICODE Latin capital letter C with cedilla (C,)
-        i = 231; // UNICODE Latin small letter C with cedilla   (c,)
-        break;
-
-      case 200:  // UNICODE Latin capital letter E with grave (E`)
-        i = 232; // UNICODE Latin small letter E with grave   (e`)
-        break;
-
-      case 201:  // UNICODE Latin capital letter E with acute (E')
-        i = 233; // UNICODE Latin small letter E with acute   (e')
-        break;
-
-      case 202:  // UNICODE Latin capital letter E with circumflex (E^)
-        i = 234; // UNICODE Latin small letter E with circumflex   (e^)
-        break;
-
-      case 203:  // UNICODE Latin capital letter E with diaeresis (E")
-        i = 235; // UNICODE Latin small letter E with diaeresis   (e")
-        break;
-
-      case 204:  // UNICODE Latin capital letter I with grave (I`)
-        i = 236; // UNICODE Latin small letter I with grave   (i`)
-        break;
-
-      case 205:  // UNICODE Latin capital letter I with acute (I')
-        i = 237; // UNICODE Latin small letter I with acute   (i')
-        break;
-
-      case 206:  // UNICODE Latin capital letter I with circumflex (I^)
-        i = 238; // UNICODE Latin small letter I with circumflex   (i^)
-        break;
-
-      case 207:  // UNICODE Latin capital letter I with diaeresis (I")
-        i = 239; // UNICODE Latin small letter I with diaeresis   (i")
-        break;
-
-      case 208:  // UNICODE Latin capital letter Eth (ED)
-        i = 240; // UNICODE Latin small letter Eth (ed)
-        break;
-
-      case 209:  // UNICODE Latin capital letter N with tilde (N~)
-        i = 241; // UNICODE Latin small letter n with tilde (n~)
-        break;
-
-      case 210:  // UNICODE Latin capital letter O with grave (O`)
-        i = 242; // UNICODE Latin small letter O with grave   (o`)
-        break;
-
-      case 211:  // UNICODE Latin capital letter O with acute (O')
-        i = 243; // UNICODE Latin small letter O with acute   (o')
-        break;
-
-      case 212:  // UNICODE Latin capital letter O with circumflex (O^)
-        i = 244; // UNICODE Latin small letter O with circumflex   (o^)
-        break;
-
-      case 213:  // UNICODE Latin capital letter O with tilde (O~)
-        i = 245; // UNICODE Latin small letter O with tilde   (o~)
-        break;
-
-      case 214:  // UNICODE Latin capital letter O with diaeresis (O")
-        i = 246; // UNICODE Latin small letter O with diaeresis   (o")
-        break;
-
-      case 216:  // UNICODE Latin capital letter O with stroke (O/)
-        i = 248; // UNICODE Latin small letter O with stroke   (o/)
-        break;
-
-      case 217:  // UNICODE Latin capital letter U with grave (U`)
-        i = 249; // UNICODE Latin small letter U with grave   (u`)
-        break;
-
-      case 218:  // UNICODE Latin capital letter U with acute (U')
-        i = 250; // UNICODE Latin small letter U with acute   (u')
-        break;
-
-      case 219:  // UNICODE Latin capital letter U with circumflex (U^)
-        i = 251; // UNICODE Latin small letter U with circumflex   (u^)
-        break;
-
-      case 220:  // UNICODE Latin capital letter U with diaeresis (U")
-        i = 252; // UNICODE Latin small letter U with diaeresis   (u")
-        break;
-
-      case 221:  // UNICODE Latin capital letter Y with acute (Y')
-        i = 253; // UNICODE Latin small letter Y with acute   (y')
-        break;
-
-      case 222:  // UNICODE Latin capital letter Thorn (P|)
-        i = 254; // UNICODE Latin small letter Thorn   (p|)
-        break;
-
-      default:
-        i = c;
-        break;
-    }
-  }
-  else if ( c <= 0x0177 )
-  {
-    if ( 0 == (c % 2) )
-      i = c+1;
-    else
-      i = c;
-  }
-  else if ( c <= 0x0192 )
-  {
-    switch( c)
-    {
-    case 0x0178:  // UNICODE Latin capital letter Y with diaeresis (Y")
-      i = 0x00FF; // UNICODE Latin small letter Y with diaeresis   (y")
-      break;
-
-    case 0x0179:  // UNICODE Latin capital letter Z with acute (Z')
-      i = 0x017A; // UNICODE Latin small letter Z with acute   (z')
-      break;
-
-    case 0x017B:  // UNICODE Latin capital letter Z with dot above
-      i = 0x017C; // UNICODE Latin small letter Z with dot above
-      break;
-
-    case 0x017D:  // UNICODE Latin capital letter Z with caron
-      i = 0x017E; // UNICODE Latin small letter Z with caron
-      break;
-
-    case 0x018F:  // UNICODE Latin capital letter Schwa
-      i = 0x0259; // UNICODE Latin small letter Schwa
-      break;
-
-    default:
-      i = c;
-      break;
-    }
-  }
-  else if ( c <= 0x01FF )
-  {
-    if ( 0 == (c % 2) )
-      i = c+1;
-    else
-      i = c;
-  }
-  else
-  {
-    // My apologies to those of you whose languages use these symbols.
-    // I am too ignorant to make good guesses at what to do here.
-    // Please fill in as needed and post your changes so I can include
-    // them in future versions of OpenNURBS.
-    switch (c)
-    {
-      // example
-      case 0x0391:  // UNICODE Greek capital letter alpha
-        i = 0x03B1; // UNICODE Greek small letter alpha
-        break;
-
-      default:
-        i = c;
-    }
-  }
-
-  return i;
-}
-
-static
-int on__hack__wcsicmp( const wchar_t* s1, const wchar_t* s2)
-{
-  // This "hack" case insensitive wchar_t compare tool is used
-  // when OpenNURBS is compiled in a development environment
-  // that does not provide proper localization support.
-
-  // handle NULL strings consistently and without crashing.
-  if ( !s1 ) 
-  {
-    return s2 ? -1 : 0;
-  }
-  else if ( !s2 ) 
-  {
-    return 1;
-  }
-
-  int rc, c1, c2;
-  
-  do
-  {
-    c1 = on__hack__tolower(*s1++);
-    c2 = on__hack__tolower(*s2++);
-    rc = c1-c2;
-  }
-  while( 0 == rc && c1 && c2 );
-
-  return rc;
-}
-
 #if defined(ON_COMPILER_MSC)
 // Disable the MSC /W4 unreachable code warning for the call to on__hack__wcsicmp()
-#pragma warning( push )
-#pragma warning( disable : 4702 )
+#pragma ON_PRAGMA_WARNING_PUSH
+#pragma ON_PRAGMA_WARNING_DISABLE_MSC( 4702 )
 #endif
 
 int on_wcsicmp( const wchar_t* s1, const wchar_t* s2)
 {
-  // handle NULL strings consistently and without crashing.
-  if ( !s1 ) 
-  {
-    return s2 ? -1 : 0;
-  }
-  else if ( !s2 ) 
-  {
-    return 1;
-  }
-
-#if defined(ON_OS_WINDOWS)
-
-#if defined(ON_COMPILER_BORLAND)
-  // Borland's compiler / C library
-  return wcscmpi(s1,s2); 
-#else
-  // Microsoft compiler
-
-  if ( 0 != g_s__windows_locale_id )
-  {
-    if ( 0 == g_s__windows_locale_os )
-    {
-      // On Win 95/98/ME, CompareStringW() doesn't work
-      // and CompareStringA() is glacial.  So we test 
-      // strings and use wcsicmp() whenever it will return
-      // the right answer.  
-      {
-        const wchar_t* c1 = s1;
-        const wchar_t* c2 = s2;
-        while ( *c1 > 0 && *c1 < 128 && *c2 > 0 && *c2 < 128 )
-        {
-          c1++;
-          c2++;
-        }      
-        if ( 0 == *c1 || 0 == *c2 )
-        {
-#if defined(ON_COMPILER_MSC1400)
-          return _wcsicmp(s1,s2);
-#else
-          return wcsicmp(s1,s2);
-#endif
-        }
-      }
-
-      // These convert UNICODE to wide character strings
-      ON_String a(s1);
-      ON_String b(s2);
-
-      // Wide char conversion
-      int rc = ::CompareStringA(g_s__windows_locale_id,
-                           NORM_IGNORECASE | NORM_IGNOREWIDTH,
-                           a.Array(),
-                           -1,
-                           b.Array(),
-                           -1);
-      if (rc == CSTR_LESS_THAN)
-        return -1;
-      if (rc == CSTR_EQUAL)
-        return 0;
-      if (rc == CSTR_GREATER_THAN)
-        return 1;
-    }
-    else
-    {
-      // a version of Windows with working UNICODE support
-      int rc = ::CompareStringW(g_s__windows_locale_id,
-                           NORM_IGNORECASE | NORM_IGNOREWIDTH,
-                           s1,
-                           -1,
-                           s2,
-                           -1);
-
-      if (rc == CSTR_LESS_THAN)
-        return -1;
-      if (rc == CSTR_EQUAL)
-        return 0;
-      if (rc == CSTR_GREATER_THAN)
-        return 1;
-    }
-  }
-
-  // Microsoft's wcsicmp() doesn't work right for
-  // upper/lower case accented latin characters, 
-  // upper/lower case cyrillic, upper/lower case Greek,
-  // Asian characters, etc.  
-  //
-  // Basically, if the character code >= 127 or you are
-  // using a language other than US english, then 
-  // Microsoft's wcsicmp() blows it.
-  //
-#if defined(ON_COMPILER_MSC1400)
-  return _wcsicmp(s1,s2); // Microsoft's compiler / C library
-#else
-  return wcsicmp(s1,s2); // Microsoft's compiler / C library
-#endif
-
-#endif
-
-
-#endif
-
-  // If your compiler does not have a way to perform
-  // a case insensitive compare of UNICODE strings,
-  // then use the "hack" version below.
-  return on__hack__wcsicmp(s1,s2);
+  // handle nullptr strings consistently and without crashing.
+  return ON_wString::Compare(
+    s1,
+    s2,
+    ON_Locale::InvariantCulture,
+    true
+    );
 }
 
 #if defined(ON_COMPILER_MSC)
-#pragma warning( pop )
+#pragma ON_PRAGMA_WARNING_POP
 #endif
 
 wchar_t* on_wcsupr(wchar_t* s)
 {
-#if defined(ON_OS_WINDOWS)
-#if defined(ON_COMPILER_BORLAND)
-  // Borland's compiler / C library
-  return _wcsupr(s);
-#else
-  // Microsoft compiler
-  return _wcsupr(s);
-#endif
-#else
-  if (s) 
-  {
-    wchar_t c;
-    while (*s) 
-    {
-      if ( 0 != (c = toupper(*s)) )
-        *s = c;
-      s++;
-    }
-  }
+  const int length = ON_wString::Length(s);
+  if ( length < 0 )
+    return nullptr;
+  ON_wString::MapStringOrdinal(ON_StringMapOrdinalType::UpperOrdinal,s,length,s,length+1);
   return s;
-#endif
 }
 
 // on_wcslwr() calls _wcslwr() or wcslwr() depending on OS
 wchar_t* on_wcslwr(wchar_t* s)
 {
-#if defined(ON_OS_WINDOWS)
-#if defined(ON_COMPILER_BORLAND)
-  // Borland's compiler / C library
-  return _wcslwr(s);
-#else
-  // Microsoft compiler
-  return _wcslwr(s);
-#endif
-#else
-  if (s) 
-  {
-    wchar_t c;
-    while (*s) 
-    {
-      if ( 0 != (c = tolower(*s)) )
-        *s = c;
-      s++;
-    }
-  }
+  const int length = ON_wString::Length(s);
+  if ( length < 0 )
+    return nullptr;
+  ON_wString::MapStringOrdinal(ON_StringMapOrdinalType::LowerOrdinal,s,length,s,length+1);
   return s;
-#endif
 }
 
-void ON_wString::MakeUpper()
-{
-  if ( !IsEmpty() ) 
-  {
-#if defined(ON_OS_WINDOWS)
-    if ( 0 != g_s__windows_locale_id )
-    {
-      if ( 0 == g_s__windows_locale_os )
-      {
-        // On Win 95/98/ME, LCMapStringW() doesn't work.
-        // (I hope you don't need the right answer in a hurry on Win9X.)
 
-        // These convert UNICODE to wide character strings
-        ON_String in(*this);
-        int len_in = in.Length();
-        int max_len_out = 2*len_in+16; // if 2x for wide char expansion
-        ON_String out;
-        out.ReserveArray(max_len_out+1);
-        out.SetLength(max_len_out+1);
-
-        // Wide char conversion
-        int rc = ::LCMapStringA(g_s__windows_locale_id, 
-                              LCMAP_UPPERCASE, 
-                              in.Array(), 
-                              len_in,
-                              out.Array(), 
-                              max_len_out);
-        if (rc > 0 && rc <= max_len_out)
-        {
-          out.SetLength(rc);
-          operator=(out); // multi-byte to wchar conversion
-          return;
-        }
-      }
-      else
-      {
-        // a version of Windows with working UNICODE support
-        int len_in = Length();
-        int max_len_out = len_in+16;
-        ON_wString out;
-        out.ReserveArray(max_len_out+1);
-        out.SetLength(max_len_out+1);
-
-        // Wide char conversion
-        int rc = ::LCMapStringW(g_s__windows_locale_id, 
-                              LCMAP_UPPERCASE, 
-                              Array(), 
-                              len_in,
-                              out.Array(), 
-                              max_len_out);
-        if (rc > 0 && rc <= max_len_out)
-        {
-          out.SetLength(rc);
-          operator=(out); // very fast - simply changes reference count
-          return;
-        }
-      }
-    }
-#endif
-
-    // If ::LCMapStringA() or ::LCMapStringW() failed or we are
-    // running on a non-Windows OS, then we fall through to the
-    // wcslwr() function which will handle most most characters
-    // in most Western European languages but is not adequate for
-    // commercial quality software.
-  	CopyArray();
-    on_wcsupr(m_s);
-  }
-}
-
-void ON_wString::MakeLower()
-{
-  if ( !IsEmpty() ) 
-  {
-#if defined(ON_OS_WINDOWS)
-    if ( 0 != g_s__windows_locale_id )
-    {
-      if ( 0 == g_s__windows_locale_os )
-      {
-        // On Win 95/98/ME, LCMapStringW() doesn't work.
-        // (I hope you don't need the right answer in a hurry on Win9X.)
-
-        // These convert UNICODE to wide character strings
-        ON_String in(*this);
-        int len_in = in.Length();
-        int max_len_out = 2*len_in+16; // if 2x for wide char expansion
-        ON_String out;
-        out.ReserveArray(max_len_out+1);
-        out.SetLength(max_len_out+1);
-
-        // Wide char conversion to multi-byte lower case string
-        int rc = ::LCMapStringA(g_s__windows_locale_id, 
-                              LCMAP_LOWERCASE, 
-                              in.Array(), 
-                              len_in,
-                              out.Array(), 
-                              max_len_out);
-        if (rc > 0 && rc <= max_len_out)
-        {
-          out.SetLength(rc);
-          operator=(out); // multi-byte to wchar conversion
-          return;
-        }
-      }
-      else
-      {
-        // a version of Windows with working UNICODE support
-        int len_in = Length();
-        int max_len_out = len_in+16;
-
-        // ReserveArray(max_len_out+1) allocates max_len_out+2
-        // wchars (room for the NULL terminator is allocatcated).
-        // The +1 is just in case LCMapStringW() has a bug and
-        // writes an extra wchar or puts a NULL terminator
-        // in s[max_len_out]. This is a lot of paranoia, but
-        // the memory cost is negligable and it will prevent
-        // difficult to diagnose crashes if MS releases a buggy
-        // version of LCMapStringW().
-        ON_wString out;
-        out.ReserveArray(max_len_out+1);
-        out.SetLength(max_len_out+1);
-        
-        // Wide char conversion to lower case.
-        // Note that changing to lower case in some languages
-        // can change the string length.
-        int rc = ::LCMapStringW(g_s__windows_locale_id, 
-                              LCMAP_LOWERCASE, 
-                              Array(), 
-                              len_in,
-                              out.Array(), 
-                              max_len_out);
-        if (rc > 0 && rc <= max_len_out)
-        {
-          out.SetLength(rc);
-          operator=(out); // very fast - simply changes reference count
-          return;
-        }
-      }
-    }
-#endif
-
-    // If ::LCMapStringA() or ::LCMapStringW() failed or we are
-    // running on a non-Windows OS, then we fall through to the
-    // wcslwr() function which will handle most most characters
-    // in most Western European languages but is not adequate for
-    // commercial quality software.
-    CopyArray();
-    on_wcslwr(m_s);
-  }
-}
-
-// on_wcsrev() calls _wcsrev() or wcsrev() depending on OS
 wchar_t* on_wcsrev(wchar_t* s)
 {
-  if ( !s )
-    return 0;
-#if defined(ON_OS_WINDOWS)
-  return _wcsrev(s);
-#else
-  int i, j;
-  wchar_t w;
-  for ( i = 0, j = wcslen(s)-1; i < j; i++, j-- ) {
-    w = s[i];
-    s[i] = s[j];
-    s[j] = w;
-  }
-  return s;
-#endif
+  return ON_wString::Reverse(s,-1);
 }
 
 int on_WideCharToMultiByte(
@@ -719,51 +152,24 @@ int on_WideCharToMultiByte(
     int cchMultiByte
     )
 {
-#if defined(ON_OS_WINDOWS)
-  unsigned int code_page = ON_GetStringConversionWindowsCodePage();
-  return ::WideCharToMultiByte( code_page, 0, 
-                        lpWideCharStr, cchWideChar, 
-                        lpMultiByteStr, cchMultiByte,
-                        NULL, NULL );
-#else
-  // use simple wchar_t -> char conversion since 
-  // wcsnrtombs() and wcsrtombs() tend to crash on various
-  // UNIX platforms.
-
-  // this union is used to get around issues invovling signed/unsigned
-  // behavior of "char" on various platforms and with various
-  // compiler flags.
-  union
+  // 14 March 2011 Dale Lear
+  //   It turns out that Windows WideCharToMultiByte does correctly
+  //   convert UTF-16 to UTF-8 in Windows 7 when the code page 
+  //   is CP_ACP and calls with CP_UTF8 sometimes fail to do
+  //   any conversion.  So, I wrote ON_ConvertWideCharToUTF8()
+  //   and opennurbs will use ON_ConvertWideCharToUTF8 to get 
+  //   consistent results on all platforms.
+  unsigned int error_status = 0;
+  unsigned int error_mask = 0xFFFFFFFF;
+  ON__UINT32 error_code_point = 0xFFFD;
+  const wchar_t* p1 = 0;
+  int count = ON_ConvertWideCharToUTF8(false,lpWideCharStr,cchWideChar,lpMultiByteStr,cchMultiByte,
+                                       &error_status,error_mask,error_code_point,&p1);
+  if ( 0 != error_status )
   {
-    char c;
-    unsigned char u;
-  } u;
-  int i;
-
-  if ( cchMultiByte > 0 && lpMultiByteStr ) {
-    for (i = 0; i < cchWideChar && i < cchMultiByte; i++ ) {
-      unsigned int w = lpWideCharStr[i];
-      if ( w >= 256 )
-        w = '_'; // default is underbar
-      u.u = (unsigned char)w;
-      lpMultiByteStr[i] = u.c;
-    }
-    if ( i < cchMultiByte )
-      lpMultiByteStr[i] = 0;
+    ON_ERROR("Error converting UTF-16 encoded wchar_t string to UTF-8 encoded char string.");
   }
-  return cchWideChar; // return number of characters required for conversion
-
-  /*
-#if defined(__USE_GNU)
-  // gcc extension is what we really need
-  return wcsnrtombs( lpMultiByteStr, &lpWideCharStr, cchWideChar, cchMultiByte, NULL );
-#else
-  // see http://www.datafocus.com/docs/man3/wcsrtombs.3.asp
-  return wcsrtombs( lpMultiByteStr, &lpWideCharStr, cchMultiByte, NULL );
-#endif
-  */
-
-#endif
+  return count;
 }
 
 int on_MultiByteToWideChar(
@@ -773,96 +179,291 @@ int on_MultiByteToWideChar(
     int cchWideChar
     )
 {
-#if defined(ON_OS_WINDOWS)
-  unsigned int code_page = ON_GetStringConversionWindowsCodePage();
-  return ::MultiByteToWideChar(code_page, 0, lpMultiByteStr, cchMultiByte, lpWideCharStr, cchWideChar);
-#else
-  // use simple char -> wchar_t conversion since 
-  // mbsnrtowcs() and mbsrtowcs() tend to crash on various
-  // UNIX platforms.
-  union
+  // 14 March 2011 Dale Lear
+  //   It turns out that Windows WideCharToMultiByte does not correctly
+  //   convert UTF-8 to UTF-16 in Windows 7 when the code page 
+  //   is CP_ACP and calls with CP_UTF8 sometimes fail to do
+  //   any conversion.  So, I wrote ON_ConvertUTF8ToWideChar()
+  //   and opennurbs will use ON_ConvertUTF8ToWideChar to get 
+  //   consistent results on all platforms.
+  unsigned int error_status = 0;
+  unsigned int error_mask = 0xFFFFFFFF;
+  ON__UINT32 error_code_point = 0xFFFD;
+  const char* p1 = 0;
+  int count = ON_ConvertUTF8ToWideChar(false,lpMultiByteStr,cchMultiByte,lpWideCharStr,cchWideChar,
+                                       &error_status,error_mask,error_code_point,&p1);
+  if ( 0 != error_status )
   {
-    char c;
-    unsigned char u;
-  } u;
-  int i;
-
-  if ( cchWideChar > 0 && lpWideCharStr ) {
-    for (i = 0; i < cchMultiByte && i < cchWideChar; i++ ) {
-      u.c = lpMultiByteStr[i];
-      lpWideCharStr[i] = u.u;
-    }
-    if ( i < cchWideChar )
-      lpWideCharStr[i] = 0;
+    ON_ERROR("Error converting UTF-8 encoded char string to UTF-16 encoded wchar_t string.");
   }
-  return cchMultiByte; // return number of characters required for conversion
-
-  /*
-#if defined(__USE_GNU)
-  // gcc extension is what we really need
-  return mbsnrtowcs(lpWideCharStr, &lpMultiByteStr, cchMultiByte, cchWideChar, NULL );
-#else
-  // see http://www.datafocus.com/docs/man3/mbsrtowcs.3.asp
-  return mbsrtowcs(lpWideCharStr, &lpMultiByteStr, cchWideChar, NULL );
-#endif
-  */
-#endif
+  return count;
 }
 
-
-int on_vsnprintf( char *buffer, size_t count, const char *format, va_list argptr )
+void on_splitpath(
+  const char* path,
+  const char** volume,
+  const char** dir,
+  const char** fname,
+  const char** ext
+  )
 {
-#if defined(ON_OS_WINDOWS)
+  // The "const char* path" parameter is a UTF-8 encoded string. 
+  // Since the unicode code point values for the characters we 
+  // are searching for ( '/' '\' '.' ':' A-Z a-z) are all > 0 
+  // and < 128, we can simply check for an array element having
+  // the character value and not have to worry about dealing
+  // with UTF-8 continuation values (>= 128).
 
-#if defined(ON_COMPILER_BORLAND)
-  return vsprintf( buffer, format, argptr );
-#else
-  return _vsnprintf( buffer, count, format, argptr );
-#endif
+  const char slash1 = '/';
+  const char slash2 = '\\'; // do this even with the os is unix because
+                            // we might be parsing a file name saved
+                            // in Windows.
 
-#else
-  return vsnprintf( buffer, count, format, argptr );
-#endif
+  const char* f;
+  const char* e;
+  const char* s;
+  const char* s1;
+
+  if ( 0 != volume )
+    *volume = 0;
+  if ( 0 != dir )
+    *dir = 0;
+  if ( 0 != fname )
+    *fname = 0;
+  if ( 0 != ext )
+    *ext = 0;
+
+  if ( 0 != path && 0 != *path )
+  {
+    // deal with Windows' volume letter (even when the os is unix)
+    if ( ':' == path[1] )
+    {
+      if ( (path[0] >= 'A' && path[0] <= 'Z') || (path[0] >= 'a' && path[0] <= 'z') )
+      {
+        if ( volume )
+          *volume = path;
+        path += 2;
+        if ( 0 == *path )
+          return;
+      }
+    }
+    else if (
+      ON_String::Backslash == path[0] 
+      && ON_String::Backslash == path[1]
+      &&( (path[2] >= 'A' && path[2] <= 'Z') 
+        || (path[2] >= 'a' && path[2] <= 'z') 
+        || (path[2] >= '0' && path[2] <= '9') 
+        )
+      )
+    {
+      // deal with Windows' UNC hostnames like \\hostname (even when the os is unix)
+      int i = 3;
+      while (
+        i < 18
+        && ((path[i] >= 'A' && path[i] <= 'Z')
+        || (path[i] >= 'a' && path[i] <= 'z')
+        || (path[i] >= '0' && path[i] <= '9')
+        || '-' == path[i] || '_' == path[i]
+        ))
+      {
+        i++;
+      }
+      if (i < 18 && (ON_String::Backslash == path[i] || ON_String::Slash == path[i]))
+      {
+        if ( volume )
+          *volume = path;
+        path += i;
+      }
+    }
+  }
+
+  if ( 0 != path && 0 != *path )
+  {
+    e = 0;
+    f = 0;
+    s1 = path;
+    while ( 0 != *s1 )
+      s1++;
+    s = (s1 > path) ? s1 - 1 : path;
+  
+    while ( s > path && '.' != *s && slash1 != *s && slash2 != *s )
+      s--;
+
+    if ( '.' == *s && 0 != s[1] )
+    {
+      // extensions must have something after the dot.
+      e = s;
+      s1 = e;
+      s--;
+    }
+
+    while ( s > path && slash1 != *s && slash2 != *s )
+      s--;
+
+    if ( s >= path && s < s1 )
+    {
+      if (slash1 == *s || slash2 == *s ) 
+      {
+        if ( s+1 < s1 )
+          f = s+1;
+      }
+      else if ( s == path )
+      {
+        f = s;
+      }
+    }
+
+    if ( 0 == f )
+    {
+      // must have a non-empty filename in order to have and "extension"
+      f = e;
+      e = 0;
+    }
+
+    if ( 0 != dir && (0 == f || path < f) )
+      *dir = path;
+
+    if ( 0 != f && 0 != fname )
+      *fname = f;
+
+    if ( 0 != e && 0 != ext )
+      *ext = e;
+  }
+
 }
 
-int on_vsnwprintf( wchar_t *buffer, size_t count, const wchar_t *format, va_list argptr )
+void on_wsplitpath(
+  const wchar_t* path,
+  const wchar_t** volume,
+  const wchar_t** dir,
+  const wchar_t** fname,
+  const wchar_t** ext
+  )
 {
-#if defined(ON_OS_WINDOWS)
+  // The "const wchar_t* path" parameter is a UTF-8, UTF-16 or UTF-32
+  // encoded string. Since the unicode code point values for the 
+  // characters we are searching for ( '/' '\' '.' ':' A-Z a-z) are
+  // all > 0 and < 128, we can simply check for an array element 
+  // having the character value and not have to worry about dealing
+  // with UTF-16 surrogate pair values (0xD800-0xDBFF and DC00-DFFF)
+  // and UTF-8 continuation values (>= 128).
 
-#if defined(ON_COMPILER_BORLAND)
-  return vswprintf( buffer, format, argptr );
-#else
-  return _vsnwprintf( buffer, count, format, argptr );
-#endif
+  const wchar_t slash1 = '/';
+  const wchar_t slash2 = '\\'; // do this even with the os is unix because
+                               // we might be parsing a file name saved
+                               // in Windows.
 
-#else
-  // if an OS doesn't support vsnwprintf(), use ASCII and hope for the best
+  const wchar_t* f;
+  const wchar_t* e;
+  const wchar_t* s;
+  const wchar_t* s1;
 
-  ON_String aformat = format; // convert format from UNICODE to ASCII
+  if ( 0 != volume )
+    *volume = 0;
+  if ( 0 != dir )
+    *dir = 0;
+  if ( 0 != fname )
+    *fname = 0;
+  if ( 0 != ext )
+    *ext = 0;
 
-  // format an ASCII buffer
-  char* abuffer = (char*)onmalloc(2*count*sizeof(*abuffer));
-  int rc = on_vsnprintf( abuffer, 2*count, aformat.Array(), argptr );
+  if ( 0 != path && 0 != *path )
+  {
+    // deal with Windows' volume letter (even when the os is unix)
+    if ( ':' == path[1] )
+    {
+      if ( (path[0] >= 'A' && path[0] <= 'Z') || (path[0] >= 'a' && path[0] <= 'z') )
+      {
+        if ( volume )
+          *volume = path;
+        path += 2;
+        if ( 0 == *path )
+          return;
+      }
+    }
+    else if (
+      ON_wString::Backslash == path[0] 
+      && ON_wString::Backslash == path[1]
+      &&( (path[2] >= 'A' && path[2] <= 'Z') 
+        || (path[2] >= 'a' && path[2] <= 'z') 
+        || (path[2] >= '0' && path[2] <= '9') 
+        )
+      )
+    {
+      // deal with Windows' UNC hostnames like \\hostname (even when the os is unix)
+      int i = 3;
+      while (
+        i < 18
+        && ((path[i] >= 'A' && path[i] <= 'Z')
+        || (path[i] >= 'a' && path[i] <= 'z')
+        || (path[i] >= '0' && path[i] <= '9')
+        || '-' == path[i] || '_' == path[i]
+        ))
+      {
+        i++;
+      }
+      if (i < 18 && (ON_wString::Backslash == path[i] || ON_wString::Slash == path[i]))
+      {
+        if ( volume )
+          *volume = path;
+        path += i;
+      }
+    }
+  }
 
-  // convert formatted ASCII buffer to UNICODE
-  on_MultiByteToWideChar( abuffer, strlen(abuffer), buffer, count );
-  onfree(abuffer);  
-  return rc;
-#endif
-}
+  if ( 0 != path && 0 != *path )
+  {
+    e = 0;
+    f = 0;
+    s1 = path;
+    while ( 0 != *s1 )
+      s1++;
+    s = (s1 > path) ? s1 - 1 : path;
+  
+    while ( s > path && '.' != *s && slash1 != *s && slash2 != *s )
+      s--;
 
-int ON::Version()
-{
-#define OPENNURBS_VERSION_DEFINITION
-#include "opennurbs_version.h"
-  return OPENNURBS_VERSION;
-#undef OPENNURBS_VERSION
-#undef OPENNURBS_VERSION_DEFINITION
-}
+    if ( '.' == *s && 0 != s[1] )
+    {
+      // extensions must have something after the dot.
+      e = s;
+      s1 = e;
+      s--;
+    }
 
-const char* ON::Revision()
-{
-  return OPENNURBS_SVN_REVISION;
+    while ( s > path && slash1 != *s && slash2 != *s )
+      s--;
+
+    if ( s >= path && s < s1 )
+    {
+      if (slash1 == *s || slash2 == *s ) 
+      {
+        if ( s+1 < s1 )
+          f = s+1;
+      }
+      else if ( s == path )
+      {
+        f = s;
+      }
+    }
+
+    if ( 0 == f )
+    {
+      // must have a non-empty filename in order to have and "extension"
+      f = e;
+      e = 0;
+    }
+
+    if ( 0 != dir && (0 == f || path < f) )
+      *dir = path;
+
+    if ( 0 != f && 0 != fname )
+      *fname = f;
+
+    if ( 0 != e && 0 != ext )
+      *ext = e;
+  }
+
 }
 
 
@@ -871,7 +472,7 @@ FILE* ON::OpenFile( // like fopen() - needed when OpenNURBS is used as a DLL
         const char* filemode // file mode
         )
 {
-  return (filename && filename[0] && filemode && filemode[0]) ? fopen(filename,filemode) : 0;
+  return ON_FileStream::Open(filename,filemode);
 }
 
 FILE* ON::OpenFile( // like fopen() - needed when OpenNURBS is used as a DLL
@@ -879,33 +480,26 @@ FILE* ON::OpenFile( // like fopen() - needed when OpenNURBS is used as a DLL
         const wchar_t* filemode // file mode
         )
 {
-#if defined(ON_OS_WINDOWS)
-  return (filename && filename[0] && filemode && filemode[0]) ? _wfopen(filename,filemode) : 0;
-#else
-  // I can't find an wfopen() or _wfopen() in
-  // gcc version egcs-2.91.66 19990314/Linux (egcs-1.1.2 release)
-  ON_String ascii_filename = filename;
-  ON_String ascii_filemode = filemode;
-  return ON::OpenFile( ascii_filename.Array(), ascii_filemode.Array() );
-#endif
+  return ON_FileStream::Open(filename,filemode);
 }
 
 int ON::CloseFile( // like fclose() - needed when OpenNURBS is used as a DLL
         FILE* fp // pointer returned by OpenFile()
         )
 {
-  return fp ? fclose(fp) : EOF;
+  return ON_FileStream::Close(fp);
 }
 
 int ON::CloseAllFiles()
 {
   // returns number of files closed or EOF for error
-#if defined(ON_OS_WINDOWS)
+#if defined(ON_COMPILER_MSC)
   return _fcloseall(); // ANSI C name
-#else
-  // I can't find an fcloseall() or _fcloseall() in
-  // gcc version egcs-2.91.66 19990314/Linux (egcs-1.1.2 release)
+#elif defined(ON_RUNTIME_APPLE) || defined(ON_RUNTIME_ANDROID) || defined(ON_RUNTIME_WASM)
+  //fcloseall is not supported on mac/ios or android
   return EOF;
+#else
+  return fcloseall();
 #endif
 }
 
@@ -917,52 +511,525 @@ ON::active_space ON::ActiveSpace(int i)
 
   switch(i)
   {
-  case no_space:    as = no_space;    break;
-  case model_space: as = model_space; break;
-  case page_space:  as = page_space;  break;
-  default:          as = no_space;    break;
+  case no_space:          as = no_space;          break;
+  case model_space:       as = model_space;       break;
+  case page_space:        as = page_space;        break;
+  case uveditor_space:    as = uveditor_space;    break;
+  case blockeditor_space: as = blockeditor_space; break;
+  default:                as = no_space;          break;
   }
 
   return as;
 }
 
-
-ON::unit_system ON::UnitSystem(int i)
+ON_INTERNAL_OBSOLETE::V5_TextDisplayMode ON_INTERNAL_OBSOLETE::V5TextDisplayModeFromUnsigned(
+  unsigned int text_display_mode_as_unsigned
+  )
 {
-  unit_system us = no_unit_system;
-  switch(i) {
-  case no_unit_system: us = no_unit_system; break;
-
-  case angstroms: us = angstroms; break;
-
-  case nanometers: us = nanometers; break;
-  case microns: us = microns; break;
-  case millimeters: us = millimeters; break;
-  case centimeters: us = centimeters; break;
-  case decimeters: us = decimeters; break;
-  case meters: us = meters; break;
-  case dekameters: us = dekameters; break;
-  case hectometers: us = hectometers; break;
-  case kilometers: us = kilometers; break;
-  case megameters: us = megameters; break;
-  case gigameters: us = gigameters; break;
-  case microinches: us = microinches; break;
-  case mils: us = mils; break;
-  case inches: us = inches; break;
-  case feet: us = feet; break;
-  case yards: us = yards; break;
-  case miles: us = miles; break;
-  case printer_point: us = printer_point; break;
-  case printer_pica: us = printer_pica; break;
-  case nautical_mile: us = nautical_mile; break;
-  case astronomical: us = astronomical; break;
-  case lightyears: us = lightyears; break;
-  case parsecs: us = parsecs; break;
-  case custom_unit_system: us = custom_unit_system; break;
-  default: us = no_unit_system; break;
+  switch (text_display_mode_as_unsigned)
+  {
+    ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_TextDisplayMode::kNormal);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_TextDisplayMode::kHorizontalToScreen);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_TextDisplayMode::kAboveLine);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_TextDisplayMode::kInLine);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_TextDisplayMode::kHorizontalInCplane);
   }
-  return us;
+  ON_ERROR("Invalid text_display_mode_as_unsigned value");
+  return (ON_INTERNAL_OBSOLETE::V5_TextDisplayMode::kAboveLine);
 }
+
+ON::RuntimeEnvironment ON::RuntimeEnvironmentFromUnsigned(
+  unsigned int runtime_environment_as_unsigned
+  )
+{
+  switch (runtime_environment_as_unsigned)
+  {
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::RuntimeEnvironment::Unset);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::RuntimeEnvironment::None);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::RuntimeEnvironment::Windows);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::RuntimeEnvironment::Apple);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::RuntimeEnvironment::Android);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::RuntimeEnvironment::Linux);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::RuntimeEnvironment::WebAssembly);
+  }
+  ON_ERROR("Invalid runtime_environment_as_unsigned parameter value.");
+  return (ON::RuntimeEnvironment::Unset);
+}
+
+ON::RuntimeEnvironment ON::CurrentRuntimeEnvironment()
+{
+#if defined(ON_RUNTIME_WIN)
+  return ON::RuntimeEnvironment::Windows;
+#elif defined (ON_RUNTIME_APPLE)
+  return ON::RuntimeEnvironment::Apple;
+#elif defined (ON_RUNTIME_ANDROID)
+  return ON::RuntimeEnvironment::Android;
+#elif defined (ON_RUNTIME_LINUX)
+  return ON::RuntimeEnvironment::Linux;
+#elif defined (ON_RUNTIME_WASM)
+  return ON::RuntimeEnvironment::WebAssembly;
+#else
+  ON_ERROR("ON_RUNTIME_... not defined.");
+  return ON::RuntimeEnvironment::Unset;
+#endif
+}
+
+ON::ReadFileResult ON::ReadFileResultFromUnsigned(
+  unsigned int read_file_result_as_unsigned
+)
+{
+  switch (read_file_result_as_unsigned)
+  {
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::ReadFileResult::Unset);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::ReadFileResult::Completed);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::ReadFileResult::CompletedWithErrors);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::ReadFileResult::Failed);
+  }
+  ON_ERROR("Invalid read_file_result_as_unsigned parameter value.");
+  return (ON::ReadFileResult::Unset);
+}
+
+bool ON::ReadFileCompleted(
+  ON::ReadFileResult read_file_result
+)
+{
+  // true indicates partial to complete success.
+  return (ON::ReadFileResult::Unset != read_file_result && ON::ReadFileResult::Failed != read_file_result);
+}
+
+bool ON::ReadFileFailed(
+  ON::ReadFileResult read_file_result
+)
+{
+  // true indicates total failure.
+  return (ON::ReadFileResult::Failed == read_file_result);
+}
+
+bool ON::IsMetricLengthUnit(
+  ON::LengthUnitSystem length_unit_system
+)
+{
+  bool rc;
+  switch (length_unit_system)
+  {
+  case ON::LengthUnitSystem::Angstroms:
+  case ON::LengthUnitSystem::Nanometers:
+  case ON::LengthUnitSystem::Microns:
+  case ON::LengthUnitSystem::Millimeters:
+  case ON::LengthUnitSystem::Centimeters:
+  case ON::LengthUnitSystem::Decimeters:
+  case ON::LengthUnitSystem::Meters:
+  case ON::LengthUnitSystem::Dekameters:
+  case ON::LengthUnitSystem::Hectometers:
+  case ON::LengthUnitSystem::Kilometers:
+  case ON::LengthUnitSystem::Megameters:
+  case ON::LengthUnitSystem::Gigameters:
+    rc = true;
+    break;
+  case ON::LengthUnitSystem::NauticalMiles:
+  case ON::LengthUnitSystem::AstronomicalUnits:
+  case ON::LengthUnitSystem::LightYears:
+  case ON::LengthUnitSystem::Parsecs:
+    rc = true;
+  default:
+    rc = false;
+    break;
+  }
+  return rc;
+}
+
+bool ON::IsUnitedStatesCustomaryLengthUnit(
+  ON::LengthUnitSystem length_unit_system
+)
+{
+  bool rc;
+  switch (length_unit_system)
+  {
+  case ON::LengthUnitSystem::Microinches:
+  case ON::LengthUnitSystem::Mils:
+  case ON::LengthUnitSystem::Inches:
+  case ON::LengthUnitSystem::Feet:
+  case ON::LengthUnitSystem::Yards:
+  case ON::LengthUnitSystem::Miles:
+  case ON::LengthUnitSystem::PrinterPoints:
+  case ON::LengthUnitSystem::PrinterPicas:
+    rc = true;
+    break;
+  default:
+    rc = false;
+    break;
+  }
+  return rc;
+}
+
+bool ON::IsTerrestrialLengthUnit(
+  ON::LengthUnitSystem length_unit_system
+)
+{
+  bool rc;
+  switch (length_unit_system)
+  {
+  case ON::LengthUnitSystem::Millimeters:
+  case ON::LengthUnitSystem::Centimeters:
+  case ON::LengthUnitSystem::Decimeters:
+  case ON::LengthUnitSystem::Meters:
+  case ON::LengthUnitSystem::Dekameters:
+  case ON::LengthUnitSystem::Hectometers:
+  case ON::LengthUnitSystem::Kilometers:
+    rc = true;
+    break;
+  case ON::LengthUnitSystem::Inches:
+  case ON::LengthUnitSystem::Feet:
+  case ON::LengthUnitSystem::Yards:
+  case ON::LengthUnitSystem::Miles:
+    rc = true;
+    break;
+  case ON::LengthUnitSystem::NauticalMiles:
+    rc = true;
+    break;
+  default:
+    rc = false;
+    break;
+  }
+  return rc;
+}
+
+bool ON::IsExtraTerrestrialLengthUnit(
+  ON::LengthUnitSystem length_unit_system
+)
+{
+  bool rc;
+  switch (length_unit_system)
+  {
+  case ON::LengthUnitSystem::AstronomicalUnits:
+  case ON::LengthUnitSystem::LightYears:
+  case ON::LengthUnitSystem::Parsecs:
+    rc = true;
+  default:
+    rc = false;
+    break;
+  }
+  return rc;
+}
+
+bool ON::IsMicroscopicLengthUnit(
+  ON::LengthUnitSystem length_unit_system
+)
+{
+  bool rc;
+  switch (length_unit_system)
+  {
+  case ON::LengthUnitSystem::Angstroms:
+  case ON::LengthUnitSystem::Nanometers:
+  case ON::LengthUnitSystem::Microns:
+    rc = true;
+    break;
+  case ON::LengthUnitSystem::Microinches:
+  case ON::LengthUnitSystem::Mils:
+    rc = true;
+    break;
+  default:
+    rc = false;
+    break;
+  }
+  return rc;
+}
+
+bool ON::IsUnitedStatesPrinterLengthUnit(
+  ON::LengthUnitSystem length_unit_system
+)
+{
+  bool rc;
+  switch (length_unit_system)
+  {
+  case ON::LengthUnitSystem::PrinterPoints:
+  case ON::LengthUnitSystem::PrinterPicas:
+    rc = false;
+    break;
+  default:
+    rc = false;
+    break;
+  }
+  return rc;
+}
+
+ON::LengthUnitSystem ON::LengthUnitSystemFromUnsigned(unsigned int length_unit_system_as_unsigned)
+{
+  switch (length_unit_system_as_unsigned)
+  {
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::None);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Angstroms);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Nanometers);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Microns);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Millimeters);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Centimeters);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Decimeters);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Meters);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Dekameters);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Hectometers);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Kilometers);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Megameters);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Gigameters);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Microinches);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Mils);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Inches);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Feet);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Yards);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Miles);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::PrinterPoints);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::PrinterPicas);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::NauticalMiles);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::AstronomicalUnits);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::LightYears);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Parsecs);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::CustomUnits);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::LengthUnitSystem::Unset);
+  }
+
+  ON_ERROR("Invalid length_unit_system_as_unsigned value");
+  return (ON::LengthUnitSystem::Unset);
+}
+
+static ON::LengthUnitSystem(*Internal_func_ModelLengthUnitSystemCallback)(ON__UINT_PTR) = nullptr;
+
+void ON::RegisterModelLengthUnitSystemCallback(
+  ON::LengthUnitSystem(*func_ModelLengthUnitSystemCallback)(ON__UINT_PTR)
+)
+{
+  Internal_func_ModelLengthUnitSystemCallback = func_ModelLengthUnitSystemCallback;
+}
+
+ON::LengthUnitSystem ON::ModelLengthUnitSystem(
+  ON__UINT_PTR model_serial_number
+)
+{
+  return 
+    (nullptr == Internal_func_ModelLengthUnitSystemCallback 
+      || 0 == model_serial_number 
+      || model_serial_number >= ON_UNSET_UINT_INDEX
+      )
+    ? ON::LengthUnitSystem::None
+    : Internal_func_ModelLengthUnitSystemCallback(model_serial_number);
+}
+
+ON::AngleUnitSystem ON::AngleUnitSystemFromUnsigned(unsigned int angle_unit_system_as_unsigned)
+{
+  switch (angle_unit_system_as_unsigned)
+  {
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::AngleUnitSystem::None);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::AngleUnitSystem::Turns);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::AngleUnitSystem::Radians);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::AngleUnitSystem::Degrees);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::AngleUnitSystem::Minutes);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::AngleUnitSystem::Seconds);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::AngleUnitSystem::Gradians);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::AngleUnitSystem::Unset);
+  }
+
+  ON_ERROR("Invalid angle_unit_system_as_unsigned value");
+  return (ON::AngleUnitSystem::Unset);
+}
+
+
+double ON::AngleUnitScale(
+    ON::AngleUnitSystem us_from,
+    ON::AngleUnitSystem us_to
+    )
+{
+  if (ON::AngleUnitSystem::Unset == us_from || ON::AngleUnitSystem::Unset == us_to)
+    return ON_DBL_QNAN;
+
+  // the default cases are here to keep lint quiet
+  double scale = 1.0;
+  
+  if (  us_from != us_to
+        && ((int)us_to) > 0 && ((int)us_to) < 6
+        // switch weeds out bogus values of us_from
+      ) 
+  switch( us_from ) 
+  {
+  case ON::AngleUnitSystem::Turns:
+    switch(us_to)
+    {
+    case ON::AngleUnitSystem::Turns:
+      scale = 1.0;
+      break;
+    case ON::AngleUnitSystem::Radians:
+      scale = 2.0*ON_PI;
+      break;
+    case ON::AngleUnitSystem::Degrees:
+      scale = 360.0;
+      break;
+    case ON::AngleUnitSystem::Minutes:
+      scale = 60.0*360.0;
+      break;
+    case ON::AngleUnitSystem::Seconds:
+      scale = 60.0*60.0*360.0;
+      break;
+    case ON::AngleUnitSystem::Gradians:
+      scale = 400.0;
+      break;
+    case ON::AngleUnitSystem::Unset:
+    case ON::AngleUnitSystem::None:
+      ON_ERROR("unit system conversion undefined");
+      break;
+    }
+    break;
+
+  case ON::AngleUnitSystem::Radians:
+    scale = 1.0;
+    switch(us_to)
+    {
+    case ON::AngleUnitSystem::Turns:
+      scale = 0.5/ON_PI;
+      break;
+    case ON::AngleUnitSystem::Radians:
+      scale = 1.0;
+      break;
+    case ON::AngleUnitSystem::Degrees:
+      scale = 180.0/ON_PI;
+      break;
+    case ON::AngleUnitSystem::Minutes:
+      scale = 60.0*180.0/ON_PI;
+      break;
+    case ON::AngleUnitSystem::Seconds:
+      scale = 60.0*60.0*180.0/ON_PI;
+      break;
+    case ON::AngleUnitSystem::Gradians:
+      scale = 400.0/ON_PI;
+      break;
+    case ON::AngleUnitSystem::Unset:
+    case ON::AngleUnitSystem::None:
+      ON_ERROR("unit system conversion undefined");
+      break;
+    }
+    break;
+
+  case ON::AngleUnitSystem::Degrees:
+    scale = 1.0;
+    switch(us_to)
+    {
+    case ON::AngleUnitSystem::Turns:
+      scale = 1.0/360.0;
+      break;
+    case ON::AngleUnitSystem::Radians:
+      scale = ON_PI/180.0;
+      break;
+    case ON::AngleUnitSystem::Degrees:
+      scale = 1.0;
+      break;
+    case ON::AngleUnitSystem::Minutes:
+      scale = 60.0;
+      break;
+    case ON::AngleUnitSystem::Seconds:
+      scale = 60.0*60.0;
+      break;
+    case ON::AngleUnitSystem::Gradians:
+      scale = 10.0/9.0;
+      break;
+    case ON::AngleUnitSystem::Unset:
+    case ON::AngleUnitSystem::None:
+      ON_ERROR("unit system conversion undefined");
+      break;
+    }
+    break;
+
+  case ON::AngleUnitSystem::Minutes:
+    scale = 1.0;
+    switch(us_to)
+    {
+    case ON::AngleUnitSystem::Turns:
+      scale = 1.0/(60.0*360.0);
+      break;
+    case ON::AngleUnitSystem::Radians:
+      scale = ON_PI/(60.0*180.0);
+      break;
+    case ON::AngleUnitSystem::Degrees:
+      scale = 1.0/60.0;
+      break;
+    case ON::AngleUnitSystem::Minutes:
+      scale = 1.0;
+      break;
+    case ON::AngleUnitSystem::Seconds:
+      scale = 60.0;
+      break;
+    case ON::AngleUnitSystem::Gradians:
+      scale = 1.0/54.0;
+      break;
+    case ON::AngleUnitSystem::Unset:
+    case ON::AngleUnitSystem::None:
+      ON_ERROR("unit system conversion undefined");
+      break;
+    }
+    break;
+
+  case ON::AngleUnitSystem::Seconds:
+    scale = 1.0;
+    switch(us_to)
+    {
+    case ON::AngleUnitSystem::Turns:
+      scale = 1.0/(60.0*60.0*360.0);
+      break;
+    case ON::AngleUnitSystem::Radians:
+      scale = ON_PI/(60.0*60.0*180.0);
+      break;
+    case ON::AngleUnitSystem::Degrees:
+      scale = 1.0/(60.0*60.0);
+      break;
+    case ON::AngleUnitSystem::Minutes:
+      scale = 1.0/60.0;
+      break;
+    case ON::AngleUnitSystem::Seconds:
+      scale = 1.0;
+      break;
+    case ON::AngleUnitSystem::Gradians:
+      scale = 1.0/(54.0*60.0);
+      break;
+    case ON::AngleUnitSystem::Unset:
+    case ON::AngleUnitSystem::None:
+      ON_ERROR("unit system conversion undefined");
+      break;
+    }
+    break;
+
+  case ON::AngleUnitSystem::Gradians:
+    scale = 1.0;
+    switch(us_to)
+    {
+    case ON::AngleUnitSystem::Turns:
+      scale = 400.0;
+      break;
+    case ON::AngleUnitSystem::Radians:
+      scale = ON_PI/200.0;
+      break;
+    case ON::AngleUnitSystem::Degrees:
+      scale = 9.0/10.0;
+      break;
+    case ON::AngleUnitSystem::Minutes:
+      scale = 54.0;
+      break;
+    case ON::AngleUnitSystem::Seconds:
+      scale = 60.0*54.0;
+      break;
+    case ON::AngleUnitSystem::Gradians:
+      scale = 1.0;
+      break;
+    case ON::AngleUnitSystem::Unset:
+    case ON::AngleUnitSystem::None:
+      ON_ERROR("unit system conversion undefined");
+      break;
+    }
+    break;
+
+  case ON::AngleUnitSystem::Unset:
+  case ON::AngleUnitSystem::None:
+    ON_ERROR("unit system conversion undefined");
+    break;
+  }
+
+  return scale;
+}
+
 
 double ON::UnitScale(
                      const class ON_3dmUnitsAndTolerances& u_and_t_from, 
@@ -973,18 +1040,47 @@ double ON::UnitScale(
 }
 
 double ON::UnitScale(
-    ON::unit_system us_from,
+    ON::LengthUnitSystem us_from,
     const class ON_UnitSystem& us_to
     )
 {
-  double scale = 1.0;
-  ON::unit_system us1 = us_to.m_unit_system;
-  if ( ON::custom_unit_system == us1 )
+  ON::LengthUnitSystem us1 = us_to.UnitSystem();
+  if (
+    ON::LengthUnitSystem::Unset == us_from 
+    || ON::LengthUnitSystem::Unset == us1
+    || us_from != ON::LengthUnitSystemFromUnsigned(static_cast<unsigned int>(us_from))
+    || us1 != ON::LengthUnitSystemFromUnsigned(static_cast<unsigned int>(us1))
+    )
   {
-    if ( us_to.m_custom_unit_scale > 0.0 && ON_IsValid(us_to.m_custom_unit_scale) )
+    ON_ERROR("Invalid parameters.");
+    return ON_DBL_QNAN;
+  }
+
+  if (ON::LengthUnitSystem::None == us_from || ON::LengthUnitSystem::None == us1)
+    return 1.0;
+
+  if (ON::LengthUnitSystem::CustomUnits == us_from)
+  {
+    ON_ERROR("Use ON::UnitScale(const ON_UnitSystem&, const ON_UnitSystem& ) for custom units.");
+    return 1.0;
+  }
+
+  if (us_from == us1)
+  {
+    return 1.0;
+  }
+
+  double scale = 1.0;
+  if (    ON::LengthUnitSystem::CustomUnits == us1 
+       && ON::LengthUnitSystem::None != us_from
+       && ON::LengthUnitSystem::CustomUnits != us_from
+    )
+  {
+    const double meters_per_custom_unit = us_to.MetersPerUnit(ON_DBL_QNAN);
+    if ( meters_per_custom_unit > 0.0 && meters_per_custom_unit < ON_UNSET_POSITIVE_VALUE )
     {
-      scale *= us_to.m_custom_unit_scale;
-      us1 = ON::meters;
+      scale *= meters_per_custom_unit;
+      us1 = ON::LengthUnitSystem::Meters;
     }
   }
   return scale*ON::UnitScale(us_from,us1);
@@ -992,300 +1088,384 @@ double ON::UnitScale(
 
 double ON::UnitScale(
     const class ON_UnitSystem& us_from, 
-    ON::unit_system us_to
+    ON::LengthUnitSystem us_to
     )
 {
-  double scale = 1.0;
-  ON::unit_system us0 = us_from.m_unit_system;
-  if ( ON::custom_unit_system == us0 )
+  ON::LengthUnitSystem us0 = us_from.UnitSystem();
+
+  if (
+    ON::LengthUnitSystem::Unset == us0
+    || ON::LengthUnitSystem::Unset == us_to
+    || us0 != ON::LengthUnitSystemFromUnsigned(static_cast<unsigned int>(us0))
+    || us_to != ON::LengthUnitSystemFromUnsigned(static_cast<unsigned int>(us_to))
+    )
   {
-    if ( us_from.m_custom_unit_scale > 0.0 && ON_IsValid(us_from.m_custom_unit_scale) )
+    ON_ERROR("Invalid parameters.");
+    return ON_DBL_QNAN;
+  }
+
+  if (ON::LengthUnitSystem::None == us0 || ON::LengthUnitSystem::None == us_to)
+    return 1.0;
+
+  if (ON::LengthUnitSystem::CustomUnits == us_to)
+  {
+    ON_ERROR("Use ON::UnitScale(const ON_UnitSystem&, const ON_UnitSystem& ) for custom units.");
+    return 1.0;
+  }
+
+  if (us0 == us_to)
+    return 1.0;
+
+  double scale = 1.0;
+  if (    ON::LengthUnitSystem::CustomUnits == us0 
+       && ON::LengthUnitSystem::None != us_to
+       && ON::LengthUnitSystem::CustomUnits != us_to
+     )
+  {
+    const double meters_per_custom_unit = us_from.MetersPerUnit(ON_DBL_QNAN);
+    if ( meters_per_custom_unit > 0.0 && meters_per_custom_unit < ON_UNSET_POSITIVE_VALUE )
     {
-      scale /= us_from.m_custom_unit_scale;
-      us0 = ON::meters;
+      scale /= meters_per_custom_unit;
+      us0 = ON::LengthUnitSystem::Meters;
     }
   }
   return scale*ON::UnitScale(us0,us_to);
 }
 
 double ON::UnitScale(
-                     const class ON_UnitSystem& u_and_t_from, 
-                     const class ON_UnitSystem& u_and_t_to
-                     )
+  const class ON_UnitSystem& u_and_t_from, 
+  const class ON_UnitSystem& u_and_t_to
+  )
 {
-  double scale = 1.0;
-  ON::unit_system us_from = u_and_t_from.m_unit_system;
-  ON::unit_system us_to   = u_and_t_to.m_unit_system;
+  ON::LengthUnitSystem us_from = u_and_t_from.UnitSystem();
+  ON::LengthUnitSystem us_to   = u_and_t_to.UnitSystem();
 
-  if ( ON::no_unit_system != us_from && ON::no_unit_system != us_to )
+  if (
+    ON::LengthUnitSystem::Unset == us_from
+    || ON::LengthUnitSystem::Unset == us_to
+    || us_from != ON::LengthUnitSystemFromUnsigned(static_cast<unsigned int>(us_from))
+    || us_to != ON::LengthUnitSystemFromUnsigned(static_cast<unsigned int>(us_to))
+    )
   {
-    if ( ON::custom_unit_system == us_from 
-         && ON_IsValid(u_and_t_from.m_custom_unit_scale) 
-         && u_and_t_from.m_custom_unit_scale > 0.0 )
-    {
-      scale /= u_and_t_from.m_custom_unit_scale;
-      us_from = ON::meters;
-    }
-
-    if ( ON::custom_unit_system == us_to 
-         && ON_IsValid(u_and_t_to.m_custom_unit_scale) 
-         && u_and_t_to.m_custom_unit_scale > 0.0 )
-    {
-      scale *= u_and_t_to.m_custom_unit_scale;
-      us_to = ON::meters;
-    }
-
-    scale *= ON::UnitScale( us_from, us_to );
+    ON_ERROR("Invalid parameters.");
+    return ON_DBL_QNAN;
   }
+
+  if (ON::LengthUnitSystem::None == us_from || ON::LengthUnitSystem::None == us_to)
+    return 1.0;
+
+  if (ON::LengthUnitSystem::CustomUnits != us_from && ON::LengthUnitSystem::CustomUnits != us_to)
+    return ON::UnitScale( us_from, us_to );
+
+  // uncommon custom units case
+  const double meters_per_unit_from = u_and_t_from.MetersPerUnit(ON_DBL_QNAN);
+  const double meters_per_unit_to = u_and_t_to.MetersPerUnit(ON_DBL_QNAN);
+  if (meters_per_unit_from == meters_per_unit_to)
+    return 1.0;
+  double scale = 1.0;
+  if ( ON::LengthUnitSystem::CustomUnits == us_from 
+        && meters_per_unit_from > 0.0 
+        && meters_per_unit_from < ON_UNSET_POSITIVE_VALUE
+        )
+  {
+    scale /= meters_per_unit_from;
+    us_from = ON::LengthUnitSystem::Meters;
+  }
+
+  if ( ON::LengthUnitSystem::CustomUnits == us_to 
+    && meters_per_unit_to > 0.0 
+    && meters_per_unit_to < ON_UNSET_POSITIVE_VALUE 
+    )
+  {
+    scale *= meters_per_unit_to;
+    us_to = ON::LengthUnitSystem::Meters;
+  }
+
+  scale *= ON::UnitScale( us_from, us_to );
 
   return scale;
 }
 
-static bool IsEnglishUnit( ON::unit_system us )
+static bool IsEnglishUnit( ON::LengthUnitSystem us )
 {
   return (
-          ON::microinches == us
-          || ON::mils == us
-          || ON::inches == us
-          || ON::feet == us
-          || ON::yards == us
-          || ON::miles == us
-          || ON::printer_point == us
-          || ON::printer_pica == us
+          ON::LengthUnitSystem::Microinches == us
+          || ON::LengthUnitSystem::Mils == us
+          || ON::LengthUnitSystem::Inches == us
+          || ON::LengthUnitSystem::Feet == us
+          || ON::LengthUnitSystem::Yards == us
+          || ON::LengthUnitSystem::Miles == us
+          || ON::LengthUnitSystem::PrinterPoints == us
+          || ON::LengthUnitSystem::PrinterPicas == us
          );
 }
 
 double ON::UnitScale(
-            ON::unit_system u0, // from
-            ON::unit_system u1  // to
+            ON::LengthUnitSystem u0, // from
+            ON::LengthUnitSystem u1  // to
             )
 {
   // Scale factor for changing unit systems
   // Examples 
-  //   100.0  = UnitScale( ON::meters, ON::centimeters ) 
-  //     2.54 = UnitScale( ON::inches, ON::centimeters ) 
-  //    12.0  = UnitScale( ON::feet, ON::inches ) 
+  //   100.0  = UnitScale( ON::LengthUnitSystem::Meters, ON::LengthUnitSystem::Centimeters ) 
+  //     2.54 = UnitScale( ON::LengthUnitSystem::Inches, ON::LengthUnitSystem::Centimeters ) 
+  //    12.0  = UnitScale( ON::LengthUnitSystem::Feet, ON::LengthUnitSystem::Inches ) 
+
+  if (ON::LengthUnitSystem::Unset == u0 || ON::LengthUnitSystem::Unset == u1)
+  {
+    ON_ERROR("Invalid parameter.");
+    return ON_DBL_QNAN;
+  }
+
+  if (
+    u0 != ON::LengthUnitSystemFromUnsigned(static_cast<unsigned int>(u0))
+    || u1 != ON::LengthUnitSystemFromUnsigned(static_cast<unsigned int>(u1))
+    )
+  {
+    ON_ERROR("Invalid parameter.");
+    return ON_DBL_QNAN;
+  }
+
+  if (ON::LengthUnitSystem::None == u0 || ON::LengthUnitSystem::None == u1)
+  {
+    return 1.0;
+  }
+
+  if (ON::LengthUnitSystem::CustomUnits == u0 || ON::LengthUnitSystem::CustomUnits == u1)
+  {
+    ON_ERROR("Use ON::UnitScale(const ON_UnitSystem&, const ON_UnitSystem& ) for custom unit scale.");
+    return 1.0;
+  }
+
+  if (u0 == u1)
+  {
+    return 1.0;
+  }
 
   // the default cases are here to keep lint quiet
   double scale = 1.0;
-  
-  if (  u0 != u1
-        && u1 != ON::custom_unit_system
-        && ((int)u1) > 0 && ((int)u1) < 26
-        // switch weeds out bogus values of u0
-      ) 
+
   switch( u0 ) 
   {
-  case ON::angstroms:
-    scale = UnitScale( meters, u1)*1.0e-10;
+  case ON::LengthUnitSystem::Angstroms:
+    scale = UnitScale( ON::LengthUnitSystem::Meters, u1)*1.0e-10;
     break;
 
-  case ON::nanometers:
-    scale = UnitScale( meters, u1)*1.0e-9;
+  case ON::LengthUnitSystem::Nanometers:
+    scale = UnitScale( ON::LengthUnitSystem::Meters, u1)*1.0e-9;
     break;
 
-  case ON::microns:
-    scale = UnitScale( meters, u1)*1.0e-6;
+  case ON::LengthUnitSystem::Microns:
+    scale = UnitScale( ON::LengthUnitSystem::Meters, u1)*1.0e-6;
     break;
 
-  case ON::millimeters:
+  case ON::LengthUnitSystem::Millimeters:
     switch( u1 ) 
     {
-    case ON::meters:      scale = 1.0e-3; break;
-    case ON::microns:     scale = 1.0e+3; break;
-    case ON::centimeters: scale = 1.0e-1; break;
+    case ON::LengthUnitSystem::Meters:      scale = 1.0e-3; break;
+    case ON::LengthUnitSystem::Microns:     scale = 1.0e+3; break;
+    case ON::LengthUnitSystem::Centimeters: scale = 1.0e-1; break;
 
     default:
       scale = IsEnglishUnit(u1)
-            ? UnitScale( inches, u1 )/25.4
-            : UnitScale( meters, u1 )*1.0e-3;
+            ? UnitScale( ON::LengthUnitSystem::Inches, u1 )/25.4
+            : UnitScale( ON::LengthUnitSystem::Meters, u1 )*1.0e-3;
       break;
     }
     break;
 
-  case ON::centimeters:
+  case ON::LengthUnitSystem::Centimeters:
     switch( u1 ) 
     {
-    case ON::meters:      scale = 1.0e-2; break;
-    case ON::millimeters: scale = 1.0e+1; break;
+    case ON::LengthUnitSystem::Meters:      scale = 1.0e-2; break;
+    case ON::LengthUnitSystem::Millimeters: scale = 1.0e+1; break;
 
     default:
       scale = IsEnglishUnit(u1)
-            ? UnitScale( inches, u1 )/2.54
-            : UnitScale( meters, u1 )*1.0e-2;
+            ? UnitScale( ON::LengthUnitSystem::Inches, u1 )/2.54
+            : UnitScale( ON::LengthUnitSystem::Meters, u1 )*1.0e-2;
       break;
     }
     break;
 
-  case ON::decimeters:
+  case ON::LengthUnitSystem::Decimeters:
     scale = IsEnglishUnit(u1)
-          ? UnitScale( inches, u1 )/0.254
-          : UnitScale( meters, u1 )*1.0e-1;
+          ? UnitScale( ON::LengthUnitSystem::Inches, u1 )/0.254
+          : UnitScale( ON::LengthUnitSystem::Meters, u1 )*1.0e-1;
     break;
 
-  case ON::meters:
+  case ON::LengthUnitSystem::Meters:
     switch( u1 ) 
     {
-    case ON::angstroms:      scale = 1.0e+10; break;
-    case ON::nanometers:     scale = 1.0e+9;  break;
-    case ON::microns:        scale = 1.0e+6;  break;
-    case ON::millimeters:    scale = 1.0e+3;  break;
-    case ON::centimeters:    scale = 1.0e+2;  break;
-    case ON::decimeters:     scale = 1.0e1;   break;
-    case ON::meters:         scale = 1.0;     break;
-    case ON::dekameters:     scale = 1.0e-1;  break;
-    case ON::hectometers:    scale = 1.0e-2;  break;
-    case ON::kilometers:     scale = 1.0e-3;  break;
-    case ON::megameters:     scale = 1.0e-6;  break;
-    case ON::gigameters:     scale = 1.0e-9;  break;
+    case ON::LengthUnitSystem::Angstroms:      scale = 1.0e+10; break;
+    case ON::LengthUnitSystem::Nanometers:     scale = 1.0e+9;  break;
+    case ON::LengthUnitSystem::Microns:        scale = 1.0e+6;  break;
+    case ON::LengthUnitSystem::Millimeters:    scale = 1.0e+3;  break;
+    case ON::LengthUnitSystem::Centimeters:    scale = 1.0e+2;  break;
+    case ON::LengthUnitSystem::Decimeters:     scale = 1.0e1;   break;
+    case ON::LengthUnitSystem::Meters:         scale = 1.0;     break;
+    case ON::LengthUnitSystem::Dekameters:     scale = 1.0e-1;  break;
+    case ON::LengthUnitSystem::Hectometers:    scale = 1.0e-2;  break;
+    case ON::LengthUnitSystem::Kilometers:     scale = 1.0e-3;  break;
+    case ON::LengthUnitSystem::Megameters:     scale = 1.0e-6;  break;
+    case ON::LengthUnitSystem::Gigameters:     scale = 1.0e-9;  break;
 
-    case ON::nautical_mile:  scale = 1.0/1852.0; break;
-    case ON::astronomical:   scale = 1.0/1.4959787e+11; break;
-    case ON::lightyears:     scale = 1.0/9.4607304725808e+15; break;
-    case ON::parsecs:        scale = 1.0/3.08567758e+16; break;
+    case ON::LengthUnitSystem::NauticalMiles:  scale = 1.0/1852.0; break;
+    case ON::LengthUnitSystem::AstronomicalUnits:   scale = 1.0/1.4959787e+11; break;
+    case ON::LengthUnitSystem::LightYears:     scale = 1.0/9.4607304725808e+15; break;
+    case ON::LengthUnitSystem::Parsecs:        scale = 1.0/3.08567758e+16; break;
 
     default:
       if ( IsEnglishUnit(u1) )
-        scale = UnitScale( inches, u1 )/0.0254;
+        scale = UnitScale( ON::LengthUnitSystem::Inches, u1 )/0.0254;
       break;
     }
     break;
 
-  case ON::dekameters:
-    scale = UnitScale( meters, u1 )*10.0;
+  case ON::LengthUnitSystem::Dekameters:
+    scale = UnitScale( ON::LengthUnitSystem::Meters, u1 )*10.0;
     break;
 
-  case ON::hectometers:
-    scale = UnitScale( meters, u1 )*100.0;
+  case ON::LengthUnitSystem::Hectometers:
+    scale = UnitScale( ON::LengthUnitSystem::Meters, u1 )*100.0;
     break;
 
-  case ON::kilometers:
+  case ON::LengthUnitSystem::Kilometers:
     scale = IsEnglishUnit(u1)
-          ? UnitScale( inches, u1 )/0.0000254
-          : UnitScale( meters, u1 )*1000.0;
+          ? UnitScale( ON::LengthUnitSystem::Inches, u1 )/0.0000254
+          : UnitScale( ON::LengthUnitSystem::Meters, u1 )*1000.0;
     break;
 
-  case ON::megameters:
-    scale = UnitScale( meters, u1 )*1.0e6;
+  case ON::LengthUnitSystem::Megameters:
+    scale = UnitScale( ON::LengthUnitSystem::Meters, u1 )*1.0e6;
     break;
 
-  case ON::gigameters:
-    scale = UnitScale( meters, u1 )*1.0e9;
+  case ON::LengthUnitSystem::Gigameters:
+    scale = UnitScale( ON::LengthUnitSystem::Meters, u1 )*1.0e9;
     break;
 
-  case ON::microinches:
-    scale = UnitScale( inches, u1 )*1.0e-6;
+  case ON::LengthUnitSystem::Microinches:
+    scale = UnitScale( ON::LengthUnitSystem::Inches, u1 )*1.0e-6;
     break;
 
-  case ON::mils:
-    scale = UnitScale( inches, u1 )*1.0e-3;
+  case ON::LengthUnitSystem::Mils:
+    scale = UnitScale( ON::LengthUnitSystem::Inches, u1 )*1.0e-3;
     break;
 
-  case ON::inches:
+  case ON::LengthUnitSystem::Inches:
     switch( u1 ) 
     {
-    case ON::angstroms:       scale = 2.54e+8; break;
-    case ON::nanometers:      scale = 2.54e+7; break;
-    case ON::microns:         scale = 2.54e+4; break;
-    case ON::millimeters:     scale = 25.4; break;
-    case ON::centimeters:     scale = 2.54; break;
-    case ON::decimeters:      scale = 2.54e-1; break;
-    case ON::meters:          scale = 2.54e-2; break;
-    case ON::dekameters:      scale = 2.54e-3; break;
-    case ON::hectometers:     scale = 2.54e-4; break;
-    case ON::kilometers:      scale = 2.54e-5; break;
-    case ON::megameters:      scale = 2.54e-8; break;
-    case ON::gigameters:      scale = 2.54e-11; break;
+    case ON::LengthUnitSystem::Angstroms:       scale = 2.54e+8; break;
+    case ON::LengthUnitSystem::Nanometers:      scale = 2.54e+7; break;
+    case ON::LengthUnitSystem::Microns:         scale = 2.54e+4; break;
+    case ON::LengthUnitSystem::Millimeters:     scale = 25.4; break;
+    case ON::LengthUnitSystem::Centimeters:     scale = 2.54; break;
+    case ON::LengthUnitSystem::Decimeters:      scale = 2.54e-1; break;
+    case ON::LengthUnitSystem::Meters:          scale = 2.54e-2; break;
+    case ON::LengthUnitSystem::Dekameters:      scale = 2.54e-3; break;
+    case ON::LengthUnitSystem::Hectometers:     scale = 2.54e-4; break;
+    case ON::LengthUnitSystem::Kilometers:      scale = 2.54e-5; break;
+    case ON::LengthUnitSystem::Megameters:      scale = 2.54e-8; break;
+    case ON::LengthUnitSystem::Gigameters:      scale = 2.54e-11; break;
 
-    case ON::printer_point: scale = 72.0;            break;
-    case ON::printer_pica:  scale = 6.0;             break;
-    case ON::microinches: scale = 1.0e+6;            break;
-    case ON::mils:        scale = 1.0e+3;            break;
-    case ON::inches:      scale = 1.0;               break;
-    case ON::feet:        scale = 1.0/12.0;          break;
-    case ON::yards:       scale = 1.0/36.0;          break;
-    case ON::miles:       scale = 1.0/(12.0*5280.0); break;
+    case ON::LengthUnitSystem::PrinterPoints: scale = 72.0;            break;
+    case ON::LengthUnitSystem::PrinterPicas:  scale = 6.0;             break;
+    case ON::LengthUnitSystem::Microinches: scale = 1.0e+6;            break;
+    case ON::LengthUnitSystem::Mils:        scale = 1.0e+3;            break;
+    case ON::LengthUnitSystem::Inches:      scale = 1.0;               break;
+    case ON::LengthUnitSystem::Feet:        scale = 1.0/12.0;          break;
+    case ON::LengthUnitSystem::Yards:       scale = 1.0/36.0;          break;
+    case ON::LengthUnitSystem::Miles:       scale = 1.0/(12.0*5280.0); break;
 
     default:
-      scale = UnitScale( meters, u1 )*2.54e-2;
+      scale = UnitScale( ON::LengthUnitSystem::Meters, u1 )*2.54e-2;
       break;
     }
     break;
 
-  case ON::feet:
+  case ON::LengthUnitSystem::Feet:
     switch( u1 ) 
     {      
-    case ON::yards:       scale = 1.0/3.0; break;
-    case ON::miles:       scale = 1.0/5280.0; break;
+    case ON::LengthUnitSystem::Yards:
+      scale = 1.0/3.0;
+      break;
+    case ON::LengthUnitSystem::Miles:
+      scale = 1.0/5280.0;
+      break;
     default:
-      scale = UnitScale( inches, u1 )*12.0;
+      scale = UnitScale( ON::LengthUnitSystem::Inches, u1 )*12.0;
       break;
     }
     break;
 
-  case ON::yards:
+  case ON::LengthUnitSystem::Yards:
     switch( u1 ) 
     {      
-    case ON::feet:        scale = 3.0; break;
-    case ON::miles:       scale = 1.0/1760.0; break;
+    case ON::LengthUnitSystem::Feet:        scale = 3.0; break;
+    case ON::LengthUnitSystem::Miles:       scale = 1.0/1760.0; break;
     default:
-      scale = UnitScale( inches, u1 )*36.0;
+      scale = UnitScale( ON::LengthUnitSystem::Inches, u1 )*36.0;
       break;
     }
     break;
 
-  case ON::miles:
-    if ( ON::feet == u1 )
+  case ON::LengthUnitSystem::Miles:
+    if ( ON::LengthUnitSystem::Feet == u1 )
     {
       scale = 5280.0;
     }
     else
     {
       scale = IsEnglishUnit(u1)
-            ? UnitScale( inches, u1 )*12.0*5280.0
-            : UnitScale( meters, u1 )*1609.344;
+            ? UnitScale( ON::LengthUnitSystem::Inches, u1 )*12.0*5280.0
+            : UnitScale( ON::LengthUnitSystem::Meters, u1 )*1609.344;
     }
     break;
 
-  case ON::printer_point:
-    scale = UnitScale( inches, u1 )/72.0;
+  case ON::LengthUnitSystem::PrinterPoints:
+    scale = UnitScale( ON::LengthUnitSystem::Inches, u1 )/72.0;
     break;
 
-  case ON::printer_pica:
-    scale = UnitScale( inches, u1 )/6.0;
+  case ON::LengthUnitSystem::PrinterPicas:
+    scale = UnitScale( ON::LengthUnitSystem::Inches, u1 )/6.0;
     break;
 
-  case ON::nautical_mile:
-    scale = UnitScale( meters, u1 )*1852.0;
+  case ON::LengthUnitSystem::NauticalMiles:
+    scale = UnitScale( ON::LengthUnitSystem::Meters, u1 )*1852.0;
     break;
 
-  case ON::astronomical:
+  case ON::LengthUnitSystem::AstronomicalUnits:
     // 1.4959787e+11  http://en.wikipedia.org/wiki/Astronomical_unit
     // 1.495979e+11   http://units.nist.gov/Pubs/SP811/appenB9.htm  
     //    An astronomical unit (au) is the mean distance from the 
     //    center of the earth to the center of the sun.
-    scale = UnitScale( meters, u1 )*1.4959787e+11;
+    scale = UnitScale( ON::LengthUnitSystem::Meters, u1 )*1.4959787e+11;
     break;
 
-  case ON::lightyears:
+  case ON::LengthUnitSystem::LightYears:
     // 9.4607304725808e+15 http://en.wikipedia.org/wiki/Light_year
     // 9.46073e+15 meters  http://units.nist.gov/Pubs/SP811/appenB9.htm
     //    A light year is the distance light travels in one Julian year.
     //    The speed of light is exactly 299792458 meters/second.
     //    A Julian year is exactly 365.25 * 86400 seconds and is 
     //    approximately the time it takes for one earth orbit.
-    scale = UnitScale( meters, u1 )*9.4607304725808e+15;
+    scale = UnitScale( ON::LengthUnitSystem::Meters, u1 )*9.4607304725808e+15;
     break;
 
-  case ON::parsecs:
+  case ON::LengthUnitSystem::Parsecs:
     // 3.08567758e+16  // http://en.wikipedia.org/wiki/Parsec
     // 3.085678e+16    // http://units.nist.gov/Pubs/SP811/appenB9.htm  
-    scale = UnitScale( meters, u1 )*3.08567758e+16;
+    scale = UnitScale( ON::LengthUnitSystem::Meters, u1 )*3.08567758e+16;
     break;
 
-  case ON::custom_unit_system:
-  case ON::no_unit_system:
-    // nothing to do here
+  case ON::LengthUnitSystem::CustomUnits:
+    scale = 1.0;
+    break;
+  case ON::LengthUnitSystem::None:
+    scale = 1.0;
+    break;
+  case ON::LengthUnitSystem::Unset:
+    scale = ON_DBL_QNAN;
     break;
   }
 
@@ -1293,32 +1473,18 @@ double ON::UnitScale(
 }
 
 
-//// distance_display_mode ///////////////////////////////////
-enum distance_display_mode
+ON::OBSOLETE_DistanceDisplayMode ON::DistanceDisplayModeFromUnsigned(unsigned int distance_display_mode_as_unsigned)
 {
-  decimal     = 0, 
-  fractional  = 1,
-  feet_inches = 2
-};
-
-ON::distance_display_mode ON::DistanceDisplayMode(int i)
-{
-  distance_display_mode dm = decimal;
-  switch (i) 
+  switch (distance_display_mode_as_unsigned) 
   {
-  case decimal:
-    dm = decimal;
-    break;
-  case fractional:
-    dm = fractional;
-    break;
-  case feet_inches:
-    dm = feet_inches;
-    break;
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::OBSOLETE_DistanceDisplayMode::Decimal);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::OBSOLETE_DistanceDisplayMode::Fractional);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::OBSOLETE_DistanceDisplayMode::FeetInches);
   }
-  return dm;
-}
 
+  ON_ERROR("Invalid distance_display_mode_as_unsigned value");
+  return (ON::OBSOLETE_DistanceDisplayMode::Decimal);
+}
 
 ON::point_style ON::PointStyle(int i)
 {
@@ -1351,25 +1517,27 @@ ON::knot_style ON::KnotStyle(int i)
 
 ON::continuity ON::Continuity(int i)
 {
-  continuity c = unknown_continuity;
+  ON::continuity c = ON::continuity::unknown_continuity;
 
   switch(i)
   {
-  case unknown_continuity: c = unknown_continuity; break;
-  case C0_continuous: c = C0_continuous; break;
-  case C1_continuous: c = C1_continuous; break;
-  case C2_continuous: c = C2_continuous; break;
-  case G1_continuous: c = G1_continuous; break;
-  case G2_continuous: c = G2_continuous; break;
+  case (int)ON::continuity::unknown_continuity: c = ON::continuity::unknown_continuity; break;
+  case (int)ON::continuity::C0_continuous: c = ON::continuity::C0_continuous; break;
+  case (int)ON::continuity::C1_continuous: c = ON::continuity::C1_continuous; break;
+  case (int)ON::continuity::C2_continuous: c = ON::continuity::C2_continuous; break;
+  case (int)ON::continuity::G1_continuous: c = ON::continuity::G1_continuous; break;
+  case (int)ON::continuity::G2_continuous: c = ON::continuity::G2_continuous; break;
   
   // 30 March 2003 Dale Lear added these
-  case C0_locus_continuous: c = C0_locus_continuous; break;
-  case C1_locus_continuous: c = C1_locus_continuous; break;
-  case C2_locus_continuous: c = C2_locus_continuous; break;
-  case G1_locus_continuous: c = G1_locus_continuous; break;
-  case G2_locus_continuous: c = G2_locus_continuous; break;
+  case (int)ON::continuity::C0_locus_continuous: c = ON::continuity::C0_locus_continuous; break;
+  case (int)ON::continuity::C1_locus_continuous: c = ON::continuity::C1_locus_continuous; break;
+  case (int)ON::continuity::C2_locus_continuous: c = ON::continuity::C2_locus_continuous; break;
+  case (int)ON::continuity::G1_locus_continuous: c = ON::continuity::G1_locus_continuous; break;
+  case (int)ON::continuity::G2_locus_continuous: c = ON::continuity::G2_locus_continuous; break;
 
-  case Cinfinity_continuous: c = Cinfinity_continuous; break;
+  case (int)ON::continuity::Cinfinity_continuous: c = ON::continuity::Cinfinity_continuous; break;
+
+  case (int)ON::continuity::Gsmooth_continuous: c = ON::continuity::Gsmooth_continuous; break;
   };
 
   return c;
@@ -1377,26 +1545,54 @@ ON::continuity ON::Continuity(int i)
 
 ON::continuity ON::ParametricContinuity(int i)
 {
-  continuity c = unknown_continuity;
+  // "erase" the locus setting.
+  ON::continuity c = ON::continuity::unknown_continuity;
 
   switch(i)
   {
-  case unknown_continuity: c = unknown_continuity; break;
-  case C0_continuous: c = C0_continuous; break;
-  case C1_continuous: c = C1_continuous; break;
-  case C2_continuous: c = C2_continuous; break;
-  case G1_continuous: c = G1_continuous; break;
-  case G2_continuous: c = G2_continuous; break;
-  case C0_locus_continuous: c = C0_continuous; break;
-  case C1_locus_continuous: c = C1_continuous; break;
-  case C2_locus_continuous: c = C2_continuous; break;
-  case G1_locus_continuous: c = G1_continuous; break;
-  case G2_locus_continuous: c = G2_continuous; break;
-  case Cinfinity_continuous: c = Cinfinity_continuous; break;
+  case (int)ON::continuity::unknown_continuity: c = ON::continuity::unknown_continuity; break;
+  case (int)ON::continuity::C0_continuous: c = ON::continuity::C0_continuous; break;
+  case (int)ON::continuity::C1_continuous: c = ON::continuity::C1_continuous; break;
+  case (int)ON::continuity::C2_continuous: c = ON::continuity::C2_continuous; break;
+  case (int)ON::continuity::G1_continuous: c = ON::continuity::G1_continuous; break;
+  case (int)ON::continuity::G2_continuous: c = ON::continuity::G2_continuous; break;
+  case (int)ON::continuity::C0_locus_continuous: c = ON::continuity::C0_continuous; break;
+  case (int)ON::continuity::C1_locus_continuous: c = ON::continuity::C1_continuous; break;
+  case (int)ON::continuity::C2_locus_continuous: c = ON::continuity::C2_continuous; break;
+  case (int)ON::continuity::G1_locus_continuous: c = ON::continuity::G1_continuous; break;
+  case (int)ON::continuity::G2_locus_continuous: c = ON::continuity::G2_continuous; break;
+  case (int)ON::continuity::Cinfinity_continuous: c = ON::continuity::Cinfinity_continuous; break;
+  case (int)ON::continuity::Gsmooth_continuous: c = ON::continuity::Gsmooth_continuous; break;
   };
 
   return c;
 }
+
+
+ON::continuity ON::PolylineContinuity(int i)
+{
+  ON::continuity c = ON::continuity::unknown_continuity;
+
+  switch(i)
+  {
+  case (int)ON::continuity::unknown_continuity: c = ON::continuity::unknown_continuity; break;
+  case (int)ON::continuity::C0_continuous: c = ON::continuity::C0_continuous; break;
+  case (int)ON::continuity::C1_continuous: c = ON::continuity::C1_continuous; break;
+  case (int)ON::continuity::C2_continuous: c = ON::continuity::C1_continuous; break;
+  case (int)ON::continuity::G1_continuous: c = ON::continuity::G1_continuous; break;
+  case (int)ON::continuity::G2_continuous: c = ON::continuity::G1_continuous; break;
+  case (int)ON::continuity::C0_locus_continuous: c = ON::continuity::C0_locus_continuous; break;
+  case (int)ON::continuity::C1_locus_continuous: c = ON::continuity::C1_locus_continuous; break;
+  case (int)ON::continuity::C2_locus_continuous: c = ON::continuity::C1_locus_continuous; break;
+  case (int)ON::continuity::G1_locus_continuous: c = ON::continuity::G1_locus_continuous; break;
+  case (int)ON::continuity::G2_locus_continuous: c = ON::continuity::G1_locus_continuous; break;
+  case (int)ON::continuity::Cinfinity_continuous: c = ON::continuity::C1_continuous; break;
+  case (int)ON::continuity::Gsmooth_continuous: c = ON::continuity::G1_continuous; break;
+  };
+
+  return c;
+}
+
 
 ON::curve_style ON::CurveStyle(int i)
 {
@@ -1440,19 +1636,19 @@ ON::surface_style ON::SurfaceStyle(int i)
 
 ON::sort_algorithm ON::SortAlgorithm(int i)
 {
-  sort_algorithm sa = heap_sort;
+  sort_algorithm sa = ON::sort_algorithm::quick_sort;
   
   switch (i) {
-  case heap_sort: sa = heap_sort; break;
-  case quick_sort: sa = quick_sort; break;
-  default: sa = heap_sort; break;
+  case (int)ON::sort_algorithm::heap_sort: sa = ON::sort_algorithm::heap_sort; break;
+  case (int)ON::sort_algorithm::quick_sort: sa = ON::sort_algorithm::quick_sort; break;
+  default: sa = ON::sort_algorithm::quick_sort; break;
   }
   return sa;
 }
 
 ON::endian ON::Endian(int i)
 { // convert integer to endian enum
-  endian e = (i<=0) ? little_endian : big_endian;
+  endian e = (i <= 0) ? ON::endian::little_endian : ON::endian::big_endian;
   return e;
 }
 
@@ -1464,19 +1660,19 @@ ON::endian ON::Endian()
     unsigned char b[sizeof(int)];
   } u;
   u.i = 1;
-  return (u.b[0] == 1) ? little_endian : big_endian;
+  return (u.b[0] == 1) ? ON::endian::little_endian : ON::endian::big_endian;
 }
 
 ON::archive_mode ON::ArchiveMode(int i)
 {
   // convert integer to endian enum
-  archive_mode a = read;
+  ON::archive_mode a = ON::archive_mode::read;
   switch(i) {
-  case read:      a = read; break;
-  case write:     a = write; break;
-  case readwrite: a = readwrite; break;
-  case read3dm:   a = read3dm; break;
-  case write3dm:  a = write3dm; break;
+  case (int)ON::archive_mode::read:      a = ON::archive_mode::read; break;
+  case (int)ON::archive_mode::write:     a = ON::archive_mode::write; break;
+  case (int)ON::archive_mode::readwrite: a = ON::archive_mode::readwrite; break;
+  case (int)ON::archive_mode::read3dm:   a = ON::archive_mode::read3dm; break;
+  case (int)ON::archive_mode::write3dm:  a = ON::archive_mode::write3dm; break;
   }
   return a;
 }
@@ -1716,35 +1912,38 @@ ON::view_type ON::ViewType(int vt)
 {
   switch(vt)
   {
-  case model_view_type:  return (model_view_type);  break;
-  case page_view_type:   return (page_view_type);   break;
-  case nested_view_type: return (nested_view_type); break;
+  case model_view_type:       return (model_view_type);       break;
+  case page_view_type:        return (page_view_type);        break;
+  case nested_view_type:      return (nested_view_type);      break;
+  case uveditor_view_type:    return (uveditor_view_type);    break;
+  case blockeditor_view_type: return (blockeditor_view_type); break;
   }
 
   return (model_view_type);
 }
 
 
-ON::display_mode ON::DisplayMode(int i)
+ON::v3_display_mode ON::V3DisplayMode(int i)
 {
   // convert integer to light_style enum
-  ON::display_mode dm = default_display;
+  ON::v3_display_mode dm = ON::v3_default_display;
   switch(i) {
-  case default_display:
-    dm = default_display;
+  case ON::v3_default_display:
+    dm = ON::v3_default_display;
     break;
-  case wireframe_display:
-    dm = wireframe_display;
+  case ON::v3_wireframe_display:
+    dm = ON::v3_wireframe_display;
     break;
-  case shaded_display:
-    dm = shaded_display;
+  case ON::v3_shaded_display:
+    dm = ON::v3_shaded_display;
     break;
-  case renderpreview_display: 
-    dm = renderpreview_display;
+  case ON::v3_renderpreview_display: 
+    dm = ON::v3_renderpreview_display;
     break;
   }
   return dm;
 }
+
 
 ON::texture_mode ON::TextureMode(int i)
 {
@@ -1770,41 +1969,42 @@ ON::texture_mode ON::TextureMode(int i)
 ON::object_type ON::ObjectType(int i)
 {
   // convert integer to object_type enum
-  object_type ot = unknown_object_type;
+  object_type ot = ON::object_type::unknown_object_type;
   switch(i) 
   {
-  case unknown_object_type:  ot = unknown_object_type; break;
+  case ON::object_type::unknown_object_type:  ot = ON::object_type::unknown_object_type; break;
 
-  case point_object:         ot = point_object; break;
-  case pointset_object:      ot = pointset_object; break;
-  case curve_object:         ot = curve_object; break;
-  case surface_object:       ot = surface_object; break;
-  case brep_object:          ot = brep_object; break;
-  case mesh_object:          ot = mesh_object; break;
-  case layer_object:         ot = layer_object; break;
-  case material_object:      ot = material_object; break;
-  case light_object:         ot = light_object; break;
-  case annotation_object:    ot = annotation_object; break;
-  case userdata_object:      ot = userdata_object; break;
-  case instance_definition:  ot = instance_definition; break;
-  case instance_reference:   ot = instance_reference; break;
-  case text_dot:             ot = text_dot; break;
-  case grip_object:          ot = grip_object; break;
-  case detail_object:        ot = detail_object; break;
-  case hatch_object:         ot = hatch_object; break;
-  case morph_control_object: ot = morph_control_object; break;
-  case loop_object:          ot = loop_object; break;
-  case polysrf_filter:       ot = polysrf_filter; break;
-  case edge_filter:          ot = edge_filter; break;
-  case polyedge_filter:      ot = polyedge_filter; break;
-  case meshvertex_object:    ot = meshvertex_object; break;
-  case meshedge_object:      ot = meshedge_object; break;
-  case meshface_object:      ot = meshface_object; break;
-  case cage_object:          ot = cage_object; break;
-  case phantom_object:       ot = phantom_object; break;
-  case extrusion_object:     ot = extrusion_object; break;
+  case ON::object_type::point_object:         ot = ON::object_type::point_object; break;
+  case ON::object_type::pointset_object:      ot = ON::object_type::pointset_object; break;
+  case ON::object_type::curve_object:         ot = ON::object_type::curve_object; break;
+  case ON::object_type::surface_object:       ot = ON::object_type::surface_object; break;
+  case ON::object_type::brep_object:          ot = ON::object_type::brep_object; break;
+  case ON::object_type::mesh_object:          ot = ON::object_type::mesh_object; break;
+  case ON::object_type::layer_object:         ot = ON::object_type::layer_object; break;
+  case ON::object_type::material_object:      ot = ON::object_type::material_object; break;
+  case ON::object_type::light_object:         ot = ON::object_type::light_object; break;
+  case ON::object_type::annotation_object:    ot = ON::object_type::annotation_object; break;
+  case ON::object_type::userdata_object:      ot = ON::object_type::userdata_object; break;
+  case ON::object_type::instance_definition:  ot = ON::object_type::instance_definition; break;
+  case ON::object_type::instance_reference:   ot = ON::object_type::instance_reference; break;
+  case ON::object_type::text_dot:             ot = ON::object_type::text_dot; break;
+  case ON::object_type::grip_object:          ot = ON::object_type::grip_object; break;
+  case ON::object_type::detail_object:        ot = ON::object_type::detail_object; break;
+  case ON::object_type::hatch_object:         ot = ON::object_type::hatch_object; break;
+  case ON::object_type::morph_control_object: ot = ON::object_type::morph_control_object; break;
+  case ON::object_type::loop_object:          ot = ON::object_type::loop_object; break;
+  case ON::object_type::polysrf_filter:       ot = ON::object_type::polysrf_filter; break;
+  case ON::object_type::edge_filter:          ot = ON::object_type::edge_filter; break;
+  case ON::object_type::polyedge_filter:      ot = ON::object_type::polyedge_filter; break;
+  case ON::object_type::meshvertex_filter:    ot = ON::object_type::meshvertex_filter; break;
+  case ON::object_type::meshedge_filter:      ot = ON::object_type::meshedge_filter; break;
+  case ON::object_type::meshface_filter:      ot = ON::object_type::meshface_filter; break;
+  case ON::object_type::cage_object:          ot = ON::object_type::cage_object; break;
+  case ON::object_type::phantom_object:       ot = ON::object_type::phantom_object; break;
+  case ON::object_type::extrusion_object:     ot = ON::object_type::extrusion_object; break;
+  case ON::object_type::meshcomponent_reference: ot = ON::object_type::meshcomponent_reference; break;
 
-  default: ot = unknown_object_type; break;
+  default: ot = ON::object_type::unknown_object_type; break;
   }
 
   return ot;
@@ -1842,7 +2042,7 @@ ON::object_decoration ON::ObjectDecoration(int i)
 ON::osnap_mode ON::OSnapMode(int i)
 {
   ON::osnap_mode osm;
-  switch(i)
+  switch((unsigned int)i)
   {
   case os_none:          osm = os_none; break;
   case os_near:          osm = os_near; break;
@@ -1906,89 +2106,776 @@ ON::cubic_loft_end_condition ON::CubicLoftEndCondition(int i)
 
 ON::mesh_type ON::MeshType(int i)
 {
-  mesh_type mt = default_mesh;
+  mesh_type mt = ON::mesh_type::default_mesh;
   switch(i)
   {
-  case default_mesh:  mt = default_mesh;  break;
-  case render_mesh:   mt = render_mesh;   break;
-  case analysis_mesh: mt = analysis_mesh; break;
-  case preview_mesh:  mt = preview_mesh; break;
-  case any_mesh:      mt = any_mesh;      break;
-  default:            mt = default_mesh;  break;
+  case (int)ON::mesh_type::default_mesh:  mt = ON::mesh_type::default_mesh;  break;
+  case (int)ON::mesh_type::render_mesh:   mt = ON::mesh_type::render_mesh;   break;
+  case (int)ON::mesh_type::analysis_mesh: mt = ON::mesh_type::analysis_mesh; break;
+  case (int)ON::mesh_type::preview_mesh:  mt = ON::mesh_type::preview_mesh; break;
+  case (int)ON::mesh_type::any_mesh:      mt = ON::mesh_type::any_mesh;      break;
+  default:            mt = ON::mesh_type::default_mesh;  break;
   }
   return mt;
 }
 
 
-ON::eAnnotationType ON::AnnotationType(int i)
+ON_INTERNAL_OBSOLETE::V5_eAnnotationType ON_INTERNAL_OBSOLETE::V5AnnotationTypeFromUnsigned(unsigned int v5_annotation_type_as_unsigned)
 {
   // convert integer to eAnnotationType enum
-  eAnnotationType at = dtNothing;
-  switch(i) {
-  case dtNothing:
-    at = dtNothing;
-    break;
-  case dtDimLinear:
-    at = dtDimLinear;
-    break;
-  case dtDimAligned:
-    at = dtDimAligned;
-    break;
-  case dtDimAngular:
-    at = dtDimAngular;
-    break;
-  case dtDimDiameter:
-    at = dtDimDiameter;
-    break;
-  case dtDimRadius:
-    at = dtDimRadius;
-    break;
-  case dtLeader:
-    at = dtLeader;
-    break;
-  case dtTextBlock:
-    at = dtTextBlock;
-    break;
-  case dtDimOrdinate:
-    at = dtDimOrdinate;
-    break;
-  }
-  return at;
-}
-
-ON::eTextDisplayMode ON::TextDisplayMode( int i)
-{
-  eTextDisplayMode m = dtAboveLine;
-  switch( i)
+  switch(v5_annotation_type_as_unsigned) 
   {
-  case dtHorizontal:
-    m = dtHorizontal;
+  ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_eAnnotationType::dtNothing);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_eAnnotationType::dtDimLinear);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_eAnnotationType::dtDimAligned);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_eAnnotationType::dtDimAngular);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_eAnnotationType::dtDimDiameter);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_eAnnotationType::dtDimRadius);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_eAnnotationType::dtLeader);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_eAnnotationType::dtTextBlock);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_eAnnotationType::dtDimOrdinate);
+  }
+  ON_ERROR("Invalid v5_annotation_type_as_unsigned value");
+  return (ON_INTERNAL_OBSOLETE::V5_eAnnotationType::dtNothing);
+}
+
+ON::ComponentNameConflictResolution ON::ComponentNameConflictResolutionFromUnsigned(
+  unsigned int component_name_conflict_resolution_as_unsigned
+)
+{
+  switch (component_name_conflict_resolution_as_unsigned)
+  {
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::ComponentNameConflictResolution::Unset);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::ComponentNameConflictResolution::QueryMethod);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::ComponentNameConflictResolution::UseExistingComponent);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::ComponentNameConflictResolution::ReplaceExistingComponent);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::ComponentNameConflictResolution::KeepBothComponentsAutomaticRename);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::ComponentNameConflictResolution::KeepBothComponentsQueryRename);
+  ON_ENUM_FROM_UNSIGNED_CASE(ON::ComponentNameConflictResolution::NoConflict);
+  }
+  ON_ERROR("Invalid component_name_conflict_resolution_as_unsigned value");
+  return (ON::ComponentNameConflictResolution::Unset);
+}
+
+
+ON_INTERNAL_OBSOLETE::V5_vertical_alignment ON_INTERNAL_OBSOLETE::V5VerticalAlignmentFromUnsigned(
+  unsigned int vertical_alignment_as_unsigned
+  )
+{
+  switch (vertical_alignment_as_unsigned)
+  {
+    ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Centered);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Above);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Below);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Top);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_vertical_alignment::FirstLine);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Middle);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_vertical_alignment::LastLine);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Bottom);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Underlined);
+  }
+  ON_ERROR("invalid vertical_alignment_as_unsigned parameter.");
+  return (ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Centered);
+}
+
+ON_INTERNAL_OBSOLETE::V5_vertical_alignment ON_INTERNAL_OBSOLETE::V5VerticalAlignmentFromV6VerticalAlignment(
+  const ON::TextVerticalAlignment text_vertical_alignment
+)
+{
+  ON_INTERNAL_OBSOLETE::V5_vertical_alignment valign = ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Centered;
+
+  switch (text_vertical_alignment)
+  {
+  case ON::TextVerticalAlignment::Top:
+    valign = ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Top;
     break;
-  case dtAboveLine:
-    m = dtAboveLine;
+  case ON::TextVerticalAlignment::MiddleOfTop:
+    valign = ON_INTERNAL_OBSOLETE::V5_vertical_alignment::FirstLine;
     break;
-  case dtInLine:
-    m = dtInLine;
+  case ON::TextVerticalAlignment::BottomOfTop:
+    // no exact mapping works - this works if there is one line of text
+    valign = ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Bottom;
+    break;
+  case ON::TextVerticalAlignment::Middle:
+    valign = ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Middle;
+    break;
+  case ON::TextVerticalAlignment::MiddleOfBottom:
+    valign = ON_INTERNAL_OBSOLETE::V5_vertical_alignment::LastLine;
+    break;
+  case ON::TextVerticalAlignment::Bottom:
+    valign = ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Bottom;
+    break;
+  case ON::TextVerticalAlignment::BottomOfBoundingBox:
+    valign = ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Underlined;
     break;
   }
-  return m;
+
+  return valign;
+}
+
+ON::TextVerticalAlignment ON_INTERNAL_OBSOLETE::V6VerticalAlignmentFromV5VerticalAlignment(
+  ON_INTERNAL_OBSOLETE::V5_vertical_alignment V5_vertical_alignment
+)
+{
+  ON::TextVerticalAlignment valign = ON::TextVerticalAlignment::Middle;
+
+  switch (V5_vertical_alignment)
+  {
+  case ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Centered:
+    valign = ON::TextVerticalAlignment::Middle;    
+    break;
+  case ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Above:
+    // V5 text "above" dim line means "bottom" of text bbox is at insertion point above dim line
+    valign = ON::TextVerticalAlignment::Bottom;    
+    break;
+  case ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Below:
+    // V5 text "below" dim line means "top" of text bbox is at insertion point below dim line
+    valign = ON::TextVerticalAlignment::Top;    
+    break;
+  case ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Top:
+    valign = ON::TextVerticalAlignment::Top;    
+    break;
+  case ON_INTERNAL_OBSOLETE::V5_vertical_alignment::FirstLine:
+    valign = ON::TextVerticalAlignment::MiddleOfTop;    
+    break;
+  case ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Middle:
+    valign = ON::TextVerticalAlignment::Middle;    
+    break;
+  case ON_INTERNAL_OBSOLETE::V5_vertical_alignment::LastLine:
+    valign = ON::TextVerticalAlignment::MiddleOfBottom;    
+    break;
+  case ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Bottom:
+    valign = ON::TextVerticalAlignment::Bottom;    
+    break;
+  case ON_INTERNAL_OBSOLETE::V5_vertical_alignment::Underlined:
+    valign = ON::TextVerticalAlignment::BottomOfBoundingBox;
+    break;
+  }
+
+  return valign;
 }
 
 
-// Windows code page support 
-//   Only ON_SetStringConversionWindowsCodePage
-//   and ON_GetStringConversionWindowsCodePage 
-//   should look at g_s__windows_code_page.
-static unsigned int g_s__windows_code_page = 0;
-
-unsigned int ON_SetStringConversionWindowsCodePage( unsigned int code_page )
+ON_INTERNAL_OBSOLETE::V5_horizontal_alignment ON_INTERNAL_OBSOLETE::V5HorizontalAlignmentFromUnsigned(
+  unsigned int horizontal_alignment_as_unsigned
+  )
 {
-  unsigned int prev_cp = g_s__windows_code_page;
-  g_s__windows_code_page = code_page;
-  return prev_cp;
+  switch (horizontal_alignment_as_unsigned)
+  {
+    ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_horizontal_alignment::Left);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_horizontal_alignment::Center);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_horizontal_alignment::Right);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON_INTERNAL_OBSOLETE::V5_horizontal_alignment::Auto);
+  }
+  ON_ERROR("invalid horizontal_alignment_as_unsigned parameter.");
+  return (ON_INTERNAL_OBSOLETE::V5_horizontal_alignment::Left);
 }
 
-unsigned int ON_GetStringConversionWindowsCodePage()
+ON_INTERNAL_OBSOLETE::V5_horizontal_alignment ON_INTERNAL_OBSOLETE::V5HorizontalAlignmentFromV6HorizontalAlignment(
+  const ON::TextHorizontalAlignment text_horizontal_alignment
+)
 {
-  return g_s__windows_code_page;
+  ON_INTERNAL_OBSOLETE::V5_horizontal_alignment halign = ON_INTERNAL_OBSOLETE::V5_horizontal_alignment::Left;
+
+  switch (text_horizontal_alignment)
+  {
+  case ON::TextHorizontalAlignment::Left:
+    halign = ON_INTERNAL_OBSOLETE::V5_horizontal_alignment::Left;
+    break;
+  case ON::TextHorizontalAlignment::Center:
+    halign = ON_INTERNAL_OBSOLETE::V5_horizontal_alignment::Center;
+    break;
+  case ON::TextHorizontalAlignment::Right:
+    halign = ON_INTERNAL_OBSOLETE::V5_horizontal_alignment::Right;
+    break;
+  case ON::TextHorizontalAlignment::Auto:
+    halign = ON_INTERNAL_OBSOLETE::V5_horizontal_alignment::Left;
+    break;
+  }
+
+  return halign;
+}
+
+ON::TextHorizontalAlignment ON_INTERNAL_OBSOLETE::V6HorizontalAlignmentFromV5HorizontalAlignment(
+  ON_INTERNAL_OBSOLETE::V5_horizontal_alignment V5_vertical_alignment
+)
+{
+  ON::TextHorizontalAlignment halign = ON::TextHorizontalAlignment::Left;
+
+  switch (V5_vertical_alignment)
+  {
+  case ON_INTERNAL_OBSOLETE::V5_horizontal_alignment::Left:
+    halign = ON::TextHorizontalAlignment::Left;
+    break;
+  case ON_INTERNAL_OBSOLETE::V5_horizontal_alignment::Center:
+    halign = ON::TextHorizontalAlignment::Center;
+    break;
+  case ON_INTERNAL_OBSOLETE::V5_horizontal_alignment::Right:
+    halign = ON::TextHorizontalAlignment::Right;
+    break;
+  case ON_INTERNAL_OBSOLETE::V5_horizontal_alignment::Auto:
+    halign = ON::TextHorizontalAlignment::Left;
+    break;
+  }
+
+  return halign;
+}
+
+ON_2dex::ON_2dex(
+  int iValue,
+  int jValue)
+  : i(iValue)
+  , j(jValue)
+{}
+
+ON_2dex ON_2dex::AsIncreasing() const
+{
+  ON_2dex rc;
+  if (j < i)
+  {
+    rc.i = j;
+    rc.j = i;
+  }
+  else
+  {
+    rc.i = i;
+    rc.j = j;
+  }
+  return rc;
+}
+
+ON_2dex ON_2dex::AsDecreasing() const
+{
+  ON_2dex rc;
+  if (i < j)
+  {
+    rc.i = j;
+    rc.j = i;
+  }
+  else
+  {
+    rc.i = i;
+    rc.j = j;
+  }
+  return rc;
+}
+
+ON_2udex ON_2udex::AsIncreasing() const
+{
+  ON_2udex rc;
+  if (j < i)
+  {
+    rc.i = j;
+    rc.j = i;
+  }
+  else
+  {
+    rc.i = i;
+    rc.j = j;
+  }
+  return rc;
+}
+
+ON_2udex ON_2udex::AsDecreasing() const
+{
+  ON_2udex rc;
+  if (i < j)
+  {
+    rc.i = j;
+    rc.j = i;
+  }
+  else
+  {
+    rc.i = i;
+    rc.j = j;
+  }
+  return rc;
+}
+
+bool ON_2dex::operator==(const ON_2dex& src) const
+{
+  return i == src.i && j == src.j;
+}
+
+bool ON_2dex::operator!=(const ON_2dex& src) const
+{
+  return i != src.i || j != src.j;
+}
+
+bool ON_2udex::operator==(const ON_2udex& src) const
+{
+  return i == src.i && j == src.j;
+}
+
+bool ON_2udex::operator!=(const ON_2udex& src) const
+{
+  return i != src.i || j != src.j;
+}
+
+bool ON_2udex::operator<(const ON_2udex& src) const
+{
+  return i < src.i || ((j == src.j) && j < src.j);
+}
+
+bool ON_2udex::operator<=(const ON_2udex& src) const
+{
+  return i < src.i || ((j == src.j) && j <= src.j);
+}
+
+bool ON_2udex::operator>=(const ON_2udex& src) const
+{
+  return i > src.i || ((j == src.j) && j >= src.j);
+}
+
+bool ON_2udex::operator>(const ON_2udex& src) const
+{
+  return i > src.i || ((j == src.j) && j > src.j);
+}
+
+bool ON_4dex::operator==(const ON_4dex& src) const
+{
+  return i == src.i && j == src.j && k == src.k && l == src.l;
+}
+
+bool ON_4dex::operator!=(const ON_4dex& src) const
+{
+  return i != src.i || j != src.j || k != src.k || l != src.l;
+}
+
+bool ON_4udex::operator==(const ON_4udex& src) const
+{
+  return i == src.i && j == src.j && k == src.k && l == src.l;
+}
+
+bool ON_4udex::operator!=(const ON_4udex& src) const
+{
+  return i != src.i || j != src.j || k != src.k || l != src.l;
+}
+
+ON_3dex::ON_3dex(
+  int iValue,
+  int jValue,
+  int kValue)
+  : i(iValue)
+  , j(jValue)
+  , k(kValue)
+{}
+
+ON_4dex::ON_4dex(
+  int iValue,
+  int jValue,
+  int kValue,
+  int lValue)
+  : i(iValue)
+  , j(jValue)
+  , k(kValue)
+  , l(lValue)
+{}
+
+ON_4dex ON_4dex::AsIncreasing() const
+{
+  auto rc = ON_4dex(i, j, k, l);
+  if (j < i) std::swap(rc.i, rc.j);
+  if (k < i) std::swap(rc.i, rc.k);
+  if (j < i) std::swap(rc.i, rc.l);
+  if (k < j) std::swap(rc.j, rc.k);
+  if (l < j) std::swap(rc.j, rc.l);
+  if (l < k) std::swap(rc.k, rc.l);
+  return rc;
+}
+
+ON_4dex ON_4dex::AsPairwiseIncreasing() const
+{
+  auto rc = ON_4dex(i, j, k, l);
+  if (k < i)
+  {
+    std::swap(rc.i, rc.k);
+    std::swap(rc.j, rc.l);
+  }
+  else if (i == k && l < j)
+  {
+    std::swap(rc.j, rc.l);
+  }
+  return rc;
+}
+
+ON_4udex ON_4udex::AsIncreasing() const
+{
+  auto rc = ON_4udex(i, j, k, l);
+  if (j < i) std::swap(rc.i, rc.j);
+  if (k < i) std::swap(rc.i, rc.k);
+  if (j < i) std::swap(rc.i, rc.l);
+  if (k < j) std::swap(rc.j, rc.k);
+  if (l < j) std::swap(rc.j, rc.l);
+  if (l < k) std::swap(rc.k, rc.l);
+  return rc;
+}
+
+ON_4udex ON_4udex::AsPairwiseIncreasing() const
+{
+  auto rc = ON_4udex(i, j, k, l);
+  if (k < i)
+  {
+    std::swap(rc.i, rc.k);
+    std::swap(rc.j, rc.l);
+  }
+  else if (i == k && l < j)
+  {
+    std::swap(rc.j, rc.l);
+  }
+  return rc;
+}
+
+int ON_4dex::operator[](int ind) const
+{ 
+	switch (ind) {
+	case 0:
+		return i;
+	case 1:
+		return j;
+	case 2:
+		return k;
+	}
+	return l;
+}
+
+int& ON_4dex::operator[](int ind)
+{
+	switch (ind) {
+	case 0:
+		return i;
+	case 1:
+		return j;
+	case 2:
+		return k;
+	}
+	return l;
+}
+
+ON_2udex::ON_2udex(
+  unsigned int iValue,
+  unsigned int jValue)
+  : i(iValue)
+  , j(jValue)
+{}
+
+int ON_2udex::DictionaryCompare(
+  const ON_2udex* lhs,
+  const ON_2udex* rhs
+)
+{
+  if (lhs == rhs)
+    return 0;
+  if (nullptr == lhs)
+    return 1;
+  if (nullptr == rhs)
+    return -1;
+  if (lhs->i < rhs->i)
+    return -1;
+  if (lhs->i > rhs->i)
+    return 1;
+  if (lhs->j < rhs->j)
+    return -1;
+  if (lhs->j > rhs->j)
+    return 1;
+  return 0;
+}
+
+int ON_2udex::CompareFirstIndex(
+  const ON_2udex* lhs,
+  const ON_2udex* rhs
+)
+{
+  if (lhs == rhs)
+    return 0;
+  if (nullptr == lhs)
+    return 1;
+  if (nullptr == rhs)
+    return -1;
+  if (lhs->i < rhs->i)
+    return -1;
+  if (lhs->i > rhs->i)
+    return 1;
+  return 0;
+}
+
+int ON_2udex::CompareSecondIndex(
+  const ON_2udex* lhs,
+  const ON_2udex* rhs
+)
+{
+  if (lhs == rhs)
+    return 0;
+  if (nullptr == lhs)
+    return 1;
+  if (nullptr == rhs)
+    return -1;
+  if (lhs->j < rhs->j)
+    return -1;
+  if (lhs->j > rhs->j)
+    return 1;
+  return 0;
+}
+
+
+
+ON_3udex::ON_3udex(
+  unsigned int iValue,
+  unsigned int jValue,
+  unsigned int kValue)
+  : i(iValue)
+  , j(jValue)
+  , k(kValue)
+{}
+
+int ON_3udex::DictionaryCompare(
+  const ON_3udex* lhs,
+  const ON_3udex* rhs
+)
+{
+  if (lhs == rhs)
+    return 0;
+  if (nullptr == lhs)
+    return 1;
+  if (nullptr == rhs)
+    return -1;
+  if (lhs->i < rhs->i)
+    return -1;
+  if (lhs->i > rhs->i)
+    return 1;
+  if (lhs->j < rhs->j)
+    return -1;
+  if (lhs->j > rhs->j)
+    return 1;
+  if (lhs->k < rhs->k)
+    return -1;
+  if (lhs->k > rhs->k)
+    return 1;
+  return 0;
+}
+
+int ON_3udex::CompareFirstIndex(
+  const ON_3udex* lhs,
+  const ON_3udex* rhs
+)
+{
+  if (lhs == rhs)
+    return 0;
+  if (nullptr == lhs)
+    return 1;
+  if (nullptr == rhs)
+    return -1;
+  if (lhs->i < rhs->i)
+    return -1;
+  if (lhs->i > rhs->i)
+    return 1;
+  return 0;
+}
+
+int ON_3udex::CompareSecondIndex(
+  const ON_3udex* lhs,
+  const ON_3udex* rhs
+)
+{
+  if (lhs == rhs)
+    return 0;
+  if (nullptr == lhs)
+    return 1;
+  if (nullptr == rhs)
+    return -1;
+  if (lhs->j < rhs->j)
+    return -1;
+  if (lhs->j > rhs->j)
+    return 1;
+  return 0;
+}
+
+int ON_3udex::CompareThirdIndex(
+  const ON_3udex* lhs,
+  const ON_3udex* rhs
+)
+{
+  if (lhs == rhs)
+    return 0;
+  if (nullptr == lhs)
+    return 1;
+  if (nullptr == rhs)
+    return -1;
+  if (lhs->k < rhs->k)
+    return -1;
+  if (lhs->k > rhs->k)
+    return 1;
+  return 0;
+}
+
+int ON_3udex::CompareFirstAndSecondIndex(
+  const ON_3udex* lhs,
+  const ON_3udex* rhs
+)
+{
+  if (lhs == rhs)
+    return 0;
+  if (nullptr == lhs)
+    return 1;
+  if (nullptr == rhs)
+    return -1;
+  if (lhs->i < rhs->i)
+    return -1;
+  if (lhs->i > rhs->i)
+    return 1;
+  if (lhs->j < rhs->j)
+    return -1;
+  if (lhs->j > rhs->j)
+    return 1;
+  return 0;
+}
+
+ON_4udex::ON_4udex(
+  unsigned int iValue,
+  unsigned int jValue,
+  unsigned int kValue,
+  unsigned int lValue)
+  : i(iValue)
+  , j(jValue)
+  , k(kValue)
+  , l(lValue)
+{}
+
+void ON_StopWatch::Start()
+{
+  if (ON_StopWatch::State::Off == m_state || ON_StopWatch::State::Stopped == m_state)
+  {
+    m_state = ON_StopWatch::State::Running;
+    m_start = std::chrono::high_resolution_clock::now();
+  }
+}
+
+double ON_StopWatch::Stop()
+{
+  const std::chrono::high_resolution_clock::time_point t = std::chrono::high_resolution_clock::now();
+  double d;
+  if ( ON_StopWatch::State::Running == m_state)
+  {
+    m_stop = t;
+    m_state = ON_StopWatch::State::Stopped;
+    d = ElapsedTime();
+  }
+  else
+  {
+    d = 0.0;
+  }
+  return d;
+}
+
+void ON_StopWatch::Reset()
+{
+  m_state = ON_StopWatch::State::Off;
+}
+
+ON_StopWatch::State ON_StopWatch::CurrentState() const
+{
+  return m_state;
+}
+
+double ON_StopWatch::ElapsedTime() const
+{
+  std::chrono::high_resolution_clock::time_point t = std::chrono::high_resolution_clock::now();
+  if (ON_StopWatch::State::Stopped == m_state)
+    t = m_stop;
+  double d;
+  if (ON_StopWatch::State::Stopped == m_state || ON_StopWatch::State::Running == m_state)
+  {
+    //d = std::chrono::duration< double, std::chrono::high_resolution_clock::period >(t - m_start).count();
+    d = std::chrono::duration<double, std::ratio<1, 1> >(t - m_start).count();
+  }
+  else
+  {
+    d = 0.0;
+  }
+  return d;
+}
+
+ON::LineCapStyle ON::LineCapStyleFromUnsigned(
+  unsigned int cap_as_unsigned
+)
+{
+  switch (cap_as_unsigned)
+  {
+    ON_ENUM_FROM_UNSIGNED_CASE(ON::LineCapStyle::Round);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON::LineCapStyle::Flat);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON::LineCapStyle::Square);
+  }
+  ON_ERROR("invalid cap_as_unsigned parameter.");
+  return ON::LineCapStyle::Round;
+}
+
+ON::LineJoinStyle ON::LineJoinStyleFromUnsigned(
+  unsigned int join_as_unsigned
+)
+{
+  switch (join_as_unsigned)
+  {
+    ON_ENUM_FROM_UNSIGNED_CASE(ON::LineJoinStyle::Round);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON::LineJoinStyle::Miter);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON::LineJoinStyle::Bevel);
+  }
+  ON_ERROR("invalid join_as_unsigned parameter.");
+  return ON::LineJoinStyle::Round;
+}
+
+
+ON::SectionFillRule ON::SectionFillRuleFromUnsigned(
+  unsigned int section_fill_rule_as_unsigned
+)
+{
+  switch (section_fill_rule_as_unsigned)
+  {
+    ON_ENUM_FROM_UNSIGNED_CASE(ON::SectionFillRule::ClosedCurves);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON::SectionFillRule::SolidObjects);
+  }
+  ON_ERROR("invalid section_fill_rule_as_unsigned parameter.");
+  return ON::SectionFillRule::ClosedCurves;
+}
+
+ON::SectionAttributesSource ON::SectionAttributesSourceFromUnsigned(
+  unsigned int section_attributes_source_as_unsigned
+)
+{
+  switch (section_attributes_source_as_unsigned)
+  {
+    ON_ENUM_FROM_UNSIGNED_CASE(ON::SectionAttributesSource::FromLayer);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON::SectionAttributesSource::FromObject);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON::SectionAttributesSource::FromParent);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON::SectionAttributesSource::FromSectioner);
+  }
+  ON_ERROR("invalid section_attributes_source_as_unsigned parameter.");
+  return ON::SectionAttributesSource::FromLayer;
+}
+
+ON::SectionLabelStyle ON::SectionLabelStyleFromUnsigned(
+  unsigned int section_label_style_as_unsigned
+)
+{
+  switch (section_label_style_as_unsigned)
+  {
+    ON_ENUM_FROM_UNSIGNED_CASE(ON::SectionLabelStyle::None);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON::SectionLabelStyle::TextDotFromName);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON::SectionLabelStyle::TextFromName);
+  }
+  ON_ERROR("invalid section_label_style_as_unsigned parameter.");
+  return ON::SectionLabelStyle::None;
+}
+
+
+ON::ViewSectionBehavior ON::ViewSectionBehaviorFromUnsigned(
+  unsigned int view_section_behavior_as_unsigned
+)
+{
+  switch (view_section_behavior_as_unsigned)
+  {
+    ON_ENUM_FROM_UNSIGNED_CASE(ON::ViewSectionBehavior::ClipAndSection);
+    ON_ENUM_FROM_UNSIGNED_CASE(ON::ViewSectionBehavior::SectionOnly);
+  }
+  ON_ERROR("invalid view_section_behavior_as_unsigned parameter.");
+  return ON::ViewSectionBehavior::ClipAndSection;
 }

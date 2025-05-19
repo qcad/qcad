@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(OPENNURBS_KNOT_INC_)
 #define OPENNURBS_KNOT_INC_
@@ -43,6 +41,77 @@ int ON_KnotCount( // returns (order + cv_count - 2)
           int, // order (>=2)
           int  // cv_count (>=order)
           );
+
+/// <summary>
+/// Get the indices of the B-spline spans where the specified 
+/// control point is active.
+/// Note that a B-spline with n control points has (n-degree) many spans.
+/// If 0 &lt= span_index &lt; (n-degree), then 
+/// CV(span_index), ..., CV(span_index+degree)
+/// and 
+/// {knot[span_index], ..., knot[span_index+2*degree-1]}
+/// are the control points and knots that are active in that span. 
+/// The domain of the span is 
+/// [knot[span_index+degree-1], knot[span_index+degree]].
+/// </summary>
+/// <param name="order">
+/// B-spline order.
+/// order &gt;= 2 (order = degree + 1)
+/// </param>
+/// <param name="control_point_count">
+/// Number of B-spline control points.
+/// control_point_count &gt;= order
+/// </param>
+/// <param name="control_point_index">
+/// 0 &lt;= control_point_index &lt; control_point_count
+/// </param>
+/// <returns>
+/// If the input is valid,
+/// then the spans whose index satisfies 
+/// ON_2dex.i &lt;= span_index &lt; ON_2dex.j
+/// use the specified control point.
+/// If the iput is not valid, then ON_2dex(0,0) is returned.
+/// </returns>
+ON_DECL
+const ON_2dex ON_BsplineControlPointSpans(
+  int order,
+  int control_point_count,
+  int control_point_index
+); 
+
+/// <summary>
+/// Get the interval in the B-spline domain where the control point is active.
+/// The domain = [knots[order-2], knots[control_point_count-1]].
+/// The returned interval will be in domain and are the parameters
+/// where the control point influnces the value of the B-spline.
+/// </summary>
+/// <param name="order">
+/// Order of the B-spline knot vector.
+/// order &gt;= 2 (order = degree + 1)
+/// </param>
+/// <param name="control_point_count">
+/// Number of B-spline control points.
+/// control_point_count &gt;= order
+/// </param>
+/// <param name="knots">
+/// knots[] is the B-spline knot vector and is an array of 
+/// (order + control_point_count - 2) doubles.
+/// </param>
+/// <param name="control_point_index">
+/// 0 &lt;= control_point_index &lt; control_point_count
+/// </param>
+/// <returns>
+/// The interval in the domain where the control point is active.
+/// </returns>
+ON_DECL
+const ON_Interval ON_BsplineControlPointSupport(
+  int order,
+  int control_point_count,
+  const double* knots,
+  int control_point_index
+);
+
+
 
 ON_DECL
 int ON_KnotMultiplicity(
@@ -224,15 +293,15 @@ int ON_CompareKnotVector( // returns
 
 ON_DECL
 bool ON_IsValidKnotVector(
-          int,           // order (>=2)
-          int,           // cv count
-          const double*, // knot[] array
-          ON_TextLog* text_log = NULL
+          int order,
+          int cv_count, 
+          const double* knot, 
+          ON_TextLog* text_log = 0
           );
 
 ON_DECL
 bool ON_ClampKnotVector(
-          // Sets inital/final order-2 knots to values in
+          // Sets initial/final order-2 knots to values in
           // knot[order-2]/knot[cv_count-1].
           int,           // order (>=2)
           int,           // cv count
@@ -242,7 +311,7 @@ bool ON_ClampKnotVector(
 
 ON_DECL
 bool ON_MakeKnotVectorPeriodic(
-          // Sets inital and final order-2 knots to values
+          // Sets initial and final order-2 knots to values
           // that make the knot vector periodic
           int,           // order (>=2)
           int,           // cv count
@@ -335,10 +404,14 @@ bool ON_ClampKnotVector(
         int,       // order (>=2)
         int,       // cv_count,
         int,       // cv_stride, 
-        double*,   // cv[] NULL or array of order many cvs
+        double*,   // cv[] nullptr or array of order many cvs
         double*,   // knot[] array with room for at least knot_multiplicity new knots
         int        // end  0 = clamp start, 1 = clamp end, 2 = clamp both ends
         );
+
+
+
+
 
 /*
 Returns:
@@ -352,10 +425,10 @@ int ON_InsertKnot(
         int,       // order (>=2)
         int,       // cv_count,
         int,       // cv_stride (>=cv_dim)
-        double*,   // cv[]  NULL or cv array with room for at least knot_multiplicity new cvs
+        double*,   // cv[]  nullptr or cv array with room for at least knot_multiplicity new cvs
         double*,   // knot[] knot array with room for at least knot_multiplicity new knots
         int*       // hint, optional hint about where to search for span to add knots to
-                   // pass NULL if no hint is available
+                   // pass nullptr if no hint is available
         );
 
 /*
@@ -377,6 +450,7 @@ Returns:
   The cv values are changed so that
   output_bezier(t) = input_bezier(lambda(t)).
 */
+ON_DECL
 bool ON_ReparameterizeRationalBezierCurve(
           double c,
           int dim,
@@ -413,6 +487,7 @@ Remarks:
   If the input Bezier has control vertices {B_0, ..., B_d}, then the 
   output Bezier has control vertices {s*B_0, ... s*r^i * B_i, ..., s*r^d * B_d}.
 */
+ON_DECL
 bool ON_ChangeRationalBezierCurveWeights(
           int dim, int order, int cvstride, double* cv,
           int i0, double w0, 

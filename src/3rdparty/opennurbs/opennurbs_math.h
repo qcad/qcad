@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,22 +10,26 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(ON_MATH_INC_)
 #define ON_MATH_INC_
+
+/*
+Returns:
+  True (1) if nan compares and arithmetic agree with IEEE-754.
+  (nan != nan) is true.
+  (nan op x) and (x op nan) is false for op ==, <, >, <=, and >=.
+  (nan op x) and (x op nan) is nan for op == +, -, *, and /.
+  False (0) otherwise.
+*/
+ON_DECL
+bool ON_PassesNanTest();
 
 class ON_3dVector;
 class ON_Interval;
 class ON_Line;
 class ON_Arc;
 class ON_Plane;
-
-// qcad: compile fix for gcc 4.7:
-class ON_Circle;
-class ON_Cylinder;
-class ON_Sphere;
-// qcad: end
 
 /*
 Description:
@@ -79,9 +82,19 @@ public:
 
   /*
   Description:
+    Add x to the current sum.
+  Parameters:
+    x - [in] value to add to the current sum.
+    dx - [in] symmetric uncertainty in x.
+         (true value is in the range x-dx to x+dx
+  */
+  void Plus( double x, double dx );
+
+  /*
+  Description:
     Calculates the total sum.   
   Parameters:
-    error_estimate - [out] if not NULL, the returned value of
+    error_estimate - [out] if not nullptr, the returned value of
        *error_estimate is an estimate of the error in the sum.
   Returns:
     Total of the sum.
@@ -90,7 +103,7 @@ public:
     In delicate sums, some precision may be lost in the final
     total if you call Total() to calculate subtotals.
   */
-  double Total( double* error_estimate = NULL );
+  double Total( double* error_estimate = nullptr );
 
   /*
   Returns:
@@ -144,7 +157,7 @@ public:
     Construction of the class for a function that takes
     parameter_count input functions and returns
     value_count values.  If the domain is infinite, pass
-    a NULL for the domain[] and periodic[] arrays.  If
+    a nullptr for the domain[] and periodic[] arrays.  If
     the domain is finite, pass a domain[] array with
     parameter_count increasing intervals.  If one or more of
     the parameters is periodic, pass the fundamental domain
@@ -152,14 +165,14 @@ public:
   Parameters:
     parameter_count - [in] >= 1.  Number of input parameters
     value_count - [in] >= 1.  Number of output values.
-    domain - [in] If not NULL, then this is an array
+    domain - [in] If not nullptr, then this is an array
                   of parameter_count increasing intervals
                   that defines the domain of the function.
-    periodic - [in] if not NULL, then this is an array of 
+    periodic - [in] if not nullptr, then this is an array of 
                 parameter_count bools where b[i] is true if
                 the i-th parameter is periodic.  Valid 
-                increasing finite domains must be specificed
-                when this parameter is not NULL.
+                increasing finite domains must be specified
+                when this parameter is not nullptr.
   */
   ON_Evaluator( 
     int parameter_count,
@@ -177,12 +190,12 @@ public:
   Parameters:
     parameters - [in] array of m_parameter_count evaluation parameters
     values - [out] array of m_value_count function values
-    jacobian - [out] If NULL, simply evaluate the value of the function.
-                     If not NULL, this is the jacobian of the function.
+    jacobian - [out] If nullptr, simply evaluate the value of the function.
+                     If not nullptr, this is the jacobian of the function.
                      jacobian[i][j] = j-th partial of the i-th value
                      0 <= i < m_value_count,
                      0 <= j < m_parameter_count
-                     If not NULL, then all the memory for the
+                     If not nullptr, then all the memory for the
                      jacobian is allocated, you just need to fill
                      in the answers.
   Example:
@@ -221,7 +234,7 @@ public:
   Description:
     OPTIONAL ability to evaluate the hessian in the case when 
     m_value_count is one.  If your function has more that
-    one value or it is not feasable to evaluate the hessian,
+    one value or it is not feasible to evaluate the hessian,
     then do not override this function.  The default implementation
     returns -1.
   Parameters:
@@ -240,7 +253,7 @@ public:
                     and lower triangles.  Since the matrix is
                     symmetrix, you should do something like evaluate
                     the upper triangle and copy the values to the
-                    lower tiangle.
+                    lower triangle.
   Returns:
    -1 = Hessian evaluation not available.
     0 = unable to evaluate
@@ -329,14 +342,89 @@ private:
 Description:
   Test a double to make sure it is a valid number.
 Returns:
-  True if x != ON_UNSET_VALUE and _finite(x) is true.
+  (x > ON_UNSET_VALUE && x < ON_UNSET_POSITIVE_VALUE)
 */
 ON_DECL
 bool ON_IsValid( double x );
 
+/*
+Returns:
+  (x > 0.0 && x < ON_UNSET_POSITIVE_VALUE);
+*/
+ON_DECL
+bool ON_IsValidPositiveNumber(double x);
+
+/*
+Returns:
+  (x > ON_UNSET_VALUE && x < 0.0));
+*/
+ON_DECL
+bool ON_IsValidNegativeNumber(double x);
+
+/*
+Returns:
+  -1: a < b or a is not a nan and b is a nan
+  +1: a > b or a is a nan and b is a not nan
+   0: a == b or both a and b are nans
+*/
+ON_DECL
+int ON_CompareDouble( 
+  double a, 
+  double b 
+  );
+
+ON_DECL
+int ON_CompareDoubleArray( 
+  size_t count,
+  const double* a, 
+  const double* b
+  );
+
+/*
+Returns:
+  -1: a < b or a is not a nan and b is a nan
+  +1: a > b or a is a nan and b is a not nan
+   0: a == b or both a and b are nans
+*/
+ON_DECL
+int ON_CompareFloat(
+  float a,
+  float b
+  );
+
 ON_DECL
 bool ON_IsValidFloat( float x );
 
+ON_DECL
+bool ON_IsNaNd(double x);
+
+ON_DECL
+bool ON_IsQNaNd(double x);
+
+ON_DECL
+bool ON_IsSNaNd(double x);
+
+ON_DECL
+bool ON_IsNaNf(float x);
+
+ON_DECL
+bool ON_IsQNaNf(float x);
+
+ON_DECL
+bool ON_IsSNaNf(float x);
+
+/*
+class ON_CLASS ON_TimeLimit
+{
+  ON_TimeLimit();
+  ON_TimeLimit(ON__UINT64 time_limit_seconds);
+  void SetTimeLimit(ON__UINT64 time_limit_seconds);
+  bool Continue() const;
+  bool IsSet() const;
+private:
+  ON__UINT64 m_time_limit[2];
+};
+*/
 
 // The ON_IS_FINITE and ON_IS_VALID defines are much faster
 // than calling ON_IsValid(), but need to be used when
@@ -346,17 +434,13 @@ bool ON_IsValidFloat( float x );
 
 // works on little endian CPUs with IEEE doubles
 #define ON_IS_FINITE(x) (0x7FF0 != (*((unsigned short*)(&x) + 3) & 0x7FF0))
-#define ON_IS_VALID(x)  (x != ON_UNSET_VALUE && 0x7FF0 != (*((unsigned short*)(&x) + 3) & 0x7FF0))
-#define ON_IS_VALID_FLOAT(x)  (x != ON_UNSET_FLOAT)
-//TODO - ADD FAST ugly bit check#define ON_IS_VALID_FLOAT(x)  (x != ON_UNSET_FLOAT && 0x7FF0 != (*((unsigned short*)(&x) + 3) & 0x7FF0))
+#define ON_IS_INFINITE(x) (0x7FF0 == (*((unsigned short*)(&x) + 3) & 0x7FF0))
 
 #elif defined(ON_BIG_ENDIAN)
 
 // works on big endian CPUs with IEEE doubles
 #define ON_IS_FINITE(x) (0x7FF0 != (*((unsigned short*)(&x)) & 0x7FF0))
-#define ON_IS_VALID(x)  (x != ON_UNSET_VALUE && 0x7FF0 != (*((unsigned short*)(&x)) & 0x7FF0))
-#define ON_IS_VALID_FLOAT(x)  (x != ON_UNSET_FLOAT)
-//TODO - ADD FAST ugly bit check#define ON_IS_VALID_FLOAT(x)  (x != ON_UNSET_FLOAT && 0x7FF0 != (*((unsigned short*)(&x) + 3) & 0x7FF0))
+#define ON_IS_INFINITE(x) (0x7FF0 == (*((unsigned short*)(&x)) & 0x7FF0))
 
 #else
 
@@ -372,18 +456,27 @@ bool ON_IsValidFloat( float x );
 // function to return true.
 
 #if defined(_GNU_SOURCE)
-#define ON_IS_FINITE(x) (isfinite(x)?true:false)
-// If your compiler does not have "isfinite()", try using "finite()".
+// if you are using an older version of gcc, use finite()
 //#define ON_IS_FINITE(x) (finite(x)?true:false)
+#define ON_IS_FINITE(x) (isfinite(x)?true:false)
 #else
 #define ON_IS_FINITE(x) (_finite(x)?true:false)
 #endif
 
-#define ON_IS_VALID(x)  (x != ON_UNSET_VALUE && ON_IS_FINITE(x))
-#define ON_IS_VALID_FLOAT(x)  (x != ON_UNSET_FLOAT && ON_IS_FINITE(x))
-
 #endif
 
+#define ON_IS_FINITE_FLOAT(x) ((x) <= 3.402823466e+38F && (x) >= -3.402823466e+38F)
+#define ON_IS_INFINITE_FLOAT(x) ((x) > 3.402823466e+38F || (x) < -3.402823466e+38F)
+
+#define ON_IS_VALID(x)  ((x) > ON_UNSET_VALUE && (x) < ON_UNSET_POSITIVE_VALUE)
+// March 27, 2024 - Tim
+// Fix for https://mcneel.myjetbrains.com/youtrack/issue/RH-81184
+// The vertexes were crap just not quite ON_UNSET_VALUE crap
+#define ON_CV_COORDINATE_IS_VALID(x) (-1.0e307 < x && x < 1.0e307)
+#define ON_IS_VALID_FLOAT(x)  ((x) > ON_UNSET_FLOAT && (x) < ON_UNSET_POSITIVE_FLOAT)
+#define ON_IS_UNSET_DOUBLE(x) (ON_UNSET_VALUE == (x) || ON_UNSET_POSITIVE_VALUE == (x))
+#define ON_IS_UNSET_FLOAT(x) (ON_UNSET_FLOAT == (x) || ON_UNSET_POSITIVE_FLOAT == (x))
+#define ON_IS_NAN(x) (!((x)==(x)))
 
 ON_DECL
 float ON_ArrayDotProduct( // returns AoB
@@ -537,7 +630,7 @@ double ON_TrinomialCoefficient(
 
 
 ON_DECL
-ON_BOOL32 ON_GetParameterTolerance(
+bool ON_GetParameterTolerance(
         double, double, // domain
         double,          // parameter in domain
         double*, double* // parameter tolerance (tminus, tplus) returned here
@@ -545,18 +638,18 @@ ON_BOOL32 ON_GetParameterTolerance(
 
 
 ON_DECL
-ON_BOOL32 ON_IsValidPointList(
+bool ON_IsValidPointList(
         int,  // dim
-        ON_BOOL32, // true for homogeneous rational points
+        bool, // true for homogeneous rational points
         int,  // count
         int,  // stride
         const float*
         );
 
 ON_DECL
-ON_BOOL32 ON_IsValidPointList(
+bool ON_IsValidPointList(
         int,  // dim
-        ON_BOOL32, // true for homogeneous rational points
+        bool, // true for homogeneous rational points
         int,  // count
         int,  // stride
         const double*
@@ -587,11 +680,11 @@ Parameters:
     a plane containing the points, pass null here.
   plane_equation - [out]
     If this point is not null, then the equation of the plane
-    containing the points is retuened here.
+    containing the points is returned here.
 Returns:
   0 - points are not coplanar to the specified tolerance
   1 - points are coplanar to the specified tolerance
-  2 - points are colinear to the specified tolerance
+  2 - points are collinear to the specified tolerance
       (in this case, plane_equation is not a unique answer)
   3 - points are coincident to the specified tolerance
       (in this case, plane_equation is not a unique answer)
@@ -609,9 +702,9 @@ int ON_IsPointListPlanar(
     );
 
 ON_DECL
-ON_BOOL32 ON_IsValidPointGrid(
+bool ON_IsValidPointGrid(
         int,  // dim
-        ON_BOOL32, // true for homogeneous rational points
+        bool, // true for homogeneous rational points
         int, int, // point_count0, point_count1,
         int, int, // point_stride0, point_stride1,
         const double*
@@ -620,16 +713,16 @@ ON_BOOL32 ON_IsValidPointGrid(
 ON_DECL
 bool ON_ReversePointList(
         int,  // dim
-        ON_BOOL32, // true for homogeneous rational points
+        bool, // true for homogeneous rational points
         int,  // count
         int,  // stride
         double*
         );
 
 ON_DECL
-ON_BOOL32 ON_ReversePointGrid(
+bool ON_ReversePointGrid(
         int,  // dim
-        ON_BOOL32, // true for homogeneous rational points
+        bool, // true for homogeneous rational points
         int, int, // point_count0, point_count1,
         int, int, // point_stride0, point_stride1,
         double*,
@@ -653,7 +746,7 @@ bool ON_SwapPointListCoordinates(
         );
 
 ON_DECL
-ON_BOOL32 ON_SwapPointGridCoordinates(
+bool ON_SwapPointGridCoordinates(
         int, int, // point_count0, point_count1,
         int, int, // point_stride0, point_stride1,
         double*,
@@ -663,7 +756,7 @@ ON_BOOL32 ON_SwapPointGridCoordinates(
 ON_DECL
 bool ON_TransformPointList(
         int,  // dim
-        ON_BOOL32, // true for homogeneous rational points
+        bool, // true for homogeneous rational points
         int,  // count
         int,  // stride
         float*,
@@ -673,7 +766,7 @@ bool ON_TransformPointList(
 ON_DECL
 bool ON_TransformPointList(
         int,  // dim
-        ON_BOOL32, // true for homogeneous rational points
+        bool, // true for homogeneous rational points
         int,  // count
         int,  // stride
         double*,
@@ -681,9 +774,9 @@ bool ON_TransformPointList(
         );
 
 ON_DECL
-ON_BOOL32 ON_TransformPointGrid(
+bool ON_TransformPointGrid(
         int,      // dim
-        ON_BOOL32,     // true for homogeneous rational points
+        bool,     // true for homogeneous rational points
         int, int, // point_count0, point_count1,
         int, int, // point_stride0, point_stride1,
         double*,
@@ -691,7 +784,7 @@ ON_BOOL32 ON_TransformPointGrid(
         );
 
 ON_DECL
-ON_BOOL32 ON_TransformVectorList(
+bool ON_TransformVectorList(
        int,  // dim
        int,  // count
        int,  // stride
@@ -700,7 +793,7 @@ ON_BOOL32 ON_TransformVectorList(
        );
 
 ON_DECL
-ON_BOOL32 ON_TransformVectorList(
+bool ON_TransformVectorList(
        int,  // dim
        int,  // count
        int,  // stride
@@ -708,15 +801,68 @@ ON_BOOL32 ON_TransformVectorList(
        const ON_Xform&
        );
 
+/*
+Parameters:
+  dim - [in]
+    >= 1
+  is_rat - [in]
+    true if the points are rational and points[dim] is the "weight"
+  pointA - [in]
+  pointB - [in]
+    point coordinates
+Returns:
+  True if the input is valid and for each coordinate pair,
+  |a-b| <= ON_ZERO_TOLERANCE 
+  or |a-b| <= (fabs(a)+fabs(b))*ON_RELATIVE_TOLERANCE.
+  False otherwise.
+*/
+ON_DECL
+bool ON_PointsAreCoincident(
+    int dim,
+    bool is_rat,
+    const double* pointA,
+    const double* pointB
+    );
+
+/*
+Description
+  See ON_PointsAreCoincident() for a description of when opennurbs
+  considers two points to be coincident.
+Parameters:
+  dim - [in]
+    >= 1
+  is_rat - [in]
+    true if the points are rational and points[dim] is the "weight"
+  point_count - [in]
+    number of points >= 2
+  point_stride - [in]
+    >= (0 != is_rat) ? (dim+1) : dim
+  points - [in]
+    point coordinates
+Returns:
+  True if the first and last points are coincident and all other
+  points in the list are coincident with the previous point.
+  False if there are points that are not coincident or
+  point_count < 2 or other input parameters are invalid.
+*/
+ON_DECL
+bool ON_PointsAreCoincident(
+    int dim,
+    bool is_rat,
+    int point_count,
+    int point_stride,
+    const double* points
+    );
+
 ON_DECL
 int ON_ComparePoint( // returns 
                               // -1: first < second
                               //  0: first == second
                               // +1: first > second
-          int,           // dim (>=0)
-          ON_BOOL32,          // true for rational CVs
-          const double*, // first CV
-          const double*  // secont CV
+          int dim,            // dim (>=0)
+          bool israt,    // true for rational CVs
+          const double* cv0,  // first CV
+          const double* cv1   // second CV
           );
 
 ON_DECL
@@ -725,7 +871,7 @@ int ON_ComparePointList( // returns
                               //  0: first == second
                               // +1: first > second
           int,           // dim (>=0)
-          ON_BOOL32,          // true for rational CVs
+          bool,          // true for rational CVs
           int,           // count
           // first point list
           int,           // stride
@@ -736,23 +882,119 @@ int ON_ComparePointList( // returns
           );
 
 ON_DECL
-ON_BOOL32 ON_IsPointListClosed(
+bool ON_IsPointListClosed(
        int,  // dim
-       int,  // true for homogeneos rational points
+       bool,  // true for homogeneous rational points
        int,  // count
        int,  // stride
        const double*
        );
 
 ON_DECL
-ON_BOOL32 ON_IsPointGridClosed(
+bool ON_IsPointGridClosed(
         int,  // dim
-        ON_BOOL32, // true for homogeneous rational points
+        bool, // true for homogeneous rational points
         int, int, // point_count0, point_count1,
         int, int, // point_stride0, point_stride1,
         const double*,
         int       // dir = 0 or 1
        );
+
+
+/*
+Description:
+  Assign a unique id to each point location.  Coincident points
+  get the same id.
+Parameters:
+  point_dim - [in]
+    2 or 3
+  point_count - [in]
+    >= 1
+  point_stride - [in]
+    number of coordinates to skip between points
+    >= point_dim
+  points - [in]
+    The first coordinate of the i-th point is points[i*point_stride]
+  first_point_id - [in]
+    Initial point id.  Typically 1 or 0.
+  point_ids - [out]
+    If not null, then point_ids[] must be an array of length point_count
+    and the ids are returned in this array.  point_ids[0] = first_point_id.
+  point_id_map - [out]
+    If point_id_index is not null, then it must have length point_count.
+    The returned values are a permutation of (0,1,...,point_count-1) such that
+    (point_ids[point_id_map[0]], ..., point_ids[point_id_map[point_count-1]])
+    is an increasing list of values and point_id_map[0] = 0.
+Returns:
+  If input is valid, then an array of point_count point location
+  ids is returned.  The i-th and j-th values in the returned array are
+  equal if and only if the i-th and j-th points have the same location.
+  If the input point_ids pointer was null, then the array memory is
+  allocated on the heap by calling onmalloc().  If input is not valid,
+  nullptr is returned.
+Remarks:
+  The ids are invariant under invertable transformations.  
+  Specifically, if one point point set is a rotation of another, then
+  the assigned ids will be the same.
+*/
+ON_DECL
+unsigned int* ON_GetPointLocationIds(
+  size_t point_dim,
+  size_t point_count,
+  size_t point_stride,
+  const float* points,
+  unsigned int first_point_id,
+  unsigned int* point_ids,
+  unsigned int* point_id_map
+  );
+
+ON_DECL
+unsigned int* ON_GetPointLocationIds(
+  size_t point_dim,
+  size_t point_count,
+  size_t point_stride,
+  const double* points,
+  unsigned int first_point_id,
+  unsigned int* point_ids,
+  unsigned int* point_id_map
+  );
+
+ON_DECL
+unsigned int* ON_GetPointLocationIds(
+  size_t point_count,
+  const class  ON_2fPoint* points,
+  unsigned int first_point_id,
+  unsigned int* point_ids,
+  unsigned int* point_id_map
+  );
+
+ON_DECL
+unsigned int* ON_GetPointLocationIds(
+  size_t point_count,
+  const class ON_3fPoint* points,
+  unsigned int first_point_id,
+  unsigned int* point_ids,
+  unsigned int* point_id_map
+  );
+
+ON_DECL
+unsigned int* ON_GetPointLocationIds(
+  size_t point_count,
+  const class  ON_2dPoint* points,
+  unsigned int first_point_id,
+  unsigned int* point_ids,
+  unsigned int* point_id_map
+  );
+
+ON_DECL
+unsigned int* ON_GetPointLocationIds(
+  size_t point_count,
+  const class ON_3dPoint* points,
+  unsigned int first_point_id,
+  unsigned int* point_ids,
+  unsigned int* point_id_map
+  );
+
 
 ON_DECL
 int ON_SolveQuadraticEquation( // solve a*X^2 + b*X + c = 0
@@ -766,8 +1008,34 @@ int ON_SolveQuadraticEquation( // solve a*X^2 + b*X + c = 0
        double*, double*        // roots r0 and r1 returned here
        );
 
+/*
+Description:
+  Solve the cubic equation a*X^3 + b*X^2 + c*X + d = 0.
+Inputs:
+  a,b,c,d, polynomial coefficients ( if a==b==c== 0) then failure is returned
+Returns: 
+  number of real roots stored with multiplicity.
+  specifically
+  -1: failure (a == b == c== 0.0 case)
+   0: no real roots ( a==0 and b!=0) two complex conjugate roots (r1 +/- (r2)*sqrt(-1))
+   1: one real root (r1).  Either  ( a==b==0.0) or else( a!=0) and two complex conjugate 
+		roots (r2 +/- (r3)*sqrt(-1))
+   2: two real roots (a==0.0, b!=0.0)  *r1 <= *r2
+   3: three real roots (a!=0.0) *r1 <= *r2 <= *r3
+*/
 ON_DECL
-ON_BOOL32 ON_SolveTriDiagonal( // solve TriDiagMatrix( a,b,c )*X = d
+int ON_SolveCubicEquation(
+  double a, double b, double c, double d,
+  double* r1, double* r2, double* r3
+);
+
+/*
+Returns:
+  0: success
+  <0: failure
+*/
+ON_DECL
+int ON_SolveTriDiagonal( // solve TriDiagMatrix( a,b,c )*X = d
         int,               // dimension of d and X (>=1)
         int,               // number of equations (>=2)
         double*,           // a[n-1] = sub-diagonal (a is modified)
@@ -789,8 +1057,8 @@ int ON_Solve2x2(
         double, double,   // a00 a01 = first row of 2x2 matrix
         double, double,   // a10 a11 = second row of 2x2 matrix
         double, double,   // b0 b1
-        double*, double*, // x0, x1 if not NULL, then solution is returned here
-        double*           // if not NULL, then pivot_ratio returned here
+        double*, double*, // x0, x1 if not nullptr, then solution is returned here
+        double*           // if not nullptr, then pivot_ratio returned here
         );
 
 // Description:
@@ -801,8 +1069,8 @@ int ON_Solve2x2(
 //          x*col0[2] + y*col1[2] = d0
 //
 // Parameters:
-//   col0 - [in] coefficents for "x" unknown
-//   col1 - [in] coefficents for "y" unknown
+//   col0 - [in] coefficients for "x" unknown
+//   col1 - [in] coefficients for "y" unknown
 //   d0 - [in] constants
 //   d1 - [in]
 //   d2 - [in]
@@ -851,7 +1119,7 @@ Parameters:
     x_addr - [in] first unknown
     y_addr - [in] second unknown
     z_addr - [in] third unknown
-    pivot_ratio - [out] if not NULL, the pivot ration is 
+    pivot_ratio - [out] if not nullptr, the pivot ration is 
          returned here.  If the pivot ratio is "small",
          then the matrix may be singular or ill 
          conditioned. You should test the results 
@@ -912,7 +1180,7 @@ Parameters:
     y_addr - [in] second unknown
     z_addr - [in] third unknown
     w_addr - [in] forth unknown
-    pivot_ratio - [out] if not NULL, the pivot ration is 
+    pivot_ratio - [out] if not nullptr, the pivot ration is 
          returned here.  If the pivot ratio is "small",
          then the matrix may be singular or ill 
          conditioned. You should test the results 
@@ -961,13 +1229,13 @@ Description:
   solution to M*X = B where M is a n x n matrix,
   B is a known n-dimensional vector and X is
   an unknown.
-Paramters:
+Parameters:
   bFullPivot - [in] if true, full pivoting is used,
     otherwise partial pivoting is used.  In rare
     cases full pivoting can produce a more accurate
     answer and never produces a less accurate answer.
     However full pivoting is slower.  If speed is an
-    issue, then experiement with bFullPivot=false
+    issue, then experiment with bFullPivot=false
     and see if it makes a difference.  Otherwise,
     set it to true.
   bNormalize - [in]
@@ -998,10 +1266,10 @@ Returns:
   the discussion below. If pr <= 1e-15, then
   M was nearly degenerate and the solution should be
   used with caution.  If an accurate solution is
-  critcial, then check the solution anytime pr <= 1e-10
+  critical, then check the solution anytime pr <= 1e-10
   In general, the difference between M*X and B will be
   reasonably small.  However, when the pr is small
-  there tend to be vector E, substantually different
+  there tend to be vector E, substantially different
   from zero, such that M*(X+E) - B is also reasonably
   small.
 See Also:
@@ -1014,13 +1282,45 @@ ON_DECL
 double ON_SolveNxN(bool bFullPivot, bool bNormalize, int n, double* M[], double B[], double X[]);
 
 
+/*
+Description:
+Find the eigen values and eigen vectors of a real symmetric
+3x3 matrix
+
+A D F
+D B E
+F E C
+
+Parameters:
+A - [in] matrix entry
+B - [in] matrix entry
+C - [in] matrix entry
+D - [in] matrix entry
+E - [in] matrix entry
+F - [in] matrix entry
+e1 - [out] eigen value
+E1 - [out] eigen vector with eigen value e1
+e2 - [out] eigen value
+E2 - [out] eigen vector with eigen value e2
+e3 - [out] eigen value
+E3 - [out] eigen vector with eigen value e3
+Returns:
+True if successful.
+*/
+ON_DECL
+bool ON_Sym3x3EigenSolver(double A, double B, double C,
+	double D, double E, double F,
+	double* e1, ON_3dVector& E1,
+	double* e2, ON_3dVector& E2,
+	double* e3, ON_3dVector& E3  );
+
 // return false if determinant is (nearly) singular
 ON_DECL
-ON_BOOL32 ON_EvJacobian( 
+bool ON_EvJacobian( 
         double, // ds o ds
         double, // ds o dt
         double, // dt o dt
-        double* // jacobian = determinant ( ds_o_ds ds_o_dt / ds_o_dt dt_o_dt )
+        double* // jacobian = determinant ( ds_o_ds dt_o_dt / ds_o_dt ds_o_dt )
         );
 
 /*
@@ -1067,7 +1367,7 @@ Returns:
   false if Jacobian is degenerate
 */
 ON_DECL
-ON_BOOL32 ON_EvNormalPartials(
+bool ON_EvNormalPartials(
         const ON_3dVector& ds,
         const ON_3dVector& dt,
         const ON_3dVector& dss,
@@ -1078,7 +1378,7 @@ ON_BOOL32 ON_EvNormalPartials(
         );
 
 ON_DECL
-ON_BOOL32 
+bool 
 ON_Pullback3dVector( // use to pull 3d vector back to surface parameter space
       const ON_3dVector&,   // 3d vector
       double,              // signed distance from vector location to closet point on surface
@@ -1092,7 +1392,7 @@ ON_Pullback3dVector( // use to pull 3d vector back to surface parameter space
       );
 
 ON_DECL
-ON_BOOL32 
+bool 
 ON_GetParameterTolerance(
         double,   // t0      domain
         double,   // t1 
@@ -1103,24 +1403,45 @@ ON_GetParameterTolerance(
 
 
 ON_DECL
-ON_BOOL32 ON_EvNormal(
+bool ON_EvNormal(
         int, // limit_dir 0=default,1=from quadrant I, 2 = from quadrant II, ...
         const ON_3dVector&, const ON_3dVector&, // first partials (Du,Dv)
         const ON_3dVector&, const ON_3dVector&, const ON_3dVector&, // optional second partials (Duu, Duv, Dvv)
         ON_3dVector& // unit normal returned here
         );
 
-// returns false if first derivtive is zero
+// returns false if the returned tangent is zero
 ON_DECL
-ON_BOOL32 ON_EvCurvature(
+bool ON_EvTangent(
+        const ON_3dVector&, // first derivative
+        const ON_3dVector&, // second derivative
+        ON_3dVector&        // Unit tangent returned here
+        );
+
+// returns false if first derivative is zero
+ON_DECL
+bool ON_EvCurvature(
         const ON_3dVector&, // first derivative
         const ON_3dVector&, // second derivative
         ON_3dVector&,       // Unit tangent returned here
         ON_3dVector&        // Curvature returned here
         );
 
+// Compute derivative of curvature as well as curvature and torsion.
+// Returns false if either kprime or torsion are not well defined.
 ON_DECL
-ON_BOOL32 ON_EvPrincipalCurvatures( 
+bool ON_EvCurvature1Der(
+  const ON_3dVector& D1, // first derivative of curve
+  const ON_3dVector& D2, // second derivative of curve
+  const ON_3dVector& D3, // third derivative of curve
+  ON_3dVector& T,       // Unit tangent returned here
+  ON_3dVector& K,       // curvature vector(k*N). curvature k = K.Length() and Normal N=K.Unitize()
+  double* kprime,       // first derivative of k
+  double* torsion);       // torsion 
+
+
+ON_DECL
+bool ON_EvPrincipalCurvatures( 
         const ON_3dVector&, // Ds,
         const ON_3dVector&, // Dt,
         const ON_3dVector&, // Dss,
@@ -1129,15 +1450,15 @@ ON_BOOL32 ON_EvPrincipalCurvatures(
         const ON_3dVector&, // N,   // unit normal to surface (use ON_EvNormal())
         double*, // gauss,  // = Gaussian curvature = kappa1*kappa2
         double*, // mean,   // = mean curvature = (kappa1+kappa2)/2
-        double*, // kappa1, // = largest principal curvature value (may be negative)
-        double*, // kappa2, // = smallest principal curvature value (may be negative)
+        double*, // kappa1, // = largest (in absolute value) principal curvature value (may be negative)
+        double*, // kappa2, // = smallest (in absolute value) principal curvature value (may be negative)
         ON_3dVector&, // K1,     // kappa1 unit principal curvature direction
         ON_3dVector&  // K2      // kappa2 unit principal curvature direction
                         // output K1,K2,N is right handed frame
         );
 
 ON_DECL
-ON_BOOL32 ON_EvPrincipalCurvatures( 
+bool ON_EvPrincipalCurvatures( 
         const ON_3dVector&, // Ds,
         const ON_3dVector&, // Dt,
         double l, // Dss*N Second fundamental form coefficients
@@ -1146,8 +1467,8 @@ ON_BOOL32 ON_EvPrincipalCurvatures(
         const ON_3dVector&, // N,   // unit normal to surface (use ON_EvNormal())
         double*, // gauss,  // = Gaussian curvature = kappa1*kappa2
         double*, // mean,   // = mean curvature = (kappa1+kappa2)/2
-        double*, // kappa1, // = largest principal curvature value (may be negative)
-        double*, // kappa2, // = smallest principal curvature value (may be negative)
+        double*, // kappa1, // = largest (in absolute value) principal curvature value (may be negative)
+        double*, // kappa2, // = smallest (in absolute value) principal curvature value (may be negative)
         ON_3dVector&, // K1,     // kappa1 unit principal curvature direction
         ON_3dVector&  // K2      // kappa2 unit principal curvature direction
                         // output K1,K2,N is right handed frame
@@ -1167,7 +1488,7 @@ Parameters:
   K - [out] Sectional curvature
     Curvature of the intersection curve of the surface
     and plane through the surface point where the partial
-    derivatives were evaluationed.
+    derivatives were evaluated.
 Returns:
   True if successful.
   False if first partials are not linearly independent, in
@@ -1198,7 +1519,7 @@ ON_3dVector ON_NormalCurvature(
 
 /*
 Description:
-  Determing if two curvatrues are different enough
+  Determine if two curvatures are different enough
   to qualify as a curvature discontinuity.
 Parameters:
   Km - [in]
@@ -1206,30 +1527,57 @@ Parameters:
     Km and Kp should be curvatures evaluated at the same
     parameters using limits from below (minus) and above (plus).
     The assumption is that you have already compared the
-    tangents and consider to curve to be G1 at the point
-    in question.
+    points and tangents and consider to curve to be G1 at the
+    point in question.
   cos_angle_tolerance - [in]
-      Used to decide if Km and Kp are parallel.
-      If Km o Kp <= cos_angle_tolerance*|Km|*|Kp|,
-      then true is returned because Km and Kp are considered
-      not parallel.  Use something like cos(angle tolerance)
-      for this parameter.
-  curvature_tolerance - [in] (ignored if < 0.0)
-    If curvature_tolerance >= 0 and (Kp-Km).Length() <= curvature_tolerance,
-    then false is returned.
+    If the input value of cos_angle_tolerance >= -1.0
+    and cos_angle_tolerance <= 1.0 and
+    Km o Kp < cos_angle_tolerance*|Km|*|Kp|, then
+    true is returned.  Otherwise it is assumed Km and Kp
+    are parallel. If the curve being tested is nonplanar,
+    then use something like cos(2*tangent angle tolerance)
+    for this parameter. If the curve being tested is planar,
+    then 0.0 will work fine.
+  curvature_tolerance - [in]
+    If |Kp-Km| <= curvature_tolerance,
+    then false is returned, otherwise other tests are used
+    to determine continuity.
   zero_curvature - [in] (ignored if < 2^-110 = 7.7037197787136e-34)
     If |K| <= zero_curvature, then K is treated as zero.
-  radius_tolerance - [in] (ignored if < 0.0)
-    If the unit directions of Km and Kp agree to 3 decimal places
-    and the difference between the radii of curvature are
-    <= radius_tolerance, then false is returned.
+    When in doubt, use ON_ZERO_CURVATURE_TOLERANCE.
+  radius_tolerance - [in]
+    If radius_tolerance >= 0.0 and the difference between the
+    radii of curvature is >= radius_tolerance, then true 
+    is returned.
+  relative_tolerance - [in]
+    If relative_tolerance > 0 and
+    |(|Km| - |Kp|)|/max(|Km|,|Kp|) > relative_tolerance,
+    then true is returned.  Note that if the curvatures are
+    nonzero and rm and rp are the radii of curvature, then
+    |(|Km| - |Kp|)|/max(|Km|,|Kp|) = |rm-rp|/max(rm,rp).
+    This means the relative_tolerance insures both the scalar
+    curvature and the radii of curvature agree to the specified
+    number of decimal places.
+    When in doubt, use ON_RELATIVE_CURVATURE_TOLERANCE, which
+    is currently 0.05.
 Returns:
   False if the curvatures should be considered G2.
   True if the curvatures are different enough that the curve should be
   considered not G2.  
   In addition to the tests described under the curvature_tolerance and 
-  radius_tolerance checks, other hurestic tests are used.
+  radius_tolerance checks, other heuristic tests are used.
 */
+ON_DECL
+bool ON_IsCurvatureDiscontinuity( 
+  const ON_3dVector Km, 
+  const ON_3dVector Kp,
+  double cos_angle_tolerance,
+  double curvature_tolerance,
+  double zero_curvature,
+  double radius_tolerance,
+  double relative_tolerance
+  );
+
 ON_DECL
 bool ON_IsCurvatureDiscontinuity( 
   const ON_3dVector Km, 
@@ -1240,6 +1588,51 @@ bool ON_IsCurvatureDiscontinuity(
   double radius_tolerance
   );
 
+
+/*
+Description:
+  This function is used to test curvature continuity
+  in IsContinuous and GetNextDiscontinuity functions
+  when the continuity parameter is ON::continuity::G2_continuous.
+Parameters:
+  Km - [in]
+    Curve's vector curvature evaluated from below
+  Kp - [in]
+    Curve's vector curvature evaluated from below
+Returns:
+  True if the change from Km to Kp should be considered
+  G2 continuous.
+*/
+ON_DECL
+bool ON_IsG2CurvatureContinuous(
+  const ON_3dVector Km, 
+  const ON_3dVector Kp,
+  double cos_angle_tolerance,
+  double curvature_tolerance
+  );
+
+/*
+Description:
+  This function is used to test curvature continuity
+  in IsContinuous and GetNextDiscontinuity functions
+  when the continuity parameter is ON::continuity::Gsmooth_continuous.
+Parameters:
+  Km - [in]
+    Curve's vector curvature evaluated from below
+  Kp - [in]
+    Curve's vector curvature evaluated from below
+Returns:
+  True if the change from Km to Kp should be considered
+  Gsmooth continuous.
+*/
+ON_DECL
+bool ON_IsGsmoothCurvatureContinuous(
+  const ON_3dVector Km, 
+  const ON_3dVector Kp,
+  double cos_angle_tolerance,
+  double curvature_tolerance
+  );
+
 /*
 Description:
   Test curve continuity from derivative values.
@@ -1247,11 +1640,11 @@ Parameters:
   c - [in] type of continuity to test for. Read ON::continuity
            comments for details.
   Pa - [in] point on curve A.
-  D1a - [in] first derviative of curve A.
-  D1a - [in] second derviative of curve A.
+  D1a - [in] first derivative of curve A.
+  D2a - [in] second derivative of curve A.
   Pb - [in] point on curve B.
-  D1b - [in] first derviative of curve B.
-  D1b - [in] second derviative of curve B.
+  D1b - [in] first derivative of curve B.
+  D3b - [in] second derivative of curve B.
   point_tolerance - [in] if the distance between two points is
       greater than point_tolerance, then the curve is not C0.
   d1_tolerance - [in] if the difference between two first derivatives is
@@ -1259,11 +1652,11 @@ Parameters:
   d2_tolerance - [in] if the difference between two second derivatives is
       greater than d2_tolerance, then the curve is not C2.
   cos_angle_tolerance - [in] default = cos(1 degree) Used only when
-      c is ON::G1_continuous or ON::G2_continuous.  If the cosine
+      c is ON::continuity::G1_continuous or ON::continuity::G2_continuous.  If the cosine
       of the angle between two tangent vectors 
       is <= cos_angle_tolerance, then a G1 discontinuity is reported.
   curvature_tolerance - [in] (default = ON_SQRT_EPSILON) Used only when
-      c is ON::G2_continuous.  If K0 and K1 are curvatures evaluated
+      c is ON::continuity::G2_continuous.  If K0 and K1 are curvatures evaluated
       from above and below and |K0 - K1| > curvature_tolerance,
       then a curvature discontinuity is reported.
 Returns:
@@ -1271,7 +1664,7 @@ Returns:
   the parameter t.
 */
 ON_DECL
-ON_BOOL32 ON_IsContinuous(
+bool ON_IsContinuous(
   ON::continuity c,
   ON_3dPoint Pa,
   ON_3dVector D1a,
@@ -1282,240 +1675,30 @@ ON_BOOL32 ON_IsContinuous(
   double point_tolerance=ON_ZERO_TOLERANCE,
   double d1_tolerance=ON_ZERO_TOLERANCE,
   double d2_tolerance=ON_ZERO_TOLERANCE,
-  double cos_angle_tolerance=0.99984769515639123915701155881391,
+  double cos_angle_tolerance=ON_DEFAULT_ANGLE_TOLERANCE_COSINE,
   double curvature_tolerance=ON_SQRT_EPSILON
   );
+
+
+ON_DECL
+bool ON_TuneupEvaluationParameter( 
+   int side,
+   double s0, double s1, // segment domain
+   double *s             // segment parameter
+   );
 
 
 ON_DECL
 int ON_Compare2dex( const ON_2dex* a, const ON_2dex* b);
 
 ON_DECL
+int ON_Compare2udex(const ON_2udex* a, const ON_2udex* b);
+
+ON_DECL
 int ON_Compare3dex( const ON_3dex* a, const ON_3dex* b);
 
-/*
-Description:
-  Sort an index array.
-Parameters
-  method - [in]
-    ON::heap_sort or ON::quick_sort
-  index - [out] 
-    Pass in an array of count integers.  The returned
-    index[] is a permutation of (0,1,..,count-1)
-    such that compare(B[index[i]],B[index[i+1]) <= 0
-    where B[i] = base + i*sizeof_element
-  base - [in]
-    array of count elements
-  count - [in]
-    number of elements in the index[] and base[] arrays
-  sizeof_element - [in]
-    number of bytes between consecutive elements in the
-    base[] array.
-  compare - [in]
-    Comparison function a la qsort().
-*/
 ON_DECL
-void ON_Sort( 
-        ON::sort_algorithm method,  // ON::heap_sort or ON::quick_sort, 
-        int* index,
-        const void* base,
-        size_t count,
-        size_t sizeof_element,
-        int (*compare)(const void*,const void*) // int compar(const void*,const void*)
-        );
-
-/*
-Description:
-  Sort an index array using a compare function
-  that takes an additional pointer that can be used to
-  pass extra informtation.
-Parameters
-  method - [in]
-    ON::heap_sort or ON::quick_sort
-  index - [out] 
-    Pass in an array of count integers.  The returned
-    index[] is a permutation of (0,1,..,count-1)
-    such that compare(B[index[i]],B[index[i+1]) <= 0
-    where B[i] = base + i*sizeof_element
-  base - [in]
-    array of count elements
-  count - [in]
-    number of elements in the index[] and base[] arrays
-  sizeof_element - [in]
-    number of bytes between consecutive elements in the
-    base[] array.
-  compare - [in]
-    Comparison function a la qsort().  The context parameter
-    is pass as the third argument.
-  context - [in]
-    pointer passed as the third argument to compare().
-*/
-ON_DECL
-void ON_Sort( 
-        ON::sort_algorithm method,  // ON::heap_sort or ON::quick_sort, 
-        int* index,
-        const void* base,
-        size_t count,
-        size_t sizeof_element,
-        int (*compare)(const void*,const void*,void*), // int compar(const void* a,const void* b, void* ptr)
-        void* context
-        );
-
-/*
-Description:
-  heap sort analogue of qsort()
-Parameters
-  base - [in]
-    array of count elements
-  count - [in]
-    number of elements in the index[] and base[] arrays
-  sizeof_element - [in]
-    number of bytes between consecutive elements in the
-    base[] array.
-  compare - [in]
-    Comparison function a la qsort().  The context parameter
-    is pass as the third argument.
-  context - [in]
-    pointer passed as the third argument to compare().
-*/
-ON_DECL
-void ON_hsort( 
-        void* base,
-        size_t count,
-        size_t sizeof_element,
-        int (*compare)(const void*,const void*)
-        );
-
-/*
-Description:
-  heap sort analogue of qsort() with a compare function
-  that takes an additional pointer that can be used to
-  pass extra informtation.
-Parameters
-  base - [in]
-    array of count elements
-  count - [in]
-    number of elements in the index[] and base[] arrays
-  sizeof_element - [in]
-    number of bytes between consecutive elements in the
-    base[] array.
-  compare - [in]
-    Comparison function a la qsort().  The context parameter
-    is passed as the first argument.
-  context - [in]
-    pointer passed as the first argument to compare().
-*/
-ON_DECL
-void ON_hsort( 
-        void* base,
-        size_t count,
-        size_t sizeof_element,
-        int (*compare)(void*,const void*,const void*),
-        void* context
-        );
-
-/*
-Description:
-  Quick sort an array
-Parameters
-  base - [in]
-    array of count elements
-  count - [in]
-    number of elements in the index[] and base[] arrays
-  sizeof_element - [in]
-    number of bytes between consecutive elements in the
-    base[] array.
-  compare - [in]
-    Comparison function a la qsort().  The context parameter
-    is pass as the third argument.
-  context - [in]
-    pointer passed as the third argument to compare().
-*/
-ON_DECL
-void ON_qsort( 
-        void* base,
-        size_t count,
-        size_t sizeof_element,
-        int (*compare)(const void*,const void*)
-        );
-
-/*
-Description:
-  Quick sort an array with a compare function
-  that takes an additional pointer that can be used to
-  pass extra informtation.
-Parameters
-  base - [in]
-    array of count elements
-  count - [in]
-    number of elements in the index[] and base[] arrays
-  sizeof_element - [in]
-    number of bytes between consecutive elements in the
-    base[] array.
-  compare - [in]
-    Comparison function a la qsort().  The context parameter
-    is passed as the first argument.
-  context - [in]
-    pointer passed as the first argument to compare().
-*/
-ON_DECL
-void ON_qsort( 
-        void* base,
-        size_t count,
-        size_t sizeof_element,
-        int (*compare)(void*,const void*,const void*),
-        void* context
-        );
-
-// heap sort array of doubles in place
-ON_DECL
-void ON_SortDoubleArray( 
-        ON::sort_algorithm, // ON::heap_sort or ON::quick_sort, 
-        double*,  // array of doubles
-        size_t    // length of array
-        );
-
-ON_DECL
-void ON_SortIntArray(
-        ON::sort_algorithm, // ON::heap_sort or ON::quick_sort, 
-        int*,     // array of doubles
-        size_t    // length of array
-        );
-
-ON_DECL
-void ON_SortUnsignedIntArray(
-        ON::sort_algorithm, // ON::heap_sort or ON::quick_sort, 
-        unsigned int*,      // array of doubles
-        size_t              // length of array
-        );
-
-ON_DECL
-void ON_SortStringArray(
-        ON::sort_algorithm, // ON::heap_sort or ON::quick_sort, 
-        char**,   // array of doubles
-        size_t    // length of array
-        );
-
-ON_DECL
-const int* ON_BinarySearchIntArray( 
-          int key, 
-          const int* base, 
-          size_t nel
-          );
-
-ON_DECL
-const unsigned int* ON_BinarySearchUnsignedIntArray( 
-          unsigned int key, 
-          const unsigned int* base, 
-          size_t nel
-          );
-
-ON_DECL
-const double* ON_BinarySearchDoubleArray( 
-          double key, 
-          const double* base, 
-          size_t nel
-          );
+int ON_Compare4dex( const ON_4dex* a, const ON_4dex* b);
 
 ON_DECL
 const ON_2dex* ON_BinarySearch2dexArray( 
@@ -1524,12 +1707,37 @@ const ON_2dex* ON_BinarySearch2dexArray(
           size_t nel
           );
 
+ON_DECL
+const ON_2udex* ON_BinarySearch2udexArray(
+  unsigned int key_i,
+  const ON_2udex* base,
+  size_t nel
+);
+
 // These simple intersectors are fast and detect transverse intersections.
 // If the intersection is not a simple transverse case, then they
 // return false and you will have to use one of the slower but fancier
 // models.
 
-// returns closest points between the two infinite lines
+// Description:
+//   Find the unique closest-points pair between two infinite lines, if it exists.
+// Parameters:
+//   lineA - [in]
+//   lineB - [in]
+//   double* a - [out]
+//   double* b - [out] The shortest distance between the lines is the
+//                    chord from lineA.PointAt(*a) to lineB.PointAt(*b).
+// Returns:
+//   True if points are found and false if the lines are numerically parallel.
+//   Numerically parallel means the 2x2 matrix
+// 
+//             AoA  -AoB
+//            -AoB   BoB
+// 
+//  is numerically singular, where A = lineA.to-lineA.from
+//  and B = lineB.to-lineB.from.
+// See Also:
+//   ON_IntersectLineLine
 ON_DECL
 bool ON_Intersect( 
           const ON_Line&, 
@@ -1538,10 +1746,18 @@ bool ON_Intersect(
           double*  // parameter on second line
           );
 
-// Returns false unless intersection is a single point
-// If returned parameter is < 0 or > 1, then the line
-// segment between line.m_point[0] and line.m_point[1]
-// does not intersect the plane
+// Description:
+//   Finds the intersection point of a line and plane, if it exists.
+// Parameters:
+//   line - [in]
+//   plane - [in]
+//   line_parameter - [out]
+//     If the returned parameter is < 0 or > 1, then the
+//     line segment between line.from and line.to
+//     does not intersect the plane.
+// Returns:
+//   true if the intersection is a single point,
+//   and false otherwise.
 ON_DECL
 bool ON_Intersect( 
           const ON_Line&, 
@@ -1549,6 +1765,35 @@ bool ON_Intersect(
           double* // parameter on line
           );
 
+// Description:
+//   Finds the intersection point of a line and plane, if it exists.
+// Parameters:
+//   line - [in]
+//   plane_equation - [in]
+//   line_parameter - [out]
+//     If the returned parameter is < 0 or > 1, then the
+//     line segment between line.from and line.to
+//     does not intersect the plane.
+// Returns:
+//   true if the intersection is a single point,
+//   and false otherwise.
+ON_DECL
+bool ON_Intersect(
+          const ON_Line& line, 
+          const ON_PlaneEquation& plane_equation, 
+          double* line_parameter
+          );
+
+// Description:
+//   Finds the intersection line between two planes, if it exists.
+// Parameters:
+//   planeA - [in]
+//   planeB - [in]
+//   line_out - [out]
+//     Intersection line is returned here.
+// Returns:
+//   true if the intersection is a single line,
+//   and false otherwise.
 ON_DECL
 bool ON_Intersect( 
         const ON_Plane&, 
@@ -1556,6 +1801,17 @@ bool ON_Intersect(
         ON_Line& // intersection line is returned here
         );
 
+// Description:
+//   Finds the intersection point of three planes, if it exists.
+// Parameters:
+//   planeA - [in]
+//   planeB - [in]
+//   planeC - [in]
+//   point_out - [out]
+//     Intersection point is returned here.
+// Returns:
+//   true if the intersection is a single point,
+//   and false otherwise.
 ON_DECL
 bool ON_Intersect( 
         const ON_Plane&, 
@@ -1564,63 +1820,83 @@ bool ON_Intersect(
         ON_3dPoint& // intersection point is returned here
         );
 
-// returns 0 = no intersections, 
-// 1 = intersection = single point, 
-// 2 = intersection = circle
-// If 0 is returned, returned circle has radius=0
-// and center = point on sphere closest to plane.
-// If 1 is returned, intersection is a single
-// point and returned circle has radius=0
-// and center = intersection point on sphere.
+// Description:
+//   Intersect a plane and a sphere.
+// Parameters:
+//   plane - [in]
+//   sphere - [in]
+//   circle - [out]
+//     Intersection circle is returned here.
+// Returns:
+//   0: no intersection
+//     circle radius = 0,
+//     and circle origin = point on the plane closest to the sphere.
+//   1: intersection is a single point
+//     circle radius = 0,
+//     and circle origin = tangent point on the plane.
+//   2: intersection is a circle
+//     circle radius > 0.
 ON_DECL
-int ON_Intersect( 
-                 const ON_Plane&, const ON_Sphere&, ON_Circle&
-                  );
+int ON_Intersect(
+        const ON_Plane&,
+        const ON_Sphere&,
+        ON_Circle&  // intersection circle is returned here
+        );
 
-// Intersects an infinte line and sphere and returns 
-// 0 = no intersections, 
-// 1 = one intersection, 
-// 2 = 2 intersections
-// If 0 is returned, first point is point 
-// on line closest to sphere and 2nd point is the point
-// on the sphere closest to the line.
-// If 1 is returned, first point is obtained by evaluating
-// the line and the second point is obtained by evaluating
-// the sphere.
+// Description:
+//   Intersect an infinite line and a sphere.
+// Parameters:
+//   line - [in]
+//   sphere - [in]
+//   pointA - [out]
+//     First intersection point is returned here.
+//   pointB - [out]
+//     Second intersection point is returned here.
+// Returns:
+//   0: no intersection
+//     pointA is the point on line closest to sphere,
+//     pointB is the point on sphere closest to line.
+//   1: intersection is a single point
+//     pointA is obtained by evaluating the line
+//     pointB is obtained by evaluating the sphere
+//   2: 2 distinct intersection points
 ON_DECL
 int ON_Intersect(                  
         const ON_Line&, 
         const ON_Sphere&,
-        ON_3dPoint&, 
-        ON_3dPoint& // intersection point(s) returned here
+        ON_3dPoint&, // [out] first intersection point
+        ON_3dPoint&  // [out] second intersection point
         );
 
-
-// Intersects an infinte line and cylinder and returns 
-// 0 = no intersections, 
-// 1 = one intersection, 
-// 2 = 2 intersections
-// 3 = line lies on cylinder
-//
-// If 0 is returned, first point is point 
-// on line closest to cylinder and 2nd point is the point
-// on the cylinder closest to the line.
-// If 1 is returned, first point is obtained by evaluating
-// the line and the second point is obtained by evaluating
-// the cylinder.
-//
-// The value of cylinder.IsFinite() determines if the
-// intersection is performed on the finite or infinite cylinder.
+// Description:
+//   Intersect an infinite line and a cylinder.
+// Parameters:
+//   line - [in]
+//   cylinder - [in]
+//   pointA - [out]
+//   pointB - [out]
+// Returns:
+//   0: no intersection
+//     pointA is the point on line closest to cylinder,
+//     pointB is the point on cylinder closest to line.
+//   1: intersection is a single point
+//     pointA is obtained by evaluating the line
+//     pointB is obtained by evaluating the cylinder
+//   2: 2 distinct intersection points
+//   3: line lies on cylinder
+// Remarks:
+//   The value of cylinder.IsFinite() determines if the
+//   intersection is performed on the finite or infinite cylinder.
 ON_DECL
 int ON_Intersect( 
-      const ON_Line&, // [in]
-      const ON_Cylinder&, // [in]
+      const ON_Line&,
+      const ON_Cylinder&,
       ON_3dPoint&, // [out] first intersection point
-      ON_3dPoint& // [out] second intersection point
+      ON_3dPoint&  // [out] second intersection point
       );
 
 // Description:
-//   Intersect an infinte line and circle.
+//   Intersect an infinite line and circle.
 // Parameters:
 //   line - [in]
 //   circle - [in]
@@ -1646,7 +1922,7 @@ int ON_Intersect(
 
 
 // Description:
-//   Intersect a infinte line and arc.
+//   Intersect a infinite line and arc.
 // Parameters:
 //   line - [in]
 //   arc - [in]
@@ -1681,7 +1957,7 @@ int ON_Intersect(
 //   1     One intersection at point0
 //   2     Two intersections at point0
 //         and point1.
-//	 3		 Circle lies on plane
+//	   3		  Circle lies on plane
 ON_DECL
 int ON_Intersect( 
                   const ON_Plane& plane, 
@@ -1702,7 +1978,7 @@ int ON_Intersect(
 //   1     One intersection at point0
 //   2     Two intersections at point0
 //         and point1.
-//	 3		 Arc lies on plane
+//   3	    Arc lies on plane
 ON_DECL
 int ON_Intersect( 
                   const ON_Plane& plane, 
@@ -1712,11 +1988,54 @@ int ON_Intersect(
                   );
 
 
+// Description:
+//   Intersect a pair of circles
+// Parameters:
+//   circle0 - [in]
+//   circle11 - [in]
+//   point0 - [out] first intersection point 
+//   point1 - [out] second intersection point
+// Returns:
+//   0     No intersection
+//   1     One intersection at point0
+//   2     Two intersections at point0
+//         and point1.
+//	 3		 Circles are identical
+ON_DECL
+int ON_Intersect(
+  const ON_Circle& c0,
+  const ON_Circle& c1,
+  ON_3dPoint& point0,
+  ON_3dPoint& point1
+);
+ 
+
+// Description:
+//   Intersect a pair of arcs, note either arc could be a full circle
+// Parameters:
+//   arc0 - [in]
+//   arc1 - [in]
+//   point0 - [out] first intersection point 
+//   point1 - [out] second intersection point
+// Returns:
+//   0     No intersection
+//   1     One intersection at point0
+//   2     Two intersections at point0
+//         and point1.
+//	 3		 arcs are cocircular and overlap
+ON_DECL
+int ON_Intersect(
+  const ON_Arc& arc0,
+  const ON_Arc& arc1,
+  ON_3dPoint& point0,
+  ON_3dPoint& point1
+);
+
 // returns 0 = no, 1 = yes, 2 = points are coincident and on line
 ON_DECL
 int ON_ArePointsOnLine(
         int, // dimension of points
-        int, // is_rat = true if homogeneous rational
+        bool, // is_rat = true if homogeneous rational
         int, // count = number of points
         int, // stride ( >= is_rat?(dim+1) :dim)
         const double*, // point array
@@ -1729,7 +2048,7 @@ int ON_ArePointsOnLine(
 ON_DECL
 int ON_ArePointsOnPlane(
         int, // dimension of points
-        int, // is_rat = true if homogeneous rational
+        bool, // is_rat = true if homogeneous rational
         int, // count = number of points
         int, // stride ( >= is_rat?(dim+1) :dim)
         const double*, // point array
@@ -1841,7 +2160,7 @@ bool ON_EvaluateQuotientRule3(
 ON_DECL
 bool ON_GetPolylineLength(
         int,           // dimension of points
-        ON_BOOL32,          // bIsRational true if points are homogeneous rational
+        bool,          // bIsRational true if points are homogeneous rational
         int,           // number of points
         int,           // stride between points
         const double*, // points
@@ -1949,6 +2268,19 @@ ON_DECL int ON_Min(int a, int b);
 // fabs(x)>2147483647. Use floor(x+0.5) instead.
 ON_DECL int ON_Round(double x);
 
+/*
+Description:
+  Calculate the value of (1.0-t)*x + t*y so that, 
+  if 0.0 <= t <= 1.0, then the result is between x and y and
+  if x == y and t is a valid double, the result is x.
+Returns:
+  (1.0-t)*x + t*y
+*/
+ON_DECL double ON_LinearInterpolation(
+  double t, 
+  double x, 
+  double y
+  );
 
 /*
 Description:
@@ -1972,8 +2304,8 @@ Parameters:
     estimate of the validity of the solution, then inspect
     the returned values.  max_pivot should around 1, 
     min_pivot should be > 1e-4 or so, and zero_pivot should
-    be < 1e-10 or so.  If the returned pivots don't satisify
-    these condtions, then exercise caution when using the
+    be < 1e-10 or so.  If the returned pivots don't satisfy
+    these conditions, then exercise caution when using the
     returned solution.
 Returns:
   True if a there is an ellipse, parabola or hyperbola through the  
@@ -2051,7 +2383,7 @@ Remarks:
   Here is the way to evaluate a point on the ellipse:
 
           
-          double t = ellipse paramter in radians;
+          double t = ellipse parameter in radians;
           double x = a*cos(t);
           double y = b*sin(t);
           ON_2dPoint ellipse_point;
@@ -2070,4 +2402,170 @@ ON_DECL bool ON_GetEllipseConicEquation(
       double conic[6]
       );
 
+/*
+Description:
+  Return the length of a 2d vector (x,y)
+Returns:
+ sqrt(x^2 + y^2) calculated in as precisely and safely as possible.
+*/
+ON_DECL double ON_Length2d( double x, double y );
+
+/*
+Description:
+  Return the squared length of a 2d vector (x,y)
+Returns:
+ (x^2 + y^2)
+*/
+ON_DECL double ON_Length2dSquared(double x, double y);
+
+/*
+Description:
+  Return the length of a 3d vector (x,y,z)
+Returns:
+ sqrt(x^2 + y^2 + z^2) calculated in as precisely and safely as possible.
+*/
+ON_DECL double ON_Length3d( double x, double y, double z );
+
+/*
+Description:
+  Return the squared length of a 3d vector (x,y,z)
+Returns:
+ (x^2 + y^2 + z^2)
+*/
+ON_DECL double ON_Length3dSquared(double x, double y, double z);
+
+/*
+Description:
+  Get the area of a 3d triangle.
+Parameters:
+  A - [in]
+  B - [in]
+  C - [in]
+    Triangle corners
+Returns:
+  Area of a 3d triangle with corners at A, B, C.
+*/
+ON_DECL
+double ON_TriangleArea3d(
+  ON_3dPoint A,
+  ON_3dPoint B, 
+  ON_3dPoint C
+  );
+
+/*
+Description:
+  Get the area of a 2d triangle.
+Parameters:
+  A - [in]
+  B - [in]
+  C - [in]
+    Triangle corners
+Returns:
+  Area of a 2d triangle with corners at A, B, C.
+*/
+ON_DECL
+double ON_TriangleArea2d(
+  ON_2dPoint A,
+  ON_2dPoint B,
+  ON_2dPoint C
+  );
+
+
+/*
+Description:
+  Convert a double x to the largest float f such that
+  the mathematical value of f is at most the value of x.
+Parameters:
+  x - [in]
+Returns
+  The largest float f such that the mathematical value
+  of f is at most the value of x.
+*/
+ON_DECL float ON_FloatFloor(double x);
+
+/*
+Description:
+  Convert a double x to the smallest float f such that
+  the mathematical value of f is at least the value of x.
+Parameters:
+  x - [in]
+Returns
+  The smallest float f such that the mathematical value
+  of f is at least the value of x.
+*/
+ON_DECL float ON_FloatCeil(double x);
+
+/*
+Description:
+  Determine if a polyline is convex.
+Parameters:
+  point_dim - [in]
+    2 or 3
+  point_count - [in]
+  points - [in]
+    If point_count >= 4 and the first and last points are equal, 
+    then the zero length segment between those points is ignored.
+  point_stride - [in]
+    number of doubles between points (>=point_dim)
+  bStrictlyConvex - [in]
+    If false, colinear segments are considered convex.  
+Returns
+  True if the polyline is convex.
+*/
+ON_DECL bool ON_IsConvexPolyline(
+  size_t point_dim,
+  size_t point_count,
+  const double* points,
+  size_t point_stride,
+  bool bStrictlyConvex
+);
+
+/*
+Description:
+  Determine if a polyline is convex.
+Parameters:
+  points - [in]
+    If points.Count() >= 4 and the first and last points are equal, 
+    then the zero length segment between those points is ignored.
+  bStrictlyConvex - [in]
+    If false, colinear segments are considered convex.  
+Returns
+  True if the polyline is convex.
+*/
+ON_DECL bool ON_IsConvexPolyline(
+  const ON_SimpleArray<ON_3dPoint>& points,
+  bool bStrictlyConvex
+);
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="a"></param>
+/// <param name="b"></param>
+/// <returns>
+/// If a &gt; 0 or b &gt; 0, then the greatest common divisor of a and b is returned (nonzero).
+/// Note that if n &gt; 0, then gcd(0,n) = gcd(n,0) = n and gcd(1,n) = gcd(n,1) = 1.
+/// If a = 0 and b = 0, then the greatest common divisor is not defined and 0 is returned.
+/// </returns>
+ON_DECL unsigned ON_GreatestCommonDivisor(
+  unsigned a,
+  unsigned b
+);
+
+/// <summary>
+/// The least common multiple of a and b is (a/gcd)*(b/gcd)*(gcd), where gcd = greatest common divisor of and b.
+/// </summary>
+/// <param name="a"></param>
+/// <param name="b"></param>
+/// <returns>
+/// If a $gt; 0 and b &gt; and the least common multiple of a and b &lt;= ON_UINT_MAX, then the
+/// least common multiple of a and b is returned.
+/// Otherwise 0 is returned.
+/// </returns>
+ON_DECL unsigned ON_LeastCommonMultiple(
+  unsigned a,
+  unsigned b
+);
+
 #endif
+

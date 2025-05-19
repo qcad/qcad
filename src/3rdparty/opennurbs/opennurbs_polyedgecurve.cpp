@@ -1,4 +1,13 @@
 #include "opennurbs.h"
+
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
+
 #include "opennurbs_polyedgecurve.h"
 
 ON_OBJECT_IMPLEMENT(ON_PolyEdgeSegment,ON_CurveProxy,"42F47A87-5B1B-4e31-AB87-4639D78325D6");
@@ -22,8 +31,8 @@ void ON_PolyEdgeSegment::Init()
   m_edge = 0;
   m_face = 0;
   m_surface = 0;
-  m_edge_domain.Destroy();
-  m_trim_domain.Destroy();
+  m_edge_domain = ON_Interval::EmptyInterval;
+  m_trim_domain = ON_Interval::EmptyInterval;
   ON_CurveProxy::SetProxyCurve(0);
 
   ClearEvalCacheHelper();
@@ -130,12 +139,12 @@ bool ON_PolyEdgeSegment::Create(
   return true;
 }
 
-const ON_BrepEdge* ON_PolyEdgeSegment::Edge() const
+const ON_BrepEdge* ON_PolyEdgeSegment::BrepEdge() const
 {
   return m_edge;
 }
 
-const ON_BrepTrim* ON_PolyEdgeSegment::Trim() const
+const ON_BrepTrim* ON_PolyEdgeSegment::BrepTrim() const
 {
   return m_trim;
 }
@@ -145,7 +154,7 @@ const ON_Brep* ON_PolyEdgeSegment::Brep() const
   return m_brep;
 }
 
-const ON_BrepFace* ON_PolyEdgeSegment::Face() const
+const ON_BrepFace* ON_PolyEdgeSegment::BrepFace() const
 {
   return m_face;
 }
@@ -170,64 +179,6 @@ ON_Interval ON_PolyEdgeSegment::TrimDomain() const
   return m_trim_domain;
 }
 
-void ON_PolyEdgeSegment::SetTrimDomainFromEdgeDomain()
-{
-  ClearEvalCacheHelper();
-  if ( m_brep )
-  {
-    double t0, t1;
-    if (!m_brep->GetTrimParameter( m_trim->m_trim_index, 
-                              m_edge_domain[0], 
-                              &t0 ) )
-      return;
-    if ( ! m_brep->GetTrimParameter( m_trim->m_trim_index, 
-                              m_edge_domain[1],
-                              &t1 ) )
-      return;
-    if ( m_trim->m_bRev3d )
-    {
-      double x = t0; t0 = t1; t1 = x;
-    }
-    m_trim_domain.Set(t0,t1);
-  }
-}
-
-
-ON_BOOL32 ON_PolyEdgeSegment::Trim( const ON_Interval& domain )
-{
-  ClearEvalCacheHelper();
-  ON_Interval old_domain = Domain();
-  ON_BOOL32 rc = ON_CurveProxy::Trim(domain);
-  if ( rc && m_edge )
-  {
-    ON_Interval new_domain = Domain();
-    if ( old_domain != new_domain )
-    {
-      ON_Interval old_edge_domain = m_edge_domain;
-      if ( old_domain == m_edge_domain && !ReversedEdgeDir() )
-      {
-        m_edge_domain = new_domain;
-      }
-      else
-      {
-        double s0 = old_domain.NormalizedParameterAt(new_domain[0]);
-        double s1 = old_domain.NormalizedParameterAt(new_domain[1]);
-        if ( ReversedEdgeDir() )
-        {
-          double x = 1.0-s0;
-          s0 = 1.0-s1;
-          s1 = x;
-        }
-        double r0 = m_edge_domain.ParameterAt(s0);
-        double r1 = m_edge_domain.ParameterAt(s1);
-        m_edge_domain.Set(r0,r1);
-      }
-      if ( old_edge_domain != m_edge_domain )
-        SetTrimDomainFromEdgeDomain();
-    }
-  }
-  return rc;
-}
 
 void ON_PolyEdgeSegment::ClearEvalCacheHelper()
 {
@@ -242,114 +193,9 @@ void ON_PolyEdgeSegment::ClearEvalCacheHelper()
   m_evsrf_hint[1] = 0;
   m_evsrf_uv[0] = ON_UNSET_VALUE;
   m_evsrf_uv[1] = ON_UNSET_VALUE;
-  m_evsrf_pt = ON_UNSET_POINT;
+  m_evsrf_pt = ON_3dPoint::UnsetPoint;
 }
 
-ON_BOOL32 ON_PolyEdgeSegment::Split(
-    double t,
-    ON_Curve*& left_side,
-    ON_Curve*& right_side
-  ) const
-{
-  ON_PolyEdgeSegment* left_seg = 0;
-  ON_PolyEdgeSegment* right_seg = 0;
-  if ( left_side )
-  {
-    if ( left_side == right_side )
-      return false;
-    left_seg = ON_PolyEdgeSegment::Cast(left_side);
-    if ( !left_seg )
-      return false;
-  }
-  if ( right_seg )
-  {
-    right_seg = ON_PolyEdgeSegment::Cast(right_side);
-    if ( !right_seg )
-      return false;
-  }
-
-  // save informtion now because this might be the same as left_side
-  // or right_side
-  ON_Interval old_domain = Domain();
-  ON_Interval old_edge_domain = EdgeDomain();
-  double s = old_domain.NormalizedParameterAt(t);
-  if ( s <= 0.0 || s >= 1.0 )
-    return false;
-  bool bReversedEdgeDir = ReversedEdgeDir();
-  if ( m_edge )
-  {
-    s = EdgeParameter(t);
-    if ( !m_edge_domain.Includes(s,true) )
-      return false;
-  }
-  if ( !left_seg )
-    left_seg = new ON_PolyEdgeSegment();
-  if ( !right_seg )
-    right_seg = new ON_PolyEdgeSegment();
-  ON_Curve* pleft = left_seg;
-  ON_Curve* pright = right_seg;
-  ON_BOOL32 rc = ON_CurveProxy::Split( t, pleft, pright );
-  if ( !rc )
-  {
-    if ( !left_side )
-      delete left_seg;
-    if ( !right_side )
-      delete right_seg;
-    return false;
-  }
-
-  if ( this != left_seg )
-  {
-    left_seg->m_object_id = m_object_id;
-    left_seg->m_component_index = m_component_index;
-    left_seg->m_brep = m_brep;
-    left_seg->m_trim = m_trim;
-    left_seg->m_edge = m_edge;
-    left_seg->m_face = m_face;
-    left_seg->m_surface = m_surface;
-    left_seg->m_edge_domain = m_edge_domain;
-    left_seg->m_trim_domain = m_trim_domain;
-  }
-
-  if ( this != right_seg )
-  {
-    right_seg->m_object_id = m_object_id;
-    right_seg->m_component_index = m_component_index;
-    right_seg->m_brep = m_brep;
-    right_seg->m_trim = m_trim;
-    right_seg->m_edge = m_edge;
-    right_seg->m_face = m_face;
-    right_seg->m_surface = m_surface;
-    right_seg->m_edge_domain = m_edge_domain;
-    right_seg->m_trim_domain = m_trim_domain;
-  }
-
-  if ( left_seg )
-    left_seg->ClearEvalCacheHelper();    
-  if ( right_seg )
-    right_seg->ClearEvalCacheHelper();    
-
-  if ( m_edge )
-  {
-    if ( bReversedEdgeDir )
-    {
-      right_seg->m_edge_domain.Set(old_edge_domain[0], s );
-      left_seg->m_edge_domain.Set(s,old_edge_domain[1]);
-    }
-    else
-    {
-      left_seg->m_edge_domain.Set(old_edge_domain[0], s );
-      right_seg->m_edge_domain.Set(s,old_edge_domain[1]);
-    }
-    left_seg->SetTrimDomainFromEdgeDomain();
-    right_seg->SetTrimDomainFromEdgeDomain();
-  }
-
-  left_side = left_seg;
-  right_side = right_seg;
-
-  return rc;
-}
 
 double ON_PolyEdgeSegment::EdgeParameter(double t) const
 {
@@ -386,56 +232,6 @@ double ON_PolyEdgeSegment::EdgeParameter(double t) const
 }
 
 
-double ON_PolyEdgeSegment::TrimParameter(double t) const
-{
-  double trim_t = ON_UNSET_VALUE;
-  if ( m_brep && m_trim )
-  {
-    if ( t == m_t && m_trim_t != ON_UNSET_VALUE )
-      trim_t = m_trim_t;
-    else
-    {
-      double edge_t = EdgeParameter(t);
-      if ( m_brep->GetTrimParameter( m_trim->m_trim_index, edge_t, &trim_t ) )
-      {
-        ON_PolyEdgeSegment* p = const_cast<ON_PolyEdgeSegment*>(this);
-        p->m_trim_t = trim_t;
-      }
-    }
-  }
-  return trim_t;
-}
-
-// Sets and returns m_srf_uv to the surface parameters at segment param t
-ON_2dPoint ON_PolyEdgeSegment::SurfaceParameter(double t) const
-{
-  ON_2dPoint srf_uv(ON_UNSET_VALUE,ON_UNSET_VALUE);
-  // last evaluated point is cached
-  if ( t == m_t && m_srf_uv[0] != ON_UNSET_VALUE && m_srf_uv[1] != ON_UNSET_VALUE )
-  {
-    srf_uv.x = m_srf_uv[0];
-    srf_uv.y = m_srf_uv[1];
-  }
-  else if ( m_brep )
-  {
-    // sets m_trim_t in the segment
-    double trim_t = TrimParameter(t);
-    if ( trim_t != ON_UNSET_VALUE )
-    {
-      ON_PolyEdgeSegment* p = const_cast<ON_PolyEdgeSegment*>(this);
-      const ON_Curve* c2 = m_trim->TrimCurveOf();
-      ON_3dPoint c2pt;
-      if( c2->EvPoint(m_trim_t,c2pt,0,&p->m_trim_hint) )
-      {
-        srf_uv.x = c2pt.x;
-        srf_uv.y = c2pt.y;
-        p->m_srf_uv[0] = srf_uv.x;
-        p->m_srf_uv[1] = srf_uv.y;
-      }
-    }
-  }
-  return srf_uv;
-}
 
 
 ON_OBJECT_IMPLEMENT(ON_PolyEdgeCurve,ON_PolyCurve,"39FF3DD3-FE0F-4807-9D59-185F0D73C0E4");
@@ -448,17 +244,17 @@ ON_PolyEdgeCurve::~ON_PolyEdgeCurve()
 {
 }
 
-ON_BOOL32 ON_PolyEdgeCurve::SetStartPoint( ON_3dPoint start_point )
+bool ON_PolyEdgeCurve::SetStartPoint( ON_3dPoint start_point )
 {
-  return false; // cannot change edges
+  return ON_Curve::SetStartPoint(start_point); // cannot change edges
 }
 
-ON_BOOL32 ON_PolyEdgeCurve::SetEndPoint( ON_3dPoint end_point )
+bool ON_PolyEdgeCurve::SetEndPoint( ON_3dPoint end_point )
 {
-  return false; // cannot change edges
+  return ON_Curve::SetEndPoint(end_point); // cannot change edges
 }
 
-ON_BOOL32 ON_PolyEdgeCurve::ChangeClosedCurveSeam( double t )
+bool ON_PolyEdgeCurve::ChangeClosedCurveSeam( double t )
 {
   //int saved_is_closed_helper = m_is_closed_helper;
 
@@ -480,7 +276,7 @@ ON_BOOL32 ON_PolyEdgeCurve::ChangeClosedCurveSeam( double t )
         s += 1.0;
       if ( fabs(s) <= ON_SQRT_EPSILON || fabs(1.0-s) <= ON_SQRT_EPSILON )
       {
-        // split parameter is at start/end of this segemnt
+        // split parameter is at start/end of this segment
         if ( t != crvd[0] )
         {
           DestroyRuntimeCache();
@@ -519,20 +315,20 @@ ON_BOOL32 ON_PolyEdgeCurve::ChangeClosedCurveSeam( double t )
 
   // ON_PolyCurve::ChangeClosedCurveSeam works fine on
   // two or more segments.
-  ON_BOOL32 rc = ON_PolyCurve::ChangeClosedCurveSeam(t);
+  bool rc = ON_PolyCurve::ChangeClosedCurveSeam(t);
   //if ( saved_is_closed_helper )
   //  m_is_closed_helper = saved_is_closed_helper;
 
   return rc;
 }
 
-ON_BOOL32 ON_PolyEdgeCurve::PrependAndMatch(ON_Curve*)
+bool ON_PolyEdgeCurve::PrependAndMatch(ON_Curve*)
 {
   return false; // cannot change edges
 }
 
 
-ON_BOOL32 ON_PolyEdgeCurve::AppendAndMatch(ON_Curve*)
+bool ON_PolyEdgeCurve::AppendAndMatch(ON_Curve*)
 {
   return false; // cannot change edges
 }
@@ -597,9 +393,9 @@ ON_Curve* ON_PolyEdgeCurve::DuplicateCurve() const
   // NO // return dup_crv;
 }
 
-ON_BOOL32 ON_PolyEdgeSegment::IsClosed(void) const
+bool ON_PolyEdgeSegment::IsClosed(void) const
 {
-  ON_BOOL32 rc = ON_CurveProxy::IsClosed();
+  bool rc = ON_CurveProxy::IsClosed();
   if ( !rc
        && m_edge
        && m_edge->m_vi[0] == m_edge->m_vi[1]
@@ -616,44 +412,38 @@ ON_BOOL32 ON_PolyEdgeSegment::IsClosed(void) const
 
 // 7-1-03 lw added override to unset cached closed flag
 // when a segment is removed
-ON_BOOL32 ON_PolyEdgeCurve::Remove( int segment_index )
+bool ON_PolyEdgeCurve::Remove( int segment_index )
 {
-  ON_BOOL32 rc = ON_PolyCurve::Remove( segment_index);
+  bool rc = ON_PolyCurve::Remove( segment_index);
   //if( rc)
   //  m_is_closed_helper = 0;  // Cached closed flag...
   return rc;
 }
-ON_BOOL32 ON_PolyEdgeCurve::Remove( )
+bool ON_PolyEdgeCurve::Remove( )
 {
   return Remove(Count()-1);
 }
 
-ON_BOOL32 ON_PolyEdgeCurve::IsClosed(void) const
+bool ON_PolyEdgeCurve::IsClosed(void) const
 {
-  //if ( m_is_closed_helper == 1 )
-  //  return true;
-  //if ( m_is_closed_helper == 2 )
-  //  return false;
-
-  ON_BOOL32 rc = ON_PolyCurve::IsClosed();
+  bool rc = ON_PolyCurve::IsClosed();
 
   if ( !rc && SegmentCount() > 1 )
   {
     // Since the segments that make up a ON_PolyEdgeCurve
-    // cannot have their ends matched (becuase the curves
-    // belong to objects alread in the rhino model), 
-    // the IsClosed() test has to tolerate gaps.
+    // cannot have their ends matched (because the curves
+    // belong to objects already in the rhino model),
+    // the IsClosed() test has to tolerate larger gaps
+    // in brep topology.
     //
-    // There are two situations.  If the start and end
-    // segments are edges that belong to the same brep, 
-    // then they "join" if and only if they share a vertex.
-    // Otherwise, the current value of Rhino tolerance
-    // is used.
+    // If the start and end segments are edges that belong
+    // to the same brep, then they "join" if and only if 
+    // they share a vertex.
     const ON_PolyEdgeSegment* seg0 = SegmentCurve(0);
     const ON_PolyEdgeSegment* seg1 = SegmentCurve(SegmentCount()-1);
 
-    const ON_BrepEdge* edge0 = seg0->Edge();
-    const ON_BrepEdge* edge1 = seg1->Edge();
+    const ON_BrepEdge* edge0 = seg0->BrepEdge();
+    const ON_BrepEdge* edge1 = seg1->BrepEdge();
     
     if ( edge0 && edge1 && edge0->Brep() == edge1->Brep() )
     {
@@ -661,7 +451,7 @@ ON_BOOL32 ON_PolyEdgeCurve::IsClosed(void) const
       //
       // Do NOT add a test for sloppy geometric closure here.
       // If the edges are in the same brep and they don't 
-      // meet topologicially, then there is something in the
+      // meet topologically, then there is something in the
       // brep that is separating the edges.
       int evi0 = seg0->ReversedEdgeDir() ? 1 : 0;
       int evi1 = seg1->ReversedEdgeDir() ? 0 : 1;
@@ -696,22 +486,7 @@ ON_BOOL32 ON_PolyEdgeCurve::IsClosed(void) const
         }
       }
     }
-    else
-    {
-      // check for sloppy geometric closure
-      //
-      // It is important that this test is NOT used when
-      // edge0 and edge1 belong to the same brep.
-      ON_3dPoint p0 = PointAtStart();
-      ON_3dPoint p1 = PointAtEnd();
-      double d = p0.DistanceTo(p1);
-      double tol = ON_ZERO_TOLERANCE; //RhinoApp().ActiveDoc()->AbsoluteTolerance();
-      if ( d <= tol )
-        rc = true;
-    }
   }
-
-  //const_cast<ON_PolyEdgeCurve*>(this)->m_is_closed_helper = (rc) ? 1 :2;
 
   return rc;
 }
@@ -781,10 +556,10 @@ void ON_PolyEdgeSegment::DestroyRuntimeCache( bool bDelete )
 }
 
 
-ON_BOOL32 ON_PolyEdgeCurve::Prepend( ON_PolyEdgeSegment* new_segment )
+bool ON_PolyEdgeCurve::Prepend( ON_PolyEdgeSegment* new_segment )
 {
   DestroyRuntimeCache();
-  ON_BOOL32 rc = false;
+  bool rc = false;
   if ( new_segment )
   {
     if ( Count() > 0 )
@@ -805,10 +580,10 @@ ON_BOOL32 ON_PolyEdgeCurve::Prepend( ON_PolyEdgeSegment* new_segment )
   return rc;
 }
 
-ON_BOOL32 ON_PolyEdgeCurve::Append( ON_PolyEdgeSegment* new_segment )
+bool ON_PolyEdgeCurve::Append( ON_PolyEdgeSegment* new_segment )
 {
   DestroyRuntimeCache();
-  ON_BOOL32 rc = false;
+  bool rc = false;
   if ( new_segment )
   {
     //m_is_closed_helper = 0;
@@ -830,13 +605,13 @@ ON_BOOL32 ON_PolyEdgeCurve::Append( ON_PolyEdgeSegment* new_segment )
   return rc;
 }
 
-ON_BOOL32 ON_PolyEdgeCurve::Insert( 
+bool ON_PolyEdgeCurve::Insert( 
          int segment_index,
          ON_PolyEdgeSegment* new_segment
          )
 {
   DestroyRuntimeCache();
-  ON_BOOL32 rc = false;
+  bool rc = false;
   if ( segment_index > 0 )
   {
     //m_is_closed_helper = 0;
@@ -860,13 +635,13 @@ ON_BOOL32 ON_PolyEdgeCurve::Insert(
 const ON_BrepEdge* ON_PolyEdgeCurve::EdgeAt(double t) const
 {
   ON_PolyEdgeSegment* seg = SegmentCurve( SegmentIndex(t) );
-  return seg ? seg->Edge() : 0;
+  return seg ? seg->BrepEdge() : 0;
 }
 
 const ON_BrepTrim* ON_PolyEdgeCurve::TrimAt(double t) const
 {
   ON_PolyEdgeSegment* seg = SegmentCurve( SegmentIndex(t) );
-  return seg ? seg->Trim() : 0;
+  return seg ? seg->BrepTrim() : 0;
 }
 
 const ON_Brep*     ON_PolyEdgeCurve::BrepAt(double t) const
@@ -878,7 +653,7 @@ const ON_Brep*     ON_PolyEdgeCurve::BrepAt(double t) const
 const ON_BrepFace* ON_PolyEdgeCurve::FaceAt(double t) const
 {
   ON_PolyEdgeSegment* seg = SegmentCurve( SegmentIndex(t) );
-  return seg ? seg->Face() : 0;
+  return seg ? seg->BrepFace() : 0;
 }
 
 const ON_Surface*  ON_PolyEdgeCurve::SurfaceAt(double t) const
@@ -913,219 +688,6 @@ double ON_PolyEdgeCurve::EdgeParameter(double t) const
   return edge_t;
 }
 
-double ON_PolyEdgeCurve::TrimParameter(double t) const
-{
-  double trim_t = ON_UNSET_VALUE;
-  int segment_index = SegmentIndex(t);
-  ON_PolyEdgeSegment* seg = SegmentCurve( segment_index );
-  if ( seg )
-  {
-    ON_Interval pdom = SegmentDomain(segment_index);
-    ON_Interval sdom = seg->Domain();
-    if ( sdom != pdom )
-    {
-      double s = pdom.NormalizedParameterAt(t);
-      t = sdom.ParameterAt(s);
-    }
-    trim_t = seg->TrimParameter(t);
-  }
-  return trim_t;
-}
-
-ON_2dPoint ON_PolyEdgeCurve::SurfaceParameter(double t) const
-{
-  ON_2dPoint srf_uv(ON_UNSET_VALUE,ON_UNSET_VALUE);
-  int segment_index = SegmentIndex(t);
-  ON_PolyEdgeSegment* seg = SegmentCurve( segment_index );
-  if ( seg )
-  {
-    ON_Interval pdom = SegmentDomain(segment_index);
-    ON_Interval sdom = seg->Domain();
-    if ( sdom != pdom )
-    {
-      double s = pdom.NormalizedParameterAt(t);
-      t = sdom.ParameterAt(s);
-    }
-    srf_uv = seg->SurfaceParameter(t);
-  }
-  return srf_uv;
-}
-
-bool ON_PolyEdgeCurve::EvSrfTangent( 
-        double t,
-        bool bIsoDir,
-        ON_3dPoint& srfpoint,
-        ON_3dVector& srftangent,
-        ON_3dVector& srfnormal
-        ) const
-{
-  ON_3dPoint srfpt;
-  ON_3dVector du, dv, duu, duv, dvv;
-  bool rc = EvSrfDerivatives(t,srfpoint,du,dv,duu,duv,dvv);
-  if (rc )
-    rc = ON_EvNormal( 0, du, dv, duu, duv, dvv, srfnormal ) ? true : false;
-  if (rc)
-  {
-    int segment_index = SegmentIndex(t);
-    ON_PolyEdgeSegment* seg = SegmentCurve(segment_index);
-    if ( seg )
-    {
-      if ( bIsoDir && seg->IsoType() == ON_Surface::not_iso )
-        bIsoDir = false;
-      
-      ON_3dVector crvtangent = TangentAt(t);
-      ON_3dVector binormal = ON_CrossProduct(crvtangent,srfnormal);
-      binormal.Unitize();
-      if ( seg->ReversedTrimDir() )
-        binormal.Reverse();
-      // at this point, binormal points "out" and is tangent
-      // to the surface.
-      if ( bIsoDir )
-      {
-        du.Unitize();
-        dv.Unitize();
-        double B_dot_du = binormal*du;
-        double B_dot_dv = binormal*dv;
-        if ( fabs(B_dot_dv) > fabs(B_dot_du) )
-        {
-          if (B_dot_dv < 0.0)
-            dv.Reverse();
-          srftangent = dv;
-        }
-        else
-        {
-          if (B_dot_du < 0.0)
-            du.Reverse();
-          srftangent = du;
-        }
-      }
-      else
-        srftangent = binormal;
-
-      if ( seg && seg->m_face && seg->m_face->m_bRev )
-        srfnormal.Reverse();
-    }
-    else
-      rc = false;
-  }
-  return rc;
-}
-
-bool ON_PolyEdgeCurve::EvSrfNormalCurvature( 
-          double t,
-          ON_3dVector srftangent,
-          ON_3dVector& srfnormalcurvature,
-          ON_3dVector& srfnormal
-          ) const
-{
-  ON_3dPoint srfpt;
-  ON_3dVector du, dv, duu, duv, dvv;
-  bool rc = EvSrfDerivatives(t,srfpt,du,dv,duu,duv,dvv);
-  if (rc )
-    rc = ON_EvNormal( 0, du, dv, duu, duv, dvv, srfnormal )?true:false;
-
-  if( rc)
-  {
-    srfnormalcurvature = ON_NormalCurvature( du, dv, duu, duv, dvv, srfnormal, srftangent );
-  }
-  return rc;
-}
-
-// Try to make up a 1st derivative if one is zero length
-static void CookDerivativesHelper( ON_3dVector& du, ON_3dVector& dv, ON_3dVector& duu, ON_3dVector& duv, ON_3dVector& dvv)
-{
-  bool du_ok = du.LengthSquared() > ON_SQRT_EPSILON;
-  bool dv_ok = dv.LengthSquared() > ON_SQRT_EPSILON;
-
-  if( !du_ok || !dv_ok)
-  {
-    ON_3dVector normal;
-    bool normal_ok = ON_EvNormal( 0, du, dv, duu, duv, dvv, normal ) ? true : false;
-    if( normal_ok)
-      normal_ok = normal.LengthSquared() > ON_SQRT_EPSILON;
-   
-    if( normal_ok)
-    {
-      if(( !du_ok) && ( dv_ok && normal_ok))
-      {
-        du = ON_CrossProduct( dv, normal);
-        du_ok = du.Unitize();
-        du *= (0.00390625*dv.Length());
-      }
-      if( du_ok && ( !dv_ok) && normal_ok)
-      {
-        dv = ON_CrossProduct( normal, du);
-        dv_ok = dv.Unitize();
-        dv *= (0.00390625*du.Length());
-      }
-    }
-  }
-}  
-
-bool ON_PolyEdgeCurve::EvSrfDerivatives(
-        double t,
-        ON_3dPoint& srfpoint,
-        ON_3dVector& du,
-        ON_3dVector& dv,
-        ON_3dVector& duu,
-        ON_3dVector& duv,
-        ON_3dVector& dvv
-        ) const
-{
-  bool rc = false;
-  int segment_index = SegmentIndex(t);
-  ON_PolyEdgeSegment* seg = SegmentCurve( segment_index );
-  if ( seg )
-  {
-    ON_Interval pdom = SegmentDomain(segment_index);
-    ON_Interval sdom = seg->Domain();
-    double s = t;
-    if ( sdom != pdom )
-    {
-      double x = pdom.NormalizedParameterAt(t);
-      s = sdom.ParameterAt(x);
-    }
-    // s is the segment parameter at the polyedge parameter t
-    // Get the corresponding surfaces parameters
-    ON_2dPoint srf_uv = seg->SurfaceParameter(s);
-    if ( ON_IsValid(srf_uv.x) )
-    {
-      if ( srf_uv.x == seg->m_evsrf_uv[0] && srf_uv.y == seg->m_evsrf_uv[1] )
-      {
-        rc = true;
-        srfpoint = seg->m_evsrf_pt;
-        du = seg->m_evsrf_du;
-        dv = seg->m_evsrf_dv;
-        duu = seg->m_evsrf_duu;
-        duv = seg->m_evsrf_duv;
-        dvv = seg->m_evsrf_dvv;
-      }
-      else if ( seg->m_surface )
-      {
-        rc = seg->m_surface->Ev2Der( 
-                  srf_uv.x, srf_uv.y, 
-                  srfpoint, 
-                  du, dv, 
-                  duu, duv, dvv, 
-                  0, seg->m_evsrf_hint 
-                  ) ? true : false;
-        if ( rc )
-        {
-          CookDerivativesHelper( du, dv, duu, duv, dvv);
-          seg->m_evsrf_uv[0] = srf_uv.x;
-          seg->m_evsrf_uv[1] = srf_uv.y;
-          seg->m_evsrf_pt = srfpoint;
-          seg->m_evsrf_du = du;
-          seg->m_evsrf_dv = dv;
-          seg->m_evsrf_duu = duu;
-          seg->m_evsrf_duv = duv;
-          seg->m_evsrf_dvv = dvv;
-        }
-      }
-    }
-  }
-  return rc;
-}
 
 // Test if there are any surface edges in the polyedge
 bool ON_PolyEdgeCurve::ContainsAnyEdges() const
@@ -1134,7 +696,7 @@ bool ON_PolyEdgeCurve::ContainsAnyEdges() const
   for( i = 0; i < count; i++)
   {
     ON_PolyEdgeSegment* segment = SegmentCurve(i);
-    if( 0 != segment && NULL != segment->Edge())
+    if( 0 != segment && nullptr != segment->BrepEdge())
     {
       return true;
     }
@@ -1149,7 +711,7 @@ bool ON_PolyEdgeCurve::ContainsAllEdges() const
   for( i = 0; i < count; i++)
   {
     ON_PolyEdgeSegment* segment = SegmentCurve(i);
-    if( NULL == segment || NULL == segment->Edge())
+    if( nullptr == segment || nullptr == segment->BrepEdge())
     {
       return false;
     }
@@ -1166,7 +728,7 @@ int ON_PolyEdgeCurve::FindEdge( const ON_BrepEdge* edge) const
     for( i = 0; i < count; i++)
     {
       ON_PolyEdgeSegment* segment = SegmentCurve(i);
-      if ( 0 != segment && edge == segment->Edge() )
+      if ( 0 != segment && edge == segment->BrepEdge() )
       {
         rc = i;
         break;
@@ -1185,7 +747,7 @@ int ON_PolyEdgeCurve::FindTrim( const ON_BrepTrim* trim) const
     for( i = 0; i < count; i++)
     {
       ON_PolyEdgeSegment* segment = SegmentCurve(i);
-      if ( 0 != segment && trim == segment->Trim() )
+      if ( 0 != segment && trim == segment->BrepTrim() )
       {
         rc = i;
         break;
@@ -1205,7 +767,7 @@ int ON_PolyEdgeCurve::FindCurve( const ON_Curve* curve) const
     {
       ON_PolyEdgeSegment* segment = SegmentCurve(i);
       if (    0 != segment 
-           && (curve == segment || curve == segment->ProxyCurve() || curve == segment->Edge()) )
+           && (curve == segment || curve == segment->ProxyCurve() || curve == segment->BrepEdge()) )
       {
         rc = i;
         break;
@@ -1215,7 +777,7 @@ int ON_PolyEdgeCurve::FindCurve( const ON_Curve* curve) const
   return rc;
 }
 
-ON_BOOL32 ON_PolyEdgeSegment::Write( ON_BinaryArchive& archive ) const
+bool ON_PolyEdgeSegment::Write( ON_BinaryArchive& archive ) const
 {
   bool rc = archive.BeginWrite3dmChunk(TCODE_ANONYMOUS_CHUNK,1,0);
   if (!rc)
@@ -1245,7 +807,7 @@ ON_BOOL32 ON_PolyEdgeSegment::Write( ON_BinaryArchive& archive ) const
   return rc;
 }
 
-ON_BOOL32 ON_PolyEdgeSegment::Read( ON_BinaryArchive& archive )
+bool ON_PolyEdgeSegment::Read( ON_BinaryArchive& archive )
 {
   Init();
   int major_version = 0;

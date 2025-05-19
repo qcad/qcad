@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(OPENNURBS_CYLINDER_INC_)
 #define OPENNURBS_CYLINDER_INC_
@@ -29,11 +27,11 @@ class ON_CLASS ON_Cylinder
 public:
   ON_Cylinder(); // zeros all fields - cylinder is invalid
 
-  ON_Cylinder( // infinte cylinder
+  ON_Cylinder( // infinite cylinder
     const ON_Circle&  // point on the bottom plane
     );
 
-  ON_Cylinder( // infinte cylinder
+  ON_Cylinder( // infinite cylinder
     const ON_Circle&,  // point on the bottom plane
     double             // height
     );
@@ -117,19 +115,19 @@ public:
         const ON_3dVector&
         );
 
-  // parameterization of NURBS surface does not match cylinder's transcendental paramaterization
+  // parameterization of NURBS surface does not match cylinder's transcendental parameterization
   int GetNurbForm( ON_NurbsSurface& ) const; // returns 0=failure, 2=success
 
   /*
   Description:
     Creates a surface of revolution definition of the cylinder.
   Parameters:
-    srf - [in] if not NULL, then this srf is used.
+    srf - [in] if not nullptr, then this srf is used.
   Result:
-    A surface of revolution or NULL if the cylinder is not 
+    A surface of revolution or nullptr if the cylinder is not 
     valid or is infinite.
   */
-  ON_RevSurface* RevSurfaceForm( ON_RevSurface* srf = NULL ) const;
+  ON_RevSurface* RevSurfaceForm( ON_RevSurface* srf = nullptr ) const;
 
 public: // members left public
   // base circle

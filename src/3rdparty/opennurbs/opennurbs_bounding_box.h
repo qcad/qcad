@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(ON_BOUNDING_BOX_INC_)
 #define ON_BOUNDING_BOX_INC_
@@ -24,25 +22,32 @@
 class ON_CLASS ON_BoundingBox
 {
 public:
-  static const ON_BoundingBox EmptyBoundingBox; // ((1.0,0,0,0,0),(-1.0,0.0,0.0))
+  static const ON_BoundingBox EmptyBoundingBox; // ((1.0,0.0,0.0),(-1.0,0.0,0.0))
+  static const ON_BoundingBox UnsetBoundingBox; // all coordinates are ON_UNSET_VALUE
+  static const ON_BoundingBox NanBoundingBox;   // all coordinates are ON_DBL_QNAN
 
-  ON_BoundingBox(); // creates EmptyBox
+  ON_BoundingBox() ON_NOEXCEPT; // creates EmptyBoundingBox
+  ~ON_BoundingBox() = default;
+  ON_BoundingBox(const ON_BoundingBox&) = default;
+  ON_BoundingBox& operator=(const ON_BoundingBox&) = default;
 
-	ON_BoundingBox(
+	explicit ON_BoundingBox(
     const ON_3dPoint&, // min corner of axis aligned bounding box
     const ON_3dPoint&  // max corner of axis aligned bounding box
     );
-  ~ON_BoundingBox();
 
 
+  // OBSOLETE
   // temporary - use ON_ClippingRegion - this function will be removed soon.
   int IsVisible( 
     const ON_Xform& bbox2c
     ) const;
 
-  void Destroy(); // invalidates bounding box
 
-  // operator[] returns min if index <= 0 and max if indes >= 1
+  // OBSOLETE
+  void Destroy(); // set this = ON_BoundingBox::EmptyBoundingBox
+
+  // operator[] returns min if index <= 0 and max if index >= 1
   ON_3dPoint& operator[](int);
   const ON_3dPoint& operator[](int) const;
 
@@ -62,8 +67,48 @@ public:
     ON_3dPoint box_corners[8] // returns list of 8 corner points
     ) const;
 
+
+  /*
+  Parameters:
+    index - in
+      the index of the edge
+  Returns:
+    Line segments, some possibly a single point.
+  */
+  ON_Line Edge(
+    unsigned int index  // the index of the requested edge.
+  ) const;
+
+  /*
+  Parameters:
+    edges[] - out
+      12 edge lines. If the bounding box has no height, width or depth,
+      then the corresponding edges will have the same "from" and "to"
+      points.
+  Returns:
+    If the bounding box is valid, then true is returned and
+    12 line segments, some possibly a single point, are returned.
+    Otherwise false is returned and 12 line segments with "from"
+    and "to" points set to ON_3dPoint::UnsetPoint are returned.
+  */
+  bool GetEdges( 
+    ON_Line edges[12]  // returns list of 12 edge segments
+    ) const;
+
+  // OBSOLETE IsValid() = IsNotEmpty()
   bool IsValid() const; // empty boxes are not valid
 
+  bool IsSet() const;        // every coordinate is a finite, valid double, not ON_UNSET_VALUE and not ON_UNSET_POSITIVE_VALUE
+  bool IsUnset() const;      // some coordinate is ON_UNSET_VALUE or ON_UNSET_POSITIVE_VALUE
+  bool IsNan() const;        // some coordinate is a NAN
+  bool IsUnsetOrNan() const; // = IsUnset() or IsNan()
+
+  bool IsEmpty() const;      // (m_min.x > m_max.x || m_min.y > m_max.y || m_min.z > m_max.z) && IsSet();
+  bool IsNotEmpty() const;   // (m_min.x <= m_max.x && m_min.y <= m_max.y && m_min.z <= m_max.z) && IsSet()
+  bool IsPoint() const;      // (m_min.x == m_max.x && m_min.y == m_max.y && m_min.z == m_max.z) && IsSet()
+  
+  void Dump(class ON_TextLog&) const;
+  
   /*
   Description:
     Test a bounding box to see if it is degenerate (flat)
@@ -71,7 +116,7 @@ public:
   Parameters:
     tolerance - [in] Distances <= tolerance will be considered
         to be zero.  If tolerance is negative (default), then
-        a scale invarient tolerance is used.
+        a scale invariant tolerance is used.
   Returns:
     @untitled table
     0     box is not degenerate
@@ -100,7 +145,7 @@ public:
   // If bGrowBox is true, the existing box is expanded, otherwise it is only set to the current point list
   bool Set(     
     int dim,
-    int is_rat,
+    bool is_rat,
     int count,
     int stride,
     const double* point_array,
@@ -109,6 +154,11 @@ public:
 
   bool Set(
     const ON_3dPoint& point,
+    int bGrowBox = false
+    );
+
+  bool Set(
+    const ON_2dPoint& point,
     int bGrowBox = false
     );
 
@@ -124,6 +174,40 @@ public:
 
   bool Set(     
     const ON_SimpleArray<ON_2dPoint>& point_array,
+    int bGrowBox = false
+    );
+
+  bool Set(     
+    int dim,
+    bool is_rat,
+    int count,
+    int stride,
+    const float* point_array,
+    int bGrowBox = false
+    );
+
+  bool Set(
+    const ON_3fPoint& point,
+    int bGrowBox = false
+    );
+
+  bool Set(
+    const ON_2fPoint& point,
+    int bGrowBox = false
+    );
+
+  bool Set(     
+    const ON_SimpleArray<ON_4fPoint>& point_array,
+    int bGrowBox = false
+    );
+
+  bool Set(     
+    const ON_SimpleArray<ON_3fPoint>& point_array,
+    int bGrowBox = false
+    );
+
+  bool Set(     
+    const ON_SimpleArray<ON_2fPoint>& point_array,
     int bGrowBox = false
     );
 
@@ -227,7 +311,7 @@ public:
     The minimum distance between a point on the plane
     and a point on the bounding box.
   See Also:
-    ON_PlaneEquation::MimimumValueAt
+    ON_PlaneEquation::MinimumValueAt
     ON_PlaneEquation::MaximumValueAt
   */
   double MinimumDistanceTo( const ON_Plane& plane ) const;
@@ -400,7 +484,7 @@ public:
   Parameters:
     other_bbox - [in]
   Returns:
-    True if this-intesect-other_bbox is a non-empty valid bounding box
+    True if this-intersect-other_bbox is a non-empty valid bounding box
     and this is set.  False if the intersection is empty, in which case
     "this" is set to an invalid bounding box.
   Remarks:
@@ -432,8 +516,8 @@ public:
 
 	bool Intersection(				//Returns true when intersect is non-empty. 
 				 const ON_Line&,		//Infinite Line segment to intersect with 
-				 double* =NULL ,			// t0  parameter of first intersection point
-				 double* =NULL       // t1  parameter of last intersection point (t0<=t1)   
+				 double* =nullptr ,			// t0  parameter of first intersection point
+				 double* =nullptr       // t1  parameter of last intersection point (t0<=t1)   
 				 ) const;			 
 
   /* 
@@ -468,7 +552,7 @@ public:
          const ON_BoundingBox&, 
          const ON_BoundingBox&
          );
-                  
+                 
   /* 
   Description:
     Test to see if "this" and other_bbox are disjoint (do not intersect).
@@ -483,21 +567,214 @@ public:
     const ON_BoundingBox& other_bbox
     ) const;
 
+  /*
+  Description:
+    Test to see if "this" and line are disjoint (do not intersect or line is included).
+  Parameters:
+    line - [in]
+    infinite - [in] if false or not provided, then the line is considered bounded by start and end points.
+  Returns:
+    True if "this" and line are disjoint.
+  */
+  bool IsDisjoint(const ON_Line& line) const;
+  bool IsDisjoint(const ON_Line& line, bool infinite) const;
+
   bool SwapCoordinates( int, int );
+
+ /*
+ Description:
+   Expand the box by adding delta to m_max and subtracting
+   it from m_min.  So, when delta is positive and the interval is 
+   increasing this function expands the box on each side.
+ Returns:
+   true if the result is Valid.  
+ */
+  bool Expand(ON_3dVector delta);
+
+  /*
+Description:
+  Shrinks the box by subtracting delta to m_max and adding
+  it from m_min.  This is not allowed to create an inverse bounding box.
+Returns:
+  true if the result is Valid.
+*/
+  bool Shrink(ON_3dVector delta);
 
   ON_3dPoint m_min;
   ON_3dPoint m_max;
 };
 
+/*
+Returns:
+  True if lhs and rhs are identical.
+*/
+ON_DECL
+bool operator==( const ON_BoundingBox& lhs, const ON_BoundingBox& rhs );
+
+/*
+Returns:
+  True if lhs and rhs are not equal.
+*/
+ON_DECL
+bool operator!=( const ON_BoundingBox& lhs, const ON_BoundingBox& rhs );
+
+class ON_CLASS ON_BoundingBoxAndHash
+{
+public:
+  ON_BoundingBoxAndHash() = default;
+  ~ON_BoundingBoxAndHash() = default;
+  ON_BoundingBoxAndHash(const ON_BoundingBoxAndHash&) = default;
+  ON_BoundingBoxAndHash& operator=(const ON_BoundingBoxAndHash&) = default;
+
+public:
+  // This hash depends on the context and is a hash
+  // of the information used to calculate the bounding box.
+  // It is not the hash of the box values
+
+  void Set(
+    const ON_BoundingBox& bbox,
+    const ON_SHA1_Hash& hash
+  );
+
+  const ON_BoundingBox& BoundingBox() const;
+
+  const ON_SHA1_Hash& Hash() const;
+
+  /*
+  Returns:
+   True if bounding box IsSet() is true and hash is not EmptyContentHash.
+  */
+  bool IsSet() const;
+
+  bool Write(
+    class ON_BinaryArchive& archive
+  ) const;
+
+  bool Read(
+    class ON_BinaryArchive& archive
+  );
+
+ private:
+  ON_BoundingBox m_bbox = ON_BoundingBox::UnsetBoundingBox;
+  ON_SHA1_Hash m_hash = ON_SHA1_Hash::EmptyContentHash;
+};
+
+/*
+A class that caches 8 bounding box - hash pairs and keeps the most frequently
+used bounding boxes.
+*/
+class ON_CLASS ON_BoundingBoxCache
+{
+public:
+  ON_BoundingBoxCache() = default;
+  ~ON_BoundingBoxCache() = default;
+  ON_BoundingBoxCache(const ON_BoundingBoxCache&) = default;
+  ON_BoundingBoxCache& operator=(const ON_BoundingBoxCache&) = default;
+
+public:
+  /*
+  Description:
+    Add a bounding box that can be found from a hash value.
+  Parameters:
+    bbox - [in]
+    hash - [in]
+      A hash of the information needed to create this bounding box.
+  */
+  void AddBoundingBox(
+    const ON_BoundingBox& bbox,
+    const ON_SHA1_Hash& hash
+  );
+
+  void AddBoundingBox(
+    const ON_BoundingBoxAndHash& bbox_and_hash
+  );
+
+  /*
+  Description:
+    Get a cached bounding box.
+  Parameters:
+    hash - [in]
+    bbox - [out]
+      If the hash identifies a bounding box in the cache, then
+      that bounding box is returned. Otherwise ON_BoundingBox::NanBoundingBox
+      is returned.
+  Returns:
+    true - cached bounding box returned
+    false - bounding box not in cache.
+  */
+  bool GetBoundingBox(
+    const ON_SHA1_Hash& hash,
+    ON_BoundingBox& bbox
+  ) const;
+
+  /*
+  Description:
+    Remove a bounding box that can be found from a hash value.
+  Parameters:
+    hash - [in]
+  Returns:
+    true - hash was in the cache and removed.
+    false - hash was not in the cache.
+  Remarks:
+    If the hash values you are using are correctly computed and include
+    all information that the bounding box depends on, then
+    you never need to remove bounding boxes. Unused ones will get
+    removed as new ones are added.
+  */
+  bool RemoveBoundingBox(
+    const ON_SHA1_Hash& hash
+  );
+
+  /*
+  Description:
+    Removes all bounding boxes.
+  Remarks:
+    If the hash values you are using are correctly computed and include
+    all information that the bounding box depends on, then
+    you never need to remove bounding boxes. Unused ones will get
+    removed as new ones are added.
+    If the hash does not include all information required to compute
+    the bounding boxes, then call RemoveAllBoundingBoxes() when the
+    non-hashed information changes.
+  */
+  void RemoveAllBoundingBoxes();
+
+  /*
+  Returns:
+    Number of cached boxes.
+  */
+  unsigned int BoundingBoxCount() const;
+
+  bool Write(
+    class ON_BinaryArchive& archive
+  ) const;
+
+  bool Read(
+    class ON_BinaryArchive& archive
+  );
+
+private:
+  // number of boxes set in m_cache[]
+  unsigned int m_count = 0; 
+
+  // capacity of m_cache[] - set when needed
+  unsigned int m_capacity = 0;
+
+  // Bounding box cache. Most recently used boxes are first.
+  mutable ON_BoundingBoxAndHash m_cache[8];
+
+  /*
+  Returns:
+    m_cache[] array index of box with the hash.
+    ON_UNSET_UINT_INDEX if hash is not present in m_cache[] array.
+  */
+  unsigned int Internal_CacheIndex(const ON_SHA1_Hash& hash) const;
+};
+
 #if defined(ON_DLL_TEMPLATE)
 
-// This stuff is here because of a limitation in the way Microsoft
-// handles templates and DLLs.  See Microsoft's knowledge base 
-// article ID Q168958 for details.
-#pragma warning( push )
-#pragma warning( disable : 4231 )
 ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_BoundingBox>;
-#pragma warning( pop )
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_BoundingBoxAndHash>;
 
 #endif
 
@@ -515,7 +792,7 @@ Parameters:
    If the input bbox is valid and bGrowBox is true,
    then the output bbox is the union of the input
    bbox and the bounding box of the point list.
- xform - [in] (default = NULL)
+ xform - [in] (default = nullptr)
    If not null, the bounding box of the transformed
    points is calculated.  The points are not modified.
 Returns:
@@ -524,7 +801,7 @@ Returns:
 ON_DECL
 bool ON_GetPointListBoundingBox(
     int dim,
-    int is_rat,
+    bool is_rat,
     int count,
     int stride,
     const double* point_list,
@@ -536,7 +813,7 @@ bool ON_GetPointListBoundingBox(
 ON_DECL
 bool ON_GetPointListBoundingBox(
     int dim,
-    int is_rat,
+    bool is_rat,
     int count,
     int stride,
     const float* point_list,
@@ -548,7 +825,7 @@ bool ON_GetPointListBoundingBox(
 ON_DECL
 bool ON_GetPointListBoundingBox(
     int dim,
-    int is_rat,
+    bool is_rat,
     int count,
     int stride,
     const double* point_list,
@@ -560,7 +837,7 @@ bool ON_GetPointListBoundingBox(
 ON_DECL
 ON_BoundingBox ON_PointListBoundingBox(
     int dim,
-    int is_rat,
+    bool is_rat,
     int count,
     int stride,
     const double* point_list
@@ -569,7 +846,7 @@ ON_BoundingBox ON_PointListBoundingBox(
 ON_DECL
 bool ON_GetPointListBoundingBox(
     int dim,
-    int is_rat,
+    bool is_rat,
     int count,
     int stride,
     const float* point_list,
@@ -581,7 +858,7 @@ bool ON_GetPointListBoundingBox(
 ON_DECL
 ON_BoundingBox ON_PointListBoundingBox( // low level workhorse function
     int dim,
-    int is_rat,
+    bool is_rat,
     int count,
     int stride,
     const float* point_list
@@ -590,7 +867,7 @@ ON_BoundingBox ON_PointListBoundingBox( // low level workhorse function
 ON_DECL
 bool ON_GetPointGridBoundingBox(
         int dim,
-        int is_rat,
+        bool is_rat,
         int point_count0, int point_count1,
         int point_stride0, int point_stride1,
         const double* point_grid,
@@ -602,7 +879,7 @@ bool ON_GetPointGridBoundingBox(
 ON_DECL
 ON_BoundingBox ON_PointGridBoundingBox(
         int dim,
-        int is_rat,
+        bool is_rat,
         int point_count0, int point_count1,
         int point_stride0, int point_stride1,
         const double* point_grid
@@ -614,6 +891,36 @@ double ON_BoundingBoxTolerance(
         const double* bboxmin,
         const double* bboxmax
         );
+
+/*
+Description:
+  Determine if an object is too large or too far 
+  from the origin for single precision coordinates
+  to be useful.
+Parameters:
+  bbox - [in]
+    Bounding box of an object with single precision
+    coordinates.  An ON_Mesh is an example of an
+    object with single precision coordinates.
+  xform - [out]
+    If this function returns false and xform is not
+    null, then the identity transform is returned.
+    If this function returns true and xform is not
+    null, then the transform moves the region
+    contained in bbox to a location where single 
+    precision coordinates will have enough
+    information for the object to be useful.
+Returns:
+  true:
+    The region contained in bbox is too large
+    or too far from the origin for single 
+    precision coordinates to be useful.
+  false:
+    A single precision object contained in bbox
+    will be satisfactory for common calculations.
+*/
+ON_DECL
+bool ON_BeyondSinglePrecision( const ON_BoundingBox& bbox, ON_Xform* xform );
 
 ON_DECL
 bool ON_WorldBBoxIsInTightBBox( 

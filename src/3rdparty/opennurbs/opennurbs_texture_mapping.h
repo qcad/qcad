@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 ////////////////////////////////////////////////////////////////
 //
@@ -32,43 +30,181 @@ class ON_3dPoint;
 
 typedef int  ( *TEXMAP_INTERSECT_LINE_SURFACE )( const ON_Line*, const ON_BrepFace*, ON_SimpleArray<ON_X_EVENT>& );
 typedef bool ( *TEXMAP_BREP_FACE_CLOSEST_POINT )( const ON_BrepFace*, const ON_3dPoint*, ON_3dPoint& );
+typedef ON_TextureMapping ( *GET_TEXMAP_FROM_DOCUMENT )( const class CRhinoDoc&, const ON_MappingChannel* );
 
-class ON_CLASS ON_TextureMapping : public ON_Object
+class ON_CLASS ON_TextureMapping : public ON_ModelComponent
 {
-public:
 	ON_OBJECT_DECLARE(ON_TextureMapping);
 
-	ON_TextureMapping();
-	~ON_TextureMapping();
+public:
 
-	// The copy constructor and operator= overrides are needed
-  // to ensure m_geometry is properly copied.
-	ON_TextureMapping(const ON_TextureMapping& src);
-	ON_TextureMapping& operator=(const ON_TextureMapping& src);
+  /// <summary>
+  /// m_type = ON_TextureMapping::TYPE::no_mapping
+  /// m_id = nil id
+  /// </summary>
+  static const ON_TextureMapping Unset;
 
-  // overrides virtual ON_Object::IsValid
-  ON_BOOL32 IsValid( ON_TextLog* text_log = NULL ) const;
+  // {B988A6C2-61A6-45a7-AAEE-9AED7EF4E316}
+  static const ON_UUID SurfaceParameterTextureMappingId;
 
-  // overrides virtual ON_Object::Dump
-  void Dump( ON_TextLog& ) const;
+  /// <summary>
+  /// m_type = ON_TextureMapping::srfp_mapping
+  /// m_id = ON_TextureMapping::SurfaceParameterTextureMappingId
+  /// </summary>
+  static const ON_TextureMapping SurfaceParameterTextureMapping;
 
-  // overrides virtual ON_Object::SizeOf
-  unsigned int SizeOf() const;
+  /*
+  Parameters:
+    model_component_reference - [in]
+    none_return_value - [in]
+      value to return if ON_Material::Cast(model_component_ref.ModelComponent())
+      is nullptr
+  Returns:
+    If ON_Material::Cast(model_component_ref.ModelComponent()) is not nullptr,
+    that pointer is returned.  Otherwise, none_return_value is returned. 
+  */
+  static const ON_TextureMapping* FromModelComponentRef(
+    const class ON_ModelComponentReference& model_component_reference,
+    const ON_TextureMapping* none_return_value
+    );
 
-  // overrides virtual ON_Object::Write
-  ON_BOOL32 Write(
-         ON_BinaryArchive& binary_archive
-       ) const;
+public:
+  //////////////////////////////////////////////////////////
+  //
+  // Mapping types:
+  //
+  //   You can either calculate texture coordinates based on
+  //   the parameterization of the surface used to create a mesh,
+  //   or project the natural parameterization from a mapping
+  //   primitive, like a plane, sphere, box, or cylinder.
+  //
+	// Do not change TYPE enum values - they are saved in 3dm files.
+  //
+  enum class TYPE : unsigned int
+  {
+    no_mapping       = 0,
+    srfp_mapping     = 1, // u,v = linear transform of surface params,w = 0
+    plane_mapping    = 2, // u,v,w = 3d coordinates wrt frame
+    cylinder_mapping = 3, // u,v,w = longitude, height, radius
+    sphere_mapping   = 4, // (u,v,w) = longitude,latitude,radius
+    box_mapping      = 5,
+    mesh_mapping_primitive = 6, // m_mapping_primitive is an ON_Mesh 
+    srf_mapping_primitive  = 7, // m_mapping_primitive is an ON_Surface
+    brep_mapping_primitive = 8,  // m_mapping_primitive is an ON_Brep
+    ocs_mapping = 9,             // same as plane_mapping - used to differentiate between OCS and plane mapping in the UI
+    false_colors = 10, // some kind of false color mapping used to set per vertex colors.
+    wcs_projection    = 11,      // used for ON_MappingTag when creating texture coordinates for WCS projections
+    wcsbox_projection = 12       // used for ON_MappingTag when creating texture coordinates for WCS box projections
+  };
 
-  // overrides virtual ON_Object::Read
-  ON_BOOL32 Read(
-         ON_BinaryArchive& binary_archive
-       );
+  static ON_TextureMapping::TYPE TypeFromUnsigned( 
+    unsigned int type_as_unsigned
+    );
 
-  void Default();
+  static const ON_wString TypeToString(
+    ON_TextureMapping::TYPE texture_mapping_type
+    );
 
-  virtual
-  ON_UUID ModelObjectId() const;
+  //////////////////////////////////////////////////////////
+  //
+  // Projection:
+  //
+  //   When a mapping primitive, like a plane, sphere, box,
+  //   or cylinder, is used, there are two projection options.
+  //
+  //  clspt_projection: world xyz maps to the point on the 
+  //                    mapping primitive that is closest to xyz.
+  //                    In this case, ON_TextureMapping::Evaluate
+  //                    ignores the vector argument.
+  //
+  //  ray_projection:   world xyz + world vector defines a world line.
+  //                    The world line is intersected with the mapping 
+  //                    primitive and the intersection point that is
+  //                    closest to the world xyz point is used to
+  //                    calculate the mapping parameters.
+  //
+  //  The value of m_projection can be changed as needed.
+  //
+  //  If m_type = srfp_mapping, then m_projection is ignored.
+  //
+  enum class PROJECTION : unsigned int
+  {
+    no_projection    = 0,
+    clspt_projection = 1,
+    ray_projection   = 2
+  };
+
+  static ON_TextureMapping::PROJECTION ProjectionFromUnsigned(
+    unsigned int projection_as_unsigned
+    );
+
+  static const ON_wString ProjectionToString(
+    ON_TextureMapping::PROJECTION texture_mapping_projection
+    );
+
+  //////////////////////////////////////////////////////////
+  //
+  // Texture space
+  //
+  //   When a mapping primitive is a box or a capped cylinder,
+  //   there are two options for the mapping.  Either the sides
+  //   all map to (0,1)x(0,1) (so the either texture map appears 
+  //   on each side, or the sides map to distinct regions of the
+  //   texture space.  
+  //   
+  enum class TEXTURE_SPACE : unsigned int
+  {
+    single  = 0, // sides and caps map to same texture space
+    divided = 1  // sides and caps map to distinct vertical
+                 // regions of texture space.
+                 // (0, 1/4, 2/4, 3/4, 1) for uncapped boxes.
+                 // (0, 1/6, 2/6, 3/6, 4/6, 5/6, 1) for capped boxes.
+                 // (0, 4/6, 5/6, 1) for capped cylinders.
+  };
+  
+  static ON_TextureMapping::TEXTURE_SPACE TextureSpaceFromUnsigned(
+    unsigned int texture_space_as_unsigned
+    );
+  
+  static const ON_wString SpaceToString(
+    ON_TextureMapping::TEXTURE_SPACE texture_mapping_space
+    );
+
+public:
+  ON_TextureMapping() ON_NOEXCEPT;
+  ON_TextureMapping(const ON_TextureMapping& src);
+  virtual ~ON_TextureMapping();
+  ON_TextureMapping& operator=(const ON_TextureMapping& src);
+
+private:
+  void Internal_CopyFrom(
+    const ON_TextureMapping& src
+    );
+
+  void Internal_Destroy();
+
+  bool Internal_WriteV5(
+    ON_BinaryArchive& binary_archive
+    ) const;
+
+  bool Internal_ReadV5(
+    ON_BinaryArchive& binary_archive
+    );
+
+public:
+  bool IsValid( class ON_TextLog* text_log = nullptr ) const override;
+
+  void Dump( ON_TextLog& ) const override;
+
+  unsigned int SizeOf() const override;
+
+  bool Write(
+    ON_BinaryArchive& binary_archive
+    ) const override;
+
+  bool Read(
+    ON_BinaryArchive& binary_archive
+    ) override;
 
 	/*
 	Determines whether the mapping, as currently set up, requires vertex normals to be present on the
@@ -129,6 +265,20 @@ public:
             const ON_Interval& dz
             );
 
+
+  /*
+Description:
+  Create a Ocs texture mapping.  Note that OCS mappings must be placed on mapping channel ON_ObjectRenderingAttributes::OCSMappingChannelId()
+  otherwise they will not work.
+Parameters:
+  plane - [in]
+Returns:
+  True if input is valid.
+*/
+  bool SetOcsMapping(
+    const ON_Plane& plane
+  );
+
   /*
   Description:
     Create a cylindrical projection texture mapping.
@@ -164,7 +314,7 @@ public:
     sphere - [in]  
         sphere in world space used to define a spherical
         coordinate system. The longitude parameter maps
-        (0,2pi) to texture "u" (0,1).  The latitude paramter
+        (0,2pi) to texture "u" (0,1).  The latitude parameter
         maps (-pi/2,+pi/2) to texture "v" (0,1).
         The radial parameter maps (0,r) to texture "w" (0,1).
   Returns:
@@ -184,19 +334,19 @@ public:
         determine the location of the sides.
     dx - [in]
        Determines the location of the front and back planes.
-       The vector plane.xaxis is perpindicular to these planes
+       The vector plane.xaxis is perpendicular to these planes
        and they pass through plane.PointAt(dx[0],0,0) and
-       plane.PointAt(dx[1],0,0), respectivly.
+       plane.PointAt(dx[1],0,0), respectively.
     dy - [in]
        Determines the location of the left and right planes.
-       The vector plane.yaxis is perpindicular to these planes
+       The vector plane.yaxis is perpendicular to these planes
        and they pass through plane.PointAt(0,dy[0],0) and
-       plane.PointAt(0,dy[1],0), respectivly.
+       plane.PointAt(0,dy[1],0), respectively.
     dz - [in] 
        Determines the location of the top and bottom planes.
-       The vector plane.zaxis is perpindicular to these planes
+       The vector plane.zaxis is perpendicular to these planes
        and they pass through plane.PointAt(0,0,dz[0]) and
-       plane.PointAt(0,0,dz[1]), respectivly.
+       plane.PointAt(0,0,dz[1]), respectively.
     bIsCapped - [in]
         If true, the box is treated as a finite
         capped box.          
@@ -336,7 +486,7 @@ public:
   Parameters:
     dir - [in] 0 = reverse "u", 1 = reverse "v", 2 = reverse "w".
   Remarks:
-    Modies m_uvw so that the spedified direction transforms
+    Modies m_uvw so that the specified direction transforms
     the texture coordinate t to 1-t.
   Returns:
     True if input is valid.
@@ -448,28 +598,6 @@ public:
     ON_3dPoint* T
     ) const;
 
-  int EvaluateMeshMapping( 
-    const ON_3dPoint& P,
-    const ON_3dVector& N,
-    const ON_Mesh* mesh,
-    ON_3dPoint* T
-    ) const;
-
-  int EvaluateSurfaceMapping( 
-    const ON_3dPoint& P,
-    const ON_3dVector& N,
-    const ON_Surface* srf,
-    ON_3dPoint* T
-    ) const;
-
-  int EvaluateBrepMapping( 
-    const ON_3dPoint& P,
-    const ON_3dVector& N,
-    const ON_Brep* brep,
-    ON_3dPoint* T
-    ) const;
-
-  static void SetAdvancedBrepMappingToolFunctions(TEXMAP_INTERSECT_LINE_SURFACE, TEXMAP_BREP_FACE_CLOSEST_POINT);
 
   /*
   Description:
@@ -479,10 +607,10 @@ public:
     mesh - [in]
     tag - [in]
     object_xform - [in] (optional)
-      If this transform is not NULL, then true will be
+      If this transform is not nullptr, then true will be
       returned only if the mapping function is the same and
       the tag's m_mesh_xform field is the same as mesh_xform.
-      This parameter is typically NULL or the value of 
+      This parameter is typically nullptr or the value of 
       ON_MappingRef::m_object_xform.
   Returns:
     True if the meshes texture coordinates were set by this
@@ -490,12 +618,34 @@ public:
   */
   bool HasMatchingTextureCoordinates( 
          const ON_Mesh& mesh,
-         const ON_Xform* object_xform = 0
+         const ON_Xform* object_xform = nullptr
          ) const; 
+
   bool HasMatchingTextureCoordinates( 
          const class ON_MappingTag& tag,
-         const ON_Xform* object_xform = 0
+         const ON_Xform* object_xform = nullptr
          ) const; 
+
+  /*
+  Description:
+    Quickly check to see if a mesh has cached texture coordinates
+    set by this mapping.
+  Parameters:
+    mesh - [in]
+    object_xform - [in] (optional)
+      If this transform is not nullptr, then true will be
+      returned only if the mapping function is the same and
+      the tag's m_mesh_xform field is the same as mesh_xform.
+      This parameter is typically nullptr or the value of
+      ON_MappingRef::m_object_xform.
+  Returns:
+    True if the mesh contains cached texture coordinates set
+    by this mapping.
+  */
+  bool HasMatchingCachedTextureCoordinates(
+         const ON_Mesh& mesh,
+         const ON_Xform* object_xform = nullptr
+         ) const;
 
   /*
   Description:
@@ -559,112 +709,18 @@ public:
     ) const;
 
 public:
-  // The only reliable and persistent way to reference texture 
-  // mappings is by the mapping_id.  If the mapping id is
-  // set to m_srfp_mapping_id, then all other mapping settings
-  // are ignored.
-  ON_UUID m_mapping_id;
 
-  // Runtime texture mapping table index. 
-  // This value is NOT SAVED IN 3DM FILES.
-  // This value is constant for each runtime instance of Rhino,
-  // but can change each time a model is loaded or saved.  
-  // Once a texture mapping is in the CRhinoDoc material table,
-  // its id and index never change in that instance of Rhino.
-  int m_mapping_index;
 
-  // The texture mapping name is for UI and user comfort. 
-  // Duplicates are permitted.
-  ON_wString m_mapping_name;
+public:
+  ON_TextureMapping::TYPE m_type = ON_TextureMapping::TYPE::no_mapping;
+  ON_TextureMapping::PROJECTION m_projection = ON_TextureMapping::PROJECTION::no_projection;
+  ON_TextureMapping::TEXTURE_SPACE m_texture_space = ON_TextureMapping::TEXTURE_SPACE::single;
 
-  //////////////////////////////////////////////////////////
-  //
-  // Mapping types:
-  //
-  //   You can either calculate texture coordinates based on
-  //   the parameterization of the surface used to create a mesh,
-  //   or project the natural parameterization from a mapping
-  //   primitive, like a plane, sphere, box, or cylinder.
-  //
-	// Do not change TYPE enum values - they are saved in 3dm files.
-  //
-  enum TYPE
-  {
-    no_mapping       = 0,
-
-    srfp_mapping     = 1, // u,v = linear transform of surface params,w = 0
-    plane_mapping    = 2, // u,v,w = 3d coordinates wrt frame
-    cylinder_mapping = 3, // u,v,w = logitude, height, radius
-    sphere_mapping   = 4, // (u,v,w) = longitude,latitude,radius
-    box_mapping      = 5,
-    mesh_mapping_primitive = 6, // m_mapping_primitive is an ON_Mesh 
-    srf_mapping_primitive  = 7, // m_mapping_primitive is an ON_Surface
-    brep_mapping_primitive = 8, // m_mapping_primitive is an ON_Brep
-
-    force_32bit_mapping_type = 0xFFFFFFFF
-  };
-
-	TYPE m_type;
-
-  //////////////////////////////////////////////////////////
-  //
-  // Projection:
-  //
-  //   When a mapping primitive, like a plane, sphere, box,
-  //   or cylinder, is used, there are two projection options.
-  //
-  //  clspt_projection: world xyz maps to the point on the 
-  //                    mapping primitive that is closest to xyz.
-  //                    In this case, ON_TextureMapping::Evaluate
-  //                    ignores the vector argument.
-  //
-  //  ray_projection:   world xyz + world vector defines a world line.
-  //                    The world line is intersected with the mapping 
-  //                    primitive and the intersection point that is
-  //                    closest to the world xyz point is used to
-  //                    calculate the mapping parameters.
-  //
-  //  The value of m_projection can be changed as needed.
-  //
-  //  If m_type = srfp_mapping, then m_projection is ignored.
-  //
-  enum PROJECTION
-  {
-    no_projection    = 0,
-    clspt_projection = 1,
-    ray_projection   = 2,
-    force_32bit_mapping_projection = 0xFFFFFFFF
-  };
-
-  PROJECTION m_projection;
-
-  //////////////////////////////////////////////////////////
-  //
-  // Texture space
-  //
-  //   When a mapping primitive is a box or a capped cylinder,
-  //   there are two options for the mapping.  Either the sides
-  //   all map to (0,1)x(0,1) (so the either texture map appears 
-  //   on each side, or the sides map to distinct regions of the
-  //   texture space.  
-  //   
-  enum TEXTURE_SPACE
-  {
-    single  = 0, // sides and caps map to same texture space
-    divided = 1, // sides and caps map to distinct vertical
-                 // regions of texture space.
-                 // (0, 1/4, 2/4, 3/4, 1) for uncapped boxes.
-                 // (0, 1/6, 2/6, 3/6, 4/6, 5/6, 1) for capped boxes.
-                 // (0, 4/6, 5/6, 1) for capped cylinders.
-    force_32bit_texture_space = 0xFFFFFFFF
-  };
-  
-  TEXTURE_SPACE m_texture_space;
-
-  // The m_bCapped applies to cylinder and box mappings.  If
-  // m_bCapped is false, the cylinder or box is "infinite".
-  // If m_bCapped is true, they are finite.
-  bool m_bCapped;
+  // The m_bCapped applies to planar, cylinder and box mappings.
+  // If m_bCapped is false, the cylinder or box is "infinite", if m_bCapped is true, they are finite.
+  // In planar mappings, m_bCapped=false means "the Z texture coordinate will always be 0.0"
+  // this is now the default behaviour in Rhino 5.0 - it's what users expect apparently.
+  bool m_bCapped = false;
 
   //////////////////////////////////////////////////////////
   //
@@ -676,34 +732,106 @@ public:
   // runtime setting that is not saved in 3dm files. 
   // If m_type is srfp_mapping, then m_Pxyz and m_Nxyz are
   // ignored.
-  ON_Xform m_Pxyz;
-  ON_Xform m_Nxyz;
+  ON_Xform m_Pxyz = ON_Xform::IdentityTransformation;
+  ON_Xform m_Nxyz = ON_Xform::IdentityTransformation;
 
   // Transform applied to mapping coordinate (u,v,w) to 
   // convert it into a texture coordinate.
-  ON_Xform m_uvw;
-
-  // Custom mapping primitive.
-  ON_Object* m_mapping_primitive;
-
-  static TYPE TypeFromInt( int i );
-  static PROJECTION ProjectionFromInt( int i );
-  static TEXTURE_SPACE TextureSpaceFromInt( int i);
+  ON_Xform m_uvw = ON_Xform::IdentityTransformation;
 
   ON__UINT32 MappingCRC() const;
+
+  // Custom mapping primitive.
+  // Returns nullptr if no custom mapping primitive is stored in this texture mapping definition.
+  const ON_Object* CustomMappingPrimitive(void) const;
+
+  const std::shared_ptr<const ON_Object>& SharedCustomMappingPrimitive(void) const;
+
+  //Returns a valid mesh if the custom mapping primitive is a mesh.  Otherwise nullptr.
+  //Implementation is return ON_Mesh::Cast(CustomMappingPrimitive());
+  const ON_Mesh* CustomMappingMeshPrimitive(void) const;
+
+  //Returns a valid brep if the custom mapping primitive is a brep.  Otherwise nullptr.
+  //Implementation is return ON_Brep::Cast(CustomMappingPrimitive());
+  const ON_Brep* CustomMappingBrepPrimitive(void) const;
+
+  //Returns a valid surface if the custom mapping primitive is a surface.  Otherwise nullptr.
+  //Implementation is return ON_Surface::Cast(CustomMappingPrimitive());
+  const ON_Surface* CustomMappingSurfacePrimitive(void) const;
+
+  void SetCustomMappingPrimitive(ON_Object*);
+
+private:
+#pragma ON_PRAGMA_WARNING_PUSH
+#pragma ON_PRAGMA_WARNING_DISABLE_MSC( 4251 ) 
+  // C4251: ... needs to have dll-interface to be used by clients of class ...
+  // m_mapping_primitive is private and all code that manages m_mapping_primitive is explicitly implemented in the DLL.
+private:
+  std::shared_ptr<const ON_Object> m_mapping_primitive = nullptr;
+#pragma ON_PRAGMA_WARNING_POP
 };
 
 #if defined(ON_DLL_TEMPLATE)
-// This stuff is here because of a limitation in the way Microsoft
-// handles templates and DLLs.  See Microsoft's knowledge base 
-// article ID Q168958 for details.
-#pragma warning( push )
-#pragma warning( disable : 4231 )
-ON_DLL_TEMPLATE template class ON_CLASS ON_ClassArray<ON_TextureMapping>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_TextureMapping*>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<const ON_TextureMapping*>;
 ON_DLL_TEMPLATE template class ON_CLASS ON_ObjectArray<ON_TextureMapping>;
-#pragma warning( pop )
 #endif
 
+class ON_CLASS ON_WeightedAverageHash
+{
+public:
+  static const int dim = 5;
+  ON_WeightedAverageHash();
+  ON_3dPoint m_sum[dim];
+  void Zero();
+  bool Write(ON_BinaryArchive& binary_archive) const;
+  bool Read(ON_BinaryArchive& binary_archive);
+  bool Matches(const ON_WeightedAverageHash& b, const ON_Xform& bt, double tol) const;
+  void Transform(const ON_Xform& xform);
+private:
+  unsigned char m_reserved[32];
+};
+class ON_CLASS ON_GeometryFingerprint
+{
+public:
+  ON_GeometryFingerprint();
+  void Zero();
+  bool Write(ON_BinaryArchive& binary_archive) const;
+  bool Read(ON_BinaryArchive& binary_archive);
+  bool Matches(const ON_GeometryFingerprint& b, const ON_Xform& bt, double tol) const;
+  void Transform(const ON_Xform& xform);
+  unsigned int m_topologyCRC;
+  ON_WeightedAverageHash m_pointWAH;
+  ON_WeightedAverageHash m_edgeWAH;
+private:
+  unsigned char m_reserved[32];
+};
+class ON_CLASS ON_MappingMeshInfo
+{
+public:
+  ON_MappingMeshInfo();
+  ON_SimpleArray<int> m_faceSourceIds;
+  ON_GeometryFingerprint m_geometryFingerprint;
+
+  // Derived data
+  void GenerateDerivedData();
+  const int* SourceIdFaces(const int sourceId, int& countOut) const;
+private:
+  ON_SimpleArray<int> m_sourceIdFaceStart;
+  ON_SimpleArray<int> m_sourceIdFaceCount;
+  ON_SimpleArray<int> m_sourceIdFaceList;
+private:
+  unsigned char m_reserved[32];
+};
+class ON_CLASS ON_RenderMeshInfo
+{
+public:
+  ON_RenderMeshInfo();
+  int m_sourceFaceId;
+  ON_GeometryFingerprint m_geometryFingerprint;
+private:
+  unsigned char m_reserved[32];
+};
 
 #endif
 

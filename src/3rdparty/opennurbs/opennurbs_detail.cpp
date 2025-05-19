@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,9 +10,16 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
+
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
 
 ON_OBJECT_IMPLEMENT(ON_DetailView,ON_Geometry,"C8C66EFA-B3CB-4e00-9440-2AD66203379E");
 
@@ -31,7 +37,7 @@ void ON_DetailView::MemoryRelocate()
   m_boundary.MemoryRelocate();
 }
 
-ON_BOOL32 ON_DetailView::IsValid( ON_TextLog* text_log ) const
+bool ON_DetailView::IsValid( ON_TextLog* text_log ) const
 {
   // Don't bother checking m_view - during runtime it's
   // not filled in. It is only used for IO.  See
@@ -53,7 +59,7 @@ unsigned int ON_DetailView::SizeOf() const
   return sz;
 }
 
-ON_BOOL32 ON_DetailView::Write( ON_BinaryArchive& archive ) const
+bool ON_DetailView::Write( ON_BinaryArchive& archive ) const
 {
   bool rc = archive.BeginWrite3dmChunk( TCODE_ANONYMOUS_CHUNK, 1, 1 );
   if (!rc)
@@ -99,7 +105,7 @@ ON_BOOL32 ON_DetailView::Write( ON_BinaryArchive& archive ) const
   return rc;
 }
 
-ON_BOOL32 ON_DetailView::Read(ON_BinaryArchive& archive)
+bool ON_DetailView::Read(ON_BinaryArchive& archive)
 {
   m_page_per_model_ratio = 0.0;
   m_view.Default();
@@ -166,24 +172,67 @@ int ON_DetailView::Dimension() const
   return m_boundary.Dimension();
 }
 
-ON_BOOL32 ON_DetailView::GetBBox(
+bool ON_DetailView::GetBBox(
     double* boxmin,
     double* boxmax,
-    int bGrowBox
+    bool bGrowBox
     ) const
 {
   return m_boundary.GetBBox(boxmin,boxmax,bGrowBox);
 }
 
 bool ON_DetailView::GetTightBoundingBox( 
-      ON_BoundingBox& tight_bbox, int bGrowBox, const ON_Xform* xform
+      ON_BoundingBox& tight_bbox, bool bGrowBox, const ON_Xform* xform
       ) const
 {
   return m_boundary.GetTightBoundingBox(tight_bbox,bGrowBox,xform);
 }
 
-ON_BOOL32 ON_DetailView::Transform( const ON_Xform& xform )
+bool ON_DetailView::Transform( const ON_Xform& xform )
 {
   return m_boundary.Transform(xform);
 }
 
+bool ON_DetailView::UpdateFrustum(
+  ON::LengthUnitSystem model_units,
+  ON::LengthUnitSystem paper_units
+)
+{
+  if (!m_view.m_vp.IsParallelProjection())
+    return false;
+  if (!(m_page_per_model_ratio > 0.0))
+    return false;
+
+  ON_BoundingBox bbox = BoundingBox();
+  double port_width = bbox.m_max.x - bbox.m_min.x;
+  double port_height = bbox.m_max.y - bbox.m_min.y;
+  if (!(port_height > 0.0) || !(port_width > 0.0))
+    return false; 
+
+  double detail_width_on_paper = bbox.m_max.x - bbox.m_min.x;
+  double detail_width_on_paper_mm = detail_width_on_paper * ON::UnitScale(paper_units, ON::LengthUnitSystem::Millimeters);
+  if (!(detail_width_on_paper_mm > 0.0))
+    return false;
+
+  double frustum_width_mm = detail_width_on_paper_mm / m_page_per_model_ratio;
+  double frustum_width = frustum_width_mm * ON::UnitScale(ON_UnitSystem(ON::LengthUnitSystem::Millimeters), model_units);
+
+  double aspect = fabs(port_width / port_height);
+  if (!(aspect > 0.0))
+    return false;
+
+  double frustum_height = frustum_width / aspect;
+  if (!(frustum_height > 0.0))
+    return false;
+
+  double fr_left, fr_right, fr_top, fr_bottom, fr_near, fr_far;
+  if (m_view.m_vp.GetFrustum(&fr_left, &fr_right, &fr_bottom, &fr_top, &fr_near, &fr_far))
+  {
+    fr_left = (fr_left + fr_right) / 2.0 - frustum_width / 2.0;
+    fr_right = fr_left + frustum_width;
+    fr_bottom = (fr_bottom + fr_top) / 2.0 - frustum_height / 2.0;
+    fr_top = fr_bottom + frustum_height;
+    return m_view.m_vp.SetFrustum(fr_left, fr_right, fr_bottom, fr_top, fr_near, fr_far);
+  }
+  return false;
+}
