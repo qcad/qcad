@@ -29,7 +29,9 @@
 #include <cmath>
 #include <limits>
 
+#if QT_VERSION >= 0x060000
 class QJSEngine;
+#endif
 class RVector;
 
 #ifndef M_PI
