@@ -15,7 +15,7 @@ BevelTest06.prototype.test00 = function() {
     qDebug('running BevelTest06.test00()...');
     this.setUp();
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::PolylineToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolBar::PolylineToolsPanel::DrawPolylineButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::PolylineToolsPanel::DrawPolylineProButton');
     this.setZoom(2.6973683189641804, new RVector(70.7537, 66.9317, 0, true));
     var p = new RVector(20.817073, 59.487807);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
