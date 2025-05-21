@@ -268,8 +268,10 @@ ArcTangential.prototype.getAuxPreview = function() {
 
     if (this.state==ArcTangential.State.SettingEndPoint) {
         var arc = this.getArc();
-        ret.push(new RLine(arc.getCenter(), arc.getStartPoint()));
-        ret.push(new RLine(arc.getCenter(), this.pos));
+        if (!isNull(arc)) {
+            ret.push(new RLine(arc.getCenter(), arc.getStartPoint()));
+            ret.push(new RLine(arc.getCenter(), this.pos));
+        }
     }
 
     return ret;
