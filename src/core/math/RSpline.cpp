@@ -28,6 +28,10 @@
 #include "RPainterPath.h"
 #include "RPolyline.h"
 
+#ifndef ON_BOOL32
+#define ON_BOOL32 int
+#endif
+
 
 //RSpline::UpdateFromFitPointsFunction RSpline::updateFromFitPointsFunction = NULL;
 //RSpline::SplitFunction RSpline::splitFunction = NULL;
@@ -1049,8 +1053,11 @@ RVector RSpline::getPointAt(double t) const {
     updateInternal();
 #ifndef R_NO_OPENNURBS
     ON_3dPoint p = curve.PointAt(t);
-    //if (p.IsUnsetPoint()) {
+#if QT_VERSION >= 0x060000
     if (p.IsUnset()) {
+#else
+    if (p.IsUnsetPoint()) {
+#endif
         return RVector::invalid;
     }
     return RVector(p.x, p.y);
@@ -1546,7 +1553,7 @@ void RSpline::updateFromControlPoints() const {
 
     // open or from fit points:
     else {
-        curve.Create(3, false, getOrder(), controlPoints.size());
+        curve.Create(3, (int)false, getOrder(), controlPoints.size());
         //curve.Create(3, true, getOrder(), controlPoints.size());
 
         // setting control points:
