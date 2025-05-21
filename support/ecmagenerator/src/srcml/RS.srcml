@@ -846,6 +846,8 @@
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
     }</block></function></template>
 
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>getFontFamilyFromFileName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>)</parameter_list>;</function_decl>
+
     <function><type><name>static</name> <name>QString</name></type> <name>getFontFamily</name><parameter_list>(<param><decl><type><name>const</name> <name>QTextCharFormat</name>&amp;</type> <name>format</name></decl></param>)</parameter_list> <block>{
 <cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
         <comment type="line">// note: QTextCharFormat::fontFamily is deprecated and broken in Qt 6:</comment>

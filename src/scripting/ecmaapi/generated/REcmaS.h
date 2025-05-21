@@ -100,6 +100,9 @@
         lessThanAlphanumerical
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getFontFamilyFromFileName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getFontFamily
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

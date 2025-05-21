@@ -25,6 +25,7 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RShape.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RArcProxy.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RBox</name>;</class_decl>
 <class_decl>class <name>RLine</name>;</class_decl>
@@ -81,7 +82,8 @@
     <function_decl><type><name>static</name> <name>RArc</name></type> <name>createTangential</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>startPoint</name></decl></param>,
                                  <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pos</name></decl></param>,
                                  <param><decl><type><name>double</name></type> <name>direction</name></decl></param>,
-                                 <param><decl><type><name>double</name></type> <name>radius</name></decl></param>)</parameter_list>;</function_decl>
+                                 <param><decl><type><name>double</name></type> <name>radius</name> =<init> <expr>0.0</expr></init></decl></param>,
+                                 <param><decl><type><name>double</name></type> <name>sweep</name> =<init> <expr>0.0</expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>RArc</name></argument>&gt;</argument_list></name></type> <name>createBiarc</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>startPoint</name></decl></param>, <param><decl><type><name>double</name></type> <name>startDirection</name></decl></param>,
                                    <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>endPoint</name></decl></param>, <param><decl><type><name>double</name></type> <name>endDirection</name></decl></param>, <param><decl><type><name>bool</name></type> <name>secondTry</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
@@ -173,6 +175,27 @@
 
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RArc</name></argument>&gt;</argument_list></name></type> <name>splitAtQuadrantLines</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function><type><name>static</name> <name>bool</name></type> <name>hasProxy</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>arcProxy</name>!=<name>NULL</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>static</name> <name>void</name></type> <name>setArcProxy</name><parameter_list>(<param><decl><type><name>RArcProxy</name>*</type> <name>p</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>arcProxy</name>!=<name>NULL</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr>delete <name>arcProxy</name></expr>;</expr_stmt>
+        }</block></then></if>
+        <expr_stmt><expr><name>arcProxy</name> = <name>p</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>static</name> <name>RArcProxy</name>*</type> <name>getArcProxy</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>arcProxy</name></expr>;</return>
+    }</block></function>
+
 <cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
     <comment type="block">/**
      * copy function for Qt 6 scripts:
@@ -186,7 +209,10 @@
 </public><protected>protected:
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>print</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
-</protected><public>public:
+</protected><private>private:
+    <decl_stmt><decl><type><name>static</name> <name>RArcProxy</name>*</type> <name>arcProxy</name></decl>;</decl_stmt>
+
+</private><public>public:
     <comment type="block">/**
      * \getter{getCenter}
      * \setter{setCenter}

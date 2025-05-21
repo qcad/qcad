@@ -635,6 +635,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getFontFamilyFromFileName"
+    cppName="getFontFamilyFromFileName" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+      </variant>
+    </method>
     <method name="getFontFamily" cppName="getFontFamily"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
