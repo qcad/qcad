@@ -40,10 +40,10 @@ class RObject;
 class RProperty;
 class RPropertyAttributes;
 class RPropertyEditor;
-class RPropertyGroupMap;
 class RPropertyListener;
-class RPropertyMap;
 class RPropertyTypeId;
+
+
 
 
 /**
