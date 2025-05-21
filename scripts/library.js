@@ -2877,21 +2877,14 @@ function initUserShortcuts() {
             continue;
         }
 
-        var match = action.getScriptFile().contains("OpenFile");
-
         var scStringList = RSettings.getValue("Shortcuts/" + key);
-
-        if (match) qDebug("scStringList", scStringList);
 
         // explicitly no shortcuts:
         if (isNull(scStringList)) {
-            if (match) qDebug("explicitly no shortcuts");
             action.setShortcuts([]);
             action.removeShortcuts();
             continue;
         }
-
-        if (match) qDebug("setting shortcuts to ", scStringList);
 
         //action.setShortcutsFromStrings(scStringList);
         //action.setShortcuts(scStringList);
@@ -3059,8 +3052,12 @@ function isUrl(urlString) {
 }
 
 function getDontUseNativeDialog() {
-    // don't use KDE file dialog (workaround for file type filter bug):
-    return RS.getWindowManagerId()==="kde" || RSettings.getBoolValue("SaveAs/UseSystemFileDialog", true)===false;
+    if (RS.getWindowManagerId()==="kde") {
+        // don't use KDE file dialog (workaround for file type filter bug):
+        return true;
+    }
+
+    return RSettings.getBoolValue("SaveAs/UseSystemFileDialog", true)===false;
 };
 
 function autoPath(path) {

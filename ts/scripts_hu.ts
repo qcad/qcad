@@ -322,7 +322,7 @@ indítsa újra a QCAD-et.</translation>
     <message>
         <location filename="../scripts/Block/AddBlock/AddBlockInit.js" line="+2"/>
         <source>&amp;Add Empty Block</source>
-        <translation>Üres blokk hozzá&amp;adása</translation>
+        <translation>Üres blokk &amp;hozzáadása</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -398,7 +398,7 @@ indítsa újra a QCAD-et.</translation>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayerInit.js" line="+2"/>
         <source>&amp;Add Layer</source>
-        <translation>&amp;Réteg hozzáadása</translation>
+        <translation>Réteg &amp;hozzáadása</translation>
     </message>
 </context>
 <context>
@@ -406,7 +406,7 @@ indítsa újra a QCAD-et.</translation>
     <message>
         <location filename="../scripts/View/AntialiasingMode/AntialiasingMode.js" line="+74"/>
         <source>&amp;Anti-aliasing</source>
-        <translation>&amp;Élsimítás</translation>
+        <translation>Éls&amp;imítás</translation>
     </message>
 </context>
 <context>
@@ -440,7 +440,7 @@ indítsa újra a QCAD-et.</translation>
     <message>
         <location line="+22"/>
         <source>&amp;Arc</source>
-        <translation>&amp;Ív</translation>
+        <translation>Í&amp;v</translation>
     </message>
 </context>
 <context>
@@ -488,7 +488,7 @@ indítsa újra a QCAD-et.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PAInit.js" line="+2"/>
         <source>&amp;2 Points and Angle</source>
-        <translation>&amp;2 pont és szög</translation>
+        <translation>2 pont és s&amp;zög</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -579,7 +579,7 @@ indítsa újra a QCAD-et.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
         <source>&amp;2 Points and Length</source>
-        <translation>&amp;2 pont és hossz</translation>
+        <translation>2 pont és &amp;hossz</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -667,7 +667,7 @@ indítsa újra a QCAD-et.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation>&amp;2 pont és sugár</translation>
+        <translation>2 pont és &amp;sugár</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -771,7 +771,7 @@ indítsa újra a QCAD-et.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
-        <translation>&amp;Koncentrikus (adott távolsággal)</translation>
+        <translation>Koncentrikus (adott &amp;távolsággal)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -789,7 +789,7 @@ indítsa újra a QCAD-et.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation>Koncentrikus (ponton át&amp;menő)</translation>
+        <translation>Koncentrikus (&amp;ponton átmenő)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -856,7 +856,7 @@ indítsa újra a QCAD-et.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation>É&amp;rintőlegesen kapcsolódó</translation>
+        <translation>Éri&amp;ntőlegesen kapcsolódó</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1023,7 +1023,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Modify/AutoTrim/AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation>Automatikus &amp;vágás</translation>
+        <translation>&amp;Automatikus vágás</translation>
     </message>
 </context>
 <context>
@@ -1081,7 +1081,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
-        <translation>Le&amp;törés</translation>
+        <translation>&amp;Letörés</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
@@ -1695,7 +1695,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation>&amp;2 pont és sugár</translation>
+        <translation>2 pont és s&amp;ugár</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1734,7 +1734,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
         <source>2 Tan&amp;gents and Point</source>
-        <translation>2 é&amp;rintő és egy pont</translation>
+        <translation>2 érintő és egy p&amp;ont</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1772,7 +1772,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
         <source>2 &amp;Tangents and Radius</source>
-        <translation>2 é&amp;rintő és sugár</translation>
+        <translation>2 érintő és su&amp;gár</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1839,7 +1839,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3T/Circle3TInit.js" line="+2"/>
         <source>3 T&amp;angents</source>
-        <translation>3 éri&amp;ntő</translation>
+        <translation>3 ér&amp;intő</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1945,7 +1945,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
-        <translation>&amp;Koncentrikus (adott távolsággal)</translation>
+        <translation>Koncentrikus (adott &amp;távolsággal)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1963,7 +1963,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation>Koncentrikus (ponton át&amp;menő)</translation>
+        <translation>Koncentrikus (&amp;ponton átmenő)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2020,7 +2020,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>É&amp;rintő, pont, sugár</translation>
+        <translation>Éri&amp;ntő, pont, sugár</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2062,7 +2062,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/File/CloseFile/CloseFileInit.js" line="+2"/>
         <source>&amp;Close</source>
-        <translation>&amp;Bezárás</translation>
+        <translation>Be&amp;zárás</translation>
     </message>
 </context>
 <context>
@@ -2244,7 +2244,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/View/CommandLineFocus/CommandLineFocusInit.js" line="+2"/>
         <source>&amp;Focus on Command Line</source>
-        <translation>&amp;Fókuszálás a parancssorra</translation>
+        <translation>Fókuszálás a &amp;parancssorra</translation>
     </message>
 </context>
 <context>
@@ -2275,7 +2275,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
         <source>Convert Drawing &amp;Unit</source>
-        <translation>Rajzolási &amp;mértékegység átalakítása</translation>
+        <translation>Ra&amp;jzolási mértékegység átalakítása</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2405,7 +2405,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Block/CreateBlock/CreateBlockInit.js" line="+2"/>
         <source>&amp;Create Block from Selection</source>
-        <translation>Blokk &amp;létrehozása a kijelölésből</translation>
+        <translation>Bl&amp;okk létrehozása a kijelölésből</translation>
     </message>
 </context>
 <context>
@@ -2582,7 +2582,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Block/DeselectBlockReferences/DeselectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Deselect Block References</source>
-        <translation>Blokk referenciák kijelölésének &amp;megszüntetése</translation>
+        <translation>Blokk referenciák k&amp;ijelölésének megszüntetése</translation>
     </message>
 </context>
 <context>
@@ -2590,7 +2590,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
-        <translation>Réteg elemeinek kijelölésének &amp;megszüntetése</translation>
+        <translation>Réteg elemeinek k&amp;ijelölésének megszüntetése</translation>
     </message>
 </context>
 <context>
@@ -2738,7 +2738,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2"/>
         <source>&amp;Angular</source>
-        <translation>&amp;Szög</translation>
+        <translation>Szö&amp;g</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2766,7 +2766,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametricInit.js" line="+2"/>
         <source>&amp;Diametric</source>
-        <translation>&amp;Átmérő</translation>
+        <translation>Á&amp;tmérő</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2850,7 +2850,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegenInit.js" line="+2"/>
         <source>&amp;Reset Label Position</source>
-        <translation>Címke helyzetének &amp;visszaállítása</translation>
+        <translation>&amp;Címke helyzetének visszaállítása</translation>
     </message>
 </context>
 <context>
@@ -2873,7 +2873,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
-        <translation>&amp;Szögben (Egyenes)</translation>
+        <translation>Szög&amp;ben (Egyenes)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2959,7 +2959,7 @@ Szeretné helyreállítani?</translation>
     <message>
         <location line="+26"/>
         <source>D&amp;imension</source>
-        <translation>&amp;Méretvonal</translation>
+        <translation>Mére&amp;tvonal</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Dimension.ui" line="+29"/>
@@ -3233,7 +3233,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation>&amp;Távolság vagy szög megjelenítése</translation>
+        <translation>Távolsá&amp;g vagy szög megjelenítése</translation>
     </message>
 </context>
 <context>
@@ -3261,7 +3261,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Modify/Divide/DivideInit.js" line="+2"/>
         <source>&amp;Divide</source>
-        <translation>&amp;Felosztás</translation>
+        <translation>F&amp;elosztás</translation>
     </message>
 </context>
 <context>
@@ -3282,7 +3282,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>&amp;Rajzolás</translation>
+        <translation>Rajz&amp;olás</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -4069,7 +4069,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
-        <translation>&amp;Rajzolási sorrend</translation>
+        <translation>Ra&amp;jzolási sorrend</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -4155,7 +4155,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation>Rajzolási &amp;beállítások</translation>
+        <translation>&amp;Rajzolási beállítások</translation>
     </message>
 </context>
 <context>
@@ -4170,7 +4170,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
-        <translation>&amp;Megkettőzés</translation>
+        <translation>Megkettő&amp;zés</translation>
     </message>
 </context>
 <context>
@@ -4372,7 +4372,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Szerkesztés</translation>
+        <translation>S&amp;zerkesztés</translation>
     </message>
 </context>
 <context>
@@ -4380,7 +4380,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Block/EditBlock/EditBlockInit.js" line="+2"/>
         <source>&amp;Edit Block</source>
-        <translation>&amp;Blokk szerkesztése</translation>
+        <translation>Blokk &amp;szerkesztése</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4398,7 +4398,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
-        <translation>Blokk szerkesztése &amp;referenciából</translation>
+        <translation>Blokk szerkesztése re&amp;ferenciából</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4416,7 +4416,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation>&amp;Sraffozás szerkesztése</translation>
+        <translation>Sraffozás s&amp;zerkesztése</translation>
     </message>
 </context>
 <context>
@@ -4446,7 +4446,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Modify/EditText/EditTextInit.js" line="+2"/>
         <source>Edit Te&amp;xt</source>
-        <translation>&amp;Szöveg szerkesztése</translation>
+        <translation>S&amp;zöveg szerkesztése</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4542,7 +4542,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js" line="+2"/>
         <source>&amp;Ellipse Arc</source>
-        <translation>&amp;Ellipszis ív</translation>
+        <translation>Ellipszis í&amp;v</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4629,7 +4629,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
         <source>&amp;Parallel Curve (with Distance)</source>
-        <translation>&amp;Párhuzamos görbe (távolsággal)</translation>
+        <translation>Párhuzamos görbe (&amp;távolsággal)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4647,7 +4647,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
         <source>Parallel Curve (&amp;through Point)</source>
-        <translation>Párhuzamos görbe (ponton át&amp;menő)</translation>
+        <translation>Párhuzamos görbe (&amp;ponton átmenő)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4696,7 +4696,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>&amp;Kilépés</translation>
+        <translation>&amp;Esc megnyomás</translation>
     </message>
 </context>
 <context>
@@ -5074,7 +5074,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation>&amp;Szétvetés</translation>
+        <translation>Szétv&amp;etés</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+137"/>
@@ -5627,7 +5627,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Help/Forum/ForumInit.js" line="+2"/>
         <source>&amp;Forum</source>
-        <translation>&amp;Fórum</translation>
+        <translation>Fóru&amp;m</translation>
     </message>
 </context>
 <context>
@@ -6275,7 +6275,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Hatch</source>
-        <translation>&amp;Sraffozás</translation>
+        <translation>Sra&amp;ffozás</translation>
     </message>
 </context>
 <context>
@@ -6378,7 +6378,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/IOExamples.js" line="+51"/>
         <source>&amp;Import/Export</source>
-        <translation>&amp;Importálás/exportálás</translation>
+        <translation>Importálás/e&amp;xportálás</translation>
     </message>
 </context>
 <context>
@@ -6416,7 +6416,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
         <source>&amp;Insert Bitmap</source>
-        <translation>&amp;Bitkép beillesztése</translation>
+        <translation>B&amp;itkép beillesztése</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/Image.ui" line="+17"/>
@@ -6778,7 +6778,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
-        <translation>&amp;Sokszög terület</translation>
+        <translation>Sokszög t&amp;erülete</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.ui" line="+17"/>
@@ -7065,7 +7065,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEEInit.js" line="+2"/>
         <source>Distance &amp;Entity to Entity</source>
-        <translation>Távolság: &amp;elem egy elemtől</translation>
+        <translation>Távolság: ele&amp;m egy elemtől</translation>
     </message>
 </context>
 <context>
@@ -7088,7 +7088,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
-        <translation>Távolság: &amp;elem egy ponttól</translation>
+        <translation>Távolság: elem egy po&amp;nttól</translation>
     </message>
 </context>
 <context>
@@ -7126,7 +7126,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
-        <translation>Távolság: &amp;pont egy ponttól</translation>
+        <translation>&amp;Távolság: pont egy ponttól</translation>
     </message>
 </context>
 <context>
@@ -7139,7 +7139,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Information/InfoPosition/InfoPositionInit.js" line="+2"/>
         <source>&amp;Position</source>
-        <translation>&amp;Pozíció</translation>
+        <translation>P&amp;ozíció</translation>
     </message>
 </context>
 <context>
@@ -7155,7 +7155,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Information/InfoPositionPolRel/InfoPositionPolRelInit.js" line="+2"/>
         <source>Relative P&amp;olar Position</source>
-        <translation>Relatív p&amp;oláris pozíció</translation>
+        <translation>Rel&amp;atív poláris pozíció</translation>
     </message>
 </context>
 <context>
@@ -7408,7 +7408,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Info</source>
-        <translation>&amp;Infó</translation>
+        <translation>In&amp;fó</translation>
     </message>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
@@ -7731,7 +7731,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Select/InvertSelection/InvertSelectionInit.js" line="+2"/>
         <source>&amp;Invert Selection</source>
-        <translation>Kijelölés &amp;megfordítása</translation>
+        <translation>Kijelölés meg&amp;fordítása</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7836,7 +7836,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridOff/IsometricGridOff.js" line="+35"/>
         <source>Isometric Grid &amp;Off</source>
-        <translation>Izometrikus &amp;rács kikapcsolása</translation>
+        <translation>Iz&amp;ometrikus rács kikapcsolása</translation>
     </message>
 </context>
 <context>
@@ -8073,7 +8073,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/LayerExamples.js" line="+50"/>
         <source>&amp;Layer</source>
-        <translation>&amp;Réteg</translation>
+        <translation>Réte&amp;g</translation>
     </message>
 </context>
 <context>
@@ -8092,7 +8092,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="-54"/>
         <source>&amp;Layer List</source>
-        <translation>&amp;Réteglista</translation>
+        <translation>Réteg&amp;lista</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/LayerList/PreferencesPage.ui" line="+19"/>
@@ -8179,7 +8179,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+22"/>
         <source>&amp;Line</source>
-        <translation>&amp;Vonal</translation>
+        <translation>Vona&amp;l</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line.ui" line="+17"/>
@@ -8343,7 +8343,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
         <source>Angle &amp;Bisector</source>
-        <translation>Szög&amp;felező</translation>
+        <translation>S&amp;zögfelező</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8477,7 +8477,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehandInit.js" line="+2"/>
         <source>&amp;Freehand Line</source>
-        <translation>&amp;Szabadkézi vonal</translation>
+        <translation>Szabad&amp;kézi vonal</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8551,7 +8551,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangentInit.js" line="+2"/>
         <source>Orthogonal / Tange&amp;nt</source>
-        <translation>Merőleges / Éri&amp;ntő</translation>
+        <translation>Meről&amp;eges / Érintő</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8587,7 +8587,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2"/>
         <source>Par&amp;allel (through Point)</source>
-        <translation>Párhuz&amp;amos (adott ponton átmenő)</translation>
+        <translation>Párhuzamos (&amp;adott ponton átmenő)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8643,7 +8643,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2"/>
         <source>R&amp;elative Angle</source>
-        <translation>R&amp;elatív szög</translation>
+        <translation>&amp;Relatív szög</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8714,7 +8714,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1Init.js" line="+2"/>
         <source>&amp;Tangent (Point, Circle)</source>
-        <translation>&amp;Érintő (pont, kör)</translation>
+        <translation>Éri&amp;ntő (pont, kör)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8768,7 +8768,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/View/LinetypeMode/LinetypeMode.js" line="+86"/>
         <source>Screen-based Line&amp;types</source>
-        <translation>Képernyő alapú vonal&amp;típusok</translation>
+        <translation>Képernyő alapú vonaltíp&amp;usok</translation>
     </message>
 </context>
 <context>
@@ -8813,7 +8813,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Layer/LockAllLayers/LockAllLayersInit.js" line="+2"/>
         <source>&amp;Lock All Layers</source>
-        <translation>Minden réteg &amp;zárolása</translation>
+        <translation>Minde&amp;n réteg zárolása</translation>
     </message>
 </context>
 <context>
@@ -8821,7 +8821,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/LockRelativeZero/LockRelativeZeroInit.js" line="+2"/>
         <source>&amp;Lock Relative Zero</source>
-        <translation>Relatív origó &amp;zárolása</translation>
+        <translation>Relatív &amp;origó zárolása</translation>
     </message>
 </context>
 <context>
@@ -9569,7 +9569,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation>&amp;Beillesztés</translation>
+        <translation>Be&amp;illesztés</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
@@ -9671,7 +9671,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Point</source>
-        <translation>&amp;Pont</translation>
+        <translation>P&amp;ont</translation>
     </message>
 </context>
 <context>
@@ -9762,7 +9762,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Polyline</source>
-        <translation>&amp;Vonallánc</translation>
+        <translation>Vonallán&amp;c</translation>
     </message>
 </context>
 <context>
@@ -9944,7 +9944,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/File/PrintCurrentView/PrintCurrentViewInit.js" line="+2"/>
         <source>Print &amp;Current View</source>
-        <translation>&amp;Jelenlegi nézet nyomtatása</translation>
+        <translation>Jelenlegi nézet ny&amp;omtatása</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -10013,7 +10013,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreviewInit.js" line="+2"/>
         <source>Print Pre&amp;view</source>
-        <translation>Nyomtatási elő&amp;nézet</translation>
+        <translation>Nyomtatási &amp;előnézet</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10116,7 +10116,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+22"/>
         <source>&amp;Projection</source>
-        <translation>&amp;Vetítés</translation>
+        <translation>Ve&amp;títés</translation>
     </message>
     <message>
         <location line="+37"/>
@@ -10317,7 +10317,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
         <source>&amp;Quit</source>
-        <translation>&amp;Kilépés</translation>
+        <translation>Ki&amp;lépés</translation>
     </message>
 </context>
 <context>
@@ -10353,7 +10353,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation>&amp;Legutóbbiak megnyitása</translation>
+        <translation>Leg&amp;utóbbiak megnyitása</translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/PreferencesPage.ui" line="+17"/>
@@ -10366,7 +10366,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Edit/Redo/RedoInit.js" line="+2"/>
         <source>&amp;Redo</source>
-        <translation>&amp;Mégis</translation>
+        <translation>Mé&amp;gis</translation>
     </message>
 </context>
 <context>
@@ -10419,7 +10419,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Help/ReportTranslationError/ReportTranslationErrorInit.js" line="+3"/>
         <source>Report &amp;Translation Error</source>
-        <translation>&amp;Fordítási hiba bejelentése</translation>
+        <translation>Fordítási &amp;hiba bejelentése</translation>
     </message>
 </context>
 <context>
@@ -10440,7 +10440,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLengthInit.js" line="+2"/>
         <source>Restrict &amp;Angle or Length</source>
-        <translation>Korlátozás &amp;szög vagy hossz szerint</translation>
+        <translation>&amp;Korlátozás szög vagy hossz szerint</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+80"/>
@@ -10470,7 +10470,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictHorizontal/RestrictHorizontalInit.js" line="+2"/>
         <source>Restrict &amp;Horizontally</source>
-        <translation>Korlátozás &amp;vízszintesen</translation>
+        <translation>&amp;Korlátozás vízszintesen</translation>
     </message>
 </context>
 <context>
@@ -10478,7 +10478,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictOff/RestrictOffInit.js" line="+2"/>
         <source>Restrictions &amp;Off</source>
-        <translation>Korlátozások &amp;kikapcsolva</translation>
+        <translation>Korlátozá&amp;sok kikapcsolása</translation>
     </message>
 </context>
 <context>
@@ -10486,7 +10486,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictOrthogonal/RestrictOrthogonalInit.js" line="+2"/>
         <source>Restrict &amp;Orthogonally</source>
-        <translation>Korlátozás &amp;derékszögben</translation>
+        <translation>&amp;Korlátozás derékszögben</translation>
     </message>
 </context>
 <context>
@@ -10494,7 +10494,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictVertical/RestrictVerticalInit.js" line="+2"/>
         <source>Restrict &amp;Vertically</source>
-        <translation>Korlátozás &amp;függőlegesen</translation>
+        <translation>&amp;Korlátozás függőlegesen</translation>
     </message>
 </context>
 <context>
@@ -10502,7 +10502,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation>&amp;Megfordítás</translation>
+        <translation>Megfo&amp;rdítás</translation>
     </message>
 </context>
 <context>
@@ -10540,7 +10540,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
-        <translation>&amp;Forgatás</translation>
+        <translation>Fo&amp;rgatás</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
@@ -10588,7 +10588,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation>&amp;Kétszeres forgatás</translation>
+        <translation>Kétszeres fo&amp;rgatás</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.ui" line="+17"/>
@@ -10853,7 +10853,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/File/Save/SaveInit.js" line="+2"/>
         <source>&amp;Save</source>
-        <translation>&amp;Mentés</translation>
+        <translation>Menté&amp;s</translation>
     </message>
 </context>
 <context>
@@ -10881,7 +10881,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAsInit.js" line="+2"/>
         <source>Save &amp;As...</source>
-        <translation>Me&amp;ntés másként...</translation>
+        <translation>Mentés más&amp;ként...</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/PreferencesPage.ui" line="+17"/>
@@ -10969,7 +10969,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation>Át&amp;méretezés</translation>
+        <translation>Átméretezé&amp;s</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
@@ -11123,7 +11123,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Block/SelectBlockReferences/SelectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Select Block References</source>
-        <translation>&amp;Blokk referenciák kijelölése</translation>
+        <translation>Blokk referenciák k&amp;ijelölése</translation>
     </message>
 </context>
 <context>
@@ -11193,7 +11193,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation>&amp;Kontúr kijelölése</translation>
+        <translation>K&amp;ontúr kijelölése</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11251,7 +11251,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation>Me&amp;tsző elemek kijelölése</translation>
+        <translation>Mets&amp;ző elemek kijelölése</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11299,7 +11299,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer Entities</source>
-        <translation>&amp;Réteg elemeinek kijelölése</translation>
+        <translation>Réteg elemeinek k&amp;ijelölése</translation>
     </message>
 </context>
 <context>
@@ -11464,7 +11464,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZeroInit.js" line="+2"/>
         <source>Set &amp;Relative Zero</source>
-        <translation>&amp;Relatív origó beállítása</translation>
+        <translation>Relatív &amp;origó beállítása</translation>
     </message>
 </context>
 <context>
@@ -11539,7 +11539,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
-        <translation>&amp;Sokszög (középpont, oldal)</translation>
+        <translation>So&amp;kszög (középpont, oldal)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11577,7 +11577,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
-        <translation>&amp;Sokszög (él, él)</translation>
+        <translation>Soks&amp;zög (él, él)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11638,7 +11638,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (2 Points of Side)</source>
-        <translation>&amp;Sokszög (él 2 pontja)</translation>
+        <translation>S&amp;okszög (él 2 pontja)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11715,7 +11715,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Layer/ShowActiveLayer/ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
-        <translation>&amp;Csak aktív megjelenítése</translation>
+        <translation>Csak az &amp;aktív megjelenítése</translation>
     </message>
 </context>
 <context>
@@ -11723,7 +11723,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Block/ShowAllBlocks/ShowAllBlocksInit.js" line="+2"/>
         <source>&amp;Show All Blocks</source>
-        <translation>Összes blokk &amp;megjelenítése</translation>
+        <translation>Összes blokk meg&amp;jelenítése</translation>
     </message>
 </context>
 <context>
@@ -11731,7 +11731,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Layer/ShowAllLayers/ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show All Layers</source>
-        <translation>Minden réteg &amp;megjelenítése</translation>
+        <translation>Minden réteg meg&amp;jelenítése</translation>
     </message>
 </context>
 <context>
@@ -11765,7 +11765,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+25"/>
         <source>&amp;Snap</source>
-        <translation>&amp;Illesztés</translation>
+        <translation>I&amp;llesztés</translation>
     </message>
 </context>
 <context>
@@ -11791,7 +11791,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCenter/SnapCenterInit.js" line="+2"/>
         <source>&amp;Center</source>
-        <translation>&amp;Középpont</translation>
+        <translation>Közép&amp;pont</translation>
     </message>
 </context>
 <context>
@@ -11809,7 +11809,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
         <source>&amp;Coordinate</source>
-        <translation>&amp;Koordináta</translation>
+        <translation>Koord&amp;ináta</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
@@ -11847,7 +11847,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
         <source>&amp;Polar Coordinate</source>
-        <translation>&amp;Polárkoordináta</translation>
+        <translation>Polárkoord&amp;ináta</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+39"/>
@@ -11913,7 +11913,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation>Kézi &amp;távolság</translation>
+        <translation>&amp;Távolság manuálisan</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11954,7 +11954,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>&amp;Szabad</translation>
+        <translation>Szaba&amp;d</translation>
     </message>
 </context>
 <context>
@@ -11970,7 +11970,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersection/SnapIntersectionInit.js" line="+2"/>
         <source>&amp;Intersection</source>
-        <translation>&amp;Metszéspontok</translation>
+        <translation>Mets&amp;zéspont</translation>
     </message>
 </context>
 <context>
@@ -11998,7 +11998,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation>&amp;Metszéspont manuálisan</translation>
+        <translation>Mets&amp;zéspont manuálisan</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17"/>
@@ -12043,7 +12043,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/SnapReference/SnapReferenceInit.js" line="+2"/>
         <source>&amp;Reference</source>
-        <translation>&amp;Referencia</translation>
+        <translation>Referen&amp;cia</translation>
     </message>
 </context>
 <context>
@@ -12051,7 +12051,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
         <source>Center of &amp;Selection</source>
-        <translation>&amp;Kijelölés középpontja</translation>
+        <translation>Ki&amp;jelölés középpontja</translation>
     </message>
 </context>
 <context>
@@ -12059,7 +12059,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/SnapTangential/SnapTangentialInit.js" line="+2"/>
         <source>&amp;Tangential</source>
-        <translation>&amp;Érintő</translation>
+        <translation>Éri&amp;ntő</translation>
     </message>
 </context>
 <context>
@@ -12088,7 +12088,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Spline</source>
-        <translation>&amp;Spline</translation>
+        <translation>S&amp;pline</translation>
     </message>
 </context>
 <context>
@@ -12106,7 +12106,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
-        <translation>&amp;Spline (vezérpontokkal)</translation>
+        <translation>Spline (&amp;vezérpontokkal)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12162,7 +12162,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+6"/>
         <source>&amp;Status Bar</source>
-        <translation>Álla&amp;potjelző sor</translation>
+        <translation>Áll&amp;apotjelző sor</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47"/>
@@ -12269,7 +12269,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
-        <translation>SVG &amp;importálása...</translation>
+        <translation>SV&amp;G importálása...</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/PreferencesPage.ui" line="+17"/>
@@ -12338,7 +12338,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Draw/Text/TextInit.js" line="+2"/>
         <source>&amp;Text</source>
-        <translation>&amp;Szöveg</translation>
+        <translation>S&amp;zöveg</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12993,7 +12993,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/View/ToolMatrixFocus/ToolMatrixFocusInit.js" line="+2"/>
         <source>&amp;Focus on Tool Matrix</source>
-        <translation>&amp;Fókuszálás az eszközmátrixra</translation>
+        <translation>Fókuszálás az eszköz&amp;mátrixra</translation>
     </message>
 </context>
 <context>
@@ -13037,7 +13037,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>
         <source>&amp;Move / Copy</source>
-        <translation>Át&amp;helyezés / Másolás</translation>
+        <translation>Áthelyezés / &amp;Másolás</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -13103,7 +13103,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
         <source>M&amp;ove and Rotate</source>
-        <translation>Áthelyezés és &amp;forgatás</translation>
+        <translation>Áthelyezés és f&amp;orgatás</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
@@ -13219,7 +13219,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation>&amp;Vágás</translation>
+        <translation>Vá&amp;gás</translation>
     </message>
 </context>
 <context>
@@ -13227,7 +13227,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Modify/TrimBoth/TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
-        <translation>&amp;Mindkettő vágása</translation>
+        <translation>Mindkettő vá&amp;gása</translation>
     </message>
 </context>
 <context>
@@ -13452,7 +13452,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Layer/UnlockAllLayers/UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
-        <translation>Minden réteg &amp;feloldása</translation>
+        <translation>Minden réteg felol&amp;dása</translation>
     </message>
 </context>
 <context>

@@ -22,6 +22,7 @@
 #include <QProcess>
 #include <QThread>
 #ifdef Q_OS_WIN
+#include <QSettings>
 #include <Windows.h>
 #else
 #include <unistd.h>
@@ -308,4 +309,64 @@ bool RS::showInFileManager(const QString& filePath) {
 #endif
 
     return true;
+}
+
+/**
+  * \return Font family name from the given font file name.
+  * This only works for Windows and might not even be possible on all systems.
+  */
+QString RS::getFontFamilyFromFileName(const QString& fileName) {
+    qDebug() << "RS::getFontFamilyFromFileName: " << fileName;
+#ifdef Q_OS_WIN
+    // registry path where Windows stores font info
+    QStringList rootKeys;
+    rootKeys.append("HKEY_LOCAL_MACHINE");
+    rootKeys.append("HKEY_CURRENT_USER");
+
+    for (int i=0; i<rootKeys.length(); i++) {
+        QString rootKey = rootKeys[i];
+
+        QSettings fontReg(rootKey + "\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts", QSettings::NativeFormat);
+
+        QStringList keys = fontReg.allKeys();
+        for (int i=0; i<keys.length(); i++) {
+            QString key = keys[i];
+            qDebug() << "key:" << key;
+            QString value = fontReg.value(key).toString();
+            qDebug() << "value:" << value;
+            value = QFileInfo(value).fileName();
+            qDebug() << "value (filename):" << value;
+
+            if (value.compare(fileName, Qt::CaseInsensitive) == 0) {
+                // extract family name from the registry key (may contain style)
+                QString family = key;
+                family.remove(QRegExp("\\s*\\(.*\\)$")); // Remove things like (TrueType)
+                return family.trimmed();
+            }
+        }
+    }
+
+    return fileName;
+#elif defined(Q_OS_MAC)
+    return fileName;
+#else
+    // TODO: Linux: use fc-list
+    // QProcess process;
+    // process.start("fc-list", QStringList() << QString(":%{file} %{family}"));
+    // process.waitForFinished();
+    // QString output = process.readAllStandardOutput();
+
+    // for (const QString &line : output.split('\n')) {
+    //     if (line.contains(fileName, Qt::CaseInsensitive)) {
+    //         // Example line: /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf: DejaVu Sans
+    //         QStringList parts = line.split(":");
+    //         if (parts.size() >= 2) {
+    //             return parts[1].trimmed();
+    //         }
+    //     }
+    // }
+    // return QString();
+
+    return fileName;
+#endif
 }

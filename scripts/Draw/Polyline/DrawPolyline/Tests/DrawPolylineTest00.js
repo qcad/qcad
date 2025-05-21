@@ -33,8 +33,8 @@ DrawPolylineTest00.prototype.test00 = function() {
     qDebug('running DrawPolylineTest00.test00()...');
     this.setUp();
     this.clickOnWidget('MainWindow::MainToolsPanel::PolylineToolsPanelButton');
-    this.clickOnWidget('MainWindow::PolylineToolsPanel::DrawPolylineButton');
-    this.setToolOption('DrawPolyline/ArcSegment', 'false');
+    this.clickOnWidget('MainWindow::PolylineToolsPanel::DrawPolylineProButton');
+    this.setToolOption('DrawPolyline/ArcMode', 'false');
     this.setToolOption('DrawPolyline/Radius',  [ 2, 0 ] );
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0) );
@@ -96,7 +96,7 @@ DrawPolylineTest00.prototype.test00 = function() {
     var p = new RVector(50, 29.9);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.clickOnWidget('MainWindow::Options::Close');
-    this.setToolOption('DrawPolyline/ArcSegment', 'false');
+    this.setToolOption('DrawPolyline/ArcMode', 'false');
     this.setToolOption('DrawPolyline/Radius',  [ 2, 0 ] );
     this.updateToolOptions();
     var p = new RVector(28.5, 26.9);

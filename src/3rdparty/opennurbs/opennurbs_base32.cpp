@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2009 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,9 +10,16 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
+
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
 
 bool ON_Base32ToString( const ON_SimpleArray<unsigned char>& base32_digits, ON_String& sBase32 )
 {
@@ -66,7 +72,7 @@ bool ON_Base32ToString( const unsigned char* base32_digits, int base32_digit_cou
       }
     }
   }
-  *sBase32 = 0; // NULL terminate string
+  *sBase32 = 0; // nullptr terminate string
 
   return rc;
 }
@@ -147,11 +153,11 @@ int ON_StringToBase32(const ON_wString& sBase32, ON_SimpleArray<unsigned char>& 
 
 int ON_StringToBase32(const ON_String& sBase32, ON_SimpleArray<unsigned char>& base32_digits )
 {
-  const char* s = sBase32;
+  const char* s = static_cast< const char* >(sBase32);
   if ( 0 == s || 0 == s[0] )
     return 0;
   base32_digits.Reserve(sBase32.Length());
-  int digit_count = ON_StringToBase32(sBase32,base32_digits.Array());
+  int digit_count = ON_StringToBase32(static_cast< const char* >(sBase32),base32_digits.Array());
   base32_digits.SetCount(digit_count);
   return digit_count;
 }

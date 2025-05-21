@@ -22,6 +22,14 @@
 **
 **********************************************************************/
 
+// For feof_unlocked and fgets_unlocked
+#if !defined(_GNU_SOURCE)
+#define _DEFAULT_SOURCE
+#endif
+#if !defined(_GNU_SOURCE)
+#define _GNU_SOURCE
+#endif
+
 #include "dl_dxf.h"
 
 #include <algorithm>
@@ -177,8 +185,8 @@ bool DL_Dxf::readDxfGroups(FILE *fp, DL_CreationInterface* creationInterface) {
     static int line = 1;
 
     // Read one group of the DXF file and strip the lines:
-    if (DL_Dxf::getStrippedLine(groupCodeTmp, DL_DXF_MAXLINE, fp) &&
-            DL_Dxf::getStrippedLine(groupValue, DL_DXF_MAXLINE, fp, false) ) {
+    if (DL_Dxf::getStrippedLine(groupCodeTmp, fp) &&
+            DL_Dxf::getStrippedLine(groupValue, fp, false) ) {
 
         groupCode = (unsigned int)toInt(groupCodeTmp);
 
@@ -187,7 +195,13 @@ bool DL_Dxf::readDxfGroups(FILE *fp, DL_CreationInterface* creationInterface) {
         processDXFGroup(creationInterface, groupCode, groupValue);
     }
 
+    // Nonlocking stdio functions are not thread-safe but they are faster.
+    // Thread safety shouldn't be a concern since we are accessing the file only in one thread.
+#ifdef __GLIBC__
+    return !feof_unlocked(fp);
+#else
     return !feof(fp);
+#endif
 }
 
 
@@ -231,14 +245,22 @@ bool DL_Dxf::readDxfGroups(std::istream& stream,
  * @todo Is it a problem if line is blank (i.e., newline only)?
  *      Then, when function returns, (s==NULL).
  */
-bool DL_Dxf::getStrippedLine(std::string& s, unsigned int size, FILE *fp, bool stripSpace) {
+bool DL_Dxf::getStrippedLine(std::string& s, FILE *fp, bool stripSpace) {
+#ifdef __GLIBC__
+    if (!feof_unlocked(fp)) {
+#else
     if (!feof(fp)) {
+#endif
         // The whole line in the file.  Includes space for NULL.
-        char* wholeLine = new char[size];
+        char wholeLine[DL_DXF_MAXLINE];
         // Only the useful part of the line
         char* line;
 
-        line = fgets(wholeLine, size, fp);
+#ifdef __GLIBC__
+        line = fgets_unlocked(wholeLine, sizeof(wholeLine), fp);
+#else
+        line = fgets(wholeLine, sizeof(wholeLine), fp);
+#endif
 
         if (line!=NULL && line[0] != '\0') { // Evaluates to fgets() retval
             // line == wholeLine at this point.
@@ -248,10 +270,8 @@ bool DL_Dxf::getStrippedLine(std::string& s, unsigned int size, FILE *fp, bool s
             stripWhiteSpace(&line, stripSpace);
 
             s = line;
-            assert(size > s.length());
+            assert(sizeof(wholeLine) > s.length());
         }
-
-        delete[] wholeLine; // Done with wholeLine
 
         return true;
     } else {
@@ -776,7 +796,7 @@ void DL_Dxf::addDictionaryEntry(DL_CreationInterface* creationInterface) {
  */
 void DL_Dxf::addSetting(DL_CreationInterface* creationInterface) {
     int c = -1;
-    std::map<int,std::string>::iterator it = values.begin();
+    std::unordered_map<int,std::string>::iterator it = values.begin();
     if (it!=values.end()) {
         c = it->first;
     }

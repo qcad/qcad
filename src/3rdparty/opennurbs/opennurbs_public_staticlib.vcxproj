@@ -1,0 +1,628 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="15.0">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64EC">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64EC</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64EC">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64EC</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{23288C65-E3EB-4D09-A648-22E1636EB40F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>opennurbs_public_staticlib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64EC'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+    <Import Project="opennurbs_msbuild.Cpp.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+    <Import Project="opennurbs_msbuild.Cpp.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+    <Import Project="opennurbs_msbuild.Cpp.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="opennurbs_msbuild.Cpp.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64EC'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="opennurbs_msbuild.Cpp.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+    <Import Project="opennurbs_msbuild.Cpp.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="opennurbs_msbuild.Cpp.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="opennurbs_msbuild.Cpp.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>ON_COMPILING_OPENNURBS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeaderFile>opennurbs.h</PrecompiledHeaderFile>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>ON_COMPILING_OPENNURBS;WIN64;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeaderFile>opennurbs.h</PrecompiledHeaderFile>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OpenMPSupport>true</OpenMPSupport>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>ON_COMPILING_OPENNURBS;WIN64;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeaderFile>opennurbs.h</PrecompiledHeaderFile>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OpenMPSupport>true</OpenMPSupport>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64EC'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>ON_COMPILING_OPENNURBS;WIN64;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeaderFile>opennurbs.h</PrecompiledHeaderFile>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OpenMPSupport>true</OpenMPSupport>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>ON_COMPILING_OPENNURBS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeaderFile>opennurbs.h</PrecompiledHeaderFile>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>ON_COMPILING_OPENNURBS;WIN64;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeaderFile>opennurbs.h</PrecompiledHeaderFile>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>ON_COMPILING_OPENNURBS;WIN64;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeaderFile>opennurbs.h</PrecompiledHeaderFile>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>ON_COMPILING_OPENNURBS;WIN64;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeaderFile>opennurbs.h</PrecompiledHeaderFile>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="opennurbs.h" />
+    <ClInclude Include="opennurbs_3dm.h" />
+    <ClInclude Include="opennurbs_3dm_attributes.h" />
+    <ClInclude Include="opennurbs_3dm_properties.h" />
+    <ClInclude Include="opennurbs_3dm_settings.h" />
+    <ClInclude Include="opennurbs_annotationbase.h" />
+    <ClInclude Include="opennurbs_arc.h" />
+    <ClInclude Include="opennurbs_arccurve.h" />
+    <ClInclude Include="opennurbs_archivable_dictionary.h" />
+    <ClInclude Include="opennurbs_archive.h" />
+    <ClInclude Include="opennurbs_array.h" />
+    <ClInclude Include="opennurbs_array_defs.h" />
+    <ClInclude Include="opennurbs_base32.h" />
+    <ClInclude Include="opennurbs_base64.h" />
+    <ClInclude Include="opennurbs_beam.h" />
+    <ClInclude Include="opennurbs_bezier.h" />
+    <ClInclude Include="opennurbs_bitmap.h" />
+    <ClInclude Include="opennurbs_bounding_box.h" />
+    <ClInclude Include="opennurbs_box.h" />
+    <ClInclude Include="opennurbs_brep.h" />
+    <ClInclude Include="opennurbs_circle.h" />
+    <ClInclude Include="opennurbs_color.h" />
+    <ClInclude Include="opennurbs_compress.h" />
+    <ClInclude Include="opennurbs_compstat.h" />
+    <ClInclude Include="opennurbs_cone.h" />
+    <ClInclude Include="opennurbs_convex_poly.h" />
+    <ClInclude Include="opennurbs_crc.h" />
+    <ClInclude Include="opennurbs_curve.h" />
+    <ClInclude Include="opennurbs_curveonsurface.h" />
+    <ClInclude Include="opennurbs_curveproxy.h" />
+    <ClInclude Include="opennurbs_cylinder.h" />
+    <ClInclude Include="opennurbs_date.h" />
+    <ClInclude Include="opennurbs_decals.h" />
+    <ClInclude Include="opennurbs_defines.h" />
+    <ClInclude Include="opennurbs_detail.h" />
+    <ClInclude Include="opennurbs_dimension.h" />
+    <ClInclude Include="opennurbs_dimensionformat.h" />
+    <ClInclude Include="opennurbs_dimensionstyle.h" />
+    <ClInclude Include="opennurbs_dithering.h" />
+    <ClInclude Include="opennurbs_dll_resource.h" />
+    <ClInclude Include="opennurbs_ellipse.h" />
+    <ClInclude Include="opennurbs_embedded_file.h" />
+    <ClInclude Include="opennurbs_error.h" />
+    <ClInclude Include="opennurbs_evaluate_nurbs.h" />
+    <ClInclude Include="opennurbs_extensions.h" />
+    <ClInclude Include="opennurbs_file_utilities.h" />
+    <ClInclude Include="opennurbs_font.h" />
+    <ClInclude Include="opennurbs_fpoint.h" />
+    <ClInclude Include="opennurbs_fsp.h" />
+    <ClInclude Include="opennurbs_fsp_defs.h" />
+    <ClInclude Include="opennurbs_function_list.h" />
+    <ClInclude Include="opennurbs_geometry.h" />
+    <ClInclude Include="opennurbs_gl.h" />
+    <ClInclude Include="opennurbs_ground_plane.h" />
+    <ClInclude Include="opennurbs_group.h" />
+    <ClInclude Include="opennurbs_hash_table.h" />
+    <ClInclude Include="opennurbs_hatch.h" />
+    <ClInclude Include="opennurbs_hsort_template.h" />
+    <ClInclude Include="opennurbs_input_libsdir.h" />
+    <ClInclude Include="opennurbs_instance.h" />
+    <ClInclude Include="opennurbs_internal_defines.h" />
+    <ClInclude Include="opennurbs_internal_glyph.h" />
+    <ClInclude Include="opennurbs_internal_V2_annotation.h" />
+    <ClInclude Include="opennurbs_internal_V5_annotation.h" />
+    <ClInclude Include="opennurbs_internal_V5_dimstyle.h" />
+    <ClInclude Include="opennurbs_intersect.h" />
+    <ClInclude Include="opennurbs_ipoint.h" />
+    <ClInclude Include="opennurbs_knot.h" />
+    <ClInclude Include="opennurbs_layer.h" />
+    <ClInclude Include="opennurbs_leader.h" />
+    <ClInclude Include="opennurbs_light.h" />
+    <ClInclude Include="opennurbs_line.h" />
+    <ClInclude Include="opennurbs_linear_workflow.h" />
+    <ClInclude Include="opennurbs_linecurve.h" />
+    <ClInclude Include="opennurbs_linestyle.h" />
+    <ClInclude Include="opennurbs_linetype.h" />
+    <ClInclude Include="opennurbs_locale.h" />
+    <ClInclude Include="opennurbs_lock.h" />
+    <ClInclude Include="opennurbs_lookup.h" />
+    <ClInclude Include="opennurbs_mapchan.h" />
+    <ClInclude Include="opennurbs_material.h" />
+    <ClInclude Include="opennurbs_math.h" />
+    <ClInclude Include="opennurbs_matrix.h" />
+    <ClInclude Include="opennurbs_md5.h" />
+    <ClInclude Include="opennurbs_memory.h" />
+    <ClInclude Include="opennurbs_mesh.h" />
+    <ClInclude Include="opennurbs_mesh_modifiers.h" />
+    <ClInclude Include="opennurbs_model_component.h" />
+    <ClInclude Include="opennurbs_model_geometry.h" />
+    <ClInclude Include="opennurbs_nurbscurve.h" />
+    <ClInclude Include="opennurbs_nurbssurface.h" />
+    <ClInclude Include="opennurbs_object.h" />
+    <ClInclude Include="opennurbs_object_history.h" />
+    <ClInclude Include="opennurbs_objref.h" />
+    <ClInclude Include="opennurbs_offsetsurface.h" />
+    <ClInclude Include="opennurbs_optimize.h" />
+    <ClInclude Include="opennurbs_parse.h" />
+    <ClInclude Include="opennurbs_photogrammetry.h" />
+    <ClInclude Include="opennurbs_plane.h" />
+    <ClInclude Include="opennurbs_planesurface.h" />
+    <ClInclude Include="opennurbs_pluginlist.h" />
+    <ClInclude Include="opennurbs_point.h" />
+    <ClInclude Include="opennurbs_pointcloud.h" />
+    <ClInclude Include="opennurbs_pointgeometry.h" />
+    <ClInclude Include="opennurbs_pointgrid.h" />
+    <ClInclude Include="opennurbs_polycurve.h" />
+    <ClInclude Include="opennurbs_polyedgecurve.h" />
+    <ClInclude Include="opennurbs_polyline.h" />
+    <ClInclude Include="opennurbs_polylinecurve.h" />
+    <ClInclude Include="opennurbs_post_effects.h" />
+    <ClInclude Include="opennurbs_private_wrap_defs.h" />
+    <ClInclude Include="opennurbs_progress_reporter.h" />
+    <ClInclude Include="opennurbs_qsort_template.h" />
+    <ClInclude Include="opennurbs_quaternion.h" />
+    <ClInclude Include="opennurbs_rand.h" />
+    <ClInclude Include="opennurbs_render_channels.h" />
+    <ClInclude Include="opennurbs_render_content.h" />
+    <ClInclude Include="opennurbs_rendering.h" />
+    <ClInclude Include="opennurbs_revsurface.h" />
+    <ClInclude Include="opennurbs_rtree.h" />
+    <ClInclude Include="opennurbs_safe_frame.h" />
+    <ClInclude Include="opennurbs_sectionstyle.h" />
+    <ClInclude Include="opennurbs_sha1.h" />
+    <ClInclude Include="opennurbs_skylight.h" />
+    <ClInclude Include="opennurbs_sleeplock.h" />
+    <ClInclude Include="opennurbs_sphere.h" />
+    <ClInclude Include="opennurbs_std_string.h" />
+    <ClInclude Include="opennurbs_string.h" />
+    <ClInclude Include="opennurbs_string_value.h" />
+    <ClInclude Include="opennurbs_subd.h" />
+    <ClInclude Include="opennurbs_subd_data.h" />
+    <ClInclude Include="opennurbs_sumsurface.h" />
+    <ClInclude Include="opennurbs_sun.h" />
+    <ClInclude Include="opennurbs_surface.h" />
+    <ClInclude Include="opennurbs_surfaceproxy.h" />
+    <ClInclude Include="opennurbs_symmetry.h" />
+    <ClInclude Include="opennurbs_system.h" />
+    <ClInclude Include="opennurbs_system_compiler.h" />
+    <ClInclude Include="opennurbs_system_runtime.h" />
+    <ClInclude Include="opennurbs_terminator.h" />
+    <ClInclude Include="opennurbs_testclass.h" />
+    <ClInclude Include="opennurbs_text.h" />
+    <ClInclude Include="opennurbs_textcontext.h" />
+    <ClInclude Include="opennurbs_textglyph.h" />
+    <ClInclude Include="opennurbs_textiterator.h" />
+    <ClInclude Include="opennurbs_textlog.h" />
+    <ClInclude Include="opennurbs_textobject.h" />
+    <ClInclude Include="opennurbs_textrun.h" />
+    <ClInclude Include="opennurbs_texture.h" />
+    <ClInclude Include="opennurbs_texture_mapping.h" />
+    <ClInclude Include="opennurbs_text_style.h" />
+    <ClInclude Include="opennurbs_topology.h" />
+    <ClInclude Include="opennurbs_torus.h" />
+    <ClInclude Include="opennurbs_unicode.h" />
+    <ClInclude Include="opennurbs_userdata.h" />
+    <ClInclude Include="opennurbs_uuid.h" />
+    <ClInclude Include="opennurbs_version.h" />
+    <ClInclude Include="opennurbs_version_number.h" />
+    <ClInclude Include="opennurbs_viewport.h" />
+    <ClInclude Include="opennurbs_windows_targetver.h" />
+    <ClInclude Include="opennurbs_win_dwrite.h" />
+    <ClInclude Include="opennurbs_wip.h" />
+    <ClInclude Include="opennurbs_workspace.h" />
+    <ClInclude Include="opennurbs_xform.h" />
+    <ClInclude Include="opennurbs_xml.h" />
+    <ClInclude Include="opennurbs_zlib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="opennurbs_3dm_attributes.cpp" />
+    <ClCompile Include="opennurbs_3dm_properties.cpp" />
+    <ClCompile Include="opennurbs_3dm_settings.cpp" />
+    <ClCompile Include="opennurbs_annotationbase.cpp" />
+    <ClCompile Include="opennurbs_arc.cpp" />
+    <ClCompile Include="opennurbs_arccurve.cpp" />
+    <ClCompile Include="opennurbs_archivable_dictionary.cpp" />
+    <ClCompile Include="opennurbs_archive.cpp" />
+    <ClCompile Include="opennurbs_archive_manifest.cpp" />
+    <ClCompile Include="opennurbs_array.cpp" />
+    <ClCompile Include="opennurbs_base32.cpp" />
+    <ClCompile Include="opennurbs_base64.cpp" />
+    <ClCompile Include="opennurbs_beam.cpp" />
+    <ClCompile Include="opennurbs_bezier.cpp" />
+    <ClCompile Include="opennurbs_beziervolume.cpp" />
+    <ClCompile Include="opennurbs_bitmap.cpp" />
+    <ClCompile Include="opennurbs_bounding_box.cpp" />
+    <ClCompile Include="opennurbs_box.cpp" />
+    <ClCompile Include="opennurbs_brep.cpp" />
+    <ClCompile Include="opennurbs_brep_extrude.cpp" />
+    <ClCompile Include="opennurbs_brep_io.cpp" />
+    <ClCompile Include="opennurbs_brep_isvalid.cpp" />
+    <ClCompile Include="opennurbs_brep_region.cpp" />
+    <ClCompile Include="opennurbs_brep_tools.cpp" />
+    <ClCompile Include="opennurbs_brep_v2valid.cpp" />
+    <ClCompile Include="opennurbs_calculator.cpp" />
+    <ClCompile Include="opennurbs_circle.cpp" />
+    <ClCompile Include="opennurbs_color.cpp" />
+    <ClCompile Include="opennurbs_compress.cpp" />
+    <ClCompile Include="opennurbs_compstat.cpp" />
+    <ClCompile Include="opennurbs_cone.cpp" />
+    <ClCompile Include="opennurbs_convex_poly.cpp" />
+    <ClCompile Include="opennurbs_crc.cpp" />
+    <ClCompile Include="opennurbs_curve.cpp" />
+    <ClCompile Include="opennurbs_curveonsurface.cpp" />
+    <ClCompile Include="opennurbs_curveproxy.cpp" />
+    <ClCompile Include="opennurbs_cylinder.cpp" />
+    <ClCompile Include="opennurbs_date.cpp" />
+    <ClCompile Include="opennurbs_decals.cpp" />
+    <ClCompile Include="opennurbs_defines.cpp" />
+    <ClCompile Include="opennurbs_detail.cpp" />
+    <ClCompile Include="opennurbs_dimension.cpp" />
+    <ClCompile Include="opennurbs_dimensionformat.cpp" />
+    <ClCompile Include="opennurbs_dimensionstyle.cpp" />
+    <ClCompile Include="opennurbs_dithering.cpp" />
+    <ClCompile Include="opennurbs_ellipse.cpp" />
+    <ClCompile Include="opennurbs_embedded_file.cpp" />
+    <ClCompile Include="opennurbs_error.cpp" />
+    <ClCompile Include="opennurbs_error_message.cpp" />
+    <ClCompile Include="opennurbs_evaluate_nurbs.cpp" />
+    <ClCompile Include="opennurbs_extensions.cpp" />
+    <ClCompile Include="opennurbs_file_utilities.cpp" />
+    <ClCompile Include="opennurbs_font.cpp" />
+    <ClCompile Include="opennurbs_fsp.cpp" />
+    <ClCompile Include="opennurbs_function_list.cpp" />
+    <ClCompile Include="opennurbs_geometry.cpp" />
+    <ClCompile Include="opennurbs_glyph_outline.cpp" />
+    <ClCompile Include="opennurbs_ground_plane.cpp" />
+    <ClCompile Include="opennurbs_group.cpp" />
+    <ClCompile Include="opennurbs_hash_table.cpp" />
+    <ClCompile Include="opennurbs_hatch.cpp" />
+    <ClCompile Include="opennurbs_instance.cpp" />
+    <ClCompile Include="opennurbs_internal_V2_annotation.cpp" />
+    <ClCompile Include="opennurbs_internal_V5_annotation.cpp" />
+    <ClCompile Include="opennurbs_internal_V5_dimstyle.cpp" />
+    <ClCompile Include="opennurbs_internal_Vx_annotation.cpp" />
+    <ClCompile Include="opennurbs_intersect.cpp" />
+    <ClCompile Include="opennurbs_ipoint.cpp" />
+    <ClCompile Include="opennurbs_knot.cpp" />
+    <ClCompile Include="opennurbs_layer.cpp" />
+    <ClCompile Include="opennurbs_leader.cpp" />
+    <ClCompile Include="opennurbs_light.cpp" />
+    <ClCompile Include="opennurbs_line.cpp" />
+    <ClCompile Include="opennurbs_linear_workflow.cpp" />
+    <ClCompile Include="opennurbs_linecurve.cpp" />
+    <ClCompile Include="opennurbs_linetype.cpp" />
+    <ClCompile Include="opennurbs_locale.cpp" />
+    <ClCompile Include="opennurbs_lock.cpp" />
+    <ClCompile Include="opennurbs_lookup.cpp" />
+    <ClCompile Include="opennurbs_material.cpp" />
+    <ClCompile Include="opennurbs_math.cpp" />
+    <ClCompile Include="opennurbs_matrix.cpp" />
+    <ClCompile Include="opennurbs_md5.cpp" />
+    <ClCompile Include="opennurbs_memory_util.cpp" />
+    <ClCompile Include="opennurbs_mesh.cpp" />
+    <ClCompile Include="opennurbs_mesh_modifiers.cpp" />
+    <ClCompile Include="opennurbs_mesh_ngon.cpp" />
+    <ClCompile Include="opennurbs_mesh_tools.cpp" />
+    <ClCompile Include="opennurbs_mesh_topology.cpp" />
+    <ClCompile Include="opennurbs_model_component.cpp" />
+    <ClCompile Include="opennurbs_model_geometry.cpp" />
+    <ClCompile Include="opennurbs_morph.cpp" />
+    <ClCompile Include="opennurbs_nurbscurve.cpp" />
+    <ClCompile Include="opennurbs_nurbssurface.cpp" />
+    <ClCompile Include="opennurbs_nurbsvolume.cpp" />
+    <ClCompile Include="opennurbs_object.cpp" />
+    <ClCompile Include="opennurbs_object_history.cpp" />
+    <ClCompile Include="opennurbs_objref.cpp" />
+    <ClCompile Include="opennurbs_offsetsurface.cpp" />
+    <ClCompile Include="opennurbs_optimize.cpp" />
+    <ClCompile Include="opennurbs_parse_angle.cpp" />
+    <ClCompile Include="opennurbs_parse_length.cpp" />
+    <ClCompile Include="opennurbs_parse_number.cpp" />
+    <ClCompile Include="opennurbs_parse_point.cpp" />
+    <ClCompile Include="opennurbs_parse_settings.cpp" />
+    <ClCompile Include="opennurbs_photogrammetry.cpp" />
+    <ClCompile Include="opennurbs_plane.cpp" />
+    <ClCompile Include="opennurbs_planesurface.cpp" />
+    <ClCompile Include="opennurbs_pluginlist.cpp" />
+    <ClCompile Include="opennurbs_point.cpp" />
+    <ClCompile Include="opennurbs_pointcloud.cpp" />
+    <ClCompile Include="opennurbs_pointgeometry.cpp" />
+    <ClCompile Include="opennurbs_pointgrid.cpp" />
+    <ClCompile Include="opennurbs_polycurve.cpp" />
+    <ClCompile Include="opennurbs_polyedgecurve.cpp" />
+    <ClCompile Include="opennurbs_polyline.cpp" />
+    <ClCompile Include="opennurbs_polylinecurve.cpp" />
+    <ClCompile Include="opennurbs_post_effects.cpp" />
+    <ClCompile Include="opennurbs_precompiledheader.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="opennurbs_progress_reporter.cpp" />
+    <ClCompile Include="opennurbs_public_memory.cpp" />
+    <ClCompile Include="opennurbs_quaternion.cpp" />
+    <ClCompile Include="opennurbs_rand.cpp" />
+    <ClCompile Include="opennurbs_render_channels.cpp" />
+    <ClCompile Include="opennurbs_render_content.cpp" />
+    <ClCompile Include="opennurbs_revsurface.cpp" />
+    <ClCompile Include="opennurbs_rtree.cpp" />
+    <ClCompile Include="opennurbs_safe_frame.cpp" />
+    <ClCompile Include="opennurbs_sectionstyle.cpp" />
+    <ClCompile Include="opennurbs_sha1.cpp" />
+    <ClCompile Include="opennurbs_skylight.cpp" />
+    <ClCompile Include="opennurbs_sleeplock.cpp" />
+    <ClCompile Include="opennurbs_sort.cpp" />
+    <ClCompile Include="opennurbs_sphere.cpp" />
+    <ClCompile Include="opennurbs_statics.cpp" />
+    <ClCompile Include="opennurbs_std_string_format.cpp" />
+    <ClCompile Include="opennurbs_std_string_utf.cpp" />
+    <ClCompile Include="opennurbs_string.cpp" />
+    <ClCompile Include="opennurbs_string_compare.cpp" />
+    <ClCompile Include="opennurbs_string_format.cpp" />
+    <ClCompile Include="opennurbs_string_scan.cpp" />
+    <ClCompile Include="opennurbs_string_values.cpp" />
+    <ClCompile Include="opennurbs_subd.cpp" />
+    <ClCompile Include="opennurbs_subd_archive.cpp" />
+    <ClCompile Include="opennurbs_subd_copy.cpp" />
+    <ClCompile Include="opennurbs_subd_data.cpp" />
+    <ClCompile Include="opennurbs_subd_eval.cpp" />
+    <ClCompile Include="opennurbs_subd_fragment.cpp" />
+    <ClCompile Include="opennurbs_subd_frommesh.cpp" />
+    <ClCompile Include="opennurbs_subd_heap.cpp" />
+    <ClCompile Include="opennurbs_subd_iter.cpp" />
+    <ClCompile Include="opennurbs_subd_limit.cpp" />
+    <ClCompile Include="opennurbs_subd_matrix.cpp" />
+    <ClCompile Include="opennurbs_subd_mesh.cpp" />
+    <ClCompile Include="opennurbs_subd_ref.cpp" />
+    <ClCompile Include="opennurbs_subd_ring.cpp" />
+    <ClCompile Include="opennurbs_subd_sector.cpp" />
+    <ClCompile Include="opennurbs_subd_texture.cpp" />
+    <ClCompile Include="opennurbs_sum.cpp" />
+    <ClCompile Include="opennurbs_sumsurface.cpp" />
+    <ClCompile Include="opennurbs_sun.cpp" />
+    <ClCompile Include="opennurbs_surface.cpp" />
+    <ClCompile Include="opennurbs_surfaceproxy.cpp" />
+    <ClCompile Include="opennurbs_symmetry.cpp" />
+    <ClCompile Include="opennurbs_terminator.cpp" />
+    <ClCompile Include="opennurbs_testclass.cpp" />
+    <ClCompile Include="opennurbs_text.cpp" />
+    <ClCompile Include="opennurbs_textcontext.cpp" />
+    <ClCompile Include="opennurbs_textglyph.cpp" />
+    <ClCompile Include="opennurbs_textiterator.cpp" />
+    <ClCompile Include="opennurbs_textlog.cpp" />
+    <ClCompile Include="opennurbs_textobject.cpp" />
+    <ClCompile Include="opennurbs_textrun.cpp" />
+    <ClCompile Include="opennurbs_text_style.cpp" />
+    <ClCompile Include="opennurbs_topology.cpp" />
+    <ClCompile Include="opennurbs_torus.cpp" />
+    <ClCompile Include="opennurbs_unicode.cpp" />
+    <ClCompile Include="opennurbs_unicode_cpsb.cpp" />
+    <ClCompile Include="opennurbs_units.cpp" />
+    <ClCompile Include="opennurbs_userdata.cpp" />
+    <ClCompile Include="opennurbs_userdata_obsolete.cpp" />
+    <ClCompile Include="opennurbs_uuid.cpp" />
+    <ClCompile Include="opennurbs_version.cpp" />
+    <ClCompile Include="opennurbs_version_number.cpp" />
+    <ClCompile Include="opennurbs_viewport.cpp" />
+    <ClCompile Include="opennurbs_win_dwrite.cpp" />
+    <ClCompile Include="opennurbs_workspace.cpp" />
+    <ClCompile Include="opennurbs_wstring.cpp" />
+    <ClCompile Include="opennurbs_xform.cpp" />
+    <ClCompile Include="opennurbs_xml.cpp" />
+    <ClCompile Include="opennurbs_zlib.cpp" />
+    <ClCompile Include="opennurbs_zlib_memory.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

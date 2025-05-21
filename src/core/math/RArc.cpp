@@ -27,6 +27,8 @@
 #include "RMath.h"
 #include "RPolyline.h"
 
+RArcProxy* RArc::arcProxy = NULL;
+
 /**
  * Creates an arc shape with an invalid center.
  */
@@ -159,36 +161,15 @@ RArc RArc::createFrom2PBulge(const RVector& startPoint,
 }
 
 RArc RArc::createTangential(const RVector& startPoint, const RVector& pos,
-                            double direction, double radius) {
-    RArc arc;
+                            double direction, double radius, double sweep) {
 
-    arc.radius = radius;
+    RArc ret;
 
-    // orthogonal to base entity:
-    RVector ortho;
-    ortho.setPolar(radius, direction + M_PI/2.0);
-
-    // two possible center points for arc:
-    RVector center1 = startPoint + ortho;
-    RVector center2 = startPoint - ortho;
-    if (center1.getDistanceTo(pos) < center2.getDistanceTo(pos)) {
-        arc.center = center1;
-    } else {
-        arc.center = center2;
+    if (RArc::hasProxy()) {
+        ret = RArc::getArcProxy()->createTangential(startPoint, pos, direction, radius, sweep);
     }
 
-    // angles:
-    arc.startAngle = arc.center.getAngleTo(startPoint);
-    arc.endAngle = arc.center.getAngleTo(pos);
-
-    // handle arc direction:
-    arc.reversed = false;
-    double diff = RMath::getNormalizedAngle(arc.getDirection1() - direction);
-    if (fabs(diff-M_PI) < 1.0e-1) {
-        arc.reversed = true;
-    }
-
-    return arc;
+    return ret;
 }
 
 /**

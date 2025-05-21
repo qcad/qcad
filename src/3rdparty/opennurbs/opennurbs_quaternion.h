@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2009 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(ON_QUATERNION_INC_)
 #define ON_QUATERNION_INC_
@@ -20,7 +18,10 @@ class ON_CLASS ON_Quaternion
 {
 public:
   // quaternion = a + bi + cj + dk
-  double a,b,c,d;
+  double a;
+  double b;
+  double c;
+  double d;
 
   static const ON_Quaternion Zero;     // 0   = (0,0,0,0
   static const ON_Quaternion Identity; // 1   = (1,0,0,0)
@@ -28,7 +29,7 @@ public:
   static const ON_Quaternion J;        // "j" = (0,0,1,0)
   static const ON_Quaternion K;        // "k" = (0,0,0,1)
 
-  ON_Quaternion() {}
+  ON_Quaternion() { a = b = c = d = 0.0; }
 
   ON_Quaternion(double qa, double qb, double qc, double qd);
 
@@ -176,7 +177,37 @@ public:
   static ON_Quaternion Rotation(double angle, const ON_3dVector& axis);
 
   /*
-  Descriptin:
+  Description:
+    Returns a Quaternion defined by Tait-Byran angles (also loosely known as Euler angles).
+  Parameters:
+    yaw - angle (in radians) to rotate about the Z axis
+    pitch -  angle (in radians) to rotate about the Y axis
+    roll - angle (in radians) to rotate about the X axis
+  Details:
+    RotationZYX(yaw, pitch, roll)  = R_z( yaw) * R_y(pitch) * R_x(roll)
+    where R_*(angle) is  rotation of angle radians  about the corresponding world coordinate axis.
+  See Also:
+    GetYawPitchRoll, RotationZYZ
+  */
+  static ON_Quaternion RotationZYX(double yaw, double pitch, double roll);
+
+  /*
+  Description:
+     Returns a Quaternion defined by Euler angles.
+  Parameters:
+    alpha - angle (in radians) to rotate about the Z axis
+    beta -  angle (in radians) to rotate about the Y axis
+    gamma - angle (in radians) to rotate about the Z axis
+  Details:
+    RotationZYZ(alpha, beta, gamma)  = R_z( alpha) * R_y(beta) * R_z(gamma)
+    where R_*(angle) is  rotation of angle radians  about the corresponding *-world coordinate axis.
+  See Also:
+    GetEulerZYZ, RotationZYX
+  */
+  static ON_Quaternion RotationZYZ(double alpha, double beta, double gamma);
+
+  /*
+  Description:
     Sets the quaternion to the unit quaternion which rotates
     plane0.xaxis to plane1.xaxis,
     plane0.yaxis to plane1.yaxis, and 
@@ -245,6 +276,42 @@ public:
   bool GetRotation(ON_Plane& plane) const;
 
   /*
+  Description:
+    Find the Tait-Byran angles (also loosely called Euler angles) for this quaternion.
+  Parameters:
+    yaw - angle (in radians) to rotate about the Z axis
+    pitch -  angle (in radians) to rotate about the Y axis
+    roll - angle (in radians) to rotate about the X axis
+  Details:
+    When true is returned.
+    this = RotationZYX(yaw, pitch, roll)  = R_z( yaw) * R_y(pitch) * R_x(roll)
+    where R_*(angle) is  rotation of angle radians  about the corresponding world coordinate axis.
+    Returns false if this is not a rotation.
+  Notes:
+   roll and yaw are in the range  (-pi, pi] and pitch is in [-pi/2, pi/2]
+
+  */
+  bool GetYawPitchRoll(double& yaw, double& pitch, double& roll)const;
+
+
+  /*
+  Description:
+    Find the Euler angles for a rotation transformation.
+  Parameters:
+    alpha - angle (in radians) to rotate about the Z axis
+    beta -  angle (in radians) to rotate about the Y axis
+    gamma - angle (in radians) to rotate about the Z axis
+  Details:
+    When true is returned.
+      *this = RotationZYZ(alpha, beta, gamma)  = R_z( alpha) * R_y(beta) * R_z(gamma)
+    where R_*(angle) is  rotation of angle radians  about the corresponding *-world coordinate axis.
+    Returns false if this is not a rotation.
+  Notes:
+    alpha and gamma are in the range (-pi, pi] while beta in in the range [0, pi]
+  */
+  bool GetEulerZYZ(double& alpha, double& beta, double& gamma)const;
+
+  /*
   Description
     Rotate a 3d vector.  This operation is also called
     conjugation, because the result is the same as
@@ -286,6 +353,12 @@ public:
 
   /*
   Returns:
+    True if a, b, c, and d are all valid, finite and at least one is non-zero.
+  */
+  bool IsNotZero() const;
+
+  /*
+  Returns:
     True if b, c, and d are all zero.
   */
   bool IsScalar() const;
@@ -317,6 +390,11 @@ public:
 
 
   static ON_Quaternion Slerp(ON_Quaternion q0, ON_Quaternion q1, double t);
+
+  /*
+     Returns the quaternion obtained by rotating q0 towards q1 limiting the rotation by MaxRadians.
+  */
+  static ON_Quaternion RotateTowards(ON_Quaternion q0, ON_Quaternion q1, double MaxRadians);
 
 };
 

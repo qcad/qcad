@@ -270,6 +270,7 @@ HEADERS = \
     RWheelEvent.h \
     RWidget.h \
     math/RArc.h \
+    math/RArcProxy.h \
     math/RBox.h \
     math/RCircle.h \
     math/RDirected.h \

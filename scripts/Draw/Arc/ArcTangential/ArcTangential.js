@@ -28,6 +28,7 @@ function ArcTangential(guiAction) {
     Arc.call(this, guiAction);
 
     this.entity = undefined;
+    this.shape = undefined;
     this.appendToStartPoint = undefined;
     this.pos = undefined;
     this.radius = undefined;
@@ -59,6 +60,7 @@ ArcTangential.prototype.setState = function(state) {
     case ArcTangential.State.ChoosingBaseEntity:
         this.getDocumentInterface().setClickMode(RAction.PickEntity);
         this.entity = undefined;
+        this.shape = undefined;
         this.pos = undefined;
         this.appendToStartPoint = undefined;
         tr = qsTr("Choose base line or base arc");
@@ -103,20 +105,22 @@ ArcTangential.prototype.pickEntity = function(event, preview) {
         return;
     }
 
+    this.shape = this.getShape(entity, pos);
+
     switch (this.state) {
     case ArcTangential.State.ChoosingBaseEntity:
-        if (isArcEntity(entity) || isLineEntity(entity)) {
+        if (this.isSupportedShape(this.shape)) {
             this.entity = entity;
 
             var startPoint;
-            if (this.entity.getStartPoint().getDistanceTo(pos) <
-                this.entity.getEndPoint().getDistanceTo(pos)) {
+            if (this.shape.getStartPoint().getDistanceTo(pos) <
+                this.shape.getEndPoint().getDistanceTo(pos)) {
 
                 this.appendToStartPoint = true;
-                startPoint = this.entity.getStartPoint();
+                startPoint = this.shape.getStartPoint();
             } else {
                 this.appendToStartPoint = false;
-                startPoint = this.entity.getEndPoint();
+                startPoint = this.shape.getEndPoint();
             }
             if (preview) {
                 this.updatePreview();
@@ -131,6 +135,7 @@ ArcTangential.prototype.pickEntity = function(event, preview) {
                 EAction.warnNotLineArc();
             }
             this.entity = undefined;
+            this.shape = undefined;
         }
         break;
     }
@@ -138,6 +143,14 @@ ArcTangential.prototype.pickEntity = function(event, preview) {
     if (!preview && this.error.length!==0) {
         EAction.handleUserWarning(this.error);
     }
+};
+
+ArcTangential.prototype.getShape = function(entity, pos) {
+    return entity.castToShape();
+};
+
+ArcTangential.prototype.isSupportedShape = function(shape) {
+    return isLineShape(shape) || isArcShape(shape);
 };
 
 ArcTangential.prototype.pickCoordinate = function(event, preview) {
@@ -166,7 +179,7 @@ ArcTangential.prototype.pickCoordinate = function(event, preview) {
 
 ArcTangential.prototype.getOperation = function(preview) {
     if (isNull(this.pos) || !isBoolean(this.appendToStartPoint) ||
-            !isEntity(this.entity) || !isNumber(this.radius)) {
+        !isEntity(this.entity) || !isShape(this.shape) || !isNumber(this.radius)) {
         return undefined;
     }
 
@@ -174,7 +187,7 @@ ArcTangential.prototype.getOperation = function(preview) {
 
     var arc = this.getArc();
 
-    if (!isShape(arc)) {
+    if (!isArcShape(arc) || !arc.isValid()) {
         return undefined;
     }
 
@@ -190,17 +203,19 @@ ArcTangential.prototype.getArc = function() {
     var direction;
     var startPoint;
     if (this.appendToStartPoint==true) {
-        direction = this.entity.getDirection1() + Math.PI;
-        startPoint = this.entity.getStartPoint();
+        direction = this.shape.getDirection1() + Math.PI;
+        startPoint = this.shape.getStartPoint();
     }
     else {
-        direction = this.entity.getDirection2() + Math.PI;
-        startPoint = this.entity.getEndPoint();
+        direction = this.shape.getDirection2() + Math.PI;
+        startPoint = this.shape.getEndPoint();
     }
 
-    var arc = RArc.createTangential(startPoint, this.pos, direction, this.radius);
+    return this.createTangential(startPoint, direction);
+};
 
-    return arc;
+ArcTangential.prototype.createTangential = function(startPoint, direction) {
+    return RArc.createTangential(startPoint, this.pos, direction, this.radius);
 };
 
 ArcTangential.getTangentialArc = function(startPoint, pos, direction, radius) {
@@ -245,7 +260,7 @@ ArcTangential.prototype.getHighlightedEntities = function() {
 
 ArcTangential.prototype.getAuxPreview = function() {
     if (isNull(this.pos) || !isBoolean(this.appendToStartPoint) ||
-            !isEntity(this.entity) || !isNumber(this.radius)) {
+            !isEntity(this.entity) || !isShape(this.shape) || !isNumber(this.radius)) {
         return undefined;
     }
 
@@ -264,4 +279,3 @@ ArcTangential.prototype.slotRadiusChanged = function(value) {
     this.radius = value;
     this.updatePreview(true);
 };
-

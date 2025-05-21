@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,9 +10,16 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
+
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
 
 ON__UINT16 ON_CRC16( ON__UINT16 current_remainder, size_t count, const void* p )
 {
@@ -66,35 +72,42 @@ ON__UINT16 ON_CRC16( ON__UINT16 current_remainder, size_t count, const void* p )
   {
     ON__UINT16 r1;
 	  // update crc remainder
-	  while (count >= 8) 
-    {
-      // while() loop unrolled for speed
-		  r1 = ON_CRC16_CCITT_TABLE[(current_remainder & ((ON__UINT16)0xff00))>>8];
-		  current_remainder = (current_remainder << 8) ^ (*b++);
-		  current_remainder ^= r1;  
-		  r1 = ON_CRC16_CCITT_TABLE[(current_remainder & ((ON__UINT16)0xff00))>>8];
-		  current_remainder = (current_remainder << 8) ^ (*b++);
-		  current_remainder ^= r1;  
-		  r1 = ON_CRC16_CCITT_TABLE[(current_remainder & ((ON__UINT16)0xff00))>>8];
-		  current_remainder = (current_remainder << 8) ^ (*b++);
-		  current_remainder ^= r1;  
-		  r1 = ON_CRC16_CCITT_TABLE[(current_remainder & ((ON__UINT16)0xff00))>>8];
-		  current_remainder = (current_remainder << 8) ^ (*b++);
-		  current_remainder ^= r1;  
-		  r1 = ON_CRC16_CCITT_TABLE[(current_remainder & ((ON__UINT16)0xff00))>>8];
-		  current_remainder = (current_remainder << 8) ^ (*b++);
-		  current_remainder ^= r1;  
-		  r1 = ON_CRC16_CCITT_TABLE[(current_remainder & ((ON__UINT16)0xff00))>>8];
-		  current_remainder = (current_remainder << 8) ^ (*b++);
-		  current_remainder ^= r1;  
-		  r1 = ON_CRC16_CCITT_TABLE[(current_remainder & ((ON__UINT16)0xff00))>>8];
-		  current_remainder = (current_remainder << 8) ^ (*b++);
-		  current_remainder ^= r1;  
-		  r1 = ON_CRC16_CCITT_TABLE[(current_remainder & ((ON__UINT16)0xff00))>>8];
-		  current_remainder = (current_remainder << 8) ^ (*b++);
-		  current_remainder ^= r1;  
-      count -= 8;
-	  }
+
+    // Dale Lear September 2020
+    // I was comparing 16-bit crc, 32-bit crc, MAD5 and SHA-1 hash calculation speeds.
+    // It turns out, that compilers and optimizers have improved a fair bit since 1994 when this code was written.
+    // Manual loop unrolling doesn't help (this used to make a measurable difference in 1994 when we used Watcom C on Win 3.1.)
+    // The TestHashSpeed command tests hashing speeds. Short story - use either ON_CRC32 or ON_SHA1. 
+
+	  //while (count >= 8) 
+    // {
+    //   // while() loop unrolled for speed
+		 // r1 = ON_CRC16_CCITT_TABLE[(current_remainder & ((ON__UINT16)0xff00))>>8];
+		 // current_remainder = (current_remainder << 8) ^ (*b++);
+		 // current_remainder ^= r1;  
+		 // r1 = ON_CRC16_CCITT_TABLE[(current_remainder & ((ON__UINT16)0xff00))>>8];
+		 // current_remainder = (current_remainder << 8) ^ (*b++);
+		 // current_remainder ^= r1;  
+		 // r1 = ON_CRC16_CCITT_TABLE[(current_remainder & ((ON__UINT16)0xff00))>>8];
+		 // current_remainder = (current_remainder << 8) ^ (*b++);
+		 // current_remainder ^= r1;  
+		 // r1 = ON_CRC16_CCITT_TABLE[(current_remainder & ((ON__UINT16)0xff00))>>8];
+		 // current_remainder = (current_remainder << 8) ^ (*b++);
+		 // current_remainder ^= r1;  
+		 // r1 = ON_CRC16_CCITT_TABLE[(current_remainder & ((ON__UINT16)0xff00))>>8];
+		 // current_remainder = (current_remainder << 8) ^ (*b++);
+		 // current_remainder ^= r1;  
+		 // r1 = ON_CRC16_CCITT_TABLE[(current_remainder & ((ON__UINT16)0xff00))>>8];
+		 // current_remainder = (current_remainder << 8) ^ (*b++);
+		 // current_remainder ^= r1;  
+		 // r1 = ON_CRC16_CCITT_TABLE[(current_remainder & ((ON__UINT16)0xff00))>>8];
+		 // current_remainder = (current_remainder << 8) ^ (*b++);
+		 // current_remainder ^= r1;  
+		 // r1 = ON_CRC16_CCITT_TABLE[(current_remainder & ((ON__UINT16)0xff00))>>8];
+		 // current_remainder = (current_remainder << 8) ^ (*b++);
+		 // current_remainder ^= r1;  
+    //   count -= 8;
+	  //}
 	  while (count--) 
     {
 		  r1 = ON_CRC16_CCITT_TABLE[(current_remainder & ((ON__UINT16)0xff00))>>8];
@@ -216,38 +229,235 @@ ON__UINT32 ON_CRC32( ON__UINT32 current_remainder, size_t count, const void* p )
   {
     const unsigned char* b = (const unsigned char*)p;
 
-    // The "L" was need long ago when "int" was often a 16 bit integers.
+    // The trailing L was needed long ago when "int" was often a 16 bit integers.
     // Today it is more common for "int" to be a 32 bit integer and
-    // "L" to be a 32 or 64 bit integer.  So, the L is causing more
+    // L to be a 32 or 64 bit integer.  So, the L is causing more
     // problems that it is fixing.
     // current_remainder ^= 0xffffffffL; 
     current_remainder ^= 0xffffffff;
-    while (count >= 8)
-    {
-      // while() loop unrolled for speed
-      current_remainder = ON_CRC32_ZLIB_TABLE[((int)current_remainder ^ (*b++)) & 0xff] ^ (current_remainder >> 8);
-      current_remainder = ON_CRC32_ZLIB_TABLE[((int)current_remainder ^ (*b++)) & 0xff] ^ (current_remainder >> 8);
-      current_remainder = ON_CRC32_ZLIB_TABLE[((int)current_remainder ^ (*b++)) & 0xff] ^ (current_remainder >> 8);
-      current_remainder = ON_CRC32_ZLIB_TABLE[((int)current_remainder ^ (*b++)) & 0xff] ^ (current_remainder >> 8);
-      current_remainder = ON_CRC32_ZLIB_TABLE[((int)current_remainder ^ (*b++)) & 0xff] ^ (current_remainder >> 8);
-      current_remainder = ON_CRC32_ZLIB_TABLE[((int)current_remainder ^ (*b++)) & 0xff] ^ (current_remainder >> 8);
-      current_remainder = ON_CRC32_ZLIB_TABLE[((int)current_remainder ^ (*b++)) & 0xff] ^ (current_remainder >> 8);
-      current_remainder = ON_CRC32_ZLIB_TABLE[((int)current_remainder ^ (*b++)) & 0xff] ^ (current_remainder >> 8);
-      count -= 8;
-    }
+
+    ////    // The loop unwrapping was done almost 20 years ago.  We need to run tests to
+    ////    // see if it does anything with current compilers and computers.
+    ////#if defined (ON_RUNTIME_WIN)
+    ////    // This slows down the Mac implementation by 50%
+    ////    while (count >= 8)
+    ////    {
+    ////      // while() loop unrolled for speed
+    ////      current_remainder = ON_CRC32_ZLIB_TABLE[((int)current_remainder ^ (*b++)) & 0xff] ^ (current_remainder >> 8);
+    ////      current_remainder = ON_CRC32_ZLIB_TABLE[((int)current_remainder ^ (*b++)) & 0xff] ^ (current_remainder >> 8);
+    ////      current_remainder = ON_CRC32_ZLIB_TABLE[((int)current_remainder ^ (*b++)) & 0xff] ^ (current_remainder >> 8);
+    ////      current_remainder = ON_CRC32_ZLIB_TABLE[((int)current_remainder ^ (*b++)) & 0xff] ^ (current_remainder >> 8);
+    ////      current_remainder = ON_CRC32_ZLIB_TABLE[((int)current_remainder ^ (*b++)) & 0xff] ^ (current_remainder >> 8);
+    ////      current_remainder = ON_CRC32_ZLIB_TABLE[((int)current_remainder ^ (*b++)) & 0xff] ^ (current_remainder >> 8);
+    ////      current_remainder = ON_CRC32_ZLIB_TABLE[((int)current_remainder ^ (*b++)) & 0xff] ^ (current_remainder >> 8);
+    ////      current_remainder = ON_CRC32_ZLIB_TABLE[((int)current_remainder ^ (*b++)) & 0xff] ^ (current_remainder >> 8);
+    ////      count -= 8;
+    ////    }
+    ////#endif
+
     while(count--) 
     {
       current_remainder = ON_CRC32_ZLIB_TABLE[((int)current_remainder ^ (*b++)) & 0xff] ^ (current_remainder >> 8);
     }
-    // The "L" was need long ago when "int" was often a 16 bit integers.
+    // The trailing L was needed long ago when "int" was often a 16 bit integers.
     // Today it is more common for "int" to be a 32 bit integer and
-    // "L" to be a 32 or 64 bit integer.  So, the L is causing more
+    // L to be a 32 or 64 bit integer.  So, the L is causing more
     // problems than it is fixing.
     //current_remainder ^= 0xffffffffL;
     current_remainder ^= 0xffffffff;
   }
 
   return current_remainder;
+}
+
+
+/*
+Description:
+  Test speeds of various hash algorithms.
+Parameters:
+  byte_count - [in]
+    Number of bytes to hash. This number is rounded up to the nearest multiple of 1024.
+  crc16 - [in/out]
+    If crc16 is not nullptr, then 16 bit CRC hashing is tested using function ON_CRC16().
+  crc32 - [in/out]
+    If crc32 is not nullptr, then 32 bit CRC hashing is tested using function ON_CRC32().
+  md5_hash - [in/out]
+    If md5_hash is not nullptr, then MD5 hashing is tested using class ON_MD5.
+  sha1_hash - [in/out]
+    If sha1_hash is not nullptr, then SHA-1 hashing is tested class ON_SHA1.
+  elapsed_time_in_seconds - [out]
+    elapsed_time_in_seconds[0] = 16 bit CRC hash time in seconds.
+    elapsed_time_in_seconds[1] = 32 bit CRC hash time in seconds.
+    elapsed_time_in_seconds[2] = MD5 hash time in seconds.
+    elapsed_time_in_seconds[3] = SHA-1 hash time in seconds.
+    If a hash was tested, then number of seconds it took to compute the hash is returned.
+    Otherwise ON_DBL_QNAN is returned.
+
+*/
+void ON_TestHashSpeed(
+  size_t byte_count,
+  ON__UINT16* crc16,
+  ON__UINT32* crc32,
+  ON_MD5_Hash* md5_hash,
+  ON_SHA1_Hash* sha1_hash,
+  double elapsed_time_in_seconds[4]
+)
+{
+  for (int i = 0; i < 4; ++i)
+    elapsed_time_in_seconds[i] = ON_DBL_QNAN;
+
+  ON_RandomNumberGenerator rng;
+  ON_SimpleArray<ON__UINT32> buffer_array(1024);
+  for (int i = 0; i < buffer_array.Capacity(); ++i)
+    buffer_array.Append(rng.RandomNumber());
+
+  const ON__UINT32* buffer = buffer_array.Array();
+  const size_t sizeof_buffer = buffer_array.UnsignedCount() * sizeof(buffer[0]);
+
+  ON_StopWatch sw;
+
+  if (nullptr != crc16)
+  {
+    sw.Start();
+    ON__UINT16 h16 = 0;
+    for (size_t count = 0; count < byte_count; count += sizeof_buffer)
+      h16 = ON_CRC16(h16, sizeof_buffer, buffer);
+    *crc16 = h16;
+    sw.Stop();
+    elapsed_time_in_seconds[0] = sw.ElapsedTime();
+  }
+
+  if (nullptr != crc32)
+  {
+    sw.Start();
+    ON__UINT32 h32 = 0;
+    for (size_t count = 0; count < byte_count; count += sizeof_buffer)
+      h32 = ON_CRC32(h32, sizeof_buffer, buffer);
+    *crc32 = h32;
+    sw.Stop();
+    elapsed_time_in_seconds[1] = sw.ElapsedTime();
+  }
+
+  if (nullptr != md5_hash)
+  {
+    sw.Start();
+    ON_MD5 md5;
+    for (size_t count = 0; count < byte_count; count += sizeof_buffer)
+      md5.AccumulateBytes(buffer, sizeof_buffer);
+    *md5_hash = md5.Hash();
+    sw.Stop();
+    elapsed_time_in_seconds[2] = sw.ElapsedTime();
+  }
+
+  if (nullptr != sha1_hash)
+  {
+    sw.Start();
+    ON_SHA1 sha1;
+    for (size_t count = 0; count < byte_count; count += sizeof_buffer)
+      sha1.AccumulateBytes(buffer, sizeof_buffer);
+    *sha1_hash = sha1.Hash();
+    sw.Stop();
+    elapsed_time_in_seconds[3] = sw.ElapsedTime();
+  }
+
+  return;
+}
+
+void ON_TestHashSpeed(
+  size_t byte_count,
+  bool bTestCRC16,
+  bool bTestCRC32,
+  bool bTestMD5,
+  bool bTestSHA1,
+  ON_TextLog& text_log
+)
+{
+  ON__UINT16 crc16 = 0;
+  ON__UINT32 crc32 = 0;
+  ON_MD5_Hash md5_hash = ON_MD5_Hash::ZeroDigest;
+  ON_SHA1_Hash sha1_hash = ON_SHA1_Hash::ZeroDigest;
+  double elapsed_time_in_seconds[4] = {};
+
+  byte_count = (byte_count / 1024) * 1024;
+
+  ON_TestHashSpeed(
+    byte_count,
+    bTestCRC16 ? &crc16 : nullptr,
+    bTestCRC32 ? &crc32 : nullptr,
+    bTestMD5 ? &md5_hash : nullptr,
+    bTestSHA1 ? &sha1_hash : nullptr,
+    elapsed_time_in_seconds
+  );
+
+#if defined(ON_DEBUG)
+  const char* str = "Debug opennurbs hashing times for ";
+#else
+  const char* str = "Release opennurbs hashing times for ";
+#endif
+  text_log.Print(str);
+
+  const size_t one_kb = 1024;
+  const size_t one_mb = one_kb * one_kb;
+  const size_t one_gb = one_kb * one_kb * one_kb;
+  if (byte_count >= one_gb && 0 == byte_count % one_gb)
+    text_log.Print("%zu GB:\n", byte_count / one_gb);
+  else if (byte_count >= one_mb && 0 == byte_count % one_mb)
+    text_log.Print("%zu MB:\n", byte_count / one_mb);
+  else if (byte_count >= one_kb && 0 == byte_count % one_kb)
+    text_log.Print("%zu KB:\n", byte_count / one_kb);
+  else
+    text_log.Print("%zu bytes:\n", byte_count);
+
+  const ON_TextLogIndent indent1(text_log);
+
+  const ON_String hashname[4] = {
+    "16 bit CRC",
+    "32 bit crc",
+    "MD5",
+    "SHA-1"
+  };
+  const bool bTested[4] = { bTestCRC16 ,bTestCRC32 ,bTestMD5 ,bTestSHA1 };
+
+  // Set i0 = index of the fastest hash test
+  int i0 = -1;
+  for (int i = 0; i < 4; i++)
+  {
+    if (bTested[i] && elapsed_time_in_seconds[i] > 0.0)
+    {
+      if (i0 < 0 || elapsed_time_in_seconds[i] < elapsed_time_in_seconds[i0])
+        i0 = i;
+    }
+  }
+
+  for (int i = 0; i < 4; ++i)
+  {
+    if (bTested[i])
+    {
+      text_log.Print("%s: %g seconds.", static_cast<const char*>(hashname[i]), elapsed_time_in_seconds[i]);
+      if (elapsed_time_in_seconds[i] > 0.0 && i0 >= 0 && i0 != i)
+        text_log.Print(" (%g x %s)", elapsed_time_in_seconds[i] / elapsed_time_in_seconds[i0], static_cast<const char*>(hashname[i0]));
+      text_log.PrintNewLine();
+    }
+  }
+}
+
+void ON_TestHashSpeed(
+  size_t byte_count,
+  ON_TextLog& text_log
+)
+{
+  const bool bTestCRC16 = true;
+  const bool bTestCRC32 = true;
+  const bool bTestMD5 = true;
+  const bool bTestSHA1 = true;
+  ON_TestHashSpeed(
+    byte_count,
+    bTestCRC16,
+    bTestCRC32,
+    bTestMD5,
+    bTestSHA1,
+    text_log
+  );
 }
 
 

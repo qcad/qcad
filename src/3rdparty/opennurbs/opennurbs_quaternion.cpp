@@ -1,10 +1,7 @@
-#include "opennurbs.h"
-
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2009 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -13,7 +10,16 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
+
+#include "opennurbs.h"
+
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
 
 ON_Quaternion ON_CrossProduct( const ON_Quaternion& p, const ON_Quaternion& q)
 {
@@ -84,7 +90,6 @@ ON_Quaternion ON_Quaternion::Pow(ON_Quaternion q,double t)
 
 ON_Quaternion ON_Quaternion::Slerp(ON_Quaternion q0, ON_Quaternion q1, double t)
 {
-  // Added 8 Jan 2010 - not tested yet
   ON_Quaternion q;
   if ( t <= 0.5 )
   {
@@ -97,6 +102,16 @@ ON_Quaternion ON_Quaternion::Slerp(ON_Quaternion q0, ON_Quaternion q1, double t)
     q = q1*ON_Quaternion::Pow(q,1.0-t);
   }
   return q;
+}
+
+ON_Quaternion ON_Quaternion::RotateTowards(ON_Quaternion q0, ON_Quaternion q1, double MaxRadians)
+{
+  ON_Quaternion Q = q0.Inverse() * q1;
+  ON_Quaternion logQ = Log(Q);
+
+  double t = MaxRadians / (2.0*logQ.Length());
+
+  return (t < 1.0) ? Slerp(q0, q1, t) : q1;
 }
 
 
@@ -231,14 +246,55 @@ ON_Quaternion ON_Quaternion::Rotation(const ON_Plane& plane0, const ON_Plane& pl
 
 bool ON_Quaternion::GetRotation(ON_Xform& xform) const
 {
-  ON_Plane plane;
-  bool rc = GetRotation(plane);
-  if (rc)
-    xform.Rotation(ON_Plane::World_xy,plane);
-  else if (IsZero())
-    xform.Zero();
+  bool rc;
+  ON_Quaternion q(*this);
+  if ( q.Unitize() )
+  {
+    if (    fabs(q.a-a) <= ON_ZERO_TOLERANCE
+         && fabs(q.b-b) <= ON_ZERO_TOLERANCE
+         && fabs(q.c-c) <= ON_ZERO_TOLERANCE
+         && fabs(q.d-d) <= ON_ZERO_TOLERANCE
+         )
+    {
+      // "this" was already unitized - don't tweak bits
+      q = *this;
+    }
+    xform[1][0] = 2.0*(q.b*q.c + q.a*q.d);
+    xform[2][0] = 2.0*(q.b*q.d - q.a*q.c);
+    xform[3][0] = 0.0;
+
+    xform[0][1] = 2.0*(q.b*q.c - q.a*q.d);
+    xform[2][1] = 2.0*(q.c*q.d + q.a*q.b);
+    xform[3][1] = 0.0;
+
+    xform[0][2] = 2.0*(q.b*q.d + q.a*q.c);
+    xform[1][2] = 2.0*(q.c*q.d - q.a*q.b);
+    xform[3][2] = 0.0;
+
+    q.b = q.b*q.b;
+    q.c = q.c*q.c;
+    q.d = q.d*q.d;
+    xform[0][0] = 1.0 - 2.0*(q.c + q.d);
+    xform[1][1] = 1.0 - 2.0*(q.b + q.d);
+    xform[2][2] = 1.0 - 2.0*(q.b + q.c);
+
+    xform[0][3] = xform[1][3] = xform[2][3] = 0.0;
+    xform[3][3] = 1.0;
+    rc = true;
+  }
+  else if ( IsZero() )
+  {
+    xform = ON_Xform::Zero4x4;
+    rc = false;
+  }
   else
-    xform.Identity();
+  {
+    // something is seriously wrong
+    ON_ERROR("ON_Quaternion::GetRotation(ON_Xform) quaternion is invalid");
+    xform = ON_Xform::IdentityTransformation;
+    rc = false;
+  }
+
   return rc;
 }
 
@@ -288,6 +344,16 @@ double ON_Quaternion::Scalar() const
 bool ON_Quaternion::IsZero() const
 {
   return (0.0 == a && 0.0 == b && 0.0 == c && 0.0 == d);
+}
+
+bool ON_Quaternion::IsNotZero() const
+{
+  return ( (0.0 != a || 0.0 != b || 0.0 != c || 0.0 != d) 
+           && ON_IsValid(a)
+           && ON_IsValid(b)
+           && ON_IsValid(c) 
+           && ON_IsValid(d)
+         );
 }
 
 bool ON_Quaternion::IsScalar() const
@@ -387,7 +453,7 @@ double ON_Quaternion::Length() const
   //     For small denormalized doubles (positive but smaller
   //     than DBL_MIN), some compilers/FPUs set 1.0/fa to +INF.
   //     Without the ON_DBL_MIN test we end up with
-  //     microscopic quaternions that have infinte norm!
+  //     microscopic quaternions that have infinite norm!
   //
   //     This code is absolutely necessary.  It is a critical
   //     part of the bug fix for RR 11217.
@@ -427,6 +493,7 @@ ON_Xform ON_Quaternion::MatrixForm() const
 bool ON_Quaternion::Unitize()
 {
   double x = Length();
+
   if (x > ON_DBL_MIN)
   {
     x = 1.0/x;
@@ -435,14 +502,18 @@ bool ON_Quaternion::Unitize()
   else if ( x > 0.0 )
   {
     ON_Quaternion q(a*1.0e300,b*1.0e300,c*1.0e300,c*1.0e300);
-    q.Unitize();
+    if ( !q.Unitize() )
+      return false;
     a = q.a; 
     b = q.b;
     c = q.c;
     d = q.d;
   }
   else
+  {
     return false;
+  }
+
   return true;
 }
 
@@ -524,5 +595,43 @@ ON_Quaternion operator*(float x, const ON_Quaternion& q)
 ON_Quaternion operator*(double x, const ON_Quaternion& q)
 {
   return ON_Quaternion(x*q.a,x*q.b,x*q.c,x*q.d);
+}
+
+ON_Quaternion ON_Quaternion::RotationZYX(double yaw, double pitch, double roll)
+{
+  ON_Xform X;
+  X.RotationZYX(yaw, pitch, roll);
+  ON_Quaternion q;
+  X.GetQuaternion(q);
+  return q;
+}
+
+ON_Quaternion ON_Quaternion::RotationZYZ(double alpha, double beta, double gamma)
+{
+  ON_Xform X;
+  X.RotationZYZ(alpha, beta, gamma );
+  ON_Quaternion q;
+  X.GetQuaternion(q);
+  return q;
+}
+
+
+bool ON_Quaternion::GetYawPitchRoll(double& yaw, double& pitch, double& roll) const
+{
+  ON_Xform X;
+  bool rc = GetRotation(X);
+  if (rc)
+    rc = GetYawPitchRoll(yaw, pitch, roll);
+  return rc;
+}
+
+bool  ON_Quaternion::GetEulerZYZ(double& alpha, double& beta, double& gamma) const
+{
+  ON_Xform X;
+  bool rc = GetRotation(X);
+  if (rc)
+    rc = GetEulerZYZ(alpha, beta, gamma);
+  return rc;
+
 }
 

@@ -1,211 +1,224 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
 // MERCHANTABILITY ARE HEREBY DISCLAIMED.
-//				
+//
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
+
+#if !defined(OPENNURBS_VERSION_INC_)
+#define OPENNURBS_VERSION_INC_
 
 #if !defined(OPENNURBS_VERSION_DEFINITION)
 #error Do NOT include opennurbs_version.h in your code.  Use ON::Version() instead.
 #endif
 
-// OpenNURBS core developers:
-//   If you change OpenNURBS definitions, set 
-//   OPENNURBS_VERSION = YYYYMMDDn, where "n" starts at 0.
+////////////////////////////////////////////////////////////////
+//
+// Values that identify the version are defined below.
+//
+// The function
+//   ON_VersionNumberConstruct(major,minor,year,month,day_of_month,branch)
+// creates a 4-byte unsigned integer that encodes the version information.
+//
+// The function
+//   ON_GetVersionNumberStringConstruct()
+// creates a "major.minor.yyddd.hhmmb" version string
+// where ddd = day of year (1 to 366).
+//
+// The function
+//   ON_GetVersionNumberQuarted()
+// returns an array of 4 unsigned short values
+//   (major,minor,yyddd,hhmmb)
+// where ddd = day of year (1 to 366).
 
-// OpenNURBS users:
-//   Do not change OPENNURBS_VERSION or the OpenNURBS code
-//   that reads 3DM files not work correctly.
 
-// version 200210210: 
-//   First V3 opennurbs source code release
+#include "opennurbs_public_version.h"
 
-// version 200211190: 
-//   First Rhino 3.0 SDK opennurbs source code release
 
-// version 200303050: 
-//   Rhino 3.0 saves layers layer dialog sorted order
+#define OPENNURBS_MAX_VERSION_MINOR  0x07F
+#define OPENNURBS_MAX_VERSION_MAJOR  0x03F
 
-// version 200306060: 
-//   Rhino 3.0 SR2
-
-// version 200310100: 
-//   Rhino 3.0 SR3
-
-// version 200310290: 
-//   Opennurbs source code release corresponding to Rhino 3.0 SR3.
-
-// version 200311100
-//   Beginning of Rhino 4.0
-
-// version 200401070
-//   Added user data support to ON_3dmObjectAttributes
-
-// version 200404080
-//   Added ON_Hatch and related classes
-
-// version 200405030
-//   Added Hatch archiving
-
-// version 200405180
-//   OpenNURBS.org source code update released
-
-// version 200410010
-//   ON_COMPONENT_INDEX added.
-
-// version 200410190
-//   Rhino V4 WIP began writing V4 files.
-
-// version 200501310
-//   Added ON_Viewport::m_viewport_id and 
-//   ON_3dmObjectAttributes::m_dmref[] to I/O support
-//   to 3dm binary archives.
-
-// version 200503150
-//   files incorrectly written
-
-// version 200503170
-//   ON_Linetype table
-
-// version 200503250
-//   ON_PlugInRef list added to ON_3dmSettings
-
-// version 200505020
-//   ON_Material expansion 1
-
-// version 200505030
-//   ON_Material expansion 2
-
-// version 200505110
-//   Added ON_TextureMapping support
-
-// version 200508110
-//   Annotation overhaul
-
-// version 200508300
-//   MBCS to UNICODE
-
-// version 200509020
-//   ON_3dmObjectAttrbutes IO version 1.6
-
-// version 200509080
-//   Remove prototype ON_LayerSet that was never used
-
-// version 200509090
-//   Remove obsolete ON_MeshParameters m_bWeld and m_combine_angle
-
-// version 200510040
-//   Changes so the code works with Win32 and Win64
-
-// version 200510140
-//   New ON_MeshParameters settings
-
-// version 200510140
-//   Added ON_Linetype::m_linetype_id
-//         ON_Group::m_group_id
-//         ON_Font::m_font_id
-//         ON_Dimstyle::m_dimstyle_id
-//         ON_HatchPattern::m_hatchpattern_id
-
-// version 200511010
-//    Fixed hatchpattern record to use ReadObject/WriteObject
-
-// version 200511110
-//    Added texture mapping table to 3dm archive
-
-// version 200511150
-//    Added IO support for V4 material definition to 3dm archive
-
-// version 200512070
-//    Added IO support for point cloud normals and colors
-
-// version 200601180
-//    Added history record table
-
-// version 200602080
-//    Added ON_3dmSettings.m_PageUnitsAndTolerances
-
-// version 200603070
-//    Added 
-//      ON_3dmSettings.m_model_basepoint, 
-//      ON_InstanceDefinition.m_source_unit_system
-//      ON_InstanceDefinition.m_source_bRelativePath
-
-// version 200603100
-//    ON_CheckSum change
+////////////////////////////////////////////////////////////////
+//
+// Major version number >= 0 and <= 63
+// Minor version number >= 0 and <= 127
 //
 
-// version 200604190
-//    Added ON_3dmSettings.m_bSaveMaterialBitmapsInFile
-//    and started saving more bitmaps in files.
+#define OPENNURBS_VERSION_MAJOR RMA_VERSION_MAJOR
+#define OPENNURBS_VERSION_MINOR RMA_VERSION_MINOR
+
+////////////////////////////////////////////////////////////////
+//
+// The five OPENNURBS_VERSION_... time defines are set
+// automatically by the build system as the first step
+// in each build.
 //
 
-// version 200605260
-//    Changes to texture mapping
+#define OPENNURBS_VERSION_YEAR         RMA_VERSION_YEAR
+#define OPENNURBS_VERSION_MONTH        RMA_VERSION_MONTH
+#define OPENNURBS_VERSION_DAY_OF_MONTH RMA_VERSION_DATE
+#define OPENNURBS_VERSION_HOUR         RMA_VERSION_HOUR
+#define OPENNURBS_VERSION_MINUTE       RMA_VERSION_MINUTE
+
+////////////////////////////////////////////////////////////////
+//
+// branch => 0
+// Use ON::VersionBranch() to get this value.
+//   This number identifies the branch used in the build.
+//
+//   The build system automatically sets the value before compiling any code.
+//
+//   The file checked into the source code repository
+//   always has branch set to 0.
+//
+//  RMA_VERSION_BRANCH is defined in opennurbs_version.h
+//    0: developer build
+//    1: Windows Commercial build
+//    2: Mac Commercial build
+//    3: Windows BETA build
+//    4: Mac Beta build
+//    5: Windows WIP build
+//    6: Mac WIP build
+//#define OPENNURBS_VERSION_BRANCH 0
+
+#define OPENNURBS_VERSION_BRANCH RMA_VERSION_BRANCH
+
+////////////////////////////////////////////////////////////////
+//
+// The build process modifies version.h and sets
+// RMA_SRC_SVN_REVISION = "<git revision SHA-1 hash>"
+// before compiling applications.
 //
 
-// version 200606060
-//    Added IO support for m_rendering_attributes on
-//    layers and object attributes.
-//
+#define OPENNURBS_GIT_REVISION_HASH RMA_GIT_REVISION_HASH_STRING
+#define OPENNURBS_GIT_BRANCH_NAME RMA_GIT_BRANCH_NAME_STRING
 
-// version 200607130
-//    Added ON_ObjRefEvaluationParameter 
-//    and enhanced ON_ObjRef_IRefID
+////////////////////////////////////////////////////////////////
 //
-
-// version 200609070
-//    First openNURBS V4 release
+// OPENNURBS_VERSION_QUARTET_STRING is a macro whose value is the
+// opennurbs version quartet as a string.
 //
+#define OPENNURBS_VERSION_QUARTET_STRING  RMA_VERSION_WITH_PERIODS_STRING
+#define OPENNURBS_VERSION_QUARTET_WSTRING RMA_VERSION_WITH_PERIODS_WSTRING
+#define OPENNURBS_VERSION_QUARTET_WITH_COMMAS VERSION_WITH_COMMAS
+#define OPENNURBS_VERSION_QUARTET_WITH_PERIODS VERSION_WITH_PERIODS
 
-// version 200612050
-//    opennurbs V4 SR0 release
+////////////////////////////////////////////////////////////////
 //
-
-// version 200612060
-//    Rhino V4 SR0 release
+// ON_VERSION_NUMBER_FEBDAYS(year) is a macro whose value is
+// the number of days in the month of February in a specified
+// year.
 //
-
-// version 200702010
-//    Beginning of Rhino V4 SR1 release development
+// In almost every situation, it is best to used the function
+// call ON_DaysInMonthOfGregorianYear(year,2) to get this value.
+// The ON_VERSION_NUMBER_FEBDAYS macro is for rare and unusual
+// situations where the C preprocessor needs this value.
 //
+#define ON_VERSION_NUMBER_FEBDAYS(year) \
+    (((year) % 400) == 0 ? 29 : \
+        (((year) % 100) == 0 ? 28 : \
+            (((year) % 4) == 0 ? 29 : \
+                28)))
 
-// version 200703060
-//    Added ON_Object::CopyFrom() and class_id mods
+////////////////////////////////////////////////////////////////
 //
-
-// version 200710180
-//    Change ON_Annotation2::Read/Write format
+// ON_VERSION_NUMBER_DAYOFYEAR(year, month, day_of_month) is a macro
+// whose value is the cardinal day of the year for the
+// specified year, month and day_of_month.
 //
-
-// version 20071030
-//    Changes to ON_Annotation2::GetTExtXform()
+// In almost every situation, it is best to used the function call
+// ON_DayOfGregorianYear(year,month,day_of_month) to get this value.
+// The ON_VERSION_NUMBER_DAYOFYEAR macro is for rare and unusual
+// situations where the C preprocessor needs this value.
 //
+#define ON_VERSION_NUMBER_DAYOFYEAR(year, month, day_of_month) \
+    ( (day_of_month) \
+      + ((month) >=  2 ? 31 : 0) \
+      + ((month) >=  3 ? ON_VERSION_NUMBER_FEBDAYS(year) : 0) \
+      + ((month) >=  4 ? 31 : 0) \
+      + ((month) >=  5 ? 30 : 0) \
+      + ((month) >=  6 ? 31 : 0) \
+      + ((month) >=  7 ? 30 : 0) \
+      + ((month) >=  8 ? 31 : 0) \
+      + ((month) >=  9 ? 31 : 0) \
+      + ((month) >= 10 ? 30 : 0) \
+      + ((month) >= 11 ? 31 : 0) \
+      + ((month) >= 12 ? 30 : 0) \
+    )
 
-// version 200909245
-//    opennurbs V5 first release
+#define ON_VERSION_NUMBER_TIME(year, month, day_of_month) \
+  ((((year)-2000)*367) + (ON_VERSION_NUMBER_DAYOFYEAR(year,month,day_of_month)))
+
+// branch is 0 for developer builds, odd for windows builds, and even for Mac builds
+// When compressed into 2 bits, the type of build (Commercial/Beta/WIP) is not encoded.
 //
+//  branch
+//    0: developer build
+//    1: Windows Commercial build
+//    2: Mac Commercial build
+//    3: Windows BETA build
+//    4: Mac Beta build
+//    5: Windows WIP build
+//    6: Mac WIP build
+//
+// ON_VERSION_NUMBER_PLATFORM_ID(branch) =
+// = 0: developer build
+//   1: Windows build
+//   2: Mac build
+//
+// NOTE WELL:
+//   ON_VERSION_NUMBER_PLATFORM_ID(branch) must be a value between 0 and 3.
+#define ON_VERSION_NUMBER_PLATFORM_ID(branch) \
+   (((branch) > 0x0U) ? (0x02U - ((branch) % 0x02U)) : 0x0U)
 
-// The YYYYMMDD portion of the _DEBUG and release
-// version numbers is always the same.  
-// The last digit of a debug build version number is 9. 
-// The last digit of a V4 release build version number is 4.
-// The last digit of a V5 release build version number is 5.
-#if defined(_DEBUG)
-#define OPENNURBS_VERSION 201004099
-#else
-#define OPENNURBS_VERSION 201004095
+////////////////////////////////////////////////////////////////
+//
+// ON_VERSION_NUMBER_CTOR(major,minor,year,month,day_of_month,branch)
+// is a macro whose value is the opennurbs version number encoding
+// for the specified major, minor, year, month and day_of_month
+// values.
+//
+// In almost every situation, it is best to used the function call
+// ON_VersionNumberConstruct(major,minor,year,month,day_of_month,branch)
+// to get this value.  The ON_VERSION_NUMBER_CTOR macro is for
+// rare and unusual situations where the C preprocessor needs
+// this value.
+//
+#define ON_VERSION_NUMBER_CTOR(major,minor,year,month,day_of_month,branch) \
+  (0x80000000U \
+  + ((((major)*0x080U + (minor)))*0x010000U \
+  + ((ON_VERSION_NUMBER_TIME(year,month,day_of_month))))*0x04U \
+  + ((ON_VERSION_NUMBER_PLATFORM_ID(branch))))
+
+////////////////////////////////////////////////////////////////
+//
+// OPENNURBS_VERSION_NUMBER is a macro whose value is the
+// opennurbs version number.
+//
+// Always use ON::Version() when you need this value.
+// The OPENNURBS_VERSION_NUMBER macro is for rare and unusual
+// situations where the C preprocessor needs this value.
+//
+#define OPENNURBS_VERSION_NUMBER ON_VERSION_NUMBER_CTOR( \
+          OPENNURBS_VERSION_MAJOR, OPENNURBS_VERSION_MINOR, \
+          OPENNURBS_VERSION_YEAR, OPENNURBS_VERSION_MONTH, OPENNURBS_VERSION_DAY_OF_MONTH, \
+          OPENNURBS_VERSION_BRANCH )
+
+// Jan 2017
+//  November 2016 Rhino 7 WIP writes version 6 files.
+//  October 23 1019, Rhino 7 WIP writes version 7 files.
+//  May 17 2021, Rhino 8 WIP writes version 8 files.
+//
+// More generally, in a stable release product, OPENNURBS_CURRENT_ARCHIVE_VERSION = OPENNURBS_VERSION_MAJOR*10.
+// But for some period of time at the beginning of the Rhino (N+1) WIP development cycle,
+// Rhino (N+1) WIP writes Rhino N files. That's why OPENNURBS_CURRENT_ARCHIVE_VERSION
+// is sometimes (OPENNURBS_VERSION_MAJOR*10) and is sometimes ((OPENNURBS_VERSION_MAJOR-1)*10)
+#define OPENNURBS_CURRENT_ARCHIVE_VERSION 80
+
 #endif
-
-// Subversion revision used to build opennurbs
-#define OPENNURBS_SVN_REVISION "52489"
-
-

@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,8 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
-
 
 #ifndef OPENNURBS_HATCH_H_INCLUDED
 #define OPENNURBS_HATCH_H_INCLUDED
@@ -25,7 +22,7 @@
 class ON_CLASS ON_HatchLoop
 {
 public:
-#if defined(ON_DLL_EXPORTS) || defined(ON_DLL_IMPORTS)
+#if defined(OPENNURBS_EXPORTS) || defined(OPENNURBS_IMPORTS)
   // When the Microsoft CRT(s) is/are used, this is the best
   // way to prevent crashes that happen when a hatch loop is
   // allocated with new in one DLL and deallocated with
@@ -57,10 +54,10 @@ public:
 
   ON_HatchLoop& operator=( const ON_HatchLoop& src);
 
-  ON_BOOL32 IsValid( ON_TextLog* text_log = NULL ) const;
+  bool IsValid( ON_TextLog* text_log = nullptr ) const;
   void Dump( ON_TextLog& ) const; // for debugging
-  ON_BOOL32 Write( ON_BinaryArchive&) const;
-  ON_BOOL32 Read( ON_BinaryArchive&);
+  bool Write( ON_BinaryArchive&) const;
+  bool Read( ON_BinaryArchive&);
 
   // Interface
   /////////////////////////////////////////////////////////////////
@@ -136,25 +133,52 @@ protected:
 class ON_CLASS ON_HatchLine
 {
 public:
-  ON_HatchLine();
-  // C++ default copy construction and operator= work fine.
+  // Default constructor creates ON_HatchLine::SolidHorizontal
+  ON_HatchLine() = default;
+  ~ON_HatchLine() = default;
+  ON_HatchLine(const ON_HatchLine&) = default;
+  ON_HatchLine& operator=(const ON_HatchLine&) = default;
+
+  static const ON_HatchLine Unset;           // angle = unset
+  static const ON_HatchLine SolidHorizontal; // angle = 0
+  static const ON_HatchLine SolidVertical;   // angle = pi/2
+
+  static int Compare(
+    const ON_HatchLine& a,
+    const ON_HatchLine& b
+    );
 
   ON_HatchLine( 
-    double angle, 
-    const ON_2dPoint& base, 
-    const ON_2dVector& offset,
-    const ON_SimpleArray<double> dashes);
+    double angle_in_radians, 
+    ON_2dPoint base, 
+    ON_2dVector offset,
+    const ON_SimpleArray<double>& dashes
+    );
+
+  // constructs solid line
+  ON_HatchLine( 
+    double angle_in_radians
+    );
 
   bool operator==( const ON_HatchLine&) const;
   bool operator!=( const ON_HatchLine&) const;
 
-  ON_BOOL32 IsValid( ON_TextLog* text_log = NULL ) const;
+  bool IsValid( ON_TextLog* text_log = nullptr ) const;
   void Dump( ON_TextLog& ) const; // for debugging
-  ON_BOOL32 Write( ON_BinaryArchive&) const;  // serialize definition to binary archive
-  ON_BOOL32 Read( ON_BinaryArchive&);  // restore definition from binary archive
 
-  // Interface
+public:
+  bool Write( ON_BinaryArchive&) const;  // serialize definition to binary archive
+  bool Read( ON_BinaryArchive&);  // restore definition from binary archive
+
+private:
+  bool WriteV5(ON_BinaryArchive&) const;  // serialize definition to binary archive
+  bool ReadV5(ON_BinaryArchive&);  // restore definition from binary archive
+
+public:
   /////////////////////////////////////////////////////////////////
+  //
+  // Interface
+  //
 
   /*
   Description:
@@ -164,7 +188,9 @@ public:
   Return:
     The angle in radians
   */
-  double Angle() const;
+  double AngleRadians() const;
+
+  double AngleDegrees() const;
 
   /*
   Description:
@@ -174,8 +200,14 @@ public:
     angle - [in] angle in radians
   Return:
   */
-  void SetAngle( double angle);
+  void SetAngleRadians( 
+    double angle_in_radians
+    );
   
+  void SetAngleDegrees(
+    double angle_in_degrees
+    );
+
   /*
   Description:
     Get this line's 2d basepoint
@@ -220,7 +252,7 @@ public:
     Get the number of gaps + dashes in the line
   Parameters:
   Return:
-    nummber of dashes in the line
+    number of dashes in the line
   */
   int DashCount() const;
 
@@ -248,21 +280,23 @@ public:
   Parameters:
     dashes - [in] array of dash lengths
   */
-  void SetPattern( const ON_SimpleArray<double>& dashes);
+  void SetDashes( const ON_SimpleArray<double>& dashes);
+
+  const ON_SimpleArray<double>& Dashes() const;
 
   /*
   Description:
     Get the line's angle, base, offset and dashes 
     in one function call
   Parameters:
-    angle  - [out] angle in radians CCW from x-axis
+    angle_radians  - [out] angle in radians CCW from x-axis
     base   - [out] origin of the master line
     offset - [out] offset for line replications
     dashes - [out] the dash array for the line
   Return:
   */
   void GetLineData(
-    double& angle, 
+    double& angle_radians, 
     ON_2dPoint& base, 
     ON_2dVector& offset, 
     ON_SimpleArray<double>& dashes) const;
@@ -276,10 +310,10 @@ public:
   */
   double GetPatternLength() const;
 
-public:
-  double m_angle;
-  ON_2dPoint m_base;
-  ON_2dVector m_offset;
+private:
+  double m_angle_radians = 0.0;
+  ON_2dPoint m_base = ON_2dPoint::Origin;
+  ON_2dVector m_offset = ON_2dVector::ZeroVector;
   ON_SimpleArray< double> m_dashes;
 };
 
@@ -287,14 +321,8 @@ public:
 
 
 #if defined(ON_DLL_TEMPLATE)
-// This stuff is here because of a limitation in the way Microsoft
-// handles templates and DLLs.  See Microsoft's knowledge base 
-// article ID Q168958 for details.
-#pragma warning( push )
-#pragma warning( disable : 4231 )
 ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_HatchLoop*>;
 ON_DLL_TEMPLATE template class ON_CLASS ON_ClassArray<ON_HatchLine>;
-#pragma warning( pop )
 #endif
 
 
@@ -304,39 +332,86 @@ ON_DLL_TEMPLATE template class ON_CLASS ON_ClassArray<ON_HatchLine>;
   Fill definition for a hatch
 
   The hatch  will be one of 
-    ON_Hatch::ftLines     - pat file style definition
-    ON_Hatch::ftGradient  - uses a color function
-    ON_Hatch::ftSolid     - uses entity color
+    ON_Hatch::ON_HatchPattern::HatchFillType::Lines     - pat file style definition
+    ON_Hatch::ON_HatchPattern::HatchFillType::Gradient  - uses a color function
+    ON_Hatch::ON_HatchPattern::HatchFillType::Solid     - uses entity color
 
 */
-class ON_CLASS ON_HatchPattern : public ON_Object
+class ON_CLASS ON_HatchPattern : public ON_ModelComponent
 {
   ON_OBJECT_DECLARE( ON_HatchPattern);
 
 public:
+  ON_HatchPattern() ON_NOEXCEPT;
+  ~ON_HatchPattern() = default;
+  ON_HatchPattern(const ON_HatchPattern&);
+  ON_HatchPattern& operator=(const ON_HatchPattern&) = default;
 
-  enum eFillType
+public:
+  static const ON_HatchPattern Unset;   // index = ON_UNSET_INT_INDEX, id = nil
+  static const ON_HatchPattern Solid; // index = -1, id set, unique and persistent
+  static const ON_HatchPattern Hatch1;    // index = -2, id set, unique and persistent
+  static const ON_HatchPattern Hatch2;    // index = -3, id set, unique and persistent
+  static const ON_HatchPattern Hatch3;    // index = -4, id set, unique and persistent
+  static const ON_HatchPattern HatchDash; // index = -5, id set, unique and persistent
+  static const ON_HatchPattern Grid;      // index = -6, id set, unique and persistent
+  static const ON_HatchPattern Grid60;    // index = -7, id set, unique and persistent
+  static const ON_HatchPattern Plus;      // index = -8, id set, unique and persistent
+  static const ON_HatchPattern Squares;   // index = -9, id set, unique and persistent
+
+  // compare everything except Index() value.
+  static int Compare( 
+    const ON_HatchPattern& a,
+    const ON_HatchPattern& b
+    );
+
+  // Compare all settings (type, lines, ...) that effect the appearance.
+  // Ignore Index(), Id(), Name()
+  static int CompareAppearance( 
+    const ON_HatchPattern& a,
+    const ON_HatchPattern& b
+    );
+  
+public:
+  /*
+  Parameters:
+    model_component_reference - [in]
+    none_return_value - [in]
+      value to return if ON_Layer::Cast(model_component_ref.ModelComponent())
+      is nullptr
+  Returns:
+    If ON_Layer::Cast(model_component_ref.ModelComponent()) is not nullptr,
+    that pointer is returned.  Otherwise, none_return_value is returned.
+  */
+  static const ON_HatchPattern* FromModelComponentRef(
+    const class ON_ModelComponentReference& model_component_reference,
+    const ON_HatchPattern* none_return_value
+    );
+
+public:
+
+  enum class HatchFillType : unsigned int
   {
-    ftSolid    = 0,  // uses entity color
-    ftLines    = 1,  // pat file definition
-    ftGradient = 2,  // uses a fill color function
-    ftLast     = 3
+    Solid    = 0,  // uses entity color
+    Lines    = 1,  // pat file definition
+    //Gradient = 2,  // uses a fill color function
   };
 
-  ON_HatchPattern();
-  ~ON_HatchPattern();
-  // C++ default copy construction and operator= work fine.
+  static ON_HatchPattern::HatchFillType HatchFillTypeFromUnsigned(
+    unsigned hatch_fill_type_as_unsigned
+    );
 
- // ON_Object overrides
+
   /////////////////////////////////////////////////////////////////
-   ON_BOOL32 IsValid( ON_TextLog* text_log = NULL ) const;
-  void Dump( ON_TextLog& ) const; // for debugging
-  ON_BOOL32 Write( ON_BinaryArchive&) const;
-  ON_BOOL32 Read( ON_BinaryArchive&);
-
-  // virtual
-  ON_UUID ModelObjectId() const;
-
+  // ON_Object overrides
+  bool IsValid( class ON_TextLog* text_log = nullptr ) const override;
+  void Dump( ON_TextLog& ) const override; // for debugging
+  bool Write( ON_BinaryArchive&) const override;
+  bool Read( ON_BinaryArchive&) override;
+private:
+  bool WriteV5(ON_BinaryArchive&) const;
+  bool ReadV5(ON_BinaryArchive&);
+public:
 
   //////////////////////////////////////////////////////////////////////
   // Interface
@@ -346,7 +421,7 @@ public:
     Return the pattern's fill type
   Parameters:
   */
-  eFillType FillType() const;
+  ON_HatchPattern::HatchFillType FillType() const;
 
   /*
   Description:
@@ -354,33 +429,9 @@ public:
   Parameters:
     type - [in] the new filltype
   */
-  void SetFillType( eFillType type);
-
-  /*
-  Description:
-    Set the name of the pattern
-  Parameters:
-    pName - [in] the new name
-  Returns:
-  */
-  void SetName( const wchar_t* pName);
-  void SetName( const char* pName);
-  
-  /*
-  Description:
-    Get the name of the pattern
-  Parameters:
-    string - [out] The name is returned here
-  */
-  void GetName( ON_wString& string) const;
-
-  /*
-  Description:
-    Get the name of the pattern
-  Returns:
-    The name string
-  */
-  const wchar_t* Name() const;
+  void SetFillType(
+    ON_HatchPattern::HatchFillType fill_type
+    );
 
   /*
   Description:
@@ -389,8 +440,9 @@ public:
     pDescription - [in] the new description
   Returns:
   */
-  void SetDescription( const wchar_t* pDescription);
-  void SetDescription( const char* pDescription);
+  void SetDescription( 
+    const wchar_t* pDescription
+    );
   
   /*
   Description:
@@ -398,34 +450,8 @@ public:
   Parameters:
     string - [out] The string is returned here
   */
-  void GetDescription( ON_wString& string) const;
+  const ON_wString& Description() const;
 
-  /*
-  Description:
-    Return a short text description of the pattern type
-  Parameters:
-  Returns:
-    The description string
-  */
-  const wchar_t* Description() const;
-
-  /*
-  Description:
-    Set the table index of the pattern
-  Parameters:
-    index - [in] the new index
-  Returns:
-  */
-  void SetIndex( int index);
-
-  /*
-  Description:
-    Return the table index of the pattern
-  Parameters:
-  Returns:
-    The table index
-  */
-  int Index() const;
 
   // Interface functions for line hatches
   /////////////////////////////////////////////////////////////////
@@ -447,7 +473,9 @@ public:
     >= 0 index of the new line
     -1 on failure
   */
-  int AddHatchLine( const ON_HatchLine& line);
+  int AddHatchLine( 
+    const ON_HatchLine& line
+    );
 
   /*
   Description:
@@ -456,9 +484,11 @@ public:
     index - [in] Index of the line to get
   Return:
     the hatch line
-    NULL if index is out of range
+    nullptr if index is out of range
   */
-  const ON_HatchLine* HatchLine( int index) const;
+  const ON_HatchLine* HatchLine(
+    int index
+    ) const;
 
   /*
   Description:
@@ -469,7 +499,9 @@ public:
     true - success
     false - index out of range
   */
-  bool RemoveHatchLine( int index);
+  bool RemoveHatchLine(
+    int index
+    );
 
   /*
   Description:
@@ -491,16 +523,21 @@ public:
   Return:
     number of lines added
   */
-  int SetHatchLines( const ON_ClassArray<ON_HatchLine> lines);
+  int SetHatchLines(
+    const ON_ClassArray<ON_HatchLine>& lines
+    );
 
-public:
-  int m_hatchpattern_index;         // Index in the hatch pattern table
-  ON_wString m_hatchpattern_name;   // String name of the pattern
-  ON_UUID m_hatchpattern_id;
+  int SetHatchLines(
+    size_t count,
+    const ON_HatchLine* lines
+    );
+
+  const ON_ClassArray<ON_HatchLine>& HatchLines() const;
+
+private:
+  ON_HatchPattern::HatchFillType m_type = ON_HatchPattern::HatchFillType::Solid;
   
-  eFillType m_type;
-  
-  ON_wString m_description;  // String description of the pattern
+  ON_wString m_description = ON_wString::EmptyString;  // String description of the pattern
 
   // Represents a collection of ON_HatchLine's to make a complete pattern
   // This is the definition of a hatch pattern.
@@ -508,6 +545,12 @@ public:
   // represented with this type of hatch
   ON_ClassArray<ON_HatchLine> m_lines; // used by line hatches
 };
+
+#if defined(ON_DLL_TEMPLATE)
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_HatchPattern*>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<const ON_HatchPattern*>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_ObjectArray<ON_HatchPattern>;
+#endif
 
 /*
   class ON_Hatch
@@ -527,66 +570,47 @@ class ON_CLASS ON_Hatch : public ON_Geometry
 
 public:
   // Default constructor
-  ON_Hatch();
+  ON_Hatch() = default;
+  ~ON_Hatch();
   ON_Hatch( const ON_Hatch&);
   ON_Hatch& operator=(const ON_Hatch&);
-  ~ON_Hatch();
+
+  static ON_Hatch* HatchFromBrep(
+    ON_Hatch* use_this_hatch,
+    const ON_Brep* brep,
+    int face_index,
+    int pattern_index,
+    double pattern_rotation_radians, 
+    double pattern_scale,
+    ON_3dPoint basepoint);
+
+private:
+  void Internal_Destroy();
+  void Internal_CopyFrom(const ON_Hatch& src);
+public:
 
   virtual ON_Hatch* DuplicateHatch() const;
 
   // ON_Object overrides
   /////////////////////////////////////////////////////////////////
-  ON_BOOL32 IsValid( ON_TextLog* text_log = NULL ) const;
-  void Dump( ON_TextLog& ) const; // for debugging
-  ON_BOOL32 Write( ON_BinaryArchive&) const;
-  ON_BOOL32 Read( ON_BinaryArchive&);
-  ON::object_type ObjectType() const;
+  bool IsValid( class ON_TextLog* text_log = nullptr ) const override;
+  void Dump( ON_TextLog& ) const override;
+  bool Write( ON_BinaryArchive&) const override;
+  bool Read( ON_BinaryArchive&) override;
+  ON::object_type ObjectType() const override;
 
   // ON_Geometry overrides
   /////////////////////////////////////////////////////////////////
   /*
     Returns the geometric dimension of the object ( usually 3)
   */
-  int Dimension() const;
+  int Dimension() const override;
 
-  /*
-    Description:
-      Get a bounding 3d WCS box of the object
-      This is a bounding box of the boundary loops
-    Parameters:
-      [in/out] double* boxmin - pointer to dim doubles for min box corner
-      [in/out] double* boxmax - pointer to dim doubles for max box corner
-      [in] ON_BOOL32 growbox   - true to grow the existing box,
-                            false ( the default) to reset the box
-    Returns:
-      true = Success
-      false = Failure
-    Remarks:
-  */
-  ON_BOOL32 GetBBox( double*, double*, ON_BOOL32 = false) const;
+  // virtual ON_Geometry GetBBox override		
+  bool GetBBox( double* boxmin, double* boxmax, bool bGrowBox = false ) const override;
 
-  /*
-	Description:
-    Get tight bounding box of the hatch.
-	Parameters:
-		tight_bbox - [in/out] tight bounding box
-		bGrowBox -[in]	(default=false)			
-      If true and the input tight_bbox is valid, then returned
-      tight_bbox is the union of the input tight_bbox and the 
-      tight bounding box of the hatch.
-		xform -[in] (default=NULL)
-      If not NULL, the tight bounding box of the transformed
-      hatch is calculated.  The hatch is not modified.
-	Returns:
-    True if the returned tight_bbox is set to a valid 
-    bounding box.
-  */
-	bool GetTightBoundingBox( 
-			ON_BoundingBox& tight_bbox, 
-      int bGrowBox = false,
-			const ON_Xform* xform = 0
-      ) const;
-
+  // virtual ON_Geometry GetTightBoundingBox override		
+  bool GetTightBoundingBox( class ON_BoundingBox& tight_bbox, bool bGrowBox = false, const class ON_Xform* xform = nullptr ) const override;
 
   /*
     Description:
@@ -600,7 +624,45 @@ public:
     Remarks:
       The object has been transformed when the function returns.
   */
-  ON_BOOL32 Transform( const ON_Xform&);
+  bool Transform( const ON_Xform&) override;
+
+  /*
+    Description:
+      Scales the hatch's pattern by a 4x4 xform matrix
+    Parameters:
+      [in] xform  - An ON_Xform with the transformation information
+    Returns:
+      true = Success
+      false = Failure
+    Remarks:
+      The hatch pattern scale is multiplied by the change in length of a
+      unit vector in the hatch plane x direction when that vector is
+      scaled by the input xform
+  */
+  bool ScalePattern(ON_Xform xform);
+
+  /*
+  Description:
+  If possible, BrepForm() creates a brep form of the
+  ON_Geometry.
+  Parameters:
+  brep - [in] if not nullptr, brep is used to store the brep
+  form of the geometry.
+  Result:
+  Returns a pointer to on ON_Brep or nullptr.  If the brep
+  parameter is not nullptr, then brep is returned if the
+  geometry has a brep form and nullptr is returned if the
+  geometry does not have a brep form.
+  Remarks:
+  The caller is responsible for managing the brep memory.
+  See Also
+  ON_Geometry::HasBrepForm
+  */
+  class ON_Brep* BrepForm(
+      class ON_Brep* brep = nullptr
+    ) const override; 
+
+
 
   // Interface
   /////////////////////////////////////////////////////////////////
@@ -739,7 +801,7 @@ public:
     index - [in] which loop to get
   Returns:
     pointer to loop at index
-    NULL if index is out of range
+    nullptr if index is out of range
   */
   const ON_HatchLoop* Loop( int index) const;
 
@@ -750,7 +812,7 @@ public:
     index - [in] which loop to get
   Returns:
     pointer to 3d curve of loop at index
-    NULL if index is out of range or curve can't be made
+    nullptr if index is out of range or curve can't be made
     Caller deletes the returned curve
   */
   ON_Curve* LoopCurve3d( int index) const;
@@ -816,18 +878,93 @@ public:
     true  - success
     false - no loops in input array or an error adding them
   */
-  bool ReplaceLoops(ON_SimpleArray<const ON_Curve*> loops);
+  bool ReplaceLoops(ON_SimpleArray<const ON_Curve*>& loops);
 
-protected:
+  /*
+  Description:
+    Returns gradient fill type for this hatch
+  */
+  ON_GradientType GetGradientType() const;
+  
+  /*
+  Description:
+    Set the gradient fill type for this hatch
+  */
+  void SetGradientType(ON_GradientType gt);
+
+  /*
+  Description:
+    Get list of color stops used for gradient drawing.
+  */
+  void GetGradientColors(ON_SimpleArray<ON_ColorStop>& colors) const;
+
+  /*
+  Description:
+    Set list of color stops used for gradient drawing.
+  */
+  bool SetGradientColors(const ON_SimpleArray<ON_ColorStop>& colors);
+
+  /*
+  Description:
+    Get gradient repeat factor for gradient drawing.
+    > 1 repeat reflected number of times between start and end point
+    < -1 repeat wrap number of times between start and end point
+    any other value does not affect repeat on a gradient
+  */
+  double GetGradientRepeat() const;
+  
+  /*
+  Description:
+    Set gradient repeat factor for gradient drawing
+    > 1 repeat reflected number of times between start and end point
+    < -1 repeat wrap number of times between start and end point
+    any other value does not affect repeat on a gradient
+  Returns:
+    True if the repeat factor was successfully set
+  */
+  bool SetGradientRepeat(double repeat);
+
+  /*
+  Description:
+    Get the start and end points for gradient drawing in 3d
+  */
+  void GetGradientEndPoints(ON_3dPoint& startPoint, ON_3dPoint& endPoint) const;
+
+  /*
+  Description:
+    Set the start and end points for gradient drawing
+  */
+  bool SetGradientEndPoints(ON_3dPoint startpoint, ON_3dPoint endPoint);
+
+private:
   ON_Plane m_plane;
-  double m_pattern_scale;
-  double m_pattern_rotation;
+  double m_pattern_scale = 1.0;
+  double m_pattern_rotation = 0.0;
+  ON_2dPoint m_basepoint = ON_2dPoint::Origin;
   ON_SimpleArray<ON_HatchLoop*> m_loops;
-  int m_pattern_index;
-
-    // This function is temporary and will be removed next time the SDK can be modified.
-  class ON_HatchExtra* HatchExtension();
-
+  int m_pattern_index = -1;
 };
+
+//Part of a boundary. An element has a curve subdomain and a flag to say 
+//whether that piece of curve should be reversed
+class ON_CLASS ON_CurveRegionBoundaryElement
+{
+public :
+  ON_CurveRegionBoundaryElement();
+  ON_CurveRegionBoundaryElement(const ON_CurveRegionBoundaryElement& src);
+  ~ON_CurveRegionBoundaryElement();
+  ON_CurveRegionBoundaryElement& operator=(const ON_CurveRegionBoundaryElement& src);
+  int m_curve_id;
+  ON_Interval m_subdomain;
+  bool m_bReversed;
+};
+
+//A list of curve subdomains that form a closed boundary with active space on the left.
+typedef ON_ClassArray<ON_CurveRegionBoundaryElement> ON_CurveRegionBoundary;
+
+//A list of region boundaries that bound a single connected region of the plane.
+//The first boundary is always the outer boundary.
+typedef ON_ClassArray<ON_CurveRegionBoundary> ON_CurveRegion;
+
 
 #endif

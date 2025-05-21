@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2009 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,14 +10,13 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(OPENNURBS_RTREE_INC_)
 #define OPENNURBS_RTREE_INC_
 
 /*
-The opennurbs rtree code is a modifed version of the
-free and unrestricted R-tree implementation obtianed from 
+The opennurbs rtree code is a modified version of the
+free and unrestricted R-tree implementation obtained from
 http://www.superliminal.com/sources/sources.htm
 
 The first lines on the website indicate the code is free and unrestricted:
@@ -86,6 +84,19 @@ struct ON_RTreeBBox
   double m_max[3];
 };
 
+struct ON_RTreeSphere
+{
+  double m_point[3];
+  double m_radius;
+};
+
+struct ON_RTreeCapsule
+{
+  double m_point[2][3];
+  double m_radius;
+  double m_domain[2];
+};
+
 struct ON_RTreeBranch
 {
   ON_RTreeBBox m_rect;
@@ -125,6 +136,12 @@ struct ON_RTreeNode
   ON_RTreeBranch m_branch[ON_RTree_MAX_NODE_COUNT];
 };
 
+// Passes data about the polyline being intersected
+struct ON_RTreePolylineContext
+{
+  unsigned int m_polyline_pointindex;
+};
+
 struct ON_RTreeSearchResult
 {
   int m_capacity;   // m_id[] array capacity (search terminates when m_count == m_capacity)
@@ -135,7 +152,11 @@ struct ON_RTreeSearchResult
 class ON_CLASS ON_RTreeMemPool
 {
 public:
-  ON_RTreeMemPool( ON_MEMORY_POOL* heap, size_t leaf_count );
+  static const ON_RTreeMemPool Empty;
+
+  ON_RTreeMemPool() = default;
+
+  ON_RTreeMemPool( size_t leaf_count );
   ~ON_RTreeMemPool();
 
   ON_RTreeNode* AllocNode();
@@ -167,19 +188,18 @@ private:
   };
 
   // linked list of unused ON_RTreeNode 
-  struct Blk* m_nodes;
+  struct Blk* m_nodes = nullptr;
   // linked list of unused ON_RTreeListNode
-  struct Blk* m_list_nodes;
+  struct Blk* m_list_nodes = nullptr;
 
   // buffer for new allocations
-  unsigned char* m_buffer;
-  size_t m_buffer_capacity;
+  unsigned char* m_buffer = nullptr;
+  size_t m_buffer_capacity = 0;
 
-  struct Blk* m_blk_list;   // linked list used to free all allocated memory
-  size_t m_sizeof_blk;      // total amount of memory in each block.
+  struct Blk* m_blk_list = nullptr;   // linked list used to free all allocated memory
+  size_t m_sizeof_blk = 0;      // total amount of memory in each block.
 
-  ON_MEMORY_POOL* m_heap;
-  size_t m_sizeof_heap; // total amount of heap memory in this rtree
+  size_t m_sizeof_heap = 0; // total amount of heap memory in this rtree
 };
 
 ////////////////////////////////////////////////////////////////
@@ -252,6 +272,30 @@ public:
   */
   bool Initialize(const struct ON_RTreeNode* a_node);
 
+  /// <summary>
+  /// Iterate every leaf in an R-tree.
+  /// ON_RTreeIterator rit(rtree);
+  /// for ( const ON_RTreeLeaf* leaf = rit.FirstLeaf(); nullptr != leaf; leaf = rith.nextLeaf())
+  /// {...}
+  ///   /// 
+  /// </summary>
+  /// <returns>
+  /// First leaf in the R-tree;
+  /// </returns>
+  const ON_RTreeLeaf* FirstLeaf();
+
+  /// <summary>
+  /// Iterate every leaf in an R-tree.
+  /// ON_RTreeIterator rit(rtree);
+  /// for ( const ON_RTreeLeaf* leaf = rit.FirstLeaf(); nullptr != leaf; leaf = rith.nextLeaf())
+  /// {...}
+  ///   /// 
+  /// </summary>
+  /// <returns>
+  /// Next leaf in the R-tree;
+  /// </returns>
+  const ON_RTreeLeaf* NextLeaf();
+
   /*
   Description:
     Get the value of the current leaf element. Calling Value()
@@ -298,7 +342,7 @@ public:
     See the comment for ON_RTreeIterator::First()
   Returns:
     True if a call to Value() will return a non-null pointer.
-    False if there is not a next leaf and all susequent calls to
+    False if there is not a next leaf and all subsequent calls to
     Value() will return null.
   See Also:
     ON_RTreeIterator::Prev();
@@ -337,7 +381,7 @@ public:
     See the comment for ON_RTreeIterator::Last()
   Returns:
     True if a call to Value() will return a non-null pointer.
-    False if there is not a previous leaf and all susequent calls to
+    False if there is not a previous leaf and all subsequent calls to
     Value() will return null.
   See Also:
     ON_RTreeIterator::Next();
@@ -364,7 +408,9 @@ private:
 class ON_CLASS ON_RTree
 {
 public:
-  ON_RTree( ON_MEMORY_POOL* heap = 0, size_t leaf_count = 0 );
+  static const ON_RTree Empty;
+
+  ON_RTree( size_t leaf_count = 0 );
   ~ON_RTree();
 
   /*
@@ -377,7 +423,8 @@ public:
     True if successful.
   */
   bool CreateMeshFaceTree( const class ON_Mesh* mesh );
-  
+
+
   /*
   Description:
     Insert an element into the RTree.
@@ -432,49 +479,167 @@ public:
   */
   void RemoveAll();
 
-
   /*
   Description:
     Search the R-tree for all elements whose bounding boxes overlap
-    (a_min, a_max).
+    a_rect.
   Parameters:
+    a_rect - [in/out]
+      The version of search that has ON_RTreeBBox* a_rect as the first
+      argument, allows you to shrink the a_rect as the search progresses.
+      This is useful for doing things like searching for closest points.
+      If you want to shrink a_rect, you must use a_context to pass it
+      to the resultCallback function and shrink it in the resultCallback
+      function. In the callback, the modified rect must be contained
+      in the previous rect.
+    a_sphere - [in/out]
+      The version of search that has ON_RTreeSphere* a_sphere as the first
+      argument, allows you to shrink the a_sphere as the search progresses.
+      This is useful for doing things like searching for closest points.
+      If you want to shrink a_sphere, you must use a_context to pass it
+      to the resultCallback function and shrink it in the resultCallback
+      function. In the callback, the modified sphere must be contained
+      in the previous sphere.
+    a_capsule - [in/out]
+      The version of search that has ON_RTreeSphere* a_capsule as the first
+      argument, allows you to shrink the a_capsule as the search progresses.
+      This is useful for doing things like searching for closest points.
+      If you want to shrink a_capsule, you must use a_context to pass it
+      to the resultCallback function and shrink it in the resultCallback
+      function. In the callback, the modified capsule must be contained
+      in the previous capsule.
     a_min - [in]
     a_max - [in]
       (a_min,a_max) is the bounding box of the search region.
     a_results - [out]
       The ids of elements that overlaps the search region.
+    resultCallback - [in]
+      A function to call when leaf nodes overlap.
+    a_context - [in]
+      pointer passed to the resultCallback() function.
   Returns:
     True if entire tree was searched.  It is possible no results were found.
+  Remarks:
+    If you are using a Search() that uses a resultCallback() function,
+    then return true to keep searching and false to terminate the search.
+    Do not modify the tree while a Search() is in progress. Doing so can
+    have unintended consequences, including corruption and crashes. If you
+    need to modify the tree, collect the results during the search and modify
+    the tree once the search is completed.
   */
+  bool Search( 
+    ON_RTreeSphere* a_sphere,
+    bool ON_CALLBACK_CDECL resultCallback(void* a_context, ON__INT_PTR a_id),
+    void* a_context
+    ) const;
+
+  bool Search( 
+    ON_RTreeCapsule* a_capsule,
+    bool ON_CALLBACK_CDECL resultCallback(void* a_context, ON__INT_PTR a_id),
+    void* a_context
+    ) const;
+
+  bool Search(
+    const ON_Line* a_line,
+    bool ON_CALLBACK_CDECL resultCallback(void* a_context, ON__INT_PTR a_id),
+    void* a_context
+  ) const;
+
+  bool Search(
+    const ON_Line* a_line,
+    bool infinite,
+    bool ON_CALLBACK_CDECL resultCallback(void* a_context, ON__INT_PTR a_id),
+    void* a_context
+  ) const;
+
+  bool Search(
+    const ON_Polyline* polyline,
+    bool ON_CALLBACK_CDECL resultCallback(void* a_context, ON__INT_PTR a_id),
+    ON_RTreePolylineContext* a_context
+  ) const;
+
+  bool Search(
+    ON_RTreeBBox* a_rect,
+    bool ON_CALLBACK_CDECL a_resultCallback(void* a_context, ON__INT_PTR a_id),
+    void* a_context
+  ) const;
+
+  /*
+  Description:
+    Search the R-tree for all elements whose bounding boxes overlap
+    the set of points between to parallel planes.
+  Parameters:
+    a_plane_eqn - [in]
+    a_min - [in]
+    a_max - [in]
+      The region between the parallel planes is the set point points
+      where the value of the plane equation is >= a_min and <= a_max.
+    resultCallback - [in]
+      A function to call when leaf nodes overlap the region between
+      the parallel planes.
+    a_context - [in]
+      pointer passed to the resultCallback() function.
+  Returns:
+    True if entire tree was searched.  It is possible no results were found.
+  Remarks:
+    If you are using a Search() that uses a resultCallback() function,
+    then return true to keep searching and false to terminate the search.
+  */
+  bool Search(
+    const double a_plane_eqn[4],
+    double a_min,
+    double a_max,
+    bool ON_CALLBACK_CDECL resultCallback(void* a_context, ON__INT_PTR a_id),
+    void* a_context
+    ) const;
+
+  bool Search(
+    const class ON_PlaneEquation& a_plane_eqn,
+    double a_min,
+    double a_max,
+    bool ON_CALLBACK_CDECL resultCallback(void* a_context, ON__INT_PTR a_id),
+    void* a_context
+    ) const;
+
   bool Search(const double a_min[3], const double a_max[3],
-    bool ON_MSC_CDECL resultCallback(void* a_context, ON__INT_PTR a_id), void* a_context ) const;
+    bool ON_CALLBACK_CDECL resultCallback(void* a_context, ON__INT_PTR a_id), void* a_context
+    ) const;
 
 	bool Search(const double a_min[3], const double a_max[3],
-    ON_RTreeSearchResult& a_result ) const;
+    ON_RTreeSearchResult& a_result 
+    ) const;
 
 	bool Search(const double a_min[3], const double a_max[3],
-    ON_SimpleArray<ON_RTreeLeaf>& a_result ) const;
+    ON_SimpleArray<ON_RTreeLeaf>& a_result 
+    ) const;
 
   bool Search(const double a_min[3], const double a_max[3],
-    ON_SimpleArray<void*>& a_result ) const;
+    ON_SimpleArray<void*>& a_result 
+    ) const;
 
   bool Search(const double a_min[3], const double a_max[3],
-    ON_SimpleArray<int>& a_result ) const;
+    ON_SimpleArray<int>& a_result 
+    ) const;
 
   bool Search2d(const double a_min[2], const double a_max[2],
-    bool ON_MSC_CDECL resultCallback(void* a_context, ON__INT_PTR a_id), void* a_context ) const;
+    bool ON_CALLBACK_CDECL resultCallback(void* a_context, ON__INT_PTR a_id), void* a_context
+    ) const;
 
 	bool Search2d(const double a_min[2], const double a_max[2],
-    ON_RTreeSearchResult& a_result ) const;
+    ON_RTreeSearchResult& a_result
+    ) const;
 
 	bool Search2d(const double a_min[2], const double a_max[2],
-    ON_SimpleArray<ON_RTreeLeaf>& a_result ) const;
+    ON_SimpleArray<ON_RTreeLeaf>& a_result
+    ) const;
 
   bool Search2d(const double a_min[2], const double a_max[2],
-    ON_SimpleArray<void*>& a_result ) const;
+    ON_SimpleArray<void*>& a_result
+    ) const;
 
   bool Search2d(const double a_min[2], const double a_max[2],
-    ON_SimpleArray<int>& a_result ) const;
+    ON_SimpleArray<int>& a_result
+    ) const;
 
   /*
   Description:
@@ -489,6 +654,11 @@ public:
       Pairs of ids of elements who bounding boxes overlap.
   Returns:
     True if entire tree was searched.  It is possible no results were found.
+  Remarks:
+    If you have a single R-tree and you want to find paris of distinct nodes whose
+    bounding boxes overlap, then use the non-static
+    ON_RTree::Search(double tolerance, ... results )
+    member functions.
   */
   static bool Search( 
           const ON_RTree& a_rtreeA,
@@ -511,14 +681,166 @@ public:
     a_context - [in] argument passed through to resultCallback().
   Returns:
     True if entire tree was searched.  It is possible no results were found.
+  Remarks:
+    If you have a single R-tree and you want to find paris of distinct nodes whose
+    bounding boxes overlap, then use the non-static
+    ON_RTree::Search(double tolerance, ... results )
+    member functions.
   */
   static bool Search( 
           const ON_RTree& a_rtreeA,
           const ON_RTree& a_rtreeB, 
           double tolerance,
-          void ON_MSC_CDECL resultCallback(void* a_context, ON__INT_PTR a_idA, ON__INT_PTR a_idB),
+          void ON_CALLBACK_CDECL resultCallback(void* a_context, ON__INT_PTR a_idA, ON__INT_PTR a_idB),
           void* a_context
           );
+
+  /*
+  Description:
+    Search two R-trees for all pairs elements whose bounding boxes overlap.
+  Parameters:
+    a_rtreeA - [in]
+    a_rtreeB - [in]
+    tolerance - [in]
+      If the distance between a pair of bounding boxes is <= tolerance, 
+      then resultCallback() is called.
+    resultCallback - [out]
+      callback function
+      Return true for the search to continue and false to terminate the search.
+    a_context - [in] argument passed through to resultCallback().
+  Returns:
+    True if entire tree was searched.  It is possible no results were found.
+  Remarks:
+    If you have a single R-tree and you want to find paris of distinct nodes whose
+    bounding boxes overlap, then use the non-static 
+    ON_RTree::Search(double tolerance, ... results )
+    member functions.
+  */
+  static bool Search( 
+          const ON_RTree& a_rtreeA,
+          const ON_RTree& a_rtreeB, 
+          double tolerance,
+          bool ON_CALLBACK_CDECL resultCallback(void* a_context, ON__INT_PTR a_idA, ON__INT_PTR a_idB),
+          void* a_context
+          );
+
+
+  /*
+  Description:
+    Search two R-trees for all pairs elements whose bounding boxes overlap.
+    The tolerance can be reduced by the callback function during the search.
+    This version of search is well suited to finding closest points between
+    two objects.
+  Parameters:
+    a_rtreeA - [in]
+    a_rtreeB - [in]
+    tolerance - [in]
+      If the distance between a pair of bounding boxes is <= tolerance,
+      then resultCallback() is called.
+    resultCallback - [out]
+      callback function
+      Return true for the search to continue and false to terminate the search.
+      The callback may reduce the value of the tolerance parameter during the search.
+      Increasing the value of the tolerance or setting it to an invalid value is
+      not supported and will lead to unpredictable results.
+    a_context - [in] argument passed through to resultCallback().
+  Returns:
+    True if entire tree was searched.  It is possible no results were found.
+  Remarks:
+    If you have a single R-tree and you want to find paris of distinct nodes whose
+    bounding boxes overlap, then use the non-static
+    ON_RTree::Search(double tolerance, ... results )
+    member functions.
+  */
+  static bool Search(
+    const ON_RTree& a_rtreeA,
+    const ON_RTree& a_rtreeB,
+    double tolerance,
+    bool ON_CALLBACK_CDECL resultCallback(void* a_context, ON__INT_PTR a_idA, ON__INT_PTR a_idB, double* tolerance),
+    void* a_context
+    );
+
+
+  /*
+  Description:
+    Search a single R-tree for all pairs of distinct elements whose bounding boxes overlap.
+  Parameters:
+    tolerance - [in]
+      If the distance between a pair of bounding boxes is <= tolerance,
+      then the pair is added to a_result[].
+    a_result - [out]
+      Pairs of ids of elements who bounding boxes overlap.
+  Returns:
+    True if entire tree was searched.  It is possible no results were found.
+  */
+  bool Search(
+    double tolerance,
+    ON_SimpleArray<ON_2dex>& a_result
+    ) const;
+
+  /*
+  Description:
+    Search a single R-tree for all pairs of distinct elements whose bounding boxes overlap.
+  Parameters:
+    tolerance - [in]
+      If the distance between a pair of bounding boxes is <= tolerance,
+      then resultCallback() is called.
+    resultCallback - [out]
+      callback function
+    a_context - [in] 
+      argument passed through to resultCallback().
+  Returns:
+    True if entire tree was searched.  It is possible no results were found.
+  */
+  bool Search(
+    double tolerance,
+    void ON_CALLBACK_CDECL resultCallback(void* a_context, ON__INT_PTR a_idA, ON__INT_PTR a_idB),
+    void* a_context
+    ) const;
+
+  /*
+  Description:
+    Search a single R-tree for all pairs of distinct elements whose bounding boxes overlap.
+  Parameters:
+    tolerance - [in]
+      If the distance between a pair of bounding boxes is <= tolerance,
+      then resultCallback() is called.
+    resultCallback - [out]
+      callback function
+    a_context - [in]
+      argument passed through to resultCallback().
+  Returns:
+    True if entire tree was searched.  It is possible no results were found.
+  */
+  bool Search(
+    double tolerance,
+    bool ON_CALLBACK_CDECL resultCallback(void* a_context, ON__INT_PTR a_idA, ON__INT_PTR a_idB),
+    void* a_context
+    ) const;
+
+  /*
+  Description:
+    Search a single R-tree for all pairs of distinct elements whose bounding boxes overlap.
+  Parameters:
+    tolerance - [in]
+      If the distance between a pair of bounding boxes is <= tolerance,
+      then resultCallback() is called.
+    resultCallback - [out]
+      callback function
+      Return true for the search to continue and false to terminate the search.
+      The callback may reduce the value of the tolerance parameter during the search.
+      Increasing the value of the tolerance or setting it to an invalid value is
+      not supported and will lead to unpredictable results.
+    a_context - [in]
+      argument passed through to resultCallback().
+  Returns:
+    True if entire tree was searched.  It is possible no results were found.
+  */
+  bool Search(
+    double tolerance,
+    bool ON_CALLBACK_CDECL resultCallback(void* a_context, ON__INT_PTR a_idA, ON__INT_PTR a_idB, double* tolerance),
+    void* a_context
+    ) const;
 
   /*
   Returns:
@@ -535,6 +857,12 @@ public:
     Pointer to the root node.
   */
   const ON_RTreeNode* Root() const;
+  
+  /*
+  Returns:
+    Bounding box of the entire R-tree;
+  */
+  ON_BoundingBox BoundingBox() const;
 
   /*
   Returns:
@@ -552,8 +880,8 @@ private:
   bool RemoveRectRec(ON_RTreeBBox*, ON__INT_PTR, ON_RTreeNode*, struct ON_RTreeListNode**);
   void ReInsert(ON_RTreeNode*, struct ON_RTreeListNode**);
   void RemoveAllRec(ON_RTreeNode*);
-  ON_RTreeNode* m_root;
-  size_t m_reserved;
+  ON_RTreeNode* m_root = nullptr;
+  size_t m_reserved = 0;
   ON_RTreeMemPool m_mem_pool;
 };
 

@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(ON_EVALUATE_NURBS_INC_)
 #define ON_EVALUATE_NURBS_INC_
@@ -19,7 +17,7 @@
 ON_DECL
 bool ON_IncreaseBezierDegree(
         int,    // dimension 
-        ON_BOOL32,   // true if Bezier is rational
+        bool,   // true if Bezier is rational
         int,    // order (>=2)
         int,    // cv_stride (>=dim+1)
         double* // cv[(order+1)*cv_stride] array
@@ -62,7 +60,7 @@ void ON_EvaluatedeCasteljau(
 ON_DECL
 bool ON_EvaluateBezier(
         int,            // dimension
-        ON_BOOL32,           // true if Bezier is rational
+        bool,           // true if Bezier is rational
         int,            // order (>=2)
         int,            // cv_stride >= (is_rat)?dim+1:dim
         const double*,  // cv[order*cv_stride] array
@@ -73,51 +71,130 @@ bool ON_EvaluateBezier(
         double*         // v[(der_count+1)*v_stride] array
         );
                                       
+/*
+Description:
+  Evaluate B-spline basis functions
+ 
+Parameters:
+  order - [in]
+    order >= 1 
+    d = degree = order - 1
+  knot - [in]
+    array of length 2*d.  
+    Generally, knot[0] <= ... <= knot[d-1] < knot[d] <= ... <= knot[2*d-1].
+    These are the knots that are active for the span being evaluated.
+  t - [in]
+    Evaluation parameter. 
+    Typically knot[d-1] <= t <= knot[d].
+    In general t may be outside the interval knot[d-1],knot[d]. This can happen 
+    when some type of extrapolation is being used and is almost always a bad
+    idea in practical situations.
+
+  N - [out]
+    double array with capacity order*order.
+    The returned values are:
+
+    If "N" were declared as double N[order][order], then
+
+                   k
+      N[d-k][i] = N (t) = value of i-th degree k basis function at t.
+                   i
+    where 0 <= k <= d and k <= i <= d.
+
+	  In particular, N[0], ..., N[d] - values of degree d basis functions.
+    The "lower left" triangle is not initialized.
+
+    Actually, the above is true when knot[d-1] <= t < knot[d].  Otherwise, the
+    value returned is the value of the polynomial that agrees with N_i^k on the
+    half open domain [ knot[d-1], knot[d] )
+
+COMMENTS:
+  If a degree d NURBS has n control points, then the OpenNURBS knot vector 
+  for the entire NURBS curve has length d+n-1. The knot[] parameter to this
+  function points to the 2*d knots active for the span being evaluated.
+  
+  Most literature, including DeBoor and The NURBS Book,
+  duplicate the Opennurbs start and end knot values and have knot vectors
+  of length d+n+1. The extra two knot values are completely superfluous 
+  when degree >= 1.
+  
+  Assume C is a B-spline of degree d (order=d+1) with n control vertices
+  (n>=d+1) and knot[] is its knot vector.  Then
+
+    C(t) = Sum( 0 <= i < n, N_{i}(t) * C_{i} )
+
+  where N_{i} are the degree d b-spline basis functions and C_{i} are the control
+  vertices.  The knot[] array length d+n-1 and satisfies
+
+    knot[0] <= ... <= knot[d-1] < knot[d]
+    knot[n-2] < knot[n-1] <= ... <= knot[n+d-2]
+    knot[i] < knot[d+i] for 0 <= i < n-1
+    knot[i] <= knot[i+1] for 0 <= i < n+d-2
+
+  The domain of C is [ knot[d-1], knot[n-1] ].
+
+  The support of N_{i} is [ knot[i-1], knot[i+d] ).
+
+  If d-1 <= k < n-1 and knot[k] <= t < knot[k+1], then 
+  N_{i}(t) = 0 if i <= k-d
+           = 0 if i >= k+2
+           = B[i-k+d-1] if k-d+1 <= i <= k+1, where B[] is computed by the call
+             ON_EvaluateNurbsBasis( d+1, knot+k-d+1, t, B );
+
+  If 0 <= j < n-d, 0 <= m <= d, knot[j+d-1] <= t < knot[j+d], and B[] is 
+  computed by the call
+    ON_EvaluateNurbsBasis( d+1, knot+j, t, B ),
+  then 
+    N_{j+m}(t) = B[m].
+*/
 ON_DECL
 bool ON_EvaluateNurbsBasis( 
-                  int,           // order (>=1)
-                  const double*, // knot[] array of 2*(order-1) knots
-                  double,        // evaluation parameter
-                  double*        // basis_values[] array of length order*order
-                  );
-
-ON_DECL
-bool ON_EvaluateNurbsBasisDerivatives( 
-                  int,           // order (>=1)
-                  const double*, // knot[] array of 2*(order-1) knots
-                  int,           // number of derivatives
-                  double*        // basis_values[] array of length order*order
-                  );                      
-
-
-
+  int order,
+  const double* knot,
+  double t,
+  double* N
+  );
 
 /*
-int dim,             // dimension
-                  ON_BOOL32 is_rat,         // true if NURBS is rational
-                  int order,           // order
-                  const double* knot,  // knot[] array of (2*order-2) doubles
-                  int cv_stride,       // cv_stride >= (is_rat)?dim+1:dim
-                  const double* cv,    // cv[order*cv_stride] array
-                  int der_count,       // number of derivatives to compute
-                  double t,            // evaluation parameter
-                  int v_stride,        // v_stride (>=dimension)
-                  double* v            // v[(der_count+1)*v_stride] array
-                  )
-        int,           // dimension
-        ON_BOOL32,          // true if NURBS is rational
-        int,           // order
-        const double*, // knot[] array of (2*order-2) doubles
-        int,           // cv_stride
-        const double*, // cv[] array of order*cv_stride  doubles
-        int,           // number of derivatives to compute (>=0)
-        double,        // evaluation parameter
-        int,           // answer_stride (>=dimension)
-        double*        // answer[] array of length (ndir+1)*answer_stride
+Description:
+  Calculate derivatives of B-spline basis functions.
+INPUT:
+  order - [in]
+    order >= 1 
+    d = degree = order - 1
+  knot - [in]
+    array of length 2*d.  
+    Generally, knot[0] <= ... <= knot[d-1] < knot[d] <= ... <= knot[2*d-1].
+    These are the knots that are active for the span being evaluated.
+  der_count - [in]
+    1 <= der_count < order
+    Number of derivatives. 
+    Note all B-spline basis derivatives with der_count >= order are identically zero.
+
+  N - [in]
+    The input value of N[] should be the results of the call
+    ON_EvaluateNurbsBasis( order, knot, t, N );
+	
+  N - [out]
+    If "N" were declared as double N[order][order], then
+	
+                                    d
+    N[d-k][i] = k-th derivative of N (t)
+                                    i
+  
+	  where 0 <= k <= d and 0 <= i <= d.
+	
+	 In particular, 
+	   N[0], ..., N[d] - values of degree d basis functions.
+	   N[order], ..., N[order_d] - values of first derivative.
 */
-
-
 ON_DECL
+bool ON_EvaluateNurbsBasisDerivatives(
+  int order,
+  const double* knot,
+  int der_count,
+  double* N
+  );
 
 /*
 Description:
@@ -164,9 +241,10 @@ See Also:
   ON_EvaluateNurbsSurfaceSpan
   ON_EvaluateNurbsCageSpan
 */
+ON_DECL
 bool ON_EvaluateNurbsSpan( 
         int dim,
-        int is_rat,
+        bool is_rat,
         int order,
         const double* knot,
         int cv_stride,
@@ -218,7 +296,7 @@ Parameters:
               n = v_stride*( (i+j)*(i+j+1)/2 + j).
 
 Returns:
-  True if succcessful.
+  True if successful.
 See Also:
   ON_NurbsSurface::Evaluate
   ON_EvaluateNurbsSpan
@@ -227,7 +305,7 @@ See Also:
 ON_DECL
 bool ON_EvaluateNurbsSurfaceSpan(
         int dim,
-        int is_rat,
+        bool is_rat,
         int order0, 
         int order1,
         const double* knot0,
@@ -296,7 +374,7 @@ Parameters:
                n = v_stride*( d*(d+1)*(d+2)/6 + (j+k)*(j+k+1)/2 + k) 
 
 Returns:
-  True if succcessful.
+  True if successful.
 See Also:
   ON_NurbsCage::Evaluate
   ON_EvaluateNurbsSpan
@@ -305,7 +383,7 @@ See Also:
 ON_DECL
 bool ON_EvaluateNurbsCageSpan(
         int dim,
-        int is_rat,
+        bool is_rat,
         int order0, int order1, int order2,
         const double* knot0,
         const double* knot1,

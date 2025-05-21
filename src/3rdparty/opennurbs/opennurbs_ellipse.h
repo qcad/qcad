@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(OPENNURBS_ELLIPSE_INC_)
 #define OPENNURBS_ELLIPSE_INC_
@@ -37,19 +35,19 @@ public:
 
   ON_Ellipse& operator=(const ON_Circle&);
 
-  ON_BOOL32 Create(
+  bool Create(
     const ON_Plane&,  // point on the plane
     double, double     // radii for x and y vectors
     );
 
-  ON_BOOL32 Create(
+  bool Create(
     const ON_Circle&
     );
 
-  ON_BOOL32 IsValid() const; // returns true if all fields contain reasonable
+  bool IsValid() const; // returns true if all fields contain reasonable
                         // information and equation jibes with point and Z.
 
-  ON_BOOL32 IsCircle() const; // returns true is ellipse is a circle
+  bool IsCircle() const; // returns true is ellipse is a circle
 
   double Radius( 
     int // 0 = x axis radius, 1 = y axis radius
@@ -66,7 +64,7 @@ public:
 
   bool GetFoci( ON_3dPoint& F1, ON_3dPoint& F2 ) const;
 
-  // Evaluation uses the trigonometrix parameterization
+  // Evaluation uses the trigonometric parameterization
   // t -> plane.origin + cos(t)*radius[0]*plane.xaxis + sin(t)*radius[1]*plane.yaxis
   // evaluate parameters and return point
   ON_3dPoint  PointAt( double ) const;
@@ -79,7 +77,7 @@ public:
   ON_3dVector CurvatureAt( double ) const;  // returns curvature vector
 
   // returns parameters of point on ellipse that is closest to given point
-  ON_BOOL32 ClosestPointTo( 
+  bool ClosestPointTo( 
          const ON_3dPoint&, 
          double*
          ) const;
@@ -93,34 +91,34 @@ public:
   ON_2dVector GradientAt( const ON_2dPoint& ) const;
 
   // rotate ellipse about its center
-  ON_BOOL32 Rotate(
+  bool Rotate(
         double,              // sin(angle)
         double,              // cos(angle)
         const ON_3dVector&  // axis of rotation
         );
-  ON_BOOL32 Rotate(
+  bool Rotate(
         double,              // angle in radians
         const ON_3dVector&  // axis of rotation
         );
 
   // rotate ellipse about a point and axis
-  ON_BOOL32 Rotate(
+  bool Rotate(
         double,              // sin(angle)
         double,              // cos(angle)
         const ON_3dVector&, // axis of rotation
         const ON_3dPoint&   // center of rotation
         );
-  ON_BOOL32 Rotate(
+  bool Rotate(
         double,              // angle in radians
         const ON_3dVector&, // axis of rotation
         const ON_3dPoint&   // center of rotation
         );
 
-  ON_BOOL32 Translate(
+  bool Translate(
         const ON_3dVector&
         );
 
-  // parameterization of NURBS curve does not match ellipse's transcendental paramaterization
+  // parameterization of NURBS curve does not match ellipse's transcendental parameterization
   int GetNurbForm( ON_NurbsCurve& ) const; // returns 0=failure, 2=success
 
 public: // members left public

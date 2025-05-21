@@ -32,12 +32,20 @@ function DrawPolyline(guiAction) {
     Polyline.call(this, guiAction);
 
     this.polylineEntity = undefined;
-    this.arcSegment = false;
+    this.arcMode = false;
     this.radius = 1.0;
+    this.actualRadius = 0.0;
     this.prepend = false;
     this.segment = undefined;
     this.redoList = [];
     this.sweep = 0.0;
+
+    // point of the last mouse click:
+    this.point = RVector.invalid;
+
+    // next polyline vertex:
+    this.vertex = RVector.invalid;
+    this.bulge = 0.0;
 
     this.setUiOptions(DrawPolyline.includeBasePath + "/DrawPolyline.ui");
 }
@@ -138,7 +146,7 @@ DrawPolyline.prototype.showUiOptions = function(resume) {
 };
 
 DrawPolyline.prototype.pickCoordinate = function(event, preview) {
-    var point, op;
+    var op;
     
     var di = this.getDocumentInterface();
     var document = this.getDocument();
@@ -147,14 +155,14 @@ DrawPolyline.prototype.pickCoordinate = function(event, preview) {
     // set first vertex, create polyline entity:
     case DrawPolyline.State.SettingFirstVertex:
         if (!preview) {
-            point = event.getModelPosition();
+            this.point = event.getModelPosition();
 
             var pl = new RPolylineEntity(document, new RPolylineData());
-            pl.appendVertex(point);
+            pl.appendVertex(this.point);
             op = new RAddObjectOperation(pl, this.getToolTitle());
             this.applyOperation(op);
 
-            di.setRelativeZero(point);
+            di.setRelativeZero(this.point);
             if (!isNull(this.polylineEntity)) {
                 this.setState(DrawPolyline.State.SettingNextVertex);
             }
@@ -163,7 +171,7 @@ DrawPolyline.prototype.pickCoordinate = function(event, preview) {
 
     // set next vertex:
     case DrawPolyline.State.SettingNextVertex:
-        point = event.getModelPosition();
+        this.point = event.getModelPosition();
 
         // number of existing vertices:
         var numberOfVertices;
@@ -175,86 +183,16 @@ DrawPolyline.prototype.pickCoordinate = function(event, preview) {
         }
 
         if (numberOfVertices>0) {
-            var bulge;
-            var vertex;
-            var appendPoint;
-            if (this.prepend) {
-                appendPoint = this.polylineEntity.getStartPoint();
-            }
-            else {
-                appendPoint = this.polylineEntity.getEndPoint();
-            }
-
-            if (this.arcSegment===true) {
-                var dir = 0.0;
-                if (numberOfVertices>1) {
-                    if (this.prepend) {
-                        dir = this.polylineEntity.getDirection1() + Math.PI;
-                    }
-                    else {
-                        dir = this.polylineEntity.getDirection2() + Math.PI;
-                    }
-                }
-
-                this.segment = RArc.createTangential(
-                        appendPoint,
-                        point,
-                        dir,
-                        this.radius);
-
-                // handle sweep here
-                // change end angle
-                // if sweep equals zero then do nothing
-                if (this.sweep < 0.0 || this.sweep > 360.0) {
-                    // print error message
-                    this.sweep = 0.0;
-                }
-                if (this.sweep !== 0.0) {
-                    var curSweep = this.segment.getSweep();
-                    if (curSweep !== this.sweep) {
-                        var startAngle = RMath.rad2deg(this.segment.getStartAngle());
-                        var reversed = this.segment.isReversed();
-                        if (reversed) {
-                            var endAngle = startAngle - this.sweep;
-                            if (endAngle < 0.0) {
-                                endAngle = endAngle + 360.0;
-                            }
-                        } else {
-                            endAngle = startAngle + this.sweep;
-                            if (endAngle > 360.0) {
-                                endAngle = endAngle - 360.0;
-                            }
-                        }
-                        this.segment.setEndAngle(RMath.deg2rad(endAngle));
-                    }
-                }
-                vertex = this.segment.getEndPoint();
-
-                if (this.prepend) {
-                    this.segment.reverse();
-                }
-
-                bulge = this.segment.getBulge();
-                this.center = this.segment.getCenter();
-                this.angle = this.segment.getEndAngle();
-            }
-            else {
-                this.segment = new RLine(appendPoint, point);
-
-                bulge = 0.0;
-                vertex = point;
-                this.center = undefined;
-                this.angle = undefined;
-            }
+            this.updateData();
 
             // append or prepend vertex:
             if (!preview) {
                 if (this.prepend) {
-                    this.polylineEntity.prependVertex(vertex, bulge);
+                    this.polylineEntity.prependVertex(this.vertex, this.bulge);
                 }
                 else {
-                    this.polylineEntity.setBulgeAt(numberOfVertices-1, bulge);
-                    this.polylineEntity.appendVertex(vertex, 0.0);
+                    this.polylineEntity.setBulgeAt(numberOfVertices-1, this.bulge);
+                    this.polylineEntity.appendVertex(this.vertex, 0.0);
                 }
             }
         }
@@ -266,8 +204,8 @@ DrawPolyline.prototype.pickCoordinate = function(event, preview) {
             op = this.getOperation(false);
             if (!isNull(op)) {
                 this.applyOperation(op);
-                di.setRelativeZero(vertex);
-                this.uncheckArcSegment();
+                di.setRelativeZero(this.vertex);
+                //this.uncheckArcMode();
             }
         }
         break;
@@ -278,6 +216,61 @@ DrawPolyline.prototype.pickCoordinate = function(event, preview) {
     }
 };
 
+DrawPolyline.prototype.updateData = function() {
+    var numberOfVertices;
+    if (isNull(this.polylineEntity)) {
+        numberOfVertices = 0;
+    }
+    else {
+        numberOfVertices = this.polylineEntity.countVertices();
+    }
+
+    var appendPoint;
+    if (this.prepend) {
+        appendPoint = this.polylineEntity.getStartPoint();
+    }
+    else {
+        appendPoint = this.polylineEntity.getEndPoint();
+    }
+
+    if (this.arcMode===true) {
+        var dir = 0.0;
+        if (numberOfVertices>1) {
+            if (this.prepend) {
+                dir = this.polylineEntity.getDirection1() + Math.PI;
+            }
+            else {
+                dir = this.polylineEntity.getDirection2() + Math.PI;
+            }
+        }
+
+        this.segment = this.createArcSegment(appendPoint, this.point, dir);
+        this.actualRadius = this.segment.getRadius();
+
+        this.vertex = this.segment.getEndPoint();
+
+        if (this.prepend) {
+            this.segment.reverse();
+        }
+
+        this.bulge = this.segment.getBulge();
+        this.center = this.segment.getCenter();
+        this.angle = this.segment.getEndAngle();
+    }
+    else {
+        this.segment = new RLine(appendPoint, this.point);
+
+        this.bulge = 0.0;
+        this.vertex = this.point;
+        this.center = undefined;
+        this.angle = undefined;
+    }
+};
+
+DrawPolyline.prototype.createArcSegment = function(appendPoint, point, dir) {
+    return RArc.createTangential(appendPoint, point, dir, this.radius, this.sweep);
+};
+
 DrawPolyline.prototype.getOperation = function(preview) {
     if (isNull(this.polylineEntity)) {
         return undefined;
@@ -285,6 +278,9 @@ DrawPolyline.prototype.getOperation = function(preview) {
 
     // for preview, only add current segment:
     if (preview) {
+        // refresh next polyline segment data:
+        this.updateData();
+
         var entity;
         if (isLineShape(this.segment)) {
             entity = new RLineEntity(
@@ -413,8 +409,8 @@ DrawPolyline.prototype.slotRedo = function() {
  * Called when user toggles 'Arc segment' check box to indicate if the next
  * segment is a line or an arc segment.
  */
-DrawPolyline.prototype.slotArcSegmentChanged = function(value) {
-    this.arcSegment = value;
+DrawPolyline.prototype.slotArcModeChanged = function(value) {
+    this.arcMode = value;
     this.updatePreview(true);
 };
 
@@ -437,9 +433,11 @@ DrawPolyline.prototype.slotSweepChanged = function(value) {
 /**
  * Called internally to automatically uncheck the 'Arc segment' check box.
  */
-DrawPolyline.prototype.uncheckArcSegment = function() {
-    var w = objectFromPath("MainWindow::Options::ArcSegment");
-    w.checked = false;
+DrawPolyline.prototype.uncheckArcMode = function() {
+    var w = objectFromPath("MainWindow::Options::ArcMode");
+    if (!isNull(w)) {
+        w.checked = false;
+    }
 };
 
 
@@ -451,7 +449,7 @@ DrawPolyline.prototype.updateButtonStates = function() {
     var w;
     
     if (this.state === DrawPolyline.State.SettingFirstVertex) {
-        this.uncheckArcSegment();
+        this.uncheckArcMode();
     }
 
     var optionsToolBar = EAction.getOptionsToolBar();
@@ -480,7 +478,7 @@ DrawPolyline.prototype.getAuxPreview = function() {
 
     if (this.state === DrawPolyline.State.SettingNextVertex) {
         if (!isNull(this.center) && !isNull(this.angle)) {
-            var v = RVector.createPolar(this.radius, this.angle);
+            var v = RVector.createPolar(this.actualRadius, this.angle);
             ret.push(new RLine(this.center, this.center.operator_add(v)));
         }
     }
@@ -521,9 +519,9 @@ DrawPolyline.prototype.commandEvent = function(event) {
     }
     str = qsTr("arc");
     if (str.startsWith(cmd)) {
-        var ob = objectFromPath("MainWindow::Options::ArcSegment");
+        var ob = objectFromPath("MainWindow::Options::ArcMode");
         ob.checked = !ob.checked
-        this.slotArcSegmentChanged(ob.checked);
+        this.slotArcModeChanged(ob.checked);
         event.accept();
         return;
     }

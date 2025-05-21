@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,9 +10,16 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
+
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
 
 double ON_EvaluateBernsteinBasis(int degree, int i, double t)
 /*****************************************************************************
@@ -302,7 +308,7 @@ RELATED FUNCTIONS:
 
 bool ON_IncreaseBezierDegree(
         int     dim, 
-        ON_BOOL32    is_rat, 
+        bool    is_rat, 
         int     order, 
         int     cv_stride,
         double* cv 
@@ -443,7 +449,7 @@ bool ON_RemoveBezierSingAt1(
 
 bool ON_EvaluateBezier(
                 int dim,              // dimension
-                ON_BOOL32 is_rat,          // true if NURBS is rational
+                bool is_rat,          // true if NURBS is rational
                 int order,            // order
                 int cv_stride,        // cv_stride >= (is_rat)?dim+1:dim
                 const double* cv,     // cv[order*cv_stride] array
@@ -477,7 +483,7 @@ INPUT:
   der_count
     (>= 0)  number of derivatives to evaluate
   answer
-     answer[i] is NULL or points to an array of dim doubles.
+     answer[i] is nullptr or points to an array of dim doubles.
 OUTPUT:
   ON_EvBezier()
     0: successful
@@ -490,7 +496,7 @@ OUTPUT:
         (n)
      bez  (t) = answer[n]
 COMMENTS:
-  Use de Casteljau's algorithm.  Rational fuctions with removable singularities
+  Use de Casteljau's algorithm.  Rational functions with removable singularities
   (like x^2/x) are efficiently and correctly handled.
 EXAMPLE:
   // ...
@@ -508,10 +514,10 @@ RELATED FUNCTIONS:
 {
   unsigned char stack_buffer[4*64*sizeof(double)];
   double delta_t;
-  /*register*/ double alpha0;
-  /*register*/ double alpha1;
-  /*register*/ double *cv0, *cv1;
-  /*register*/ int i, j, k; 
+  double alpha0;
+  double alpha1;
+  double *cv0, *cv1;
+  int i, j, k; 
   double* CV, *tmp;
   void* free_me = 0;
   const int degree = order-1;
@@ -522,11 +528,20 @@ RELATED FUNCTIONS:
 
   memset( v, 0, v_stride*(der_count+1)*sizeof(*v) );
 
-#if defined( ON_DEBUG)
-  if (t0==t1) {
+
+  if (!(t0!=t1)) 
+  {
+    // Fix http://mcneel.myjetbrains.com/youtrack/issue/RH-28304
+    //  This test for valid domain was being done only in debug builds
+    //  and not in release builds.  The #if defined(ON_DEBUG) projection
+    //  has been here since 2005 when we switched to svn.
+    //  I can't determine when or why it got added because it happened
+    //  when we used SourceSafe or earlier version control.
+    //  The bug was a crash in release builds, which skipped this test.
+    //  I'm enabling the test in all builds and addeing a call to ON_ERROR().
+    ON_ERROR("Invalid domain");
     return false;
   }
-#endif
 
   i = order*cvdim;
   j = 0;
@@ -540,8 +555,6 @@ RELATED FUNCTIONS:
 
   size_t sizeofCV = (i+j)*sizeof(*CV);
 
-
-  // 21 November 2007 Dale Lear RR 29005 - remove call to alloca()
   CV = (double*)( (sizeofCV <= sizeof(stack_buffer)) ? stack_buffer : (free_me=onmalloc(sizeofCV)) );
   if (j) {
     memset( CV+i, 0, j*sizeof(*CV) );
@@ -656,89 +669,23 @@ RELATED FUNCTIONS:
   return true;
 }
 
-
-bool ON_EvaluateNurbsBasis( int order, const double* knot, 
-                                       double t, double* N )
+bool ON_EvaluateNurbsBasis(
+  int order, 
+  const double* knot,
+  double t,
+  double* N 
+  )
 {
-/*****************************************************************************
-Evaluate B-spline basis functions
- 
-INPUT:
-  order >= 1 
-    d = degree = order - 1
-  knot[]
-    array of length 2*d.  
-    Generally, knot[0] <= ... <= knot[d-1] < knot[d] <= ... <= knot[2*d-1].
-  N[]
-    array of length order*order
-
-OUTPUT:
-  If "N" were declared as double N[order][order], then
-
-                 k
-    N[d-k][i] = N (t) = value of i-th degree k basis function.
-                 i
-  where 0 <= k <= d and k <= i <= d.
-
-	In particular, N[0], ..., N[d] - values of degree d basis functions.
-  The "lower left" triangle is not initialized.
-
-  Actually, the above is true when knot[d-1] <= t < knot[d].  Otherwise, the
-  value returned is the value of the polynomial that agrees with N_i^k on the
-  half open domain [ knot[d-1], knot[d] )
-
-COMMENTS:
-  If a degree d NURBS has n control points, then the TL knot vector has
-  length d+n-1. ( Most literature, including DeBoor and The NURBS Book,
-  duplicate the TL start and end knot and have knot vectors of length
-  d+n+1. )
-  
-  Assume C is a B-spline of degree d (order=d+1) with n control vertices
-  (n>=d+1) and knot[] is its knot vector.  Then
-
-    C(t) = Sum( 0 <= i < n, N_{i}(t) * C_{i} )
-
-  where N_{i} are the degree d b-spline basis functions and C_{i} are the control
-  vertices.  The knot[] array length d+n-1 and satisfies
-
-    knot[0] <= ... <= knot[d-1] < knot[d]
-    knot[n-2] < knot[n-1] <= ... <= knot[n+d-2]
-    knot[i] < knot[d+i] for 0 <= i < n-1
-    knot[i] <= knot[i+1] for 0 <= i < n+d-2
-
-  The domain of C is [ knot[d-1], knot[n-1] ].
-
-  The support of N_{i} is [ knot[i-1], knot[i+d] ).
-
-  If d-1 <= k < n-1 and knot[k] <= t < knot[k+1], then 
-  N_{i}(t) = 0 if i <= k-d
-           = 0 if i >= k+2
-           = B[i-k+d-1] if k-d+1 <= i <= k+1, where B[] is computed by the call
-             TL_EvNurbBasis( d+1, knot+k-d+1, t, B );
-
-  If 0 <= j < n-d, 0 <= m <= d, knot[j+d-1] <= t < knot[j+d], and B[] is 
-  computed by the call
-
-    TL_EvNurbBasis( d+1, knot+j, t, B ),
-
-  then 
-
-    N_{j+m}(t) = B[m].
-
-EXAMPLE:
-REFERENCE:
-  The NURBS book
-RELATED FUNCTIONS:
-  TL_EvNurbBasis
-  TL_EvNurbBasisDer
-*****************************************************************************/
-  /*register*/ double a0, a1, x, y;
+  double a0, a1, x, y;
   const double *k0;
   double *t_k, *k_t, *N0;
   const int d = order-1;
-  /*register*/ int j, r;
-
-  t_k = (double*)alloca( d<<4 );
+  int j, r;
+  double stack_buffer[80];
+  void* heap_buffer = 0;
+  const size_t sizeof_buffer = d<<4;
+  
+  t_k = (sizeof_buffer <= sizeof(stack_buffer)) ? stack_buffer : (double*)(heap_buffer=onmalloc( sizeof_buffer ));
   k_t = t_k + d;
   
   if (knot[d-1] == knot[d]) {
@@ -777,68 +724,55 @@ RELATED FUNCTIONS:
   //   fail to be one by a bit or two when knot
   //   values are large.
   x = 1.0-ON_SQRT_EPSILON;
-  if ( N[0] > x )
+  if ( N[0] >= x )
   {
-    if ( N[0] != 1.0 && N[0] < 1.0 + ON_SQRT_EPSILON )
+    if ( N[0] != 1.0 && N[0] <= 1.0 + ON_SQRT_EPSILON )
     {
       r = 1;
-      for ( j = 1; j <= d && r; j++ )
+      for ( j = 1; j <= d; j++ )
       {
-        if ( N[j] != 0.0 )
+        if (N[j] != 0.0)
+        {
           r = 0;
+          break;
+        }
       }
       if (r)
         N[0] = 1.0;
     }
   }
-  else if ( N[d] > x )
+  else if ( N[d] >= x )
   {
-    if ( N[d] != 1.0 && N[d] < 1.0 + ON_SQRT_EPSILON )
+    if ( N[d] != 1.0 && N[d] <= 1.0 + ON_SQRT_EPSILON )
     {
       r = 1;
-      for ( j = 0; j < d && r; j++ )
+      for ( j = 0; j < d; j++ )
       {
         if ( N[j] != 0.0 )
+        {
           r = 0;
+          break;
+        }
       }
       if (r)
         N[d] = 1.0;
     }
   }
 
+  if ( heap_buffer )
+    onfree(heap_buffer);
+
   return true;
 }
 
 
-bool ON_EvaluateNurbsBasisDerivatives( int order, const double* knot, 
-                       int der_count, double* N )
+bool ON_EvaluateNurbsBasisDerivatives(
+  int order,
+  const double* knot, 
+  int der_count,
+  double* N 
+)
 {
-	/* INPUT:
-	 *   Results of the call
-	 *      TL_EvNurbBasis( order, knot, t, N );  (initializes N[] )
-	 *   are sent to
-	 *      TL_EvNurbBasisDer( order, knot, der_count, N ),
-	 *   where 1 <= der_count < order
-	 *
-	 * OUTPUT:
-   *  If "N" were declared as double N[order][order], then
-	 *
-   *                                    d
-   *    N[d-k][i] = k-th derivative of N (t)
-   *                                    i
-   *
-	 *  where 0 <= k <= d and 0 <= i <= d.
-	 *
-	 * In particular, 
-	 *   N[0], ..., N[d] - values of degree d basis functions.
-	 *   N[order], ..., N[order_d] - values of first derivative.
-	 *
-   * Actually, the above is true when knot[d-1] <= t < knot[d].  Otherwise, the
-   * values returned are the values of the polynomials that agree with N_i^k on the
-   * half open domain [ knot[d-1], knot[d] )
-	 *
-	 * Ref: The NURBS Book
-	 */
 	double dN, c;
 	const double *k0, *k1;
 	double *a0, *a1, *ptr, **dk;
@@ -857,9 +791,19 @@ bool ON_EvaluateNurbsBasisDerivatives( int order, const double* knot,
 	 * dk[der_count-1] = 1.0/(knot[d] - knot[d-1])
 	 * dk[der_count] = dummy pointer to make loop efficient
 	 */
-	dk = (double**)alloca( (der_count+1) << 3 ); /* << 3 in case pointers are 8 bytes long */
-	a0 = (double*)alloca( (order*(2 + ((d+1)>>1))) << 3 ); /* d for a0, d for a1, d*order/2 for dk[]'s and slop to avoid /2 */
+
+	//dk = (double**)alloca( (der_count+1) << 3 ); /* << 3 in case pointers are 8 bytes long */
+	//a0 = (double*)alloca( (order*(2 + ((d+1)>>1))) << 3 ); /* d for a0, d for a1, d*order/2 for dk[]'s and slop to avoid /2 */
+	//a1 = a0 + order;
+
+  double stack_buffer[80];
+  void* heap_buffer = 0;
+  const size_t dbl_count = (order*(2 + ((d+1)>>1)));
+  const size_t sz = ( dbl_count*sizeof(*a0) + (der_count+1)*sizeof(*dk) );
+
+  a0 = (sz <= sizeof(stack_buffer)) ? stack_buffer : (double*)(heap_buffer = onmalloc(sz));
 	a1 = a0 + order;
+  dk = (double**)(a0 + dbl_count);
 
 	/* initialize reciprocal of knot differences */
 	dk[0] = a1 + order;
@@ -934,6 +878,10 @@ bool ON_EvaluateNurbsBasisDerivatives( int order, const double* knot,
 		dN -= 1.0;
 		c *= dN;
 	}
+
+  if ( 0 != heap_buffer )
+    onfree(heap_buffer);
+
   return true;
 }
 
@@ -956,7 +904,11 @@ bool ON_EvaluateNurbsNonRationalSpan(
   double *N;
 	double a;
 
-	N = (double*)alloca( (order*order)<<3 );
+  double stack_buffer[64];
+  void* heap_buffer = 0;
+  const size_t sizeof_buffer = (order*order)*sizeof(*N);
+
+	N = (sizeof_buffer <= sizeof(stack_buffer)) ? stack_buffer : (double*)(heap_buffer=onmalloc(sizeof_buffer));
 
   if ( stride_minus_dim > 0)
   {
@@ -1007,6 +959,9 @@ bool ON_EvaluateNurbsNonRationalSpan(
         v[i] = cv[i];
     }
   }
+
+  if ( 0 != heap_buffer )
+    onfree(heap_buffer);
 		
 	return true;
 }
@@ -1029,28 +984,40 @@ bool ON_EvaluateNurbsRationalSpan(
   int i;
   bool rc;
 
-  hv = (double*)alloca( (der_count+1)*hv_stride*sizeof(*hv) );
+  double stack_buffer[32];
+  void* heap_buffer = 0;
+  const size_t sizeof_buffer = (der_count+1)*hv_stride*sizeof(*hv);
+
+  hv = (sizeof_buffer <= sizeof(stack_buffer)) 
+     ? stack_buffer 
+     : (double*)(heap_buffer=onmalloc(sizeof_buffer));
   
   rc = ON_EvaluateNurbsNonRationalSpan( dim+1, order, knot, 
           cv_stride, cv, der_count, t, hv_stride, hv );
-  if (rc) {
+  if (rc) 
+  {
     rc = ON_EvaluateQuotientRule(dim, der_count, hv_stride, hv);
-  }
-  if ( rc ) {
-    // copy answer to v[]
-    for ( i = 0; i <= der_count; i++ ) {
-      memcpy( v, hv, dim*sizeof(*v) );
-      v += v_stride;
-      hv += hv_stride;
+    if ( rc )
+    {
+      // copy answer to v[]
+      for ( i = 0; i <= der_count; i++ ) {
+        memcpy( v, hv, dim*sizeof(*v) );
+        v += v_stride;
+        hv += hv_stride;
+      }
     }
   }
+
+  if ( heap_buffer )
+    onfree(heap_buffer);
+
   return rc;
 }
 
 
 bool ON_EvaluateNurbsSpan( 
                   int dim,             // dimension
-                  ON_BOOL32 is_rat,         // true if NURBS is rational
+                  bool is_rat,         // true if NURBS is rational
                   int order,           // order
                   const double* knot,  // knot[] array of (2*order-2) doubles
                   int cv_stride,       // cv_stride >= (is_rat)?dim+1:dim
@@ -1084,7 +1051,7 @@ bool ON_EvaluateNurbsSpan(
 
 bool ON_EvaluateNurbsSurfaceSpan(
         int dim,
-        ON_BOOL32 is_rat,
+        bool is_rat,
         int order0, int order1,
         const double* knot0,
         const double* knot1,
@@ -1107,12 +1074,21 @@ bool ON_EvaluateNurbsSurfaceSpan(
   const int cvdim = (is_rat) ? dim+1 : dim;
   const int dcv1 = cv_stride1 - cvdim;
 
+  double stack_buffer[128];
+  void* heap_buffer = 0;
+  size_t sizeof_buffer;
+
 	// get work space memory
 	i = order0*order0;
 	j = order1*order1;
 	Pcount = ((der_count+1)*(der_count+2))>>1;
 	Psize = cvdim<<3;
-  N_0 = (double*)alloca( ((i + j) << 3) + Pcount*Psize );
+
+  sizeof_buffer = ((i + j) << 3) + Pcount*Psize;
+
+  N_0 = (sizeof_buffer <= sizeof(stack_buffer)) ? stack_buffer : (double*)(heap_buffer=onmalloc(sizeof_buffer));
+  if ( nullptr == N_0)
+    return false;
 	N_1 = N_0 + i;
 	P0  = N_1 + j;
 	memset( P0, 0, Pcount*Psize );
@@ -1262,6 +1238,9 @@ bool ON_EvaluateNurbsSurfaceSpan(
 		P0 += cvdim;
 	}
 
+  if ( heap_buffer )
+    onfree(heap_buffer);
+
 	return true;
 }
 
@@ -1346,8 +1325,8 @@ bool ON_EvaluateNurbsDeBoor(
  *                 argument.  In most cases, you can avoid resetting knots
  *                 by carefully choosing the value of "side" and "mult_k".
  *  TL_EvDeBoor()
- *   0: successful
- *      -1: knot[order-2] == knot[order-1]
+ *   true: successful
+ *   false: knot[order-2] == knot[order-1]
  *
  * COMMENTS:
  *
@@ -1356,7 +1335,7 @@ bool ON_EvaluateNurbsDeBoor(
  *   It is used to convert portions of NURB curves to Beziers and to create
  *   fully multiple end knots.  The functions that perform the above tasks
  *   simply call this function with appropriate values and take linear
- *   combonations of the returned cv's to compute the desired result.
+ *   combinations of the returned cv's to compute the desired result.
  *
  *   Rational cases are handled adding one to the dimension and applying the
  *   quotient rule as needed.
@@ -1553,7 +1532,7 @@ bool ON_EvaluateNurbsBlossom(int cvdim,
   int degree = order-1;
   double workspace[32];
   double* space = workspace;
-  double* free_space = NULL;
+  double* free_space = nullptr;
   if (order > 32){
     free_space = (double*)onmalloc(order*sizeof(double));
     space = free_space;
@@ -1608,7 +1587,7 @@ void ON_ConvertNurbSpanToBezier(int cvdim, int order,
  *      span's control vertices
  *   knot
  *      array of (2*order - 2) doubles the define the Nurb
- *      span's knot vector.  The array should satisfiy
+ *      span's knot vector.  The array should satisfy
  *      knot[0] <= ... <= knot[order-2] < knot[order-1] 
  *      <= ... <= knot[2*order-3]
  *   t0, t1
@@ -1641,8 +1620,6 @@ void ON_ConvertNurbSpanToBezier(int cvdim, int order,
  *
  * RELATED FUNCTIONS:
  *   TL_EvdeBoor(), TL_ConvertBezierToPolynomial
- *
- * Copyright (c) 1994 Robert McNeel & Associates. All rights reserved.
  */
 {
   ON_EvaluateNurbsDeBoor(cvdim,order,cvstride,cv,knot, 1, 0.0, t0);

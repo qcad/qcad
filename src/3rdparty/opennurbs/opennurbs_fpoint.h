@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 ////////////////////////////////////////////////////////////////
 //
@@ -39,24 +37,50 @@ class ON_CLASS ON_2fPoint
 public:
   float x, y;
 
+public:
+  // x,y not initialized
+  ON_2fPoint() = default;
+  ~ON_2fPoint() = default;
+  ON_2fPoint(const ON_2fPoint&) = default;
+  ON_2fPoint& operator=(const ON_2fPoint&) = default;
+
+public:
   static const ON_2fPoint Origin; // (0.0f,0.0f)
+  static const ON_2fPoint NanPoint; // (ON_FLT_QNAN,ON_FLT_QNAN)
 
-  // use implicit destructor, copy constructor
-  ON_2fPoint();                       // x,y not initialized
-  ON_2fPoint(float x,float y);
+public:
+  explicit ON_2fPoint(float x,float y);
 
-  ON_2fPoint(const ON_3fPoint& );     // from 3f point
-  ON_2fPoint(const ON_4fPoint& );     // from 4f point
-  ON_2fPoint(const ON_2fVector& );    // from 2f vector
-  ON_2fPoint(const ON_3fVector& );    // from 3f vector
-  ON_2fPoint(const float*);           // from float[2] array
+  /*
+  Description:
+    A well ordered dictionary compare function that is nan aware and can
+    be used for robust sorting.
+  */
+  static int Compare(
+    const ON_2fPoint& lhs,
+    const ON_2fPoint& rhs
+    );
 
-  ON_2fPoint(const ON_2dPoint& );     // from 2d point
-  ON_2fPoint(const ON_3dPoint& );     // from 3d point
-  ON_2fPoint(const ON_4dPoint& );     // from 4d point
-  ON_2fPoint(const ON_2dVector& );    // from 2d vector
-  ON_2fPoint(const ON_3dVector& );    // from 3d vector
-  ON_2fPoint(const double*);          // from double[2] array
+  /*
+  Returns:
+    (A+B)/2
+  Remarks:
+    Exact when coordinates are equal and prevents overflow.
+  */
+  static const ON_2fPoint Midpoint(const ON_2fPoint& A, const ON_2fPoint& B);
+
+  explicit ON_2fPoint(const ON_3fPoint& );     // from 3f point
+  explicit ON_2fPoint(const ON_4fPoint& );     // from 4f point
+  explicit ON_2fPoint(const ON_2fVector& );    // from 2f vector
+  explicit ON_2fPoint(const ON_3fVector& );    // from 3f vector
+  explicit ON_2fPoint(const float*);           // from float[2] array
+
+  explicit ON_2fPoint(const ON_2dPoint& );     // from 2d point
+  explicit ON_2fPoint(const ON_3dPoint& );     // from 3d point
+  explicit ON_2fPoint(const ON_4dPoint& );     // from 4d point
+  explicit ON_2fPoint(const ON_2dVector& );    // from 2d vector
+  explicit ON_2fPoint(const ON_3dVector& );    // from 3d vector
+  explicit ON_2fPoint(const double*);          // from double[2] array
 
   // (float*) conversion operators
   operator float*();
@@ -78,12 +102,8 @@ public:
 
   ON_2fPoint& operator*=(float);
   ON_2fPoint& operator/=(float);
-  ON_2fPoint& operator+=(const ON_2fPoint&);
   ON_2fPoint& operator+=(const ON_2fVector&);
-  ON_2fPoint& operator+=(const ON_3fVector&);
-  ON_2fPoint& operator-=(const ON_2fPoint&);
   ON_2fPoint& operator-=(const ON_2fVector&);
-  ON_2fPoint& operator-=(const ON_3fVector&);
 
   ON_2fPoint  operator*(int) const;
   ON_2fPoint  operator/(int) const;
@@ -112,7 +132,6 @@ public:
 
   float operator*(const ON_2fPoint&) const; // for points acting as vectors
   float operator*(const ON_2fVector&) const; // for points acting as vectors
-  float operator*(const ON_4fPoint&) const;
 
   bool operator==(const ON_2fPoint&) const;
   bool operator!=(const ON_2fPoint&) const;
@@ -126,16 +145,46 @@ public:
   // index operators mimic float[2] behavior
   float& operator[](int);
   float operator[](int) const;
+  float& operator[](unsigned int);
+  float operator[](unsigned int) const;
+
+  /*
+  Returns:
+    False if any coordinate is ON_UNSET_FLOAT, ON_UNSET_POSITIVE_FLOAT, nan, or infinite.
+    True, otherwise.
+  */
+  bool IsValid() const;
+  
+  /*
+  Returns:
+    True if any coordinate is ON_UNSET_FLOAT or ON_UNSET_POSITIVE_FLOAT
+  */
+  bool IsUnset() const;
 
   // set 2d point value
   void Set(float,float);
 
   double DistanceTo( const ON_2fPoint& ) const;
+  double DistanceToSquared(const ON_2fPoint&) const;
 
   int MaximumCoordinateIndex() const;
   double MaximumCoordinate() const; // absolute value of maximum coordinate
 
+  ON_DEPRECATED_MSG("Use p = ON_2fPoint::Origin;")
   void Zero(); // set all coordinates to zero;
+
+  /*
+  Returns:
+    true if all coordinates are not zero and no coordinates are nans.
+    false otherwise.
+  */
+  bool IsZero() const;
+
+  /*
+  Returns:
+    true if at lease one coordinate is not zero and no coordinates are unset or nans.
+  */
+  bool IsNotZero() const;
 
   // These transform the point in place. The transformation matrix acts on
   // the left of the point; i.e., result = transformation*point
@@ -143,16 +192,18 @@ public:
         const ON_Xform&
         );
 
-  void Rotate( // rotatation in XY plane
+  void Rotate( // rotation in XY plane
         double,              // angle in radians
         const ON_2fPoint&   // center of rotation
         );
 
-  void Rotate( // rotatation in XY plane
+  void Rotate( // rotation in XY plane
         double,              // sin(angle)
         double,              // cos(angle)
         const ON_2fPoint&   // center of rotation
         );
+
+  ON__UINT32 DataCRC(ON__UINT32 current_remainder) const;
 };
 
 ON_DECL
@@ -173,23 +224,48 @@ class ON_CLASS ON_3fPoint
 public:
   float x, y, z;
 
+public:
+  // x,y,z not initialized
+  ON_3fPoint() = default;
+  ~ON_3fPoint() = default;
+  ON_3fPoint(const ON_3fPoint&) = default;
+  ON_3fPoint& operator=(const ON_3fPoint&) = default;
+
+public:
   static const ON_3fPoint Origin; // (0.0f,0.0f,0.0f)
+  static const ON_3fPoint NanPoint; // (ON_FLT_QNAN,ON_FLT_QNAN,ON_FLT_QNAN)
 
-  // use implicit destructor, copy constructor
-  ON_3fPoint();                       // x,y,z not initialized
-  ON_3fPoint(float x,float y,float z);
-  ON_3fPoint(const ON_2fPoint& );     // from 2f point
-  ON_3fPoint(const ON_4fPoint& );     // from 4f point
-  ON_3fPoint(const ON_2fVector& );    // from 2f vector
-  ON_3fPoint(const ON_3fVector& );    // from 3f vector
-  ON_3fPoint(const float*);           // from float[3] array
+  /*
+  Description:
+    A well ordered dictionary compare function that is nan aware and can
+    be used for robust sorting.
+  */
+  static int Compare(
+    const ON_3fPoint& lhs,
+    const ON_3fPoint& rhs
+    );
 
-  ON_3fPoint(const ON_2dPoint& );     // from 2d point
-  ON_3fPoint(const ON_3dPoint& );     // from 3d point
-  ON_3fPoint(const ON_4dPoint& );     // from 4d point
-  ON_3fPoint(const ON_2dVector& );    // from 2d vector
-  ON_3fPoint(const ON_3dVector& );    // from 3d vector
-  ON_3fPoint(const double*);          // from double[3] array
+  /*
+  Returns:
+    (A+B)/2
+  Remarks:
+    Exact when coordinates are equal and prevents overflow.
+  */
+  static const ON_3fPoint Midpoint(const ON_3fPoint& A, const ON_3fPoint& B);
+
+  explicit ON_3fPoint(float x,float y,float z);
+  explicit ON_3fPoint(const ON_2fPoint& );     // from 2f point
+  explicit ON_3fPoint(const ON_4fPoint& );     // from 4f point
+  explicit ON_3fPoint(const ON_2fVector& );    // from 2f vector
+  explicit ON_3fPoint(const ON_3fVector& );    // from 3f vector
+  explicit ON_3fPoint(const float*);           // from float[3] array
+
+  explicit ON_3fPoint(const ON_2dPoint& );     // from 2d point
+  explicit ON_3fPoint(const ON_3dPoint& );     // from 3d point
+  explicit ON_3fPoint(const ON_4dPoint& );     // from 4d point
+  explicit ON_3fPoint(const ON_2dVector& );    // from 2d vector
+  explicit ON_3fPoint(const ON_3dVector& );    // from 3d vector
+  explicit ON_3fPoint(const double*);          // from double[3] array
 
   // (float*) conversion operators
   operator float*();
@@ -211,9 +287,7 @@ public:
 
   ON_3fPoint& operator*=(float);
   ON_3fPoint& operator/=(float);
-  ON_3fPoint& operator+=(const ON_3fPoint&);
   ON_3fPoint& operator+=(const ON_3fVector&);
-  ON_3fPoint& operator-=(const ON_3fPoint&);
   ON_3fPoint& operator-=(const ON_3fVector&);
 
   ON_3fPoint  operator*(int) const;
@@ -243,7 +317,6 @@ public:
 
   float operator*(const ON_3fPoint&) const; // for points acting as vectors
   float operator*(const ON_3fVector&) const; // for points acting as vectors
-  float operator*(const ON_4fPoint&) const;
 
   bool operator==(const ON_3fPoint&) const;
   bool operator!=(const ON_3fPoint&) const;
@@ -257,17 +330,47 @@ public:
   // index operators mimic float[3] behavior
   float& operator[](int);
   float operator[](int) const;
+  float& operator[](unsigned int);
+  float operator[](unsigned int) const;
+
+    /*
+  Returns:
+    False if any coordinate is ON_UNSET_FLOAT, ON_UNSET_POSITIVE_FLOAT, nan, or infinite.
+    True, otherwise.
+  */
+  bool IsValid() const;
+  
+  /*
+  Returns:
+    True if any coordinate is ON_UNSET_FLOAT or ON_UNSET_POSITIVE_FLOAT
+  */
+  bool IsUnset() const;
 
   // set 3d point value
   void Set(float,float,float);
 
   double DistanceTo( const ON_3fPoint& ) const;
+  double DistanceToSquared(const ON_3fPoint&) const;
 
   int MaximumCoordinateIndex() const;
   double MaximumCoordinate() const; // absolute value of maximum coordinate
   double Fuzz( double = ON_ZERO_TOLERANCE ) const; // tolerance to use when comparing 3d points
 
+  ON_DEPRECATED_MSG("Use p = ON_3fPoint::Origin;")
   void Zero(); // set all coordinates to zero;
+
+  /*
+  Returns:
+    true if all coordinates are not zero and no coordinates are nans.
+    false otherwise.
+  */
+  bool IsZero() const;
+
+  /*
+  Returns:
+    true if at lease one coordinate is not zero and no coordinates are unset or nans.
+  */
+  bool IsNotZero() const;
 
   // These transform the point in place. The transformation matrix acts on
   // the left of the point; i.e., result = transformation*point
@@ -287,6 +390,8 @@ public:
         const ON_3fVector&, // axis of rotation
         const ON_3fPoint&   // center of rotation
         );
+
+  ON__UINT32 DataCRC(ON__UINT32 current_remainder) const;
 };
 
 ON_DECL
@@ -307,22 +412,101 @@ class ON_CLASS ON_4fPoint
 public:
   float x, y, z, w;
 
-  // use implicit destructor, copy constructor
-  ON_4fPoint();                        // x,y,z,w not initialized
-  ON_4fPoint(float x,float y,float z,float w);
+  /*
+  Returns:
+    ON_UNSET_VALUE, if x or w is ON_UNSET_VALUE or ON_UNSET_POSITIVE_VALUE
+    and neither x nor w is a nan.
+    x/w, otherwise
+  Remarks:
+    If w is 0.0 or nan, the result will be a nan.
+  */
+  float EuclideanX() const;
+
+  /*
+  Returns:
+    ON_UNSET_VALUE, if y or w is ON_UNSET_VALUE or ON_UNSET_POSITIVE_VALUE
+    and neither y nor w is a nan.
+    y/w, otherwise
+  Remarks:
+    If w is 0.0 or nan, the result will be a nan.
+  */
+  float EuclideanY() const;
+
+  /*
+  Returns:
+    ON_UNSET_VALUE, if z or w is ON_UNSET_VALUE or ON_UNSET_POSITIVE_VALUE
+    and neither z nor w is a nan.
+    z/w, otherwise
+  Remarks:
+    If w is 0.0 or nan, the result will be a nan.
+  */
+  float EuclideanZ() const;
+
+public:
+  // x,y,z,w not initialized
+  ON_4fPoint() = default;
+  ~ON_4fPoint() = default;
+  ON_4fPoint(const ON_4fPoint&) = default;
+  ON_4fPoint& operator=(const ON_4fPoint&) = default;
+
+public:
+  static const ON_4fPoint Zero; // (0,0,0,0)
+  static const ON_4fPoint Nan; // (ON_FLT_QNAN,ON_FLT_QNAN,ON_FLT_QNAN,ON_FLT_QNAN)
+
+  /*
+  Description:
+    A well ordered projective compare function that is nan aware and can
+    be used for robust sorting.
+  Remarks:
+    float c = non-nan value.
+    ON_4fPoint h0 = ...;
+    ON_4fPoint h1(c*h0.x,c*h0.x,c*h0.x,c*h0.x);
+    0 == ON_4fPoint::ProjectiveCompare(h0,ha);
+  */
+  static int ProjectiveCompare(
+    const ON_4fPoint& lhs,
+    const ON_4fPoint& rhs
+    );
+
+  /*
+  Description:
+    A well ordered dictionary compare function that is nan aware and can
+    be used for robust sorting.
+  */
+  static int DictionaryCompare(
+    const ON_4fPoint& lhs,
+    const ON_4fPoint& rhs
+    );
+
+  /*
+  Returns:
+    True if (lhs.x == rhs.x && lhs.y == rhs.y && lhs.z == rhs.z && lhs.w == rhs.w).
+  */
+  bool operator==(const ON_4fPoint& rhs) const;
+
+  /*
+  Returns:
+    True if lhs.* != rhs.* for some coordinate and no values are nans.
+  */
+  bool operator!=(const ON_4fPoint& rhs) const;
+
+  explicit ON_4fPoint(float x,float y,float z,float w);
 
   ON_4fPoint(const ON_2fPoint& );     // from 2f point
   ON_4fPoint(const ON_3fPoint& );     // from 3f point
   ON_4fPoint(const ON_2fVector& );    // from 2f vector
   ON_4fPoint(const ON_3fVector& );    // from 3f vector
-  ON_4fPoint(const float*);           // from float[4] array
 
-  ON_4fPoint(const ON_2dPoint& );     // from 2d point
-  ON_4fPoint(const ON_3dPoint& );     // from 3d point
-  ON_4fPoint(const ON_4dPoint& );     // from 4d point
-  ON_4fPoint(const ON_2dVector& );    // from 2d vector
-  ON_4fPoint(const ON_3dVector& );    // from 3d vector
-  ON_4fPoint(const double*);          // from double[4] array
+  // Require explicit construction when dev must insure array has length >= 4.
+  explicit ON_4fPoint(const float*);           // from float[4] array
+
+  // Require explicit construction when losing precision
+  explicit ON_4fPoint(const ON_2dPoint& );     // from 2d point
+  explicit ON_4fPoint(const ON_3dPoint& );     // from 3d point
+  explicit ON_4fPoint(const ON_4dPoint& );     // from 4d point
+  explicit ON_4fPoint(const ON_2dVector& );    // from 2d vector
+  explicit ON_4fPoint(const ON_3dVector& );    // from 3d vector
+  explicit ON_4fPoint(const double*);          // from double[4] array
 
   // (float*) conversion operators
   operator float*();
@@ -352,16 +536,25 @@ public:
   ON_4fPoint  operator+(const ON_4fPoint&) const; // sum w = sqrt(w1*w2)
   ON_4fPoint  operator-(const ON_4fPoint&) const; // difference w = sqrt(w1*w2)
 
-  float operator*(const ON_4fPoint&) const;
-
-  // projective comparison 
-  // (i.e., [x,y,z,w] == [c*x,c*y,c*z,c*w] is true for nonzero c)
-  bool operator==(ON_4fPoint) const;
-  bool operator!=(const ON_4fPoint&) const;
-
+public:
   // index operators mimic float[4] behavior
   float& operator[](int);
   float operator[](int) const;
+  float& operator[](unsigned int);
+  float operator[](unsigned int) const;
+
+  /*
+  Returns:
+    False if any coordinate is ON_UNSET_FLOAT, ON_UNSET_POSITIVE_FLOAT, nan, or infinite.
+    True, otherwise.
+  */
+  bool IsValid() const;
+  
+  /*
+  Returns:
+    True if any coordinate is ON_UNSET_FLOAT or ON_UNSET_POSITIVE_FLOAT
+  */
+  bool IsUnset() const;
 
   // set 4d point value
   void Set(float,float,float,float);
@@ -369,7 +562,6 @@ public:
   int MaximumCoordinateIndex() const;
   double MaximumCoordinate() const; // absolute value of maximum coordinate
 
-  void Zero();      // set all 4 coordinates to zero;
   bool Normalize(); // set so x^2 + y^2 + z^2 + w^2 = 1
 
   // These transform the point in place. The transformation matrix acts on
@@ -377,6 +569,8 @@ public:
   void Transform( 
         const ON_Xform&
         );
+
+  ON__UINT32 DataCRC(ON__UINT32 current_remainder) const;
 };
 
 ON_DECL
@@ -394,9 +588,28 @@ class ON_CLASS ON_2fVector
 public:
   float x, y;
 
+public:
+  // x,y not initialized
+  ON_2fVector() = default;
+  ~ON_2fVector() = default;
+  ON_2fVector(const ON_2fVector&) = default;
+  ON_2fVector& operator=(const ON_2fVector&) = default;
+
+public:
+  static const ON_2fVector NanVector; // (ON_FLT_QNAN,ON_FLT_QNAN)
   static const ON_2fVector ZeroVector; // (0.0f,0.0f)
   static const ON_2fVector XAxis;      // (1.0f,0.0f)
   static const ON_2fVector YAxis;      // (0.0f,1.0f)
+
+  /*
+  Description:
+    A well ordered dictionary compare function that is nan aware and can
+    be used for robust sorting.
+  */
+  static int Compare(
+    const ON_2fVector& lhs,
+    const ON_2fVector& rhs
+    );
 
   // Description:
   //   A index driven function to get unit axis vectors.
@@ -408,21 +621,17 @@ public:
     int // index
     );
 
-  // use implicit destructor, copy constructor
-  ON_2fVector();                      // x,y not initialized
-  ON_2fVector(float x,float y);
-  ON_2fVector(const ON_2fPoint& );     // from 2f point
-  ON_2fVector(const ON_3fPoint& );     // from 3f point
-  ON_2fVector(const ON_4fPoint& );     // from 4f point
-  ON_2fVector(const ON_3fVector& );    // from 3f vector
-  ON_2fVector(const float*);           // from float[2] array
+  explicit ON_2fVector(float x,float y);
+  explicit ON_2fVector(const ON_2fPoint& );     // from 2f point
+  explicit ON_2fVector(const ON_3fPoint& );     // from 3f point
+  explicit ON_2fVector(const ON_3fVector& );    // from 3f vector
+  explicit ON_2fVector(const float*);           // from float[2] array
 
-  ON_2fVector(const ON_2dPoint& );     // from 2d point
-  ON_2fVector(const ON_3dPoint& );     // from 3d point
-  ON_2fVector(const ON_4dPoint& );     // from 4d point
-  ON_2fVector(const ON_2dVector& );    // from 2d vector
-  ON_2fVector(const ON_3dVector& );    // from 3d vector
-  ON_2fVector(const double*);          // from double[2] array
+  explicit ON_2fVector(const ON_2dPoint& );     // from 2d point
+  explicit ON_2fVector(const ON_3dPoint& );     // from 3d point
+  explicit ON_2fVector(const ON_2dVector& );    // from 2d vector
+  explicit ON_2fVector(const ON_3dVector& );    // from 3d vector
+  explicit ON_2fVector(const double*);          // from double[2] array
 
   // (float*) conversion operators
   operator float*();
@@ -476,8 +685,6 @@ public:
   ON_3dVector  operator-(const ON_3dVector&) const;
   ON_3dPoint   operator-(const ON_3dPoint&) const;
 
-  float operator*(const ON_4fPoint&) const;
-
   bool operator==(const ON_2fVector&) const;
   bool operator!=(const ON_2fVector&) const;
 
@@ -490,6 +697,21 @@ public:
   // index operators mimic float[2] behavior
   float& operator[](int);
   float operator[](int) const;
+  float& operator[](unsigned int);
+  float operator[](unsigned int) const;
+
+  /*
+  Returns:
+    False if any coordinate is ON_UNSET_FLOAT, ON_UNSET_POSITIVE_FLOAT, nan, or infinite.
+    True, otherwise.
+  */
+  bool IsValid() const;
+  
+  /*
+  Returns:
+    True if any coordinate is ON_UNSET_FLOAT or ON_UNSET_POSITIVE_FLOAT
+  */
+  bool IsUnset() const;
 
   // set 2d vector value
   void Set(float,float);
@@ -530,10 +752,22 @@ public:
         double = ON_DEFAULT_ANGLE_TOLERANCE // optional angle tolerance (radians)
         ) const;
 
+  ON_DEPRECATED_MSG("Use p = ON_2fVector::ZeroVector;")
   void Zero(); // set all coordinates to zero;
+
+  ON_DEPRECATED_MSG("Use v = -v;")
   void Reverse(); // negate all coordinates
+
   bool Unitize();  // returns false if vector has zero length
+
   bool IsUnitVector() const;
+
+  /*
+  Returns:
+    If this is a valid non-zero vector, a unit vector parallel to this is returned.
+    Otherwise the zero vector is returned.
+  */
+  ON_2fVector UnitVector() const;
 
   // Description:
   //   Test a vector to see if it is very short
@@ -553,6 +787,12 @@ public:
   //   true if vector is the zero vector.
   bool IsZero() const;
 
+  /*
+  Returns:
+    true if at lease one coordinate is not zero and no coordinates are unset or nans.
+  */
+  bool IsNotZero() const;
+
   // set this vector to be perpendicular to another vector
   bool PerpendicularTo( // Result is not unitized. 
                         // returns false if input vector is zero
@@ -564,6 +804,8 @@ public:
         const ON_2fPoint&, 
         const ON_2fPoint& 
         );
+
+  ON__UINT32 DataCRC(ON__UINT32 current_remainder) const;
 };
 
 ON_DECL
@@ -596,7 +838,7 @@ ON_CrossProduct(
 
 ON_DECL
 bool 
-ON_IsOrthogonalFrame( // true if X, Y are nonzero and mutually perpindicular
+ON_IsOrthogonalFrame( // true if X, Y are nonzero and mutually perpendicular
     const ON_2fVector&, // X
     const ON_2fVector&  // Y
     );
@@ -624,10 +866,29 @@ class ON_CLASS ON_3fVector
 public:
   float x, y, z;
 
+public:
+  // x,y,z not initialized
+  ON_3fVector() = default;
+  ~ON_3fVector() = default;
+  ON_3fVector(const ON_3fVector&) = default;
+  ON_3fVector& operator=(const ON_3fVector&) = default;
+
+public:
+  static const ON_3fVector NanVector; // (ON_FLT_QNAN,ON_FLT_QNAN,ON_FLT_QNAN)
   static const ON_3fVector ZeroVector; // (0.0f,0.0f,0.0f)
   static const ON_3fVector XAxis;      // (1.0f,0.0f,0.0f)
   static const ON_3fVector YAxis;      // (0.0f,1.0f,0.0f)
   static const ON_3fVector ZAxis;      // (0.0f,0.0f,1.0f)
+
+  /*
+  Description:
+    A well ordered dictionary compare function that is nan aware and can
+    be used for robust sorting.
+  */
+  static int Compare(
+    const ON_3fVector& lhs,
+    const ON_3fVector& rhs
+    );
 
   // Description:
   //   A index driven function to get unit axis vectors.
@@ -640,22 +901,18 @@ public:
     int // index
     );
 
-  // use implicit destructor, copy constructor
-  ON_3fVector();                      // x,y,z not initialized
-  ON_3fVector(float x,float y,float z);
+  explicit ON_3fVector(float x,float y,float z);
 
-  ON_3fVector(const ON_2fPoint& );     // from 2f point
-  ON_3fVector(const ON_3fPoint& );     // from 3f point
-  ON_3fVector(const ON_4fPoint& );     // from 4f point
-  ON_3fVector(const ON_2fVector& );    // from 2f vector
-  ON_3fVector(const float*);           // from float[3] array
+  explicit ON_3fVector(const ON_2fPoint& );     // from 2f point
+  explicit ON_3fVector(const ON_3fPoint& );     // from 3f point
+  explicit ON_3fVector(const ON_2fVector& );    // from 2f vector
+  explicit ON_3fVector(const float*);           // from float[3] array
 
-  ON_3fVector(const ON_2dPoint& );     // from 2d point
-  ON_3fVector(const ON_3dPoint& );     // from 3d point
-  ON_3fVector(const ON_4dPoint& );     // from 4d point
-  ON_3fVector(const ON_2dVector& );    // from 2d vector
-  ON_3fVector(const ON_3dVector& );    // from 3d vector
-  ON_3fVector(const double*);          // from double[3] array
+  explicit ON_3fVector(const ON_2dPoint& );     // from 2d point
+  explicit ON_3fVector(const ON_3dPoint& );     // from 3d point
+  explicit ON_3fVector(const ON_2dVector& );    // from 2d vector
+  explicit ON_3fVector(const ON_3dVector& );    // from 3d vector
+  explicit ON_3fVector(const double*);          // from double[3] array
 
   // (float*) conversion operators
   operator float*();
@@ -664,13 +921,11 @@ public:
   // use implicit operator=(const ON_3fVector&)
   ON_3fVector& operator=(const ON_2fPoint&);
   ON_3fVector& operator=(const ON_3fPoint&);
-  ON_3fVector& operator=(const ON_4fPoint&);
   ON_3fVector& operator=(const ON_2fVector&);
   ON_3fVector& operator=(const float*);  // point = float[3] support
 
   ON_3fVector& operator=(const ON_2dPoint&);
   ON_3fVector& operator=(const ON_3dPoint&);
-  ON_3fVector& operator=(const ON_4dPoint&);
   ON_3fVector& operator=(const ON_2dVector&);
   ON_3fVector& operator=(const ON_3dVector&);
   ON_3fVector& operator=(const double*); // point = double[3] support
@@ -711,8 +966,6 @@ public:
   ON_3dVector  operator-(const ON_2dVector&) const;
   ON_3dPoint   operator-(const ON_2dPoint&) const;
 
-  float operator*(const ON_4fPoint&) const;
-
   bool operator==(const ON_3fVector&) const;
   bool operator!=(const ON_3fVector&) const;
 
@@ -725,6 +978,21 @@ public:
   // index operators mimic float[3] behavior
   float& operator[](int);
   float operator[](int) const;
+  float& operator[](unsigned int);
+  float operator[](unsigned int) const;
+
+  /*
+  Returns:
+    False if any coordinate is ON_UNSET_FLOAT, ON_UNSET_POSITIVE_FLOAT, nan, or infinite.
+    True, otherwise.
+  */
+  bool IsValid() const;
+  
+  /*
+  Returns:
+    True if any coordinate is ON_UNSET_FLOAT or ON_UNSET_POSITIVE_FLOAT
+  */
+  bool IsUnset() const;
 
   // set 3d vector value
   void Set(float,float,float);
@@ -745,10 +1013,23 @@ public:
 
   double Fuzz( double = ON_ZERO_TOLERANCE ) const; // tolerance to use when comparing 3d vectors
 
+  ON_DEPRECATED_MSG("Use p = ON_3fVector::ZeroVector;")
   void Zero(); // set all coordinates to zero
+
+  ON_DEPRECATED_MSG("Use v = -v;")
   void Reverse(); // negate all coordinates
+
   bool Unitize();  // returns false if vector has zero length
+
   bool IsUnitVector() const;
+
+  /*
+  Returns:
+    If this is a valid non-zero vector, a unit vector parallel to this is returned.
+    Otherwise the zero vector is returned.
+  */
+  ON_3fVector UnitVector() const;
+
 
   // Description:
   //   Test a vector to see if it is very short
@@ -767,6 +1048,12 @@ public:
   // Returns:
   //   true if vector is the zero vector.
   bool IsZero() const;
+
+  /*
+  Returns:
+    true if at lease one coordinate is not zero and no coordinates are unset or nans.
+  */
+  bool IsNotZero() const;
 
   // set this vector to be perpendicular to another vector
   bool PerpendicularTo( // Result is not unitized. 
@@ -790,6 +1077,8 @@ public:
         double,             // cos(angle)
         const ON_3fVector&  // axis of rotation
         );
+
+  ON__UINT32 DataCRC(ON__UINT32 current_remainder) const;
 };
 
 ON_DECL
@@ -846,7 +1135,7 @@ ON_TripleProduct(  // 3d triple product for old fashioned arrays
 
 ON_DECL
 bool 
-ON_IsOrthogonalFrame( // true if X, Y, Z are nonzero and mutually perpindicular
+ON_IsOrthogonalFrame( // true if X, Y, Z are nonzero and mutually perpendicular
     const ON_3fVector&, // X
     const ON_3fVector&, // Y
     const ON_3fVector&  // Z 
@@ -867,23 +1156,5 @@ ON_IsRightHandFrame( // true if X, Y, Z are orthonormal and right handed
     const ON_3fVector&, // Y
     const ON_3fVector&  // Z 
     );
-
-///////////////////////////////////////////////////////////////
-//
-// common points and vectors
-//
-
-// ON_forigin is OBSOLETE - use ON_3fPoint::Origin
-extern ON_EXTERN_DECL const ON_3fPoint ON_forigin; // (0.0, 0.0, 0.0)
-
-// ON_fxaxis is OBSOLETE - use ON_3fPoint::XAxis
-extern ON_EXTERN_DECL const ON_3fVector ON_fxaxis; // (1.0, 0.0, 0.0)
-
-// ON_fyaxis is OBSOLETE - use ON_3fVector::YAxis
-extern ON_EXTERN_DECL const ON_3fVector ON_fyaxis; // (0.0, 1.0, 0.0)
-
-// ON_fzaxis is OBSOLETE - use ON_3fVector::ZAxis
-extern ON_EXTERN_DECL const ON_3fVector ON_fzaxis; // (0.0, 0.0, 1.0)
-
 
 #endif

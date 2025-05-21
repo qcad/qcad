@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(ON_TORUS_INC_)
 #define ON_TORUS_INC_
@@ -42,16 +40,16 @@ public:
   ON_Torus( const ON_Circle& major__circle, double minor__radius );
   ~ON_Torus();
 
-  ON_BOOL32 IsValid( ON_TextLog* text_log = NULL ) const;
+  bool IsValid( ON_TextLog* text_log = nullptr ) const;
 
-  ON_BOOL32 Create( const ON_Plane& major__plane, double major__radius, double minor__radius );
-  ON_BOOL32 Create( const ON_Circle& major__circle, double minor__radius);
+  bool Create( const ON_Plane& major__plane, double major__radius, double minor__radius );
+  bool Create( const ON_Circle& major__circle, double minor__radius);
 
   /*
   Description:
     Get the circle that is the isocurve on the torus
     at a specified minor angle.
-  Parameteters:
+  Parameters:
     minor_angle_radians - [in]
   Returns:
     A circle with normal major_circle.plane.zaxis that starts
@@ -68,7 +66,7 @@ public:
   Description:
     Get the circle that is the isocurve on the torus
     at a specified minor angle.
-  Parameteters:
+  Parameters:
     minor_angle_degrees - [in]
   Returns:
     A circle with normal major_circle.plane.zaxis that starts
@@ -85,7 +83,7 @@ public:
   Description:
     Get the minor circle that is the isocurve on the torus
     at a specified major angle.
-  Parameteters:
+  Parameters:
     major_angle_radians - [in]
   Returns:
     A circle with radius = minor_radis, 
@@ -103,7 +101,7 @@ public:
   Description:
     Get the minor circle that is the isocurve on the torus
     at a specified major angle.
-  Parameteters:
+  Parameters:
     major_angle_degrees - [in]
   Returns:
     A circle with radius = minor_radis, 
@@ -133,7 +131,7 @@ public:
     ) const;
 
   // returns parameters of point on torus that is closest to test_point.
-  ON_BOOL32 ClosestPointTo( 
+  bool ClosestPointTo( 
          ON_3dPoint test_point, 
          double* major_angle_radians, 
          double* minor_angle_radians
@@ -145,49 +143,49 @@ public:
          ) const;
 
   // rotate torus about its origin
-  ON_BOOL32 Rotate(
+  bool Rotate(
         double sin_angle,               // sin(angle)
         double cos_angle,               // cos(angle)
         const ON_3dVector& axis_of_rotation // axis of rotation
         );
 
-  ON_BOOL32 Rotate(
+  bool Rotate(
         double angle_radians,               // angle in radians
         const ON_3dVector& axis_of_rotation // axis of rotation
         );
 
   // rotate torus about a point and axis
-  ON_BOOL32 Rotate(
+  bool Rotate(
         double sin_angle,               // sin(angle)
         double cos_angle,               // cos(angle)
         const ON_3dVector& axis_of_rotation, // axis of rotation
         const ON_3dPoint& center_of_rotation  // center of rotation
         );
 
-  ON_BOOL32 Rotate(
+  bool Rotate(
         double angle_radians,               // angle in radians
         const ON_3dVector& axis_of_rotation, // axis of rotation
         const ON_3dPoint& center_of_rotation  // center of rotation
         );
 
-  ON_BOOL32 Translate(
+  bool Translate(
         const ON_3dVector&
         );
 
-  ON_BOOL32 Transform( const ON_Xform& );
+  bool Transform( const ON_Xform& );
 
-  // parameterization of NURBS surface does not match torus's transcendental paramaterization
+  // parameterization of NURBS surface does not match torus's transcendental parameterization
   int GetNurbForm( ON_NurbsSurface& ) const; // returns 0=failure, 2=success
 
   /*
   Description:
     Creates a surface of revolution definition of the torus.
   Parameters:
-    srf - [in] if not NULL, then this srf is used.
+    srf - [in] if not nullptr, then this srf is used.
   Result:
-    A surface of revolution or NULL if the torus is not valid.
+    A surface of revolution or nullptr if the torus is not valid.
   */
-  ON_RevSurface* RevSurfaceForm( ON_RevSurface* srf = NULL ) const;
+  ON_RevSurface* RevSurfaceForm( ON_RevSurface* srf = nullptr ) const;
 };
 
 #endif

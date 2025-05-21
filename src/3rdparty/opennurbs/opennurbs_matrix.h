@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(ON_MATRIX_INC_)
 #define ON_MATRIX_INC_
@@ -35,6 +33,16 @@ public:
   ON_Matrix( const ON_Xform& );
   ON_Matrix( const ON_Matrix& );
 
+#if defined(ON_HAS_RVALUEREF)
+  // rvalue copy constructor
+  ON_Matrix(ON_Matrix&&) ON_NOEXCEPT;
+
+  // The rvalue assignment operator calls ON_Object::operator=(ON_Object&&)
+  // which could throw exceptions.  See the implementation of
+  // ON_Object::operator=(ON_Object&&) for details.
+  ON_Matrix& operator=(ON_Matrix&&);
+#endif
+
   /*
   Description:
     This constructor is for experts who have storage for a matrix
@@ -57,6 +65,20 @@ public:
     bool bDestructorFreeM
     );
 
+  /*
+  Returns:
+    A row_count X col_count martix on the heap that can be 
+    deleted by calling ON_Matrix::Deallocate().
+  */
+  static double** Allocate(
+    unsigned int row_count,
+    unsigned int col_count
+    );
+
+  static void Deallocate(
+    double** M
+    );
+
   virtual ~ON_Matrix();
   void EmergencyDestroy(); // call if memory pool used matrix by becomes invalid
 
@@ -71,10 +93,16 @@ public:
 
   bool IsValid() const;
   int IsSquare() const; // returns 0 for no and m_row_count (= m_col_count) for yes
+
   int RowCount() const;
   int ColCount() const;
   int MinCount() const; // smallest of row and column count
   int MaxCount() const; // largest of row and column count
+
+  unsigned int UnsignedRowCount() const;
+  unsigned int UnsignedColCount() const;
+  unsigned int UnsignedMinCount() const; // smallest of row and column count
+  unsigned int UnsignedMaxCount() const; // largest of row and column count
 
   void RowScale(int,double); 
   void ColScale(int,double);
@@ -104,6 +132,8 @@ public:
     row_count - [in]
     col_count - [in]
     M - [in]
+      M should point to the start of an array of double*,
+      each pointing to the start of the storage for a row.
     bDestructorFreeM - [in]
       If true, ~ON_Matrix will call onfree(M).
       If false, caller is managing M's memory.
@@ -182,8 +212,8 @@ public:
   //   Row reduce a matrix to calculate rank and determinant.
   // Parameters:
   //   zero_tolerance - [in] (>=0.0) zero tolerance for pivot test
-  //       If a the absolute value of a pivot is <= zero_tolerance,
-  //       then the pivoit is assumed to be zero.
+  //       If the absolute value of a pivot is <= zero_tolerance,
+  //       then the pivot is assumed to be zero.
   //   determinant - [out] value of determinant is returned here.
   //   pivot - [out] value of the smallest pivot is returned here
   // Returns:
@@ -202,12 +232,12 @@ public:
   //   B is a column of values.
   // Parameters:
   //   zero_tolerance - [in] (>=0.0) zero tolerance for pivot test
-  //       If a the absolute value of a pivot is <= zero_tolerance,
-  //       then the pivoit is assumed to be zero.
+  //       If the absolute value of a pivot is <= zero_tolerance,
+  //       then the pivot is assumed to be zero.
   //   B - [in/out] an array of m_row_count values that is row reduced
   //       with the matrix.
   //   determinant - [out] value of determinant is returned here.
-  //   pivot - [out] If not NULL, then the value of the smallest 
+  //   pivot - [out] If not nullptr, then the value of the smallest 
   //       pivot is returned here
   // Returns:
   //   Rank of the matrix.
@@ -226,7 +256,7 @@ public:
   int RowReduce(
     double,        // zero_tolerance
     double*,       // B
-    double* = NULL // pivot
+    double* = nullptr // pivot
     ); 
 
   // Description:
@@ -234,12 +264,12 @@ public:
   //   B is a column of 3d points
   // Parameters:
   //   zero_tolerance - [in] (>=0.0) zero tolerance for pivot test
-  //       If a the absolute value of a pivot is <= zero_tolerance,
-  //       then the pivoit is assumed to be zero.
+  //       If the absolute value of a pivot is <= zero_tolerance,
+  //       then the pivot is assumed to be zero.
   //   B - [in/out] an array of m_row_count 3d points that is 
   //       row reduced with the matrix.
   //   determinant - [out] value of determinant is returned here.
-  //   pivot - [out] If not NULL, then the value of the smallest 
+  //   pivot - [out] If not nullptr, then the value of the smallest 
   //       pivot is returned here
   // Returns:
   //   Rank of the matrix.
@@ -251,7 +281,7 @@ public:
   int RowReduce(
     double,        // zero_tolerance
     ON_3dPoint*,   // B
-    double* = NULL // pivot
+    double* = nullptr // pivot
     ); 
 
   // Description:
@@ -268,7 +298,7 @@ public:
   //        (pt[i*pt_stride],...,pt[i*pt_stride+pt_dim-1]).
   //        This array of points is row reduced along with the 
   //        matrix.
-  //   pivot - [out] If not NULL, then the value of the smallest 
+  //   pivot - [out] If not nullptr, then the value of the smallest 
   //       pivot is returned here
   // Returns:
   //   Rank of the matrix.
@@ -282,7 +312,7 @@ public:
     int,         // pt_dim
     int,         // pt_stride
     double*,     // pt
-    double* = NULL // pivot
+    double* = nullptr // pivot
     ); 
 
   // Description:
@@ -341,7 +371,7 @@ public:
   //       in under determined systems of equations.
   //   pt_dim - [in] dimension of points
   //   Bsize - [in] (>=m_row_count) number of points in B[].  The points
-  //       correspoinding to indices m_row_count, ..., (Bsize-1)
+  //       corresponding to indices m_row_count, ..., (Bsize-1)
   //       are tested to make sure they are "zero".
   //   Bpt_stride - [in] stride between B points (>=pt_dim)
   //   Bpt - [in/out] array of m_row_count*Bpt_stride values.
@@ -373,202 +403,29 @@ public:
   bool IsColOrthoganal() const;
   bool IsColOrthoNormal() const;
 
-
-  double** m; // m[i][j] = value at row i and column j
+  // 2024-09-05, Pierre:
+  // Note that this does not mean the memory allocated is contiguous.
+  // m points to the start of m_rowmem[0] in most cases.
+  // When the matrix is bigger than max_dblblk_size (see ON_Matrix::Create), m_rowmem does
+  // not point to contiguous pieces of memory, and indexing as **(m + i*m_col_count + j)
+  // would read into the wrong place.
+  double** m = nullptr; // m[i][j] = value at row i and column j
               //           0 <= i < RowCount()
               //           0 <= j < ColCount()
 private:
-  int m_row_count;
-  int m_col_count;
+  int m_row_count = 0;
+  int m_col_count = 0;
   // m_rowmem[i][j] = row i+m_row_offset and column j+m_col_offset.
   ON_SimpleArray<double*> m_rowmem; 
-	double** m_Mmem; // used by Create(row_count,col_count,user_memory,true);
-	int   m_row_offset; // = ri0 when sub-matrix constructor is used
-	int   m_col_offset; // = ci0 when sub-matrix constructor is used
-  void* m_cmem;
+	double** m_Mmem = nullptr; // used by Create(row_count,col_count,user_memory,true);
+	int   m_row_offset = 0; // = ri0 when sub-matrix constructor is used
+  int   m_col_offset = 0; // = ci0 when sub-matrix constructor is used
+  void* m_cmem = nullptr;
   // returns 0 based arrays, even in submatrix case.
   double const * const * ThisM() const;
   double * * ThisM();
 };
 
-/*
-Description:
-  Calculate the singular value decomposition of a matrix.
-
-Parameters:
-  row_count - [in]
-    number of rows in matrix A
-  col_count - [in]
-    number of columns in matrix A
-  A - [in]
-    Matrix for which you want the singular value decomposition.
-    A[0][0] = coefficeint in the first row and first column.
-    A[row_count-1][col_count-1] = coefficeint in the last row
-    and last column.
-  U - [out]
-    The singular value decomposition of A is U*Diag(W)*Transpose(V),
-    where U has the same size as A, Diag(W) is a col_count X col_count
-    diagonal matrix with (W[0],...,W[col_count-1]) on the diagonal
-    and V is a col_count X col_count matrix.
-    U and A may be the same pointer.  If the input value of U is
-    null, heap storage will be allocated using onmalloc()
-    and the calling function must call onfree(U).  If the input
-    value of U is not null, U[i] must point to an array of col_count
-    doubles.  
-  W - [out]
-    If the input value W is null, then heap storage will be allocated
-    using onmalloc() and the calling function must call onfree(W).
-    If the input value of W is not null, then W must point to
-    an array of col_count doubles.
-  V - [out]
-    If the input value V is null, then heap storage will be allocated
-    using onmalloc() and the calling function must call onfree(V).
-    If the input value of V is not null, then V[i] must point
-    to an array of col_count doubles.
-
-Example:
-
-          int m = row_count;
-          int n = col_count;
-          ON_Matrix A(m,n);
-          for (i = 0; i < m; i++ ) for ( j = 0; j < n; j++ )
-          {
-            A[i][j] = ...;
-          }
-          ON_Matrix U(m,n);
-          double* W = 0; // ON_GetMatrixSVD() will allocate W
-          ON_Matrix V(n,n);
-          bool rc = ON_GetMatrixSVD(m,n,A.m,U.m,W,V.m);
-          ...
-          onfree(W); // W allocated in ON_GetMatrixSVD()
-
-Returns:
-  True if the singular value decomposition was cacluated.
-  False if the algorithm failed to converge.
-*/
-ON_DECL
-bool ON_GetMatrixSVD(
-  int row_count,
-  int col_count,
-  double const * const * A,
-  double**& U,
-  double*& W,
-  double**& V
-  );
-
-/*
-Description:
-  Invert the diagonal matrix in a the singular value decomposition.
-Parameters:
-  count - [in] number of elements in W
-  W - [in]
-    diagonal values in the singular value decomposition.
-  invW - [out]
-    The inverted diagonal is returned here.  invW may be the same
-    pointer as W.  If the input value of invW is not null, it must
-    point to an array of count doubles.  If the input value of
-    invW is null, heap storage will be allocated using onmalloc()
-    and the calling function must call onfree(invW).
-Remarks:
-  If the singular value decomposition were mathematically perfect, then
-  this function would be:
-    for (i = 0; i < count; i++) 
-      invW[i] = (W[i] != 0.0) ? 1.0/W[i] : 0.0;
-  Because the double precision arithmetic is not mathematically perfect,
-  very small values of W[i] may well be zero and this function makes
-  a reasonable guess as to when W[i] should be treated as zero.  
-Returns:
-  Number of non-zero elements in invW, which, in a mathematically perfect
-  situation, is the rank of Diag(W).
-*/
-ON_DECL
-int ON_InvertSVDW(
-  int count, 
-  const double* W,
-  double*& invW
-  );
-
-/*
-Description:
-  Solve a linear system of equations using the singular value decomposition.
-Parameters:
-  row_count - [in]
-    number of rows in matrix U
-  col_count - [in]
-    number of columns in matrix U
-  U - [in]
-    row_count X col_count matix.
-    See the remarks section for the definition of U.
-  invW - [in]
-    inverted DVD diagonal.
-    See the remarks section for the definition of invW.
-  V - [in]
-    col_count X col_count matrix.
-    See the remarks section for the definition of V.
-  B - [in]
-    An array of row_count values.
-  X - [out]
-    The solution array of col_count values is returned here.
-    If the input value of X is not null, it must point to an
-    array of col_count doubles.  If the input value of X is
-    null, heap storage will be allocated using onmalloc() and
-    the calling function must call onfree(X).
-Remarks:
-  If A*X = B is an m X n system of equations (m = row_count, n = col_count)
-  and A = U*Diag(W)*Transpose(V) is the singular value decompostion of A,
-  then a solution is X = V*Diag(1/W)*Transpose(U).
-Example:
-
-          int m = row_count;
-          int n = col_count;
-          ON_Matrix A(m,n);
-          for (i = 0; i < m; i++ ) for ( j = 0; j < n; j++ )
-          {
-            A[i][j] = ...;
-          }
-          ON_SimpleArray<double> B(m);
-          for (i = 0; i < m; i++ )
-          {
-            B[i] = ...;
-          }
-
-          ON_SimpleArray<double> X; // solution returned here.
-          {
-            double** U = 0;
-            double* W = 0;
-            double** V = 0;
-            if ( ON_GetMatrixSVD(m,n,A.m,U,W,V) )
-            {
-              double* invW = 0;
-              int rankW = ON_InvertSVDW(n,W,W); // save invW into W
-              X.Reserve(n);
-              if ( ON_SolveSVD(m,n,U,W,V,B,X.Array()) )
-                X.SetCount(n);
-            }
-            onfree(U); // U allocated in ON_GetMatrixSVD()
-            onfree(W); // W allocated in ON_GetMatrixSVD()
-            onfree(V); // V allocated in ON_GetMatrixSVD()
-          }
-
-          if ( n == X.Count() )
-          {
-            ... use solution
-          }  
-Returns:
-  True if input is valid and X[] was calculated. 
-  False if input is not valid.
-*/
-ON_DECL
-bool ON_SolveSVD(
-  int row_count,
-  int col_count,
-  double const * const * U,
-  const double* invW,
-  double const * const * V,
-  const double* B,
-  double*& X
-  );
-  
 
 /*
 Description:
@@ -602,5 +459,160 @@ int ON_RowReduce(
           double** B, 
           double pivots[2] 
           );
+
+
+/*
+Description:
+  Calculate a row reduction matrix so that R*M = upper triangular matrixPerform simple row reduction on a matrix.  If A is square, positive
+  definite, and really really nice, then the returned B is the inverse
+  of A.  If A is not positive definite and really really nice, then it
+  is probably a waste of time to call this function.
+Parameters:
+  row_count - [in]
+  col_count - [in]
+  zero_pivot - [in]
+    absolute values <= zero_pivot_tolerance are considered to be zero
+  constA - [in]
+    nullptr or a row_count x col_count matrix.
+  bInitializeB - [in]
+    If true, then B is set to the rox_count x row_count identity
+    before the calculation begins.
+  bInitializeColumnPermutation - [in]
+    If true and nullptr != column_permutation, then
+    column_permutation[] is initialized to (0, 1, ..., col_count-1)
+    before the calculation begins.
+  A - [in/out]
+    A row_count X col_count matrix.  
+    If constA is not null, then A can be null or is the workspace used
+    to row reduce.
+    If constA is null, then the input A must not be null and must be initialized.
+    In all cases, the calculation destroys the contents of A and
+    output A contains garbage.
+  B - [in/out]
+    A a row_count X row_count matrix
+    The row operations applied to A are also applied to B.  
+    If the input B is the identity, then R*(input A) would have zeros below the diagonal.
+  column_permutation - [in/out]
+    The permutation applied to the columns of A is also applied to
+    the column_permutation[] array.
+    pivots - [out]
+    pivots[0] = maximum nonzero pivot
+    pivots[1] = minimum nonzero pivot
+    pivots[2] = largest pivot that was treated as zero
+Returns:
+  Rank of A.  If the returned value < min(row_count,col_count),
+  then a zero pivot was encountered.
+  If C = input value of A, then B*C = (I,*)
+*/
+ON_DECL
+unsigned int ON_RowReduce(
+  unsigned int row_count,
+  unsigned  col_count,
+  double zero_pivot_tolerance,
+  const double*const* constA,
+  bool bInitializeB,
+  bool bInitializeColumnPermutation,
+  double** A,
+  double** B,
+  unsigned int* column_permutation,
+  double pivots[3]
+  );
+
+/*
+Parameters:
+  N - [in] >= 1
+  M - [in]
+    M is an NxN matrix
+  
+  bTransposeM - [in]
+    If true, the eigenvectors of the transpose of M are calculated.
+    Put another way, if bTransposeM is false, then the "right"
+    eigenvectors are calculated;  if bTransposeM is true, then the "left"
+    eigenvectors are calculated.
+
+  lambda - [in]
+    known eigenvalue of M
+
+  lambda_multiplicity - [in]
+    > 0: known algebraic multiplicity of lambda
+    0: algebraic multiplicity is unknown.
+
+  termination_tolerances - [in]
+    An array of three tolerances that control when the calculation
+    will stop searching for eigenvectors.
+    If you do not understand what pivot values are, then pass nullptr
+    and the values (1.0e-12, 1.0e-3, 1.0e4) will be used.
+    If termination_tolerances[0] is not strictly positive, then 1.0e-12 is used.
+    If termination_tolerances[1] is not strictly positive, then 1.0e-3 is used.
+    If termination_tolerances[2] is not strictly positive, then 1.0e4 is used.
+
+    The search for eigenvectors will continue if condition 1, 
+    and condition 2, and condition 3a or 3b is true.
+
+    1) The number of found eigenvectors is < lambda_multiplicity.
+    2) eigenpivots[0] >= eigenpivots[1] > eigenpivots[2] >= 0.
+    3a) eigenpivots[1]/eigenpivots[0] < termination_tolerance[0].
+    3b) eigenpivots[1]/eigenpivots[0] > termination_tolerance[1]
+        or
+        eigenpivots[0] - eigenpivots[1] <= termination_tolerance[2]*eigenpivots[1].
+
+  eigenvectors - [out]
+    eigenvectors[0,...,eigendim-1][0,...,N-1]
+    a basis for the lambda eigenspace.  The eigenvectors are generally
+    neither normalized nor orthogonal. 
+
+  eigenprecision - [out]
+    eigenprecision[i] = maximum value of fabs(lambda*E[j] = E[j])/length(E) 0 <= j < N,
+    where E = eigenvectors[i].
+    If eigenprecision[i] is not "small" compared to nonzero coefficients in M and E,
+    then E is not precise.
+
+  eigenpivots - [out]
+    eigenpivots[0] = maximum nonzero pivot
+    eigenpivots[1] = minimum nonzero pivot
+    eigenpivots[2] = maximum "zero" pivot
+    When eigenpivots[2] s not "small" compared to eigenpivots[1],
+    the answer is suspect.
+
+Returns:
+  Number of eigenvectors found. In stable cases, this is the geometric
+  multiplicity of the eigenvalue.
+*/
+ON_DECL
+unsigned int ON_GetEigenvectors(
+  const unsigned int N,
+  const double*const* M,
+  bool bTransposeM,
+  double lambda,
+  unsigned int lambda_multiplicity,
+  const double* termination_tolerances,
+  double** eigenvectors,
+  double* eigenprecision,
+  double* eigenpivots
+  );
+
+ON_DECL
+double ON_EigenvectorPrecision(
+  const unsigned int N,
+  const double*const* M,
+  bool bTransposeM,
+  double lambda,
+  const double* eigenvector
+  );
+
+/*
+Returns:
+  Maximum of fabs( ((M-lambda*I)*X)[i] - B[i] ) for 0 <= i < N
+  Pass lambda = 0.0 if you're not testing some type of generalized eigenvalue.
+*/
+ON_DECL
+double ON_MatrixSolutionPrecision(
+  const unsigned int N,
+  const double*const* M,
+  bool bTransposeM,
+  double lambda,
+  const double* X,
+  const double* B
+  );
 
 #endif

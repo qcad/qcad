@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(OPENNURBS_POINT_GRID_INC_)
 #define OPENNURBS_POINT_GRID_INC_
@@ -28,7 +26,7 @@ public:
 
   void Initialize(void);  // zeros all fields
 
-  ON_BOOL32 Create( 
+  bool Create( 
           int,  // point count0 (>=1)
           int   // point count1 (>=1)
           );
@@ -47,90 +45,49 @@ public:
   /////////////////////////////////////////////////////////////////
   // ON_Object overrides
 
-  /*
-  Description:
-    Tests an object to see if its data members are correctly
-    initialized.
-  Parameters:
-    text_log - [in] if the object is not valid and text_log
-        is not NULL, then a brief englis description of the
-        reason the object is not valid is appened to the log.
-        The information appended to text_log is suitable for 
-        low-level debugging purposes by programmers and is 
-        not intended to be useful as a high level user 
-        interface tool.
-  Returns:
-    @untitled table
-    true     object is valid
-    false    object is invalid, uninitialized, etc.
-  Remarks:
-    Overrides virtual ON_Object::IsValid
-  */
-  ON_BOOL32 IsValid( ON_TextLog* text_log = NULL ) const;
+  bool IsValid( class ON_TextLog* text_log = nullptr ) const override;
 
-  void Dump( ON_TextLog& ) const; // for debugging
+  void Dump( ON_TextLog& ) const override; // for debugging
 
-  ON_BOOL32 Write(
+  bool Write(
          ON_BinaryArchive&  // open binary file
-       ) const;
+       ) const override;
 
-  ON_BOOL32 Read(
+  bool Read(
          ON_BinaryArchive&  // open binary file
-       );
+       ) override;
 
-  ON::object_type ObjectType() const;
+  ON::object_type ObjectType() const override;
 
   /////////////////////////////////////////////////////////////////
   // ON_Geometry overrides
 
-  int Dimension() const;
+  int Dimension() const override;
 
-  ON_BOOL32 GetBBox( // returns true if successful
-         double*,    // minimum
-         double*,    // maximum
-         ON_BOOL32 = false  // true means grow box
-         ) const;
+  // virtual ON_Geometry GetBBox override		
+  bool GetBBox( double* boxmin, double* boxmax, bool bGrowBox = false ) const override;
 
-  /*
-	Description:
-    Get tight bounding box of the point grid.
-	Parameters:
-		tight_bbox - [in/out] tight bounding box
-		bGrowBox -[in]	(default=false)			
-      If true and the input tight_bbox is valid, then returned
-      tight_bbox is the union of the input tight_bbox and the 
-      tight bounding box of the point grid.
-		xform -[in] (default=NULL)
-      If not NULL, the tight bounding box of the transformed
-      point grid is calculated.  The point grid is not modified.
-	Returns:
-    True if the returned tight_bbox is set to a valid 
-    bounding box.
-  */
-	bool GetTightBoundingBox( 
-			ON_BoundingBox& tight_bbox, 
-      int bGrowBox = false,
-			const ON_Xform* xform = 0
-      ) const;
+  // virtual ON_Geometry GetTightBoundingBox override		
+  bool GetTightBoundingBox( class ON_BoundingBox& tight_bbox, bool bGrowBox = false, const class ON_Xform* xform = nullptr ) const override;
 
-  ON_BOOL32 Transform( 
+  bool Transform( 
          const ON_Xform&
-         );
+         ) override;
 
   // virtual ON_Geometry::IsDeformable() override
-  bool IsDeformable() const;
+  bool IsDeformable() const override;
 
   // virtual ON_Geometry::MakeDeformable() override
-  bool MakeDeformable();
+  bool MakeDeformable() override;
 
-  ON_BOOL32 SwapCoordinates(
+  bool SwapCoordinates(
         int, int        // indices of coords to swap
-        );
+        ) override;
 
   /////////////////////////////////////////////////////////////////
   // Interface
 
-  ON_BOOL32 IsClosed( 
+  bool IsClosed( 
         int // dir
         ) const;
 
@@ -158,21 +115,21 @@ public:
         int         // dir 0 = "s", 1 = "t"
         ) const;
 
-  ON_BOOL32 SetPoint(      // set a single point
+  bool SetPoint(      // set a single point
         int, int, // point index ( 0 <= i <= PointCount(0), 0 <= j <= PointCount(1)
         const ON_3dPoint& // value of point
         );
 
-  ON_BOOL32 GetPoint(              // get a single control vertex
+  bool GetPoint(              // get a single control vertex
         int, int,   // CV index ( 0 <= i <= CVCount(0), 0 <= j <= CVCount(1)
         ON_3dPoint&      // gets euclidean cv when NURBS is rational
         ) const;
 
-  ON_BOOL32 Reverse(  // reverse grid order
+  bool Reverse(  // reverse grid order
     int // dir  0 = "s", 1 = "t"
     );
 
-  ON_BOOL32 Transpose(); // transpose grid points
+  bool Transpose(); // transpose grid points
 
   /////////////////////////////////////////////////////////////////
   // Implementation

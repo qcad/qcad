@@ -845,6 +845,8 @@ public:
 #endif
     }
 
+    static QString getFontFamilyFromFileName(const QString& fileName);
+
     static QString getFontFamily(const QTextCharFormat& format) {
 #if QT_VERSION >= 0x060000
         // note: QTextCharFormat::fontFamily is deprecated and broken in Qt 6:

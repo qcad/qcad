@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
 #include "opennurbs_gl.h" // ON_GL() function declarations
@@ -194,7 +192,7 @@ void ON_GL( int dim, int is_rat, int nurb_order, int cv_count,
             double xform[][4]
             )
 {
-  ON_BOOL32 bCallgluBeginEndCurve = false;
+  bool bCallgluBeginEndCurve = false;
   int i;
 
   GLint nknots = nurb_order + cv_count; // GL knot count = TL knot count + 2
@@ -446,8 +444,8 @@ void ON_GL( const ON_Mesh& mesh )
   ON_2fPoint t[4];
 
   const int face_count = mesh.FaceCount();
-  const ON_BOOL32 bHasNormals = mesh.HasVertexNormals();
-  const ON_BOOL32 bHasTCoords = mesh.HasTextureCoordinates();
+  const bool bHasNormals = mesh.HasVertexNormals();
+  const bool bHasTCoords = mesh.HasTextureCoordinates();
 
   glBegin(GL_TRIANGLES);
   for ( fi = 0; fi < face_count; fi++ ) {
@@ -599,7 +597,7 @@ void ON_GL( const ON_Material* pMat )
     ON_GL( pMat->Diffuse(), alpha, diffuse );
     ON_GL( pMat->Specular(), alpha, specular );
     ON_GL( pMat->Emission(), alpha, emission );
-    GLint shine = (GLint)(128.0*(pMat->Shine() / ON_Material::MaxShine()));
+    GLint shine = (GLint)(128.0*(pMat->Shine() / ON_Material::MaxShine));
     if ( shine == 0 ) {
       specular[0]=specular[1]=specular[2]=(GLfloat)0.0;
     }
@@ -623,8 +621,8 @@ void ON_GL( const ON_Light* light, GLenum light_index )
 
 void ON_GL( const ON_Light& light, GLenum light_index )
 {
-  ON_BOOL32 bPopModelViewMatrix = false;
-  ON_BOOL32 bPopProjectionMatrix = false;
+  bool bPopModelViewMatrix = false;
+  bool bPopProjectionMatrix = false;
 
   switch ( light.CoordinateSystem() ) 
   {
@@ -706,7 +704,7 @@ void ON_GL( ON_Viewport& viewport,
   viewport.SetScreenPort( port_left, port_right, port_bottom, port_top,
                           0, 0xff );
 
-  ON_BOOL32 bHaveCameraToClip = viewport.GetXform( 
+  bool bHaveCameraToClip = viewport.GetXform( 
                                        ON::camera_cs,  
                                        ON::clip_cs,
                                        projectionMatrix 
@@ -723,7 +721,7 @@ void ON_GL( const ON_Viewport& viewport )
 {
   // sets model view matrix (world to camera transformation)
   ON_Xform modelviewMatrix; // world to camera transformation
-  ON_BOOL32 bHaveWorldToCamera = viewport.GetXform( 
+  bool bHaveWorldToCamera = viewport.GetXform( 
                                        ON::world_cs,  
                                        ON::camera_cs,
                                        modelviewMatrix 

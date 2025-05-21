@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 ////////////////////////////////////////////////////////////////
 //
@@ -27,17 +25,19 @@ class ON_ClassId; // used for runtime class identification
 
 ////////////////////////////////////////////////////////////////
 //
-// Runtime class id
 //
+/*
+ Description:
+   OpenNURBS classes derived from ON_Object use ON_ClassId to
+   store run-time type information  
+   
+   The ON_OBJECT_DECLARE and ON_OBJECT_IMPLEMENT macros generate
+   the code that creates and initializes the ON_ClassId for each
+   class.
 
-// Description:
-//   Every class derived from ON_Object has a class id that records
-//   its class name, baseclass name, and class uuid.  The 
-//   ON_OBJECT_DECLARE and ON_OBJECT_IMPLEMENT macros generate
-//   the code that creates and initializes class ids.
-//
-//   The ON_Object::IsKindOf() and ON_Object::Cast() functions
-//   use these class ids.
+   The ON_Object::IsKindOf() and ON_Object::Cast() functions
+   use this run-time type information.
+*/
 class ON_CLASS ON_ClassId
 {
 public:
@@ -50,20 +50,11 @@ public:
   //   sClassName - [in] name of the class (like ON_Geometry)
   //   sBaseClassName - [in] name of baseclass (like ON_Object)
   //   create - [in] function to create a new object(like CreateNewON_Geometry())
-  //   copy - [in] function to copy
   //   sUUID - [in] UUID in registry format from Windows guidgen.exe
   ON_ClassId( 
           const char* sClassName,
           const char* sBaseClassName,
-          ON_Object* (*create)(),
-          const char* sUUID
-           );
-
-  ON_ClassId( 
-          const char* sClassName,
-          const char* sBaseClassName,
-          ON_Object* (*create)(),
-          bool (*copy)(const ON_Object*,ON_Object* ),
+          class ON_Object* (*create)(),
           const char* sUUID
            );
 
@@ -89,7 +80,7 @@ public:
   //   Pointer to the class's ON_ClassId.
   // Example:
   //   ON_UUID brep_uuid = ON_UuidFromString("60B5DBC5-E660-11d3-BFE4-0010830122F0");
-  //   const ON_ClassId* brep_id = ON_CLassId::ClassId(brep_uuid);
+  //   const ON_ClassId* brep_id = ON_ClassId::ClassId(brep_uuid);
   static const ON_ClassId* ClassId( 
           ON_UUID class_uuid
           );
@@ -157,15 +148,16 @@ public:
   //   potential_parent - [in] Class to test as parent.
   // Returns:
   //   true if this is derived from potential_parent.
-	ON_BOOL32 IsDerivedFrom( 
+	bool IsDerivedFrom( 
     const ON_ClassId* potential_parent
     ) const;
 
-  // Descrption:
-  //   Create an instance of the class associated with
-  //   class id.
+  // Description:
+  //   Use the default constructor to create an instance of the
+  //   class on the heap.
   // Returns:
-  //   Instance of the class id's class.
+  //   Null or a pointer to an instance of the class created
+  //   using new and the class's default constructor.
   ON_Object* Create() const;
 
   // Returns:
@@ -192,28 +184,33 @@ private:
   const ON_ClassId* m_pBaseClassId;  // base class id
   char m_sClassName[80];              
   char m_sBaseClassName[80];
-  ON_Object* (*m_create)();
+  // m_create points to a function that calls the default constructor.
+  // m_create() is used to create classes from uuids when reading files.
+  ON_Object* (*m_create)(); 
   ON_UUID m_uuid;
   int m_mark; // bit 0x80000000 is used to indicate new extensions
 
 private:
-  // no implementaion to prohibit use
+  // There are no implementations of the default constructor, copy constructor
+  // or operator=() to prohibit use.
   ON_ClassId();
   ON_ClassId( const ON_ClassId&);
   ON_ClassId& operator=( const ON_ClassId&);
 
+private:
   void ConstructorHelper( 
           const char* sClassName, 
           const char* sBaseClassName, 
           const char* sUUID
           );
 
-  // This is a temporary way to add simple virtual functions
-  // to ON_Object without breaking the SDK.  At V6 these will
-  // be redone to be ordinary virtual functions.
-  friend class ON_Object;
+  // The m_f[] pointers provide a way add a "virtual" function to
+  // a class derived from ON_Object without breaking the SDK.
+  // At each SDK breaking release, any functions that use this
+  // mechanism are made into C++ virtual functions on the appropriate
+  // classes. Currently, none of these are in use.
   unsigned int m_class_id_version; 
-  bool (*m_copy)(const ON_Object*,ON_Object*); // on version 1 class ids
+  void* m_f1;
   void* m_f2;
   void* m_f3;
   void* m_f4;
@@ -223,15 +220,25 @@ private:
   void* m_f8;
 };
 
-// Description:
-//   Macro to easily get a pointer to the ON_ClassId for a
-//   given class;
-//
-// Example:
-//
-//          const ON_ClassId* brep_class_id = ON_CLASS_ID("ON_Brep");
-//
-#define ON_CLASS_ID( cls ) ON_ClassId::ClassId( #cls )
+/*
+Description:
+  ON_CLASS_RTTI is a macro to get the class's run-time type
+  information from class name.
+Example:
+        // Get the ON_Brep class's run-time type information.
+        const ON_ClassId& brep_rtti = ON_CLASS_RTTI(ON_Brep);
+*/
+#define ON_CLASS_RTTI( cls ) cls::m_##cls##_class_rtti
+
+/*
+Description:
+  ON_CLASS_ID is a macro to get the class's uuid from
+  a class name.
+Example:
+        // Get the class id for ON_Brep.
+        ON_UUID brep_class_id = ON_CLASS_ID(ON_Brep);
+*/
+#define ON_CLASS_ID( cls ) ON_CLASS_RTTI( cls ).Uuid()
 
 /*
 Description:
@@ -247,119 +254,144 @@ Returns:
 ON_DECL
 ON_UUID ON_GetMostRecentClassIdCreateUuid();
 
-typedef int (*ON_Vtable_func)(void);
 
-struct ON_Vtable
-{
-  // The actual number of virtual functions depends on the class.
-  // The four in f[4] is just there to make it easy to see the 
-  // first four in the debugger.  There can be fewer or more
-  // than four virtual functions.  The function prototype
-  // also depends on the class defintion.  In particular,
-  // it is probably not int function(void).
-  ON_Vtable_func f[4];
-};
+#define ON_OBJECT_DECLARE_VIRTUAL
+#define ON_OBJECT_DECLARE_OVERRIDE override
 
 /*
-Description:
-  Expert user function to get a pointer to 
-  a class's vtable.
-Parameters:
-  pClass - [in] a class that has a vtable.
-    If you pass a class that does not have
-    a vtable, then the returned pointer is
-    garbage.
-Returns:
-  A pointer to the vtable.
-*/
-ON_DECL
-struct ON_Vtable* ON_ClassVtable(void* p);
-
-
-/*
-All classes derived from ON_Object must have 
-
+All classes derived from ON_Object must have the declaration macro
   ON_OBJECT_DECLARE( <classname> );
-
-as the first line in their class definition an a corresponding
-
-  ON_VIRTUAL_OBJECT_IMPLEMENT( <classname>, <basclassname>, <classuuid> );
-
-or 
-
-  ON_OBJECT_IMPLEMENT( <classname>, <basclassname>, <classuuid> );
-
-in a .CPP file.
+as the first line in their class definition, must have a robust
+operator=(), should have a robust copy constructor, and must
+have exactly one of the following implementation macros in 
+a .cpp file.
+  Classes with a pure virtual function:
+    ON_VIRTUAL_OBJECT_IMPLEMENT( <classname>, <basclassname>, <classuuid> )
+  Classes with an operator= and copy constructor.
+    ON_OBJECT_IMPLEMENT( <classname>, <basclassname>, <classuuid> )
+  Classes with an operator=, but no copy constructor.
+    ON_OBJECT_IMPLEMENT_NO_COPYCTOR( <classname>, <basclassname>, <classuuid> )
 */
-#define ON_OBJECT_DECLARE( cls )                                \
-  protected:                                                    \
-    static void* m_s_##cls##_ptr;                               \
-  public:                                                       \
-    static const ON_ClassId m_##cls##_class_id;                 \
-    /*record used for ON_Object runtime type information*/      \
-                                                                \
-    static cls * Cast( ON_Object* );                            \
-    /*Description: Similar to C++ dynamic_cast*/                \
-    /*Returns: object on success. NULL on failure*/             \
-                                                                \
-    static const cls * Cast( const ON_Object* );                \
-    /*Description: Similar to C++ dynamic_cast*/                \
-    /*Returns: object on success. NULL on failure*/             \
-                                                                \
-    virtual const ON_ClassId* ClassId() const;                  \
-    /*Description:*/                                            \
-                                                                \
-  private:                                                      \
-    virtual ON_Object* DuplicateObject() const;                 \
-    /*used by Duplicate to create copy of an object.*/          \
-                                                                \
-    static bool Copy##cls( const ON_Object*, ON_Object* );      \
-    /* used by ON_Object::CopyFrom copy object into this. */    \
-    /* In V6 Copy##cls will vanish and be replaced with   */    \
-    /* virtual bool CopyFrom( const ON_Object* src )      */    \
-                                                                \
-  public:                                                       \
-    cls * Duplicate() const;                                    \
-    /*Description: Expert level tool - no support available.*/  \
-    /*If this class is derived from CRhinoObject, use CRhinoObject::DuplicateRhinoObject instead*/
+#define ON_OBJECT_DECLARE( cls )                          \
+  protected:                                              \
+    static void* m_s_##cls##_ptr;                         \
+                                                          \
+  public:                                                 \
+    /* OpenNURBS class run-time type information */       \
+    static const ON_ClassId m_##cls##_class_rtti;         \
+                                                          \
+    /*OpenNURBS platform independent dynamic cast*/       \
+    static cls * Cast( ON_Object* );                      \
+                                                          \
+    /*OpenNURBS platform independent dynamic cast*/       \
+    static const cls * Cast( const ON_Object* );          \
+                                                          \
+    /*Returns: OpenNURBS run-time type information.*/     \
+    ON_OBJECT_DECLARE_VIRTUAL const ON_ClassId* ClassId() const ON_OBJECT_DECLARE_OVERRIDE; \
+                                                          \
+  public:                                                 \
+    /*Description:                                     */ \
+    /*  Uses a virtual function to create a deep copy. */ \
+    /*Returns:                                         */ \
+    /*  null or a deep copy with type this->ClassId(). */ \
+    /*See Also:                                        */ \
+    /*  ON_Curve::DuplicateCurve()                     */ \
+    /*  ON_Surface::DuplicateSurface()                 */ \
+    /*  CRhinoObject::DuplicateRhinoObject()           */ \
+    cls * Duplicate() const;                              \
+                                                          \
+    /*Description:                                     */ \
+    /*  Uses operator= to copy src to this.            */ \
+    /*Returns:                                         */ \
+    /*  True if successful.                            */ \
+    /*  False if src is null or an incompatible type.  */ \
+    ON_OBJECT_DECLARE_VIRTUAL bool CopyFrom(const ON_Object*) ON_OBJECT_DECLARE_OVERRIDE; \
+                                                          \
+  private:                                                \
+    /* Duplicate() uses this virtual helper function. */  \
+    ON_OBJECT_DECLARE_VIRTUAL ON_Object* Internal_DeepCopy() const ON_OBJECT_DECLARE_OVERRIDE \
+                                                          
 
-// Objects derived from ON_Object that do not have a valid new, operator=, 
-// or copy constructor must use ON_VIRTUAL_OBJECT_IMPLEMENT instead of
-// ON_OBJECT_IMPLEMENT.  Objects defined with ON_VIRTUAL_OBJECT_IMPLEMENT
-// cannot be serialized using ON_BinaryArchive::ReadObject()/WriteObject()
-// or duplicated using ON_Object::Duplicate().
-//
-// The Cast() and ClassId() members work on objects defined with either
-// ON_VIRTUAL_OBJECT_IMPLEMENT or ON_OBJECT_IMPLEMENT.
+/*
+Classes derived from ON_Object that are pure virtual classes,
+or do not have a valid default constructor, valid operator new
+or valid operator= must use ON_VIRTUAL_OBJECT_IMPLEMENT in their
+implementation. Classes implemented with ON_VIRTUAL_OBJECT_IMPLEMENT
+cannot be serialized using ON_BinaryArchive::ReadObject()/WriteObject()
+or duplicated using ON_Object::Duplicate().
+The Cast() and ClassId() members work on classes implemented with
+ON_VIRTUAL_OBJECT_IMPLEMENT, ON_OBJECT_IMPLEMENT or
+ON_OBJECT_IMPLEMENT_NO_COPYCTOR
+*/
 #define ON_VIRTUAL_OBJECT_IMPLEMENT( cls, basecls, uuid ) \
-  void* cls::m_s_##cls##_ptr = 0;\
-  const ON_ClassId cls::m_##cls##_class_id(#cls,#basecls,0,0,uuid);\
-  cls * cls::Cast( ON_Object* p) {return(cls *)Cast((const ON_Object*)p);} \
-  const cls * cls::Cast( const ON_Object* p) {return(p&&p->IsKindOf(&cls::m_##cls##_class_id))?(const cls *)p:0;} \
-  const ON_ClassId* cls::ClassId() const {return &cls::m_##cls##_class_id;} \
-  ON_Object* cls::DuplicateObject() const {return 0;} \
-  bool cls::Copy##cls( const ON_Object*, ON_Object* ) {return false;} \
-  cls * cls::Duplicate() const {return static_cast<cls *>(DuplicateObject());}
+  void* cls::m_s_##cls##_ptr = nullptr; \
+  const ON_ClassId cls::m_##cls##_class_rtti(#cls,#basecls,0,uuid);\
+  cls * cls::Cast( ON_Object* p) {return(p&&p->IsKindOf(&cls::m_##cls##_class_rtti))?static_cast< cls *>(p):nullptr;} \
+  const cls * cls::Cast( const ON_Object* p) {return(p&&p->IsKindOf(&cls::m_##cls##_class_rtti))?static_cast<const cls *>(p):nullptr;} \
+  const ON_ClassId* cls::ClassId() const {return &cls::m_##cls##_class_rtti;} \
+  bool cls::CopyFrom(const ON_Object*) {return false;} \
+  cls * cls::Duplicate() const {return static_cast< cls *>(this->Internal_DeepCopy());} \
+  ON_Object* cls::Internal_DeepCopy() const {return nullptr;}
 
-// Objects derived from ON_Object that use ON_OBJECT_IMPLEMENT must
-// have a valid operator= and copy constructor.  Objects defined with
-// ON_OBJECT_IMPLEMENT may be serialized using 
-// ON_BinaryArchive::ReadObject()/WriteObject()
-// and duplicated by calling ON_Object::Duplicate().
+/*
+Classes derived from ON_Object that have a valid default constructor,
+valid copy constructor, operator new and operator= can use
+ON_OBJECT_IMPLEMENT in their implementation.  Classes implemented
+with ON_OBJECT_IMPLEMENT can be created from their run-time type
+information id and their Duplicate() function will use the class's
+copy constructor to create a deep copy.
+*/
 #define ON_OBJECT_IMPLEMENT( cls, basecls, uuid ) \
-  void* cls::m_s_##cls##_ptr = 0;\
+  void* cls::m_s_##cls##_ptr = nullptr; \
   static ON_Object* CreateNew##cls() {return new cls();} \
-  const ON_ClassId cls::m_##cls##_class_id(#cls,#basecls,CreateNew##cls,cls::Copy##cls,uuid);\
-  cls * cls::Cast( ON_Object* p) {return(cls *)Cast((const ON_Object*)p);} \
-  const cls * cls::Cast( const ON_Object* p) {return(p&&p->IsKindOf(&cls::m_##cls##_class_id))?(const cls *)p:0;} \
-  const ON_ClassId* cls::ClassId() const {return &cls::m_##cls##_class_id;} \
-  ON_Object* cls::DuplicateObject() const {cls* p = new cls(); if (p) *p=*this; return p;} \
-  bool cls::Copy##cls( const ON_Object* src, ON_Object* dst ){cls* d;const cls* s;if (0!=(s=cls::Cast(src))&&0!=(d=cls::Cast(dst))) {d->cls::operator=(*s);return true;}return false;} \
-  cls * cls::Duplicate() const {return static_cast<cls *>(DuplicateObject());}
+  const ON_ClassId cls::m_##cls##_class_rtti(#cls,#basecls,CreateNew##cls,uuid);\
+  cls * cls::Cast( ON_Object* p) {return(p&&p->IsKindOf(&cls::m_##cls##_class_rtti))?static_cast< cls *>(p):nullptr;} \
+  const cls * cls::Cast( const ON_Object* p) {return(p&&p->IsKindOf(&cls::m_##cls##_class_rtti))?static_cast<const cls *>(p):nullptr;} \
+  const ON_ClassId* cls::ClassId() const {return &cls::m_##cls##_class_rtti;} \
+  bool cls::CopyFrom( const ON_Object* src){const cls * s=cls::Cast(src); if ( nullptr != this && nullptr != s) {*this = *s; return true;}return false;} \
+  cls * cls::Duplicate() const {return static_cast< cls *>(this->Internal_DeepCopy());} \
+  ON_Object* cls::Internal_DeepCopy() const {return new cls (*this);}
+
+/*
+Classes derived from ON_Object that have a valid default constructor,
+operator new and operator=, but do not have a valid copy constructor,
+can use ON_OBJECT_IMPLEMENT_NO_COPYCTOR in their implementation.
+Classes implemented with ON_OBJECT_IMPLEMENT_NO_COPYCTOR can be created 
+from their run-time type information id and their Duplicate() function
+will use the class's default constructor and operator= to create a
+deep copy.
+*/
+#define ON_OBJECT_IMPLEMENT_NO_COPYCTOR( cls, basecls, uuid ) \
+  void* cls::m_s_##cls##_ptr = nullptr; \
+  static ON_Object* CreateNew##cls() {return new cls();} \
+  const ON_ClassId cls::m_##cls##_class_rtti(#cls,#basecls,CreateNew##cls,uuid);\
+  cls * cls::Cast( ON_Object* p) {return(p&&p->IsKindOf(&cls::m_##cls##_class_rtti))?static_cast< cls *>(p):nullptr;} \
+  const cls * cls::Cast( const ON_Object* p) {return(p&&p->IsKindOf(&cls::m_##cls##_class_rtti))?static_cast<const cls *>(p):nullptr;} \
+  const ON_ClassId* cls::ClassId() const {return &cls::m_##cls##_class_rtti;} \
+  bool cls::CopyFrom( const ON_Object* src){const cls* s=cls::Cast(src); if ( 0 != this && 0 != s) {*this = *s; return true;}return false;} \
+  cls * cls::Duplicate() const {return static_cast< cls *>(this->Internal_DeepCopy());} \
+  ON_Object* cls::Internal_DeepCopy() const { cls* p = new cls();if (p) {*p = *this; return p;}return nullptr;}
+
+/*
+Classes derived from ON_Object that have a valid default constructor,
+operator new and operator=, but do not have a valid copy constructor or assignment operator,
+can use ON_OBJECT_IMPLEMENT_NO_COPY in their implementation.
+Classes implemented with ON_OBJECT_IMPLEMENT_NO_COPY can be created
+from their run-time type information id and their Duplicate() function
+will silently return a nullptr.  CopyFrom will return false.
+*/
+#define ON_OBJECT_IMPLEMENT_NO_COPY( cls, basecls, uuid ) \
+  void* cls::m_s_##cls##_ptr = nullptr; \
+  static ON_Object* CreateNew##cls() {return new cls();} \
+  const ON_ClassId cls::m_##cls##_class_rtti(#cls,#basecls,CreateNew##cls,uuid);\
+  cls * cls::Cast( ON_Object* p) {return(p&&p->IsKindOf(&cls::m_##cls##_class_rtti))?static_cast< cls *>(p):nullptr;} \
+  const cls * cls::Cast( const ON_Object* p) {return(p&&p->IsKindOf(&cls::m_##cls##_class_rtti))?static_cast<const cls *>(p):nullptr;} \
+  const ON_ClassId* cls::ClassId() const {return &cls::m_##cls##_class_rtti;} \
+  bool cls::CopyFrom( const ON_Object* src){return false;} \
+  cls * cls::Duplicate() const {return nullptr;} \
+  ON_Object* cls::Internal_DeepCopy() const { return nullptr;}
 
 #define ON__SET__THIS__PTR(ptr) if (ptr) *((void**)this) = ptr
-
-class ON_UserData;
 
 class ON_CLASS ON_UserString
 {
@@ -375,14 +407,20 @@ public:
 };
 
 #if defined(ON_DLL_TEMPLATE)
-// This stuff is here because of a limitation in the way Microsoft
-// handles templates and DLLs.  See Microsoft's knowledge base 
-// article ID Q168958 for details.
-#pragma warning( push )
-#pragma warning( disable : 4231 )
 ON_DLL_TEMPLATE template class ON_CLASS ON_ClassArray<ON_UserString>;
-#pragma warning( pop )
 #endif
+
+/*
+Description:
+  When ON_Object::IsValid() fails and returns false, ON_IsNotValid()
+  is called.  This way, a developer can put a breakpoint in
+  ON_IsNotValid() and stop execution at the exact place IsValid()
+  fails.
+Returns:
+  false;
+*/
+ON_DECL
+bool ON_IsNotValid();
 
 ////////////////////////////////////////////////////////////////
 
@@ -391,61 +429,43 @@ ON_DLL_TEMPLATE template class ON_CLASS ON_ClassArray<ON_UserString>;
 //   runtime class id or support object level 3DM serialization
 class ON_CLASS ON_Object
 {
-  /////////////////////////////////////////////////////////////////
-  //
-  // Any object derived from ON_Object should have a
-  //   ON_OBJECT_DECLARE(ON_...);
-  // as the last line of its class definition and a
-  //   ON_OBJECT_IMPLEMENT( ON_..., ON_baseclass );
-  // in a .cpp file.
-  //
-  // These macros declare and implement public members
-  //
-  // static ON_ClassId m_ON_Object;
-  // static cls * Cast( ON_Object* );
-  // static const cls * Cast( const ON_Object* );
-  // virtual const ON_ClassId* ClassId() const;
+#undef ON_OBJECT_DECLARE_VIRTUAL
+#undef ON_OBJECT_DECLARE_OVERRIDE
+#define ON_OBJECT_DECLARE_VIRTUAL virtual
+#define ON_OBJECT_DECLARE_OVERRIDE
+  // This is the base class
   ON_OBJECT_DECLARE(ON_Object);
+  // Every other use of ON_OBJECT_DECLARE() is in derived class
+#undef ON_OBJECT_DECLARE_VIRTUAL
+#undef ON_OBJECT_DECLARE_OVERRIDE
+#define ON_OBJECT_DECLARE_VIRTUAL
+#define ON_OBJECT_DECLARE_OVERRIDE override
+
 public:
+  ON_Object() ON_NOEXCEPT;
+  virtual ~ON_Object();
+  ON_Object( const ON_Object& );
+  ON_Object& operator=( const ON_Object& );
+
+#if defined(ON_HAS_RVALUEREF)
+  // rvalue copy constructor
+  ON_Object( ON_Object&& ) ON_NOEXCEPT;
+
+  // The rvalue assignment operator calls this->PurgeUserData()
+  // which calls unknown destructors that could throw exceptions.
+  ON_Object& operator=( ON_Object&& );
+#endif
+
+public:
+
+
+
 
   /*
   Description:
-    Copies src into this, if possible.
-  Parameters:
-    src - [in]
-  Returns:
-    True if this->operator= could be called to copy src.
-  Remarks:
-    This should be virtual function declared in the
-    ON_OBJECT_DECLARE macro along the lines of DuplicateObject()
-    but is was added after the SDK was frozen (adding virtual
-    functions breaks the SDK).  In V6, the function will work
-    the same but be implemented like DuplicateObject();
+    Sets m_user_data_list = 0.
   */
-  bool CopyFrom( const ON_Object* src );
-
-public:
-
-#if defined(ON_DLL_EXPORTS) || defined(ON_DLL_IMPORTS)
-  // See comments at the top of opennurbs_object.cpp for details.
-
-  // new/delete
-  void* operator new(size_t);
-  void  operator delete(void*);
-
-  // array new/delete
-  void* operator new[] (size_t);
-  void  operator delete[] (void*);
-
-  // in place new/delete
-  void* operator new(size_t,void*);
-  void  operator delete(void*,void*);
-#endif
-
-  ON_Object();
-  ON_Object( const ON_Object& );
-  ON_Object& operator=( const ON_Object& );
-  virtual ~ON_Object();
+  void EmergencyDestroy();
 
   /*
   Description:
@@ -487,13 +507,13 @@ public:
     static Cast() members declared in the ON_OBJECT_DECLARE
     macro.  If we determine that dynamic_cast is properly 
     supported and implemented by all supported compilers, 
-    then IsKindOf() may dissappear.  If an application needs
+    then IsKindOf() may disappear.  If an application needs
     to determine if a pointer points to a class derived from
     ON_SomeClassName, then call 
     ON_SomeClassName::Cast(mystery pointer) and check for 
     a non-null return.
   */
-  ON_BOOL32 IsKindOf( 
+  bool IsKindOf( 
         const ON_ClassId* pClassId
         ) const;
 
@@ -503,8 +523,8 @@ public:
     initialized.
   Parameters:
     text_log - [in] if the object is not valid and text_log
-        is not NULL, then a brief englis description of the
-        reason the object is not valid is appened to the log.
+        is not nullptr, then a brief english description of the
+        reason the object is not valid is appended to the log.
         The information appended to text_log is suitable for 
         low-level debugging purposes by programmers and is 
         not intended to be useful as a high level user 
@@ -514,8 +534,40 @@ public:
     true     object is valid
     false    object is invalid, uninitialized, etc.
   */
-  virtual
-  ON_BOOL32 IsValid( ON_TextLog* text_log = NULL ) const = 0;
+  virtual bool IsValid( class ON_TextLog* text_log = nullptr ) const;
+
+  /*
+  Description:
+    Tests to see if this is null in ways that will prevent compilers like
+    CLang from thinking the test is not necessary. 
+    The reason the runtime test is being performed is to find bugs that call 
+    member functions on null pointers.
+  */
+  bool ThisIsNullptr(
+    bool bSilentError
+  ) const;
+
+  /*
+  Description:
+    Check for corrupt data values that are likely to cause crashes.
+  Parameters:
+    bRepair - [in]
+      If true, const_cast<> will be used to change the corrupt data
+      so that crashes are less likely.
+    bSilentError - [in]
+      If true, ON_ERROR will not be called when corruption is detected.
+    text_log - [out]
+      If text_log is not null, then a description of corruption 
+      is printed using text_log.
+  Remarks:
+    Ideally, IsCorrupt() would be a virtual function on ON_Object,
+    but doing that at this point would break the public SDK.
+  */
+  bool IsCorrupt(
+    bool bRepair,
+    bool bSilentError,
+    class ON_TextLog* text_log
+  ) const;
 
   /*
   Description:
@@ -568,7 +620,7 @@ public:
     false and does nothing.
   */
   virtual
-  ON_BOOL32 Write(
+  bool Write(
          ON_BinaryArchive& binary_archive
        ) const;
 
@@ -588,7 +640,7 @@ public:
     false and does nothing.
   */
   virtual
-  ON_BOOL32 Read(
+  bool Read(
          ON_BinaryArchive& binary_archive
        );
 
@@ -600,22 +652,6 @@ public:
 
   Returns: 
     ON::object_type enum value.
-
-    @untitled table
-    ON::unknown_object_type      unknown object
-    ON::point_object             derived from ON_Point
-    ON::pointset_object          some type of ON_PointCloud, ON_PointGrid, ...
-    ON::curve_object             derived from ON_Curve
-    ON::surface_object           derived from ON_Surface
-    ON::brep_object              derived from ON_Brep
-    ON::extrusion_object         derived from ON_Extrusion
-    ON::mesh_object              derived from ON_Mesh
-    ON::layer_object             derived from ON_Layer
-    ON::material_object          derived from ON_Material
-    ON::light_object             derived from ON_Light
-    ON::annotation_object        derived from ON_Annotation,
-    ON::userdata_object          derived from ON_UserData
-    ON::text_dot                 derived from ON_TextDot
 
   Remarks:
     The default implementation of this virtual function returns
@@ -633,28 +669,24 @@ public:
       ON_Material.m_material_id, ON_3dmObjectAttributes.m_uuid
       ).
   Returns:
-    The id used to identify the object in the openurbs model.
+    The id used to identify the object in the opennurbs model.
   */
   virtual
   ON_UUID ModelObjectId() const;
 
-  /////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
   //
-  // User data provides a standard way for extra information to
-  // be attached to any class derived from ON_Object.  The attached
-  // information can persist and be transformed.  If you use user
-  // data, please carefully read all the comments from here to the
-  // end of the file.
+  // BEGIN: User string support
   //
 
   /*
   Description:
-    Attach a user string to an object.  This information will
-    perisist through copy construction, operator=, and file IO.
+    Attach a user string to the object.  This information will
+    persist through copy construction, operator=, and file IO.
   Parameters:
     key - [in] id used to retrieve this string.
     string_value - [in] 
-      If NULL, the string with this id will be removed.
+      If nullptr, the string with this id will be removed.
   Returns:
     True if successful.
   */
@@ -665,7 +697,24 @@ public:
 
   /*
   Description:
-    Get user string from an object.
+    Append entries to the user string list
+  Parameters:
+    count - [in]
+      number of element in us[] array
+    user_strings - [in]
+      entries to append.
+    bReplace - [in]
+      If bReplace is true, then existing entries with the same key are
+      updated with the new entry's value.  If bReplace is false, then
+      existing entries are not updated.
+  Returns:
+    Number of entries added, deleted, or modified.
+  */
+  int SetUserStrings( int count, const ON_UserString* user_strings, bool bReplace );
+
+  /*
+  Description:
+    Get user string from the object.
   Parameters:
     key - [in] id used to retrieve the string.
     string_value - [out]
@@ -679,7 +728,7 @@ public:
 
   /*
   Description:
-    Get a list of all user strings on an object.
+    Get a list of all user strings on the object.
   Parameters:
     user_strings - [out]
       user strings are appended to this list.
@@ -692,7 +741,7 @@ public:
 
   /*
   Description:
-    Get a list of all user string keys on an object.
+    Get a list of all user string keys on the object.
   Parameters:
     user_string_keys - [out]
       user string keys are appended to this list.
@@ -702,6 +751,26 @@ public:
   int GetUserStringKeys( 
     ON_ClassArray<ON_wString>& user_string_keys 
     ) const;
+
+  /*
+  Returns:
+    Number of user strings on the object.
+  */
+  int UserStringCount() const;
+
+  //
+  // END: User string support
+  //
+  //////////////////////////////////////////////////////////////////
+
+  /////////////////////////////////////////////////////////////////
+  //
+  // User data provides a standard way for extra information to
+  // be attached to any class derived from ON_Object.  The attached
+  // information can persist and be transformed.  If you use user
+  // data, please carefully read all the comments from here to the
+  // end of the file.
+  //
 
   /*
   Description:
@@ -718,8 +787,8 @@ public:
     AttachUserData() will fail if the user data's m_userdata_uuid
     field is nil or not unique.
   */
-  ON_BOOL32 AttachUserData( 
-          ON_UserData* pUserData 
+  bool AttachUserData( 
+          class ON_UserData* pUserData 
           );
 
   /*
@@ -739,8 +808,8 @@ public:
   Remarks:
     Call delete pUserData if you want to destroy the user data.
   */
-  ON_BOOL32 DetachUserData(
-          ON_UserData* pUserData 
+  bool DetachUserData(
+          class ON_UserData* pUserData 
           );
 
 
@@ -755,7 +824,7 @@ public:
     Deleting the returned user data will automatically remove
     the user data from the object.
   */
-  ON_UserData* GetUserData( 
+  class ON_UserData* GetUserData( 
           const ON_UUID& userdata_uuid
           ) const;
 
@@ -779,7 +848,7 @@ public:
     call FirstUserData() and then use ON_UserData::Next()
     to traverse the list.
   */
-  ON_UserData* FirstUserData() const;
+  class ON_UserData* FirstUserData() const;
 
   /*
   Description:
@@ -789,19 +858,88 @@ public:
     xform - [in] transformation to apply to user data
   */
   void TransformUserData( 
-    const ON_Xform& xform
+    const class ON_Xform& xform
     );
 
   /*
   Description:
-    Expert user tool that copies user data that has a positive 
-    m_userdata_copycount from the source_object to this.
+    When a userdata item is copied or moved from a source object to
+    a destination object, the ON_Object::UserDataConflictResolution
+    enum values specify how conflicts are resolved.
+  Remark:
+    A userdata item "conflict" occurs when both the destination
+    and source object have a user data item with the same
+    value of ON_UserData::m_userdata_uuid.
+  */
+  enum class UserDataConflictResolution : unsigned char
+  {
+    destination_object = 0,       // use destination item
+    source_object = 1,            // use source item
+    source_copycount_gt = 2,      // use source item if source copycount > destination copy count
+    source_copycount_ge = 3,      // use source item if source copycount >= destination copy count
+    destination_copycount_gt = 4, // use destination item if destination copycount > source copy count
+    destination_copycount_ge = 5, // use destination item if destination copycount >= source copy count
+    delete_item = 6               // delete item from the destination object
+  };
+
+  /*
+  Description:
+    Expert user tool that copies user data items with positive values of
+    ON_UserData.m_userdata_copycount from source_object to "this.
   Parameters:
-    source_object - [in] source of user data to copy
+    source_object - [in] 
+      source of user data to copy
+    source_userdata_item_id - [in]
+      If source_userdata_item_id  is not nil, then only the user data item
+      with a matching ON_UserData.m_userdata_uuid value will be copied.
+    userdata_conflict_resolution - [in]
+      method to resolve userdata item conflicts.
   Remarks:
     Generally speaking you don't need to use CopyUserData().
     Simply rely on ON_Object::operator=() or the copy constructor
     to do the right thing.
+  Returns:
+    Number of user data items that were copied.
+  */
+  unsigned int CopyUserData( 
+    const ON_Object& source_object,
+    ON_UUID source_userdata_item_id,
+    ON_Object::UserDataConflictResolution userdata_conflict_resolution
+    );
+
+  /*
+  Description:
+    Expert user tool that moves user data items from source_object to "this.
+  Parameters:
+    source_object - [in] 
+      source of user data to copy
+    source_userdata_item_id - [in]
+      If source_userdata_item_id  is not nil, then only the user data item
+      with a matching ON_UserData.m_userdata_uuid value will be moved.
+    userdata_conflict_resolution - [in]
+      method to resolve userdata item conflicts.
+    bDeleteAllSourceItems - [in]
+      If bDeleteAllSourceItems is true, then any userdata items
+      that are not copied from source_object are deleted.
+  Remarks:
+    Generally speaking you don't need to use MoveUserData().
+    Simply rely on ON_Object::operator=() or the copy constructor
+    to do the right thing.
+  Returns:
+    Number of user data items that were moved.
+  */
+  unsigned int MoveUserData( 
+    ON_Object& source_object,
+    ON_UUID source_userdata_item_id,
+    ON_Object::UserDataConflictResolution userdata_conflict_resolution,
+    bool bDeleteAllSourceItems
+    );
+
+  /*
+  Description:
+    Calls CopyUserData(source_object,ON_Object::UserDataConflictResolution::source_object).
+  Parameters:
+    source_object - [in] 
   */
   void CopyUserData( 
     const ON_Object& source_object 
@@ -809,15 +947,211 @@ public:
 
   /*
   Description:
-    Expert user tool Moves user data from source_object 
-    to this, including user data with a nil m_userdata_copycount.
-    Deletes any source user data with a duplicate m_userdata_uuid
-    on this.
+    Calls MoveUserData(source_object,ON_Object::UserDataConflictResolution::source_object,true).
+  Parameters:
+    source_object - [in] 
   */
   void MoveUserData( 
     ON_Object& source_object 
     );
+  
+  /*
+  Description:
+    Uses the destination_manifest to update references to other components.
+    This is typically done when a component's references came from a "source" 
+    context and are being updated to the "destination" context. For example,
+    inserting one model into another when index, id, and name conflicts 
+    need to be resolved at the time of insertion.
+  Parameters:
+    source_manifest - [in]
+      A manifest of the source context with indices and ids 
+      corresponding to the current component references.
+      If this manifest is not available, pass ON_ComponentManifest::Empty.
+    destination_manifest - [in]
+      A manifest of the destination context with indices and ids 
+      corresponding to the desired component references.
+      If this manifest is not available, pass ON_ComponentManifest::Empty.
+    manifest_map - [in]
+      A map from the source (current) referenced component index/id values 
+      to the destination (desired) component index/id values.
+  Returns:
+    True if successful.
+    False indicates a referenced component was not found in the manifest
+    and the reference was changed to a default value.
+  Example:
+    If this object is an ON_Layer, the line pattern and render material references
+    are updated. 
+    If this object is an ON_DimStyle, the text style reference is updated. 
+    If this object is an ON_3dmObjectAttributes, the layer,
+    material, line pattern, and group references are updated. 
+  */
+  virtual bool UpdateReferencedComponents(
+    const class ON_ComponentManifest& source_manifest,
+    const class ON_ComponentManifest& destination_manifest,
+    const class ON_ManifestMap& manifest_map
+    );
+  
+  /////////////////////////////////////////////////////////////////
+  //
+  // Component status interface
+  //
+  //  Currently implemented on ON_SubD and ON_Brep
+  //
 
+  /*
+  Description:
+    Set all active level component states to ON_ComponentStatus::NoneSet.
+  Returns:
+    Number of components where a state setting changed.
+  */
+  unsigned int ClearAllComponentStates() const;
+
+  /*
+  Description:
+    Clear the specified states on every component.
+  Parameters:
+    states_to_clear - [in]
+      States to clear.
+  Returns:
+    Number of components where a state setting changed.
+  */
+  virtual
+  unsigned int ClearComponentStates(
+    ON_ComponentStatus states_to_clear
+    ) const;
+
+  /*
+  Parameters:
+    states_filter - [in]
+
+    bAllEqualStates - [in]
+      If a state is set in states_filter, all active level components
+      with the same state set will be included in the 
+      components_with_set_states[] array.  
+
+      If bAllEqualStates is true, then ON_ComponentStatus::AllEqualStates()
+      is used to test for inclusion.  
+
+      If bAllEqualStates is false, then ON_ComponentStatus::SomeEqualStates()
+      is used to test for inclusion.
+
+    components_with_set_states - [out]
+  Returns:
+    Number of returned components.
+  */
+  virtual
+  unsigned int GetComponentsWithSetStates(
+    ON_ComponentStatus states_filter,
+    bool bAllEqualStates,
+    ON_SimpleArray< ON_COMPONENT_INDEX >& components
+    ) const;
+  
+  /*
+  Description:
+    Set states on an individual component.
+  Parameters:
+    component_index - [in]
+      The states will be set on this component.
+    states_to_set - [in]
+      If a state is set in the states_to_set parameter, the same
+      state will be set on the component.      
+  Returns:
+    0: no state settings changed on the component.
+    1: some state setting changed on the component.
+  */
+  virtual
+  unsigned int SetComponentStates(
+    ON_COMPONENT_INDEX component_index,
+    ON_ComponentStatus states_to_set
+    ) const;
+
+  /*
+  Description:
+    Clear states on an individual component.
+  Parameters:
+    component_index - [in]
+      The states will be cleared on this component.
+    states_to_clear - [in]
+      If a state is set in the states_to_clear parameter, the same
+      state will be cleared on the component.      
+  Returns:
+    0: no state settings changed on the component.
+    1: some state setting changed on the component.
+  */
+  virtual
+  unsigned int ClearComponentStates(
+    ON_COMPONENT_INDEX component_index,
+    ON_ComponentStatus states_to_clear
+    ) const;
+  
+  /*
+  Description:
+    Copy status settings to an individual component.
+  Parameters:
+    component_index - [in]
+      The states will be copied to this component.
+    status_to_copy - [in]
+  Returns:
+    0: no state settings changed on the component.
+    1: some state setting changed on the component.
+  */
+  virtual
+  unsigned int SetComponentStatus(
+    ON_COMPONENT_INDEX component_index,
+    ON_ComponentStatus status_to_copy
+    ) const;
+
+  /*
+  Description:
+    Call whenever a component status setting is modified 
+    by directly changing it on a component in a way that
+    will result in any saved information about the parent
+    object's aggregate component status becoming invalid.
+
+  Returns:
+    Aggregate information about the object's component states.
+
+  Remarks:
+    This function "should" return a const ON_AggregateComponentStatusEx,
+    but that requires breaking the C++ SDK.
+  */
+  virtual
+  ON_AggregateComponentStatus AggregateComponentStatus() const;
+
+  /*
+  Description:
+    Call whenever a component status setting is modified 
+    by directly changing it on a component in a way that
+    will result in any saved information about the parent
+    object's aggregate component status becoming invalid.
+
+  Remarks:
+    The implementations of this function are nearly instant.
+    and this function may be called as frequently as needed. 
+    The next time AggregateComponentStatus()
+    is called the information used to return the value
+    will be updated.
+  */
+  virtual
+  void MarkAggregateComponentStatusAsNotCurrent() const;
+
+  /*
+  Description:
+    Delete the portions of the object identified in ci_list[].
+  Parameters:
+    ci_list - [in]
+      List of components to delete.
+    ci_list_count - [in]
+      Number of elements in the ci_list[] array.
+  Returns:
+    True: successful
+    False: failure - no changes.
+  */
+  virtual
+  bool DeleteComponents(
+    const ON_COMPONENT_INDEX* ci_list,
+    size_t ci_count
+    );
 
   /////////////////////////////////////////////////////////////////
   //
@@ -840,17 +1174,16 @@ public:
                    memory pools that are managed in nonstandard
                    ways.
   */
-  virtual
-  void DestroyRuntimeCache( bool bDelete = true );
+  virtual void DestroyRuntimeCache( bool bDelete = true );
 
-  ON_MEMORY_POOL* m_mempool; // memory pool for this object (typically null)
 private:
-  friend int ON_BinaryArchive::ReadObject( ON_Object** );
-  friend bool ON_BinaryArchive::WriteObject( const ON_Object& );
-  friend bool ON_BinaryArchive::ReadObjectUserData( ON_Object& );
-  friend bool ON_BinaryArchive::WriteObjectUserData( const ON_Object& );
-  friend class ON_UserData;
-  ON_UserData* m_userdata_list;
+  class ON_UserData* m_userdata_list;
+  class ON_UserData* TransferUserDataItem(
+    const class ON_UserData* source_ud_copy_this,
+    class ON_UserData* source_ud_move_this,
+    bool bPerformConflictCheck,
+    ON_Object::UserDataConflictResolution userdata_conflict_resolution
+    );
 };
 
 #endif

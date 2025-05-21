@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+*******************************************************************************
+opennurbs.vcxproj.Common.props
+
+This file defines the MSBuild properties:
+
+  OpennurbsRootDir = 
+        The full path to the "root" directory containing the opennurbs source.
+        This path varies depending on where the opennurbs source is installed
+        on a particular computer.
+        
+  OpennurbsOutputDir =
+        The full path to the directory where the final build results 
+        (.exe, .dll, .pdb, .lib, ... files) are delivered.
+        
+Every build configuration of every opennurbs component should have this
+property sheet as the first property sheet after the Microsoft boiler plate.
+
+*******************************************************************************
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Choose>
+    <When Condition=" '$(MSBuildProjectName.IndexOf(&quot;opennurbs&quot;))' == '0' ">
+      <PropertyGroup Label="UserMacros">
+        <OpennurbsRootDir>$(MSBuildProjectDirectory)</OpennurbsRootDir>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(MSBuildProjectName.IndexOf(&quot;zlib&quot;))' == '0' ">
+      <PropertyGroup Label="UserMacros">
+        <OpennurbsRootDir>$(MSBuildProjectDirectory.SubString(0,$(MSBuildProjectDirectory.IndexOf(&quot;\zlib&quot;))))</OpennurbsRootDir>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(MSBuildProjectName.IndexOf(&quot;freetype&quot;))' == '0' ">
+      <PropertyGroup Label="UserMacros">
+        <OpennurbsRootDir>$(MSBuildProjectDirectory.SubString(0,$(MSBuildProjectDirectory.IndexOf(&quot;\freetype&quot;))))</OpennurbsRootDir>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <!--
+      To get the opennurbs root directory for other projects in subdirectories of the opennurbs root 
+      directory, like ...\opennurbs\example_X\example_X.vcxproj, the subdirectory needs to be removed.
+      -->
+      <PropertyGroup Label="UserMacros">
+        <OpennurbsRootDir>$(MSBuildProjectFullPath.SubString(0,$(MSBuildProjectFullPath.IndexOf(&quot;\$(MSBuildProjectName)\$(MSBuildProjectFile)&quot;))))</OpennurbsRootDir>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+  <Choose>
+    <When Condition=" '$(MSBuildProjectName.IndexOf(&quot;opennurbs_public&quot;))' == '0' ">
+	  <PropertyGroup Label="UserMacros">
+		<!--
+		Define OPENNURBS_PUBLIC when compiling opennurbs_public... libraries
+		-->
+		<OpennurbsPublicDefine>OPENNURBS_PUBLIC;</OpennurbsPublicDefine>
+	  </PropertyGroup>
+	</When>
+    <Otherwise>
+	  <PropertyGroup Label="UserMacros">
+		<!--
+		No public define for everything else
+		-->
+		<OpennurbsPublicDefine></OpennurbsPublicDefine>
+	  </PropertyGroup>
+    </Otherwise>
+  </Choose>
+  <PropertyGroup Label="UserMacros">
+    <!--
+    This is the location of a file called Rhino.Cpp.CoreComponent.props when opennurbs is being built
+    from it's location in the Rhino project tree. If this file exists, it is used to define the location
+    of the output files (lib, dll, pdb).
+    -->
+    <OpennurbsRhinoProperySheet>$(OpennurbsRootDir)\..\RhinoProjectPropertySheets\Rhino.Cpp.CoreComponent.props</OpennurbsRhinoProperySheet>
+  </PropertyGroup>
+  <!--
+  Note: 
+    An <Import ...> 
+    cannot appear in a <Choose><When>...</When><Otherwise>...</Otherwise></Choose>
+    block, so the condition that checks for the existence of the property sheet
+    occurs twice.  
+  -->
+  <Import Project="$(OpennurbsRhinoProperySheet)" Condition="Exists('$(OpennurbsRhinoProperySheet)')" />
+  <Choose>
+    <When Condition="Exists('$(OpennurbsRhinoProperySheet)')">
+      <!--
+      Rhino.Cpp.CoreComponent.props exists and it determines the location of the output files.
+      -->
+      <PropertyGroup Label="UserMacros">
+        <OpennurbsOutputDir>$(RhinoOutputDir)</OpennurbsOutputDir>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <!--
+      opennurbs is being built from public source code
+      -->
+      <PropertyGroup Label="UserMacros">
+        <OpennurbsOutputDir>$(OpennurbsRootDir)\bin\$(Platform)\$(Configuration)</OpennurbsOutputDir>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+  <PropertyGroup>
+    <IntDir>$(OpennurbsRootDir)\obj\$(MSBuildProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(OpennurbsOutputDir)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <!--
+      OPENNURBS_OUTPUT_DIR = directory where opennurbs builds create the opennurbs library and symbol files.
+      -->
+      <PreprocessorDefinitions>OPENNURBS_OUTPUT_DIR="$(OpennurbsOutputDir.Replace('\','/'))";OPENNURBS_ROOT_DIR="$(OpennurbsRootDir.Replace('\','/'))";$(OpennurbsPublicDefine)%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+</Project>

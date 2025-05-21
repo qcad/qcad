@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,9 +10,16 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
+
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
 
 ON_OBJECT_IMPLEMENT(ON_PointGrid,ON_Geometry,"4ED7D4E5-E947-11d3-BFE5-0010830122F0");
 
@@ -71,12 +77,12 @@ ON_3dPoint ON_PointGrid::Point( int i, int j ) const
 
 double* ON_PointGrid::PointArray()
 {
-  return (m_point_count[0]>0&&m_point_count[1]>0) ? &m_point[0].x : NULL;
+  return (m_point_count[0]>0&&m_point_count[1]>0) ? &m_point[0].x : nullptr;
 }
 
 const double* ON_PointGrid::PointArray() const
 {
-  return (m_point_count[0]>0&&m_point_count[1]>0) ? &m_point[0].x : NULL;
+  return (m_point_count[0]>0&&m_point_count[1]>0) ? &m_point[0].x : nullptr;
 }
 
 int ON_PointGrid::PointArrayStride(  // point stride in grid direction
@@ -87,9 +93,9 @@ int ON_PointGrid::PointArrayStride(  // point stride in grid direction
 }
 
 
-ON_BOOL32 ON_PointGrid::SetPoint( int i, int j, const ON_3dPoint& point )
+bool ON_PointGrid::SetPoint( int i, int j, const ON_3dPoint& point )
 {
-  ON_BOOL32 rc = false;
+  bool rc = false;
   if ( 0 <= i && i < m_point_count[0] && 0 <= j && j < m_point_count[1] ) {
     m_point[i*m_point_stride0+j] = point;
     rc = true;
@@ -97,9 +103,9 @@ ON_BOOL32 ON_PointGrid::SetPoint( int i, int j, const ON_3dPoint& point )
   return rc;
 }
 
-ON_BOOL32 ON_PointGrid::GetPoint( int i, int j, ON_3dPoint& point ) const
+bool ON_PointGrid::GetPoint( int i, int j, ON_3dPoint& point ) const
 {
-  ON_BOOL32 rc = false;
+  bool rc = false;
   if ( 0 <= i && i < m_point_count[0] && 0 <= j && j < m_point_count[1] ) {
     point = m_point[i*m_point_stride0+j];
     rc = true;
@@ -119,7 +125,7 @@ const ON_3dPoint* ON_PointGrid::operator[](int i) const
          ? m_point.Array() + i*m_point_stride0 : 0;
 }
 
-ON_BOOL32
+bool
 ON_PointGrid::Create(
         int point_count0,  // cv count0 (>= order0)
         int point_count1   // cv count1 (>= order1)
@@ -200,9 +206,9 @@ void ON_PointGrid::Dump( ON_TextLog& dump ) const
   }
 }
 
-ON_BOOL32 ON_PointGrid::IsValid( ON_TextLog* text_log ) const
+bool ON_PointGrid::IsValid( ON_TextLog* text_log ) const
 {
-  ON_BOOL32 rc = false;
+  bool rc = false;
   if ( ON_IsValidPointGrid( 3, false, 
                             m_point_count[0], m_point_count[1], 
                             m_point_stride0*3, 3, 
@@ -214,10 +220,10 @@ ON_BOOL32 ON_PointGrid::IsValid( ON_TextLog* text_log ) const
   return rc;
 }
 
-ON_BOOL32 ON_PointGrid::GetBBox( // returns true if successful
+bool ON_PointGrid::GetBBox( // returns true if successful
        double* boxmin,    // minimum
        double* boxmax,    // maximum
-       ON_BOOL32 bGrowBox  // true means grow box
+       bool bGrowBox  // true means grow box
        ) const
 {
   return ON_GetPointGridBoundingBox( 3, 0, 
@@ -228,7 +234,7 @@ ON_BOOL32 ON_PointGrid::GetBBox( // returns true if successful
 
 bool ON_PointGrid::GetTightBoundingBox(
          ON_BoundingBox& tight_bbox,
-         int bGrowBox,
+         bool bGrowBox,
 				 const ON_Xform* xform 
          ) const
 {
@@ -250,7 +256,7 @@ bool ON_PointGrid::GetTightBoundingBox(
   return bGrowBox?true:false;
 }
 
-ON_BOOL32 ON_PointGrid::Transform( const ON_Xform& xform )
+bool ON_PointGrid::Transform( const ON_Xform& xform )
 {
   TransformUserData(xform);
   return ON_TransformPointGrid( 3, false, 
@@ -272,7 +278,7 @@ bool ON_PointGrid::MakeDeformable()
   return true;
 }
 
-ON_BOOL32 ON_PointGrid::SwapCoordinates(
+bool ON_PointGrid::SwapCoordinates(
       int i, int j // indices of coords to swap
       )
 {
@@ -285,7 +291,7 @@ ON_BOOL32 ON_PointGrid::SwapCoordinates(
 }
 
 
-ON_BOOL32 ON_PointGrid::Write(
+bool ON_PointGrid::Write(
        ON_BinaryArchive&  // open binary file
      ) const
 {
@@ -293,7 +299,7 @@ ON_BOOL32 ON_PointGrid::Write(
   return false;
 }
 
-ON_BOOL32 ON_PointGrid::Read(
+bool ON_PointGrid::Read(
        ON_BinaryArchive&  // open binary file
      )
 {
@@ -306,7 +312,7 @@ ON::object_type ON_PointGrid::ObjectType() const
   return ON::pointset_object;
 }
 
-ON_BOOL32 
+bool 
 ON_PointGrid::IsClosed( int dir ) const
 {
   return ON_IsPointGridClosed( 3, 0, 
@@ -315,19 +321,19 @@ ON_PointGrid::IsClosed( int dir ) const
                     &m_point[0].x, dir );
 }
 
-ON_BOOL32
+bool
 ON_PointGrid::Reverse(int dir)
 {
   return ON_ReversePointGrid( 3, false, m_point_count[0], m_point_count[1], m_point_stride0*3, 3, Point(0,0), dir );
 }
 
-ON_BOOL32
+bool
 ON_PointGrid::Transpose()
 {
   int i, j;
-  ON_BOOL32 rc = false;
+  bool rc = false;
   if ( IsValid() ) {
-    // slow stupid way - can be imporved if necessary
+    // slow stupid way - can be improved if necessary
     ON_PointGrid t(m_point_count[1],m_point_count[0]);
     for ( i = 0; i < m_point_count[0]; i++ ) for ( j = 0; j < m_point_count[1]; j++ ) {
       t[j][i] = Point(i,j);

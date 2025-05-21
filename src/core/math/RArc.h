@@ -24,6 +24,7 @@
 
 #include "RShape.h"
 #include "RVector.h"
+#include "RArcProxy.h"
 
 class RBox;
 class RLine;
@@ -80,7 +81,8 @@ public:
     static RArc createTangential(const RVector& startPoint,
                                  const RVector& pos,
                                  double direction,
-                                 double radius);
+                                 double radius = 0.0,
+                                 double sweep = 0.0);
     static QList<RArc> createBiarc(const RVector& startPoint, double startDirection,
                                    const RVector& endPoint, double endDirection, bool secondTry = false);
 
@@ -172,6 +174,27 @@ public:
 
     QList<RArc> splitAtQuadrantLines() const;
 
+    static bool hasProxy() {
+        return arcProxy!=NULL;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static void setArcProxy(RArcProxy* p) {
+        if (arcProxy!=NULL) {
+            delete arcProxy;
+        }
+        arcProxy = p;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static RArcProxy* getArcProxy() {
+        return arcProxy;
+    }
+
 #if QT_VERSION >= 0x060000
     /**
      * copy function for Qt 6 scripts:
@@ -184,6 +207,9 @@ public:
 
 protected:
     virtual void print(QDebug dbg) const;
+
+private:
+    static RArcProxy* arcProxy;
 
 public:
     /**

@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,18 +10,45 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
 
-ON_Line::ON_Line()
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
+
+
+bool operator==(const ON_Line& a, const ON_Line& b)
 {
-  from.Zero();
-  to.Zero();
+  // Properly handles nans.
+  return (a.from == b.from && a.to == b.to);
 }
 
-ON_Line::ON_Line( const ON_3dPoint& from_pt, const ON_3dPoint& to_pt )
-: from(from_pt), to(to_pt)
+bool operator!=(const ON_Line& a, const ON_Line& b)
+{
+  // Properly handles nans.
+  return (a.from != b.from || a.to != b.to);
+}
+
+
+ON_Line::ON_Line()
+  : from(ON_3dPoint::Origin)
+  , to(ON_3dPoint::Origin)
+{
+}
+
+ON_Line::ON_Line( ON_3dPoint from_pt, ON_3dPoint to_pt )
+  : from(from_pt)
+  , to(to_pt)
+{}
+
+ON_Line::ON_Line( ON_2dPoint from_pt, ON_2dPoint to_pt )
+  : from(from_pt)
+  , to(to_pt)
 {}
 
 ON_Line::~ON_Line()
@@ -39,17 +65,26 @@ const ON_3dPoint& ON_Line::operator[](int i) const
   return (i<=0) ? from : to;
 }
 
-bool ON_Line::Create( const ON_3dPoint& from_pt, const ON_3dPoint& to_pt )
+bool ON_Line::Create( const ON_3dPoint from_pt, const ON_3dPoint to_pt )
 {
   from = from_pt;
   to = to_pt;
   return IsValid();
 }
 
+bool ON_Line::Create( const ON_2dPoint from_pt, const ON_2dPoint to_pt )
+{
+  from = ON_3dPoint(from_pt);
+  to = ON_3dPoint(to_pt);
+  return IsValid();
+}
+
 
 bool ON_Line::IsValid() const
 {
-  return (from != to && from.IsValid() && to.IsValid());
+  bool from_rc = ON_CV_COORDINATE_IS_VALID(from.x) && ON_CV_COORDINATE_IS_VALID(from.y) && ON_CV_COORDINATE_IS_VALID(from.z);
+  bool to_rc = ON_CV_COORDINATE_IS_VALID(to.x) && ON_CV_COORDINATE_IS_VALID(to.y) && ON_CV_COORDINATE_IS_VALID(to.z);
+  return (from != to && true == from_rc && true == to_rc);
 }
 
 double ON_Line::Length() const
@@ -59,7 +94,10 @@ double ON_Line::Length() const
 
 ON_3dVector ON_Line::Direction() const
 {
-  return (to-from);
+  return (ON_UNSET_VALUE < to.x && to.x < ON_UNSET_POSITIVE_VALUE && ON_UNSET_VALUE <from.x && from.x < ON_UNSET_POSITIVE_VALUE) 
+    ? (to-from)
+    : (ON_3dPoint::UnsetPoint == from && ON_3dPoint::UnsetPoint == to ? ON_3dVector::UnsetVector : ON_3dVector::NanVector)
+    ;
 }
 
 ON_3dVector ON_Line::Tangent() const
@@ -77,10 +115,12 @@ ON_3dPoint ON_Line::PointAt( double t ) const
   //     to the following so that axis aligned lines will
   //     return exact answers for large values of t.  
   //     See RR 9683.
-  const double s = 1.0-t;
-  return  ON_3dPoint( (from.x == to.x) ? from.x : s*from.x + t*to.x,
-                      (from.y == to.y) ? from.y : s*from.y + t*to.y,
-                      (from.z == to.z) ? from.z : s*from.z + t*to.z );
+ 
+
+  //08 May 2022 - Greg. Mikko, Chuck.  This is more accurate than the parameterwise 
+  //(1-t)*from + t*to with fudging.  Note that if any coordinate of from is the same as that of to,
+  //the answer will be exact in that coord.
+  return  (t < 0.5) ? from + t*(to-from) : to + (1.0-t)*(from-to);
 }
 
 void ON_Line::Reverse()
@@ -97,7 +137,7 @@ bool ON_Line::ClosestPointTo( const ON_3dPoint& point, double *t ) const
     const ON_3dVector D = Direction();
     const double DoD = D.LengthSquared();
     if ( DoD > 0.0 ) {
-      if ( point.DistanceTo(from) <= point.DistanceTo(to) ) {
+      if ((point - from).LengthSquared() <= (point - to).LengthSquared()) {
         *t = ((point - from)*D)/DoD;
       }
       else {
@@ -107,6 +147,7 @@ bool ON_Line::ClosestPointTo( const ON_3dPoint& point, double *t ) const
     }
     else {
       *t = 0.0;
+			rc = true;			// (GBA) Closet point to a degenerate line works as well
     }
   }
   return rc;
@@ -168,14 +209,19 @@ bool ON_Line::Translate(
       const ON_3dVector& delta
       )
 {
-  ON_Xform tr;
-  tr.Translation( delta );
+  const ON_Xform tr(ON_Xform::TranslationTransformation( delta ));
   return Transform( tr );
+}
+
+
+double ON_Line::MaximumCoordinate() const
+{
+  return  fmax( from.MaximumCoordinate(), to.MaximumCoordinate());
 }
 
 int ON_ArePointsOnLine( // returns 0=no, 1 = yes, 2 = pointset is (to tolerance) a single point on the line
         int dim,     // 2 or 3
-        int is_rat,
+        bool is_rat,
         int count, 
         int stride, const double* point,
         const ON_BoundingBox& bbox, // if needed, use ON_GetBoundingBox(dim,is_rat,count,stride,point)
@@ -226,7 +272,7 @@ int ON_ArePointsOnLine( // returns 0=no, 1 = yes, 2 = pointset is (to tolerance)
     tolerance = bbox.Tolerance();
   }
 
-  ON_3dPoint Q;
+  ON_3dPoint Q(ON_3dPoint::Origin);
 
   // test bounding box to quickly detect the common coordinate axis cases
   rc = (count == 1 || bbox.Diagonal().Length() <= tolerance) ? 2 : 1;
@@ -244,7 +290,7 @@ int ON_ArePointsOnLine( // returns 0=no, 1 = yes, 2 = pointset is (to tolerance)
 
   if ( !rc ) {
     // test points one by one
-    Q.Zero();
+    Q = ON_3dPoint::Origin;
     rc = (count == 1 || bbox.Diagonal().Length() <= tolerance) ? 2 : 1;
     if ( is_rat ) {
       for ( i = 0; i < count; i++ ) {
@@ -304,18 +350,18 @@ bool ON_Line::InPlane( ON_Plane& plane, double tolerance ) const
   ON_3dVector Y;
   if ( bTinyZ && ( !bTinyX || !bTinyY ) )
   {
-    X = ON_xaxis;
-    Y = ON_yaxis;
+    X = ON_3dVector::XAxis;
+    Y = ON_3dVector::YAxis;
   }
   else if ( bTinyX && ( !bTinyY || !bTinyZ ) )
   {
-    X = ON_yaxis;
-    Y = ON_zaxis;
+    X = ON_3dVector::YAxis;
+    Y = ON_3dVector::ZAxis;
   }
   else if ( bTinyY && ( !bTinyZ || !bTinyX ) )
   {
-    X = ON_zaxis;
-    Y = ON_xaxis;
+    X = ON_3dVector::ZAxis;
+    Y = ON_3dVector::XAxis;
   }
   else
   {
@@ -327,8 +373,8 @@ bool ON_Line::InPlane( ON_Plane& plane, double tolerance ) const
       rc = false;
       if ( X.IsZero() )
       {
-        X = ON_xaxis;
-        Y = ON_yaxis;
+        X = ON_3dVector::XAxis;
+        Y = ON_3dVector::YAxis;
       }
     }
   }
@@ -474,7 +520,7 @@ bool ON_Line::IsFartherThan( double d, const ON_Line& L ) const
       // If ( b >= 0.0), then this->from and L(b) are a pair of closest points.
       if ( b < 0.0 )
       {
-        // Othersise L.from and this(a) are a pair of closest points.
+        // Otherwise L.from and this(a) are a pair of closest points.
         b = 0.0;
         ClosestPointTo(L.from,&a);
       }
@@ -487,7 +533,7 @@ bool ON_Line::IsFartherThan( double d, const ON_Line& L ) const
       // If ( b >= 0.0), then this->to and L(b) are a pair of closest points.
       if ( b < 0.0 )
       {
-        // Othersise L.to and this(a) are a pair of closest points.
+        // Otherwise L.to and this(a) are a pair of closest points.
         b = 0.0;
         ClosestPointTo(L.from,&a);
       }
@@ -529,5 +575,422 @@ bool ON_Line::IsFartherThan( double d, const ON_Line& L ) const
   }
  
   return (x > d);
+}
+
+ON_Triangle::ON_Triangle(const ON_3dPoint vertices[3])
+{
+	for(int i=0; i<3; i++)
+		m_V[i] = vertices[i];
+}
+
+ON_Triangle::ON_Triangle(const ON_3dPoint & a, const ON_3dPoint & b, const ON_3dPoint & c)
+{
+	m_V[0]= a; m_V[1] = b; m_V[2] = c;
+}
+
+ON_Triangle::ON_Triangle(double x)
+{
+	// Note this constructor overload is useful so that ON_Triangle(0) doesn't
+	// get interpreted as ON_Triangle(nullptr)
+	ON_3dPoint p(x, x, x);
+	m_V[0] = m_V[1] = m_V[2] = p;
+}
+
+ON_Triangle::ON_Triangle(const double vertices[9])
+{
+  m_V[0] = ON_3dPoint(vertices);
+  m_V[1] = ON_3dPoint(vertices ? vertices+3 : vertices);
+  m_V[2] = ON_3dPoint(vertices ? vertices+6 : vertices);
+}
+
+ON_Triangle::operator ON_3dPoint*()
+{
+	return m_V;
+}
+
+ON_Triangle::operator const ON_3dPoint*() const
+{
+	return m_V;
+}
+
+bool ON_Triangle::IsValid() const
+{
+	return m_V[0].IsValid() && m_V[1].IsValid() && m_V[2].IsValid();
+}
+
+ON_3dPoint& ON_Triangle::operator[](int i)
+{
+	return m_V[i];
+}
+
+const ON_3dPoint& ON_Triangle::operator[](int i) const
+{
+	return m_V[i];
+}
+
+void ON_Triangle::Create(const ON_3dPoint  vertices[3])
+{
+	for (int i = 0; i < 3; i++)
+		m_V[i] = vertices[i];
+}
+
+void ON_Triangle::Create(const ON_3dPoint & a, const ON_3dPoint & b, const ON_3dPoint & c)
+{
+	m_V[0] = a;
+	m_V[1] = b; 
+	m_V[2] = c;
+}
+
+ON_BoundingBox ON_Triangle::BoundingBox() const
+{
+	ON_BoundingBox bbox;
+	bbox.Set(3, false, 3, 3, m_V[0], false);
+	return bbox;
+}
+
+bool ON_Triangle::GetBoundingBox(
+	ON_BoundingBox& bbox,
+	int bGrowBox
+) const
+{
+	bbox.Set(3, false, 3, 3, m_V[0], bGrowBox);
+	return true;
+}
+
+bool ON_Triangle::GetTightBoundingBox(
+	ON_BoundingBox& tight_bbox,
+	bool bGrowBox,
+	const ON_Xform* xform ) const
+{
+	if (bGrowBox && !tight_bbox.IsValid())
+	{
+		bGrowBox = false;
+	}
+
+	bool rc = true;
+	if (xform && !xform->IsIdentity())
+	{
+		for (int i = 0; i < 3; i++)
+		{
+			ON_3dPoint P = (*xform)*m_V[i];
+			rc = tight_bbox.Set(P, bGrowBox) && rc;
+			bGrowBox = true;
+		}
+	}
+	else
+	{
+		rc =GetBoundingBox(tight_bbox, bGrowBox);
+	}
+
+	return rc;
+}
+
+unsigned char ON_Triangle::LongestEdge() const
+{
+  double l0 = (m_V[1] - m_V[2]).LengthSquared();
+  double l1 = (m_V[2] - m_V[0]).LengthSquared();
+  double l2 = (m_V[0] - m_V[1]).LengthSquared();
+
+  return l1 < l2 ? ((l2 <= l0) ? 0 : 2) : ((l1 <= l0) ? 0 : 1);
+}
+
+unsigned char ON_Triangle::ShortestEdge() const
+{
+  double l0 = (m_V[1] - m_V[2]).LengthSquared();
+  double l1 = (m_V[2] - m_V[0]).LengthSquared();
+  double l2 = (m_V[0] - m_V[1]).LengthSquared();
+
+  return l2 < l1 ? ((l2 < l0) ? 2 : 0) : ((l1 < l0) ? 1 : 0);
+}
+
+ON_Line ON_Triangle::Edge(int i) const
+{
+	return  ON_Line(m_V[(i + 1) % 3], m_V[(i + 2) % 3]);
+}
+
+ON_3dVector ON_Triangle::Normal() const
+{
+	int i0 = 0; // base vetex for computation s/b opposite longest side
+									 // too minimize roundoff 
+									 // ( see Kahan https://people.eecs.berkeley.edu/~wkahan/MathH110/Cross.pdf).
+	double max_len = -1;
+	for (int i = 0; i < 3; i++)
+	{
+		ON_3dVector V = Edge(i).Direction();
+		double normV = V.MaximumCoordinate();
+		if (normV > max_len)
+		{
+			max_len = normV;
+			i0 = i;
+		}
+	}
+
+	ON_3dVector V = m_V[(i0 + 1)%3] - m_V[i0];
+	ON_3dVector W = m_V[(i0 + 2)%3] - m_V[i0];
+
+	return ON_CrossProduct(V, W);
+}
+
+double ON_Triangle::Area() const
+{
+	return .5 * Normal().Length();
+}
+
+
+bool ON_Triangle::IsDegenerate(double area_tol) const
+{
+	return (Area() < area_tol);
+}
+
+ON_3dVector ON_Triangle::UnitNormal() const
+{
+	auto V =  Normal();
+	V.Unitize();
+	return V;
+}
+
+ON_PlaneEquation ON_Triangle::PlaneEquation() const
+{
+	auto U = UnitNormal();
+	double d = U*m_V[0];
+	return ON_PlaneEquation(U.x, U.y, U.z, d);
+}
+
+ON_3dPoint ON_Triangle::PointAt(double s1, double s2) const
+{
+	return (1 - s1 - s2)* m_V[0] + s1*m_V[1] + s2*m_V[2];
+}
+
+ON_3dPoint ON_Triangle::Centroid() const
+{
+	return PointAt(1.0/3.0, 1.0/3.0);
+}
+
+bool ON_Triangle::GetBarycentricCoordinates(
+  const ON_3dPoint& P,
+  bool constrainInside,
+  double* s1, double* s2
+) const
+{
+	bool rc = false;
+	// Choose  base vertex v[i0] is closest to P
+	int i0 = 0;
+	double Min_norm = ON_DBL_MAX;
+	for (int i = 0; i < 3; i++)
+	{
+		ON_3dVector V = P - m_V[i];
+		double d = V.MaximumCoordinate();
+		if (d < Min_norm)
+		{
+			i0 = i;
+			Min_norm = d;
+		}
+	}
+
+	ON_3dVector VP = P - m_V[i0];
+	ON_3dVector V = m_V[(i0 + 1) % 3] - m_V[i0];
+	ON_3dVector W = m_V[(i0 + 2) % 3] - m_V[i0];
+	ON_3dPoint s(0, 0, 0);		// set to barycentric coordinates of solution
+
+	if (ON_DecomposeVector(VP, V, W, &s[(i0 + 1) % 3], &s[(i0 + 2) % 3]))
+	{
+		// use decomposition
+		s[i0] = 1 - s[(i0 + 1) % 3] - s[(i0 + 2) % 3];
+
+    if (constrainInside)
+		  for (int i = 0; i < 3; i++)
+			  if (s[i] < 0)
+			  {
+				  double t;
+				  if (Edge(i).ClosestPointTo(P, &t))	
+				  {
+					  s = ON_3dPoint( 0,0,0 );
+					  if (t < 0)
+					  {
+						  s[(i + 1) % 3] = 1.0;
+					  }
+
+					  else if (t >= 1.0)
+					  {
+						  s[(i + 2) % 3] = 1.0;
+					  }
+					  else
+					  {
+						  s[(i + 1) % 3] = 1 - t;
+						  s[(i + 2) % 3] = t;
+					  }
+				  }
+				  break;
+			  }
+		rc = true;
+	}
+	else
+	{
+		// decomposition failed:
+		// Find closest point to longest edge i0
+		double max = Edge(0).Direction().LengthSquared();
+    i0 = 0;
+		for (int i = 1; i < 3; i++)
+		{
+			double lensq = Edge(i).Direction().LengthSquared();
+			if (max < lensq)
+			{
+				i0 = i;
+				max = lensq;
+			}
+		}
+		double t;
+		if (Edge(i0).ClosestPointTo(P, &t))
+		{
+			s[(i0 + 1) % 3] = (1 - t);
+			s[(i0 + 2) % 3] = t;
+			rc = true;
+		}
+	
+	}
+	if (s1)
+		*s1 = s[1];
+	if (s2)
+		*s2 = s[2];
+	return rc;
+}
+
+bool ON_Triangle::ClosestPointTo(const ON_3dPoint & P, double * s1, double * s2) const
+{
+  return GetBarycentricCoordinates(P, true, s1, s2);
+}
+
+
+ON_3dPoint ON_Triangle::ClosestPointTo(const ON_3dPoint& P) const
+{
+	ON_3dPoint s(0, 0, 0);
+	ClosestPointTo(P, &s[1], &s[2]);
+	return PointAt(s[1], s[2]);
+}
+
+double ON_Triangle::DistanceTo(const ON_3dPoint& P) const
+{
+	return P.DistanceTo(ClosestPointTo(P));
+}
+
+void ON_Triangle::Reverse(int i)
+{
+	auto temp = m_V[(i + 1) % 3];
+	m_V[(i + 1) % 3] = m_V[(i + 2) % 3];
+	m_V[(i + 2) % 3] = temp;
+}
+
+bool ON_Triangle::Transform(const ON_Xform & xform)
+{
+	for (int i = 0; i < 3; i++) m_V[i] = xform * m_V[i];
+	return true;
+}
+
+bool ON_Triangle::Rotate(double sin_angle, double cos_angle, 
+			const ON_3dVector & axis_of_rotation, 
+			const ON_3dPoint & center_of_rotation)
+{
+	ON_Xform R;
+	R.Rotation(sin_angle, cos_angle, axis_of_rotation, center_of_rotation);
+	return Transform(R);
+}
+
+bool ON_Triangle::Rotate(double angle_in_radians, const ON_3dVector & axis_of_rotation, const ON_3dPoint & center_of_rotation)
+{
+	ON_Xform R;
+	R.Rotation(angle_in_radians, axis_of_rotation, center_of_rotation);
+	return Transform(R);
+}
+
+bool ON_Triangle::Translate(const ON_3dVector & delta)
+{
+	const ON_Xform T(ON_Xform::TranslationTransformation(delta));
+	return Transform(T);
+}
+
+void ON_Triangle::Split(unsigned char edge, ON_3dPoint pt, ON_Triangle& out_a, ON_Triangle& out_b) const
+{
+  switch (edge % 3)
+  {
+  case 0:
+    out_a.m_V[0] = m_V[0];
+    out_a.m_V[1] = m_V[1];
+    out_a.m_V[2] = pt;
+    out_b.m_V[0] = m_V[0];
+    out_b.m_V[1] = pt;
+    out_b.m_V[2] = m_V[2];
+    break;
+  case 1:
+    out_a.m_V[0] = m_V[0];
+    out_a.m_V[1] = m_V[1];
+    out_a.m_V[2] = pt;
+    out_b.m_V[0] = pt;
+    out_b.m_V[1] = m_V[1];
+    out_b.m_V[2] = m_V[2];
+    break;
+  default: //2
+    out_a.m_V[0] = m_V[0];
+    out_a.m_V[1] = pt;
+    out_a.m_V[2] = m_V[2];
+    out_b.m_V[0] = pt;
+    out_b.m_V[1] = m_V[1];
+    out_b.m_V[2] = m_V[2];
+    break;
+  }
+}
+
+void ON_Triangle::Flip(unsigned char edge)
+{
+  switch (edge % 3)
+  {
+  case 0:
+    std::swap(m_V[1], m_V[2]);
+    break;
+  case 1:
+    std::swap(m_V[2], m_V[0]);
+    break;
+  default: //2
+    std::swap(m_V[0], m_V[1]);
+    break;
+  }
+}
+
+void ON_Triangle::Spin(unsigned char move)
+{
+  ON_3dPoint tmp;
+  switch (move % 3)
+  {
+  case 0:
+    break;
+  case 1:
+    tmp = m_V[0];
+    m_V[0] = m_V[2];
+    m_V[2] = m_V[1];
+    m_V[1] = tmp;
+    break;
+  default: //2
+    tmp = m_V[0];
+    m_V[0] = m_V[1];
+    m_V[1] = m_V[2];
+    m_V[2] = tmp;
+    break;
+  }
+}
+
+
+bool operator==(const ON_Triangle & a, const ON_Triangle & b)
+{
+	// Properly handles nans.
+	return (a.m_V[0] == b.m_V[0] &&
+					a.m_V[1] == b.m_V[1] &&
+					a.m_V[2] == b.m_V[2]);
+}
+
+bool operator!=(const ON_Triangle & a, const ON_Triangle & b)
+{
+	// Properly handles nans.
+	return (a.m_V[0] != b.m_V[0] ||
+					a.m_V[1] != b.m_V[1] ||
+					a.m_V[2] != b.m_V[2]);
 }
 

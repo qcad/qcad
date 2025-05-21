@@ -1,8 +1,6 @@
-/* $NoKeywords: $ */
-/*
-//
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2024 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,16 +9,11 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
-
-
-// Delete evertyhing this comment and everything below it except
-// the "#include "opennurbs.h"" for the public version of 
-// opennurbs source code.
-
 
 // CHECK SETTINGS BEFORE ANYTHING IS INCLUDED
 
+#if defined(_MSC_VER)
+
 #if defined(WIN32) && defined(WIN64)
 #error WIN32 and WIN64 defined.  This is wrong!
 #endif
@@ -35,6 +28,7 @@
 #error Incorrect _M_... setting for x64 build
 #endif
 
+#if !defined(_M_ARM64)
 #if !defined(_M_X64)
 // This should be automatically defined by the compiler
 #error _M_X64 should be defined for x64 builds
@@ -50,6 +44,7 @@
 // This should be automatically defined by the compiler
 #error _M_AMD64 should be defined for x64 builds
 #endif
+#endif // !defined(_M_ARM64)
 
 #endif
 
@@ -71,13 +66,31 @@
 
 #endif
 
-
+#endif
 
 #include "opennurbs.h"
 
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
 
+// CHECK SETTINGS AFTER EVERYTHING IS INCLUDED
 
-// CHECK SETTINGS AFTER EVERTHING IS INCLUDED
+#if defined(_MSC_VER)
+
+#if !defined(ON_COMPILER_MSC)
+#error _MSC_VER is defined and ON_COMPILER_MSC is NOT defined.
+#endif
+
+#if !defined(ON_RUNTIME_WIN)
+// if Microsfot C is used on another platfrom, then lots
+// of careful cleaning and checking will be required.
+#error _MSC_VER is defined and ON_RUNTIME_WIN is NOT defined.
+#endif
 
 #if defined(WIN32) && defined(WIN64)
 #error WIN32 and WIN64 defined.  This is wrong!
@@ -93,6 +106,7 @@
 #error Incorrect _M_... setting for x64 build
 #endif
 
+#if !defined(_M_ARM64)
 #if !defined(_M_X64)
 // This should be automatically defined by the compiler
 #error _M_X64 should be defined for x64 builds
@@ -108,6 +122,7 @@
 // This should be automatically defined by the compiler
 #error _M_AMD64 should be defined for x64 builds
 #endif
+#endif // !defined(_M_ARM64)
 
 #endif
 
@@ -129,3 +144,4 @@
 
 #endif
 
+#endif

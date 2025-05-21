@@ -29,6 +29,7 @@
 #include <cmath>
 #include <limits>
 
+class QJSEngine;
 class RVector;
 
 #ifndef M_PI
@@ -84,11 +85,8 @@ class RVector;
  */
 class QCADCORE_EXPORT RMath {
 public:
-    static void init() {
-    }
-
-    static void uninit() {
-    }
+    static void init();
+    static void uninit();
 
     /**
      * Rounds the given double to the next int.
@@ -176,6 +174,10 @@ public:
 private:
     static QString lastError;
     static QString mathExt;
+
+#if QT_VERSION >= 0x060000
+    static QJSEngine* jsEngine;
+#endif
 };
 
 Q_DECLARE_METATYPE(RMath*);

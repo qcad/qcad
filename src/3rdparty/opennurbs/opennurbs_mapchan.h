@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(OPENNURBS_MAPPING_CHANNEL_INC_)
 #define OPENNURBS_MAPPING_CHANNEL_INC_
@@ -41,7 +39,7 @@ public:
 
   ON_UUID m_mapping_id;  // Identifies an ON_TextureMapping
 
-  // RUNTIME textrure mapping table index.
+  // RUNTIME texture mapping table index.
   // If -1, it needs to be set.  This value is not saved int files.
   int m_mapping_index;
 
@@ -64,13 +62,7 @@ public:
 };
 
 #if defined(ON_DLL_TEMPLATE)
-// This stuff is here because of a limitation in the way Microsoft
-// handles templates and DLLs.  See Microsoft's knowledge base 
-// article ID Q168958 for details.
-#pragma warning( push )
-#pragma warning( disable : 4231 )
 ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_MappingChannel>;
-#pragma warning( pop )
 #endif
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -83,7 +75,7 @@ ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_MappingChannel>;
 //   use.  This allows different rendering plug-ins to have different 
 //   materials on the same object.  The values of
 //   ON_3dmObjectAttributes.m_material_index and 
-//   ON_3dmObjectAttributes.m_matrial_source reflect the settings
+//   ON_3dmObjectAttributes.m_material_source reflect the settings
 //   of the renderer that is currently active.
 //
 
@@ -110,7 +102,7 @@ public:
       ON_TextureMapping id
   Returns:
     A pointer to the plug-in's mapping channel, if there
-    is one. Otherwise NULL is returned.
+    is one. Otherwise nullptr is returned.
   */
   const ON_MappingChannel* MappingChannel( 
     int mapping_channel_id
@@ -127,7 +119,7 @@ public:
     mapping_id - [in]
       ON_TextureMapping id
   Returns:
-    True if the mapping channel was added or a pefect
+    True if the mapping channel was added or a perfect
     match already existed.  False if a mapping channel 
     with a different mapping_id already exists for this
     plug-in and channel.
@@ -200,6 +192,9 @@ public:
   ON_UUID m_material_backface_id; // Identifies an ON_Material
 
   ON::object_material_source MaterialSource() const;
+  void SetMaterialSource(
+    ON::object_material_source
+    );
   unsigned char m_material_source; // ON::object_material_source values
   unsigned char m_reserved1;
   unsigned char m_reserved2;
@@ -217,14 +212,8 @@ public:
 };
 
 #if defined(ON_DLL_TEMPLATE)
-// This stuff is here because of a limitation in the way Microsoft
-// handles templates and DLLs.  See Microsoft's knowledge base 
-// article ID Q168958 for details.
-#pragma warning( push )
-#pragma warning( disable : 4231 )
 ON_DLL_TEMPLATE template class ON_CLASS ON_ClassArray<ON_MaterialRef>;
 ON_DLL_TEMPLATE template class ON_CLASS ON_ClassArray<ON_MappingRef>;
-#pragma warning( pop )
 #endif
 
 #endif

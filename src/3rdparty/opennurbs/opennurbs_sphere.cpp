@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,9 +10,16 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
+
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
 
 ON_Sphere::ON_Sphere() : radius(0.0)
 {}
@@ -28,7 +34,7 @@ ON_Sphere::~ON_Sphere()
 
 bool ON_Sphere::IsValid() const
 {
-  return ( ON_IsValid(radius) && radius > 0.0 && plane.IsValid() ) ? true : false;
+  return ( radius > 0.0 && radius < ON_UNSET_POSITIVE_VALUE && plane.IsValid() ) ? true : false;
 }
 
 bool ON_Sphere::Create( const ON_3dPoint& center, double r )
@@ -301,9 +307,17 @@ int ON_Sphere::GetNurbForm( ON_NurbsSurface& s ) const
 
 ON_RevSurface* ON_Sphere::RevSurfaceForm( ON_RevSurface* srf ) const
 {
+  return RevSurfaceForm(false,srf);
+}
+
+ON_RevSurface* ON_Sphere::RevSurfaceForm( 
+  bool bArcLengthParameterization,
+  ON_RevSurface* srf 
+  ) const
+{
   if ( srf )
     srf->Destroy();
-  ON_RevSurface* pRevSurface = NULL;
+  ON_RevSurface* pRevSurface = nullptr;
   if ( IsValid() )
   {
     ON_Arc arc;
@@ -333,6 +347,15 @@ ON_RevSurface* ON_Sphere::RevSurfaceForm( ON_RevSurface* srf ) const
     pRevSurface->m_bbox.m_max.x += radius;
     pRevSurface->m_bbox.m_max.y += radius;
     pRevSurface->m_bbox.m_max.z += radius;
+    if ( bArcLengthParameterization )
+    {
+      double r = fabs(radius);
+      if ( !(r > ON_SQRT_EPSILON) )
+        r = 1.0;
+      r *= ON_PI;
+      pRevSurface->SetDomain(0,0.0,2.0*r);
+      pRevSurface->SetDomain(1,-0.5*r,0.5*r);
+    }
   }
   return pRevSurface;
 }

@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2008 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(OPENNURBS_MAP_INC_)
 #define OPENNURBS_MAP_INC_
@@ -32,17 +30,20 @@ Description:
 class ON_CLASS ON_SerialNumberMap
 {
 public:
-  ON_SerialNumberMap( ON_MEMORY_POOL* pool = 0 );
+  ON_SerialNumberMap();
   ~ON_SerialNumberMap();
 
   struct MAP_VALUE
   {
     ON__UINT32 m_u_type;
+    ON__UINT32 m_u32;
     union
     {
+      ON__UINT64 u64;
+      ON__INT64 i64;
       void* ptr;
-      unsigned int ui;
-      int i;
+      ON__UINT32 ui[2];
+      ON__INT32 i[2];
     } m_u;
   };
 
@@ -53,13 +54,12 @@ public:
     // ID
     //
     ON_UUID m_id;
-    struct SN_ELEMENT* m_next; // id hash table linked list
 
     ////////////////////////////////////////////////////////////
     //
     // Serial number:
     //
-    unsigned int m_sn;
+    ON__UINT64 m_sn;
 
     ////////////////////////////////////////////////////////////
     //
@@ -67,11 +67,14 @@ public:
     //
     // If m_id_active is 1, then m_sn_active must be 1.
     // If m_sn_active = 1, then m_id_active can be 0 or 1.
-    //
-    unsigned char m_sn_active; // 1 = serial number is active
-    unsigned char m_id_active; // 1 = id is active
-    unsigned char m_reserved1;
-    unsigned char m_reserved2;
+    ON__UINT8 m_sn_active; // 1 = serial number is active
+    ON__UINT8 m_id_active; // 1 = id is active
+    ON__UINT8 m_reserved1;
+    ON__UINT8 m_reserved2;
+
+    ON__UINT32 m_id_crc32; // id hash = IdCRC(id)
+
+    struct SN_ELEMENT* m_next; // id hash table linked list
 
     ////////////////////////////////////////////////////////////
     //
@@ -83,20 +86,22 @@ public:
     //   this class.  The location of m_value in memory,
     //   (&m_value) may change at any time.
     struct MAP_VALUE m_value;
+
+    void Dump(ON_TextLog&) const;
   };
 
   /*
   Returns:
     Number of active serial numbers in the list.
   */
-  size_t ActiveSerialNumberCount() const;
+  ON__UINT64 ActiveSerialNumberCount() const;
 
   /*
   Returns:
     Number of active ids in the list.  This number
     is less than or equal to ActiveSerialNumberCount().
   */
-  size_t ActiveIdCount() const;
+  ON__UINT64 ActiveIdCount() const;
 
   /*
   Returns:
@@ -152,7 +157,7 @@ public:
     fields or you will break searching and possibly cause
     crashes.
   */
-  struct SN_ELEMENT* FindSerialNumber(unsigned int sn) const;
+  struct SN_ELEMENT* FindSerialNumber(ON__UINT64 sn) const;
 
   /*
   Parameters:
@@ -185,8 +190,8 @@ public:
     every byte of the m_value field is set to 0.
     If the serial number was already active, its element is
     also returned.  If you need to distinguish between new
-    and previously existing elements, then change  
-    m_value.m_u_type to something besides 0 after you add
+    and previously existing elements, then set an 
+    m_value field to something besides 0 after you add
     a new serial number.  The id associated with this
     serial number will be zero and cannot be found using
     FindId().
@@ -202,7 +207,7 @@ public:
     fields or you will break searching and possibly cause
     crashes.
   */
-  struct SN_ELEMENT* AddSerialNumber(unsigned int sn);
+  struct SN_ELEMENT* AddSerialNumber(ON__UINT64 sn);
 
   /*
   Parameters:
@@ -216,15 +221,16 @@ public:
     every byte of the m_value field is set to 0.
     If the serial number was already active, its element is
     also returned.  If you need to distinguish between new
-    and previously existing elements, then change  
-    m_value.m_u_type to something besides 0 after you add
+    and previously existing elements, then set an 
+    m_value field to something besides 0 after you add
     a new serial number. 
-    If the id parameter is zero, then a new uuid is created
-    and added. If the id parameter is non zero but is active
+    If the id parameter is nil, then a new uuid is created
+    and added. If the id parameter is not nil but is active
     on another element, a new uuid is created and added.
     You can inspect the value of m_id on the returned element
     to determine the id AddSerialNumberAndId() assigned to
     the element.
+
   Restrictions:
     The returned pointer may become invalid after any
     subsequent calls to any function in this class.  
@@ -237,7 +243,7 @@ public:
     fields or you will break searching and possibly cause
     crashes.
   */
-  struct SN_ELEMENT* AddSerialNumberAndId(unsigned int sn, ON_UUID id);
+  struct SN_ELEMENT* AddSerialNumberAndId(ON__UINT64 sn, ON_UUID id);
 
   /*
   Parameters:
@@ -258,7 +264,7 @@ public:
     fields or you will break searching and possibly cause
     crashes.
   */
-  struct SN_ELEMENT* RemoveSerialNumberAndId(unsigned int sn);
+  struct SN_ELEMENT* RemoveSerialNumberAndId(ON__UINT64 sn);
 
   /*
   Parameters:
@@ -283,7 +289,7 @@ public:
     fields or you will break searching and possibly cause
     crashes.
   */
-  struct SN_ELEMENT* RemoveId(unsigned int sn, ON_UUID id);
+  struct SN_ELEMENT* RemoveId(ON__UINT64 sn, ON_UUID id);
 
   /*
   Description:
@@ -307,10 +313,10 @@ public:
     When many elements are returned, GetElements() can be
     substantially faster than repeated calls to FindElement().
   */
-  size_t GetElements(
-          unsigned int sn0,
-          unsigned int sn1, 
-          size_t max_count,
+  ON__UINT64 GetElements(
+          ON__UINT64 sn0,
+          ON__UINT64 sn1, 
+          ON__UINT64 max_count,
           ON_SimpleArray<SN_ELEMENT>& elements
           ) const;
 
@@ -329,99 +335,122 @@ public:
   Returns:
     true if the list if valid.
   */
-  bool IsValid(ON_TextLog* textlog) const;
+  bool IsValid(
+    bool bBuildHashTable,
+    ON_TextLog* textlog
+    ) const;
+
+  void Dump(ON_TextLog& text_log) const;
 
 private:
   // prohibit copy construction and operator=
   // no implementation
-  ON_SerialNumberMap(const ON_SerialNumberMap&);
-  ON_SerialNumberMap& operator=(const ON_SerialNumberMap&);
+  ON_SerialNumberMap(const ON_SerialNumberMap&) = delete;
+  ON_SerialNumberMap& operator=(const ON_SerialNumberMap&) = delete;
 
-  enum
-  {
-    // These numbers are chosen so the ON_SerialNumberMap
-    // will be computationally efficient for up to
-    // 10 million entries.
-    SN_BLOCK_CAPACITY = 8192,
-    SN_PURGE_RATIO = 16,
-    ID_HASH_TABLE_COUNT = 8192
-  };
-
-  struct SN_BLOCK
-  {
-    size_t m_count;  // used elements in m_sn[]
-    size_t m_purged; // number of purged elements in m_sn[]
-    unsigned int m_sorted; // 0 = no, 1 = yes
-    unsigned int m_sn0; // minimum sn in m_sn[]
-    unsigned int m_sn1; // maximum sn in m_sn[]
-    struct SN_ELEMENT m_sn[SN_BLOCK_CAPACITY];
-    void EmptyBlock();
-    void CullBlockHelper();
-    void SortBlockHelper();
-    bool IsValidBlock(ON_TextLog* textlog,struct SN_ELEMENT*const* hash_table,size_t* active_id_count) const;
-    struct SN_ELEMENT* BinarySearchBlockHelper(unsigned int sn);
-    static int CompareMaxSN(const void*,const void*);
-    size_t ActiveElementEstimate(unsigned int sn0, unsigned int sn1) const;
-  };
-
-  unsigned int m_maxsn; // largest sn stored anywhere
-  unsigned int m_reserved;
-
-  // All heap used in this class is allocated from this pool.
-  ON_MEMORY_POOL* m_pool;
+private:
+  class ON_SerialNumberMapPrivate* m_private = nullptr;
 
   // Serial Number list counts
-  size_t m_sn_count;   // total number of elements                       
-  size_t m_sn_purged;  // total number of purged elements
+  ON__UINT64 m_sn_count = 0;   // total number of elements                       
+  ON__UINT64 m_sn_purged = 0;  // total number of purged elements
 
-  // ID hash table counts (all ids in the hash table are active)
-  bool m_bHashTableIsValid; // true if m_hash_table[] is valid
-  size_t m_active_id_count; // number of active ids in the hash table
-  ON_UUID m_inactive_id;    // frequently and id is removed and
-                            // then added back.  m_inactive_id
-                            // records the most recently removed
-                            // id so we don't have to waste time
-                            // searching the hash table for
-                            // an id that is not there.
-                            
-
-  // The blocks in m_sn_list[] are alwasy sorted, disjoint,
+  // The blocks in m_sn_list[] are always sorted, disjoint,
   // and in increasing order.  m_sn_list is used when
   // m_sn_block0.m_sn[] is not large enough.
   // The sn list is partitioned into blocks to avoid
   // requiring large amounts of contiguous memory for
   // situations with millions of serial numbers.
-  struct SN_BLOCK** m_snblk_list;
-  size_t m_snblk_list_capacity; // capacity of m_blk_list[]
-  size_t m_snblk_list_count;    // used elements in m_snblk_list[]
+  ON__UINT64 m_snblk_list_capacity = 0; // capacity of m_blk_list[]
+  ON__UINT64 m_snblk_list_count = 0;    // used elements in m_snblk_list[]
+  class ON_SN_BLOCK** m_snblk_list = nullptr;
 
   // If FindElementHelper() returns a non-null pointer
-  // to an element, then m_e_blk points to the SN_BLOCK
+  // to an element, then m_e_blk points to the ON_SN_BLOCK
   // that contains the returned element.  In all other
   // situations the value in m_e_blk is undefined and
   // m_e_blk must not be dereferenced.
-  struct SN_BLOCK* m_e_blk;
+  class ON_SN_BLOCK* m_e_blk = nullptr;
 
-  // m_sn_block0 is where the new additions are added.
-  // When serial numbers are not added in increasing
-  // order, m_sn_block0.m_sn[] may not be sorted.
-  SN_BLOCK m_sn_block0;
+private:
+  class ON_SN_BLOCK& m_sn_block0;
 
-  struct SN_ELEMENT* FindElementHelper(unsigned int sn);
+private:
+  struct SN_ELEMENT* FindElementHelper(ON__UINT64 sn);
   void UpdateMaxSNHelper();
   void GarbageCollectHelper();
-  size_t GarbageCollectMoveHelper(SN_BLOCK* dst,SN_BLOCK* src);
+  ON__UINT64 GarbageCollectMoveHelper(ON_SN_BLOCK* dst,ON_SN_BLOCK* src);
 
-  // When m_bHashTableIsValid is true, then m_hash_table[i] is 
-  // a linked list of elements whose id satisfies 
-  // i = HashIndex(&e->m_id).  When m_bHashTableIsValid is false,
-  // m_hash_table[] is identically zero.
-  struct SN_ELEMENT* m_hash_table[ID_HASH_TABLE_COUNT];
-  size_t HashIndex(const ON_UUID*) const;
-  void InvalidateHashTableHelper(); // marks table as dirty
-  bool RemoveBlockFromHashTableHelper(const struct SN_BLOCK* blk);
-  void AddBlockToHashTableHelper(struct SN_BLOCK* blk);
-  void BuildHashTableHelper();      // prepares table for use
+  ON__UINT8 m_reserved1 = 0;
+  ON__UINT8 m_reserved2 = 0;
+  ON__UINT8 m_reserved3 = 0;
+
+  // When m_bHashTableIsValid == 1, the id hash table is valid.
+  // Otherwise it is not built or out of date.
+  // When m_bHashTableIsValid and nullptr != m_hash_table, 
+  // then m_hash1_count > 0 and m_hash_table[i][j] is a 
+  // linked list of elements whose id satisfies 
+  // i = e->m_id_crc32 % m_hash_block_count
+  // j = (e->m_id_crc32/ID_HASH_BLOCK_CAPACITY) % ID_HASH_BLOCK_CAPACITY
+  mutable ON__UINT8 m_bHashTableIsValid = 0;
+
+  mutable ON__UINT32 m_hash_block_count = 0; // number of blocks in m_hash_tableX[] 
+  mutable ON__UINT64 m_hash_capacity = 0; // == m_hash_block_count*ID_HASH_BLOCK_CAPACITY
+                                  // ideally, m_active_id_count/m_hash_capacity is close to 4
+  mutable struct SN_ELEMENT*** m_hash_table_blocks = nullptr;
+
+  // ID hash table counts (all ids in the hash table are active)
+  ON__UINT64 m_active_id_count = 0; // number of active ids in the hash table
+  ON_UUID m_inactive_id = ON_nil_uuid; // frequently an id is removed and
+                            // then added back.  m_inactive_id
+                            // records the most recently removed
+                            // id so we don't have to waste time
+                            // searching the hash table for
+                            // an id that is not there.
+
+  void Internal_HashTableInvalidate(); // marks table as dirty
+  
+  bool Internal_HashTableRemoveSerialNumberBlock(
+    const class ON_SN_BLOCK* blk
+    );
+  
+  /*
+  Returns:
+    Number of active ids added to hash table.
+  */
+  ON__UINT64 Internal_HashTableAddSerialNumberBlock(
+    class ON_SN_BLOCK* blk
+    ) const;
+
+  void Internal_HashTableBuild() const;      // prepares table for use
+
+  struct SN_ELEMENT** Internal_HashTableBlock(
+    ON__UINT32 id_crc32
+    ) const;
+
+  ON__UINT32 Internal_HashTableBlockIndex(
+    ON__UINT32 id_crc32
+    ) const;
+
+  static ON__UINT32 Internal_HashTableBlockRowIndex(
+    ON__UINT32 id_crc32
+    );
+
+  struct SN_ELEMENT* Internal_HashTableFindId(
+    ON_UUID id,
+    ON__UINT32 id_crc32,
+    bool bBuildTableIfNeeded
+    ) const;
+
+  struct SN_ELEMENT* Internal_HashTableRemoveElement(
+    struct SN_ELEMENT* e,
+    bool bRemoveFromHashBlock
+    );
+
+  void Internal_HashTableGrow() const;
+
+  void Internal_HashTableInitialize() const;
+
 };
 
 

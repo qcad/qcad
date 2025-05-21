@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(ON_INTERSECT_INC_)
 #define ON_INTERSECT_INC_
@@ -78,99 +76,6 @@ bool ON_IntersectLineLine(
 
 /*
 Description:
-  Find the closest point between two infinte lines.
-Parameters:
-  lineA - [in]
-  lineB - [in]
-  double* a - [out]
-  double* b - [out] The shortest distance between the lines is the
-                   chord from lineA.PointAt(*a) to lineB.PointAt(*b).
-Returns:
-  True if points are found and false if the lines are numerically parallel.
-  Numerically parallel means the 2x2 matrix
-
-            AoA  -AoB
-           -AoB   BoB
-
- is numerically singluar, where A = lineA.to-lineA.from 
- and B = lineB.to-lineB.from.
-See Also:
-  ON_IntersectLineLine
-*/
-ON_DECL
-bool ON_Intersect(
-          const ON_Line& lineA, 
-          const ON_Line& lineB, 
-          double* a,
-          double* b
-          );
-
-ON_DECL
-bool ON_Intersect( // Returns false unless intersection is a single point
-                   // If returned parameter is < 0 or > 1, then the line
-                   // segment between line.m_point[0] and line.m_point[1]
-                   // does not intersect the plane
-          const ON_Line&, 
-          const ON_Plane&, 
-          double* // parameter on line
-          );
-
-ON_DECL
-bool ON_Intersect( const ON_Plane&, 
-                  const ON_Plane&, 
-                   ON_Line& // intersection line is returned here
-                   );
-
-ON_DECL
-bool ON_Intersect( const ON_Plane&, 
-                  const ON_Plane&, 
-                  const ON_Plane&,
-                  ON_3dPoint& // intersection point is returned here
-                  );
-
-ON_DECL
-int ON_Intersect( // returns 0 = no intersections, 
-                  // 1 = intersection = single point, 
-                  // 2 = intersection = circle
-                  // If 0 is returned, returned circle has radius=0
-                  // and center = point on sphere closest to plane.
-                  // If 1 is returned, intersection is a single
-                  // point and returned circle has radius=0
-                  // and center = intersection point on sphere.
-                 const ON_Plane&, const ON_Sphere&, ON_Circle&
-                  );
-
-ON_DECL
-int ON_Intersect( // returns 0 = no intersections, 
-                  // 1 = one intersection, 
-                  // 2 = 2 intersections
-                  // If 0 is returned, first point is point 
-                  // on line closest to sphere and 2nd point is the point
-                  // on the sphere closest to the line.
-                  // If 1 is returned, first point is obtained by evaluating
-                  // the line and the second point is obtained by evaluating
-                  // the sphere.
-                 const ON_Line&, const ON_Sphere&,
-                  ON_3dPoint&, ON_3dPoint& // intersection point(s) returned here
-                  );
-
-ON_DECL
-int ON_Intersect( // returns 0 = no intersections, 
-                  // 1 = one intersection, 
-                  // 2 = 2 intersections
-                  // 3 = line lies on cylinder
-                  // If 0 is returned, first point is point 
-                  // on line closest to cylinder and 2nd point is the point
-                  // on the sphere closest to the line.
-                  // If 1 is returned, first point is obtained by evaluating
-                  // the line and the second point is obtained by evaluating
-                  // the sphere.
-                  const ON_Line&, const ON_Cylinder&,
-                  ON_3dPoint&, ON_3dPoint& // intersection point(s) returned here
-                  );
-
-/*
-Description:
   Intersect an infinite line and an axis aligned bounding box.
 Parameters:
   bbox - [in]
@@ -178,8 +83,15 @@ Parameters:
   tolerance - [in]  If tolerance > 0.0, then the intersection is
                    performed against a box that has each side
                    moved out by tolerance.
-  line_parameters - [out] The chord from line.PointAt(line_parameters[0])
-     to line.PointAt(line_parameters[1]) is the intersection.
+  line_parameters - [out] 
+    Pass null if you do not need the parameters.
+    If true is returned and line.from != line.to,
+    then the chord from line.PointAt(line_parameters[0])
+    to line.PointAt(line_parameters[1]) is the intersection.
+    If true is returned and line.from = line.to, then line.from
+    is in the box and the interval (0.0,0.0) is returned.
+    If false is returned, the input value of line_parameters
+    is not changed.
 Returns:
   True if the line intersects the box and false otherwise.
 */

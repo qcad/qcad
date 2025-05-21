@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(ON_DETAIL_OBJECTY_INC_)
 #define ON_DETAIL_OBJECTY_INC_
@@ -31,44 +29,38 @@ public:
   //
   // virtual ON_Object overrides
   //
-  void MemoryRelocate();
+  void MemoryRelocate() override;
 
-  ON_BOOL32 IsValid( ON_TextLog* text_log = NULL ) const;
+  bool IsValid( class ON_TextLog* text_log = nullptr ) const override;
 
-  void Dump( ON_TextLog& ) const;
+  void Dump( ON_TextLog& ) const override;
 
-  unsigned int SizeOf() const;
+  unsigned int SizeOf() const override;
 
-  ON_BOOL32 Write(
+  bool Write(
          ON_BinaryArchive& binary_archive
-       ) const;
+       ) const override;
 
-  ON_BOOL32 Read(
+  bool Read(
          ON_BinaryArchive& binary_archive
-       );
+       ) override;
 
-  ON::object_type ObjectType() const; // returns ON::detail_object
+  ON::object_type ObjectType() const override; // returns ON::detail_object
 
   //////////////////////////////////////////////////////
   //
   // virtual ON_Geometry overrides
   // The m_boundary determines all bounding boxes 
   //
-  int Dimension() const;
+  int Dimension() const override;
 
-  ON_BOOL32 GetBBox(
-         double* boxmin,
-         double* boxmax,
-         int bGrowBox = false
-         ) const;
+  // virtual ON_Geometry GetBBox override		
+  bool GetBBox( double* boxmin, double* boxmax, bool bGrowBox = false ) const override;
 
-	bool GetTightBoundingBox( 
-			ON_BoundingBox& tight_bbox, 
-      int bGrowBox = false,
-			const ON_Xform* xform = 0
-      ) const;
+  // virtual ON_Geometry GetTightBoundingBox override		
+  bool GetTightBoundingBox( class ON_BoundingBox& tight_bbox, bool bGrowBox = false, const class ON_Xform* xform = nullptr ) const override;
 
-  ON_BOOL32 Transform( const ON_Xform& xform );
+  bool Transform( const ON_Xform& xform ) override;
 
   // m_page_per_model_ratio is the ratio of page length / model length
   // where both lengths are in the same unit system
@@ -86,6 +78,12 @@ public:
   // 2d curve in page layout coordinates in mm
   // (0,0) = lower left corner of page
   ON_NurbsCurve m_boundary;
+
+  // Update frustum to match bounding box and detail scale
+  bool UpdateFrustum(
+    ON::LengthUnitSystem model_units,
+    ON::LengthUnitSystem paper_units
+  );
 };
 
 

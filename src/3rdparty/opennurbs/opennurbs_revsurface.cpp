@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,9 +10,16 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
+
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
 
 ON_OBJECT_IMPLEMENT( ON_RevSurface, ON_Surface, "A16220D3-163B-11d4-8000-0010830122F0");
 
@@ -40,7 +46,7 @@ ON_RevSurface* ON_RevSurface::New( const ON_RevSurface& rev_surface )
 }
 
 ON_RevSurface::ON_RevSurface() : m_curve(0), 
-                                 m_axis( ON_origin, ON_zaxis ), 
+                                 m_axis( ON_3dPoint::Origin, ON_3dVector::ZAxis ), 
                                  m_angle( 0.0, 2.0*ON_PI ),
                                  m_t( 0.0, 2.0*ON_PI ),
                                  m_bTransposed(0)
@@ -61,7 +67,7 @@ void ON_RevSurface::Destroy()
     delete m_curve;
     m_curve = 0;
   }
-  m_axis.Create( ON_origin, ON_zaxis );
+  m_axis.Create( ON_3dPoint::Origin, ON_3dVector::ZAxis );
   m_angle.Set(0.0,2.0*ON_PI);
   m_t = m_angle;
   m_bTransposed = false;
@@ -71,7 +77,7 @@ void ON_RevSurface::Destroy()
 ON_RevSurface::ON_RevSurface( const ON_RevSurface& src ) : ON_Surface(src)
 {
   ON__SET__THIS__PTR(m_s_ON_RevSurface_ptr);
-  m_curve = src.m_curve ? src.m_curve->Duplicate() : NULL;
+  m_curve = src.m_curve ? src.m_curve->Duplicate() : nullptr;
   m_axis = src.m_axis;
   m_angle = src.m_angle;
   m_t = src.m_t;
@@ -118,7 +124,7 @@ ON_RevSurface& ON_RevSurface::operator=( const ON_RevSurface& src )
 }
 
 
-ON_BOOL32 ON_RevSurface::SetAngleRadians(
+bool ON_RevSurface::SetAngleRadians(
   double start_angle_radians,
   double end_angle_radians
   )
@@ -139,7 +145,7 @@ ON_BOOL32 ON_RevSurface::SetAngleRadians(
 }
 
 
-ON_BOOL32 ON_RevSurface::SetAngleDegrees (
+bool ON_RevSurface::SetAngleDegrees (
   double start_angle_degrees,
   double end_angle_degrees
   )
@@ -151,12 +157,12 @@ ON_BOOL32 ON_RevSurface::SetAngleDegrees (
 }
 
 
-ON_BOOL32 ON_RevSurface::IsValid( ON_TextLog* text_log ) const
+bool ON_RevSurface::IsValid( ON_TextLog* text_log ) const
 {
   if ( !m_curve )
   {
     if ( text_log )
-      text_log->Print( "ON_RevSurface.m_curve is NULL.\n");
+      text_log->Print( "ON_RevSurface.m_curve is nullptr.\n");
     return false;
   }
   if ( !m_curve->IsValid(text_log) )
@@ -229,18 +235,19 @@ void ON_RevSurface::Dump( ON_TextLog& dump ) const
     m_curve->Dump(dump);
     dump.PopIndent();
   }  
+  dump.PopIndent();
 }
 
-ON_BOOL32 ON_RevSurface::Write( ON_BinaryArchive& file ) const
+bool ON_RevSurface::Write( ON_BinaryArchive& file ) const
 {
-  ON_BOOL32 rc = file.Write3dmChunkVersion(2,0);
+  bool rc = file.Write3dmChunkVersion(2,0);
   if (rc) 
   {
     rc = file.WriteLine( m_axis );
     rc = file.WriteInterval( m_angle );
     rc = file.WriteInterval( m_t );
     rc = file.WriteBoundingBox( m_bbox );
-    rc = file.WriteInt( m_bTransposed );
+    rc = file.WriteInt( m_bTransposed?1:0 );
     if ( m_curve ) 
     {
       rc = file.WriteChar((char)1);
@@ -255,18 +262,21 @@ ON_BOOL32 ON_RevSurface::Write( ON_BinaryArchive& file ) const
 }
 
 
-ON_BOOL32 ON_RevSurface::Read( ON_BinaryArchive& file )
+bool ON_RevSurface::Read( ON_BinaryArchive& file )
 {
   int major_version = 0;
   int minor_version = 0;
   char bHaveCurve = 0;
-  ON_BOOL32 rc = file.Read3dmChunkVersion(&major_version,&minor_version);
+  bool rc = file.Read3dmChunkVersion(&major_version,&minor_version);
   if (rc && major_version == 1) 
   {
     rc = file.ReadLine( m_axis );
     rc = file.ReadInterval( m_angle );
     rc = file.ReadBoundingBox( m_bbox );
-    rc = file.ReadInt( &m_bTransposed );
+    int bTransposedAsInt = m_bTransposed ? 1 : 0;
+    rc = file.ReadInt( &bTransposedAsInt );
+    if (rc)
+      m_bTransposed = bTransposedAsInt ? true : false;
     rc = file.ReadChar( &bHaveCurve );
     if ( bHaveCurve ) 
     {
@@ -288,7 +298,10 @@ ON_BOOL32 ON_RevSurface::Read( ON_BinaryArchive& file )
     rc = file.ReadInterval( m_angle );
     rc = file.ReadInterval( m_t );
     rc = file.ReadBoundingBox( m_bbox );
-    rc = file.ReadInt( &m_bTransposed );
+    int bTransposedAsInt = m_bTransposed ? 1 : 0;
+    rc = file.ReadInt( &bTransposedAsInt );
+    if (rc) 
+      m_bTransposed = bTransposedAsInt ? true : false;
     rc = file.ReadChar( &bHaveCurve );
     if ( bHaveCurve ) 
     {
@@ -310,11 +323,11 @@ int ON_RevSurface::Dimension() const
   return 3;
 }
 
-ON_BOOL32 ON_RevSurface::Transform( const ON_Xform& xform )
+bool ON_RevSurface::Transform( const ON_Xform& xform )
 {
   DestroyRuntimeCache();
   TransformUserData(xform);
-  ON_BOOL32 rc = (m_curve) ? m_curve->Transform(xform) : false;
+  bool rc = (m_curve) ? m_curve->Transform(xform) : false;
   ON_3dVector X, Y, Z;
   Z = m_axis.Tangent();
   X.PerpendicularTo( Z );
@@ -347,7 +360,7 @@ ON_BOOL32 ON_RevSurface::Transform( const ON_Xform& xform )
   return rc;
 }
 
-ON_BOOL32 ON_RevSurface::Evaluate( // returns false if unable to evaluate
+bool ON_RevSurface::Evaluate( // returns false if unable to evaluate
        double s, // angle
        double t, // curve_parameter
        // evaluation parameters
@@ -592,7 +605,7 @@ int ON_RevSurface::GetNurbForm(class ON_NurbsSurface& srf , double tolerance ) c
   {
     ON_NurbsCurve a, c;
     ON_Arc arc;
-    arc.plane.CreateFromNormal( ON_origin, ON_zaxis );
+    arc.plane.CreateFromNormal( ON_3dPoint::Origin, ON_3dVector::ZAxis );
     arc.radius = 1.0;
     arc.SetAngleRadians(m_angle[1]-m_angle[0]);
     if ( arc.GetNurbForm(a) ) 
@@ -602,6 +615,20 @@ int ON_RevSurface::GetNurbForm(class ON_NurbsSurface& srf , double tolerance ) c
       rc = m_curve->GetNurbForm(c,tolerance);
       if (rc) 
       {
+        if ( 2 == c.m_dim )
+        {
+          // Increasing the dimension of a 2d curve to 3d fixes
+          // was added to make the Scale1D operation in
+          // bug # 103845 work.
+          ON_WARNING("ON_RevSurface.m_curve is 2-dimensional.");
+          c.ChangeDimension(3);
+        }
+        if ( 3 != c.m_dim )
+        {
+          ON_ERROR("ON_RevSurface.m_curve is not valid.");
+          return 0;
+        }
+
         if ( m_angle[0] != 0.0 )
         {
           c.Rotate( m_angle[0], m_axis.Direction(), m_axis.from );
@@ -614,7 +641,15 @@ int ON_RevSurface::GetNurbForm(class ON_NurbsSurface& srf , double tolerance ) c
         rho.X.Unitize();
         rho.Y = ON_CrossProduct(rho.Z,rho.X);
         rho.Y.Unitize();
-        srf.TensorProduct( a, c, rho );
+        if ( !srf.TensorProduct( a, c, rho ) )
+        {
+          // Testing for false here prevents crashes
+          // when and was added as part of investigating
+          // bug # 103845.  A change a few lines up
+          // made it so that particular bug no longer
+          // fails to create a nurbs surface.
+          return 0;
+        }
 
         // make singular points "spot on"
         ON_3dPoint C0 = c.PointAtStart();
@@ -741,11 +776,55 @@ bool ON_RevSurface::GetNurbFormParameterFromSurfaceParameter(
   return rc;
 }
 
+ON_Arc ON_RevSurface::IsoArc(
+  double curve_parameter
+) const
+{
+  for (;;)
+  {
+    if (nullptr == m_curve)
+      break;
+    // 8 December 2003 Chuck - fix iso extraction bug
+    //   when m_angle[0] != 0.
+    ON_Circle circle;
+    ON_3dPoint P = m_curve->PointAt(curve_parameter);
+    if (false == P.IsValid())
+      break;
+    circle.plane.origin = m_axis.ClosestPointTo(P);
+    circle.plane.zaxis = m_axis.Tangent();
+    circle.plane.xaxis = P - circle.plane.origin;
+    circle.radius = circle.plane.xaxis.Length();
+    if (!circle.plane.xaxis.Unitize())
+    {
+      // 8 December 2003 Dale Lear - get valid zero radius
+      //   arc/circle when revolute hits the axis.
+      // First: try middle of revolute for x-axis
+      P = m_curve->PointAt(m_curve->Domain().ParameterAt(0.5));
+      ON_3dPoint Q = m_axis.ClosestPointTo(P);
+      circle.plane.xaxis = P - Q;
+      if (!circle.plane.xaxis.Unitize())
+      {
+        // Then: just use a vector perp to zaxis
+        circle.plane.xaxis.PerpendicularTo(circle.plane.zaxis);
+      }
+    }
+    circle.plane.yaxis = ON_CrossProduct(circle.plane.zaxis, circle.plane.xaxis);
+    circle.plane.yaxis.Unitize();
+    circle.plane.UpdateEquation();
+    ON_Arc arc(circle, m_angle);
+    return arc;
+  }
+  ON_Arc arc;
+  arc.plane = ON_Plane::NanPlane;
+  arc.radius = ON_DBL_QNAN;
+  return arc;
+}
+
 
 ON_Curve* ON_RevSurface::IsoCurve( int dir, double c ) const
 {
   if ( dir < 0 || dir > 1 || !m_curve )
-    return NULL;
+    return nullptr;
 
   ON_Curve* crv = 0;
   
@@ -802,9 +881,9 @@ ON_Curve* ON_RevSurface::IsoCurve( int dir, double c ) const
   return crv;
 }
 
-ON_BOOL32 ON_RevSurface::Trim( int dir, const ON_Interval& domain )
+bool ON_RevSurface::Trim( int dir, const ON_Interval& domain )
 {
-  ON_BOOL32 rc = false;
+  bool rc = false;
   if ( dir != 0 && dir != 1 )
     return false;
   if ( !domain.IsIncreasing() )
@@ -898,21 +977,21 @@ bool ON_RevSurface::Extend(
   {
     DestroySurfaceTree();
     // update bounding box
-    ON_BoundingBox bbox0 = m_bbox;
+    //ON_BoundingBox bbox0 = m_bbox;
     m_bbox.Destroy();
     BoundingBox();
   }
   return rc;
 }
 
-ON_BOOL32 ON_RevSurface::Split(
+bool ON_RevSurface::Split(
        int dir,
        double c,
        ON_Surface*& west_or_south_side,
        ON_Surface*& east_or_north_side
        ) const
 {
-  ON_BOOL32 rc = false;
+  bool rc = false;
 
   ON_RevSurface* srf_ws=ON_RevSurface::Cast(west_or_south_side);
   ON_RevSurface* srf_en=ON_RevSurface::Cast(east_or_north_side);
@@ -1016,13 +1095,13 @@ ON_BOOL32 ON_RevSurface::Split(
     srf_en->m_bbox.Destroy();
 
     // update bounding boxes
-    // if input box was valid, intesect calculated boxes with
+    // if input box was valid, intersect calculated boxes with
     // input box
-    srf_ws->BoundingBox(); // calcluates srf_ws->m_bbox
+    srf_ws->BoundingBox(); // calculates srf_ws->m_bbox
     if ( srf_ws->m_bbox.IsValid() && input_bbox.IsValid() )
       srf_ws->m_bbox.Intersection(input_bbox);
 
-    srf_en->BoundingBox(); // calcluates srf_en->m_bbox
+    srf_en->BoundingBox(); // calculates srf_en->m_bbox
     if ( srf_en->m_bbox.IsValid() && input_bbox.IsValid() )
       srf_en->m_bbox.Intersection(input_bbox);
   }
@@ -1031,68 +1110,7 @@ ON_BOOL32 ON_RevSurface::Split(
 }
 
 
-bool ON_RevSurface::GetClosestPoint( 
-        const ON_3dPoint& test_point,
-        double* angle_t, double* curve_t,  // parameters of local closest point returned here
-        double maximum_distance,
-        const ON_Interval* angle_sub_domain, // can be NULL
-        const ON_Interval* curve_sub_domain  // can be NULL
-        ) const
-{
-  bool rc = false;
-
-  if ( m_curve )
-  {
-    // TODO - Add a FAST planar test and if curve is not planar,
-    //        call ON_Surface::GetClosestPoint().
-
-    if ( m_bTransposed )
-    {
-      double* ptr = angle_t;
-      angle_t = curve_t;
-      curve_t = ptr;
-      const ON_Interval* p = angle_sub_domain;
-      angle_sub_domain = curve_sub_domain;
-      curve_sub_domain = p;
-    }
-
-    // this assumes revolute is coplanar with axis and midpoint of curve is
-    // not on the axis
-
-    ON_Interval angle_domain;
-    if ( angle_sub_domain )
-    {
-      if ( m_t != m_angle )
-      {
-        angle_domain[0] = m_angle.ParameterAt( m_t.NormalizedParameterAt(angle_sub_domain->Min()) );
-        angle_domain[1] = m_angle.ParameterAt( m_t.NormalizedParameterAt(angle_sub_domain->Max()) );
-      }
-      else
-      {
-        angle_domain[0] = angle_sub_domain->Min();
-        angle_domain[1] = angle_sub_domain->Max();
-      }
-      angle_domain.Intersection(m_angle);
-    }
-    else
-      angle_domain = m_angle;
-
-    if ( angle_domain[0] == ON_UNSET_VALUE || angle_domain[1] == ON_UNSET_VALUE )
-      return false;
-
-    ON_3dPoint curve_test_point;
-    double angle, sin_angle, cos_angle;
-    angle = ON_ClosestPointAngle( m_axis, *m_curve, angle_domain, test_point, curve_test_point, &sin_angle, &cos_angle );
-    if ( m_t != m_angle )
-      *angle_t = m_t.ParameterAt( m_angle.NormalizedParameterAt(angle) );
-    else
-      *angle_t = angle;
-    rc = m_curve->GetClosestPoint( curve_test_point, curve_t, maximum_distance, curve_sub_domain )?true:false;
-  }
-  return rc;
-}
-
-ON_BOOL32 ON_RevSurface::Transpose()
+bool ON_RevSurface::Transpose()
 {
   m_bTransposed = m_bTransposed ? false : true;
   return true;
@@ -1102,11 +1120,11 @@ bool ON_RevSurface::IsContinuous(
     ON::continuity desired_continuity,
     double s, 
     double t, 
-    int* hint, // default = NULL,
+    int* hint, // default = nullptr,
     double point_tolerance, // default=ON_ZERO_TOLERANCE
     double d1_tolerance, // default==ON_ZERO_TOLERANCE
     double d2_tolerance, // default==ON_ZERO_TOLERANCE
-    double cos_angle_tolerance, // default==0.99984769515639123915701155881391
+    double cos_angle_tolerance, // default==ON_DEFAULT_ANGLE_TOLERANCE_COSINE
     double curvature_tolerance  // default==ON_SQRT_EPSILON
     ) const
 {
@@ -1121,9 +1139,9 @@ bool ON_RevSurface::IsContinuous(
   return rc;
 }
 
-ON_BOOL32 ON_RevSurface::Reverse( int dir )
+bool ON_RevSurface::Reverse( int dir )
 {
-  ON_BOOL32 rc = false;
+  bool rc = false;
   if ( m_bTransposed )
     dir = dir ? 0 : 1;
   if ( dir == 0 )
@@ -1181,11 +1199,11 @@ bool ON_RevSurface::GetNextDiscontinuity(
   return rc;
 }
 
-ON_BOOL32 ON_RevSurface::IsSingular( int side ) const // 0 = south, 1 = east, 2 = north, 3 = west
+bool ON_RevSurface::IsSingular( int side ) const // 0 = south, 1 = east, 2 = north, 3 = west
 {
-  ON_BOOL32 rc = false;
+  bool rc = false;
   ON_3dPoint P, Q;
-  double d, tol;
+  //double d, tol;
   if ( side < 0 || side > 3 )
     return false;
 
@@ -1224,28 +1242,33 @@ ON_BOOL32 ON_RevSurface::IsSingular( int side ) const // 0 = south, 1 = east, 2 
     //if ( d <= ON_ZERO_TOLERANCE )
     //  rc = true;
 
-    d = fabs(P.x - Q.x);
-    tol = ON_ZERO_TOLERANCE + fabs(Q.x)*ON_SQRT_EPSILON;
-    if ( d <= tol )
-    {
-      d = fabs(P.y - Q.y);
-      tol = ON_ZERO_TOLERANCE + fabs(Q.y)*ON_SQRT_EPSILON;
-      if ( d <= tol )
-      {
-        d = fabs(P.z - Q.z);
-        tol = ON_ZERO_TOLERANCE + fabs(Q.z)*ON_SQRT_EPSILON;
-        if ( d <= tol )
-          rc = true;
-      }
-    }
+    // 12 July 2012 Dale Lear
+    //   Use ON_PointsAreCoincident() for all IsSingular queries
+    //
+    //d = fabs(P.x - Q.x);
+    //tol = ON_ZERO_TOLERANCE + fabs(Q.x)*ON_SQRT_EPSILON;
+    //if ( d <= tol )
+    //{
+    //  d = fabs(P.y - Q.y);
+    //  tol = ON_ZERO_TOLERANCE + fabs(Q.y)*ON_SQRT_EPSILON;
+    //  if ( d <= tol )
+    //  {
+    //    d = fabs(P.z - Q.z);
+    //    tol = ON_ZERO_TOLERANCE + fabs(Q.z)*ON_SQRT_EPSILON;
+    //    if ( d <= tol )
+    //      rc = true;
+    //  }
+    //}
+    rc = ON_PointsAreCoincident(3,0,&P.x,&Q.x);
+
   }
 
   return rc;
 }
 
-ON_BOOL32 ON_RevSurface::IsPeriodic( int dir ) const // dir  0 = "s", 1 = "t"
+bool ON_RevSurface::IsPeriodic( int dir ) const // dir  0 = "s", 1 = "t"
 {
-  ON_BOOL32 rc = false;
+  bool rc = false;
   if ( m_bTransposed )
     dir = dir ? 0 : 1;
   if ( dir == 0 )
@@ -1260,12 +1283,12 @@ ON_BOOL32 ON_RevSurface::IsPeriodic( int dir ) const // dir  0 = "s", 1 = "t"
   return rc;
 }
 
-ON_BOOL32 ON_RevSurface::IsPlanar(
+bool ON_RevSurface::IsPlanar(
       ON_Plane* plane,
       double tolerance
       ) const
 {
-  ON_BOOL32 rc = false;
+  bool rc = false;
   if( IsValid()){
     ON_Plane AxisNormal( m_curve->PointAtStart(), m_axis.Tangent() );
     rc = m_curve->IsInPlane( AxisNormal, tolerance);
@@ -1275,9 +1298,9 @@ ON_BOOL32 ON_RevSurface::IsPlanar(
   return rc;
 }
 
-ON_BOOL32 ON_RevSurface::IsClosed( int dir ) const  // dir  0 = "s", 1 = "t"
+bool ON_RevSurface::IsClosed( int dir ) const  // dir  0 = "s", 1 = "t"
 {
-  ON_BOOL32 rc = false;
+  bool rc = false;
   if ( m_bTransposed )
     dir = dir ? 0 : 1;
   if ( dir == 0 )
@@ -1292,14 +1315,14 @@ ON_BOOL32 ON_RevSurface::IsClosed( int dir ) const  // dir  0 = "s", 1 = "t"
   return rc;
 }
 
-ON_BOOL32 ON_RevSurface::GetParameterTolerance( // returns tminus < tplus: parameters tminus <= s <= tplus
+bool ON_RevSurface::GetParameterTolerance( // returns tminus < tplus: parameters tminus <= s <= tplus
          int dir,        // 0 gets first parameter, 1 gets second parameter
          double t,       // t = parameter in domain
          double* tminus, // tminus
          double* tplus   // tplus
          ) const
 {
-  ON_BOOL32 rc = false;
+  bool rc = false;
   if ( m_bTransposed )
     dir = dir ? 0 : 1;
   if ( dir == 0 )
@@ -1314,7 +1337,7 @@ ON_BOOL32 ON_RevSurface::GetParameterTolerance( // returns tminus < tplus: param
   return rc;
 }
 
-ON_BOOL32 ON_RevSurface::SetDomain( 
+bool ON_RevSurface::SetDomain( 
   int dir, // 0 sets first parameter's domain, 1 gets second parameter's domain
   double t0, 
   double t1
@@ -1356,12 +1379,12 @@ ON_Interval ON_RevSurface::Domain( int dir ) const
   return d;
 }
 
-ON_BOOL32 ON_RevSurface::GetSurfaceSize( 
+bool ON_RevSurface::GetSurfaceSize( 
     double* width, 
     double* height 
     ) const
 {
-  ON_BOOL32 rc = false;
+  bool rc = false;
   if ( m_bTransposed )
   {
     double* ptr = width;
@@ -1376,11 +1399,11 @@ ON_BOOL32 ON_RevSurface::GetSurfaceSize(
     int i, hint = 0;
     int imax = 64;
     double d = 1.0/((double)imax);
-    ON_3dPoint pt0 = ON_UNSET_POINT;
+    ON_3dPoint pt0 = ON_3dPoint::UnsetPoint;
     ON_3dPoint pt;
     double length_estimate = 0.0;
 
-    if ( width != NULL || height != NULL )
+    if ( width != nullptr || height != nullptr )
     {
       double radius_estimate = 0.0;
       double r;
@@ -1391,19 +1414,18 @@ ON_BOOL32 ON_RevSurface::GetSurfaceSize(
           r = m_axis.DistanceTo(pt);
           if ( r > radius_estimate )
             radius_estimate = r;
-          if ( pt0 != ON_UNSET_POINT )
+          if ( pt0 != ON_3dPoint::UnsetPoint )
             length_estimate += pt0.DistanceTo(pt);
           pt0 = pt;
         }
       }
-      if ( width != NULL )
+      if ( width != nullptr )
         *width = m_angle.Length()*radius_estimate;
     }
 
-    if ( height != NULL )
+    if ( height != nullptr )
     {
-      if ( !m_curve->GetLength( height, 1.0e-4 ) )
-        *height = length_estimate;
+      *height = length_estimate;
     }
   }
   else
@@ -1438,9 +1460,9 @@ int ON_RevSurface::SpanCount( int dir ) const
 }
 
 
-ON_BOOL32 ON_RevSurface::GetSpanVector( int dir, double* s ) const
+bool ON_RevSurface::GetSpanVector( int dir, double* s ) const
 {
-  ON_BOOL32 rc = false;
+  bool rc = false;
   if ( m_bTransposed )
     dir = 1-dir;
   if ( dir==0 && m_t.IsIncreasing() ) {
@@ -1479,13 +1501,13 @@ void ON_RevSurface::ClearBoundingBox()
   m_bbox.Destroy();
 }
 
-ON_BOOL32 ON_RevSurface::GetBBox(    // returns true if successful
+bool ON_RevSurface::GetBBox(    // returns true if successful
        double* boxmin,  // boxmin[dim]
        double* boxmax,  // boxmax[dim]
-       ON_BOOL32 bGrowBox    // true means grow box
+       bool bGrowBox    // true means grow box
        ) const
 {
-  ON_BOOL32 rc = m_bbox.IsValid();
+  bool rc = m_bbox.IsValid();
 
   if ( !rc )
   {
@@ -1493,7 +1515,9 @@ ON_BOOL32 ON_RevSurface::GetBBox(    // returns true if successful
     rc = m_curve->GetBoundingBox( cbox );
     if (rc)
     {
-      bbox = cbox;
+      //Dec 16 2010 - Chuck - if the angle range does not include 0, m_curve is not part of the surface.
+      //bbox = cbox;
+
       ON_3dPointArray corners;
       cbox.GetCorners(corners);
       ON_3dPoint P;
@@ -1502,30 +1526,38 @@ ON_BOOL32 ON_RevSurface::GetBBox(    // returns true if successful
       arc.SetAngleRadians(m_angle[1] - m_angle[0]);
       int i;
       double t;
-      for ( i = 0; i < 8; i++ )
+      for ( i = 0; i < corners.Count(); i++ )
       {
         P = corners[i];
-        if ( m_axis.ClosestPointTo(P,&t) )
+        abox.Set(P,false);
+        while( m_axis.ClosestPointTo(P,&t) ) // not a loop - used for flow control
         {
+          // If we cannot construct a valid arc, then P and the point on the axis
+          // are added to the bounding box.  One case where this happens is when
+          // P is on the axis of revolution.  See bug 84354.
+
           arc.plane.origin = m_axis.PointAt(t);
           arc.plane.xaxis = P-arc.plane.origin;
+          abox.Set(arc.plane.origin,true);
           arc.radius = arc.plane.xaxis.Length();
           if ( !arc.plane.xaxis.Unitize() )
-            continue;
-          if ( fabs(arc.plane.xaxis*arc.plane.zaxis) > 0.0001 )
-            continue;
+            break;
+          double dot = arc.plane.xaxis*arc.plane.zaxis;
+          if ( fabs(dot) > 0.0001 )
+            break; 
           arc.plane.yaxis = ON_CrossProduct(arc.plane.zaxis,arc.plane.xaxis);
           if ( !arc.plane.yaxis.Unitize() )
-            continue;
+            break;
           arc.plane.UpdateEquation();
           arc.plane.Rotate( m_angle[0], arc.plane.zaxis );
-          if ( arc.IsValid() )
-          {
-            abox = arc.BoundingBox();
-            bbox.Union(abox);
-          }
+          if ( !arc.IsValid() )
+            break;
+          abox = arc.BoundingBox();
+          break;
         }
+        bbox.Union(abox);
       }
+
       if ( bbox.IsValid() )
       {
         ON_RevSurface* ptr = const_cast<ON_RevSurface*>(this);
@@ -1568,9 +1600,9 @@ ON_BOOL32 ON_RevSurface::GetBBox(    // returns true if successful
   return rc;
 }
 
-ON_BOOL32 ON_RevSurface::IsSpherical(ON_Sphere* sphere, double tolerance ) const
+bool ON_RevSurface::IsSpherical(ON_Sphere* sphere, double tolerance ) const
 {
-  ON_BOOL32 rc = false;
+  bool rc = false;
   if ( m_curve )
   {
     ON_Plane plane;
@@ -2262,7 +2294,7 @@ bool ON__IsCylConeHelper(
     return false;
   if ( h < 0.0 )
   {
-    plane.zaxis.Reverse();
+    plane.zaxis = -plane.zaxis;
     h = -h;
   }
   if ( h <= ON_ZERO_TOLERANCE )
@@ -2306,7 +2338,7 @@ bool ON__IsCylConeHelper(
   return (curve->IsLinear( tolerance )?true:false);
 }
 
-ON_BOOL32 ON_RevSurface::IsCylindrical(
+bool ON_RevSurface::IsCylindrical(
       ON_Cylinder* cylinder,
       double tolerance
       ) const
@@ -2331,7 +2363,7 @@ ON_BOOL32 ON_RevSurface::IsCylindrical(
   return c.IsValid();
 }
 
-ON_BOOL32 ON_RevSurface::IsConical(
+bool ON_RevSurface::IsConical(
       ON_Cone* cone,
       double tolerance
       ) const
@@ -2379,113 +2411,5 @@ ON_BOOL32 ON_RevSurface::IsConical(
   if ( cone )
     *cone = c;
   return c.IsValid();
-}
-
-double ON_ClosestPointAngle( 
-            const ON_Line& axis, 
-            const ON_Curve& curve, 
-            ON_Interval angle_domain,
-            const ON_3dPoint& test_point,
-            ON_3dPoint& curve_test_point, 
-            double* sine_angle, 
-            double* cosine_angle 
-            )
-{
-  // this assumes curve (revolute) is coplanar with axis and midpoint of curve is
-  // not on the axis
-
-  // angle_domain is on the stack and we assume it is increasing
-  // below, so it is ok to swap it here.  This does not change the
-  // interval that was passed to ClsPtAngle().
-  if ( angle_domain.IsDecreasing() )
-    angle_domain.Swap();
-
-  curve_test_point = test_point;
-  ON_3dPoint Cpt = curve.PointAt( curve.Domain().ParameterAt( 0.5 ) );
-  ON_3dPoint Apt = axis.ClosestPointTo( Cpt );
-  ON_3dVector v0 = Cpt - Apt;
-  ON_3dVector v1 = test_point - axis.ClosestPointTo( test_point );
-  v0.Unitize();
-  v1.Unitize();
-  double angle = angle_domain[0];
-  double cos_angle = v0*v1;
-  ON_3dVector Cross = ON_CrossProduct( v0, v1 );
-  double sin_angle = Cross.Length();
-  if (axis.Direction()*Cross < 0.0) 
-    sin_angle *= -1.0;
-
-  // 16 November 2002 Dale Lear: I was getting the wrong pullback on
-  //     cyl seams when cos_angle=1.0 and sin_angle = ...1e-16.  This
-  //     fixed the bug.
-
-  // cos_angle sin_angle is garbage if fabs() s < ON_EPSILON
-  if ( fabs(sin_angle) < ON_EPSILON ) sin_angle = 0.0;
-  if ( fabs(cos_angle) < ON_EPSILON ) cos_angle = 0.0;
-
-  // if cos/sin is +1, -1, then we set the other to 0
-  if      ( cos_angle >=  1.0 ) { cos_angle =  1.0; sin_angle =  0.0; }
-  else if ( cos_angle <= -1.0 ) { cos_angle = -1.0; sin_angle =  0.0; }
-  else if ( sin_angle >=  1.0 ) { cos_angle =  0.0; sin_angle =  1.0; }
-  else if ( sin_angle <= -1.0 ) { cos_angle =  0.0; sin_angle = -1.0; }
-  else if ( cos_angle == 0.0 && sin_angle != 0.0 ) { sin_angle = (sin_angle>0.0) ? 1.0 : -1.0;}
-  else if ( cos_angle != 0.0 && sin_angle == 0.0 ) { cos_angle = (cos_angle>0.0) ? 1.0 : -1.0;}
-
-  if ( sin_angle != 0.0 || cos_angle != 0.0 )
-  {
-    {
-      ON_Xform rot;
-      rot.Rotation( -sin_angle, cos_angle, axis.Tangent(), Apt );
-      curve_test_point = rot*test_point;
-    }
-    angle = atan2( sin_angle, cos_angle );
-    if ( !angle_domain.Includes(angle) )
-    {
-      // NOTE: angle[0] and angle[1] can both be negative (-2pi,pi) for example
-      const double twopi = 2.0*ON_PI;
-
-      // if angle is too small, add 2pi
-      while ( angle < angle_domain[0] )
-        angle += twopi;
-
-      // if angle is too big, subtract 2pi
-      while ( angle > angle_domain[0]+twopi && angle > angle_domain[1] )
-        angle -= twopi;
-
-      if ( !angle_domain.Includes(angle) )
-      {
-        // a0 = smallest angle between "angle" and angle[0]
-        double d0 = fabs(angle - angle_domain[0]);
-        double d1 = fabs(angle - angle_domain[0] - twopi);
-        double d2 = fabs(angle - angle_domain[0] + twopi);
-        double a0 = (d0<=d1) ? ((d0<=d2)?d0:d2) : ((d1<=d2)?d1:d2);
-
-        // a1 = smallest angle between "angle" and angle[1]
-        d0 = fabs(angle - angle_domain[1]);
-        d1 = fabs(angle - angle_domain[1] - twopi);
-        d2 = fabs(angle - angle_domain[1] + twopi);
-        double a1 = (d0<=d1) ? ((d0<=d2)?d0:d2) : ((d1<=d2)?d1:d2);
-
-        if ( a0 <= a1 )
-        {
-          // angle is closest to angle_domain[0]
-          angle = angle_domain[0];
-        }
-        else
-        {
-          // angle is closest to angle_domain[1]
-          angle = angle_domain[1];
-        }
-      }
-    }
-  }
-
-  // angle may have been tweaked and atan2 might have a bit of fuzz,
-  // this makes sure sine and cosine are spot on.
-  sin_angle = sin(angle);
-  cos_angle = cos(angle);
-
-  *sine_angle = sin_angle;
-  *cosine_angle = cos_angle;
-  return angle;
 }
 

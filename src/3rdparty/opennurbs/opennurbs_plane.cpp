@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,26 +10,16 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
 
-const ON_Plane ON_xy_plane( ON_3dPoint(0.0,0.0,0.0),
-                              ON_3dVector(1.0,0.0,0.0),
-                              ON_3dVector(0.0,1.0,0.0) 
-                              );
-
-const ON_Plane ON_yz_plane( ON_3dPoint(0.0,0.0,0.0),
-                              ON_3dVector(0.0,1.0,0.0), 
-                              ON_3dVector(0.0,0.0,1.0) 
-                              );
-
-const ON_Plane ON_zx_plane( ON_3dPoint(0.0,0.0,0.0),
-                              ON_3dVector(0.0,0.0,1.0),
-                              ON_3dVector(1.0,0.0,0.0)
-                              );
-
-const ON_Plane ON_Plane::World_xy=ON_xy_plane;
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
 
 ON_Plane::ON_Plane() 
         : origin(0.0,0.0,0.0), 
@@ -71,6 +60,13 @@ ON_Plane::ON_Plane(
     )
 {
   CreateFromEquation(e);
+}
+
+ON_Plane::ON_Plane(
+  const ON_PlaneEquation& plane_equation
+  )
+{
+  CreateFromEquation(plane_equation);
 }
 
 ON_Plane::~ON_Plane()
@@ -245,17 +241,46 @@ bool ON_Plane::CreateFromNormal(
   return b;
 }
 
+bool ON_Plane::CreateFromNormalYup(
+  const ON_3dPoint& P,
+  const ON_3dVector& N,
+  const ON_3dVector& Y
+)
+{
+  origin = P;
+  zaxis = N;
+  bool b = zaxis.Unitize();
+  xaxis = ON_CrossProduct(Y, zaxis);
+  b = xaxis.Unitize() && b;
+  if (!xaxis.Unitize())
+  {
+    xaxis.PerpendicularTo(zaxis);
+    xaxis.Unitize();
+  }
+
+  yaxis = ON_CrossProduct(zaxis, xaxis);
+  yaxis.Unitize();
+  UpdateEquation();
+
+  return b;
+}
+
 bool ON_Plane::CreateFromFrame(
     const ON_3dPoint&  P, // point on the plane
     const ON_3dVector& X, // non-zero vector in plane
     const ON_3dVector& Y  // another non-zero vector in the plane
     )
 {
-  origin = P;
+  const ON_3dPoint localP(P);
+  const ON_3dVector localX(X);
+  const ON_3dVector localY(Y);
 
-  xaxis = X;
+
+  origin = localP;
+
+  xaxis = localX;
   xaxis.Unitize();
-  yaxis = Y - ON_DotProduct( Y, xaxis)*xaxis;
+  yaxis = localY - ON_DotProduct( localY, xaxis)*xaxis;
   yaxis.Unitize();
   zaxis = ON_CrossProduct( xaxis, yaxis );
   bool b = zaxis.Unitize();
@@ -267,8 +292,8 @@ bool ON_Plane::CreateFromFrame(
     b = IsValid();
     if ( b )
     {
-      // make sure zaxis is perp to Y
-      if ( fabs(Y*zaxis) > ON_SQRT_EPSILON*Y.Length() )
+      // make sure zaxis is perp to localY
+      if ( fabs(localY*zaxis) > ON_SQRT_EPSILON*localY.Length() )
         b = false;
     }
   }
@@ -276,30 +301,37 @@ bool ON_Plane::CreateFromFrame(
 }
 
 bool ON_Plane::CreateFromEquation(
-    const double e[4]    // equation of plane
-    )
+  const class ON_PlaneEquation& eqn
+  )
 {
   bool b = false;
-  plane_equation.x = e[0];
-  plane_equation.y = e[1];
-  plane_equation.z = e[2];
-  plane_equation.d = e[3];
+  
+  plane_equation = eqn;
 
-  zaxis.x = e[0];
-  zaxis.y = e[1];
-  zaxis.z = e[2];
+  zaxis.x = plane_equation.x;
+  zaxis.y = plane_equation.y;
+  zaxis.z = plane_equation.z;
 
   double d = zaxis.Length();
-  if ( d > 0.0 ) {
-    d = 1.0/d;
+  if (d > 0.0) {
+    d = 1.0 / d;
+		zaxis *= d;		
     origin = (-d*plane_equation.d)*zaxis;
     b = true;
   }
-  xaxis.PerpendicularTo( zaxis );
+  xaxis.PerpendicularTo(zaxis);
   xaxis.Unitize();
-  yaxis = ON_CrossProduct( zaxis, xaxis );
+  yaxis = ON_CrossProduct(zaxis, xaxis);
   yaxis.Unitize();
   return b;
+}
+
+bool ON_Plane::CreateFromEquation(
+    const double e[4]    // equation of plane
+    )
+{
+  ON_PlaneEquation eqn(e[0], e[1], e[2], e[3]);
+  return CreateFromEquation(eqn);
 }
 
 bool ON_Plane::CreateFromPoints(
@@ -328,6 +360,9 @@ bool ON_Plane::IsValid() const
 
 
   double x = plane_equation.ValueAt(origin);
+  if (ON_IS_NAN(x))
+    return false;
+
   if ( fabs(x) >  ON_ZERO_TOLERANCE )
   {
     double tol = fabs(origin.MaximumCoordinate()) + fabs(plane_equation.d);
@@ -352,8 +387,7 @@ bool ON_Plane::IsValid() const
   if ( !ON_IsRightHandFrame( xaxis, yaxis, zaxis ) )
     return false;
 
-  ON_3dVector N = plane_equation;
-  N.Unitize();
+  const ON_3dVector N = plane_equation.UnitNormal();
   x = ON_DotProduct( N, zaxis );
   if ( fabs(x-1.0) >  ON_SQRT_EPSILON )
     return false;
@@ -361,126 +395,62 @@ bool ON_Plane::IsValid() const
   return true;
 }
 
+void ON_Plane::Dump(class ON_TextLog& text_log) const
+{
+  text_log.Print("plane equation: ");
+  plane_equation.Dump(text_log);
+  text_log.PrintNewLine();
+  text_log.PushIndent();
+  text_log.Print("xaxis=");
+  text_log.Print(xaxis);
+  text_log.Print(", yaxis=");
+  text_log.Print(yaxis);
+  text_log.Print(", zaxis=");
+  text_log.Print(zaxis);
+  text_log.Print(", origin=");
+  text_log.Print(origin);
+  text_log.PrintNewLine();
+  text_log.PopIndent();
+}
 
 bool ON_Plane::Transform( const ON_Xform& xform )
 {
+  if ( xform.IsIdentity() )
+  {
+    // 27 October 2011 Dale Lear
+    //    If the plane is valid and the transformation
+    //    is the identity, then NO changes should be
+    //    made to the plane's values.  In particular
+    //    calling CreateFromFrame() can introduce
+    //    slight fuzz.
+    //
+    //    Please discuss any changes with me.
+    return IsValid();
+  }
+
   ON_3dPoint origin_pt = xform*origin;
-  // use care tranforming vectors 
-  ON_3dVector xaxis_vec = (xform*(origin+xaxis)) - origin_pt;
-  ON_3dVector yaxis_vec = (xform*(origin+yaxis)) - origin_pt;
+
+  // use care transforming vectors to get
+  // maximum precision and the right answer
+  bool bUseVectorXform = (    0.0 == xform.m_xform[3][0] 
+                           && 0.0 == xform.m_xform[3][1]
+                           && 0.0 == xform.m_xform[3][2] 
+                           && 1.0 == xform.m_xform[3][3]
+                         );
+
+  ON_3dVector xaxis_vec = bUseVectorXform ? (xform*xaxis) : ((xform*(origin+xaxis)) - origin_pt);
+  ON_3dVector yaxis_vec = bUseVectorXform ? (xform*yaxis) : ((xform*(origin+yaxis)) - origin_pt);
 
   return CreateFromFrame( origin_pt, xaxis_vec, yaxis_vec );
 }
 
-
-bool ON_Plane::Morph( const ON_SpaceMorph& morph )
-{
-  ON_Plane mp;
-  double s = sqrt( fabs(origin.MaximumCoordinate())*ON_SQRT_EPSILON + ON_ZERO_TOLERANCE );
-  mp.xaxis = morph.MorphVector(origin,s*xaxis);
-  mp.yaxis = morph.MorphVector(origin,s*yaxis);
-  mp.zaxis = morph.MorphVector(origin,s*zaxis);
-  origin = morph.MorphPoint(origin);
-  UpdateEquation();
-  bool bx = mp.xaxis.Unitize();
-  bool by = mp.yaxis.Unitize();
-  bool bz = mp.zaxis.Unitize();
-  if (!bx)
-  {
-    mp.xaxis = ON_CrossProduct(mp.yaxis,mp.zaxis);
-    bx = mp.xaxis.Unitize();
-  }
-  if (!by)
-  {
-    mp.yaxis = ON_CrossProduct(mp.zaxis,mp.xaxis);
-    by = mp.yaxis.Unitize();
-  }
-  if (!bz)
-  {
-    mp.zaxis = ON_CrossProduct(mp.xaxis,mp.yaxis);
-    bz = mp.zaxis.Unitize();
-  }
-
-  mp.origin.Set(0.0,0.0,0.0);
-  mp.UpdateEquation();
-  bool rc = mp.IsValid();
-  ON_3dVector x, y, z;
-  if ( rc )
-  {
-    x = mp.xaxis;
-    y = mp.yaxis;
-    z = mp.zaxis;
-  }
-  else
-  {
-    x = ON_CrossProduct(mp.yaxis,mp.zaxis);
-    y = ON_CrossProduct(mp.zaxis,mp.xaxis);
-    z = ON_CrossProduct(mp.xaxis,mp.yaxis);
-    x.Unitize();
-    y.Unitize();
-    z.Unitize();
-    x = mp.xaxis + x;
-    y = mp.yaxis + y;
-    z = mp.zaxis + z;
-    x.Unitize();
-    y.Unitize();
-    z.Unitize();
-    rc = mp.CreateFromFrame(ON_origin,x,y);
-    if (rc)
-    {
-      x = mp.xaxis;
-      y = mp.yaxis;
-      z = mp.zaxis;
-    }
-    else
-    {
-      rc = mp.CreateFromFrame(ON_origin,y,z);
-      if ( rc )
-      {
-        y = mp.xaxis;
-        z = mp.yaxis;
-        x = mp.zaxis;
-      }
-      else
-      {
-        rc = mp.CreateFromFrame(ON_origin,z,x);
-        if (rc)
-        {
-          z = mp.xaxis;
-          x = mp.yaxis;
-          y = mp.zaxis;
-        }
-        else
-        {
-          rc = mp.CreateFromNormal(ON_origin,z);
-          if (rc)
-          {
-            x = mp.xaxis;
-            y = mp.yaxis;
-            z = mp.zaxis;
-          }
-        }
-      }
-    }
-  }
-
-  if (rc)
-  {
-    xaxis = x;
-    yaxis = y;
-    zaxis = z;
-    UpdateEquation();
-  }
-
-  return rc;
-}
 
 
 bool ON_Plane::SwapCoordinates( int i, int j )
 {
   bool rc = false;
   if ( 0 <= i && i < 3 && 0 <= j && j < 3 ) {
-    ON_Xform xform(1);
+    ON_Xform xform(ON_Xform::IdentityTransformation);
     xform[i][i] = 0.0;
     xform[j][j] = 0.0;
     xform[i][j] = 1.0;
@@ -498,19 +468,7 @@ bool ON_Plane::Rotate(
       const ON_3dVector& axis // axis of rotation
       )
 {
-  bool rc = true;
-  if ( axis == zaxis ) {
-    ON_3dVector x = c*xaxis + s*yaxis;
-    ON_3dVector y = c*yaxis - s*xaxis;
-    xaxis = x;
-    yaxis = y;
-  }
-  else {
-    ON_3dPoint origin_pt = origin;
-    rc = Rotate( s, c, axis, origin );
-    origin = origin_pt; // to kill any fuzz
-  }
-  return rc;
+  return Rotate( s, c, axis, origin );
 }
 
 bool ON_Plane::Rotate(
@@ -532,11 +490,12 @@ bool ON_Plane::Rotate(
   bool rc = false;
   ON_Xform rot;
   if ( center == origin ) {
-    rot.Rotation( sin_angle, cos_angle, axis, ON_origin );
+    rot.Rotation( sin_angle, cos_angle, axis, ON_3dPoint::Origin );
     xaxis = rot*xaxis;
     yaxis = rot*yaxis;
-    zaxis = rot*zaxis;
-    UpdateEquation();
+    if ( !(axis == zaxis) )
+      zaxis = rot*zaxis;
+    rc = UpdateEquation();
   }
   else {
     rot.Rotation( sin_angle, cos_angle, axis, center );
@@ -558,8 +517,7 @@ bool ON_Plane::Translate(
       const ON_3dVector& delta
       )
 {
-  ON_Xform tr;
-  tr.Translation( delta );
+  const ON_Xform tr(ON_Xform::TranslationTransformation(delta));
   return Transform( tr );
 }
 
@@ -576,7 +534,7 @@ bool ON_Plane::Flip()
 
 int ON_ArePointsOnPlane( // returns 0=no, 1 = yes, 2 = pointset is (to tolerance) a single point on the line
         int dim,     // 2 or 3
-        int is_rat,
+        bool is_rat,
         int count, 
         int stride, const double* point,
         const ON_BoundingBox& bbox, // if needed, use ON_GetBoundingBox(dim,is_rat,count,stride,point)
@@ -644,7 +602,7 @@ int ON_ArePointsOnPlane( // returns 0=no, 1 = yes, 2 = pointset is (to tolerance
 
   if ( !rc ) {
     // test points one by one
-    Q.Zero();
+    Q = ON_3dPoint::Origin;
     rc = (count == 1 || bbox.Diagonal().Length() <= tolerance) ? 2 : 1;
     if ( is_rat ) {
       for ( i = 0; i < count; i++ ) {

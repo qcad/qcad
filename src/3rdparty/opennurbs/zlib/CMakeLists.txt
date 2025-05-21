@@ -1,21 +1,48 @@
-cmake_minimum_required(VERSION 3.16)
-project(zlib VERSION 1.0 LANGUAGES C)
+cmake_minimum_required (VERSION 3.16)
+project( zlib C)
 
-add_library(zlib SHARED
-    adler32.c
-    compress.c
-    crc32.c crc32.h
-    deflate.c deflate.h
-    infback.c
-    inffast.c inffast.h
-    inffixed.h
-    inflate.c inflate.h
-    inftrees.c inftrees.h
-    trees.c trees.h
-    uncompr.c
-    zconf.h
-    zlib.h
-    zutil.c zutil.h
+
+set( INCLUDE_DIRS
+.
+)
+
+set( PROJECT_HEADERS
+crc32.h
+deflate.h
+inffast.h
+inffixed.h
+inflate.h
+inftrees.h
+trees.h
+zconf.h
+zlib.h
+zutil.h
+)
+
+set( SOURCES
+adler32.c
+compress.c
+crc32.c
+deflate.c
+infback.c
+inffast.c
+inflate.c
+inftrees.c
+trees.c
+uncompr.c
+zutil.c
+)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON) # -fPIC
+add_library( zlib STATIC
+${SOURCES}
+${PROJECT_HEADERS}
+${RESOURCES}
+)
+target_compile_definitions(zlib PRIVATE Z_PREFIX MY_ZCALLOC)
+
+target_include_directories( zlib
+   PUBLIC
+.
 )
 
 if (CMAKE_BUILD_TYPE STREQUAL "Release")
@@ -28,8 +55,5 @@ else()
     target_link_libraries(zlib PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../../../debug)
 endif()
 
-if(CMAKE_BUILD_TYPE STREQUAL Release)
-    target_compile_definitions(zlib PRIVATE
-        NDEBUG
-    )
-endif()
+install( TARGETS zlib DESTINATION "lib")
+install( FILES DESTINATION "include/zlib")

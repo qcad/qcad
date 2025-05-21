@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,24 +10,10 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(ON_ARRAY_INC_)
 #define ON_ARRAY_INC_
 
-class ON_2dPointArray;
-class ON_3dPointArray;
-class ON_4dPointArray;
-
-class ON_2dVectorArray;
-class ON_3dVectorArray;
-
-class ON_2fPointArray;
-class ON_3fPointArray;
-class ON_4fPointArray;
-
-class ON_2fVectorArray;
-class ON_3fVectorArray;
 
 ////////////////////////////////////////////////////////////////
 //
@@ -36,6 +21,8 @@ class ON_3fVectorArray;
 // ON_ClassArray<> template, but ON_SimpleArray<> should not
 // be used for arrays of classes that require explicit
 // construction, destruction, or copy operators.
+//
+// Elements returned by AppendNew() are memset to zero.
 //
 // By default, ON_SimpleArray<> uses onrealloc() to manage
 // the dynamic array memory. If you want to use something 
@@ -49,19 +36,32 @@ public:
 
   // These constructors create an array that uses onrealloc() to manage
   // the array memory.
-  ON_SimpleArray();
-  ON_SimpleArray( int ); // int = initial capacity
-
-  // Copy constructor
-  ON_SimpleArray( const ON_SimpleArray<T>& );
+  ON_SimpleArray() ON_NOEXCEPT;
 
   virtual
   ~ON_SimpleArray();
 
-  // Assignment operator
-  virtual
+  // Copy constructor
+  ON_SimpleArray( const ON_SimpleArray<T>& );
+
+  ////// Assignment operator
+  //////   Making a virtual operator= was a mistake.
+  //////   One reason might have been that the operator is virtual
+  //////   so ON_UuidList::operator= will be called when one is
+  //////   passed as an ON_SimpleArray<ON_UUID>& to a function?
+  ////virtual
   ON_SimpleArray<T>& operator=( const ON_SimpleArray<T>& );
-  
+
+#if defined(ON_HAS_RVALUEREF)
+  // Clone constructor
+  ON_SimpleArray( ON_SimpleArray<T>&& ) ON_NOEXCEPT;
+
+  // Clone assignment
+  ON_SimpleArray<T>& operator=( ON_SimpleArray<T>&& ) ON_NOEXCEPT;
+#endif
+
+  ON_SimpleArray(size_t); // size_t parameter = initial capacity
+
   // emergency bailout ///////////////////////////////////////////////////
   void EmergencyDestroy(void); // call only when memory used by this array
                                // may have become invalid for reasons beyond
@@ -72,44 +72,67 @@ public:
   // query ///////////////////////////////////////////////////////////////
   
 	int Count() const;      // number of elements in array
+  unsigned int UnsignedCount() const;
 	
 	int Capacity() const;  // capacity of array
 
   unsigned int SizeOfArray() const; // amount of memory in the m_a[] array
 
+  unsigned int SizeOfElement() const; // amount of memory in an m_a[] array element
+
   ON__UINT32 DataCRC(ON__UINT32 current_remainder) const;
 
-  T& operator[]( int );              // grows array if index >= Capacity()
+  // The operator[] does to not check for valid indices.
+  // The caller is responsible for insuring that 0 <= i < Capacity()
+  T& operator[]( int );
+  T& operator[]( unsigned int );
+  T& operator[]( ON__INT64 );
+  T& operator[]( ON__UINT64 );
+#if defined(ON_RUNTIME_APPLE)
+  T& operator[]( size_t );
+#endif
 
-  const T& operator[]( int ) const;  // The const operator[] does not
-                                     // check for a valid index.  Caller
-                                     // is responsible for making sure
-                                     // that the index is > 0 and < Capacity().
+  const T& operator[]( int ) const;
+  const T& operator[]( unsigned int ) const;  
+  const T& operator[]( ON__INT64 ) const;
+  const T& operator[]( ON__UINT64 ) const;  
+#if defined(ON_RUNTIME_APPLE)
+  const T& operator[]( size_t ) const;  
+#endif
 
   operator T*();                     // The cast operators return a pointer
   operator const T*() const;         // to the array.  If Count() is zero,
-                                     // this pointer is NULL.
+                                     // this pointer is nullptr.
 
   T* First();
-  const T* First() const;             // returns NULL if count = 0
+  const T* First() const;             // returns nullptr if count = 0
 
+  // At(index) returns nullptr if index < 0 or index >= count
   T* At( int );
-  const T* At( int ) const;          // returns NULL if index < 0 or index >= count
+  T* At( unsigned int );
+  T* At( ON__INT64 );
+  T* At( ON__UINT64 );
+  const T* At( int ) const;
+  const T* At( unsigned int ) const;
+  const T* At( ON__INT64 ) const;
+  const T* At( ON__UINT64 ) const;
 
   T* Last();
-  const T* Last() const;             // returns NULL if count = 0
+  const T* Last() const;             // returns nullptr if count = 0
 
   
   // array operations ////////////////////////////////////////////////////
 
   T& AppendNew();                    // Most efficient way to add a new element 
                                      // to the array.  Increases count by 1.
+                                     // Returned element is memset to zero.
 
   void Append( const T& );           // Append copy of element.
                                      // Increments count by 1.
 
   void Append( int, const T* );      // Append copy of an array T[count]
 
+  void Prepend( int, const T* );      // Prepend copy of an array T[count]
 
   void Insert( int, const T& );      // Insert copy of element. Uses
                                      // memmove() to perform any
@@ -125,6 +148,16 @@ public:
                                      // Decrements count by 1.  Does not change
                                      // capacity
 
+  void RemoveValue(const T&);        // Removes elements. Uses memcmp() to compare
+                                     // Decrements count by removed items.  Does 
+                                     // not change capacity
+
+  void RemoveIf(bool predicate(const T& key));
+                                     // Removes elements for which predicate 
+                                     // returns true. Decrements count 
+                                     // by removed items.
+                                     // Does not change capacity
+
   void Empty();           // Sets count to 0, leaves capacity untouched.
 
   void Reverse();         // reverse order
@@ -138,7 +171,7 @@ public:
   // successful, then Search() returns -1.  For Search(T) to work 
   // correctly, T must be a simple type.  Use Search(p,compare())
   // for Ts that are structs/classes that contain pointers.  Search()
-  // is only suitable for performing infrequent searchs of small 
+  // is only suitable for performing infrequent searches of small 
   // arrays.  Sort the array and use BinarySearch() for performing
   // efficient searches.
   int Search( const T& ) const;
@@ -155,16 +188,35 @@ public:
 
   //////////
   // BinarySearch( p, compare ) does a fast search of a sorted array
-  // and returns the smallest index "i" of the element that satisifies
-  // 0==compare(p,&array[i]).  If the search is successful, 
+  // and returns the smallest index "i" of the element that satisfies
+  // 0==compare(p,&array[i]).  
+  //
+  // BinarySearch( p, compare, count ) does a fast search of the first
+  // count element sorted array and returns the smallest index "i" of 
+  // the element that satisfies 0==compare(p,&array[i]).  The version
+  // that takes a "count" is useful when elements are being appended
+  // during a calculation and the appended elements are not sorted.
+  //
+  // If the search is successful, 
   // BinarySearch() returns the index of the element (>=0).
-  // If the search is not successful, BinarySearch() returns -1.  Use
-  // HeapSort( compare ) or QuickSort( compare ) to sort the array.
+  // If the search is not successful, BinarySearch() returns -1.  
+  // Use QuickSort( compare ) or, in rare cases and after meaningful
+  // performance testing using optimzed release builds, 
+  // HeapSort( compare ) to sort the array.
 	// See Also: ON_CompareIncreasing<T> and ON_CompareDeccreasing<T>
   int BinarySearch( const T*, int (*)(const T*,const T*) ) const;
+  int BinarySearch( const T*, int (*)(const T*,const T*), int ) const;
+
+  const T* BinarySearchPtr(const T*, int (*)(const T*, const T*)) const;
+  const T* BinarySearchPtr(const T*, int (*)(const T*, const T*), int) const;
+
+
+  int InsertInSortedList(const T&, int (*)(const T*, const T*));
+  int InsertInSortedList(const T&, int (*)(const T*, const T*), int);
 
   //////////
   // Sorts the array using the heap sort algorithm.
+  // QuickSort() is generally the better choice.
   bool HeapSort( int (*)(const T*,const T*) );
 
   //////////
@@ -173,10 +225,9 @@ public:
   bool QuickSort( int (*)(const T*,const T*) );
 
   //////////
-  // Sort() computes fills in the index[] array so that
-  // array[index[i]] <= array[index[i+1]].  The array is not
-  // modified
-  bool Sort( ON::sort_algorithm, int* /* index[] */ , int (*)(const T*,const T*) ) const; 
+  // Sorts the array using the quick sort algorithma and then removes duplicates.
+	// See Also: ON_CompareIncreasing<T> and ON_CompareDeccreasing<T>
+  bool QuickSortAndRemoveDuplicates( int (*)(const T*,const T*) );
 
   /*
   Description:
@@ -185,7 +236,36 @@ public:
     The array is not modified.  
 
   Parameters:
-    sa - [in] ON::heap_sort or  ON::quick_sort
+    sort_algorithm - [in]  
+      ON::sort_algorithm::quick_sort (best in general) or ON::sort_algorithm::heap_sort
+      Use ON::sort_algorithm::heap_sort only if you have done extensive testing with
+      optimized release builds and are confident heap sort is 
+      significantly faster.
+    index - [out] an array of length Count() that is returned with
+        some permutation of (0,1,...,Count()-1). 
+    compare - [in] compare function compare(a,b,p) should return
+        <0 if a<b, 0, if a==b, and >0 if a>b.
+  Returns:
+    true if successful
+  */
+  bool Sort( 
+    ON::sort_algorithm sort_algorithm, 
+    int* /* index[] */ ,
+    int (*)(const T*,const T*) 
+    ) const; 
+
+  /*
+  Description:
+    Sort() fills in the index[] array so that 
+    array[index[i]] <= array[index[i+1]].  
+    The array is not modified.  
+
+  Parameters:
+    sort_algorithm - [in]  
+      ON::sort_algorithm::quick_sort (best in general) or ON::sort_algorithm::heap_sort
+      Use ON::sort_algorithm::heap_sort only if you have done extensive testing with
+      optimized release builds and are confident heap sort is 
+      significantly faster.
     index - [out] an array of length Count() that is returned with
         some permutation of (0,1,...,Count()-1). 
     compare - [in] compare function compare(a,b,p) should return
@@ -196,7 +276,7 @@ public:
     true if successful
   */
   bool Sort( 
-    ON::sort_algorithm, // sa
+    ON::sort_algorithm sort_algorithm,
     int*, // index[] 
     int (*)(const T*,const T*,void*), // int compare(const T*,const T*,void* p)
     void* // p
@@ -216,31 +296,36 @@ public:
   // Sets all bytes in array memory to value. 
   // Count and capacity are not changed.
   void MemSet(unsigned char); 
-  
-  // memory managment ////////////////////////////////////////////////////
 
-  void Reserve( int );    // increase capacity to at least the requested value
+  //////////
+  // Sets all specified items in an array range to a value. 
+  // Count and capacity are not changed.
+  void SetRange(int from, int count, T);
+  
+  // memory management ////////////////////////////////////////////////////
+
+  T* Reserve( size_t );    // increase capacity to at least the requested value
 
   void Shrink();          // remove unused capacity
 
   void Destroy();         // onfree any memory and set count and capacity to zero
     
-  // low level memory managment //////////////////////////////////////////
+  // low level memory management //////////////////////////////////////////
 
   // By default, ON_SimpleArray<> uses onrealloc() to manage
   // the dynamic array memory. If you want to use something 
   // besides onrealloc() to manage the array memory, then override 
   // Realloc(). The T* Realloc(ptr, capacity) should do the following:
   //
-  // 1) If ptr and capacity are zero, return NULL.
-  // 2) If ptr is NULL, an capacity > 0, allocate a memory block of 
+  // 1) If ptr and capacity are zero, return nullptr.
+  // 2) If ptr is nullptr, an capacity > 0, allocate a memory block of 
   //    capacity*sizeof(T) bytes and return a pointer to this block.
-  //    If the allocation request fails, return NULL.
-  // 3) If ptr is not NULL and capacity is 0, free the memory block
-  //    pointed to by ptr and return NULL.
-  // 4) If ptr is not NULL and capacity > 0, then reallocate the memory
+  //    If the allocation request fails, return nullptr.
+  // 3) If ptr is not nullptr and capacity is 0, free the memory block
+  //    pointed to by ptr and return nullptr.
+  // 4) If ptr is not nullptr and capacity > 0, then reallocate the memory
   //    block and return a pointer to the reallocated block.  If the 
-  //    reallocation request fails, return NULL.
+  //    reallocation request fails, return nullptr.
   //
   // NOTE WELL: 
   //    Microsoft's VC 6.0 realloc() contains a bug that can cause
@@ -256,7 +341,7 @@ public:
   void SetCount( int );               // If value is <= Capacity(), then
                                       // sets count to specified value.
 
-  void SetCapacity( int );            // Shrink/grows capacity.  If value
+  T* SetCapacity( size_t );            // Shrink/grows capacity.  If value
                                       // is < current Count(), then count
                                       // is reduced to value.
                                       //
@@ -265,6 +350,9 @@ public:
                                       // this calculates the new value for m_capacity.
 
   /*
+  Description:
+    Expert user tool to take charge of the memory used by 
+    the dynamic array.
   Returns:
      A pointer to the array and zeros out this class.
      The returned pointer is on the heap and must be
@@ -274,17 +362,26 @@ public:
 
   /*
   Description:
-    Expert user tool to set m_a = T. 
-  Parameters:
-    T* pointer - [in]
-       m_a is set to T*.  It is critical that the pointer
-       be one returned by onmalloc(sz), where
-       sz >= Capacity()*sizeof(T[0]);
+    Do not use this version of SetArray().  Use the one that takes
+    a pointer, count and capacity.
   */
   void SetArray(T*);
 
+  /*
+  Description:
+    Expert user tool to set the memory used by the dynamic array.
+  Parameters:
+    T* pointer - [in]
+    int count [in]
+    int capacity - [in]
+       m_a is set to pointer, m_count is set to count, and m_capacity
+       is set to capacity.  It is critical that the pointer be one 
+       returned by onmalloc(sz), where sz >= capacity*sizeof(T[0]).
+  */
+  void SetArray(T*, int, int);
+
 protected:
-  // implimentation //////////////////////////////////////////////////////
+  // implementation //////////////////////////////////////////////////////
   void Move( int /* dest index*/, int /* src index */, int /* element count*/ );
 	T*   m_a;        // pointer to array memory
 	int  m_count;    // 0 <= m_count <= m_capacity
@@ -296,450 +393,32 @@ protected:
 //
 
 #if defined(ON_DLL_TEMPLATE)
-// This stuff is here because of a limitation in the way Microsoft
-// handles templates and DLLs.  See Microsoft's knowledge base 
-// article ID Q168958 for details.
-#pragma warning( push )
-#pragma warning( disable : 4231 )
 
 ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<bool>;
 ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<char>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<unsigned char>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<short>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<unsigned short>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<int>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<unsigned int>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON__INT8>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON__UINT8>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON__INT16>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON__UINT16>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON__INT32>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON__UINT32>;
 ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<float>;
 ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<double>;
 
 ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<bool*>;
 ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<char*>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<unsigned char*>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<short*>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<unsigned short*>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<int*>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<unsigned int*>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON__INT8*>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON__UINT8*>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON__INT16*>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON__UINT16*>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON__INT32*>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON__UINT32*>;
 ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<float*>;
 ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<double*>;
 
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_2dPoint>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_3dPoint>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_4dPoint>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_2dVector>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_3dVector>;
-
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_2fPoint>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_3fPoint>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_4fPoint>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_2fVector>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_3fVector>;
-
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_Color>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_SurfaceCurvature>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_Interval>;
-
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_2dex>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_3dex>;
-
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_COMPONENT_INDEX>;
-#pragma warning( pop )
 #endif
 
 
-/////////////////////////////////////////////////////////////////
-//
-
-class ON_CLASS ON_2dPointArray : public ON_SimpleArray<ON_2dPoint>
-{
-public:
-  // see ON_SimpleArray class definition comments for constructor documentation
-  ON_2dPointArray();
-  ON_2dPointArray(int);
-  ON_2dPointArray( const ON_2dPointArray& );
-  ON_2dPointArray& operator=( const ON_2dPointArray& );
-
-  bool GetBBox( // returns true if successful
-         double boxmin[2],
-         double boxmax[2],
-         int bGrowBox = false  // true means grow box
-         ) const;
-
-  bool Transform( const ON_Xform& );
-  bool SwapCoordinates(int,int);
-};
-
-
-/////////////////////////////////////////////////////////////////
-//
-
-class ON_CLASS ON_2fPointArray : public ON_SimpleArray<ON_2fPoint>
-{
-public:
-  // see ON_SimpleArray class definition comments for constructor documentation
-  ON_2fPointArray();
-  ON_2fPointArray(int);
-  ON_2fPointArray(const ON_2fPointArray&);
-  ON_2fPointArray& operator=( const ON_2fPointArray& );
-
-  bool GetBBox( // returns true if successful
-         float boxmin[2],
-         float boxmax[2],
-         int bGrowBox = false  // true means grow box
-         ) const;
-  bool Transform( const ON_Xform& );
-  bool SwapCoordinates(int,int);
-};
-
-
-/////////////////////////////////////////////////////////////////
-//
-
-class ON_CLASS ON_3dPointArray : public ON_SimpleArray<ON_3dPoint>
-{
-public:
-  // see ON_SimpleArray class definition comments for constructor documentation
-  ON_3dPointArray();
-  ON_3dPointArray(int);
-  ON_3dPointArray(const ON_SimpleArray<ON_3dPoint>&);
-  ON_3dPointArray& operator=( const ON_3dPointArray& );
-  ON_3dPointArray(const ON_SimpleArray<ON_3fPoint>&);
-  ON_3dPointArray& operator=( const ON_SimpleArray<ON_3fPoint>& );
-
-  // Description:
-  //   Create 3d point list
-  // Parameters:
-  //   point_dimension - [in] dimension of input points (2 or 3)
-  //   bRational - [in] true if points are in homogenous rational form
-  //   point_count - [in] number of points
-  //   point_stride - [in] number of doubles to skip between points
-  //   points - [in] array of point coordinates
-  bool Create(
-    int point_dimension,
-    int bRational,
-    int point_count,
-    int point_stride,
-    const double* points
-    );
-
-  // Description:
-  //   Create 3d point list
-  // Parameters:
-  //   point_dimension - [in] dimension of input points (2 or 3)
-  //   bRational - [in] true if points are in homogenous rational form
-  //   point_count - [in] number of points
-  //   point_stride - [in] number of doubles to skip between points
-  //   points - [in] array of point coordinates
-  bool Create(
-    int point_dimension,
-    int bRational,
-    int point_count,
-    int point_stride,
-    const float* points
-    );
-
-  // Description: 
-  //   Get 3d axis aligned bounding box.
-  // Returns:
-  //   3d bounding box of point list.
-  ON_BoundingBox BoundingBox() const;
-
-  // Description:
-  //   Get 3d axis aligned bounding box or the union
-  //   of the input box with the point list's bounding box.
-  // Parameters:
-  //   bbox - [in/out] 3d axis aligned bounding box
-  //   bGrowBox - [in] (default=false) 
-  //     If true, then the union of the input bbox and the 
-  //     point list's bounding box is returned in bbox.  
-  //     If false, the point list's bounding box is returned in bbox.
-  // Returns:
-  //   true if successful.
-  bool GetBoundingBox( 
-    ON_BoundingBox& bbox,
-    int bGrowBox = false
-    ) const;
-
-  // Description:
-  //   Get axis aligned bounding box.
-  // Parameters:
-  //   boxmin - [in/out] array of 3 doubles
-  //   boxmax - [in/out] array of 3 doubles
-  //   bGrowBox - [in] (default=false) 
-  //     If true, then the union of the input bounding box and the 
-  //     object's bounding box is returned.
-  //     If false, the object's bounding box is returned.
-  // Returns:
-  //   true if object has bounding box and calculation was successful
-  bool GetBBox(
-         double boxmin[3],
-         double boxmax[3],
-         int bGrowBox = false
-         ) const;
-
-  /*
-	Description:
-    Get tight bounding box of the point list.
-	Parameters:
-		tight_bbox - [in/out] tight bounding box
-		bGrowBox -[in]	(default=false)			
-      If true and the input tight_bbox is valid, then returned
-      tight_bbox is the union of the input tight_bbox and the 
-      tight bounding box of the point list.
-		xform -[in] (default=NULL)
-      If not NULL, the tight bounding box of the transformed
-      point list is calculated.  The point list is not modified.
-	Returns:
-    True if the returned tight_bbox is set to a valid 
-    bounding box.
-  */
-	bool GetTightBoundingBox( 
-			ON_BoundingBox& tight_bbox, 
-      int bGrowBox = false,
-			const ON_Xform* xform = 0
-      ) const;
-
-  // Description:
-  //   Transform points by applying xform to each point.
-  // Parameters:
-  //   xform - [in] transformation matrix
-  // Returns:
-  //   true if successful.
-  bool Transform( 
-    const ON_Xform& xform 
-    );
-
-  // Description:
-  //   Swaps point coordinate values with indices i and j.
-  // Parameters:
-  //   i - [in] coordinate index
-  //   j - [in] coordinate index
-  // Returns:
-  //   true if successful.
-  // Example:
-  //   The call SwapCoordinates(0,2) would swap the x and z
-  //   coordinates of each point in the array.
-  bool SwapCoordinates(
-    int i,
-    int j
-    );
-
-  // Description:
-  //   Rotate points about a center and axis.  A positive angle
-  //   results in a counter-clockwise rotation about the axis
-  //   of rotation.
-  // Parameters:
-  //   sin_angle - [in] sine of rotation angle
-  //   cos_angle - [in] cosine of rotation angle
-  //   axis_of_rotation - [in] axis of rotation
-  //   center_of_rotation - [in] center (fixed point) of rotation
-  // Returns:
-  //   true if successful.
-  bool Rotate(
-        double sin_angle,
-        double cos_angle,
-        const ON_3dVector& axis_of_rotation,
-        const ON_3dPoint& center_of_rotation
-        );
-
-  // Description:
-  //   Rotate points about a center and axis.  A positive angle
-  //   results in a counter-clockwise rotation about the axis
-  //   of rotation.
-  // Parameters:
-  //   angle - [in] angle in radians.  Polsine of rotation angle
-  //   cos_angle - [in] cosine of rotation angle
-  //   axis_of_rotation - [in] axis of rotation
-  //   center_of_rotation - [in] center (fixed point) of rotation
-  // Returns:
-  //   true if successful.
-  bool Rotate(
-        double angle_in_radians,
-        const ON_3dVector& axis_of_rotation,
-        const ON_3dPoint& center_of_rotation
-        );
-
-  // Description:
-  //   Translate a polyline
-  // Parameters:
-  //   delta - [in] translation vectorsine of rotation angle
-  // Returns:
-  //   true if successful.
-  bool Translate(
-        const ON_3dVector& delta
-        );
-
-  /*
-  Description:
-    Get the index of the point in the array that is closest
-    to P.
-  Parameters:
-    P - [in]
-    closest_point_index - [out]
-    maximum_distance - [in] optional distance constraint.
-        If maximum_distance > 0, then only points Q with
-        |P-Q| <= maximum_distance are returned.
-  Returns:
-    True if a point is found; in which case *closest_point_index
-    is the index of the point.  False if no point is found
-    or the input is not valid.
-  See Also:
-    ON_GetClosestPointInPointList
-    ON_PointCloud::GetClosestPoint
-  */
-  bool GetClosestPoint( 
-          ON_3dPoint P,
-          int* closest_point_index,
-          double maximum_distance = 0.0
-          ) const;
-
-};
-
-
-/////////////////////////////////////////////////////////////////
-//
-
-class ON_CLASS ON_3fPointArray : public ON_SimpleArray<ON_3fPoint>
-{
-public:
-  // see ON_SimpleArray class definition comments for constructor documentation
-  ON_3fPointArray();
-  ON_3fPointArray(int);
-  ON_3fPointArray(const ON_3fPointArray&);
-  ON_3fPointArray& operator=( const ON_3fPointArray& );
-
-  bool GetBBox(
-         float boxmin[3],
-         float boxmax[3],
-         int bGrowBox = false
-         ) const;
-
-  bool Transform( const ON_Xform& );
-
-  bool SwapCoordinates(int,int);
-};
-
-
-/////////////////////////////////////////////////////////////////
-//
-
-class ON_CLASS ON_4dPointArray : public ON_SimpleArray<ON_4dPoint>
-{
-public:
-  // see ON_SimpleArray class definition comments for constructor documentation
-  ON_4dPointArray();
-  ON_4dPointArray(int);
-  ON_4dPointArray(const ON_4dPointArray&);
-  ON_4dPointArray& operator=( const ON_4dPointArray& );
-
-  bool Transform( const ON_Xform& );
-  bool SwapCoordinates(int,int);
-};
-
-
-/////////////////////////////////////////////////////////////////
-//
-
-class ON_CLASS ON_4fPointArray : public ON_SimpleArray<ON_4fPoint>
-{
-public:
-  // see ON_SimpleArray class definition comments for constructor documentation
-  ON_4fPointArray();
-  ON_4fPointArray(int);
-  ON_4fPointArray(const ON_4fPointArray&);
-  ON_4fPointArray& operator=( const ON_4fPointArray& );
-
-  bool Transform( const ON_Xform& );
-  bool SwapCoordinates(int,int);
-};
-
-
-/////////////////////////////////////////////////////////////////
-//
-
-class ON_CLASS ON_2dVectorArray : public ON_SimpleArray<ON_2dVector>
-{
-public:
-  // see ON_SimpleArray class definition comments for constructor documentation
-  ON_2dVectorArray();
-  ON_2dVectorArray(int);
-  ON_2dVectorArray(const ON_2dVectorArray&);
-  ON_2dVectorArray& operator=( const ON_2dVectorArray& );
-
-  bool GetBBox(
-         double boxmin[2],
-         double boxmax[2],
-         int bGrowBox = false
-         ) const;
-
-  bool Transform( const ON_Xform& );
-  bool SwapCoordinates(int,int);
-};
-
-
-/////////////////////////////////////////////////////////////////
-//
-
-class ON_CLASS ON_2fVectorArray : public ON_SimpleArray<ON_2fVector>
-{
-public:
-  // see ON_SimpleArray class definition comments for constructor documentation
-  ON_2fVectorArray();
-  ON_2fVectorArray(int);
-  ON_2fVectorArray(const ON_2fVectorArray&);
-  ON_2fVectorArray& operator=( const ON_2fVectorArray& );
-
-  bool GetBBox(
-         float boxmin[2],
-         float boxmax[2],
-         bool = false
-         ) const;
-
-  bool Transform( const ON_Xform& );
-  bool SwapCoordinates(int,int);
-};
-
-
-/////////////////////////////////////////////////////////////////
-//
-
-class ON_CLASS ON_3dVectorArray : public ON_SimpleArray<ON_3dVector>
-{
-public:
-  ON_3dVectorArray();
-  ON_3dVectorArray(int);
-  ON_3dVectorArray(const ON_3dVectorArray&);
-  ON_3dVectorArray& operator=( const ON_3dVectorArray& );
-
-  bool GetBBox(
-         double boxmin[3],
-         double boxmax[3],
-         bool bGrowBow = false
-         ) const;
-
-  bool Transform( const ON_Xform& );
-  bool SwapCoordinates(int,int);
-};
-
-/////////////////////////////////////////////////////////////////
-//
-
-class ON_CLASS ON_3fVectorArray : public ON_SimpleArray<ON_3fVector>
-{
-public:
-  ON_3fVectorArray();
-  ON_3fVectorArray(int);
-  ON_3fVectorArray(const ON_3fVectorArray&);
-  ON_3fVectorArray& operator=( const ON_3fVectorArray& );
-
-  bool GetBBox(
-         float boxmin[3],
-         float boxmax[3],
-         int bGrowBox = false
-         ) const;
-
-  bool Transform( const ON_Xform& );
-  bool SwapCoordinates(int,int);
-};
 
 ////////////////////////////////////////////////////////////////
 //
@@ -753,15 +432,15 @@ public:
 // besides onrealloc() to manage the array memory, then override
 // ON_ClassArray::Realloc().  In practice this means that if your
 // class has members with back-pointers, then you cannot use
-// it in the defaule ON_ClassArray.  See ON_ObjectArray
+// it in the default ON_ClassArray.  See ON_ObjectArray
 // for an example.
 //
 template <class T> class ON_ClassArray
 {
 public:
   // construction ////////////////////////////////////////////////////////
-  ON_ClassArray(); 
-  ON_ClassArray( int ); // int = initial capacity
+  ON_ClassArray() ON_NOEXCEPT; 
+  ON_ClassArray( size_t ); // size_t parameter = initial capacity
 
   // Copy constructor
   ON_ClassArray( const ON_ClassArray<T>& );
@@ -771,6 +450,14 @@ public:
 
   // Assignment operator
   ON_ClassArray<T>& operator=( const ON_ClassArray<T>& );
+
+#if defined(ON_HAS_RVALUEREF)
+  // Clone constructor
+  ON_ClassArray( ON_ClassArray<T>&& ) ON_NOEXCEPT;
+
+  // Clone Assignment operator
+  ON_ClassArray<T>& operator=( ON_ClassArray<T>&& ) ON_NOEXCEPT;
+#endif
   
   // emergency bailout ///////////////////////////////////////////////////
   void EmergencyDestroy(void); // call only when memory used by this array
@@ -782,29 +469,50 @@ public:
   // query ///////////////////////////////////////////////////////////////
   
 	int Count() const;      // number of elements in array
-	
+	unsigned int UnsignedCount() const;
+
 	int Capacity() const;  // capacity of array
 
   unsigned int SizeOfArray() const; // amount of memory in the m_a[] array
 
-  T& operator[]( int );              // grows array if index >= Capacity()
+  unsigned int SizeOfElement() const; // amount of memory in an m_a[] array element
 
-  const T& operator[]( int ) const;  // The const operator[] does not
-                                     // check for a valid index.  Caller
-                                     // is responsible for making sure
-                                     // that the index is > 0 and < Capacity().
+  // The operator[] does to not check for valid indices.
+  // The caller is responsible for insuring that 0 <= i < Capacity()
+  T& operator[]( int );
+  T& operator[]( unsigned int );
+  T& operator[]( ON__INT64 );
+  T& operator[]( ON__UINT64 );
+#if defined(ON_RUNTIME_APPLE)
+  T& operator[]( size_t );
+#endif
+
+  const T& operator[]( int ) const;
+  const T& operator[]( unsigned int ) const;  
+  const T& operator[]( ON__INT64 ) const;
+  const T& operator[]( ON__UINT64 ) const;  
+#if defined(ON_RUNTIME_APPLE)
+  const T& operator[]( size_t ) const;  
+#endif
 
   operator T*();                     // The cast operators return a pointer
   operator const T*() const;         // to the array.  If Count() is zero,
-                                     // this pointer is NULL.
+                                     // this pointer is nullptr.
   T* First();
-  const T* First() const;             // returns NULL if count = 0
+  const T* First() const;             // returns nullptr if count = 0
 
+  // At(index) returns nullptr if index < 0 or index >= count
   T* At( int );
-  const T* At( int ) const;          // returns NULL if index < 0 or index >= count
+  T* At( unsigned int );
+  T* At( ON__INT64 );
+  T* At( ON__UINT64 );
+  const T* At( int ) const;
+  const T* At( unsigned int ) const;
+  const T* At( ON__INT64 ) const;
+  const T* At( ON__UINT64 ) const;
 
   T* Last();
-  const T* Last() const;             // returns NULL if count = 0
+  const T* Last() const;             // returns nullptr if count = 0
 
   
   // array operations ////////////////////////////////////////////////////
@@ -847,17 +555,32 @@ public:
 
   //////////
   // BinarySearch( p, compare ) does a fast search of a sorted array
-  // and returns the smallest index "i" of the element that satisifies
-  // 0==compare(p,&array[i]).  If the search is successful, 
+  // and returns the smallest index "i" of the element that satisfies
+  // 0==compare(p,&array[i]).
+  //
+  // BinarySearch( p, compare, count ) does a fast search of the first
+  // count element sorted array and returns the smallest index "i" of 
+  // the element that satisfies 0==compare(p,&array[i]).  The version
+  // that takes a "count" is useful when elements are being appended
+  // during a calculation and the appended elements are not sorted.
+  //
+  // If the search is successful, 
   // BinarySearch() returns the index of the element (>=0).
-  // If the search is not successful, BinarySearch() returns -1.  Use
-  // HeapSort( compare ) or QuickSort( compare ) to sort the array.
+  // If the search is not successful, BinarySearch() returns -1.
+  // Use QuickSort( compare ) or, in rare cases and after meaningful
+  // performance testing using optimzed release builds, 
+  // HeapSort( compare ) to sort the array.
 	// See Also: ON_CompareIncreasing<T> and ON_CompareDeccreasing<T>
   int BinarySearch( const T*, int (*)(const T*,const T*) ) const;
+  int BinarySearch( const T*, int (*)(const T*,const T*), int ) const;
+
+  int InsertInSortedList(const T&, int (*)(const T*, const T*));
+  int InsertInSortedList(const T&, int (*)(const T*, const T*), int);
 
   //////////
   // Sorts the array using the heap sort algorithm.
 	// See Also: ON_CompareIncreasing<T> and ON_CompareDeccreasing<T>
+  // QuickSort() is generally the better choice.
   virtual
   bool HeapSort( int (*)(const T*,const T*) );
 
@@ -866,11 +589,31 @@ public:
   virtual
   bool QuickSort( int (*)(const T*,const T*) );
 
-  //////////
-  // Sort() computes fills in the index[] array so that
-  // array[index[i]] <= array[index[i+1]].  The array is not
-  // modified
-  bool Sort( ON::sort_algorithm, int* /* index[] */ , int (*)(const T*,const T*) ) const; 
+  /*
+  Description:
+    Sort() fills in the index[] array so that 
+    array[index[i]] <= array[index[i+1]].  
+    The array is not modified.  
+
+  Parameters:
+    sort_algorithm - [in]  
+      ON::sort_algorithm::quick_sort (best in general) or ON::sort_algorithm::heap_sort
+      Use ON::sort_algorithm::heap_sort only if you have done extensive testing with
+      optimized release builds and are confident heap sort is 
+      significantly faster.
+    index - [out] an array of length Count() that is returned with
+        some permutation of (0,1,...,Count()-1). 
+    compare - [in] compare function compare(a,b) should return
+        <0 if a<b, 0, if a==b, and >0 if a>b.
+
+  Returns:
+    true if successful
+  */
+  bool Sort( 
+    ON::sort_algorithm sort_algorithm, 
+    int* /* index[] */ ,
+    int (*)(const T*,const T*)
+    ) const; 
 
   /*
   Description:
@@ -879,7 +622,11 @@ public:
     The array is not modified.  
 
   Parameters:
-    sa - [in] ON::heap_sort or  ON::quick_sort
+    sort_algorithm - [in]  
+      ON::sort_algorithm::quick_sort (best in general) or ON::sort_algorithm::heap_sort
+      Use ON::sort_algorithm::heap_sort only if you have done extensive testing with
+      optimized release builds and are confident heap sort is 
+      significantly faster.
     index - [out] an array of length Count() that is returned with
         some permutation of (0,1,...,Count()-1). 
     compare - [in] compare function compare(a,b,p) should return
@@ -890,7 +637,7 @@ public:
     true if successful
   */
   bool Sort( 
-    ON::sort_algorithm, // sa
+    ON::sort_algorithm sort_algorithm,
     int*, // index[] 
     int (*)(const T*,const T*,void*), // int compare(const T*,const T*,void* p)
     void* // p
@@ -903,34 +650,34 @@ public:
 
   //////////
   // Destroys all elements and fills them with values
-  // set by the defualt constructor.
+  // set by the default constructor.
   // Count and capacity are not changed.
   void Zero();
 
-  // memory managment /////////////////////////////////////////////////
+  // memory management /////////////////////////////////////////////////
 
-  void Reserve( int ); // increase capacity to at least the requested value
+  T* Reserve( size_t ); // increase capacity to at least the requested value
 
   void Shrink();       // remove unused capacity
 
   void Destroy();      // onfree any memory and set count and capacity to zero
     
-  // low level memory managment ///////////////////////////////////////
+  // low level memory management ///////////////////////////////////////
 
   // By default, ON_ClassArray<> uses onrealloc() to manage
   // the dynamic array memory. If you want to use something 
   // besides onrealloc() to manage the array memory, then override 
   // Realloc(). The T* Realloc(ptr, capacity) should do the following:
   //
-  // 1) If ptr and capacity are zero, return NULL.
-  // 2) If ptr is NULL, an capacity > 0, allocate a memory block of 
+  // 1) If ptr and capacity are zero, return nullptr.
+  // 2) If ptr is nullptr, an capacity > 0, allocate a memory block of 
   //    capacity*sizeof(T) bytes and return a pointer to this block.
-  //    If the allocation request fails, return NULL.
-  // 3) If ptr is not NULL and capacity is 0, free the memory block
-  //    pointed to by ptr and return NULL.
-  // 4) If ptr is not NULL and capacity > 0, then reallocate the memory
+  //    If the allocation request fails, return nullptr.
+  // 3) If ptr is not nullptr and capacity is 0, free the memory block
+  //    pointed to by ptr and return nullptr.
+  // 4) If ptr is not nullptr and capacity > 0, then reallocate the memory
   //    block and return a pointer to the reallocated block.  If the 
-  //    reallocation request fails, return NULL.
+  //    reallocation request fails, return nullptr.
   //
   // NOTE WELL: 
   //    Microsoft's VC 6.0 realloc() contains a bug that can cause
@@ -946,7 +693,7 @@ public:
   void SetCount( int );               // If value is <= Capacity(), then
                                       // sets count to specified value.
 
-  void SetCapacity( int );            // Shrink/grows capacity.  If value
+  T* SetCapacity( size_t );            // Shrink/grows capacity.  If value
                                       // is < current Count(), then count
                                       // is reduced to value.
 
@@ -966,17 +713,28 @@ public:
 
   /*
   Description:
-    Expert user tool to set m_a = T. 
-  Parameters:
-    T* pointer - [in]
-       m_a is set to T*.  It is critical that the pointer
-       be one returned by onmalloc(sz), where
-       sz >= Capacity()*sizeof(T[0]);
+    Do not use this version of SetArray().  Use the one that takes
+    a pointer, count and capacity: SetArray(pointer,count,capacity)
   */
   void SetArray(T*);
 
+  /*
+  Description:
+    Expert user tool to set the memory used by the dynamic array.
+  Parameters:
+    T* pointer - [in]
+    int count - [in]  0 <= count <= capacity
+    int capacity - [in]
+       m_a is set to pointer, m_count is set to count, and m_capacity
+       is set to capacity.  It is critical that the pointer be one 
+       returned by onmalloc(sz), where sz >= capacity*sizeof(T[0]),
+       and that the in-place operator new has been used to initialize
+       each element of the array.  
+  */
+  void SetArray(T*, int, int);
+
 protected:
-  // implimentation //////////////////////////////////////////////////////
+  // implementation //////////////////////////////////////////////////////
   void Move( int /* dest index*/, int /* src index */, int /* element count*/ );
   void ConstructDefaultElement(T*);
   void DestroyElement(T&);
@@ -985,6 +743,12 @@ protected:
 	int  m_capacity; // actual length of m_a[]
 };
 
+#if defined(ON_DLL_TEMPLATE)
+
+ON_DLL_TEMPLATE template class ON_CLASS ON_ClassArray<ON_String>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_ClassArray<ON_wString>;
+
+#endif
 
 /*
 Description:
@@ -999,9 +763,17 @@ template <class T> class ON_ObjectArray : public ON_ClassArray<T>
 public:
   ON_ObjectArray(); 
   ~ON_ObjectArray(); // override for struct member deallocation, etc.
-  ON_ObjectArray( int ); // int = initial capacity
+  ON_ObjectArray( size_t ); // size_t parameter = initial capacity
   ON_ObjectArray( const ON_ObjectArray<T>& );
   ON_ObjectArray<T>& operator=( const ON_ObjectArray<T>& );
+
+#if defined(ON_HAS_RVALUEREF)
+  // Clone constructor
+  ON_ObjectArray( ON_ObjectArray<T>&& );
+
+  // Clone Assignment operator
+  ON_ObjectArray<T>& operator=( ON_ObjectArray<T>&& );
+#endif
 
   ON__UINT32 DataCRC(ON__UINT32 current_remainder) const;
 
@@ -1013,6 +785,7 @@ public:
   // virtual ON_ClassArray<T> override that 
   // calls MemoryRelocate on each element after
   // the heap sort.
+  // QuickSort() is generally the better choice.
   bool HeapSort( int (*)(const T*,const T*) );
 
   // virtual ON_ClassArray<T> override that 
@@ -1040,7 +813,7 @@ public:
 
   /*
   Description:
-    Compares m_uuid[0] first and then m_uuid[1].
+    Compares m_uuid[0] then m_uuid[1].
   */
   static 
   int Compare(const class ON_UuidPair*,const class ON_UuidPair*);
@@ -1051,19 +824,11 @@ public:
 
 #if defined(ON_DLL_TEMPLATE)
 
-// This stuff is here because of a limitation in the way Microsoft
-// handles templates and DLLs.  See Microsoft's knowledge base 
-// article ID Q168958 for details.
-#pragma warning( push )
-#pragma warning( disable : 4231 )
 ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_UUID>;
 ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_UuidIndex>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_DisplayMaterialRef>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_LinetypeSegment>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_UuidPtr>;
 ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_UuidPair>;
-ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_PlaneEquation>;
 ON_DLL_TEMPLATE template class ON_CLASS ON_ClassArray<ON_SimpleArray<int> >;
-#pragma warning( pop )
 
 #endif
 
@@ -1083,6 +848,9 @@ public:
   ~ON_UuidList();
   ON_UuidList(const ON_UuidList& src);
   ON_UuidList& operator=(const ON_UuidList& src);
+
+  bool operator==(const ON_UuidList& other) const;
+  bool operator!=(const ON_UuidList& other) const;
 
   /*
   Description:
@@ -1122,13 +890,13 @@ public:
   */
   void Destroy();
 
-  void Reserve(int capacity);
+  void Reserve(size_t capacity);
 
   /*
   Description:
-    Makes the uuid list as efficent as possible in both search
+    Makes the uuid list as efficient as possible in both search
     speed and memory usage.  Use Compact() when a uuid list
-    will be in use but is not likely to be modifed.  A list 
+    will be in use but is not likely to be modified.  A list 
     that has been compacted can still be modified.
   */
   void Compact();
@@ -1183,6 +951,24 @@ public:
 
   /*
   Description:
+    Saves the uuid list in an archive.
+  Parameters:
+    archive - [in] archive to write to.
+    bSortBeforeWrite - [in]
+      True if ids should be sorted before the write
+      so future lookups will be fast.  False if
+      the current state of the sorted/unsorted bits
+      should be preserved.
+  Returns:
+    true if write was successful.
+  */
+  bool Write( 
+    class ON_BinaryArchive& archive,
+      bool bSortBeforeWrite
+    ) const;
+
+  /*
+  Description:
     Read the uuid list from an archive.
   Parameters:
     archive - [in] archive to read from.
@@ -1191,6 +977,25 @@ public:
   */
   bool Read( 
     class ON_BinaryArchive& archive 
+    );
+
+  /*
+  Description:
+    Read the uuid list from an archive.
+  Parameters:
+    archive - [in] 
+      archive to read from.
+    bool bSortAfterRead - [in]
+      True if ids should be sorted after the read
+      so future lookups will be fast.  False if
+      the state of the sorted/unsorted bits that
+      existed at write time should be preserved.
+  Returns:
+    true if the read was successful.
+  */
+  bool Read( 
+    class ON_BinaryArchive& archive,
+    bool bSortAferRead
     );
 
   /*
@@ -1219,6 +1024,7 @@ public:
     );
 
 private:
+  void PurgeHelper();
   void SortHelper();
   ON_UUID* SearchHelper(const ON_UUID*) const;
   int m_sorted_count;
@@ -1236,9 +1042,9 @@ Description:
 class ON_CLASS ON_UuidIndexList : private ON_SimpleArray<ON_UuidIndex>
 {
 public:
-  ON_UuidIndexList();
-  ON_UuidIndexList(int capacity);
-  ~ON_UuidIndexList();
+  ON_UuidIndexList() = default;
+  ON_UuidIndexList(size_t capacity);
+  ~ON_UuidIndexList() = default;
   ON_UuidIndexList(const ON_UuidIndexList& src);
   ON_UuidIndexList& operator=(const ON_UuidIndexList& src);
 
@@ -1246,22 +1052,24 @@ public:
   Returns:
     Number of active uuids in the list.
   */
-  int Count() const;
+  unsigned int Count() const;
 
   /*
   Description:
     Provides an efficient way to empty a list so that it
     can be used again.
   */
-  void Empty();
+  void RemoveAll();
 
-  void Reserve( int capacity );
+  void Reserve( size_t capacity );
 
   /*
   Description:
     Adds a uuid-index pair to the list.
   Parameters:
-    uuid - [in] id to add.
+    uuid - [in] id to add.  
+      This uuid cannot be ON_max_uuid because ON_max_uuid
+      is 
     bCheckForDupicates - [in] if true, then the uuid
        is not added if it is already in the list.
        If you are certain that the uuid is not in the list
@@ -1292,31 +1100,16 @@ public:
 
   /*
   Description:
-    Removes every element with a matching uuid-index pair from
-    the list.
-  Parameters:
-    uuid - [in] id to remove
-    index - [in] index value
-  Returns:
-    True if an element was removed.  False if the uuid-index
-    pair does not appear in the list.
-  */
-  bool RemoveUuidIndex(
-    ON_UUID uuid,
-    int index
-    );
-
-  /*
-  Description:
     Determine if an element with a uuid is in the list.
   Parameters:
-    index - [out] if not NULL and a matching uuid is found,
+    index - [out] if not nullptr and a matching uuid is found,
        then *index is set to the value of the index.
   Returns:
     True if an element was found.  Returns false if
     the uuid is not in the list.
   */
-  bool FindUuid(ON_UUID uuid, int* index=NULL) const;
+  bool FindUuid(ON_UUID uuid) const;
+  bool FindUuid(ON_UUID uuid, int* index) const;
 
   /*
   Description:
@@ -1330,27 +1123,131 @@ public:
 
   /*
   Description:
-    Saves the uuid-index list in an archive.
+    Append the uuids in this class to uuid_list.
   Parameters:
-    archive - [in] archive to write to.
+    uuid_list - [in/out]
   Returns:
-    true if write was successful.
+    Number of uuids added to uuid_list.
   */
-  bool Write( 
-    class ON_BinaryArchive& archive 
-    ) const;
+  unsigned int GetUuids(
+     ON_SimpleArray<ON_UUID>& uuid_list
+     ) const;
 
   /*
   Description:
-    Read the uuid-index list from an archive.
-  Parameters:
-    archive - [in] archive to read from.
-  Returns:
-    true if the read was successful.
+    If you will perform lots of searches before the next
+    change to the list, then calling ImproveSearchSpeed()
+    will speed up the searches by culling removed objects
+    and completely sorting the list so only a binary search
+    is required. You may edit the list at any time after 
+    calling ImproveSearchSpeed().  If you are performing 
+    a few searches between edits, then excessive calling
+    of ImproveSearchSpeed() may actually decrease overall
+    program performance.
   */
-  bool Read( 
-    class ON_BinaryArchive& archive 
+  void ImproveSearchSpeed();
+
+private:
+  ON_UuidIndex* SearchHelper(const ON_UUID*) const;
+  unsigned int m_sorted_count = 0;
+  unsigned int m_removed_count = 0;
+};
+
+
+
+
+
+
+
+/*
+Description:
+  The ON_UuidList class provides a tool
+  to efficiently maintain a list of uuid-pointer
+  pairs and determine if a uuid is in the list.
+  This class is based on the premise that there are
+  no duplicate uuids in the list.
+*/
+class ON_CLASS ON_UuidPtrList : private ON_SimpleArray<ON_UuidPtr>
+{
+public:
+  ON_UuidPtrList() = default;
+  ON_UuidPtrList(size_t capacity);
+  ~ON_UuidPtrList() = default;
+  ON_UuidPtrList(const ON_UuidPtrList& src);
+  ON_UuidPtrList& operator=(const ON_UuidPtrList& src);
+
+  /*
+  Returns:
+    Number of active uuids in the list.
+  */
+  unsigned int Count() const;
+
+  /*
+  Description:
+    Provides an efficient way to empty a list so that it
+    can be used again.
+  */
+  void RemoveAll();
+
+  void Reserve( size_t capacity );
+
+  /*
+  Description:
+    Adds a uuid-index pair to the list.
+  Parameters:
+    uuid - [in] id to add.  
+      This uuid cannot be ON_max_uuid because ON_max_uuid
+      is 
+    bCheckForDupicates - [in] if true, then the uuid
+       is not added if it is already in the list.
+       If you are certain that the uuid is not in the list
+       and you have a have a large collection of uuids,
+       then setting bCheckForDupicates=false will
+       speed up the addition of uuids.
+  Returns:
+    True if uuid was added.  False if uuid was not added
+    because it is already in the collection.
+  */
+  bool AddUuidPtr(
+    ON_UUID uuid, 
+    ON__UINT_PTR ptr, 
+    bool bCheckForDupicates=true);
+
+  /*
+  Description:
+    Removes an element with a matching uuid from the list.
+  Parameters:
+    uuid - [in] id to remove
+  Returns:
+    True if an element was removed.  False if the uuid
+    was not in the list.
+  */
+  bool RemoveUuid(
+    ON_UUID uuid
     );
+
+  /*
+  Description:
+    Determine if an element with a uuid is in the list.
+  Parameters:
+    ptr - [out] if not nullptr and a matching uuid is found,
+       then *ptr is set to the value of the m_ptr.
+  Returns:
+    True if an element was found.  Returns false if
+    the uuid is not in the list.
+  */
+  bool FindUuid(ON_UUID uuid) const;
+  bool FindUuid(ON_UUID uuid, ON__UINT_PTR* ptr) const;
+
+  /*
+  Description:
+    Determine if a uuid-index pair is in the list.
+  Returns:
+    True if the uuid-index pair is in the list.
+    Returns false if the uuid-index pair is not
+    in the list.
+  */
+  bool FindUuidPtr(ON_UUID uuid, ON__UINT_PTR index) const;
 
   /*
   Description:
@@ -1360,16 +1257,274 @@ public:
   Returns:
     Number of uuids added to uuid_list.
   */
-  int GetUuids(
+  unsigned int GetUuids(
      ON_SimpleArray<ON_UUID>& uuid_list
      ) const;
 
+  /*
+  Description:
+    If you will perform lots of searches before the next
+    change to the list, then calling ImproveSearchSpeed()
+    will speed up the searches by culling removed objects
+    and completely sorting the list so only a binary search
+    is required. You may edit the list at any time after 
+    calling ImproveSearchSpeed().  If you are performing 
+    a few searches between edits, then excessive calling
+    of ImproveSearchSpeed() may actually decrease overall
+    program performance.
+  */
+  void ImproveSearchSpeed();
 
 private:
-  ON_UuidIndex* SearchHelper(const ON_UUID*) const;
-  int m_sorted_count;
-  int m_removed_count;
+  ON_UuidPtr* SearchHelper(const ON_UUID*) const;
+  unsigned int m_sorted_count = 0;
+  unsigned int m_removed_count = 0;
 };
+
+
+
+
+
+
+
+
+/*
+Description:
+  The ON_UuidPairList class provides a tool
+  to efficiently maintain a list of uuid pairs 
+  and determine if a uuid is in the list.
+  This class is based on the premise that there are
+  no duplicate uuids in the list.
+*/
+class ON_CLASS ON_UuidPairList : private ON_SimpleArray<ON_UuidPair>
+{
+public:
+  ON_UuidPairList();
+  ON_UuidPairList(int capacity);
+  ~ON_UuidPairList();
+  ON_UuidPairList(const ON_UuidPairList& src);
+  ON_UuidPairList& operator=(const ON_UuidPairList& src);
+
+  static const ON_UuidPairList EmptyList;
+
+  /*
+  Returns:
+    Number of active uuids in the list.
+  */
+  int Count() const;
+
+  /*
+  Description:
+    Provides an efficient way to empty a list so that it
+    can be used again.
+  */
+  void Empty();
+
+  void Reserve( size_t capacity );
+
+  /*
+  Description:
+    Adds a uuid-index pair to the list.
+  Parameters:
+    id1 - [in] id to add.
+    id2 - [in] id to add.
+    bCheckForDupicates - [in] if true, then the pair
+       is not added if id1 is already in the list.
+       If you are certain that the id1 is not in the list
+       and you have a have a large collection of uuids,
+       then setting bCheckForDupicates=false will
+       speed up the addition of uuids.
+  Returns:
+    True if the pair was added.  False if the pair was not added
+    because it is already in the collection.
+  Remarks:
+    You cannot add the pair value ( ON_max_uuid, ON_max_uuid ). This
+    pair value is used to mark removed elements in the ON_UuidPairList[].
+  */
+  bool AddPair(
+    ON_UUID id1, 
+    ON_UUID id2, 
+    bool bCheckForDupicates=true
+    );
+
+  /*
+  Description:
+    Removes an element with a matching id1 from the list.
+  Parameters:
+    id1 - [in] id to remove
+  Returns:
+    True if an element was removed.  False if the id1
+    was not in the list.
+  */
+  bool RemovePair(
+    ON_UUID id1
+    );
+
+  /*
+  Description:
+    Removes an element with a matching id pair from the list.
+  Parameters:
+    id1 - [in]
+    id2 - [in]
+  Returns:
+    True if an element was removed.  False if the id pair
+    does not appear in the list.
+  */
+  bool RemovePair(
+    ON_UUID id1,
+    ON_UUID id2
+    );
+
+  /*
+  Description:
+    Determine if an element with a uuid is in the list.
+  Parameters:
+    id1 - [in]
+    id2 - [out] if not nullptr and a matching id1 is found,
+       then *id2 is set to the value of the second uuid.
+  Returns:
+    True if an element was found.  Returns false if
+    the id1 is not in the list.
+  */
+  bool FindId1(ON_UUID id1, ON_UUID* id2=0) const;
+
+  /*
+  Description:
+    Determine if an id pair is in the list.
+  Returns:
+    True if the id pair is in the list.
+    False if the id pair is not in the list.
+  */
+  bool FindPair(ON_UUID id1, ON_UUID id2) const;
+
+  /*
+  Description:
+    Append the value of the first id in each pair to uuid_list[].
+  Parameters:
+    uuid_list - [in/out]
+  Returns:
+    Number of ids appended to uuid_list[].
+  */
+  int GetId1s(
+     ON_SimpleArray<ON_UUID>& uuid_list
+     ) const;
+
+  /*
+  Description:
+    If you will perform lots of searches before the next
+    change to the list, then calling ImproveSearchSpeed()
+    will speed up the searches by culling removed objects
+    and completely sorting the list so only a binary search
+    is required. You may edit the list at any time after 
+    calling ImproveSearchSpeed().  If you are performing 
+    a few searches between edits, then excessive calling
+    of ImproveSearchSpeed() may actually decrease overall
+    program performance.
+  */
+  void ImproveSearchSpeed();
+
+  bool Write(
+    class ON_BinaryArchive& archive
+    ) const;
+
+  bool Read(
+    class ON_BinaryArchive& archive
+    );
+
+private:
+  ON_UuidPair* SearchHelper(const ON_UUID*) const;
+  unsigned int m_sorted_count;
+  unsigned int m_removed_count;
+};
+
+
+
+class ON_CLASS ON_UuidPtrList2
+{
+public:
+  ON_UuidPtrList2();
+  ~ON_UuidPtrList2();
+  ON_UuidPtrList2(const ON_UuidPtrList2& src);
+  ON_UuidPtrList2& operator=(const ON_UuidPtrList2& src);
+
+  unsigned int Count() const;
+  void RemoveAll();
+  void Reserve(size_t capacity);
+  bool AddUuidPtr(const ON_UUID& uuid, ON__UINT_PTR ptr);
+  bool RemoveUuid(const ON_UUID& uuid);
+  bool FindUuid(const ON_UUID& uuid) const;
+  bool FindUuid(const ON_UUID& uuid, ON__UINT_PTR* ptr) const;
+  bool FindUuidPtr(const ON_UUID& uuid, ON__UINT_PTR index) const;
+  unsigned int GetUuids(ON_SimpleArray<ON_UUID>& uuid_list) const;
+  void ImproveSearchSpeed();
+
+private:
+#pragma warning (push)
+#pragma warning (disable : 4251)
+  std::unique_ptr<class ON_UuidPtrList2_Private> m_private;
+  unsigned char padding[sizeof(ON_UuidPtrList) - sizeof(m_private)];
+#pragma warning (pop)
+};
+
+class ON_CLASS ON_UuidPairList2
+{
+public:
+  ON_UuidPairList2();
+  ~ON_UuidPairList2();
+  ON_UuidPairList2(const ON_UuidPairList2& src);
+  ON_UuidPairList2& operator=(const ON_UuidPairList2& src);
+
+  static const ON_UuidPairList2 EmptyList;
+
+  unsigned int Count() const;
+  void Empty();
+  void Reserve(size_t capacity);
+  bool AddPair(const ON_UUID& id1, const ON_UUID& id2);
+  bool RemovePair(const ON_UUID& id1);
+  bool RemovePair(const ON_UUID& id1, const ON_UUID& id2);
+  bool FindId1(const ON_UUID& id1, ON_UUID* id2 = 0) const;
+  bool FindPair(const ON_UUID& id1, const ON_UUID& id2) const;
+  int GetId1s(ON_SimpleArray<ON_UUID>& uuid_list) const;
+
+  void ImproveSearchSpeed();
+
+private:
+#pragma warning (push)
+#pragma warning (disable : 4251)
+  std::unique_ptr<class ON_UuidPairList2_Private> m_private;
+  unsigned char padding[sizeof(ON_UuidPairList) - sizeof(m_private)];
+#pragma warning (pop)
+};
+
+class ON_CLASS ON_UuidIndexList2
+{
+public:
+  ON_UuidIndexList2();
+  ~ON_UuidIndexList2();
+  ON_UuidIndexList2(const ON_UuidIndexList2& src);
+  ON_UuidIndexList2& operator=(const ON_UuidIndexList2& src);
+
+  unsigned int Count() const;
+  void RemoveAll();
+  void Reserve(size_t capacity);
+  bool AddUuidIndex(const ON_UUID& uuid, int index);
+  bool RemoveUuid(const ON_UUID& uuid);
+  bool FindUuid(const ON_UUID& uuid) const;
+  bool FindUuid(const ON_UUID& uuid, int* index) const;
+  bool FindUuidIndex(const ON_UUID& uuid, int index) const;
+  unsigned int GetUuids(ON_SimpleArray<ON_UUID>& uuid_list) const;
+  void ImproveSearchSpeed();
+
+private:
+#pragma warning (push)
+#pragma warning (disable : 4251)
+  std::unique_ptr<class ON_UuidIndexList2_Private> m_private;
+  unsigned char padding[sizeof(ON_UuidIndexList) - sizeof(m_private)];
+#pragma warning (pop)
+};
+
+
+
 
 class ON_CLASS ON_2dexMap : private ON_SimpleArray<ON_2dex>
 {
@@ -1380,7 +1535,7 @@ public:
 
   int Count() const;
 
-  void Reserve(int capacity);
+  void Reserve(size_t capacity);
 
   const ON_2dex* Array() const;
 
@@ -1488,7 +1643,7 @@ Description:
 Returns:
    -1 if *a < *b is true
     1 if *b < *a is true
-    0 if niether *a <*b nor *b<*a is true 
+    0 if neither *a <*b nor *b<*a is true 
 Details:
 	Use this template functions to sort ON_SimpleArray and
   ON_ClassArray objects into increasing order.  The elements
@@ -1515,7 +1670,7 @@ Description:
 Returns:
    -1 if *b < *a is true
     1 if *a < *b is true
-    0 if niether *a < *b nor *b < *a is true 
+    0 if neither *a < *b nor *b < *a is true 
 Details:
 	Use this template functions to sort ON_SimpleArray and
   ON_ClassArray objects into decreasing order.  The elements
@@ -1543,11 +1698,217 @@ template< class T>
 static
 int ON_CompareDecreasing( const T* a, const T* b);
 
+void ON_SHA1_Accumulate2fPointArray(
+  class ON_SHA1& sha1,
+  const class ON_SimpleArray<ON_2fPoint>& a
+);
+
+void ON_SHA1_Accumulate3fPointArray(
+  class ON_SHA1& sha1,
+  const class ON_SimpleArray<ON_3fPoint>& a
+);
+
+void ON_SHA1_Accumulate4fPointArray(
+  class ON_SHA1& sha1,
+  const class ON_SimpleArray<ON_4fPoint>& a
+);
+
+void ON_SHA1_Accumulate2fVectorArray(
+  class ON_SHA1& sha1,
+  const class ON_SimpleArray<ON_2fVector>& a
+);
+
+void ON_SHA1_Accumulate3fVectorArray(
+  class ON_SHA1& sha1,
+  const class ON_SimpleArray<ON_3fVector>& a
+);
+
+void ON_SHA1_Accumulate2dPointArray(
+  class ON_SHA1& sha1,
+  const class ON_SimpleArray<ON_2dPoint>& a
+);
+
+void ON_SHA1_Accumulate3dPointArray(
+  class ON_SHA1& sha1,
+  const class ON_SimpleArray<ON_3dPoint>& a
+);
+
+void ON_SHA1_Accumulate4dPointArray(
+  class ON_SHA1& sha1,
+  const class ON_SimpleArray<ON_4dPoint>& a
+);
+
+void ON_SHA1_Accumulate2dVectorArray(
+  class ON_SHA1& sha1,
+  const class ON_SimpleArray<ON_2dVector>& a
+);
+
+void ON_SHA1_Accumulate3dVectorArray(
+  class ON_SHA1& sha1,
+  const class ON_SimpleArray<ON_3dVector>& a
+);
 
 // definitions of the template functions are in a different file
 // so that Microsoft's developer studio's autocomplete utility
 // will work on the template functions.
 #include "opennurbs_array_defs.h"
 
+class ON_CLASS ON_Big5UnicodePair
+{
+public:
+  ON_Big5UnicodePair() = default;
+  ~ON_Big5UnicodePair() = default;
+  ON_Big5UnicodePair(const ON_Big5UnicodePair&) = default;
+  ON_Big5UnicodePair& operator=(const ON_Big5UnicodePair&) = default;
+
+public:
+  /// <summary>
+  /// An array sorted by BIG5 code points and useful for converting BIG5 code points to Unicode code points.
+  /// </summary>
+  /// <returns>Returns an array sorted by ON_Big5UnicodePair::CompareBig5AndUnicodeCodePoints()</returns>
+  static const ON_SimpleArray< ON_Big5UnicodePair >& Big5ToUnicode();
+
+  /// <summary>
+  /// An array sorted by Unicode code points and useful for converting Unicode code points to BIG5 code points.
+  /// </summary>
+  /// <returns>Returns an array sorted by ON_Big5UnicodePair::CompareUnicodeAndBig5CodePoints()</returns>
+  static const ON_SimpleArray< ON_Big5UnicodePair >& UnicodeToBig5();
+
+public:
+  static const ON_Big5UnicodePair Null;
+
+  /// <summary>
+  /// ON_Big5UnicodePair::Error.Big5() = ON_Big5CodePoint::Error and ON_Big5UnicodePair::Error.Unicode() = ON_UnicodeShortCodePoint::Error.
+  /// </summary>
+  static const ON_Big5UnicodePair Error;
+
+  /// <summary>
+  /// Create a BIG5 - Unicode code point pair. 
+  /// </summary>
+  /// <param name="big5_code_point">
+  /// BIG5 code point.
+  /// </param>
+  /// <param name="unicode_code_point">
+  /// Unicode code point.
+  /// </param>
+  /// <returns></returns>
+  static const ON_Big5UnicodePair Create(
+    ON_Big5CodePoint big5_code_point,
+    ON_UnicodeShortCodePoint unicode_code_point
+  );
+
+  static const ON_Big5UnicodePair Create(
+    unsigned int big5_code_point,
+    unsigned int unicode_code_point
+  );
+
+  /// <summary>
+  /// Determine if both code points in this pair are 0.
+  /// </summary>
+  /// <returns>True if both code points are 0.</returns>
+  bool IsNull() const;
+
+  /// <summary>
+  /// Determing if the values stored as the BIG5 and Unicode code points are equal nonzero ASCII code points.
+  /// ASCII code point are in the range 0-0x7F (127 decimal).
+  /// Unicode extends ASCII. Strictly speaking, BIG5 does not extend ASCII, but it is common to mix 
+  /// single bytes ASCII and double byte BIG5 encodings in the same char string.
+  /// BIG5 is a double byte string encoding with the first byte in the range 0x81 to 0xFE, the
+  /// minimum BIG5 code point is 0x8140 and the maximum BIG5 code point is 0xFEFE.
+  /// Thus it is possible to mix ASCII and BIG5 encodings in the same char string.
+  /// </summary>
+  /// <param name="bNullIsASCII">
+  /// Value to return if both code points are 0.
+  /// </param>
+  /// <returns>True if both code points are equal and ASCII code points (0 to 0x7F).</returns>
+  bool IsASCII(bool bNullIsASCII) const;
+
+  /// <summary>
+  /// Determine if the pair of code points is valid. 
+  /// If the values for BIG5 and Unicode code point values are &lt 0xFF and equal, the pair is considered valid. 
+  /// Use IsASCII() if you need to treat nonzero ASCII code points differently.
+  /// </summary>
+  /// <param name="bNullIsValid">
+  /// Value to return if this pair is null.
+  /// </param>
+  /// <param name="bASCIICodePointIsValid">
+  /// Value to return if this pair is an ASCII code point.
+  /// </param>
+  /// <returns>True if the BIG5 and Unicode code points are both valid or IsASCII() is true.</returns>
+  bool IsValid(bool bNullIsValid, bool bASCIICodePointIsValid) const;
+
+  const ON_Big5CodePoint Big5() const;
+  const ON_UnicodeShortCodePoint Unicode() const;
+
+  unsigned int Big5CodePoint() const;
+  unsigned int UnicodeCodePoint() const;
+
+  /// <summary>
+  /// 
+  /// </summary>
+  /// </summary>
+  /// <param name="bNullIsValid">
+  /// Value to return if this pair is null.
+  /// </param>
+  /// <param name="bASCIICodePointIsValid">
+  /// Value to return if this pair is an ASCII code point.
+  /// </param>
+  /// <returns></returns>
+  bool IsStandard(bool bNullIsValid, bool bASCIICodePointIsStandard) const;
+
+  /// <summary>
+  /// 
+  /// </summary>
+  /// <returns>Returns true if this pair is valid and at least one of the code points is a private use code point.
+  /// </returns>
+  bool IsPrivateUse() const;
+
+  /// <summary>
+  /// Compares the BIG5 code point.
+  /// </summary>
+  /// <param name="lhs"></param>
+  /// <param name="rhs"></param>
+  /// <returns></returns>
+  static int CompareBig5CodePoint(const ON_Big5UnicodePair* lhs, const ON_Big5UnicodePair* rhs);
+
+  /// <summary>
+  /// Compares the Unicode code point.
+  /// </summary>
+  /// <param name="lhs"></param>
+  /// <param name="rhs"></param>
+  /// <returns></returns>
+  static int CompareUnicodeCodePoint(const ON_Big5UnicodePair* lhs, const ON_Big5UnicodePair* rhs);
+
+  /// <summary>
+  /// Dictionary compare (BIG5 code point first, Unicode code point second).
+  /// </summary>
+  /// <param name="lhs"></param>
+  /// <param name="rhs"></param>
+  /// <returns></returns>
+  static int CompareBig5AndUnicodeCodePoints(const ON_Big5UnicodePair* lhs, const ON_Big5UnicodePair* rhs);
+
+  /// <summary>
+  /// Dictionary compare (Unicode code point first, BIG5 code point second).
+  /// </summary>
+  /// <param name="lhs"></param>
+  /// <param name="rhs"></param>
+  /// <returns></returns>
+  static int CompareUnicodeAndBig5CodePoints(const ON_Big5UnicodePair* lhs, const ON_Big5UnicodePair* rhs);
+
+private:
+  ON_Big5CodePoint m_big5;
+  ON_UnicodeShortCodePoint m_unicode;
+};
+
+ON_DECL bool operator==(ON_Big5UnicodePair lhs, ON_Big5UnicodePair rhs);
+ON_DECL bool operator!=(ON_Big5UnicodePair lhs, ON_Big5UnicodePair rhs);
+
+#if defined(ON_DLL_TEMPLATE)
+
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_Big5UnicodePair>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_Big5CodePoint>;
+ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_UnicodeShortCodePoint>;
+
+#endif
 
 #endif

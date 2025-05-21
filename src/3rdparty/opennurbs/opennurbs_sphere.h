@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(ON_SPHERE_INC_)
 #define ON_SPHERE_INC_
@@ -22,7 +20,7 @@ class ON_CLASS ON_Sphere
 {
 public:
   
-  ON_Plane plane; // equitorial plane
+  ON_Plane plane; // equatorial plane
   double radius;  // > 0
 
   ON_Sphere();
@@ -109,11 +107,20 @@ public:
   Description:
     Creates a surface of revolution definition of the sphere.
   Parameters:
-    srf - [in] if not NULL, then this srf is used.
+    bArcLengthParameterization - [in]
+      true: 
+        The domain will be set to (0,radius*2*pi)x(-radius*pi/2,radius*pi/2)
+      false: 
+        The domain will be set to (0,2*pi)x(-pi/2,pi/2)
+    srf - [in]
+      if not nullptr, then this srf is used.
   Result:
-    A surface of revolution or NULL if the sphere is not valid.
+    A surface of revolution or nullptr if the sphere is not valid.
   */
-  ON_RevSurface* RevSurfaceForm( ON_RevSurface* srf = NULL ) const;
+  ON_RevSurface* RevSurfaceForm( bool bArcLengthParameterization, ON_RevSurface* srf = nullptr ) const;
+
+  ON_DEPRECATED_MSG("Call RevSurfaceForm(false,srf)")
+  ON_RevSurface* RevSurfaceForm( ON_RevSurface* srf = nullptr ) const;
 };
 
 #endif

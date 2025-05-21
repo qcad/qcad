@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2008 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,114 +10,141 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
 
-class ON_BrepRegionTopologyUserData : public ON_UserData
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
+
+
+
+
+class ON_V5_BrepRegionTopologyUserData : public ON_UserData
 {
-  ON_OBJECT_DECLARE(ON_BrepRegionTopologyUserData);
+  ON_OBJECT_DECLARE(ON_V5_BrepRegionTopologyUserData);
 public:
-  static ON_BrepRegionTopology* RegionTopology(const ON_Brep* brep,bool bValidateFaceCount);
 
-  ON_BrepRegionTopologyUserData();
-  ~ON_BrepRegionTopologyUserData();
-  ON_BrepRegionTopologyUserData(const ON_BrepRegionTopologyUserData&);
-  ON_BrepRegionTopologyUserData& operator=(const ON_BrepRegionTopologyUserData&);
+  ON_V5_BrepRegionTopologyUserData();
+  ~ON_V5_BrepRegionTopologyUserData();
+  ON_V5_BrepRegionTopologyUserData(const ON_V5_BrepRegionTopologyUserData&);
+  ON_V5_BrepRegionTopologyUserData& operator=(const ON_V5_BrepRegionTopologyUserData&);
 
-  unsigned int SizeOf() const;
-  ON_BOOL32 Archive() const; 
-  ON_BOOL32 Transform( const ON_Xform& ); 
-  ON_BOOL32 Write(ON_BinaryArchive& binary_archive) const;
-  ON_BOOL32 Read(ON_BinaryArchive& binary_archive);
+  bool Archive() const override; 
 
-  ON_BOOL32 GetDescription( ON_wString& description );
+  bool DeleteAfterWrite(
+    const class ON_BinaryArchive& archive,
+    const class ON_Object* parent_object
+    ) const override;
 
-  ON_BrepRegionTopology m_region_topology;
+  bool DeleteAfterRead(
+    const class ON_BinaryArchive& archive,
+    class ON_Object* parent_object
+  ) const override;
+  
+  bool Write(ON_BinaryArchive& binary_archive) const override;
+  bool Read(ON_BinaryArchive& binary_archive) override;
+
+  bool GetDescription( ON_wString& description ) override;
+
+  const ON_BrepRegionTopology* m_write_region_topology_ptr = nullptr;
+  mutable ON_BrepRegionTopology* m_read_region_topology_ptr = nullptr;
 };
 
-ON_OBJECT_IMPLEMENT(ON_BrepRegionTopologyUserData,ON_UserData,"7FE23D63-E536-43f1-98E2-C807A2625AFF");
+ON_OBJECT_IMPLEMENT(ON_V5_BrepRegionTopologyUserData,ON_UserData,"7FE23D63-E536-43f1-98E2-C807A2625AFF");
 
-ON_BrepRegionTopology* ON_BrepRegionTopologyUserData::RegionTopology(const ON_Brep* brep,bool bValidateFaceCount)
-{
-  ON_BrepRegionTopology* rtop = 0;
-  if ( brep )
-  {
-    ON_BrepRegionTopologyUserData* ud = ON_BrepRegionTopologyUserData::Cast(brep->GetUserData(ON_BrepRegionTopologyUserData::m_ON_BrepRegionTopologyUserData_class_id.Uuid()));
-    if (ud)
-    {
-      rtop = &ud->m_region_topology;
-      if (bValidateFaceCount && rtop->m_FS.Count() != 2*brep->m_F.Count())
-        rtop = 0;
-    }
-  }
-  return rtop;
-}
-
-ON_BrepRegionTopologyUserData::ON_BrepRegionTopologyUserData()
+ON_V5_BrepRegionTopologyUserData::ON_V5_BrepRegionTopologyUserData()
 {
   m_userdata_copycount = 1;
-  m_userdata_uuid = ON_BrepRegionTopologyUserData::m_ON_BrepRegionTopologyUserData_class_id.Uuid();
+  m_userdata_uuid = ON_CLASS_ID(ON_V5_BrepRegionTopologyUserData);
   m_application_uuid = ON_opennurbs4_id;
 }
 
-ON_BrepRegionTopologyUserData::~ON_BrepRegionTopologyUserData()
+ON_V5_BrepRegionTopologyUserData::~ON_V5_BrepRegionTopologyUserData()
 {
-}
-
-ON_BrepRegionTopologyUserData::ON_BrepRegionTopologyUserData( const ON_BrepRegionTopologyUserData& src ) 
-                              : ON_UserData(src)
-                              , m_region_topology(src.m_region_topology)
-{
-  m_userdata_uuid = ON_BrepRegionTopologyUserData::m_ON_BrepRegionTopologyUserData_class_id.Uuid();
-  m_application_uuid = ON_opennurbs4_id;
-}
-
-ON_BrepRegionTopologyUserData& ON_BrepRegionTopologyUserData::operator=(const ON_BrepRegionTopologyUserData& src)
-{
-  if ( this != &src )
+  m_write_region_topology_ptr = nullptr;
+  if (nullptr != m_read_region_topology_ptr)
   {
-    ON_UserData::operator=(src);
-    m_region_topology = src.m_region_topology;
+    delete m_read_region_topology_ptr;
+    m_read_region_topology_ptr = nullptr;
   }
+}
+
+ON_V5_BrepRegionTopologyUserData::ON_V5_BrepRegionTopologyUserData( const ON_V5_BrepRegionTopologyUserData& src ) 
+                              : ON_UserData(src)
+{
+  // copy constructor is never called.
+  //m_userdata_uuid = ON_CLASS_ID(ON_V5_BrepRegionTopologyUserData);
+  //m_application_uuid = ON_opennurbs4_id;
+}
+
+ON_V5_BrepRegionTopologyUserData& ON_V5_BrepRegionTopologyUserData::operator=(const ON_V5_BrepRegionTopologyUserData& src)
+{
+  // operator= is never called.
+  //if ( this != &src )
+  //{
+  //  ON_UserData::operator=(src);
+  //  m_region_topology = src.m_region_topology;
+  //}
   return *this;
 }
 
-unsigned int ON_BrepRegionTopologyUserData::SizeOf() const
-{
-  return ON_UserData::SizeOf() + m_region_topology.SizeOf();
-}
-
-ON_BOOL32 ON_BrepRegionTopologyUserData::Archive() const
+bool ON_V5_BrepRegionTopologyUserData::Archive() const
 {
   return true;
 }
 
-ON_BOOL32 ON_BrepRegionTopologyUserData::Transform( const ON_Xform& xform)
+bool ON_V5_BrepRegionTopologyUserData::DeleteAfterWrite(
+  const class ON_BinaryArchive&, //archive,
+  const class ON_Object* //parent_object
+) const
+{
+  return true;
+}
+
+bool ON_V5_BrepRegionTopologyUserData::DeleteAfterRead(
+  const class ON_BinaryArchive& archive,
+  class ON_Object* parent_object
+) const
+{
+  const ON_Brep* brep = ON_Brep::Cast(parent_object);
+  if (nullptr != brep && nullptr == brep->m_region_topology)
+  {
+    brep->m_region_topology = m_read_region_topology_ptr;
+    m_read_region_topology_ptr = nullptr;
+  }
+  return true;
+}
+
+
+bool ON_BrepRegionTopology::Transform( const ON_Xform& xform)
 {
   // Transforming the bbox makes it grow too large under repeated
   // rotations.  So, we will destroy it here and reset it below.
   //m_bbox.Transform(xform);
   int i, j;
-  const int region_count = m_region_topology.m_R.Count();
-  const int faceside_count = m_region_topology.m_FS.Count();
-  const ON_Brep* brep = ON_Brep::Cast(Owner());
-  if ( brep )
+  const int region_count = m_R.Count();
+  const int faceside_count = m_FS.Count();
+  if ( nullptr != m_brep )
   {
-    const int face_count = brep->m_F.Count();
+    const int face_count = m_brep->m_F.Count();
     for (i = 0; i < region_count; i++ )
     {
-      ON_BrepRegion& r = m_region_topology.m_R[i];
+      ON_BrepRegion& r = m_R[i];
       r.m_bbox.Destroy();
       for ( j = 0; j < r.m_fsi.Count(); j++ )
       {
         int fsi = r.m_fsi[j];
         if ( fsi >= 0 && fsi < faceside_count )
         {
-          int fi = m_region_topology.m_FS[fsi].m_fi;
+          int fi = m_FS[fsi].m_fi;
           if ( fi >= 0 && fi < face_count )
           {
-            r.m_bbox.Union(brep->m_F[fi].BoundingBox());
+            r.m_bbox.Union(m_brep->m_F[fi].BoundingBox());
           }
         }
       }
@@ -126,33 +152,60 @@ ON_BOOL32 ON_BrepRegionTopologyUserData::Transform( const ON_Xform& xform)
   }
 
   for ( i = 0; i < faceside_count; i++ )
-    m_region_topology.m_FS[i].TransformUserData(xform);
+    m_FS[i].TransformUserData(xform);
   for ( i = 0; i < region_count; i++ )
-    m_region_topology.m_R[i].TransformUserData(xform);
+    m_R[i].TransformUserData(xform);
 
   return true;
 }
 
-ON_BOOL32 ON_BrepRegionTopologyUserData::Write(ON_BinaryArchive& binary_archive) const
+bool ON_V5_BrepRegionTopologyUserData::Write(ON_BinaryArchive& binary_archive) const
 {
-  return m_region_topology.Write(binary_archive);
+  // m_write_region_topology_ptr is never nullptr when this fuction is called
+  return 
+    (nullptr == m_write_region_topology_ptr)
+    ?
+    false
+    : m_write_region_topology_ptr->Write(binary_archive)
+    ;
 }
 
-ON_BOOL32 ON_BrepRegionTopologyUserData::Read(ON_BinaryArchive& binary_archive)
+bool ON_V5_BrepRegionTopologyUserData::Read(ON_BinaryArchive& binary_archive)
 {
-  m_region_topology.m_brep = ON_Brep::Cast(Owner());
-  return m_region_topology.Read(binary_archive);
+  m_read_region_topology_ptr = new ON_BrepRegionTopology();
+  m_read_region_topology_ptr->m_brep = ON_Brep::Cast(Owner());
+  return m_read_region_topology_ptr->Read(binary_archive);
 }
 
-ON_BOOL32 ON_BrepRegionTopologyUserData::GetDescription( ON_wString& description )
+bool ON_V5_BrepRegionTopologyUserData::GetDescription( ON_wString& description )
 {
-  description=L"Brep Region Topology";
+  description=L"V5 Brep Region Topology userdata";
   return true;
 }
 
-ON_OBJECT_IMPLEMENT(ON_BrepFaceSide,ON_Object,"30930370-0D5B-4ee4-8083-BD635C7398A4");
+void ON_Brep::Internal_AttachV5RegionTopologyAsUserData(
+  ON_BinaryArchive& archive
+) const
+{
+  if ( archive.Archive3dmVersion() != 50 )
+    return;
 
-ON_BOOL32 ON_BrepFaceSide::IsValid( ON_TextLog* text_log ) const
+  const bool bWriteRegionTopology
+    = (nullptr != m_region_topology)
+    && (m_F.UnsignedCount() > 0)
+    && (m_region_topology->m_FS.UnsignedCount() == 2 * m_F.UnsignedCount());
+
+  if ( false == bWriteRegionTopology )
+    return;
+
+  ON_V5_BrepRegionTopologyUserData* ud = new ON_V5_BrepRegionTopologyUserData();
+  ud->m_write_region_topology_ptr = m_region_topology;
+  const_cast<ON_Brep*>(this)->AttachUserData(ud);
+}
+
+ON_OBJECT_IMPLEMENT_NO_COPYCTOR(ON_BrepFaceSide,ON_Object,"30930370-0D5B-4ee4-8083-BD635C7398A4");
+
+bool ON_BrepFaceSide::IsValid( ON_TextLog* text_log ) const
 {
   return true;
 }
@@ -186,7 +239,7 @@ ON_BrepFaceSide& ON_BrepFaceSide::operator=(const ON_BrepFaceSide& src)
   return *this;
 }
 
-ON_BOOL32 ON_BrepFaceSide::Write(ON_BinaryArchive& file) const
+bool ON_BrepFaceSide::Write(ON_BinaryArchive& file) const
 {
   bool rc = file.BeginWrite3dmChunk(TCODE_ANONYMOUS_CHUNK,1,0);
   if ( !rc )
@@ -209,7 +262,7 @@ ON_BOOL32 ON_BrepFaceSide::Write(ON_BinaryArchive& file) const
   return rc;
 }
 
-ON_BOOL32 ON_BrepFaceSide::Read(ON_BinaryArchive& file)
+bool ON_BrepFaceSide::Read(ON_BinaryArchive& file)
 {
   int major_version = 0;
   int minor_version = 0;
@@ -236,19 +289,17 @@ ON_BOOL32 ON_BrepFaceSide::Read(ON_BinaryArchive& file)
   return rc;
 }
 
-
-ON_Brep* ON_BrepFaceSide::Brep() const
+const ON_Brep* ON_BrepFaceSide::Brep() const
 {
-  return m_rtop ? m_rtop->Brep() : 0;
+  return m_rtop ? m_rtop->Brep() : nullptr;
 }
 
-
-ON_BrepRegionTopology* ON_BrepFaceSide::RegionTopology() const
+const ON_BrepRegionTopology* ON_BrepFaceSide::RegionTopology() const
 {
   return m_rtop;
 }
 
-ON_BrepRegion* ON_BrepFaceSide::Region() const
+const ON_BrepRegion* ON_BrepFaceSide::Region() const
 {
   ON_BrepRegion* region = 0;
   if ( m_rtop && m_ri >= 0 && m_ri < m_rtop->m_R.Count() )
@@ -259,12 +310,12 @@ ON_BrepRegion* ON_BrepFaceSide::Region() const
   return region;
 }
 
-class ON_BrepFace* ON_BrepFaceSide::Face() const
+const ON_BrepFace* ON_BrepFaceSide::Face() const
 {
-  class ON_BrepFace* face = 0;
+  const ON_BrepFace* face = 0;
   if ( m_rtop && m_fi >= 0 )
   {
-    ON_Brep* brep = m_rtop->Brep();
+    const ON_Brep* brep = m_rtop->Brep();
     if ( brep && m_fi < brep->m_F.Count() )
     {
       face = &brep->m_F[m_fi];
@@ -278,9 +329,9 @@ int ON_BrepFaceSide::SurfaceNormalDirection() const
   return m_srf_dir;
 }
 
-ON_OBJECT_IMPLEMENT(ON_BrepRegion,ON_Object,"CA7A0092-7EE6-4f99-B9D2-E1D6AA798AA1");
+ON_OBJECT_IMPLEMENT_NO_COPYCTOR(ON_BrepRegion,ON_Object,"CA7A0092-7EE6-4f99-B9D2-E1D6AA798AA1");
 
-ON_BOOL32 ON_BrepRegion::IsValid( ON_TextLog* text_log ) const
+bool ON_BrepRegion::IsValid( ON_TextLog* text_log ) const
 {
   return true;
 }
@@ -314,7 +365,7 @@ ON_BrepRegion& ON_BrepRegion::operator=(const ON_BrepRegion& src)
 }
 
 
-ON_BOOL32 ON_BrepRegion::Write(ON_BinaryArchive& file) const
+bool ON_BrepRegion::Write(ON_BinaryArchive& file) const
 {
   bool rc = file.BeginWrite3dmChunk(TCODE_ANONYMOUS_CHUNK,1,0);
   if ( !rc )
@@ -337,7 +388,7 @@ ON_BOOL32 ON_BrepRegion::Write(ON_BinaryArchive& file) const
   return rc;
 }
 
-ON_BOOL32 ON_BrepRegion::Read(ON_BinaryArchive& file)
+bool ON_BrepRegion::Read(ON_BinaryArchive& file)
 {
   int major_version = 0;
   int minor_version = 0;
@@ -365,9 +416,9 @@ ON_BOOL32 ON_BrepRegion::Read(ON_BinaryArchive& file)
 }
 
 
-ON_Brep* ON_BrepRegion::Brep() const
+const ON_Brep* ON_BrepRegion::Brep() const
 {
-  return m_rtop ? m_rtop->Brep() : 0;
+  return m_rtop ? m_rtop->Brep() : nullptr;
 }
 
 ON_BrepRegionTopology* ON_BrepRegion::RegionTopology() const
@@ -411,6 +462,14 @@ ON_BrepFaceSideArray::~ON_BrepFaceSideArray()
 
 bool ON_BrepFaceSideArray::Read( ON_BinaryArchive& file )
 {
+  return
+    (file.Archive3dmVersion() < 60)
+    ? Internal_ReadV5(file)
+    : Internal_ReadV6(file);
+}
+
+bool ON_BrepFaceSideArray::Internal_ReadV5( ON_BinaryArchive& file )
+{
   Empty();
   int count = 0;
   int i;
@@ -438,7 +497,44 @@ bool ON_BrepFaceSideArray::Read( ON_BinaryArchive& file )
   return rc;
 }
 
+bool ON_BrepFaceSideArray::Internal_ReadV6( ON_BinaryArchive& file )
+{
+  Empty();
+  int count = 0;
+  int i;
+  int major_version = 0;
+  int minor_version = 0;
+  bool rc = file.BeginRead3dmChunk( TCODE_ANONYMOUS_CHUNK, &major_version, &minor_version );
+  if (rc) 
+  {
+    for(;;)
+    {
+      rc = (1 == major_version);
+      if (!rc) break;
+      if (rc) rc = file.ReadInt(&count);
+      SetCapacity(count);
+      for ( i = 0; i < count && rc; i++ ) 
+      {
+        ON_BrepFaceSide& faceside = AppendNew();
+        rc = file.ReadObject(faceside)?true:false;
+      }    
+      break;
+    }
+    if ( !file.EndRead3dmChunk() )
+      rc = false;
+  }
+  return rc;
+}
+
 bool ON_BrepFaceSideArray::Write( ON_BinaryArchive& file ) const
+{
+  return
+    (file.Archive3dmVersion() < 60)
+    ? Internal_WriteV5(file)
+    : Internal_WriteV6(file);
+}
+
+bool ON_BrepFaceSideArray::Internal_WriteV5( ON_BinaryArchive& file ) const
 {
   int i;
   bool rc = file.BeginWrite3dmChunk( TCODE_ANONYMOUS_CHUNK, 1, 0 );
@@ -449,6 +545,24 @@ bool ON_BrepFaceSideArray::Write( ON_BinaryArchive& file ) const
     for ( i = 0; rc && i < count; i++ ) 
     {
       rc = m_a[i].Write(file)?true:false;
+    }
+    if ( !file.EndWrite3dmChunk() )
+      rc = false;
+  }
+  return rc;
+}
+
+bool ON_BrepFaceSideArray::Internal_WriteV6( ON_BinaryArchive& file ) const
+{
+  int i;
+  bool rc = file.BeginWrite3dmChunk( TCODE_ANONYMOUS_CHUNK, 1, 0 );
+  if (rc) 
+  {
+    const int count = Count();
+    if (rc) rc = file.WriteInt( count );
+    for ( i = 0; rc && i < count; i++ ) 
+    {
+      rc = file.WriteObject(m_a[i])?true:false;
     }
     if ( !file.EndWrite3dmChunk() )
       rc = false;
@@ -473,6 +587,14 @@ ON_BrepRegionArray::~ON_BrepRegionArray()
 }
 
 bool ON_BrepRegionArray::Read( ON_BinaryArchive& file )
+{
+  return
+    (file.Archive3dmVersion() < 60)
+    ? Internal_ReadV5(file)
+    : Internal_ReadV6(file);
+}
+
+bool ON_BrepRegionArray::Internal_ReadV5( ON_BinaryArchive& file )
 {
   Empty();
   int count = 0;
@@ -501,7 +623,44 @@ bool ON_BrepRegionArray::Read( ON_BinaryArchive& file )
   return rc;
 }
 
+bool ON_BrepRegionArray::Internal_ReadV6( ON_BinaryArchive& file )
+{
+  Empty();
+  int count = 0;
+  int i;
+  int major_version = 0;
+  int minor_version = 0;
+  bool rc = file.BeginRead3dmChunk( TCODE_ANONYMOUS_CHUNK, &major_version, &minor_version );
+  if (rc) 
+  {
+    for(;;)
+    {
+      rc = (1 == major_version);
+      if (!rc) break;
+      if (rc) rc = file.ReadInt(&count);
+      SetCapacity(count);
+      for ( i = 0; i < count && rc ; i++ ) 
+      {
+        ON_BrepRegion& region = AppendNew();
+        rc = file.ReadObject(region)?true:false;
+      }    
+      break;
+    }
+    if ( !file.EndRead3dmChunk() )
+      rc = false;
+  }
+  return rc;
+}
+
 bool ON_BrepRegionArray::Write( ON_BinaryArchive& file ) const
+{
+  return
+    (file.Archive3dmVersion() < 60)
+    ? Internal_WriteV5(file)
+    : Internal_WriteV6(file);
+}
+
+bool ON_BrepRegionArray::Internal_WriteV5( ON_BinaryArchive& file ) const
 {
   int i;
   bool rc = file.BeginWrite3dmChunk( TCODE_ANONYMOUS_CHUNK, 1, 0 );
@@ -512,6 +671,24 @@ bool ON_BrepRegionArray::Write( ON_BinaryArchive& file ) const
     for ( i = 0; rc && i < count; i++ ) 
     {
       rc = m_a[i].Write(file)?true:false;
+    }
+    if ( !file.EndWrite3dmChunk() )
+      rc = false;
+  }
+  return rc;
+}
+
+bool ON_BrepRegionArray::Internal_WriteV6( ON_BinaryArchive& file ) const
+{
+  int i;
+  bool rc = file.BeginWrite3dmChunk( TCODE_ANONYMOUS_CHUNK, 1, 0 );
+  if (rc) 
+  {
+    const int count = Count();
+    if (rc) rc = file.WriteInt( count );
+    for ( i = 0; rc && i < count; i++ ) 
+    {
+      rc = file.WriteObject(m_a[i])?true:false;
     }
     if ( !file.EndWrite3dmChunk() )
       rc = false;
@@ -576,7 +753,7 @@ bool ON_BrepRegionTopology::IsValid( ON_TextLog* text_log) const
   int ri, fsi;
   if ( !m_brep )
   {
-    PRINT_MSG("ON_BrepRegionTopology::m_brep is NULL\n");
+    PRINT_MSG("ON_BrepRegionTopology::m_brep is nullptr\n");
     return false;
   }
   const int faceside_count = m_FS.Count();
@@ -696,7 +873,7 @@ bool ON_BrepRegionTopology::IsValid( ON_TextLog* text_log) const
   return true;
 }
 
-ON_Brep* ON_BrepRegionTopology::Brep() const
+const ON_Brep* ON_BrepRegionTopology::Brep() const
 {
   return m_brep;
 }
@@ -756,16 +933,29 @@ unsigned int ON_BrepRegionTopology::SizeOf() const
   return m_FS.SizeOf() + m_R.SizeOf();
 }
 
-bool ON_BrepRegionTopology::Create(const ON_Brep* brep)
+
+class ON_BrepRegionTopology* ON_Brep::Internal_RegionTopologyPointer(
+  const class ON_Brep* brep,
+  bool bValidateFaceCount 
+)
 {
-  return false;
+  if (nullptr != brep && nullptr != brep->m_region_topology)
+  {
+    if (bValidateFaceCount && brep->m_region_topology->m_FS.UnsignedCount() != 2 * brep->m_F.UnsignedCount())
+    {
+      delete brep->m_region_topology;
+      brep->m_region_topology = nullptr;
+    }
+    return brep->m_region_topology;
+  }
+  return nullptr;
 }
 
 
 ON_BrepFaceSide* ON_BrepFace::FaceSide(int dir) const
 {
   ON_BrepFaceSide* faceside = 0;
-  const ON_BrepRegionTopology* rtop = ON_BrepRegionTopologyUserData::RegionTopology(m_brep,true);
+  const ON_BrepRegionTopology* rtop = ON_Brep::Internal_RegionTopologyPointer(m_brep, true);
   if ( rtop )
   {
     if ( m_face_index >= 0 && m_face_index < m_brep->m_F.Count() )
@@ -781,38 +971,34 @@ ON_BrepFaceSide* ON_BrepFace::FaceSide(int dir) const
 
 bool ON_Brep::HasRegionTopology() const
 {
-  ON_UserData* ud = GetUserData(ON_BrepRegionTopologyUserData::m_ON_BrepRegionTopologyUserData_class_id.Uuid());
-  return (0 != ud);
+  return (nullptr != m_region_topology);
 }
 
 const ON_BrepRegionTopology& ON_Brep::RegionTopology() const
 {
-  ON_BrepRegionTopology* rtop = ON_BrepRegionTopologyUserData::RegionTopology(this,false);
-  if ( 0 == rtop )
+  bool bCreate = false;
+  if ( nullptr == m_region_topology )
   {
-    ON_BrepRegionTopologyUserData* ud = new ON_BrepRegionTopologyUserData();
-    if ( const_cast<ON_Brep*>(this)->AttachUserData(ud) )
-    {
-      rtop = &ud->m_region_topology;
-    }
-    else
-    {
-      ON_ERROR("Unable to create brep region topology");
-      delete ud;
-    }
+    bCreate = true;
+    m_region_topology = new ON_BrepRegionTopology();
   }
-  if (rtop && rtop->m_FS.Count() != 2*m_F.Count() )
+  else
   {
-    rtop->Create(this);
+    bCreate = (m_region_topology->m_FS.UnsignedCount() != 2 * m_F.UnsignedCount());
   }
-  return *rtop;
+  if (bCreate )
+  {
+  }
+  return *m_region_topology;
 }
 
 void ON_Brep::DestroyRegionTopology()
 {
-  ON_UserData* ud = GetUserData(ON_BrepRegionTopologyUserData::m_ON_BrepRegionTopologyUserData_class_id.Uuid());
-  if ( ud )
-    delete ud;
+  if (nullptr != m_region_topology)
+  {
+    delete m_region_topology;
+    m_region_topology = nullptr;
+  }
 }
 
 void ON_Brep::MemoryRelocate()
@@ -850,18 +1036,10 @@ void ON_Brep::MemoryRelocate()
     m_F[i].m_brep = this;
   }
 
-  ON_BrepRegionTopology* rtop = ON_BrepRegionTopologyUserData::RegionTopology(this,false);
-  if ( rtop )
+  if ( m_region_topology )
   {
-    rtop->m_brep = this;
-    count = rtop->m_FS.Count();
-    for ( i = 0; i < count; i++ )
-      rtop->m_FS[i].m_rtop = rtop;
-    count = rtop->m_R.Count();
-    for ( i = 0; i < count; i++ )
-      rtop->m_R[i].m_rtop = rtop;
+    m_region_topology->m_brep = this;
   }
-
 }
 
 ON_Brep* ON_Brep::SubBrep( 
@@ -956,7 +1134,8 @@ ON_Brep* ON_Brep::SubBrep(
           Vmap[trim->m_vi[1]] = 1;
           Vcount++;
         }
-        if ( ON_BrepTrim::singular == trim->m_type )
+        if ( ON_BrepTrim::singular == trim->m_type ||
+             ON_BrepTrim::ptonsrf == trim->m_type)   // March 29, 2010 Lowell - Allow ptonsrf
         {
           if ( trim->m_ei >= 0 || trim->m_vi[0] != trim->m_vi[1] )
             return 0;
@@ -1012,7 +1191,9 @@ ON_Brep* ON_Brep::SubBrep(
       const ON_BrepVertex& vertex = m_V[i];
       ON_BrepVertex& sub_vertex = sub_brep->NewVertex(vertex.point,vertex.m_tolerance);
       Vmap[i] = sub_vertex.m_vertex_index;
-      sub_vertex.CopyUserData(vertex);      
+      sub_vertex.CopyUserData(vertex);
+      // March 29, 2010 Lowell - Copy user fields
+      memcpy(&sub_vertex.m_vertex_user, &vertex.m_vertex_user, sizeof(sub_vertex.m_vertex_user));
     }
     else
       Vmap[i] = -1;
@@ -1037,6 +1218,8 @@ ON_Brep* ON_Brep::SubBrep(
       ON_BrepEdge& sub_edge = sub_brep->NewEdge(sub_v0,sub_v1,sub_brep->m_C3.Count()-1,0,edge.m_tolerance);
       Emap[i] = sub_edge.m_edge_index;
       sub_edge.CopyUserData(edge);
+      // March 29, 2010 Lowell - Copy user fields
+      memcpy(&sub_edge.m_edge_user, &edge.m_edge_user, sizeof(sub_edge.m_edge_user));
     }
     else
       Emap[i] = -1;
@@ -1060,6 +1243,9 @@ ON_Brep* ON_Brep::SubBrep(
     sub_face.m_bbox = face.m_bbox;
     sub_face.m_domain[0] = face.m_domain[0];
     sub_face.m_domain[1] = face.m_domain[1];
+    // March 29, 2010 Lowell - Copy user fields
+    memcpy(&sub_face.m_face_user, &face.m_face_user, sizeof(sub_face.m_face_user));
+
     if ( bHaveBBox )
     {
       if ( sub_face.m_bbox.IsValid() )
@@ -1078,6 +1264,9 @@ ON_Brep* ON_Brep::SubBrep(
       ON_BrepLoop& sub_loop = sub_brep->NewLoop(loop.m_type,sub_face);
       sub_loop.CopyUserData(loop);
       sub_loop.m_pbox = loop.m_pbox;
+      // April 19, 2010 Lowell - Copy user fields
+      memcpy(&sub_loop.m_loop_user, &loop.m_loop_user, sizeof(sub_loop.m_loop_user));
+
       for ( lti = 0; lti < loop.m_ti.Count(); lti++ )
       {
         const ON_BrepTrim& trim = m_T[loop.m_ti[lti]];
@@ -1085,10 +1274,15 @@ ON_Brep* ON_Brep::SubBrep(
           return 0;
         if ( trim.m_ei >= 0 && Emap[trim.m_ei] < 0 )
           return 0;
-        ON_Curve* c2 = trim.DuplicateCurve();
-        if ( !c2 )
+        if(trim.m_c2i >= 0)
+        {
+          ON_Curve* c2 = trim.DuplicateCurve();
+          if ( !c2 )
+            return 0;
+          sub_brep->m_C2.Append(c2);
+        }
+        else if(trim.m_type != ON_BrepTrim::ptonsrf)
           return 0;
-        sub_brep->m_C2.Append(c2);
         if ( trim.m_ei >= 0 )
         {
           ON_BrepEdge& sub_edge = sub_brep->m_E[Emap[trim.m_ei]];
@@ -1098,6 +1292,14 @@ ON_Brep* ON_Brep::SubBrep(
         {
           ON_BrepVertex& sub_vertex = sub_brep->m_V[Vmap[trim.m_vi[0]]];
           sub_brep->NewSingularTrim(sub_vertex,sub_loop,trim.m_iso,sub_brep->m_C2.Count()-1);
+        }
+        // March 29, 2010 Lowell - copy ptonsrf type
+        else if ( ON_BrepTrim::ptonsrf == trim.m_type)
+        {
+          ON_BrepTrim& sub_trim = sub_brep->NewTrim(false, sub_loop, -1);
+          sub_trim.m_type = ON_BrepTrim::ptonsrf;
+          ON_BrepVertex& sub_vertex = sub_brep->m_V[Vmap[trim.m_vi[0]]];
+          sub_trim.m_vi[0] = sub_trim.m_vi[1] = sub_vertex.m_vertex_index;
         }
         else
         {
@@ -1112,6 +1314,9 @@ ON_Brep* ON_Brep::SubBrep(
         sub_trim.m_tolerance[1] = trim.m_tolerance[1];
         sub_trim.m_pbox = trim.m_pbox;
         sub_trim.m_iso = trim.m_iso;
+        // April 19, 2010 Lowell - Copy user fields
+        memcpy(&sub_trim.m_trim_user, &trim.m_trim_user, sizeof(sub_trim.m_trim_user));
+
         // Since we are extracting a subset of the original brep,
         // some mated edges could turn into boundary edges. The
         // call to NewTrim() above will correctly handle setting
@@ -1175,8 +1380,8 @@ ON_Brep* ON_BrepRegion::RegionBoundaryBrep( ON_Brep* brep ) const
     face.m_bRev = ( FS[i]->m_srf_dir < 0 );
   }
 
-  ON_BOOL32 bIsOriented = false;
-  ON_BOOL32 bHasBoundary = true;
+  bool bIsOriented = false;
+  bool bHasBoundary = true;
   if ( brep->IsManifold(&bIsOriented,&bHasBoundary) )
   {
     if ( bIsOriented && !bHasBoundary )
@@ -1191,58 +1396,3 @@ ON_Brep* ON_BrepRegion::RegionBoundaryBrep( ON_Brep* brep ) const
   return brep;
 }
 
-
-bool ON_BrepRegion::AreaMassProperties(
-  ON_MassProperties& mp,
-  bool bArea,
-  bool bFirstMoments,
-  bool bSecondMoments,
-  bool bProductMoments,
-  double rel_tol,
-  double abs_tol
-  ) const
-{
-  // TODO - avoid call to RegionBoundaryBrep()
-  ON_Brep region_brep;
-  if ( !RegionBoundaryBrep(&region_brep) )
-    return false;
-  return region_brep.AreaMassProperties(mp, 
-        bArea, bFirstMoments, bSecondMoments, bProductMoments,
-        rel_tol, abs_tol
-       );
-}
-
-bool ON_BrepRegion::VolumeMassProperties(
-  ON_MassProperties& mp, 
-  bool bVolume,
-  bool bFirstMoments,
-  bool bSecondMoments,
-  bool bProductMoments,
-  ON_3dPoint base_point,
-  double rel_tol,
-  double abs_tol
-  ) const
-{
-  // TODO - avoid call to RegionBoundaryBrep()
-  ON_Brep region_brep;
-  if ( !RegionBoundaryBrep(&region_brep) )
-    return false;
-  return region_brep.VolumeMassProperties(mp,
-          bVolume, bFirstMoments, bSecondMoments, bProductMoments,
-          base_point, rel_tol, abs_tol
-          );
-}
-
-
-bool ON_BrepRegion::IsPointInside(
-        ON_3dPoint P, 
-        double tolerance,
-        bool bStrictlyInside
-        ) const
-{
-  // TODO - avoid call to RegionBoundaryBrep()
-  ON_Brep region_brep;
-  if ( !P.IsValid() || !RegionBoundaryBrep(&region_brep) )
-    return false;
-  return region_brep.IsPointInside(P,tolerance,bStrictlyInside);
-}

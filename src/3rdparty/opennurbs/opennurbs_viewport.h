@@ -1,21 +1,13 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
 // MERCHANTABILITY ARE HEREBY DISCLAIMED.
 //				
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
-//
-////////////////////////////////////////////////////////////////
-*/
-
-////////////////////////////////////////////////////////////////
-//
-//   defines ON_Viewport
 //
 ////////////////////////////////////////////////////////////////
 
@@ -32,41 +24,98 @@ class ON_CLASS ON_Viewport : public ON_Geometry
 	ON_OBJECT_DECLARE( ON_Viewport );
 public:
 
-  // Default z=up perspective camera direction
-  static const ON_3dVector Default3dCameraDirection;
+  static const double DefaultNearDist;               // 0.005
+  static const double DefaultFarDist;                // 1000.0
+  static const double DefaultMinNearDist;            // 0.0001
+  static const double DefaultMinNearOverFar;         // 0.0001
 
-  // Construction
-	ON_Viewport();
-  ~ON_Viewport();
-	ON_Viewport& operator=( const ON_Viewport& );
-
-  bool IsValidCamera() const;
-  bool IsValidFrustum() const;
-
-  // ON_Object overrides //////////////////////////////////////////////////////
-  //
+  static const ON_3dPoint DefaultCameraLocation;     // (0.0,0.0,100.0)
+  static const ON_3dVector Default3dCameraDirection; // (-0.43301270189221932338186158537647,0.75,-0.5)
 
   /*
   Description:
-    Test for a valid camera, frustum, and screen port.
-  Parameters:
-    text_log - [in] if the object is not valid and text_log
-        is not NULL, then a brief englis description of the
-        reason the object is not valid is appened to the log.
-        The information appended to text_log is suitable for 
-        low-level debugging purposes by programmers and is 
-        not intended to be useful as a high level user 
-        interface tool.
-  Returns:
-    @untitled table
-    true     camera, frustum, and screen port are valid.
-    false    camera, frustum, or screen port is invalid.
-  Remarks:
-    Overrides virtual ON_Object::IsValid
-  See Also:
-    IsValidCamera, IsValidFrustum
+    A Y-up parallel projection looking at the origin of the XYplane.
+    up  =  ON_3dVector::Yaxis, 
+    dir = -ON_3dVector::Zaxis
   */
-  ON_BOOL32 IsValid( ON_TextLog* text_log = NULL ) const;
+  static const ON_Viewport DefaultTopViewYUp;
+
+  /*
+  Description:
+    A Z-up perspective projection looking down on the origin of the XY plane.
+    up  = ON_3dVector::Zaxis, 
+    dir = ON_3dVector:Default3dCameraDirection
+  */
+  static const ON_Viewport DefaultPerspectiveViewZUp;
+
+  // Construction
+  // Default constructor creates a copy of ON_Viewport::DefaultTopViewYUp;
+	ON_Viewport() = default;
+  ~ON_Viewport() = default;
+	ON_Viewport( const ON_Viewport& ) = default;
+	ON_Viewport& operator=( const ON_Viewport& ) = default;
+
+  /*
+  Description:
+    Creates a shallow copy of this (no base class member including user data are copied).
+  Parameters:
+    destination - [in]
+      If destination is not nullptr, then the copy is put in this class. Otherwise, the copy is put
+      into a viewport created by calling new ON_Viewport().
+  */
+  ON_Viewport* ShallowCopy(ON_Viewport* destination) const;
+
+  /*
+  Returns:
+    A sha1 hash of all the settings that effect view projection matrices.
+    view projection, camera location, camera X,Y,Z frame, frustum, port.   
+    If two ON_Viewport classes have identical values ViewProjectionContentHash(),
+    then they will have identical view projection matrices and generate identical
+    images from the same model content.
+  */
+  ON_SHA1_Hash ViewProjectionContentHash() const;
+
+  /*
+  Returns:
+    candidate_point.IsValid() 
+    && candidate_point.MaximumCoordinate() < ON_NONSENSE_WORLD_COORDINATE_VALUE;
+  */
+  static bool IsValidCameraLocation(
+    ON_3dPoint candidate_point
+  );
+
+  /*
+  Returns:
+    candidate_vector.IsValid() 
+    && candidate_vector.MaximumCoordinate() < ON_NONSENSE_WORLD_COORDINATE_VALUE
+    && candidate_vector.MaximumCoordinate() > ON_ZERO_TOLERANCE
+    ;
+  */
+  static bool IsValidCameraUpOrDirection(
+    ON_3dVector candidate_vector
+  );
+
+  /*
+  Returns:
+    True if camera up, direction, X, Y, and Z are valid.
+  */
+  bool IsValidCameraFrame() const;
+
+  /*
+  Returns:
+    True if camera location is valid and camera up, direction, X, Y, and Z are valid.
+  */
+  bool IsValidCamera() const;
+
+  /*
+  Returns:
+    True if camera frustum is valid.
+  */
+  bool IsValidFrustum() const;
+  
+  // ON_Object overrides //////////////////////////////////////////////////////
+  //
+  bool IsValid( class ON_TextLog* text_log = nullptr ) const override;
 
   // Description:
   //   Dumps debugging text description to a text log.
@@ -78,10 +127,10 @@ public:
   //   This overrides the virtual ON_Object::Dump() function.
   void Dump( 
     ON_TextLog& // dump_target
-    ) const;
+    ) const override;
 
   // Description:
-  //   Writes ON_Viewport defintion from a binary archive.
+  //   Writes ON_Viewport definition from a binary archive.
   //
   // Parameters:
   //   binary_archive - [in] open binary archive
@@ -91,13 +140,13 @@ public:
   //
   // Remarks:
   //   This overrides the virtual ON_Object::Write() function.
-  ON_BOOL32 Write(
+  bool Write(
          ON_BinaryArchive&  // binary_archive
-       ) const;
+       ) const override;
 
 
   // Description:
-  //   Reads ON_Viewport defintion from a binary archive.
+  //   Reads ON_Viewport definition from a binary archive.
   //
   // Parameters:
   //   binary_archive - [in] open binary archive
@@ -107,9 +156,9 @@ public:
   //
   // Remarks:
   //   This overrides the virtual ON_Object::Read() function.
-  ON_BOOL32 Read(
+  bool Read(
          ON_BinaryArchive&  // binary_archive
-       );
+       ) override;
 
 
   // ON_Geometry overrides //////////////////////////////////////////////////////
@@ -123,31 +172,10 @@ public:
   //
   // Remarks:
   //   This is virtual ON_Geometry function.
-  int Dimension() const;
+  int Dimension() const override;
 
-  // Description:
-  //   Gets bounding box of viewing frustum.
-  //
-  // Parameters:
-  //   boxmin - [in/out] array of Dimension() doubles
-  //   boxmax - [in/out] array of Dimension() doubles
-  //   bGrowBox - [in] (default=false) 
-  //     If true, then the union of the input bbox and the 
-  //     object's bounding box is returned in bbox.  
-  //     If false, the object's bounding box is returned in bbox.
-  //
-  // Returns:
-  //   @untitled table
-  //   true     Valid frustum and bounding box returned.
-  //   false    Invalid camera or frustum. No bounding box returned.
-  //
-  // Remarks:
-  //   This overrides the virtual ON_Geometry::GetBBox() function.
-  ON_BOOL32 GetBBox( // returns true if successful
-         double*, // boxmin
-         double*, // boxmax
-         ON_BOOL32 = false // bGrowBox
-         ) const;
+  // virtual ON_Geometry GetBBox override		
+  bool GetBBox( double* boxmin, double* boxmax, bool bGrowBox = false ) const override;
 
   // Description:
   //   Transforms the view camera location, direction, and up.
@@ -162,12 +190,14 @@ public:
   //
   // Remarks:
   //   This overrides the virtual ON_Geometry::Transform() function.
-  ON_BOOL32 Transform( 
+  bool Transform( 
          const ON_Xform& // xform
-         );
+         ) override;
 
   // Interface /////////////////////////////////////////////////////////////////
   //
+
+  ON_DEPRECATED_MSG("Use = ON_Viewport::DefaultTopViewYUp")
   void Initialize();
 
   ON::view_projection Projection() const;
@@ -179,7 +209,7 @@ public:
     projection - [in]
   See Also:
     ON_Viewport::SetParallelProjection
-    ON_Viewport::SetPerpectiveProjection
+    ON_Viewport::SetPerspectiveProjection
     ON_Viewport::SetTwoPointPerspectiveProjection    
   */
   bool SetProjection( ON::view_projection projection );
@@ -187,7 +217,7 @@ public:
   /*
   Description:
     Use this function to change projections of valid viewports
-    from persective to parallel.  It will make common additional
+    from perspective to parallel.  It will make common additional
     adjustments to the frustum so the resulting views are similar.
     The camera location and direction will not be changed.
   Parameters:
@@ -202,6 +232,18 @@ public:
 
   /*
   Description:
+    When a viewport is set to a standard Parallel projection, the 
+    geometry that is on the ceiling plane is occluded by the geometry 
+    above. When a viewport is set to Parallel Reflected projection, 
+    the geometry on the ceiling is shown as if it is mirrored to the 
+    floor below.
+  Remarks:
+    Calls ChangeToParallelProjection and sets the viewscale to (1, 1, -1)
+    */
+  bool ChangeToParallelReflectedProjection();
+
+  /*
+  Description:
     Use this function to change projections of valid viewports
     from parallel to perspective.  It will make common additional
     adjustments to the frustum and camera location so the resulting
@@ -211,7 +253,7 @@ public:
     target_distance - [in]
       If ON_UNSET_VALUE this parameter is ignored.  Otherwise
       it must be > 0 and indicates which plane in the current 
-      view frustum should be perserved.
+      view frustum should be preserved.
     bSymmetricFrustum - [in]
       True if you want the resulting frustum to be symmetric.
     lens_length - [in] (pass 50.0 when in doubt)
@@ -240,7 +282,7 @@ public:
     target_distance - [in]
       If ON_UNSET_VALUE this parameter is ignored.  Otherwise
       it must be > 0 and indicates which plane in the current 
-      view frustum should be perserved.
+      view frustum should be preserved.
     up - [in]
       This direction will be the locked up direction.  Pass 
       ON_3dVector::ZeroVector if you want to use the world axis
@@ -294,6 +336,20 @@ public:
   ON_3dVector CameraDirection() const;
   ON_3dVector CameraUp() const;
 
+  /*
+  Description:
+    Copy camera location, up, direction and frame from source_viewport.
+  Parameters:
+    source_viewport - [in]
+      camera location to copy
+    bBreakLocks - [in]
+      If true, any locked frustum settings will be unlocked.
+  */
+  bool SetCamera(
+    const ON_Viewport& source_viewport,
+    bool bBreakLocks
+  );
+
   bool CameraLocationIsLocked() const;
   bool CameraDirectionIsLocked() const;
   bool CameraUpIsLocked() const;
@@ -314,6 +370,10 @@ public:
       double*, // CameraX[3]
       double*, // CameraY[3]
       double*  // CameraZ[3]
+      ) const;
+
+  bool GetCameraFrame(
+      class ON_Plane& camera_frame
       ) const;
 
   // these do not check for a valid camera orientation
@@ -337,7 +397,7 @@ public:
 
   bool GetCameraExtents( 
       // returns bounding box in camera coordinates - this is useful information
-      // for setting view frustrums to include the point list
+      // for setting view frustums to include the point list
       int,           // count = number of 3d points
       int,           // stride = number of doubles to skip between points (>=3)
       const double*, // 3d points in world coordinates
@@ -347,7 +407,7 @@ public:
 
   bool GetCameraExtents( 
       // returns bounding box in camera coordinates - this is useful information
-      // for setting view frustrums to include the point list
+      // for setting view frustums to include the point list
       const ON_BoundingBox&, // world coordinate bounding box
       ON_BoundingBox& cambbox, // bounding box in camera coordinates
       int bGrowBox = false   // set to true if you want to enlarge an existing camera coordinate box
@@ -355,7 +415,7 @@ public:
 
   bool GetCameraExtents( 
       // returns bounding box in camera coordinates - this is useful information
-      // for setting view frustrums to include the point list
+      // for setting view frustums to include the point list
       ON_3dPoint&,     // world coordinate bounding sphere center
       double,          // world coordinate bounding sphere radius
       ON_BoundingBox& cambox, // bounding box in camera coordinates
@@ -381,11 +441,26 @@ public:
         double* right,       // (left < right)
         double* bottom,      // 
         double* top,         // (bottom < top)
-        double* near_dist = NULL, // 
-        double* far_dist = NULL   // (0 < near_dist < far_dist)
+        double* near_dist = nullptr, // 
+        double* far_dist = nullptr   // (0 < near_dist < far_dist)
         ) const;
 
-  // SetFrustumAspect() changes the larger of the frustum's widht/height
+
+  /*
+  Description:
+    Copy frustum information from source_viewport.
+  Parameters:
+    source_viewport - [in]
+    bBreakLocks - [in]
+      If true, any locked frustum settings will be unlocked.
+  */
+  bool SetFrustum(
+    const ON_Viewport& source_viewport,
+    bool bBreakLocks
+  );
+
+
+  // SetFrustumAspect() changes the larger of the frustum's width/height
   // so that the resulting value of width/height matches the requested
   // aspect.  The camera angle is not changed.  If you change the shape
   // of the view port with a call SetScreenPort(), then you generally 
@@ -476,6 +551,7 @@ public:
     );
 
   /*
+  Description:
     Get near and far clipping distances of a point
   Parameters:
     point - [in] 
@@ -490,7 +566,7 @@ public:
   Returns:
     True if the point is ing the view frustum and
     near_dist/far_dist were set.
-    False if the bounding box does not intesect the
+    False if the bounding box does not intersect the
     view frustum.
   */
   bool GetPointDepth(       
@@ -502,14 +578,41 @@ public:
 
   /*
   Description:
-    Get near and far clipping distances of a bounding box
+    Get the view plane depth of a point
+  Parameters:
+    point - [in] 
+    view_plane_depth - [out] 
+      positive values are in front of the camera and negative
+      values are behind the camera.
+      If 0 <= point_depth < FrustumNear(), the point's view
+      plane is between the camera and the frustum's near plane.
+      If point_depth > FrustumFar(), the point's view
+      plane is farther from the camera and the frustum's far plane.
+  Returns:
+    True if the point is ing the view frustum and
+    near_dist/far_dist were set.
+    False if the bounding box does not intersect the
+    view frustum.
+  */
+  bool GetPointDepth(       
+       ON_3dPoint point,
+       double* view_plane_depth
+       ) const;
+
+  /*
+  Description:
+    Get near and far clipping distances of a bounding box.
   Parameters:
     bbox - [in] 
       bounding box
     near_dist - [out] 
-      near distance of the box (can be < 0)
+      near distance of the box
+      This value can be zero or negative when the camera
+      location is inside bbox.
     far_dist - [out] 
-      far distance of the box (can be equal to near_dist)
+      far distance of the box
+      This value can be equal to near_dist, zero or negative 
+      when the camera location is in front of the bounding box.
     bGrowNearFar - [in]
       If true and input values of near_dist and far_dist
       are not ON_UNSET_VALUE, the near_dist and far_dist
@@ -517,7 +620,16 @@ public:
   Returns:
     True if the bounding box intersects the view frustum and
     near_dist/far_dist were set.
-    False if the bounding box does not intesect the view frustum.
+    False if the bounding box does not intersect the view frustum.
+  Remarks:
+    This function ignores the current value of the viewport's 
+    near and far settings. If the viewport is a perspective
+    projection, the it intersects the semi infinite frustum
+    volume with the bounding box and returns the near and far
+    distances of the intersection.  If the viewport is a parallel
+    projection, it intersects the infinite view region with the
+    bounding box and returns the near and far distances of the
+    projection.
   */
   bool GetBoundingBoxDepth(       
          ON_BoundingBox bbox,
@@ -525,6 +637,88 @@ public:
          double* far_dist,
          bool bGrowNearFar=false
          ) const;
+
+  /*
+  Description:
+    Get near and far clipping distances of a bounding box.
+  Parameters:
+    bbox - [in] 
+      bounding box
+    bbox_xform - [in]
+      If not nullptr, this transformation to applied to the corners of bbox. 
+      It should have positive determinant for the results to be meaningful.
+      Typically bbox_xform is used to pass an instance reference transformation.
+    near_dist - [out] 
+      near distance of the box
+      This value can be zero or negative when the camera
+      location is inside bbox.
+    far_dist - [out] 
+      far distance of the box
+      This value can be equal to near_dist, zero or negative 
+      when the camera location is in front of the bounding box.
+    bGrowNearFar - [in]
+      If true and input values of near_dist and far_dist
+      are not ON_UNSET_VALUE, the near_dist and far_dist
+      are enlarged to include bbox.
+  Returns:
+    0: The bounding box does not intersect the view frustum.
+    1: A proper subset of the bounding box is inside the view frustum
+       and near_dist/far_dist were set.
+    2: The entire bounding box is inside the view frustum 
+       and near_dist/far_dist were set.
+  Remarks:
+    This function ignores the current value of the viewport's 
+    near and far settings. If the viewport is a perspective
+    projection, the it intersects the semi infinite frustum
+    volume with the bounding box and returns the near and far
+    distances of the intersection.  If the viewport is a parallel
+    projection, it intersects the infinite view region with the
+    bounding box and returns the near and far distances of the
+    projection.
+  */
+  int GetBoundingBoxDepth(  
+    ON_BoundingBox bbox,
+    const ON_Xform* bbox_xform,
+    double* near_dist,
+    double* far_dist,
+    bool bGrowNearFar
+    ) const;
+
+  /*
+  Description:
+    Get the normalized extents of the smallest rectangle that
+    contains the intersection of bbox and the view's frustum.
+  Parameters:
+    bbox - [in] 
+      bounding box
+    x_extents - [out] 
+    y_extents - [out] 
+      0 <= x_extents[0] <= x_extents[1] <= 1.0
+      0 <= y_extents[0] <= y_extents[1] <= 1.0
+      If true is returned, then intersection of the bbox
+      and the view's frustum is not empty and the bounding
+      rectangle of the projection of the intersection set
+      is returned in x_range and y_range. The returned values
+      are normalized image extents.  For example, if
+      x_extents[0] = 0.0, x_extents[1] = 0.25, y_extents[0] = 0.75
+      and y_extents[1] = 1.0, then the portion of bbox in the
+      view's frustum would project to the upper left corner
+      of the image.
+  Returns:
+    True if the bounding box intersects the view frustum and
+    x_range and y_range were set.
+    False if the bounding box does not intersect the view
+    frustum.
+  Remarks:
+    This function takes the viewport's near and far settings
+    into account.  Set them to something appropriate before
+    calling this function.
+  */
+  bool GetBoundingBoxProjectionExtents(
+    ON_BoundingBox bbox,
+    ON_Interval& x_extents,
+    ON_Interval& y_extents
+    ) const;
 
   /*
   Description:
@@ -543,7 +737,7 @@ public:
   Returns:
     True if the sphere intersects the view frustum and
     near_dist/far_dist were set.
-    False if the sphere does not intesect the view frustum.
+    False if the sphere does not intersect the view frustum.
   */
   bool GetSphereDepth( 
          ON_Sphere sphere,
@@ -577,6 +771,14 @@ public:
       If target_dist <= 0.0, it is ignored.
       If target_dist > 0, it is used as described in the
       description of the min_near_over_far parameter.
+    relative_depth_bias - [in]
+      If relative_depth_bias <= 0.0, it is ignored.
+      If relative_depth_bias > 0, it is assumed that
+      the requested near_dist and far_dist were calculated
+      assuming no depth bias and the values will be
+      appropriately adjusted to ensure the frustum's 
+      near and far clipping planes will not clip biased
+      objects.
   */
   bool SetFrustumNearFar( 
          double near_dist,
@@ -586,18 +788,33 @@ public:
          double target_dist
          );
 
+  bool SetFrustumNearFar( 
+         double near_dist,
+         double far_dist,
+         double min_near_dist,
+         double min_near_over_far,
+         double target_dist,
+         double relative_depth_bias
+         );
+
   // Description:
   //   Get near clipping plane.
   //
   //  near_plane - [out] near clipping plane if camera and frustum
   //      are valid.  The plane's frame is the same as the camera's
   //      frame.  The origin is located at the intersection of the
-  //      camera direction ray and the near clipping plane.
+  //      camera direction ray and the near clipping plane. The plane's
+  //      normal points out of the frustum towards the camera
+  //      location.
   //
   // Returns:
   //   true if camera and frustum are valid.
   bool GetNearPlane( 
     ON_Plane& near_plane 
+    ) const;
+
+  bool GetNearPlaneEquation( 
+    ON_PlaneEquation& near_plane_equation 
     ) const;
 
   // Description:
@@ -606,12 +823,47 @@ public:
   //  far_plane - [out] far clipping plane if camera and frustum
   //      are valid.  The plane's frame is the same as the camera's
   //      frame.  The origin is located at the intersection of the
-  //      camera direction ray and the far clipping plane.
+  //      camera direction ray and the far clipping plane. The plane's
+  //      normal points into the frustum towards the camera location.
   //
   // Returns:
   //   true if camera and frustum are valid.
   bool GetFarPlane( 
     ON_Plane& far_plane 
+    ) const;
+
+  bool GetFarPlaneEquation( 
+    ON_PlaneEquation& far_plane_equation 
+    ) const;
+
+  /*
+  Description:
+    Get the plane that is a specified distance from the camera.
+    This plane is parallel to the frustum's near and far planes.
+  Parameters:
+    view_plane_depth - [in]
+      The distance from the camera location to the view plane. 
+      Positive distances are in front of the camera and
+      negative distances are behind the camera.
+      A value of FrustumNear() will return the frustum's
+      near plane and a valid of FrustumFar() will return
+      the frustum's far plane.
+    view_plane - [out]
+      View plane
+    view_plane_equation - [out]
+      Equation of the view plane.
+  Returns:
+    True if the camera and frustum are valid and view_plane
+    was calculated.  False otherwise.
+  */
+  bool GetViewPlane( 
+    double view_plane_depth,
+    ON_Plane& view_plane 
+    ) const;
+
+  bool GetViewPlaneEquation( 
+    double view_plane_depth,
+    ON_PlaneEquation& view_plane_equation 
     ) const;
 
   /*
@@ -622,7 +874,7 @@ public:
       frustum left side clipping plane.  The normal points
       into the visible region of the frustum.  If the projection
       is perspective, the origin is at the camera location,
-      otherwise the origin isthe point on the plane that is
+      otherwise the origin is the point on the plane that is
       closest to the camera location.
   Returns:
     True if camera and frustum are valid and plane was set.
@@ -631,15 +883,19 @@ public:
     ON_Plane& left_plane 
     ) const;
 
+  bool GetFrustumLeftPlaneEquation( 
+    ON_PlaneEquation& left_plane_equation 
+    ) const;
+
   /*
   Description:
   Get right world frustum clipping plane.
   Parameters:
     right_plane - [out] 
       frustum right side clipping plane.  The normal points
-      out of the visible region of the frustum.  If the projection
+      into the visible region of the frustum.  If the projection
       is perspective, the origin is at the camera location,
-      otherwise the origin isthe point on the plane that is
+      otherwise the origin is the point on the plane that is
       closest to the camera location.
   Returns:
     True if camera and frustum are valid and plane was set.
@@ -648,15 +904,19 @@ public:
     ON_Plane& right_plane 
     ) const;
 
+  bool GetFrustumRightPlaneEquation( 
+    ON_PlaneEquation& right_plane_equation 
+    ) const;
+
   /*
   Description:
-  Get right world frustum clipping plane.
+  Get bottom world frustum clipping plane.
   Parameters:
-    right_plane - [out] 
+    bottom_plane - [out] 
       frustum bottom side clipping plane.  The normal points
       into the visible region of the frustum.  If the projection
       is perspective, the origin is at the camera location,
-      otherwise the origin isthe point on the plane that is
+      otherwise the origin is the point on the plane that is
       closest to the camera location.
   Returns:
     True if camera and frustum are valid and plane was set.
@@ -665,21 +925,28 @@ public:
     ON_Plane& bottom_plane 
     ) const;
 
+  bool GetFrustumBottomPlaneEquation( 
+    ON_PlaneEquation& bottom_plane_equation 
+    ) const;
   /*
   Description:
-  Get right world frustum clipping plane.
+  Get top world frustum clipping plane.
   Parameters:
     top_plane - [out] 
       frustum top side clipping plane.  The normal points
       into the visible region of the frustum.  If the projection
       is perspective, the origin is at the camera location,
-      otherwise the origin isthe point on the plane that is
+      otherwise the origin is the point on the plane that is
       closest to the camera location.
   Returns:
     True if camera and frustum are valid and plane was set.
   */
   bool GetFrustumTopPlane( 
     ON_Plane& top_plane 
+    ) const;
+
+  bool GetFrustumTopPlaneEquation( 
+    ON_PlaneEquation& top_plane_equation 
     ) const;
 
   // Description:
@@ -712,6 +979,35 @@ public:
   // Returns:
   //   true if camera and frustum are valid.
   bool GetFarRect( 
+          ON_3dPoint& left_bottom,
+          ON_3dPoint& right_bottom,
+          ON_3dPoint& left_top,
+          ON_3dPoint& right_top
+          ) const;
+
+  /*
+  Description:
+    Get the world coordinate corners of the rectangle of
+    a view plane that is a specified distance from the camera.
+    This rectangle is parallel to the frustum's near and far planes.
+  Parameters:
+    view_plane_depth - [in]
+      The distance from the camera location to the view plane. 
+      Positive distances are in front of the camera and
+      negative distances are behind the camera.
+      A value of FrustumNear() will return the frustum's
+      near rectangle and a value of FrustumFar() will return
+      the frustum's far rectangle.
+    left_bottom - [out]
+    right_bottom - [out]
+    left_top - [out]
+    right_top - [out]
+  Returns:
+    True if the camera and frustum are valid and view_plane
+    was calculated.  False otherwise.
+  */
+  bool GetViewPlaneRect(
+          double view_plane_depth,
           ON_3dPoint& left_bottom,
           ON_3dPoint& right_bottom,
           ON_3dPoint& left_top,
@@ -766,9 +1062,23 @@ public:
         int* right,         //( port_left != port_right )
         int* port_bottom,
         int* port_top,      //( port_bottom != port_top)
-        int* port_near=NULL,  
-        int* port_far=NULL   
+        int* port_near=nullptr,  
+        int* port_far=nullptr   
         ) const;
+
+  /* 
+  Returns:
+    std::abs(port_right - port_left)
+  */
+  int ScreenPortWidth() const;
+
+  /* 
+  Returns:
+    std::abs(port_bottom - port_top)
+  */
+  int ScreenPortHeight() const;
+
+  ON_2iSize ScreenPortSize() const;
 
   bool GetScreenPortAspect( double& ) const; // port's |width/height|
 
@@ -790,7 +1100,7 @@ public:
   // is not 36/24.  (35mm film is 36mm wide and 24mm high.)
   //
   // The SetCamera35mmLensLength() preserves camera location,
-  // changes the frustum, but maintains the frsutrum's aspect.
+  // changes the frustum, but maintains the frustum's aspect.
   bool GetCamera35mmLensLength( 
     double* lens_length 
     ) const;
@@ -835,9 +1145,51 @@ public:
             ) const;
 
   // display tools
-  bool GetWorldToScreenScale( 
-    const ON_3dPoint& point_in_frustum, // [in]  point in viewing frustum.
-    double* pixels_per_unit             // [out] scale = number of pixels per world unit at the 3d point
+
+  /*
+  Description:
+    Get the number of horizontal pixels per world unit at the 
+    location in screen space where world_point would be rendered.
+  Parameters:
+    world_point - [in] (ignored for parallel projection viewports)
+      world location 
+    frustum_depth - [in] (ignored for parallel projection viewports)
+      If the viewport has a perspective projection, then this parameter
+      specifies the depth in the view frustum where the scale is calculated.
+      If frustum_depth is not > 0.0, then FrustumNear() is used.
+    pixels_per_unit - [out]
+      number of horizontal screen pixels per world unit at the location
+      in screen space where world_point would be rendered.
+      If the viewport is not valid, then 0.0 is returned.
+  Returns:
+    true: success.
+    false: The view projection or frustum is invalid.
+  */
+  bool GetWorldToScreenScale(
+    ON_3dPoint world_point,
+    double* pixels_per_unit
+    ) const;
+
+  /*
+  Description:
+    Get the number of horizontal pixels per world unit at the
+    location in screen space where world_point would be rendered.
+  Parameters:
+    frustum_depth - [in] (ignored for parallel projection viewports)
+      If the viewport has a perspective projection, then this parameter
+      specifies the depth in the view frustum where the scale is calculated.
+      If frustum_depth is not > 0.0, then FrustumNear() is used.
+    pixels_per_unit - [out]
+      number of horizontal screen pixels per world unit at the location
+      in screen space where frustum_depth would be rendered.
+      If the viewport is not valid, then 0.0 is returned.
+  Returns:
+    true: success.
+    false: The view projection or frustum is invalid.
+  */
+  bool GetWorldToScreenScale(
+    double frustum_depth,
+    double* pixels_per_unit
     ) const;
 
   bool GetCoordinateSprite(
@@ -848,7 +1200,7 @@ public:
          ) const;
 
   // Use Extents() as a quick way to set a viewport to so that bounding
-  // volume is inside of a viewports frusmtrum.
+  // volume is inside of a viewports frustum.
   // The view angle is used to determine the position of the camera.
   bool Extents( 
          double half_view_angle,        // 1/2 smallest subtended view angle
@@ -921,9 +1273,9 @@ public:
   */
   bool SetViewScale( double x, double y );
   void GetViewScale( double* x, double* y ) const;
-  
-  // OBSOLETE - use SetViewScale
-  //__declspec(deprecated) bool ScaleView( double x, double y, double z );
+
+  bool SetViewScale(double x, double y, double z);
+  void GetViewScale(double* x, double* y, double* z) const;
 
   /*
   Description:
@@ -957,7 +1309,7 @@ public:
       point to the camera plane will be target_distance. Note that
       if the frustum is not symmetric, the distance from the
       returned point to the camera location will be larger than
-      target_distanct.
+      target_distance.
       If target_distance == ON_UNSET_VALUE and the frustum
       is valid with near > 0.0, then 0.5*(near + far) will be used
       as the target_distance.
@@ -1014,8 +1366,111 @@ public:
   */
   double TargetDistance( bool bUseFrustumCenterFallback ) const;
 
-  void SetMinNearOverFar(double);
-  double MinNearOverFar() const;
+  /*
+  Description:    
+    Get suggested values for setting the perspective minimum
+    near distance and minimum near/far ratio.
+  Parameters:      
+    camera_location - [in]
+    depth_buffer_bit_depth - [in]
+      typically 32, 24, 16 or 8, but any positive value can be 
+      passed in.
+    min_near_dist - [out]
+      Suggest value for passing to SetPerspectiveMinNearDist().     
+    min_near_over_far - [out]
+      Suggest value for passing to SetPerspectiveMinNearOverFar().     
+  */
+  static void GetPerspectiveClippingPlaneConstraints( 
+        ON_3dPoint camera_location,
+        unsigned int depth_buffer_bit_depth,
+        double* min_near_dist,
+        double* min_near_over_far
+        );
+
+  /*
+  Description:
+    Calculate the value to add to homogeneous "z" clipping coordinate
+    that corresponds to moving the corresponding euclidean camera
+    coordinate by relative_depth_bias*(far - near).
+  Parameters:
+    relative_depth_bias - [in]
+      signed relative bias. 
+      = 0: no bias, 
+      > 0: bias towards frustum's near clipping plane
+      < 0: bias towards frustum's far clipping plane
+      When you have curves and points that are "on" shaded objects,
+      values around 1/256 work well to move the wire objects
+      in front of or behind shaded objects.
+    clip_z [-in]
+    clip_w [-in]
+      clip_z and clip_w are the homogeneous "w" and "w" coordinates
+      of a homogeneous clipping coordinate point.
+  Returns:
+    The clipping coordinate depth bias to add to the z-clipping
+    coordinate that corresponds to adding cam_depth_bias
+    to the z camera coordinate.
+  Remarks:
+    For perspective views, this bias is largest in the vicinity
+    of the frustum's near clipping plane and smallest in the
+    vicinity of the frustum's far clipping plane.
+    For orthographic projections, this bias is constant.
+  */
+  double ClipCoordDepthBias(
+    double relative_depth_bias,
+    double clip_z, 
+    double clip_w
+    ) const;
+
+  /*
+  Description:
+    Calculate a transformation to apply to clipping coordinates to
+    bias their depth.
+
+  Parameters:
+    relative_depth_bias - [in]
+      signed relative bias. 
+      = 0: no bias, 
+      > 0: bias towards frustum's near clipping plane
+      < 0: bias towards frustum's far clipping plane
+      When you have curves and points that are "on" shaded objects,
+      values around 1/512 work well to move the wire objects
+      in front of or behind shaded objects.
+
+    clip_bias - [out]
+      clip_bias = cam2clip * delta * clip2cam,
+      where delta = 1 0 0 0 
+                    0 1 0 0
+                    0 0 1 D
+                    0 0 0 1
+      and D = relative_depth_bias*(far-near).
+
+  Returns:
+    True if the function worked.  False if the frustum settings
+    are not valid, in which cate the identity matrix is returned.
+
+  Remarks:
+    The inverse of the transformations returned by 
+    GetClipCoordDepthBiasXform(+r,...) is the transformation
+    returned by GetClipCoordDepthBiasXform(-r,...).
+  */
+  bool GetClipCoordDepthBiasXform( 
+    double relative_depth_bias,
+    ON_Xform& clip_bias
+    ) const;
+
+  /*
+  Description:
+    Set suggested the perspective minimum near distance and
+    minimum near/far ratio to the suggested values returned
+    by GetPerspectiveClippingPlaneConstraints().
+  Parameters:
+    depth_buffer_bit_depth - [in]
+      typically 32, 24, 16 or 8, but any positive value can be 
+      passed in.
+  */
+  void SetPerspectiveClippingPlaneConstraints(
+        unsigned int depth_buffer_bit_depth
+        );
 
   /*
   Description:
@@ -1096,20 +1551,98 @@ public:
     viewport_id - [in]    
   */
   void ChangeViewportId(const ON_UUID& viewport_id);
+
+
+  /*
+  Description:
+    The "view frustum" is the frustum the m_xform transformation
+    maps to clipping coordinate box (-1,+1)^3.  These functions
+    determine if some portion of the convex hull of the test points
+    is inside the view frustum.
+  Parameters:
+    P - [in] point
+    box - [in] bounding box
+    count - [in] number of points
+    p - [in] array of points
+    bEnableClippingPlanes - [in]
+      If true, then the additional clipping planes are tested.
+      If false, then the additional clipping planes are ignored.
+  Returns:
+    0 = No part of the of the convex hull of the tested points
+        is in the view frustum or the view camera and frustum
+        have not been set.
+    1 = A portion of the convex hull of the otested points may
+        be in the view frustum.
+    2 = The entire convex hull of the tested points is in the
+        view frustum.
+
+  Remarks:
+    Each call to ON_Viewport::InViewFrustum() requires the calculation
+    of the world-to-clipping coordinates transformation.  If multiple
+    queries are required, fewer computation resources will be used
+    if you set ON_ClippingRegion.m_xform to the viewport's world-to-
+    clipping coordinate transformation and then call the
+    ON_ClippingRegion::InViewFrustum() functions.
+  */
+  int InViewFrustum( 
+    ON_3dPoint P
+    ) const;
+  int InViewFrustum( 
+    const ON_BoundingBox& bbox
+    ) const;
+  int InViewFrustum( 
+    int count, 
+    const ON_3fPoint* p
+    ) const;
+  int InViewFrustum( 
+    int count, 
+    const ON_3dPoint* p
+    ) const;
+  int InViewFrustum( 
+    int count, 
+    const ON_4dPoint* p
+    ) const;
+
+  /*
+  Description:
+    Determine if some portion of the transformed bounding box
+    is inside the view frustum.
+  Parameters:
+    bInfiniteFrustum - [in]
+      ignore the near and far clipping planes of the viewport.
+    bbox - [in] 
+      bounding box
+    bbox_xform - [in] 
+      If not nullptr, this transformation is applied to the bounding box.
+      Typically bbox_xform is used to pass an instance reference transformation.
+  Returns:
+    0 = No part of the of the transformed bounding box
+        is in the view frustum or the view camera and frustum
+        have not been set.
+    1 = A portion of of the transformed bounding box is
+        in the view frustum
+    2 = The entire  transformed bounding box is in the
+        view frustum.
+  */
+  int InViewFrustum(
+    bool bInfiniteFrustum,
+    const ON_BoundingBox& bbox,
+    const ON_Xform* bbox_xform
+    ) const;
   
 protected:
 
   // These boolean status flags are set to true when
   // the associated fields contain valid values.
-  bool m_bValidCamera;
-  bool m_bValidFrustum;
-  bool m_bValidPort;
-  unsigned char m_reserved1;
+  bool m_bValidCamera = true;
+  bool m_bValidFrustum = true;
+  bool m_bValidPort = false;
+  bool m_bValidCameraFrame = true;
 
   // Camera Settings: ///////////////////////////////////////////////
 
   // perspective or parallel projection
-  ON::view_projection m_projection;
+  ON::view_projection m_projection = ON::parallel_view;
 
   //   Camera location, direction and orientation (in world coordinates).
   //   These values are used to set the camera frame vectors CamX, CamY,
@@ -1123,60 +1656,65 @@ protected:
   // parameter will not be changed by view editing functions. This
   // permits user interface to easily preserve important camera
   // features without having to perform excessive calculations.
-  bool m_bLockCamUp;
-  bool m_bLockCamDir;
-  bool m_bLockCamLoc;
-  unsigned char m_frustum_symmetry_flags; // 0 != (flags & 1) top/bottom symmetry enforced
-                                          // 0 != (flags & 2) left/right symmetry enforced.
-  ON_3dPoint m_CamLoc;  // camera location
-  ON_3dVector m_CamDir; // from camera towards view (nonzero and not parallel to m_CamUp)
-  ON_3dVector m_CamUp;  // (nonzero and not parallel to m_CamDir)
+  bool m_bLockCamUp = false;
+  bool m_bLockCamDir = false;
+  bool m_bLockCamLoc = false;
+  unsigned char m_frustum_symmetry_flags = 0; // 0 != (flags & 1) top/bottom symmetry enforced
+                                              // 0 != (flags & 2) left/right symmetry enforced.
+  ON_3dPoint m_CamLoc  = ON_Viewport::DefaultCameraLocation;  // camera location
+  ON_3dVector m_CamDir = -ON_3dVector::ZAxis; // from camera towards view (nonzero and not parallel to m_CamUp)
+  ON_3dVector m_CamUp  = ON_3dVector::YAxis;  // (nonzero and not parallel to m_CamDir)
 
   // The camera frame vectors are properly initialized by SetCamera()
-  ON_3dVector m_CamX;
-  ON_3dVector m_CamY;
-  ON_3dVector m_CamZ;
+  ON_3dVector m_CamX = ON_3dVector::XAxis;
+  ON_3dVector m_CamY = ON_3dVector::YAxis;
+  ON_3dVector m_CamZ = ON_3dVector::ZAxis;
 
   // View Frustum Settings: ///////////////////////////////////////
   //   left, right are camera X coords on near clipping plane
   //   bottom, top are camera Y coords on near clipping plane
   //   near = distance from camera to near clipping plane
   //   far = distance from camera to far clipping plane
-  double m_frus_left,   m_frus_right; // frus_left < frus_right 
-  double m_frus_bottom, m_frus_top;   // frus_bottom < frus_top 
-  double m_frus_near,   m_frus_far;   // frus_near < frus_far 
-                                      // in perspective, 0 < frus_near
-  
+  double m_frus_left   = -20.0; // frus_left < frus_right 
+  double m_frus_right  =  20.0; 
+  double m_frus_bottom = -20.0; // frus_bottom < frus_top 
+  double m_frus_top    =  20.0;
+  double m_frus_near = ON_Viewport::DefaultMinNearDist; // 0 < frus_near < frus_far 
+  double m_frus_far  = ON_Viewport::DefaultFarDist;  
 
   // Device View Port Box Settings: ( in display device coordinates ) ////
   //   The point (left,bottom,-near), in camera coordinates, of the view
   //   frustum is mapped to pixel coordinate (port_left,port_bottom,port_near).
   //   The point (right,top,-far), in camera coordinates, of the view frustum 
   //   is mapped to pixel coordinate (port_right,port_top,port_far).
-  int m_port_left,   m_port_right; // port_left != port_right
-  int m_port_bottom, m_port_top;   // port_bottom != port_top  
-                                   // In many situations including Windows,
-                                   // port_left = 0,
-                                   // port_right = viewport width-1,
-                                   // port_top = 0,
-                                   // port_bottom = viewport height-1.
-  int m_port_near,   m_port_far;   // (If you want an 8 bit z-buffer with 
-                                   // z=255 being "in front of" z=0, then
-                                   // set port_near = 255 and port_far = 0.)
+  //   In many situations including Microsoft Windows coordinates,
+  //   port_left = 0,
+  //   port_right = viewport width-1,
+  //   port_top = 0,
+  //   port_bottom = viewport height-1.
+  int m_port_left = 0;     // port_left != port_right
+  int m_port_right = 1000;
+  int m_port_bottom = 0;   // port_bottom != port_top  
+  int m_port_top = 1000;
+  // (If you want an 8 bit z-buffer with 
+  // z=255 being "in front of" z=0, then
+  // set port_near = 255 and port_far = 0.)
+  int m_port_near = 0;
+  int m_port_far = 1;
 
 
   // The location of this point has no impact on the 
   // view projection. It is simply a suggestion for a 
   // fixed point when views are rotated or the isometric 
-  // depth when perpsective views are dollied.  The default
-  // is ON_UNSET_POINT.
-  ON_3dPoint m_target_point;
+  // depth when perspective views are dollied.  The default
+  // is ON_3dPoint::UnsetPoint.
+  ON_3dPoint m_target_point = ON_3dPoint::UnsetPoint;
 
 private:
   // When this id matches the viewport id saved in an ON_DisplayMaterialRef
   // list in ON_3dmObjectAttributes, then the the display material is used
   // for that object in this view.
-  ON_UUID m_viewport_id;
+  ON_UUID m_viewport_id = ON_nil_uuid;
 
   bool SetCameraFrame(); // used to set m_CamX, m_CamY, m_CamZ
 
@@ -1193,48 +1731,49 @@ private:
     clip_mod_xform - [in] invertable transformation
   */
   bool SetClipModXform( ON_Xform clip_mod_xform );
-  ON_Xform m_clip_mods;
-  ON_Xform m_clip_mods_inverse;
+  ON_Xform m_clip_mods = ON_Xform::IdentityTransformation;
+  ON_Xform m_clip_mods_inverse = ON_Xform::IdentityTransformation;
 
   // Runtime values that depend on the graphics hardware being used.
   // These values are not saved in 3dm files.
-  double m__MIN_NEAR_DIST;
-  double m__MIN_NEAR_OVER_FAR;
+  double m__MIN_NEAR_DIST = ON_Viewport::DefaultMinNearDist;
+  double m__MIN_NEAR_OVER_FAR = ON_Viewport::DefaultMinNearOverFar;
+
+private:
+  mutable ON_SHA1_Hash m_projection_content_sha1 = ON_SHA1_Hash::ZeroDigest;
 };
 
 ON_DECL
-bool 
-ON_GetViewportRotationAngles( 
-    const ON_3dVector&, // X, // X,Y,Z must be a right handed orthonormal basis
-    const ON_3dVector&, // Y, 
-    const ON_3dVector&, // Z,
-    double*, // angle1, // returns rotation about world Z
-    double*, // angle2, // returns rotation about world X ( 0 <= a2 <= pi )
-    double*  // angle3  // returns rotation about world Z
-    );
+bool ON_GetViewportRotationAngles(
+  const ON_3dVector&, // X, // X,Y,Z must be a right handed orthonormal basis
+  const ON_3dVector&, // Y, 
+  const ON_3dVector&, // Z,
+  double*, // angle1, // returns rotation about world Z
+  double*, // angle2, // returns rotation about world X ( 0 <= a2 <= pi )
+  double*  // angle3  // returns rotation about world Z
+);
 
 ON_DECL
-bool
-ON_ViewportFromRhinoView( // create ON_Viewport from legacy Rhino projection info
-        ON::view_projection, // projection,
-        const ON_3dPoint&, // rhvp_target, // 3d point
-        double, // rhvp_angle1 in radians
-        double, // rhvp_angle2 in radians
-        double, // rhvp_angle3 in radians
-        double, // rhvp_viewsize,     // > 0
-        double, // rhvp_cameradist,   // > 0
-        int, // screen_width, 
-        int, // screen_height,
-        ON_Viewport&
-        );
+bool ON_ViewportFromRhinoView( // create ON_Viewport from legacy Rhino projection info
+  ON::view_projection, // projection,
+  const ON_3dPoint&, // rhvp_target, // 3d point
+  double, // rhvp_angle1 in radians
+  double, // rhvp_angle2 in radians
+  double, // rhvp_angle3 in radians
+  double, // rhvp_viewsize,     // > 0
+  double, // rhvp_cameradist,   // > 0
+  int, // screen_width, 
+  int, // screen_height,
+  ON_Viewport&
+);
 
 /*
 Description:
   Calculate the corners of the polygon that is the
-  intersection of a view frustum with and infinte plane.
+  intersection of a view frustum with and infinite plane.
 Parameters:
   vp - [in] defines view frustum
-  plane_equation - [in] defined infinte plane
+  plane_equation - [in] defined infinite plane
   points  - [out] corners of the polygon.
     If true is returned and points.Count() is zero, then
     the plane missed the frustum.  Note that the start/end
@@ -1245,12 +1784,29 @@ Returns:
   may be zero if the plane and frustum do not intersect.
 */
 ON_DECL
-bool
-ON_IntersectViewFrustumPlane(
-          const ON_Viewport& vp,
-          const ON_PlaneEquation& plane_equation, 
-          ON_SimpleArray<ON_3dPoint>& points 
-          );
+bool ON_IntersectViewFrustumPlane(
+  const ON_Viewport& vp,
+  const ON_PlaneEquation& plane_equation,
+  ON_SimpleArray<ON_3dPoint>& points
+);
+
+/*
+  Dolly the camera location and so that the view frustum contains
+  camcoord_bbox and the volume of camcoord_bbox fills the frustum.
+  If the projection is perspective, the camera angle is not changed.
+Parameters:
+  current_vp    - [in] Current projection, must be valid.
+  camcoord_bbox - [in] Valid bounding box in current_vp camera coordinates.
+  zoomed_vp     - [out] Can be the same as current_vp projection.
+Returns:
+  True if successful.
+*/
+ON_DECL
+bool ON_DollyExtents(
+  const ON_Viewport& current_vp,
+  ON_BoundingBox camcoord_bbox,
+  ON_Viewport& zoomed_vp
+);
 
 #endif
 

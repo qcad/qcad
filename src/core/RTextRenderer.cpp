@@ -2049,7 +2049,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
         //}
 
         bool isSpace = false;
-        if (ch==' ' || ch==QChar(Qt::Key_nobreakspace)) {
+        if (ch==' ' || ch==QChar((int)Qt::Key_nobreakspace)) {
             if (gotLetterSpacing) {
                 cursor -= font->getLetterSpacing() * cxfScale;
             }

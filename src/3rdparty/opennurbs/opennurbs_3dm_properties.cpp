@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,42 +10,128 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
+
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
 
 //////////////////////////////////////////////////////////////////////////////////////////
 //
 // ON_3dmRevisionHistory
 //
 
-ON_3dmRevisionHistory::ON_3dmRevisionHistory() : m_revision_count(0)
+ON_3dmRevisionHistory::ON_3dmRevisionHistory() 
 {
-  Default();
-}
-
-ON_3dmRevisionHistory::~ON_3dmRevisionHistory()
-{
-  m_sCreatedBy.Destroy();
-  m_sLastEditedBy.Destroy();
-}
-
-void ON_3dmRevisionHistory::Default()
-{
-  m_sCreatedBy.Destroy();
-  m_sLastEditedBy.Destroy();
   memset( &m_create_time,    0, sizeof(m_create_time) );
   memset( &m_last_edit_time, 0, sizeof(m_last_edit_time) );
-  m_revision_count = 0;
 }
 
-ON_BOOL32 ON_3dmRevisionHistory::IsValid() const
+ON_3dmRevisionHistory ON_3dmRevisionHistory::FirstRevision()
 {
-  return ( m_last_edit_time.tm_year > 0 ) ? true : false;
+  ON_3dmRevisionHistory first_revision;
+  first_revision.NewRevision();
+  return first_revision;
+}
+
+static int ON_CompareRevisionHistoryTime( const struct tm* time0, const struct tm* time1 )
+{
+  if ( 0 == time0 || 0 == time1 )
+  {
+    if ( 0 != time0 )
+      return 1;
+    if ( 0 != time1 )
+      return -1;
+    return 0;
+  }
+
+  if (time0->tm_year < time1->tm_year)
+    return -1;
+  if (time0->tm_year > time1->tm_year)
+    return 1;
+
+  if (time0->tm_mon < time1->tm_mon)
+    return -1;
+  if (time0->tm_mon > time1->tm_mon)
+    return 1;
+
+  if (time0->tm_mday < time1->tm_mday)
+    return -1;
+  if (time0->tm_mday > time1->tm_mday)
+    return 1;
+
+  if (time0->tm_hour < time1->tm_hour)
+    return -1;
+  if (time0->tm_hour > time1->tm_hour)
+    return 1;
+
+  if (time0->tm_min < time1->tm_min)
+    return -1;
+  if (time0->tm_min > time1->tm_min)
+    return 1;
+
+  if (time0->tm_sec < time1->tm_sec)
+    return -1;
+  if (time0->tm_sec > time1->tm_sec)
+    return 1;
+
+  return 0;
+}
+
+bool ON_3dmRevisionHistory::CreateTimeIsSet() const
+{
+  struct tm jan_1_1970;
+  memset(&jan_1_1970,0,sizeof(jan_1_1970));
+  jan_1_1970.tm_mday = 1;    /* day of the month - [1,31] */
+  jan_1_1970.tm_year = 70;   /* years since 1900 */
+  return ( ON_CompareRevisionHistoryTime(&jan_1_1970,&m_create_time) <= 0 );
+}
+/*
+Returns:
+  true 
+    if m_last_edit_time is >= January 1, 1970
+*/
+bool ON_3dmRevisionHistory::LastEditedTimeIsSet() const
+{
+  struct tm jan_1_1970;
+  memset(&jan_1_1970,0,sizeof(jan_1_1970));
+  jan_1_1970.tm_mday = 1;    /* day of the month - [1,31] */
+  jan_1_1970.tm_year = 70;   /* years since 1900 */
+  return ( ON_CompareRevisionHistoryTime(&jan_1_1970,&m_last_edit_time) <= 0 );
+}
+
+
+bool ON_3dmRevisionHistory::IsEmpty() const
+{
+  if ( 0 == m_revision_count
+       && !CreateTimeIsSet()
+       && !LastEditedTimeIsSet()
+       && m_sCreatedBy.IsEmpty()
+       && m_sLastEditedBy.IsEmpty()
+     )
+  {
+    return true;
+  }
+  return false;
+}
+
+bool ON_3dmRevisionHistory::IsValid() const
+{
+  return (     LastEditedTimeIsSet() 
+            && ON_CompareRevisionHistoryTime(&m_create_time, &m_last_edit_time) <= 0
+         );
 }
 
 int ON_3dmRevisionHistory::NewRevision()
 {
+  if ( 0 == m_revision_count )
+    *this = ON_3dmRevisionHistory::Empty;
+
   struct tm current_time;
   memset(&current_time,0,sizeof(current_time));
   {
@@ -57,7 +142,7 @@ int ON_3dmRevisionHistory::NewRevision()
   }
   m_last_edit_time = current_time;
 
-#if defined(ON_OS_WINDOWS)  
+#if defined(ON_RUNTIME_WIN)  
   // use Windows ::GetUserNameW() to get current user name
   wchar_t current_user[512];
   memset( current_user, 0, sizeof(current_user) );
@@ -66,19 +151,26 @@ int ON_3dmRevisionHistory::NewRevision()
     current_user[0] = 0;
   m_sLastEditedBy = current_user;
 #endif
+#if defined(ON_RUNTIME_COCOA_AVAILABLE)
+  m_sLastEditedBy = NSFullUserName().UTF8String;
+#endif
 
-  if ( m_revision_count == 0 ) {
+  if ( m_revision_count <= 0 ) 
+  {
+    m_revision_count = 0;
     m_sCreatedBy = m_sLastEditedBy;
     m_create_time = current_time;
   };
+
   m_revision_count++;
+
   return m_revision_count;
 }
 
 
-ON_BOOL32 ON_3dmRevisionHistory::Write( ON_BinaryArchive& file ) const
+bool ON_3dmRevisionHistory::Write( ON_BinaryArchive& file ) const
 {
-  ON_BOOL32 rc = file.Write3dmChunkVersion( 1, 0 );
+  bool rc = file.Write3dmChunkVersion( 1, 0 );
   if (rc) rc = file.WriteString( m_sCreatedBy );
   if (rc) rc = file.WriteTime( m_create_time );
   if (rc) rc = file.WriteString( m_sLastEditedBy );
@@ -87,12 +179,12 @@ ON_BOOL32 ON_3dmRevisionHistory::Write( ON_BinaryArchive& file ) const
   return rc;
 }
 
-ON_BOOL32 ON_3dmRevisionHistory::Read( ON_BinaryArchive& file )
+bool ON_3dmRevisionHistory::Read( ON_BinaryArchive& file )
 {
-  Default();
+  *this = ON_3dmRevisionHistory::Empty;
   int major_version = 0;
   int minor_version = 0;
-  ON_BOOL32 rc = file.Read3dmChunkVersion( &major_version, &minor_version );
+  bool rc = file.Read3dmChunkVersion( &major_version, &minor_version );
   if ( rc && major_version == 1 ) {
     rc = file.ReadString( m_sCreatedBy );
     if (rc) rc = file.ReadTime( m_create_time );
@@ -105,18 +197,25 @@ ON_BOOL32 ON_3dmRevisionHistory::Read( ON_BinaryArchive& file )
 
 void ON_3dmRevisionHistory::Dump( ON_TextLog& dump ) const
 {
-  const wchar_t* s = m_sCreatedBy;
-  if ( !s ) s = L"";
-  dump.Print("Created by: %S\n", s );
-  dump.Print("Created on: "); dump.PrintTime(m_create_time); dump.Print("\n");
+  if ( IsEmpty() )
+  {
+    dump.Print("Empty revision history.\n");
+  }
+  else
+  {
+    const wchar_t* ws = static_cast< const wchar_t* >(m_sCreatedBy);
+    if ( !ws ) ws = L"";
+    dump.Print("Created by: %ls\n", ws );
+    dump.Print("Created on: "); dump.PrintTime(m_create_time); dump.Print("\n");
 
   
-  s = m_sLastEditedBy;
-  if ( !s ) s = L"";
-  dump.Print("Last edited by: %S\n", s );
-  dump.Print("Last edited on: "); dump.PrintTime(m_last_edit_time); dump.Print("\n");
+    ws = static_cast< const wchar_t* >(m_sLastEditedBy);
+    if ( !ws ) ws = L"";
+    dump.Print("Last edited by: %ls\n", ws );
+    dump.Print("Last edited on: "); dump.PrintTime(m_last_edit_time); dump.Print("\n");
 
-  dump.Print("Revision count: %d\n",m_revision_count);
+    dump.Print("Revision count: %d\n",m_revision_count);
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -124,83 +223,81 @@ void ON_3dmRevisionHistory::Dump( ON_TextLog& dump ) const
 // ON_3dmNotes
 //
 
-ON_3dmNotes::ON_3dmNotes()
-            : m_bVisible(0), 
-              m_bHTML(0),
-              m_window_left(0),
-              m_window_top(0),
-              m_window_right(0),
-              m_window_bottom(0)
-{}
+const ON_3dmNotes ON_3dmNotes::Empty;
 
-ON_3dmNotes::ON_3dmNotes( const ON_3dmNotes& src )
-            : m_bVisible(0), 
-              m_bHTML(0),
-              m_window_left(0),
-              m_window_top(0),
-              m_window_right(0),
-              m_window_bottom(0)
-{
-  *this = src;
-}
+ON_3dmNotes::ON_3dmNotes()
+: m_bVisible(false)
+, m_bHTML(false)
+, m_window_left(0)
+, m_window_top(0)
+, m_window_right(0)
+, m_window_bottom(0)
+, m_bLocked(false)
+{}
 
 ON_3dmNotes::~ON_3dmNotes()
 {
   m_notes.Destroy();
 }
 
-ON_3dmNotes& ON_3dmNotes::operator=(const ON_3dmNotes& src)
-{
-  if ( this != &src ) {
-    m_notes     = src.m_notes;
-    m_bVisible  = src.m_bVisible;
-    m_bHTML     = src.m_bHTML;
-    m_window_left   = src.m_window_left;
-    m_window_top    = src.m_window_top;
-    m_window_right  = src.m_window_right;
-    m_window_bottom = src.m_window_bottom;
-  }
-  return *this;
-}
-
-void ON_3dmNotes::Default()
-{
-  m_notes.Destroy();
-  m_bVisible = 0;
-  m_bHTML = 0;
-  m_window_left = 0;
-  m_window_top = 0;
-  m_window_right = 0;
-  m_window_bottom = 0;
-}
-
-ON_BOOL32 ON_3dmNotes::IsValid() const
+bool ON_3dmNotes::IsValid() const
 {
   return m_notes.IsEmpty() ? false : true;
 }
 
-ON_BOOL32 ON_3dmNotes::Read( ON_BinaryArchive& file )
+bool ON_3dmNotes::IsEmpty() const
 {
-  Default();
-  int major_version = 0;
-  int minor_version = 0;
-  ON_BOOL32 rc = file.Read3dmChunkVersion( &major_version, &minor_version );
-  if ( rc && major_version == 1 ) {
-    m_notes.Destroy();
-    rc = file.ReadInt( &m_bHTML );
-    if ( rc ) rc = file.ReadString( m_notes );
-    if ( rc ) rc = file.ReadInt( &m_bVisible );
-    if ( rc ) rc = file.ReadInt( &m_window_left );
-    if ( rc ) rc = file.ReadInt( &m_window_top );
-    if ( rc ) rc = file.ReadInt( &m_window_right );
-    if ( rc ) rc = file.ReadInt( &m_window_bottom );
+  return m_notes.IsEmpty();
+}
+
+bool ON_3dmNotes::Read( ON_BinaryArchive& file )
+{
+  *this = ON_3dmNotes::Empty;
+  bool rc = false;
+  for(;;)
+  {
+    int i;
+    int major_version = 0;
+    int minor_version = 0;
+    if ( !file.Read3dmChunkVersion( &major_version, &minor_version ) )
+      break;
+    if ( 1 !=  major_version == 1 )
+      break;
+    i = m_bHTML;
+    if ( !file.ReadInt( &i ) )
+      break;
+    m_bHTML = i ? true : false;
+    if (!file.ReadString( m_notes ))
+      break;
+    i = m_bVisible;
+    if (!file.ReadInt( &i ))
+      break;
+    m_bVisible = i ? true : false;
+    if (!file.ReadInt( &m_window_left ))
+      break;
+    if (!file.ReadInt( &m_window_top ))
+      break;
+    if (!file.ReadInt( &m_window_right ))
+      break;
+    if (!file.ReadInt( &m_window_bottom ))
+      break;
+
+    if (minor_version >= 1)
+    {
+      //https://mcneel.myjetbrains.com/youtrack/issue/RH-74718/Lock-notes
+      if (!file.ReadBool(&m_bLocked))
+        break;
+    }
+
+    rc = true;
+    break;
   }
   return rc;
 }
 
-ON_BOOL32 ON_3dmNotes::Write( ON_BinaryArchive& file ) const
+bool ON_3dmNotes::Write( ON_BinaryArchive& file ) const
 {
-  ON_BOOL32 rc = file.Write3dmChunkVersion(1,0);
+  bool rc = file.Write3dmChunkVersion(1,1);
   if ( rc ) rc = file.WriteInt( m_bHTML );
   if ( rc ) rc = file.WriteString( m_notes );
   if ( rc ) rc = file.WriteInt( m_bVisible );
@@ -208,12 +305,15 @@ ON_BOOL32 ON_3dmNotes::Write( ON_BinaryArchive& file ) const
   if ( rc ) rc = file.WriteInt( m_window_top );
   if ( rc ) rc = file.WriteInt( m_window_right );
   if ( rc ) rc = file.WriteInt( m_window_bottom );
+
+  if (rc) rc = file.WriteBool(m_bLocked);
+
   return rc;
 }
 
 void ON_3dmNotes::Dump(ON_TextLog& dump) const
 {
-  const wchar_t* s = m_notes;
+  const wchar_t* s = static_cast< const wchar_t* >(m_notes);
   if ( s )
     dump.PrintWrappedText(s);
   dump.Print("\n");
@@ -224,17 +324,12 @@ void ON_3dmNotes::Dump(ON_TextLog& dump) const
 //
 // ON_3dmApplication
 //
+
+const ON_3dmApplication ON_3dmApplication::Empty;
+
 ON_3dmApplication::ON_3dmApplication()
 {
 }
-
-ON_3dmApplication::ON_3dmApplication( const ON_3dmApplication& src)
-{
-  m_application_name = src.m_application_name;
-  m_application_URL = src.m_application_URL;
-  m_application_details = src.m_application_details;
-}
-
 
 ON_3dmApplication::~ON_3dmApplication()
 {
@@ -243,55 +338,45 @@ ON_3dmApplication::~ON_3dmApplication()
   m_application_details.Empty();
 }
 
-ON_3dmApplication& ON_3dmApplication::operator=(const ON_3dmApplication& src)
-{
-  if ( this != &src ) {
-    m_application_name = src.m_application_name;
-    m_application_URL = src.m_application_URL;
-    m_application_details = src.m_application_details;
-  }
-  return *this;
-}
-
-void ON_3dmApplication::Default()
-{
-  m_application_name.Empty();
-  m_application_URL.Empty();
-  m_application_details.Empty();
-}
-
 void ON_3dmApplication::Dump( ON_TextLog& dump ) const
 {
-  const wchar_t* s = m_application_name;
+  const wchar_t* s = static_cast< const wchar_t* >(m_application_name);
   if ( s )
-    dump.Print("Name: %S\n",s);
-  s = m_application_URL;
+    dump.Print("Name: %ls\n",s);
+  s = static_cast< const wchar_t* >(m_application_URL);
   if ( s )
-    dump.Print("URL: %S\n",s);
-  s = m_application_details;
+    dump.Print("URL: %ls\n",s);
+  s = static_cast< const wchar_t* >(m_application_details);
   if ( s )
-    dump.Print("Details: %S\n",s);
+    dump.Print("Details: %ls\n",s);
 }
 
-ON_BOOL32 ON_3dmApplication::IsValid() const
+bool ON_3dmApplication::IsValid() const
 {
   return m_application_name.IsEmpty() ? false : true;
 }
 
-ON_BOOL32 ON_3dmApplication::Read( ON_BinaryArchive& file )
+bool ON_3dmApplication::IsEmpty() const
+{
+  return    m_application_name.IsEmpty() 
+         && m_application_URL.IsEmpty()
+         && m_application_details.IsEmpty();
+}
+
+bool ON_3dmApplication::Read( ON_BinaryArchive& file )
 {
   int major_version = 0;
   int minor_version = 0;
-  ON_BOOL32 rc = file.Read3dmChunkVersion( &major_version, &minor_version );
+  bool rc = file.Read3dmChunkVersion( &major_version, &minor_version );
   if (rc) rc = file.ReadString( m_application_name );
   if (rc) rc = file.ReadString( m_application_URL );
   if (rc) rc = file.ReadString( m_application_details );
   return rc;
 }
 
-ON_BOOL32 ON_3dmApplication::Write( ON_BinaryArchive& file ) const
+bool ON_3dmApplication::Write( ON_BinaryArchive& file ) const
 {
-  ON_BOOL32 rc = file.Write3dmChunkVersion( 1, 0 );
+  bool rc = file.Write3dmChunkVersion( 1, 0 );
   if (rc) rc = file.WriteString( m_application_name );
   if (rc) rc = file.WriteString( m_application_URL );
   if (rc) rc = file.WriteString( m_application_details );
@@ -303,46 +388,34 @@ ON_BOOL32 ON_3dmApplication::Write( ON_BinaryArchive& file ) const
 // ON_3dmProperties
 //
 
-void ON_3dmProperties::Default()
+bool ON_3dmProperties::IsEmpty() const
 {
-  // default properties
-  m_RevisionHistory.Default();
-  m_Notes.Default();
-  m_PreviewImage.Destroy();
-  m_Application.Default();
+  return    m_RevisionHistory.IsEmpty() 
+         && m_PreviewImage.IsEmpty()
+         && m_Notes.IsEmpty()
+         && m_Application.IsEmpty()
+         && m_3dmArchiveFullPathName.IsEmpty();
 }
 
-ON_3dmProperties::ON_3dmProperties()
+void ON_SetBinaryArchiveOpenNURBSVersion(ON_BinaryArchive& file, unsigned int value)
 {
-  Default();
-};
-
-ON_3dmProperties::~ON_3dmProperties()
-{
-  Default();
-}
-
-ON_3dmProperties::ON_3dmProperties(const ON_3dmProperties& src)
-{
-  Default();
-  *this = src;
-}
-
-ON_3dmProperties& ON_3dmProperties::operator=(const ON_3dmProperties& src)
-{
-  if ( this != &src ) {
-    m_RevisionHistory = src.m_RevisionHistory;
-    m_Notes = src.m_Notes;
-    m_PreviewImage = src.m_PreviewImage;
-    m_Application = src.m_Application;
-  }
-  return *this;
-}
-
-void ON_SetBinaryArchiveOpenNURBSVersion(ON_BinaryArchive& file, int value)
-{
-  if ( value >= 200012210 )
+  if ( ON_VersionNumberIsValid(value) )
   {
+    // can be yyyymmddn or a number from ON_VersionNumberConstruct().
+    file.m_3dm_opennurbs_version = value;
+  }
+  else if ( ON_VersionNumberIsYearMonthDateFormat(file.Archive3dmVersion(),value) )
+  {
+    // can be yyyymmddn or a number from ON_VersionNumberConstruct().
+    if ( 9 == (value%10) && value <= 201712319 )
+    {
+      // 9 marked debug versions.
+      unsigned int n = file.Archive3dmVersion();
+      if ( n >= 50 && 0 == (n%10) )
+        n /= 10;
+      if ( n > 0 && n < 9 )
+        value = ((value/10)*10) + n;
+    }
     file.m_3dm_opennurbs_version = value;
   }
   else
@@ -352,57 +425,67 @@ void ON_SetBinaryArchiveOpenNURBSVersion(ON_BinaryArchive& file, int value)
   }
 }
 
-ON_BOOL32 ON_3dmProperties::Read(ON_BinaryArchive& file )
+bool ON_3dmProperties::Read(ON_BinaryArchive& file )
 {
-  Default();
+  *this = ON_3dmProperties::Empty;
 
-  ON_BOOL32 rc = true;
+  bool rc = true;
 
   unsigned int tcode;
   ON__INT64 value;
 
-  for(;;) {
+  for(;;) 
+  {
 
     rc = file.BeginRead3dmBigChunk( &tcode, &value );
     if ( !rc )
       break;
 
-    switch(tcode) {
+    switch(tcode) 
+    {
 
     case TCODE_PROPERTIES_OPENNURBS_VERSION:
       { 
-        int on_version = 0;
-        if ( value > 299912319 || (value != 0 && value < 200101010) )
+        unsigned int opennurbs_version = 0;
+        if ( value > 0 && value <= 0xFFFFFFFFll)
+        {
+          opennurbs_version = (unsigned int)((ON__UINT64)value);
+        }
+
+        if (    !ON_VersionNumberIsValid(opennurbs_version)
+             && !ON_VersionNumberIsYearMonthDateFormat(file.Archive3dmVersion(),opennurbs_version)
+           )
         {
           ON_ERROR("ON_3dmProperties::Read - TCODE_PROPERTIES_OPENNURBS_VERSION corrupt value");
           rc = false;
         }
-        else
-        {
-          on_version = (int)value;
-        }
-        ON_SetBinaryArchiveOpenNURBSVersion(file,on_version);
+
+        ON_SetBinaryArchiveOpenNURBSVersion(file,opennurbs_version);
       }
+      break;
+
+    case TCODE_PROPERTIES_AS_FILE_NAME:
+      rc = file.ReadString(m_3dmArchiveFullPathName);
       break;
       
     case TCODE_PROPERTIES_REVISIONHISTORY: // file creation/revision information
-      m_RevisionHistory.Read(file);
+      rc = m_RevisionHistory.Read(file);
       break;
       
     case TCODE_PROPERTIES_NOTES: // file notes
-      m_Notes.Read(file);
+      rc = m_Notes.Read(file);
       break;
       
     case TCODE_PROPERTIES_PREVIEWIMAGE: // uncompressed preview image
-      m_PreviewImage.ReadUncompressed(file);
+      rc = m_PreviewImage.ReadUncompressed(file);
       break;
       
     case TCODE_PROPERTIES_COMPRESSED_PREVIEWIMAGE: // compressed preview image
-      m_PreviewImage.ReadCompressed(file);
+      rc = m_PreviewImage.ReadCompressed(file);
       break;
       
     case TCODE_PROPERTIES_APPLICATION: // application that created 3dm file
-      m_Application.Read(file);
+      rc = m_Application.Read(file);
       break;
       
     default:
@@ -410,10 +493,11 @@ ON_BOOL32 ON_3dmProperties::Read(ON_BinaryArchive& file )
       break;
     }
 
-    if ( !file.EndRead3dmChunk() ) {
+    if ( !file.EndRead3dmChunk() )
       rc = false;
+
+    if (!rc)
       break;
-    }
 
     if ( TCODE_ENDOFTABLE == tcode )
       break;
@@ -422,13 +506,34 @@ ON_BOOL32 ON_3dmProperties::Read(ON_BinaryArchive& file )
   return rc;
 }
 
-ON_BOOL32 ON_3dmProperties::Write(ON_BinaryArchive& file) const
+bool ON_3dmProperties::Write(ON_BinaryArchive& file) const
 {
-  ON_BOOL32 rc = true;
+  bool rc = true;
 
   // This short chunk identifies the version of OpenNURBS that was used to write this file.
-  rc = file.BeginWrite3dmChunk(TCODE_PROPERTIES_OPENNURBS_VERSION,ON::Version());
-  if ( rc) rc = file.EndWrite3dmChunk();
+  const unsigned int version_number_to_write = ON_BinaryArchive::ArchiveOpenNURBSVersionToWrite(file.Archive3dmVersion(), ON::Version());
+  rc = file.BeginWrite3dmChunk(TCODE_PROPERTIES_OPENNURBS_VERSION, version_number_to_write);
+  if (rc)
+    rc = file.EndWrite3dmChunk();
+  if (!rc)
+    return false;
+
+  // This chunk added November 5, 2015
+  const ON_wString archive_full_path
+    = file.ArchiveFullPath().IsEmpty()
+    ? m_3dmArchiveFullPathName
+    : file.ArchiveFullPath();
+  if (rc && archive_full_path.IsNotEmpty())
+  {
+    if (!file.BeginWrite3dmChunk(TCODE_PROPERTIES_AS_FILE_NAME, 0))
+      return false;
+    rc = file.WriteString(file.ArchiveFullPath());
+    if (!file.EndWrite3dmChunk())
+      rc = false;
+    if (!rc)
+      return false;
+  }
+
 
   // optional TCODE_PROPERTIES_REVISIONHISTORY chunk - file creation/revision information
   if ( rc && m_RevisionHistory.IsValid() ) {
@@ -450,20 +555,17 @@ ON_BOOL32 ON_3dmProperties::Write(ON_BinaryArchive& file) const
     }
   }
 
-  // optional TCODE_PROPERTIES_PREVIEWIMAGE chunk - bitmap preview
-  //if ( rc && m_PreviewImage.IsValid() ) {
-  //  rc = file.BeginWrite3dmChunk(TCODE_PROPERTIES_PREVIEWIMAGE,0);
-  //  if ( rc ) {
-  //    rc = m_PreviewImage.WriteUncompressed(file);
-  //    if ( !file.EndWrite3dmChunk() )
-  //      rc = false;
-  //  }
-  //}
+  //// When merging Mac code please note that the
+  //// TCODE_PROPERTIES_PREVIEWIMAGE chunk is OBSOLETE.
+  //// DO NOT WRITE THEM IN V6 FILES.  If performance is an
+  //// issue, we will address it some other way.
 
   // optional TCODE_PROPERTIES_COMPRESSED_PREVIEWIMAGE chunk - bitmap preview
-  if ( rc && m_PreviewImage.IsValid() ) {
+  if ( rc && m_PreviewImage.IsValid() && file.Save3dmPreviewImage()) 
+  {
     rc = file.BeginWrite3dmChunk(TCODE_PROPERTIES_COMPRESSED_PREVIEWIMAGE,0);
-    if ( rc ) {
+    if ( rc ) 
+    {
       rc = m_PreviewImage.WriteCompressed(file);
       if ( !file.EndWrite3dmChunk() )
         rc = false;
@@ -471,9 +573,11 @@ ON_BOOL32 ON_3dmProperties::Write(ON_BinaryArchive& file) const
   }
 
   // optional TCODE_PROPERTIES_APPLICATION chunk - application information
-  if ( rc && m_Application.IsValid() ) {
+  if ( rc && m_Application.IsValid() ) 
+  {
     rc = file.BeginWrite3dmChunk(TCODE_PROPERTIES_APPLICATION,0);
-    if ( rc ) {
+    if ( rc ) 
+    {
       rc = m_Application.Write(file);
       if ( !file.EndWrite3dmChunk() )
         rc = false;

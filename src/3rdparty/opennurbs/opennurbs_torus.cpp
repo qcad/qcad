@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,9 +10,16 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #include "opennurbs.h"
+
+#if !defined(ON_COMPILING_OPENNURBS)
+// This check is included in all opennurbs source .c and .cpp files to insure
+// ON_COMPILING_OPENNURBS is defined when opennurbs source is compiled.
+// When opennurbs source is being compiled, ON_COMPILING_OPENNURBS is defined 
+// and the opennurbs .h files alter what is declared and how it is declared.
+#error ON_COMPILING_OPENNURBS must be defined when compiling opennurbs
+#endif
 
 ON_Torus::ON_Torus() : major_radius(0.0), minor_radius(0.0)
 {}
@@ -31,7 +37,7 @@ ON_Torus::ON_Torus( const ON_Circle& major__circle, double minor__radius )
 ON_Torus::~ON_Torus()
 {}
 
-ON_BOOL32 ON_Torus::IsValid( ON_TextLog* text_log ) const
+bool ON_Torus::IsValid( ON_TextLog* text_log ) const
 {
   bool rc=false;
   if ( minor_radius <= 0.0 )
@@ -54,7 +60,7 @@ ON_BOOL32 ON_Torus::IsValid( ON_TextLog* text_log ) const
   return rc;
 }
 
-ON_BOOL32 ON_Torus::Create( const ON_Plane& major_plane, double major__radius, double minor__radius )
+bool ON_Torus::Create( const ON_Plane& major_plane, double major__radius, double minor__radius )
 {
   plane = major_plane;
   major_radius = major__radius;
@@ -62,7 +68,7 @@ ON_BOOL32 ON_Torus::Create( const ON_Plane& major_plane, double major__radius, d
   return IsValid();
 }
 
-ON_BOOL32 ON_Torus::Create( const ON_Circle& major__circle, double minor__radius )
+bool ON_Torus::Create( const ON_Circle& major__circle, double minor__radius )
 {
   return Create( major__circle.plane, major__circle.radius, minor__radius );
 }
@@ -143,7 +149,7 @@ double ON_Torus::MinorRadius() const
   return minor_radius;
 }
 
-ON_BOOL32 ON_Torus::ClosestPointTo( 
+bool ON_Torus::ClosestPointTo( 
          ON_3dPoint test_point, 
          double* major__angle_radians, 
          double* minor__angle_radians
@@ -151,7 +157,7 @@ ON_BOOL32 ON_Torus::ClosestPointTo(
 {
   double major_angle_radians, minor_angle_radians;
   const ON_Circle major_circle(plane,major_radius);
-  ON_BOOL32 rc = major_circle.ClosestPointTo( test_point, &major_angle_radians );
+  bool rc = major_circle.ClosestPointTo( test_point, &major_angle_radians );
   if ( rc && minor__angle_radians )
   {
     EVAL_SETUP_MAJOR;
@@ -189,7 +195,7 @@ ON_3dPoint ON_Torus::ClosestPointTo( ON_3dPoint test_point ) const
 
 
 // rotate cylinder about its origin
-ON_BOOL32 ON_Torus::Rotate(
+bool ON_Torus::Rotate(
       double sin_angle,
       double cos_angle,
       const ON_3dVector& axis // axis of rotation
@@ -198,7 +204,7 @@ ON_BOOL32 ON_Torus::Rotate(
   return Rotate(sin_angle, cos_angle, axis, plane.origin );
 }
 
-ON_BOOL32 ON_Torus::Rotate(
+bool ON_Torus::Rotate(
       double angle,            // angle in radians
       const ON_3dVector& axis // axis of rotation
       )
@@ -206,7 +212,7 @@ ON_BOOL32 ON_Torus::Rotate(
   return Rotate(sin(angle), cos(angle), axis, plane.origin );
 }
 
-ON_BOOL32 ON_Torus::Rotate(
+bool ON_Torus::Rotate(
       double sin_angle,
       double cos_angle,
       const ON_3dVector& axis, // axis of rotation
@@ -216,7 +222,7 @@ ON_BOOL32 ON_Torus::Rotate(
   return plane.Rotate( sin_angle, cos_angle, axis, point );
 }
 
-ON_BOOL32 ON_Torus::Rotate(
+bool ON_Torus::Rotate(
       double angle,             // angle in radians
       const ON_3dVector& axis,  // axis of rotation
       const ON_3dPoint&  point  // center of rotation
@@ -225,15 +231,15 @@ ON_BOOL32 ON_Torus::Rotate(
   return Rotate(sin(angle),cos(angle),axis,point);
 }
 
-ON_BOOL32 ON_Torus::Translate( const ON_3dVector& delta )
+bool ON_Torus::Translate( const ON_3dVector& delta )
 {
   return plane.Translate(delta);
 }
 
-ON_BOOL32 ON_Torus::Transform( const ON_Xform& xform )
+bool ON_Torus::Transform( const ON_Xform& xform )
 {
   ON_Circle major_c(plane,major_radius);
-  ON_BOOL32 rc = major_c.Transform(xform);
+  bool rc = major_c.Transform(xform);
   if (rc)
   {
     double s = (0.0==major_radius) ? 1.0 : major_c.radius/major_radius;
@@ -262,7 +268,7 @@ ON_RevSurface* ON_Torus::RevSurfaceForm( ON_RevSurface* srf ) const
 {
   if ( srf )
     srf->Destroy();
-  ON_RevSurface* pRevSurface = NULL;
+  ON_RevSurface* pRevSurface = nullptr;
   if ( IsValid() )
   {
     ON_Circle circle = MinorCircleRadians(0.0);
@@ -272,7 +278,9 @@ ON_RevSurface* ON_Torus::RevSurfaceForm( ON_RevSurface* srf ) const
     else
       pRevSurface = new ON_RevSurface();
     pRevSurface->m_angle.Set(0.0,2.0*ON_PI);
-    pRevSurface->m_t = pRevSurface->m_angle;
+    //pRevSurface->m_t = pRevSurface->m_angle;
+    pRevSurface->m_t[0] = 0.0;
+    pRevSurface->m_t[1] = 2.0*ON_PI*MajorRadius();
     pRevSurface->m_curve = circle_crv;
     pRevSurface->m_axis.from = plane.origin;
     pRevSurface->m_axis.to = plane.origin + plane.zaxis;

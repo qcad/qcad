@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,24 +10,19 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(ON_OFFSETSURFACE_INC_)
 #define ON_OFFSETSURFACE_INC_
 
-// This file is to be used in V3 plug-ins.  
-// In V4, this will be included as part of opennurbs.
-// Ask Dale Lear if you have any questions.
-
-class ON_BumpFunction
+class ON_CLASS ON_BumpFunction
 {
 public:
   ON_BumpFunction();
+  ~ON_BumpFunction() = default;
+  ON_BumpFunction(const ON_BumpFunction&) = default;
+  ON_BumpFunction& operator=(const ON_BumpFunction&) = default;
 
-  bool operator==(const ON_BumpFunction& other) const;
-  bool operator<(const ON_BumpFunction& other) const;
-  bool operator>(const ON_BumpFunction& other) const;
-
+public:
   double ValueAt(
     double s,
     double t
@@ -41,41 +35,43 @@ public:
     double* value
     ) const;
 
-  ON_2dPoint m_point; // center of bump
-  int m_type[2];      // 1 = linear, 5 = quintic;
+public:
+  ON_2dPoint m_point = ON_2dPoint::NanPoint; // center of bump
+  int m_type[2];//  // = {0,0}  // 1 = linear, 5 = quintic, else linear;
 
+public:
   // numbers used in evaluation
-  double m_x0;
-  double m_y0;
-  double m_sx[2];      // 1/(suppor radius)
-  double m_sy[2];      // 1/(suppor radius)
-  double m_a;         // evaluation coefficient
+  double m_x0 = 0.0;
+  double m_y0 = 0.0;
+  double m_sx[2]; // = {0.0, 0.0} // 1/(support radius)
+  double m_sy[2]; // = {0.0, 0.0} // 1/(support radius)
+  double m_a = 0.0;  // evaluation coefficient
 
-  void EvaluateHelperLinearBump(double t, double dt, int der_count, double* value) const;
-  void EvaluateHelperQuinticBump(double t, double dt, int der_count, double* value) const;
+private:
+  void Internal_EvaluateLinearBump(double t, double dt, int der_count, double* value) const;
+  void Internal_EvaluateQuinticBump(double t, double dt, int der_count, double* value) const;
 };
 
 
-class ON_OffsetSurfaceValue
+class ON_CLASS ON_OffsetSurfaceValue
 {
 public:
-  double m_s;
-  double m_t;
-  double m_distance;
-  double m_radius;
-  int m_index;
+  ON_OffsetSurfaceValue() = default;
+  ~ON_OffsetSurfaceValue() = default;
+  ON_OffsetSurfaceValue(const ON_OffsetSurfaceValue&) = default;
+  ON_OffsetSurfaceValue& operator=(const ON_OffsetSurfaceValue&) = default;
+public:
+  double m_s = ON_DBL_QNAN;
+  double m_t = ON_DBL_QNAN;
+  double m_distance = ON_DBL_QNAN;
+  double m_radius = ON_DBL_QNAN;
+  int m_index = ON_UNSET_INT_INDEX;
 };
 
 
 #if defined(ON_DLL_TEMPLATE)
-// This stuff is here because of a limitation in the way Microsoft
-// handles templates and DLLs.  See Microsoft's knowledge base 
-// article ID Q168958 for details.
-#pragma warning( push )
-#pragma warning( disable : 4231 )
 ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_BumpFunction>;
 ON_DLL_TEMPLATE template class ON_CLASS ON_SimpleArray<ON_OffsetSurfaceValue>;
-#pragma warning( pop )
 #endif
 
 
@@ -142,7 +138,7 @@ public:
   /*
   Description:
     Sets the offset distance at a point.  Call this function
-    once for each point wher the user specifies an offset.
+    once for each point where the user specifies an offset.
   Parameters:
     s - [in]
     t - [in] (s,t) is a base surface evaluation parameter
@@ -295,13 +291,10 @@ public:
   ON_OffsetSurface( const ON_OffsetSurface& src);
   ON_OffsetSurface& operator=(const ON_OffsetSurface& src);
 
-  ON_BOOL32 GetBBox(
-         double* bbox_min,
-         double* bbox_max,
-         int bGrowBox = false
-         ) const;
+  // virtual ON_Geometry GetBBox override		
+  bool GetBBox( double* boxmin, double* boxmax, bool bGrowBox = false ) const override;
 
-  ON_BOOL32 Evaluate( // returns false if unable to evaluate
+  bool Evaluate( // returns false if unable to evaluate
          double, double, // evaluation parameters
          int,            // number of derivatives (>=0)
          int,            // array stride (>=Dimension())
@@ -314,7 +307,7 @@ public:
                          //         4 from SE quadrant
          int* = 0        // optional - evaluation hint (int[2]) used to speed
                          //            repeated evaluations
-         ) const;
+         ) const override;
 
   /*
   Description:
@@ -360,7 +353,7 @@ public:
   const ON_OffsetSurfaceFunction& OffsetFunction() const;
 
 private:
-  // If not NULL, this points to the base surface
+  // If not nullptr, this points to the base surface
   ON_Surface* m__pSrf;
   ON_OffsetSurfaceFunction m_offset_function;
 };

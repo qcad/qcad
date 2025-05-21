@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(OPENNURBS_WORKSPACE_INC_)
 #define OPENNURBS_WORKSPACE_INC_
@@ -45,6 +43,15 @@ public:
 
   /*
   Description:
+    The destructor frees memory that was allocated by
+    ON_Workspace::GetMemory and closes files that were 
+    opened with ON_Workspace::OpenFile.  The workspace
+    can be used again after calling destroy.
+  */
+  void Destroy();
+
+  /*
+  Description:
     Gets a block of heap memory that will be freed by 
     ~ON_Workspace. The intent of ON_Workspace::GetMemory
     is to provide an easy way to get blocks of scratch 
@@ -52,7 +59,7 @@ public:
     before returning.
   Parameters:
     sz - [in] (>0) size of memory block in bytes. 
-              If sz <= 0, then NULL is returned.
+              If sz <= 0, then nullptr is returned.
   Returns:
     A pointer to the memory block.
   Remarks.
@@ -80,7 +87,7 @@ public:
     having to worry about cleaning up before returning.
   Parameters:
     count - [in] (>0) number of integers in memory block.
-              If count <= 0, then NULL is returned.
+              If count <= 0, then nullptr is returned.
   Returns:
     A pointer to the array of integers.
   Remarks.
@@ -120,7 +127,7 @@ public:
     having to worry about cleaning up before returning.
   Parameters:
     count - [in] (>0) number of doubles in memory block.
-              If count <= 0, then NULL is returned.
+              If count <= 0, then nullptr is returned.
   Returns:
     A pointer to the array of doubles.
   Remarks.
@@ -160,7 +167,7 @@ public:
     having to worry about cleaning up before returning.
   Parameters:
     count - [in] (>0) number of points in memory block.
-              If count <= 0, then NULL is returned.
+              If count <= 0, then nullptr is returned.
   Returns:
     A pointer to the memory block.
   Remarks.
@@ -183,7 +190,7 @@ public:
     having to worry about cleaning up before returning.
   Parameters:
     count - [in] (>0) number of Vectors in memory block.
-              If count <= 0, then NULL is returned.
+              If count <= 0, then nullptr is returned.
   Returns:
     A pointer to the memory block.
   Remarks.
@@ -206,10 +213,10 @@ public:
     ptr - [in] pointer returned by an earlier call to
                GetMemory or GrowMemory.
     sz - [in] (>0) size of memory block in bytes. 
-              If sz <= 0, then NULL is returned.
-              If ptr is not NULL and was not allocated by an 
+              If sz <= 0, then nullptr is returned.
+              If ptr is not nullptr and was not allocated by an 
               earlier call to GetMemory or GrowMemory, then
-              NULL is returned.
+              nullptr is returned.
   Returns:
     A pointer to the memory block.
   Remarks.
@@ -236,9 +243,9 @@ public:
     ptr - [in] pointer returned by an earlier call to
                GetIntMemory or GrowIntMemory.
     count - [in] (>0) number of integers in memory block.
-              If count <= 0, then NULL is returned.
+              If count <= 0, then nullptr is returned.
               If ptr was not allocated by this ON_Workspace
-              class, then NULL is returned.
+              class, then nullptr is returned.
   Returns:
     A pointer to the integer array.
   Remarks.
@@ -261,9 +268,9 @@ public:
     ptr - [in] pointer returned by an earlier call to
                GetDoubleMemory or GrowDoubleMemory.
     count - [in] (>0) number of doubles in memory block.
-              If count <= 0, then NULL is returned.
+              If count <= 0, then nullptr is returned.
               If ptr was not allocated by this ON_Workspace
-              class, then NULL is returned.
+              class, then nullptr is returned.
   Returns:
     A pointer to the double array.
   Remarks.
@@ -286,9 +293,9 @@ public:
     ptr - [in] pointer returned by an earlier call to
                GetPointMemory or GrowPointMemory.
     count - [in] (>0) number of points in memory block.
-              If count <= 0, then NULL is returned.
+              If count <= 0, then nullptr is returned.
               If ptr was not allocated by this ON_Workspace
-              class, then NULL is returned.
+              class, then nullptr is returned.
   Returns:
     A pointer to the point array.
   Remarks.
@@ -311,9 +318,9 @@ public:
     ptr - [in] pointer returned by an earlier call to
                GetVectorMemory or GrowVectorMemory.
     count - [in] (>0) number of vectors in memory block.
-              If count <= 0, then NULL is returned.
+              If count <= 0, then nullptr is returned.
               If ptr was not allocated by this ON_Workspace
-              class, then NULL is returned.
+              class, then nullptr is returned.
   Returns:
     A pointer to the vector array.
   Remarks.
@@ -341,13 +348,29 @@ public:
     ptr - [in] pointer returned by a Get...() or Grow()
                call to this ON_Workspace.
   Returns:
-    True if the pointer was successfully freed.
+    True if the pointer was successfully found and removed
+    from this ON_Workspace.
   See Also:
     ON_Workspace::~ON_Workspace
     ON_Workspace::GetMemory
-    ON_Workspace::GrowMemory
+    ON_Workspace::KeepAllMemory
   */
-  ON_BOOL32 KeepMemory( void* ptr );
+  bool KeepMemory( void* ptr );
+
+  /*
+  Description:
+    Calling KeepAllMemory() has the same effect as calling
+    KeepMemory(p) for every active allocation in the workspace.
+    After calling KeepAllMemory(), you can no longer use
+    Grow...() on the pointers and you are responsible 
+    for using onfree() to release the memory when it is no
+    longer needed.
+  See Also:
+    ON_Workspace::~ON_Workspace
+    ON_Workspace::GetMemory
+    ON_Workspace::KeepMemory
+  */
+  void KeepAllMemory();
 
   /*
   Description:
@@ -408,27 +431,18 @@ public:
     ON::OpenFile
     ON::CloseFile
   */
-  int KeepFile(FILE* fileptr);
+  bool KeepFile(FILE* fileptr);
 
 private:
-  struct FBLK 
-  {
-    struct FBLK* pNext;
-    FILE* pFile;
-  } * m_pFileBlk;
-
-  struct MBLK 
-  {
-    struct MBLK* pNext;
-    void* pMem;
-  } * m_pMemBlk;
+  struct ON_Workspace_FBLK * m_pFileBlk;
+  struct ON_Workspace_MBLK * m_pMemBlk;
 
 private:
   // There is no implementation of the following to prevent use.
   // ON_Workspaces should never be copied, or you will get
   // multiple attempts to free the same pointer.
-  ON_Workspace( const ON_Workspace& );
-  ON_Workspace& operator=( const ON_Workspace& );
+  ON_Workspace( const ON_Workspace& ) = delete;
+  ON_Workspace& operator=( const ON_Workspace& ) = delete;
 };
 
 

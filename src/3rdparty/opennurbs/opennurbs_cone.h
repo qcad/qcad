@@ -1,8 +1,7 @@
-/* $NoKeywords: $ */
-/*
 //
-// Copyright (c) 1993-2007 Robert McNeel & Associates. All rights reserved.
-// Rhinoceros is a registered trademark of Robert McNeel & Assoicates.
+// Copyright (c) 1993-2022 Robert McNeel & Associates. All rights reserved.
+// OpenNURBS, Rhinoceros, and Rhino3D are registered trademarks of Robert
+// McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
 // ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF
@@ -11,7 +10,6 @@
 // For complete openNURBS copyright information see <http://www.opennurbs.org>.
 //
 ////////////////////////////////////////////////////////////////
-*/
 
 #if !defined(ON_CONE_INC_)
 #define ON_CONE_INC_
@@ -46,7 +44,7 @@ public:
   //      the axis of the cone is plane.zaxis.
   //  height - [in] The center of the base is height*plane.zaxis.
   //  radius - [in] tan(cone angle) = radius/height
-  ON_BOOL32 Create(
+  bool Create(
     const ON_Plane& plane,
     double height,
     double radius
@@ -54,7 +52,7 @@ public:
 
   // Returns true if plane is valid, height is not zero, and
   // radius is not zero.
-  ON_BOOL32 IsValid() const;
+  bool IsValid() const;
 
   // Returns:
   //   Center of base circle.
@@ -131,49 +129,54 @@ public:
          ON_3dPoint 
          ) const;
 
-  ON_BOOL32 Transform( const ON_Xform& );
+  bool Transform( const ON_Xform& );
 
   // rotate cone about its origin
-  ON_BOOL32 Rotate(
+  bool Rotate(
         double sin_angle,
         double cos_angle,
         const ON_3dVector& axis_of_rotation
         );
 
-  ON_BOOL32 Rotate(
+  bool Rotate(
         double angle_in_radians,
         const ON_3dVector& axis_of_rotation
         );
 
   // rotate cone about a point and axis
-  ON_BOOL32 Rotate(
+  bool Rotate(
         double sin_angle,
         double cos_angle,
         const ON_3dVector& axis_of_rotation,
         const ON_3dPoint& center_of_rotation
         );
-  ON_BOOL32 Rotate(
+  bool Rotate(
         double angle_in_radians,
         const ON_3dVector& axis_of_rotation,
         const ON_3dPoint& center_of_rotation
         );
 
-  ON_BOOL32 Translate(
+  bool Translate(
         const ON_3dVector& delta
         );
 
-  ON_BOOL32 GetNurbForm( ON_NurbsSurface& ) const;
+  /*
+  returns:
+    0 = failure
+    2 = success
+  */
+  int GetNurbForm( ON_NurbsSurface& ) const;
 
   /*
   Description:
     Creates a surface of revolution definition of the cylinder.
   Parameters:
-    srf - [in] if not NULL, then this srf is used.
+    srf - [in] if not nullptr, then this srf is used.
   Result:
-    A surface of revolution or NULL if the cylinder is not 
+    A surface of revolution or nullptr if the cylinder is not 
     valid or is infinite.
   */
-  ON_RevSurface* RevSurfaceForm( ON_RevSurface* srf = NULL ) const;
+  ON_RevSurface* RevSurfaceForm( ON_RevSurface* srf = nullptr ) const;
 
 public:
   ON_Plane plane; // apex = plane.origin, axis = plane.zaxis
