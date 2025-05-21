@@ -30,7 +30,9 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cmath&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;limits&gt;</cpp:file></cpp:include>
 
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
 <class_decl>class <name>QJSEngine</name>;</class_decl>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 <class_decl>class <name>RVector</name>;</class_decl>
 
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>M_PI</name></cpp:ifndef>
