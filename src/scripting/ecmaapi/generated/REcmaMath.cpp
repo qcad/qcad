@@ -7,8 +7,6 @@
 
         // forwards declarations mapped to includes
         
-                #include <QJSEngine>
-            
                 #include "RVector.h"
             
             
