@@ -30,6 +30,9 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;cmath&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;limits&gt;</cpp:file></cpp:include>
 
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+<class_decl>class <name>QJSEngine</name>;</class_decl>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 <class_decl>class <name>RVector</name>;</class_decl>
 
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>M_PI</name></cpp:ifndef>
@@ -85,11 +88,8 @@
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RMath</name> <block>{<private type="default">
 </private><public>public:
-    <function><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list> <block>{
-    }</block></function>
-
-    <function><type><name>static</name> <name>void</name></type> <name>uninit</name><parameter_list>()</parameter_list> <block>{
-    }</block></function>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>uninit</name><parameter_list>()</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * Rounds the given double to the next int.
@@ -177,6 +177,10 @@
 </public><private>private:
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>lastError</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>mathExt</name></decl>;</decl_stmt>
+
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+    <decl_stmt><decl><type><name>static</name> <name>QJSEngine</name>*</type> <name>jsEngine</name></decl>;</decl_stmt>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </private>}</block>;</class>
 
 <expr_stmt><expr><call><name>Q_DECLARE_METATYPE</name><argument_list>(<argument><expr><name>RMath</name>*</expr></argument>)</argument_list></call></expr>;</expr_stmt>

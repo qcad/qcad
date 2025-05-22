@@ -38,8 +38,10 @@
     </xsl:template>
 
     <xsl:template match="srcml:class_decl">
-        <class_decl name="{srcml:name/text()}"/>
-     </xsl:template>
+        <xsl:if test="srcml:name/text()!='QJSEngine'">
+            <class_decl name="{srcml:name/text()}"/>
+        </xsl:if>
+    </xsl:template>
 
     <xsl:template match="srcml:class">
         <xsl:variable name="name" select="srcml:name/text()"/>

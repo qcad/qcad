@@ -33,7 +33,11 @@ class RPolyline;
 class RSplineProxy;
 
 #ifndef R_NO_OPENNURBS
+#if QT_VERSION >= 0x060000
 #include "opennurbs/opennurbs.h"
+#else
+#include "legacy/opennurbs/opennurbs.h"
+#endif
 #endif
 
 #ifndef RDEFAULT_MIN1

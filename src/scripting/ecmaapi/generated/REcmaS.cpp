@@ -97,6 +97,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, lessThanAlphanumerical, "lessThanAlphanumerical");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getFontFamilyFromFileName, "getFontFamilyFromFileName");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getFontFamily, "getFontFamily");
             
             REcmaHelper::registerFunction(&engine, &ctor, getPageSizeId, "getPageSizeId");
@@ -3686,6 +3688,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaS::lessThanAlphanumerical", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::getFontFamilyFromFileName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::getFontFamilyFromFileName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::getFontFamilyFromFileName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RS::
+       getFontFamilyFromFileName(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.getFontFamilyFromFileName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::getFontFamilyFromFileName", context, engine);
             return result;
         }
          QScriptValue

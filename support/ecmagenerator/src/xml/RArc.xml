@@ -132,7 +132,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="direction"
         isConst="false" />
         <arg type="double" typeName="double" name="radius"
-        isConst="false" />
+        hasDefault="true" default="0.0" isConst="false" />
+        <arg type="double" typeName="double" name="sweep"
+        hasDefault="true" default="0.0" isConst="false" />
       </variant>
     </method>
     <method name="createBiarc" cppName="createBiarc"
@@ -593,6 +595,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QList &lt; RArc &gt;"
       isPureVirtual="false" />
+    </method>
+    <method name="hasProxy" cppName="hasProxy" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

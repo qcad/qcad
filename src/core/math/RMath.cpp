@@ -56,10 +56,12 @@ void RMath::init() {
 }
 
 void RMath::uninit() {
+#if QT_VERSION >= 0x060000
     if (jsEngine!=NULL) {
         delete jsEngine;
         jsEngine = NULL;
     }
+#endif
 }
 
 /**

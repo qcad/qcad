@@ -15,7 +15,7 @@ TrimTest02.prototype.test00 = function() {
     qDebug('running TrimTest02.test00()...');
     this.setUp();
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::PolylineToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolBar::PolylineToolsPanel::DrawPolylineButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::PolylineToolsPanel::DrawPolylineProButton');
     this.setZoom(9.744520817053466, new RVector(-0.894822, 10.9445, 0, true));
     var p = new RVector(10.233403, 29.796314);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

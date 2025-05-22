@@ -34,8 +34,12 @@ DrawPolylineTest00.prototype.test00 = function() {
     this.setUp();
     this.clickOnWidget('MainWindow::MainToolsPanel::PolylineToolsPanelButton');
     this.clickOnWidget('MainWindow::PolylineToolsPanel::DrawPolylineProButton');
-    this.setToolOption('DrawPolyline/ArcMode', 'false');
-    this.setToolOption('DrawPolyline/Radius',  [ 2, 0 ] );
+    this.setToolOption('DrawPolylinePro/ArcMode', 'false');
+    this.setToolOption('DrawPolylinePro/UseRadius', 'false');
+    this.setToolOption('DrawPolylinePro/Radius', '2');
+    this.setToolOption('DrawPolylinePro/UseSweep', 'false');
+    this.setToolOption('DrawPolylinePro/Sweep', '0.0');
+    this.setToolOption('DrawPolylinePro/Restrict', 'false');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(9.8, 20);
@@ -96,9 +100,6 @@ DrawPolylineTest00.prototype.test00 = function() {
     var p = new RVector(50, 29.9);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.clickOnWidget('MainWindow::Options::Close');
-    this.setToolOption('DrawPolyline/ArcMode', 'false');
-    this.setToolOption('DrawPolyline/Radius',  [ 2, 0 ] );
-    this.updateToolOptions();
     var p = new RVector(28.5, 26.9);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     var p = new RVector(28.5, 26.9);

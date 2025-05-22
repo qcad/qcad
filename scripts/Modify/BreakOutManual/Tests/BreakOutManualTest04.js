@@ -15,7 +15,7 @@ BreakOutManualTest04.prototype.test00 = function() {
     qDebug('running BreakOutManualTest04.test00()...');
     this.setUp();
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::PolylineToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolBar::PolylineToolsPanel::DrawPolylineButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::PolylineToolsPanel::DrawPolylineProButton');
     this.setZoom(10, new RVector(5,5));
     var p = new RVector(9.7, 9.7);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

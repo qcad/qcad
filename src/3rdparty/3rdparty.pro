@@ -1,18 +1,26 @@
 include (../../shared.pri)
 TEMPLATE = subdirs
 SUBDIRS = \
-    stemmer
+    stemmer \
+    legacy
+
 
 contains(QMAKE_COMPILER_DEFINES, _MSC_VER=1929) {
     # MSVC 2019
     SUBDIRS += spatialindexnavel
 }
 else {
-    SUBDIRS += legacy
+    # see legacy for older spatialindexnavel for older MSVC
 }
 
 !r_no_opennurbs {
-    SUBDIRS += opennurbs
+    lessThan(QT_MAJOR_VERSION, 6) {
+        # see legacy for Qt 5 opennurbs
+    }
+    else {
+        # Qt 6: use newer opennurbs library
+        SUBDIRS += opennurbs
+    }
 }
 !rs_no_dxf {
     SUBDIRS += dxflib

@@ -15,7 +15,7 @@ LengthenTest01.prototype.test00 = function() {
     qDebug('running LengthenTest01.test00()...');
     this.setUp();
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::PolylineToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolBar::PolylineToolsPanel::DrawPolylineButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::PolylineToolsPanel::DrawPolylineProButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(10, 20.3);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
