@@ -86,6 +86,13 @@ RTransaction RChangePropertyOperation::apply(RDocument& document, bool preview) 
             }
         }
 
+        // don't apply attribute properties of block with attributes to selected attributes:
+        if (obj->isOfType(RS::EntityAttribute) && propertyTypeId.isCustom()) {
+            if (propertyTypeId.getCustomPropertyTitle()=="Attributes") {
+                continue;
+            }
+        }
+
         // apply operation to object:
         bool modified = obj->setProperty(propertyTypeId, val, &transaction);
 
