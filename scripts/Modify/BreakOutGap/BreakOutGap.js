@@ -174,10 +174,18 @@ BreakOutGap.prototype.getOperation = function(preview) {
         shape1 = trimEndPoint(shape1, this.pos, this.pos);
         this.cutPos = shape1.getEndPoint();
         var points = shape1.getPointsWithDistanceToEnd(this.offset/2);
-        var line = new RLine(shape1.getStartPoint(), points[1]);
+        qDebug("points[1].valid:" + points[1].valid);
 
-        // modify chosen entity into first part:
-        modifyEntity(op, this.entity, line);
+        // make sure the line is changed to invalid:
+        if (points[1].valid) {
+            var line = new RLine(shape1.getStartPoint(), points[1]);
+
+            // modify chosen entity into first part:
+            modifyEntity(op, this.entity, line);
+        }
+        else {
+            op.deleteObject(this.entity);
+        }
         
         shape2 = trimStartPoint(shape2, this.pos, this.pos);
         points = shape2.getPointsWithDistanceToEnd(this.offset/2);
