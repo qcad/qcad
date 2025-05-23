@@ -199,35 +199,50 @@ BreakOutGap.prototype.getOperation = function(preview) {
         var center;
         var angle = undefined;
         var angle2 = undefined;
+        var reversed = this.shape.isReversed();
+        var shapeNorm = this.shape.clone();
+
+        if (reversed) {
+            shapeNorm.reverse();
+        }
 
         op.deleteObject(this.entity);
 
-        center = this.shape.getCenter();
-        var radius = this.shape.getRadius();
-        angle = center.getAngleTo(this.shape.getStartPoint());
+        center = shapeNorm.getCenter();
+        var radius = shapeNorm.getRadius();
+        angle = center.getAngleTo(shapeNorm.getStartPoint());
         angle2 = center.getAngleTo(this.pos)-((this.offset/2)/radius);
+        if (RMath.isAngleBetween(angle2, shapeNorm.getStartAngle(), shapeNorm.getEndAngle(), false)) {
+            this.cutPos = center.operator_add(RVector.createPolar(radius, angle2+((this.offset/2)/radius)));
 
-        this.cutPos = center.operator_add(RVector.createPolar(radius, angle2+((this.offset/2)/radius)));
-
-        var arc = new RArc(
-                this.shape.getCenter(),
-                this.shape.getRadius(),
-                angle,
-                angle2,
-                false);
-        e = new RArcEntity(this.entity.getDocument(), new RArcData(arc));
-        op.addObject(e, false);
+            var arc = new RArc(
+                    shapeNorm.getCenter(),
+                    shapeNorm.getRadius(),
+                    angle,
+                    angle2,
+                    false);
+            if (reversed) {
+                arc.reverse();
+            }
+            e = new RArcEntity(this.entity.getDocument(), new RArcData(arc));
+            op.addObject(e, false);
+        }
 
         angle = center.getAngleTo(this.pos)+((this.offset/2)/radius);
-        angle2 = center.getAngleTo(this.shape.getEndPoint());
-        arc = new RArc(
-                this.shape.getCenter(),
-                this.shape.getRadius(),
-                angle,
-                angle2,
-                false);
-        e = new RArcEntity(this.entity.getDocument(), new RArcData(arc));
-        op.addObject(e, false);
+        angle2 = center.getAngleTo(shapeNorm.getEndPoint());
+        if (RMath.isAngleBetween(angle, shapeNorm.getStartAngle(), shapeNorm.getEndAngle(), false)) {
+            arc = new RArc(
+                    shapeNorm.getCenter(),
+                    shapeNorm.getRadius(),
+                    angle,
+                    angle2,
+                    false);
+            if (reversed) {
+                arc.reverse();
+            }
+            e = new RArcEntity(this.entity.getDocument(), new RArcData(arc));
+            op.addObject(e, false);
+        }
     }
     return op;
 };
