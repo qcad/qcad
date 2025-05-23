@@ -316,7 +316,6 @@ bool RS::showInFileManager(const QString& filePath) {
   * This only works for Windows and might not even be possible on all systems.
   */
 QString RS::getFontFamilyFromFileName(const QString& fileName) {
-    qDebug() << "RS::getFontFamilyFromFileName: " << fileName;
 #ifdef Q_OS_WIN
     // registry path where Windows stores font info
     QStringList rootKeys;
