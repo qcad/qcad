@@ -839,7 +839,7 @@ um die Änderungen zu übernehmen.</translation>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+66"/>
         <source>Choose base line or base arc</source>
         <translation>Basislinie oder Basisbogen wählen</translation>
     </message>
@@ -4089,12 +4089,12 @@ ist bereits in der Liste.</translation>
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+80"/>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+88"/>
         <source>Next vertex</source>
         <translation>Nächster Eckpunkt</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+414"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -4114,7 +4114,7 @@ ist bereits in der Liste.</translation>
         <translation>arc</translation>
     </message>
     <message>
-        <location line="-452"/>
+        <location line="-442"/>
         <source>First vertex</source>
         <translation>Erster Eckpunkt</translation>
     </message>
@@ -9992,7 +9992,7 @@ ist bereits in der Liste.</translation>
         <translation>Querformat</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+478"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+483"/>
         <source>Export to PDF</source>
         <translation>PDF exportieren</translation>
     </message>
@@ -10002,7 +10002,7 @@ ist bereits in der Liste.</translation>
         <translation>Drucken ...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-732"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-737"/>
         <source>Auto Paper Size</source>
         <translation>Auto Papiergrösse</translation>
     </message>
@@ -10027,7 +10027,7 @@ ist bereits in der Liste.</translation>
         <translation>Ziehen zum Verschieben des Papiers</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+204"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>Seiteneinstellungen</translation>
@@ -10144,12 +10144,12 @@ ist bereits in der Liste.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1684"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1715"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1458"/>
+        <location line="-1483"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10169,7 +10169,7 @@ ist bereits in der Liste.</translation>
         <translation>Abhängige Objekte</translation>
     </message>
     <message>
-        <location line="+221"/>
+        <location line="+222"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -10194,17 +10194,17 @@ ist bereits in der Liste.</translation>
         <translation>Alle Eigenschaften anzeigen</translation>
     </message>
     <message>
-        <location line="+794"/>
+        <location line="+818"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="-840"/>
+        <location line="-864"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
     <message>
-        <location line="+181"/>
+        <location line="+186"/>
         <source>Auto</source>
         <translation>auto</translation>
     </message>
@@ -10224,7 +10224,7 @@ ist bereits in der Liste.</translation>
         <translation>Nein</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+433"/>
         <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
@@ -10261,7 +10261,7 @@ ist bereits in der Liste.</translation>
         <translation>Farbe:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1307"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1332"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
@@ -13454,6 +13454,14 @@ ist bereits in der Liste.</translation>
         <location filename="../scripts/Layer/UnlockAllLayers/UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
         <translation>Alle Layer &amp;entsperren</translation>
+    </message>
+</context>
+<context>
+    <name>VideoTutorials</name>
+    <message>
+        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
+        <source>QCAD &amp;Video Tutorials</source>
+        <translation>QCAD &amp;Video Tutorials</translation>
     </message>
 </context>
 <context>

@@ -839,7 +839,7 @@ aby se změny předvoleb projevily.</translation>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+66"/>
         <source>Choose base line or base arc</source>
         <translation>Vyberte základní čáru nebo oblouk</translation>
     </message>
@@ -4090,7 +4090,7 @@ již v seznamu je.</translation>
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+78"/>
         <source>First vertex</source>
         <translation>První vrchol</translation>
     </message>
@@ -4100,7 +4100,7 @@ již v seznamu je.</translation>
         <translation>Následující vrchol</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+414"/>
         <source>close</source>
         <translation>uzavřít</translation>
     </message>
@@ -10002,7 +10002,7 @@ již v seznamu je.</translation>
         <translation>Dokončit</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation type="unfinished">Nastavení stránky</translation>
@@ -10199,7 +10199,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">Zobrazení rozšířených předvoleb stylů rozměrů</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+226"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10224,7 +10224,7 @@ již v seznamu je.</translation>
         <translation>Vlastní</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+204"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -10254,7 +10254,7 @@ již v seznamu je.</translation>
         <translation>Zobrazit všechny vlastnosti</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+140"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -10274,7 +10274,7 @@ již v seznamu je.</translation>
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+411"/>
+        <location line="+430"/>
         <source>*VARIES*</source>
         <translation>*RŮZNÉ*</translation>
     </message>
@@ -13465,6 +13465,14 @@ již v seznamu je.</translation>
     </message>
 </context>
 <context>
+    <name>VideoTutorials</name>
+    <message>
+        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
+        <source>QCAD &amp;Video Tutorials</source>
+        <translation type="unfinished">Videonávody QCAD</translation>
+    </message>
+</context>
+<context>
     <name>View</name>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
@@ -14631,3 +14639,4 @@ již v seznamu je.</translation>
     </message>
 </context>
 </TS>
+

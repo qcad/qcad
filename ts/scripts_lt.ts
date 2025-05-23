@@ -839,7 +839,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+66"/>
         <source>Choose base line or base arc</source>
         <translation type="unfinished">Pasirinkite bazinę liniją arba bazinį lanką</translation>
     </message>
@@ -4089,7 +4089,7 @@ jau yra sąraše.</translation>
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+78"/>
         <source>First vertex</source>
         <translation type="unfinished">Pirmoji viršūnė</translation>
     </message>
@@ -4099,7 +4099,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Kita viršūnė</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+414"/>
         <source>close</source>
         <translation type="unfinished">uždaryti</translation>
     </message>
@@ -10001,7 +10001,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Atlikta</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation type="unfinished">Puslapio nustatymai</translation>
@@ -10148,7 +10148,7 @@ jau yra sąraše.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+226"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10173,7 +10173,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Pasirinktinis</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+204"/>
         <source>Index</source>
         <translation type="unfinished">Indeksas</translation>
     </message>
@@ -10203,7 +10203,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Rodyti visas savybes</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+140"/>
         <source>Auto</source>
         <translation type="unfinished">Automatinis</translation>
     </message>
@@ -10223,7 +10223,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Ne</translation>
     </message>
     <message>
-        <location line="+411"/>
+        <location line="+430"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIES*</translation>
     </message>
@@ -13464,6 +13464,14 @@ jau yra sąraše.</translation>
     </message>
 </context>
 <context>
+    <name>VideoTutorials</name>
+    <message>
+        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
+        <source>QCAD &amp;Video Tutorials</source>
+        <translation type="unfinished">&quot;QCAD&quot; vaizdo įrašų pamokos</translation>
+    </message>
+</context>
+<context>
     <name>View</name>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
@@ -14630,3 +14638,4 @@ jau yra sąraše.</translation>
     </message>
 </context>
 </TS>
+

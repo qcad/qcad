@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+450"/>
+        <location line="+451"/>
         <source>Plugin:</source>
         <translation>Bővítmény:</translation>
     </message>
     <message>
-        <location line="-425"/>
+        <location line="-426"/>
         <source>ID:</source>
         <translation>Azonosító:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Készítők</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+170"/>
         <source>Licenses</source>
         <translation>Licencek</translation>
     </message>
@@ -219,7 +219,7 @@
         <translation>Fordítások</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Sablonok</translation>
     </message>
@@ -412,12 +412,12 @@ indítsa újra a QCAD-et.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2637"/>
+        <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
         <translation>Érvénytelen sugár</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>Nincs megoldás</translation>
     </message>
@@ -839,7 +839,7 @@ indítsa újra a QCAD-et.</translation>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+66"/>
         <source>Choose base line or base arc</source>
         <translation>Válasszon alapvonalat vagy alapívet</translation>
     </message>
@@ -1178,12 +1178,12 @@ Szeretné helyreállítani?</translation>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+23"/>
         <source>Color</source>
-        <translation>Színek</translation>
+        <comment>Title of group box</comment>
+        <translation type="unfinished">Színek</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+6"/>
         <source>Monochrome</source>
         <translation>Monokróm</translation>
     </message>
@@ -1193,7 +1193,13 @@ Szeretné helyreállítani?</translation>
         <translation>Szürkeárnyalatos</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>Color</source>
+        <comment>Radio button choice</comment>
+        <translation type="unfinished">Színek</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Anti-aliasing</source>
         <translation>Élsimítás</translation>
     </message>
@@ -1234,7 +1240,7 @@ Szeretné helyreállítani?</translation>
 <context>
     <name>Block</name>
     <message>
-        <location filename="../scripts/Block/Block.js" line="+67"/>
+        <location filename="../scripts/Block/Block.js" line="+68"/>
         <source>Block Tools</source>
         <translation>Blokk eszközök</translation>
     </message>
@@ -1678,7 +1684,7 @@ Szeretné helyreállítani?</translation>
         <translation>Sugár:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Solution:</source>
         <translation>Megoldás:</translation>
     </message>
@@ -1832,7 +1838,7 @@ Szeretné helyreállítani?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+84"/>
+        <location line="+63"/>
         <source>No solution</source>
         <translation>Nincs megoldás</translation>
     </message>
@@ -3403,7 +3409,7 @@ már szerepel a listában.</translation>
         <translation>Következő csúcs</translation>
     </message>
     <message>
-        <location line="+532"/>
+        <location line="+525"/>
         <source>close</source>
         <translation>bezárás</translation>
     </message>
@@ -4080,7 +4086,7 @@ már szerepel a listában.</translation>
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+78"/>
         <source>First vertex</source>
         <translation>Első csúcs</translation>
     </message>
@@ -4090,7 +4096,7 @@ már szerepel a listában.</translation>
         <translation>Következő csúcs</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+414"/>
         <source>close</source>
         <translation>bezárás</translation>
     </message>
@@ -4433,7 +4439,6 @@ már szerepel a listában.</translation>
         <location filename="../scripts/Block/EditMainDrawing/EditMainDrawingInit.js" line="+2"/>
         <source>&amp;Return to Main Drawing</source>
         <translatorcomment>Szerepel a &quot;DefaultAction&quot; egy szövegében is!</translatorcomment>
-        <translation>&amp;Vissza a fő rajzhoz</translation>
     </message>
 </context>
 <context>
@@ -5163,7 +5168,7 @@ már szerepel a listában.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
-        <location line="+243"/>
+        <location line="+244"/>
         <source>%1 First Start</source>
         <translation>%1 első indítása</translation>
     </message>
@@ -5218,17 +5223,17 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1115"/>
         <source>Add Active SubLayer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aktív alréteg hozzáadása</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>FP added layer:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FP hozzáadott réteg:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Festi át a kiválasztást egy hengeres bélyegzőt utánozva</translation>
     </message>
 </context>
 <context>
@@ -5236,237 +5241,237 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Festő opciók</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Festők öntési lehetőségek</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flip festők</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Csoportos szereposztás</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cast on sub-layer</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Begin Apex</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Add Begin Apex hozzáadása</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add End Apex</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Add End Apex hozzáadása</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add Insertions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Beillesztések hozzáadása</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Festő készlet</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tükörfestők az alapvonal felett.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Csoportosítsa az összes öntvényt egy művelethez.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kezdje a nyitott formáknál egy kezdőcsúcs öntésével.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Végezze nyitott formáknál egy végcsúcs öntésével.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Adjunk hozzá betéteket a kettő között, pl. távtartókat, csomókat. (Nem valósult meg)</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Festők előnézete.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Válassza ki a festőkészletet.</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CurtainRope</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">OrthogonalBar</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SinusoidWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>3PhaseWaveGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3PhaseWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">TriangleWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SawtoothWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SqaureWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SteppedWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SqauredShape</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SqauredShapeFlexing</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>AllPainterDataTypes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">AllPainterDataTypes</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Insertion type</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Beillesztés típusa</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of insertion.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">A beillesztés előnézete.</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Válassza a Beillesztés vagy az Üres hely beírása lehetőséget. (Nem implementálva)</translation>
     </message>
     <message>
         <location line="+277"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verzió</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>FlexPainter Beta 0.42e © CVH 2020 </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FlexPainter Beta 0.42e © CVH 2020</translation>
     </message>
     <message>
         <location line="+272"/>
         <source>Document Units.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dokumentumegységek.</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Adja meg a festő szélességét. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Adja meg a fő festő lépésméretét. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Adja meg a főfestő hosszát. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tartsa arányosnak a festőket.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Válassza ki a Stepsize százalékos arányát.</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alkalmazza az f 1,00-0,90 skálázást a teljes űrlaphoz.</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Szöveges információ. (tartósan be van kapcsolva)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Törölték a festett alapegységek felett. (tartós ki)</translation>
     </message>
     <message>
         <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;lt</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Curtain Rope Knot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Függöny kötél csomó</translation>
     </message>
     <message>
         <location line="+543"/>
         <source>#Undefined#</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">#Undefined#</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Width : </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Szélesség :</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5476,57 +5481,57 @@ már szerepel a listában.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ismétlődő festő opciók</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Stepsize :</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lépésméret :</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Length :</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hosszúság :</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Closed Forms shifting % :</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zárt formák eltolódása % :</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nyitott űrlapok méretezési lehetőségei</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dynamically scale to fit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dinamikusan méretezhető</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Igazodjon a begin</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Centered</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Középre igazított</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Igazodjon a véghez</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5534,7 +5539,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
         <source>&amp;FlexPainter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -5599,12 +5604,12 @@ már szerepel a listában.</translation>
     <message>
         <location line="+6"/>
         <source>Cube size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kocka méret:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Döntetlen ragasztó öl</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
@@ -7754,7 +7759,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+1"/>
         <source>Planometric</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Planometrikus</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7765,7 +7770,7 @@ már szerepel a listában.</translation>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Szekrény</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8023,7 +8028,7 @@ már szerepel a listában.</translation>
         <translation>réteg</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+153"/>
         <source>Leading or trailing spaces.</source>
         <translation>Szóközök az elején vagy a végén.</translation>
     </message>
@@ -9965,7 +9970,7 @@ már szerepel a listában.</translation>
         <translation>A papírméret egyéni értékre van állítva (%1 x %2 mm). Kívánja átállítani a nyomtató alapértelmezett papírméretére (%3)?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+40"/>
         <source>Auto fit</source>
         <translation>Automatikus illesztés</translation>
     </message>
@@ -9975,7 +9980,7 @@ már szerepel a listában.</translation>
         <translation>A rajz automatikus illesztése a papírhoz?</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+211"/>
         <source>Drag to move paper</source>
         <translation>Húzza a papír mozgatásához</translation>
     </message>
@@ -9985,7 +9990,7 @@ már szerepel a listában.</translation>
         <translation>Kész</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>Oldalbeállítások</translation>
@@ -10132,7 +10137,7 @@ már szerepel a listában.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+226"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10157,7 +10162,7 @@ már szerepel a listában.</translation>
         <translation>Egyéni</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+204"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -10187,7 +10192,7 @@ már szerepel a listában.</translation>
         <translation>Minden tulajdonság megjelenítése</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+140"/>
         <source>Auto</source>
         <translation>Automatikus</translation>
     </message>
@@ -10207,7 +10212,7 @@ már szerepel a listában.</translation>
         <translation>Nem</translation>
     </message>
     <message>
-        <location line="+411"/>
+        <location line="+430"/>
         <source>*VARIES*</source>
         <translation>*KÜLÖNBÖZŐ*</translation>
     </message>
@@ -11406,7 +11411,7 @@ már szerepel a listában.</translation>
         <translation>Nincs elem kijelölve.</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translation>%1 %2 a(z) &quot;%3&quot; rétegen</translation>
     </message>
@@ -11498,7 +11503,7 @@ már szerepel a listában.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Legalább két pont azonos.</translation>
@@ -12489,7 +12494,7 @@ már szerepel a listában.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
         <translation>Alapértelmezett érték:</translation>
     </message>
@@ -12713,7 +12718,7 @@ már szerepel a listában.</translation>
         <translation>Szimbólum beszúrása...</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+40"/>
         <source>Source</source>
         <translation>Forrás</translation>
     </message>
@@ -12738,7 +12743,7 @@ már szerepel a listában.</translation>
         <translation>Érték:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+39"/>
         <source>Text Geometry</source>
         <translation>Szöveg geometriája</translation>
     </message>
@@ -12768,7 +12773,7 @@ már szerepel a listában.</translation>
         <translation>Igazítás</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+41"/>
         <source>Top Left</source>
         <translation>Bal fent</translation>
     </message>
@@ -12826,16 +12831,6 @@ már szerepel a listában.</translation>
         <location line="+29"/>
         <source>Bottom Right</source>
         <translation>Jobb lent</translation>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>Cancel</source>
-        <translation>Mégse</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>OK</source>
-        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -13136,6 +13131,11 @@ már szerepel a listában.</translation>
         <source>Use Current Layer and Attributes</source>
         <translation>A jelenlegi réteg és tulajdonságok használata</translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Eszközbeállítások megjelenítése ablakban</translation>
+    </message>
 </context>
 <context>
     <name>TranslateRotateOptions</name>
@@ -13168,20 +13168,11 @@ már szerepel a listában.</translation>
         <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translatorcomment>&quot;(a)&quot; refers to the angle that indicated as angle &quot;a&quot; in the figure of the dialog</translatorcomment>
-        <translation>&amp;Szög (a):</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>A jelenlegi réteg és &amp;tulajdonságok használata</translation>
-    </message>
-</context>
-<context>
-    <name>TranslateiRotate</name>
-    <message>
-        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation>Eszközbeállítások megjelenítése ablakban</translation>
     </message>
 </context>
 <context>
@@ -13453,6 +13444,14 @@ már szerepel a listában.</translation>
         <location filename="../scripts/Layer/UnlockAllLayers/UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
         <translation>Minden réteg felol&amp;dása</translation>
+    </message>
+</context>
+<context>
+    <name>VideoTutorials</name>
+    <message>
+        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
+        <source>QCAD &amp;Video Tutorials</source>
+        <translation type="unfinished">QCAD videó oktatóanyagok</translation>
     </message>
 </context>
 <context>
@@ -14028,7 +14027,7 @@ már szerepel a listában.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1295"/>
+        <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
         <translation>Objektumok</translation>
     </message>
@@ -14401,7 +14400,6 @@ már szerepel a listában.</translation>
         <location line="+0"/>
         <source>Trace</source>
         <translatorcomment>A trace is a filled area with 3 or 4 corners.</translatorcomment>
-        <translation>Nyom</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14412,7 +14410,6 @@ már szerepel a listában.</translation>
         <location line="+0"/>
         <source>Face</source>
         <translatorcomment>A face is the same as Trace but can also be 3D.</translatorcomment>
-        <translation>Felület</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14470,12 +14467,14 @@ már szerepel a listában.</translation>
         <translation>Külső referencia</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <location line="+9"/>
         <source>Unknown Entities</source>
         <translation>Ismeretlen elemek</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-9"/>
+        <location line="+9"/>
         <source>Unknown Entity</source>
         <translation>Ismeretlen elem</translation>
     </message>
@@ -14622,3 +14621,4 @@ már szerepel a listában.</translation>
     </message>
 </context>
 </TS>
+

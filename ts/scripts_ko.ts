@@ -839,7 +839,7 @@ the preference changes to take effect.</source>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+66"/>
         <source>Choose base line or base arc</source>
         <translation type="unfinished">기준선 또는 기준 호 선택</translation>
     </message>
@@ -4086,7 +4086,7 @@ is already in the list.</source>
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+78"/>
         <source>First vertex</source>
         <translation type="unfinished">첫 번째 버텍스</translation>
     </message>
@@ -4096,7 +4096,7 @@ is already in the list.</source>
         <translation type="unfinished">다음 버텍스</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+414"/>
         <source>close</source>
         <translation type="unfinished">닫기</translation>
     </message>
@@ -9990,7 +9990,7 @@ is already in the list.</source>
         <translation type="unfinished">완료</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation type="unfinished">페이지 설정</translation>
@@ -10187,7 +10187,7 @@ is already in the list.</source>
         <translation type="unfinished">표시되는 프로퍼티 값의 소수점/정밀도입니다:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+226"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10212,7 +10212,7 @@ is already in the list.</source>
         <translation type="unfinished">사용자 지정</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+204"/>
         <source>Index</source>
         <translation type="unfinished">색인</translation>
     </message>
@@ -10242,7 +10242,7 @@ is already in the list.</source>
         <translation type="unfinished">모든 속성 표시</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+140"/>
         <source>Auto</source>
         <translation type="unfinished">자동</translation>
     </message>
@@ -10262,7 +10262,7 @@ is already in the list.</source>
         <translation type="unfinished">아니요</translation>
     </message>
     <message>
-        <location line="+411"/>
+        <location line="+430"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*다양한*</translation>
     </message>
@@ -13447,6 +13447,14 @@ is already in the list.</source>
     </message>
 </context>
 <context>
+    <name>VideoTutorials</name>
+    <message>
+        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
+        <source>QCAD &amp;Video Tutorials</source>
+        <translation type="unfinished">QCAD 비디오 자습서</translation>
+    </message>
+</context>
+<context>
     <name>View</name>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
@@ -14613,3 +14621,4 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+

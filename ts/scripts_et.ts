@@ -293,7 +293,6 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -838,7 +837,7 @@ the preference changes to take effect.</source>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+66"/>
         <source>Choose base line or base arc</source>
         <translation type="unfinished">Valige baasjoon või baaskaar</translation>
     </message>
@@ -918,7 +917,6 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -3223,7 +3221,6 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4083,7 +4080,7 @@ is already in the list.</source>
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+78"/>
         <source>First vertex</source>
         <translation type="unfinished">Esimene tipp</translation>
     </message>
@@ -4093,7 +4090,7 @@ is already in the list.</source>
         <translation type="unfinished">Järgmine tipp</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+414"/>
         <source>close</source>
         <translation type="unfinished">sulge</translation>
     </message>
@@ -9991,7 +9988,7 @@ is already in the list.</source>
         <translation type="unfinished">Valmis</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation type="unfinished">Lehekülje seaded</translation>
@@ -10188,7 +10185,7 @@ is already in the list.</source>
         <translation type="unfinished">Kuvatud omaduste väärtuste kümnendmärgid / täpsus:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+226"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10213,7 +10210,7 @@ is already in the list.</source>
         <translation type="unfinished">Kohandatud</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+204"/>
         <source>Index</source>
         <translation type="unfinished">Indeks</translation>
     </message>
@@ -10243,7 +10240,7 @@ is already in the list.</source>
         <translation type="unfinished">Näita kõiki omadusi</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+140"/>
         <source>Auto</source>
         <translation type="unfinished">Auto</translation>
     </message>
@@ -10263,7 +10260,7 @@ is already in the list.</source>
         <translation type="unfinished">Ei</translation>
     </message>
     <message>
-        <location line="+411"/>
+        <location line="+430"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIES*</translation>
     </message>
@@ -11454,7 +11451,6 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12682,7 +12678,6 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -13446,6 +13441,14 @@ is already in the list.</source>
         <location filename="../scripts/Layer/UnlockAllLayers/UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
         <translation type="unfinished">Ava kõik kihid</translation>
+    </message>
+</context>
+<context>
+    <name>VideoTutorials</name>
+    <message>
+        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
+        <source>QCAD &amp;Video Tutorials</source>
+        <translation type="unfinished">QCADi videoõpikud</translation>
     </message>
 </context>
 <context>
@@ -14615,3 +14618,4 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+
