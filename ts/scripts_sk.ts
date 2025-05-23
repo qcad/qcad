@@ -13467,14 +13467,6 @@ už existuje v zozname.</translation>
     </message>
 </context>
 <context>
-    <name>VideoTutorials</name>
-    <message>
-        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
-        <source>QCAD &amp;Video Tutorials</source>
-        <translation type="unfinished">Videonávody QCAD</translation>
-    </message>
-</context>
-<context>
     <name>View</name>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
@@ -14641,4 +14633,3 @@ už existuje v zozname.</translation>
     </message>
 </context>
 </TS>
-

@@ -13455,14 +13455,6 @@ is already in the list.</source>
     </message>
 </context>
 <context>
-    <name>VideoTutorials</name>
-    <message>
-        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
-        <source>QCAD &amp;Video Tutorials</source>
-        <translation type="unfinished">Видео уроци за QCAD</translation>
-    </message>
-</context>
-<context>
     <name>View</name>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
@@ -14629,4 +14621,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-
