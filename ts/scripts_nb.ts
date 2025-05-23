@@ -839,7 +839,7 @@ preferanseendringene skal tre i kraft.</translation>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+66"/>
         <source>Choose base line or base arc</source>
         <translation type="unfinished">Velg grunnlinje eller grunnbue</translation>
     </message>
@@ -4089,7 +4089,7 @@ er allerede i listen.</translation>
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+78"/>
         <source>First vertex</source>
         <translation type="unfinished">Første toppunkt</translation>
     </message>
@@ -4099,7 +4099,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Neste toppunkt</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+414"/>
         <source>close</source>
         <translation type="unfinished">nær</translation>
     </message>
@@ -9997,7 +9997,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Ferdig</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation type="unfinished">Sideinnstillinger</translation>
@@ -10194,7 +10194,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Desimaler / presisjon for viste eiendomsverdier:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+226"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10219,7 +10219,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Tilpasset</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+204"/>
         <source>Index</source>
         <translation type="unfinished">Indeks</translation>
     </message>
@@ -10249,7 +10249,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Vis alle eiendommer</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+140"/>
         <source>Auto</source>
         <translation type="unfinished">Auto</translation>
     </message>
@@ -10269,7 +10269,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Nei</translation>
     </message>
     <message>
-        <location line="+411"/>
+        <location line="+430"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIERER*</translation>
     </message>
@@ -13457,6 +13457,14 @@ er allerede i listen.</translation>
     </message>
 </context>
 <context>
+    <name>VideoTutorials</name>
+    <message>
+        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
+        <source>QCAD &amp;Video Tutorials</source>
+        <translation type="unfinished">QCAD-videoveiledninger</translation>
+    </message>
+</context>
+<context>
     <name>View</name>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
@@ -14623,3 +14631,4 @@ er allerede i listen.</translation>
     </message>
 </context>
 </TS>
+

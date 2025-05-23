@@ -839,7 +839,7 @@ da bodo spremembe začele delovat.</translation>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+66"/>
         <source>Choose base line or base arc</source>
         <translation>Izberi nosilno črto ali nosilni lok</translation>
     </message>
@@ -4091,7 +4091,7 @@ je že na seznamu.</translation>
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+78"/>
         <source>First vertex</source>
         <translation>Prvi lom</translation>
     </message>
@@ -4101,7 +4101,7 @@ je že na seznamu.</translation>
         <translation>Naslednji lom</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+414"/>
         <source>close</source>
         <translation>zapri</translation>
     </message>
@@ -10007,7 +10007,7 @@ je že na seznamu.</translation>
         <translation>Končano</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation type="unfinished">Nastavitve strani</translation>
@@ -10154,12 +10154,12 @@ je že na seznamu.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1684"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1715"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1458"/>
+        <location line="-1483"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10184,7 +10184,7 @@ je že na seznamu.</translation>
         <translation>Dodatno</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+204"/>
         <source>Index</source>
         <translation>Indeks</translation>
     </message>
@@ -10214,12 +10214,12 @@ je že na seznamu.</translation>
         <translation>Prikaži vse lasnosti</translation>
     </message>
     <message>
-        <location line="+794"/>
+        <location line="+818"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
     <message>
-        <location line="-659"/>
+        <location line="-678"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
@@ -10239,7 +10239,7 @@ je že na seznamu.</translation>
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+433"/>
         <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
@@ -13473,6 +13473,14 @@ je že na seznamu.</translation>
     </message>
 </context>
 <context>
+    <name>VideoTutorials</name>
+    <message>
+        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
+        <source>QCAD &amp;Video Tutorials</source>
+        <translation type="unfinished">QCAD Video vaje</translation>
+    </message>
+</context>
+<context>
     <name>View</name>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
@@ -14639,3 +14647,4 @@ je že na seznamu.</translation>
     </message>
 </context>
 </TS>
+

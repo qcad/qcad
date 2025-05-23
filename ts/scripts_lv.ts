@@ -839,7 +839,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+66"/>
         <source>Choose base line or base arc</source>
         <translation type="unfinished">Izvēlieties bāzes līniju vai bāzes loku</translation>
     </message>
@@ -4089,7 +4089,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+78"/>
         <source>First vertex</source>
         <translation type="unfinished">Pirmā virsotne</translation>
     </message>
@@ -4099,7 +4099,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Nākamā virsotne</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+414"/>
         <source>close</source>
         <translation type="unfinished">aizvērt</translation>
     </message>
@@ -10001,7 +10001,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Paveikts</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation type="unfinished">Lapas iestatījumi</translation>
@@ -10198,7 +10198,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Attēloto īpašību vērtību decimāldaļas / precizitāte:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+226"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10223,7 +10223,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Pielāgots</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+204"/>
         <source>Index</source>
         <translation type="unfinished">Indekss</translation>
     </message>
@@ -10253,7 +10253,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Rādīt visas īpašības</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+140"/>
         <source>Auto</source>
         <translation type="unfinished">Auto</translation>
     </message>
@@ -10273,7 +10273,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Nē</translation>
     </message>
     <message>
-        <location line="+411"/>
+        <location line="+430"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIES*</translation>
     </message>
@@ -13464,6 +13464,14 @@ jau ir sarakstā.</translation>
     </message>
 </context>
 <context>
+    <name>VideoTutorials</name>
+    <message>
+        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
+        <source>QCAD &amp;Video Tutorials</source>
+        <translation type="unfinished">QCAD video pamācības</translation>
+    </message>
+</context>
+<context>
     <name>View</name>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
@@ -14630,3 +14638,4 @@ jau ir sarakstā.</translation>
     </message>
 </context>
 </TS>
+

@@ -839,7 +839,7 @@ pour appliquer les modifications.</translation>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+66"/>
         <source>Choose base line or base arc</source>
         <translation>Choisissez une ligne de base ou un arc de base</translation>
     </message>
@@ -1167,7 +1167,7 @@ Voulez-vous le récupérer ?</translation>
         <location line="+10"/>
         <source>Color</source>
         <comment>Title of group box</comment>
-        <translation type="unfinished">Couleur</translation>
+        <translation>Couleur</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1183,7 +1183,7 @@ Voulez-vous le récupérer ?</translation>
         <location line="+7"/>
         <source>Color</source>
         <comment>Radio button choice</comment>
-        <translation type="unfinished">Couleur</translation>
+        <translation>Couleur</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -4089,12 +4089,12 @@ est déjà dans la liste.</translation>
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+80"/>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+88"/>
         <source>Next vertex</source>
         <translation>Vertex suivant</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+414"/>
         <source>close</source>
         <translation>fermer</translation>
     </message>
@@ -4114,7 +4114,7 @@ est déjà dans la liste.</translation>
         <translation>arc</translation>
     </message>
     <message>
-        <location line="-452"/>
+        <location line="-442"/>
         <source>First vertex</source>
         <translation>Premier vertex</translation>
     </message>
@@ -9997,7 +9997,7 @@ est déjà dans la liste.</translation>
         <translation>Terminer</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>Propriétés de la page</translation>
@@ -10144,12 +10144,12 @@ est déjà dans la liste.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+473"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+479"/>
         <source>Custom</source>
         <translation>Personnalisé</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+204"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -10174,7 +10174,7 @@ est déjà dans la liste.</translation>
         <translation>Afficher toutes les propriétés</translation>
     </message>
     <message>
-        <location line="+794"/>
+        <location line="+818"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10184,7 +10184,7 @@ est déjà dans la liste.</translation>
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1458"/>
+        <location line="-1483"/>
         <source>:</source>
         <translation> :</translation>
     </message>
@@ -10204,12 +10204,12 @@ est déjà dans la liste.</translation>
         <translation>Entités dépendantes</translation>
     </message>
     <message>
-        <location line="+368"/>
+        <location line="+369"/>
         <source>All</source>
         <translation>Tous</translation>
     </message>
     <message>
-        <location line="+205"/>
+        <location line="+210"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -10229,7 +10229,7 @@ est déjà dans la liste.</translation>
         <translation>Non</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+433"/>
         <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
@@ -13457,6 +13457,14 @@ est déjà dans la liste.</translation>
     </message>
 </context>
 <context>
+    <name>VideoTutorials</name>
+    <message>
+        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
+        <source>QCAD &amp;Video Tutorials</source>
+        <translation>Tutoriels &amp;vidéo QCAD</translation>
+    </message>
+</context>
+<context>
     <name>View</name>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
@@ -14623,3 +14631,4 @@ est déjà dans la liste.</translation>
     </message>
 </context>
 </TS>
+

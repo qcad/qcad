@@ -839,7 +839,7 @@ the preference changes to take effect.</source>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+66"/>
         <source>Choose base line or base arc</source>
         <translation>Выбрать базовую линию или базовую дугу</translation>
     </message>
@@ -4092,7 +4092,7 @@ is already in the list.</source>
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+78"/>
         <source>First vertex</source>
         <translation>Первая вершина</translation>
     </message>
@@ -4102,7 +4102,7 @@ is already in the list.</source>
         <translation>Следующая вершина</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+414"/>
         <source>close</source>
         <translation>закрыть</translation>
     </message>
@@ -10004,7 +10004,7 @@ is already in the list.</source>
         <translation>Завершено</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation type="unfinished">Настройки страницы</translation>
@@ -10151,12 +10151,12 @@ is already in the list.</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1684"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1715"/>
         <source>*VARIES*</source>
         <translation>*ВАРЬИРОВАНИЕ*</translation>
     </message>
     <message>
-        <location line="-1458"/>
+        <location line="-1483"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10181,7 +10181,7 @@ is already in the list.</source>
         <translation>Пользовательский</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+204"/>
         <source>Index</source>
         <translation>Индекс</translation>
     </message>
@@ -10211,7 +10211,7 @@ is already in the list.</source>
         <translation>Показать все свойства</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+140"/>
         <source>Auto</source>
         <translation>Автоматический</translation>
     </message>
@@ -10231,7 +10231,7 @@ is already in the list.</source>
         <translation>Нет</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+433"/>
         <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
@@ -13467,6 +13467,14 @@ is already in the list.</source>
     </message>
 </context>
 <context>
+    <name>VideoTutorials</name>
+    <message>
+        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
+        <source>QCAD &amp;Video Tutorials</source>
+        <translation type="unfinished">Видеоуроки по QCAD</translation>
+    </message>
+</context>
+<context>
     <name>View</name>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
@@ -14633,3 +14641,4 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+

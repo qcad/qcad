@@ -839,7 +839,7 @@ agar perubahan preferensi dapat diterapkan.</translation>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+66"/>
         <source>Choose base line or base arc</source>
         <translation type="unfinished">Pilih garis dasar atau busur dasar</translation>
     </message>
@@ -4086,7 +4086,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+78"/>
         <source>First vertex</source>
         <translation type="unfinished">Simpul pertama</translation>
     </message>
@@ -4096,7 +4096,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Simpul berikutnya</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+414"/>
         <source>close</source>
         <translation type="unfinished">tutup</translation>
     </message>
@@ -9990,7 +9990,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Selesai</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation type="unfinished">Pengaturan Halaman</translation>
@@ -10187,7 +10187,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Desimal/presisi untuk nilai properti yang ditampilkan:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+226"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10212,7 +10212,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Kustom</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+204"/>
         <source>Index</source>
         <translation type="unfinished">Indeks</translation>
     </message>
@@ -10242,7 +10242,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Tampilkan semua properti</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+140"/>
         <source>Auto</source>
         <translation type="unfinished">Otomatis</translation>
     </message>
@@ -10262,7 +10262,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Tidak</translation>
     </message>
     <message>
-        <location line="+411"/>
+        <location line="+430"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIASI*</translation>
     </message>
@@ -13447,6 +13447,14 @@ sudah ada dalam daftar.</translation>
     </message>
 </context>
 <context>
+    <name>VideoTutorials</name>
+    <message>
+        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
+        <source>QCAD &amp;Video Tutorials</source>
+        <translation type="unfinished">Tutorial Video QCAD</translation>
+    </message>
+</context>
+<context>
     <name>View</name>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
@@ -14613,3 +14621,4 @@ sudah ada dalam daftar.</translation>
     </message>
 </context>
 </TS>
+

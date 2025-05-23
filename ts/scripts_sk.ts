@@ -839,7 +839,7 @@ musíte znovu spustiť QCAD.</translation>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+66"/>
         <source>Choose base line or base arc</source>
         <translation>Vyberte základnú čiaru alebo základný oblúk</translation>
     </message>
@@ -4092,7 +4092,7 @@ už existuje v zozname.</translation>
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+78"/>
         <source>First vertex</source>
         <translation>Prvý bod</translation>
     </message>
@@ -4102,7 +4102,7 @@ už existuje v zozname.</translation>
         <translation>Ďalší bod</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+414"/>
         <source>close</source>
         <translation>zavrieť</translation>
     </message>
@@ -10004,7 +10004,7 @@ už existuje v zozname.</translation>
         <translation>Hotovo</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation type="unfinished">Nastavenia stránky</translation>
@@ -10201,12 +10201,12 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Zobrazenie rozšíreného štýlu dimenzie</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1684"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1715"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1458"/>
+        <location line="-1483"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10231,7 +10231,7 @@ už existuje v zozname.</translation>
         <translation>Vlastné</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+204"/>
         <source>Index</source>
         <translation>Zoznam</translation>
     </message>
@@ -10261,7 +10261,7 @@ už existuje v zozname.</translation>
         <translation>Zobraziť všetky vlastnosti</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+140"/>
         <source>Auto</source>
         <translation>automatický</translation>
     </message>
@@ -10281,7 +10281,7 @@ už existuje v zozname.</translation>
         <translation>Nie</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+433"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>
@@ -13467,6 +13467,14 @@ už existuje v zozname.</translation>
     </message>
 </context>
 <context>
+    <name>VideoTutorials</name>
+    <message>
+        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
+        <source>QCAD &amp;Video Tutorials</source>
+        <translation type="unfinished">Videonávody QCAD</translation>
+    </message>
+</context>
+<context>
     <name>View</name>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
@@ -14633,3 +14641,4 @@ už existuje v zozname.</translation>
     </message>
 </context>
 </TS>
+

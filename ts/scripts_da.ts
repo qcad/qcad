@@ -839,7 +839,7 @@ the preference changes to take effect.</source>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+66"/>
         <source>Choose base line or base arc</source>
         <translation>Vælg grundlinje eller grundbue</translation>
     </message>
@@ -1177,7 +1177,7 @@ Do you wish to recover it?</source>
         <location line="+10"/>
         <source>Color</source>
         <comment>Title of group box</comment>
-        <translation type="unfinished">Farve</translation>
+        <translation>Farve</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1193,7 +1193,7 @@ Do you wish to recover it?</source>
         <location line="+7"/>
         <source>Color</source>
         <comment>Radio button choice</comment>
-        <translation type="unfinished">Farve</translation>
+        <translation>Farve</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -4089,7 +4089,7 @@ er allerede på listen.</translation>
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+78"/>
         <source>First vertex</source>
         <translation>Første toppunkt</translation>
     </message>
@@ -4099,7 +4099,7 @@ er allerede på listen.</translation>
         <translation>Næste toppunkt</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+414"/>
         <source>close</source>
         <translation>luk</translation>
     </message>
@@ -9997,7 +9997,7 @@ er allerede på listen.</translation>
         <translation>Udført</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>Sideindstillinger</translation>
@@ -10194,7 +10194,7 @@ er allerede på listen.</translation>
         <translation>Vis avancerede dimensionsstilsoverstyringer</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+226"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10219,7 +10219,7 @@ er allerede på listen.</translation>
         <translation>Tilpasset</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+204"/>
         <source>Index</source>
         <translation>Indeks</translation>
     </message>
@@ -10249,7 +10249,7 @@ er allerede på listen.</translation>
         <translation>Vis alle egenskaber</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+140"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -10269,7 +10269,7 @@ er allerede på listen.</translation>
         <translation>Nej</translation>
     </message>
     <message>
-        <location line="+411"/>
+        <location line="+430"/>
         <source>*VARIES*</source>
         <translation>*VARIERER*</translation>
     </message>
@@ -13454,6 +13454,14 @@ er allerede på listen.</translation>
         <location filename="../scripts/Layer/UnlockAllLayers/UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
         <translation>&amp;Lås alle lag op</translation>
+    </message>
+</context>
+<context>
+    <name>VideoTutorials</name>
+    <message>
+        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
+        <source>QCAD &amp;Video Tutorials</source>
+        <translation>QCAD-videovejledninger</translation>
     </message>
 </context>
 <context>

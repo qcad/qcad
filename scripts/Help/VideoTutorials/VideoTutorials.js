@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2018 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2025 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -19,15 +19,14 @@
 
 include("scripts/Help/Help.js");
 
-function ReportBug(guiAction) {
+function VideoTutorials(guiAction) {
     Help.call(this, guiAction);
 }
 
-ReportBug.prototype = new Help();
+VideoTutorials.prototype = new Help();
 
-ReportBug.prototype.beginEvent = function() {
+VideoTutorials.prototype.beginEvent = function() {
     Help.prototype.beginEvent.call(this);
-
-    Help.openUrl("https://qcad.org/bugreport");
+    Help.openUrl("https://qcad.org/videotutorials");
 };
 

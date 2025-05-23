@@ -13,10 +13,10 @@
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+157"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+153"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+152"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="+82"/>
+        <location filename="../src/entity/REllipseEntity.cpp" line="+81"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
@@ -26,15 +26,15 @@
         <location line="-2"/>
         <location line="+3"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
-        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+165"/>
+        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+164"/>
         <location line="+12"/>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-2"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+155"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+154"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+157"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+156"/>
         <location line="+4"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+117"/>
@@ -42,31 +42,31 @@
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+118"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+121"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-2"/>
         <location line="+3"/>
         <location line="+10"/>
         <location line="+3"/>
-        <location filename="../src/entity/RFaceEntity.cpp" line="+76"/>
+        <location filename="../src/entity/RFaceEntity.cpp" line="+75"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+101"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+97"/>
         <location line="+3"/>
-        <location filename="../src/entity/RImageEntity.cpp" line="+94"/>
+        <location filename="../src/entity/RImageEntity.cpp" line="+84"/>
         <location line="+4"/>
         <location line="+3"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="+85"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="+87"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="+90"/>
+        <location filename="../src/entity/RLineEntity.cpp" line="+88"/>
         <location line="+3"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+72"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+109"/>
-        <location filename="../src/entity/RRayEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+108"/>
+        <location filename="../src/entity/RRayEntity.cpp" line="+78"/>
         <location line="+3"/>
         <location line="+4"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="+76"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="+75"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -74,14 +74,14 @@
         <location line="+3"/>
         <location line="+10"/>
         <location line="+4"/>
-        <location filename="../src/entity/RToleranceEntity.cpp" line="+80"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="+82"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTraceEntity.cpp" line="+76"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="+75"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RWipeoutEntity.cpp" line="+84"/>
-        <location filename="../src/entity/RXLineEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RWipeoutEntity.cpp" line="+82"/>
+        <location filename="../src/entity/RXLineEntity.cpp" line="+78"/>
         <location line="+3"/>
         <location line="+4"/>
         <source>X</source>
@@ -282,7 +282,6 @@
         <location line="+1"/>
         <source>Sweep Angle</source>
         <translatorcomment>A megrajzolt ív hossza</translatorcomment>
-        <translation>Átfogott szög</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -301,23 +300,20 @@
         <translation>Teljes terület</translation>
     </message>
     <message>
-        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+96"/>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+95"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+101"/>
         <source>Tag</source>
         <translatorcomment>The ID of a block attribute, for example &quot;author_name&quot;.</translatorcomment>
-        <translation>Címke</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Prompt</source>
         <translatorcomment>The label of a block attribute, what the user sees, for example &quot;Author name&quot;</translatorcomment>
-        <translation>Címkenév</translation>
     </message>
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
         <source>Circumference</source>
         <translatorcomment>Kör kerülete</translatorcomment>
-        <translation>Kerület</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-10"/>
@@ -346,7 +342,6 @@
         <location line="+1"/>
         <source>Line 1 Start</source>
         <translatorcomment>Szög méretvonalának darabja</translatorcomment>
-        <translation>1. vonal eleje</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
@@ -413,7 +408,6 @@
         <location line="+1"/>
         <source>Defining Point</source>
         <translatorcomment>Ennek a pontnak írja ki az ordináta &quot;méretvonal&quot; az egyik koordinátájtát (abszcisszát(X) vagy ordinátát(Y))</translatorcomment>
-        <translation>Meghatározott pont</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -423,7 +417,7 @@
         <translation>Mutató vonal végpontja</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+173"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
         <source>Dimension Angle</source>
         <translation>Méretvonal szöge</translation>
     </message>
@@ -454,7 +448,6 @@
         <location line="+1"/>
         <source>Definition Point</source>
         <translatorcomment>An important point of a dimension, can be at different locations depending on the dimension type hence probably the vague name.</translatorcomment>
-        <translation>Meghatározó pont</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -559,7 +552,6 @@
         <location line="+1"/>
         <source>Winding</source>
         <translatorcomment>A fill mode in which double-filled areas are also filled, not empty.</translatorcomment>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -650,14 +642,12 @@
         <location line="+1"/>
         <source>U</source>
         <translatorcomment>A vector indicting the direction of the image bottom side (commonly called U vector).</translatorcomment>
-        <translation>U</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
         <translatorcomment>A vector indicting the direction of the image left side (commonly called V vector).</translatorcomment>
-        <translation>V</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -824,7 +814,6 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
         <source>Closed Periodic</source>
         <translatorcomment>Spline esetén a körbezártság</translatorcomment>
-        <translation>Körbezárt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -922,7 +911,7 @@
         <translation>Láthatatlan</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+191"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+190"/>
         <source>Arc Symbol Type</source>
         <translation>Ív szimbólum típusa</translation>
     </message>
@@ -959,3 +948,4 @@
     </message>
 </context>
 </TS>
+

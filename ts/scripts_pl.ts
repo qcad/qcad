@@ -839,7 +839,7 @@ aby wprowadzić zmiany preferencji.</translation>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+66"/>
         <source>Choose base line or base arc</source>
         <translation>Wybierz linię bazową lub łuk bazowy</translation>
     </message>
@@ -1164,7 +1164,7 @@ Czy chcesz go odzyskać?</translation>
         <location line="+10"/>
         <source>Color</source>
         <comment>Title of group box</comment>
-        <translation type="unfinished">Kolor</translation>
+        <translation>Kolor</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1180,7 +1180,7 @@ Czy chcesz go odzyskać?</translation>
         <location line="+7"/>
         <source>Color</source>
         <comment>Radio button choice</comment>
-        <translation type="unfinished">Kolor</translation>
+        <translation>Kolor</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -4092,7 +4092,7 @@ jest już na liście.</translation>
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+78"/>
         <source>First vertex</source>
         <translation>Pierwszy wierzchołek</translation>
     </message>
@@ -4102,7 +4102,7 @@ jest już na liście.</translation>
         <translation>Następny wierzchołek</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+414"/>
         <source>close</source>
         <translation>zamknij</translation>
     </message>
@@ -10004,7 +10004,7 @@ jest już na liście.</translation>
         <translation>Gotowe</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation>Ustawienia strony</translation>
@@ -10151,12 +10151,12 @@ jest już na liście.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1684"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1715"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1458"/>
+        <location line="-1483"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10181,7 +10181,7 @@ jest już na liście.</translation>
         <translation>Własna</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+204"/>
         <source>Index</source>
         <translation>Indeks</translation>
     </message>
@@ -10206,17 +10206,17 @@ jest już na liście.</translation>
         <translation>Pokaż wszystkie nieruchomości</translation>
     </message>
     <message>
-        <location line="+794"/>
+        <location line="+818"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
     <message>
-        <location line="-840"/>
+        <location line="-864"/>
         <source>Add custom property to selected objects</source>
         <translation>Dodaj dostosowaną właściwość do zaznaczonych obiektów</translation>
     </message>
     <message>
-        <location line="+181"/>
+        <location line="+186"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -10236,7 +10236,7 @@ jest już na liście.</translation>
         <translation>Nie</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+433"/>
         <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
@@ -13464,6 +13464,14 @@ jest już na liście.</translation>
         <location filename="../scripts/Layer/UnlockAllLayers/UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
         <translation>&amp;Odblokuj wszystkie warstwy</translation>
+    </message>
+</context>
+<context>
+    <name>VideoTutorials</name>
+    <message>
+        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
+        <source>QCAD &amp;Video Tutorials</source>
+        <translation>Samouczki wideo QCAD</translation>
     </message>
 </context>
 <context>

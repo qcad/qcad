@@ -839,7 +839,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+66"/>
         <source>Choose base line or base arc</source>
         <translation>Taban çizgisini veya taban yayını seçin</translation>
     </message>
@@ -4085,7 +4085,7 @@ zaten listede.</translation>
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+78"/>
         <source>First vertex</source>
         <translation type="unfinished">İlk tepe noktası</translation>
     </message>
@@ -4095,7 +4095,7 @@ zaten listede.</translation>
         <translation type="unfinished">Sonraki tepe</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+414"/>
         <source>close</source>
         <translation>kapat</translation>
     </message>
@@ -9989,7 +9989,7 @@ zaten listede.</translation>
         <translation>Bitti</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation type="unfinished">Sayfa Ayarları</translation>
@@ -10186,7 +10186,7 @@ zaten listede.</translation>
         <translation type="unfinished">Gelişmiş boyut stili geçersiz kılmalarını görüntüleme</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+226"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10211,7 +10211,7 @@ zaten listede.</translation>
         <translation type="unfinished">Özel</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+204"/>
         <source>Index</source>
         <translation type="unfinished">Dizin</translation>
     </message>
@@ -10241,7 +10241,7 @@ zaten listede.</translation>
         <translation type="unfinished">Tüm özellikleri göster</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+140"/>
         <source>Auto</source>
         <translation>Oto</translation>
     </message>
@@ -10261,7 +10261,7 @@ zaten listede.</translation>
         <translation>Hayır</translation>
     </message>
     <message>
-        <location line="+411"/>
+        <location line="+430"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*DEĞİŞKENLER*</translation>
     </message>
@@ -13446,6 +13446,14 @@ zaten listede.</translation>
     </message>
 </context>
 <context>
+    <name>VideoTutorials</name>
+    <message>
+        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
+        <source>QCAD &amp;Video Tutorials</source>
+        <translation type="unfinished">QCAD Video Eğitimleri</translation>
+    </message>
+</context>
+<context>
     <name>View</name>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
@@ -14612,3 +14620,4 @@ zaten listede.</translation>
     </message>
 </context>
 </TS>
+

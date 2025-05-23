@@ -839,7 +839,7 @@ QCADを再起動してください。</translation>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+66"/>
         <source>Choose base line or base arc</source>
         <translation>ベースとなる線分または弧を選択してください</translation>
     </message>
@@ -4086,7 +4086,7 @@ is already in the list.</source>
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+78"/>
         <source>First vertex</source>
         <translation>最初の頂点</translation>
     </message>
@@ -4096,7 +4096,7 @@ is already in the list.</source>
         <translation>次の頂点</translation>
     </message>
     <message>
-        <location line="+424"/>
+        <location line="+414"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -9990,7 +9990,7 @@ is already in the list.</source>
         <translation>完了</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
         <translation type="unfinished">ページ設定</translation>
@@ -10137,12 +10137,12 @@ is already in the list.</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1684"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1715"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1458"/>
+        <location line="-1483"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10167,7 +10167,7 @@ is already in the list.</source>
         <translation>カスタム</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+204"/>
         <source>Index</source>
         <translation>目次</translation>
     </message>
@@ -10192,17 +10192,17 @@ is already in the list.</source>
         <translation type="unfinished">すべての物件を表示する</translation>
     </message>
     <message>
-        <location line="+794"/>
+        <location line="+818"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
     <message>
-        <location line="-840"/>
+        <location line="-864"/>
         <source>Add custom property to selected objects</source>
         <translation>選択したオブジェクトにカスタムプロパティを追加</translation>
     </message>
     <message>
-        <location line="+181"/>
+        <location line="+186"/>
         <source>Auto</source>
         <translation>自動</translation>
     </message>
@@ -10222,7 +10222,7 @@ is already in the list.</source>
         <translation>いいえ</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+433"/>
         <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
@@ -13447,6 +13447,14 @@ is already in the list.</source>
     </message>
 </context>
 <context>
+    <name>VideoTutorials</name>
+    <message>
+        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
+        <source>QCAD &amp;Video Tutorials</source>
+        <translation type="unfinished">QCADビデオチュートリアル</translation>
+    </message>
+</context>
+<context>
     <name>View</name>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
@@ -14613,3 +14621,4 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+
