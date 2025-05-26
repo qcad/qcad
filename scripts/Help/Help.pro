@@ -9,5 +9,4 @@ SUBDIRS = \
     ReportBug \
     ReportTranslationError \
     ShowReadme \
-    VideoTutorials \
     Website

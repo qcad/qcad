@@ -13457,14 +13457,6 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 <context>
-    <name>VideoTutorials</name>
-    <message>
-        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
-        <source>QCAD &amp;Video Tutorials</source>
-        <translation>QCAD &amp;Video Tutorials</translation>
-    </message>
-</context>
-<context>
     <name>View</name>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>

@@ -13464,14 +13464,6 @@ jau yra sąraše.</translation>
     </message>
 </context>
 <context>
-    <name>VideoTutorials</name>
-    <message>
-        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
-        <source>QCAD &amp;Video Tutorials</source>
-        <translation type="unfinished">&quot;QCAD&quot; vaizdo įrašų pamokos</translation>
-    </message>
-</context>
-<context>
     <name>View</name>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
@@ -14638,4 +14630,3 @@ jau yra sąraše.</translation>
     </message>
 </context>
 </TS>
-

@@ -13457,14 +13457,6 @@ ya está en la lista.</translation>
     </message>
 </context>
 <context>
-    <name>VideoTutorials</name>
-    <message>
-        <location filename="../scripts/Help/VideoTutorials/VideoTutorialsInit.js" line="+2"/>
-        <source>QCAD &amp;Video Tutorials</source>
-        <translation>Tutoriales en &amp;vídeo de QCAD</translation>
-    </message>
-</context>
-<context>
     <name>View</name>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
@@ -14631,4 +14623,3 @@ ya está en la lista.</translation>
     </message>
 </context>
 </TS>
-

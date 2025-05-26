@@ -522,8 +522,6 @@ SOURCES = \
 ../scripts/Help/ReportTranslationError/ReportTranslationErrorInit.js \
 ../scripts/Help/ShowReadme/ShowReadme.js \
 ../scripts/Help/ShowReadme/ShowReadmeInit.js \
-../scripts/Help/VideoTutorials/VideoTutorials.js \
-../scripts/Help/VideoTutorials/VideoTutorialsInit.js \
 ../scripts/Help/Website/Website.js \
 ../scripts/Help/Website/WebsiteInit.js \
 ../scripts/ImportExport/SvgImporter/SvgImporter.js \
