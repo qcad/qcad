@@ -32,7 +32,11 @@
 #include <stdlib.h>
 #include <string>
 #include <sstream>
+#if __cplusplus >= 201103L
 #include <unordered_map>
+#else
+#include <map>
+#endif
 
 #include "dl_attributes.h"
 #include "dl_codes.h"
@@ -511,7 +515,11 @@ private:
     // Stores the group codes
     // Inserting entries into an unordered_map is faster, but lookup of entries is slower.
     // Since we are inserting entries more often than accessing them, using unordered_map increases performance.
+#if __cplusplus >= 201103L
     std::unordered_map<int, std::string> values;
+#else
+    std::map<int, std::string> values;
+#endif
     // First call of this method. We initialize all group values in
     //  the first call.
     bool firstCall;

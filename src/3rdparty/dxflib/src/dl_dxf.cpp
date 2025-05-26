@@ -796,7 +796,11 @@ void DL_Dxf::addDictionaryEntry(DL_CreationInterface* creationInterface) {
  */
 void DL_Dxf::addSetting(DL_CreationInterface* creationInterface) {
     int c = -1;
+#if __cplusplus >= 201103L
     std::unordered_map<int,std::string>::iterator it = values.begin();
+#else
+    std::map<int,std::string>::iterator it = values.begin();
+#endif
     if (it!=values.end()) {
         c = it->first;
     }
