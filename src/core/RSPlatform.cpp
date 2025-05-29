@@ -20,6 +20,7 @@
 #include <QFileInfo>
 #include <QHostInfo>
 #include <QProcess>
+#include <QRegularExpression>
 #include <QThread>
 #ifdef Q_OS_WIN
 #include <QSettings>
@@ -339,7 +340,7 @@ QString RS::getFontFamilyFromFileName(const QString& fileName) {
             if (value.compare(fileName, Qt::CaseInsensitive) == 0) {
                 // extract family name from the registry key (may contain style)
                 QString family = key;
-                family.remove(QRegExp("\\s*\\(.*\\)$")); // Remove things like (TrueType)
+                family.remove(QRegularExpression("\\s*\\(.*\\)$")); // Remove things like (TrueType)
                 return family.trimmed();
             }
         }
