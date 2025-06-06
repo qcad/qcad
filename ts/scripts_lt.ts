@@ -19,7 +19,7 @@
         <location line="+136"/>
         <location line="+11"/>
         <source>Internet:</source>
-        <translation type="unfinished">Internetas:</translation>
+        <translation>Internetas:</translation>
     </message>
     <message>
         <location line="-145"/>
