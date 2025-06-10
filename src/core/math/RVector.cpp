@@ -31,6 +31,7 @@
 const RVector RVector::invalid = RVector(0, 0, 0, false);
 const RVector RVector::nullVector = RVector(0, 0, 0, true);
 const RVector RVector::nanVector = RVector(RNANDOUBLE, RNANDOUBLE, RNANDOUBLE, true);
+const RVector RVector::zAxis = RVector(0, 0, 1, true);
 RVector RVector::RVectorDistanceSort::v;
 RVector RVector::RVectorAngleSort::center;
 double RVector::RVectorAngleSort::angle = 0.0;

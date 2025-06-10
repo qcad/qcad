@@ -55,6 +55,11 @@ public:
     static RPropertyTypeId PropertyPositionY;
     static RPropertyTypeId PropertyPositionZ;
 
+    static RPropertyTypeId PropertyThickness;
+    static RPropertyTypeId PropertyNormalX;
+    static RPropertyTypeId PropertyNormalY;
+    static RPropertyTypeId PropertyNormalZ;
+
 public:
     RPointEntity(RDocument* document, const RPointData& data);
     RPointEntity(const RPointEntity& other);
@@ -96,6 +101,20 @@ public:
 
     RVector getPosition() const {
         return data.getPosition();
+    }
+
+    void setThickness(double t) {
+        data.setThickness(t);
+    }
+    double getThickness() const {
+        return data.getThickness();
+    }
+
+    void setNormal(const RVector& dir) {
+        data.setNormal(dir);
+    }
+    RVector getNormal() const {
+        return data.getNormal();
     }
 
 protected:

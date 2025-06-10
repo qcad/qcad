@@ -38,6 +38,11 @@ RPropertyTypeId RPointEntity::PropertyPositionX;
 RPropertyTypeId RPointEntity::PropertyPositionY;
 RPropertyTypeId RPointEntity::PropertyPositionZ;
 
+RPropertyTypeId RPointEntity::PropertyThickness;
+RPropertyTypeId RPointEntity::PropertyNormalX;
+RPropertyTypeId RPointEntity::PropertyNormalY;
+RPropertyTypeId RPointEntity::PropertyNormalZ;
+
 
 RPointEntity::RPointEntity(RDocument* document, const RPointData& data) :
     REntity(document), data(document, data) {
@@ -72,14 +77,28 @@ void RPointEntity::init() {
     RPointEntity::PropertyPositionX.generateId(RPointEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
     RPointEntity::PropertyPositionY.generateId(RPointEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
     RPointEntity::PropertyPositionZ.generateId(RPointEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+
+    RPointEntity::PropertyThickness.generateId(RPointEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Thickness"));
+
+    RPointEntity::PropertyNormalX.generateId(RPointEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Normal"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RPointEntity::PropertyNormalY.generateId(RPointEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Normal"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RPointEntity::PropertyNormalZ.generateId(RPointEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Normal"), QT_TRANSLATE_NOOP("REntity", "Z"));
 }
 
 bool RPointEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction) {
     bool ret = REntity::setProperty(propertyTypeId, value, transaction);
+
     ret = ret || RObject::setMember(data.position.x, value, PropertyPositionX == propertyTypeId);
     ret = ret || RObject::setMember(data.position.y, value, PropertyPositionY == propertyTypeId);
     ret = ret || RObject::setMember(data.position.z, value, PropertyPositionZ == propertyTypeId);
+
+    ret = ret || RObject::setMember(data.thickness, value, PropertyThickness == propertyTypeId);
+
+    ret = ret || RObject::setMember(data.normal.x, value, PropertyNormalX == propertyTypeId);
+    ret = ret || RObject::setMember(data.normal.y, value, PropertyNormalY == propertyTypeId);
+    ret = ret || RObject::setMember(data.normal.z, value, PropertyNormalZ == propertyTypeId);
+
     return ret;
 }
 
@@ -92,6 +111,19 @@ QPair<QVariant, RPropertyAttributes> RPointEntity::getProperty(
     } else if (propertyTypeId == PropertyPositionZ) {
         return qMakePair(QVariant(data.position.z), RPropertyAttributes());
     }
+
+    else if (propertyTypeId == PropertyThickness) {
+        return qMakePair(QVariant(data.thickness), RPropertyAttributes());
+    }
+
+    else if (propertyTypeId == PropertyNormalX) {
+        return qMakePair(QVariant(data.normal.x), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyNormalY) {
+        return qMakePair(QVariant(data.normal.y), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyNormalZ) {
+        return qMakePair(QVariant(data.normal.z), RPropertyAttributes());
+    }
+
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 

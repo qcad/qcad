@@ -111,6 +111,8 @@ public:
      * \setter{setPosition}
      */
     RVector position;
+    double thickness;
+    RVector normal;
 };
 
 Q_DECLARE_METATYPE(RPoint)
