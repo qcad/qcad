@@ -243,7 +243,7 @@ target_link_libraries(qcadcore PUBLIC
     Qt::Xml
     Qt::Qml
     zlib
-    opennurbs
+    OpenNURBS
 )
 
 
