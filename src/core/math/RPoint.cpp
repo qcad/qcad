@@ -26,7 +26,8 @@
 /**
  * Creates a point object with an invalid position
  */
-RPoint::RPoint() {
+RPoint::RPoint() :
+    thickness(0.0), normal(RVector::zAxis) {
 }
 
 //RPoint::RPoint(const RPoint& other) : RShape() {
@@ -34,7 +35,7 @@ RPoint::RPoint() {
 //}
 
 RPoint::RPoint(double x, double y) :
-    position(x, y) {
+    position(x, y), thickness(0.0), normal(RVector::zAxis) {
 }
 
 /**
@@ -44,7 +45,7 @@ RPoint::RPoint(double x, double y) :
  *
  */
 RPoint::RPoint(const RVector& position) :
-    position(position) {
+    position(position), thickness(0.0), normal(RVector::zAxis) {
 }
 
 RPoint::~RPoint() {

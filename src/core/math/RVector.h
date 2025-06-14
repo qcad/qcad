@@ -343,6 +343,11 @@ public:
      * NaN vector
      */
     static const RVector nanVector;
+
+    /**
+     * Z axis vector (default extrusion direction)
+     */
+    static const RVector zAxis;
 };
 
 QCADCORE_EXPORT RVector operator*(double s, const RVector& v);
