@@ -268,7 +268,62 @@ DrawPolyline.prototype.updateData = function() {
 };
 
 DrawPolyline.prototype.createArcSegment = function(appendPoint, point, dir) {
-    return RArc.createTangential(appendPoint, point, dir, this.radius, this.sweep);
+    var arc = new RArc();
+
+    arc.radius = this.radius;
+
+    // orthogonal to base entity:
+    var ortho = new RVector();
+    ortho.setPolar(this.radius, dir + Math.PI/2.0);
+
+    // two possible center points for arc:
+    var center1 = appendPoint.operator_add(ortho);
+    var center2 = appendPoint.operator_subtract(ortho);
+    if (center1.getDistanceTo(point) < center2.getDistanceTo(point)) {
+        arc.setCenter(center1);
+    } else {
+        arc.setCenter(center2);
+    }
+
+    // angles:
+    arc.setStartAngle(arc.getCenter().getAngleTo(appendPoint));
+    arc.setEndAngle(arc.getCenter().getAngleTo(point));
+
+    // handle arc direction:
+    arc.setReversed(false);
+    var diff = RMath.getNormalizedAngle(arc.getDirection1() - dir);
+    if (Math.abs(diff-Math.PI) < 1.0e-1) {
+        arc.setReversed(true);
+    }
+
+    // handle sweep here
+    // change end angle
+    // if sweep equals zero then do nothing
+    if (this.sweep < 0.0 || this.sweep > 360.0) {
+        // print error message
+        this.sweep = 0.0;
+    }
+    if (this.sweep !== 0.0) {
+        var curSweep = arc.getSweep();
+        if (curSweep !== this.sweep) {
+            var startAngle = RMath.rad2deg(arc.getStartAngle());
+            var reversed = arc.isReversed();
+            if (reversed) {
+                var endAngle = startAngle - this.sweep;
+                if (endAngle < 0.0) {
+                    endAngle = endAngle + 360.0;
+                }
+            } else {
+                endAngle = startAngle + this.sweep;
+                if (endAngle > 360.0) {
+                    endAngle = endAngle - 360.0;
+                }
+            }
+            arc.setEndAngle(RMath.deg2rad(endAngle));
+        }
+    }
+
+    return arc;
 };
 
 DrawPolyline.prototype.getOperation = function(preview) {
