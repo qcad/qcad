@@ -129,18 +129,20 @@ public:
     RVector getPosition() const {
        return RPoint::getPosition();
     }
-    void setThickness(double t) {
-        thickness = t;
-    }
-    double getThickness() const {
-        return thickness;
-    }
-    void setNormal(const RVector& dir) {
-        normal = dir;
-    }
-    RVector getNormal() const {
-        return normal;
-    }
+
+    // for aama files:
+    // void setThickness(double t) {
+    //     thickness = t;
+    // }
+    // double getThickness() const {
+    //     return thickness;
+    // }
+    // void setNormal(const RVector& dir) {
+    //     normal = dir;
+    // }
+    // RVector getNormal() const {
+    //     return normal;
+    // }
 
     virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
 

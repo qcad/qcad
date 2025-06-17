@@ -111,8 +111,10 @@ public:
      * \setter{setPosition}
      */
     RVector position;
-    double thickness;
-    RVector normal;
+
+    // for aama files:
+    //double thickness;
+    //RVector normal;
 };
 
 Q_DECLARE_METATYPE(RPoint)

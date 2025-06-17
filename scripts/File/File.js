@@ -302,7 +302,7 @@ File.getOpenFileName = function(parentWidget, caption, dir, filterStrings, noAll
  * \param version String from the file version drop down in the save as dialog.
  */
 File.isRecommendedVersion = function(version) {
-    if (version.length>0 && !version.contains("*.dxf") && !version.contains("*.dwg") && !version.contains("*.aam")) {
+    if (version.length>0 && !version.contains("*.dxf") && !version.contains("*.dwg") /*&& !version.contains("*.aam")*/) {
         // only dxf and dwg are recommended to save drawing files:
         return false;
     }
@@ -316,7 +316,9 @@ File.isRecommendedVersion = function(version) {
     else if (version.indexOf("R9")!==-1) {
         return false;
     }
-    else if (version.indexOf("R10")!==-1 && !version.contains("*.aam")) {
+    // for aama files:
+    //else if (version.indexOf("R10")!==-1 && !version.contains("*.aam")) {
+    else if (version.indexOf("R10")!==-1) {
         return false;
     }
     else if (version.indexOf("R12")!==-1) {

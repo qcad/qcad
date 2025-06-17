@@ -38,10 +38,11 @@ RPropertyTypeId RPointEntity::PropertyPositionX;
 RPropertyTypeId RPointEntity::PropertyPositionY;
 RPropertyTypeId RPointEntity::PropertyPositionZ;
 
-RPropertyTypeId RPointEntity::PropertyThickness;
-RPropertyTypeId RPointEntity::PropertyNormalX;
-RPropertyTypeId RPointEntity::PropertyNormalY;
-RPropertyTypeId RPointEntity::PropertyNormalZ;
+// for aama files:
+// RPropertyTypeId RPointEntity::PropertyThickness;
+// RPropertyTypeId RPointEntity::PropertyNormalX;
+// RPropertyTypeId RPointEntity::PropertyNormalY;
+// RPropertyTypeId RPointEntity::PropertyNormalZ;
 
 
 RPointEntity::RPointEntity(RDocument* document, const RPointData& data) :
@@ -78,11 +79,11 @@ void RPointEntity::init() {
     RPointEntity::PropertyPositionY.generateId(RPointEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
     RPointEntity::PropertyPositionZ.generateId(RPointEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
 
-    RPointEntity::PropertyThickness.generateId(RPointEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Thickness"));
-
-    RPointEntity::PropertyNormalX.generateId(RPointEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Normal"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RPointEntity::PropertyNormalY.generateId(RPointEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Normal"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RPointEntity::PropertyNormalZ.generateId(RPointEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Normal"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    // for aama files:
+    // RPointEntity::PropertyThickness.generateId(RPointEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Thickness"));
+    // RPointEntity::PropertyNormalX.generateId(RPointEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Normal"), QT_TRANSLATE_NOOP("REntity", "X"));
+    // RPointEntity::PropertyNormalY.generateId(RPointEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Normal"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    // RPointEntity::PropertyNormalZ.generateId(RPointEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Normal"), QT_TRANSLATE_NOOP("REntity", "Z"));
 }
 
 bool RPointEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -93,11 +94,11 @@ bool RPointEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(data.position.y, value, PropertyPositionY == propertyTypeId);
     ret = ret || RObject::setMember(data.position.z, value, PropertyPositionZ == propertyTypeId);
 
-    ret = ret || RObject::setMember(data.thickness, value, PropertyThickness == propertyTypeId);
-
-    ret = ret || RObject::setMember(data.normal.x, value, PropertyNormalX == propertyTypeId);
-    ret = ret || RObject::setMember(data.normal.y, value, PropertyNormalY == propertyTypeId);
-    ret = ret || RObject::setMember(data.normal.z, value, PropertyNormalZ == propertyTypeId);
+    // for aama files:
+    // ret = ret || RObject::setMember(data.thickness, value, PropertyThickness == propertyTypeId);
+    // ret = ret || RObject::setMember(data.normal.x, value, PropertyNormalX == propertyTypeId);
+    // ret = ret || RObject::setMember(data.normal.y, value, PropertyNormalY == propertyTypeId);
+    // ret = ret || RObject::setMember(data.normal.z, value, PropertyNormalZ == propertyTypeId);
 
     return ret;
 }
@@ -112,17 +113,17 @@ QPair<QVariant, RPropertyAttributes> RPointEntity::getProperty(
         return qMakePair(QVariant(data.position.z), RPropertyAttributes());
     }
 
-    else if (propertyTypeId == PropertyThickness) {
-        return qMakePair(QVariant(data.thickness), RPropertyAttributes());
-    }
-
-    else if (propertyTypeId == PropertyNormalX) {
-        return qMakePair(QVariant(data.normal.x), RPropertyAttributes());
-    } else if (propertyTypeId == PropertyNormalY) {
-        return qMakePair(QVariant(data.normal.y), RPropertyAttributes());
-    } else if (propertyTypeId == PropertyNormalZ) {
-        return qMakePair(QVariant(data.normal.z), RPropertyAttributes());
-    }
+    // for aama files:
+    // else if (propertyTypeId == PropertyThickness) {
+    //     return qMakePair(QVariant(data.thickness), RPropertyAttributes());
+    // }
+    // else if (propertyTypeId == PropertyNormalX) {
+    //     return qMakePair(QVariant(data.normal.x), RPropertyAttributes());
+    // } else if (propertyTypeId == PropertyNormalY) {
+    //     return qMakePair(QVariant(data.normal.y), RPropertyAttributes());
+    // } else if (propertyTypeId == PropertyNormalZ) {
+    //     return qMakePair(QVariant(data.normal.z), RPropertyAttributes());
+    // }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
