@@ -295,7 +295,7 @@ InsertBlockItem.prototype.initOp = function(op) {
             off2.flipVertical();
         }
         off2.scale(this.scale);
-        off2.rotate(rotation);
+        off2.rotate(this.getRotation());
         op.setOffset(off1.operator_subtract(off2));
     }
 
