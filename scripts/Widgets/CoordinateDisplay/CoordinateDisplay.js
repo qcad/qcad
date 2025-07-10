@@ -79,7 +79,7 @@ CoordinateDisplay.update = function(documentInterface) {
     }
 
     if (!isNull(CoordinateDisplay.singleShot)) {
-        if (CoordinateDisplay.singleShot.active) {
+        if (CoordinateDisplay.singleShot.active && !isNull(CoordinateDisplay.singleShot)) {
             // never mind previous update:
             CoordinateDisplay.singleShot.stop();
         }
