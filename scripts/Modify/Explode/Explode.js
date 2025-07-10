@@ -348,6 +348,17 @@ Explode.explodeEntity = function(entity, options) {
                     prevLeftPl = leftPl;
                     prevRightPl = rightPl;
                 }
+
+                else if (leftPl.countSegments()===1) {
+                    // add only left segment:
+                    ret.push(leftPl);
+                }
+
+                else if (rightPl.countSegments()===1) {
+                    // add only right segment:
+                    ret.push(rightPl);
+                }
+
                 //else if (leftPl.countSegments()>1 || rightPl.countSegments()>1) {
                 else if (!leftPl.isEmpty()) {
                     //ret.push(pls[k]);
@@ -373,6 +384,20 @@ Explode.explodeEntity = function(entity, options) {
             }
             if (!isNull(lastSegment)) {
                 ret.push(lastSegment);
+            }
+
+            // special case of donut shape with hole diameter=0 which explodes to circle:
+            if (ret.length===2) {
+                if (isPolylineShape(ret[0]) && isPolylineShape(ret[1]) &&
+                    ret[0].countSegments()===1 && ret[1].countSegments()===1 &&
+                    ret[0].getStartPoint().equalsFuzzy(ret[1].getEndPoint()) &&
+                    ret[0].getEndPoint().equalsFuzzy(ret[1].getStartPoint()) &&
+                    RMath.fuzzyCompare(ret[0].getBulgeAt(0), 1.0) &&
+                    RMath.fuzzyCompare(ret[1].getBulgeAt(0), 1.0)) {
+
+                    var seg = ret[0].getSegmentAt(0);
+                    ret = [ new RCircle(seg.getCenter(), seg.getRadius()) ];
+                }
             }
         }
         else {
