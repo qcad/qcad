@@ -930,7 +930,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 }
             }
             if (!isNull(value)) {
-                c.value = value;
+                c.value = parseInt(value);
             }
             continue;
         }
