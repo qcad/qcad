@@ -354,6 +354,10 @@ Image.prototype.slotHeightChanged = function(value) {
 
 Image.prototype.slotAngleChanged = function(value) {
     this.angle = value;
+    if (!isNumber(this.angle)) {
+        this.angle = 0;
+    }
+
     if (!isNull(this.image)) {
         this.image.setAngle(value);
     }
