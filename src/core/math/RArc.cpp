@@ -536,18 +536,13 @@ RBox RArc::getBoundingBox() const {
         return RBox();
     }
 
-    RVector minV;
-    RVector maxV;
     double minX = qMin(getStartPoint().x, getEndPoint().x);
     double minY = qMin(getStartPoint().y, getEndPoint().y);
     double maxX = qMax(getStartPoint().x, getEndPoint().x);
     double maxY = qMax(getStartPoint().y, getEndPoint().y);
 
-    if (getStartPoint().getDistanceTo(getEndPoint()) < 1.0e-6 && getRadius()
-            > 1.0e5) {
-        minV = RVector(minX, minY);
-        maxV = RVector(maxX, maxY);
-        return RBox(minV, maxV);
+    if (getStartPoint().getDistanceTo(getEndPoint()) < 1.0e-6 && getRadius() > 1.0e5) {
+        return RBox(RVector(minX, minY), RVector(maxX, maxY));
     }
 
     double a1 = RMath::getNormalizedAngle(!isReversed() ? startAngle : endAngle);
@@ -582,10 +577,22 @@ RBox RArc::getBoundingBox() const {
         maxY = qMax(center.y + radius, maxY);
     }
 
-    minV = RVector(minX, minY);
-    maxV = RVector(maxX, maxY);
+    RBox ret(RVector(minX, minY), RVector(maxX, maxY));
 
-    return RBox(minV, maxV);
+    // if center is almost within bounding box, increase bounding box to include center
+    // this enables snapping to the center point with auto snap for (almost) 180 degree arcs:
+    RBox larger = ret;
+    larger.growXY(RS::PointTolerance * 100);
+    if (larger.contains(center)) {
+        minX = qMin(center.x, minX);
+        maxX = qMax(center.x, maxX);
+        minY = qMin(center.y, minY);
+        maxY = qMax(center.y, maxY);
+
+        ret = RBox(RVector(minX, minY), RVector(maxX, maxY));
+    }
+
+    return ret;
 }
 
 QList<RVector> RArc::getEndPoints() const {
