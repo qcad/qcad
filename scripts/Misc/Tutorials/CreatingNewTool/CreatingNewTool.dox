@@ -41,15 +41,15 @@ that is defined in its parent directory or from EAction, defined in scripts/EAct
 For that reason, we have to include the script file of EAction. 
 In this case "scripts/EAction.js":
 
-\snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd include
+include("scripts/EAction.js");
 
 Then, we define the class constructor, which calls the base class constructor:
 
-\snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd constructor
+\snippet ExThreePoints.jsd constructor
 
 Finally, we derive our class from the base class, in this case "DrawExamples":
 
-\snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd inheritance
+ExThreePoints.prototype = new EAction();
 
 When QCAD finds the tool directory "ExThreePoints", it looks inside for a file 
 called "ExThreePoints.js" and inside that script file for the definition of a
@@ -59,7 +59,7 @@ started by the user.
 Create a static "init" method at the bottom of the file "ExThreePoints.js"
 as follows:
 
-\snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd init
+\snippet ExThreePoints.jsd init
 
 <b>The static "init" method is called during the startup of QCAD.</b>
 
@@ -121,26 +121,26 @@ we have to keep track of its progress. One way to do this is by adding
 a state to it. Even if our tool can only be in one state, it's good 
 practice to define this single state:
 
-\snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd State
+\snippet ExThreePoints.jsd State
 
 We can now implement "setState", which is called whenever the tools state
 changes:
 
-\snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd setState
+\snippet ExThreePoints.jsd setState
 
 In our "beginEvent", we set the initial state of the tool to our
 one and only state. We also remove the tool termination:
 
-\snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd beginEvent
+\snippet ExThreePoints.jsd beginEvent
 
 Now we can implement "coordinateEvent", which is called when the user 
 clicks or enters a coordinate. Our implementation draws three points 
 beside each other.
 
-\snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd coordinateEvent
+\snippet ExThreePoints.jsd coordinateEvent
 
 Here's the complete code listing of file ExThreePoints.js:
 
-\snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd main
+\snippet ExThreePoints.jsd main
 
 */

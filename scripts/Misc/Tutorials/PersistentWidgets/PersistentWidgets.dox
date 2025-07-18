@@ -31,7 +31,7 @@ With Qt Designer we create the UI file for the dialog called "PersistentWidgets.
 Thanks to the introspection facilities of Qt, storing and restoring 
 dialog data is a one-liner.
 
-\snippet PersistentWidgets.jsd include
+include("scripts/WidgetFactory.js");
 
 \snippet PersistentWidgets.jsd beginEvent
 
