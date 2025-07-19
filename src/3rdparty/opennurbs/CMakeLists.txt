@@ -509,7 +509,7 @@ if (ANDROID)
   include_directories("freetype263/include")
 endif()
 
-if( APPLE)
+if (APPLE)
    find_library( CORE_GRAPHICS_LIBRARY CoreGraphics)
    message( STATUS "CORE_GRAPHICS_LIBRARY is ${CORE_GRAPHICS_LIBRARY}")
    find_library( CORE_TEXT_LIBRARY CoreText)
