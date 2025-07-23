@@ -1153,63 +1153,37 @@ QList<RLine> REllipse::getTangents(const RVector& point) const {
     return ret;
 }
 
-/**
- * \return Tangent point of the given line to this tangent or an invalid vector if the
- * line is not a tangent
- */
 RVector REllipse::getTangentPoint(const RLine& line) const {
-    RLine lineNeutral = line;
+    QList<RVector> candidates = RShape::getIntersectionPointsLE(line, *this);
 
-    // translate line to ellipse's center
-    lineNeutral.move(getCenter().getNegated());
-
-    // rotate line points (inverse rotation of the ellipse)
-    lineNeutral.rotate(-getAngle());
-
-    // calculate slope and y-intercept of the transformed line
-    // check for vertical line:
-    if (lineNeutral.isVertical()) {
-        // for vertical line, check if it passes through ellipse's major axis
-        if (RMath::fuzzyCompare(lineNeutral.getStartPoint().x, getMajorRadius())) {
-            return getCenter() + getMajorPoint();
-        }
-
-        if (RMath::fuzzyCompare(lineNeutral.getStartPoint().x, -getMajorRadius())) {
-            return getCenter() - getMajorPoint();
-        }
-
+    if (candidates.isEmpty()) {
         return RVector::invalid;
     }
 
-    // check if the transformed line is tangent to the axis-aligned ellipse:
-    // slope of line:
-    double m = (lineNeutral.getEndPoint().y - lineNeutral.getStartPoint().y) / (lineNeutral.getEndPoint().x - lineNeutral.getStartPoint().x);
-
-    // y-intersept:
-    double c = lineNeutral.getStartPoint().y - m * lineNeutral.getStartPoint().x;
+    RVector dir = line.getEndPoint() - line.getStartPoint();
 
     double a = getMajorRadius();
     double b = getMinorRadius();
 
-    double A = (b * b) + (a * a * m * m);
-    double B = 2 * a * a * m * c;
-    double C = (a * a * c * c) - (a * a * b * b);
+    for (int i=0; i<candidates.length(); i++) {
+        RVector worldPt = candidates[i];
+        // transform point to local coordinates
+        RVector ptLocal = worldPt;
+        ptLocal.move(getCenter().getNegated());
+        ptLocal.rotate(-getAngle());
 
-    double discriminant = B * B - 4 * A * C;
+        // compute normal vector at this point on the ellipse
+        RVector normal(ptLocal.x / (a*a), ptLocal.y / (b*b));
 
-    // for a tangent line, discriminant should be zero (one real root):
-    if (RMath::fuzzyCompare(discriminant, 0.0, 0.001)) {
-        double x = -B / (2 * A);
-        double y = m * x + c;
-
-        RVector ret = RVector(x, y);
-        ret.rotate(getAngle());
-        ret.move(getCenter());
-        return ret;
+        // check tangency using dot product
+        if (RMath::fuzzyCompare(RVector::getDotProduct(normal, dir), 0.0, 1.0e-6)) {
+            return worldPt;
+        }
     }
 
     return RVector::invalid;
 }
+
 
 QList<RSpline> REllipse::approximateWithSplines() const {
     if (REllipse::hasProxy()) {
