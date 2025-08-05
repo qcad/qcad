@@ -318,34 +318,45 @@ bool RS::showInFileManager(const QString& filePath) {
   */
 QString RS::getFontFamilyFromFileName(const QString& fileName) {
 #ifdef Q_OS_WIN
-    // registry path where Windows stores font info
-    QStringList rootKeys;
-    rootKeys.append("HKEY_LOCAL_MACHINE");
-    rootKeys.append("HKEY_CURRENT_USER");
+    // static cache for filename -> family name
+    static QHash<QString, QString> fontCache;
 
-    for (int i=0; i<rootKeys.length(); i++) {
-        QString rootKey = rootKeys[i];
+    QString fileKey = fileName.toLower();
 
+    // If we already have it in cache, return immediately
+    if (fontCache.contains(fileKey)) {
+        return fontCache.value(fileKey);
+    }
+
+    // Registry paths to search
+    QStringList rootKeys = {
+        "HKEY_LOCAL_MACHINE",
+        "HKEY_CURRENT_USER"
+    };
+
+    for (const QString& rootKey : rootKeys) {
         QSettings fontReg(rootKey + "\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts", QSettings::NativeFormat);
 
         QStringList keys = fontReg.allKeys();
-        for (int i=0; i<keys.length(); i++) {
-            QString key = keys[i];
-            qDebug() << "key:" << key;
+        for (const QString& key : keys) {
             QString value = fontReg.value(key).toString();
-            qDebug() << "value:" << value;
             value = QFileInfo(value).fileName();
-            qDebug() << "value (filename):" << value;
 
             if (value.compare(fileName, Qt::CaseInsensitive) == 0) {
-                // extract family name from the registry key (may contain style)
+                // Extract font family name (strip style info like "(TrueType)")
                 QString family = key;
-                family.remove(QRegularExpression("\\s*\\(.*\\)$")); // Remove things like (TrueType)
-                return family.trimmed();
+                family.remove(QRegularExpression("\\s*\\(.*\\)$"));
+                family = family.trimmed();
+
+                // Store in cache before returning
+                fontCache.insert(fileKey, family);
+                return family;
             }
         }
     }
 
+    // If not found, cache and return the original filename
+    fontCache.insert(fileKey, fileName);
     return fileName;
 #elif defined(Q_OS_MAC)
     return fileName;
