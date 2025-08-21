@@ -4099,7 +4099,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Kita viršūnė</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+469"/>
         <source>close</source>
         <translation type="unfinished">uždaryti</translation>
     </message>
@@ -4988,16 +4988,19 @@ jau yra sąraše.</translation>
     <name>ExThreePoints</name>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js" line="+58"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+58"/>
         <source>Position</source>
         <translation type="unfinished">Pozicija</translation>
     </message>
     <message>
         <location line="+46"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+46"/>
         <source>Three Points</source>
         <translation type="unfinished">Trys taškai</translation>
     </message>
     <message>
         <location line="+3"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
         <translation type="unfinished">Lygiosios trys taškai</translation>
     </message>

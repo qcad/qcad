@@ -4096,7 +4096,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Simpul berikutnya</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+469"/>
         <source>close</source>
         <translation type="unfinished">tutup</translation>
     </message>
@@ -4983,16 +4983,19 @@ sudah ada dalam daftar.</translation>
     <name>ExThreePoints</name>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js" line="+58"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+58"/>
         <source>Position</source>
         <translation type="unfinished">Posisi</translation>
     </message>
     <message>
         <location line="+46"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+46"/>
         <source>Three Points</source>
         <translation type="unfinished">Tiga Poin</translation>
     </message>
     <message>
         <location line="+3"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
         <translation type="unfinished">Gambarlah tiga poin</translation>
     </message>
@@ -14613,4 +14616,3 @@ sudah ada dalam daftar.</translation>
     </message>
 </context>
 </TS>
-

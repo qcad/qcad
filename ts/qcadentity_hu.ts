@@ -61,7 +61,7 @@
         <location filename="../src/entity/RLineEntity.cpp" line="+88"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RPointEntity.cpp" line="+72"/>
+        <location filename="../src/entity/RPointEntity.cpp" line="+78"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+108"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+78"/>
         <location line="+3"/>
@@ -282,6 +282,7 @@
         <location line="+1"/>
         <source>Sweep Angle</source>
         <translatorcomment>A megrajzolt ív hossza</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -304,16 +305,19 @@
         <location filename="../src/entity/RAttributeEntity.cpp" line="+101"/>
         <source>Tag</source>
         <translatorcomment>The ID of a block attribute, for example &quot;author_name&quot;.</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Prompt</source>
         <translatorcomment>The label of a block attribute, what the user sees, for example &quot;Author name&quot;</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
         <source>Circumference</source>
         <translatorcomment>Kör kerülete</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-10"/>
@@ -342,6 +346,7 @@
         <location line="+1"/>
         <source>Line 1 Start</source>
         <translatorcomment>Szög méretvonalának darabja</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
@@ -408,6 +413,7 @@
         <location line="+1"/>
         <source>Defining Point</source>
         <translatorcomment>Ennek a pontnak írja ki az ordináta &quot;méretvonal&quot; az egyik koordinátájtát (abszcisszát(X) vagy ordinátát(Y))</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -448,6 +454,7 @@
         <location line="+1"/>
         <source>Definition Point</source>
         <translatorcomment>An important point of a dimension, can be at different locations depending on the dimension type hence probably the vague name.</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -552,6 +559,7 @@
         <location line="+1"/>
         <source>Winding</source>
         <translatorcomment>A fill mode in which double-filled areas are also filled, not empty.</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -642,12 +650,14 @@
         <location line="+1"/>
         <source>U</source>
         <translatorcomment>A vector indicting the direction of the image bottom side (commonly called U vector).</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
         <translatorcomment>A vector indicting the direction of the image left side (commonly called V vector).</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -814,6 +824,7 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
         <source>Closed Periodic</source>
         <translatorcomment>Spline esetén a körbezártság</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -948,4 +959,3 @@
     </message>
 </context>
 </TS>
-
