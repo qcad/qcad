@@ -4101,7 +4101,7 @@ je že na seznamu.</translation>
         <translation>Naslednji lom</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+469"/>
         <source>close</source>
         <translation>zapri</translation>
     </message>
@@ -4991,16 +4991,19 @@ je že na seznamu.</translation>
     <name>ExThreePoints</name>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js" line="+58"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+58"/>
         <source>Position</source>
         <translation>Pozicija</translation>
     </message>
     <message>
         <location line="+46"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+46"/>
         <source>Three Points</source>
         <translation>Tri točke</translation>
     </message>
     <message>
         <location line="+3"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
         <translation>Nariši tri točke</translation>
     </message>
@@ -14639,4 +14642,3 @@ je že na seznamu.</translation>
     </message>
 </context>
 </TS>
-

@@ -4096,7 +4096,7 @@ is already in the list.</source>
         <translation type="unfinished">다음 버텍스</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+469"/>
         <source>close</source>
         <translation type="unfinished">닫기</translation>
     </message>
@@ -4983,16 +4983,19 @@ is already in the list.</source>
     <name>ExThreePoints</name>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js" line="+58"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+58"/>
         <source>Position</source>
         <translation type="unfinished">위치</translation>
     </message>
     <message>
         <location line="+46"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+46"/>
         <source>Three Points</source>
         <translation type="unfinished">세 점</translation>
     </message>
     <message>
         <location line="+3"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
         <translation type="unfinished">세 점 그리기</translation>
     </message>
@@ -14613,4 +14616,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

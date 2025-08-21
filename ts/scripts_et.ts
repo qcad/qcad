@@ -293,6 +293,7 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -917,6 +918,7 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -3221,6 +3223,7 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4090,7 +4093,7 @@ is already in the list.</source>
         <translation type="unfinished">Järgmine tipp</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+469"/>
         <source>close</source>
         <translation type="unfinished">sulge</translation>
     </message>
@@ -4978,16 +4981,19 @@ is already in the list.</source>
     <name>ExThreePoints</name>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js" line="+58"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+58"/>
         <source>Position</source>
         <translation type="unfinished">Positsioon</translation>
     </message>
     <message>
         <location line="+46"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+46"/>
         <source>Three Points</source>
         <translation type="unfinished">Kolm punkti</translation>
     </message>
     <message>
         <location line="+3"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
         <translation type="unfinished">Kolme punktiga viik</translation>
     </message>
@@ -11451,6 +11457,7 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12678,6 +12685,7 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -14610,4 +14618,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-
