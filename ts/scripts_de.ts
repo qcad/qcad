@@ -9075,7 +9075,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+10"/>
         <source>Misc Modification Tools</source>
-        <translation>Diverse Bearbeitungswerkzeuge</translation>
+        <translation>Diverse Modifikationswerkzeuge</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -9106,7 +9106,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Modify/Modify.js" line="+99"/>
         <source>Modification Tools</source>
-        <translation>Bearbeitungswerkzeuge</translation>
+        <translation>Modifikationswerkzeuge</translation>
     </message>
     <message>
         <location line="+26"/>
