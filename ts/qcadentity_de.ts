@@ -42,7 +42,7 @@
         <location filename="../src/entity/RLineEntity.cpp" line="+88"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RPointEntity.cpp" line="+72"/>
+        <location filename="../src/entity/RPointEntity.cpp" line="+78"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+108"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+78"/>
         <location line="+3"/>

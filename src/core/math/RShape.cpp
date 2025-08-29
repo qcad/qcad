@@ -766,70 +766,72 @@ QList<RVector> RShape::getIntersectionPointsLC(const RLine& line1,
 QList<RVector> RShape::getIntersectionPointsLE(const RLine& line1,
         const REllipse& ellipse2, bool limited1, bool limited2) {
 
-    QList<RVector> res;
+    QList<RVector> result;
 
-    // find out if line1 is (almost) a tangent:
-    RVector tangentPoint = ellipse2.getTangentPoint(line1);
-    if (tangentPoint.isValid()) {
-        res.append(tangentPoint);
-        return res;
+    // transform the line into the ellipse's local coordinate system
+    RLine lineLocal = line1;
+    lineLocal.move(ellipse2.getCenter().getNegated());
+    lineLocal.rotate(-ellipse2.getAngle());
+
+    RVector p1 = lineLocal.getStartPoint();
+    RVector p2 = lineLocal.getEndPoint();
+    RVector dir = p2 - p1;
+
+    double a = ellipse2.getMajorRadius();
+    double b = ellipse2.getMinorRadius();
+
+    if (a<RS::PointTolerance || b<RS::PointTolerance) {
+        return result;
     }
 
-    // rotate into normal position:
-    double ang = ellipse2.getAngle();
+    // parametrize line: x = x0 + dx*t, y = y0 + dy*t
+    double dx = dir.x;
+    double dy = dir.y;
+    double x0 = p1.x;
+    double y0 = p1.y;
 
-    double rx = ellipse2.getMajorRadius();
-    double ry = ellipse2.getMinorRadius();
-    RVector center = ellipse2.getCenter();
-    RVector a1 = line1.getStartPoint();
-    a1.rotate(-ang, center);
-    RVector a2 = line1.getEndPoint();
-    a2.rotate(-ang, center);
-    RVector origin = a1;
-    RVector dir = a2-a1;
-    RVector diff = origin - center;
-    RVector mDir = RVector(dir.x/(rx*rx), dir.y/(ry*ry));
-    RVector mDiff = RVector(diff.x/(rx*rx), diff.y/(ry*ry));
+    // solve At^2 + Bt + C = 0 for ellipse equation (x^2 / a^2 + y^2 / b^2 = 1)
+    double A = (dx*dx)/(a*a) + (dy*dy)/(b*b);
+    double B = 2 * (x0*dx)/(a*a) + 2 * (y0*dy)/(b*b);
+    double C = (x0*x0)/(a*a) + (y0*y0)/(b*b) - 1;
 
-    double a = RVector::getDotProduct(dir, mDir);
-    double b = RVector::getDotProduct(dir, mDiff);
-    double c = RVector::getDotProduct(diff, mDiff) - 1.0;
-    double d = b*b - a*c;
+    double discriminant = B*B - 4*A*C;
 
-    RVector res1 = RVector::invalid;
+    if (discriminant < 0) {
+        return result;
+    }
+
+    if (A < RS::PointTolerance) {
+        return result;
+    }
+
+    double sqrtDisc = sqrt(discriminant);
+    double t1 = (-B + sqrtDisc) / (2*A);
+    double t2 = (-B - sqrtDisc) / (2*A);
+
+    RVector res1 = p1 + dir * t1;
+    res1.rotate(ellipse2.getAngle());
+    res1.move(ellipse2.getCenter());
+
     RVector res2 = RVector::invalid;
-
-    if (d < 0) {
-        // no solution
-    } else if ( d > 0 ) {
-        double root = sqrt(d);
-        double t_a = (-b - root) / a;
-        double t_b = (-b + root) / a;
-
-        res1 = a1.getLerp(a2, t_a).rotate(ang, center);
-        res2 = a1.getLerp(a2, t_b).rotate(ang, center);
-    } else {
-        double t = -b/a;
-        if ( 0 <= t && t <= 1 ) {
-            // one solution:
-            res1 = a1.getLerp(a2, t).rotate(ang, center);
-        } else {
-            // no solution
-        }
+    if (!RMath::fuzzyCompare(t1, t2)) {
+        res2 = p1 + dir * t2;
+        res2.rotate(ellipse2.getAngle());
+        res2.move(ellipse2.getCenter());
     }
 
     if (res1.isValid()) {
         if ((!limited1 || line1.isOnShape(res1)) && (!limited2 || ellipse2.isOnShape(res1))) {
-            res.append(res1);
+            result.append(res1);
         }
     }
     if (res2.isValid()) {
         if ((!limited1 || line1.isOnShape(res2)) && (!limited2 || ellipse2.isOnShape(res2))) {
-            res.append(res2);
+            result.append(res2);
         }
     }
 
-    return res;
+    return result;
 }
 
 QList<RVector> RShape::getIntersectionPointsLT(const RLine& line1,

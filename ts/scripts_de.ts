@@ -4094,7 +4094,7 @@ ist bereits in der Liste.</translation>
         <translation>Nächster Eckpunkt</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+469"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -4114,7 +4114,7 @@ ist bereits in der Liste.</translation>
         <translation>arc</translation>
     </message>
     <message>
-        <location line="-442"/>
+        <location line="-497"/>
         <source>First vertex</source>
         <translation>Erster Eckpunkt</translation>
     </message>
@@ -4987,16 +4987,19 @@ ist bereits in der Liste.</translation>
     <name>ExThreePoints</name>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js" line="+58"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+58"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
     <message>
         <location line="+46"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+46"/>
         <source>Three Points</source>
         <translation>Drei Punkte</translation>
     </message>
     <message>
         <location line="+3"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
         <translation>Drei Punkte zeichnen</translation>
     </message>
@@ -9075,7 +9078,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+10"/>
         <source>Misc Modification Tools</source>
-        <translation>Diverse Bearbeitungswerkzeuge</translation>
+        <translation>Diverse Modifikationswerkzeuge</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -9106,7 +9109,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Modify/Modify.js" line="+99"/>
         <source>Modification Tools</source>
-        <translation>Bearbeitungswerkzeuge</translation>
+        <translation>Modifikationswerkzeuge</translation>
     </message>
     <message>
         <location line="+26"/>

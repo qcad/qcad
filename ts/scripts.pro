@@ -722,6 +722,7 @@ SOURCES = \
 ../scripts/Misc/Tutorials/CommandLineTools/CreatingDrawing/CreatingDrawing.js \
 ../scripts/Misc/Tutorials/CommandLineTools/ExPdfExport/ExPdfExport.js \
 ../scripts/Misc/Tutorials/CommandLineTools/ExSvgExport/ExSvgExport.js \
+../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js \
 ../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.js \
 ../scripts/Misc/Tutorials/MenusAndToolBars/MenusAndToolBars.js \
 ../scripts/Misc/Tutorials/MenusAndToolBars/MyAction.js \

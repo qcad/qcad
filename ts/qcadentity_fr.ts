@@ -12,7 +12,7 @@
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RPointEntity.cpp" line="+72"/>
+        <location filename="../src/entity/RPointEntity.cpp" line="+78"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>

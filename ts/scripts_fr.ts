@@ -4094,7 +4094,7 @@ est déjà dans la liste.</translation>
         <translation>Vertex suivant</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+469"/>
         <source>close</source>
         <translation>fermer</translation>
     </message>
@@ -4114,7 +4114,7 @@ est déjà dans la liste.</translation>
         <translation>arc</translation>
     </message>
     <message>
-        <location line="-442"/>
+        <location line="-497"/>
         <source>First vertex</source>
         <translation>Premier vertex</translation>
     </message>
@@ -4987,16 +4987,19 @@ est déjà dans la liste.</translation>
     <name>ExThreePoints</name>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js" line="+58"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+58"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
     <message>
         <location line="+46"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+46"/>
         <source>Three Points</source>
         <translation>Trois points</translation>
     </message>
     <message>
         <location line="+3"/>
+        <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
         <translation>Dessiner trois points</translation>
     </message>
