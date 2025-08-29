@@ -1787,6 +1787,7 @@
     <file alias="scripts/Misc/Tutorials/CommandLineTools/CreatingDrawing/CreatingDrawing.js">../../scripts/Misc/Tutorials/CommandLineTools/CreatingDrawing/CreatingDrawing.js</file>
     <file alias="scripts/Misc/Tutorials/CommandLineTools/ExPdfExport/ExPdfExport.js">../../scripts/Misc/Tutorials/CommandLineTools/ExPdfExport/ExPdfExport.js</file>
     <file alias="scripts/Misc/Tutorials/CommandLineTools/ExSvgExport/ExSvgExport.js">../../scripts/Misc/Tutorials/CommandLineTools/ExSvgExport/ExSvgExport.js</file>
+    <file alias="scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js">../../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js</file>
     <file alias="scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.js">../../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.js</file>
     <file alias="scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui">../../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui</file>
     <file alias="scripts/Misc/Tutorials/MenusAndToolBars/MenusAndToolBars.js">../../scripts/Misc/Tutorials/MenusAndToolBars/MenusAndToolBars.js</file>
