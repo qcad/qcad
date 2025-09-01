@@ -217,12 +217,14 @@ QSharedPointer<REntity> RArcEntity::scaleNonUniform(REntity& entity, const RVect
         return QSharedPointer<REntity>();
     }
 
+    // transform shape appropriately:
     RShapeTransformationScale scale(scaleFactors, center);
     QSharedPointer<RShape> shapeT = RShape::transformArc(*s, scale);
     if (shapeT.isNull()) {
         return QSharedPointer<REntity>();
     }
 
+    // turn shape back into new entity:
     if (RShape::isEllipseShape(*shapeT)) {
         QSharedPointer<REllipse> ellipseT = shapeT.dynamicCast<REllipse>();
         if (ellipseT.isNull()) {
