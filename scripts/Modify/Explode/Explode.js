@@ -692,6 +692,7 @@ Explode.explodeEntity = function(entity, options) {
                 }
 
                 if (!isBlockReferenceEntity(subEntity)) {
+                    // TODO: this might already have happened in queryEntity with transformation:
                     subEntity.scaleVisualProperties(data.getScaleFactors().x);
                 }
 
