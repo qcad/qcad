@@ -193,6 +193,20 @@ BreakOut.breakOut = function(op, entity, pos, extend, removeSegment) {
     var doc = entity.getDocument();
     var shape = entity.getClosestShape(pos);
 
+    if (isEllipseShape(shape)) {
+        // normalize angles:
+        var ang1 = shape.getStartParam() % (2*Math.PI);
+        if (ang1<0) {
+            ang1 += 2*Math.PI;
+        }
+        var ang2 = shape.getEndParam() % (2*Math.PI);
+        if (ang2<0) {
+            ang2 += 2*Math.PI;
+        }
+        shape.setStartParam(ang1);
+        shape.setEndParam(ang2);
+    }
+
     var otherShapes = ShapeAlgorithms.getIntersectingShapes(doc, entity.getId(), shape, extend);
     var newSegments = ShapeAlgorithms.autoSplit(shape, otherShapes, pos, extend);
 
