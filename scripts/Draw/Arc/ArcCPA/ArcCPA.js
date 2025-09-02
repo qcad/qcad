@@ -29,7 +29,6 @@ function ArcCPA(guiAction) {
 
     this.center = undefined;
     this.reversed = undefined;
-    this.useRadius = false;
 
     // radius set in options tool bar:
     this.radius = 1.0;
@@ -38,10 +37,13 @@ function ArcCPA(guiAction) {
     // point on radius set by mouse click:
     this.pointR = undefined;
 
-    this.angle1 = undefined;
-    this.point1 = undefined;
-    this.angle2 = undefined;
-    this.point2 = undefined;
+    this.startAngle = undefined;
+    this.actualStartAngle = undefined;
+    this.startPoint = undefined;
+
+    this.endAngle = undefined;
+    this.actualEndAngle = undefined;
+    this.endPoint = undefined;
 
     this.setUiOptions("ArcCPA.ui");
 }
@@ -51,8 +53,8 @@ ArcCPA.prototype = new Arc();
 ArcCPA.State = {
     SettingCenter : 0,
     SettingRadius : 1,
-    SettingAngle1 : 2,
-    SettingAngle2 : 3
+    SettingStartAngle : 2,
+    SettingEndAngle : 3
 };
 
 ArcCPA.prototype.beginEvent = function() {
@@ -60,28 +62,6 @@ ArcCPA.prototype.beginEvent = function() {
 
     this.setState(ArcCPA.State.SettingCenter);
 };
-
-ArcCPA.prototype.showUiOptions = function() {
-    Arc.prototype.showUiOptions.call(this);
-
-    var optionsToolBar = EAction.getOptionsToolBar();
-
-    if (!isNull(optionsToolBar)) {
-        var leRadius = optionsToolBar.findChild("Radius");
-
-        if (!isNull(leRadius)) {
-            // connect singal when pressing enter in radius field to set radius and advances to next stage:
-            var self = this;
-            leRadius.returnPressed.connect(function() {
-                if (self.state==ArcCPA.State.SettingRadius) {
-                    self.setState(ArcCPA.State.SettingAngle1);
-                }
-            });
-
-        }
-    }
-};
-
 
 ArcCPA.prototype.setState = function(state) {
     Arc.prototype.setState.call(this, state);
@@ -94,10 +74,8 @@ ArcCPA.prototype.setState = function(state) {
     case ArcCPA.State.SettingCenter:
         this.pointR = undefined;
         this.center = undefined;
-        this.angle1 = undefined;
-        this.point1 = undefined;
-        this.angle2 = undefined;
-        this.point2 = undefined;
+        this.startPoint = undefined;
+        this.endPoint = undefined;
 
         var trCenter = qsTr("Center");
         this.setCommandPrompt(trCenter);
@@ -111,14 +89,14 @@ ArcCPA.prototype.setState = function(state) {
         this.setRightMouseTip(EAction.trBack);
         break;
 
-    case ArcCPA.State.SettingAngle1:
+    case ArcCPA.State.SettingStartAngle:
         var trStartAngle = qsTr("Start angle");
         this.setCommandPrompt(trStartAngle);
         this.setLeftMouseTip(trStartAngle);
         this.setRightMouseTip(EAction.trBack);
         break;
 
-    case ArcCPA.State.SettingAngle2:
+    case ArcCPA.State.SettingEndAngle:
         var trEndAngle = qsTr("End angle");
         this.setCommandPrompt(trEndAngle);
         this.setLeftMouseTip(trEndAngle);
@@ -139,12 +117,12 @@ ArcCPA.prototype.escapeEvent = function() {
         this.setState(ArcCPA.State.SettingCenter);
         break;
 
-    case ArcCPA.State.SettingAngle1:
+    case ArcCPA.State.SettingStartAngle:
         this.setState(ArcCPA.State.SettingRadius);
         break;
 
-    case ArcCPA.State.SettingAngle2:
-        this.setState(ArcCPA.State.SettingAngle1);
+    case ArcCPA.State.SettingEndAngle:
+        this.setState(ArcCPA.State.SettingStartAngle);
         break;
 
     }
@@ -171,24 +149,27 @@ ArcCPA.prototype.pickCoordinate = function(event, preview) {
             this.updatePreview();
         }
         else {
-            this.setState(ArcCPA.State.SettingAngle1);
+            this.setState(ArcCPA.State.SettingStartAngle);
         }
         break;
 
-    case ArcCPA.State.SettingAngle1:
-        this.point1 = event.getModelPosition();
-        this.angle1 = this.center.getAngleTo(this.point1);
+    case ArcCPA.State.SettingStartAngle:
+        this.startPoint = event.getModelPosition();
+
+        this.updateActualStartAngle();
+        //this.startAngle = this.center.getAngleTo(this.startPoint);
         if (preview) {
             this.updatePreview();
         }
         else {
-            this.setState(ArcCPA.State.SettingAngle2);
+            this.setState(ArcCPA.State.SettingEndAngle);
         }
         break;
 
-    case ArcCPA.State.SettingAngle2:
-        this.point2 = event.getModelPosition();
-        this.angle2 = this.center.getAngleTo(this.point2);
+    case ArcCPA.State.SettingEndAngle:
+        this.endPoint = event.getModelPosition();
+        this.updateActualEndAngle();
+        //this.endAngle = this.center.getAngleTo(this.endPoint);
         if (preview) {
             this.updatePreview();
         }
@@ -213,16 +194,16 @@ ArcCPA.prototype.getOperation = function(preview) {
     var reversed = this.reversed;
 
     if (this.state === ArcCPA.State.SettingRadius) {
-        this.angle1 = 0.0;
-        this.angle2 = 2*Math.PI;
+        this.actualStartAngle = 0.0;
+        this.actualEndAngle = 2*Math.PI;
         reversed = false;
     }
-    else if (this.state === ArcCPA.State.SettingAngle1) {
+    else if (this.state === ArcCPA.State.SettingStartAngle) {
         if (this.reversed===true) {
-            this.angle2 = this.angle1 - Math.PI/3;
+            this.actualEndAngle = this.actualStartAngle - Math.PI/3;
         }
         else {
-            this.angle2 = this.angle1 + Math.PI/3;
+            this.actualEndAngle = this.actualStartAngle + Math.PI/3;
         }
     }
 
@@ -231,8 +212,8 @@ ArcCPA.prototype.getOperation = function(preview) {
         new RArcData(
             this.center,
             this.actualRadius,
-            this.angle1,
-            this.angle2,
+            this.actualStartAngle,
+            this.actualEndAngle,
             reversed
         )
     );
@@ -246,14 +227,14 @@ ArcCPA.prototype.getAuxPreview = function() {
 
     var v = new RVector();
 
-    if (this.state===ArcCPA.State.SettingAngle1) {
-        d = Math.max(this.center.getDistanceTo(this.point1), this.actualRadius);
-        v.setPolar(d,this.angle1);
+    if (this.state===ArcCPA.State.SettingStartAngle) {
+        d = Math.max(this.center.getDistanceTo(this.startPoint), this.actualRadius);
+        v.setPolar(d,this.actualStartAngle);
         ret.push(new RLine(this.center, this.center.operator_add(v)));
     }
-    if (this.state===ArcCPA.State.SettingAngle2) {
-        d = Math.max(this.center.getDistanceTo(this.point2), this.actualRadius);
-        v.setPolar(d,this.angle2);
+    if (this.state===ArcCPA.State.SettingEndAngle) {
+        d = Math.max(this.center.getDistanceTo(this.endPoint), this.actualRadius);
+        v.setPolar(d,this.actualEndAngle);
         ret.push(new RLine(this.center, this.center.operator_add(v)));
     }
 
@@ -275,39 +256,27 @@ ArcCPA.prototype.slotDirectionChanged = function(button) {
     this.updatePreview(true);
 };
 
-ArcCPA.prototype.slotUseRadiusChanged = function(value) {
-    this.useRadius = value;
-    this.updateActualRadius();
-    this.updatePreview(true);
-};
-
-/**
- * Called when user changes the radius.
- */
-ArcCPA.prototype.slotRadiusChanged = function(value) {
-    this.radius = value;
-    this.updateActualRadius();
-    this.updatePreview(true);
-};
-
 ArcCPA.prototype.updateActualRadius = function() {
-    if (this.useRadius) {
-        this.actualRadius = this.radius;
-    }
-    else {
-        if (isVector(this.center) && isVector(this.pointR)) {
-            this.actualRadius = this.center.getDistanceTo(this.pointR);
-        }
+    this.actualRadius = undefined;
+
+    if (isVector(this.center) && isVector(this.pointR)) {
+        this.actualRadius = this.center.getDistanceTo(this.pointR);
     }
 };
 
-ArcCPA.prototype.updateRadiusOption = function(value) {
-    var optionsToolBar = EAction.getOptionsToolBar();
-    if (!isNull(optionsToolBar)) {
-        var leRadius = optionsToolBar.findChild("Radius");
-        if (!isNull(leRadius)) {
-            leRadius.setValue(value);
-        }
+ArcCPA.prototype.updateActualStartAngle = function() {
+    this.actualStartAngle = undefined;
+
+    if (isVector(this.center) && isVector(this.startPoint)) {
+        this.actualStartAngle = this.center.getAngleTo(this.startPoint)
+    }
+};
+
+ArcCPA.prototype.updateActualEndAngle = function() {
+    this.actualEndAngle = undefined;
+
+    if (isVector(this.center) && isVector(this.endPoint)) {
+        this.actualEndAngle = this.center.getAngleTo(this.endPoint)
     }
 };
 
@@ -336,30 +305,32 @@ ArcCPA.prototype.applyCommand = function(event, preview) {
             this.updatePreview(true);
         }
         else {
-            this.setState(ArcCPA.State.SettingAngle1);
+            this.setState(ArcCPA.State.SettingStartAngle);
         }
         break;
 
-    case ArcCPA.State.SettingAngle1:
+    case ArcCPA.State.SettingStartAngle:
         event.accept();
-        this.angle1 = RMath.deg2rad(value);
+        this.startAngle = RMath.deg2rad(value);
+        this.updateStartAngleOption(this.startAngle);
         v = new RVector();
-        v.setPolar(this.actualRadius, this.angle1);
-        this.point1 = this.center.operator_add(v);
+        v.setPolar(this.actualRadius, this.startAngle);
+        this.startPoint = this.center.operator_add(v);
         if (preview) {
             this.updatePreview(true);
         }
         else {
-            this.setState(ArcCPA.State.SettingAngle2);
+            this.setState(ArcCPA.State.SettingEndAngle);
         }
         break;
 
-    case ArcCPA.State.SettingAngle2:
+    case ArcCPA.State.SettingEndAngle:
         event.accept();
-        this.angle2 = RMath.deg2rad(value);
+        this.endAngle = RMath.deg2rad(value);
+        this.updateEndAngleOption(this.endAngle);
         v = new RVector();
-        v.setPolar(this.actualRadius, this.angle1);
-        this.point2 = this.center.operator_add(v);
+        v.setPolar(this.actualRadius, this.startAngle);
+        this.endPoint = this.center.operator_add(v);
         if (preview) {
             this.updatePreview(true);
         }
