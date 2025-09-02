@@ -53,7 +53,7 @@
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation>Fondu</translation>
+        <translation>Estompage</translation>
     </message>
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="+95"/>
