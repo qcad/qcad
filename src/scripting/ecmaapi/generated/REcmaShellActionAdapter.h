@@ -39,6 +39,12 @@
         
     
     
+      int getState(
+                
+            );
+        
+    
+    
       void beginEvent(
                 
             );

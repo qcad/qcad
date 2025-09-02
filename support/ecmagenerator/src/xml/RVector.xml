@@ -893,5 +893,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" />
     <property name="nanVector" type="RVector" isConst="true"
     isStatic="true" />
+    <property name="zAxis" type="RVector" isConst="true"
+    isStatic="true" />
   </class>
 </unit>

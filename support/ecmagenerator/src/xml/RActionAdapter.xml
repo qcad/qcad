@@ -27,6 +27,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </constructor>
+    <method name="getState" cppName="getState" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
     <method name="beginEvent" cppName="beginEvent"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

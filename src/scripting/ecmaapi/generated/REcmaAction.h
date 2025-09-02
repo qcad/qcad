@@ -103,6 +103,9 @@
         getClickMode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getState
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         beginEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

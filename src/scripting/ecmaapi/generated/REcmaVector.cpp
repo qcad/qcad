@@ -323,6 +323,10 @@
                 qScriptValueFromValue(&engine, RVector::nanVector),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("zAxis",
+                qScriptValueFromValue(&engine, RVector::zAxis),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     

@@ -121,6 +121,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getClickMode, "getClickMode");
             
+            REcmaHelper::registerFunction(&engine, proto, getState, "getState");
+            
             REcmaHelper::registerFunction(&engine, proto, beginEvent, "beginEvent");
             
             REcmaHelper::registerFunction(&engine, proto, setGraphicsView, "setGraphicsView");
@@ -1259,6 +1261,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaAction::getClickMode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaAction::getState
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaAction::getState", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaAction::getState";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RAction* self = 
+                        getSelf("getState", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getState();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAction.getState().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaAction::getState", context, engine);
             return result;
         }
          QScriptValue

@@ -344,6 +344,11 @@
      * NaN vector
      */</comment>
     <decl_stmt><decl><type><name>static</name> <name>const</name> <name>RVector</name></type> <name>nanVector</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * Z axis vector (default extrusion direction)
+     */</comment>
+    <decl_stmt><decl><type><name>static</name> <name>const</name> <name>RVector</name></type> <name>zAxis</name></decl>;</decl_stmt>
 </public>}</block>;</class>
 
 <function_decl><type><name>QCADCORE_EXPORT</name> <name>RVector</name></type> <name>operator*</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>

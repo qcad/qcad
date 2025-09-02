@@ -12,7 +12,7 @@
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>handleEnterKey</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>obj</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>handleTabKey</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>obj</name></decl></param>, <param><decl><type><name>bool</name></type> <name>backTab</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>handleOptionsShortcut</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>shortcut</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <decl_stmt><decl><type><name>virtual</name> <name>bool</name></type> <name>handleOptionsShortcut</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>shortcut</name></expr></argument>, <argument><expr><name>int</name> <name>actionState</name> = -1</expr></argument>)</argument_list> =<init> <expr>0</expr></init></decl>;</decl_stmt>
 </public>}</block>;</class>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>

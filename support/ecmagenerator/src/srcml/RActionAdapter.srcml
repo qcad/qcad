@@ -57,6 +57,7 @@
     <destructor><specifier>virtual</specifier> <name>~RActionAdapter</name><parameter_list>()</parameter_list> <block>{
         <comment type="line">//qDebug() &lt;&lt; "~RActionAdapter " &lt;&lt; QString("%1").arg((unsigned long long int)this);</comment>
     }</block></destructor>
+    <function><type><name>virtual</name> <name>int</name></type> <name>getState</name><parameter_list>()</parameter_list> <block>{ <return>return <expr>-1</expr>;</return> }</block></function>;
     <function><type><name>virtual</name> <name>void</name></type> <name>beginEvent</name><parameter_list>()</parameter_list> <block>{}</block></function>
     <function><type><name>virtual</name> <name>void</name></type> <name>setGraphicsView</name><parameter_list>(<param><decl><type><name>RGraphicsView</name>*</type></decl></param> <comment type="block">/*view*/</comment>)</parameter_list> <block>{}</block></function>
     <function><type><name>virtual</name> <name>void</name></type> <name>finishEvent</name><parameter_list>()</parameter_list> <block>{}</block></function>

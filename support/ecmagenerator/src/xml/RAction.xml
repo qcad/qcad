@@ -152,6 +152,10 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RAction::ClickMode"
       isPureVirtual="false" />
     </method>
+    <method name="getState" cppName="getState" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="true" />
+    </method>
     <method name="beginEvent" cppName="beginEvent"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

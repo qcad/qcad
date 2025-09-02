@@ -120,6 +120,8 @@
         <return>return <expr><name>clickMode</name></expr>;</return>
     }</block></function>
 
+    <function_decl><type><name>virtual</name> <name>int</name></type> <name>getState</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
     <comment type="block">/**
      * Called as soon as the action is created (menu chosen, toolbutton activated, etc).
      */</comment>

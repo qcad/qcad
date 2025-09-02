@@ -93,6 +93,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getState, "getState");
+            
             REcmaHelper::registerFunction(&engine, proto, beginEvent, "beginEvent");
             
             REcmaHelper::registerFunction(&engine, proto, setGraphicsView, "setGraphicsView");
@@ -308,6 +310,55 @@
 
     // public methods:
      QScriptValue
+        REcmaActionAdapter::getState
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaActionAdapter::getState", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaActionAdapter::getState";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RActionAdapter* self = 
+                        getSelf("getState", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getState();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RActionAdapter.getState().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaActionAdapter::getState", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaActionAdapter::beginEvent
         (QScriptContext* context, QScriptEngine* engine) 
         

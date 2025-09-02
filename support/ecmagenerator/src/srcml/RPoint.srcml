@@ -112,6 +112,10 @@
      * \setter{setPosition}
      */</comment>
     <decl_stmt><decl><type><name>RVector</name></type> <name>position</name></decl>;</decl_stmt>
+
+    <comment type="line">// for aama files:</comment>
+    <comment type="line">//double thickness;</comment>
+    <comment type="line">//RVector normal;</comment>
 </public>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RPoint</argument>)</argument_list></macro>
