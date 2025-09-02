@@ -790,45 +790,96 @@ QList<RVector> RShape::getIntersectionPointsLE(const RLine& line1,
     double x0 = p1.x;
     double y0 = p1.y;
 
-    // solve At^2 + Bt + C = 0 for ellipse equation (x^2 / a^2 + y^2 / b^2 = 1)
-    double A = (dx*dx)/(a*a) + (dy*dy)/(b*b);
-    double B = 2 * (x0*dx)/(a*a) + 2 * (y0*dy)/(b*b);
-    double C = (x0*x0)/(a*a) + (y0*y0)/(b*b) - 1;
+    // solve A t^2 + B t + C = 0 for ellipse (x^2/a^2 + y^2/b^2 = 1)
+    const double aa = a*a;
+    const double bb = b*b;
+
+    double A = (dx*dx)/(aa) + (dy*dy)/(bb);
+    double B = 2 * (x0*dx)/(aa) + 2 * (y0*dy)/(bb);
+    double C = (x0*x0)/(aa) + (y0*y0)/(bb) - 1;
+
+    if (A < RS::PointTolerance) {
+        // degenerate line direction (start ≈ end)
+        return result;
+    }
 
     double discriminant = B*B - 4*A*C;
 
-    if (discriminant < 0) {
-        return result;
+    // scale a tolerance by the expression magnitudes to decide "almost zero"
+    const double scaleForDisc =
+        std::fabs(B*B) + 4.0*std::fabs(A*C) + 1.0; // +1 to avoid zero scale
+    const double discEps =
+        64.0 * std::numeric_limits<double>::epsilon() * scaleForDisc;
+
+    if (discriminant < 0.0) {
+        if (discriminant > -discEps) {
+            discriminant = 0.0; // treat as tangent
+        } else {
+            return result;      // truly no intersection
+        }
     }
 
-    if (A < RS::PointTolerance) {
-        return result;
+    // compute roots using a numerically stable form.
+    double t1, t2;
+    if (discriminant == 0.0) {
+        // exact or near tangent: one double root
+        t1 = -B / (2.0*A);
+        t2 = t1;
+    } else {
+        const double sqrtDisc = std::sqrt(discriminant);
+        // q formulation avoids catastrophic cancellation:
+        const double q = -0.5 * (B + (B >= 0.0 ? sqrtDisc : -sqrtDisc));
+        t1 = q / A;
+        t2 = C / q;
     }
 
-    double sqrtDisc = sqrt(discriminant);
-    double t1 = (-B + sqrtDisc) / (2*A);
-    double t2 = (-B - sqrtDisc) / (2*A);
+    // compute intersection(s) in local coords first
+    RVector i1Local = p1 + dir * t1;
+    RVector i2Local = RVector::invalid;
 
-    RVector res1 = p1 + dir * t1;
+    if (!RMath::fuzzyCompare(t1, t2)) {
+        i2Local = p1 + dir * t2;
+    }
+
+    // if (near-)tangent, snap the point to the ellipse to counter tiny drift
+    if (discriminant == 0.0) {
+        double u = i1Local.x / a;
+        double v = i1Local.y / b;
+        double n = std::sqrt(u*u + v*v);
+        if (n > RS::PointTolerance) {
+            i1Local.x = a * (u / n);
+            i1Local.y = b * (v / n);
+        }
+    }
+
+    // transform back to world coords
+    RVector res1 = i1Local;
     res1.rotate(ellipse2.getAngle());
     res1.move(ellipse2.getCenter());
 
     RVector res2 = RVector::invalid;
-    if (!RMath::fuzzyCompare(t1, t2)) {
-        res2 = p1 + dir * t2;
+    if (i2Local.isValid()) {
+        res2 = i2Local;
         res2.rotate(ellipse2.getAngle());
         res2.move(ellipse2.getCenter());
     }
 
     if (res1.isValid()) {
-        if ((!limited1 || line1.isOnShape(res1)) && (!limited2 || ellipse2.isOnShape(res1))) {
+        if ((!limited1 || line1.isOnShape(res1)) &&
+            (!limited2 || ellipse2.isOnShape(res1))) {
             result.append(res1);
         }
     }
     if (res2.isValid()) {
-        if ((!limited1 || line1.isOnShape(res2)) && (!limited2 || ellipse2.isOnShape(res2))) {
+        if ((!limited1 || line1.isOnShape(res2)) &&
+            (!limited2 || ellipse2.isOnShape(res2))) {
             result.append(res2);
         }
+    }
+
+    // single tangent intersection: collapse duplicate if the two are equal
+    if (result.length()==2 && result[0].equalsFuzzy(result[1], 0.001)) {
+        result.removeLast();
     }
 
     return result;
@@ -2715,7 +2766,7 @@ QSharedPointer<RShape> RShape::transformArc(const RShape& shape, RShapeTransform
     RVector v3 = c - r1 - r2;
     RVector v4 = c - r1 + r2;
 
-    // transform conrners:
+    // transform corners:
     v1 = transformation.transform(v1);
     v2 = transformation.transform(v2);
     v3 = transformation.transform(v3);

@@ -27,7 +27,21 @@ include("scripts/Draw/Arc/Arc.js");
 function ArcCPA(guiAction) {
     Arc.call(this, guiAction);
 
+    this.center = undefined;
     this.reversed = undefined;
+    this.useRadius = false;
+
+    // radius set in options tool bar:
+    this.radius = 1.0;
+    // radius that is being used (from options tool bar or click):
+    this.actualRadius = 1.0;
+    // point on radius set by mouse click:
+    this.pointR = undefined;
+
+    this.angle1 = undefined;
+    this.point1 = undefined;
+    this.angle2 = undefined;
+    this.point2 = undefined;
 
     this.setUiOptions("ArcCPA.ui");
 }
@@ -47,6 +61,28 @@ ArcCPA.prototype.beginEvent = function() {
     this.setState(ArcCPA.State.SettingCenter);
 };
 
+ArcCPA.prototype.showUiOptions = function() {
+    Arc.prototype.showUiOptions.call(this);
+
+    var optionsToolBar = EAction.getOptionsToolBar();
+
+    if (!isNull(optionsToolBar)) {
+        var leRadius = optionsToolBar.findChild("Radius");
+
+        if (!isNull(leRadius)) {
+            // connect singal when pressing enter in radius field to set radius and advances to next stage:
+            var self = this;
+            leRadius.returnPressed.connect(function() {
+                if (self.state==ArcCPA.State.SettingRadius) {
+                    self.setState(ArcCPA.State.SettingAngle1);
+                }
+            });
+
+        }
+    }
+};
+
+
 ArcCPA.prototype.setState = function(state) {
     Arc.prototype.setState.call(this, state);
 
@@ -56,8 +92,8 @@ ArcCPA.prototype.setState = function(state) {
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case ArcCPA.State.SettingCenter:
+        this.pointR = undefined;
         this.center = undefined;
-        this.radius = undefined;
         this.angle1 = undefined;
         this.point1 = undefined;
         this.angle2 = undefined;
@@ -127,7 +163,10 @@ ArcCPA.prototype.pickCoordinate = function(event, preview) {
         break;
 
     case ArcCPA.State.SettingRadius:
-        this.radius = this.center.getDistanceTo(event.getModelPosition());
+        this.pointR = event.getModelPosition();
+
+        this.updateActualRadius();
+
         if (preview) {
             this.updatePreview();
         }
@@ -166,20 +205,20 @@ ArcCPA.prototype.pickCoordinate = function(event, preview) {
 
 ArcCPA.prototype.getOperation = function(preview) {
     if (isNull(this.center) ||
-        !isNumber(this.radius) || !isBoolean(this.reversed)) {
+        !isNumber(this.actualRadius) || !isBoolean(this.reversed)) {
 
         return undefined;
     }
 
     var reversed = this.reversed;
 
-    if (this.state == ArcCPA.State.SettingRadius) {
+    if (this.state === ArcCPA.State.SettingRadius) {
         this.angle1 = 0.0;
         this.angle2 = 2*Math.PI;
         reversed = false;
     }
-    else if (this.state == ArcCPA.State.SettingAngle1) {
-        if (this.reversed==true) {
+    else if (this.state === ArcCPA.State.SettingAngle1) {
+        if (this.reversed===true) {
             this.angle2 = this.angle1 - Math.PI/3;
         }
         else {
@@ -191,7 +230,7 @@ ArcCPA.prototype.getOperation = function(preview) {
         this.getDocument(),
         new RArcData(
             this.center,
-            this.radius,
+            this.actualRadius,
             this.angle1,
             this.angle2,
             reversed
@@ -207,13 +246,13 @@ ArcCPA.prototype.getAuxPreview = function() {
 
     var v = new RVector();
 
-    if (this.state==ArcCPA.State.SettingAngle1) {
-        d = Math.max(this.center.getDistanceTo(this.point1), this.radius);
+    if (this.state===ArcCPA.State.SettingAngle1) {
+        d = Math.max(this.center.getDistanceTo(this.point1), this.actualRadius);
         v.setPolar(d,this.angle1);
         ret.push(new RLine(this.center, this.center.operator_add(v)));
     }
-    if (this.state==ArcCPA.State.SettingAngle2) {
-        d = Math.max(this.center.getDistanceTo(this.point2), this.radius);
+    if (this.state===ArcCPA.State.SettingAngle2) {
+        d = Math.max(this.center.getDistanceTo(this.point2), this.actualRadius);
         v.setPolar(d,this.angle2);
         ret.push(new RLine(this.center, this.center.operator_add(v)));
     }
@@ -236,6 +275,42 @@ ArcCPA.prototype.slotDirectionChanged = function(button) {
     this.updatePreview(true);
 };
 
+ArcCPA.prototype.slotUseRadiusChanged = function(value) {
+    this.useRadius = value;
+    this.updateActualRadius();
+    this.updatePreview(true);
+};
+
+/**
+ * Called when user changes the radius.
+ */
+ArcCPA.prototype.slotRadiusChanged = function(value) {
+    this.radius = value;
+    this.updateActualRadius();
+    this.updatePreview(true);
+};
+
+ArcCPA.prototype.updateActualRadius = function() {
+    if (this.useRadius) {
+        this.actualRadius = this.radius;
+    }
+    else {
+        if (isVector(this.center) && isVector(this.pointR)) {
+            this.actualRadius = this.center.getDistanceTo(this.pointR);
+        }
+    }
+};
+
+ArcCPA.prototype.updateRadiusOption = function(value) {
+    var optionsToolBar = EAction.getOptionsToolBar();
+    if (!isNull(optionsToolBar)) {
+        var leRadius = optionsToolBar.findChild("Radius");
+        if (!isNull(leRadius)) {
+            leRadius.setValue(value);
+        }
+    }
+};
+
 ArcCPA.prototype.applyCommand = function(event, preview) {
     var v;
     var di = this.getDocumentInterface();
@@ -255,6 +330,8 @@ ArcCPA.prototype.applyCommand = function(event, preview) {
     case ArcCPA.State.SettingRadius:
         event.accept();
         this.radius = value;
+        this.updateRadiusOption(this.radius);
+
         if (preview) {
             this.updatePreview(true);
         }
@@ -267,7 +344,7 @@ ArcCPA.prototype.applyCommand = function(event, preview) {
         event.accept();
         this.angle1 = RMath.deg2rad(value);
         v = new RVector();
-        v.setPolar(this.radius, this.angle1);
+        v.setPolar(this.actualRadius, this.angle1);
         this.point1 = this.center.operator_add(v);
         if (preview) {
             this.updatePreview(true);
@@ -281,7 +358,7 @@ ArcCPA.prototype.applyCommand = function(event, preview) {
         event.accept();
         this.angle2 = RMath.deg2rad(value);
         v = new RVector();
-        v.setPolar(this.radius, this.angle1);
+        v.setPolar(this.actualRadius, this.angle1);
         this.point2 = this.center.operator_add(v);
         if (preview) {
             this.updatePreview(true);
