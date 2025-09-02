@@ -706,7 +706,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
 <context>
     <name>ArcCPA</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+66"/>
+        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+102"/>
         <source>Center</source>
         <translation type="unfinished">Centras</translation>
     </message>
@@ -754,6 +754,16 @@ nuostatos pakeitimai įsigaliotų.</translation>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation type="unfinished">Pagal laikrodžio rodyklę (neigiamas)</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Radius:</source>
+        <translation type="unfinished">Spindulys:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Radius</source>
+        <translation type="unfinished">Spindulys</translation>
     </message>
 </context>
 <context>
@@ -14633,4 +14643,3 @@ jau yra sąraše.</translation>
     </message>
 </context>
 </TS>
-

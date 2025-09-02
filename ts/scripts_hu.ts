@@ -706,7 +706,7 @@ indítsa újra a QCAD-et.</translation>
 <context>
     <name>ArcCPA</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+66"/>
+        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+102"/>
         <source>Center</source>
         <translation>Középpont</translation>
     </message>
@@ -744,6 +744,16 @@ indítsa újra a QCAD-et.</translation>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Óramutató járásával megegyező</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Radius:</source>
+        <translation type="unfinished">Sugár:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Radius</source>
+        <translation type="unfinished">Sugár</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
@@ -4439,6 +4449,7 @@ már szerepel a listában.</translation>
         <location filename="../scripts/Block/EditMainDrawing/EditMainDrawingInit.js" line="+2"/>
         <source>&amp;Return to Main Drawing</source>
         <translatorcomment>Szerepel a &quot;DefaultAction&quot; egy szövegében is!</translatorcomment>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -5529,12 +5540,12 @@ már szerepel a listában.</translation>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-      <translation type="unfinished"></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
-      <translation type="unfinished">null</translation>
+        <translation type="unfinished">null</translation>
     </message>
 </context>
 <context>
@@ -13171,6 +13182,7 @@ már szerepel a listában.</translation>
         <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translatorcomment>&quot;(a)&quot; refers to the angle that indicated as angle &quot;a&quot; in the figure of the dialog</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -14395,6 +14407,7 @@ már szerepel a listában.</translation>
         <location line="+0"/>
         <source>Trace</source>
         <translatorcomment>A trace is a filled area with 3 or 4 corners.</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14405,6 +14418,7 @@ már szerepel a listában.</translation>
         <location line="+0"/>
         <source>Face</source>
         <translatorcomment>A face is the same as Trace but can also be 3D.</translatorcomment>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14616,4 +14630,3 @@ már szerepel a listában.</translation>
     </message>
 </context>
 </TS>
-

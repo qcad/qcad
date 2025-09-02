@@ -706,7 +706,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
 <context>
     <name>ArcCPA</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+66"/>
+        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+102"/>
         <source>Center</source>
         <translation>Merkez</translation>
     </message>
@@ -744,6 +744,16 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Saat yönünde (Negatif)</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Radius:</source>
+        <translation type="unfinished">Yarıçap:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Radius</source>
+        <translation type="unfinished">Yarıçap</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
@@ -14615,4 +14625,3 @@ zaten listede.</translation>
     </message>
 </context>
 </TS>
-

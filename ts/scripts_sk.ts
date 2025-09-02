@@ -706,7 +706,7 @@ musíte znovu spustiť QCAD.</translation>
 <context>
     <name>ArcCPA</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+66"/>
+        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+102"/>
         <source>Center</source>
         <translation>Stredový bod</translation>
     </message>
@@ -744,6 +744,16 @@ musíte znovu spustiť QCAD.</translation>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>V smere hodinových ručičiek (mínusový)</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Radius:</source>
+        <translation type="unfinished">Polomer:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Radius</source>
+        <translation type="unfinished">Polomer</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
@@ -14636,4 +14646,3 @@ už existuje v zozname.</translation>
     </message>
 </context>
 </TS>
-

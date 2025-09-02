@@ -706,7 +706,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
 <context>
     <name>ArcCPA</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+66"/>
+        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+102"/>
         <source>Center</source>
         <translation>Centro</translation>
     </message>
@@ -754,6 +754,16 @@ para que as mudanças de preferências entrem em vigor.</translation>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>No sentido dos ponteiros do relógio (Negativo)</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Radius:</source>
+        <translation>Raio:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Radius</source>
+        <translation>Raio</translation>
     </message>
 </context>
 <context>
@@ -14626,4 +14636,3 @@ já se encontra na lista.</translation>
     </message>
 </context>
 </TS>
-

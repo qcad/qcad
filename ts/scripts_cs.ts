@@ -706,7 +706,7 @@ aby se změny předvoleb projevily.</translation>
 <context>
     <name>ArcCPA</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+66"/>
+        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+102"/>
         <source>Center</source>
         <translation>Střed</translation>
     </message>
@@ -744,6 +744,16 @@ aby se změny předvoleb projevily.</translation>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Směr otáčení (Negativní)</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Radius:</source>
+        <translation type="unfinished">Poloměr:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Radius</source>
+        <translation type="unfinished">Poloměr</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
@@ -14634,4 +14644,3 @@ již v seznamu je.</translation>
     </message>
 </context>
 </TS>
-

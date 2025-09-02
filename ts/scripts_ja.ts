@@ -706,7 +706,7 @@ QCADを再起動してください。</translation>
 <context>
     <name>ArcCPA</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+66"/>
+        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+102"/>
         <source>Center</source>
         <translation>中心</translation>
     </message>
@@ -744,6 +744,16 @@ QCADを再起動してください。</translation>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>時計回り（負）</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Radius:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Radius</source>
+        <translation type="unfinished">半径</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
@@ -14616,4 +14626,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

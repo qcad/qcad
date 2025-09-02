@@ -706,7 +706,7 @@ de wijzigingen door te voeren.</translation>
 <context>
     <name>ArcCPA</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+66"/>
+        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+102"/>
         <source>Center</source>
         <translation>Centrum</translation>
     </message>
@@ -744,6 +744,16 @@ de wijzigingen door te voeren.</translation>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Met de klok mee (negatief)</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Radius:</source>
+        <translation>Straal:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Radius</source>
+        <translation>Straal</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
@@ -14626,4 +14636,3 @@ is al in de lijst.</translation>
     </message>
 </context>
 </TS>
-
