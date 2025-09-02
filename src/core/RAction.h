@@ -119,6 +119,8 @@ public:
         return clickMode;
     }
 
+    virtual int getState() = 0;
+
     /**
      * Called as soon as the action is created (menu chosen, toolbutton activated, etc).
      */

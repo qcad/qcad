@@ -240,6 +240,10 @@ EAction.prototype.setState = function(state) {
     }
 };
 
+EAction.prototype.getState = function() {
+    return this.state;
+};
+
 /**
  * Called to initialize a new state of this action. Overwrite to
  * set mouse tips, show desired toolbars, etc.

@@ -768,7 +768,16 @@ bool RMainWindowQt::event(QEvent* e) {
                     keyLog += QChar(ke->key());
                     //qDebug() << "keyLog:" << keyLog;
 
-                    if (mainWindowProxy && mainWindowProxy->handleOptionsShortcut(keyLog)) {
+                    int actionState = -1;
+                    RDocumentInterface* di = getDocumentInterface();
+                    if (di!=NULL) {
+                        RAction* action = di->getCurrentAction();
+                        if (action!=NULL) {
+                            actionState = action->getState();
+                        }
+                    }
+
+                    if (mainWindowProxy && mainWindowProxy->handleOptionsShortcut(keyLog, actionState)) {
                         // shortcut for options toolbar:
                         keyLog.clear();
                     }

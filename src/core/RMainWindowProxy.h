@@ -11,7 +11,7 @@ public:
 
     virtual void handleEnterKey(QObject* obj) = 0;
     virtual bool handleTabKey(QObject* obj, bool backTab = false) = 0;
-    virtual bool handleOptionsShortcut(const QString& shortcut) = 0;
+    virtual bool handleOptionsShortcut(const QString& shortcut, int actionState = -1) = 0;
 };
 
 #endif
