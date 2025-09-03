@@ -15,8 +15,8 @@ Circle3TTest02.prototype.test00 = function() {
     qDebug('running Circle3TTest02.test00()...');
     this.setUp();
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ArcToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolBar::ArcToolsPanel::ArcCPAButton');
-    this.setToolOption('ArcCPA/Direction', 'Clockwise');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ArcToolsPanel::ArcCPAProButton');
+    this.setToolOption('ArcCPAPro/Direction', 'Clockwise');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(19.8, 20.2);

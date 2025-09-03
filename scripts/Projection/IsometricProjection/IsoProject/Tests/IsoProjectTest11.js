@@ -38,8 +38,8 @@ IsoProjectTest11.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ArcToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolBar::ArcToolsPanel::ArcCPAButton');
-    this.setToolOption('ArcCPA/Direction', 'Clockwise');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ArcToolsPanel::ArcCPAProButton');
+    this.setToolOption('ArcCPAPro/Direction', 'Clockwise');
     this.updateToolOptions();
     this.setZoom(12.413102687059721, new RVector(2.139, 2.60251, 0, true));
     var p = new RVector(20.095569, 9.723177);

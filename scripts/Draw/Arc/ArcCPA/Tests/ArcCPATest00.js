@@ -33,8 +33,8 @@ ArcCPATest00.prototype.test00 = function() {
     qDebug('running ArcCPATest00.test00()...');
     this.setUp();
     this.clickOnWidget('MainWindow::MainToolsPanel::ArcToolsPanelButton');
-    this.clickOnWidget('MainWindow::ArcToolsPanel::ArcCPAButton');
-    this.setToolOption('ArcCPA/Direction', 'CounterClockwise');
+    this.clickOnWidget('MainWindow::ArcToolsPanel::ArcCPAProButton');
+    this.setToolOption('ArcCPAPro/Direction', 'CounterClockwise');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(9.9, 10.1);
@@ -96,7 +96,7 @@ ArcCPATest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     var p = new RVector(10, 4);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    this.setToolOption('ArcCPA/Direction', 'Clockwise');
+    this.setToolOption('ArcCPAPro/Direction', 'Clockwise');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(40.1, 10);

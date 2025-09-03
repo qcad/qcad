@@ -33,8 +33,8 @@ LineTangent2Test01.prototype.test00 = function() {
     qDebug('running LineTangent2Test01.test00()...');
     this.setUp();
     this.clickOnWidget('MainWindow::MainToolsPanel::ArcToolsPanelButton');
-    this.clickOnWidget('MainWindow::ArcToolsPanel::ArcCPAButton');
-    this.setToolOption('ArcCPA/Direction', 'CounterClockwise');
+    this.clickOnWidget('MainWindow::ArcToolsPanel::ArcCPAProButton');
+    this.setToolOption('ArcCPAPro/Direction', 'CounterClockwise');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(9.9, 10);
