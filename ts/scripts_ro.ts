@@ -706,7 +706,7 @@ modificările preferințelor să intre în vigoare.</translation>
 <context>
     <name>ArcCPA</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+102"/>
+        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+80"/>
         <source>Center</source>
         <translation type="unfinished">Centru</translation>
     </message>
@@ -744,16 +744,6 @@ modificările preferințelor să intre în vigoare.</translation>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation type="unfinished">În sensul acelor de ceasornic (Negativ)</translation>
-    </message>
-    <message>
-        <location line="+24"/>
-        <source>Radius:</source>
-        <translation type="unfinished">Raza de acțiune:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Radius</source>
-        <translation type="unfinished">Radius</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
@@ -4203,17 +4193,17 @@ este deja în listă.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2123"/>
+        <location line="+2127"/>
         <source>Cancel</source>
         <translation type="unfinished">Anulează</translation>
     </message>
     <message>
-        <location line="-2122"/>
+        <location line="-2126"/>
         <source>Done</source>
         <translation type="unfinished">Realizat</translation>
     </message>
     <message>
-        <location line="+280"/>
+        <location line="+284"/>
         <location line="+127"/>
         <source>Active Tool:</source>
         <translation type="unfinished">Instrument activ:</translation>

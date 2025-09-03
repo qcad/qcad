@@ -706,7 +706,7 @@ the preference changes to take effect.</source>
 <context>
     <name>ArcCPA</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+102"/>
+        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+80"/>
         <source>Center</source>
         <translation type="unfinished">中心</translation>
     </message>
@@ -754,16 +754,6 @@ the preference changes to take effect.</source>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation type="unfinished">顺时针(负数)</translation>
-    </message>
-    <message>
-        <location line="+24"/>
-        <source>Radius:</source>
-        <translation type="unfinished">半径：</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Radius</source>
-        <translation type="unfinished">半径</translation>
     </message>
 </context>
 <context>
@@ -4198,17 +4188,17 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2123"/>
+        <location line="+2127"/>
         <source>Cancel</source>
         <translation type="unfinished">取消</translation>
     </message>
     <message>
-        <location line="-2122"/>
+        <location line="-2126"/>
         <source>Done</source>
         <translation type="unfinished">已完成</translation>
     </message>
     <message>
-        <location line="+280"/>
+        <location line="+284"/>
         <location line="+127"/>
         <source>Active Tool:</source>
         <translation type="unfinished">活跃的工具：</translation>

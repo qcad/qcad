@@ -705,7 +705,7 @@ the preference changes to take effect.</source>
 <context>
     <name>ArcCPA</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+102"/>
+        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+80"/>
         <source>Center</source>
         <translation type="unfinished"></translation>
     </message>
@@ -742,16 +742,6 @@ the preference changes to take effect.</source>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
-        <source>Radius:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Radius</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4193,17 +4183,17 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2123"/>
+        <location line="+2127"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-2122"/>
+        <location line="-2126"/>
         <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+280"/>
+        <location line="+284"/>
         <location line="+127"/>
         <source>Active Tool:</source>
         <translation type="unfinished"></translation>

@@ -706,7 +706,7 @@ um die Änderungen zu übernehmen.</translation>
 <context>
     <name>ArcCPA</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+102"/>
+        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+80"/>
         <source>Center</source>
         <translation>Zentrum</translation>
     </message>
@@ -754,16 +754,6 @@ um die Änderungen zu übernehmen.</translation>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Uhrzeigersinn (negativ)</translation>
-    </message>
-    <message>
-        <location line="+24"/>
-        <source>Radius:</source>
-        <translation>Radius:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Radius</source>
-        <translation>Radius</translation>
     </message>
 </context>
 <context>
@@ -4202,17 +4192,17 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2123"/>
+        <location line="+2127"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-2122"/>
+        <location line="-2126"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
     <message>
-        <location line="+280"/>
+        <location line="+284"/>
         <location line="+127"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
