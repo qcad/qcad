@@ -298,8 +298,8 @@ ArcCPA.prototype.applyCommand = function(event, preview) {
     switch (this.state) {
     case ArcCPA.State.SettingRadius:
         event.accept();
-        this.radius = value;
-        this.updateRadiusOption(this.radius);
+        this.actualRadius = value;
+        this.updateRadiusOption(this.actualRadius);
 
         if (preview) {
             this.updatePreview(true);
@@ -311,10 +311,10 @@ ArcCPA.prototype.applyCommand = function(event, preview) {
 
     case ArcCPA.State.SettingStartAngle:
         event.accept();
-        this.startAngle = RMath.deg2rad(value);
-        this.updateStartAngleOption(this.startAngle);
+        this.actualStartAngle = RMath.deg2rad(value);
+        this.updateStartAngleOption(this.actualStartAngle);
         v = new RVector();
-        v.setPolar(this.actualRadius, this.startAngle);
+        v.setPolar(this.actualRadius, this.actualStartAngle);
         this.startPoint = this.center.operator_add(v);
         if (preview) {
             this.updatePreview(true);
@@ -326,10 +326,10 @@ ArcCPA.prototype.applyCommand = function(event, preview) {
 
     case ArcCPA.State.SettingEndAngle:
         event.accept();
-        this.endAngle = RMath.deg2rad(value);
-        this.updateEndAngleOption(this.endAngle);
+        this.actualEndAngle = RMath.deg2rad(value);
+        this.updateEndAngleOption(this.actualEndAngle);
         v = new RVector();
-        v.setPolar(this.actualRadius, this.startAngle);
+        v.setPolar(this.actualRadius, this.actualEndAngle);
         this.endPoint = this.center.operator_add(v);
         if (preview) {
             this.updatePreview(true);
@@ -343,3 +343,9 @@ ArcCPA.prototype.applyCommand = function(event, preview) {
     }
 };
 
+ArcCPA.prototype.updateRadiusOption = function(value) {
+};
+ArcCPA.prototype.updateStartAngleOption = function(value) {
+};
+ArcCPA.prototype.updateEndAngleOption = function(value) {
+};
