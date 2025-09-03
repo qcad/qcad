@@ -280,7 +280,7 @@ BreakOutGap.prototype.applyCommand = function(event, preview) {
     var di = this.getDocumentInterface();
     var cmd = event.getCommand();
 
-    var pos = RMath.parseCoordinate(cmd);
+    var pos = RMath.parseCoordinate(cmd, di.getRelativeZero());
     if (pos.isValid()) {
         return;
     }
