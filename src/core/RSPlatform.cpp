@@ -334,7 +334,9 @@ QString RS::getFontFamilyFromFileName(const QString& fileName) {
         "HKEY_CURRENT_USER"
     };
 
-    for (const QString& rootKey : rootKeys) {
+    for (int i=0; i<rootKeys.length(); i++) {
+        const QString rootKey = rootKeys[i];
+
         QSettings fontReg(rootKey + "\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts", QSettings::NativeFormat);
 
         QStringList keys = fontReg.allKeys();
