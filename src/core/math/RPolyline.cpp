@@ -1299,9 +1299,14 @@ bool RPolyline::contains(const RVector& point, bool borderIsInside, double toler
     }
 
     if (hasArcSegments()) {
-        // TODO: not always reliable:
-        QPainterPath pp = toPainterPath();
-        return pp.contains(QPointF(point.x, point.y));
+        if (RPolyline::hasProxy()) {
+            return RPolyline::getPolylineProxy()->contains(*this, point, borderIsInside, tolerance);
+        }
+        else {
+            // not reliable, false negatives:
+            QPainterPath pp = toPainterPath();
+            return pp.contains(QPointF(point.x, point.y));
+        }
     }
 
     int nvert = vertices.size();
@@ -1315,6 +1320,7 @@ bool RPolyline::contains(const RVector& point, bool borderIsInside, double toler
     }
     return c;
 }
+
 
 /**
  * Checks if the given shape is completely inside this closed polygon. If this
@@ -1369,13 +1375,14 @@ bool RPolyline::containsShape(const RShape& shape) const {
             const RCircle& circle = dynamic_cast<const RCircle&>(shape);
             RVector p1 = circle.getCenter() + RVector(circle.getRadius(), 0);
             RVector p2 = circle.getCenter() + RVector(-circle.getRadius(), 0);
-            if (contains(p1) || contains(p2)) {
+            if (contains(p1) && contains(p2)) {
                 return true;
             }
             return false;
         }
         else {
             // other shapes:
+            // shape is inside if one point on the shape is inside and there are no intersections (see above):
             RVector pointOnShape = shape.getPointOnShape();
             if (contains(pointOnShape, true)) {
                 return true;
