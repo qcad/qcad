@@ -245,12 +245,14 @@ QString RImageData::getFullFilePath() const {
         return "";
     }
 
+    QString fn = fileName;
+
     // QFileInfo does not correctly handle paths with mixed slash / backslash notation:
-    fileName = fileName.replace('\\', '/');
+    fn = fn.replace('\\', '/');
 
     // load image from absolute path:
-    if (QFileInfo(fileName).exists()) {
-        return fileName;
+    if (QFileInfo(fn).exists()) {
+        return fn;
     }
 
     QString docPath;
@@ -263,15 +265,15 @@ QString RImageData::getFullFilePath() const {
     }
 
     // load image from relative path:
-    if (QFileInfo(fileName).isRelative()) {
-        QString absPath = docPath + QDir::separator() + fileName;
+    if (QFileInfo(fn).isRelative()) {
+        QString absPath = docPath + QDir::separator() + fn;
         if (QFileInfo(absPath).exists()) {
             return absPath;
         }
     }
 
     // load image from same path as drawing file:
-    QString absPath = docPath + QDir::separator() + QFileInfo(fileName).fileName();
+    QString absPath = docPath + QDir::separator() + QFileInfo(fn).fileName();
     if (QFileInfo(absPath).exists()) {
         return absPath;
     }
