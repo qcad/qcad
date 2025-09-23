@@ -526,6 +526,7 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
     dbg.nospace() << "document variables: " << *s.queryDocumentVariables() << "\n";
 
     {
+        dbg.nospace() << "layers:\n";
         QSet<RLayer::Id> layers = s.queryAllLayers(true);
         QSetIterator<RLayer::Id> i(layers);
         while (i.hasNext()) {
@@ -540,6 +541,7 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
     }
 
     {
+        dbg.nospace() << "layerstates:\n";
         QSet<RLayerState::Id> layerStates = s.queryAllLayerStates(true);
         QSetIterator<RLayerState::Id> i(layerStates);
         while (i.hasNext()) {
@@ -554,6 +556,7 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
     }
 
     {
+        dbg.nospace() << "views:\n";
         QSet<RView::Id> views = s.queryAllViews(true);
         QSetIterator<RView::Id> i(views);
         while (i.hasNext()) {
@@ -568,6 +571,7 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
     }
 
     {
+        dbg.nospace() << "blocks:\n";
         QSet<RBlock::Id> blocks = s.queryAllBlocks(true);
         QSetIterator<RBlock::Id> i(blocks);
         while (i.hasNext()) {
@@ -583,6 +587,7 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
     }
 
     {
+        dbg.nospace() << "linetypes:\n";
         QSet<RLinetype::Id> linetypes = s.queryAllLinetypes();
         QSetIterator<RLinetype::Id> i(linetypes);
         while (i.hasNext()) {
@@ -597,6 +602,7 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
     }
 
     {
+        dbg.nospace() << "entities:\n";
         QSet<REntity::Id> entities = s.querySelectedEntities();
         if (entities.size()==0) {
             entities = s.queryAllEntities(true, true);
