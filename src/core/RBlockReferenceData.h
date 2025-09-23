@@ -173,6 +173,9 @@ public:
 
     bool isPixelUnit() const;
 
+    bool isXRef() const;
+    bool loadXRef() const;
+
 #if QT_VERSION >= 0x060000
     /**
      * copy function for Qt 6 scripts:

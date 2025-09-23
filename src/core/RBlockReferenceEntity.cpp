@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RBlockReferenceEntity.h"
+#include "RBlock.h"
 #include "RDebug.h"
 #include "RDocument.h"
 #include "RExporter.h"
@@ -109,7 +110,7 @@ void RBlockReferenceEntity::init() {
     RBlockReferenceEntity::PropertyRowSpacing.generateId(RBlockReferenceEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Row Spacing"));
 
     // make sure title of property attributes group is translated:
-    QT_TRANSLATE_NOOP("REntity", "Attributes");
+    QString s = QT_TRANSLATE_NOOP("REntity", "Attributes");
 }
 
 QSet<RPropertyTypeId> RBlockReferenceEntity::getPropertyTypeIds(RPropertyAttributes::Option option) const {
@@ -392,6 +393,20 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
         return;
     }
 
+    QSharedPointer<RBlock> block = document->queryBlockDirect(data.referencedBlockId);
+    if (block.isNull()) {
+        recursionDepth--;
+        //qWarning() << "block" << data.referencedBlockId << "is NULL";
+        return;
+    }
+
+    QString xRefFileName = block->getXRefFileName();
+    bool isXRef = !xRefFileName.isEmpty();
+
+    if (isXRef) {
+        block->loadXRef();
+    }
+
     RObject::Id layer0Id = document->getLayer0Id();
     //bool layerIsOff = document->isLayerOff(getLayerId());
     //bool layer0IsOff = document->isLayerOff(layer0Id);
@@ -405,13 +420,6 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
     // TODO: block attributes for rest of array:
 //    QSet<REntity::Id> attributeIds = document->queryChildEntities(getId(), RS::EntityAttribute);
 //    QList<REntity::Id> attributeList = document->getStorage().orderBackToFront(attributeIds);
-
-    QSharedPointer<RBlock> block = document->queryBlockDirect(data.referencedBlockId);
-    if (block.isNull()) {
-        recursionDepth--;
-        //qWarning() << "block" << data.referencedBlockId << "is NULL";
-        return;
-    }
 
     // transform for whole block reference:
     RTransform blockRefTransform;

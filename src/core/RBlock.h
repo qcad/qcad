@@ -28,6 +28,7 @@
 #include "RS.h"
 #include "RVector.h"
 #include "RPropertyTypeId.h"
+#include "RBlockProxy.h"
 
 class RDocument;
 class RTransaction;
@@ -52,6 +53,7 @@ public:
     static RPropertyTypeId PropertyOriginZ;
     static RPropertyTypeId PropertyLayout;
     static RPropertyTypeId PropertyOwnedByReference;
+    static RPropertyTypeId PropertyXRefFileName;
 
 public:
     RBlock();
@@ -146,12 +148,63 @@ public:
 
     QString getLayoutName() const;
 
+    void setXRefFileName(const QString& f) {
+        xRefFileName = f;
+    }
+
+    QString getXRefFileName() const {
+        return xRefFileName;
+    }
+
+    bool loadXRef() {
+        if (blockProxy!=NULL) {
+            return blockProxy->loadXRef(this);
+        }
+        return false;
+    }
+
+    QString getFullXRefFilePath() const {
+        if (blockProxy!=NULL) {
+            return blockProxy->getFullXRefFilePath(this);
+        }
+        return "";
+    }
+
+    bool isXRefLoaded() const {
+        return xRefLoaded;
+    }
+
+    void setXRefLoaded(bool on) {
+        xRefLoaded = on;
+    }
+
     virtual QPair<QVariant, RPropertyAttributes> getProperty(RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false, bool showOnRequest = false);
     virtual bool setProperty(RPropertyTypeId propertyTypeId,
             const QVariant& value, RTransaction* transaction=NULL);
 
     virtual void setCustomProperty(const QString& title, const QString& key, const QVariant& value);
+
+    static bool hasProxy() {
+        return blockProxy!=NULL;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static void setBlockProxy(RBlockProxy* p) {
+        if (blockProxy!=NULL) {
+            delete blockProxy;
+        }
+        blockProxy = p;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static RBlockProxy* getBlockProxy() {
+        return blockProxy;
+    }
 
 public:
     static const QString modelSpaceName;
@@ -171,6 +224,10 @@ private:
     RVector origin;
     RObject::Id layoutId;
     bool ownedByReference;
+    QString xRefFileName;
+    bool xRefLoaded;
+
+    static RBlockProxy* blockProxy;
 };
 
 

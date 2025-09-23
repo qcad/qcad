@@ -209,6 +209,14 @@ public:
         return data.mapToBlock(v);
     }
 
+    bool isXRef() const {
+        return data.isXRef();
+    }
+
+    bool loadXRef() const {
+        return data.loadXRef();
+    }
+
     /**
      * \nonscriptable
      */
