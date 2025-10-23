@@ -36,7 +36,9 @@ RClipboardOperation::RClipboardOperation() :
     copyAllLayers(false),
     keepSelection(false),
     blockOwnership(false),
-    customEntityType(RS::EntityUnknown) {
+    customEntityType(RS::EntityUnknown),
+    createBlockReference(true),
+    useExistingBlock(false) {
 }
 
 void RClipboardOperation::copy(RDocument& src, RDocument& dest,
@@ -102,13 +104,24 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
         // block does not exist in dest - or -
         // block exists in dest and must be overwritten:
         if (!hasBlock || overwriteBlocks) {
-            block = QSharedPointer<RBlock> (new RBlock(&dest, blockName,
-                    RVector(0, 0, 0)));
+            if (hasBlock && useExistingBlock) {
+                // use existing block in dest as template for new block (keep block parameters such as XRef file name):
+                block = dest.queryBlock(blockName);
+            }
+            else {
+                block = QSharedPointer<RBlock> (new RBlock(&dest, blockName, RVector(0, 0, 0)));
+            }
             block->setCustomProperties(blockProperties);
             if (blockOwnership) {
                 block->setOwnedByReference(true);
             }
-            transaction.overwriteBlock(block);
+            if (hasBlock && useExistingBlock) {
+                // when using existing block, we only update it instead of actually overwriting it:
+                transaction.addObject(block);
+            }
+            else {
+                transaction.overwriteBlock(block);
+            }
         }
 
         // block exists and must not be overwritten:
@@ -118,69 +131,70 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
 
         Q_ASSERT(!block.isNull());
 
-        // create new block reference that references new, overwritten or existing block
-        // (insert later, when block is complete, so we have bounding box for spatial index):
-        //RBlockReferenceEntity* ref = new RBlockReferenceEntity(&dest,
-        RBlockReferenceData data(block->getId(), RVector(0,0,0),
-                                    RVector(1.0, 1.0, 1.0), 0.0);
-        RBlockReferenceEntity* ref = createBlockReferenceEntity(dest, customEntityType, data);
-        refp = QSharedPointer<RBlockReferenceEntity>(ref);
-        refp->setBlockId(dest.getCurrentBlockId());
-        off = RVector(0, 0, 0);
-        if (flipHorizontal) {
-            refp->flipHorizontal();
-        }
-        if (flipVertical) {
-            refp->flipVertical();
-        }
-        //ref->scale(scale * unitScale);
-        refp->scale(scale);
-        refp->rotate(rotation, center);
-        refp->move(offset);
-
-        refp->setCustomProperties(properties);
-
-        // create attribute for each attribute definition in block with
-        // invalid parent ID (fixed later, when block reference ID is known):
-        QSet<REntity::Id> ids = src.queryAllEntities();
-        QSet<REntity::Id>::iterator it;
-        for (it=ids.begin(); it!=ids.end(); it++) {
-            REntity::Id id = *it;
-            QSharedPointer<RAttributeDefinitionEntity> attDef =
-                src.queryEntity(id).dynamicCast<RAttributeDefinitionEntity>();
-            if (attDef.isNull()) {
-                continue;
+        if (createBlockReference) {
+            // create new block reference that references new, overwritten or existing block
+            // (insert later, when block is complete, so we have bounding box for spatial index):
+            //RBlockReferenceEntity* ref = new RBlockReferenceEntity(&dest,
+            RBlockReferenceData data(block->getId(), RVector(0,0,0), RVector(1.0, 1.0, 1.0), 0.0);
+            RBlockReferenceEntity* ref = createBlockReferenceEntity(dest, customEntityType, data);
+            refp = QSharedPointer<RBlockReferenceEntity>(ref);
+            refp->setBlockId(dest.getCurrentBlockId());
+            off = RVector(0, 0, 0);
+            if (flipHorizontal) {
+                refp->flipHorizontal();
             }
-
-            RAttributeDefinitionData ad = attDef->getData();
-            ad.setDocument(&dest);
-            ad.setBlockId(RBlock::INVALID_ID);
-            QSharedPointer<RAttributeEntity> att(
-                new RAttributeEntity(
-                    &dest,
-                    RAttributeData(ad, REntity::INVALID_ID, attDef->getTag())
-                )
-            );
-            att->scale(unitScale);
-            att->setInvisible(attDef->isInvisible());
-            refp->applyTransformationTo(*att);
-
-            // assign values to attributes:
-            QString tag = att->getTag();
-            if (attributes.contains(tag)) {
-                att->setText(attributes[tag]);
+            if (flipVertical) {
+                refp->flipVertical();
             }
+            //ref->scale(scale * unitScale);
+            refp->scale(scale);
+            refp->rotate(rotation, center);
+            refp->move(offset);
 
-            // make sure the attribute has the correct layer ID of the
-            // corresponding layer in dest:
-            QSharedPointer<RLayer> destLayer = copyEntityLayer(*attDef, src, dest, overwriteLayers, transaction);
-            att->setLayerId(destLayer->getId());
+            refp->setCustomProperties(properties);
 
-            QSharedPointer<RLinetype> destLinetype = copyEntityLinetype(*attDef, src, dest, overwriteLinetypes, transaction);
-            att->setLinetypeId(destLinetype->getId());
+            // create attribute for each attribute definition in block with
+            // invalid parent ID (fixed later, when block reference ID is known):
+            QSet<REntity::Id> ids = src.queryAllEntities();
+            QSet<REntity::Id>::iterator it;
+            for (it=ids.begin(); it!=ids.end(); it++) {
+                REntity::Id id = *it;
+                QSharedPointer<RAttributeDefinitionEntity> attDef =
+                    src.queryEntity(id).dynamicCast<RAttributeDefinitionEntity>();
+                if (attDef.isNull()) {
+                    continue;
+                }
 
-            transaction.addObject(att, false);
-            attributeIds.insert(att->getId());
+                RAttributeDefinitionData ad = attDef->getData();
+                ad.setDocument(&dest);
+                ad.setBlockId(RBlock::INVALID_ID);
+                QSharedPointer<RAttributeEntity> att(
+                    new RAttributeEntity(
+                        &dest,
+                        RAttributeData(ad, REntity::INVALID_ID, attDef->getTag())
+                    )
+                );
+                att->scale(unitScale);
+                att->setInvisible(attDef->isInvisible());
+                refp->applyTransformationTo(*att);
+
+                // assign values to attributes:
+                QString tag = att->getTag();
+                if (attributes.contains(tag)) {
+                    att->setText(attributes[tag]);
+                }
+
+                // make sure the attribute has the correct layer ID of the
+                // corresponding layer in dest:
+                QSharedPointer<RLayer> destLayer = copyEntityLayer(*attDef, src, dest, overwriteLayers, transaction);
+                att->setLayerId(destLayer->getId());
+
+                QSharedPointer<RLinetype> destLinetype = copyEntityLinetype(*attDef, src, dest, overwriteLinetypes, transaction);
+                att->setLinetypeId(destLinetype->getId());
+
+                transaction.addObject(att, false);
+                attributeIds.insert(att->getId());
+            }
         }
 
         scale = 1.0;
@@ -430,8 +444,7 @@ void RClipboardOperation::copyEntity(
     // if block contents has already been copied, do nothing
     RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(&entity);
     if (blockRef!=NULL && !copiedBlockContents.contains(blockRef->getReferencedBlockId())) {
-        QSharedPointer<RBlock> refBlock =
-            src.queryBlock(blockRef->getReferencedBlockId());
+        QSharedPointer<RBlock> refBlock = src.queryBlock(blockRef->getReferencedBlockId());
         if (refBlock.isNull()) {
             qWarning("RClipboardOperation::copyToDocument: "
                 "entity references a NULL block.");
@@ -453,6 +466,8 @@ void RClipboardOperation::copyEntity(
         // already there and needs to be overwritten:
         QSharedPointer<RBlock> refBlockDest = dest.queryBlock(refBlock->getName());
         if (refBlockDest.isNull() || overwriteBlocks) {
+
+            // copy block from src to dest:
             QSet<REntity::Id> ids = src.queryBlockEntities(refBlock->getId());
             bool first = true;
             QSet<REntity::Id>::iterator it;
@@ -566,6 +581,12 @@ void RClipboardOperation::copyEntity(
         destEntity.dynamicCast<RBlockReferenceEntity>();
     if (!destBlockRef.isNull() && blockRef!=NULL) {
         QString bn = src.getBlockName(blockRef->getReferencedBlockId());
+
+        // add block name prefix for block in XRef:
+        if (!blockNamePrefix.isEmpty()) {
+            bn = blockNamePrefix + bn;
+        }
+
         RBlock::Id blockId = dest.getBlockId(bn);
         destBlockRef->setReferencedBlockId(blockId);
 //        qDebug() << "not yet updated block ref: " << *destBlockRef;
@@ -604,6 +625,12 @@ QSharedPointer<RBlock> RClipboardOperation::copyBlock(
         return QSharedPointer<RBlock>();
     }
     QString srcBlockName = srcBlock->getName();
+
+    // add block name prefix for block in XRef:
+    if (!blockNamePrefix.isEmpty()) {
+        srcBlockName = blockNamePrefix + srcBlockName;
+    }
+
     QSharedPointer<RBlock> destBlock;
     if (copiedBlocks.contains(srcBlockName)) {
         // block was already copied and was added to cache:
@@ -621,6 +648,11 @@ QSharedPointer<RBlock> RClipboardOperation::copyBlock(
             }
             else {
                 destBlockName = srcBlock->getName();
+
+                // add block name prefix for block in XRef:
+                if (!blockNamePrefix.isEmpty()) {
+                    destBlockName = blockNamePrefix + destBlockName;
+                }
             }
         }
         if (!dest.hasBlock(destBlockName) || (overwriteBlocks && blockName.isNull())) {
@@ -628,6 +660,12 @@ QSharedPointer<RBlock> RClipboardOperation::copyBlock(
             dest.getStorage().setObjectId(*destBlock.data(), RObject::INVALID_ID);
             dest.getStorage().setObjectHandle(*destBlock.data(), RObject::INVALID_HANDLE);
             destBlock->setDocument(&dest);
+
+            // rename block for XRef:
+            if (!blockNamePrefix.isEmpty()) {
+                destBlock->setName(destBlockName);
+            }
+
             if (dest.hasBlock(destBlockName)) {
                 if (!transaction.overwriteBlock(destBlock)) {
                     destBlock = dest.queryBlock(destBlockName);
@@ -663,6 +701,12 @@ QSharedPointer<RLayer> RClipboardOperation::copyLayer(
 
     // copy parent layers:
     QString layerName = src.getLayerName(layerId);
+
+    // apply layer name prefix (for XRefs):
+    if (!layerNamePrefix.isEmpty()) {
+        layerName = layerNamePrefix + layerName;
+    }
+
     if (layerName.contains(" ... ")) {
         QStringList l = layerName.split(" ... ");
         l.removeLast();
@@ -690,17 +734,30 @@ QSharedPointer<RLayer> RClipboardOperation::copyLayer(
         return QSharedPointer<RLayer>();
     }
 
+    // TODO: line type prefix for XRef:
     QSharedPointer<RLinetype> destLinetype = copyLinetype(srcLayer->getLinetypeId(), src, dest, overwriteLinetypes, transaction);
 
-    QString srcLayerName = srcLayer->getName();
+    QString destLayerName = srcLayer->getName();
+
+    // apply layer name prefix (for XRefs):
+    if (!layerNamePrefix.isEmpty()) {
+        destLayerName = layerNamePrefix + destLayerName;
+    }
+
     QSharedPointer<RLayer> destLayer;
-    if (copiedLayers.contains(srcLayerName)) {
-        destLayer = copiedLayers.value(srcLayerName);
+    if (copiedLayers.contains(destLayerName)) {
+        // layer was already copied:
+        destLayer = copiedLayers.value(destLayerName);
         Q_ASSERT(!destLayer.isNull());
     }
     else {
-        if (!dest.hasLayer(srcLayerName) || overwriteLayers) {
+        // copy layer to dest:
+        if (!dest.hasLayer(destLayerName) || overwriteLayers) {
             destLayer = srcLayer->cloneToLayer();
+            if (!layerNamePrefix.isEmpty()) {
+                // apply layer name override for XRefs:
+                destLayer->setName(destLayerName);
+            }
             destLayer->setDocument(&dest);
             if (destLayer->getDocument()!=srcLayer->getDocument()) {
                 dest.getStorage().setObjectId(*destLayer.data(), RObject::INVALID_ID);
@@ -709,11 +766,11 @@ QSharedPointer<RLayer> RClipboardOperation::copyLayer(
             transaction.addObject(destLayer);
         }
         else {
-            destLayer = dest.queryLayer(srcLayerName);
+            destLayer = dest.queryLayer(destLayerName);
             Q_ASSERT(!destLayer.isNull());
         }
 
-        copiedLayers.insert(srcLayerName, destLayer);
+        copiedLayers.insert(destLayerName, destLayer);
     }
 
     if (!destLinetype.isNull()) {

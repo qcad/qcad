@@ -20,6 +20,8 @@
 #include "RDocument.h"
 #include "RLayout.h"
 
+RBlockProxy* RBlock::blockProxy = NULL;
+
 const QString RBlock::modelSpaceName = "*Model_Space";
 const QString RBlock::paperSpaceName = "*Paper_Space";
 
@@ -34,6 +36,7 @@ RPropertyTypeId RBlock::PropertyOriginY;
 RPropertyTypeId RBlock::PropertyOriginZ;
 RPropertyTypeId RBlock::PropertyLayout;
 RPropertyTypeId RBlock::PropertyOwnedByReference;
+RPropertyTypeId RBlock::PropertyXRefFileName;
 
 RBlock::RBlock() :
     RObject(),
@@ -42,7 +45,8 @@ RBlock::RBlock() :
     pixelUnit(false),
     origin(RVector::invalid),
     layoutId(RLayout::INVALID_ID),
-    ownedByReference(false) {
+    ownedByReference(false),
+    xRefLoaded(false) {
 }
 
 RBlock::RBlock(RDocument* document, const QString& name,
@@ -54,7 +58,8 @@ RBlock::RBlock(RDocument* document, const QString& name,
     pixelUnit(false),
     origin(origin),
     layoutId(RLayout::INVALID_ID),
-    ownedByReference(false) {
+    ownedByReference(false),
+    xRefLoaded(false) {
 }
 
 RBlock::~RBlock() {
@@ -72,6 +77,7 @@ void RBlock::init() {
     RBlock::PropertyOriginZ.generateId(RBlock::getRtti(), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "Z"));
     RBlock::PropertyLayout.generateId(RBlock::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Layout"));
     RBlock::PropertyOwnedByReference.generateId(RBlock::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Owned by Reference"));
+    RBlock::PropertyXRefFileName.generateId(RBlock::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "XRef File Name"));
 }
 
 void RBlock::setName(const QString& n) {
@@ -119,6 +125,7 @@ bool RBlock::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, 
     ret = ret || RObject::setMember(origin.z, value, PropertyOriginZ == propertyTypeId);
     ret = ret || RObject::setMember(layoutId, value.toInt(), propertyTypeId == PropertyLayout);
     ret = ret || RObject::setMember(ownedByReference, value.toBool(), propertyTypeId == PropertyOwnedByReference);
+    ret = ret || RObject::setMember(xRefFileName, value.toString(), propertyTypeId == PropertyXRefFileName);
 
     return ret;
 }
@@ -153,6 +160,9 @@ QPair<QVariant, RPropertyAttributes> RBlock::getProperty(RPropertyTypeId& proper
     else if (propertyTypeId == PropertyOwnedByReference) {
         return qMakePair(QVariant(ownedByReference), RPropertyAttributes());
     }
+    else if (propertyTypeId == PropertyXRefFileName) {
+        return qMakePair(QVariant(xRefFileName), RPropertyAttributes());
+    }
 
     return RObject::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
@@ -176,5 +186,6 @@ void RBlock::print(QDebug dbg) const {
             << ", origin: " << getOrigin()
             << ", frozen: " << isFrozen()
             << ", anonymous: " << isAnonymous()
+            << ", XRef: " << getXRefFileName()
             << ")";
 }

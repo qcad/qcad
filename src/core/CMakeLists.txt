@@ -28,6 +28,7 @@ add_library(qcadcore SHARED
     RActionAdapter.h
     RArcExporter.cpp RArcExporter.h
     RBlock.cpp RBlock.h
+    RBlockProxy.h
     RBlockListener.h
     RKeyListener.h
     RMainWindowProxy.h
@@ -72,6 +73,7 @@ add_library(qcadcore SHARED
     RInputEvent.cpp RInputEvent.h
     RInterTransactionListener.h
     RLayer.cpp RLayer.h
+    RLayerProxy.h
     RLayerListener.h
     RLayerState.cpp RLayerState.h
     RLayout.cpp RLayout.h

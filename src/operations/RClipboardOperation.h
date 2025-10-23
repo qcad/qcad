@@ -257,6 +257,22 @@ public:
         customEntityType = t;
     }
 
+    void setLayerNamePrefix(const QString& p) {
+        layerNamePrefix = p;
+    }
+
+    void setBlockNamePrefix(const QString& p) {
+        blockNamePrefix = p;
+    }
+
+    void setCreateBlockReference(bool on) {
+        createBlockReference = on;
+    }
+
+    void setUseExistingBlock(bool on) {
+        useExistingBlock = on;
+    }
+
     virtual RBlockReferenceEntity* createBlockReferenceEntity(RDocument& doc, RS::EntityType customEntityType, const RBlockReferenceData& data);
 
 private:
@@ -269,6 +285,10 @@ private:
     bool keepSelection;
     bool blockOwnership;
     RS::EntityType customEntityType;
+    QString layerNamePrefix;
+    QString blockNamePrefix;
+    bool createBlockReference;
+    bool useExistingBlock;
 };
 
 Q_DECLARE_METATYPE(RClipboardOperation*)

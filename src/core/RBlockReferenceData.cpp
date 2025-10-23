@@ -416,15 +416,22 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId, b
         return e;
     }
 
+    // query block or XRef:
+    RBlock::Id blockId = getBlockId();
+    QSharedPointer<RBlock> block = document->queryBlockDirect(blockId);
+    if (block.isNull()) {
+        qWarning() << "RBlockReferenceData::queryEntity: block is NULL";
+        return QSharedPointer<REntity> ();
+    }
+
     if (document == NULL) {
-        qWarning("RBlockReferenceData::queryEntity: document is NULL");
+        qWarning() << "RBlockReferenceData::queryEntity: document is NULL";
         return QSharedPointer<REntity> ();
     }
 
     QSharedPointer<REntity> entity = document->queryEntity(entityId);
     if (entity.isNull()) {
-        qWarning("RBlockReferenceData::queryEntity: "
-            "entity %d is NULL", entityId);
+        qWarning() << "RBlockReferenceData::queryEntity: entity " << entityId << " is NULL";
         return QSharedPointer<REntity>();
     }
 
@@ -485,6 +492,9 @@ void RBlockReferenceData::applyColumnRowOffsetTo(REntity& entity, int col, int r
 }
 
 bool RBlockReferenceData::applyTransformationTo(REntity& entity) const {
+    if (document==NULL) {
+        return false;
+    }
     QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
     if (block.isNull()) {
         qWarning("RBlockReferenceData::applyTransformationTo: "
@@ -521,6 +531,10 @@ bool RBlockReferenceData::applyTransformationTo(REntity& entity) const {
 }
 
 bool RBlockReferenceData::applyTransformationTo(QSharedPointer<REntity>& entity) const {
+    if (document==NULL) {
+        return false;
+    }
+
     QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
     if (block.isNull()) {
         qWarning("RBlockReferenceData::applyTransformationTo: "
@@ -570,6 +584,10 @@ bool RBlockReferenceData::applyTransformationTo(QSharedPointer<REntity>& entity)
 }
 
 RTransform RBlockReferenceData::getTransform() const {
+    if (document==NULL) {
+        return RTransform();
+    }
+
     QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
     if (block.isNull()) {
         qWarning("RBlockReferenceData::getTransform: "
@@ -586,6 +604,9 @@ RTransform RBlockReferenceData::getTransform() const {
 }
 
 RVector RBlockReferenceData::mapToBlock(const RVector& v) const {
+    if (document==NULL) {
+        return RVector::invalid;
+    }
     QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
     if (block.isNull()) {
         qWarning("RBlockReferenceData::mapToBlock: "
@@ -614,6 +635,28 @@ bool RBlockReferenceData::isPixelUnit() const {
         return false;
     }
     return block->isPixelUnit();
+}
+
+bool RBlockReferenceData::isXRef() const {
+    if (document==NULL) {
+        return false;
+    }
+    QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
+    if (block==NULL) {
+        return false;
+    }
+    return !block->getXRefFileName().isEmpty();
+}
+
+bool RBlockReferenceData::loadXRef() const {
+    if (document==NULL) {
+        return false;
+    }
+    QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
+    if (block==NULL) {
+        return false;
+    }
+    return block->loadXRef();
 }
 
 QList<RRefPoint> RBlockReferenceData::getInternalReferencePoints(RS::ProjectionRenderingHint hint, QList<REntity::Id>* subEntityIds) const {
