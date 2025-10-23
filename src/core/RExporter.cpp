@@ -49,6 +49,7 @@ class RImageData;
 
 RExporter::RExporter()
     : document(NULL),
+      overrideEntity(NULL),
       currentLayer(NULL),
       layerSource(NULL),
       blockSource(NULL),
@@ -73,6 +74,7 @@ RExporter::RExporter()
 
 RExporter::RExporter(RDocument& document, RMessageHandler *messageHandler, RProgressHandler *progressHandler)
     : document(&document),
+      overrideEntity(NULL),
       currentLayer(NULL),
       layerSource(NULL),
       blockSource(NULL),
@@ -193,12 +195,12 @@ QSharedPointer<REntity> RExporter::getEntity() {
 }
 
 
-void RExporter::setOverrideEntity(QSharedPointer<REntity>& oe) {
-    overrideEntity = QSharedPointer<REntity>(oe->cloneToEntity());
+void RExporter::setOverrideEntity(REntity* oe) {
+    overrideEntity = oe;
 }
 
 void RExporter::unsetOverrideEntity() {
-    overrideEntity.clear();
+    overrideEntity = NULL;
 }
 
 /**
@@ -702,7 +704,7 @@ void RExporter::exportEntity(QSharedPointer<REntity> entity, bool preview, bool 
         return;
     }
 
-    preExportEntity(*entity.data(), preview, allBlocks);
+    preExportEntity(entity.data(), preview, allBlocks);
 
     RDocument* doc = entity->getDocument();
     if (doc==NULL) {

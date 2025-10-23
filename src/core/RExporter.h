@@ -397,7 +397,7 @@ public:
 //        combineTransforms = on;
 //    }
 
-    void setOverrideEntity(QSharedPointer<REntity>& oe);
+    void setOverrideEntity(REntity* oe);
     void unsetOverrideEntity();
 
 protected:
@@ -406,7 +406,7 @@ protected:
     QPen currentPen;
     RLinetypePattern currentLinetypePattern;
     QBrush currentBrush;
-    QSharedPointer<REntity> overrideEntity;
+    REntity* overrideEntity;
     QStack<QSharedPointer<REntity> > entityStack;
     RLayer* currentLayer;
     QStack<QSharedPointer<REntity> > blockRefViewportStack;
