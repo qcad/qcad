@@ -168,6 +168,10 @@ REntity::Id RExporter::getBlockRefOrEntityId() {
  * \return Pointer to the entity that is currently being exported.
  */
 QSharedPointer<REntity> RExporter::getEntity() const {
+    if (!overrideEntity.isNull()) {
+        return overrideEntity;
+    }
+
     if (entityStack.isEmpty()) {
         return QSharedPointer<REntity>();
     }
