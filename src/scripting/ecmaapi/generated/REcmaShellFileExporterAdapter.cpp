@@ -8938,7 +8938,7 @@
         
     
       void REcmaShellFileExporterAdapter::setOverrideEntity(
-                QSharedPointer < REntity > & oe
+                REntity * oe
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::setOverrideEntity", engine);
@@ -8987,10 +8987,10 @@
 
 
 
-    // type: QSharedPointer < REntity > &, copyable: false
-        << qScriptValueFromValue(engine, 
-
-        &oe
+    // type: REntity *, copyable: false
+        // REntity *:
+        << REcmaHelper::toScriptValue(engine, 
+          oe
         )
       
                             )

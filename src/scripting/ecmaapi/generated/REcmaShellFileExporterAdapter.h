@@ -700,7 +700,7 @@
         
     
       void setOverrideEntity(
-                QSharedPointer < REntity > & oe
+                REntity * oe
             );
         
     

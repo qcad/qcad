@@ -973,8 +973,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QSharedPointer &lt; REntity &gt; &amp;"
-        typeName="QSharedPointer &lt; REntity &gt;" name="oe"
+        <arg type="REntity *" typeName="REntity *" name="oe"
         isConst="false" />
       </variant>
     </method>
