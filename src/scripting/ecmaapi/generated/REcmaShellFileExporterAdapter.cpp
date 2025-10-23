@@ -4867,7 +4867,7 @@
         
     
       void REcmaShellFileExporterAdapter::preExportEntity(
-                const REntity & entity, bool preview, bool allBlocks
+                REntity * entity, bool preview, bool allBlocks
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::preExportEntity", engine);
@@ -4916,10 +4916,10 @@
 
 
 
-    // type: REntity &, copyable: false
-        // REntity &:
+    // type: REntity *, copyable: false
+        // REntity *:
         << REcmaHelper::toScriptValue(engine, 
-          &entity
+          entity
         )
       
 

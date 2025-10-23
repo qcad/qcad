@@ -3983,7 +3983,7 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: REntity */
+        ) /* type: REntity * */
      && (
             context->argument(1).isBool()
         ) /* type: bool */
@@ -3994,22 +3994,18 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    REntity*
-                    ap0 =
-                    qscriptvalue_cast<
-                    REntity*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
+                    // argument is pointer
+                    REntity * a0 = NULL;
 
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type REntity* or QSharedPointer<REntity>.",
-                               context);
+                    a0 = 
+                        REcmaHelper::scriptValueTo<REntity >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RExporter: Argument 0 is not of type REntity *REntity *.", context);                    
                     }
-                    REntity& a0 = *ap0;
                 
                     // argument isStandardType
                     bool

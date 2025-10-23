@@ -399,7 +399,7 @@
         
     
       void preExportEntity(
-                const REntity & entity, bool preview, bool allBlocks
+                REntity * entity, bool preview, bool allBlocks
             );
         
     
