@@ -179,6 +179,29 @@ QSharedPointer<REntity> RExporter::getEntity() const {
 }
 
 /**
+ * \return Pointer to the entity that is currently being exported.
+ */
+QSharedPointer<REntity> RExporter::getEntity() {
+    if (!overrideEntity.isNull()) {
+        return overrideEntity;
+    }
+
+    if (entityStack.size()>0) {
+        return entityStack.top()->cloneToEntity();
+    }
+    return QSharedPointer<REntity>();
+}
+
+
+void RExporter::setOverrideEntity(QSharedPointer<REntity>& oe) {
+    overrideEntity = QSharedPointer<REntity>(oe->cloneToEntity());
+}
+
+void RExporter::unsetOverrideEntity() {
+    overrideEntity.clear();
+}
+
+/**
  * Sets a rendering hint for the current projection used for exports.
  *
  * This is a rendering hint for the exporting entity to decide how
@@ -395,16 +418,6 @@ void RExporter::setBrushStyle(Qt::BrushStyle brushStyle) {
 
 void RExporter::setDashPattern(const QVector<qreal>& dashes) {
     currentPen.setDashPattern(dashes);
-}
-
-/**
- * \return Pointer to the entity that is currently being exported.
- */
-QSharedPointer<REntity> RExporter::getEntity() {
-    if (entityStack.size()>0) {
-        return entityStack.top()->cloneToEntity();
-    }
-    return QSharedPointer<REntity>();
 }
 
 QSharedPointer<REntity> RExporter::getCurrentBlockRef() const {

@@ -392,13 +392,8 @@ public:
 //        combineTransforms = on;
 //    }
 
-    void setOverrideEntity(QSharedPointer<REntity>& oe) {
-        overrideEntity = oe;
-    }
-
-    void unsetOverrideEntity() {
-        overrideEntity.clear();
-    }
+    void setOverrideEntity(QSharedPointer<REntity>& oe);
+    void unsetOverrideEntity();
 
 protected:
     RDocument* document;
