@@ -205,6 +205,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportEntities, "exportEntities");
             
+            REcmaHelper::registerFunction(&engine, proto, preExportEntity, "preExportEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, exportEntity, "exportEntity");
             
             REcmaHelper::registerFunction(&engine, proto, getEntityLayer, "getEntityLayer");
@@ -3952,6 +3954,98 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::exportEntities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::preExportEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::preExportEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::preExportEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("preExportEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntity */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    REntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    REntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type REntity* or QSharedPointer<REntity>.",
+                               context);
+                    }
+                    REntity& a0 = *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->preExportEntity(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.preExportEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::preExportEntity", context, engine);
             return result;
         }
          QScriptValue

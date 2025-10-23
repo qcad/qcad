@@ -199,6 +199,9 @@
         exportEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        preExportEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         exportEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

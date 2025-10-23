@@ -398,6 +398,11 @@
             );
         
     
+      void preExportEntity(
+                const REntity & entity, bool preview, bool allBlocks
+            );
+        
+    
       void exportEntity(
                 QSharedPointer < REntity > entity, bool preview
         = false, bool allBlocks
