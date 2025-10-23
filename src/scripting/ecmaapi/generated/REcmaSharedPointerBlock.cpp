@@ -111,6 +111,18 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLayoutName, "getLayoutName");
             
+            REcmaHelper::registerFunction(&engine, proto, setXRefFileName, "setXRefFileName");
+            
+            REcmaHelper::registerFunction(&engine, proto, getXRefFileName, "getXRefFileName");
+            
+            REcmaHelper::registerFunction(&engine, proto, loadXRef, "loadXRef");
+            
+            REcmaHelper::registerFunction(&engine, proto, getFullXRefFilePath, "getFullXRefFilePath");
+            
+            REcmaHelper::registerFunction(&engine, proto, isXRefLoaded, "isXRefLoaded");
+            
+            REcmaHelper::registerFunction(&engine, proto, setXRefLoaded, "setXRefLoaded");
+            
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
             
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
@@ -129,6 +141,8 @@
             REcmaHelper::registerFunction(&engine, &ctor, init, "init");
             
             REcmaHelper::registerFunction(&engine, &ctor, getRtti, "getRtti");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, hasProxy, "hasProxy");
             
 
     // static properties:
@@ -175,6 +189,10 @@
             
             ctor.setProperty("PropertyOwnedByReference",
                 qScriptValueFromValue(&engine, RBlock::PropertyOwnedByReference),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyXRefFileName",
+                qScriptValueFromValue(&engine, RBlock::PropertyXRefFileName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("modelSpaceName",
@@ -1498,6 +1516,312 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerBlock::setXRefFileName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlock::setXRefFileName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlock::setXRefFileName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlock* self = 
+                        getSelf("setXRefFileName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setXRefFileName(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.setXRefFileName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlock::setXRefFileName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlock::getXRefFileName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlock::getXRefFileName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlock::getXRefFileName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlock* self = 
+                        getSelf("getXRefFileName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getXRefFileName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.getXRefFileName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlock::getXRefFileName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlock::loadXRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlock::loadXRef", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlock::loadXRef";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlock* self = 
+                        getSelf("loadXRef", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->loadXRef();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.loadXRef().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlock::loadXRef", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlock::getFullXRefFilePath
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlock::getFullXRefFilePath", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlock::getFullXRefFilePath";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlock* self = 
+                        getSelf("getFullXRefFilePath", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getFullXRefFilePath();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.getFullXRefFilePath().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlock::getFullXRefFilePath", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlock::isXRefLoaded
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlock::isXRefLoaded", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlock::isXRefLoaded";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlock* self = 
+                        getSelf("isXRefLoaded", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isXRefLoaded();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.isXRefLoaded().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlock::isXRefLoaded", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlock::setXRefLoaded
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlock::setXRefLoaded", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlock::setXRefLoaded";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlock* self = 
+                        getSelf("setXRefLoaded", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setXRefLoaded(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.setXRefLoaded().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlock::setXRefLoaded", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerBlock::getProperty
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2114,6 +2438,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerBlock::setCustomProperty", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlock::hasProxy
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlock::hasProxy", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlock::hasProxy";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RBlock::
+       hasProxy();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.hasProxy().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlock::hasProxy", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerBlock::toString

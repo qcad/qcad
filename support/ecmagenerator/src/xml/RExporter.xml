@@ -957,5 +957,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="setOverrideEntity" cppName="setOverrideEntity"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QSharedPointer &lt; REntity &gt; &amp;"
+        typeName="QSharedPointer &lt; REntity &gt;" name="oe"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="unsetOverrideEntity"
+    cppName="unsetOverrideEntity" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
   </class>
 </unit>

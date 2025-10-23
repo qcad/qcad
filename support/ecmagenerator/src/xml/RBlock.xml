@@ -141,6 +141,41 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="setXRefFileName" cppName="setXRefFileName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="f"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getXRefFileName" cppName="getXRefFileName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="loadXRef" cppName="loadXRef" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getFullXRefFilePath"
+    cppName="getFullXRefFilePath" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="isXRefLoaded" cppName="isXRefLoaded"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setXRefLoaded" cppName="setXRefLoaded"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getProperty" cppName="getProperty"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -182,6 +217,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="hasProxy" cppName="hasProxy" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <property name="PropertyCustom" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyType" type="RPropertyTypeId"
@@ -204,6 +243,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyOwnedByReference"
     type="RPropertyTypeId" isConst="false" isStatic="true" />
+    <property name="PropertyXRefFileName" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="modelSpaceName" type="QString" isConst="true"
     isStatic="true" />
     <property name="paperSpaceName" type="QString" isConst="true"

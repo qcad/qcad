@@ -134,6 +134,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, mapToBlock, "mapToBlock");
             
+            REcmaHelper::registerFunction(&engine, proto, isXRef, "isXRef");
+            
+            REcmaHelper::registerFunction(&engine, proto, loadXRef, "loadXRef");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RBlockReferenceEntityPointer>(), *proto);
       
@@ -2957,6 +2961,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::mapToBlock", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlockReferenceEntity::isXRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::isXRef", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::isXRef";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceEntity* self = 
+                        getSelf("isXRef", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isXRef();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.isXRef().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::isXRef", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlockReferenceEntity::loadXRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::loadXRef", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::loadXRef";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceEntity* self = 
+                        getSelf("loadXRef", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->loadXRef();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.loadXRef().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::loadXRef", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerBlockReferenceEntity::toString

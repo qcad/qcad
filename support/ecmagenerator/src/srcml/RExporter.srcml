@@ -393,12 +393,21 @@
 <comment type="line">//        combineTransforms = on;</comment>
 <comment type="line">//    }</comment>
 
+    <function><type><name>void</name></type> <name>setOverrideEntity</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name>&amp;</type> <name>oe</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>overrideEntity</name> = <name>oe</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>unsetOverrideEntity</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>overrideEntity</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
 </public><protected>protected:
     <decl_stmt><decl><type><name>RDocument</name>*</type> <name>document</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QTransform</name></type> <name>transform</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QPen</name></type> <name>currentPen</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RLinetypePattern</name></type> <name>currentLinetypePattern</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QBrush</name></type> <name>currentBrush</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></type> <name>overrideEntity</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>entityStack</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RLayer</name>*</type> <name>currentLayer</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>blockRefViewportStack</name></decl>;</decl_stmt>

@@ -92,6 +92,18 @@
         setCustomEntityType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setLayerNamePrefix
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setBlockNamePrefix
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCreateBlockReference
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setUseExistingBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         createBlockReferenceEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
