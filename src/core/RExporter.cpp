@@ -702,6 +702,8 @@ void RExporter::exportEntity(QSharedPointer<REntity> entity, bool preview, bool 
         return;
     }
 
+    preExportEntity(*entity.data(), preview, allBlocks);
+
     RDocument* doc = entity->getDocument();
     if (doc==NULL) {
         doc = document;

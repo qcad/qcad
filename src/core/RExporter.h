@@ -177,6 +177,11 @@ public:
     virtual void exportEntities(bool allBlocks = true, bool undone = false, bool invisible = false);
     virtual void exportEntities(const RBox& box);
     virtual void exportEntities(QSet<RObject::Id>& entityIds, bool allBlocks = true);
+    virtual void preExportEntity(const REntity& entity, bool preview, bool allBlocks) {
+        Q_UNUSED(entity)
+        Q_UNUSED(preview)
+        Q_UNUSED(allBlocks)
+    }
     virtual void exportEntity(QSharedPointer<REntity> entity, bool preview = false, bool allBlocks = true, bool forceSelected = false, bool invisible = false);
     virtual void exportEntity(RObject::Id entityId, bool allBlocks = true, bool forceSelected = false);
     virtual QSharedPointer<RLayer> getEntityLayer(QSharedPointer<REntity> entity);
