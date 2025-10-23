@@ -177,7 +177,7 @@ public:
     virtual void exportEntities(bool allBlocks = true, bool undone = false, bool invisible = false);
     virtual void exportEntities(const RBox& box);
     virtual void exportEntities(QSet<RObject::Id>& entityIds, bool allBlocks = true);
-    virtual void preExportEntity(const REntity& entity, bool preview, bool allBlocks) {
+    virtual void preExportEntity(REntity* entity, bool preview, bool allBlocks) {
         Q_UNUSED(entity)
         Q_UNUSED(preview)
         Q_UNUSED(allBlocks)
