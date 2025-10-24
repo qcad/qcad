@@ -398,7 +398,7 @@
             );
         
     
-      void preExportEntity(
+      bool preExportEntity(
                 REntity * entity, bool preview, bool allBlocks
             );
         

@@ -4026,13 +4026,18 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'void'
-    
+    // return type 'bool'
+    bool cppResult =
+        
                self->preExportEntity(a0
         ,
     a1
         ,
     a2);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
     } else
 
 

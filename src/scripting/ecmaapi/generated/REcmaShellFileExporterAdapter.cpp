@@ -4866,7 +4866,7 @@
             }
         
     
-      void REcmaShellFileExporterAdapter::preExportEntity(
+      bool REcmaShellFileExporterAdapter::preExportEntity(
                 REntity * entity, bool preview, bool allBlocks
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
@@ -4892,6 +4892,7 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
+                        bool ret =
                         RFileExporterAdapter::preExportEntity(
                             entity, preview, allBlocks
                         );
@@ -4902,14 +4903,19 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::preExportEntity", engine);
 
                         
-                            return;
+                            return ret;
                           
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    
+                    bool res;
+                      
+                          res = qscriptvalue_cast< 
+                            bool
+                          >(
+                        
                             _q_function.call(__qtscript_self,
                                 QScriptValueList()
                                 
@@ -4942,12 +4948,16 @@
       
                             )
                         
+                      )
+                    
                     ;
                     _q_function.setData(QScriptValue(engine, prev));
 
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::preExportEntity", engine);
 
                     
+                            return res;
+                          
             }
         
     
