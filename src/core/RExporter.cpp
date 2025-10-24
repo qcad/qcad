@@ -170,8 +170,8 @@ REntity::Id RExporter::getBlockRefOrEntityId() {
  * \return Pointer to the entity that is currently being exported.
  */
 QSharedPointer<REntity> RExporter::getEntity() const {
-    if (!overrideEntity.isNull()) {
-        return overrideEntity;
+    if (overrideEntity!=NULL) {
+        return QSharedPointer<REntity>(overrideEntity->cloneToEntity());
     }
 
     if (entityStack.isEmpty()) {
@@ -184,8 +184,8 @@ QSharedPointer<REntity> RExporter::getEntity() const {
  * \return Pointer to the entity that is currently being exported.
  */
 QSharedPointer<REntity> RExporter::getEntity() {
-    if (!overrideEntity.isNull()) {
-        return overrideEntity;
+    if (overrideEntity!=NULL) {
+        return QSharedPointer<REntity>(overrideEntity->cloneToEntity());
     }
 
     if (entityStack.size()>0) {
@@ -704,7 +704,10 @@ void RExporter::exportEntity(QSharedPointer<REntity> entity, bool preview, bool 
         return;
     }
 
-    preExportEntity(entity.data(), preview, allBlocks);
+    if (!preExportEntity(entity.data(), preview, allBlocks)) {
+        // preExportEntity returned false, this means, we are done, preExportingEntity decided that this entity does not need exporting anymore:
+        return;
+    }
 
     RDocument* doc = entity->getDocument();
     if (doc==NULL) {
