@@ -416,14 +416,6 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId, b
         return e;
     }
 
-    // query block or XRef:
-    RBlock::Id blockId = getBlockId();
-    QSharedPointer<RBlock> block = document->queryBlockDirect(blockId);
-    if (block.isNull()) {
-        qWarning() << "RBlockReferenceData::queryEntity: block is NULL";
-        return QSharedPointer<REntity> ();
-    }
-
     if (document == NULL) {
         qWarning() << "RBlockReferenceData::queryEntity: document is NULL";
         return QSharedPointer<REntity> ();
