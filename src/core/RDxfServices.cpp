@@ -183,7 +183,9 @@ void RDxfServices::fixBlockName(QString& blockName) {
 void RDxfServices::fixLayerName(QString& layerName) {
     // fix invalid layer names (mainly from QCAD 2):
     QString oldLayerName = layerName;
-    layerName.replace(QRegularExpression("[<>/\":;?*|,=`\\\\\n]"), "_");
+    // 20251025: allow | for layers from XRefs:
+    //layerName.replace(QRegularExpression("[<>/\":;?*|,=`\\\\\n]"), "_");
+    layerName.replace(QRegularExpression("[<>/\":;?*,=`\\\\\n]"), "_");
     layerName.replace(QChar(0x0083), "_");
     version2LayerMapping.insert(oldLayerName, layerName);
 }
