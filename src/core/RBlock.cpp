@@ -125,7 +125,14 @@ bool RBlock::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, 
     ret = ret || RObject::setMember(origin.z, value, PropertyOriginZ == propertyTypeId);
     ret = ret || RObject::setMember(layoutId, value.toInt(), propertyTypeId == PropertyLayout);
     ret = ret || RObject::setMember(ownedByReference, value.toBool(), propertyTypeId == PropertyOwnedByReference);
-    ret = ret || RObject::setMember(xRefFileName, value.toString(), propertyTypeId == PropertyXRefFileName);
+    if (propertyTypeId == PropertyXRefFileName) {
+        ret = ret || RObject::setMember(xRefFileName, value.toString());
+        if (ret) {
+            // XRef file changed: force reload:
+            xRefLoaded = false;
+            loadXRef();
+        }
+    }
 
     return ret;
 }
