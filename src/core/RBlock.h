@@ -148,6 +148,10 @@ public:
 
     QString getLayoutName() const;
 
+    bool isXRef() const {
+        return !xRefFileName.isEmpty();
+    }
+
     void setXRefFileName(const QString& f) {
         xRefFileName = f;
     }
