@@ -148,6 +148,7 @@ public:
     static int getTextHeightThreshold();
     static double getArcAngleLengthThreshold();
     static double getMinArcAngleStep();
+    static double getDotLength();
     static int getDashThreshold();
     static int getQtVersion();
     static QString getQtVersionString();
@@ -361,6 +362,7 @@ private:
     static double arcAngleLengthThreshold;
     static double fadingFactor;
     static double minArcAngleStep;
+    static double dotLength;
     static int dashThreshold;
     static int textRenderedAsText;
     static int layer0CompatibilityOn;

@@ -20,9 +20,9 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>-223</y>
+     <y>-259</y>
      <width>635</width>
-     <height>1289</height>
+     <height>1325</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -814,14 +814,14 @@
            </item>
           </widget>
          </item>
-         <item row="5" column="0">
+         <item row="6" column="0">
           <widget class="QLabel" name="label_8">
            <property name="text">
             <string>Timeout for hatch rendering:</string>
            </property>
           </widget>
          </item>
-         <item row="5" column="1">
+         <item row="6" column="1">
           <widget class="QComboBox" name="MaxHatchTime">
            <property name="editable">
             <bool>true</bool>
@@ -879,14 +879,14 @@
            </item>
           </widget>
          </item>
-         <item row="8" column="0">
+         <item row="9" column="0">
           <widget class="QLabel" name="label_9">
            <property name="text">
             <string>Maximum selected entities with reference points:</string>
            </property>
           </widget>
          </item>
-         <item row="8" column="1">
+         <item row="9" column="1">
           <widget class="QComboBox" name="MaxReferencePointEntities">
            <property name="editable">
             <bool>true</bool>
@@ -949,14 +949,14 @@
            </item>
           </widget>
          </item>
-         <item row="9" column="0">
+         <item row="10" column="0">
           <widget class="QLabel" name="label_13">
            <property name="text">
             <string>Maximum selected entities with displayed reference points:</string>
            </property>
           </widget>
          </item>
-         <item row="9" column="1">
+         <item row="10" column="1">
           <widget class="QComboBox" name="MaxReferencePointEntitiesDisplay">
            <property name="editable">
             <bool>true</bool>
@@ -1019,14 +1019,14 @@
            </item>
           </widget>
          </item>
-         <item row="10" column="0">
+         <item row="11" column="0">
           <widget class="QLabel" name="label_12">
            <property name="text">
             <string>Reference point size (px):</string>
            </property>
           </widget>
          </item>
-         <item row="10" column="1">
+         <item row="11" column="1">
           <widget class="QComboBox" name="ReferencePointSize">
            <property name="currentText">
             <string notr="true">10</string>
@@ -1096,14 +1096,14 @@
            </item>
           </widget>
          </item>
-         <item row="11" column="0">
+         <item row="12" column="0">
           <widget class="QLabel" name="label_11">
            <property name="text">
             <string>Text height threshold (px):</string>
            </property>
           </widget>
          </item>
-         <item row="11" column="1">
+         <item row="12" column="1">
           <widget class="QComboBox" name="TextHeightThreshold">
            <property name="editable">
             <bool>true</bool>
@@ -1158,24 +1158,24 @@
            </item>
           </widget>
          </item>
-         <item row="12" column="0">
+         <item row="13" column="0">
           <widget class="QLabel" name="PenCapStyle_Label">
            <property name="text">
             <string notr="true">Pen cap style:</string>
            </property>
           </widget>
          </item>
-         <item row="12" column="1">
+         <item row="13" column="1">
           <widget class="QComboBox" name="PenCapStyle"/>
          </item>
-         <item row="6" column="0">
+         <item row="7" column="0">
           <widget class="QLabel" name="label_16">
            <property name="text">
             <string>Maximum complexity for solid fills at high quality:</string>
            </property>
           </widget>
          </item>
-         <item row="6" column="1">
+         <item row="7" column="1">
           <widget class="QComboBox" name="MaxHatchComplexity">
            <property name="editable">
             <bool>true</bool>
@@ -1228,14 +1228,14 @@
            </item>
           </widget>
          </item>
-         <item row="7" column="0">
+         <item row="8" column="0">
           <widget class="QLabel" name="ImageAllocationLimit_Label">
            <property name="text">
             <string>Allocation limit for bitmaps (MB):</string>
            </property>
           </widget>
          </item>
-         <item row="7" column="1">
+         <item row="8" column="1">
           <widget class="QComboBox" name="ImageAllocationLimit">
            <property name="editable">
             <bool>true</bool>
@@ -1266,6 +1266,35 @@
            <item>
             <property name="text">
              <string notr="true">4096</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_17">
+           <property name="text">
+            <string>Dot length in line patterns:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QComboBox" name="DotLength">
+           <property name="editable">
+            <bool>true</bool>
+           </property>
+           <item>
+            <property name="text">
+             <string notr="true">0.000001</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">0.001</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">0.01</string>
             </property>
            </item>
           </widget>

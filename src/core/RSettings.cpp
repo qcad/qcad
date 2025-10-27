@@ -90,6 +90,7 @@ int RSettings::useSolidLineSelection = -1;
 double RSettings::arcAngleLengthThreshold = -1;
 double RSettings::fadingFactor = -1;
 double RSettings::minArcAngleStep = -1;
+double RSettings::dotLength = -1;
 int RSettings::dashThreshold = -1;
 int RSettings::textRenderedAsText = -1;
 int RSettings::layer0CompatibilityOn = -1;
@@ -958,6 +959,13 @@ double RSettings::getMinArcAngleStep() {
         minArcAngleStep = RMath::deg2rad(getValue("GraphicsView/MinArcAngleStep", 0.2).toDouble());
     }
     return minArcAngleStep;
+}
+
+double RSettings::getDotLength() {
+    if (dotLength<-0.9) {
+        dotLength = getValue("GraphicsView/DotLength", 0.000001).toDouble();
+    }
+    return dotLength;
 }
 
 int RSettings::getDashThreshold() {
@@ -2036,6 +2044,7 @@ void RSettings::resetCache() {
     maxHatchTime = -1;
     maxHatchComplexity = -1;
     minArcAngleStep = -1;
+    dotLength = -1;
     dashThreshold = -1;
     textRenderedAsText = -1;
     layer0CompatibilityOn = -1;
