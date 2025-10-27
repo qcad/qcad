@@ -205,6 +205,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportEntities, "exportEntities");
             
+            REcmaHelper::registerFunction(&engine, proto, preExportEntity, "preExportEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, exportEntity, "exportEntity");
             
             REcmaHelper::registerFunction(&engine, proto, getEntityLayer, "getEntityLayer");
@@ -326,6 +328,10 @@
             REcmaHelper::registerFunction(&engine, proto, setPixelWidth, "setPixelWidth");
             
             REcmaHelper::registerFunction(&engine, proto, setEnablePatterns, "setEnablePatterns");
+            
+            REcmaHelper::registerFunction(&engine, proto, setOverrideEntity, "setOverrideEntity");
+            
+            REcmaHelper::registerFunction(&engine, proto, unsetOverrideEntity, "unsetOverrideEntity");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RExporter*>(), *proto);
@@ -3948,6 +3954,99 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::exportEntities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::preExportEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::preExportEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::preExportEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("preExportEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntity * */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    REntity * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<REntity >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RExporter: Argument 0 is not of type REntity *REntity *.", context);                    
+                    }
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->preExportEntity(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.preExportEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::preExportEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -9063,6 +9162,112 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::setEnablePatterns", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::setOverrideEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::setOverrideEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::setOverrideEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("setOverrideEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntity * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    REntity * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<REntity >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RExporter: Argument 0 is not of type REntity *REntity *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setOverrideEntity(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.setOverrideEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::setOverrideEntity", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::unsetOverrideEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::unsetOverrideEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::unsetOverrideEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("unsetOverrideEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->unsetOverrideEntity();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.unsetOverrideEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::unsetOverrideEntity", context, engine);
             return result;
         }
          QScriptValue REcmaExporter::toString

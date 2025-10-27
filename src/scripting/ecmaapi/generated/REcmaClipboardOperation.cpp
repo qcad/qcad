@@ -112,6 +112,14 @@
             
             REcmaHelper::registerFunction(&engine, proto, setCustomEntityType, "setCustomEntityType");
             
+            REcmaHelper::registerFunction(&engine, proto, setLayerNamePrefix, "setLayerNamePrefix");
+            
+            REcmaHelper::registerFunction(&engine, proto, setBlockNamePrefix, "setBlockNamePrefix");
+            
+            REcmaHelper::registerFunction(&engine, proto, setCreateBlockReference, "setCreateBlockReference");
+            
+            REcmaHelper::registerFunction(&engine, proto, setUseExistingBlock, "setUseExistingBlock");
+            
             REcmaHelper::registerFunction(&engine, proto, createBlockReferenceEntity, "createBlockReferenceEntity");
             
         engine.setDefaultPrototype(
@@ -2289,6 +2297,226 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaClipboardOperation::setCustomEntityType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaClipboardOperation::setLayerNamePrefix
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaClipboardOperation::setLayerNamePrefix", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::setLayerNamePrefix";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RClipboardOperation* self = 
+                        getSelf("setLayerNamePrefix", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLayerNamePrefix(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.setLayerNamePrefix().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::setLayerNamePrefix", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaClipboardOperation::setBlockNamePrefix
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaClipboardOperation::setBlockNamePrefix", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::setBlockNamePrefix";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RClipboardOperation* self = 
+                        getSelf("setBlockNamePrefix", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setBlockNamePrefix(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.setBlockNamePrefix().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::setBlockNamePrefix", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaClipboardOperation::setCreateBlockReference
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaClipboardOperation::setCreateBlockReference", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::setCreateBlockReference";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RClipboardOperation* self = 
+                        getSelf("setCreateBlockReference", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCreateBlockReference(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.setCreateBlockReference().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::setCreateBlockReference", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaClipboardOperation::setUseExistingBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaClipboardOperation::setUseExistingBlock", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::setUseExistingBlock";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RClipboardOperation* self = 
+                        getSelf("setUseExistingBlock", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setUseExistingBlock(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.setUseExistingBlock().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::setUseExistingBlock", context, engine);
             return result;
         }
          QScriptValue

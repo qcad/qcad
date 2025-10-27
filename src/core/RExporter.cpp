@@ -49,6 +49,7 @@ class RImageData;
 
 RExporter::RExporter()
     : document(NULL),
+      overrideEntity(NULL),
       currentLayer(NULL),
       layerSource(NULL),
       blockSource(NULL),
@@ -73,6 +74,7 @@ RExporter::RExporter()
 
 RExporter::RExporter(RDocument& document, RMessageHandler *messageHandler, RProgressHandler *progressHandler)
     : document(&document),
+      overrideEntity(NULL),
       currentLayer(NULL),
       layerSource(NULL),
       blockSource(NULL),
@@ -168,10 +170,37 @@ REntity::Id RExporter::getBlockRefOrEntityId() {
  * \return Pointer to the entity that is currently being exported.
  */
 QSharedPointer<REntity> RExporter::getEntity() const {
+    if (overrideEntity!=NULL) {
+        return QSharedPointer<REntity>(overrideEntity->cloneToEntity());
+    }
+
     if (entityStack.isEmpty()) {
         return QSharedPointer<REntity>();
     }
     return entityStack.top()->cloneToEntity();
+}
+
+/**
+ * \return Pointer to the entity that is currently being exported.
+ */
+QSharedPointer<REntity> RExporter::getEntity() {
+    if (overrideEntity!=NULL) {
+        return QSharedPointer<REntity>(overrideEntity->cloneToEntity());
+    }
+
+    if (entityStack.size()>0) {
+        return entityStack.top()->cloneToEntity();
+    }
+    return QSharedPointer<REntity>();
+}
+
+
+void RExporter::setOverrideEntity(REntity* oe) {
+    overrideEntity = oe;
+}
+
+void RExporter::unsetOverrideEntity() {
+    overrideEntity = NULL;
 }
 
 /**
@@ -391,16 +420,6 @@ void RExporter::setBrushStyle(Qt::BrushStyle brushStyle) {
 
 void RExporter::setDashPattern(const QVector<qreal>& dashes) {
     currentPen.setDashPattern(dashes);
-}
-
-/**
- * \return Pointer to the entity that is currently being exported.
- */
-QSharedPointer<REntity> RExporter::getEntity() {
-    if (entityStack.size()>0) {
-        return entityStack.top()->cloneToEntity();
-    }
-    return QSharedPointer<REntity>();
 }
 
 QSharedPointer<REntity> RExporter::getCurrentBlockRef() const {
@@ -682,6 +701,11 @@ void RExporter::exportView(RView::Id viewId) {
  */
 void RExporter::exportEntity(QSharedPointer<REntity> entity, bool preview, bool allBlocks, bool forceSelected, bool invisible) {
     if (entity.isNull()) {
+        return;
+    }
+
+    if (!preExportEntity(entity.data(), preview, allBlocks)) {
+        // preExportEntity returned false, this means, we are done, preExportingEntity decided that this entity does not need exporting anymore:
         return;
     }
 

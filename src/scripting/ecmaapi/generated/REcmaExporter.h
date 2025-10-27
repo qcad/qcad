@@ -199,6 +199,9 @@
         exportEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        preExportEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         exportEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -380,6 +383,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setEnablePatterns
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setOverrideEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        unsetOverrideEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

@@ -150,6 +150,12 @@
         ;static  QScriptValue
         mapToBlock
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isXRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        loadXRef
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

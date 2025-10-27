@@ -210,6 +210,14 @@
         <return>return <expr><name>data</name>.<call><name>mapToBlock</name><argument_list>(<argument><expr><name>v</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>bool</name></type> <name>isXRef</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>isXRef</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>loadXRef</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>loadXRef</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
     <comment type="block">/**
      * \nonscriptable
      */</comment>

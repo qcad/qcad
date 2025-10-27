@@ -191,6 +191,12 @@
         ;static  QScriptValue
         isPixelUnit
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isXRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        loadXRef
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

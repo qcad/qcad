@@ -398,6 +398,11 @@
             );
         
     
+      bool preExportEntity(
+                REntity * entity, bool preview, bool allBlocks
+            );
+        
+    
       void exportEntity(
                 QSharedPointer < REntity > entity, bool preview
         = false, bool allBlocks
@@ -691,6 +696,16 @@
     
       void setEnablePatterns(
                 bool on
+            );
+        
+    
+      void setOverrideEntity(
+                REntity * oe
+            );
+        
+    
+      void unsetOverrideEntity(
+                
             );
         
     

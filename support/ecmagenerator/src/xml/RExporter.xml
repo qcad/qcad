@@ -448,6 +448,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
+    <method name="preExportEntity" cppName="preExportEntity"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="REntity *" typeName="REntity *" name="entity"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="preview"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="allBlocks"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="exportEntity" cppName="exportEntity"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -956,6 +968,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool" name="on"
         isConst="false" />
       </variant>
+    </method>
+    <method name="setOverrideEntity" cppName="setOverrideEntity"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="REntity *" typeName="REntity *" name="oe"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="unsetOverrideEntity"
+    cppName="unsetOverrideEntity" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
     </method>
   </class>
 </unit>

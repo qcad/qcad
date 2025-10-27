@@ -116,6 +116,24 @@
         getLayoutName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setXRefFileName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getXRefFileName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        loadXRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getFullXRefFilePath
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isXRefLoaded
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setXRefLoaded
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -123,6 +141,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setCustomProperty
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasProxy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

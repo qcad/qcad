@@ -177,6 +177,12 @@ public:
     virtual void exportEntities(bool allBlocks = true, bool undone = false, bool invisible = false);
     virtual void exportEntities(const RBox& box);
     virtual void exportEntities(QSet<RObject::Id>& entityIds, bool allBlocks = true);
+    virtual bool preExportEntity(REntity* entity, bool preview, bool allBlocks) {
+        Q_UNUSED(entity)
+        Q_UNUSED(preview)
+        Q_UNUSED(allBlocks)
+        return true;
+    }
     virtual void exportEntity(QSharedPointer<REntity> entity, bool preview = false, bool allBlocks = true, bool forceSelected = false, bool invisible = false);
     virtual void exportEntity(RObject::Id entityId, bool allBlocks = true, bool forceSelected = false);
     virtual QSharedPointer<RLayer> getEntityLayer(QSharedPointer<REntity> entity);
@@ -392,12 +398,16 @@ public:
 //        combineTransforms = on;
 //    }
 
+    void setOverrideEntity(REntity* oe);
+    void unsetOverrideEntity();
+
 protected:
     RDocument* document;
     QTransform transform;
     QPen currentPen;
     RLinetypePattern currentLinetypePattern;
     QBrush currentBrush;
+    REntity* overrideEntity;
     QStack<QSharedPointer<REntity> > entityStack;
     RLayer* currentLayer;
     QStack<QSharedPointer<REntity> > blockRefViewportStack;
