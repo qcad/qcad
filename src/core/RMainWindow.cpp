@@ -693,6 +693,12 @@ void RMainWindow::notifyBlockListenersCurrentBlock(RDocumentInterface* documentI
     }
 }
 
+void RMainWindow::notifyBlockListenersXRef() {
+    for (int i=0; i<blockListeners.length(); i++) {
+        blockListeners[i]->updateXRef();
+    }
+}
+
 /**
  * Adds a listener for view change / add / remove events.
  */

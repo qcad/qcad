@@ -194,6 +194,7 @@ public:
     void removeBlockListener(RBlockListener* l);
     void notifyBlockListeners(RDocumentInterface* documentInterface);
     void notifyBlockListenersCurrentBlock(RDocumentInterface* documentInterface);
+    void notifyBlockListenersXRef();
 
     void addViewListener(RViewListener* l);
     void removeViewListener(RViewListener* l);
