@@ -71,6 +71,8 @@
 
         // methods of secondary base class RBlockListener:
         
+            REcmaHelper::registerFunction(&engine, proto, updateXRef, "updateXRef");
+            
 
     // properties:
     
@@ -247,6 +249,68 @@
         
 
         // methods of secondary base class RBlockListener:
+         QScriptValue
+        REcmaBlockListenerAdapter::updateXRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockListenerAdapter::updateXRef", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockListenerAdapter::updateXRef";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockListenerAdapter* self = 
+                        getSelf("updateXRef", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocumentInterface * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RDocumentInterface * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocumentInterface >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RBlockListener: Argument 0 is not of type RDocumentInterface *RDocumentInterface *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateXRef(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockListenerAdapter.updateXRef().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockListenerAdapter::updateXRef", context, engine);
+            return result;
+        }
         
 
     // properties:

@@ -197,6 +197,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getMinArcAngleStep, "getMinArcAngleStep");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getDotLength, "getDotLength");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getDashThreshold, "getDashThreshold");
             
             REcmaHelper::registerFunction(&engine, &ctor, getQtVersion, "getQtVersion");
@@ -4096,6 +4098,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getMinArcAngleStep", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getDotLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getDotLength", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getDotLength";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        RSettings::
+       getDotLength();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getDotLength().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getDotLength", context, engine);
             return result;
         }
          QScriptValue

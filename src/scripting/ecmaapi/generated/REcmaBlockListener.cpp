@@ -51,6 +51,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, updateBlocks, "updateBlocks");
             
+            REcmaHelper::registerFunction(&engine, proto, updateXRef, "updateXRef");
+            
             REcmaHelper::registerFunction(&engine, proto, setCurrentBlock, "setCurrentBlock");
             
             REcmaHelper::registerFunction(&engine, proto, clearBlocks, "clearBlocks");
@@ -178,6 +180,68 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBlockListener::updateBlocks", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockListener::updateXRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockListener::updateXRef", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockListener::updateXRef";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockListener* self = 
+                        getSelf("updateXRef", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocumentInterface * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RDocumentInterface * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocumentInterface >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RBlockListener: Argument 0 is not of type RDocumentInterface *RDocumentInterface *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateXRef(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockListener.updateXRef().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockListener::updateXRef", context, engine);
             return result;
         }
          QScriptValue

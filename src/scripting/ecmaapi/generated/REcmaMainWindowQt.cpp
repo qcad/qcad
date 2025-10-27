@@ -267,6 +267,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, notifyBlockListenersCurrentBlock, "notifyBlockListenersCurrentBlock");
             
+            REcmaHelper::registerFunction(&engine, proto, notifyBlockListenersXRef, "notifyBlockListenersXRef");
+            
             REcmaHelper::registerFunction(&engine, proto, addViewListener, "addViewListener");
             
             REcmaHelper::registerFunction(&engine, proto, removeViewListener, "removeViewListener");
@@ -4741,6 +4743,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindowQt::notifyBlockListenersCurrentBlock", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::notifyBlockListenersXRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::notifyBlockListenersXRef", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::notifyBlockListenersXRef";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("notifyBlockListenersXRef", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->notifyBlockListenersXRef();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.notifyBlockListenersXRef().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::notifyBlockListenersXRef", context, engine);
             return result;
         }
          QScriptValue

@@ -141,6 +141,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="isXRef" cppName="isXRef" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="setXRefFileName" cppName="setXRefFileName"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

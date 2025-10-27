@@ -48,7 +48,10 @@
         
 
         // methods of secondary base class RBlockListener:
-        
+        static  QScriptValue
+        updateXRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;
 
     // properties:
     

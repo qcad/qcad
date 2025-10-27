@@ -116,6 +116,9 @@
         getLayoutName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isXRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setXRefFileName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
