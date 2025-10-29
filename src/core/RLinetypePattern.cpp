@@ -968,6 +968,9 @@ void RLinetypePattern::initNameMap() {
     nameMap.insert("TRACKS", tr("Tracks"));
     nameMap.insert("FENCELINE1", tr("Fenceline 1"));
     nameMap.insert("FENCELINE2", tr("Fenceline 2"));
+    nameMap.insert("POINT1", tr("Point 1"));
+    nameMap.insert("POINT2", tr("Point 2"));
+    nameMap.insert("PLANT", tr("Plant"));
 
     nameMap.insert("WATER", tr("Water"));
     nameMap.insert("DRAINAGE", tr("Drainage"));
