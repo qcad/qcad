@@ -2327,6 +2327,7 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
     //bool layerHasChanged = false;
     QSet<RLayer::Id> changedLayerIds;
     bool blockHasChanged = false;
+    bool blockXRefHasChanged = false;
     bool layoutHasChanged = false;
     bool viewHasChanged = false;
     bool entityHasChanged = false;
@@ -2468,6 +2469,10 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
                             // current block renamed (needs block list update):
                             blockHasChanged = true;
                         }
+                        if (propertyChanges[i].getPropertyTypeId()==RBlock::PropertyXRefFileName) {
+                            // xref file name changed:
+                            blockXRefHasChanged = true;
+                        }
                     }
                 }
 
@@ -2475,6 +2480,12 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
                 if (block->isFrozen()) {
                     QSet<RObject::Id> ids = document.queryBlockReferences(*it);
                     deselectEntities(ids);
+                }
+
+                if (blockXRefHasChanged) {
+                    // force XRef reload:
+                    block->setXRefLoaded(false);
+                    block->loadXRef();
                 }
                 continue;
             }
@@ -2492,22 +2503,29 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
     }
 
     // notify global listeners if this is not the clipboard document interface:
-    if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
+    RMainWindow* mainWindow = RMainWindow::getMainWindow();
+    if (mainWindow!=NULL && notifyGlobalListeners) {
         if (ucsHasChanged) {
-            RMainWindow::getMainWindow()->notifyUcsListeners(this);
+            mainWindow->notifyUcsListeners(this);
         }
         if (linetypeHasChanged) {
             // TODO:
             //RMainWindow::getMainWindow()->notifyLinetypeListeners(this);
         }
         if (!changedLayerIds.isEmpty()) {
-            RMainWindow::getMainWindow()->notifyLayerListeners(this, changedLayerIdList);
+            mainWindow->notifyLayerListeners(this, changedLayerIdList);
         }
         if (blockHasChanged || layoutHasChanged) {
-            RMainWindow::getMainWindow()->notifyBlockListeners(this);
+            mainWindow->notifyBlockListeners(this);
+        }
+        if (blockXRefHasChanged) {
+            mainWindow->notifyBlockListenersXRef();
+            QList<RLayer::Id> layerIds;
+            // update all layers:
+            mainWindow->notifyLayerListeners(this, layerIds);
         }
         if (viewHasChanged) {
-            RMainWindow::getMainWindow()->notifyViewListeners(this);
+            mainWindow->notifyViewListeners(this);
         }
     }
 

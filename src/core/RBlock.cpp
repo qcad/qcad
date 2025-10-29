@@ -19,6 +19,7 @@
 #include "RBlock.h"
 #include "RDocument.h"
 #include "RLayout.h"
+#include "RMainWindow.h"
 
 RBlockProxy* RBlock::blockProxy = NULL;
 
@@ -132,13 +133,6 @@ bool RBlock::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, 
             return false;
         }
         ret = ret || RObject::setMember(xRefFileName, value.toString());
-        if (ret) {
-            // XRef file changed: force reload:
-            xRefLoaded = false;
-            loadXRef();
-
-            RMainWindow::notifyXRefChanged(getId());
-        }
     }
 
     return ret;

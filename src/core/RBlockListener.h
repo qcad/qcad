@@ -47,7 +47,7 @@ public:
     /**
      * This method is called when the XRef status of the current block might have changed.
      */
-    virtual void updateXRef(RDocumentInterface* documentInterface) = 0;
+    virtual void updateXRef() = 0;
 
     /**
      * This method is called when a different block becomes the new current block.

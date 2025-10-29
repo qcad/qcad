@@ -45,6 +45,10 @@ public:
         emit blocksUpdated(documentInterface);
     }
 
+    virtual void updateXRef() {
+        emit xRefUpdated();
+    }
+
     virtual void setCurrentBlock(RDocumentInterface* documentInterface) {
         emit currentBlockSet(documentInterface);
     }
@@ -55,6 +59,7 @@ public:
 
 signals:
     void blocksUpdated(RDocumentInterface* documentInterface);
+    void xRefUpdated();
     void currentBlockSet(RDocumentInterface* documentInterface);
     void blocksCleared();
 };
