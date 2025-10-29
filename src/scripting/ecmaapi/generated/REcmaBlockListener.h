@@ -49,6 +49,9 @@
         updateBlocks
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        updateXRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setCurrentBlock
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -195,6 +195,7 @@
     <function_decl><type><name>void</name></type> <name>removeBlockListener</name><parameter_list>(<param><decl><type><name>RBlockListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>notifyBlockListeners</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>notifyBlockListenersCurrentBlock</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>notifyBlockListenersXRef</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>addViewListener</name><parameter_list>(<param><decl><type><name>RViewListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>removeViewListener</name><parameter_list>(<param><decl><type><name>RViewListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>

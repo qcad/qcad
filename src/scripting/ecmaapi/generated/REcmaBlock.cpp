@@ -109,6 +109,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLayoutName, "getLayoutName");
             
+            REcmaHelper::registerFunction(&engine, proto, isXRef, "isXRef");
+            
             REcmaHelper::registerFunction(&engine, proto, setXRefFileName, "setXRefFileName");
             
             REcmaHelper::registerFunction(&engine, proto, getXRefFileName, "getXRefFileName");
@@ -1512,6 +1514,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBlock::getLayoutName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlock::isXRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlock::isXRef", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlock::isXRef";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlock* self = 
+                        getSelf("isXRef", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isXRef();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.isXRef().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlock::isXRef", context, engine);
             return result;
         }
          QScriptValue
