@@ -110,6 +110,12 @@ A,.5,-.2,["HW",STANDARD,S=.1,R=0.0,X=-0.1,Y=-.05],-.2
 A,.5,-.2,["GAS",STANDARD,S=.1,R=0.0,X=-0.1,Y=-.05],-.25
 *ZIGZAG,Zig zag /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 A,.0001,-.2,[ZIG,ltypeshp.shx,X=-.2,S=.2],-.4,[ZIG,ltypeshp.shx,R=180,X=.2,S=.2],-.2
+*POINT1,----/\-----/\---
+A,1,[PT1,ltypeshp.shx,s=0.2],-0.2308
+*POINT2,----\/-----\/---
+A,1,[PT2,ltypeshp.shx,s=0.2],-0.2308
+*PLANT,_/^\_\^\_
+A,0.001,[PLANT1,ltypeshp.shx,s=0.04],-0.118,[PLANT2,ltypeshp.shx,s=0.04],-0.124,[PLANT3,ltypeshp.shx,s=0.04],-0.167,[PLANT4,ltypeshp.shx,s=0.04],-0.182,[PLANT5,ltypeshp.shx,s=0.04],-0.0984,[PLANT6,ltypeshp.shx,s=0.04],-0.174
 
 *DRAINAGE,Drainage ---->---->---->----
 A,0.2,[RIGHT_ARROW,qcadshp.shx,S=0.2,R=180],0.2

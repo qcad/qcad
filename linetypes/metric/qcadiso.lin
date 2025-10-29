@@ -110,8 +110,15 @@ A,12.7,-5.08,["HW",STANDARD,S=2.54,R=0.0,X=-2.54,Y=-1.27],-5.08
 A,12.7,-5.08,["GAS",STANDARD,S=2.54,R=0.0,X=-2.54,Y=-1.27],-6.35
 *ZIGZAG,Zig zag /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 A,.00254,-5.08,[ZIG,ltypeshp.shx,X=-5.08,S=5.08],-10.16,[ZIG,ltypeshp.shx,R=180,X=5.08,S=5.08],-5.08
+*POINT1,----/\-----/\---
+A,25.4,[PT1,ltypeshp.shx,s=5.08],-5.86232
+*POINT2,----\/-----\/---
+A,25.4,[PT2,ltypeshp.shx,s=5.08],-5.86232
+*PLANT,_/^\_\^\_
+A,0.01,[PLANT1,ltypeshp.shx,s=1.0],-3.0,[PLANT2,ltypeshp.shx,s=1.0],-3.15,[PLANT3,ltypeshp.shx,s=1.0],-4.23,[PLANT4,ltypeshp.shx,s=1.0],-4.63,[PLANT5,ltypeshp.shx,s=1.0],-2.5,[PLANT6,ltypeshp.shx,s=1.0],-4.42
 
 *DRAINAGE,Drainage ---->---->---->----
 A,5.08,[RIGHT_ARROW,qcadshp.shx,S=2.54,R=180],5.08
 *DRAINAGE2,Drainage reversed----<----<----<----
 A,5.08,[RIGHT_ARROW,qcadshp.shx,S=2.54],5.08
+
