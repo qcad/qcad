@@ -13268,7 +13268,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+17"/>
         <source>Auto screen scale factor</source>
-        <translation>Facteur d&apos;échelle :</translation>
+        <translation>Facteur d'échelle automatique de l'écran</translation>
     </message>
     <message>
         <location line="+13"/>
