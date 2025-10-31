@@ -1177,6 +1177,17 @@ QList<RPolyline> RPolyline::getOutline() const {
     }
 }
 
+QList<QSharedPointer<RShape>> RPolyline::getSegments() const {
+    QList<QSharedPointer<RShape>> ret;
+    for (int i=0; i<countSegments(); i++) {
+        QSharedPointer<RShape> seg = getSegmentAt(i);
+        if (!seg.isNull()) {
+            ret.append(seg);
+        }
+    }
+    return ret;
+}
+
 /**
  * \return Number of segments. The number of segments equals the
  *      number of vertices for a closed polyline and one less for
@@ -1300,7 +1311,11 @@ bool RPolyline::contains(const RVector& point, bool borderIsInside, double toler
 
     if (hasArcSegments()) {
         if (RPolyline::hasProxy()) {
-            return RPolyline::getPolylineProxy()->contains(*this, point, borderIsInside, tolerance);
+            bool ret = RPolyline::getPolylineProxy()->contains(*this, point, borderIsInside, tolerance);
+            qDebug("pl:");
+            dump();
+            qDebug() << "point: " << point.x << " / " << point.y;
+            return ret;
         }
         else {
             // not reliable, false negatives:

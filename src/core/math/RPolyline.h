@@ -240,6 +240,7 @@ public:
     virtual bool isInterpolated() const {
         return false;
     }
+    QList<QSharedPointer<RShape> > getSegments() const;
     int countSegments() const;
     QSharedPointer<RShape> getSegmentAt(int i) const;
     bool isArcSegmentAt(int i) const;
