@@ -326,6 +326,9 @@
         isInterpolated
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSegments
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getSegmentAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

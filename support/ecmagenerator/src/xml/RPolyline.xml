@@ -883,6 +883,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="getSegments" cppName="getSegments"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="countSegments" cppName="countSegments"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

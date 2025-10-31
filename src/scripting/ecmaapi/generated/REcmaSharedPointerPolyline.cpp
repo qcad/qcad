@@ -306,6 +306,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isInterpolated, "isInterpolated");
             
+            REcmaHelper::registerFunction(&engine, proto, getSegments, "getSegments");
+            
             REcmaHelper::registerFunction(&engine, proto, countSegments, "countSegments");
             
             REcmaHelper::registerFunction(&engine, proto, getSegmentAt, "getSegmentAt");
@@ -9295,6 +9297,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::isInterpolated", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::getSegments
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getSegments", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getSegments";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getSegments", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        
+               self->getSegments();
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getSegments().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getSegments", context, engine);
             return result;
         }
          QScriptValue
