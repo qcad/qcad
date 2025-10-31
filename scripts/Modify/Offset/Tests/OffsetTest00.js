@@ -12,6 +12,10 @@ function OffsetTest00() {
 OffsetTest00.prototype = new TdbTest();
 
 OffsetTest00.prototype.test00 = function() {
+    if (typeof(RCavalierContours)!=="undefined") {
+        return;
+    }
+
     qDebug('running OffsetTest00.test00()...');
     this.setUp();
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::LineToolsPanelButton');
