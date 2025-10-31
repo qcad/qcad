@@ -23,6 +23,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="updateXRef" cppName="updateXRef"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="setCurrentBlock" cppName="setCurrentBlock"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
