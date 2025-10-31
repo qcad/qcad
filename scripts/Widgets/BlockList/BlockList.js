@@ -42,9 +42,9 @@ function RBlockListQt(parent, addListener, showHeader) {
     this.indentation = 0;
     this.rootIsDecorated = false;
 
-    this.setSelectableColumn(2);
+    this.setSelectableColumn(3);
 
-    this.columnCount = 3;
+    this.columnCount = 4;
 
     this.header().stretchLastSection = false;
     if (RSettings.isQt(5)) {
@@ -52,11 +52,13 @@ function RBlockListQt(parent, addListener, showHeader) {
         this.header().setSectionResizeMode(BlockList.colName, QHeaderView.Stretch);
         this.header().setSectionResizeMode(BlockList.colVisible, QHeaderView.Interactive);
         this.header().setSectionResizeMode(BlockList.colEdit, QHeaderView.Interactive);
+        this.header().setSectionResizeMode(BlockList.colXRef, QHeaderView.Interactive);
     }
     else {
         this.header().setResizeMode(BlockList.colName, QHeaderView.Stretch);
         this.header().setResizeMode(BlockList.colVisible, QHeaderView.Interactive);
         this.header().setResizeMode(BlockList.colEdit, QHeaderView.Interactive);
+        this.header().setResizeMode(BlockList.colXRef, QHeaderView.Interactive);
     }
 
     // Qt 6.6.1 workaround: this only works once widget is visible:
@@ -69,6 +71,7 @@ function RBlockListQt(parent, addListener, showHeader) {
         var adapter = new RBlockListenerAdapter();
         appWin.addBlockListener(adapter);
         adapter.blocksUpdated.connect(function(di) { self.updateBlocks(di); });
+        adapter.xRefUpdated.connect(function() { self.updateXRef(); });
         adapter.currentBlockSet.connect(function(di) { self.updateCurrentBlock(di); });
         adapter.blocksCleared.connect(function() { self.clearBlocks(); });
     }
@@ -203,6 +206,30 @@ RBlockListQt.prototype.updateCurrentBlock = function(documentInterface) {
 };
 
 /**
+ * Called when the XRef status of the current block changes. Updates the XRef icon.
+ */
+RBlockListQt.prototype.updateXRef = function() {
+    if (isNull(this.di)) {
+        return;
+    }
+
+    var doc = this.di.getDocument();
+
+    // find item of current block:
+    var item = RBlockListQt.getItem(this, doc.getCurrentBlockName());
+
+    // update XRef icon for item:
+    if (!isNull(item)) {
+        var block = doc.queryCurrentBlock();
+        var isXRef = false;
+        if (!isNull(block)) {
+            isXRef = block.isXRef();
+        }
+        item.setIcon(BlockList.colXRef, BlockList.iconXRef[Number(isXRef)]);
+    }
+};
+
+/**
  * Called when blocks are added, edited or deleted. Updates the block list.
  */
 RBlockListQt.prototype.updateBlocks = function(documentInterface) {
@@ -311,13 +338,13 @@ RBlockListQt.prototype.createBlockItem = function(block) {
 };
 
 RBlockListQt.prototype.updateItemIcons = function(item, block) {
-    //var iconName = autoIconPath(BlockList.includeBasePath + "/Visible%1.svg".arg(Number(!block.isFrozen())));
     item.setIcon(BlockList.colVisible, BlockList.iconVisible[Number(!block.isFrozen())]);
 
     var doc = this.di.getDocument();
     var currentBlockId = doc.getCurrentBlockId();
-    //iconName = autoIconPath(BlockList.includeBasePath + "/Edit%1.svg".arg(Number(block.getId()===currentBlockId)));
     item.setIcon(BlockList.colEdit, BlockList.iconEdit[Number(block.getId()===currentBlockId)]);
+
+    item.setIcon(BlockList.colXRef, BlockList.iconXRef[Number(block.isXRef())]);
 };
 
 /**
@@ -351,6 +378,8 @@ RBlockListQt.prototype.itemColumnClickedSlot = function(item, column) {
         this.setCurrentItem(item);
         this.editBlock();
         //this.updateBlocks(this.di);
+    } else if (column===BlockList.colXRef) {
+        this.setCurrentItem(item);
     }
 
     this.blockActivated();
@@ -479,10 +508,12 @@ BlockList.includeBasePath = includeBasePath;
 
 BlockList.colVisible=0;
 BlockList.colEdit=1;
-BlockList.colName=2;
+BlockList.colXRef=2;
+BlockList.colName=3;
 
 BlockList.iconVisible = [];
 BlockList.iconEdit = [];
+BlockList.iconXRef = [];
 
 BlockList.initStyle = function(upd) {
     if (isNull(upd)) {
@@ -497,6 +528,11 @@ BlockList.initStyle = function(upd) {
     BlockList.iconEdit = [
         new QIcon(autoIconPath(BlockList.includeBasePath + "/Edit0.svg")),
         new QIcon(autoIconPath(BlockList.includeBasePath + "/Edit1.svg"))
+    ];
+
+    BlockList.iconXRef = [
+        new QIcon(autoIconPath(BlockList.includeBasePath + "/XRef0.svg")),
+        new QIcon(autoIconPath(BlockList.includeBasePath + "/XRef1.svg"))
     ];
 
     if (upd) {
@@ -565,6 +601,7 @@ BlockList.prototype.finishEvent = function() {
 };
 
 BlockList.initColumnWidths = function(blockList) {
+    blockList.setColumnWidth(BlockList.colXRef, 22);
     blockList.setColumnWidth(BlockList.colVisible, 22);
     blockList.setColumnWidth(BlockList.colEdit, 22);
 };
