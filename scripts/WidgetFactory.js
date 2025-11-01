@@ -1184,7 +1184,7 @@ WidgetFactory.adjustIcons = function(includeBasePath, widget) {
         // adjust icon for theme / dark mode:
         if (isOfType(w, QToolButton)) {
             var iconFile = autoIconPath(includeBasePath + "/" + w.objectName + ".svg");
-            if (!isNull(iconFile)) {
+            if (iconFile.length!==0) {
                 w.icon = new QIcon(iconFile);
             }
         }
@@ -1343,7 +1343,7 @@ WidgetFactory.initTextBrowser = function(textBrowser, slot) {
 //    }
 //};
 
-WidgetFactory.initLayerCombo = function(comboBox, doc, clear) {
+WidgetFactory.initLayerCombo = function(comboBox, doc, clear, xRefLayers) {
     var i;
 
     if (isNull(doc)) {
@@ -1351,6 +1351,9 @@ WidgetFactory.initLayerCombo = function(comboBox, doc, clear) {
     }
     if (isNull(clear)) {
         clear = true;
+    }
+    if (isNull(xRefLayers)) {
+        xRefLayers = true;
     }
 
     var existingLayerNames = [];
@@ -1370,6 +1373,12 @@ WidgetFactory.initLayerCombo = function(comboBox, doc, clear) {
     names.sort(Array.alphaNumericalSorter);
     for (i=0; i<names.length; i++) {
         var name = names[i];
+
+        if (!xRefLayers && name.contains("|")) {
+            // don't add XRef layers to this combo box:
+            continue;
+        }
+
         var layer = doc.queryLayer(name);
 
         if (existingLayerNames.containsIgnoreCase(layer.getName())) {

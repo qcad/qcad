@@ -16,7 +16,7 @@
     <message>
         <location line="+3"/>
         <source>Foot</source>
-        <translation>Fuss</translation>
+        <translation>Fuß</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -194,7 +194,7 @@
     <message>
         <location line="+3"/>
         <source>White</source>
-        <translation>Weiss</translation>
+        <translation>Weiß</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -232,7 +232,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation>Bemassungsschriftart</translation>
+        <translation>Bemaßungsschriftart</translation>
     </message>
 </context>
 <context>
@@ -243,13 +243,13 @@
         <translation>Block</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+98"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+100"/>
         <source>Referenced Block</source>
         <translation>Referenzierter Block</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+70"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+1"/>
+        <location filename="../src/core/RBlock.cpp" line="+76"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+2"/>
         <location line="+3"/>
         <location filename="../src/core/RLayout.cpp" line="+83"/>
         <location line="+3"/>
@@ -327,7 +327,17 @@
         <translation>Im Besitz von Referenz</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
+        <location line="+1"/>
+        <source>External reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
+        <source>External Reference</source>
+        <translation>Externe Referenz</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
@@ -487,7 +497,7 @@
         <location line="+0"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation>Grösse</translation>
+        <translation>Größe</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -623,7 +633,7 @@
         <translation>Layer ID</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="-7"/>
+        <location filename="../src/core/RBlock.cpp" line="-8"/>
         <location filename="../src/core/RLayer.cpp" line="-8"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
@@ -701,17 +711,17 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation>Min Ausmass</translation>
+        <translation>Min Ausmaß</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation>Max Ausmass</translation>
+        <translation>Max Ausmaß</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+886"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Circuläre (rekursive) Blockreferenzierung detektiert:</translation>
     </message>
@@ -738,22 +748,22 @@
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Abstand zu Bemassungslinien</translation>
+        <translation>Abstand zu Bemaßungslinien</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow size</source>
-        <translation>Pfeilgrösse</translation>
+        <translation>Pfeilgröße</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation>Schrittweite der Masslinien</translation>
+        <translation>Schrittweite der Maßlinien</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation>Verlängerung der Bemassungslinie</translation>
+        <translation>Verlängerung der Bemaßungslinie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -778,7 +788,7 @@
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation>Tick-Grösse</translation>
+        <translation>Tick-Größe</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -813,7 +823,7 @@
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation>Unterdrückung von Nullen Winkelmass</translation>
+        <translation>Unterdrückung von Nullen Winkelmaß</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1018,12 +1028,12 @@
     <message>
         <location line="+2"/>
         <source>Hot Water Supply</source>
-        <translation>Heisswasserleitung</translation>
+        <translation>Heißwasserleitung</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hot Water</source>
-        <translation>Heisswasser</translation>
+        <translation>Heißwasser</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1054,6 +1064,21 @@
         <location line="+1"/>
         <source>Fenceline 2</source>
         <translation>Grenze eckig</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Point 1</source>
+        <translation>Punkt 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Point 2</source>
+        <translation>Punkt 2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plant</source>
+        <translation>Anlage</translation>
     </message>
     <message>
         <location line="+2"/>

@@ -46,7 +46,7 @@
     <message>
         <location line="+3"/>
         <source>Perpendicular</source>
-        <translation>Lotrechte</translation>
+        <translation>Rechtwinklig</translation>
     </message>
     <message>
         <location line="+3"/>

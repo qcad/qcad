@@ -31,6 +31,7 @@ LanguagePreferences.localLanguageName["cs"] = "Čeština";
 LanguagePreferences.localLanguageName["da"] = "Dansk";
 LanguagePreferences.localLanguageName["de"] = "Deutsch";
 LanguagePreferences.localLanguageName["de_DE"] = "Deutsch";
+LanguagePreferences.localLanguageName["de_CH"] = "Deutsch (Schweiz)";
 LanguagePreferences.localLanguageName["en"] = "English";
 LanguagePreferences.localLanguageName["en_US"] = "English";
 LanguagePreferences.localLanguageName["es"] = "Español";

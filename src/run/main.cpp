@@ -279,7 +279,10 @@ int main(int argc, char *argv[]) {
 #endif
 
     if (RSettings::getBoolValue("MenuBar/ShowIcons", true)==false) {
-        QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
+        QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus, true);
+    }
+    else {
+        QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus, false);
     }
 
     if (!app->arguments().contains("-allow-multiple-instances")) {

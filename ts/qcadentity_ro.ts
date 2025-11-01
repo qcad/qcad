@@ -465,7 +465,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation type="unfinished">Text Poziție</translation>
+        <translation type="unfinished">Poziție text</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -647,12 +647,12 @@
         <location filename="../src/entity/RRayEntity.cpp" line="+2"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+2"/>
         <source>Angle</source>
-        <translation type="unfinished">Unghiul</translation>
+        <translation type="unfinished">Unghi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Scale</source>
-        <translation type="unfinished">Scala</translation>
+        <translation type="unfinished">Scară</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -698,7 +698,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished">Poziția</translation>
+        <translation type="unfinished">Poziție</translation>
     </message>
     <message>
         <location line="+2"/>

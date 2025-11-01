@@ -219,7 +219,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Střední</translation>
+        <translation>Střed</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -465,7 +465,7 @@
     <message>
         <location line="+3"/>
         <source>Text Rotation</source>
-        <translation type="unfinished">Otáčení textu</translation>
+        <translation>Otočení textu</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -562,12 +562,12 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished">Winding</translation>
+        <translation>Smysl otáčení</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alpha</source>
-        <translation type="unfinished">Alpha</translation>
+        <translation>Alpha</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -647,13 +647,13 @@
         <location line="+2"/>
         <location line="+1"/>
         <source>U</source>
-        <translation type="unfinished">U</translation>
+        <translation>U</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
-        <translation type="unfinished">V</translation>
+        <translation>V</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -688,7 +688,7 @@
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation type="unfinished">Drážkování</translation>
+        <translation>Drážkování</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -751,13 +751,13 @@
         <location line="+1"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <source>Size 1</source>
-        <translation type="unfinished">Velikost 1</translation>
+        <translation>Velikost 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <source>Size 2</source>
-        <translation type="unfinished">Velikost 2</translation>
+        <translation>Velikost 2</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -920,31 +920,31 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation type="unfinished">Umístění</translation>
+        <translation>Umístění</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-        <translation type="unfinished">Směr</translation>
+        <translation>Směr</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation type="unfinished">Text</translation>
+        <translation>Text</translation>
     </message>
     <message>
         <location filename="../src/entity/RLineEntity.cpp" line="-7"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-        <translation type="unfinished">Střední bod</translation>
+        <translation>Střední bod</translation>
     </message>
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
         <source>Frame</source>
-        <translation type="unfinished">Rám</translation>
+        <translation>Rám</translation>
     </message>
 </context>
 </TS>

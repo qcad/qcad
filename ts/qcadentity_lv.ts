@@ -20,7 +20,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished">Centrs</translation>
+        <translation>Centrs</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -85,7 +85,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>X</source>
-        <translation type="unfinished">X</translation>
+        <translation>X</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -150,7 +150,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>Y</source>
-        <translation type="unfinished">Y</translation>
+        <translation>Y</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -212,44 +212,44 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>Z</source>
-        <translation type="unfinished">Z</translation>
+        <translation>Z</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Middle</translation>
+        <translation>Middle</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <source>Radius</source>
-        <translation type="unfinished">Rādiuss</translation>
+        <translation>Rādiuss</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-9"/>
         <source>Start Angle</source>
-        <translation type="unfinished">Sākuma leņķis</translation>
+        <translation>Sākuma leņķis</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>End Angle</source>
-        <translation type="unfinished">Gala leņķis</translation>
+        <translation>Gala leņķis</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>Reversed</source>
-        <translation type="unfinished">Apgrieztā</translation>
+        <translation>Apgrieztā</translation>
     </message>
     <message>
         <location line="+2"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
         <source>Diameter</source>
-        <translation type="unfinished">Diametrs</translation>
+        <translation>Diametrs</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -263,7 +263,7 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="-11"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
         <source>Length</source>
-        <translation type="unfinished">Garums</translation>
+        <translation>Garums</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -276,12 +276,12 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
         <source>Total Length</source>
-        <translation type="unfinished">Kopējais garums</translation>
+        <translation>Kopējais garums</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Sweep Angle</source>
-        <translation type="unfinished">Pārsvīšanas leņķis</translation>
+        <translation>Pārsvīšanas leņķis</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -289,7 +289,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <source>Area</source>
-        <translation type="unfinished">Platība</translation>
+        <translation>Platība</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -297,69 +297,69 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Total Area</source>
-        <translation type="unfinished">Kopējā platība</translation>
+        <translation>Kopējā platība</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+93"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+102"/>
         <source>Invisible</source>
-        <translation type="unfinished">Invisible</translation>
+        <translation>Invisible</translation>
     </message>
     <message>
         <location line="+2"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="-1"/>
         <source>Tag</source>
-        <translation type="unfinished">Tag</translation>
+        <translation>Tag</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation type="unfinished">Uzaicinājums</translation>
+        <translation>Uzaicinājums</translation>
     </message>
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
         <source>Circumference</source>
-        <translation type="unfinished">Apjoms</translation>
+        <translation>Apjoms</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngular2LEntity.cpp" line="-14"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 Start</source>
-        <translation type="unfinished">1. rindas sākums</translation>
+        <translation>1. rindas sākums</translation>
     </message>
     <message>
         <location line="+10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 Start</source>
-        <translation type="unfinished">2. rindas sākums</translation>
+        <translation>2. rindas sākums</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 End</source>
-        <translation type="unfinished">1. rindas beigas</translation>
+        <translation>1. rindas beigas</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 End</source>
-        <translation type="unfinished">2. rindas beigas</translation>
+        <translation>2. rindas beigas</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
-        <translation type="unfinished">Dimensijas loks</translation>
+        <translation>Dimensijas loks</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+190"/>
         <source>Arc Symbol Type</source>
-        <translation type="unfinished">Loka simbola tips</translation>
+        <translation>Loka simbola tips</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>
@@ -369,35 +369,35 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation type="unfinished">Akordpunkts</translation>
+        <translation>Akordpunkts</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation type="unfinished">Tālais akorda punkts</translation>
+        <translation>Tālais akorda punkts</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Line</source>
-        <translation type="unfinished">Dimensiju līnija</translation>
+        <translation>Dimensiju līnija</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 1</source>
-        <translation type="unfinished">Pagarinājuma punkts 1</translation>
+        <translation>Pagarinājuma punkts 1</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 2</source>
-        <translation type="unfinished">Paplašinājuma punkts 2</translation>
+        <translation>Paplašinājuma punkts 2</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
@@ -406,133 +406,133 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-11"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation type="unfinished">Izcelsme</translation>
+        <translation>Izcelsme</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate</source>
-        <translation type="unfinished">Ordināts</translation>
+        <translation>Ordināts</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Defining Point</source>
-        <translation type="unfinished">Noteicošais punkts</translation>
+        <translation>Noteicošais punkts</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation type="unfinished">Leader beigu punkts</translation>
+        <translation>Leader beigu punkts</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
         <source>Dimension Angle</source>
-        <translation type="unfinished">Izmērs Leņķis</translation>
+        <translation>Izmērs Leņķis</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
         <source>Label</source>
-        <translation type="unfinished">Etiķete</translation>
+        <translation>Etiķete</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Tolerance</source>
-        <translation type="unfinished">Tolerance</translation>
+        <translation>Tolerance</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Upper Limit</source>
-        <translation type="unfinished">Augšējā robeža</translation>
+        <translation>Augšējā robeža</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lower Limit</source>
-        <translation type="unfinished">Apakšējā robeža</translation>
+        <translation>Apakšējā robeža</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Definition Point</source>
-        <translation type="unfinished">Definīcijas punkts</translation>
+        <translation>Definīcijas punkts</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation type="unfinished">Teksta pozīcija</translation>
+        <translation>Teksta pozīcija</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Text Rotation</source>
-        <translation type="unfinished">Teksta rotācija</translation>
+        <translation>Teksta rotācija</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip First Arrow</source>
-        <translation type="unfinished">Flip Pirmā bulta</translation>
+        <translation>Flip Pirmā bulta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation type="unfinished">Flip Otrā bulta</translation>
+        <translation>Flip Otrā bulta</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation type="unfinished">Fiksētā pagarinājuma līnija</translation>
+        <translation>Fiksētā pagarinājuma līnija</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation type="unfinished">Pagarinājuma līnijas garums</translation>
+        <translation>Pagarinājuma līnijas garums</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Auto Label</source>
-        <translation type="unfinished">Automātiskā etiķete</translation>
+        <translation>Automātiskā etiķete</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Measured Value</source>
-        <translation type="unfinished">Izmērītā vērtība</translation>
+        <translation>Izmērītā vērtība</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Block Name</source>
-        <translation type="unfinished">Bloka nosaukums</translation>
+        <translation>Bloka nosaukums</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Auto Label Position</source>
-        <translation type="unfinished">Automātiskā etiķetes pozīcija</translation>
+        <translation>Automātiskā etiķetes pozīcija</translation>
     </message>
     <message>
         <location filename="../src/entity/REllipseEntity.cpp" line="-17"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation type="unfinished">Galvenais punkts</translation>
+        <translation>Galvenais punkts</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ratio</source>
-        <translation type="unfinished">Attiecība</translation>
+        <translation>Attiecība</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Start Parameter</source>
-        <translation type="unfinished">Sākuma parametrs</translation>
+        <translation>Sākuma parametrs</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Parameter</source>
-        <translation type="unfinished">Beigu parametrs</translation>
+        <translation>Beigu parametrs</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -542,7 +542,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Point</source>
-        <translation type="unfinished">Sākuma punkts</translation>
+        <translation>Sākuma punkts</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -552,7 +552,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>End Point</source>
-        <translation type="unfinished">Beigu punkts</translation>
+        <translation>Beigu punkts</translation>
     </message>
     <message>
         <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>
@@ -565,7 +565,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished">1. punkts</translation>
+        <translation>1. punkts</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -578,7 +578,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished">2. punkts</translation>
+        <translation>2. punkts</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -591,7 +591,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 3</source>
-        <translation type="unfinished">3. punkts</translation>
+        <translation>3. punkts</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -604,22 +604,22 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 4</source>
-        <translation type="unfinished">4. punkts</translation>
+        <translation>4. punkts</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-10"/>
         <source>Solid</source>
-        <translation type="unfinished">Solid</translation>
+        <translation>Solid</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished">Vītņošana</translation>
+        <translation>Vītņošana</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alpha</source>
-        <translation type="unfinished">Alpha</translation>
+        <translation>Alpha</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -627,17 +627,17 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation type="unfinished">Modelis</translation>
+        <translation>Raksts</translation>
     </message>
     <message>
         <location line="-3"/>
         <source>Name</source>
-        <translation type="unfinished">Nosaukums</translation>
+        <translation>Nosaukums</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>From Entity</source>
-        <translation type="unfinished">No vienības</translation>
+        <translation>No vienības</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -647,12 +647,12 @@
         <location filename="../src/entity/RRayEntity.cpp" line="+2"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+2"/>
         <source>Angle</source>
-        <translation type="unfinished">Leņķis</translation>
+        <translation>Leņķis</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Scale</source>
-        <translation type="unfinished">Mērogs</translation>
+        <translation>Mērogs</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -673,22 +673,22 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Vertex</source>
-        <translation type="unfinished">Vertex</translation>
+        <translation>Vertex</translation>
     </message>
     <message>
         <location line="+201"/>
         <source>Yes</source>
-        <translation type="unfinished">Jā</translation>
+        <translation>Jā</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>No</source>
-        <translation type="unfinished">Nē</translation>
+        <translation>Nē</translation>
     </message>
     <message>
         <location filename="../src/entity/RImageEntity.cpp" line="-18"/>
         <source>File</source>
-        <translation type="unfinished">Faili</translation>
+        <translation>Faili</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -698,95 +698,95 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished">Pozīcija</translation>
+        <translation>Pozīcija</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>U</source>
-        <translation type="unfinished">U</translation>
+        <translation>U</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
-        <translation type="unfinished">V</translation>
+        <translation>V</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Width Factor</source>
-        <translation type="unfinished">Platuma faktors</translation>
+        <translation>Platuma faktors</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height Factor</source>
-        <translation type="unfinished">Augstuma faktors</translation>
+        <translation>Augstuma faktors</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Width</source>
-        <translation type="unfinished">Platums</translation>
+        <translation>Platums</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height</source>
-        <translation type="unfinished">Augstums</translation>
+        <translation>Augstums</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation type="unfinished">Izbalināt</translation>
+        <translation>Izbalināt</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-5"/>
         <source>Arrow</source>
-        <translation type="unfinished">Arrow</translation>
+        <translation>Arrow</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation type="unfinished">Spline</translation>
+        <translation>Splains</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow Block</source>
-        <translation type="unfinished">Strēlītes bloks</translation>
+        <translation>Strēlītes bloks</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
-        <translation type="unfinished">Daudzlīniju modelis</translation>
+        <translation>Daudzlīniju modelis</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Closed</source>
-        <translation type="unfinished">Slēgts</translation>
+        <translation>Slēgts</translation>
     </message>
     <message>
         <location line="+4"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+0"/>
         <source>Bulge</source>
-        <translation type="unfinished">Bulge</translation>
+        <translation>Bulge</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Start Width</source>
-        <translation type="unfinished">Sākuma platums</translation>
+        <translation>Sākuma platums</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Width</source>
-        <translation type="unfinished">Beigu platums</translation>
+        <translation>Beigu platums</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Width</source>
-        <translation type="unfinished">Globālais platums</translation>
+        <translation>Globālais platums</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Orientation</source>
-        <translation type="unfinished">Orientēšanās</translation>
+        <translation>Orientēšanās</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -796,30 +796,30 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation type="unfinished">Izmērs</translation>
+        <translation>Izmērs</translation>
     </message>
     <message>
         <location line="-2"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="-2"/>
         <source>Base Angle</source>
-        <translation type="unfinished">Bāzes leņķis</translation>
+        <translation>Bāzes leņķis</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <source>Size 1</source>
-        <translation type="unfinished">Izmērs 1</translation>
+        <translation>Izmērs 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <source>Size 2</source>
-        <translation type="unfinished">Izmērs 2</translation>
+        <translation>Izmērs 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Z</source>
-        <translation type="unfinished">Global Z</translation>
+        <translation>Global Z</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
@@ -829,7 +829,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Base Point</source>
-        <translation type="unfinished">Bāzes punkts</translation>
+        <translation>Bāzes punkts</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -839,7 +839,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Second Point</source>
-        <translation type="unfinished">Otrais punkts</translation>
+        <translation>Otrais punkts</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -849,102 +849,102 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction Vector</source>
-        <translation type="unfinished">Virziena vektors</translation>
+        <translation>Virziena vektors</translation>
     </message>
     <message>
         <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
-        <translation type="unfinished">Fiksēts leņķis</translation>
+        <translation>Fiksēts leņķis</translation>
     </message>
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
         <source>Closed Periodic</source>
-        <translation type="unfinished">Slēgts Periodiski</translation>
+        <translation>Slēgts Periodiski</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation type="unfinished">Grāds</translation>
+        <translation>Grāds</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Control Point</source>
-        <translation type="unfinished">Kontroles punkts</translation>
+        <translation>Kontroles punkts</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation type="unfinished">Fit Point</translation>
+        <translation>Fit Point</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Knot Vector</source>
-        <translation type="unfinished">Mezglu vektors</translation>
+        <translation>Mezglu vektors</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Knot</source>
-        <translation type="unfinished">Mezgls</translation>
+        <translation>Mezgls</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use Start Tangent</source>
-        <translation type="unfinished">Izmantot Start Tangent</translation>
+        <translation>Izmantot Start Tangent</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Tangent</source>
-        <translation type="unfinished">Sākums Tangenta sākums</translation>
+        <translation>Sākums Tangenta sākums</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use End Tangent</source>
-        <translation type="unfinished">Izmantot End Tangent</translation>
+        <translation>Izmantot End Tangent</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>End Tangent</source>
-        <translation type="unfinished">Tangenta beigas</translation>
+        <translation>Tangenta beigas</translation>
     </message>
     <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation type="unfinished">Atrašanās vieta</translation>
+        <translation>Atrašanās vieta</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-        <translation type="unfinished">Virziens</translation>
+        <translation>Virziens</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation type="unfinished">Teksts</translation>
+        <translation>Teksts</translation>
     </message>
     <message>
         <location filename="../src/entity/RLineEntity.cpp" line="-7"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-        <translation type="unfinished">Vidējais punkts</translation>
+        <translation>Vidējais punkts</translation>
     </message>
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
         <source>Frame</source>
-        <translation type="unfinished">Rāmis</translation>
+        <translation>Rāmis</translation>
     </message>
 </context>
 </TS>

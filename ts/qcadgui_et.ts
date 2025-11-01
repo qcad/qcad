@@ -31,52 +31,52 @@
     <message>
         <location filename="../src/gui/REventHandler.cpp" line="+211"/>
         <source>Grid</source>
-        <translation type="unfinished">Võrk</translation>
+        <translation>Võrk</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>End</source>
-        <translation type="unfinished">End</translation>
+        <translation>Otspunkt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation type="unfinished">Üksuse kohta</translation>
+        <translation>Objektil</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Perpendicular</source>
-        <translation type="unfinished">Ristkülikukujuline</translation>
+        <translation>Risti</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Tangential</source>
-        <translation type="unfinished">Tangentsiaalne</translation>
+        <translation>Tangentsiaalne</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Center</source>
-        <translation type="unfinished">Keskus</translation>
+        <translation>Keskus</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation type="unfinished">Keskmine</translation>
+        <translation>Keskpunkt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Intersection</source>
-        <translation type="unfinished">Ristmik</translation>
+        <translation>Lõikepunkt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Reference</source>
-        <translation type="unfinished">Viide</translation>
+        <translation>Viide</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Distance</source>
-        <translation type="unfinished">Kaugus</translation>
+        <translation>Kaugus</translation>
     </message>
 </context>
 <context>
@@ -84,7 +84,7 @@
     <message>
         <location filename="../src/gui/RMathLineEdit.cpp" line="+188"/>
         <source>Invalid</source>
-        <translation type="unfinished">Invaliidne</translation>
+        <translation>Kehtetu</translation>
     </message>
 </context>
 </TS>

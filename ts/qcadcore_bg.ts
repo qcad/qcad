@@ -11,12 +11,12 @@
     <message>
         <location line="+3"/>
         <source>Inch</source>
-        <translation type="unfinished">Инчове</translation>
+        <translation type="unfinished">Инч</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Foot</source>
-        <translation type="unfinished">Крака</translation>
+        <translation type="unfinished">Фут</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -31,12 +31,12 @@
     <message>
         <location line="+3"/>
         <source>Centimeter</source>
-        <translation type="unfinished">Сантиметри</translation>
+        <translation type="unfinished">Сантиметър</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Meter</source>
-        <translation type="unfinished">Измервателен уред</translation>
+        <translation type="unfinished">Метър</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -46,22 +46,22 @@
     <message>
         <location line="+3"/>
         <source>Microinch</source>
-        <translation type="unfinished">Microinch</translation>
+        <translation type="unfinished">Микроинч</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mil</source>
-        <translation type="unfinished">Mil</translation>
+        <translation type="unfinished">Мил</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Yard</source>
-        <translation type="unfinished">Двор</translation>
+        <translation type="unfinished">Ярд</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angstrom</source>
-        <translation type="unfinished">Angstrom</translation>
+        <translation type="unfinished">Ангстрьом</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -71,7 +71,7 @@
     <message>
         <location line="+3"/>
         <source>Micron</source>
-        <translation type="unfinished">Micron</translation>
+        <translation type="unfinished">Микрон</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -96,17 +96,17 @@
     <message>
         <location line="+3"/>
         <source>Astro</source>
-        <translation type="unfinished">Astro</translation>
+        <translation type="unfinished">Астрономическа единица</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Lightyear</source>
-        <translation type="unfinished">Lightyear</translation>
+        <translation type="unfinished">Светлинна година</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Parsec</source>
-        <translation type="unfinished">Parsec</translation>
+        <translation type="unfinished">Парсек</translation>
     </message>
 </context>
 <context>
@@ -119,12 +119,12 @@
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">От блок</translation>
+        <translation type="unfinished">По блок</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Red</source>
-        <translation type="unfinished">Червено</translation>
+        <translation type="unfinished">Червен</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -134,12 +134,12 @@
     <message>
         <location line="+1"/>
         <source>Blue</source>
-        <translation type="unfinished">Синьо</translation>
+        <translation type="unfinished">Син</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cyan</source>
-        <translation type="unfinished">Cyan</translation>
+        <translation type="unfinished">Циан</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -154,42 +154,42 @@
     <message>
         <location line="+1"/>
         <source>Orange</source>
-        <translation type="unfinished">Orange</translation>
+        <translation type="unfinished">Оранжев</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Red</source>
-        <translation type="unfinished">Тъмно червено</translation>
+        <translation type="unfinished">Тъмночервен</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Green</source>
-        <translation type="unfinished">Тъмнозелено</translation>
+        <translation type="unfinished">Тъмнозелен</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Blue</source>
-        <translation type="unfinished">Тъмно синьо</translation>
+        <translation type="unfinished">Тъмносин</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation type="unfinished">Тъмно синьо</translation>
+        <translation type="unfinished">Тъмноциан</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation type="unfinished">Тъмно магента</translation>
+        <translation type="unfinished">Тъмномагента</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Yellow</source>
-        <translation type="unfinished">Тъмно жълто</translation>
+        <translation type="unfinished">Тъмножълт</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Black</source>
-        <translation type="unfinished">Черно</translation>
+        <translation type="unfinished">Черен</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -199,7 +199,7 @@
     <message>
         <location line="+1"/>
         <source>Light Gray</source>
-        <translation type="unfinished">Светло сиво</translation>
+        <translation type="unfinished">Светлосив</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -227,7 +227,7 @@
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished">Мащаб на линеен тип</translation>
+        <translation type="unfinished">Мащаб на тип линия</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -238,7 +238,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+67"/>
+        <location filename="../src/core/RBlock.cpp" line="+73"/>
         <location filename="../src/core/RLayer.cpp" line="+95"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="+81"/>
@@ -264,7 +264,7 @@
     </message>
     <message>
         <location line="-2"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+99"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+102"/>
         <location line="+3"/>
         <location filename="../src/core/RLayout.cpp" line="+2"/>
         <location line="+3"/>
@@ -317,10 +317,15 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation type="unfinished">Притежаван от Reference</translation>
+        <translation type="unfinished">Притежаван от препратка</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+886"/>
+        <location line="+1"/>
+        <source>External reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation type="unfinished">Открито е кръгово (рекурсивно) препращане към блок:</translation>
     </message>
@@ -330,9 +335,14 @@
         <translation type="unfinished">Име на блока:</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
         <source>Referenced Block</source>
         <translation type="unfinished">Референтен блок</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>External Reference</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -350,7 +360,7 @@
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+3"/>
         <source>Scale</source>
-        <translation type="unfinished">Скала</translation>
+        <translation type="unfinished">Мащаб</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -465,7 +475,7 @@
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation type="unfinished">Формат Angular</translation>
+        <translation type="unfinished">Ъглов формат</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -480,7 +490,7 @@
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation type="unfinished">Architectur tick</translation>
+        <translation type="unfinished">Архитектурна отметка</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -522,18 +532,18 @@
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+9"/>
         <source>Linetype</source>
-        <translation type="unfinished">Линеен тип</translation>
+        <translation type="unfinished">Тип линия</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished">Мащаб на линеен тип</translation>
+        <translation type="unfinished">Мащаб на тип линия</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
-        <translation type="unfinished">Линейно тегло</translation>
+        <translation type="unfinished">Дебелина на линията</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -764,7 +774,7 @@
     <message>
         <location line="+1"/>
         <source>Bold</source>
-        <translation type="unfinished">Bold</translation>
+        <translation type="unfinished">Удебелен</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -882,7 +892,7 @@
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">От блок</translation>
+        <translation type="unfinished">По блок</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -943,7 +953,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation type="unfinished">Phantom</translation>
+        <translation type="unfinished">Фантомна</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1038,7 +1048,7 @@
     <message>
         <location line="+1"/>
         <source>Zig Zag</source>
-        <translation type="unfinished">Zig Zag</translation>
+        <translation type="unfinished">Зигзаг</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1053,7 +1063,22 @@
     <message>
         <location line="+1"/>
         <source>Fenceline 2</source>
-        <translation type="unfinished">Fenceline 2</translation>
+        <translation type="unfinished">Ограда 2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Point 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Point 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plant</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1098,12 +1123,12 @@
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation type="unfinished">Foul</translation>
+        <translation type="unfinished">Фаул</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished">Foul Rising</translation>
+        <translation type="unfinished">Фаул нарастващ</translation>
     </message>
 </context>
 <context>
@@ -1116,7 +1141,7 @@
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">От блок</translation>
+        <translation type="unfinished">По блок</translation>
     </message>
     <message>
         <location line="+1"/>

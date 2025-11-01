@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./operations" filename="RMultiOperation.h"><cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RMULTIOPERATION_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RMULTIOPERATION_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"ROperation.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * \brief An operation that bundles several ROperation objects into one.
+ * This allows grouping multiple edits into a single undo/redo step.
+ */</comment>
+<class>class <name>RMultiOperation</name> <super>: <specifier>public</specifier> <name>ROperation</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor><name>RMultiOperation</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undoable</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>
+        <member_list>: <call><name>ROperation</name><argument_list>(<argument><expr><name>undoable</name></expr></argument>)</argument_list></call> </member_list><block>{
+    }</block></constructor>
+
+    <destructor><specifier>virtual</specifier> <name>~RMultiOperation</name><parameter_list>()</parameter_list> <block>{
+        <comment type="line">//qDeleteAll(operations);</comment>
+    }</block></destructor>
+
+    <comment type="block">/**
+     * Adds an operation to the bundle.
+     * Ownership of the operation is transferred to this object.
+     */</comment>
+    <function_decl><type><name>void</name></type> <name>addOperation</name><parameter_list>(<param><decl><type><name>ROperation</name>*</type> <name>op</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Executes all bundled operations sequentially.
+     * Returns true if all operations succeed.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>RTransaction</name></type> <name>apply</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Combines the results of all sub-operations into one.
+     */</comment>
+    <comment type="block">/*
+    virtual RTransaction getTransaction() const override {
+        RTransaction combined;
+        for (const ROperation* op : operations) {
+            RTransaction t = op-&gt;getTransaction();
+            combined.combine(t);
+        }
+        return combined;
+    }
+    */</comment>
+
+    <comment type="block">/**
+     * Returns a descriptive name for debugging or UI purposes.
+     */</comment>
+    <comment type="line">//virtual QString getName() const override {</comment>
+    <comment type="line">//    return QString("MultiOperation (%1 ops)").arg(operations.size());</comment>
+    <comment type="line">//}</comment>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>ROperation</name>*</argument>&gt;</argument_list></name></type> <name>operations</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif> <comment type="line">// RMULTIOPERATION_H</comment>
+
+</unit>

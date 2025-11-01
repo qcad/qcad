@@ -238,7 +238,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+67"/>
+        <location filename="../src/core/RBlock.cpp" line="+73"/>
         <location filename="../src/core/RLayer.cpp" line="+95"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="+81"/>
@@ -264,7 +264,7 @@
     </message>
     <message>
         <location line="-2"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+99"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+102"/>
         <location line="+3"/>
         <location filename="../src/core/RLayout.cpp" line="+2"/>
         <location line="+3"/>
@@ -317,7 +317,12 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation type="unfinished">Ve vlastnictví společnosti Reference</translation>
+        <translation>Vlastněno odkazem</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>External reference</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+95"/>
@@ -325,9 +330,14 @@
         <translation>Blok</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
         <source>Referenced Block</source>
-        <translation type="unfinished">Odkazovaný blok</translation>
+        <translation>Odkazovaný blok</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>External Reference</source>
+        <translation>Externí odkaz</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -424,7 +434,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation type="unfinished">Id rodiče</translation>
+        <translation>ID rodiče</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -577,12 +587,12 @@
     <message>
         <location line="+1"/>
         <source>Object Invisible</source>
-        <translation type="unfinished">Objekt neviditelný</translation>
+        <translation>Objekt neviditelný</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation type="unfinished">Pracovní sada</translation>
+        <translation>Pracovní sada</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
@@ -619,7 +629,7 @@
     <message>
         <location line="+1"/>
         <source>Text Width</source>
-        <translation type="unfinished">Šířka textu</translation>
+        <translation>Šířka textu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -665,12 +675,12 @@
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation type="unfinished">Zpětně</translation>
+        <translation>Pozpátku</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation type="unfinished">Vzhůru nohama</translation>
+        <translation>Vzhůru nohama</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
@@ -703,15 +713,15 @@
     <message>
         <location line="+2"/>
         <source>Frozen Layers</source>
-        <translation type="unfinished">Zmrazené vrstvy</translation>
+        <translation>Zmrazené vrstvy</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer ID</source>
-        <translation type="unfinished">ID vrstvy</translation>
+        <translation>ID vrstvy</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+886"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Detekováno kruhové (rekurzivní) odkazování bloku</translation>
     </message>
@@ -723,122 +733,122 @@
     <message>
         <location filename="../src/core/RDimStyle.cpp" line="+71"/>
         <source>Style</source>
-        <translation type="unfinished">Styl</translation>
+        <translation>Styl</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overall scale</source>
-        <translation type="unfinished">Celkové měřítko</translation>
+        <translation>Celkové měřítko</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation type="unfinished">Lineární faktor měření</translation>
+        <translation>Lineární faktor měření</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text height</source>
-        <translation type="unfinished">Výška textu</translation>
+        <translation>Výška textu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation type="unfinished">Mezera mezi rozměry</translation>
+        <translation>Mezera mezi rozměry</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow size</source>
-        <translation type="unfinished">Velikost šipky</translation>
+        <translation>Velikost šipky</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation type="unfinished">Přírůstek čáry rozměrů</translation>
+        <translation>Přírůstek čáry rozměrů</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation type="unfinished">Prodloužení linky</translation>
+        <translation>Prodloužení linky</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation type="unfinished">Posunutí prodlužovacího vedení</translation>
+        <translation>Posunutí prodlužovacího vedení</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text position vertical</source>
-        <translation type="unfinished">Pozice textu na výšku</translation>
+        <translation>Pozice textu na výšku</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text horizontal</source>
-        <translation type="unfinished">Horizontální text</translation>
+        <translation>Horizontální text</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation type="unfinished">Velikost zatržítka</translation>
+        <translation>Velikost zatržítka</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
-        <translation type="unfinished">Lineární formát</translation>
+        <translation>Lineární formát</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal places</source>
-        <translation type="unfinished">Desetinná místa</translation>
+        <translation>Desetinná místa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal separator</source>
-        <translation type="unfinished">Oddělovač desetinných míst</translation>
+        <translation>Oddělovač desetinných míst</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zero suppression</source>
-        <translation type="unfinished">Nulové potlačení</translation>
+        <translation>Nulové potlačení</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation type="unfinished">Úhlový formát</translation>
+        <translation>Úhlový formát</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation type="unfinished">Úhlová desetinná místa</translation>
+        <translation>Úhlová desetinná místa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation type="unfinished">Potlačení úhlové nuly</translation>
+        <translation>Potlačení úhlové nuly</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation type="unfinished">Architectur tick</translation>
+        <translation>Architectur tick</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text color</source>
-        <translation type="unfinished">Barva textu</translation>
+        <translation>Barva textu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation type="unfinished">Blok šipek</translation>
+        <translation>Blok šipek</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 1</source>
-        <translation type="unfinished">Blok šipek 1</translation>
+        <translation>Blok šipek 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation type="unfinished">Blok šipek 2</translation>
+        <translation>Blok šipek 2</translation>
     </message>
 </context>
 <context>
@@ -1056,9 +1066,24 @@
         <translation>Plot 2</translation>
     </message>
     <message>
+        <location line="+1"/>
+        <source>Point 1</source>
+        <translation>Bod 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Point 2</source>
+        <translation>Bod 2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plant</source>
+        <translation>Rostlina</translation>
+    </message>
+    <message>
         <location line="+2"/>
         <source>Water</source>
-        <translation type="unfinished">Voda</translation>
+        <translation>Voda</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1073,37 +1098,37 @@
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation type="unfinished">Komunikace</translation>
+        <translation>Komunikace</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Electric</source>
-        <translation type="unfinished">Elektrický</translation>
+        <translation>Elektrický</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Low Voltage</source>
-        <translation type="unfinished">Nízké napětí</translation>
+        <translation>Nízké napětí</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>High Voltage</source>
-        <translation type="unfinished">Vysoké napětí</translation>
+        <translation>Vysoké napětí</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation type="unfinished">Režijní napájení</translation>
+        <translation>Režijní napájení</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation type="unfinished">Foul</translation>
+        <translation>Foul</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished">Foul Rising</translation>
+        <translation>Foul Rising</translation>
     </message>
 </context>
 <context>

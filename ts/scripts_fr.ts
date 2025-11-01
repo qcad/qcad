@@ -49,7 +49,7 @@
         <translation>Plugins</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+50"/>
         <source>No information available</source>
         <translation>Pas d&apos;information disponible</translation>
     </message>
@@ -82,14 +82,14 @@
         <translation>Licences</translation>
     </message>
     <message>
-        <location line="-426"/>
-        <location line="+123"/>
+        <location line="-445"/>
+        <location line="+142"/>
         <source>Version:</source>
         <translation>Version :</translation>
     </message>
     <message>
-        <location line="-113"/>
-        <location line="+117"/>
+        <location line="-132"/>
+        <location line="+136"/>
         <source>Qt Version:</source>
         <translation>Qt Version :</translation>
     </message>
@@ -99,14 +99,14 @@
         <translation>Licence :</translation>
     </message>
     <message>
-        <location line="-127"/>
-        <location line="+136"/>
+        <location line="-146"/>
+        <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet :</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-164"/>
         <source>Build Date:</source>
         <translation>Date de fabrication :</translation>
     </message>
@@ -151,7 +151,7 @@
         <translation>Aucun plugin trouvé.</translation>
     </message>
     <message>
-        <location line="+99"/>
+        <location line="+118"/>
         <source>Active</source>
         <translation>Actif</translation>
     </message>
@@ -1252,7 +1252,17 @@ Voulez-vous le récupérer ?</translation>
         <translation>Impossible d&apos;éditer un bloc pendant l&apos;édition d&apos;un bloc sur place</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="+23"/>
+        <source>Cannot edit external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot edit block from external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-109"/>
         <source>&amp;Block</source>
         <translation>&amp;Bloc</translation>
     </message>
@@ -1283,7 +1293,7 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location line="+5"/>
         <source>Block name is empty.</source>
-        <translation>Nom du bloc est vide.</translation>
+        <translation>Le nom du bloc est vide.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1293,12 +1303,12 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location line="+11"/>
         <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation>Block &quot;%1&quot; existe&lt;br&gt;et sera écrasé.</translation>
+        <translation>Le bloc &quot;%1&quot; existe déjà&lt;br&gt;et sera écrasé.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block already exists.</source>
-        <translation>Bloc existe déjà.</translation>
+        <translation>Le bloc existe déjà.</translation>
     </message>
 </context>
 <context>
@@ -1320,14 +1330,14 @@ Voulez-vous le récupérer ?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+511"/>
-        <location line="+67"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Liste des blocs</translation>
     </message>
     <message>
-        <location line="-110"/>
+        <location line="-111"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -2655,7 +2665,7 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location line="-8"/>
         <source>Splines</source>
-        <translation>Cannelures</translation>
+        <translation>Splines</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -3544,7 +3554,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+16"/>
         <source>Can not switch to non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>Impossible de passer à des couches inexistantes, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
+        <translation>Impossible de passer à des calques inexistants, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3554,12 +3564,12 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+15"/>
         <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
-        <translation>Le commutateur &quot;Nouvelle couche&quot; n&apos;est pas correct et est ignoré. Ligne de texte : %1</translation>
+        <translation>Le commutateur &quot;Nouveau calque&quot; n&apos;est pas correct et est ignoré. Ligne de texte : %1</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>Impossible de masquer des couches inexistantes, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
+        <translation>Impossible de masquer des calques inexistants, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3569,7 +3579,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+28"/>
         <source>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>Impossible de geler des couches inexistantes, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
+        <translation>Impossible de geler des calques inexistants, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3579,7 +3589,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+28"/>
         <source>Can not lock non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>Impossible de verrouiller des couches inexistantes, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
+        <translation>Impossible de verrouiller des calques inexistants, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3589,7 +3599,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+30"/>
         <source>Can not allow non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>Impossible d&apos;autoriser des couches inexistantes, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
+        <translation>Impossible d&apos;autoriser des calques inexistants, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3970,7 +3980,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+24"/>
         <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
-        <translation>Le nom de la couche n&apos;est pas correct, il est ignoré. Ligne de texte : %1%2 Nom : %3</translation>
+        <translation>Le nom du calque n&apos;est pas correct, il est ignoré. Ligne de texte : %1%2 Nom : %3</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -4005,7 +4015,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+48"/>
         <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
-        <translation>Le nom de la couche n&apos;est pas correct. Ligne de texte : %1%2 Nom : %3</translation>
+        <translation>Le nom du calque n&apos;est pas correct. Ligne de texte : %1%2 Nom : %3</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -4030,7 +4040,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+18"/>
         <source>Add/Update layer ignored.</source>
-        <translation>Ajout/mise à jour de la couche ignorée.</translation>
+        <translation>Ajout/mise à jour du calque ignoré.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4040,7 +4050,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+3"/>
         <source>Added new layer: %1</source>
-        <translation>Ajout d&apos;une nouvelle couche : %1</translation>
+        <translation>Ajout d&apos;un nouveau calque : %1</translation>
     </message>
     <message>
         <location line="-447"/>
@@ -5236,7 +5246,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+6"/>
         <source>FP added layer:</source>
-        <translation>FP a ajouté une couche :</translation>
+        <translation>FP a ajouté un calque :</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
@@ -5895,12 +5905,12 @@ est déjà dans la liste.</translation>
         <translation>Seuil de hauteur du texte (px):</translation>
     </message>
     <message>
-        <location line="+192"/>
+        <location line="+221"/>
         <source>Persistent selection</source>
         <translation>Sélection persistante</translation>
     </message>
     <message>
-        <location line="-1053"/>
+        <location line="-1082"/>
         <source>Color lightness threshold:</source>
         <translation>Seuil de couleur :</translation>
     </message>
@@ -5990,7 +6000,12 @@ est déjà dans la liste.</translation>
         <translation>Limite d&apos;allocation pour les bitmaps (Mo) :</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+42"/>
+        <source>Dot length in line patterns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Selection</source>
         <translation>Sélection</translation>
     </message>
@@ -6455,7 +6470,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
+        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
         <translation>Erreur lors de l&apos;importation de fichier %1</translation>
     </message>
@@ -7921,7 +7936,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+62"/>
         <source>Language Settings</source>
         <translation>Configuration de langue</translation>
     </message>
@@ -7956,7 +7971,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+97"/>
         <source>Layer Tools</source>
-        <translation>Outils de la couche</translation>
+        <translation>Outils de calque</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -7974,7 +7989,7 @@ est déjà dans la liste.</translation>
         <translation>Cachez tous les calques</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+51"/>
         <source>Thawing all layers</source>
         <translation>Décongeler toutes les calques</translation>
     </message>
@@ -8014,12 +8029,12 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+6"/>
         <source>Layer 0 behaves like a regular layer (QCAD)</source>
-        <translation>Calque 0 se comporte comme un calque régulière</translation>
+        <translation>Le calque 0 se comporte comme un calque régulier (QCAD)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Layer 0 behaves differently (best compatibility)</source>
-        <translation>La couche 0 se comporte différemment (meilleure compatibilité)</translation>
+        <translation>Le calque 0 se comporte différemment (meilleure compatibilité)</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -8066,7 +8081,7 @@ est déjà dans la liste.</translation>
         <translation>calque</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espaces avant ou après.</translation>
     </message>
@@ -10858,7 +10873,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+4"/>
         <source>Black entities and layers are saved as white.</source>
-        <translation>Entités et les couches noires sont enregistrés en tant que blanc.</translation>
+        <translation>Les entités et les calques noirs sont enregistrés en blanc.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -13268,7 +13283,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+17"/>
         <source>Auto screen scale factor</source>
-        <translation>Facteur d'échelle automatique de l'écran</translation>
+        <translation>Facteur d&apos;échelle automatique de l&apos;écran</translation>
     </message>
     <message>
         <location line="+13"/>

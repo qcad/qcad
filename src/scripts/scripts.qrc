@@ -465,8 +465,10 @@
     <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.ui">../../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.ui</file>
     <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js">../../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js</file>
     <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/Tests/EllipseArcCPPATest00.js">../../scripts/Draw/Ellipse/EllipseArcCPPA/Tests/EllipseArcCPPATest00.js</file>
+    <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/Tests/EllipseArcCPPATest10.js">../../scripts/Draw/Ellipse/EllipseArcCPPA/Tests/EllipseArcCPPATest10.js</file>
     <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/Tests/lines.dxf">../../scripts/Draw/Ellipse/EllipseArcCPPA/Tests/lines.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/Tests/required/EllipseArcCPPATest00_000.dxf">../../scripts/Draw/Ellipse/EllipseArcCPPA/Tests/required/EllipseArcCPPATest00_000.dxf</file>
+    <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/Tests/required/EllipseArcCPPATest10_000.dxf">../../scripts/Draw/Ellipse/EllipseArcCPPA/Tests/required/EllipseArcCPPATest10_000.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseCPP/EllipseCPP-inverse.svg">../../scripts/Draw/Ellipse/EllipseCPP/EllipseCPP-inverse.svg</file>
     <file alias="scripts/Draw/Ellipse/EllipseCPP/EllipseCPP.js">../../scripts/Draw/Ellipse/EllipseCPP/EllipseCPP.js</file>
     <file alias="scripts/Draw/Ellipse/EllipseCPP/EllipseCPP.svg">../../scripts/Draw/Ellipse/EllipseCPP/EllipseCPP.svg</file>
@@ -2034,6 +2036,7 @@
     <file alias="scripts/Modify/Offset/Tests/OffsetTest00.js">../../scripts/Modify/Offset/Tests/OffsetTest00.js</file>
     <file alias="scripts/Modify/Offset/Tests/OffsetTest01.js">../../scripts/Modify/Offset/Tests/OffsetTest01.js</file>
     <file alias="scripts/Modify/Offset/Tests/OffsetTest02.js">../../scripts/Modify/Offset/Tests/OffsetTest02.js</file>
+    <file alias="scripts/Modify/Offset/Tests/required/OffsetCavalierTest00_001.dxf">../../scripts/Modify/Offset/Tests/required/OffsetCavalierTest00_001.dxf</file>
     <file alias="scripts/Modify/Offset/Tests/required/OffsetTest00_000.dxf">../../scripts/Modify/Offset/Tests/required/OffsetTest00_000.dxf</file>
     <file alias="scripts/Modify/Offset/Tests/required/OffsetTest00_001.dxf">../../scripts/Modify/Offset/Tests/required/OffsetTest00_001.dxf</file>
     <file alias="scripts/Modify/Offset/Tests/required/OffsetTest01_000.dxf">../../scripts/Modify/Offset/Tests/required/OffsetTest01_000.dxf</file>
@@ -2610,11 +2613,19 @@
     <file alias="scripts/Widgets/BlockList/Edit0.svg">../../scripts/Widgets/BlockList/Edit0.svg</file>
     <file alias="scripts/Widgets/BlockList/Edit1-inverse.svg">../../scripts/Widgets/BlockList/Edit1-inverse.svg</file>
     <file alias="scripts/Widgets/BlockList/Edit1.svg">../../scripts/Widgets/BlockList/Edit1.svg</file>
+    <file alias="scripts/Widgets/BlockList/FromXRef0-inverse.svg">../../scripts/Widgets/BlockList/FromXRef0-inverse.svg</file>
+    <file alias="scripts/Widgets/BlockList/FromXRef0.svg">../../scripts/Widgets/BlockList/FromXRef0.svg</file>
+    <file alias="scripts/Widgets/BlockList/FromXRef1-inverse.svg">../../scripts/Widgets/BlockList/FromXRef1-inverse.svg</file>
+    <file alias="scripts/Widgets/BlockList/FromXRef1.svg">../../scripts/Widgets/BlockList/FromXRef1.svg</file>
     <file alias="scripts/Widgets/BlockList/PreferencesPage.ui">../../scripts/Widgets/BlockList/PreferencesPage.ui</file>
     <file alias="scripts/Widgets/BlockList/Visible0-inverse.svg">../../scripts/Widgets/BlockList/Visible0-inverse.svg</file>
     <file alias="scripts/Widgets/BlockList/Visible0.svg">../../scripts/Widgets/BlockList/Visible0.svg</file>
     <file alias="scripts/Widgets/BlockList/Visible1-inverse.svg">../../scripts/Widgets/BlockList/Visible1-inverse.svg</file>
     <file alias="scripts/Widgets/BlockList/Visible1.svg">../../scripts/Widgets/BlockList/Visible1.svg</file>
+    <file alias="scripts/Widgets/BlockList/XRef0-inverse.svg">../../scripts/Widgets/BlockList/XRef0-inverse.svg</file>
+    <file alias="scripts/Widgets/BlockList/XRef0.svg">../../scripts/Widgets/BlockList/XRef0.svg</file>
+    <file alias="scripts/Widgets/BlockList/XRef1-inverse.svg">../../scripts/Widgets/BlockList/XRef1-inverse.svg</file>
+    <file alias="scripts/Widgets/BlockList/XRef1.svg">../../scripts/Widgets/BlockList/XRef1.svg</file>
     <file alias="scripts/Widgets/CadToolBar/Back-inverse.svg">../../scripts/Widgets/CadToolBar/Back-inverse.svg</file>
     <file alias="scripts/Widgets/CadToolBar/Back.svg">../../scripts/Widgets/CadToolBar/Back.svg</file>
     <file alias="scripts/Widgets/CadToolBar/CadToolBar.js">../../scripts/Widgets/CadToolBar/CadToolBar.js</file>
@@ -2723,6 +2734,7 @@
     <file alias="ts/scripts_bg.qm">../../ts/scripts_bg.qm</file>
     <file alias="ts/scripts_cs.qm">../../ts/scripts_cs.qm</file>
     <file alias="ts/scripts_da.qm">../../ts/scripts_da.qm</file>
+    <file alias="ts/scripts_de_CH.qm">../../ts/scripts_de_CH.qm</file>
     <file alias="ts/scripts_de.qm">../../ts/scripts_de.qm</file>
     <file alias="ts/scripts_el.qm">../../ts/scripts_el.qm</file>
     <file alias="ts/scripts_en.qm">../../ts/scripts_en.qm</file>

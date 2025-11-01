@@ -5,6 +5,7 @@ TRANSLATIONS = \
     $$PWD/ts/$${NAME}_cs.ts \
     $$PWD/ts/$${NAME}_da.ts \
     $$PWD/ts/$${NAME}_de.ts \
+    $$PWD/ts/$${NAME}_de_CH.ts \
     $$PWD/ts/$${NAME}_el.ts \
     $$PWD/ts/$${NAME}_en.ts \
     $$PWD/ts/$${NAME}_es.ts \

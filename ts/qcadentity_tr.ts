@@ -20,7 +20,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished">Merkez</translation>
+        <translation>Merkez</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -85,7 +85,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>X</source>
-        <translation type="unfinished">X</translation>
+        <translation>X</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -150,7 +150,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>Y</source>
-        <translation type="unfinished">Y</translation>
+        <translation>Y</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -212,44 +212,44 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>Z</source>
-        <translation type="unfinished">Z</translation>
+        <translation>Z</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Orta</translation>
+        <translation>Orta</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <source>Radius</source>
-        <translation type="unfinished">Yarıçap</translation>
+        <translation>Yarıçap</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-9"/>
         <source>Start Angle</source>
-        <translation type="unfinished">Başlangıç Açısı</translation>
+        <translation>Başlangıç Açısı</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>End Angle</source>
-        <translation type="unfinished">Uç Açısı</translation>
+        <translation>Bitiş Açısı</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>Reversed</source>
-        <translation type="unfinished">Tersine çevrildi</translation>
+        <translation>Tersine Çevrilmiş</translation>
     </message>
     <message>
         <location line="+2"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
         <source>Diameter</source>
-        <translation type="unfinished">Çap</translation>
+        <translation>Çap</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -263,7 +263,7 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="-11"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
         <source>Length</source>
-        <translation type="unfinished">Uzunluk</translation>
+        <translation>Uzunluk</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -276,12 +276,12 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
         <source>Total Length</source>
-        <translation type="unfinished">Toplam Uzunluk</translation>
+        <translation>Toplam Uzunluk</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Sweep Angle</source>
-        <translation type="unfinished">Süpürme Açısı</translation>
+        <translation>Süpürme Açısı</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -289,7 +289,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <source>Area</source>
-        <translation type="unfinished">Alan</translation>
+        <translation>Alan</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -297,69 +297,69 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Total Area</source>
-        <translation type="unfinished">Toplam Alan</translation>
+        <translation>Toplam Alan</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+95"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+101"/>
         <source>Tag</source>
-        <translation type="unfinished">Etiket</translation>
+        <translation>Etiket</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation type="unfinished">İstem</translation>
+        <translation>İstem</translation>
     </message>
     <message>
         <location line="-3"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
         <source>Invisible</source>
-        <translation type="unfinished">Görünmez</translation>
+        <translation>Görünmez</translation>
     </message>
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
         <source>Circumference</source>
-        <translation type="unfinished">Çevresi</translation>
+        <translation>Çevre</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngular2LEntity.cpp" line="-14"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 Start</source>
-        <translation type="unfinished">Hat 1 Başlangıç</translation>
+        <translation>Çizgi 1 Başlangıç</translation>
     </message>
     <message>
         <location line="+10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 Start</source>
-        <translation type="unfinished">Hat 2 Başlangıç</translation>
+        <translation>Çizgi 2 Başlangıç</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 End</source>
-        <translation type="unfinished">Hat 1 Sonu</translation>
+        <translation>Çizgi 1 Bitiş</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 End</source>
-        <translation type="unfinished">Hat 2 Sonu</translation>
+        <translation>Çizgi 2 Bitiş</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
-        <translation type="unfinished">Boyut Arkı</translation>
+        <translation>Ölçü Yayı</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+190"/>
         <source>Arc Symbol Type</source>
-        <translation type="unfinished">Ark Sembol Tipi</translation>
+        <translation>Yay Sembol Tipi</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>
@@ -369,35 +369,35 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation type="unfinished">Akor Noktası</translation>
+        <translation>Kiriş Noktası</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation type="unfinished">Uzak Akor Noktası</translation>
+        <translation>Uzak Kiriş Noktası</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Line</source>
-        <translation type="unfinished">Boyut Çizgisi</translation>
+        <translation>Ölçü Çizgisi</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 1</source>
-        <translation type="unfinished">Uzatma Noktası 1</translation>
+        <translation>Uzantı Noktası 1</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 2</source>
-        <translation type="unfinished">Uzatma Noktası 2</translation>
+        <translation>Uzantı Noktası 2</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
@@ -406,138 +406,138 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-11"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation type="unfinished">Köken</translation>
+        <translation>Orijin</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Ordinate</source>
-        <translation type="unfinished">Ordinate</translation>
+        <source>Ordinat</source>
+        <translation>Ordinat</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Defining Point</source>
-        <translation type="unfinished">Tanımlayıcı Nokta</translation>
+        <translation>Tanımlama Noktası</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation type="unfinished">Lider Bitiş Noktası</translation>
+        <translation>Kılavuz Bitiş Noktası</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
         <source>Dimension Angle</source>
-        <translation type="unfinished">Boyut Açısı</translation>
+        <translation>Ölçü Açısı</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
         <source>Label</source>
-        <translation type="unfinished">Etiket</translation>
+        <translation>Etiket</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Tolerance</source>
-        <translation type="unfinished">Hoşgörü</translation>
+        <translation>Tolerans</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Upper Limit</source>
-        <translation type="unfinished">Üst Sınır</translation>
+        <translation>Üst Limit</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lower Limit</source>
-        <translation type="unfinished">Alt Limit</translation>
+        <translation>Alt Limit</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Definition Point</source>
-        <translation type="unfinished">Tanım Noktası</translation>
+        <translation>Tanım Noktası</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation type="unfinished">Metin Konumu</translation>
+        <translation>Metin Konumu</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Text Rotation</source>
-        <translation type="unfinished">Metin Döndürme</translation>
+        <translation>Metin Döndürme</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip First Arrow</source>
-        <translation type="unfinished">İlk Oku Çevirin</translation>
+        <translation>İlk Oku Çevir</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation type="unfinished">İkinci Oku Çevir</translation>
+        <translation>İkinci Oku Çevir</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation type="unfinished">Sabit Uzatma Hattı</translation>
+        <translation>Sabit Uzantı Çizgisi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation type="unfinished">Uzatma Hattı Uzunluğu</translation>
+        <translation>Uzantı Çizgisi Uzunluğu</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Auto Label</source>
-        <translation type="unfinished">Otomatik Etiket</translation>
+        <translation>Otomatik Etiket</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Measured Value</source>
-        <translation type="unfinished">Ölçülen Değer</translation>
+        <translation>Ölçülen Değer</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-3"/>
         <source>Scale</source>
-        <translation type="unfinished">Ölçek</translation>
+        <translation>Ölçek</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="+3"/>
         <source>Block Name</source>
-        <translation type="unfinished">Blok Adı</translation>
+        <translation>Blok Adı</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Auto Label Position</source>
-        <translation type="unfinished">Otomatik Etiket Konumu</translation>
+        <translation>Otomatik Etiket Konumu</translation>
     </message>
     <message>
         <location filename="../src/entity/REllipseEntity.cpp" line="-17"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation type="unfinished">Önemli Nokta</translation>
+        <translation>Ana Eksen Noktası</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ratio</source>
-        <translation type="unfinished">Oran</translation>
+        <translation>Oran</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Start Parameter</source>
-        <translation type="unfinished">Başlangıç Parametresi</translation>
+        <translation>Başlangıç Parametresi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Parameter</source>
-        <translation type="unfinished">Son Parametre</translation>
+        <translation>Bitiş Parametresi</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -547,7 +547,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Point</source>
-        <translation type="unfinished">Başlangıç Noktası</translation>
+        <translation>Başlangıç Noktası</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -557,7 +557,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>End Point</source>
-        <translation type="unfinished">Bitiş Noktası</translation>
+        <translation>Bitiş Noktası</translation>
     </message>
     <message>
         <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>
@@ -570,7 +570,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished">Nokta 1</translation>
+        <translation>Nokta 1</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -583,7 +583,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished">Nokta 2</translation>
+        <translation>Nokta 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -596,7 +596,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 3</source>
-        <translation type="unfinished">Nokta 3</translation>
+        <translation>Nokta 3</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -609,22 +609,22 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 4</source>
-        <translation type="unfinished">Nokta 4</translation>
+        <translation>Nokta 4</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-7"/>
         <source>Solid</source>
-        <translation type="unfinished">Katı</translation>
+        <translation>Dolu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished">Sarma</translation>
+        <translation>Sarım</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alpha</source>
-        <translation type="unfinished">Alfa</translation>
+        <translation>Alfa</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -632,17 +632,17 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation type="unfinished">Desen</translation>
+        <translation>Desen</translation>
     </message>
     <message>
         <location line="-3"/>
         <source>Name</source>
-        <translation type="unfinished">İsim</translation>
+        <translation>Ad</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>From Entity</source>
-        <translation type="unfinished">Varlıktan</translation>
+        <translation>Varlıktan</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -652,7 +652,7 @@
         <location filename="../src/entity/RRayEntity.cpp" line="+2"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+2"/>
         <source>Angle</source>
-        <translation type="unfinished">Açı</translation>
+        <translation>Açı</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -672,23 +672,23 @@
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
-        <source>Vertex</source>
-        <translation type="unfinished">Vertex</translation>
+        <source>Köşe Noktası</source>
+        <translation>Köşe Noktası</translation>
     </message>
     <message>
         <location line="+201"/>
         <source>Yes</source>
-        <translation type="unfinished">Evet</translation>
+        <translation>Evet</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>No</source>
-        <translation type="unfinished">Hayır</translation>
+        <translation>Hayır</translation>
     </message>
     <message>
         <location filename="../src/entity/RImageEntity.cpp" line="-18"/>
         <source>File</source>
-        <translation type="unfinished">Dosya</translation>
+        <translation>Dosya</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -698,95 +698,95 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished">Pozisyon</translation>
+        <translation>Konum</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>U</source>
-        <translation type="unfinished">U</translation>
+        <translation>U</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
-        <translation type="unfinished">V</translation>
+        <translation>V</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Width Factor</source>
-        <translation type="unfinished">Genişlik Faktörü</translation>
+        <translation>Genişlik Faktörü</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height Factor</source>
-        <translation type="unfinished">Yükseklik Faktörü</translation>
+        <translation>Yükseklik Faktörü</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Width</source>
-        <translation type="unfinished">Genişlik</translation>
+        <translation>Genişlik</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height</source>
-        <translation type="unfinished">Yükseklik</translation>
+        <translation>Yükseklik</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation type="unfinished">Soldur</translation>
+        <translation>Solgunluk</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-5"/>
         <source>Arrow</source>
-        <translation type="unfinished">Ok</translation>
+        <translation>Ok</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Spline</source>
-        <translation type="unfinished">Spline</translation>
+        <source>Eğri</source>
+        <translation>Eğri</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow Block</source>
-        <translation type="unfinished">Ok Bloğu</translation>
+        <translation>Ok Bloğu</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
-        <translation type="unfinished">Çoklu Çizgi Deseni</translation>
+        <translation>Çoklu Çizgi Deseni</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Closed</source>
-        <translation type="unfinished">Kapalı</translation>
+        <translation>Kapalı</translation>
     </message>
     <message>
         <location line="+4"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+0"/>
-        <source>Bulge</source>
-        <translation type="unfinished">Bulge</translation>
+        <source>Kavis</source>
+        <translation>Kavis</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Start Width</source>
-        <translation type="unfinished">Başlangıç Genişliği</translation>
+        <translation>Başlangıç Genişliği</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Width</source>
-        <translation type="unfinished">Uç Genişliği</translation>
+        <translation>Bitiş Genişliği</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Width</source>
-        <translation type="unfinished">Küresel Genişlik</translation>
+        <translation>Genel Genişlik</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Orientation</source>
-        <translation type="unfinished">Oryantasyon</translation>
+        <translation>Yönelim</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -796,30 +796,30 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation type="unfinished">Boyut</translation>
+        <translation>Boyut</translation>
     </message>
     <message>
         <location line="-2"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="-2"/>
         <source>Base Angle</source>
-        <translation type="unfinished">Taban Açısı</translation>
+        <translation>Taban Açısı</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <source>Size 1</source>
-        <translation type="unfinished">Boyut 1</translation>
+        <translation>Boyut 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <source>Size 2</source>
-        <translation type="unfinished">Boyut 2</translation>
+        <translation>Boyut 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Z</source>
-        <translation type="unfinished">Küresel Z</translation>
+        <translation>Genel Z</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
@@ -829,7 +829,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Base Point</source>
-        <translation type="unfinished">Temel Nokta</translation>
+        <translation>Baz Nokta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -839,7 +839,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Second Point</source>
-        <translation type="unfinished">İkinci Nokta</translation>
+        <translation>İkinci Nokta</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -849,102 +849,102 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction Vector</source>
-        <translation type="unfinished">Yön Vektörü</translation>
+        <translation>Yön Vektörü</translation>
     </message>
     <message>
         <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
-        <translation type="unfinished">Sabit Açı</translation>
+        <translation>Sabit Açı</translation>
     </message>
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
         <source>Closed Periodic</source>
-        <translation type="unfinished">Kapalı Periyodik</translation>
+        <translation>Kapalı Periyodik</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation type="unfinished">Derece</translation>
+        <translation>Derece</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Control Point</source>
-        <translation type="unfinished">Kontrol Noktası</translation>
+        <translation>Kontrol Noktası</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation type="unfinished">Uyum Noktası</translation>
+        <translation>Geçiş Noktası</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Knot Vector</source>
-        <translation type="unfinished">Düğüm Vektörü</translation>
+        <translation>Düğüm Vektörü</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Knot</source>
-        <translation type="unfinished">Düğüm</translation>
+        <translation>Düğüm</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use Start Tangent</source>
-        <translation type="unfinished">Teğet Başlat&apos;ı Kullanın</translation>
+        <translation>Teğet Başlat&apos;ı Kullanın</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Tangent</source>
-        <translation type="unfinished">Teğet Başlat</translation>
+        <translation>Başlangıç Teğeti</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use End Tangent</source>
-        <translation type="unfinished">Uç Teğet Kullanın</translation>
+        <translation>Bitiş Teğetini Kullan</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>End Tangent</source>
-        <translation type="unfinished">Teğet Sonu</translation>
+        <translation>Bitiş Teğeti</translation>
     </message>
     <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation type="unfinished">Konum</translation>
+        <translation>Konum</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-        <translation type="unfinished">Yön</translation>
+        <translation>Yön</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation type="unfinished">Metin</translation>
+        <translation>Metin</translation>
     </message>
     <message>
         <location filename="../src/entity/RLineEntity.cpp" line="-7"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-        <translation type="unfinished">Orta Nokta</translation>
+        <translation>Orta Nokta</translation>
     </message>
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
         <source>Frame</source>
-        <translation type="unfinished">Çerçeve</translation>
+        <translation>Çerçeve</translation>
     </message>
 </context>
 </TS>

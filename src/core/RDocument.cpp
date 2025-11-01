@@ -895,6 +895,7 @@ QString RDocument::getCurrentBlockName() const {
 void RDocument::setCurrentBlock(RBlock::Id blockId) {
     RBlock::Id prevBlockId = getCurrentBlockId();
 
+    // remove the block we are about to edit from the spatial index:
     removeBlockFromSpatialIndex(blockId);
 
     storage.setCurrentBlock(blockId);

@@ -78,7 +78,7 @@ void RBlock::init() {
     RBlock::PropertyOriginZ.generateId(RBlock::getRtti(), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "Z"));
     RBlock::PropertyLayout.generateId(RBlock::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Layout"));
     RBlock::PropertyOwnedByReference.generateId(RBlock::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Owned by Reference"));
-    RBlock::PropertyXRefFileName.generateId(RBlock::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "XRef File Name"));
+    RBlock::PropertyXRefFileName.generateId(RBlock::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "External reference"));
 }
 
 void RBlock::setName(const QString& n) {
@@ -102,6 +102,44 @@ QString RBlock::getLayoutName() const {
     }
 
     return layout->getName();
+}
+
+/**
+ * \return List of layer names that depend on this XRef block.
+ */
+QSet<QString> RBlock::getXRefLayerNames() const {
+    if (!isXRef()) {
+        return QSet<QString>();
+    }
+
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
+        return QSet<QString>();
+    }
+
+    return doc->getLayerNames(QRegularExpression::escape(getName()) + "\\|.*");
+}
+
+/**
+ * \return List of block names that depend on this XRef block.
+ */
+QSet<QString> RBlock::getXRefBlockNames() const {
+    if (!isXRef()) {
+        return QSet<QString>();
+    }
+
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
+        return QSet<QString>();
+    }
+
+    return doc->getBlockNames(QRegularExpression::escape(getName()) + "\\|.*");
+}
+
+void RBlock::bindXRef(bool useTransaction) {
+    if (blockProxy!=NULL) {
+        blockProxy->bindXRef(this, useTransaction);
+    }
 }
 
 bool RBlock::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction) {
@@ -129,7 +167,7 @@ bool RBlock::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, 
 
     if (propertyTypeId == PropertyXRefFileName) {
         if (name.startsWith("*")) {
-            // never change XRef file name of blocks starting with * (model space, paper space, ...):
+            // never set XRef file name of blocks starting with * (model space, paper space, ...):
             return false;
         }
         ret = ret || RObject::setMember(xRefFileName, value.toString());

@@ -820,6 +820,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
+    <method name="reloadXRefs" cppName="reloadXRefs"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="di"
+        isConst="false" />
+        <arg type="QSet &lt; QString &gt; &amp;"
+        typeName="QSet &lt; QString &gt;" name="dirtyXRefPaths"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="setCommandPrompt" cppName="setCommandPrompt"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

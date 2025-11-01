@@ -289,7 +289,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <source>Area</source>
-        <translation type="unfinished">Област</translation>
+        <translation type="unfinished">Площ</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -609,7 +609,7 @@
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-10"/>
         <source>Solid</source>
-        <translation type="unfinished">Solid</translation>
+        <translation type="unfinished">Плътен</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -619,7 +619,7 @@
     <message>
         <location line="+1"/>
         <source>Alpha</source>
-        <translation type="unfinished">Alpha</translation>
+        <translation type="unfinished">Алфа</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -652,7 +652,7 @@
     <message>
         <location line="+1"/>
         <source>Scale</source>
-        <translation type="unfinished">Скала</translation>
+        <translation type="unfinished">Мащаб</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -673,7 +673,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Vertex</source>
-        <translation type="unfinished">Vertex</translation>
+        <translation type="unfinished">Връх</translation>
     </message>
     <message>
         <location line="+201"/>
@@ -819,7 +819,7 @@
     <message>
         <location line="+2"/>
         <source>Global Z</source>
-        <translation type="unfinished">Global Z</translation>
+        <translation type="unfinished">Глобално Z</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>

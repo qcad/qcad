@@ -77,6 +77,58 @@
             
             REcmaHelper::registerFunction(&engine, proto, setClear, "setClear");
             
+            REcmaHelper::registerFunction(&engine, proto, setScale, "setScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, getScale, "getScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, setAngle, "setAngle");
+            
+            REcmaHelper::registerFunction(&engine, proto, getAngle, "getAngle");
+            
+            REcmaHelper::registerFunction(&engine, proto, setCenter, "setCenter");
+            
+            REcmaHelper::registerFunction(&engine, proto, getCenter, "getCenter");
+            
+            REcmaHelper::registerFunction(&engine, proto, setFlipHorizontal, "setFlipHorizontal");
+            
+            REcmaHelper::registerFunction(&engine, proto, getFlipHorizontal, "getFlipHorizontal");
+            
+            REcmaHelper::registerFunction(&engine, proto, setFlipVertical, "setFlipVertical");
+            
+            REcmaHelper::registerFunction(&engine, proto, getFlipVertical, "getFlipVertical");
+            
+            REcmaHelper::registerFunction(&engine, proto, setToCurrentLayer, "setToCurrentLayer");
+            
+            REcmaHelper::registerFunction(&engine, proto, getToCurrentLayer, "getToCurrentLayer");
+            
+            REcmaHelper::registerFunction(&engine, proto, setToCurrentBlock, "setToCurrentBlock");
+            
+            REcmaHelper::registerFunction(&engine, proto, getToCurrentBlock, "getToCurrentBlock");
+            
+            REcmaHelper::registerFunction(&engine, proto, setOverwriteLayers, "setOverwriteLayers");
+            
+            REcmaHelper::registerFunction(&engine, proto, getOverwriteLayers, "getOverwriteLayers");
+            
+            REcmaHelper::registerFunction(&engine, proto, setOverwriteBlocks, "setOverwriteBlocks");
+            
+            REcmaHelper::registerFunction(&engine, proto, getOverwriteBlocks, "getOverwriteBlocks");
+            
+            REcmaHelper::registerFunction(&engine, proto, setBlockName, "setBlockName");
+            
+            REcmaHelper::registerFunction(&engine, proto, getBlockName, "getBlockName");
+            
+            REcmaHelper::registerFunction(&engine, proto, setLayerName, "setLayerName");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLayerName, "getLayerName");
+            
+            REcmaHelper::registerFunction(&engine, proto, setSelectionOnly, "setSelectionOnly");
+            
+            REcmaHelper::registerFunction(&engine, proto, getSelectionOnly, "getSelectionOnly");
+            
+            REcmaHelper::registerFunction(&engine, proto, setToModelSpaceBlock, "setToModelSpaceBlock");
+            
+            REcmaHelper::registerFunction(&engine, proto, getToModelSpaceBlock, "getToModelSpaceBlock");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RCopyOperation*>(), *proto);
 
@@ -463,6 +515,1370 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaCopyOperation::setClear", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::setScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::setScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::setScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("setScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setScale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.setScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::setScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::getScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::getScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::getScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("getScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getScale();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.getScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::getScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::setAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::setAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::setAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("setAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAngle(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.setAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::setAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::getAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::getAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::getAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("getAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getAngle();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.getAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::getAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::setCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::setCenter", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::setCenter";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("setCenter", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RCopyOperation: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCenter(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.setCenter().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::setCenter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::getCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::getCenter", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::getCenter";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("getCenter", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getCenter();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.getCenter().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::getCenter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::setFlipHorizontal
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::setFlipHorizontal", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::setFlipHorizontal";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("setFlipHorizontal", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setFlipHorizontal(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.setFlipHorizontal().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::setFlipHorizontal", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::getFlipHorizontal
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::getFlipHorizontal", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::getFlipHorizontal";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("getFlipHorizontal", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getFlipHorizontal();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.getFlipHorizontal().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::getFlipHorizontal", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::setFlipVertical
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::setFlipVertical", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::setFlipVertical";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("setFlipVertical", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setFlipVertical(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.setFlipVertical().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::setFlipVertical", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::getFlipVertical
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::getFlipVertical", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::getFlipVertical";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("getFlipVertical", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getFlipVertical();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.getFlipVertical().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::getFlipVertical", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::setToCurrentLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::setToCurrentLayer", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::setToCurrentLayer";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("setToCurrentLayer", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setToCurrentLayer(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.setToCurrentLayer().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::setToCurrentLayer", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::getToCurrentLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::getToCurrentLayer", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::getToCurrentLayer";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("getToCurrentLayer", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getToCurrentLayer();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.getToCurrentLayer().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::getToCurrentLayer", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::setToCurrentBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::setToCurrentBlock", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::setToCurrentBlock";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("setToCurrentBlock", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setToCurrentBlock(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.setToCurrentBlock().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::setToCurrentBlock", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::getToCurrentBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::getToCurrentBlock", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::getToCurrentBlock";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("getToCurrentBlock", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getToCurrentBlock();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.getToCurrentBlock().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::getToCurrentBlock", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::setOverwriteLayers
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::setOverwriteLayers", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::setOverwriteLayers";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("setOverwriteLayers", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setOverwriteLayers(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.setOverwriteLayers().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::setOverwriteLayers", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::getOverwriteLayers
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::getOverwriteLayers", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::getOverwriteLayers";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("getOverwriteLayers", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getOverwriteLayers();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.getOverwriteLayers().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::getOverwriteLayers", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::setOverwriteBlocks
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::setOverwriteBlocks", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::setOverwriteBlocks";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("setOverwriteBlocks", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setOverwriteBlocks(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.setOverwriteBlocks().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::setOverwriteBlocks", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::getOverwriteBlocks
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::getOverwriteBlocks", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::getOverwriteBlocks";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("getOverwriteBlocks", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getOverwriteBlocks();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.getOverwriteBlocks().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::getOverwriteBlocks", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::setBlockName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::setBlockName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::setBlockName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("setBlockName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setBlockName(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.setBlockName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::setBlockName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::getBlockName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::getBlockName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::getBlockName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("getBlockName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getBlockName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.getBlockName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::getBlockName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::setLayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::setLayerName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::setLayerName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("setLayerName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLayerName(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.setLayerName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::setLayerName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::getLayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::getLayerName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::getLayerName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("getLayerName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getLayerName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.getLayerName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::getLayerName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::setSelectionOnly
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::setSelectionOnly", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::setSelectionOnly";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("setSelectionOnly", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setSelectionOnly(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.setSelectionOnly().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::setSelectionOnly", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::getSelectionOnly
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::getSelectionOnly", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::getSelectionOnly";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("getSelectionOnly", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getSelectionOnly();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.getSelectionOnly().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::getSelectionOnly", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::setToModelSpaceBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::setToModelSpaceBlock", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::setToModelSpaceBlock";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("setToModelSpaceBlock", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setToModelSpaceBlock(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.setToModelSpaceBlock().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::setToModelSpaceBlock", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::getToModelSpaceBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::getToModelSpaceBlock", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::getToModelSpaceBlock";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("getToModelSpaceBlock", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getToModelSpaceBlock();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.getToModelSpaceBlock().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::getToModelSpaceBlock", context, engine);
             return result;
         }
          QScriptValue REcmaCopyOperation::toString

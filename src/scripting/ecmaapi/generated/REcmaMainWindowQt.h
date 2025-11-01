@@ -332,6 +332,9 @@
         handleTabKey
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        reloadXRefs
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         postSelectionChangedEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

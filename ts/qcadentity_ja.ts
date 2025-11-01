@@ -219,7 +219,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">中</translation>
+        <translation>中央</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -448,27 +448,27 @@
     <message>
         <location line="+3"/>
         <source>Text Rotation</source>
-        <translation type="unfinished">テキストの回転</translation>
+        <translation>文字回転</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip First Arrow</source>
-        <translation type="unfinished">フリップファーストアロー</translation>
+        <translation>第一矢印反転</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation type="unfinished">フリップセカンドアロー</translation>
+        <translation>第二矢印反転</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation type="unfinished">固定内線</translation>
+        <translation>固定補助線</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation type="unfinished">エクステンションラインの長さ</translation>
+        <translation>補助線長さ</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -540,12 +540,12 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished">ワインディング</translation>
+        <translation>巻き方向</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alpha</source>
-        <translation type="unfinished">アルファ</translation>
+        <translation>アルファ</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -630,13 +630,13 @@
         <location line="+2"/>
         <location line="+1"/>
         <source>U</source>
-        <translation type="unfinished">U</translation>
+        <translation>U</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
-        <translation type="unfinished">V</translation>
+        <translation>V</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -671,7 +671,7 @@
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation type="unfinished">スプライン</translation>
+        <translation>スプライン</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -712,7 +712,7 @@
     <message>
         <location line="+2"/>
         <source>Orientation</source>
-        <translation type="unfinished">オリエンテーション</translation>
+        <translation>向き</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -722,30 +722,30 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation type="unfinished">サイズ</translation>
+        <translation>サイズ</translation>
     </message>
     <message>
         <location line="-2"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="-2"/>
         <source>Base Angle</source>
-        <translation type="unfinished">ベースアングル</translation>
+        <translation>基準角度</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <source>Size 1</source>
-        <translation type="unfinished">サイズ1</translation>
+        <translation>サイズ1</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <source>Size 2</source>
-        <translation type="unfinished">サイズ2</translation>
+        <translation>サイズ2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Z</source>
-        <translation type="unfinished">グローバルZ</translation>
+        <translation>グローバルZ</translation>
     </message>
     <message>
         <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>
@@ -836,40 +836,40 @@
     <message>
         <location line="+6"/>
         <source>Use Start Tangent</source>
-        <translation type="unfinished">Start Tangentを使用する</translation>
+        <translation>始点接線を使用</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Tangent</source>
-        <translation type="unfinished">スタート・タンジェント</translation>
+        <translation>始点接線</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use End Tangent</source>
-        <translation type="unfinished">エンドタンジェント使用</translation>
+        <translation>終点接線を使用</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>End Tangent</source>
-        <translation type="unfinished">エンドタンジェント</translation>
+        <translation>終点接線</translation>
     </message>
     <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation type="unfinished">所在地</translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-        <translation type="unfinished">方向性</translation>
+        <translation>方向</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -932,19 +932,19 @@
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+190"/>
         <source>Arc Symbol Type</source>
-        <translation type="unfinished">アークシンボルタイプ</translation>
+        <translation>円弧記号タイプ</translation>
     </message>
     <message>
         <location filename="../src/entity/RLineEntity.cpp" line="-7"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-        <translation type="unfinished">ミドルポイント</translation>
+        <translation>中点</translation>
     </message>
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
         <source>Frame</source>
-        <translation type="unfinished">フレーム</translation>
+        <translation>枠</translation>
     </message>
 </context>
 </TS>

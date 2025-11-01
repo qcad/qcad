@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de">
+<TS version="2.1" language="de_DE">
 <context>
     <name>About</name>
     <message>
@@ -41,12 +41,12 @@
     <message>
         <location line="-8"/>
         <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
-        <translation>Zusätzliche Werkzeuge, Funktionen und Dateiformate einschliesslich DWG sind in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; oder &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt; verfügbar.</translation>
+        <translation>Zusätzliche Werkzeuge, Funktionen und Dateiformate einschließlich DWG sind in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; oder &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt; verfügbar.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
-        <translation>Qt wird mit QCAD unter der &lt;a href=&apos;%1&apos;&gt;LGPL Open Source Lizenz&lt;/a&gt; ausgeliefert, die Ihnen als Benutzer verschiedene Rechte verleiht, einschliesslich des Rechts, die Qt-Bibliotheken für Ihre Plattform neu zu kompilieren. Folgen Sie dazu der &lt;a href=&apos;%2&apos;&gt;Dokumentation auf der Qt-Webseite&lt;/a&gt;.</translation>
+        <translation>Qt wird mit QCAD unter der &lt;a href=&apos;%1&apos;&gt;LGPL Open Source Lizenz&lt;/a&gt; ausgeliefert, die Ihnen als Benutzer verschiedene Rechte verleiht, einschließlich des Rechts, die Qt-Bibliotheken für Ihre Plattform neu zu kompilieren. Folgen Sie dazu der &lt;a href=&apos;%2&apos;&gt;Dokumentation auf der Qt-Webseite&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -59,7 +59,7 @@
         <translation>Plugins</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+50"/>
         <source>No information available</source>
         <translation>Keine Information verfügbar</translation>
     </message>
@@ -92,14 +92,14 @@
         <translation>Lizenzen</translation>
     </message>
     <message>
-        <location line="-426"/>
-        <location line="+123"/>
+        <location line="-445"/>
+        <location line="+142"/>
         <source>Version:</source>
         <translation>Version:</translation>
     </message>
     <message>
-        <location line="-113"/>
-        <location line="+117"/>
+        <location line="-132"/>
+        <location line="+136"/>
         <source>Qt Version:</source>
         <translation>Qt Version:</translation>
     </message>
@@ -109,14 +109,14 @@
         <translation>Lizenz:</translation>
     </message>
     <message>
-        <location line="-127"/>
-        <location line="+136"/>
+        <location line="-146"/>
+        <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-164"/>
         <source>Build Date:</source>
         <translation>Erstellungsdatum:</translation>
     </message>
@@ -151,7 +151,7 @@
         <translation>Keine Plugins gefunden.</translation>
     </message>
     <message>
-        <location line="+99"/>
+        <location line="+118"/>
         <source>Active</source>
         <translation>Aktiv</translation>
     </message>
@@ -851,7 +851,7 @@ um die Änderungen zu übernehmen.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation>&amp;Tangential anschliessend</translation>
+        <translation>&amp;Tangential anschließend</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -992,7 +992,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+7"/>
         <source>Perpendicular</source>
-        <translation>Lotrechte</translation>
+        <translation>Rechtwinklig</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1136,7 +1136,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+9"/>
         <source>Size</source>
-        <translation>Grösse</translation>
+        <translation>Größe</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1223,7 +1223,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+6"/>
         <source>White</source>
-        <translation>Weiss</translation>
+        <translation>Weiß</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1236,7 +1236,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
-        <translation>Ungültige Bildgrösse (Breite x Höhe muss kleiner sein als %1)</translation>
+        <translation>Ungültige Bildgröße (Breite x Höhe muss kleiner sein als %1)</translation>
     </message>
 </context>
 <context>
@@ -1252,7 +1252,17 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Block kann nicht bearbeitet werden, während ein Block direkt bearbeitet wird</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="+23"/>
+        <source>Cannot edit external reference</source>
+        <translation>Externe Referenz kann nicht bearbeitet werden</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot edit block from external reference</source>
+        <translation>Block aus externer Referenz kann nicht bearbeitet werden</translation>
+    </message>
+    <message>
+        <location line="-109"/>
         <source>&amp;Block</source>
         <translation>Blo&amp;ck</translation>
     </message>
@@ -1320,14 +1330,14 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+511"/>
-        <location line="+67"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Blockliste</translation>
     </message>
     <message>
-        <location line="-110"/>
+        <location line="-111"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -1498,7 +1508,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
-        <translation>Symbolgrösse:</translation>
+        <translation>Symbolgröße:</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -1562,7 +1572,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
         <source>Icon size:</source>
-        <translation>Symbolgrösse:</translation>
+        <translation>Symbolgröße:</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -2054,7 +2064,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Window/CloseAll/CloseAllInit.js" line="+2"/>
         <source>&amp;Close All</source>
-        <translation>A&amp;lle schliessen</translation>
+        <translation>A&amp;lle schließen</translation>
     </message>
 </context>
 <context>
@@ -2062,7 +2072,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation>Zeichnung schliessen...</translation>
+        <translation>Zeichnung schließen...</translation>
     </message>
 </context>
 <context>
@@ -2070,7 +2080,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/File/CloseFile/CloseFileInit.js" line="+2"/>
         <source>&amp;Close</source>
-        <translation>&amp;Schliessen</translation>
+        <translation>&amp;Schließen</translation>
     </message>
 </context>
 <context>
@@ -2131,7 +2141,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+17"/>
         <source>Black / white</source>
-        <translation>Schwarz / Weiss</translation>
+        <translation>Schwarz / Weiß</translation>
     </message>
 </context>
 <context>
@@ -2226,7 +2236,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History size:</source>
-        <translation>Verlaufgrösse:</translation>
+        <translation>Verlaufgröße:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -2556,7 +2566,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+5"/>
         <source>Zoom (Wheel Mouse)</source>
-        <translation>Ansicht vergrössern / verkleinern (Maus mit Rad)</translation>
+        <translation>Ansicht vergrößern / verkleinern (Maus mit Rad)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2634,7 +2644,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+16"/>
         <source>Dimensions</source>
-        <translation>Bemassungen</translation>
+        <translation>Bemaßungen</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -2703,17 +2713,17 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAligned.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation>Startpunkt erste Bemassungslinie</translation>
+        <translation>Startpunkt erste Bemaßungslinie</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation>Startpunkt zweite Bemassungslinie</translation>
+        <translation>Startpunkt zweite Bemaßungslinie</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
-        <translation>Position Bemassungslinie</translation>
+        <translation>Position Bemaßungslinie</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAlignedInit.js" line="+2"/>
@@ -2723,7 +2733,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+3"/>
         <source>Draw aligned dimension</source>
-        <translation>Ausgerichtete Bemassung</translation>
+        <translation>Ausgerichtete Bemaßung</translation>
     </message>
 </context>
 <context>
@@ -2741,7 +2751,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+9"/>
         <source>Dimension arc location</source>
-        <translation>Bemassungsbogen Position</translation>
+        <translation>Bemaßungsbogen Position</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2"/>
@@ -2751,7 +2761,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+3"/>
         <source>Draw angular dimension</source>
-        <translation>Winkelbemassung</translation>
+        <translation>Winkelbemaßung</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
@@ -2769,7 +2779,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation>Position der Bemassungslinie oder Winkel</translation>
+        <translation>Position der Bemaßungslinie oder Winkel</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametricInit.js" line="+2"/>
@@ -2779,7 +2789,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+4"/>
         <source>Draw diametric dimension</source>
-        <translation>Durchmesserbemassung</translation>
+        <translation>Durchmesserbemaßung</translation>
     </message>
 </context>
 <context>
@@ -2792,7 +2802,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+4"/>
         <source>Draw horizontal dimension</source>
-        <translation>Horizontale Bemassung</translation>
+        <translation>Horizontale Bemaßung</translation>
     </message>
 </context>
 <context>
@@ -2815,7 +2825,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+3"/>
         <source>Draw ordinate dimension</source>
-        <translation>Ordinatenbemassung</translation>
+        <translation>Ordinatenbemaßung</translation>
     </message>
 </context>
 <context>
@@ -2828,7 +2838,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation>Position der Bemassungslinie oder Winkel</translation>
+        <translation>Position der Bemaßungslinie oder Winkel</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRadial/DimRadialInit.js" line="+2"/>
@@ -2838,7 +2848,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+4"/>
         <source>Draw radial dimension</source>
-        <translation>Radiale Bemassung</translation>
+        <translation>Radiale Bemaßung</translation>
     </message>
 </context>
 <context>
@@ -2846,14 +2856,14 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
-        <translation>Keine Bemassungen mit Benutzerdefinierter Beschriftungsposition ausgewählt.</translation>
+        <translation>Keine Bemaßungen mit Benutzerdefinierter Beschriftungsposition ausgewählt.</translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
-            <numerusform>Beschriftungsposition von einer Bemassung zurückgesetzt.</numerusform>
-            <numerusform>Beschriftungsposition von %n Bemassungen zurückgesetzt.</numerusform>
+            <numerusform>Beschriftungsposition von einer Bemaßung zurückgesetzt.</numerusform>
+            <numerusform>Beschriftungsposition von %n Bemaßungen zurückgesetzt.</numerusform>
         </translation>
     </message>
     <message>
@@ -2867,17 +2877,17 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation>Startpunkt erste Bemassungslinie</translation>
+        <translation>Startpunkt erste Bemaßungslinie</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation>Startpunkt zweite Bemassungslinie</translation>
+        <translation>Startpunkt zweite Bemaßungslinie</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
-        <translation>Position Bemassungslinie</translation>
+        <translation>Position Bemaßungslinie</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
@@ -2887,7 +2897,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
-        <translation>Lineare Bemassung mit fixem Winkel</translation>
+        <translation>Lineare Bemaßung mit fixem Winkel</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.ui" line="+17"/>
@@ -2905,7 +2915,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+4"/>
         <source>Draw vertical dimension</source>
-        <translation>Vertikale Bemassung</translation>
+        <translation>Vertikale Bemaßung</translation>
     </message>
 </context>
 <context>
@@ -2963,12 +2973,12 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+122"/>
         <source>Dimension Tools</source>
-        <translation>Bemassungswerkzeuge</translation>
+        <translation>Bemaßungswerkzeuge</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>D&amp;imension</source>
-        <translation>Be&amp;massung</translation>
+        <translation>Be&amp;maßung</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Dimension.ui" line="+29"/>
@@ -2983,7 +2993,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+19"/>
         <source>Enter fixed label or leave empty for automatic label</source>
-        <translation>Fixes Mass eingeben oder leer lassen für automatisches Mass</translation>
+        <translation>Fixes Maß eingeben oder leer lassen für automatisches Maß</translation>
     </message>
     <message>
         <location line="+61"/>
@@ -3016,12 +3026,12 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation>Skalierung von Bemassungen</translation>
+        <translation>Skalierung von Bemaßungen</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
-        <translation>Die Skalierung für neue Bemassungen ist nicht 1:1. Bemassungsbeschriftungen zeigen deshalb Werte an, die vom gemessenen Wert in der Zeichnung abweichen. Sie können den Skalierungsfaktor in der Optionenwerkzeugleiste oben anpassen.</translation>
+        <translation>Die Skalierung für neue Bemaßungen ist nicht 1:1. Bemaßungsbeschriftungen zeigen deshalb Werte an, die vom gemessenen Wert in der Zeichnung abweichen. Sie können den Skalierungsfaktor in der Optionenwerkzeugleiste oben anpassen.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3034,13 +3044,13 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+29"/>
         <source>Dimension</source>
-        <translation>Bemassung</translation>
+        <translation>Bemaßung</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+2"/>
         <source>Dimension Settings</source>
-        <translation>Bemassungseinstellungen</translation>
+        <translation>Bemaßungseinstellungen</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -3065,12 +3075,12 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+310"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
-        <translation>Die Zeichnungseinheit muss &quot;Inch&quot; sein, damit Bemassungsbeschriftungen in den Formaten &quot;Architektur&quot; oder &quot;Technisch&quot; angezeigt werden können. Format zurückgesetzt auf &quot;Dezimal&quot;.</translation>
+        <translation>Die Zeichnungseinheit muss &quot;Inch&quot; sein, damit Bemaßungsbeschriftungen in den Formaten &quot;Architektur&quot; oder &quot;Technisch&quot; angezeigt werden können. Format zurückgesetzt auf &quot;Dezimal&quot;.</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+68"/>
         <source>Sizes</source>
-        <translation>Grössen</translation>
+        <translation>Größen</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3095,7 +3105,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="-145"/>
         <source>Dimension Style</source>
-        <translation>Bemassungsstil</translation>
+        <translation>Bemaßungsstil</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3105,27 +3115,27 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+20"/>
         <source>Text above dimension line</source>
-        <translation>Text über Bemassungslinie</translation>
+        <translation>Text über Bemaßungslinie</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Dimension line gap:</source>
-        <translation>Bemassungslinien Abstand:</translation>
+        <translation>Bemaßungslinien Abstand:</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Arrow size:</source>
-        <translation>Pfeil Grösse:</translation>
+        <translation>Pfeil Größe:</translation>
     </message>
     <message>
         <location line="+108"/>
         <source>Dimension line increment:</source>
-        <translation>Schrittweite der Bemassungslinien:</translation>
+        <translation>Schrittweite der Bemaßungslinien:</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Size scale factor:</source>
-        <translation>Skalierung für alle Grössen:</translation>
+        <translation>Skalierung für alle Größen:</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -3175,7 +3185,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+6"/>
         <source>Linear Dimensions</source>
-        <translation>Lineare Bemassungen</translation>
+        <translation>Lineare Bemaßungen</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3196,7 +3206,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="-50"/>
         <source>Angular Dimensions</source>
-        <translation>Winkelbemassungen</translation>
+        <translation>Winkelbemaßungen</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3434,7 +3444,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation>Polylinie schliessen</translation>
+        <translation>Polylinie schließen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -3847,17 +3857,17 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+19"/>
         <source>Size Invalid.</source>
-        <translation>Grösse ungültig.</translation>
+        <translation>Größe ungültig.</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Size in X Invalid.</source>
-        <translation>Grösse in X ungültig.</translation>
+        <translation>Größe in X ungültig.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size in Y Invalid.</source>
-        <translation>Grösse in Y ungültig.</translation>
+        <translation>Größe in Y ungültig.</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -3995,7 +4005,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation>Keine korrekte Linetype-Skala, ignoriert. Textzeile: %1%2 Massstab: %3</translation>
+        <translation>Keine korrekte Linetype-Skala, ignoriert. Textzeile: %1%2 Maßstab: %3</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4131,7 +4141,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation>Polylinie schliessen</translation>
+        <translation>Polylinie schließen</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -4364,7 +4374,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &quot;safe&quot; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anzeigen der ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Mit Hilfe der ECMAScript Shell können Sie &lt;span style=&quot;color:#ff0000;&quot;&gt;Zeichnungen ändern&lt;/span&gt; aber auch &lt;span style=&quot;color:#ff0000;&quot;&gt;Dateien löschen&lt;/span&gt; oder &lt;span style=&quot;color:#ff0000;&quot;&gt;einen Absturz der Anwendung verursachen&lt;/span&gt;, was zu &lt;span style=&quot;color:#ff0000;&quot;&gt;Datenverlust&lt;/span&gt; führen kann.&lt;/p&gt;&lt;p&gt;Für unerfahrene Programmierer, wird die ausschliessliche Verwendung der &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;QCAD Simple API&lt;/a&gt; empfohlen. Diese wird als &quot;sicher&quot; eingestuft.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anzeigen der ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Mit Hilfe der ECMAScript Shell können Sie &lt;span style=&quot;color:#ff0000;&quot;&gt;Zeichnungen ändern&lt;/span&gt; aber auch &lt;span style=&quot;color:#ff0000;&quot;&gt;Dateien löschen&lt;/span&gt; oder &lt;span style=&quot;color:#ff0000;&quot;&gt;einen Absturz der Anwendung verursachen&lt;/span&gt;, was zu &lt;span style=&quot;color:#ff0000;&quot;&gt;Datenverlust&lt;/span&gt; führen kann.&lt;/p&gt;&lt;p&gt;Für unerfahrene Programmierer, wird die ausschließliche Verwendung der &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;QCAD Simple API&lt;/a&gt; empfohlen. Diese wird als &quot;sicher&quot; eingestuft.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4947,17 +4957,17 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.js" line="+60"/>
         <source>&amp;Resize Window</source>
-        <translation>&amp;Fenstergrösse ändern</translation>
+        <translation>&amp;Fenstergröße ändern</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui" line="+14"/>
         <source>Enter Size</source>
-        <translation>Grösse eingeben</translation>
+        <translation>Größe eingeben</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Size:</source>
-        <translation>Grösse:</translation>
+        <translation>Größe:</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -5182,7 +5192,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation>Weiss</translation>
+        <translation>Weiß</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5464,7 +5474,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation>&lt;Raumgrösse eingeben&gt;</translation>
+        <translation>&lt;Raumgröße eingeben&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5514,7 +5524,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+24"/>
         <source>Dynamically scale to fit</source>
-        <translation>Dynamische Skalierung nach Mass</translation>
+        <translation>Dynamische Skalierung nach Maß</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -5612,7 +5622,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+6"/>
         <source>Cube size:</source>
-        <translation>Würfelgrösse:</translation>
+        <translation>Würfelgröße:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -5648,7 +5658,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation>Vier: Gleichmässig</translation>
+        <translation>Vier: Gleichmäßig</translation>
     </message>
 </context>
 <context>
@@ -5782,12 +5792,12 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+51"/>
         <source>Rulers and Scrollbars</source>
-        <translation>Massstäbe und Bildlaufleisten</translation>
+        <translation>Maßstäbe und Bildlaufleisten</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show rulers</source>
-        <translation>Massstäbe anzeigen</translation>
+        <translation>Maßstäbe anzeigen</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5807,7 +5817,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+10"/>
         <source>Show large crosshairs</source>
-        <translation>Grosses Fadenkreuz</translation>
+        <translation>Großes Fadenkreuz</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -5817,7 +5827,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation>Grosse Ursprungsachsen anzeigen</translation>
+        <translation>Große Ursprungsachsen anzeigen</translation>
     </message>
     <message>
         <location line="+68"/>
@@ -5852,7 +5862,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+58"/>
         <source>Prevent white on white / black on black display</source>
-        <translation>Schwarz / weiss automatisch anpassen</translation>
+        <translation>Schwarz / weiß automatisch anpassen</translation>
     </message>
     <message>
         <location line="+136"/>
@@ -5887,20 +5897,20 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+577"/>
         <source>Reference point size (px):</source>
-        <translation>Referenzpunktgrösse (pix):</translation>
+        <translation>Referenzpunktgröße (pix):</translation>
     </message>
     <message>
         <location line="+77"/>
         <source>Text height threshold (px):</source>
-        <translation>Schwellenwert für Textgrösse (pix):</translation>
+        <translation>Schwellenwert für Textgröße (pix):</translation>
     </message>
     <message>
-        <location line="+192"/>
+        <location line="+221"/>
         <source>Persistent selection</source>
         <translation>Persistente Selektion</translation>
     </message>
     <message>
-        <location line="-1053"/>
+        <location line="-1082"/>
         <source>Color lightness threshold:</source>
         <translation>Farbgrenzwert:</translation>
     </message>
@@ -5990,7 +6000,12 @@ ist bereits in der Liste.</translation>
         <translation>Speichergrenze für Bitmaps (MB):</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+42"/>
+        <source>Dot length in line patterns:</source>
+        <translation>Punktlänge in Linienmustern:</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Selection</source>
         <translation>Selektion</translation>
     </message>
@@ -6115,7 +6130,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+12"/>
         <source>Measurements and labels:</source>
-        <translation>Masse und Beschriftung:</translation>
+        <translation>Maße und Beschriftung:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6163,7 +6178,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
-        <translation>Massstab:</translation>
+        <translation>Maßstab:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -6455,7 +6470,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
+        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
         <translation>Fehler beim Importieren der Datei %1</translation>
     </message>
@@ -7921,7 +7936,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+62"/>
         <source>Language Settings</source>
         <translation>Spracheinstellungen</translation>
     </message>
@@ -7974,7 +7989,7 @@ ist bereits in der Liste.</translation>
         <translation>Alle Layer verbergen</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+51"/>
         <source>Thawing all layers</source>
         <translation>Alle Layer auftauen</translation>
     </message>
@@ -8066,7 +8081,7 @@ ist bereits in der Liste.</translation>
         <translation>layer</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Leading or trailing spaces.</source>
         <translation>Führende oder nachfolgende Leerzeichen.</translation>
     </message>
@@ -8240,7 +8255,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
-        <translation>Sequenz schliessen</translation>
+        <translation>Sequenz schließen</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -9548,7 +9563,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+16"/>
         <source>Point size (mm):</source>
-        <translation>Punktgrösse (mm):</translation>
+        <translation>Punktgröße (mm):</translation>
     </message>
     <message>
         <location line="-10"/>
@@ -9733,7 +9748,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+17"/>
         <source>Size (pixel):</source>
-        <translation>Grösse (Pixel):</translation>
+        <translation>Größe (Pixel):</translation>
     </message>
 </context>
 <context>
@@ -10007,7 +10022,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-737"/>
         <source>Auto Paper Size</source>
-        <translation>Auto Papiergrösse</translation>
+        <translation>Auto Papiergröße</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10022,7 +10037,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+1"/>
         <source>Auto fit drawing to paper?</source>
-        <translation>Automatische Skalierung der Zeichnung auf die Papiergrösse?</translation>
+        <translation>Automatische Skalierung der Zeichnung auf die Papiergröße?</translation>
     </message>
     <message>
         <location line="+211"/>
@@ -10058,7 +10073,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.ui" line="-17"/>
         <source>Close Print Preview</source>
-        <translation>Druckvorschau schliessen</translation>
+        <translation>Druckvorschau schließen</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -10103,7 +10118,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+20"/>
         <source>Black / White Mode</source>
-        <translation>Schwarz / Weiss</translation>
+        <translation>Schwarz / Weiß</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10316,7 +10331,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+101"/>
         <source>Display advanced dimension style overrides</source>
-        <translation>Erweiterte Bemassungsstile anzeigen</translation>
+        <translation>Erweiterte Bemaßungsstile anzeigen</translation>
     </message>
 </context>
 <context>
@@ -10803,7 +10818,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+1"/>
         <source>All black entities and layers will be saved as white.</source>
-        <translation>Alle schwarzen Objekte und Layer werden weiss gespeichert.</translation>
+        <translation>Alle schwarzen Objekte und Layer werden weiß gespeichert.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10838,7 +10853,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="-30"/>
         <source>Black entities and layers are saved as white.</source>
-        <translation>Schwarze Objekte und Layer werden als weiss gespeichert.</translation>
+        <translation>Schwarze Objekte und Layer werden als weiß gespeichert.</translation>
     </message>
     <message>
         <location filename="../scripts/File/Save/SaveInit.js" line="+2"/>
@@ -10916,7 +10931,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+6"/>
         <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
-        <translation>Öffnen von Dateien mit Grösse Null erlauben (z. B. Online-Dateien, die nicht mit der Festplatte synchronisiert werden)</translation>
+        <translation>Öffnen von Dateien mit Größe Null erlauben (z. B. Online-Dateien, die nicht mit der Festplatte synchronisiert werden)</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11562,7 +11577,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
-        <translation>Regelmässiges Polygon von Zentrum und Mittelpunkt einer Seite zeichnen</translation>
+        <translation>Regelmäßiges Polygon von Zentrum und Mittelpunkt einer Seite zeichnen</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
@@ -11692,12 +11707,12 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
-        <translation>Rechteck mit &amp;Grösse</translation>
+        <translation>Rechteck mit &amp;Größe</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw rectangle with position and size</source>
-        <translation>Rechteck von Position und Grösse</translation>
+        <translation>Rechteck von Position und Größe</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
@@ -12053,7 +12068,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Snap/SnapPerpendicular/SnapPerpendicularInit.js" line="+2"/>
         <source>&amp;Perpendicular</source>
-        <translation>&amp;Lotrecht</translation>
+        <translation>&amp;Rechtwinklig</translation>
     </message>
 </context>
 <context>
@@ -12388,7 +12403,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
         <source>Font size in text dialog preview:</source>
-        <translation>Schriftgrösse in der Vorschau des Textdialogs:</translation>
+        <translation>Schriftgröße in der Vorschau des Textdialogs:</translation>
     </message>
     <message>
         <location line="+99"/>
@@ -12957,7 +12972,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon size:</source>
-        <translation>Symbolgrösse:</translation>
+        <translation>Symbolgröße:</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -13278,7 +13293,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+12"/>
         <source>Scale factor:</source>
-        <translation>Skalierung für alle Grössen:</translation>
+        <translation>Skalierung für alle Größen:</translation>
     </message>
 </context>
 <context>
@@ -13327,7 +13342,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+1"/>
         <source>Foot</source>
-        <translation>Fuss</translation>
+        <translation>Fuß</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13982,7 +13997,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomIn/ZoomInInit.js" line="+2"/>
         <source>Zoom &amp;In</source>
-        <translation>Ansicht ver&amp;grössern</translation>
+        <translation>Ansicht ver&amp;größern</translation>
     </message>
 </context>
 <context>
@@ -14104,12 +14119,12 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+2"/>
         <source>Dimension Styles</source>
-        <translation>Bemassungsstile</translation>
+        <translation>Bemaßungsstile</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension Style</source>
-        <translation>Bemassungsstil</translation>
+        <translation>Bemaßungsstil</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14194,97 +14209,97 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+2"/>
         <source>Dimensions</source>
-        <translation>Bemassungen</translation>
+        <translation>Bemaßungen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation>Bemassung</translation>
+        <translation>Bemaßung</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Aligned Dimensions</source>
-        <translation>Anliegende Bemassungen</translation>
+        <translation>Anliegende Bemaßungen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Aligned Dimension</source>
-        <translation>Anliegende Bemassung</translation>
+        <translation>Anliegende Bemaßung</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions</source>
-        <translation>Winkelbemassungen</translation>
+        <translation>Winkelbemaßungen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension</source>
-        <translation>Winkelbemassung</translation>
+        <translation>Winkelbemaßung</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Lines)</source>
-        <translation>Winkelbemassungen (2 Linien)</translation>
+        <translation>Winkelbemaßungen (2 Linien)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Lines)</source>
-        <translation>Winkelbemassung (2 Linien)</translation>
+        <translation>Winkelbemaßung (2 Linien)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Points)</source>
-        <translation>Winkelbemassungen (3 Punkte)</translation>
+        <translation>Winkelbemaßungen (3 Punkte)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Points)</source>
-        <translation>Winkelbemassung (3 Punkte)</translation>
+        <translation>Winkelbemaßung (3 Punkte)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arc Dimension</source>
-        <translation>Bogenbemassung</translation>
+        <translation>Bogenbemaßung</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Diametric Dimensions</source>
-        <translation>Durchmesser Bemassungen</translation>
+        <translation>Durchmesser Bemaßungen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Diametric Dimension</source>
-        <translation>Durchmesser Bemassung</translation>
+        <translation>Durchmesser Bemaßung</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation>Koordinaten Bemassungen</translation>
+        <translation>Koordinaten Bemaßungen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ordinate Dimension</source>
-        <translation>Koordinaten Bemassung</translation>
+        <translation>Koordinaten Bemaßung</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
-        <translation>Gedrehte Bemassungen</translation>
+        <translation>Gedrehte Bemaßungen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
-        <translation>Gedrehte Bemassung</translation>
+        <translation>Gedrehte Bemaßung</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Radial Dimensions</source>
-        <translation>Radiale Bemassungen</translation>
+        <translation>Radiale Bemaßungen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Radial Dimension</source>
-        <translation>Radiale Bemassung</translation>
+        <translation>Radiale Bemaßung</translation>
     </message>
     <message>
         <location line="+2"/>

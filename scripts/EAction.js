@@ -473,7 +473,7 @@ EAction.prototype.hideUiOptions = function(saveToSettings) {
         if (!this.getGuiAction().icon.isNull()) {
             var iconLabel = optionsToolBar.findChild("Icon");
             if (!isNull(iconLabel)) {
-                OptionsToolBar.setIcon("scripts/Reset/Reset.svg");
+                OptionsToolBar.setIcon(autoPath("scripts/Reset/Reset.svg"));
                 iconLabel.toolTip = qsTr("Active Tool:") + " " + qsTr("None");
             }
         }

@@ -182,13 +182,32 @@ About.prototype.initAboutPlugins = function(textBrowser) {
         html += qsTr("No plugins found.");
     }
     else {
-        var maxPri = undefined;
+        var pluginInfos = [];
         for (var i=0; i<numPlugins; i++) {
+            pluginInfos.push(RPluginLoader.getPluginInfo(i));
+        }
+
+        // sort plugins by Name, then ID:
+        pluginInfos.sort(function(a,b) {
+            var na = a.get("Name", "");
+            var nb = b.get("Name", "");
+            var c = na.localeCompare(nb);
+            if (c===0) {
+                var ida = a.get("ID", "");
+                var idb = b.get("ID", "");
+                c = ida.localeCompare(idb);
+            }
+            return c;
+        });
+
+
+        var maxPri = undefined;
+        for (var i=0; i<pluginInfos.length; i++) {
             html += "<table border='0' width='100%'>";
 
             var text, url;
 
-            var pluginInfo = RPluginLoader.getPluginInfo(i);
+            var pluginInfo = pluginInfos[i];
 
             // override priority:
             var pri = pluginInfo.get("OverridePriority");

@@ -21,7 +21,23 @@
 
 
 RCopyOperation::RCopyOperation(const RVector& offset, RDocument& src)
-    : clear(true), offset(offset), src(src) {
+    : offset(offset),
+      src(src),
+      scale(1.0),
+      angle(0.0),
+      center(0,0),
+      flipHorizontal(false),
+      flipVertical(false),
+      toCurrentLayer(false),
+      toCurrentBlock(false),
+      overwriteLayers(true),
+      overwriteBlocks(false),
+      blockName(QString()),
+      layerName(QString()),
+      selectionOnly(true),
+      clear(true),
+      toModelSpaceBlock(true) {
+
 }
 
 
@@ -34,22 +50,25 @@ RTransaction RCopyOperation::apply(RDocument& document, bool preview) {
     copy(
         src, document,
         offset,
-        1.0, 0.0,             // scale, angle
-        RVector(0,0),         // center
-        false,                // flipHorizontal
-        false,                // flipVertical
-        false,                // toCurrentLayer
-        false,                // toCurrentBlock
-        true,                 // overwriteLayers
-        false,                // overwriteBlocks
-        QString(),            // blockName
-        QString(),            // layerName
+        scale,
+        angle,
+        center,
+        flipHorizontal,
+        flipVertical,
+        toCurrentLayer,
+        toCurrentBlock,
+        overwriteLayers,
+        overwriteBlocks,
+        blockName,
+        layerName,
         transaction,
-        true,                 // selectionOnly
-        clear,                // clear
-        true,                 // toModelSpace (clipboard root is always model space)
+        selectionOnly,
+        clear,
+        toModelSpaceBlock,
         preview
     );
+
+
 
     transaction.end();
     return transaction;

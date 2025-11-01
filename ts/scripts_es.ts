@@ -49,7 +49,7 @@
         <translation>Plugins</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+50"/>
         <source>No information available</source>
         <translation>No hay información disponible</translation>
     </message>
@@ -82,14 +82,14 @@
         <translation>Licencias</translation>
     </message>
     <message>
-        <location line="-426"/>
-        <location line="+123"/>
+        <location line="-445"/>
+        <location line="+142"/>
         <source>Version:</source>
         <translation>Versión:</translation>
     </message>
     <message>
-        <location line="-113"/>
-        <location line="+117"/>
+        <location line="-132"/>
+        <location line="+136"/>
         <source>Qt Version:</source>
         <translation>Qt Versión:</translation>
     </message>
@@ -99,14 +99,14 @@
         <translation>Licencia:</translation>
     </message>
     <message>
-        <location line="-127"/>
-        <location line="+136"/>
+        <location line="-146"/>
+        <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-164"/>
         <source>Build Date:</source>
         <translation>Fecha de producción:</translation>
     </message>
@@ -151,7 +151,7 @@
         <translation>No hay plugins encontrados.</translation>
     </message>
     <message>
-        <location line="+99"/>
+        <location line="+118"/>
         <source>Active</source>
         <translation>Activo</translation>
     </message>
@@ -1252,7 +1252,17 @@ Do you wish to recover it?</source>
         <translation>No se puede editar el bloque mientras se edita un bloque in situ</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="+23"/>
+        <source>Cannot edit external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot edit block from external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-109"/>
         <source>&amp;Block</source>
         <translation>&amp;Bloque</translation>
     </message>
@@ -1320,14 +1330,14 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+511"/>
-        <location line="+67"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Lista de bloques</translation>
     </message>
     <message>
-        <location line="-110"/>
+        <location line="-111"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -3816,7 +3826,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+98"/>
         <source>Circle Invalid.</source>
-        <translation>Circunvalación inválida.</translation>
+        <translation>Círculo inválido.</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -4343,18 +4353,18 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
         <source>Show ECMAScript Shell</source>
-        <translation>Mostrar ECMAScript Shell</translation>
+        <translation>Mostrar consola de ECMAScript</translation>
     </message>
     <message>
         <location line="+55"/>
         <source>&amp;Script Shell</source>
-        <translation>&amp;Shell guión</translation>
+        <translation>&amp;Consola de scripts</translation>
     </message>
     <message>
         <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
-        <translation>Script Shell</translation>
+        <translation>Consola de scripts</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShellDialog.ui" line="+20"/>
@@ -4364,7 +4374,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &quot;safe&quot; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Está a punto de habilitar el Shell de ECMAScript. A través de la shell de ECMAScript puede &lt;span style=&quot; color:#ff0000;&quot;&gt;modificar sus dibujos&lt;/span&gt; pero también &lt;span style=&quot; color:#ff0000;&quot;&gt;eliminar archivos &lt;/span&gt; o &lt;span style=&quot; color:#ff0000;&quot;&gt;accidente de la aplicación &lt;/span&gt; lo que puede conducir a &lt;span style=&quot; color:#ff0000;&quot;&gt;pérdida de datos &lt;/span&gt;.Para programadores sin experiencia, se recomienda limitar el uso del intérprete de comandos de ECMAScript a &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: subrayado; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; que se considera &quot;seguro&quot; de usar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Está a punto de habilitar el Shell de ECMAScript. A través de la shell de ECMAScript puede &lt;span style=&quot; color:#ff0000;&quot;&gt;modificar sus dibujos&lt;/span&gt; pero también &lt;span style=&quot; color:#ff0000;&quot;&gt;eliminar archivos &lt;/span&gt; o &lt;span style=&quot; color:#ff0000;&quot;&gt;bloquear la aplicación &lt;/span&gt; lo que puede conducir a &lt;span style=&quot; color:#ff0000;&quot;&gt;pérdida de datos &lt;/span&gt;.Para programadores sin experiencia, se recomienda limitar el uso del intérprete de comandos de ECMAScript a &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; que se considera &quot;seguro&quot; de usar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5017,7 +5027,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
-        <translation>&amp;Transaction Listener</translation>
+        <translation>&amp;Oyente de transacciones</translation>
     </message>
 </context>
 <context>
@@ -5424,7 +5434,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Enter painter width. (+0)</translation>
+        <translation>Introduzca el ancho del pintor. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
@@ -5895,12 +5905,12 @@ ya está en la lista.</translation>
         <translation>Umbral de altura del texto (px):</translation>
     </message>
     <message>
-        <location line="+192"/>
+        <location line="+221"/>
         <source>Persistent selection</source>
         <translation>Selección persistente</translation>
     </message>
     <message>
-        <location line="-1053"/>
+        <location line="-1082"/>
         <source>Color lightness threshold:</source>
         <translation>Umbral para la claridad del color:</translation>
     </message>
@@ -5990,7 +6000,12 @@ ya está en la lista.</translation>
         <translation>Límite de asignación para mapas de bits (MB):</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+42"/>
+        <source>Dot length in line patterns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Selection</source>
         <translation>Selección</translation>
     </message>
@@ -6168,7 +6183,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+19"/>
         <source>Snap label font:</source>
-        <translation>Fuente de la etiqueta para forzcursor:</translation>
+        <translation>Fuente de la etiqueta para forzar cursor:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -6455,7 +6470,7 @@ ya está en la lista.</translation>
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
+        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
         <translation>Error al importar archivo %1</translation>
     </message>
@@ -7921,7 +7936,7 @@ ya está en la lista.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+62"/>
         <source>Language Settings</source>
         <translation>Configuración de idioma</translation>
     </message>
@@ -7974,7 +7989,7 @@ ya está en la lista.</translation>
         <translation>Ocultar todas las capas</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+51"/>
         <source>Thawing all layers</source>
         <translation>Descongelación todas las capas</translation>
     </message>
@@ -8066,7 +8081,7 @@ ya está en la lista.</translation>
         <translation>capa</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espacios iniciales o finales.</translation>
     </message>
@@ -9503,12 +9518,12 @@ ya está en la lista.</translation>
     <message>
         <location line="+17"/>
         <source>Offset X:</source>
-        <translation>Offset X:</translation>
+        <translation>Desplazamiento X:</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Offset Y:</source>
-        <translation>Offset Y:</translation>
+        <translation>Desplazamiento Y:</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -11195,7 +11210,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation>Handle (hex):</translation>
+        <translation>Identificador (hex):</translation>
     </message>
 </context>
 <context>
@@ -11778,7 +11793,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation>Herramientas de forzcursor</translation>
+        <translation>Herramientas de forzar cursor</translation>
     </message>
     <message>
         <location line="+25"/>

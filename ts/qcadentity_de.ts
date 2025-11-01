@@ -493,7 +493,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation>Grösse</translation>
+        <translation>Größe</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -505,13 +505,13 @@
         <location line="+1"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <source>Size 1</source>
-        <translation>Grösse 1</translation>
+        <translation>Größe 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <source>Size 2</source>
-        <translation>Grösse 2</translation>
+        <translation>Größe 2</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -628,7 +628,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Line</source>
-        <translation>Bemassungslinie</translation>
+        <translation>Bemaßungslinie</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -677,7 +677,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
-        <translation>Bemassungsbogen</translation>
+        <translation>Bemaßungsbogen</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>
@@ -727,7 +727,7 @@
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
         <source>Dimension Angle</source>
-        <translation>Bemassungswinkel</translation>
+        <translation>Bemaßungswinkel</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>

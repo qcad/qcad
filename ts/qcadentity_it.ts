@@ -295,7 +295,7 @@
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>Reversed</source>
-        <translation>Arcocomplementare</translation>
+        <translation>Invertito</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -563,12 +563,12 @@
         <location filename="../src/entity/RPolylineEntity.cpp" line="-4"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+0"/>
         <source>Bulge</source>
-        <translation>Bulge</translation>
+        <translation>Bombatura</translation>
     </message>
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
         <source>Closed Periodic</source>
-        <translation>Chiuso periodica</translation>
+        <translation>Chiusa periodica</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -708,7 +708,7 @@
     <message>
         <location line="+2"/>
         <source>Ordinate</source>
-        <translation>Ordinate</translation>
+        <translation>Ordinata</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -807,7 +807,7 @@
     <message>
         <location line="+1"/>
         <source>Auto Label Position</source>
-        <translation>Auto Label Position</translation>
+        <translation>Posizione automatica etichetta</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-5"/>
@@ -885,7 +885,7 @@
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation>Prompt</translation>
+        <translation>Richiesta</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>

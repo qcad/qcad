@@ -14,7 +14,7 @@
         <translation>Laajennusosat</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+50"/>
         <source>No information available</source>
         <translation>Tietoja ei ole saatavilla</translation>
     </message>
@@ -42,14 +42,14 @@
         <translation>Tuntematon</translation>
     </message>
     <message>
-        <location line="-130"/>
-        <location line="+123"/>
+        <location line="-149"/>
+        <location line="+142"/>
         <source>Version:</source>
         <translation>Versio:</translation>
     </message>
     <message>
-        <location line="-113"/>
-        <location line="+117"/>
+        <location line="-132"/>
+        <location line="+136"/>
         <source>Qt Version:</source>
         <translation>Qt-versio:</translation>
     </message>
@@ -59,14 +59,14 @@
         <translation>Lisenssi:</translation>
     </message>
     <message>
-        <location line="-127"/>
-        <location line="+136"/>
+        <location line="-146"/>
+        <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-164"/>
         <source>Build Date:</source>
         <translation>Tekopäivä:</translation>
     </message>
@@ -146,7 +146,7 @@
         <translation>Laajennuksia ei löytynyt.</translation>
     </message>
     <message>
-        <location line="+99"/>
+        <location line="+118"/>
         <source>Active</source>
         <translation>Aktiivinen</translation>
     </message>
@@ -1252,7 +1252,17 @@ Haluatko palauttaa sen?</translation>
         <translation>Lohkoa ei voi muokata, kun lohkoa muokataan paikan päällä</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="+23"/>
+        <source>Cannot edit external reference</source>
+        <translation>Ulkoista viitettä ei voi muokata</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot edit block from external reference</source>
+        <translation>Ulkoisesta viitteestä peräisin olevaa lohkoa ei voi muokata</translation>
+    </message>
+    <message>
+        <location line="-109"/>
         <source>&amp;Block</source>
         <translation>&amp;Lohko</translation>
     </message>
@@ -1320,13 +1330,13 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+511"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+67"/>
+        <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Lohkoluettelo</translation>
@@ -5905,12 +5915,17 @@ on jo luettelossa.</translation>
         <translation>Bittikarttojen jakorajoitus (MB):</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+42"/>
+        <source>Dot length in line patterns:</source>
+        <translation>Pisteen pituus viivamalleissa:</translation>
+    </message>
+    <message>
+        <location line="+47"/>
         <source>Persistent selection</source>
         <translation>Pysyvä valinta</translation>
     </message>
     <message>
-        <location line="-835"/>
+        <location line="-864"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
@@ -5990,7 +6005,7 @@ on jo luettelossa.</translation>
         <translation>Maksimaalinen monimutkaisuus kiinteitä täytteitä varten korkealla laadulla:</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+143"/>
         <source>Selection</source>
         <translation>Valinta</translation>
     </message>
@@ -6288,7 +6303,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Hatch</source>
-        <translation>&amp;Kuvionti</translation>
+        <translation>&amp;Kuviointi</translation>
     </message>
 </context>
 <context>
@@ -6296,7 +6311,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation>Kuviotäyttö</translation>
+        <translation>Kuviointi</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6455,7 +6470,7 @@ on jo luettelossa.</translation>
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
+        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
         <translation>Virhe tuotaessa tiedostoa %1</translation>
     </message>
@@ -7921,7 +7936,7 @@ on jo luettelossa.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+62"/>
         <source>Language Settings</source>
         <translation>Kieliasetukset</translation>
     </message>
@@ -7949,7 +7964,7 @@ on jo luettelossa.</translation>
         <translation>Piilotetaan kaikki tasot</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+51"/>
         <source>Thawing all layers</source>
         <translation>Sulautetaan kaikki tasot</translation>
     </message>
@@ -7969,7 +7984,7 @@ on jo luettelossa.</translation>
         <translation>Avataan kaikki tasot</translation>
     </message>
     <message>
-        <location line="-133"/>
+        <location line="-134"/>
         <source>&amp;Layer</source>
         <translation>&amp;Taso</translation>
     </message>
@@ -8036,7 +8051,7 @@ on jo luettelossa.</translation>
         <translation>taso</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Leading or trailing spaces.</source>
         <translation>Edeltävät tai lopussa olevat välilyönnit.</translation>
     </message>
@@ -9055,7 +9070,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+41"/>
         <source>Misc</source>
-        <translation>Misc</translation>
+        <translation>Sekalaiset</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10959,7 +10974,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+0"/>
         <source>Scale</source>
-        <translation>Asteikko</translation>
+        <translation>Mittakaava</translation>
     </message>
     <message>
         <location line="+32"/>

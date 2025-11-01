@@ -53,6 +53,7 @@ public:
     static RPropertyTypeId PropertyDrawOrder;
 
     static RPropertyTypeId PropertyReferencedBlock;
+    static RPropertyTypeId PropertyXRef;
     static RPropertyTypeId PropertyPositionX;
     static RPropertyTypeId PropertyPositionY;
     static RPropertyTypeId PropertyPositionZ;

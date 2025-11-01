@@ -3129,7 +3129,7 @@ function autoIconPath(path) {
 
     if (!new QFileInfo(path).exists()) {
         // given icon does not exist (for icons based on object names, e.g. in options toolbar):
-        return undefined;
+        return "";
     }
 
     return path;

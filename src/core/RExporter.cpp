@@ -49,7 +49,7 @@ class RImageData;
 
 RExporter::RExporter()
     : document(NULL),
-      overrideEntity(NULL),
+      //overrideEntity(NULL),
       currentLayer(NULL),
       layerSource(NULL),
       blockSource(NULL),
@@ -74,7 +74,7 @@ RExporter::RExporter()
 
 RExporter::RExporter(RDocument& document, RMessageHandler *messageHandler, RProgressHandler *progressHandler)
     : document(&document),
-      overrideEntity(NULL),
+      //overrideEntity(NULL),
       currentLayer(NULL),
       layerSource(NULL),
       blockSource(NULL),
@@ -170,8 +170,9 @@ REntity::Id RExporter::getBlockRefOrEntityId() {
  * \return Pointer to the entity that is currently being exported.
  */
 QSharedPointer<REntity> RExporter::getEntity() const {
-    if (overrideEntity!=NULL) {
-        return QSharedPointer<REntity>(overrideEntity->cloneToEntity());
+    if (!overrideEntity.isNull()) {
+        //return QSharedPointer<REntity>(overrideEntity->cloneToEntity());
+        return overrideEntity->cloneToEntity();
     }
 
     if (entityStack.isEmpty()) {
@@ -184,8 +185,10 @@ QSharedPointer<REntity> RExporter::getEntity() const {
  * \return Pointer to the entity that is currently being exported.
  */
 QSharedPointer<REntity> RExporter::getEntity() {
-    if (overrideEntity!=NULL) {
-        return QSharedPointer<REntity>(overrideEntity->cloneToEntity());
+    //if (overrideEntity!=NULL) {
+    if (!overrideEntity.isNull()) {
+        //return QSharedPointer<REntity>(overrideEntity->cloneToEntity());
+        return overrideEntity->cloneToEntity();
     }
 
     if (entityStack.size()>0) {
@@ -195,12 +198,13 @@ QSharedPointer<REntity> RExporter::getEntity() {
 }
 
 
-void RExporter::setOverrideEntity(REntity* oe) {
+void RExporter::setOverrideEntity(QSharedPointer<REntity> oe) {
     overrideEntity = oe;
 }
 
 void RExporter::unsetOverrideEntity() {
-    overrideEntity = NULL;
+    //overrideEntity = NULL;
+    overrideEntity.clear();
 }
 
 /**

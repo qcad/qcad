@@ -20,7 +20,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished">Κέντρο</translation>
+        <translation>Κέντρο</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -85,7 +85,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>X</source>
-        <translation type="unfinished">X</translation>
+        <translation>X</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -150,7 +150,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>Y</source>
-        <translation type="unfinished">Y</translation>
+        <translation>Y</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -212,44 +212,44 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>Z</source>
-        <translation type="unfinished">Z</translation>
+        <translation>Z</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Μέση</translation>
+        <translation>Μέση</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <source>Radius</source>
-        <translation type="unfinished">Ακτίνα</translation>
+        <translation>Ακτίνα</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-9"/>
         <source>Start Angle</source>
-        <translation type="unfinished">Γωνία έναρξης</translation>
+        <translation>Αρχική γωνία</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>End Angle</source>
-        <translation type="unfinished">Γωνία τέλους</translation>
+        <translation>Τελική γωνία</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>Reversed</source>
-        <translation type="unfinished">Αντίστροφη</translation>
+        <translation>Αντεστραμμένο</translation>
     </message>
     <message>
         <location line="+2"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
         <source>Diameter</source>
-        <translation type="unfinished">Διάμετρος</translation>
+        <translation>Διάμετρος</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -263,7 +263,7 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="-11"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
         <source>Length</source>
-        <translation type="unfinished">Μήκος</translation>
+        <translation>Μήκος</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -276,12 +276,12 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
         <source>Total Length</source>
-        <translation type="unfinished">Συνολικό μήκος</translation>
+        <translation>Συνολικό μήκος</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Sweep Angle</source>
-        <translation type="unfinished">Γωνία σάρωσης</translation>
+        <translation>Γωνία σάρωσης</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -289,7 +289,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <source>Area</source>
-        <translation type="unfinished">Περιοχή</translation>
+        <translation>Εμβαδόν</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -297,69 +297,69 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Total Area</source>
-        <translation type="unfinished">Συνολική έκταση</translation>
+        <translation>Συνολικό εμβαδόν</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+93"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+102"/>
         <source>Invisible</source>
-        <translation type="unfinished">Αόρατο</translation>
+        <translation>Αόρατο</translation>
     </message>
     <message>
         <location line="+2"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="-1"/>
         <source>Tag</source>
-        <translation type="unfinished">Ετικέτα</translation>
+        <translation>Ετικέτα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation type="unfinished">Προτροπή</translation>
+        <translation>Προτροπή</translation>
     </message>
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
         <source>Circumference</source>
-        <translation type="unfinished">Περιφέρεια</translation>
+        <translation>Περιφέρεια</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngular2LEntity.cpp" line="-14"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 Start</source>
-        <translation type="unfinished">Γραμμή 1 Έναρξη</translation>
+        <translation>Αρχή γραμμής 1</translation>
     </message>
     <message>
         <location line="+10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 Start</source>
-        <translation type="unfinished">Γραμμή 2 Έναρξη</translation>
+        <translation>Αρχή γραμμής 2</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 End</source>
-        <translation type="unfinished">Γραμμή 1 Τέλος</translation>
+        <translation>Τέλος γραμμής 1</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 End</source>
-        <translation type="unfinished">Γραμμή 2 Τέλος</translation>
+        <translation>Τέλος γραμμής 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
-        <translation type="unfinished">Διάσταση Arc</translation>
+        <translation>Τόξο διάστασης</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+190"/>
         <source>Arc Symbol Type</source>
-        <translation type="unfinished">Τύπος συμβόλου τόξου</translation>
+        <translation>Τύπος συμβόλου τόξου</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>
@@ -369,35 +369,35 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation type="unfinished">Σημείο χορδής</translation>
+        <translation>Σημείο χορδής</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation type="unfinished">Σημείο μακρινής χορδής</translation>
+        <translation>Μακρινό σημείο χορδής</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Line</source>
-        <translation type="unfinished">Γραμμή διαστάσεων</translation>
+        <translation>Γραμμή διάστασης</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 1</source>
-        <translation type="unfinished">Σημείο επέκτασης 1</translation>
+        <translation>Σημείο επέκτασης 1</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 2</source>
-        <translation type="unfinished">Σημείο επέκτασης 2</translation>
+        <translation>Σημείο επέκτασης 2</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
@@ -406,133 +406,133 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-11"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation type="unfinished">Προέλευση</translation>
+        <translation>Αρχή</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate</source>
-        <translation type="unfinished">Ordinate</translation>
+        <translation>Τεταγμένη</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Defining Point</source>
-        <translation type="unfinished">Σημείο καθορισμού</translation>
+        <translation>Σημείο ορισμού</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation type="unfinished">Τελικό σημείο αρχηγού</translation>
+        <translation>Τελικό σημείο γραμμής οδήγησης</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
         <source>Dimension Angle</source>
-        <translation type="unfinished">Γωνία διάστασης</translation>
+        <translation>Γωνία διάστασης</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
         <source>Label</source>
-        <translation type="unfinished">Ετικέτα</translation>
+        <translation>Ετικέτα</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Tolerance</source>
-        <translation type="unfinished">Ανοχή</translation>
+        <translation>Ανοχή</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Upper Limit</source>
-        <translation type="unfinished">Ανώτατο όριο</translation>
+        <translation>Ανώτερο όριο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lower Limit</source>
-        <translation type="unfinished">Κάτω όριο</translation>
+        <translation>Κατώτερο όριο</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Definition Point</source>
-        <translation type="unfinished">Σημείο ορισμού</translation>
+        <translation>Σημείο ορισμού</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation type="unfinished">Θέση κειμένου</translation>
+        <translation>Θέση κειμένου</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Text Rotation</source>
-        <translation type="unfinished">Περιστροφή κειμένου</translation>
+        <translation>Περιστροφή κειμένου</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip First Arrow</source>
-        <translation type="unfinished">Flip πρώτο βέλος</translation>
+        <translation>Αναστροφή πρώτου βέλους</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation type="unfinished">Flip δεύτερο βέλος</translation>
+        <translation>Αναστροφή δεύτερου βέλους</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation type="unfinished">Σταθερή γραμμή επέκτασης</translation>
+        <translation>Σταθερή γραμμή επέκτασης</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation type="unfinished">Μήκος γραμμής επέκτασης</translation>
+        <translation>Μήκος γραμμής επέκτασης</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Auto Label</source>
-        <translation type="unfinished">Αυτόματη ετικέτα</translation>
+        <translation>Αυτόματη ετικέτα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Measured Value</source>
-        <translation type="unfinished">Μετρούμενη αξία</translation>
+        <translation>Μετρημένη τιμή</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Block Name</source>
-        <translation type="unfinished">Όνομα μπλοκ</translation>
+        <translation>Όνομα μπλοκ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Auto Label Position</source>
-        <translation type="unfinished">Αυτόματη θέση ετικέτας</translation>
+        <translation>Αυτόματη θέση ετικέτας</translation>
     </message>
     <message>
         <location filename="../src/entity/REllipseEntity.cpp" line="-17"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation type="unfinished">Σημαντικό σημείο</translation>
+        <translation>Κύριο σημείο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ratio</source>
-        <translation type="unfinished">Αναλογία</translation>
+        <translation>Αναλογία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Start Parameter</source>
-        <translation type="unfinished">Παράμετρος έναρξης</translation>
+        <translation>Παράμετρος έναρξης</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Parameter</source>
-        <translation type="unfinished">Τέλος παραμέτρου</translation>
+        <translation>Παράμετρος λήξης</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -542,7 +542,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Point</source>
-        <translation type="unfinished">Σημείο εκκίνησης</translation>
+        <translation>Σημείο εκκίνησης</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -552,7 +552,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>End Point</source>
-        <translation type="unfinished">Τελικό σημείο</translation>
+        <translation>Τελικό σημείο</translation>
     </message>
     <message>
         <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>
@@ -565,7 +565,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished">Σημείο 1</translation>
+        <translation>Σημείο 1</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -578,7 +578,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished">Σημείο 2</translation>
+        <translation>Σημείο 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -591,7 +591,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 3</source>
-        <translation type="unfinished">Σημείο 3</translation>
+        <translation>Σημείο 3</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -604,22 +604,22 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 4</source>
-        <translation type="unfinished">Σημείο 4</translation>
+        <translation>Σημείο 4</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-10"/>
         <source>Solid</source>
-        <translation type="unfinished">Στερεά</translation>
+        <translation>Συμπαγές</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished">Περιελίξεις</translation>
+        <translation>Περιέλιξη</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alpha</source>
-        <translation type="unfinished">Alpha</translation>
+        <translation>Άλφα</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -627,17 +627,17 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation type="unfinished">Μοτίβο</translation>
+        <translation>Μοτίβο</translation>
     </message>
     <message>
         <location line="-3"/>
         <source>Name</source>
-        <translation type="unfinished">Όνομα</translation>
+        <translation>Όνομα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>From Entity</source>
-        <translation type="unfinished">Από οντότητα</translation>
+        <translation>Από οντότητα</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -647,12 +647,12 @@
         <location filename="../src/entity/RRayEntity.cpp" line="+2"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+2"/>
         <source>Angle</source>
-        <translation type="unfinished">Γωνία</translation>
+        <translation>Γωνία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Scale</source>
-        <translation type="unfinished">Κλίμακα</translation>
+        <translation>Κλίμακα</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -673,22 +673,22 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Vertex</source>
-        <translation type="unfinished">Vertex</translation>
+        <translation>Κορυφή</translation>
     </message>
     <message>
         <location line="+201"/>
         <source>Yes</source>
-        <translation type="unfinished">Ναι</translation>
+        <translation>Ναι</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>No</source>
-        <translation type="unfinished">Όχι</translation>
+        <translation>Όχι</translation>
     </message>
     <message>
         <location filename="../src/entity/RImageEntity.cpp" line="-18"/>
         <source>File</source>
-        <translation type="unfinished">Αρχείο</translation>
+        <translation>Αρχείο</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -698,95 +698,95 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished">Θέση</translation>
+        <translation>Θέση</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>U</source>
-        <translation type="unfinished">U</translation>
+        <translation>U</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
-        <translation type="unfinished">V</translation>
+        <translation>V</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Width Factor</source>
-        <translation type="unfinished">Παράγοντας πλάτους</translation>
+        <translation>Συντελεστής πλάτους</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height Factor</source>
-        <translation type="unfinished">Συντελεστής ύψους</translation>
+        <translation>Συντελεστής ύψους</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Width</source>
-        <translation type="unfinished">Πλάτος</translation>
+        <translation>Πλάτος</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height</source>
-        <translation type="unfinished">Ύψος</translation>
+        <translation>Ύψος</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation type="unfinished">Fade</translation>
+        <translation>Σβήσιμο</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-5"/>
         <source>Arrow</source>
-        <translation type="unfinished">Βέλος</translation>
+        <translation>Βέλος</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation type="unfinished">Spline</translation>
+        <translation>Καμπύλη</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow Block</source>
-        <translation type="unfinished">Μπλοκ βέλους</translation>
+        <translation>Μπλοκ βέλους</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
-        <translation type="unfinished">Μοτίβο πολυγραμμής</translation>
+        <translation>Μοτίβο πολυγραμμής</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Closed</source>
-        <translation type="unfinished">Κλειστό</translation>
+        <translation>Κλειστό</translation>
     </message>
     <message>
         <location line="+4"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+0"/>
         <source>Bulge</source>
-        <translation type="unfinished">Bulge</translation>
+        <translation>Εξόγκωση</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Start Width</source>
-        <translation type="unfinished">Πλάτος έναρξης</translation>
+        <translation>Αρχικό πλάτος</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Width</source>
-        <translation type="unfinished">Πλάτος τέλους</translation>
+        <translation>Τελικό πλάτος</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Width</source>
-        <translation type="unfinished">Παγκόσμιο πλάτος</translation>
+        <translation>Συνολικό πλάτος</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Orientation</source>
-        <translation type="unfinished">Προσανατολισμός</translation>
+        <translation>Προσανατολισμός</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -796,30 +796,30 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation type="unfinished">Μέγεθος</translation>
+        <translation>Μέγεθος</translation>
     </message>
     <message>
         <location line="-2"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="-2"/>
         <source>Base Angle</source>
-        <translation type="unfinished">Γωνία βάσης</translation>
+        <translation>Βασική γωνία</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <source>Size 1</source>
-        <translation type="unfinished">Μέγεθος 1</translation>
+        <translation>Μέγεθος 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <source>Size 2</source>
-        <translation type="unfinished">Μέγεθος 2</translation>
+        <translation>Μέγεθος 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Z</source>
-        <translation type="unfinished">Παγκόσμια Z</translation>
+        <translation>Συνολικό Z</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
@@ -829,7 +829,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Base Point</source>
-        <translation type="unfinished">Σημείο βάσης</translation>
+        <translation>Βασικό σημείο</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -839,7 +839,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Second Point</source>
-        <translation type="unfinished">Δεύτερο σημείο</translation>
+        <translation>Δεύτερο σημείο</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -849,102 +849,102 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction Vector</source>
-        <translation type="unfinished">Διάνυσμα κατεύθυνσης</translation>
+        <translation>Διάνυσμα κατεύθυνσης</translation>
     </message>
     <message>
         <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
-        <translation type="unfinished">Σταθερή γωνία</translation>
+        <translation>Σταθερή γωνία</translation>
     </message>
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
         <source>Closed Periodic</source>
-        <translation type="unfinished">Κλειστή Περιοδική</translation>
+        <translation>Κλειστό περιοδικό</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation type="unfinished">Πτυχίο</translation>
+        <translation>Βαθμός</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Control Point</source>
-        <translation type="unfinished">Σημείο ελέγχου</translation>
+        <translation>Σημείο ελέγχου</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation type="unfinished">Fit Point</translation>
+        <translation>Σημείο προσαρμογής</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Knot Vector</source>
-        <translation type="unfinished">Διάνυσμα κόμβου</translation>
+        <translation>Διάνυσμα κόμβων</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Knot</source>
-        <translation type="unfinished">Κόμπος</translation>
+        <translation>Κόμβος</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use Start Tangent</source>
-        <translation type="unfinished">Χρήση Start Tangent</translation>
+        <translation>Χρήση αρχικής εφαπτομένης</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Tangent</source>
-        <translation type="unfinished">Έναρξη εφαπτομένης</translation>
+        <translation>Αρχική εφαπτομένη</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use End Tangent</source>
-        <translation type="unfinished">Χρήση τέλους εφαπτομένης</translation>
+        <translation>Χρήση τελικής εφαπτομένης</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>End Tangent</source>
-        <translation type="unfinished">Τέλος εφαπτομένης</translation>
+        <translation>Τελική εφαπτομένη</translation>
     </message>
     <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation type="unfinished">Τοποθεσία</translation>
+        <translation>Τοποθεσία</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-        <translation type="unfinished">Κατεύθυνση</translation>
+        <translation>Κατεύθυνση</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation type="unfinished">Κείμενο</translation>
+        <translation>Κείμενο</translation>
     </message>
     <message>
         <location filename="../src/entity/RLineEntity.cpp" line="-7"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-        <translation type="unfinished">Μέσο σημείο</translation>
+        <translation>Μεσαίο σημείο</translation>
     </message>
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
         <source>Frame</source>
-        <translation type="unfinished">Πλαίσιο</translation>
+        <translation>Πλαίσιο</translation>
     </message>
 </context>
 </TS>

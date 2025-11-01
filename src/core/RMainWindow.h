@@ -292,6 +292,8 @@ public:
     static void messageHandler(QtMsgType type, const char* msg);
 #endif
 
+    virtual void reloadXRefs(RDocumentInterface* di, const QSet<QString>& dirtyXRefPaths) {}
+
     virtual void setCommandPrompt(const QString& text = "") = 0;
     virtual void setLeftMouseTip(const QString& text = "") = 0;
     virtual void setRightMouseTip(const QString& text = "") = 0;

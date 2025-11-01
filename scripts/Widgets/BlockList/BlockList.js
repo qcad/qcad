@@ -42,9 +42,9 @@ function RBlockListQt(parent, addListener, showHeader) {
     this.indentation = 0;
     this.rootIsDecorated = false;
 
-    this.setSelectableColumn(3);
+    this.setSelectableColumn(2);
 
-    this.columnCount = 4;
+    this.columnCount = 3;
 
     this.header().stretchLastSection = false;
     if (RSettings.isQt(5)) {
@@ -52,13 +52,13 @@ function RBlockListQt(parent, addListener, showHeader) {
         this.header().setSectionResizeMode(BlockList.colName, QHeaderView.Stretch);
         this.header().setSectionResizeMode(BlockList.colVisible, QHeaderView.Interactive);
         this.header().setSectionResizeMode(BlockList.colEdit, QHeaderView.Interactive);
-        this.header().setSectionResizeMode(BlockList.colXRef, QHeaderView.Interactive);
+        //this.header().setSectionResizeMode(BlockList.colXRef, QHeaderView.Interactive);
     }
     else {
         this.header().setResizeMode(BlockList.colName, QHeaderView.Stretch);
         this.header().setResizeMode(BlockList.colVisible, QHeaderView.Interactive);
         this.header().setResizeMode(BlockList.colEdit, QHeaderView.Interactive);
-        this.header().setResizeMode(BlockList.colXRef, QHeaderView.Interactive);
+        //this.header().setResizeMode(BlockList.colXRef, QHeaderView.Interactive);
     }
 
     // Qt 6.6.1 workaround: this only works once widget is visible:
@@ -222,10 +222,20 @@ RBlockListQt.prototype.updateXRef = function() {
     if (!isNull(item)) {
         var block = doc.queryCurrentBlock();
         var isXRef = false;
+        var isFromXRef = false;
         if (!isNull(block)) {
+            // block is XRef:
             isXRef = block.isXRef();
+            // block is a block that lives inside an XRef:s
+            isFromXRef = block.isFromXRef();
         }
-        item.setIcon(BlockList.colXRef, BlockList.iconXRef[Number(isXRef)]);
+
+        if (isXRef) {
+            item.setIcon(BlockList.colEdit, BlockList.iconXRef[Number(isXRef)]);
+        }
+        else if (isFromXRef) {
+            item.setIcon(BlockList.colEdit, BlockList.iconFromXRef[Number(isFromXRef)]);
+        }
     }
 };
 
@@ -342,9 +352,20 @@ RBlockListQt.prototype.updateItemIcons = function(item, block) {
 
     var doc = this.di.getDocument();
     var currentBlockId = doc.getCurrentBlockId();
-    item.setIcon(BlockList.colEdit, BlockList.iconEdit[Number(block.getId()===currentBlockId)]);
 
-    item.setIcon(BlockList.colXRef, BlockList.iconXRef[Number(block.isXRef())]);
+    // set icon to XRef icon (not editable) or edit icon for regular blocks:
+    if (block.isXRef()) {
+        item.setIcon(BlockList.colEdit, BlockList.iconXRef[1]);
+    }
+    else if (block.isFromXRef()) {
+        item.setIcon(BlockList.colEdit, BlockList.iconFromXRef[1]);
+    }
+    else {
+        item.setIcon(BlockList.colEdit, BlockList.iconEdit[Number(block.getId()===currentBlockId)]);
+    }
+
+
+    //item.setIcon(BlockList.colEdit, BlockList.iconXRef[Number(block.isXRef())]);
 };
 
 /**
@@ -378,9 +399,9 @@ RBlockListQt.prototype.itemColumnClickedSlot = function(item, column) {
         this.setCurrentItem(item);
         this.editBlock();
         //this.updateBlocks(this.di);
-    } else if (column===BlockList.colXRef) {
+    } /*else if (column===BlockList.colXRef) {
         this.setCurrentItem(item);
-    }
+    }*/
 
     this.blockActivated();
 };
@@ -400,12 +421,6 @@ RBlockListQt.prototype.blockActivated = function() {
         return;
     }
 
-    var item = list[0];
-    if (isNull(item)) {
-        this.enableActions(false);
-        return;
-    }
-
     var document = this.di.getDocument();
     if (isNull(document)) {
         this.enableActions(false);
@@ -418,12 +433,29 @@ RBlockListQt.prototype.blockActivated = function() {
         return;
     }
 
-    var blockName = this.getBlockName(item);
+    var insertable = true;
+    var renamable = true;
+    var removable = true;
+    for (var i=0; i<list.length; i++) {
+        var item = list[i];
 
-    // prevent removal or insertion of current block:
-    var insertable = currentBlock.getName().toLowerCase()!==blockName.toLowerCase() && !blockName.startsWith("*");
-    var renamable = document.getBlockId(blockName)!==document.getModelSpaceBlockId();
-    var removable = document.getBlockId(blockName)!==document.getModelSpaceBlockId();
+        if (isNull(item)) {
+            continue;
+        }
+
+        var blockName = this.getBlockName(item);
+        var block = document.queryBlockDirect(blockName);
+        if (isNull(block)) {
+            continue;
+        }
+
+        insertable = insertable && currentBlock.getName().toLowerCase()!==blockName.toLowerCase() && !blockName.startsWith("*");
+        renamable = renamable && document.getBlockId(blockName)!==document.getModelSpaceBlockId() && !block.isFromXRef();
+        removable = removable && document.getBlockId(blockName)!==document.getModelSpaceBlockId() && !block.isFromXRef();
+        // cannot remove block from XRef:
+        removable = removable && !block.isFromXRef();
+    }
+
     this.enableActions(insertable, renamable, removable);
 };
 
@@ -484,12 +516,41 @@ RBlockListQt.prototype.enableActions = function(insertable, renamable, removable
  * (double click).
  */
 RBlockListQt.prototype.editBlock = function() {
-    var action = RGuiAction.getByScriptFile("scripts/Block/EditBlock/EditBlock.js");
+    var block = this.getSelectedBlock();
+
+    var action = undefined;
+
+    if (!isNull(block) && block.isXRef() && !block.isFromXRef()) {
+        // one single block selected in block list:
+
+        // editing XRef triggers rename which also allows editing the path:
+        action = RGuiAction.getByScriptFile("scripts/Block/RenameBlock/RenameBlock.js");
+    }
+
+    if (isNull(action)) {
+        action = RGuiAction.getByScriptFile("scripts/Block/EditBlock/EditBlock.js");
+    }
+
     if (!isNull(action)) {
         action.slotTrigger();
     }
 
     this.blockActivated();
+};
+
+/**
+ * If one item is selected, return the corresponding block otherwise undefined.
+ */
+RBlockListQt.prototype.getSelectedBlock = function() {
+    var items = BlockList.getSelectedItems();
+    if (items.length===1) {
+        // one single block selected in block list:
+        var item = items[0];
+        var blockName = this.getBlockName(item);
+        var doc = this.di.getDocument();
+        return doc.queryBlockDirect(blockName);
+    }
+    return undefined;
 };
 
 
@@ -508,12 +569,12 @@ BlockList.includeBasePath = includeBasePath;
 
 BlockList.colVisible=0;
 BlockList.colEdit=1;
-BlockList.colXRef=2;
-BlockList.colName=3;
+BlockList.colName=2;
 
 BlockList.iconVisible = [];
 BlockList.iconEdit = [];
 BlockList.iconXRef = [];
+BlockList.iconFromXRef = [];
 
 BlockList.initStyle = function(upd) {
     if (isNull(upd)) {
@@ -527,12 +588,18 @@ BlockList.initStyle = function(upd) {
 
     BlockList.iconEdit = [
         new QIcon(autoIconPath(BlockList.includeBasePath + "/Edit0.svg")),
-        new QIcon(autoIconPath(BlockList.includeBasePath + "/Edit1.svg"))
+        new QIcon(autoIconPath(BlockList.includeBasePath + "/Edit1.svg")),
+        new QIcon(autoIconPath(BlockList.includeBasePath + "/Edit2.svg"))
     ];
 
     BlockList.iconXRef = [
         new QIcon(autoIconPath(BlockList.includeBasePath + "/XRef0.svg")),
         new QIcon(autoIconPath(BlockList.includeBasePath + "/XRef1.svg"))
+    ];
+
+    BlockList.iconFromXRef = [
+        new QIcon(autoIconPath(BlockList.includeBasePath + "/FromXRef0.svg")),
+        new QIcon(autoIconPath(BlockList.includeBasePath + "/FromXRef1.svg"))
     ];
 
     if (upd) {
@@ -601,7 +668,7 @@ BlockList.prototype.finishEvent = function() {
 };
 
 BlockList.initColumnWidths = function(blockList) {
-    blockList.setColumnWidth(BlockList.colXRef, 22);
+    //blockList.setColumnWidth(BlockList.colXRef, 22);
     blockList.setColumnWidth(BlockList.colVisible, 22);
     blockList.setColumnWidth(BlockList.colEdit, 22);
 };

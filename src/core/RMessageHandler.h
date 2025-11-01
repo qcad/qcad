@@ -36,8 +36,7 @@ public:
 
     virtual void handleUserMessage(const QString& message, bool escape=true) = 0;
     virtual void handleUserInfo(const QString& message, bool escape=true) = 0;
-    virtual void handleUserWarning(const QString& message,
-            bool messageBox = false, bool escape=true) = 0;
+    virtual void handleUserWarning(const QString& message, bool messageBox = false, bool escape=true) = 0;
     virtual void handleUserCommand(const QString& message, bool escape=true) = 0;
 };
 

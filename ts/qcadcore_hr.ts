@@ -238,7 +238,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+67"/>
+        <location filename="../src/core/RBlock.cpp" line="+73"/>
         <location filename="../src/core/RLayer.cpp" line="+95"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="+81"/>
@@ -264,7 +264,7 @@
     </message>
     <message>
         <location line="-2"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+99"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+102"/>
         <location line="+3"/>
         <location filename="../src/core/RLayout.cpp" line="+2"/>
         <location line="+3"/>
@@ -317,10 +317,15 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
+        <translation>U vlasništvu reference</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>External reference</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+886"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Detektirana kružna (rekurzivna) referenca bloka:</translation>
     </message>
@@ -335,9 +340,14 @@
         <translation>Blok</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
         <source>Referenced Block</source>
         <translation>Referencirani blok</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>External Reference</source>
+        <translation>Vanjska referenca</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -587,7 +597,7 @@
     <message>
         <location line="+1"/>
         <source>Object Invisible</source>
-        <translation type="unfinished"></translation>
+        <translation>Objekt nevidljiv</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -713,12 +723,12 @@
     <message>
         <location line="+2"/>
         <source>Frozen Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Zamrznuti slojevi</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID sloja</translation>
     </message>
     <message>
         <location filename="../src/core/RDimStyle.cpp" line="+71"/>
@@ -728,7 +738,7 @@
     <message>
         <location line="+1"/>
         <source>Overall scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukupno mjerilo</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1056,9 +1066,24 @@
         <translation>Ograda 2</translation>
     </message>
     <message>
+        <location line="+1"/>
+        <source>Point 1</source>
+        <translation>Točka 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Point 2</source>
+        <translation>Točka 2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plant</source>
+        <translation>Pogon</translation>
+    </message>
+    <message>
         <location line="+2"/>
         <source>Water</source>
-        <translation type="unfinished"></translation>
+        <translation>Voda</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1073,37 +1098,37 @@
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation type="unfinished"></translation>
+        <translation>Komunikacija</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Electric</source>
-        <translation type="unfinished"></translation>
+        <translation>Električna</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Low Voltage</source>
-        <translation type="unfinished"></translation>
+        <translation>Niski napon</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>High Voltage</source>
-        <translation type="unfinished"></translation>
+        <translation>Visoki napon</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation type="unfinished"></translation>
+        <translation>Nadzemno napajanje</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation type="unfinished"></translation>
+        <translation>Otpadna</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished"></translation>
+        <translation>Otpadna uzdižuća</translation>
     </message>
 </context>
 <context>

@@ -145,6 +145,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="isFromXRef" cppName="isFromXRef"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="setXRefFileName" cppName="setXRefFileName"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -162,6 +167,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="unloadXRef" cppName="unloadXRef"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="getFullXRefFilePath"
     cppName="getFullXRefFilePath" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -178,6 +188,25 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="on"
         isConst="false" />
+      </variant>
+    </method>
+    <method name="getXRefLayerNames" cppName="getXRefLayerNames"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSet &lt; QString &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getXRefBlockNames" cppName="getXRefBlockNames"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSet &lt; QString &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="bindXRef" cppName="bindXRef" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="useTransaction"
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getProperty" cppName="getProperty"

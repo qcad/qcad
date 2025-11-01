@@ -71,7 +71,6 @@ bool RBlockReferenceData::hasBlockOwnership() const {
     return block->isOwnedByReference();
 }
 
-
 void RBlockReferenceData::setReferencedBlockName(const QString& blockName) {
     if (document == NULL) {
         qWarning("RBlockReferenceData::setReferencedBlockName(): "
@@ -637,7 +636,7 @@ bool RBlockReferenceData::isXRef() const {
     if (block==NULL) {
         return false;
     }
-    return !block->getXRefFileName().isEmpty();
+    return block->isXRef();
 }
 
 bool RBlockReferenceData::loadXRef() const {

@@ -115,6 +115,8 @@
         <return>return <expr><name>false</name></expr>;</return>
     }</block></function>
 
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>reloadXRefs</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>di</name></decl></param>, <param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name>&amp;</type> <name>dirtyXRefPaths</name></decl></param>)</parameter_list>;</function_decl>
+
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>postSelectionChangedEvent</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>postTransactionEvent</name><parameter_list>(
         <param><decl><type><name>RTransaction</name>&amp;</type> <name>t</name></decl></param>,
@@ -197,6 +199,8 @@
     <function_decl><type><name>void</name></type> <name>userInfo</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>bool</name></type> <name>escape</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>userWarning</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>bool</name></type> <name>messageBox</name></decl></param>, <param><decl><type><name>bool</name></type> <name>escape</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>userCommand</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>bool</name></type> <name>escape</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>reloadXRefsSignal</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>di</name></decl></param>, <param><decl><type><name>const</name> <name>QStringList</name>&amp;</type> <name>dirtyXRefPaths</name></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * Emitted when a context menu is requested on top of the given entity.
