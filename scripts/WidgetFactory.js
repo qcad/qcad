@@ -1184,7 +1184,7 @@ WidgetFactory.adjustIcons = function(includeBasePath, widget) {
         // adjust icon for theme / dark mode:
         if (isOfType(w, QToolButton)) {
             var iconFile = autoIconPath(includeBasePath + "/" + w.objectName + ".svg");
-            if (!isNull(iconFile)) {
+            if (iconFile.length!==0) {
                 w.icon = new QIcon(iconFile);
             }
         }
