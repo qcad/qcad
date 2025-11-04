@@ -2615,6 +2615,10 @@
     <file alias="scripts/Widgets/BlockList/Visible0.svg">../../scripts/Widgets/BlockList/Visible0.svg</file>
     <file alias="scripts/Widgets/BlockList/Visible1-inverse.svg">../../scripts/Widgets/BlockList/Visible1-inverse.svg</file>
     <file alias="scripts/Widgets/BlockList/Visible1.svg">../../scripts/Widgets/BlockList/Visible1.svg</file>
+    <file alias="scripts/Widgets/BlockList/XRef0-inverse.svg">../../scripts/Widgets/BlockList/XRef0-inverse.svg</file>
+    <file alias="scripts/Widgets/BlockList/XRef0.svg">../../scripts/Widgets/BlockList/XRef0.svg</file>
+    <file alias="scripts/Widgets/BlockList/XRef1-inverse.svg">../../scripts/Widgets/BlockList/XRef1-inverse.svg</file>
+    <file alias="scripts/Widgets/BlockList/XRef1.svg">../../scripts/Widgets/BlockList/XRef1.svg</file>
     <file alias="scripts/Widgets/CadToolBar/Back-inverse.svg">../../scripts/Widgets/CadToolBar/Back-inverse.svg</file>
     <file alias="scripts/Widgets/CadToolBar/Back.svg">../../scripts/Widgets/CadToolBar/Back.svg</file>
     <file alias="scripts/Widgets/CadToolBar/CadToolBar.js">../../scripts/Widgets/CadToolBar/CadToolBar.js</file>
