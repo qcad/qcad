@@ -561,13 +561,13 @@ double REllipse::getLength() const {
         }
     }
     else {
-        if (a1>M_PI && a2<M_PI) {
+        if (a1>M_PI && a2<=M_PI) {
             return getSimpsonLength(a1, 2*M_PI) + getSimpsonLength(0, a2);
         }
         if (a1>M_PI && a2>M_PI) {
             return getSimpsonLength(a1, 2*M_PI) + getSimpsonLength(0, M_PI) + getSimpsonLength(M_PI, a2);
         }
-        if (a1<M_PI && a2<M_PI) {
+        if (a1<=M_PI && a2<M_PI) {
             return getSimpsonLength(a1, M_PI) + getSimpsonLength(M_PI, 2*M_PI) + getSimpsonLength(0, a2);
         }
     }
