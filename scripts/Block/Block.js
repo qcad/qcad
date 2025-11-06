@@ -178,7 +178,7 @@ Block.editBlock = function(di, blockName) {
         return;
     }
 
-    // store offset and zoom factor of all views in a map blockId -> [factor, offset vector]:
+    // store offset and zoom factor of current block and all views in a map blockId -> [factor, offset vector]:
     var blockId = doc.getCurrentBlockId();
     for (i=0; i<views.length; i++) {
         view = views[i];
@@ -191,6 +191,18 @@ Block.editBlock = function(di, blockName) {
         viewWidget.setProperty("BlockZoomFactor_" + blockId, view.getFactor());
         viewWidget.setProperty("BlockZoomOffset_" + blockId, view.getOffset());
         //print("stored zoom for block: ", blockId, ", view: ", i, ", factor: ", view.getFactor());
+    }
+
+    // query block to edit:
+    var block = doc.queryBlock(blockName);
+
+    if (block.isXRef()) {
+        EAction.handleUserWarning(qsTr("Cannot edit external reference"));
+        return;
+    }
+    if (block.isFromXRef()) {
+        EAction.handleUserWarning(qsTr("Cannot edit block from external reference"));
+        return;
     }
 
     // change current block that is being edited:
@@ -210,8 +222,6 @@ Block.editBlock = function(di, blockName) {
         var blockZoomOffset = viewWidget.property("BlockZoomOffset_" + blockId);
 
         if (isNull(blockZoomFactor) || isNull(blockZoomOffset)) {
-            var block = doc.queryBlock(blockId);
-
             if (block.hasLayout()) {
                 // block is layout block: zoom to page:
                 var pBox = Print.getPaperBox(doc);
