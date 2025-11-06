@@ -56,6 +56,13 @@ RenameBlock.prototype.beginEvent = function() {
     var doc = this.getDocument();
 
     var block = doc.queryBlock(blockId);
+    if (isNull(block)) {
+        this.terminate();
+        return;
+    }
+
+    var oldBlockName = block.getName();
+
     var dlg = this.createDialog(doc, block);
     if (isNull(dlg)) {
         this.terminate();
@@ -68,14 +75,22 @@ RenameBlock.prototype.beginEvent = function() {
         return;
     }
 
+    this.renameBlock(oldBlockName, newBlock, false);
+
+    this.terminate();
+};
+
+RenameBlock.prototype.renameBlock = function(oldBlockName, newBlock, useTransactionGroup) {
     var op = new RAddObjectOperation(newBlock);
     op.setText(this.getToolTitle());
     var di = this.getDocumentInterface();
+    var doc = di.getDocument();
+    if (useTransactionGroup) {
+        op.setTransactionGroup(doc.getTransactionGroup());
+    }
     di.applyOperation(op);
     di.clearPreview();
     di.repaintViews();
-
-    this.terminate();
 };
 
 RenameBlock.prototype.createDialog = function(doc, block) {
