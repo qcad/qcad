@@ -41,6 +41,7 @@ RPropertyTypeId RBlockReferenceEntity::PropertyDisplayedColor;
 RPropertyTypeId RBlockReferenceEntity::PropertyDrawOrder;
 
 RPropertyTypeId RBlockReferenceEntity::PropertyReferencedBlock;
+RPropertyTypeId RBlockReferenceEntity::PropertyXRef;
 RPropertyTypeId RBlockReferenceEntity::PropertyPositionX;
 RPropertyTypeId RBlockReferenceEntity::PropertyPositionY;
 RPropertyTypeId RBlockReferenceEntity::PropertyPositionZ;
@@ -97,6 +98,7 @@ void RBlockReferenceEntity::init() {
     RBlockReferenceEntity::PropertyDrawOrder.generateId(RBlockReferenceEntity::getRtti(), REntity::PropertyDrawOrder);
 
     RBlockReferenceEntity::PropertyReferencedBlock.generateId(RBlockReferenceEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Referenced Block"));
+    RBlockReferenceEntity::PropertyXRef.generateId(RBlockReferenceEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "External Reference"));
     RBlockReferenceEntity::PropertyPositionX.generateId(RBlockReferenceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
     RBlockReferenceEntity::PropertyPositionY.generateId(RBlockReferenceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
     RBlockReferenceEntity::PropertyPositionZ.generateId(RBlockReferenceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
@@ -292,6 +294,8 @@ QPair<QVariant, RPropertyAttributes> RBlockReferenceEntity::getProperty(
         return qMakePair(QVariant(data.columnSpacing), RPropertyAttributes());
     } else if (propertyTypeId == PropertyRowSpacing) {
         return qMakePair(QVariant(data.rowSpacing), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyXRef) {
+        return qMakePair(QVariant(data.isXRef()), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     } else if (propertyTypeId == PropertyReferencedBlock) {
         if (humanReadable) {
             RDocument* document = getData().getDocument();
