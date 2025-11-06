@@ -174,14 +174,15 @@ Layer.showHide = function(show, di, layerId, showProgress) {
     var showFrozen = Layer.getShowFrozen();
     var freezeLayer = Layer.getFreezeLayer();
 
+    var doc = di.getDocument();
     var operation = new RModifyObjectsOperation();
-    var layers = di.getDocument().queryAllLayers();
+    var layers = doc.queryAllLayers();
     for (var l = 0; l < layers.length; ++l) {
         if (showProgress===true) {
             EAction.setProgress(100/layers.length*l);
         }
 
-        var layer = di.getDocument().queryLayer(layers[l]);
+        var layer = doc.queryLayer(layers[l]);
         if (layers[l] !== layerId) {
             if (showFrozen) {
                 layer.setOff(!show);
