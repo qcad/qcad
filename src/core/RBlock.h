@@ -148,8 +148,18 @@ public:
 
     QString getLayoutName() const;
 
+    /**
+     * Block is an XRef.
+     */
     bool isXRef() const {
         return !xRefFileName.isEmpty();
+    }
+
+    /**
+     * Block was imported as part of an XRef.
+     */
+    bool isFromXRef() const {
+        return name.contains("|");
     }
 
     void setXRefFileName(const QString& f) {
@@ -181,6 +191,9 @@ public:
     void setXRefLoaded(bool on) {
         xRefLoaded = on;
     }
+
+    QSet<QString> getXRefLayerNames() const;
+    QSet<QString> getXRefBlockNames() const;
 
     virtual QPair<QVariant, RPropertyAttributes> getProperty(RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false, bool showOnRequest = false);

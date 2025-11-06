@@ -104,6 +104,40 @@ QString RBlock::getLayoutName() const {
     return layout->getName();
 }
 
+/**
+ * \return List of layer names that depend on this XRef block.
+ */
+QSet<QString> RBlock::getXRefLayerNames() const {
+    if (!isXRef()) {
+        return QSet<QString>();
+    }
+
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
+        return QSet<QString>();
+    }
+
+    qDebug() << "get layer names pattern:" << getName() << "\\|.*";
+
+    return doc->getLayerNames(getName() + "\\|.*");
+}
+
+/**
+ * \return List of block names that depend on this XRef block.
+ */
+QSet<QString> RBlock::getXRefBlockNames() const {
+    if (!isXRef()) {
+        return QSet<QString>();
+    }
+
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
+        return QSet<QString>();
+    }
+
+    return doc->getBlockNames(getName() + "\\|.*");
+}
+
 bool RBlock::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction) {
     bool ret = RObject::setProperty(propertyTypeId, value, transaction);
 
