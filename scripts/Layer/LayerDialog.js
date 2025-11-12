@@ -70,6 +70,7 @@ LayerDialog.prototype.show = function() {
     var widgets = getWidgets(this.dialog);
     var leLayerName = widgets["LayerName"];
     this.validator = createValidator("[^<>/\\\\\":;\?\*|,=`]{1,255}", leLayerName);
+    //this.validator = createValidator("[^<>/\\\\\":;\?\*,=`]{1,255}", leLayerName);
     leLayerName.setValidator(this.validator);
     var cbColor = widgets["Color"];
     cbColor.setColor(this.defaultColor);
@@ -83,6 +84,10 @@ LayerDialog.prototype.show = function() {
         leLayerName.text = this.layer.getName();
 
         if (leLayerName.text === "0") {
+            leLayerName.enabled = false;
+        }
+        else if (leLayerName.text.contains("|")) {
+            // cannot rename XRef layers:
             leLayerName.enabled = false;
         }
         else {
@@ -195,7 +200,7 @@ LayerDialog.validate = function(layer, layerName, document, dialog, validator) {
         acceptable = false;
     }
 
-    if (validator.validate(layerName, pos) != QValidator.Acceptable) {
+    if (!layerName.contains("|") && validator.validate(layerName, pos) != QValidator.Acceptable) {
         if (!isNull(lMessage)) {
             lMessage.text = "<font color='red'>" + qsTr("Layer name is empty.") + "</font>";
         }
