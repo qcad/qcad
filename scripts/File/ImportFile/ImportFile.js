@@ -69,7 +69,9 @@ ImportFile.prototype.beginEvent = function() {
         return;
     }
 
-    if (this.sourceDi.importFile(fileDialogInfo[0], fileDialogInfo[1], false)!==RDocumentInterface.IoErrorNoError) {
+    this.fileName = fileDialogInfo[0];
+
+    if (this.sourceDi.importFile(this.fileName, fileDialogInfo[1], false)!==RDocumentInterface.IoErrorNoError) {
         EAction.handleUserWarning(qsTr("Error while importing file %1").arg(fileDialogInfo[0]));
         if (!isNull(this.sourceDi)) {
             destr(this.sourceDi);
