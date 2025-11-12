@@ -236,7 +236,6 @@ RBlockListQt.prototype.updateXRef = function() {
         else if (isFromXRef) {
             item.setIcon(BlockList.colEdit, BlockList.iconFromXRef[Number(isFromXRef)]);
         }
-
     }
 };
 
@@ -451,7 +450,7 @@ RBlockListQt.prototype.blockActivated = function() {
         }
 
         insertable = insertable && currentBlock.getName().toLowerCase()!==blockName.toLowerCase() && !blockName.startsWith("*");
-        renamable = renamable && document.getBlockId(blockName)!==document.getModelSpaceBlockId();
+        renamable = renamable && document.getBlockId(blockName)!==document.getModelSpaceBlockId() && !block.isFromXRef();
         removable = removable && document.getBlockId(blockName)!==document.getModelSpaceBlockId() && !block.isFromXRef();
         // cannot remove block from XRef:
         removable = removable && !block.isFromXRef();
