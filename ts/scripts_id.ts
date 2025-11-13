@@ -10,19 +10,19 @@
     </message>
     <message>
         <location line="+53"/>
-        <location line="+123"/>
+        <location line="+142"/>
         <source>Version:</source>
         <translation type="unfinished">Versi:</translation>
     </message>
     <message>
-        <location line="-119"/>
-        <location line="+136"/>
+        <location line="-138"/>
+        <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation type="unfinished">Internet:</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-164"/>
         <source>Build Date:</source>
         <translation type="unfinished">Tanggal Pembuatan:</translation>
     </message>
@@ -33,12 +33,12 @@
     </message>
     <message>
         <location line="+2"/>
-        <location line="+117"/>
+        <location line="+136"/>
         <source>Qt Version:</source>
         <translation type="unfinished">Versi Qt:</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-132"/>
         <source>Architecture:</source>
         <translation type="unfinished">Arsitektur:</translation>
     </message>
@@ -113,7 +113,7 @@
         <translation type="unfinished">Tidak ada plugin yang ditemukan.</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+44"/>
         <source>No information available</source>
         <translation type="unfinished">Tidak ada informasi yang tersedia</translation>
     </message>
@@ -1254,6 +1254,16 @@ Apakah Anda ingin memulihkannya?</translation>
         <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished">Tidak dapat mengedit blok saat mengedit blok di tempat</translation>
     </message>
+    <message>
+        <location line="+23"/>
+        <source>Cannot edit external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot edit block from external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>BlockDialog</name>
@@ -1318,13 +1328,13 @@ Apakah Anda ingin memulihkannya?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+511"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
         <source>Widgets</source>
         <translation type="unfinished">Widget</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+67"/>
+        <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Daftar Blokir</translation>
@@ -5980,7 +5990,12 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Batas alokasi untuk bitmap (MB):</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+42"/>
+        <source>Dot length in line patterns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Selection</source>
         <translation type="unfinished">Seleksi</translation>
     </message>
@@ -6450,7 +6465,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
+        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
         <translation type="unfinished">Kesalahan saat mengimpor file %1</translation>
     </message>
@@ -7969,7 +7984,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Menyembunyikan semua lapisan</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+51"/>
         <source>Thawing all layers</source>
         <translation type="unfinished">Mencairkan semua lapisan</translation>
     </message>
@@ -8031,7 +8046,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">lapisan</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Spasi di depan atau di belakang spasi.</translation>
     </message>

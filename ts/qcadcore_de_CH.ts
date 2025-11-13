@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.1" language="de_CH">
 <context>
     <name>QObject</name>
     <message>
         <location filename="../src/core/RUnit.cpp" line="+272"/>
         <source>None</source>
-        <translation>Geen</translation>
+        <translation>Keine</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -16,12 +16,12 @@
     <message>
         <location line="+3"/>
         <source>Foot</source>
-        <translation>Voet</translation>
+        <translation>Fuss</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mile</source>
-        <translation>Mile</translation>
+        <translation>Meile</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -31,7 +31,7 @@
     <message>
         <location line="+3"/>
         <source>Centimeter</source>
-        <translation>Centimeter</translation>
+        <translation>Zentimeter</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -46,7 +46,7 @@
     <message>
         <location line="+3"/>
         <source>Microinch</source>
-        <translation>Microinch</translation>
+        <translation>Mikroinch</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -71,22 +71,22 @@
     <message>
         <location line="+3"/>
         <source>Micron</source>
-        <translation>Micron</translation>
+        <translation>Mikron</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Decimeter</source>
-        <translation>Decimeter</translation>
+        <translation>Dezimeter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Decameter</source>
-        <translation>Decameter</translation>
+        <translation>Dekameter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hectometer</source>
-        <translation>Hectometer</translation>
+        <translation>Hektometer</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -101,7 +101,7 @@
     <message>
         <location line="+3"/>
         <source>Lightyear</source>
-        <translation>Lichtjaar</translation>
+        <translation>Lichtjahr</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -114,100 +114,100 @@
     <message>
         <location filename="../src/core/RColor.cpp" line="+340"/>
         <source>By Layer</source>
-        <translation>Door laag bepaald</translation>
+        <translation>Von Layer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation>Door blok bepaald</translation>
+        <translation>Von Block</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Red</source>
-        <translation>Rood</translation>
+        <translation>Rot</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+5"/>
+        <source>Yellow</source>
+        <translation>Gelb</translation>
+    </message>
+    <message>
+        <location line="-4"/>
         <source>Green</source>
-        <translation>Groen</translation>
+        <translation>Grün</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Blue</source>
-        <translation>Blauw</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Cyan</source>
-        <translation>Cyaan</translation>
+        <translation>Cyan</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-1"/>
+        <source>Blue</source>
+        <translation>Blau</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Magenta</source>
         <translation>Magenta</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Yellow</source>
-        <translation>Geel</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Orange</source>
-        <translation>Oranje</translation>
+        <translation>Orange</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Red</source>
-        <translation>Donkerrood</translation>
+        <translation>Dunkelrot</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Green</source>
-        <translation>Donkergroen</translation>
+        <translation>Dunkelgrün</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Blue</source>
-        <translation>Donkerblauw</translation>
+        <translation>Dunkelblau</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation>Donkercyaan</translation>
+        <translation>Dunkelcyan</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation>Donkermagenta</translation>
+        <translation>Dunkelmagenta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Yellow</source>
-        <translation>Donkergeel</translation>
+        <translation>Dunkelgelb</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Black</source>
-        <translation>Zwart</translation>
+        <translation>Schwarz</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
+        <source>White</source>
+        <translation>Weiss</translation>
+    </message>
+    <message>
+        <location line="-2"/>
         <source>Gray</source>
-        <translation>Grijs</translation>
+        <translation>Grau</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Light Gray</source>
-        <translation>Lichtgrijs</translation>
+        <translation>Hellgrau</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>White</source>
-        <translation>Wit</translation>
-    </message>
-    <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>
@@ -217,22 +217,22 @@
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+48"/>
         <source>Current Layer ID</source>
-        <translation>ID actieve laag</translation>
+        <translation>ID des aktuellen Layers</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation>Tekeningseenheid</translation>
+        <translation>Zeichnungseinheit</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Lijntypeschaal</translation>
+        <translation>Linientypskalierung</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation>Bematingslettertype</translation>
+        <translation>Bemassungsschriftart</translation>
     </message>
 </context>
 <context>
@@ -240,26 +240,16 @@
     <message>
         <location filename="../src/core/REntity.cpp" line="+95"/>
         <source>Block</source>
-        <translation>Blok</translation>
+        <translation>Block</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+102"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+80"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <source>Position</source>
-        <translation>Positie</translation>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+100"/>
+        <source>Referenced Block</source>
+        <translation>Referenzierter Block</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+75"/>
-        <source>Pixel Unit</source>
-        <translation>Pixeleenheid</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
+        <location filename="../src/core/RBlock.cpp" line="+76"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+2"/>
         <location line="+3"/>
         <location filename="../src/core/RLayout.cpp" line="+83"/>
         <location line="+3"/>
@@ -267,22 +257,37 @@
         <location line="+3"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+75"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+80"/>
         <location line="+8"/>
         <location line="+2"/>
         <source>X</source>
         <translation>X</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-3"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="-10"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Position</source>
+        <translation>Position</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RBlock.cpp" line="-1"/>
+        <source>Pixel Unit</source>
+        <translation>Pixeleinheit</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation>Oorsprong</translation>
+        <translation>Ursprung</translation>
     </message>
     <message>
         <location line="-1"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-1"/>
         <location line="+3"/>
         <location filename="../src/core/RLayout.cpp" line="-11"/>
         <location line="+3"/>
@@ -290,7 +295,7 @@
         <location line="+3"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="-9"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="-1"/>
         <location line="+8"/>
         <location line="+2"/>
         <source>Y</source>
@@ -319,7 +324,7 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation>Eigendom van Referentie</translation>
+        <translation>Im Besitz von Referenz</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -327,12 +332,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
-        <source>Referenced Block</source>
-        <translation>Gerefereerde blok</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
         <source>External Reference</source>
         <translation type="unfinished"></translation>
     </message>
@@ -342,81 +342,81 @@
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <source>Scale</source>
-        <translation>Schaal</translation>
+        <translation>Skalierung</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation>Hoek</translation>
+        <translation>Winkel</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Columns</source>
-        <translation>Kolommen</translation>
+        <translation>Spalten</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rows</source>
-        <translation>Rijen</translation>
+        <translation>Reihen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
-        <translation>Kolomafstand</translation>
+        <translation>Spaltenabstand</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
-        <translation>Rijafstand</translation>
+        <translation>Reihenabstand</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Attributes</source>
-        <translation>Attributen</translation>
+        <translation>Attribute</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="-1"/>
         <location filename="../src/core/RObject.cpp" line="+70"/>
         <source>Type</source>
-        <translation>Type</translation>
+        <translation>Typ</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layer</source>
-        <translation>Laag</translation>
+        <translation>Layer</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+104"/>
         <source>Linetype</source>
-        <translation>Lijntype</translation>
+        <translation>Linientyp</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Lijntypeschaal</translation>
+        <translation>Linientypskalierung</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
-        <translation>Lijndikte</translation>
+        <translation>Linienbreite</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
-        <translation>Kleur</translation>
+        <translation>Farbe</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Displayed Color</source>
-        <translation>Getoonde kleur</translation>
+        <translation>Angezeigte Farbe</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation>Tekenvolgorde</translation>
+        <translation>Reihenfolge</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -429,7 +429,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Boundary</source>
-        <translation>Begrenzing</translation>
+        <translation>Begrenzung</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -441,7 +441,7 @@
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Bottom</source>
-        <translation>Onderkant</translation>
+        <translation>Unten</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -453,13 +453,13 @@
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Top</source>
-        <translation>Bovenkant</translation>
+        <translation>Oben</translation>
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+162"/>
         <source>Custom</source>
-        <translation>Gebruikergedefinieerd</translation>
+        <translation>Benutzerdefiniert</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -469,168 +469,168 @@
     <message>
         <location line="+1"/>
         <source>Protected</source>
-        <translation>Beschermd</translation>
+        <translation>Geschützt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Selected</source>
-        <translation>Geselecteerd</translation>
+        <translation>Ausgewählt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Object Invisible</source>
-        <translation>Object onzichtbaar</translation>
+        <translation>Objekt unsichtbar</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation>Werkset</translation>
+        <translation>Arbeitsset</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
-        <translation>Breedte</translation>
+        <translation>Breite</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation>Grootte</translation>
+        <translation>Grösse</translation>
     </message>
     <message>
         <location line="+0"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
-        <translation>Hoogte</translation>
+        <translation>Höhe</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
         <source>Simple</source>
-        <translation>Eenvoudig</translation>
+        <translation>Einfach</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation>Tekstpositie</translation>
+        <translation>Text Position</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation>Tekst</translation>
+        <translation>Text</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plain Text</source>
-        <translation>Platte tekst</translation>
+        <translation>Klartext</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Font Name</source>
-        <translation>Lettertype</translation>
+        <translation>Schriftart</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Height</source>
-        <translation>Teksthoogte</translation>
+        <translation>Texthöhe</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Width</source>
-        <translation>Tekstbreedte</translation>
+        <translation>Textbreite</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Angle</source>
-        <translation>Teksthoek</translation>
+        <translation>Textwinkel</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>X Scale</source>
-        <translation>X schaal</translation>
+        <translation>X Skalierung</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bold</source>
-        <translation>Vetgedrukt</translation>
+        <translation>Fett</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Italic</source>
-        <translation>Cursief</translation>
+        <translation>Kursiv</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Line Spacing</source>
-        <translation>Regelafstand</translation>
+        <translation>Linienabstand</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Alignment</source>
-        <translation>Uitlijning</translation>
+        <translation>Ausrichtung</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Horizontal</source>
-        <translation>Horizontaal</translation>
+        <translation>Horizontal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Vertical</source>
-        <translation>Vertikaal</translation>
+        <translation>Vertikal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation>Achteruit</translation>
+        <translation>Rückwärts</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation>Ondersteboven</translation>
+        <translation>Auf dem Kopf</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
         <source>Rotation</source>
-        <translation>Rotatie</translation>
+        <translation>Rotation</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation>Aan</translation>
+        <translation>Ein</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>Centrum van aanzicht</translation>
+        <translation>Ansicht Zentrum</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>Doelpunt van aanzicht</translation>
+        <translation>Ansicht Ziel</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Overall</source>
-        <translation>Overall</translation>
+        <translation>Umfassend</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Frozen Layers</source>
-        <translation>Bevroren lagen</translation>
+        <translation>Eingefrorene Layer</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer ID</source>
-        <translation>Laag ID</translation>
+        <translation>Layer ID</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-8"/>
@@ -638,217 +638,217 @@
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Name</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation>Verborgen</translation>
+        <translation>Verdeckt</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Off</source>
-        <translation>Uit</translation>
+        <translation>Inaktiv</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation>Bevroren</translation>
+        <translation>Gefroren</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Locked</source>
-        <translation>Vergrendeld</translation>
+        <translation>Gesperrt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation>Gevouwen</translation>
+        <translation>Eingeklappt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation>Plotbaar</translation>
+        <translation>Plotbar</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation>Vangbaar</translation>
+        <translation>Fangbar</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation>Uit is bevriezen</translation>
+        <translation>Aus ist einfrieren</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Tab Order</source>
-        <translation>Tabvolgorde</translation>
+        <translation>Tab Reihenfolge</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Limits</source>
-        <translation>Min limieten</translation>
+        <translation>Min Begrenzung</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Limits</source>
-        <translation>Max limieten</translation>
+        <translation>Max Begrenzung</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation>Basis van invoeging</translation>
+        <translation>Einfügungsbasis</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation>Min afmetingen</translation>
+        <translation>Min Ausmass</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation>Max afmetingen</translation>
+        <translation>Max Ausmass</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
         <source>Circular (recursive) block referencing detected:</source>
-        <translation>Circulaire (recursieve) blokreferenties gedetecteerd:</translation>
+        <translation>Circuläre (rekursive) Blockreferenzierung detektiert:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block name:</source>
-        <translation>Bloknaam:</translation>
+        <translation>Blockname:</translation>
     </message>
     <message>
         <location filename="../src/core/RDimStyle.cpp" line="+71"/>
         <source>Style</source>
-        <translation>Stijl</translation>
+        <translation>Stil</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Linear measurement factor</source>
-        <translation>Lineaire meetfactor</translation>
+        <translation>Linearfaktor</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text height</source>
-        <translation>Hoogte van de tekst</translation>
+        <translation>Höhe des Textes</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Maat lijn uitsparing</translation>
+        <translation>Abstand zu Bemassungslinien</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow size</source>
-        <translation>Pijlgrootte</translation>
+        <translation>Pfeilgrösse</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation>Dimensie lijn toename</translation>
+        <translation>Schrittweite der Masslinien</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation>Hulplijn extentie</translation>
+        <translation>Verlängerung der Bemassungslinie</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation>Extensielijnafzet</translation>
+        <translation>Begrenzungslinien Abstand</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text position vertical</source>
-        <translation>Tekstpositie verticaal</translation>
+        <translation>Vertikale Textposition</translation>
     </message>
     <message>
         <location line="-8"/>
         <source>Overall scale</source>
-        <translation>Algemene schaal</translation>
+        <translation>Globale Skalierung</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Text horizontal</source>
-        <translation>Tekst horizontaal</translation>
+        <translation>Text horizontal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation>Tikgrootte</translation>
+        <translation>Tick-Grösse</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
-        <translation>Lineair formaat</translation>
+        <translation>Linearformat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal places</source>
-        <translation>Decimalplaatsen</translation>
+        <translation>Dezimalstellen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal separator</source>
-        <translation>Decimaalscheidingsteken</translation>
+        <translation>Dezimaltrennzeichen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zero suppression</source>
-        <translation>Nul onderdrukking</translation>
+        <translation>Nullunterdrückung</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation>Hoekformaat</translation>
+        <translation>Winkelformat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation>Hoek decimale plaatsen</translation>
+        <translation>Winkelnachkommastellen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation>Onderdrukking van nul hoekmaat</translation>
+        <translation>Unterdrückung von Nullen Winkelmass</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Architecturale markering</translation>
+        <translation>Architektur-Tick</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text color</source>
-        <translation>Tekst kleur</translation>
+        <translation>Textfarbe</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation>Pijlblok</translation>
+        <translation>Pfeilblock</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 1</source>
-        <translation>Pijlblok 1</translation>
+        <translation>Pfeilblock 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation>Pijlblok 2</translation>
+        <translation>Pfeilblock 2</translation>
     </message>
 </context>
 <context>
@@ -856,7 +856,7 @@
     <message>
         <location filename="../src/core/RGuiAction.cpp" line="+203"/>
         <source>Requires selection</source>
-        <translation>Selectie vereist</translation>
+        <translation>Benötigt Selektion</translation>
     </message>
 </context>
 <context>
@@ -864,12 +864,12 @@
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+51"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Name</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Description</source>
-        <translation>Beschrijving</translation>
+        <translation>Beschreibung</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -879,7 +879,7 @@
     <message>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation>Patroon</translation>
+        <translation>Muster</translation>
     </message>
 </context>
 <context>
@@ -887,17 +887,17 @@
     <message>
         <location filename="../src/core/RLinetypePattern.cpp" line="+912"/>
         <source>By Layer</source>
-        <translation>Door laag bepaald</translation>
+        <translation>Von Layer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation>Door blok bepaald</translation>
+        <translation>Von Block</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Continuous</source>
-        <translation>Doorlopend</translation>
+        <translation>Durchgehend</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -911,42 +911,42 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation>Middellijn</translation>
+        <translation>Mitte</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation>Streep punt</translation>
+        <translation>Strichpunkt</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dashed</source>
-        <translation>Streep</translation>
+        <translation>Strichlinie</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation>Gescheiden</translation>
+        <translation>Getrennt</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dot</source>
-        <translation>Punt</translation>
+        <translation>Punkt</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation>Verborgen</translation>
+        <translation>Verdeckt</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -958,112 +958,112 @@
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation>ISO streep</translation>
+        <translation>ISO Strichlinie</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation>ISO streep met afstand</translation>
+        <translation>ISO Gestrichelt mit Abstand</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation>ISO lange streep punt</translation>
+        <translation>ISO Lang gestrichelt punktiert</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-dot</source>
-        <translation>ISO lange streep dubbele punt</translation>
+        <translation>ISO Lang gestrichelt doppelpunktiert</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation>ISO lange streep drievoudige punt</translation>
+        <translation>ISO Lang gestrichelt dreifachpunktiert</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dot</source>
-        <translation>ISO punt</translation>
+        <translation>ISO Punktiert</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation>ISO lang kort streep</translation>
+        <translation>ISO Lang kurz gestrichelt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation>ISO lang kort kort streep</translation>
+        <translation>ISO Lang kurz-kurz gestrichelt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash dot</source>
-        <translation>ISO streep punt</translation>
+        <translation>ISO Strichpunktlinie</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash dot</source>
-        <translation>ISO dubbele streep, punt</translation>
+        <translation>ISO Zwei Striche, Punkt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash double-dot</source>
-        <translation>ISO streep, dubbele punt</translation>
+        <translation>ISO Strich, zwei Punkte</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash double-dot</source>
-        <translation>ISO dubbele streep, dubbele punt</translation>
+        <translation>ISO zwei Striche, zwei Punkte</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash triple-dot</source>
-        <translation>ISO streep, drievoudige punt</translation>
+        <translation>ISO Strich, drei Punkte</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
-        <translation>ISO dubbele streep, drievoudige punt</translation>
+        <translation>ISO Zwei Striche, drei Punkte</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hot Water Supply</source>
-        <translation>Heet water</translation>
+        <translation>Heisswasserleitung</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hot Water</source>
-        <translation>Heet water</translation>
+        <translation>Heisswasser</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gas Line</source>
-        <translation>Gasleiding</translation>
+        <translation>Gasleitung</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation>Isolatie</translation>
+        <translation>Isolation</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zig Zag</source>
-        <translation>Zigzag</translation>
+        <translation>Zickzack</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation>Spoorweg</translation>
+        <translation>Eisenbahn</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation>Grens rond</translation>
+        <translation>Grenze rund</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 2</source>
-        <translation>Grens vierkant</translation>
+        <translation>Grenze eckig</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1083,52 +1083,52 @@
     <message>
         <location line="+2"/>
         <source>Water</source>
-        <translation>Water</translation>
+        <translation>Wasser</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drainage</source>
-        <translation>Riolering</translation>
+        <translation>Entwässerung</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drainage Reversed</source>
-        <translation>Riolering omgekeerd</translation>
+        <translation>Entwässerung umgekehrt</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation>Communicatie</translation>
+        <translation>Kommunikation</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Electric</source>
-        <translation>Elektrische</translation>
+        <translation>Elektrisch</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Low Voltage</source>
-        <translation>Laagspanning</translation>
+        <translation>Niederspannung</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>High Voltage</source>
-        <translation>Hoogspanning</translation>
+        <translation>Hochspannung</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation>Bovenleiding</translation>
+        <translation>Strom Oberleitung</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation>Onrein</translation>
+        <translation>Verschmutzt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation>Onzuiver stijgend</translation>
+        <translation>Verschmutzt steigend</translation>
     </message>
 </context>
 <context>
@@ -1136,17 +1136,17 @@
     <message>
         <location filename="../src/core/RLineweight.cpp" line="+37"/>
         <source>By Layer</source>
-        <translation>Door laag bepaald</translation>
+        <translation>Von Layer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation>Door blok bepaald</translation>
+        <translation>Von Block</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default</source>
-        <translation>Standaard</translation>
+        <translation>Standard</translation>
     </message>
     <message>
         <location line="+1"/>

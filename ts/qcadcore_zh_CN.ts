@@ -243,7 +243,7 @@
         <translation>块</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+99"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+102"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+80"/>
@@ -253,7 +253,7 @@
         <translation>位置</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+69"/>
+        <location filename="../src/core/RBlock.cpp" line="+75"/>
         <source>Pixel Unit</source>
         <translation>像素单位</translation>
     </message>
@@ -322,9 +322,19 @@
         <translation type="unfinished">由参考资料拥有</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
+        <location line="+1"/>
+        <source>XRef File Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
         <source>Referenced Block</source>
         <translation type="unfinished">被引用的区块</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>External Reference</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -623,7 +633,7 @@
         <translation type="unfinished">层 ID</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="-7"/>
+        <location filename="../src/core/RBlock.cpp" line="-8"/>
         <location filename="../src/core/RLayer.cpp" line="-8"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
@@ -711,7 +721,7 @@
         <translation>最大扩展</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+886"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>检测到循环（递归）块引用：</translation>
     </message>
@@ -1054,6 +1064,21 @@
         <location line="+1"/>
         <source>Fenceline 2</source>
         <translation>围墙线2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Point 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Point 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plant</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

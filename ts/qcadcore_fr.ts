@@ -243,13 +243,13 @@
         <translation>Bloc</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+98"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+100"/>
         <source>Referenced Block</source>
         <translation>Bloc référencé</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+70"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+1"/>
+        <location filename="../src/core/RBlock.cpp" line="+76"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+2"/>
         <location line="+3"/>
         <location filename="../src/core/RLayout.cpp" line="+83"/>
         <location line="+3"/>
@@ -327,7 +327,17 @@
         <translation>Propriété de Référence</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
+        <location line="+1"/>
+        <source>XRef File Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
+        <source>External Reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
@@ -623,7 +633,7 @@
         <translation>ID du calque</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="-7"/>
+        <location filename="../src/core/RBlock.cpp" line="-8"/>
         <location filename="../src/core/RLayer.cpp" line="-8"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
@@ -711,7 +721,7 @@
         <translation>Max extents</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+886"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Une référence de bloc circulaire (récursive) a été détectée :</translation>
     </message>
@@ -1054,6 +1064,21 @@
         <location line="+1"/>
         <source>Fenceline 2</source>
         <translation>Ligne-carrés</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Point 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Point 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plant</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

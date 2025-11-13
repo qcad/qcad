@@ -34,7 +34,7 @@
         <translation>Zásuvné moduly</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+50"/>
         <source>No information available</source>
         <translation>Žiadne dostupné informácie</translation>
     </message>
@@ -62,14 +62,14 @@
         <translation>Neznáme</translation>
     </message>
     <message>
-        <location line="-130"/>
-        <location line="+123"/>
+        <location line="-149"/>
+        <location line="+142"/>
         <source>Version:</source>
         <translation>Verzia:</translation>
     </message>
     <message>
-        <location line="-113"/>
-        <location line="+117"/>
+        <location line="-132"/>
+        <location line="+136"/>
         <source>Qt Version:</source>
         <translation>Qt Verzia:</translation>
     </message>
@@ -79,14 +79,14 @@
         <translation>Licencia:</translation>
     </message>
     <message>
-        <location line="-127"/>
-        <location line="+136"/>
+        <location line="-146"/>
+        <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-164"/>
         <source>Build Date:</source>
         <translation>Dátum vytvorenia:</translation>
     </message>
@@ -146,7 +146,7 @@
         <translation>Nenašiel sa žiadny modul.</translation>
     </message>
     <message>
-        <location line="+99"/>
+        <location line="+118"/>
         <source>Active</source>
         <translation>Aktívne</translation>
     </message>
@@ -1254,7 +1254,17 @@ Prajete si ho obnoviť?</translation>
         <translation type="unfinished">Nie je možné upraviť blok počas úpravy bloku na mieste</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="+23"/>
+        <source>Cannot edit external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot edit block from external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-109"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>
@@ -1322,13 +1332,13 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+511"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+67"/>
+        <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Zoznam Blokov</translation>
@@ -5895,12 +5905,17 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Limit alokácie pre bitové mapy (MB):</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+42"/>
+        <source>Dot length in line patterns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+47"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Trvalý výber</translation>
     </message>
     <message>
-        <location line="-1053"/>
+        <location line="-1082"/>
         <source>Color lightness threshold:</source>
         <translation>Hranica svetlosti farby:</translation>
     </message>
@@ -5995,7 +6010,7 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Maximálna zložitosť pre pevné výplne vo vysokej kvalite:</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+143"/>
         <source>Selection</source>
         <translation>Výber</translation>
     </message>
@@ -6460,7 +6475,7 @@ už existuje v zozname.</translation>
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
+        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
         <translation>Chyba pri importe súboru %1</translation>
     </message>
@@ -7979,7 +7994,7 @@ už existuje v zozname.</translation>
         <translation>Skrytie všetkých vrstiev</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+51"/>
         <source>Thawing all layers</source>
         <translation>Rozmraziť všetky vrstvy</translation>
     </message>
@@ -8041,7 +8056,7 @@ už existuje v zozname.</translation>
         <translation>vrstva</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Leading or trailing spaces.</source>
         <translation>Na začiatku alebo na konci nesmie byť medzera.</translation>
     </message>

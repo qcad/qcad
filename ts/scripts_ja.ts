@@ -29,7 +29,7 @@
         <translation>プラグイン</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+50"/>
         <source>No information available</source>
         <translation>利用可能な情報がありません</translation>
     </message>
@@ -57,19 +57,19 @@
         <translation>不明</translation>
     </message>
     <message>
-        <location line="-130"/>
-        <location line="+123"/>
+        <location line="-149"/>
+        <location line="+142"/>
         <source>Version:</source>
         <translation>バージョン:</translation>
     </message>
     <message>
-        <location line="-113"/>
-        <location line="+117"/>
+        <location line="-132"/>
+        <location line="+136"/>
         <source>Qt Version:</source>
         <translation>Qtバージョン:</translation>
     </message>
     <message>
-        <location line="-94"/>
+        <location line="-113"/>
         <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
         <translation type="unfinished">DWG を含むその他のツール、機能、およびファイル形式は、&lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; または &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt; で利用可能です。</translation>
     </message>
@@ -89,19 +89,19 @@
         <translation type="unfinished">Qtは、&lt;a href=&apos;%1&apos;&gt;LGPL Open Source License&lt;/a&gt;のもとでQCADとともに出荷され、ユーザーとしてQtライブラリをあなたのプラットフォーム用に再コンパイルする権利を含むさまざまな権利を与えています。これを行うには、Qt ウェブサイト&lt;/a&gt;に示されている &lt;a href=&apos;%2&apos;&gt;documentation に従います。</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+108"/>
         <source>License:</source>
         <translation>ライセンス:</translation>
     </message>
     <message>
-        <location line="-127"/>
-        <location line="+136"/>
+        <location line="-146"/>
+        <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>インターネット:</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-164"/>
         <source>Build Date:</source>
         <translation>ビルド日付:</translation>
     </message>
@@ -146,7 +146,7 @@
         <translation>プラグインがありません</translation>
     </message>
     <message>
-        <location line="+99"/>
+        <location line="+118"/>
         <source>Active</source>
         <translation>アクティブ</translation>
     </message>
@@ -1250,7 +1250,17 @@ Do you wish to recover it?</source>
         <translation type="unfinished">ブロックのインプレース編集中にブロックの編集ができない</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="+23"/>
+        <source>Cannot edit external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot edit block from external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-109"/>
         <source>&amp;Block</source>
         <translation>&amp;B ブロック</translation>
     </message>
@@ -1318,14 +1328,14 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+511"/>
-        <location line="+67"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>ブロックリスト</translation>
     </message>
     <message>
-        <location line="-110"/>
+        <location line="-111"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -5890,12 +5900,12 @@ is already in the list.</source>
         <translation type="unfinished">テキストの高さの閾値(px)。</translation>
     </message>
     <message>
-        <location line="+192"/>
+        <location line="+221"/>
         <source>Persistent selection</source>
         <translation type="unfinished">永続的な選択</translation>
     </message>
     <message>
-        <location line="-1053"/>
+        <location line="-1082"/>
         <source>Color lightness threshold:</source>
         <translation>色の明るさ閾値:</translation>
     </message>
@@ -5985,7 +5995,12 @@ is already in the list.</source>
         <translation type="unfinished">ビットマップの割り当て上限（MB）：</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+42"/>
+        <source>Dot length in line patterns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Selection</source>
         <translation>選択</translation>
     </message>
@@ -6450,7 +6465,7 @@ is already in the list.</source>
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
+        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
         <translation>ファイルインポート中のエラー %1</translation>
     </message>
@@ -7969,7 +7984,7 @@ is already in the list.</source>
         <translation>全てのレイヤーを非表示</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+51"/>
         <source>Thawing all layers</source>
         <translation>全てのレイヤの解凍</translation>
     </message>
@@ -8031,7 +8046,7 @@ is already in the list.</source>
         <translation type="unfinished">層</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Leading or trailing spaces.</source>
         <translation>上部または下部の余白</translation>
     </message>

@@ -10,19 +10,19 @@
     </message>
     <message>
         <location line="+53"/>
-        <location line="+123"/>
+        <location line="+142"/>
         <source>Version:</source>
         <translation type="unfinished">Версия:</translation>
     </message>
     <message>
-        <location line="-119"/>
-        <location line="+136"/>
+        <location line="-138"/>
+        <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation type="unfinished">Интернет:</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-164"/>
         <source>Build Date:</source>
         <translation type="unfinished">Дата на изграждане:</translation>
     </message>
@@ -33,12 +33,12 @@
     </message>
     <message>
         <location line="+2"/>
-        <location line="+117"/>
+        <location line="+136"/>
         <source>Qt Version:</source>
         <translation type="unfinished">Версия на Qt:</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-132"/>
         <source>Architecture:</source>
         <translation type="unfinished">Архитектура:</translation>
     </message>
@@ -113,7 +113,7 @@
         <translation type="unfinished">Не са намерени никакви плъгини.</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+44"/>
         <source>No information available</source>
         <translation type="unfinished">Няма налична информация</translation>
     </message>
@@ -1254,6 +1254,16 @@ Do you wish to recover it?</source>
         <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished">Не може да редактирате блок, докато редактирате блок на място</translation>
     </message>
+    <message>
+        <location line="+23"/>
+        <source>Cannot edit external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot edit block from external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>BlockDialog</name>
@@ -1318,13 +1328,13 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+511"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
         <source>Widgets</source>
         <translation type="unfinished">Уиджети</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+67"/>
+        <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Списък с блокове</translation>
@@ -5983,7 +5993,12 @@ is already in the list.</source>
         <translation type="unfinished">Ограничение на разпределението за битови карти (MB):</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+42"/>
+        <source>Dot length in line patterns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Selection</source>
         <translation type="unfinished">Избор</translation>
     </message>
@@ -6453,7 +6468,7 @@ is already in the list.</source>
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
+        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
         <translation type="unfinished">Грешка при импортирането на файл %1</translation>
     </message>
@@ -7972,7 +7987,7 @@ is already in the list.</source>
         <translation type="unfinished">Скриване на всички слоеве</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+51"/>
         <source>Thawing all layers</source>
         <translation type="unfinished">Размразяване на всички слоеве</translation>
     </message>
@@ -8034,7 +8049,7 @@ is already in the list.</source>
         <translation type="unfinished">слой</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Предни или задни интервали.</translation>
     </message>

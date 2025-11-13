@@ -29,7 +29,7 @@
         <translation>Модули</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+50"/>
         <source>No information available</source>
         <translation>Сведения недоступны</translation>
     </message>
@@ -57,14 +57,14 @@
         <translation>Неизвестно</translation>
     </message>
     <message>
-        <location line="-130"/>
-        <location line="+123"/>
+        <location line="-149"/>
+        <location line="+142"/>
         <source>Version:</source>
         <translation>Версия:</translation>
     </message>
     <message>
-        <location line="-113"/>
-        <location line="+117"/>
+        <location line="-132"/>
+        <location line="+136"/>
         <source>Qt Version:</source>
         <translation>Версия Qt:</translation>
     </message>
@@ -74,14 +74,14 @@
         <translation>Лицензия:</translation>
     </message>
     <message>
-        <location line="-127"/>
-        <location line="+136"/>
+        <location line="-146"/>
+        <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Интернет:</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-164"/>
         <source>Build Date:</source>
         <translation>Дата сборки:</translation>
     </message>
@@ -146,7 +146,7 @@
         <translation>Не найдено модулей.</translation>
     </message>
     <message>
-        <location line="+99"/>
+        <location line="+118"/>
         <source>Active</source>
         <translation>Включён</translation>
     </message>
@@ -1254,7 +1254,17 @@ Do you wish to recover it?</source>
         <translation>Нельзя редактировать блок во время редактирования блока на месте</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="+23"/>
+        <source>Cannot edit external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot edit block from external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-109"/>
         <source>&amp;Block</source>
         <translation>&amp;Блок</translation>
     </message>
@@ -1322,14 +1332,14 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+511"/>
-        <location line="+67"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Список блоков</translation>
     </message>
     <message>
-        <location line="-110"/>
+        <location line="-111"/>
         <source>Widgets</source>
         <translation>Виджеты</translation>
     </message>
@@ -5905,12 +5915,12 @@ is already in the list.</source>
         <translation type="unfinished">Максимальная сложность для сплошных заливок высокого качества:</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+149"/>
         <source>Persistent selection</source>
         <translation>Постоянное выделение</translation>
     </message>
     <message>
-        <location line="-1053"/>
+        <location line="-1082"/>
         <source>Color lightness threshold:</source>
         <translation>Порог светлоты цвета:</translation>
     </message>
@@ -5995,7 +6005,12 @@ is already in the list.</source>
         <translation type="unfinished">Предел выделения для растровых изображений (МБ):</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+42"/>
+        <source>Dot length in line patterns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Selection</source>
         <translation>Выделение</translation>
     </message>
@@ -6460,7 +6475,7 @@ is already in the list.</source>
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
+        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
         <translation>Ошибка при импорте файла %1</translation>
     </message>
@@ -7974,7 +7989,7 @@ is already in the list.</source>
         <translation>Скрытие всех слоёв</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+51"/>
         <source>Thawing all layers</source>
         <translation>Размораживание всех слоёв</translation>
     </message>
@@ -7994,7 +8009,7 @@ is already in the list.</source>
         <translation>Разблокировка всех слоёв</translation>
     </message>
     <message>
-        <location line="-133"/>
+        <location line="-134"/>
         <source>&amp;Layer</source>
         <translation>С&amp;лой</translation>
     </message>
@@ -8041,7 +8056,7 @@ is already in the list.</source>
         <translation>слой</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Leading or trailing spaces.</source>
         <translation>Начальные или завершающие пробелы.</translation>
     </message>

@@ -10,19 +10,19 @@
     </message>
     <message>
         <location line="+53"/>
-        <location line="+123"/>
+        <location line="+142"/>
         <source>Version:</source>
         <translation type="unfinished">Версія:</translation>
     </message>
     <message>
-        <location line="-119"/>
-        <location line="+136"/>
+        <location line="-138"/>
+        <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation type="unfinished">Інтернет:</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-164"/>
         <source>Build Date:</source>
         <translation type="unfinished">Дата побудови:</translation>
     </message>
@@ -33,12 +33,12 @@
     </message>
     <message>
         <location line="+2"/>
-        <location line="+117"/>
+        <location line="+136"/>
         <source>Qt Version:</source>
         <translation type="unfinished">Версія Qt:</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-132"/>
         <source>Architecture:</source>
         <translation type="unfinished">Архітектура:</translation>
     </message>
@@ -113,7 +113,7 @@
         <translation type="unfinished">Плагінів не знайдено.</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+44"/>
         <source>No information available</source>
         <translation type="unfinished">Інформація відсутня</translation>
     </message>
@@ -1255,6 +1255,16 @@ Do you wish to recover it?</source>
         <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished">Неможливо редагувати блок під час редагування блоку на місці</translation>
     </message>
+    <message>
+        <location line="+23"/>
+        <source>Cannot edit external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot edit block from external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>BlockDialog</name>
@@ -1319,13 +1329,13 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+511"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
         <source>Widgets</source>
         <translation type="unfinished">Віджети</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+67"/>
+        <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Список блокування</translation>
@@ -5987,7 +5997,12 @@ is already in the list.</source>
         <translation type="unfinished">Ліміт виділення для растрових зображень (МБ):</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+42"/>
+        <source>Dot length in line patterns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Selection</source>
         <translation type="unfinished">Відбір</translation>
     </message>
@@ -6457,7 +6472,7 @@ is already in the list.</source>
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
+        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
         <translation type="unfinished">Помилка при імпорті файлу %1</translation>
     </message>
@@ -7976,7 +7991,7 @@ is already in the list.</source>
         <translation type="unfinished">Приховування всіх шарів</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+51"/>
         <source>Thawing all layers</source>
         <translation type="unfinished">Розморожування всіх шарів</translation>
     </message>
@@ -8038,7 +8053,7 @@ is already in the list.</source>
         <translation type="unfinished">шар</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Початкові або кінцеві пробіли.</translation>
     </message>

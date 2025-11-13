@@ -238,7 +238,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+67"/>
+        <location filename="../src/core/RBlock.cpp" line="+73"/>
         <location filename="../src/core/RLayer.cpp" line="+95"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="+81"/>
@@ -264,7 +264,7 @@
     </message>
     <message>
         <location line="-2"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+99"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+102"/>
         <location line="+3"/>
         <location filename="../src/core/RLayout.cpp" line="+2"/>
         <location line="+3"/>
@@ -320,7 +320,12 @@
         <translation type="unfinished">Referans tarafından sahip olunan</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+886"/>
+        <location line="+1"/>
+        <source>XRef File Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation type="unfinished">Dairesel (özyinelemeli) blok referanslama tespit edildi:</translation>
     </message>
@@ -335,9 +340,14 @@
         <translation type="unfinished">Blok</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
         <source>Referenced Block</source>
         <translation type="unfinished">Başvurulan Blok</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>External Reference</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1054,6 +1064,21 @@
         <location line="+1"/>
         <source>Fenceline 2</source>
         <translation type="unfinished">Fenceline 2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Point 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Point 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plant</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

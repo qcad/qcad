@@ -34,7 +34,7 @@
         <translation>Plugins</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+50"/>
         <source>No information available</source>
         <translation>Geen informatie beschikbaar</translation>
     </message>
@@ -62,14 +62,14 @@
         <translation>Onbekend</translation>
     </message>
     <message>
-        <location line="-130"/>
-        <location line="+123"/>
+        <location line="-149"/>
+        <location line="+142"/>
         <source>Version:</source>
         <translation>Versie:</translation>
     </message>
     <message>
-        <location line="-113"/>
-        <location line="+117"/>
+        <location line="-132"/>
+        <location line="+136"/>
         <source>Qt Version:</source>
         <translation>Qt Versie:</translation>
     </message>
@@ -79,14 +79,14 @@
         <translation>Licentie:</translation>
     </message>
     <message>
-        <location line="-127"/>
-        <location line="+136"/>
+        <location line="-146"/>
+        <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-164"/>
         <source>Build Date:</source>
         <translation>Aanmaakdatum:</translation>
     </message>
@@ -146,7 +146,7 @@
         <translation>Geen plugins gevonden.</translation>
     </message>
     <message>
-        <location line="+99"/>
+        <location line="+118"/>
         <source>Active</source>
         <translation>Actief</translation>
     </message>
@@ -1252,7 +1252,17 @@ Wilt u deze herstellen?</translation>
         <translation>Kan blok niet bewerken tijdens het bewerken van een blok ter plaatse</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="+23"/>
+        <source>Cannot edit external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot edit block from external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-109"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>
@@ -1320,14 +1330,14 @@ Wilt u deze herstellen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+511"/>
-        <location line="+67"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Blokkenlijst</translation>
     </message>
     <message>
-        <location line="-110"/>
+        <location line="-111"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -5900,12 +5910,12 @@ is al in de lijst.</translation>
         <translation>Maximale complexiteit voor solide vullingen van hoge kwaliteit:</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+149"/>
         <source>Persistent selection</source>
         <translation>Blijvende selectie</translation>
     </message>
     <message>
-        <location line="-1053"/>
+        <location line="-1082"/>
         <source>Color lightness threshold:</source>
         <translation>Kleur lichtheid drempel:</translation>
     </message>
@@ -5990,7 +6000,12 @@ is al in de lijst.</translation>
         <translation>Geheugenlimiet voor bitmaps (MB):</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+42"/>
+        <source>Dot length in line patterns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Selection</source>
         <translation>Selectie</translation>
     </message>
@@ -6455,7 +6470,7 @@ is al in de lijst.</translation>
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
+        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
         <translation>Fout bij het importeren van bestand %1</translation>
     </message>
@@ -7974,7 +7989,7 @@ is al in de lijst.</translation>
         <translation>Alle laagen verbergen</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+51"/>
         <source>Thawing all layers</source>
         <translation>Alle laagen ontdooien</translation>
     </message>
@@ -8036,7 +8051,7 @@ is al in de lijst.</translation>
         <translation>laag</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Leading or trailing spaces.</source>
         <translation>Spaties voor of na.</translation>
     </message>

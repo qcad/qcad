@@ -10,19 +10,19 @@
     </message>
     <message>
         <location line="+53"/>
-        <location line="+123"/>
+        <location line="+142"/>
         <source>Version:</source>
         <translation>Versija:</translation>
     </message>
     <message>
-        <location line="-119"/>
-        <location line="+136"/>
+        <location line="-138"/>
+        <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internetas:</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-164"/>
         <source>Build Date:</source>
         <translation type="unfinished">Sukūrimo data:</translation>
     </message>
@@ -33,12 +33,12 @@
     </message>
     <message>
         <location line="+2"/>
-        <location line="+117"/>
+        <location line="+136"/>
         <source>Qt Version:</source>
         <translation type="unfinished">Qt versija:</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-132"/>
         <source>Architecture:</source>
         <translation type="unfinished">Architektūra:</translation>
     </message>
@@ -113,7 +113,7 @@
         <translation type="unfinished">Įskiepių nerasta.</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+44"/>
         <source>No information available</source>
         <translation type="unfinished">Informacijos nėra</translation>
     </message>
@@ -1255,6 +1255,16 @@ Ar norite jį atkurti?</translation>
         <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished">Negalima redaguoti bloko redaguojant bloką vietoje</translation>
     </message>
+    <message>
+        <location line="+23"/>
+        <source>Cannot edit external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot edit block from external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>BlockDialog</name>
@@ -1319,13 +1329,13 @@ Ar norite jį atkurti?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+511"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
         <source>Widgets</source>
         <translation type="unfinished">Valdikliai</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+67"/>
+        <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Blokų sąrašas</translation>
@@ -5927,12 +5937,17 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Bitinių atvaizdų paskirstymo riba (MB):</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+42"/>
+        <source>Dot length in line patterns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+47"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Nuolatinė atranka</translation>
     </message>
     <message>
-        <location line="-737"/>
+        <location line="-766"/>
         <source>Number of preview entities:</source>
         <translation type="unfinished">Peržiūros subjektų skaičius:</translation>
     </message>
@@ -5992,7 +6007,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Didžiausias sudėtingumas, kad būtų galima kokybiškai užpildyti vientisą užpildą:</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+143"/>
         <source>Selection</source>
         <translation type="unfinished">Atranka</translation>
     </message>
@@ -6457,7 +6472,7 @@ jau yra sąraše.</translation>
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
+        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
         <translation type="unfinished">Klaida importuojant failą %1</translation>
     </message>
@@ -7956,7 +7971,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Visų sluoksnių paslėpimas</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+51"/>
         <source>Thawing all layers</source>
         <translation type="unfinished">Visų sluoksnių atšildymas</translation>
     </message>
@@ -8038,7 +8053,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">sluoksnis</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Pradiniai arba galiniai tarpai.</translation>
     </message>

@@ -10,19 +10,19 @@
     </message>
     <message>
         <location line="+53"/>
-        <location line="+123"/>
+        <location line="+142"/>
         <source>Version:</source>
         <translation>Verze:</translation>
     </message>
     <message>
-        <location line="-119"/>
-        <location line="+136"/>
+        <location line="-138"/>
+        <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>URL:</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-164"/>
         <source>Build Date:</source>
         <translation>Datum sestavení:</translation>
     </message>
@@ -33,12 +33,12 @@
     </message>
     <message>
         <location line="+2"/>
-        <location line="+117"/>
+        <location line="+136"/>
         <source>Qt Version:</source>
         <translation>Verze Qt:</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-132"/>
         <source>Architecture:</source>
         <translation>Architektura:</translation>
     </message>
@@ -113,7 +113,7 @@
         <translation>Nebyly nalezeny žádné pluginy.</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+44"/>
         <source>No information available</source>
         <translation>Nejsou k dispozici žádné informace</translation>
     </message>
@@ -1252,7 +1252,17 @@ Přejete si ho obnovit?</translation>
         <translation type="unfinished">Nelze upravit blok při úpravě bloku na místě</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="+23"/>
+        <source>Cannot edit external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot edit block from external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-109"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>
@@ -1320,13 +1330,13 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+511"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
         <source>Widgets</source>
         <translation>Widgety</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+67"/>
+        <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Seznam bloků</translation>
@@ -5893,12 +5903,17 @@ již v seznamu je.</translation>
         <translation type="unfinished">Alokační limit pro bitové mapy (MB):</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+42"/>
+        <source>Dot length in line patterns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+47"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Trvalý výběr</translation>
     </message>
     <message>
-        <location line="-1053"/>
+        <location line="-1082"/>
         <source>Color lightness threshold:</source>
         <translation>Prahová hodnota světla barvy:</translation>
     </message>
@@ -5993,7 +6008,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">Maximální složitost pro pevné výplně ve vysoké kvalitě:</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+143"/>
         <source>Selection</source>
         <translation>Výběr</translation>
     </message>
@@ -6458,7 +6473,7 @@ již v seznamu je.</translation>
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
+        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
         <translation>Chyba při importu souboru %1</translation>
     </message>
@@ -7977,7 +7992,7 @@ již v seznamu je.</translation>
         <translation>Skrýt všechny vrstvy</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+51"/>
         <source>Thawing all layers</source>
         <translation>Rozmrazit všechny vrstvy</translation>
     </message>
@@ -8039,7 +8054,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">vrstva</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Leading or trailing spaces.</source>
         <translation>Počáteční nebo koncové mezery.</translation>
     </message>

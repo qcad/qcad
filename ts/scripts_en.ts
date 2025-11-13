@@ -10,19 +10,19 @@
     </message>
     <message>
         <location line="+53"/>
-        <location line="+123"/>
+        <location line="+142"/>
         <source>Version:</source>
         <translation>Version:</translation>
     </message>
     <message>
-        <location line="-119"/>
-        <location line="+136"/>
+        <location line="-138"/>
+        <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-164"/>
         <source>Build Date:</source>
         <translation>Build Date:</translation>
     </message>
@@ -33,12 +33,12 @@
     </message>
     <message>
         <location line="+2"/>
-        <location line="+117"/>
+        <location line="+136"/>
         <source>Qt Version:</source>
         <translation>Qt Version:</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-132"/>
         <source>Architecture:</source>
         <translation>Architecture:</translation>
     </message>
@@ -113,7 +113,7 @@
         <translation>No plugins found.</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+44"/>
         <source>No information available</source>
         <translation>No information available</translation>
     </message>
@@ -1252,7 +1252,17 @@ Do you wish to recover it?</translation>
         <translation>Cannot edit block while editing a block in-place</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="+23"/>
+        <source>Cannot edit external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot edit block from external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-109"/>
         <source>&amp;Block</source>
         <translation>&amp;Block</translation>
     </message>
@@ -1320,13 +1330,13 @@ Do you wish to recover it?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+511"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+67"/>
+        <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Block List</translation>
@@ -5920,12 +5930,12 @@ is already in the list.</translation>
         <translation>Maximum complexity for solid fills at high quality:</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+149"/>
         <source>Persistent selection</source>
         <translation>Persistent selection</translation>
     </message>
     <message>
-        <location line="-961"/>
+        <location line="-990"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatically use screen based linetypes in model view</translation>
     </message>
@@ -5990,7 +6000,12 @@ is already in the list.</translation>
         <translation>Allocation limit for bitmaps (MB):</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+42"/>
+        <source>Dot length in line patterns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Selection</source>
         <translation>Selection</translation>
     </message>
@@ -6455,7 +6470,7 @@ is already in the list.</translation>
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
+        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
         <translation>Error while importing file %1</translation>
     </message>
@@ -7974,7 +7989,7 @@ is already in the list.</translation>
         <translation>Hiding all layers</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+51"/>
         <source>Thawing all layers</source>
         <translation>Thawing all layers</translation>
     </message>
@@ -8036,7 +8051,7 @@ is already in the list.</translation>
         <translation>layer</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Leading or trailing spaces.</source>
         <translation>Leading or trailing spaces.</translation>
     </message>

@@ -10,19 +10,19 @@
     </message>
     <message>
         <location line="+53"/>
-        <location line="+123"/>
+        <location line="+142"/>
         <source>Version:</source>
         <translation type="unfinished">Versioon:</translation>
     </message>
     <message>
-        <location line="-119"/>
-        <location line="+136"/>
+        <location line="-138"/>
+        <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation type="unfinished">Internet:</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-164"/>
         <source>Build Date:</source>
         <translation type="unfinished">Ehituskuupäev:</translation>
     </message>
@@ -33,12 +33,12 @@
     </message>
     <message>
         <location line="+2"/>
-        <location line="+117"/>
+        <location line="+136"/>
         <source>Qt Version:</source>
         <translation type="unfinished">Qt versioon:</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-132"/>
         <source>Architecture:</source>
         <translation type="unfinished">Arhitektuur:</translation>
     </message>
@@ -113,7 +113,7 @@
         <translation type="unfinished">Pistikprogramme ei leitud.</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+44"/>
         <source>No information available</source>
         <translation type="unfinished">Teave puudub</translation>
     </message>
@@ -1252,6 +1252,16 @@ Do you wish to recover it?</source>
         <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished">Ei saa plokki redigeerida, kui redigeeritakse plokki in-place</translation>
     </message>
+    <message>
+        <location line="+23"/>
+        <source>Cannot edit external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot edit block from external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>BlockDialog</name>
@@ -1316,13 +1326,13 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+511"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
         <source>Widgets</source>
         <translation type="unfinished">Vidinad</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+67"/>
+        <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Plokkide nimekiri</translation>
@@ -5979,7 +5989,12 @@ is already in the list.</source>
         <translation type="unfinished">Bitkaartide eraldamise piirang (MB):</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+42"/>
+        <source>Dot length in line patterns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Selection</source>
         <translation type="unfinished">Valik</translation>
     </message>
@@ -6449,7 +6464,7 @@ is already in the list.</source>
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
+        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
         <translation type="unfinished">Viga faili %1 importimisel</translation>
     </message>
@@ -7968,7 +7983,7 @@ is already in the list.</source>
         <translation type="unfinished">Kõigi kihtide peitmine</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+51"/>
         <source>Thawing all layers</source>
         <translation type="unfinished">Kõikide kihtide sulatamine</translation>
     </message>
@@ -8030,7 +8045,7 @@ is already in the list.</source>
         <translation type="unfinished">kiht</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Ees- või tagapool olevad tühikud.</translation>
     </message>

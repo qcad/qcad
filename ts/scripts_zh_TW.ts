@@ -10,19 +10,19 @@
     </message>
     <message>
         <location line="+53"/>
-        <location line="+123"/>
+        <location line="+142"/>
         <source>Version:</source>
         <translation type="unfinished">版本：</translation>
     </message>
     <message>
-        <location line="-119"/>
-        <location line="+136"/>
+        <location line="-138"/>
+        <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation type="unfinished">互联网：</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-164"/>
         <source>Build Date:</source>
         <translation type="unfinished">建造日期：</translation>
     </message>
@@ -33,12 +33,12 @@
     </message>
     <message>
         <location line="+2"/>
-        <location line="+117"/>
+        <location line="+136"/>
         <source>Qt Version:</source>
         <translation type="unfinished">Qt版本：</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-132"/>
         <source>Architecture:</source>
         <translation type="unfinished">建筑：</translation>
     </message>
@@ -113,7 +113,7 @@
         <translation type="unfinished">没有发现任何插件。</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+44"/>
         <source>No information available</source>
         <translation type="unfinished">无相关信息</translation>
     </message>
@@ -1254,6 +1254,16 @@ Do you wish to recover it?</source>
         <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished">在原地编辑区块时不能编辑区块</translation>
     </message>
+    <message>
+        <location line="+23"/>
+        <source>Cannot edit external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot edit block from external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>BlockDialog</name>
@@ -1318,13 +1328,13 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+511"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
         <source>Widgets</source>
         <translation type="unfinished">小工具</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+67"/>
+        <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">块状列表</translation>
@@ -5920,12 +5930,17 @@ is already in the list.</source>
         <translation type="unfinished">位圖的分配限制 (MB)：</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+42"/>
+        <source>Dot length in line patterns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+47"/>
         <source>Persistent selection</source>
         <translation type="unfinished">持续性的选择</translation>
     </message>
     <message>
-        <location line="-737"/>
+        <location line="-766"/>
         <source>Number of preview entities:</source>
         <translation type="unfinished">预览实体的数量：</translation>
     </message>
@@ -5985,7 +6000,7 @@ is already in the list.</source>
         <translation type="unfinished">最高複雜度的高品質實心填充：</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+143"/>
         <source>Selection</source>
         <translation type="unfinished">选择</translation>
     </message>
@@ -6450,7 +6465,7 @@ is already in the list.</source>
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
+        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
         <translation type="unfinished">导入文件%1时出错</translation>
     </message>
@@ -7949,7 +7964,7 @@ is already in the list.</source>
         <translation type="unfinished">隐藏所有层</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+51"/>
         <source>Thawing all layers</source>
         <translation type="unfinished">解冻所有层面</translation>
     </message>
@@ -8031,7 +8046,7 @@ is already in the list.</source>
         <translation type="unfinished">层</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">前面或后面的空格。</translation>
     </message>

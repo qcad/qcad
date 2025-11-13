@@ -243,13 +243,13 @@
         <translation>Block</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+98"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+100"/>
         <source>Referenced Block</source>
         <translation>Referenzierter Block</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+70"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+1"/>
+        <location filename="../src/core/RBlock.cpp" line="+76"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+2"/>
         <location line="+3"/>
         <location filename="../src/core/RLayout.cpp" line="+83"/>
         <location line="+3"/>
@@ -327,7 +327,17 @@
         <translation>Im Besitz von Referenz</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
+        <location line="+1"/>
+        <source>XRef File Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
+        <source>External Reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
@@ -487,7 +497,7 @@
         <location line="+0"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation>Grösse</translation>
+        <translation>Größe</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -623,7 +633,7 @@
         <translation>Layer ID</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="-7"/>
+        <location filename="../src/core/RBlock.cpp" line="-8"/>
         <location filename="../src/core/RLayer.cpp" line="-8"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
@@ -711,7 +721,7 @@
         <translation>Max Ausmass</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+886"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Circuläre (rekursive) Blockreferenzierung detektiert:</translation>
     </message>
@@ -778,7 +788,7 @@
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation>Tick-Grösse</translation>
+        <translation>Tick-Größe</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1054,6 +1064,21 @@
         <location line="+1"/>
         <source>Fenceline 2</source>
         <translation>Grenze eckig</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Point 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Point 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plant</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

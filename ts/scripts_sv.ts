@@ -10,19 +10,19 @@
     </message>
     <message>
         <location line="+53"/>
-        <location line="+123"/>
+        <location line="+142"/>
         <source>Version:</source>
         <translation>Version:</translation>
     </message>
     <message>
-        <location line="-119"/>
-        <location line="+136"/>
+        <location line="-138"/>
+        <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Webbsida:</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-164"/>
         <source>Build Date:</source>
         <translation>Byggdatum:</translation>
     </message>
@@ -33,12 +33,12 @@
     </message>
     <message>
         <location line="+2"/>
-        <location line="+117"/>
+        <location line="+136"/>
         <source>Qt Version:</source>
         <translation>Qt Version:</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-132"/>
         <source>Architecture:</source>
         <translation>Arkitektur:</translation>
     </message>
@@ -113,7 +113,7 @@
         <translation>Inga plugin hittades.</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+44"/>
         <source>No information available</source>
         <translation>Ingen information tillgänglig</translation>
     </message>
@@ -1250,7 +1250,17 @@ Vill du återställa den?</translation>
         <translation>Det går inte att redigera block när ett block redigeras på plats</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="+23"/>
+        <source>Cannot edit external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cannot edit block from external reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-109"/>
         <source>&amp;Block</source>
         <translation>&amp;Block</translation>
     </message>
@@ -1318,13 +1328,13 @@ Vill du återställa den?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+511"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+67"/>
+        <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Lista över block</translation>
@@ -5903,12 +5913,17 @@ finns redan i listan.</translation>
         <translation>Gräns för allokering av bitmappar (MB):</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+42"/>
+        <source>Dot length in line patterns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+47"/>
         <source>Persistent selection</source>
         <translation>Beständigt urval</translation>
     </message>
     <message>
-        <location line="-737"/>
+        <location line="-766"/>
         <source>Number of preview entities:</source>
         <translation>Antal förhandsvisade objekt:</translation>
     </message>
@@ -5963,12 +5978,12 @@ finns redan i listan.</translation>
         <translation>Maximal komplexitet för solida fyllningar med hög kvalitet:</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+143"/>
         <source>Selection</source>
         <translation>Urval</translation>
     </message>
     <message>
-        <location line="-670"/>
+        <location line="-699"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Visa bågar som linjer under denna vinkel (grader):</translation>
     </message>
@@ -6453,7 +6468,7 @@ finns redan i listan.</translation>
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
+        <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
         <translation>Fel vid import av fil %1</translation>
     </message>
@@ -7952,7 +7967,7 @@ finns redan i listan.</translation>
         <translation>Dölja alla lager</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+51"/>
         <source>Thawing all layers</source>
         <translation>Tina alla lager</translation>
     </message>
@@ -8034,7 +8049,7 @@ finns redan i listan.</translation>
         <translation>skikt</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Leading or trailing spaces.</source>
         <translation>Ledande eller avslutande mellanslag.</translation>
     </message>
