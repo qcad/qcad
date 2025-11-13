@@ -13439,7 +13439,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing unit:</source>
-        <translation>Disegno unitario:</translation>
+        <translation>Unità di disegno:</translation>
     </message>
     <message>
         <location line="+10"/>
