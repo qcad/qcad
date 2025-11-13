@@ -194,7 +194,7 @@
     <message>
         <location line="+3"/>
         <source>White</source>
-        <translation>Weiss</translation>
+        <translation>Weiß</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -823,7 +823,7 @@
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation>Unterdrückung von Nullen Winkelmass</translation>
+        <translation>Unterdrückung von Nullen Winkelmaß</translation>
     </message>
     <message>
         <location line="+1"/>

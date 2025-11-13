@@ -1223,7 +1223,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+6"/>
         <source>White</source>
-        <translation>Weiss</translation>
+        <translation>Weiß</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2080,7 +2080,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/File/CloseFile/CloseFileInit.js" line="+2"/>
         <source>&amp;Close</source>
-        <translation>&amp;Schliessen</translation>
+        <translation>&amp;Schließen</translation>
     </message>
 </context>
 <context>
@@ -2141,7 +2141,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+17"/>
         <source>Black / white</source>
-        <translation>Schwarz / Weiss</translation>
+        <translation>Schwarz / Weiß</translation>
     </message>
 </context>
 <context>
@@ -2644,7 +2644,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+16"/>
         <source>Dimensions</source>
-        <translation>Bemassungen</translation>
+        <translation>Bemaßungen</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -2713,17 +2713,17 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAligned.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation>Startpunkt erste Bemassungslinie</translation>
+        <translation>Startpunkt erste Bemaßungslinie</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation>Startpunkt zweite Bemassungslinie</translation>
+        <translation>Startpunkt zweite Bemaßungslinie</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
-        <translation>Position Bemassungslinie</translation>
+        <translation>Position Bemaßungslinie</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAlignedInit.js" line="+2"/>
@@ -2733,7 +2733,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+3"/>
         <source>Draw aligned dimension</source>
-        <translation>Ausgerichtete Bemassung</translation>
+        <translation>Ausgerichtete Bemaßung</translation>
     </message>
 </context>
 <context>
@@ -2751,7 +2751,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+9"/>
         <source>Dimension arc location</source>
-        <translation>Bemassungsbogen Position</translation>
+        <translation>Bemaßungsbogen Position</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2"/>
@@ -2779,7 +2779,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation>Position der Bemassungslinie oder Winkel</translation>
+        <translation>Position der Bemaßungslinie oder Winkel</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametricInit.js" line="+2"/>
@@ -2802,7 +2802,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+4"/>
         <source>Draw horizontal dimension</source>
-        <translation>Horizontale Bemassung</translation>
+        <translation>Horizontale Bemaßung</translation>
     </message>
 </context>
 <context>
@@ -2838,7 +2838,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation>Position der Bemassungslinie oder Winkel</translation>
+        <translation>Position der Bemaßungslinie oder Winkel</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRadial/DimRadialInit.js" line="+2"/>
@@ -2848,7 +2848,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+4"/>
         <source>Draw radial dimension</source>
-        <translation>Radiale Bemassung</translation>
+        <translation>Radiale Bemaßung</translation>
     </message>
 </context>
 <context>
@@ -2856,14 +2856,14 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
-        <translation>Keine Bemassungen mit Benutzerdefinierter Beschriftungsposition ausgewählt.</translation>
+        <translation>Keine Bemaßungen mit Benutzerdefinierter Beschriftungsposition ausgewählt.</translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
-            <numerusform>Beschriftungsposition von einer Bemassung zurückgesetzt.</numerusform>
-            <numerusform>Beschriftungsposition von %n Bemassungen zurückgesetzt.</numerusform>
+            <numerusform>Beschriftungsposition von einer Bemaßung zurückgesetzt.</numerusform>
+            <numerusform>Beschriftungsposition von %n Bemaßungen zurückgesetzt.</numerusform>
         </translation>
     </message>
     <message>
@@ -2877,17 +2877,17 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation>Startpunkt erste Bemassungslinie</translation>
+        <translation>Startpunkt erste Bemaßungslinie</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation>Startpunkt zweite Bemassungslinie</translation>
+        <translation>Startpunkt zweite Bemaßungslinie</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
-        <translation>Position Bemassungslinie</translation>
+        <translation>Position Bemaßungslinie</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
@@ -2897,7 +2897,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
-        <translation>Lineare Bemassung mit fixem Winkel</translation>
+        <translation>Lineare Bemaßung mit fixem Winkel</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.ui" line="+17"/>
@@ -2915,7 +2915,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+4"/>
         <source>Draw vertical dimension</source>
-        <translation>Vertikale Bemassung</translation>
+        <translation>Vertikale Bemaßung</translation>
     </message>
 </context>
 <context>
@@ -2973,7 +2973,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+122"/>
         <source>Dimension Tools</source>
-        <translation>Bemassungswerkzeuge</translation>
+        <translation>Bemaßungswerkzeuge</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -2993,7 +2993,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+19"/>
         <source>Enter fixed label or leave empty for automatic label</source>
-        <translation>Fixes Mass eingeben oder leer lassen für automatisches Mass</translation>
+        <translation>Fixes Maß eingeben oder leer lassen für automatisches Maß</translation>
     </message>
     <message>
         <location line="+61"/>
@@ -3026,12 +3026,12 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation>Skalierung von Bemassungen</translation>
+        <translation>Skalierung von Bemaßungen</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
-        <translation>Die Skalierung für neue Bemassungen ist nicht 1:1. Bemassungsbeschriftungen zeigen deshalb Werte an, die vom gemessenen Wert in der Zeichnung abweichen. Sie können den Skalierungsfaktor in der Optionenwerkzeugleiste oben anpassen.</translation>
+        <translation>Die Skalierung für neue Bemaßungen ist nicht 1:1. Bemaßungsbeschriftungen zeigen deshalb Werte an, die vom gemessenen Wert in der Zeichnung abweichen. Sie können den Skalierungsfaktor in der Optionenwerkzeugleiste oben anpassen.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3044,13 +3044,13 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+29"/>
         <source>Dimension</source>
-        <translation>Bemassung</translation>
+        <translation>Bemaßung</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+2"/>
         <source>Dimension Settings</source>
-        <translation>Bemassungseinstellungen</translation>
+        <translation>Bemaßungseinstellungen</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -3075,12 +3075,12 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+310"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
-        <translation>Die Zeichnungseinheit muss &quot;Inch&quot; sein, damit Bemassungsbeschriftungen in den Formaten &quot;Architektur&quot; oder &quot;Technisch&quot; angezeigt werden können. Format zurückgesetzt auf &quot;Dezimal&quot;.</translation>
+        <translation>Die Zeichnungseinheit muss &quot;Inch&quot; sein, damit Bemaßungsbeschriftungen in den Formaten &quot;Architektur&quot; oder &quot;Technisch&quot; angezeigt werden können. Format zurückgesetzt auf &quot;Dezimal&quot;.</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+68"/>
         <source>Sizes</source>
-        <translation>Grössen</translation>
+        <translation>Größen</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3105,7 +3105,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="-145"/>
         <source>Dimension Style</source>
-        <translation>Bemassungsstil</translation>
+        <translation>Bemaßungsstil</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3115,27 +3115,27 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+20"/>
         <source>Text above dimension line</source>
-        <translation>Text über Bemassungslinie</translation>
+        <translation>Text über Bemaßungslinie</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Dimension line gap:</source>
-        <translation>Bemassungslinien Abstand:</translation>
+        <translation>Bemaßungslinien Abstand:</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Arrow size:</source>
-        <translation>Pfeil Grösse:</translation>
+        <translation>Pfeil Größe:</translation>
     </message>
     <message>
         <location line="+108"/>
         <source>Dimension line increment:</source>
-        <translation>Schrittweite der Bemassungslinien:</translation>
+        <translation>Schrittweite der Bemaßungslinien:</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Size scale factor:</source>
-        <translation>Skalierung für alle Grössen:</translation>
+        <translation>Skalierung für alle Größen:</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -3185,7 +3185,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+6"/>
         <source>Linear Dimensions</source>
-        <translation>Lineare Bemassungen</translation>
+        <translation>Lineare Bemaßungen</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3857,17 +3857,17 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+19"/>
         <source>Size Invalid.</source>
-        <translation>Grösse ungültig.</translation>
+        <translation>Größe ungültig.</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Size in X Invalid.</source>
-        <translation>Grösse in X ungültig.</translation>
+        <translation>Größe in X ungültig.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size in Y Invalid.</source>
-        <translation>Grösse in Y ungültig.</translation>
+        <translation>Größe in Y ungültig.</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -4005,7 +4005,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation>Keine korrekte Linetype-Skala, ignoriert. Textzeile: %1%2 Massstab: %3</translation>
+        <translation>Keine korrekte Linetype-Skala, ignoriert. Textzeile: %1%2 Maßstab: %3</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4962,12 +4962,12 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui" line="+14"/>
         <source>Enter Size</source>
-        <translation>Grösse eingeben</translation>
+        <translation>Größe eingeben</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Size:</source>
-        <translation>Grösse:</translation>
+        <translation>Größe:</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -5192,7 +5192,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation>Weiss</translation>
+        <translation>Weiß</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5524,7 +5524,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+24"/>
         <source>Dynamically scale to fit</source>
-        <translation>Dynamische Skalierung nach Mass</translation>
+        <translation>Dynamische Skalierung nach Maß</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -5658,7 +5658,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation>Vier: Gleichmässig</translation>
+        <translation>Vier: Gleichmäßig</translation>
     </message>
 </context>
 <context>
@@ -5792,12 +5792,12 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+51"/>
         <source>Rulers and Scrollbars</source>
-        <translation>Massstäbe und Bildlaufleisten</translation>
+        <translation>Maßstäbe und Bildlaufleisten</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show rulers</source>
-        <translation>Massstäbe anzeigen</translation>
+        <translation>Maßstäbe anzeigen</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5817,7 +5817,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+10"/>
         <source>Show large crosshairs</source>
-        <translation>Grosses Fadenkreuz</translation>
+        <translation>Großes Fadenkreuz</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -5827,7 +5827,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation>Grosse Ursprungsachsen anzeigen</translation>
+        <translation>Große Ursprungsachsen anzeigen</translation>
     </message>
     <message>
         <location line="+68"/>
@@ -6130,7 +6130,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+12"/>
         <source>Measurements and labels:</source>
-        <translation>Masse und Beschriftung:</translation>
+        <translation>Maße und Beschriftung:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6178,7 +6178,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
-        <translation>Massstab:</translation>
+        <translation>Maßstab:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -9748,7 +9748,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+17"/>
         <source>Size (pixel):</source>
-        <translation>Grösse (Pixel):</translation>
+        <translation>Größe (Pixel):</translation>
     </message>
 </context>
 <context>
@@ -10118,7 +10118,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+20"/>
         <source>Black / White Mode</source>
-        <translation>Schwarz / Weiss</translation>
+        <translation>Schwarz / Weiß</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10331,7 +10331,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+101"/>
         <source>Display advanced dimension style overrides</source>
-        <translation>Erweiterte Bemassungsstile anzeigen</translation>
+        <translation>Erweiterte Bemaßungsstile anzeigen</translation>
     </message>
 </context>
 <context>
@@ -10931,7 +10931,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+6"/>
         <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
-        <translation>Öffnen von Dateien mit Grösse Null erlauben (z. B. Online-Dateien, die nicht mit der Festplatte synchronisiert werden)</translation>
+        <translation>Öffnen von Dateien mit Größe Null erlauben (z. B. Online-Dateien, die nicht mit der Festplatte synchronisiert werden)</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11577,7 +11577,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
-        <translation>Regelmässiges Polygon von Zentrum und Mittelpunkt einer Seite zeichnen</translation>
+        <translation>Regelmäßiges Polygon von Zentrum und Mittelpunkt einer Seite zeichnen</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
@@ -11707,12 +11707,12 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
-        <translation>Rechteck mit &amp;Grösse</translation>
+        <translation>Rechteck mit &amp;Größe</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw rectangle with position and size</source>
-        <translation>Rechteck von Position und Grösse</translation>
+        <translation>Rechteck von Position und Größe</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
@@ -13293,7 +13293,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+12"/>
         <source>Scale factor:</source>
-        <translation>Skalierung für alle Grössen:</translation>
+        <translation>Skalierung für alle Größen:</translation>
     </message>
 </context>
 <context>
@@ -14119,12 +14119,12 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+2"/>
         <source>Dimension Styles</source>
-        <translation>Bemassungsstile</translation>
+        <translation>Bemaßungsstile</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension Style</source>
-        <translation>Bemassungsstil</translation>
+        <translation>Bemaßungsstil</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14209,22 +14209,22 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+2"/>
         <source>Dimensions</source>
-        <translation>Bemassungen</translation>
+        <translation>Bemaßungen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation>Bemassung</translation>
+        <translation>Bemaßung</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Aligned Dimensions</source>
-        <translation>Anliegende Bemassungen</translation>
+        <translation>Anliegende Bemaßungen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Aligned Dimension</source>
-        <translation>Anliegende Bemassung</translation>
+        <translation>Anliegende Bemaßung</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14264,42 +14264,42 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+2"/>
         <source>Diametric Dimensions</source>
-        <translation>Durchmesser Bemassungen</translation>
+        <translation>Durchmesser Bemaßungen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Diametric Dimension</source>
-        <translation>Durchmesser Bemassung</translation>
+        <translation>Durchmesser Bemaßung</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation>Koordinaten Bemassungen</translation>
+        <translation>Koordinaten Bemaßungen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ordinate Dimension</source>
-        <translation>Koordinaten Bemassung</translation>
+        <translation>Koordinaten Bemaßung</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
-        <translation>Gedrehte Bemassungen</translation>
+        <translation>Gedrehte Bemaßungen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
-        <translation>Gedrehte Bemassung</translation>
+        <translation>Gedrehte Bemaßung</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Radial Dimensions</source>
-        <translation>Radiale Bemassungen</translation>
+        <translation>Radiale Bemaßungen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Radial Dimension</source>
-        <translation>Radiale Bemassung</translation>
+        <translation>Radiale Bemaßung</translation>
     </message>
     <message>
         <location line="+2"/>
