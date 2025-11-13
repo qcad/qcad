@@ -222,7 +222,7 @@
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation>Disegno unitario</translation>
+        <translation>Unità di disegno</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -577,7 +577,7 @@
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation>a rovescio</translation>
+        <translation>A rovescio</translation>
     </message>
     <message>
         <location line="+1"/>

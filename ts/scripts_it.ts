@@ -1693,7 +1693,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location line="+107"/>
         <source>Invalid radius</source>
-        <translation>Raggio valido</translation>
+        <translation>Raggio non valido</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6542,7 +6542,7 @@ is already in the list.</source>
     <message>
         <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Sovrascrivere eventuali livello&lt;br&gt;esistenti nel disegno&lt;br&gt;con gli livello di appunti</translation>
+        <translation>Sovrascrivere eventuali livelli&lt;br&gt;esistenti nel disegno&lt;br&gt;con i livelli di appunti</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -7668,7 +7668,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Sovrascrivere eventuali livelli&lt;br&gt;esistenti nel disegno&lt;br&gt;con gli livelli di appunti</translation>
+        <translation>Sovrascrivere eventuali livelli&lt;br&gt;esistenti nel disegno&lt;br&gt;con i livelli di appunti</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9609,7 +9609,7 @@ is already in the list.</source>
     <message>
         <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Sovrascrivere eventuali livello&lt;br&gt;esistenti nel disegno&lt;br&gt;con gli livello di appunti</translation>
+        <translation>Sovrascrivere eventuali livelli&lt;br&gt;esistenti nel disegno&lt;br&gt;con i livelli di appunti</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9830,7 +9830,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Remove Segment</source>
-        <translation>Rimuovi segmento</translation>
+        <translation>Elimina segmento</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -10141,7 +10141,7 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation>Obiettivo punto</translation>
+        <translation>Punto obiettivo</translation>
     </message>
 </context>
 <context>
@@ -13359,12 +13359,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Kilometer</source>
-        <translation>Kilometro</translation>
+        <translation>Chilometro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Microinch</source>
-        <translation>Microinch</translation>
+        <translation>Micropollice</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13439,7 +13439,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing unit:</source>
-        <translation>Disegno unitario:</translation>
+        <translation>Unità di disegno:</translation>
     </message>
     <message>
         <location line="+10"/>
