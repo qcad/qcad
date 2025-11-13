@@ -4343,18 +4343,18 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
         <source>Show ECMAScript Shell</source>
-        <translation>Mostrar ECMAScript Shell</translation>
+        <translation>Mostrar consola de ECMAScript</translation>
     </message>
     <message>
         <location line="+55"/>
         <source>&amp;Script Shell</source>
-        <translation>&amp;Shell guión</translation>
+        <translation>&amp;Consola de scripts</translation>
     </message>
     <message>
         <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
-        <translation>Script Shell</translation>
+        <translation>Consola de scripts</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShellDialog.ui" line="+20"/>
@@ -5017,7 +5017,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
-        <translation>&amp;Transaction Listener</translation>
+        <translation>&amp;Oyente de transacciones</translation>
     </message>
 </context>
 <context>
@@ -5424,7 +5424,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation>Enter painter width. (+0)</translation>
+        <translation>Introduzca el ancho del pintor. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
@@ -9503,12 +9503,12 @@ ya está en la lista.</translation>
     <message>
         <location line="+17"/>
         <source>Offset X:</source>
-        <translation>Offset X:</translation>
+        <translation>Desplazamiento X:</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Offset Y:</source>
-        <translation>Offset Y:</translation>
+        <translation>Desplazamiento Y:</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -11195,7 +11195,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation>Handle (hex):</translation>
+        <translation>Identificador (hex):</translation>
     </message>
 </context>
 <context>
