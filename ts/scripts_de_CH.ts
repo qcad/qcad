@@ -1254,12 +1254,12 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Externe Referenz kann nicht bearbeitet werden</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Block aus externer Referenz kann nicht bearbeitet werden</translation>
     </message>
     <message>
         <location line="-109"/>
@@ -6002,7 +6002,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Punktlänge in Linienmustern:</translation>
     </message>
     <message>
         <location line="+41"/>

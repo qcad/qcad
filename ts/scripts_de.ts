@@ -2978,7 +2978,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+26"/>
         <source>D&amp;imension</source>
-        <translation>Be&amp;massung</translation>
+        <translation>Be&amp;maßung</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Dimension.ui" line="+29"/>

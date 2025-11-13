@@ -1254,12 +1254,12 @@ Do you wish to recover it?</translation>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Cannot edit external reference</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Cannot edit block from external reference</translation>
     </message>
     <message>
         <location line="-109"/>
@@ -6002,7 +6002,7 @@ is already in the list.</translation>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dot length in line patterns:</translation>
     </message>
     <message>
         <location line="+41"/>
