@@ -2429,12 +2429,12 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>Cross</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Croß/Croß.js" line="+56"/>
+        <location filename="../scripts/Misc/MiscDraw/Cross/Cross.js" line="+56"/>
         <source>Select arc, circle, ellipse or elliptical arc</source>
         <translation>Bogen, Kreis, Ellipse oder Ellipsenbogen wählen</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Croß/CroßInit.js" line="+2"/>
+        <location filename="../scripts/Misc/MiscDraw/Cross/CrossInit.js" line="+2"/>
         <source>Centerline Cross</source>
         <translation>Mittellinien</translation>
     </message>
@@ -2447,7 +2447,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>CrossOptions</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Croß/Croß.ui" line="+17"/>
+        <location filename="../scripts/Misc/MiscDraw/Cross/Cross.ui" line="+17"/>
         <source>X:</source>
         <translation>X:</translation>
     </message>
@@ -4896,7 +4896,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>ExProcess</name>
     <message>
-        <location filename="../scripts/Misc/Examples/QtExamples/ExProceß/ExProceß.js" line="+96"/>
+        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
         <translation>&amp;Prozess ausführen</translation>
     </message>
@@ -7936,7 +7936,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+62"/>
         <source>Language Settings</source>
         <translation>Spracheinstellungen</translation>
     </message>
