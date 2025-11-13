@@ -2751,7 +2751,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location line="+3"/>
         <source>Draw angular dimension</source>
-        <translation>Hoek maat</translation>
+        <translation>Hoekbemating</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
@@ -2838,7 +2838,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location line="+4"/>
         <source>Draw radial dimension</source>
-        <translation>Radiale Maat</translation>
+        <translation>Radiale maat</translation>
     </message>
 </context>
 <context>
@@ -2867,12 +2867,12 @@ Wilt u deze herstellen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation>Startpunt eerste bematingslijn</translation>
+        <translation>Startpunt eerste extensielijn</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation>Startpunt tweede bematingslijn</translation>
+        <translation>Startpunt tweede extensielijn</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3145,7 +3145,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>Bouwkunde tick</translation>
+        <translation>Architecturale markering</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -5682,7 +5682,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation>Dubbelklik  om arcering te bewerken</translation>
+        <translation>Dubbelklik om arcering te bewerken</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -14214,7 +14214,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions</source>
-        <translation>Hoek bematingen</translation>
+        <translation>Hoekbematingen</translation>
     </message>
     <message>
         <location line="+0"/>

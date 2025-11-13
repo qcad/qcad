@@ -758,7 +758,7 @@
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation>Hulplijn afzet</translation>
+        <translation>Extensielijnafzet</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -818,7 +818,7 @@
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Architectur tick</translation>
+        <translation>Architecturale markering</translation>
     </message>
     <message>
         <location line="+1"/>
