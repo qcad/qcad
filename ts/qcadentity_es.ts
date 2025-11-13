@@ -807,7 +807,7 @@
     <message>
         <location line="+1"/>
         <source>Auto Label Position</source>
-        <translation>Auto Label Position</translation>
+        <translation>Posición automática de etiqueta</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-5"/>
