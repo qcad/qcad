@@ -6542,7 +6542,7 @@ is already in the list.</source>
     <message>
         <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Sovrascrivere eventuali livelli&lt;br&gt;esistenti nel disegno&lt;br&gt;con gli livelli di appunti</translation>
+        <translation>Sovrascrivere eventuali livelli&lt;br&gt;esistenti nel disegno&lt;br&gt;con i livelli di appunti</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -7668,7 +7668,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Sovrascrivere eventuali livelli&lt;br&gt;esistenti nel disegno&lt;br&gt;con gli livelli di appunti</translation>
+        <translation>Sovrascrivere eventuali livelli&lt;br&gt;esistenti nel disegno&lt;br&gt;con i livelli di appunti</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9609,7 +9609,7 @@ is already in the list.</source>
     <message>
         <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Sovrascrivere eventuali livelli&lt;br&gt;esistenti nel disegno&lt;br&gt;con gli livelli di appunti</translation>
+        <translation>Sovrascrivere eventuali livelli&lt;br&gt;esistenti nel disegno&lt;br&gt;con i livelli di appunti</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9830,7 +9830,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Remove Segment</source>
-        <translation>Rimuovi segmento</translation>
+        <translation>Elimina segmento</translation>
     </message>
     <message>
         <location line="+17"/>
