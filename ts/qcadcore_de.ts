@@ -194,7 +194,7 @@
     <message>
         <location line="+3"/>
         <source>White</source>
-        <translation>Weiss</translation>
+        <translation>Weiß</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -232,7 +232,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation>Bemassungsschriftart</translation>
+        <translation>Bemaßungsschriftart</translation>
     </message>
 </context>
 <context>
@@ -329,12 +329,12 @@
     <message>
         <location line="+1"/>
         <source>XRef File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>XRef Dateiname</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Externe Referenz</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -711,14 +711,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation>Min Ausmass</translation>
+        <translation>Min Ausmaß</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation>Max Ausmass</translation>
+        <translation>Max Ausmaß</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
@@ -748,7 +748,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Abstand zu Bemassungslinien</translation>
+        <translation>Abstand zu Bemaßungslinien</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -758,12 +758,12 @@
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation>Schrittweite der Masslinien</translation>
+        <translation>Schrittweite der Maßlinien</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation>Verlängerung der Bemassungslinie</translation>
+        <translation>Verlängerung der Bemaßungslinie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -823,7 +823,7 @@
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation>Unterdrückung von Nullen Winkelmass</translation>
+        <translation>Unterdrückung von Nullen Winkelmaß</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1028,12 +1028,12 @@
     <message>
         <location line="+2"/>
         <source>Hot Water Supply</source>
-        <translation>Heisswasserleitung</translation>
+        <translation>Heißwasserleitung</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hot Water</source>
-        <translation>Heisswasser</translation>
+        <translation>Heißwasser</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1068,17 +1068,17 @@
     <message>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Punkt 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Punkt 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation type="unfinished"></translation>
+        <translation>Anlage</translation>
     </message>
     <message>
         <location line="+2"/>
