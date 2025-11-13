@@ -1283,7 +1283,7 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location line="+5"/>
         <source>Block name is empty.</source>
-        <translation>Nom du bloc est vide.</translation>
+        <translation>Le nom du bloc est vide.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1293,12 +1293,12 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location line="+11"/>
         <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation>Block &quot;%1&quot; existe&lt;br&gt;et sera écrasé.</translation>
+        <translation>Le bloc &quot;%1&quot; existe déjà&lt;br&gt;et sera écrasé.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block already exists.</source>
-        <translation>Bloc existe déjà.</translation>
+        <translation>Le bloc existe déjà.</translation>
     </message>
 </context>
 <context>
@@ -2655,7 +2655,7 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location line="-8"/>
         <source>Splines</source>
-        <translation>Cannelures</translation>
+        <translation>Splines</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -3544,7 +3544,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+16"/>
         <source>Can not switch to non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>Impossible de passer à des couches inexistantes, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
+        <translation>Impossible de passer à des calques inexistants, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3554,12 +3554,12 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+15"/>
         <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
-        <translation>Le commutateur &quot;Nouvelle couche&quot; n&apos;est pas correct et est ignoré. Ligne de texte : %1</translation>
+        <translation>Le commutateur &quot;Nouveau calque&quot; n&apos;est pas correct et est ignoré. Ligne de texte : %1</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>Impossible de masquer des couches inexistantes, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
+        <translation>Impossible de masquer des calques inexistants, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3569,7 +3569,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+28"/>
         <source>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>Impossible de geler des couches inexistantes, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
+        <translation>Impossible de geler des calques inexistants, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3579,7 +3579,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+28"/>
         <source>Can not lock non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>Impossible de verrouiller des couches inexistantes, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
+        <translation>Impossible de verrouiller des calques inexistants, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3589,7 +3589,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+30"/>
         <source>Can not allow non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation>Impossible d&apos;autoriser des couches inexistantes, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
+        <translation>Impossible d&apos;autoriser des calques inexistants, ignoré. Ligne de texte : %1%2 Calque : %3</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3970,7 +3970,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+24"/>
         <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
-        <translation>Le nom de la couche n&apos;est pas correct, il est ignoré. Ligne de texte : %1%2 Nom : %3</translation>
+        <translation>Le nom du calque n&apos;est pas correct, il est ignoré. Ligne de texte : %1%2 Nom : %3</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -4005,7 +4005,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+48"/>
         <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
-        <translation>Le nom de la couche n&apos;est pas correct. Ligne de texte : %1%2 Nom : %3</translation>
+        <translation>Le nom du calque n&apos;est pas correct. Ligne de texte : %1%2 Nom : %3</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -4030,7 +4030,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+18"/>
         <source>Add/Update layer ignored.</source>
-        <translation>Ajout/mise à jour de la couche ignorée.</translation>
+        <translation>Ajout/mise à jour du calque ignoré.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4040,7 +4040,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+3"/>
         <source>Added new layer: %1</source>
-        <translation>Ajout d&apos;une nouvelle couche : %1</translation>
+        <translation>Ajout d&apos;un nouveau calque : %1</translation>
     </message>
     <message>
         <location line="-447"/>
@@ -5236,7 +5236,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+6"/>
         <source>FP added layer:</source>
-        <translation>FP a ajouté une couche :</translation>
+        <translation>FP a ajouté un calque :</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
@@ -7956,7 +7956,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+97"/>
         <source>Layer Tools</source>
-        <translation>Outils de la couche</translation>
+        <translation>Outils de calque</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -8014,12 +8014,12 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+6"/>
         <source>Layer 0 behaves like a regular layer (QCAD)</source>
-        <translation>Calque 0 se comporte comme un calque régulière</translation>
+        <translation>Le calque 0 se comporte comme un calque régulier (QCAD)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Layer 0 behaves differently (best compatibility)</source>
-        <translation>La couche 0 se comporte différemment (meilleure compatibilité)</translation>
+        <translation>Le calque 0 se comporte différemment (meilleure compatibilité)</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -10858,7 +10858,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+4"/>
         <source>Black entities and layers are saved as white.</source>
-        <translation>Entités et les couches noires sont enregistrés en tant que blanc.</translation>
+        <translation>Les entités et les calques noirs sont enregistrés en blanc.</translation>
     </message>
     <message>
         <location line="+7"/>
