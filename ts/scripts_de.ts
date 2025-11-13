@@ -2761,7 +2761,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+3"/>
         <source>Draw angular dimension</source>
-        <translation>Winkelbemassung</translation>
+        <translation>Winkelbemaßung</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
@@ -2789,7 +2789,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+4"/>
         <source>Draw diametric dimension</source>
-        <translation>Durchmesserbemassung</translation>
+        <translation>Durchmesserbemaßung</translation>
     </message>
 </context>
 <context>
@@ -2825,7 +2825,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+3"/>
         <source>Draw ordinate dimension</source>
-        <translation>Ordinatenbemassung</translation>
+        <translation>Ordinatenbemaßung</translation>
     </message>
 </context>
 <context>
@@ -3206,7 +3206,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="-50"/>
         <source>Angular Dimensions</source>
-        <translation>Winkelbemassungen</translation>
+        <translation>Winkelbemaßungen</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -14229,37 +14229,37 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions</source>
-        <translation>Winkelbemassungen</translation>
+        <translation>Winkelbemaßungen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension</source>
-        <translation>Winkelbemassung</translation>
+        <translation>Winkelbemaßung</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Lines)</source>
-        <translation>Winkelbemassungen (2 Linien)</translation>
+        <translation>Winkelbemaßungen (2 Linien)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Lines)</source>
-        <translation>Winkelbemassung (2 Linien)</translation>
+        <translation>Winkelbemaßung (2 Linien)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Points)</source>
-        <translation>Winkelbemassungen (3 Punkte)</translation>
+        <translation>Winkelbemaßungen (3 Punkte)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Points)</source>
-        <translation>Winkelbemassung (3 Punkte)</translation>
+        <translation>Winkelbemaßung (3 Punkte)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arc Dimension</source>
-        <translation>Bogenbemassung</translation>
+        <translation>Bogenbemaßung</translation>
     </message>
     <message>
         <location line="+2"/>
