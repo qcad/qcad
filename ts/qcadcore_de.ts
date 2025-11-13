@@ -16,7 +16,7 @@
     <message>
         <location line="+3"/>
         <source>Foot</source>
-        <translation>Fuss</translation>
+        <translation>Fuß</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -743,7 +743,7 @@
     <message>
         <location line="+1"/>
         <source>Arrow size</source>
-        <translation>Pfeilgrösse</translation>
+        <translation>Pfeilgröße</translation>
     </message>
     <message>
         <location line="+1"/>

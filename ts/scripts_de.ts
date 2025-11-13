@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de">
+<TS version="2.1" language="de_DE">
 <context>
     <name>About</name>
     <message>
@@ -41,12 +41,12 @@
     <message>
         <location line="-8"/>
         <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
-        <translation>Zusätzliche Werkzeuge, Funktionen und Dateiformate einschliesslich DWG sind in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; oder &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt; verfügbar.</translation>
+        <translation>Zusätzliche Werkzeuge, Funktionen und Dateiformate einschließlich DWG sind in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; oder &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt; verfügbar.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
-        <translation>Qt wird mit QCAD unter der &lt;a href=&apos;%1&apos;&gt;LGPL Open Source Lizenz&lt;/a&gt; ausgeliefert, die Ihnen als Benutzer verschiedene Rechte verleiht, einschliesslich des Rechts, die Qt-Bibliotheken für Ihre Plattform neu zu kompilieren. Folgen Sie dazu der &lt;a href=&apos;%2&apos;&gt;Dokumentation auf der Qt-Webseite&lt;/a&gt;.</translation>
+        <translation>Qt wird mit QCAD unter der &lt;a href=&apos;%1&apos;&gt;LGPL Open Source Lizenz&lt;/a&gt; ausgeliefert, die Ihnen als Benutzer verschiedene Rechte verleiht, einschließlich des Rechts, die Qt-Bibliotheken für Ihre Plattform neu zu kompilieren. Folgen Sie dazu der &lt;a href=&apos;%2&apos;&gt;Dokumentation auf der Qt-Webseite&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -851,7 +851,7 @@ um die Änderungen zu übernehmen.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation>&amp;Tangential anschliessend</translation>
+        <translation>&amp;Tangential anschließend</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -992,7 +992,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+7"/>
         <source>Perpendicular</source>
-        <translation>Lotrechte</translation>
+        <translation>Rechtwinklig</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1236,7 +1236,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
-        <translation>Ungültige Bildgrösse (Breite x Höhe muss kleiner sein als %1)</translation>
+        <translation>Ungültige Bildgröße (Breite x Höhe muss kleiner sein als %1)</translation>
     </message>
 </context>
 <context>
@@ -1498,7 +1498,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
-        <translation>Symbolgrösse:</translation>
+        <translation>Symbolgröße:</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -1562,7 +1562,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
         <source>Icon size:</source>
-        <translation>Symbolgrösse:</translation>
+        <translation>Symbolgröße:</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -2054,7 +2054,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Window/CloseAll/CloseAllInit.js" line="+2"/>
         <source>&amp;Close All</source>
-        <translation>A&amp;lle schliessen</translation>
+        <translation>A&amp;lle schließen</translation>
     </message>
 </context>
 <context>
@@ -2062,7 +2062,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation>Zeichnung schliessen...</translation>
+        <translation>Zeichnung schließen...</translation>
     </message>
 </context>
 <context>
@@ -2226,7 +2226,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History size:</source>
-        <translation>Verlaufgrösse:</translation>
+        <translation>Verlaufgröße:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -2556,7 +2556,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+5"/>
         <source>Zoom (Wheel Mouse)</source>
-        <translation>Ansicht vergrössern / verkleinern (Maus mit Rad)</translation>
+        <translation>Ansicht vergrößern / verkleinern (Maus mit Rad)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3434,7 +3434,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation>Polylinie schliessen</translation>
+        <translation>Polylinie schließen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -4131,7 +4131,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation>Polylinie schliessen</translation>
+        <translation>Polylinie schließen</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -4364,7 +4364,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &quot;safe&quot; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anzeigen der ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Mit Hilfe der ECMAScript Shell können Sie &lt;span style=&quot;color:#ff0000;&quot;&gt;Zeichnungen ändern&lt;/span&gt; aber auch &lt;span style=&quot;color:#ff0000;&quot;&gt;Dateien löschen&lt;/span&gt; oder &lt;span style=&quot;color:#ff0000;&quot;&gt;einen Absturz der Anwendung verursachen&lt;/span&gt;, was zu &lt;span style=&quot;color:#ff0000;&quot;&gt;Datenverlust&lt;/span&gt; führen kann.&lt;/p&gt;&lt;p&gt;Für unerfahrene Programmierer, wird die ausschliessliche Verwendung der &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;QCAD Simple API&lt;/a&gt; empfohlen. Diese wird als &quot;sicher&quot; eingestuft.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anzeigen der ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Mit Hilfe der ECMAScript Shell können Sie &lt;span style=&quot;color:#ff0000;&quot;&gt;Zeichnungen ändern&lt;/span&gt; aber auch &lt;span style=&quot;color:#ff0000;&quot;&gt;Dateien löschen&lt;/span&gt; oder &lt;span style=&quot;color:#ff0000;&quot;&gt;einen Absturz der Anwendung verursachen&lt;/span&gt;, was zu &lt;span style=&quot;color:#ff0000;&quot;&gt;Datenverlust&lt;/span&gt; führen kann.&lt;/p&gt;&lt;p&gt;Für unerfahrene Programmierer, wird die ausschließliche Verwendung der &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;QCAD Simple API&lt;/a&gt; empfohlen. Diese wird als &quot;sicher&quot; eingestuft.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4947,7 +4947,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.js" line="+60"/>
         <source>&amp;Resize Window</source>
-        <translation>&amp;Fenstergrösse ändern</translation>
+        <translation>&amp;Fenstergröße ändern</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui" line="+14"/>
@@ -5464,7 +5464,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation>&lt;Raumgrösse eingeben&gt;</translation>
+        <translation>&lt;Raumgröße eingeben&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5612,7 +5612,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+6"/>
         <source>Cube size:</source>
-        <translation>Würfelgrösse:</translation>
+        <translation>Würfelgröße:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -5852,7 +5852,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+58"/>
         <source>Prevent white on white / black on black display</source>
-        <translation>Schwarz / weiss automatisch anpassen</translation>
+        <translation>Schwarz / weiß automatisch anpassen</translation>
     </message>
     <message>
         <location line="+136"/>
@@ -5887,12 +5887,12 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+577"/>
         <source>Reference point size (px):</source>
-        <translation>Referenzpunktgrösse (pix):</translation>
+        <translation>Referenzpunktgröße (pix):</translation>
     </message>
     <message>
         <location line="+77"/>
         <source>Text height threshold (px):</source>
-        <translation>Schwellenwert für Textgrösse (pix):</translation>
+        <translation>Schwellenwert für Textgröße (pix):</translation>
     </message>
     <message>
         <location line="+192"/>
@@ -8240,7 +8240,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
-        <translation>Sequenz schliessen</translation>
+        <translation>Sequenz schließen</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -9548,7 +9548,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+16"/>
         <source>Point size (mm):</source>
-        <translation>Punktgrösse (mm):</translation>
+        <translation>Punktgröße (mm):</translation>
     </message>
     <message>
         <location line="-10"/>
@@ -10007,7 +10007,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-737"/>
         <source>Auto Paper Size</source>
-        <translation>Auto Papiergrösse</translation>
+        <translation>Auto Papiergröße</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10022,7 +10022,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+1"/>
         <source>Auto fit drawing to paper?</source>
-        <translation>Automatische Skalierung der Zeichnung auf die Papiergrösse?</translation>
+        <translation>Automatische Skalierung der Zeichnung auf die Papiergröße?</translation>
     </message>
     <message>
         <location line="+211"/>
@@ -10058,7 +10058,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.ui" line="-17"/>
         <source>Close Print Preview</source>
-        <translation>Druckvorschau schliessen</translation>
+        <translation>Druckvorschau schließen</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -10803,7 +10803,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+1"/>
         <source>All black entities and layers will be saved as white.</source>
-        <translation>Alle schwarzen Objekte und Layer werden weiss gespeichert.</translation>
+        <translation>Alle schwarzen Objekte und Layer werden weiß gespeichert.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10838,7 +10838,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="-30"/>
         <source>Black entities and layers are saved as white.</source>
-        <translation>Schwarze Objekte und Layer werden als weiss gespeichert.</translation>
+        <translation>Schwarze Objekte und Layer werden als weiß gespeichert.</translation>
     </message>
     <message>
         <location filename="../scripts/File/Save/SaveInit.js" line="+2"/>
@@ -12053,7 +12053,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Snap/SnapPerpendicular/SnapPerpendicularInit.js" line="+2"/>
         <source>&amp;Perpendicular</source>
-        <translation>&amp;Lotrecht</translation>
+        <translation>&amp;Rechtwinklig</translation>
     </message>
 </context>
 <context>
@@ -12388,7 +12388,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
         <source>Font size in text dialog preview:</source>
-        <translation>Schriftgrösse in der Vorschau des Textdialogs:</translation>
+        <translation>Schriftgröße in der Vorschau des Textdialogs:</translation>
     </message>
     <message>
         <location line="+99"/>
@@ -12957,7 +12957,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon size:</source>
-        <translation>Symbolgrösse:</translation>
+        <translation>Symbolgröße:</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -13327,7 +13327,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+1"/>
         <source>Foot</source>
-        <translation>Fuss</translation>
+        <translation>Fuß</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13982,7 +13982,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomIn/ZoomInInit.js" line="+2"/>
         <source>Zoom &amp;In</source>
-        <translation>Ansicht ver&amp;grössern</translation>
+        <translation>Ansicht ver&amp;größern</translation>
     </message>
 </context>
 <context>
