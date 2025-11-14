@@ -158,7 +158,9 @@ RTransaction::RTransaction(
 //        parent->appendChild(*this);
 //    }
 
-    this->storage->beginTransaction();
+    if (undoable) {
+        this->storage->beginTransaction();
+    }
 }
 
 
