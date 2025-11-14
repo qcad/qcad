@@ -71,8 +71,10 @@ Layer.prototype.getDocument = function() {
     return EAction.prototype.getDocument.call(this);
 };
 
+/**
+ * \return current layer from document.
+ */
 Layer.prototype.getCurrentLayer = function() {
-    // get current or override document:
     var doc = this.getDocument();
     return doc.queryCurrentLayer();
 };
