@@ -35,6 +35,7 @@ EditLayer.prototype = new Layer();
 EditLayer.prototype.beginEvent = function() {
     Layer.prototype.beginEvent.call(this);
 
+    // TODO: don't use current layer, but selected item:
     var layer = this.getCurrentLayer();
     
     var dlg = this.createLayerDialog(this.getDocumentInterface(), layer);
