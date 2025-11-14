@@ -35,6 +35,7 @@ add_library(qcadoperations SHARED
     RModifyObjectsOperation.cpp RModifyObjectsOperation.h
     RMoveReferencePointOperation.cpp RMoveReferencePointOperation.h
     RMoveSelectionOperation.cpp RMoveSelectionOperation.h
+    RMultiOperation.cpp RMultiOperation.h
     ROperationUtils.cpp ROperationUtils.h
     RPasteOperation.cpp RPasteOperation.h
     RScaleSelectionOperation.cpp RScaleSelectionOperation.h

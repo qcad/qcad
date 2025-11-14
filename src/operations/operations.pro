@@ -14,6 +14,7 @@ SOURCES += RAddObjectOperation.cpp \
     RModifyObjectsOperation.cpp \
     RMoveReferencePointOperation.cpp \
     RMoveSelectionOperation.cpp \
+    RMultiOperation.cpp \
     ROperationUtils.cpp \
     RPasteOperation.cpp \
     RScaleSelectionOperation.cpp
@@ -32,6 +33,7 @@ HEADERS = RAddObjectOperation.h \
     RModifyObjectsOperation.h \
     RMoveReferencePointOperation.h \
     RMoveSelectionOperation.h \
+    RMultiOperation.h \
     RScaleSelectionOperation.h \
     ROperationUtils.h \
     RPasteOperation.h \
