@@ -516,7 +516,27 @@ RBlockListQt.prototype.enableActions = function(insertable, renamable, removable
  * (double click).
  */
 RBlockListQt.prototype.editBlock = function() {
-    var action = RGuiAction.getByScriptFile("scripts/Block/EditBlock/EditBlock.js");
+    var items = BlockList.getSelectedItems();
+
+    var action = undefined;
+
+    if (items.length===1) {
+        // one single block selected in block list:
+        // check if block is an XRef:
+        var item = items[0];
+        var blockName = this.getBlockName(item);
+        var doc = this.di.getDocument();
+        var block = doc.queryBlockDirect(blockName);
+        if (!isNull(block) && block.isXRef()) {
+            // editing XRef triggers rename which also allows editing the path:
+            action = RGuiAction.getByScriptFile("scripts/Block/RenameBlock/RenameBlock.js");
+        }
+    }
+
+    if (isNull(action)) {
+        action = RGuiAction.getByScriptFile("scripts/Block/EditBlock/EditBlock.js");
+    }
+
     if (!isNull(action)) {
         action.slotTrigger();
     }
