@@ -177,6 +177,12 @@ public:
         return false;
     }
 
+    void unloadXRef() {
+        if (blockProxy!=NULL) {
+            blockProxy->unloadXRef(this);
+        }
+    }
+
     QString getFullXRefFilePath() const {
         if (blockProxy!=NULL) {
             return blockProxy->getFullXRefFilePath(this);

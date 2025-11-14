@@ -39,6 +39,7 @@ public:
     virtual ~RBlockProxy() {}
 
     virtual bool loadXRef(RBlock* block) = 0;
+    virtual void unloadXRef(RBlock* block) = 0;
     virtual QString getFullXRefFilePath(const RBlock* block) = 0;
 };
 
