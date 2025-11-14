@@ -1439,6 +1439,7 @@ void RDocumentInterface::undoToTag(const QString& tag) {
  * Transaction based undo.
  */
 void RDocumentInterface::undo() {
+    //qDebug() << "RDocumentInterface::undo: vvvvvvvvvvv";
     RMainWindow* mainWindow = RMainWindow::getMainWindow();
     clearPreview();
 
@@ -1460,12 +1461,14 @@ void RDocumentInterface::undo() {
             mainWindow->handleUserMessage(QString("Undo:") + " " + t[i].getText());
         }
     }
+    //qDebug() << "RDocumentInterface::undo: ^^^^^^^^^^";
 }
 
 /**
  * Transaction based redo.
  */
 void RDocumentInterface::redo() {
+    //qDebug() << "RDocumentInterface::redo: vvvvvvvvvvv";
     RMainWindow* mainWindow = RMainWindow::getMainWindow();
     clearPreview();
 
@@ -1488,6 +1491,7 @@ void RDocumentInterface::redo() {
             mainWindow->handleUserMessage(QString("Redo:") + " " + t[i].getText());
         }
     }
+    //qDebug() << "RDocumentInterface::redo: ^^^^^^^^^^";
 }
 
 /**
@@ -2457,23 +2461,28 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
         if (type==RS::ObjectBlock) {
             QSharedPointer<RBlock> block = object.dynamicCast<RBlock> ();
             if (!block.isNull()) {
-                //if (block->getId()!=document.getModelSpaceBlockId()) {
+
                 if (block->getId()!=document.getCurrentBlockId()) {
                     blockHasChanged = true;
-                    //document.queryBlockReferences(block->getId());
                 }
-                else {
-                    QList<RPropertyChange> propertyChanges = transaction.getPropertyChanges(objectId);
-                    for (int i=0; i<propertyChanges.length(); i++) {
-                        if (propertyChanges[i].getPropertyTypeId()==RBlock::PropertyName) {
-                            // current block renamed (needs block list update):
-                            blockHasChanged = true;
-                        }
-                        if (propertyChanges[i].getPropertyTypeId()==RBlock::PropertyXRefFileName) {
-                            // xref file name changed:
-                            blockXRefHasChanged = true;
-                        }
+
+                bool blockNameHasChanged = false;
+                QString oldBlockName = "";
+                QString newBlockName = "";
+
+                QList<RPropertyChange> propertyChanges = transaction.getPropertyChanges(objectId);
+                for (int i=0; i<propertyChanges.length(); i++) {
+                    if (propertyChanges[i].getPropertyTypeId()==RBlock::PropertyName) {
+                        // current block renamed (needs block list update):
+                        blockHasChanged = true;
+                        blockNameHasChanged = true;
+                        newBlockName = propertyChanges[i].getNewValue().toString();
+                        oldBlockName = propertyChanges[i].getOldValue().toString();
                     }
+                }
+
+                if (block->isXRef()) {
+                    blockXRefHasChanged = true;
                 }
 
                 // deselect block reference entities of hidden block:
@@ -2483,9 +2492,36 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
                 }
 
                 if (blockXRefHasChanged) {
-                    // force XRef reload:
-                    block->setXRefLoaded(false);
-                    block->loadXRef();
+
+                    if (block->isUndone()) {
+                        block->unloadXRef();
+                    }
+                    else {
+                        if (transaction.isType(RTransaction::Undo) && blockNameHasChanged) {
+                            // unload block with new name while undoing:
+                            //QString oldBlockName = block->getName();
+                            block->setName(newBlockName);
+                            block->unloadXRef();
+                            block->setName(oldBlockName);
+                        }
+                        else if (transaction.isType(RTransaction::Redo) && blockNameHasChanged) {
+                            // unload block with old name while redoing:
+                            //QString newBlockName = block->getName();
+                            block->setName(oldBlockName);
+                            block->unloadXRef();
+                            block->setName(newBlockName);
+                        }
+                        else if (blockNameHasChanged) {
+                            // unload block with old name while renaming:
+                            block->setName(oldBlockName);
+                            block->unloadXRef();
+                            block->setName(newBlockName);
+                        }
+
+                        // force XRef reload:
+                        block->setXRefLoaded(false);
+                        block->loadXRef();
+                    }
                 }
                 continue;
             }
