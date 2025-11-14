@@ -117,8 +117,6 @@ QSet<QString> RBlock::getXRefLayerNames() const {
         return QSet<QString>();
     }
 
-    qDebug() << "get layer names pattern:" << getName() << "\\|.*";
-
     return doc->getLayerNames(getName() + "\\|.*");
 }
 
@@ -163,7 +161,7 @@ bool RBlock::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, 
 
     if (propertyTypeId == PropertyXRefFileName) {
         if (name.startsWith("*")) {
-            // never change XRef file name of blocks starting with * (model space, paper space, ...):
+            // never set XRef file name of blocks starting with * (model space, paper space, ...):
             return false;
         }
         ret = ret || RObject::setMember(xRefFileName, value.toString());
