@@ -50,7 +50,7 @@
     <message>
         <location line="+3" />
         <source>Mil</source>
-        <translation type="unfinished">Mil</translation>
+        <translation type="unfinished">Мил</translation>
     </message>
     <message>
         <location line="+3" />
@@ -316,7 +316,7 @@
     <message>
         <location line="+1" />
         <source>Owned by Reference</source>
-        <translation type="unfinished">Притежаван от Reference</translation>
+        <translation type="unfinished">Притежаван от препратка</translation>
     </message>
     <message>
         <location line="+1" />
@@ -474,7 +474,7 @@
     <message>
         <location line="+1" />
         <source>Angular format</source>
-        <translation type="unfinished">Формат Angular</translation>
+        <translation type="unfinished">Ъглов формат</translation>
     </message>
     <message>
         <location line="+1" />
@@ -489,7 +489,7 @@
     <message>
         <location line="+1" />
         <source>Architectur tick</source>
-        <translation type="unfinished">Architectur tick</translation>
+        <translation type="unfinished">Архитектурна отметка</translation>
     </message>
     <message>
         <location line="+1" />
@@ -1062,7 +1062,7 @@
     <message>
         <location line="+1" />
         <source>Fenceline 2</source>
-        <translation type="unfinished">Fenceline 2</translation>
+        <translation type="unfinished">Ограда 2</translation>
     </message>
     <message>
         <location line="+1" />
@@ -1122,12 +1122,12 @@
     <message>
         <location line="+2" />
         <source>Foul</source>
-        <translation type="unfinished">Foul</translation>
+        <translation type="unfinished">Фаул</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Foul Rising</source>
-        <translation type="unfinished">Foul Rising</translation>
+        <translation type="unfinished">Фаул нарастващ</translation>
     </message>
 </context>
 <context>

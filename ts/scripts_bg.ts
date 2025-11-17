@@ -205,7 +205,7 @@
     <message>
         <location line="+65" />
         <source>Hatch Patterns</source>
-        <translation type="unfinished">Модели на люкове</translation>
+        <translation type="unfinished">Модели на щриховане</translation>
     </message>
     <message>
         <location line="+31" />
@@ -281,7 +281,7 @@
     <message>
         <location line="+326" />
         <source>Apply preferences</source>
-        <translation type="unfinished">Прилагане на преференции</translation>
+        <translation type="unfinished">Прилагане на предпочитания</translation>
     </message>
     <message>
         <location line="+52" />
@@ -361,7 +361,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+7" />
         <source>Reset to 'Undefined'</source>
-        <translation type="unfinished">Нулиране на 'Undefined'</translation>
+        <translation type="unfinished">Нулиране към 'Неопределен'</translation>
     </message>
 </context>
 <context>
@@ -492,7 +492,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+3" />
         <source>Draw arc from 2 points and angle</source>
-        <translation type="unfinished">Начертайте дъга от 2 точки и ъгъл</translation>
+        <translation type="unfinished">Начертаване на дъга от 2 точки и ъгъл</translation>
     </message>
 </context>
 <context>
@@ -545,7 +545,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+3" />
         <source>Draw arc from 2 points and height</source>
-        <translation type="unfinished">Начертайте дъга от 2 точки и височина</translation>
+        <translation type="unfinished">Начертаване на дъга от 2 точки и височина</translation>
     </message>
 </context>
 <context>
@@ -603,7 +603,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+3" />
         <source>Draw arc from 2 points and length</source>
-        <translation type="unfinished">Начертайте дъга от 2 точки и дължина</translation>
+        <translation type="unfinished">Начертаване на дъга от 2 точки и дължина</translation>
     </message>
 </context>
 <context>
@@ -964,7 +964,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Snap/SnapAuto/PreferencesPage.ui" line="+17" />
         <source>Auto Snap</source>
-        <translation type="unfinished">Auto Snap</translation>
+        <translation type="unfinished">Автоматично прилепване</translation>
     </message>
     <message>
         <location line="+6" />
@@ -1118,7 +1118,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+12" />
         <source>Export as Bitmap</source>
-        <translation type="unfinished">Експортиране като Bitmap</translation>
+        <translation type="unfinished">Експортиране като растерно изображение</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportDialog.ui" line="+14" />
@@ -1592,7 +1592,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/ChangeFontToArial/ChangeFontToArial.js" line="+65" />
         <source>Set Font to Arial</source>
-        <translation type="unfinished">Задайте шрифт Arial</translation>
+        <translation type="unfinished">Задаване на шрифт Arial</translation>
     </message>
 </context>
 <context>
@@ -2433,7 +2433,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/CrossInit.js" line="+2" />
         <source>Centerline Cross</source>
-        <translation type="unfinished">Централна линия Cross</translation>
+        <translation type="unfinished">Кръстовидна централна линия</translation>
     </message>
     <message>
         <location line="+3" />
@@ -2753,7 +2753,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2" />
         <source>&amp;Angular</source>
-        <translation type="unfinished">Angular</translation>
+        <translation type="unfinished">&amp;Ъглов</translation>
     </message>
     <message>
         <location line="+3" />
@@ -3395,7 +3395,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js" line="+71" />
         <source>Draw &amp;Bounding Box</source>
-        <translation type="unfinished">Draw Bounding Box</translation>
+        <translation type="unfinished">Начертаване на ограничаваща рамка</translation>
     </message>
 </context>
 <context>
@@ -3471,7 +3471,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2" />
         <source>Draw &amp;Fms Lanes</source>
-        <translation type="unfinished">Рисунка Fms Lanes</translation>
+        <translation type="unfinished">Начертаване на ленти Fms</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5336,52 +5336,52 @@ is already in the list.</source>
     <message>
         <location line="+22" />
         <source>CurtainRope</source>
-        <translation type="unfinished">CurtainRope</translation>
+        <translation type="unfinished">Завеса</translation>
     </message>
     <message>
         <location line="+5" />
         <source>OrthogonalBar</source>
-        <translation type="unfinished">OrthogonalBar</translation>
+        <translation type="unfinished">Ортогонална лента</translation>
     </message>
     <message>
         <location line="+5" />
         <source>OrthogonalPointsGlobal</source>
-        <translation type="unfinished">OrthogonalPointsGlobal</translation>
+        <translation type="unfinished">Глобални ортогонални точки</translation>
     </message>
     <message>
         <location line="+5" />
         <source>SinusoidWave</source>
-        <translation type="unfinished">SinusoidWave</translation>
+        <translation type="unfinished">Синусоида</translation>
     </message>
     <message>
         <location line="+5" />
         <source>SinusoidWaveGlobal</source>
-        <translation type="unfinished">SinusoidWaveGlobal</translation>
+        <translation type="unfinished">Глобална синусоида</translation>
     </message>
     <message>
         <location line="+5" />
         <source>3PhaseWaveGlobal</source>
-        <translation type="unfinished">3PhaseWaveGlobal</translation>
+        <translation type="unfinished">Глобална 3-фазна вълна</translation>
     </message>
     <message>
         <location line="+5" />
         <source>TriangleWave</source>
-        <translation type="unfinished">TriangleWave</translation>
+        <translation type="unfinished">Триъгълна вълна</translation>
     </message>
     <message>
         <location line="+5" />
         <source>SawtoothWave</source>
-        <translation type="unfinished">SawtoothWave</translation>
+        <translation type="unfinished">Зъбчата вълна</translation>
     </message>
     <message>
         <location line="+5" />
         <source>SqaureWave</source>
-        <translation type="unfinished">SqaureWave</translation>
+        <translation type="unfinished">Квадратна вълна</translation>
     </message>
     <message>
         <location line="+5" />
         <source>SteppedWave</source>
-        <translation type="unfinished">SteppedWave</translation>
+        <translation type="unfinished">Стъпаловидна вълна</translation>
     </message>
     <message>
         <location line="+5" />
@@ -6300,7 +6300,7 @@ is already in the list.</source>
     <message>
         <location line="+26" />
         <source>&amp;Hatch</source>
-        <translation type="unfinished">Люк</translation>
+        <translation type="unfinished">Щриховане</translation>
     </message>
 </context>
 <context>
@@ -11808,7 +11808,7 @@ is already in the list.</source>
     <message>
         <location line="+0" />
         <source>Auto Snap</source>
-        <translation type="unfinished">Auto Snap</translation>
+        <translation type="unfinished">Автоматично прилепване</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAutoInit.js" line="+2" />
@@ -13395,7 +13395,7 @@ is already in the list.</source>
     <message>
         <location line="+1" />
         <source>Mil</source>
-        <translation type="unfinished">Mil</translation>
+        <translation type="unfinished">Мил</translation>
     </message>
     <message>
         <location line="+1" />
