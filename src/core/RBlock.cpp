@@ -117,7 +117,7 @@ QSet<QString> RBlock::getXRefLayerNames() const {
         return QSet<QString>();
     }
 
-    return doc->getLayerNames(getName() + "\\|.*");
+    return doc->getLayerNames(QRegularExpression::escape(getName()) + "\\|.*");
 }
 
 /**
@@ -133,7 +133,7 @@ QSet<QString> RBlock::getXRefBlockNames() const {
         return QSet<QString>();
     }
 
-    return doc->getBlockNames(getName() + "\\|.*");
+    return doc->getBlockNames(QRegularExpression::escape(getName()) + "\\|.*");
 }
 
 bool RBlock::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction) {
