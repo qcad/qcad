@@ -292,7 +292,11 @@ void RTransaction::undo() {
         // i.e. object was created or deleted:
         if (statusChanges.contains(objId)) {
             QSharedPointer<RObject> object = storage->queryObjectDirect(objId);
-
+            if (object.isNull()) {
+                qWarning("RTransaction::undo: "
+                         "object '%d' not found in storage", objId);
+                continue;
+            }
             // toggle undo status of affected object:
             if (object->isUndone()) {
                 // object was deleted and is now restored:
