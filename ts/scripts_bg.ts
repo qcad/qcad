@@ -6300,7 +6300,7 @@ is already in the list.</source>
     <message>
         <location line="+26" />
         <source>&amp;Hatch</source>
-        <translation type="unfinished">Щриховане</translation>
+        <translation type="unfinished">Щрихоране</translation>
     </message>
 </context>
 <context>
