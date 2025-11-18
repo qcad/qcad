@@ -212,6 +212,10 @@
                 qScriptValueFromValue(&engine, RBlockReferenceEntity::PropertyReferencedBlock),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyXRef",
+                qScriptValueFromValue(&engine, RBlockReferenceEntity::PropertyXRef),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyPositionX",
                 qScriptValueFromValue(&engine, RBlockReferenceEntity::PropertyPositionX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

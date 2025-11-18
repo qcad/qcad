@@ -40,6 +40,7 @@
     <destructor><specifier>virtual</specifier> <name>~RBlockProxy</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>loadXRef</name><parameter_list>(<param><decl><type><name>RBlock</name>*</type> <name>block</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>unloadXRef</name><parameter_list>(<param><decl><type><name>RBlock</name>*</type> <name>block</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getFullXRefFilePath</name><parameter_list>(<param><decl><type><name>const</name> <name>RBlock</name>*</type> <name>block</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 </public>}</block>;</class>
 

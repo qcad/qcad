@@ -300,6 +300,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyReferencedBlock" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyXRef" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyPositionX" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyPositionY" type="RPropertyTypeId"

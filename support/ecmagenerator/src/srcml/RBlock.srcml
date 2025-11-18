@@ -149,8 +149,18 @@
 
     <function_decl><type><name>QString</name></type> <name>getLayoutName</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <comment type="block">/**
+     * Block is an XRef.
+     */</comment>
     <function><type><name>bool</name></type> <name>isXRef</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr>!<name>xRefFileName</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * Block was imported as part of an XRef.
+     */</comment>
+    <function><type><name>bool</name></type> <name>isFromXRef</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>name</name>.<call><name>contains</name><argument_list>(<argument><expr>"|"</expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setXRefFileName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>f</name></decl></param>)</parameter_list> <block>{
@@ -168,6 +178,12 @@
         <return>return <expr><name>false</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>unloadXRef</name><parameter_list>()</parameter_list> <block>{
+        <if>if <condition>(<expr><name>blockProxy</name>!=<name>NULL</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>blockProxy</name>-&gt;<call><name>unloadXRef</name><argument_list>(<argument><expr><name>this</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></function>
+
     <function><type><name>QString</name></type> <name>getFullXRefFilePath</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <if>if <condition>(<expr><name>blockProxy</name>!=<name>NULL</name></expr>)</condition><then> <block>{
             <return>return <expr><name>blockProxy</name>-&gt;<call><name>getFullXRefFilePath</name><argument_list>(<argument><expr><name>this</name></expr></argument>)</argument_list></call></expr>;</return>
@@ -182,6 +198,9 @@
     <function><type><name>void</name></type> <name>setXRefLoaded</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>xRefLoaded</name> = <name>on</name></expr>;</expr_stmt>
     }</block></function>
+
+    <function_decl><type><name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getXRefLayerNames</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getXRefBlockNames</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>QPair<argument_list>&lt;<argument><name>QVariant</name></argument>, <argument><name>RPropertyAttributes</name></argument>&gt;</argument_list></name></type> <name>getProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>,
             <param><decl><type><name>bool</name></type> <name>humanReadable</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>noAttributes</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>

@@ -119,6 +119,9 @@
         isXRef
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isFromXRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setXRefFileName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -128,6 +131,9 @@
         loadXRef
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        unloadXRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getFullXRefFilePath
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -135,6 +141,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setXRefLoaded
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getXRefLayerNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getXRefBlockNames
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getProperty
