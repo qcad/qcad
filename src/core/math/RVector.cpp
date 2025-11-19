@@ -149,14 +149,21 @@ double RVector::getAngle() const {
  */
 double RVector::getAngleToPlaneXY() const {
     RVector n(0, 0, 1);
+    double m = getMagnitude();
 
-    if (getMagnitude() < 1.0e-4) {
+    if (m < 1.0e-4) {
         return M_PI / 2;
-    } else if ((getDotProduct(*this, n) / (getMagnitude() * 1)) > 1.0) {
-        return 0.0;
-    } else {
-        return M_PI / 2 - acos(getDotProduct(*this, n) / (getMagnitude() * 1));
     }
+
+    double arg = getDotProduct(*this, n) / m;
+
+    if (arg > 1.0) {
+        arg = 1.0;
+    } else if (arg < -1.0) {
+        arg = -1.0;
+    }
+
+    return M_PI / 2 - acos(arg);
 }
 
 /**
@@ -1023,7 +1030,7 @@ RVector RVector::getCrossProduct(const RVector& v1, const RVector& v2) {
     return RVector(v1.y * v2.z - v1.z * v2.y, v1.z * v2.x - v1.x * v2.z, v1.x
             * v2.y - v1.y * v2.x, v1.valid && v2.valid);
 }
-
+::
 /**
  * Generic 3d transformation. \c m must be a 3x3 matrix.
  */
