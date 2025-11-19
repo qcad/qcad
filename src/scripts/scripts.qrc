@@ -2610,6 +2610,10 @@
     <file alias="scripts/Widgets/BlockList/Edit0.svg">../../scripts/Widgets/BlockList/Edit0.svg</file>
     <file alias="scripts/Widgets/BlockList/Edit1-inverse.svg">../../scripts/Widgets/BlockList/Edit1-inverse.svg</file>
     <file alias="scripts/Widgets/BlockList/Edit1.svg">../../scripts/Widgets/BlockList/Edit1.svg</file>
+    <file alias="scripts/Widgets/BlockList/FromXRef0-inverse.svg">../../scripts/Widgets/BlockList/FromXRef0-inverse.svg</file>
+    <file alias="scripts/Widgets/BlockList/FromXRef0.svg">../../scripts/Widgets/BlockList/FromXRef0.svg</file>
+    <file alias="scripts/Widgets/BlockList/FromXRef1-inverse.svg">../../scripts/Widgets/BlockList/FromXRef1-inverse.svg</file>
+    <file alias="scripts/Widgets/BlockList/FromXRef1.svg">../../scripts/Widgets/BlockList/FromXRef1.svg</file>
     <file alias="scripts/Widgets/BlockList/PreferencesPage.ui">../../scripts/Widgets/BlockList/PreferencesPage.ui</file>
     <file alias="scripts/Widgets/BlockList/Visible0-inverse.svg">../../scripts/Widgets/BlockList/Visible0-inverse.svg</file>
     <file alias="scripts/Widgets/BlockList/Visible0.svg">../../scripts/Widgets/BlockList/Visible0.svg</file>
@@ -2727,6 +2731,7 @@
     <file alias="ts/scripts_bg.qm">../../ts/scripts_bg.qm</file>
     <file alias="ts/scripts_cs.qm">../../ts/scripts_cs.qm</file>
     <file alias="ts/scripts_da.qm">../../ts/scripts_da.qm</file>
+    <file alias="ts/scripts_de_CH.qm">../../ts/scripts_de_CH.qm</file>
     <file alias="ts/scripts_de.qm">../../ts/scripts_de.qm</file>
     <file alias="ts/scripts_el.qm">../../ts/scripts_el.qm</file>
     <file alias="ts/scripts_en.qm">../../ts/scripts_en.qm</file>
