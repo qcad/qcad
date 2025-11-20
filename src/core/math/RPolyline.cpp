@@ -270,7 +270,7 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
 
     RVector connectionPoint;
     RVector nextPoint;
-    double gap;
+    RVector plPoint;
     if (prepend) {
         // prepend:
         connectionPoint = shape.getEndPoint();
@@ -279,7 +279,8 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
             // first point:
             appendVertex(connectionPoint);
         }
-        gap = vertices.first().getDistanceTo(connectionPoint);
+        plPoint = vertices.first();
+        //gap = vertices.first().getDistanceTo(connectionPoint);
     }
     else {
         // append:
@@ -289,12 +290,14 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
             // first point:
             appendVertex(connectionPoint);
         }
-        gap = vertices.last().getDistanceTo(connectionPoint);
+        plPoint = vertices.last();
+        //gap = vertices.last().getDistanceTo(connectionPoint);
     }
 
+    double gap = plPoint.getDistanceTo(connectionPoint);
     if (!RMath::fuzzyCompare(gap, 0.0, 1.0e-3)) {
         qWarning() << "RPolyline::appendShape: "
-                   << "arc or line not connected to polyline at " << connectionPoint << ":"
+                   << "arc or line not connected to polyline at " << plPoint << ":"
                    << "\nshape:" << shape
                    << "\ngap: " << gap;
         ret = false;
