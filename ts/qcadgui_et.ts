@@ -31,7 +31,7 @@
     <message>
         <location filename="../src/gui/REventHandler.cpp" line="+211"/>
         <source>Grid</source>
-        <translation type="unfinished">Võrk</translation>
+        <translation>Võrk</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -41,7 +41,7 @@
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation type="unfinished">Üksuse kohta</translation>
+        <translation>Objektil</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -51,12 +51,12 @@
     <message>
         <location line="+3"/>
         <source>Tangential</source>
-        <translation type="unfinished">Tangentsiaalne</translation>
+        <translation>Tangentsiaalne</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Center</source>
-        <translation type="unfinished">Keskus</translation>
+        <translation>Keskus</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -71,12 +71,12 @@
     <message>
         <location line="+3"/>
         <source>Reference</source>
-        <translation type="unfinished">Viide</translation>
+        <translation>Viide</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Distance</source>
-        <translation type="unfinished">Kaugus</translation>
+        <translation>Kaugus</translation>
     </message>
 </context>
 <context>

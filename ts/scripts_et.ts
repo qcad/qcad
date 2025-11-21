@@ -413,7 +413,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
-        <translation type="unfinished">Vale raadius</translation>
+        <translation>Kehtetu raadius</translation>
     </message>
     <message>
         <location line="+48"/>
@@ -457,7 +457,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+85"/>
         <source>Invalid angle</source>
-        <translation type="unfinished">Vale nurk</translation>
+        <translation type="unfinished">Kehtetu nurk</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -510,7 +510,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+81"/>
         <source>Invalid height</source>
-        <translation type="unfinished">Vale kõrgus</translation>
+        <translation>Kehtetu kõrgus</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -563,7 +563,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+85"/>
         <source>Invalid length</source>
-        <translation type="unfinished">Vale pikkus</translation>
+        <translation>Kehtetu pikkus</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -621,7 +621,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+81"/>
         <source>Invalid radius</source>
-        <translation type="unfinished">Vale raadius</translation>
+        <translation>Kehtetu raadius</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1232,7 +1232,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
-        <translation type="unfinished">Vale pildi suurus (laius x kõrgus peab olema väiksem kui %1)</translation>
+        <translation type="unfinished">Kehtetu pildi suurus (laius x kõrgus peab olema väiksem kui %1)</translation>
     </message>
 </context>
 <context>
@@ -1679,7 +1679,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+107"/>
         <source>Invalid radius</source>
-        <translation type="unfinished">Vale raadius</translation>
+        <translation>Kehtetu raadius</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2162,12 +2162,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+199"/>
         <source>Invalid value:</source>
-        <translation type="unfinished">Vale väärtus:</translation>
+        <translation type="unfinished">Kehtetu väärtus:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Invalid coordinate or distance &quot;%1&quot;.</source>
-        <translation type="unfinished">Vale koordinaat või kaugus &quot;%1&quot;.</translation>
+        <translation type="unfinished">Kehtetu koordinaat või kaugus &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -4234,7 +4234,7 @@ is already in the list.</source>
     <message>
         <location line="+578"/>
         <source>Invalid position</source>
-        <translation type="unfinished">Vale asend</translation>
+        <translation type="unfinished">Kehtetu asend</translation>
     </message>
     <message>
         <location line="+175"/>
@@ -4525,7 +4525,7 @@ is already in the list.</source>
     <message>
         <location line="+249"/>
         <source>Invalid major radius.</source>
-        <translation type="unfinished">Vale suur raadius.</translation>
+        <translation type="unfinished">Kehtetu suur raadius.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10564,7 +10564,7 @@ is already in the list.</source>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-        <translation type="unfinished">Vale pöördenurk</translation>
+        <translation type="unfinished">Kehtetu pöördenurk</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
@@ -10993,7 +10993,7 @@ is already in the list.</source>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-        <translation type="unfinished">Vale skaalategur</translation>
+        <translation type="unfinished">Kehtetu skaalategur</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
