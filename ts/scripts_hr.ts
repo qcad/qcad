@@ -1004,22 +1004,22 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Reference points</source>
-        <translation type="unfinished"></translation>
+        <translation>Referentne točke</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Grid points</source>
-        <translation type="unfinished"></translation>
+        <translation>Točke mreže</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Točke na entitetu</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Free positioning</source>
-        <translation type="unfinished"></translation>
+        <translation>Slobodno pozicioniranje</translation>
     </message>
 </context>
 <context>
@@ -1027,7 +1027,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/AutoTrim/AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatsko &amp;obrezivanje</translation>
     </message>
 </context>
 <context>
@@ -1035,7 +1035,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/View/Zoom/AutoZoom/AutoZoomInit.js" line="+2"/>
         <source>&amp;Auto Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Automatski zum</translation>
     </message>
 </context>
 <context>
@@ -1043,13 +1043,13 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2Pdf.js" line="+30"/>
         <source>Export to PDF</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvezi u PDF</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
         <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Masovni izvoz u PDF vidljivih blokova rasporeda</translation>
     </message>
 </context>
 <context>
@@ -1057,12 +1057,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Grafički prikaz</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Ponašanje</translation>
     </message>
 </context>
 <context>
@@ -1070,12 +1070,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dva entiteta ne mogu biti zakošena.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prvi entitet ne može biti obrezan.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1085,22 +1085,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Faseta / zakošenje</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="unfinished"></translation>
+        <translation>Obreži</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Length 1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Duljina 1:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Length 2:</source>
-        <translation type="unfinished"></translation>
+        <translation>Duljina 2:</translation>
     </message>
 </context>
 <context>
@@ -1108,12 +1108,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExport.js" line="+78"/>
         <source>Error while generating bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška pri generiranju bitmap datoteke &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitmap datoteka je izvezena u &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+43"/>
