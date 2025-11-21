@@ -36,7 +36,7 @@
     <message>
         <location line="+3"/>
         <source>Meter</source>
-        <translation type="unfinished">Metru</translation>
+        <translation type="unfinished">Contor</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -56,7 +56,7 @@
     <message>
         <location line="+3"/>
         <source>Yard</source>
-        <translation type="unfinished">Iard</translation>
+        <translation type="unfinished">Curtea</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -114,12 +114,12 @@
     <message>
         <location filename="../src/core/RColor.cpp" line="+340"/>
         <source>By Layer</source>
-        <translation type="unfinished">După strat</translation>
+        <translation type="unfinished">Prin strat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">După bloc</translation>
+        <translation type="unfinished">Prin bloc</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -217,22 +217,22 @@
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+48"/>
         <source>Current Layer ID</source>
-        <translation type="unfinished">ID strat curent</translation>
+        <translation type="unfinished">ID-ul stratului curent</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished">Unitate de desenare</translation>
+        <translation type="unfinished">Unitatea de desen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished">Scală tip linie</translation>
+        <translation type="unfinished">Linetype Scale</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation type="unfinished">Font pentru cote</translation>
+        <translation type="unfinished">Dimensiune Font</translation>
     </message>
 </context>
 <context>
@@ -352,7 +352,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished">Poziție</translation>
+        <translation type="unfinished">Poziția</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -360,12 +360,12 @@
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+3"/>
         <source>Scale</source>
-        <translation type="unfinished">Scară</translation>
+        <translation type="unfinished">Scala</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation type="unfinished">Unghi</translation>
+        <translation type="unfinished">Unghiul</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -490,7 +490,7 @@
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation type="unfinished">Bifă arhitectură</translation>
+        <translation type="unfinished">Căpușă arhitecturală</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -526,7 +526,7 @@
     <message>
         <location line="+1"/>
         <source>Layer</source>
-        <translation type="unfinished">Strat</translation>
+        <translation type="unfinished">Stratul</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -537,7 +537,7 @@
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished">Scală tip linie</translation>
+        <translation type="unfinished">Linetype Scale</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -559,7 +559,7 @@
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation type="unfinished">Ordine de desenare</translation>
+        <translation type="unfinished">Ordine de tragere</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -641,12 +641,12 @@
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation type="unfinished">Tipărabil</translation>
+        <translation type="unfinished">Plottable</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation type="unfinished">Ancorabil</translation>
+        <translation type="unfinished">Snappable</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -734,7 +734,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation type="unfinished">Poziție text</translation>
+        <translation type="unfinished">Text Poziție</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -826,14 +826,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation type="unfinished">Centru vizualizare</translation>
+        <translation type="unfinished">Vezi Centrul</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation type="unfinished">Țintă vizualizare</translation>
+        <translation type="unfinished">Vezi țintă</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -887,12 +887,12 @@
     <message>
         <location filename="../src/core/RLinetypePattern.cpp" line="+912"/>
         <source>By Layer</source>
-        <translation type="unfinished">După strat</translation>
+        <translation type="unfinished">Prin strat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">După bloc</translation>
+        <translation type="unfinished">Prin bloc</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1043,7 +1043,7 @@
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation type="unfinished">Izolație</translation>
+        <translation type="unfinished">Lovirea</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1136,12 +1136,12 @@
     <message>
         <location filename="../src/core/RLineweight.cpp" line="+37"/>
         <source>By Layer</source>
-        <translation type="unfinished">După strat</translation>
+        <translation type="unfinished">Prin strat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">După bloc</translation>
+        <translation type="unfinished">Prin bloc</translation>
     </message>
     <message>
         <location line="+1"/>
