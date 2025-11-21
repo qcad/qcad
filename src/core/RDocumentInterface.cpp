@@ -2481,17 +2481,14 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
                     }
                 }
 
-                if (block->isXRef()) {
-                    blockXRefHasChanged = true;
-                }
-
                 // deselect block reference entities of hidden block:
                 if (block->isFrozen()) {
                     QSet<RObject::Id> ids = document.queryBlockReferences(*it);
                     deselectEntities(ids);
                 }
 
-                if (blockXRefHasChanged) {
+                if (block->isXRef()) {
+                    blockXRefHasChanged = true;
 
                     if (block->isUndone()) {
                         block->unloadXRef();
