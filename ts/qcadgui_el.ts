@@ -56,7 +56,7 @@
     <message>
         <location line="+3"/>
         <source>Center</source>
-        <translation type="unfinished">Κέντρο</translation>
+        <translation>Κέντρο</translation>
     </message>
     <message>
         <location line="+3"/>

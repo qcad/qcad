@@ -388,7 +388,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
-        <translation type="unfinished">Στρώμα</translation>
+        <translation>Στρώμα</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -419,7 +419,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+48"/>
         <source>No solution</source>
-        <translation type="unfinished">Δεν υπάρχει λύση</translation>
+        <translation>Δεν υπάρχει λύση</translation>
     </message>
 </context>
 <context>
@@ -448,12 +448,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PA.js" line="+65"/>
         <source>Start point</source>
-        <translation type="unfinished">Σημείο εκκίνησης</translation>
+        <translation>Σημείο εκκίνησης</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End point</source>
-        <translation type="unfinished">Τελικό σημείο</translation>
+        <translation>Τελικό σημείο</translation>
     </message>
     <message>
         <location line="+85"/>
@@ -463,17 +463,17 @@ the preference changes to take effect.</source>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished">Τα δύο σημεία είναι πανομοιότυπα</translation>
+        <translation>Τα δύο σημεία είναι ταυτόσημα</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PA.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Direction:</source>
-        <translation type="unfinished">Κατεύθυνση:</translation>
+        <translation>Κατεύθυνση:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -483,7 +483,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished">Δεξιόστροφα (αρνητικά)</translation>
+        <translation>Δεξιόστροφα (Αρνητικό)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PAInit.js" line="+2"/>
@@ -501,12 +501,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PH.js" line="+65"/>
         <source>Start point</source>
-        <translation type="unfinished">Σημείο εκκίνησης</translation>
+        <translation>Σημείο εκκίνησης</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation type="unfinished">Τελικό σημείο</translation>
+        <translation>Τελικό σημείο</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -516,17 +516,17 @@ the preference changes to take effect.</source>
     <message>
         <location line="+8"/>
         <source>The two points are identical</source>
-        <translation type="unfinished">Τα δύο σημεία είναι πανομοιότυπα</translation>
+        <translation>Τα δύο σημεία είναι ταυτόσημα</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PH.ui" line="+17"/>
         <source>Height:</source>
-        <translation type="unfinished">Ύψος:</translation>
+        <translation>Ύψος:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Direction:</source>
-        <translation type="unfinished">Κατεύθυνση:</translation>
+        <translation>Κατεύθυνση:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -536,7 +536,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished">Δεξιόστροφα (αρνητικά)</translation>
+        <translation>Δεξιόστροφα (Αρνητικό)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
@@ -554,12 +554,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PL.js" line="+65"/>
         <source>Start point</source>
-        <translation type="unfinished">Σημείο εκκίνησης</translation>
+        <translation>Σημείο εκκίνησης</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation type="unfinished">Τελικό σημείο</translation>
+        <translation>Τελικό σημείο</translation>
     </message>
     <message>
         <location line="+85"/>
@@ -569,7 +569,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished">Τα δύο σημεία είναι πανομοιότυπα</translation>
+        <translation>Τα δύο σημεία είναι ταυτόσημα</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -579,12 +579,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PL.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished">Μήκος:</translation>
+        <translation>Μήκος:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Direction:</source>
-        <translation type="unfinished">Κατεύθυνση:</translation>
+        <translation>Κατεύθυνση:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -594,7 +594,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished">Δεξιόστροφα (αρνητικά)</translation>
+        <translation>Δεξιόστροφα (Αρνητικό)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
@@ -612,12 +612,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PR.js" line="+67"/>
         <source>Start point</source>
-        <translation type="unfinished">Σημείο εκκίνησης</translation>
+        <translation>Σημείο εκκίνησης</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation type="unfinished">Τελικό σημείο</translation>
+        <translation>Τελικό σημείο</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -627,17 +627,17 @@ the preference changes to take effect.</source>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished">Τα δύο σημεία είναι πανομοιότυπα</translation>
+        <translation>Τα δύο σημεία είναι ταυτόσημα</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished">Ακτίνα:</translation>
+        <translation>Ακτίνα:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Direction:</source>
-        <translation type="unfinished">Κατεύθυνση:</translation>
+        <translation>Κατεύθυνση:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -647,7 +647,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished">Δεξιόστροφα (αρνητικά)</translation>
+        <translation>Δεξιόστροφα (Αρνητικό)</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -680,7 +680,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc3P/Arc3P.js" line="+62"/>
         <source>Start point</source>
-        <translation type="unfinished">Σημείο εκκίνησης</translation>
+        <translation>Σημείο εκκίνησης</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -690,7 +690,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+7"/>
         <source>End point</source>
-        <translation type="unfinished">Τελικό σημείο</translation>
+        <translation>Τελικό σημείο</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc3P/Arc3PInit.js" line="+2"/>
@@ -708,7 +708,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+80"/>
         <source>Center</source>
-        <translation type="unfinished">Κέντρο</translation>
+        <translation>Κέντρο</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -733,7 +733,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.ui" line="+17"/>
         <source>Direction:</source>
-        <translation type="unfinished">Κατεύθυνση:</translation>
+        <translation>Κατεύθυνση:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -743,7 +743,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished">Δεξιόστροφα (αρνητικά)</translation>
+        <translation>Δεξιόστροφα (Αρνητικό)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
@@ -761,12 +761,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentric.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished">Απόσταση:</translation>
+        <translation>Απόσταση:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished">Αριθμός:</translation>
+        <translation>Αριθμός:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentricInit.js" line="+2"/>
@@ -784,7 +784,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished">Αριθμός:</translation>
+        <translation>Αριθμός:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThroughInit.js" line="+2"/>
@@ -812,18 +812,18 @@ the preference changes to take effect.</source>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation type="unfinished">Επιλέξτε λύση</translation>
+        <translation>Επιλέξτε λύση</translation>
     </message>
     <message>
         <location line="+128"/>
         <location line="+73"/>
         <source>No solution</source>
-        <translation type="unfinished">Δεν υπάρχει λύση</translation>
+        <translation>Δεν υπάρχει λύση</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished">Ακτίνα:</translation>
+        <translation>Ακτίνα:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
@@ -851,7 +851,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished">Ακτίνα:</translation>
+        <translation>Ακτίνα:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
@@ -1053,7 +1053,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished">Προβολή γραφικών</translation>
+        <translation>Προβολή γραφικών</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1129,7 +1129,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+9"/>
         <source>Size</source>
-        <translation type="unfinished">Μέγεθος</translation>
+        <translation>Μέγεθος</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1139,7 +1139,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+23"/>
         <source>Height:</source>
-        <translation type="unfinished">Ύψος:</translation>
+        <translation>Ύψος:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1159,12 +1159,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>White</source>
-        <translation type="unfinished">Λευκό</translation>
+        <translation>Λευκό</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Black</source>
-        <translation type="unfinished">Μαύρο</translation>
+        <translation>Μαύρο</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1301,12 +1301,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block</source>
-        <translation type="unfinished">Μπλοκ</translation>
+        <translation>Μπλοκ</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Block name:</source>
-        <translation type="unfinished">Όνομα μπλοκ:</translation>
+        <translation>Όνομα μπλοκ:</translation>
     </message>
 </context>
 <context>
@@ -1330,7 +1330,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgets</translation>
+        <translation>Εργαλεία</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1506,7 +1506,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgets</translation>
+        <translation>Εργαλεία</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1559,7 +1559,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+34"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgets</translation>
+        <translation>Εργαλεία</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1643,17 +1643,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2P/Circle2P.js" line="+58"/>
         <source>First point</source>
-        <translation type="unfinished">Πρώτο σημείο</translation>
+        <translation>Πρώτο σημείο</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished">Δεύτερο σημείο</translation>
+        <translation>Δεύτερο σημείο</translation>
     </message>
     <message>
         <location line="+83"/>
         <source>The two points are identical</source>
-        <translation type="unfinished">Τα δύο σημεία είναι πανομοιότυπα</translation>
+        <translation>Τα δύο σημεία είναι ταυτόσημα</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2P/Circle2PInit.js" line="+2"/>
@@ -1671,12 +1671,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.js" line="+65"/>
         <source>First point</source>
-        <translation type="unfinished">Πρώτο σημείο</translation>
+        <translation>Πρώτο σημείο</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished">Δεύτερο σημείο</translation>
+        <translation>Δεύτερο σημείο</translation>
     </message>
     <message>
         <location line="+107"/>
@@ -1686,12 +1686,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished">Τα δύο σημεία είναι πανομοιότυπα</translation>
+        <translation>Τα δύο σημεία είναι ταυτόσημα</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished">Ακτίνα:</translation>
+        <translation>Ακτίνα:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -1739,13 +1739,13 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation type="unfinished">Επιλέξτε λύση</translation>
+        <translation>Επιλέξτε λύση</translation>
     </message>
     <message>
         <location line="+144"/>
         <location line="+59"/>
         <source>No solution</source>
-        <translation type="unfinished">Δεν υπάρχει λύση</translation>
+        <translation>Δεν υπάρχει λύση</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
@@ -1773,17 +1773,17 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Choose solution</source>
-        <translation type="unfinished">Επιλέξτε λύση</translation>
+        <translation>Επιλέξτε λύση</translation>
     </message>
     <message>
         <location line="+103"/>
         <source>No solution</source>
-        <translation type="unfinished">Δεν υπάρχει λύση</translation>
+        <translation>Δεν υπάρχει λύση</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished">Ακτίνα:</translation>
+        <translation>Ακτίνα:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
@@ -1801,12 +1801,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3P/Circle3P.js" line="+63"/>
         <source>First point</source>
-        <translation type="unfinished">Πρώτο σημείο</translation>
+        <translation>Πρώτο σημείο</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second point</source>
-        <translation type="unfinished">Δεύτερο σημείο</translation>
+        <translation>Δεύτερο σημείο</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1844,13 +1844,13 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Choose solution</source>
-        <translation type="unfinished">Επιλέξτε λύση</translation>
+        <translation>Επιλέξτε λύση</translation>
     </message>
     <message>
         <location line="+126"/>
         <location line="+63"/>
         <source>No solution</source>
-        <translation type="unfinished">Δεν υπάρχει λύση</translation>
+        <translation>Δεν υπάρχει λύση</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3T/Circle3TInit.js" line="+2"/>
@@ -1875,12 +1875,12 @@ Do you wish to recover it?</source>
         <location line="+36"/>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDDialog.ui" line="-60"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Σημείο αναφοράς:</translation>
+        <translation>Σημείο αναφοράς:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDInit.js" line="+2"/>
@@ -1898,7 +1898,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCP/CircleCP.js" line="+56"/>
         <source>Center</source>
-        <translation type="unfinished">Κέντρο</translation>
+        <translation>Κέντρο</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1922,18 +1922,18 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCR.ui" line="+17"/>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="+89"/>
         <source>Radius:</source>
-        <translation type="unfinished">Ακτίνα:</translation>
+        <translation>Ακτίνα:</translation>
     </message>
     <message>
         <location line="+36"/>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="-60"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Σημείο αναφοράς:</translation>
+        <translation>Σημείο αναφοράς:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRInit.js" line="+2"/>
@@ -1951,12 +1951,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentric.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished">Απόσταση:</translation>
+        <translation>Απόσταση:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished">Αριθμός:</translation>
+        <translation>Αριθμός:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentricInit.js" line="+2"/>
@@ -1974,7 +1974,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished">Αριθμός:</translation>
+        <translation>Αριθμός:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit.js" line="+2"/>
@@ -2007,13 +2007,13 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation type="unfinished">Επιλέξτε λύση</translation>
+        <translation>Επιλέξτε λύση</translation>
     </message>
     <message>
         <location line="+138"/>
         <location line="+55"/>
         <source>No solution</source>
-        <translation type="unfinished">Δεν υπάρχει λύση</translation>
+        <translation>Δεν υπάρχει λύση</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2PInit.js" line="+2"/>
@@ -2036,7 +2036,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished">Ακτίνα:</translation>
+        <translation>Ακτίνα:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js" line="+2"/>
@@ -2054,7 +2054,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
-        <translation type="unfinished">Σημείο αναφοράς</translation>
+        <translation>Σημείο αναφοράς</translation>
     </message>
 </context>
 <context>
@@ -2086,7 +2086,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished">Προβολή γραφικών</translation>
+        <translation>Προβολή γραφικών</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2099,7 +2099,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/ColorSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished">Προεπιλογές για νέα σχέδια</translation>
+        <translation>Προεπιλογές για νέα σχέδια</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2147,7 +2147,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.js" line="+30"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgets</translation>
+        <translation>Εργαλεία</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2319,7 +2319,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgets</translation>
+        <translation>Εργαλεία</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2373,7 +2373,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
-        <translation type="unfinished">Θέση</translation>
+        <translation>Θέση</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.ui" line="+17"/>
@@ -2457,7 +2457,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+36"/>
         <source>Mode:</source>
-        <translation type="unfinished">Λειτουργία:</translation>
+        <translation>Λειτουργία:</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -2477,7 +2477,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+15"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
 </context>
 <context>
@@ -2511,7 +2511,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation type="unfinished">Δεύτερη γωνία</translation>
+        <translation>Δεύτερη γωνία</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2554,7 +2554,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Navigation/DefaultNavigation/DefaultNavigation.js" line="+47"/>
         <source>Graphics View</source>
-        <translation type="unfinished">Προβολή γραφικών</translation>
+        <translation>Προβολή γραφικών</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2890,7 +2890,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
@@ -3006,7 +3006,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>Scale</source>
-        <translation type="unfinished">Κλίμακα</translation>
+        <translation>Κλίμακα</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -3042,7 +3042,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished">Προεπιλογές για νέα σχέδια</translation>
+        <translation>Προεπιλογές για νέα σχέδια</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -3312,12 +3312,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+73"/>
         <source>First corner</source>
-        <translation type="unfinished">Πρώτη γωνία</translation>
+        <translation>Πρώτη γωνία</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second corner</source>
-        <translation type="unfinished">Δεύτερη γωνία</translation>
+        <translation>Δεύτερη γωνία</translation>
     </message>
 </context>
 <context>
@@ -3330,7 +3330,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation type="unfinished">Κορυφή</translation>
+        <translation>Πάνω</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3340,7 +3340,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Left</source>
-        <translation type="unfinished">Αριστερά</translation>
+        <translation>Αριστερά</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3350,7 +3350,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished">Δεξιά</translation>
+        <translation>Δεξιά</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3360,7 +3360,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished">Κάτω μέρος</translation>
+        <translation>Κάτω</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3370,7 +3370,7 @@ is already in the list.</source>
     <message>
         <location line="+51"/>
         <source>Position</source>
-        <translation type="unfinished">Θέση</translation>
+        <translation>Θέση</translation>
     </message>
 </context>
 <context>
@@ -3988,7 +3988,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation type="unfinished">Όλα τα αρχεία</translation>
+        <translation>Όλα τα αρχεία</translation>
     </message>
     <message>
         <location line="+182"/>
@@ -4091,7 +4091,7 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation type="unfinished">Σειρά κλήρωσης</translation>
+        <translation>Σειρά σχεδίασης</translation>
     </message>
 </context>
 <context>
@@ -4218,7 +4218,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>None</source>
-        <translation type="unfinished">Κανένα</translation>
+        <translation>Κανένα</translation>
     </message>
     <message>
         <location line="+668"/>
@@ -4253,7 +4253,7 @@ is already in the list.</source>
     <message>
         <location line="+233"/>
         <source>Length:</source>
-        <translation type="unfinished">Μήκος:</translation>
+        <translation>Μήκος:</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -4489,7 +4489,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.js" line="+74"/>
         <source>Center</source>
-        <translation type="unfinished">Κέντρο</translation>
+        <translation>Κέντρο</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -4539,7 +4539,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -4559,7 +4559,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.ui" line="+17"/>
         <source>Direction:</source>
-        <translation type="unfinished">Κατεύθυνση:</translation>
+        <translation>Κατεύθυνση:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4569,7 +4569,7 @@ is already in the list.</source>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished">Δεξιόστροφα (αρνητικά)</translation>
+        <translation>Δεξιόστροφα (Αρνητικό)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js" line="+2"/>
@@ -4613,12 +4613,12 @@ is already in the list.</source>
         <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="-23"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Σημείο αναφοράς:</translation>
+        <translation>Σημείο αναφοράς:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js" line="+2"/>
@@ -4636,12 +4636,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished">Απόσταση:</translation>
+        <translation>Απόσταση:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished">Αριθμός:</translation>
+        <translation>Αριθμός:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
@@ -4659,7 +4659,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished">Αριθμός:</translation>
+        <translation>Αριθμός:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
@@ -4690,12 +4690,12 @@ is already in the list.</source>
         <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-90"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Σημείο αναφοράς:</translation>
+        <translation>Σημείο αναφοράς:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRInit.js" line="+2"/>
@@ -4823,12 +4823,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove.js" line="+56"/>
         <source>First corner</source>
-        <translation type="unfinished">Πρώτη γωνία</translation>
+        <translation>Πρώτη γωνία</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation type="unfinished">Δεύτερη γωνία</translation>
+        <translation>Δεύτερη γωνία</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
@@ -4888,7 +4888,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished">Ακτίνα:</translation>
+        <translation>Ακτίνα:</translation>
     </message>
 </context>
 <context>
@@ -4983,7 +4983,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExText/ExText.js" line="+69"/>
         <source>Text</source>
-        <translation type="unfinished">Κείμενο</translation>
+        <translation>Κείμενο</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4997,7 +4997,7 @@ is already in the list.</source>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js" line="+58"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+58"/>
         <source>Position</source>
-        <translation type="unfinished">Θέση</translation>
+        <translation>Θέση</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -5041,7 +5041,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExport.js" line="+39"/>
         <source>All Files</source>
-        <translation type="unfinished">Όλα τα αρχεία</translation>
+        <translation>Όλα τα αρχεία</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5059,7 +5059,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImport.js" line="+73"/>
         <source>All Files</source>
-        <translation type="unfinished">Όλα τα αρχεία</translation>
+        <translation>Όλα τα αρχεία</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5085,7 +5085,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Explode/Explode.js" line="+30"/>
         <source>Modify</source>
-        <translation type="unfinished">Τροποποίηση</translation>
+        <translation>Τροποποίηση</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -5162,7 +5162,7 @@ is already in the list.</source>
         <location line="+106"/>
         <location line="+76"/>
         <source>Format:</source>
-        <translation type="unfinished">Μορφή:</translation>
+        <translation>Μορφή:</translation>
     </message>
     <message>
         <location line="-39"/>
@@ -5177,7 +5177,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>All Files</source>
-        <translation type="unfinished">Όλα τα αρχεία</translation>
+        <translation>Όλα τα αρχεία</translation>
     </message>
 </context>
 <context>
@@ -5191,12 +5191,12 @@ is already in the list.</source>
     <message>
         <location line="-5"/>
         <source>Black</source>
-        <translation type="unfinished">Μαύρο</translation>
+        <translation>Μαύρο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation type="unfinished">Λευκό</translation>
+        <translation>Λευκό</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5602,7 +5602,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/FontPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished">Προβολή γραφικών</translation>
+        <translation>Προβολή γραφικών</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -5790,7 +5790,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation type="unfinished">Προέλευση</translation>
+        <translation>Αρχή</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6013,7 +6013,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
         <source>Graphics View</source>
-        <translation type="unfinished">Προβολή γραφικών</translation>
+        <translation>Προβολή γραφικών</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -6038,7 +6038,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation type="unfinished">Προέλευση</translation>
+        <translation>Αρχή</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -6242,7 +6242,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished">Προβολή γραφικών</translation>
+        <translation>Προβολή γραφικών</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6255,7 +6255,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/GridPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished">Προβολή γραφικών</translation>
+        <translation>Προβολή γραφικών</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6268,7 +6268,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/GridSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished">Προεπιλογές για νέα σχέδια</translation>
+        <translation>Προεπιλογές για νέα σχέδια</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6279,7 +6279,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished">Γενικά</translation>
+        <translation>Γενικά</translation>
     </message>
     <message>
         <location line="+84"/>
@@ -6314,7 +6314,7 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Type</source>
-        <translation type="unfinished">Τύπος</translation>
+        <translation>Τύπος</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6339,12 +6339,12 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale:</source>
-        <translation type="unfinished">Κλίμακα:</translation>
+        <translation>Κλίμακα:</translation>
     </message>
 </context>
 <context>
@@ -6422,7 +6422,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>All Files</source>
-        <translation type="unfinished">Όλα τα αρχεία</translation>
+        <translation>Όλα τα αρχεία</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6432,12 +6432,12 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Format:</source>
-        <translation type="unfinished">Μορφή:</translation>
+        <translation>Μορφή:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Position</source>
-        <translation type="unfinished">Θέση</translation>
+        <translation>Θέση</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/Image.ui" line="+17"/>
@@ -6452,12 +6452,12 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Height:</source>
-        <translation type="unfinished">Ύψος:</translation>
+        <translation>Ύψος:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
@@ -6480,7 +6480,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>All Files</source>
-        <translation type="unfinished">Όλα τα αρχεία</translation>
+        <translation>Όλα τα αρχεία</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -6490,7 +6490,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Format:</source>
-        <translation type="unfinished">Μορφή:</translation>
+        <translation>Μορφή:</translation>
     </message>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
@@ -6510,7 +6510,7 @@ is already in the list.</source>
     <message>
         <location line="+110"/>
         <source>Scale:</source>
-        <translation type="unfinished">Κλίμακα:</translation>
+        <translation>Κλίμακα:</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -6568,7 +6568,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/ImportPoints/ImportPoints.js" line="+39"/>
         <source>All Files</source>
-        <translation type="unfinished">Όλα τα αρχεία</translation>
+        <translation>Όλα τα αρχεία</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6586,7 +6586,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroid.js" line="+78"/>
         <source>Position</source>
-        <translation type="unfinished">Θέση</translation>
+        <translation>Θέση</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6634,7 +6634,7 @@ is already in the list.</source>
     <message>
         <location line="+96"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngleInit.js" line="+2"/>
@@ -6746,7 +6746,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-89"/>
         <source>Mode:</source>
-        <translation type="unfinished">Λειτουργία:</translation>
+        <translation>Λειτουργία:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6964,7 +6964,7 @@ is already in the list.</source>
     <message>
         <location line="+42"/>
         <source>Distance:</source>
-        <translation type="unfinished">Απόσταση:</translation>
+        <translation>Απόσταση:</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -7086,7 +7086,7 @@ is already in the list.</source>
     <message>
         <location line="+95"/>
         <source>Distance:</source>
-        <translation type="unfinished">Απόσταση:</translation>
+        <translation>Απόσταση:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEEInit.js" line="+2"/>
@@ -7109,7 +7109,7 @@ is already in the list.</source>
     <message>
         <location line="+81"/>
         <source>Distance:</source>
-        <translation type="unfinished">Απόσταση:</translation>
+        <translation>Απόσταση:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2"/>
@@ -7122,17 +7122,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePP.js" line="+59"/>
         <source>First point</source>
-        <translation type="unfinished">Πρώτο σημείο</translation>
+        <translation>Πρώτο σημείο</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished">Δεύτερο σημείο</translation>
+        <translation>Δεύτερο σημείο</translation>
     </message>
     <message>
         <location line="+53"/>
         <source>Distance:</source>
-        <translation type="unfinished">Απόσταση:</translation>
+        <translation>Απόσταση:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7147,7 +7147,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
@@ -7344,7 +7344,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Length:</source>
-        <translation type="unfinished">Μήκος:</translation>
+        <translation>Μήκος:</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -7500,7 +7500,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
-        <translation type="unfinished">Γενικά</translation>
+        <translation>Γενικά</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -7562,7 +7562,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlock.js" line="+117"/>
         <source>Position</source>
-        <translation type="unfinished">Θέση</translation>
+        <translation>Θέση</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlock.ui" line="+17"/>
@@ -7661,7 +7661,7 @@ is already in the list.</source>
     <message>
         <location line="+83"/>
         <source>Position</source>
-        <translation type="unfinished">Θέση</translation>
+        <translation>Θέση</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.ui" line="+17"/>
@@ -7676,7 +7676,7 @@ is already in the list.</source>
     <message>
         <location line="+110"/>
         <source>Scale:</source>
-        <translation type="unfinished">Κλίμακα:</translation>
+        <translation>Κλίμακα:</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -7801,17 +7801,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
         <source>Top</source>
-        <translation type="unfinished">Κορυφή</translation>
+        <translation>Πάνω</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Bottom</source>
-        <translation type="unfinished">Κάτω μέρος</translation>
+        <translation>Κάτω</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Left</source>
-        <translation type="unfinished">Αριστερά</translation>
+        <translation>Αριστερά</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -7821,7 +7821,7 @@ is already in the list.</source>
     <message>
         <location line="+24"/>
         <source>Right</source>
-        <translation type="unfinished">Δεξιά</translation>
+        <translation>Δεξιά</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -7915,7 +7915,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/KeyboardPreferences.js" line="+24"/>
         <source>General</source>
-        <translation type="unfinished">Γενικά</translation>
+        <translation>Γενικά</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -8012,7 +8012,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/LayerCompatibility.js" line="+30"/>
         <source>Layer</source>
-        <translation type="unfinished">Στρώμα</translation>
+        <translation>Στρώμα</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -8066,7 +8066,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer</source>
-        <translation type="unfinished">Στρώμα</translation>
+        <translation>Στρώμα</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -8076,7 +8076,7 @@ is already in the list.</source>
     <message>
         <location line="+28"/>
         <source>Attributes</source>
-        <translation type="unfinished">Χαρακτηριστικά</translation>
+        <translation>Χαρακτηριστικά</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -8107,7 +8107,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+200"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgets</translation>
+        <translation>Εργαλεία</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -8233,7 +8233,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+76"/>
         <source>First point</source>
-        <translation type="unfinished">Πρώτο σημείο</translation>
+        <translation>Πρώτο σημείο</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -8263,7 +8263,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Length:</source>
-        <translation type="unfinished">Μήκος:</translation>
+        <translation>Μήκος:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8273,7 +8273,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -8291,7 +8291,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.js" line="+71"/>
         <source>Position</source>
-        <translation type="unfinished">Θέση</translation>
+        <translation>Θέση</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8331,7 +8331,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Length:</source>
-        <translation type="unfinished">Μήκος:</translation>
+        <translation>Μήκος:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8341,12 +8341,12 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Σημείο αναφοράς:</translation>
+        <translation>Σημείο αναφοράς:</translation>
     </message>
 </context>
 <context>
@@ -8369,12 +8369,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisector.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished">Μήκος:</translation>
+        <translation>Μήκος:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished">Αριθμός:</translation>
+        <translation>Αριθμός:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
@@ -8392,12 +8392,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js" line="+63"/>
         <source>First point</source>
-        <translation type="unfinished">Πρώτο σημείο</translation>
+        <translation>Πρώτο σημείο</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished">Δεύτερο σημείο</translation>
+        <translation>Δεύτερο σημείο</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
@@ -8450,12 +8450,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
         <source>First point</source>
-        <translation type="unfinished">Πρώτο σημείο</translation>
+        <translation>Πρώτο σημείο</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished">Δεύτερο σημείο</translation>
+        <translation>Δεύτερο σημείο</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+17"/>
@@ -8526,12 +8526,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished">Μήκος:</translation>
+        <translation>Μήκος:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Σημείο αναφοράς:</translation>
+        <translation>Σημείο αναφοράς:</translation>
     </message>
 </context>
 <context>
@@ -8539,12 +8539,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonal.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished">Μήκος:</translation>
+        <translation>Μήκος:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Σημείο αναφοράς:</translation>
+        <translation>Σημείο αναφοράς:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js" line="+2"/>
@@ -8600,12 +8600,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished">Απόσταση:</translation>
+        <translation>Απόσταση:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished">Αριθμός:</translation>
+        <translation>Αριθμός:</translation>
     </message>
 </context>
 <context>
@@ -8613,7 +8613,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished">Αριθμός:</translation>
+        <translation>Αριθμός:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2"/>
@@ -8641,12 +8641,12 @@ is already in the list.</source>
     <message>
         <location line="+106"/>
         <source>No solution</source>
-        <translation type="unfinished">Δεν υπάρχει λύση</translation>
+        <translation>Δεν υπάρχει λύση</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished">Μήκος:</translation>
+        <translation>Μήκος:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
@@ -8674,12 +8674,12 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Length:</source>
-        <translation type="unfinished">Μήκος:</translation>
+        <translation>Μήκος:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Σημείο αναφοράς:</translation>
+        <translation>Σημείο αναφοράς:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="-45"/>
@@ -8802,18 +8802,18 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/LinetypeSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished">Προεπιλογές για νέα σχέδια</translation>
+        <translation>Προεπιλογές για νέα σχέδια</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Linetype</source>
-        <translation type="unfinished">Linetype</translation>
+        <translation>Τύπος γραμμής</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished">Γενικά</translation>
+        <translation>Γενικά</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
@@ -8871,7 +8871,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/MenuBar/MenuBar.js" line="+24"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgets</translation>
+        <translation>Εργαλεία</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -8902,7 +8902,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.js" line="+44"/>
         <source>Modify</source>
-        <translation type="unfinished">Τροποποίηση</translation>
+        <translation>Τροποποίηση</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -8922,12 +8922,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Αντιγραφή</translation>
+        <translation>Αντιγραφή</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">Χρήση τρέχοντος στρώματος και χαρακτηριστικών</translation>
+        <translation>Χρήση τρέχοντος στρώματος και χαρακτηριστικών</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
@@ -8937,7 +8937,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">Χρήση διαλόγου για επιλογές εργαλείων</translation>
+        <translation>Χρήση διαλόγου για επιλογές εργαλείου</translation>
     </message>
 </context>
 <context>
@@ -8950,22 +8950,22 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished">Αριθμός αντιγράφων</translation>
+        <translation>Αριθμός αντιγράφων</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished">Διαγραφή αρχικού</translation>
+        <translation>&amp;Διαγραφή αρχικού</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished">Διατηρήστε το πρωτότυπο</translation>
+        <translation>&amp;Διατήρηση αρχικού</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Χρήση τρέχοντος στρώματος και χαρακτηριστικών</translation>
+        <translation>Χρήση τρέχοντος στρώματος και &amp;χαρακτηριστικών</translation>
     </message>
 </context>
 <context>
@@ -8978,7 +8978,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Misc</source>
-        <translation type="unfinished">Διάφορα</translation>
+        <translation>Διάφορα</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -8991,7 +8991,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/MiscBlock.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished">Διάφορα</translation>
+        <translation>Διάφορα</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -9009,7 +9009,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/MiscDevelopment.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished">Διάφορα</translation>
+        <translation>Διάφορα</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -9027,7 +9027,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/MiscDraw.js" line="+52"/>
         <source>Misc</source>
-        <translation type="unfinished">Διάφορα</translation>
+        <translation>Διάφορα</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -9050,7 +9050,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MiscIO.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished">Διάφορα</translation>
+        <translation>Διάφορα</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -9068,7 +9068,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+41"/>
         <source>Misc</source>
-        <translation type="unfinished">Διάφορα</translation>
+        <translation>Διάφορα</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9086,7 +9086,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/MiscModify.js" line="+44"/>
         <source>Misc</source>
-        <translation type="unfinished">Διάφορα</translation>
+        <translation>Διάφορα</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9104,7 +9104,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/MiscSelect.js" line="+52"/>
         <source>Misc</source>
-        <translation type="unfinished">Διάφορα</translation>
+        <translation>Διάφορα</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -9176,7 +9176,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation type="unfinished">Όλα τα αρχεία</translation>
+        <translation>Όλα τα αρχεία</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
@@ -9305,7 +9305,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Format:</source>
-        <translation type="unfinished">Μορφή:</translation>
+        <translation>Μορφή:</translation>
     </message>
     <message>
         <location line="+143"/>
@@ -9377,12 +9377,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished">Απόσταση:</translation>
+        <translation>Απόσταση:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Number:</source>
-        <translation type="unfinished">Αριθμός:</translation>
+        <translation>Αριθμός:</translation>
     </message>
 </context>
 <context>
@@ -9395,7 +9395,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished">Αριθμός:</translation>
+        <translation>Αριθμός:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
@@ -9423,7 +9423,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>All Files</source>
-        <translation type="unfinished">Όλα τα αρχεία</translation>
+        <translation>Όλα τα αρχεία</translation>
     </message>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFileInit.js" line="+2"/>
@@ -9441,7 +9441,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished">Προεπιλογές για νέα σχέδια</translation>
+        <translation>Προεπιλογές για νέα σχέδια</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9592,7 +9592,7 @@ is already in the list.</source>
     <message>
         <location line="+40"/>
         <source>Position</source>
-        <translation type="unfinished">Θέση</translation>
+        <translation>Θέση</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
@@ -9602,7 +9602,7 @@ is already in the list.</source>
     <message>
         <location line="+129"/>
         <source>Scale:</source>
-        <translation type="unfinished">Κλίμακα:</translation>
+        <translation>Κλίμακα:</translation>
     </message>
     <message>
         <location line="+91"/>
@@ -9707,7 +9707,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1P.js" line="+51"/>
         <source>Position</source>
-        <translation type="unfinished">Θέση</translation>
+        <translation>Θέση</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1PInit.js" line="+2"/>
@@ -9725,7 +9725,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PointDisplaySettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished">Προεπιλογές για νέα σχέδια</translation>
+        <translation>Προεπιλογές για νέα σχέδια</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9736,12 +9736,12 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished">Γενικά</translation>
+        <translation>Γενικά</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode:</source>
-        <translation type="unfinished">Λειτουργία:</translation>
+        <translation>Λειτουργία:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -9772,7 +9772,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenter.js" line="+45"/>
         <source>No solution</source>
-        <translation type="unfinished">Δεν υπάρχει λύση</translation>
+        <translation>Δεν υπάρχει λύση</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
@@ -10056,7 +10056,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Scale:</source>
-        <translation type="unfinished">Κλίμακα:</translation>
+        <translation>Κλίμακα:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -10149,12 +10149,12 @@ is already in the list.</source>
     <message>
         <location line="+37"/>
         <source>Reference point</source>
-        <translation type="unfinished">Σημείο αναφοράς</translation>
+        <translation>Σημείο αναφοράς</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation type="unfinished">Σημείο-στόχος</translation>
+        <translation>Σημείο προορισμού</translation>
     </message>
 </context>
 <context>
@@ -10292,7 +10292,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgets</translation>
+        <translation>Εργαλεία</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10468,7 +10468,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+80"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location line="-40"/>
@@ -10485,7 +10485,7 @@ is already in the list.</source>
     <message>
         <location line="-115"/>
         <source>Distance:</source>
-        <translation type="unfinished">Απόσταση:</translation>
+        <translation>Απόσταση:</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLengthInit.js" line="+2"/>
@@ -10538,12 +10538,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">Χρήση διαλόγου για επιλογές εργαλείων</translation>
+        <translation>Χρήση διαλόγου για επιλογές εργαλείου</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.js" line="+47"/>
         <source>Modify</source>
-        <translation type="unfinished">Τροποποίηση</translation>
+        <translation>Τροποποίηση</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10558,12 +10558,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Reference point</source>
-        <translation type="unfinished">Σημείο αναφοράς</translation>
+        <translation>Σημείο αναφοράς</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Target point</source>
-        <translation type="unfinished">Σημείο-στόχος</translation>
+        <translation>Σημείο προορισμού</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -10573,7 +10573,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Αντιγραφή</translation>
+        <translation>Αντιγραφή</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10583,12 +10583,12 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">Χρήση τρέχοντος στρώματος και χαρακτηριστικών</translation>
+        <translation>Χρήση τρέχοντος στρώματος και χαρακτηριστικών</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -10644,22 +10644,22 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished">Αριθμός αντιγράφων</translation>
+        <translation>Αριθμός αντιγράφων</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished">Διαγραφή αρχικού</translation>
+        <translation>&amp;Διαγραφή αρχικού</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished">Διατηρήστε το πρωτότυπο</translation>
+        <translation>&amp;Διατήρηση αρχικού</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished">Πολλαπλά αντίγραφα</translation>
+        <translation>&amp;Πολλαπλά αντίγραφα</translation>
     </message>
     <message>
         <location line="+97"/>
@@ -10674,7 +10674,7 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Χρήση τρέχοντος στρώματος και χαρακτηριστικών</translation>
+        <translation>Χρήση τρέχοντος στρώματος και &amp;χαρακτηριστικών</translation>
     </message>
 </context>
 <context>
@@ -10687,22 +10687,22 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished">Αριθμός αντιγράφων</translation>
+        <translation>Αριθμός αντιγράφων</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished">Διαγραφή αρχικού</translation>
+        <translation>&amp;Διαγραφή αρχικού</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished">Διατηρήστε το πρωτότυπο</translation>
+        <translation>&amp;Διατήρηση αρχικού</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished">Πολλαπλά αντίγραφα</translation>
+        <translation>&amp;Πολλαπλά αντίγραφα</translation>
     </message>
     <message>
         <location line="+97"/>
@@ -10717,7 +10717,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Χρήση τρέχοντος στρώματος και χαρακτηριστικών</translation>
+        <translation>Χρήση τρέχοντος στρώματος και &amp;χαρακτηριστικών</translation>
     </message>
 </context>
 <context>
@@ -10745,7 +10745,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished">Ακτίνα:</translation>
+        <translation>Ακτίνα:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -10763,7 +10763,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>All Files</source>
-        <translation type="unfinished">Όλα τα αρχεία</translation>
+        <translation>Όλα τα αρχεία</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10876,7 +10876,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Format:</source>
-        <translation type="unfinished">Μορφή:</translation>
+        <translation>Μορφή:</translation>
     </message>
     <message>
         <location filename="../scripts/File/Save/SaveInit.js" line="+2"/>
@@ -10954,7 +10954,7 @@ is already in the list.</source>
     <message>
         <location line="+84"/>
         <source>Format:</source>
-        <translation type="unfinished">Μορφή:</translation>
+        <translation>Μορφή:</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAsInit.js" line="+2"/>
@@ -10967,17 +10967,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">Χρήση διαλόγου για επιλογές εργαλείων</translation>
+        <translation>Χρήση διαλόγου για επιλογές εργαλείου</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
         <source>Modify</source>
-        <translation type="unfinished">Τροποποίηση</translation>
+        <translation>Τροποποίηση</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Scale</source>
-        <translation type="unfinished">Κλίμακα</translation>
+        <translation>Κλίμακα</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -10987,12 +10987,12 @@ is already in the list.</source>
     <message>
         <location line="+11"/>
         <source>Reference point</source>
-        <translation type="unfinished">Σημείο αναφοράς</translation>
+        <translation>Σημείο αναφοράς</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Target point</source>
-        <translation type="unfinished">Σημείο-στόχος</translation>
+        <translation>Σημείο προορισμού</translation>
     </message>
     <message>
         <location line="+66"/>
@@ -11002,7 +11002,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Αντιγραφή</translation>
+        <translation>Αντιγραφή</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11012,7 +11012,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">Χρήση τρέχοντος στρώματος και χαρακτηριστικών</translation>
+        <translation>Χρήση τρέχοντος στρώματος και χαρακτηριστικών</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11056,22 +11056,22 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished">Αριθμός αντιγράφων</translation>
+        <translation>Αριθμός αντιγράφων</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished">Διαγραφή αρχικού</translation>
+        <translation>&amp;Διαγραφή αρχικού</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished">Διατηρήστε το πρωτότυπο</translation>
+        <translation>&amp;Διατήρηση αρχικού</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished">Πολλαπλά αντίγραφα</translation>
+        <translation>&amp;Πολλαπλά αντίγραφα</translation>
     </message>
     <message>
         <location line="+115"/>
@@ -11096,7 +11096,7 @@ is already in the list.</source>
     <message>
         <location line="+25"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Χρήση τρέχοντος στρώματος και χαρακτηριστικών</translation>
+        <translation>Χρήση τρέχοντος στρώματος και &amp;χαρακτηριστικών</translation>
     </message>
 </context>
 <context>
@@ -11221,7 +11221,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished">Λειτουργία:</translation>
+        <translation>Λειτουργία:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11269,17 +11269,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.js" line="+90"/>
         <source>First point</source>
-        <translation type="unfinished">Πρώτο σημείο</translation>
+        <translation>Πρώτο σημείο</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished">Δεύτερο σημείο</translation>
+        <translation>Δεύτερο σημείο</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished">Λειτουργία:</translation>
+        <translation>Λειτουργία:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11340,7 +11340,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished">Λειτουργία:</translation>
+        <translation>Λειτουργία:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11378,17 +11378,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+74"/>
         <source>First corner</source>
-        <translation type="unfinished">Πρώτη γωνία</translation>
+        <translation>Πρώτη γωνία</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second corner</source>
-        <translation type="unfinished">Δεύτερη γωνία</translation>
+        <translation>Δεύτερη γωνία</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished">Λειτουργία:</translation>
+        <translation>Λειτουργία:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11490,7 +11490,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZero.js" line="+50"/>
         <source>Position</source>
-        <translation type="unfinished">Θέση</translation>
+        <translation>Θέση</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZeroInit.js" line="+2"/>
@@ -11523,7 +11523,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Radius:</source>
-        <translation type="unfinished">Ακτίνα:</translation>
+        <translation>Ακτίνα:</translation>
     </message>
 </context>
 <context>
@@ -11560,7 +11560,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.js" line="+61"/>
         <source>Center</source>
-        <translation type="unfinished">Κέντρο</translation>
+        <translation>Κέντρο</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -11631,7 +11631,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+61"/>
         <source>Center</source>
-        <translation type="unfinished">Κέντρο</translation>
+        <translation>Κέντρο</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11659,7 +11659,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+60"/>
         <source>First corner</source>
-        <translation type="unfinished">Πρώτη γωνία</translation>
+        <translation>Πρώτη γωνία</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11697,7 +11697,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
 </context>
 <context>
@@ -11712,18 +11712,18 @@ is already in the list.</source>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
         <source>Height:</source>
-        <translation type="unfinished">Ύψος:</translation>
+        <translation>Ύψος:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="-10"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Σημείο αναφοράς:</translation>
+        <translation>Σημείο αναφοράς:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101"/>
@@ -11898,7 +11898,7 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>Angle</source>
-        <translation type="unfinished">Γωνία</translation>
+        <translation>Γωνία</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -11939,7 +11939,7 @@ is already in the list.</source>
     <message>
         <location line="+32"/>
         <source>Second point</source>
-        <translation type="unfinished">Δεύτερο σημείο</translation>
+        <translation>Δεύτερο σημείο</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
@@ -12218,7 +12218,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/StatusBar/StatusBar.js" line="+32"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgets</translation>
+        <translation>Εργαλεία</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -12236,22 +12236,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Stretch/Stretch.js" line="+59"/>
         <source>First corner</source>
-        <translation type="unfinished">Πρώτη γωνία</translation>
+        <translation>Πρώτη γωνία</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second corner</source>
-        <translation type="unfinished">Δεύτερη γωνία</translation>
+        <translation>Δεύτερη γωνία</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Reference point</source>
-        <translation type="unfinished">Σημείο αναφοράς</translation>
+        <translation>Σημείο αναφοράς</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation type="unfinished">Σημείο-στόχος</translation>
+        <translation>Σημείο προορισμού</translation>
     </message>
     <message>
         <location line="+141"/>
@@ -12315,7 +12315,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation type="unfinished">Όλα τα αρχεία</translation>
+        <translation>Όλα τα αρχεία</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>
@@ -12351,7 +12351,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/TabBar/TabBar.js" line="+24"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgets</translation>
+        <translation>Εργαλεία</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -12364,7 +12364,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Text/Text.js" line="+89"/>
         <source>Position</source>
-        <translation type="unfinished">Θέση</translation>
+        <translation>Θέση</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
@@ -12376,12 +12376,12 @@ is already in the list.</source>
         <location line="+33"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+33"/>
         <source>Height:</source>
-        <translation type="unfinished">Ύψος:</translation>
+        <translation>Ύψος:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextInit.js" line="+2"/>
@@ -12421,12 +12421,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-17"/>
         <source>Text</source>
-        <translation type="unfinished">Κείμενο</translation>
+        <translation>Κείμενο</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Text height</source>
-        <translation type="unfinished">Ύψος κειμένου</translation>
+        <translation>Ύψος κειμένου</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -12446,7 +12446,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Direction:</source>
-        <translation type="unfinished">Κατεύθυνση:</translation>
+        <translation>Κατεύθυνση:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12504,7 +12504,7 @@ is already in the list.</source>
         <location line="+6"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished">Θέση</translation>
+        <translation>Θέση</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js" line="+2"/>
@@ -12587,7 +12587,7 @@ is already in the list.</source>
     <message>
         <location line="+348"/>
         <source>Others...</source>
-        <translation type="unfinished">Άλλοι...</translation>
+        <translation>Άλλα...</translation>
     </message>
     <message>
         <location line="+139"/>
@@ -12667,7 +12667,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
         <source>Text</source>
-        <translation type="unfinished">Κείμενο</translation>
+        <translation>Κείμενο</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -12677,7 +12677,7 @@ is already in the list.</source>
     <message>
         <location line="+24"/>
         <source>Height:</source>
-        <translation type="unfinished">Ύψος:</translation>
+        <translation>Ύψος:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12721,7 +12721,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Copy</source>
-        <translation type="unfinished">Αντιγραφή</translation>
+        <translation>Αντιγραφή</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12786,7 +12786,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12869,7 +12869,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Text</source>
-        <translation type="unfinished">Κείμενο</translation>
+        <translation>Κείμενο</translation>
     </message>
 </context>
 <context>
@@ -12885,7 +12885,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
         <source>General</source>
-        <translation type="unfinished">Γενικά</translation>
+        <translation>Γενικά</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -12988,7 +12988,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+85"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgets</translation>
+        <translation>Εργαλεία</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -13001,7 +13001,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/ToolBarPreferences.js" line="+30"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgets</translation>
+        <translation>Εργαλεία</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13038,12 +13038,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Translate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">Χρήση διαλόγου για επιλογές εργαλείων</translation>
+        <translation>Χρήση διαλόγου για επιλογές εργαλείου</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.js" line="+44"/>
         <source>Modify</source>
-        <translation type="unfinished">Τροποποίηση</translation>
+        <translation>Τροποποίηση</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13053,17 +13053,17 @@ is already in the list.</source>
     <message>
         <location line="+27"/>
         <source>Reference point</source>
-        <translation type="unfinished">Σημείο αναφοράς</translation>
+        <translation>Σημείο αναφοράς</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation type="unfinished">Σημείο-στόχος</translation>
+        <translation>Σημείο προορισμού</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Αντιγραφή</translation>
+        <translation>Αντιγραφή</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -13073,7 +13073,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">Χρήση τρέχοντος στρώματος και χαρακτηριστικών</translation>
+        <translation>Χρήση τρέχοντος στρώματος και χαρακτηριστικών</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>
@@ -13096,27 +13096,27 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished">Αριθμός αντιγράφων</translation>
+        <translation>Αριθμός αντιγράφων</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished">Διαγραφή αρχικού</translation>
+        <translation>&amp;Διαγραφή αρχικού</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished">Διατηρήστε το πρωτότυπο</translation>
+        <translation>&amp;Διατήρηση αρχικού</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished">Πολλαπλά αντίγραφα</translation>
+        <translation>&amp;Πολλαπλά αντίγραφα</translation>
     </message>
     <message>
         <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Χρήση τρέχοντος στρώματος και χαρακτηριστικών</translation>
+        <translation>Χρήση τρέχοντος στρώματος και &amp;χαρακτηριστικών</translation>
     </message>
 </context>
 <context>
@@ -13125,7 +13125,7 @@ is already in the list.</source>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished">Γωνία:</translation>
+        <translation>Γωνία:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
@@ -13135,7 +13135,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-        <translation type="unfinished">Τροποποίηση</translation>
+        <translation>Τροποποίηση</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13145,7 +13145,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
         <source>Copy</source>
-        <translation type="unfinished">Αντιγραφή</translation>
+        <translation>Αντιγραφή</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -13155,12 +13155,12 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">Χρήση τρέχοντος στρώματος και χαρακτηριστικών</translation>
+        <translation>Χρήση τρέχοντος στρώματος και χαρακτηριστικών</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">Χρήση διαλόγου για επιλογές εργαλείων</translation>
+        <translation>Χρήση διαλόγου για επιλογές εργαλείου</translation>
     </message>
 </context>
 <context>
@@ -13173,22 +13173,22 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished">Αριθμός αντιγράφων</translation>
+        <translation>Αριθμός αντιγράφων</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished">Διαγραφή αρχικού</translation>
+        <translation>&amp;Διαγραφή αρχικού</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished">Διατηρήστε το πρωτότυπο</translation>
+        <translation>&amp;Διατήρηση αρχικού</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished">Πολλαπλά αντίγραφα</translation>
+        <translation>&amp;Πολλαπλά αντίγραφα</translation>
     </message>
     <message>
         <location line="+97"/>
@@ -13198,7 +13198,7 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Χρήση τρέχοντος στρώματος και χαρακτηριστικών</translation>
+        <translation>Χρήση τρέχοντος στρώματος και &amp;χαρακτηριστικών</translation>
     </message>
 </context>
 <context>
@@ -13299,7 +13299,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/UiPreferences.js" line="+29"/>
         <source>General</source>
-        <translation type="unfinished">Γενικά</translation>
+        <translation>Γενικά</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13335,123 +13335,123 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished">Προεπιλογές για νέα σχέδια</translation>
+        <translation>Προεπιλογές για νέα σχέδια</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished">Μονάδα σχεδίασης</translation>
+        <translation>Μονάδα Σχεδίασης</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished">Γενικά</translation>
+        <translation>Γενικά</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>None</source>
-        <translation type="unfinished">Κανένα</translation>
+        <translation>Κανένα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Inch</source>
-        <translation type="unfinished">Ίντσα</translation>
+        <translation>Ίντσα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foot</source>
-        <translation type="unfinished">Πόδι</translation>
+        <translation>Πόδι</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mile</source>
-        <translation type="unfinished">Μίλι</translation>
+        <translation>Μίλι</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Millimeter</source>
-        <translation type="unfinished">Millimeter</translation>
+        <translation>Χιλιοστόμετρο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Centimeter</source>
-        <translation type="unfinished">Εκατοστόμετρο</translation>
+        <translation>Εκατοστόμετρο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Meter</source>
-        <translation type="unfinished">Μετρητής</translation>
+        <translation>Μέτρο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Kilometer</source>
-        <translation type="unfinished">Χιλιόμετρα</translation>
+        <translation>Χιλιόμετρο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Microinch</source>
-        <translation type="unfinished">Microinch</translation>
+        <translation>Μικροΐντσα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mil</source>
-        <translation type="unfinished">Mil</translation>
+        <translation>Χιλιοστό της ίντσας</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Yard</source>
-        <translation type="unfinished">Αυλή</translation>
+        <translation>Γιάρδα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angstrom</source>
-        <translation type="unfinished">Angstrom</translation>
+        <translation>Άνγκστρομ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Nanometer</source>
-        <translation type="unfinished">Νάνομετρο</translation>
+        <translation>Νανόμετρο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Micron</source>
-        <translation type="unfinished">Micron</translation>
+        <translation>Μικρόμετρο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimeter</source>
-        <translation type="unfinished">Δεκάμετρο</translation>
+        <translation>Δεκατόμετρο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decameter</source>
-        <translation type="unfinished">Δεκάμετρος</translation>
+        <translation>Δεκάμετρο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hectometer</source>
-        <translation type="unfinished">Hectometer</translation>
+        <translation>Εκατόμετρο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gigameter</source>
-        <translation type="unfinished">Gigameter</translation>
+        <translation>Γιγάμετρο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Astro</source>
-        <translation type="unfinished">Astro</translation>
+        <translation>Αστρονομική Μονάδα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lightyear</source>
-        <translation type="unfinished">Lightyear</translation>
+        <translation>Έτος φωτός</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Parsec</source>
-        <translation type="unfinished">Parsec</translation>
+        <translation>Παρσέκ</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -13500,7 +13500,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgets</translation>
+        <translation>Εργαλεία</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13531,7 +13531,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/ViewportSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished">Προεπιλογές για νέα σχέδια</translation>
+        <translation>Προεπιλογές για νέα σχέδια</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13541,7 +13541,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Layout</source>
-        <translation type="unfinished">Διάταξη</translation>
+        <translation>Διάταξη</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13620,7 +13620,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation type="unfinished">Γωνία</translation>
+        <translation>Γωνία</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13740,17 +13740,17 @@ is already in the list.</source>
     <message>
         <location line="+162"/>
         <source>Left</source>
-        <translation type="unfinished">Αριστερά</translation>
+        <translation>Αριστερά</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished">Κέντρο</translation>
+        <translation>Κέντρο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished">Δεξιά</translation>
+        <translation>Δεξιά</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13771,7 +13771,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation type="unfinished">Κορυφή</translation>
+        <translation>Πάνω</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13781,7 +13781,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished">Κάτω μέρος</translation>
+        <translation>Κάτω</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -13914,7 +13914,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>None</source>
-        <translation type="unfinished">Κανένα</translation>
+        <translation>Κανένα</translation>
     </message>
 </context>
 <context>
@@ -14072,7 +14072,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Block</source>
-        <translation type="unfinished">Μπλοκ</translation>
+        <translation>Μπλοκ</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14082,7 +14082,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Layer</source>
-        <translation type="unfinished">Στρώμα</translation>
+        <translation>Στρώμα</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14092,7 +14092,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Layout</source>
-        <translation type="unfinished">Διάταξη</translation>
+        <translation>Διάταξη</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14102,7 +14102,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Linetype</source>
-        <translation type="unfinished">Linetype</translation>
+        <translation>Τύπος γραμμής</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14177,7 +14177,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Attributes</source>
-        <translation type="unfinished">Χαρακτηριστικά</translation>
+        <translation>Χαρακτηριστικά</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14452,7 +14452,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Text</source>
-        <translation type="unfinished">Κείμενο</translation>
+        <translation>Κείμενο</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14482,7 +14482,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished">Εξωτερική αναφορά</translation>
+        <translation>Εξωτερική Αναφορά</translation>
     </message>
     <message>
         <location line="+2"/>
