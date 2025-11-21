@@ -382,7 +382,7 @@
     <message>
         <location line="+1" />
         <source>Layer</source>
-        <translation>画層</translation>
+        <translation>レイヤー</translation>
     </message>
     <message>
         <location line="+1" />

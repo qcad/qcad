@@ -2939,7 +2939,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1" />
         <source>Arc</source>
-        <translation>弧</translation>
+        <translation>円弧</translation>
     </message>
     <message>
         <location line="+1" />
@@ -9753,7 +9753,7 @@ is already in the list.</source>
     <message>
         <location line="+9" />
         <source>Line</source>
-        <translation>ライン</translation>
+        <translation>線分</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2" />
@@ -14163,7 +14163,7 @@ is already in the list.</source>
     <message>
         <location line="+0" />
         <source>Arc</source>
-        <translation>弧</translation>
+        <translation>円弧</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14203,7 +14203,7 @@ is already in the list.</source>
     <message>
         <location line="+0" />
         <source>Dimension</source>
-        <translation>次元</translation>
+        <translation>寸法</translation>
     </message>
     <message>
         <location line="+2" />
