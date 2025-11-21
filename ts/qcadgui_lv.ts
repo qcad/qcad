@@ -1,90 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
+<?xml version='1.0' encoding='utf-8'?>
 <TS version="2.1" language="lv_LV">
 <context>
     <name>RCadToolBar</name>
     <message>
-        <location filename="../src/gui/RCadToolBar.cpp" line="+139"/>
+        <location filename="../src/gui/RCadToolBar.cpp" line="+139" />
         <source>Vertical/Horizontal</source>
-        <translation type="unfinished">Vertikāli/horizontāli</translation>
+        <translation>Vertikāli/horizontāli</translation>
     </message>
 </context>
 <context>
     <name>RCadToolBarPanel</name>
     <message>
-        <location filename="../src/gui/RCadToolBarPanel.cpp" line="+23"/>
-        <location line="+63"/>
+        <location filename="../src/gui/RCadToolBarPanel.cpp" line="+23" />
+        <location line="+63" />
         <source>Back</source>
-        <translation type="unfinished">Atpakaļ</translation>
+        <translation>Atpakaļ</translation>
     </message>
 </context>
 <context>
     <name>RColorCombo</name>
     <message>
-        <location filename="../src/gui/RColorCombo.cpp" line="+154"/>
+        <location filename="../src/gui/RColorCombo.cpp" line="+154" />
         <source>Custom</source>
-        <translation type="unfinished">Pielāgots</translation>
+        <translation>Pielāgots</translation>
     </message>
 </context>
 <context>
     <name>REventHandler</name>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="+211"/>
+        <location filename="../src/gui/REventHandler.cpp" line="+211" />
         <source>Grid</source>
-        <translation type="unfinished">Tīkls</translation>
+        <translation>Tīkls</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+3" />
         <source>End</source>
-        <translation type="unfinished">Izbeigt</translation>
+        <translation>Izbeigt</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+3" />
         <source>On Entity</source>
-        <translation type="unfinished">Par vienību</translation>
+        <translation>Par vienību</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+3" />
         <source>Perpendicular</source>
-        <translation type="unfinished">Perpendikulāri</translation>
+        <translation>Perpendikulāri</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+3" />
         <source>Tangential</source>
-        <translation type="unfinished">Tangenciālais</translation>
+        <translation>Tangenciālais</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+3" />
         <source>Center</source>
-        <translation type="unfinished">Centrs</translation>
+        <translation>Centrs</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+3" />
         <source>Middle</source>
-        <translation type="unfinished">Middle</translation>
+        <translation>Middle</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+3" />
         <source>Intersection</source>
-        <translation type="unfinished">Krustojums</translation>
+        <translation>Krustojums</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+3" />
         <source>Reference</source>
-        <translation type="unfinished">Atsauce</translation>
+        <translation>Atsauce</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+3" />
         <source>Distance</source>
-        <translation type="unfinished">Attālums</translation>
+        <translation>Attālums</translation>
     </message>
 </context>
 <context>
     <name>RMathLineEdit</name>
     <message>
-        <location filename="../src/gui/RMathLineEdit.cpp" line="+188"/>
+        <location filename="../src/gui/RMathLineEdit.cpp" line="+188" />
         <source>Invalid</source>
-        <translation type="unfinished">Nederīgs</translation>
+        <translation>Nederīgs</translation>
     </message>
 </context>
 </TS>
