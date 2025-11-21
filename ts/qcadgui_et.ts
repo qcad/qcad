@@ -36,7 +36,7 @@
     <message>
         <location line="+3"/>
         <source>End</source>
-        <translation type="unfinished">End</translation>
+        <translation>Otspunkt</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -61,12 +61,12 @@
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation type="unfinished">Keskmine</translation>
+        <translation>Keskpunkt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Intersection</source>
-        <translation type="unfinished">Ristmik</translation>
+        <translation>Lõikepunkt</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -84,7 +84,7 @@
     <message>
         <location filename="../src/gui/RMathLineEdit.cpp" line="+188"/>
         <source>Invalid</source>
-        <translation type="unfinished">Invaliidne</translation>
+        <translation>Kehtetu</translation>
     </message>
 </context>
 </TS>

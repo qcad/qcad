@@ -3341,7 +3341,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Keskmine</translation>
+        <translation>Keskpunkt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8297,17 +8297,17 @@ is already in the list.</source>
     <message>
         <location line="-31"/>
         <source>Start</source>
-        <translation type="unfinished">Start</translation>
+        <translation>Alguspunkt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Keskmine</translation>
+        <translation>Keskpunkt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation type="unfinished">End</translation>
+        <translation>Otspunkt</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2"/>
@@ -8680,17 +8680,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="-45"/>
         <source>Start</source>
-        <translation type="unfinished">Start</translation>
+        <translation>Alguspunkt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Keskmine</translation>
+        <translation>Keskpunkt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation type="unfinished">End</translation>
+        <translation>Otspunkt</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2"/>
@@ -13755,7 +13755,7 @@ is already in the list.</source>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation type="unfinished">Keskmine</translation>
+        <translation>Keskpunkt</translation>
     </message>
     <message>
         <location line="-6"/>
