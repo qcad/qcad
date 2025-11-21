@@ -6,7 +6,7 @@
     <message>
         <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
-        <translation type="unfinished">Umbes %1</translation>
+        <translation>Teave %1</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -24,12 +24,12 @@
     <message>
         <location line="-164"/>
         <source>Build Date:</source>
-        <translation type="unfinished">Ehituskuupäev:</translation>
+        <translation>Ehitamise kuupäev:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Revision:</source>
-        <translation type="unfinished">Läbivaatamine:</translation>
+        <translation>Revisjon:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -45,7 +45,7 @@
     <message>
         <location line="+2"/>
         <source>Compiler:</source>
-        <translation type="unfinished">Koostaja:</translation>
+        <translation>Kompilaator:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -193,7 +193,7 @@
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
-        <translation type="unfinished">Umbes...</translation>
+        <translation>&amp;Teave...</translation>
     </message>
 </context>
 <context>
@@ -988,7 +988,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Perpendicular</source>
-        <translation type="unfinished">Ristkülikukujuline</translation>
+        <translation>Risti</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11682,7 +11682,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
-        <translation type="unfinished">Ristkülikukujuline</translation>
+        <translation>Ristkülik</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12061,7 +12061,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapPerpendicular/SnapPerpendicularInit.js" line="+2"/>
         <source>&amp;Perpendicular</source>
-        <translation type="unfinished">Ristkülikukujuline</translation>
+        <translation>&amp;Risti</translation>
     </message>
 </context>
 <context>
@@ -13375,7 +13375,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Meter</source>
-        <translation type="unfinished">Arvesti</translation>
+        <translation>Meeter</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13395,7 +13395,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Yard</source>
-        <translation type="unfinished">Hoov</translation>
+        <translation>Jard</translation>
     </message>
     <message>
         <location line="+1"/>

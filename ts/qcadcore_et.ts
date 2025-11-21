@@ -36,7 +36,7 @@
     <message>
         <location line="+3"/>
         <source>Meter</source>
-        <translation type="unfinished">Arvesti</translation>
+        <translation>Meeter</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -56,7 +56,7 @@
     <message>
         <location line="+3"/>
         <source>Yard</source>
-        <translation type="unfinished">Hoov</translation>
+        <translation>Jard</translation>
     </message>
     <message>
         <location line="+3"/>

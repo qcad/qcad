@@ -46,7 +46,7 @@
     <message>
         <location line="+3"/>
         <source>Perpendicular</source>
-        <translation type="unfinished">Ristkülikukujuline</translation>
+        <translation>Risti</translation>
     </message>
     <message>
         <location line="+3"/>
