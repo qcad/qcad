@@ -322,7 +322,7 @@
     <message>
         <location line="+1"/>
         <source>XRef File Name</source>
-        <translation>Naziv XRef datoteke</translation>
+        <translation>XRef naziv datoteke</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
@@ -1078,7 +1078,7 @@
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation>Postrojenje</translation>
+        <translation>Pogon</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1103,7 +1103,7 @@
     <message>
         <location line="+1"/>
         <source>Electric</source>
-        <translation>Električno</translation>
+        <translation>Električna</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1118,17 +1118,17 @@
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation>Nadzemni elektrovod</translation>
+        <translation>Nadzemno napajanje</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation>Otpadne vode</translation>
+        <translation>Otpadna</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation>Otpadne vode uzlazno</translation>
+        <translation>Otpadna uzdižuća</translation>
     </message>
 </context>
 <context>

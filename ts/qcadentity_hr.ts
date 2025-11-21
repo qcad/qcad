@@ -619,7 +619,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation>Obuhvaćanje</translation>
+        <translation>Namotaj</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -939,7 +939,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-        <translation>Središnja točka</translation>
+        <translation>Srednja točka</translation>
     </message>
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
