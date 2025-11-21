@@ -5,107 +5,107 @@
     <message>
         <location filename="../src/core/RUnit.cpp" line="+272" />
         <source>None</source>
-        <translation type="unfinished">Nėra</translation>
+        <translation>Nėra</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Inch</source>
-        <translation type="unfinished">Colis</translation>
+        <translation>Colis</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Foot</source>
-        <translation type="unfinished">Pėda</translation>
+        <translation>Pėda</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Mile</source>
-        <translation type="unfinished">Mylia</translation>
+        <translation>Mylia</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Millimeter</source>
-        <translation type="unfinished">Milimetras</translation>
+        <translation>Milimetras</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Centimeter</source>
-        <translation type="unfinished">Centimetras</translation>
+        <translation>Centimetras</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Meter</source>
-        <translation type="unfinished">Metras</translation>
+        <translation>Metras</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Kilometer</source>
-        <translation type="unfinished">Kilometras</translation>
+        <translation>Kilometras</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Microinch</source>
-        <translation type="unfinished">Microinch</translation>
+        <translation>Microinch</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Mil</source>
-        <translation type="unfinished">Mil</translation>
+        <translation>Mil</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Yard</source>
-        <translation type="unfinished">Jardas</translation>
+        <translation>Jardas</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Angstrom</source>
-        <translation type="unfinished">Angstromas</translation>
+        <translation>Angstromas</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Nanometer</source>
-        <translation type="unfinished">Nanometras</translation>
+        <translation>Nanometras</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Micron</source>
-        <translation type="unfinished">"Micron"</translation>
+        <translation>"Micron"</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Decimeter</source>
-        <translation type="unfinished">Decimetras</translation>
+        <translation>Decimetras</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Decameter</source>
-        <translation type="unfinished">Dekametras</translation>
+        <translation>Dekametras</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Hectometer</source>
-        <translation type="unfinished">Hektometras</translation>
+        <translation>Hektometras</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Gigameter</source>
-        <translation type="unfinished">Gigametras</translation>
+        <translation>Gigametras</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Astro</source>
-        <translation type="unfinished">Astro</translation>
+        <translation>Astro</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Lightyear</source>
-        <translation type="unfinished">Lightyear</translation>
+        <translation>Šviesmečiai</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Parsec</source>
-        <translation type="unfinished">Parsekas</translation>
+        <translation>Parsekas</translation>
     </message>
 </context>
 <context>
@@ -113,97 +113,97 @@
     <message>
         <location filename="../src/core/RColor.cpp" line="+340" />
         <source>By Layer</source>
-        <translation type="unfinished">Pagal sluoksnį</translation>
+        <translation>Pagal sluoksnį</translation>
     </message>
     <message>
         <location line="+1" />
         <source>By Block</source>
-        <translation type="unfinished">Pagal bloką</translation>
+        <translation>Pagal bloką</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Red</source>
-        <translation type="unfinished">Raudona</translation>
+        <translation>Raudona</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Green</source>
-        <translation type="unfinished">Žalioji</translation>
+        <translation>Žalioji</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Blue</source>
-        <translation type="unfinished">Mėlyna</translation>
+        <translation>Mėlyna</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Cyan</source>
-        <translation type="unfinished">Cyan</translation>
+        <translation>Žydra</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Magenta</source>
-        <translation type="unfinished">Magenta</translation>
+        <translation>Rausva</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Yellow</source>
-        <translation type="unfinished">Geltona</translation>
+        <translation>Geltona</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Orange</source>
-        <translation type="unfinished">Oranžinė</translation>
+        <translation>Oranžinė</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Dark Red</source>
-        <translation type="unfinished">Tamsiai raudona</translation>
+        <translation>Tamsiai raudona</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Dark Green</source>
-        <translation type="unfinished">Tamsiai žalia</translation>
+        <translation>Tamsiai žalia</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Dark Blue</source>
-        <translation type="unfinished">Tamsiai mėlyna</translation>
+        <translation>Tamsiai mėlyna</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Dark Cyan</source>
-        <translation type="unfinished">Tamsiai žydra</translation>
+        <translation>Tamsiai žydra</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Dark Magenta</source>
-        <translation type="unfinished">Tamsiai purpurinės spalvos</translation>
+        <translation>Tamsiai purpurinės spalvos</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Dark Yellow</source>
-        <translation type="unfinished">Tamsiai geltona</translation>
+        <translation>Tamsiai geltona</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Black</source>
-        <translation type="unfinished">Juoda</translation>
+        <translation>Juoda</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Gray</source>
-        <translation type="unfinished">Pilka</translation>
+        <translation>Pilka</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Light Gray</source>
-        <translation type="unfinished">Šviesiai pilka</translation>
+        <translation>Šviesiai pilka</translation>
     </message>
     <message>
         <location line="+1" />
         <source>White</source>
-        <translation type="unfinished">Balta</translation>
+        <translation>Balta</translation>
     </message>
     <message>
         <location line="+2" />
@@ -216,22 +216,22 @@
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+48" />
         <source>Current Layer ID</source>
-        <translation type="unfinished">Dabartinis sluoksnio ID</translation>
+        <translation>Dabartinis sluoksnio ID</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Drawing Unit</source>
-        <translation type="unfinished">Piešimo vienetas</translation>
+        <translation>Piešimo vienetas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Linetype Scale</source>
-        <translation type="unfinished">Linijinio tipo skalė</translation>
+        <translation>Linijinio tipo skalė</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Dimension Font</source>
-        <translation type="unfinished">Matmenų šriftas</translation>
+        <translation>Matmenų šriftas</translation>
     </message>
 </context>
 <context>
@@ -242,24 +242,24 @@
         <location filename="../src/core/RLayerState.cpp" line="+46" />
         <location filename="../src/core/RLayout.cpp" line="+81" />
         <source>Name</source>
-        <translation type="unfinished">Pavadinimas</translation>
+        <translation>Pavadinimas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Hidden</source>
-        <translation type="unfinished">Paslėptas</translation>
+        <translation>Paslėptas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Pixel Unit</source>
-        <translation type="unfinished">Pikselių vienetas</translation>
+        <translation>Pikselių vienetas</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
         <location line="+1" />
         <source>Origin</source>
-        <translation type="unfinished">Kilmė</translation>
+        <translation>Kilmė</translation>
     </message>
     <message>
         <location line="-2" />
@@ -275,7 +275,7 @@
         <location line="+8" />
         <location line="+2" />
         <source>X</source>
-        <translation type="unfinished">X</translation>
+        <translation>X</translation>
     </message>
     <message>
         <location line="+1" />
@@ -291,7 +291,7 @@
         <location line="+8" />
         <location line="+2" />
         <source>Y</source>
-        <translation type="unfinished">Y</translation>
+        <translation>Y</translation>
     </message>
     <message>
         <location line="+1" />
@@ -306,37 +306,37 @@
         <location filename="../src/core/RViewportEntity.cpp" line="-9" />
         <location line="+10" />
         <source>Z</source>
-        <translation type="unfinished">Z</translation>
+        <translation>Z</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Layout</source>
-        <translation type="unfinished">Maketavimas</translation>
+        <translation>Maketavimas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Owned by Reference</source>
-        <translation type="unfinished">Nuosavybės teise priklausanti nuoroda</translation>
+        <translation>Nuosavybės teise priklausanti nuoroda</translation>
     </message>
     <message>
         <location line="+1" />
         <source>XRef File Name</source>
-        <translation type="unfinished" />
+        <translation>XRef failo pavadinimas</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+95" />
         <source>Block</source>
-        <translation type="unfinished">Blokas</translation>
+        <translation>Blokas</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7" />
         <source>Referenced Block</source>
-        <translation type="unfinished">Referencinis blokas</translation>
+        <translation>Referencinis blokas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>External Reference</source>
-        <translation type="unfinished" />
+        <translation>Išorinė nuoroda</translation>
     </message>
     <message>
         <location line="+1" />
@@ -346,7 +346,7 @@
         <location line="+1" />
         <location line="+1" />
         <source>Position</source>
-        <translation type="unfinished">Pozicija</translation>
+        <translation>Pozicija</translation>
     </message>
     <message>
         <location line="+1" />
@@ -354,86 +354,86 @@
         <location line="+1" />
         <location filename="../src/core/RViewportEntity.cpp" line="+3" />
         <source>Scale</source>
-        <translation type="unfinished">Skalė</translation>
+        <translation>Skalė</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Angle</source>
-        <translation type="unfinished">Kampas</translation>
+        <translation>Kampas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Columns</source>
-        <translation type="unfinished">Stulpeliai</translation>
+        <translation>Stulpeliai</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Rows</source>
-        <translation type="unfinished">Eilutės</translation>
+        <translation>Eilutės</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Column Spacing</source>
-        <translation type="unfinished">Atstumai tarp stulpelių</translation>
+        <translation>Atstumai tarp stulpelių</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Row Spacing</source>
-        <translation type="unfinished">Tarpai tarp eilučių</translation>
+        <translation>Tarpai tarp eilučių</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Attributes</source>
-        <translation type="unfinished">Atributai</translation>
+        <translation>Atributai</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="-1" />
         <location filename="../src/core/RObject.cpp" line="+70" />
         <source>Type</source>
-        <translation type="unfinished">Tipas</translation>
+        <translation>Tipas</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Layer</source>
-        <translation type="unfinished">Sluoksnis</translation>
+        <translation>Sluoksnis</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../src/core/RLayer.cpp" line="+9" />
         <source>Linetype</source>
-        <translation type="unfinished">Linijų tipas</translation>
+        <translation>Linijų tipas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Linetype Scale</source>
-        <translation type="unfinished">Linijinio tipo skalė</translation>
+        <translation>Linijinio tipo skalė</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../src/core/RLayer.cpp" line="+1" />
         <source>Lineweight</source>
-        <translation type="unfinished">Linijinis svoris</translation>
+        <translation>Linijinis svoris</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../src/core/RLayer.cpp" line="-2" />
         <source>Color</source>
-        <translation type="unfinished">Spalva</translation>
+        <translation>Spalva</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Displayed Color</source>
-        <translation type="unfinished">Rodoma spalva</translation>
+        <translation>Rodoma spalva</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Draw Order</source>
-        <translation type="unfinished">Piešimo tvarka</translation>
+        <translation>Piešimo tvarka</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Parent Id</source>
-        <translation type="unfinished">Tėvų ID</translation>
+        <translation>Tėvų ID</translation>
     </message>
     <message>
         <location line="+2" />
@@ -441,413 +441,413 @@
         <location line="+1" />
         <location line="+1" />
         <source>Boundary</source>
-        <translation type="unfinished">Riba</translation>
+        <translation>Riba</translation>
     </message>
     <message>
         <location line="-3" />
         <location filename="../src/core/RLayout.cpp" line="+3" />
         <source>Left</source>
-        <translation type="unfinished">Kairėje pusėje</translation>
+        <translation>Kairėje pusėje</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../src/core/RLayout.cpp" line="+1" />
         <source>Bottom</source>
-        <translation type="unfinished">Dugnas</translation>
+        <translation>Dugnas</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../src/core/RLayout.cpp" line="+1" />
         <source>Right</source>
-        <translation type="unfinished">Dešinė</translation>
+        <translation>Dešinė</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../src/core/RLayout.cpp" line="+1" />
         <source>Top</source>
-        <translation type="unfinished">Viršuje</translation>
+        <translation>Viršuje</translation>
     </message>
     <message>
         <location line="+2" />
         <location line="+1" />
         <source>Size</source>
-        <translation type="unfinished">Dydis</translation>
+        <translation>Dydis</translation>
     </message>
     <message>
         <location line="-1" />
         <location filename="../src/core/RLayout.cpp" line="+1" />
         <location filename="../src/core/RViewportEntity.cpp" line="-2" />
         <source>Width</source>
-        <translation type="unfinished">Plotis</translation>
+        <translation>Plotis</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../src/core/RLayout.cpp" line="+1" />
         <location filename="../src/core/RViewportEntity.cpp" line="+1" />
         <source>Height</source>
-        <translation type="unfinished">Aukštis</translation>
+        <translation>Aukštis</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="-7" />
         <source>Off</source>
-        <translation type="unfinished">Išjungta</translation>
+        <translation>Išjungta</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Frozen</source>
-        <translation type="unfinished">Užšaldytas</translation>
+        <translation>Užšaldytas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Locked</source>
-        <translation type="unfinished">Užrakinta</translation>
+        <translation>Užrakinta</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Collapsed</source>
-        <translation type="unfinished">Sugriuvęs</translation>
+        <translation>Sugriuvęs</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Plottable</source>
-        <translation type="unfinished">Plotai</translation>
+        <translation>Plotai</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Snappable</source>
-        <translation type="unfinished">Snappable</translation>
+        <translation>Prikabinamas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Off is Freeze</source>
-        <translation type="unfinished">Išjungta yra įšaldymas</translation>
+        <translation>Išjungta yra įšaldymas</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="-23" />
         <source>Tab Order</source>
-        <translation type="unfinished">Skirtuko tvarka</translation>
+        <translation>Skirtuko tvarka</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
         <location line="+1" />
         <source>Min Limits</source>
-        <translation type="unfinished">Minimalios ribos</translation>
+        <translation>Minimalios ribos</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
         <location line="+1" />
         <source>Max Limits</source>
-        <translation type="unfinished">Maksimalios ribos</translation>
+        <translation>Maksimalios ribos</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
         <location line="+1" />
         <source>Insertion Base</source>
-        <translation type="unfinished">Įterpimo bazė</translation>
+        <translation>Įterpimo bazė</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
         <location line="+1" />
         <source>Min Extents</source>
-        <translation type="unfinished">Min Extents</translation>
+        <translation>Minimalūs matmenys</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
         <location line="+1" />
         <source>Max Extents</source>
-        <translation type="unfinished">Maksimalūs ištraukos</translation>
+        <translation>Maksimalūs ištraukos</translation>
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1" />
         <location filename="../src/core/RPropertyTypeId.cpp" line="+162" />
         <source>Custom</source>
-        <translation type="unfinished">Pasirinktinis</translation>
+        <translation>Pasirinktinis</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Handle</source>
-        <translation type="unfinished">Rankena</translation>
+        <translation>Rankena</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Protected</source>
-        <translation type="unfinished">Apsaugotas</translation>
+        <translation>Apsaugotas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Selected</source>
-        <translation type="unfinished">Pasirinkta</translation>
+        <translation>Pasirinkta</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Object Invisible</source>
-        <translation type="unfinished">Objektas nematomas</translation>
+        <translation>Objektas nematomas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Working Set</source>
-        <translation type="unfinished">Darbo rinkinys</translation>
+        <translation>Darbo rinkinys</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3" />
         <source>Simple</source>
-        <translation type="unfinished">Paprastas</translation>
+        <translation>Paprastas</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
         <location line="+1" />
         <source>Text Position</source>
-        <translation type="unfinished">Teksto padėtis</translation>
+        <translation>Teksto padėtis</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Text</source>
-        <translation type="unfinished">Tekstas</translation>
+        <translation>Tekstas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Plain Text</source>
-        <translation type="unfinished">Paprastas tekstas</translation>
+        <translation>Paprastas tekstas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Font Name</source>
-        <translation type="unfinished">Šrifto pavadinimas</translation>
+        <translation>Šrifto pavadinimas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Text Height</source>
-        <translation type="unfinished">Teksto aukštis</translation>
+        <translation>Teksto aukštis</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Text Width</source>
-        <translation type="unfinished">Teksto plotis</translation>
+        <translation>Teksto plotis</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Text Angle</source>
-        <translation type="unfinished">Teksto kampas</translation>
+        <translation>Teksto kampas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>X Scale</source>
-        <translation type="unfinished">X skalė</translation>
+        <translation>X skalė</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Bold</source>
-        <translation type="unfinished">Drąsiai</translation>
+        <translation>Drąsiai</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Italic</source>
-        <translation type="unfinished">Kursyvu</translation>
+        <translation>Kursyvu</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Line Spacing</source>
-        <translation type="unfinished">Tarpai tarp eilučių</translation>
+        <translation>Tarpai tarp eilučių</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
         <source>Alignment</source>
-        <translation type="unfinished">Suderinimas</translation>
+        <translation>Suderinimas</translation>
     </message>
     <message>
         <location line="-1" />
         <source>Horizontal</source>
-        <translation type="unfinished">Horizontalus</translation>
+        <translation>Horizontalus</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Vertical</source>
-        <translation type="unfinished">Vertikalus</translation>
+        <translation>Vertikalus</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Backward</source>
-        <translation type="unfinished">Atgalinis</translation>
+        <translation>Atgalinis</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Upside Down</source>
-        <translation type="unfinished">Apversta aukštyn kojomis</translation>
+        <translation>Apversta aukštyn kojomis</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2" />
         <source>Rotation</source>
-        <translation type="unfinished">Sukimasis</translation>
+        <translation>Sukimasis</translation>
     </message>
     <message>
         <location line="+1" />
         <source>On</source>
-        <translation type="unfinished">Svetainėje</translation>
+        <translation>Svetainėje</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
         <source>View Center</source>
-        <translation type="unfinished">Vaizdo centras</translation>
+        <translation>Vaizdo centras</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
         <location line="+1" />
         <source>View Target</source>
-        <translation type="unfinished">Peržiūrėti taikinį</translation>
+        <translation>Peržiūrėti taikinį</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Overall</source>
-        <translation type="unfinished">Bendras</translation>
+        <translation>Bendras</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Frozen Layers</source>
-        <translation type="unfinished">Užšaldyti sluoksniai</translation>
+        <translation>Užšaldyti sluoksniai</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Layer ID</source>
-        <translation type="unfinished">Sluoksnio ID</translation>
+        <translation>Sluoksnio ID</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+920" />
         <source>Circular (recursive) block referencing detected:</source>
-        <translation type="unfinished">Aptikta žiedinė (rekursinė) bloko nuoroda:</translation>
+        <translation>Aptikta žiedinė (rekursinė) bloko nuoroda:</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Block name:</source>
-        <translation type="unfinished">Bloko pavadinimas:</translation>
+        <translation>Bloko pavadinimas:</translation>
     </message>
     <message>
         <location filename="../src/core/RDimStyle.cpp" line="+71" />
         <source>Style</source>
-        <translation type="unfinished">Stilius</translation>
+        <translation>Stilius</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Overall scale</source>
-        <translation type="unfinished">Bendra skalė</translation>
+        <translation>Bendra skalė</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Linear measurement factor</source>
-        <translation type="unfinished">Linijinis matavimo koeficientas</translation>
+        <translation>Linijinis matavimo koeficientas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Text height</source>
-        <translation type="unfinished">Teksto aukštis</translation>
+        <translation>Teksto aukštis</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Dimension line gap</source>
-        <translation type="unfinished">Matmenų linijos tarpas</translation>
+        <translation>Matmenų linijos tarpas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Arrow size</source>
-        <translation type="unfinished">Strėlės dydis</translation>
+        <translation>Strėlės dydis</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Dimension line increment</source>
-        <translation type="unfinished">Matmenų linijos prieaugis</translation>
+        <translation>Matmenų linijos prieaugis</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Extension line extension</source>
-        <translation type="unfinished">Pratęsimo linijos išplėtimas</translation>
+        <translation>Pratęsimo linijos išplėtimas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Extension line offset</source>
-        <translation type="unfinished">Išplėtimo linijos poslinkis</translation>
+        <translation>Išplėtimo linijos poslinkis</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Text position vertical</source>
-        <translation type="unfinished">Vertikali teksto padėtis</translation>
+        <translation>Vertikali teksto padėtis</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Text horizontal</source>
-        <translation type="unfinished">Horizontalusis tekstas</translation>
+        <translation>Horizontalusis tekstas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Tick size</source>
-        <translation type="unfinished">Žymeklio dydis</translation>
+        <translation>Žymeklio dydis</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Linear format</source>
-        <translation type="unfinished">Linijinis formatas</translation>
+        <translation>Linijinis formatas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Decimal places</source>
-        <translation type="unfinished">Dešimtainės vietos</translation>
+        <translation>Dešimtainės vietos</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Decimal separator</source>
-        <translation type="unfinished">Dešimtainių skaičių skirtukas</translation>
+        <translation>Dešimtainių skaičių skirtukas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Zero suppression</source>
-        <translation type="unfinished">Nulinis slopinimas</translation>
+        <translation>Nulinis slopinimas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Angular format</source>
-        <translation type="unfinished">Kampinis formatas</translation>
+        <translation>Kampinis formatas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Angular decimal places</source>
-        <translation type="unfinished">Kampinis skaičius po kablelio</translation>
+        <translation>Kampinis skaičius po kablelio</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Angular zero suppression</source>
-        <translation type="unfinished">Kampinio nulio slopinimas</translation>
+        <translation>Kampinio nulio slopinimas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Architectur tick</source>
-        <translation type="unfinished">Architectur tick</translation>
+        <translation>Architektūrinis žymeklis</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Text color</source>
-        <translation type="unfinished">Teksto spalva</translation>
+        <translation>Teksto spalva</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Arrow block</source>
-        <translation type="unfinished">Strėlių blokas</translation>
+        <translation>Strėlių blokas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Arrow block 1</source>
-        <translation type="unfinished">1 rodyklės blokas</translation>
+        <translation>1 rodyklės blokas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Arrow block 2</source>
-        <translation type="unfinished">2 rodyklių blokas</translation>
+        <translation>2 rodyklių blokas</translation>
     </message>
 </context>
 <context>
@@ -855,7 +855,7 @@
     <message>
         <location filename="../src/core/RGuiAction.cpp" line="+203" />
         <source>Requires selection</source>
-        <translation type="unfinished">Reikia pasirinkti</translation>
+        <translation>Reikia pasirinkti</translation>
     </message>
 </context>
 <context>
@@ -863,22 +863,22 @@
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+51" />
         <source>Name</source>
-        <translation type="unfinished">Pavadinimas</translation>
+        <translation>Pavadinimas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Description</source>
-        <translation type="unfinished">Aprašymas</translation>
+        <translation>Aprašymas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Metric</source>
-        <translation type="unfinished">Metrinis</translation>
+        <translation>Metrinis</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Pattern</source>
-        <translation type="unfinished">Modelis</translation>
+        <translation>Modelis</translation>
     </message>
 </context>
 <context>
@@ -886,163 +886,163 @@
     <message>
         <location filename="../src/core/RLinetypePattern.cpp" line="+912" />
         <source>By Layer</source>
-        <translation type="unfinished">Pagal sluoksnį</translation>
+        <translation>Pagal sluoksnį</translation>
     </message>
     <message>
         <location line="+1" />
         <source>By Block</source>
-        <translation type="unfinished">Pagal bloką</translation>
+        <translation>Pagal bloką</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Continuous</source>
-        <translation type="unfinished">Nuolatinis</translation>
+        <translation>Nuolatinis</translation>
     </message>
     <message>
         <location line="+2" />
         <location line="+1" />
         <location line="+1" />
         <source>Border</source>
-        <translation type="unfinished">Pasienis</translation>
+        <translation>Pasienis</translation>
     </message>
     <message>
         <location line="+2" />
         <location line="+1" />
         <location line="+1" />
         <source>Center</source>
-        <translation type="unfinished">Centras</translation>
+        <translation>Centras</translation>
     </message>
     <message>
         <location line="+2" />
         <location line="+1" />
         <location line="+1" />
         <source>Dash dot</source>
-        <translation type="unfinished">Brūkšnelis taškas</translation>
+        <translation>Brūkšnelis taškas</translation>
     </message>
     <message>
         <location line="+2" />
         <location line="+1" />
         <location line="+1" />
         <source>Dashed</source>
-        <translation type="unfinished">Brūkšninis</translation>
+        <translation>Brūkšninis</translation>
     </message>
     <message>
         <location line="+2" />
         <location line="+1" />
         <location line="+1" />
         <source>Divide</source>
-        <translation type="unfinished">Padalykite</translation>
+        <translation>Padalykite</translation>
     </message>
     <message>
         <location line="+2" />
         <location line="+1" />
         <location line="+1" />
         <source>Dot</source>
-        <translation type="unfinished">Taškas</translation>
+        <translation>Taškas</translation>
     </message>
     <message>
         <location line="+2" />
         <location line="+1" />
         <location line="+1" />
         <source>Hidden</source>
-        <translation type="unfinished">Paslėptas</translation>
+        <translation>Paslėptas</translation>
     </message>
     <message>
         <location line="+2" />
         <location line="+1" />
         <location line="+1" />
         <source>Phantom</source>
-        <translation type="unfinished">Fantomas</translation>
+        <translation>Fantomas</translation>
     </message>
     <message>
         <location line="+2" />
         <source>ISO dash</source>
-        <translation type="unfinished">ISO brūkšnys</translation>
+        <translation>ISO brūkšnys</translation>
     </message>
     <message>
         <location line="+1" />
         <source>ISO dash space</source>
-        <translation type="unfinished">ISO brūkšnelio vieta</translation>
+        <translation>ISO brūkšnelio vieta</translation>
     </message>
     <message>
         <location line="+1" />
         <source>ISO long-dash dot</source>
-        <translation type="unfinished">ISO ilgasis brūkšnys taškas</translation>
+        <translation>ISO ilgasis brūkšnys taškas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>ISO long-dash double-dot</source>
-        <translation type="unfinished">ISO ilgasis brūkšnys su dvigubu tašku</translation>
+        <translation>ISO ilgasis brūkšnys su dvigubu tašku</translation>
     </message>
     <message>
         <location line="+1" />
         <source>ISO long-dash triple-dot</source>
-        <translation type="unfinished">ISO ilgasis brūkšnys, trigubas taškas</translation>
+        <translation>ISO ilgasis brūkšnys, trigubas taškas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>ISO dot</source>
-        <translation type="unfinished">ISO taškas</translation>
+        <translation>ISO taškas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>ISO long-dash short-dash</source>
-        <translation type="unfinished">ISO ilgas brūkšnys trumpas brūkšnys</translation>
+        <translation>ISO ilgas brūkšnys trumpas brūkšnys</translation>
     </message>
     <message>
         <location line="+1" />
         <source>ISO long-dash double-short-dash</source>
-        <translation type="unfinished">ISO ilgas brūkšnys, dvigubas trumpas brūkšnys</translation>
+        <translation>ISO ilgas brūkšnys, dvigubas trumpas brūkšnys</translation>
     </message>
     <message>
         <location line="+1" />
         <source>ISO dash dot</source>
-        <translation type="unfinished">ISO brūkšnelis taškas</translation>
+        <translation>ISO brūkšnelis taškas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>ISO double-dash dot</source>
-        <translation type="unfinished">ISO dvigubas brūkšnelis</translation>
+        <translation>ISO dvigubas brūkšnelis</translation>
     </message>
     <message>
         <location line="+1" />
         <source>ISO dash double-dot</source>
-        <translation type="unfinished">ISO brūkšnelis su dvigubu tašku</translation>
+        <translation>ISO brūkšnelis su dvigubu tašku</translation>
     </message>
     <message>
         <location line="+1" />
         <source>ISO double-dash double-dot</source>
-        <translation type="unfinished">ISO dvigubas brūkšnys dvigubas taškas</translation>
+        <translation>ISO dvigubas brūkšnys dvigubas taškas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>ISO dash triple-dot</source>
-        <translation type="unfinished">ISO brūkšnelis su triženkliu tašku</translation>
+        <translation>ISO brūkšnelis su triženkliu tašku</translation>
     </message>
     <message>
         <location line="+1" />
         <source>ISO double-dash triple-dot</source>
-        <translation type="unfinished">ISO dvigubas brūkšnys, trigubas taškas</translation>
+        <translation>ISO dvigubas brūkšnys, trigubas taškas</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Hot Water Supply</source>
-        <translation type="unfinished">Karšto vandens tiekimas</translation>
+        <translation>Karšto vandens tiekimas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Hot Water</source>
-        <translation type="unfinished">Karštas vanduo</translation>
+        <translation>Karštas vanduo</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Gas Line</source>
-        <translation type="unfinished">Dujotiekio linija</translation>
+        <translation>Dujotiekio linija</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Batting</source>
-        <translation type="unfinished">Batsiuvystė</translation>
+        <translation>Batsiuvystė</translation>
     </message>
     <message>
         <location line="+1" />
@@ -1052,27 +1052,27 @@
     <message>
         <location line="+1" />
         <source>Tracks</source>
-        <translation type="unfinished">Trasos</translation>
+        <translation>Trasos</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Fenceline 1</source>
-        <translation type="unfinished">Fenceline 1</translation>
+        <translation>Fenceline 1</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Fenceline 2</source>
-        <translation type="unfinished">"Fenceline 2</translation>
+        <translation>"Fenceline 2</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Point 1</source>
-        <translation type="unfinished" />
+        <translation>Taškas 1</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Point 2</source>
-        <translation type="unfinished" />
+        <translation>Taškas 2</translation>
     </message>
     <message>
         <location line="+1" />
@@ -1082,42 +1082,42 @@
     <message>
         <location line="+2" />
         <source>Water</source>
-        <translation type="unfinished">Vanduo</translation>
+        <translation>Vanduo</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Drainage</source>
-        <translation type="unfinished">Drenažas</translation>
+        <translation>Drenažas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Drainage Reversed</source>
-        <translation type="unfinished">Atvirkštinis drenažas</translation>
+        <translation>Atvirkštinis drenažas</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Communication</source>
-        <translation type="unfinished">Bendravimas</translation>
+        <translation>Bendravimas</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Electric</source>
-        <translation type="unfinished">Elektrinis</translation>
+        <translation>Elektrinis</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Low Voltage</source>
-        <translation type="unfinished">Žema įtampa</translation>
+        <translation>Žema įtampa</translation>
     </message>
     <message>
         <location line="+1" />
         <source>High Voltage</source>
-        <translation type="unfinished">Aukšta įtampa</translation>
+        <translation>Aukšta įtampa</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Overhead Power</source>
-        <translation type="unfinished">Viršutinė galia</translation>
+        <translation>Viršutinė galia</translation>
     </message>
     <message>
         <location line="+2" />
@@ -1135,137 +1135,137 @@
     <message>
         <location filename="../src/core/RLineweight.cpp" line="+37" />
         <source>By Layer</source>
-        <translation type="unfinished">Pagal sluoksnį</translation>
+        <translation>Pagal sluoksnį</translation>
     </message>
     <message>
         <location line="+1" />
         <source>By Block</source>
-        <translation type="unfinished">Pagal bloką</translation>
+        <translation>Pagal bloką</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Default</source>
-        <translation type="unfinished">Numatytoji</translation>
+        <translation>Numatytoji</translation>
     </message>
     <message>
         <location line="+1" />
         <source>0.00mm</source>
-        <translation type="unfinished">0.00 mm</translation>
+        <translation>0.00 mm</translation>
     </message>
     <message>
         <location line="+1" />
         <source>0.05mm</source>
-        <translation type="unfinished">0.05 mm</translation>
+        <translation>0.05 mm</translation>
     </message>
     <message>
         <location line="+1" />
         <source>0.09mm</source>
-        <translation type="unfinished">0.09 mm</translation>
+        <translation>0.09 mm</translation>
     </message>
     <message>
         <location line="+1" />
         <source>0.13mm (ISO)</source>
-        <translation type="unfinished">0.13 mm (ISO)</translation>
+        <translation>0.13 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>0.15mm</source>
-        <translation type="unfinished">0.15 mm</translation>
+        <translation>0.15 mm</translation>
     </message>
     <message>
         <location line="+1" />
         <source>0.18mm (ISO)</source>
-        <translation type="unfinished">0.18 mm (ISO)</translation>
+        <translation>0.18 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>0.20mm</source>
-        <translation type="unfinished">0.20 mm</translation>
+        <translation>0.20 mm</translation>
     </message>
     <message>
         <location line="+1" />
         <source>0.25mm (ISO)</source>
-        <translation type="unfinished">0.25 mm (ISO)</translation>
+        <translation>0.25 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>0.30mm</source>
-        <translation type="unfinished">0.30 mm</translation>
+        <translation>0.30 mm</translation>
     </message>
     <message>
         <location line="+1" />
         <source>0.35mm (ISO)</source>
-        <translation type="unfinished">0.35 mm (ISO)</translation>
+        <translation>0.35 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>0.40mm</source>
-        <translation type="unfinished">0.40 mm</translation>
+        <translation>0.40 mm</translation>
     </message>
     <message>
         <location line="+1" />
         <source>0.50mm (ISO)</source>
-        <translation type="unfinished">0.50 mm (ISO)</translation>
+        <translation>0.50 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>0.53mm</source>
-        <translation type="unfinished">0.53 mm</translation>
+        <translation>0.53 mm</translation>
     </message>
     <message>
         <location line="+1" />
         <source>0.60mm</source>
-        <translation type="unfinished">0.60 mm</translation>
+        <translation>0.60 mm</translation>
     </message>
     <message>
         <location line="+1" />
         <source>0.70mm (ISO)</source>
-        <translation type="unfinished">0.70 mm (ISO)</translation>
+        <translation>0.70 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>0.80mm</source>
-        <translation type="unfinished">0.80 mm</translation>
+        <translation>0.80 mm</translation>
     </message>
     <message>
         <location line="+1" />
         <source>0.90mm</source>
-        <translation type="unfinished">0.90 mm</translation>
+        <translation>0.90 mm</translation>
     </message>
     <message>
         <location line="+1" />
         <source>1.00mm (ISO)</source>
-        <translation type="unfinished">1.00 mm (ISO)</translation>
+        <translation>1.00 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>1.06mm</source>
-        <translation type="unfinished">1.06 mm</translation>
+        <translation>1.06 mm</translation>
     </message>
     <message>
         <location line="+1" />
         <source>1.20mm</source>
-        <translation type="unfinished">1.20 mm</translation>
+        <translation>1.20 mm</translation>
     </message>
     <message>
         <location line="+1" />
         <source>1.40mm (ISO)</source>
-        <translation type="unfinished">1.40 mm (ISO)</translation>
+        <translation>1.40 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>1.58mm</source>
-        <translation type="unfinished">1.58 mm</translation>
+        <translation>1.58 mm</translation>
     </message>
     <message>
         <location line="+1" />
         <source>2.00mm (ISO)</source>
-        <translation type="unfinished">2.00 mm (ISO)</translation>
+        <translation>2.00 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>2.11mm</source>
-        <translation type="unfinished">2.11 mm</translation>
+        <translation>2.11 mm</translation>
     </message>
 </context>
 </TS>
