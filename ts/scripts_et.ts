@@ -457,7 +457,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+85"/>
         <source>Invalid angle</source>
-        <translation type="unfinished">Kehtetu nurk</translation>
+        <translation>Kehtetu nurk</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1232,7 +1232,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
-        <translation type="unfinished">Kehtetu pildi suurus (laius x kõrgus peab olema väiksem kui %1)</translation>
+        <translation>Kehtetu pildi suurus (laius x kõrgus peab olema väiksem kui %1)</translation>
     </message>
 </context>
 <context>
@@ -2162,12 +2162,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+199"/>
         <source>Invalid value:</source>
-        <translation type="unfinished">Kehtetu väärtus:</translation>
+        <translation>Kehtetu väärtus:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Invalid coordinate or distance &quot;%1&quot;.</source>
-        <translation type="unfinished">Kehtetu koordinaat või kaugus &quot;%1&quot;.</translation>
+        <translation>Kehtetu koordinaat või kaugus &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -4234,7 +4234,7 @@ is already in the list.</source>
     <message>
         <location line="+578"/>
         <source>Invalid position</source>
-        <translation type="unfinished">Kehtetu asend</translation>
+        <translation>Kehtetu asend</translation>
     </message>
     <message>
         <location line="+175"/>
@@ -4525,7 +4525,7 @@ is already in the list.</source>
     <message>
         <location line="+249"/>
         <source>Invalid major radius.</source>
-        <translation type="unfinished">Kehtetu suur raadius.</translation>
+        <translation>Kehtetu suur raadius.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10564,7 +10564,7 @@ is already in the list.</source>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-        <translation type="unfinished">Kehtetu pöördenurk</translation>
+        <translation>Kehtetu pöördenurk</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
@@ -10993,7 +10993,7 @@ is already in the list.</source>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-        <translation type="unfinished">Kehtetu skaalategur</translation>
+        <translation>Kehtetu skaalategur</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
