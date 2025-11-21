@@ -9070,7 +9070,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+41"/>
         <source>Misc</source>
-        <translation>Misc</translation>
+        <translation>Sekalaiset</translation>
     </message>
     <message>
         <location line="+10"/>
