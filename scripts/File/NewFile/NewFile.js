@@ -300,6 +300,7 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
         // replacement dialog, etc):
         for (k=0; k<NewFile.postOpenActions.length; k++) {
             if (!isNull(NewFile.postOpenActions[k])) {
+                include(NewFile.postOpenActions[k]);
                 action = RGuiAction.getByScriptFile(NewFile.postOpenActions[k]);
                 if (!isNull(action)) {
                     action.slotTrigger();
