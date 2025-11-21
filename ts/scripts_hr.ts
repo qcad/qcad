@@ -75,32 +75,32 @@
     <message>
         <location line="+1"/>
         <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodatni alati, funkcije i formati datoteka, uključujući DWG, dostupni su u &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; ili &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaci i skriptni dodaci podliježu svojim odgovarajućim licencama (vidi &quot;Dodaci&quot; tab).</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Svi nazivi robnih marki ili proizvoda su zaštitni znakovi ili registrirani zaštitni znakovi njihovih vlasnika.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dijelovi ovog softvera © %1 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt je isporučen sa QCAD-om pod &lt;a href=&apos;%1&apos;&gt;LGPL Open Source licencom&lt;/a&gt; koja vam kao korisniku daje različita prava, uključujući pravo ponovnog kompajliranja Qt biblioteka za vašu platformu. Za to slijedite &lt;a href=&apos;%2&apos;&gt;dokumentaciju prikazanu na Qt web stranici&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
-        <translation type="unfinished"></translation>
+        <translation>Program se pruža KAKAV JEST bez IKAKVIH JAMSTAVA, UKLJUČUJUĆI JAMSTVO DIZAJNA, PRODAJNOSTI I PRIKLADNOSTI ZA ODREĐENU SVRHU.</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -211,7 +211,7 @@
     <message>
         <location line="+31"/>
         <source>Themes</source>
-        <translation type="unfinished"></translation>
+        <translation>Teme</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -314,7 +314,7 @@ primjenjivanje promijenjenih postavki.</translation>
     <message>
         <location line="+1"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Postavke trenutnog crteža mogu se promijeniti pod&lt;br/&gt;&lt;i&gt;Uredi &amp;gt; Postavke crteža&lt;/i&gt;.</translation>
     </message>
 </context>
 <context>
@@ -335,34 +335,34 @@ primjenjivanje promijenjenih postavki.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/AddCentroidDialog.ui" line="+14"/>
         <source>Add  point mass 2D Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj točkasu masu 2D centroida</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozicija Y:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+7"/>
         <location line="+49"/>
         <source>0.00</source>
-        <translation type="unfinished"></translation>
+        <translation>0.00</translation>
     </message>
     <message>
         <location line="-42"/>
         <source>Position X:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozicija X:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Point mass:</source>
-        <translation type="unfinished"></translation>
+        <translation>Točkasta masa:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetiraj na &apos;Nedefinirano&apos;</translation>
     </message>
 </context>
 <context>
@@ -370,17 +370,17 @@ primjenjivanje promijenjenih postavki.</translation>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj prilagođeno svojstvo</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Naziv:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrijednost:</translation>
     </message>
 </context>
 <context>
@@ -388,17 +388,17 @@ primjenjivanje promijenjenih postavki.</translation>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Sloj</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj sloj</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayerInit.js" line="+2"/>
         <source>&amp;Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dodaj sloj</translation>
     </message>
 </context>
 <context>
@@ -406,7 +406,7 @@ primjenjivanje promijenjenih postavki.</translation>
     <message>
         <location filename="../scripts/View/AntialiasingMode/AntialiasingMode.js" line="+74"/>
         <source>&amp;Anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zaglađivanje</translation>
     </message>
 </context>
 <context>
@@ -414,7 +414,7 @@ primjenjivanje promijenjenih postavki.</translation>
     <message>
         <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
-        <translation type="unfinished">Neispravan polumjer</translation>
+        <translation>Neispravan polumjer</translation>
     </message>
     <message>
         <location line="+48"/>
@@ -427,7 +427,7 @@ primjenjivanje promijenjenih postavki.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/AppPreferences.js" line="+65"/>
         <source>Application &amp;Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Postavke aplikacije</translation>
     </message>
 </context>
 <context>
@@ -511,7 +511,7 @@ primjenjivanje promijenjenih postavki.</translation>
     <message>
         <location line="+81"/>
         <source>Invalid height</source>
-        <translation type="unfinished"></translation>
+        <translation>Neispravna visina</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -521,17 +521,17 @@ primjenjivanje promijenjenih postavki.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
         <source>2 Points and &amp;Height</source>
-        <translation type="unfinished"></translation>
+        <translation>2 točke i &amp;visina</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
-        <translation type="unfinished"></translation>
+        <translation>Nacrtaj luk od 2 točke i visine</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PH.ui" line="+17"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Visina:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -564,7 +564,7 @@ primjenjivanje promijenjenih postavki.</translation>
     <message>
         <location line="+85"/>
         <source>Invalid length</source>
-        <translation type="unfinished"></translation>
+        <translation>Neispravna duljina</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -574,17 +574,17 @@ primjenjivanje promijenjenih postavki.</translation>
     <message>
         <location line="+10"/>
         <source>The distance between the two points must be less than the arc length</source>
-        <translation type="unfinished"></translation>
+        <translation>Udaljenost između dviju točaka mora biti manja od duljine luka</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
         <source>&amp;2 Points and Length</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;2 točke i duljina</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
-        <translation type="unfinished"></translation>
+        <translation>Nacrtaj luk od 2 točke i duljine</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PL.ui" line="+17"/>
@@ -802,7 +802,7 @@ primjenjivanje promijenjenih postavki.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPR.js" line="+79"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Odaberi liniju, luk, kružnicu ili elipsu</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -812,7 +812,7 @@ primjenjivanje promijenjenih postavki.</translation>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Odaberi rješenje</translation>
     </message>
     <message>
         <location line="+128"/>
@@ -823,12 +823,12 @@ primjenjivanje promijenjenih postavki.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tangenta, točka, polumjer</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Nacrtaj luk tangencijalan entitetu, kroz točku s polumjerom</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPR.ui" line="+17"/>
@@ -869,95 +869,99 @@ primjenjivanje promijenjenih postavki.</translation>
     <message>
         <location filename="../scripts/File/AutoSave/AutoSave.js" line="+35"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Datoteka</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Autosave</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatsko spremanje</translation>
     </message>
     <message>
         <location line="+100"/>
         <source>Autosaving to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatsko spremanje u:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Autosave failed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatsko spremanje nije uspjelo:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Autosave complete.</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatsko spremanje završeno.</translation>
     </message>
     <message numerus="yes">
         <location line="+19"/>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Pronađena je %n sigurnosna kopija automatskog spremanja za neimenovani crtež.
+Želite li je vratiti?</numerusform>
+            <numerusform>Pronađene su %n sigurnosne kopije automatskog spremanja za neimenovane crteže.
+Želite li ih vratiti?</numerusform>
+            <numerusform>Pronađeno je %n sigurnosnih kopija automatskog spremanja za neimenovane crteže.
+Želite li ih vratiti?</numerusform>
         </translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Recover Files?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrati datoteke?</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Recovered</source>
-        <translation type="unfinished"></translation>
+        <translation>Vraćeno</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Recover File?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrati datoteku?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Sigurnosna kopija automatskog spremanja za &quot;%1&quot; postoji.
+Želite li je vratiti?</translation>
     </message>
     <message>
         <location line="+25"/>
         <location line="+11"/>
         <location line="+5"/>
         <source>Cannot rename file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nije moguće preimenovati datoteku:</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Moved autosave backup file to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sigurnosna kopija automatskog spremanja premještena u:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Moved original file to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvorna datoteka premještena u:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Cannot remove file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nije moguće ukloniti datoteku:</translation>
     </message>
     <message>
         <location filename="../scripts/File/AutoSave/PreferencesPage.ui" line="+17"/>
         <source>Enable Autosave</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogući automatsko spremanje</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Autosave Interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>Interval automatskog spremanja:</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>min</source>
-        <translation type="unfinished"></translation>
+        <translation>min</translation>
     </message>
 </context>
 <context>
@@ -965,37 +969,37 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Snap/SnapAuto/PreferencesPage.ui" line="+17"/>
         <source>Auto Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatsko hvatanje</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Intersections</source>
-        <translation type="unfinished"></translation>
+        <translation>Presjeci</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>End points</source>
-        <translation type="unfinished"></translation>
+        <translation>Krajnje točke</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Middle points</source>
-        <translation type="unfinished"></translation>
+        <translation>Središnje točke</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Center points</source>
-        <translation type="unfinished"></translation>
+        <translation>Središnje točke</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Perpendicular</source>
-        <translation type="unfinished"></translation>
+        <translation>Okomito</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation>Tangencijalno</translation>
     </message>
     <message>
         <location line="+10"/>
