@@ -219,13 +219,13 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Μέση</translation>
+        <translation>Μέση</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <source>Radius</source>
-        <translation type="unfinished">Ακτίνα</translation>
+        <translation>Ακτίνα</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -249,7 +249,7 @@
         <location line="+2"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
         <source>Diameter</source>
-        <translation type="unfinished">Διάμετρος</translation>
+        <translation>Διάμετρος</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -688,7 +688,7 @@
     <message>
         <location filename="../src/entity/RImageEntity.cpp" line="-18"/>
         <source>File</source>
-        <translation type="unfinished">Αρχείο</translation>
+        <translation>Αρχείο</translation>
     </message>
     <message>
         <location line="+2"/>

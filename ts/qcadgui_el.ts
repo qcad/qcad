@@ -31,7 +31,7 @@
     <message>
         <location filename="../src/gui/REventHandler.cpp" line="+211"/>
         <source>Grid</source>
-        <translation type="unfinished">Πλέγμα</translation>
+        <translation>Πλέγμα</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -61,7 +61,7 @@
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation type="unfinished">Μέση</translation>
+        <translation>Μέση</translation>
     </message>
     <message>
         <location line="+3"/>
