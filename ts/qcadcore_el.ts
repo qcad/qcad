@@ -697,44 +697,44 @@
         <location filename="../src/core/RObject.cpp" line="-1"/>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+162"/>
         <source>Custom</source>
-        <translation type="unfinished">Προσαρμοσμένο</translation>
+        <translation>Προσαρμοσμένο</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation type="unfinished">Λαβή</translation>
+        <translation>Λαβή</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Protected</source>
-        <translation type="unfinished">Προστατευμένο</translation>
+        <translation>Προστατευμένο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Selected</source>
-        <translation type="unfinished">Επιλεγμένα</translation>
+        <translation>Επιλεγμένο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Object Invisible</source>
-        <translation type="unfinished">Αντικείμενο Αόρατο</translation>
+        <translation>Αντικείμενο αόρατο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation type="unfinished">Σετ εργασίας</translation>
+        <translation>Σύνολο εργασίας</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
         <source>Simple</source>
-        <translation type="unfinished">Απλό</translation>
+        <translation>Απλό</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation type="unfinished">Θέση κειμένου</translation>
+        <translation>Θέση κειμένου</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -744,111 +744,111 @@
     <message>
         <location line="+1"/>
         <source>Plain Text</source>
-        <translation type="unfinished">Απλό κείμενο</translation>
+        <translation>Απλό κείμενο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Font Name</source>
-        <translation type="unfinished">Όνομα γραμματοσειράς</translation>
+        <translation>Όνομα γραμματοσειράς</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Height</source>
-        <translation type="unfinished">Ύψος κειμένου</translation>
+        <translation>Ύψος κειμένου</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Width</source>
-        <translation type="unfinished">Πλάτος κειμένου</translation>
+        <translation>Πλάτος κειμένου</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Angle</source>
-        <translation type="unfinished">Γωνία κειμένου</translation>
+        <translation>Γωνία κειμένου</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>X Scale</source>
-        <translation type="unfinished">X Κλίμακα</translation>
+        <translation>Κλίμακα X</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bold</source>
-        <translation type="unfinished">Τολμηρό</translation>
+        <translation>Έντονο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Italic</source>
-        <translation type="unfinished">Πλάγια</translation>
+        <translation>Πλάγιο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Line Spacing</source>
-        <translation type="unfinished">Απόσταση γραμμών</translation>
+        <translation>Απόσταση γραμμών</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Alignment</source>
-        <translation type="unfinished">Ευθυγράμμιση</translation>
+        <translation>Στοίχιση</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Horizontal</source>
-        <translation type="unfinished">Οριζόντια</translation>
+        <translation>Οριζόντιο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Vertical</source>
-        <translation type="unfinished">Κατακόρυφο</translation>
+        <translation>Κατακόρυφο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation type="unfinished">Προς τα πίσω</translation>
+        <translation>Προς τα πίσω</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation type="unfinished">Ανάποδα</translation>
+        <translation>Ανάποδα</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
         <source>Rotation</source>
-        <translation type="unfinished">Περιστροφή</translation>
+        <translation>Περιστροφή</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation type="unfinished">Στο</translation>
+        <translation>Ενεργό</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation type="unfinished">Κέντρο προβολής</translation>
+        <translation>Κέντρο προβολής</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation type="unfinished">Προβολή στόχου</translation>
+        <translation>Στόχος προβολής</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Overall</source>
-        <translation type="unfinished">Συνολικά</translation>
+        <translation>Συνολικά</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Frozen Layers</source>
-        <translation type="unfinished">Κατεψυγμένα στρώματα</translation>
+        <translation>Παγωμένα στρώματα</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer ID</source>
-        <translation type="unfinished">Αναγνωριστικό στρώματος</translation>
+        <translation>ID στρώματος</translation>
     </message>
 </context>
 <context>
@@ -856,7 +856,7 @@
     <message>
         <location filename="../src/core/RGuiAction.cpp" line="+203"/>
         <source>Requires selection</source>
-        <translation type="unfinished">Απαιτεί επιλογή</translation>
+        <translation>Απαιτεί επιλογή</translation>
     </message>
 </context>
 <context>
@@ -869,17 +869,17 @@
     <message>
         <location line="+1"/>
         <source>Description</source>
-        <translation type="unfinished">Περιγραφή</translation>
+        <translation>Περιγραφή</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished">Μετρικό</translation>
+        <translation>Μετρικό</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation type="unfinished">Μοτίβο</translation>
+        <translation>Μοτίβο</translation>
     </message>
 </context>
 <context>
@@ -897,14 +897,14 @@
     <message>
         <location line="+1"/>
         <source>Continuous</source>
-        <translation type="unfinished">Συνεχής</translation>
+        <translation>Συνεχής</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Border</source>
-        <translation type="unfinished">Σύνορα</translation>
+        <translation>Περίγραμμα</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -918,28 +918,28 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation type="unfinished">Τελεία παύλα</translation>
+        <translation>Παύλα τελεία</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dashed</source>
-        <translation type="unfinished">Διακεκομμένο</translation>
+        <translation>Διακεκομμένη</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation type="unfinished">Διαχωρίστε το</translation>
+        <translation>Διαίρεση</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dot</source>
-        <translation type="unfinished">Σημείο</translation>
+        <translation>Τελεία</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -953,57 +953,57 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation type="unfinished">Φάντασμα</translation>
+        <translation>Φάντασμα</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation type="unfinished">Παύλα ISO</translation>
+        <translation>ISO παύλα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation type="unfinished">Χώρος παύλας ISO</translation>
+        <translation>ISO παύλα κενό</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation type="unfinished">Τελεία με μεγάλη παύλα ISO</translation>
+        <translation>ISO μακρά παύλα τελεία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-dot</source>
-        <translation type="unfinished">ISO long-dash double-dot</translation>
+        <translation>ISO μακρά παύλα διπλή τελεία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation type="unfinished">ISO long-dash triple-dot</translation>
+        <translation>ISO μακρά παύλα τριπλή τελεία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dot</source>
-        <translation type="unfinished">Κουκκίδα ISO</translation>
+        <translation>ISO τελεία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation type="unfinished">ISO long-dash short-dash</translation>
+        <translation>ISO μακρά παύλα σύντομη παύλα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation type="unfinished">ISO long-dash double-short-dash</translation>
+        <translation>ISO μακρά παύλα διπλή σύντομη παύλα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash dot</source>
-        <translation type="unfinished">ISO παύλα τελεία</translation>
+        <translation>ISO παύλα τελεία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash dot</source>
-        <translation type="unfinished">Τελεία με διπλή παύλα ISO</translation>
+        <translation>ISO διπλή παύλα τελεία</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1068,12 +1068,12 @@
     <message>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Σημείο 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Σημείο 2</translation>
     </message>
     <message>
         <location line="+1"/>
