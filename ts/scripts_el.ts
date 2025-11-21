@@ -990,12 +990,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Perpendicular</source>
-        <translation type="unfinished">Κάθετη</translation>
+        <translation>Κάθετο</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Tangential</source>
-        <translation type="unfinished">Tangential</translation>
+        <translation>Εφαπτόμενο</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3148,7 +3148,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+12"/>
         <source>Arrow</source>
-        <translation type="unfinished">Βέλος</translation>
+        <translation>Βέλος</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4196,7 +4196,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/EAction.js" line="+64"/>
         <source>Back</source>
-        <translation type="unfinished">Πίσω</translation>
+        <translation>Πίσω</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6715,7 +6715,7 @@ is already in the list.</source>
     <message>
         <location line="-52"/>
         <source>Distance</source>
-        <translation type="unfinished">Απόσταση</translation>
+        <translation>Απόσταση</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -6954,12 +6954,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
         <source>Reference</source>
-        <translation type="unfinished">Αναφορά</translation>
+        <translation>Αναφορά</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Direction</source>
-        <translation type="unfinished">Κατεύθυνση</translation>
+        <translation>Κατεύθυνση</translation>
     </message>
     <message>
         <location line="+42"/>
@@ -8311,7 +8311,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation type="unfinished">Τέλος</translation>
+        <translation>Τέλος</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2"/>
@@ -8694,7 +8694,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation type="unfinished">Τέλος</translation>
+        <translation>Τέλος</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2"/>
@@ -10277,12 +10277,12 @@ is already in the list.</source>
     <message>
         <location line="+43"/>
         <source>Yes</source>
-        <translation type="unfinished">Ναι</translation>
+        <translation>Ναι</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No</source>
-        <translation type="unfinished">Όχι</translation>
+        <translation>Όχι</translation>
     </message>
     <message>
         <location line="+430"/>
@@ -11949,7 +11949,7 @@ is already in the list.</source>
     <message>
         <location line="+75"/>
         <source>Distance</source>
-        <translation type="unfinished">Απόσταση</translation>
+        <translation>Απόσταση</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -12157,7 +12157,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Closed</source>
-        <translation type="unfinished">Κλειστό</translation>
+        <translation>Κλειστό</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
@@ -12592,7 +12592,7 @@ is already in the list.</source>
     <message>
         <location line="+139"/>
         <source>Degree</source>
-        <translation type="unfinished">Πτυχίο</translation>
+        <translation>Βαθμός</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14407,7 +14407,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Solid</source>
-        <translation type="unfinished">Στερεά</translation>
+        <translation>Συμπαγές</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14437,7 +14437,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Spline</source>
-        <translation type="unfinished">Spline</translation>
+        <translation>Καμπύλη</translation>
     </message>
     <message>
         <location line="+2"/>

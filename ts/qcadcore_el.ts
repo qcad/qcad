@@ -1008,62 +1008,62 @@
     <message>
         <location line="+1"/>
         <source>ISO dash double-dot</source>
-        <translation type="unfinished">ISO παύλα διπλή τελεία</translation>
+        <translation>ISO παύλα διπλή τελεία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash double-dot</source>
-        <translation type="unfinished">ISO διπλή παύλα διπλή τελεία</translation>
+        <translation>ISO διπλή παύλα διπλή τελεία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash triple-dot</source>
-        <translation type="unfinished">ISO παύλα τριπλή τελεία</translation>
+        <translation>ISO παύλα τριπλή τελεία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
-        <translation type="unfinished">ISO διπλή παύλα τριπλή τελεία</translation>
+        <translation>ISO διπλή παύλα τριπλή τελεία</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hot Water Supply</source>
-        <translation type="unfinished">Παροχή ζεστού νερού</translation>
+        <translation>Παροχή ζεστού νερού</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hot Water</source>
-        <translation type="unfinished">Ζεστό νερό</translation>
+        <translation>Ζεστό νερό</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gas Line</source>
-        <translation type="unfinished">Γραμμή αερίου</translation>
+        <translation>Γραμμή αερίου</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation type="unfinished">Κτυπήματα</translation>
+        <translation>Μόνωση</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zig Zag</source>
-        <translation type="unfinished">Ζιγκ Ζαγκ</translation>
+        <translation>Ζιγκ-ζαγκ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation type="unfinished">Κομμάτια</translation>
+        <translation>Ράγες</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation type="unfinished">Fenceline 1</translation>
+        <translation>Φράχτης 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 2</source>
-        <translation type="unfinished">Fenceline 2</translation>
+        <translation>Φράχτης 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1078,57 +1078,57 @@
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation type="unfinished"></translation>
+        <translation>Φυτό</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Water</source>
-        <translation type="unfinished">Νερό</translation>
+        <translation>Νερό</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drainage</source>
-        <translation type="unfinished">Αποχέτευση</translation>
+        <translation>Αποχέτευση</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drainage Reversed</source>
-        <translation type="unfinished">Αποστράγγιση Αντιστρέφεται</translation>
+        <translation>Αποχέτευση αντίστροφη</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation type="unfinished">Επικοινωνία</translation>
+        <translation>Επικοινωνία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Electric</source>
-        <translation type="unfinished">Ηλεκτρικό</translation>
+        <translation>Ηλεκτρικό</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Low Voltage</source>
-        <translation type="unfinished">Χαμηλή τάση</translation>
+        <translation>Χαμηλή τάση</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>High Voltage</source>
-        <translation type="unfinished">Υψηλή τάση</translation>
+        <translation>Υψηλή τάση</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation type="unfinished">Εναέρια ισχύς</translation>
+        <translation>Εναέρια ηλεκτροδότηση</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation type="unfinished">Foul</translation>
+        <translation>Ακάθαρτα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished">Foul Rising</translation>
+        <translation>Ανερχόμενα ακάθαρτα</translation>
     </message>
 </context>
 <context>
@@ -1146,127 +1146,127 @@
     <message>
         <location line="+1"/>
         <source>Default</source>
-        <translation type="unfinished">Προεπιλογή</translation>
+        <translation>Προεπιλογή</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.00mm</source>
-        <translation type="unfinished">0.00mm</translation>
+        <translation>0.00mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.05mm</source>
-        <translation type="unfinished">0.05mm</translation>
+        <translation>0.05mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.09mm</source>
-        <translation type="unfinished">0.09mm</translation>
+        <translation>0.09mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.13mm (ISO)</source>
-        <translation type="unfinished">0.13mm (ISO)</translation>
+        <translation>0.13mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.15mm</source>
-        <translation type="unfinished">0.15mm</translation>
+        <translation>0.15mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.18mm (ISO)</source>
-        <translation type="unfinished">0.18mm (ISO)</translation>
+        <translation>0.18mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.20mm</source>
-        <translation type="unfinished">0.20mm</translation>
+        <translation>0.20mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.25mm (ISO)</source>
-        <translation type="unfinished">0.25mm (ISO)</translation>
+        <translation>0.25mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.30mm</source>
-        <translation type="unfinished">0.30mm</translation>
+        <translation>0.30mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.35mm (ISO)</source>
-        <translation type="unfinished">0.35mm (ISO)</translation>
+        <translation>0.35mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.40mm</source>
-        <translation type="unfinished">0.40mm</translation>
+        <translation>0.40mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.50mm (ISO)</source>
-        <translation type="unfinished">0.50mm (ISO)</translation>
+        <translation>0.50mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.53mm</source>
-        <translation type="unfinished">0.53mm</translation>
+        <translation>0.53mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.60mm</source>
-        <translation type="unfinished">0.60mm</translation>
+        <translation>0.60mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.70mm (ISO)</source>
-        <translation type="unfinished">0.70mm (ISO)</translation>
+        <translation>0.70mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.80mm</source>
-        <translation type="unfinished">0.80mm</translation>
+        <translation>0.80mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.90mm</source>
-        <translation type="unfinished">0.90mm</translation>
+        <translation>0.90mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.00mm (ISO)</source>
-        <translation type="unfinished">1.00mm (ISO)</translation>
+        <translation>1.00mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.06mm</source>
-        <translation type="unfinished">1.06mm</translation>
+        <translation>1.06mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.20mm</source>
-        <translation type="unfinished">1.20mm</translation>
+        <translation>1.20mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.40mm (ISO)</source>
-        <translation type="unfinished">1.40mm (ISO)</translation>
+        <translation>1.40mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.58mm</source>
-        <translation type="unfinished">1.58mm</translation>
+        <translation>1.58mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.00mm (ISO)</source>
-        <translation type="unfinished">2.00mm (ISO)</translation>
+        <translation>2.00mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.11mm</source>
-        <translation type="unfinished">2.11mm</translation>
+        <translation>2.11mm</translation>
     </message>
 </context>
 </TS>
