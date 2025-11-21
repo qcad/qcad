@@ -1,90 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
+<?xml version='1.0' encoding='utf-8'?>
 <TS version="2.1" language="nb_NO">
 <context>
     <name>RCadToolBar</name>
     <message>
-        <location filename="../src/gui/RCadToolBar.cpp" line="+139"/>
+        <location filename="../src/gui/RCadToolBar.cpp" line="+139" />
         <source>Vertical/Horizontal</source>
-        <translation type="unfinished">Vertikal/horisontal</translation>
+        <translation>Vertikal/horisontal</translation>
     </message>
 </context>
 <context>
     <name>RCadToolBarPanel</name>
     <message>
-        <location filename="../src/gui/RCadToolBarPanel.cpp" line="+23"/>
-        <location line="+63"/>
+        <location filename="../src/gui/RCadToolBarPanel.cpp" line="+23" />
+        <location line="+63" />
         <source>Back</source>
-        <translation type="unfinished">Tilbake</translation>
+        <translation>Tilbake</translation>
     </message>
 </context>
 <context>
     <name>RColorCombo</name>
     <message>
-        <location filename="../src/gui/RColorCombo.cpp" line="+154"/>
+        <location filename="../src/gui/RColorCombo.cpp" line="+154" />
         <source>Custom</source>
-        <translation type="unfinished">Tilpasset</translation>
+        <translation>Tilpasset</translation>
     </message>
 </context>
 <context>
     <name>REventHandler</name>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="+211"/>
+        <location filename="../src/gui/REventHandler.cpp" line="+211" />
         <source>Grid</source>
-        <translation type="unfinished">Rutenett</translation>
+        <translation>Rutenett</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+3" />
         <source>End</source>
-        <translation type="unfinished">Slutt</translation>
+        <translation>Slutt</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+3" />
         <source>On Entity</source>
-        <translation type="unfinished">Om enhet</translation>
+        <translation>Om enhet</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+3" />
         <source>Perpendicular</source>
-        <translation type="unfinished">Vinkelrett</translation>
+        <translation>Vinkelrett</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+3" />
         <source>Tangential</source>
-        <translation type="unfinished">Tangerende</translation>
+        <translation>Tangerende</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+3" />
         <source>Center</source>
-        <translation type="unfinished">Senter</translation>
+        <translation>Senter</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+3" />
         <source>Middle</source>
-        <translation type="unfinished">Midten</translation>
+        <translation>Midten</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+3" />
         <source>Intersection</source>
-        <translation type="unfinished">Skjæringspunkt</translation>
+        <translation>Skjæringspunkt</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+3" />
         <source>Reference</source>
-        <translation type="unfinished">Referanse</translation>
+        <translation>Referanse</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+3" />
         <source>Distance</source>
-        <translation type="unfinished">Avstand</translation>
+        <translation>Avstand</translation>
     </message>
 </context>
 <context>
     <name>RMathLineEdit</name>
     <message>
-        <location filename="../src/gui/RMathLineEdit.cpp" line="+188"/>
+        <location filename="../src/gui/RMathLineEdit.cpp" line="+188" />
         <source>Invalid</source>
-        <translation type="unfinished">Ugyldig</translation>
+        <translation>Ugyldig</translation>
     </message>
 </context>
 </TS>
