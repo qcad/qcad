@@ -25,6 +25,8 @@
 #include <QList>
 #include <QString>
 
+#include "RTransaction.h"
+
 class RDocument;
 class RBlock;
 
@@ -42,6 +44,8 @@ public:
         QStringList dummy;
         return loadXRef(block, dummy);
     }
+
+    virtual RTransaction loadXRefs(RDocument& document, const QSet<QString>& paths, QStringList& xRefFileNames) = 0;
 
     virtual bool loadXRef(RBlock* block, QStringList& nestedXRefFileNames) = 0;
 
