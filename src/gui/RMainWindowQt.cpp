@@ -136,7 +136,6 @@ void RMainWindowQt::handleUserCommand(const QString& message, bool escape) {
 }
 
 void RMainWindowQt::reloadXRefs(RDocumentInterface* di, const QSet<QString>& dirtyXRefPaths) {
-    qDebug() << "RMainWindowQt::reloadXRefs: emit signal";
     emit reloadXRefsSignal(di, dirtyXRefPaths);
 }
 
