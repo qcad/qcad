@@ -38,7 +38,13 @@ class QCADCORE_EXPORT RBlockProxy {
 public:
     virtual ~RBlockProxy() {}
 
-    virtual bool loadXRef(RBlock* block) = 0;
+    virtual bool loadXRef(RBlock* block) {
+        QStringList dummy;
+        return loadXRef(block, dummy);
+    }
+
+    virtual bool loadXRef(RBlock* block, QStringList& nestedXRefFileNames) = 0;
+
     virtual void unloadXRef(RBlock* block) = 0;
     virtual QString getFullXRefFilePath(const RBlock* block) = 0;
 };
