@@ -114,6 +114,8 @@ public:
         return false;
     }
 
+    virtual void reloadXRefs(RDocumentInterface* di, const QSet<QString>& dirtyXRefPaths);
+
     virtual void postSelectionChangedEvent();
     virtual void postTransactionEvent(
         RTransaction& t,
@@ -196,6 +198,8 @@ signals:
     void userInfo(const QString& message, bool escape);
     void userWarning(const QString& message, bool messageBox, bool escape);
     void userCommand(const QString& message, bool escape);
+
+    void reloadXRefsSignal(RDocumentInterface* di, const QSet<QString>& dirtyXRefPaths);
 
     /**
      * Emitted when a context menu is requested on top of the given entity.

@@ -135,6 +135,11 @@ void RMainWindowQt::handleUserCommand(const QString& message, bool escape) {
     emit userCommand(message, escape);
 }
 
+void RMainWindowQt::reloadXRefs(RDocumentInterface* di, const QSet<QString>& dirtyXRefPaths) {
+    qDebug() << "RMainWindowQt::reloadXRefs: emit signal";
+    emit reloadXRefsSignal(di, dirtyXRefPaths);
+}
+
 void RMainWindowQt::postSelectionChangedEvent() {
     RSelectionChangedEvent* event = new RSelectionChangedEvent();
     QCoreApplication::postEvent(this, event);
