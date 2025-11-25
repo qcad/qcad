@@ -78,7 +78,7 @@ void RBlock::init() {
     RBlock::PropertyOriginZ.generateId(RBlock::getRtti(), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "Z"));
     RBlock::PropertyLayout.generateId(RBlock::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Layout"));
     RBlock::PropertyOwnedByReference.generateId(RBlock::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Owned by Reference"));
-    RBlock::PropertyXRefFileName.generateId(RBlock::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "XRef File Name"));
+    RBlock::PropertyXRefFileName.generateId(RBlock::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "External reference"));
 }
 
 void RBlock::setName(const QString& n) {
