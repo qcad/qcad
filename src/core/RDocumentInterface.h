@@ -26,6 +26,7 @@
 #include <QMap>
 #include <QStack>
 #include <QQueue>
+#include <QFileSystemWatcher>
 
 #include "RAction.h"
 #include "RLineweight.h"
@@ -376,6 +377,9 @@ public:
 
     QVariant eval(const QString& ext, const QString& script);
 
+    void xRefFileChanged(const QString& path);
+    void loadXRefs(const QSet<QString>& paths = QSet<QString>());
+
 //    QTransform getInputTransform() const {
 //        return inputTransform;
 //    }
@@ -430,6 +434,9 @@ private:
     QMap<QString, int> tags;
 
     RDocument* previewDocument;
+
+    QSet<QString> dirtyXRefPaths;
+    QFileSystemWatcher fileSystemWatcher;
 
     // transform for all input coordinates:
 //    QTransform inputTransform;

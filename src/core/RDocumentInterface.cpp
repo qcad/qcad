@@ -27,6 +27,7 @@
 #include "RDocumentInterface.h"
 #include "RBlock.h"
 #include "RBlockListener.h"
+#include "RBlockReferenceEntity.h"
 #include "RCoordinateEvent.h"
 #include "RCoordinateListener.h"
 #include "RDimStyle.h"
@@ -86,6 +87,13 @@ RDocumentInterface::RDocumentInterface(RDocument& document)
     allowSnapInterruption(true),
     previewDocument(NULL) {
     //pressEvent(NULL) {
+
+    QObject::connect(
+        &fileSystemWatcher, &QFileSystemWatcher::fileChanged,
+        [this](const QString& path) {
+            xRefFileChanged(path);
+        }
+    );
 
     RDebug::incCounter("RDocumentInterface");
 }
@@ -528,6 +536,17 @@ void RDocumentInterface::suspend() {
 }
 
 void RDocumentInterface::resume() {
+    // ask user if changed XRefs should be reloaded:
+    if (!dirtyXRefPaths.isEmpty()) {
+        RMainWindow* appWin = RMainWindow::getMainWindow();
+        if (appWin!=NULL) {
+            // do the actual reloading in the GUI:
+            appWin->reloadXRefs(this, dirtyXRefPaths);
+        }
+
+        dirtyXRefPaths.clear();
+    }
+
     if (currentSnap!=NULL) {
         currentSnap->showUiOptions();
     }
@@ -1334,6 +1353,8 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
     }
 
     delete fileImporter;
+
+    loadXRefs();
 
     if (mainWindow!=NULL && notify==true && notifyGlobalListeners==true) {
         mainWindow->notifyListeners();
@@ -2479,6 +2500,10 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
                         newBlockName = propertyChanges[i].getNewValue().toString();
                         oldBlockName = propertyChanges[i].getOldValue().toString();
                     }
+
+                    if (propertyChanges[i].getPropertyTypeId()==RBlock::PropertyXRefFileName) {
+                        // TODO: handle undo / redo for XRef file name changes
+                    }
                 }
 
                 // deselect block reference entities of hidden block:
@@ -2517,7 +2542,13 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
 
                         // force XRef reload:
                         block->setXRefLoaded(false);
-                        block->loadXRef();
+
+                        QStringList xRefFileNames;
+                        RBlockProxy* proxy = RBlock::getBlockProxy();
+                        proxy->loadXRef(block.data(), xRefFileNames);
+
+                        fileSystemWatcher.addPaths(xRefFileNames);
+                        fileSystemWatcher.addPath(block->getFullXRefFilePath());
                     }
                 }
                 continue;
@@ -2848,4 +2879,30 @@ QVariant RDocumentInterface::eval(const QString& ext, const QString& script) {
         return QVariant();
     }
     return handler->eval(script);
+}
+
+void RDocumentInterface::xRefFileChanged(const QString& dirtyXRefPath) {
+    //loadXRefs(path);
+
+    // remember which XRefs have been changed to ask user to reload on resume:
+    dirtyXRefPaths.insert(dirtyXRefPath);
+}
+
+void RDocumentInterface::loadXRefs(const QSet<QString>& paths) {
+    QStringList xRefFileNames;
+
+    RBlockProxy* proxy = RBlock::getBlockProxy();
+    if (proxy==NULL) {
+        return;
+    }
+
+    RTransaction t = proxy->loadXRefs(document, paths, xRefFileNames);
+
+    objectChangeEvent(t);
+
+    if (xRefFileNames.isEmpty()) {
+        return;
+    }
+
+    fileSystemWatcher.addPaths(xRefFileNames);
 }
