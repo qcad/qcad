@@ -199,7 +199,7 @@ signals:
     void userWarning(const QString& message, bool messageBox, bool escape);
     void userCommand(const QString& message, bool escape);
 
-    void reloadXRefsSignal(RDocumentInterface* di, const QSet<QString>& dirtyXRefPaths);
+    void reloadXRefsSignal(RDocumentInterface* di, const QStringList& dirtyXRefPaths);
 
     /**
      * Emitted when a context menu is requested on top of the given entity.

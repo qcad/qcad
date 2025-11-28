@@ -136,7 +136,7 @@ void RMainWindowQt::handleUserCommand(const QString& message, bool escape) {
 }
 
 void RMainWindowQt::reloadXRefs(RDocumentInterface* di, const QSet<QString>& dirtyXRefPaths) {
-    emit reloadXRefsSignal(di, dirtyXRefPaths);
+    emit reloadXRefsSignal(di, dirtyXRefPaths.values());
 }
 
 void RMainWindowQt::postSelectionChangedEvent() {
