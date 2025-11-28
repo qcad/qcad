@@ -2491,6 +2491,10 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
                 QString oldBlockName = "";
                 QString newBlockName = "";
 
+                bool xRefFileNameHasChanged = false;
+                QString oldXRefFileName = "";
+                QString newXRefFileName = "";
+
                 QList<RPropertyChange> propertyChanges = transaction.getPropertyChanges(objectId);
                 for (int i=0; i<propertyChanges.length(); i++) {
                     if (propertyChanges[i].getPropertyTypeId()==RBlock::PropertyName) {
@@ -2502,7 +2506,10 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
                     }
 
                     if (propertyChanges[i].getPropertyTypeId()==RBlock::PropertyXRefFileName) {
-                        // TODO: handle undo / redo for XRef file name changes
+                        // handle undo / redo for XRef file name changes
+                        xRefFileNameHasChanged = true;
+                        newXRefFileName = propertyChanges[i].getNewValue().toString();
+                        oldXRefFileName = propertyChanges[i].getOldValue().toString();
                     }
                 }
 
@@ -2512,43 +2519,58 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
                     deselectEntities(ids);
                 }
 
-                if (block->isXRef()) {
+                bool binding = !oldXRefFileName.isEmpty() && newXRefFileName.isEmpty();
+
+                // block is XRef or was XRef (binding):
+                if (block->isXRef() || binding) {
                     blockXRefHasChanged = true;
 
                     if (block->isUndone()) {
                         block->unloadXRef();
                     }
                     else {
-                        if (transaction.isType(RTransaction::Undo) && blockNameHasChanged) {
-                            // unload block with new name while undoing:
-                            //QString oldBlockName = block->getName();
-                            block->setName(newBlockName);
-                            block->unloadXRef();
-                            block->setName(oldBlockName);
+                        if (blockNameHasChanged) {
+                            if (transaction.isType(RTransaction::Undo)) {
+                                // unload block with new name while undoing:
+                                block->setName(newBlockName);
+                                block->unloadXRef();
+                                block->setName(oldBlockName);
+                            }
+                            else if (transaction.isType(RTransaction::Redo)) {
+                                // unload block with old name while redoing:
+                                block->setName(oldBlockName);
+                                block->unloadXRef();
+                                block->setName(newBlockName);
+                            }
+                            else {
+                                // unload block with old name while renaming:
+                                block->setName(oldBlockName);
+                                block->unloadXRef();
+                                block->setName(newBlockName);
+                            }
                         }
-                        else if (transaction.isType(RTransaction::Redo) && blockNameHasChanged) {
-                            // unload block with old name while redoing:
-                            //QString newBlockName = block->getName();
-                            block->setName(oldBlockName);
-                            block->unloadXRef();
-                            block->setName(newBlockName);
-                        }
-                        else if (blockNameHasChanged) {
-                            // unload block with old name while renaming:
-                            block->setName(oldBlockName);
-                            block->unloadXRef();
-                            block->setName(newBlockName);
+                        if (xRefFileNameHasChanged) {
+                            if (transaction.isType(RTransaction::Redo)) {
+                                if (!oldXRefFileName.isEmpty() && newXRefFileName.isEmpty()) {
+                                    // redo binding:
+                                    block->setXRefFileName(oldXRefFileName);
+                                    block->bindXRef(false);
+                                    block->setXRefFileName(newXRefFileName);
+                                }
+                            }
                         }
 
-                        // force XRef reload:
-                        block->setXRefLoaded(false);
+                        if (!binding) {
+                            // force XRef reload:
+                            block->setXRefLoaded(false);
 
-                        QStringList xRefFileNames;
-                        RBlockProxy* proxy = RBlock::getBlockProxy();
-                        proxy->loadXRef(block.data(), xRefFileNames);
+                            QStringList xRefFileNames;
+                            RBlockProxy* proxy = RBlock::getBlockProxy();
+                            proxy->loadXRef(block.data(), xRefFileNames);
 
-                        fileSystemWatcher.addPaths(xRefFileNames);
-                        fileSystemWatcher.addPath(block->getFullXRefFilePath());
+                            fileSystemWatcher.addPaths(xRefFileNames);
+                            fileSystemWatcher.addPath(block->getFullXRefFilePath());
+                        }
                     }
                 }
                 continue;
@@ -2905,4 +2927,18 @@ void RDocumentInterface::loadXRefs(const QSet<QString>& paths) {
     }
 
     fileSystemWatcher.addPaths(xRefFileNames);
+}
+
+void RDocumentInterface::bindXRef(RBlock* block) {
+    if (block==NULL) {
+        return;
+    }
+
+    RBlockProxy* proxy = RBlock::getBlockProxy();
+    if (proxy==NULL) {
+        return;
+    }
+
+    RTransaction t = proxy->bindXRef(block);
+    objectChangeEvent(t);
 }

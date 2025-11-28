@@ -136,6 +136,12 @@ QSet<QString> RBlock::getXRefBlockNames() const {
     return doc->getBlockNames(QRegularExpression::escape(getName()) + "\\|.*");
 }
 
+void RBlock::bindXRef(bool useTransaction) {
+    if (blockProxy!=NULL) {
+        blockProxy->bindXRef(this, useTransaction);
+    }
+}
+
 bool RBlock::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction) {
     bool ret = RObject::setProperty(propertyTypeId, value, transaction);
 

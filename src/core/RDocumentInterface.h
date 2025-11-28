@@ -379,6 +379,7 @@ public:
 
     void xRefFileChanged(const QString& path);
     void loadXRefs(const QSet<QString>& paths = QSet<QString>());
+    void bindXRef(RBlock* block);
 
 //    QTransform getInputTransform() const {
 //        return inputTransform;

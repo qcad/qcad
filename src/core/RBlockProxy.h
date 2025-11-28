@@ -51,6 +51,8 @@ public:
 
     virtual void unloadXRef(RBlock* block) = 0;
     virtual QString getFullXRefFilePath(const RBlock* block) = 0;
+
+    virtual RTransaction bindXRef(RBlock* block, bool useTransaction = true) = 0;
 };
 
 #endif
