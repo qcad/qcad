@@ -540,7 +540,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
         <source>2 Points and &amp;Height</source>
-        <translation type="unfinished"></translation>
+        <translation>2 จุดและ&amp;ความสูง</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -827,7 +827,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;เส้นสัมผัส จุด รัศมี</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -855,7 +855,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;เชื่อมต่อแบบสัมผัส</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1055,7 +1055,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <source>Behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>พฤติกรรม</translation>
     </message>
 </context>
 <context>
@@ -1121,7 +1121,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportDialog.ui" line="+14"/>
         <source>Bitmap Export</source>
-        <translation type="unfinished"></translation>
+        <translation>ส่งออกบิตแมป</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1218,7 +1218,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation type="unfinished"></translation>
+        <translation>เพิ่มขอบเพิ่มเติมเพื่อชดเชยน้ำหนักเส้น</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
@@ -1303,7 +1303,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Block name:</source>
-        <translation type="unfinished"></translation>
+        <translation>ชื่อบล็อก:</translation>
     </message>
 </context>
 <context>
@@ -1528,7 +1528,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+9"/>
         <source>Columns:</source>
-        <translation type="unfinished"></translation>
+        <translation>คอลัมน์:</translation>
     </message>
 </context>
 <context>
@@ -1785,7 +1785,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
         <source>2 &amp;Tangents and Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>2 &amp;เส้นสัมผัสและรัศมี</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1852,7 +1852,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3T/Circle3TInit.js" line="+2"/>
         <source>3 T&amp;angents</source>
-        <translation type="unfinished"></translation>
+        <translation>3 เส้นสัม&amp;ผัส</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2015,7 +2015,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2PInit.js" line="+2"/>
         <source>&amp;Tangent and 2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;เส้นสัมผัสและ 2 จุด</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2038,7 +2038,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;เส้นสัมผัส จุด รัศมี</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2326,12 +2326,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui" line="+72"/>
         <source>Absolute Cartesian Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>พิกัดคาร์ทีเซียนสัมบูรณ์</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Absolute Polar Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>พิกัดโพลาร์สัมบูรณ์</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -3007,7 +3007,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>มาตราส่วนการเขียนแบบ</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3044,7 +3044,7 @@ Do you wish to recover it?</source>
         <location line="+0"/>
         <location line="+2"/>
         <source>Dimension Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>การตั้งค่ามิติ</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -3298,7 +3298,7 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>เครื่องมือการเขียนแบบ</translation>
     </message>
 </context>
 <context>
@@ -4062,7 +4062,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>ไฟล์ทั้งหมด</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
@@ -4808,7 +4808,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Add Custom Property to a Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>เพิ่มคุณสมบัติกำหนดเองไปยังชั้น</translation>
     </message>
 </context>
 <context>
@@ -5017,7 +5017,7 @@ is already in the list.</source>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;ตัวฟังการทำธุรกรรม</translation>
     </message>
 </context>
 <context>
@@ -5033,7 +5033,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExport.js" line="+39"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>ไฟล์ทั้งหมด</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5051,7 +5051,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImport.js" line="+73"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>ไฟล์ทั้งหมด</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5169,7 +5169,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>ไฟล์ทั้งหมด</translation>
     </message>
 </context>
 <context>
@@ -5872,7 +5872,7 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation type="unfinished"></translation>
+        <translation>น้ำหนักเส้นเริ่มต้น:</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -5907,7 +5907,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Anti-aliasing on by default</source>
-        <translation type="unfinished"></translation>
+        <translation>เปิดการลดรอยหยักเป็นค่าเริ่มต้น</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6140,7 +6140,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>เครื่องมือการเขียนแบบ</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -6239,7 +6239,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>การแสดงผล</translation>
     </message>
 </context>
 <context>
@@ -6414,7 +6414,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>ไฟล์ทั้งหมด</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6472,7 +6472,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>ไฟล์ทั้งหมด</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -6560,7 +6560,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/ImportPoints/ImportPoints.js" line="+39"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>ไฟล์ทั้งหมด</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6753,12 +6753,12 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Add:</source>
-        <translation type="unfinished"></translation>
+        <translation>เพิ่ม:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Add entities to drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>เพิ่มวัตถุไปยังการเขียนแบบ</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7431,7 +7431,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>เพิ่มการวัดไปยังการเขียนแบบ</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -7469,12 +7469,12 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Absolute Cartesian coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation>พิกัดคาร์ทีเซียนสัมบูรณ์:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Absolute polar coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation>พิกัดโพลาร์สัมบูรณ์:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -7511,7 +7511,7 @@ is already in the list.</source>
         <location line="+5"/>
         <location line="+21"/>
         <source>(Default)</source>
-        <translation type="unfinished"></translation>
+        <translation>(ค่าเริ่มต้น)</translation>
     </message>
     <message>
         <location line="-31"/>
@@ -7615,12 +7615,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+8"/>
         <source>Columns:</source>
-        <translation type="unfinished"></translation>
+        <translation>คอลัมน์:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Rows:</source>
-        <translation type="unfinished"></translation>
+        <translation>แถว:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -8732,7 +8732,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1Init.js" line="+2"/>
         <source>&amp;Tangent (Point, Circle)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;เส้นสัมผัส (จุด วงกลม)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9168,7 +9168,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>ไฟล์ทั้งหมด</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
@@ -9413,7 +9413,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>ไฟล์ทั้งหมด</translation>
     </message>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFileInit.js" line="+2"/>
@@ -10051,7 +10051,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>มาตราส่วนการเขียนแบบ</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10242,7 +10242,7 @@ is already in the list.</source>
     <message>
         <location line="+24"/>
         <source>Add custom property to selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation>เพิ่มคุณสมบัติกำหนดเองไปยังวัตถุที่เลือก</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -10753,7 +10753,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>ไฟล์ทั้งหมด</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -11221,7 +11221,7 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>เพิ่มไปยังการเลือกปัจจุบัน</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11246,12 +11246,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation type="unfinished"></translation>
+        <translation>(ยกเลิก)เลือก&amp;รูปร่าง</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select connected entities</source>
-        <translation type="unfinished"></translation>
+        <translation>(ยกเลิก)เลือกวัตถุที่เชื่อมต่อ</translation>
     </message>
 </context>
 <context>
@@ -11279,7 +11279,7 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>เพิ่มไปยังการเลือกปัจจุบัน</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11340,7 +11340,7 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>เพิ่มไปยังการเลือกปัจจุบัน</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11360,7 +11360,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation type="unfinished"></translation>
+        <translation>(ยกเลิก)เลือกวัตถุทั้งหมดบนชั้นเดียวกัน</translation>
     </message>
 </context>
 <context>
@@ -11388,7 +11388,7 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>เพิ่มไปยังการเลือกปัจจุบัน</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11408,12 +11408,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation type="unfinished"></translation>
+        <translation>(ยกเลิก)เลือก&amp;พื้นที่สี่เหลี่ยม</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>(ยกเลิก)เลือกวัตถุทั้งหมดภายในสี่เหลี่ยม</translation>
     </message>
 </context>
 <context>
@@ -12148,7 +12148,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;สไปลน์ (จุดควบคุม)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12301,7 +12301,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>ไฟล์ทั้งหมด</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>
@@ -12402,7 +12402,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Check all</source>
-        <translation type="unfinished"></translation>
+        <translation>เลือกทั้งหมด</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-17"/>
@@ -12475,7 +12475,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;เส้นนำจัดแนวข้อความ</translation>
     </message>
 </context>
 <context>
@@ -12495,7 +12495,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js" line="+2"/>
         <source>&amp;Text Along Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;ข้อความตามวัตถุ</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12923,7 +12923,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/ToggleBlockVisibility/ToggleBlockVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;สลับการมองเห็น</translation>
     </message>
 </context>
 <context>
@@ -12939,7 +12939,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/ToggleLayerLock/ToggleLayerLockInit.js" line="+2"/>
         <source>&amp;Toggle Lock Status</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;สลับสถานะล็อค</translation>
     </message>
 </context>
 <context>
@@ -12947,7 +12947,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/ToggleLayerVisibility/ToggleLayerVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;สลับการมองเห็น</translation>
     </message>
 </context>
 <context>
@@ -13480,7 +13480,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/ViewToolBars/ViewToolBarsPostInit.js" line="+6"/>
         <source>&amp;Toolbars and Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;แถบเครื่องมือและวิดเจ็ต</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -13740,7 +13740,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Aligned</source>
-        <translation type="unfinished"></translation>
+        <translation>จัดแนว</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13786,7 +13786,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Architectural</source>
-        <translation type="unfinished"></translation>
+        <translation>สถาปัตยกรรม</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13872,7 +13872,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+2"/>
         <source>(unsupported)</source>
-        <translation type="unfinished"></translation>
+        <translation>(ไม่รองรับ)</translation>
     </message>
     <message>
         <location line="-39"/>
@@ -14202,12 +14202,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Aligned Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>มิติจัดแนว</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Aligned Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>มิติจัดแนว</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14484,7 +14484,7 @@ is already in the list.</source>
     <message>
         <location line="+106"/>
         <source>All CAD Files</source>
-        <translation type="unfinished"></translation>
+        <translation>ไฟล์ CAD ทั้งหมด</translation>
     </message>
     <message>
         <location line="+1"/>
