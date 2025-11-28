@@ -528,6 +528,12 @@
         ;static  QScriptValue
         eval
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        xRefFileChanged
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        bindXRef
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
