@@ -426,7 +426,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/AppPreferences.js" line="+65"/>
         <source>Application &amp;Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;การตั้งค่าแอปพลิเคชัน</translation>
     </message>
 </context>
 <context>
@@ -811,7 +811,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>เลือกทางแก้</translation>
     </message>
     <message>
         <location line="+128"/>
@@ -944,7 +944,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/AutoSave/PreferencesPage.ui" line="+17"/>
         <source>Enable Autosave</source>
-        <translation type="unfinished"></translation>
+        <translation>เปิดใช้งานบันทึกอัตโนมัติ</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -992,7 +992,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation>สัมผัส</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1198,7 +1198,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Use anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้การลดรอยหยัก</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1352,7 +1352,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js" line="+47"/>
         <source>Block:</source>
-        <translation type="unfinished"></translation>
+        <translation>บล็อก:</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1736,7 +1736,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>เลือกทางแก้</translation>
     </message>
     <message>
         <location line="+144"/>
@@ -1770,7 +1770,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>เลือกทางแก้</translation>
     </message>
     <message>
         <location line="+103"/>
@@ -1836,12 +1836,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+12"/>
         <source>Third line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>เส้นที่สาม ส่วนโค้ง หรือวงกลม</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>เลือกทางแก้</translation>
     </message>
     <message>
         <location line="+126"/>
@@ -2004,7 +2004,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>เลือกทางแก้</translation>
     </message>
     <message>
         <location line="+138"/>
@@ -2293,7 +2293,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+56"/>
         <source>To:</source>
-        <translation type="unfinished"></translation>
+        <translation>ถึง:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -2513,12 +2513,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>จุดเป้าหมายของจุดอ้างอิง</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>จุดเป้าหมายของการเลือก</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2761,7 +2761,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้มุมสูงสุด</translation>
     </message>
 </context>
 <context>
@@ -2992,7 +2992,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+61"/>
         <source>Upper tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>ค่าความคลาดเคลื่อนบน</translation>
     </message>
     <message>
         <location line="+54"/>
@@ -3020,7 +3020,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>มาตราส่วนมิติ</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3089,7 +3089,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>Text above dimension line</source>
-        <translation type="unfinished"></translation>
+        <translation>ข้อความเหนือเส้นมิติ</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -3205,7 +3205,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="-50"/>
         <source>Angular Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>มิติมุม</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3456,7 +3456,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation type="unfinished"></translation>
+        <translation>กวาด</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -3732,7 +3732,7 @@ is already in the list.</source>
         <location line="+35"/>
         <location line="+150"/>
         <source>Angle Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>มุมไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="-527"/>
@@ -3907,7 +3907,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Width Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>ความกว้างไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4133,7 +4133,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation type="unfinished"></translation>
+        <translation>กวาด:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -4461,7 +4461,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Edit text</source>
-        <translation type="unfinished"></translation>
+        <translation>แก้ไขข้อความ</translation>
     </message>
 </context>
 <context>
@@ -4753,7 +4753,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Add and Delete Line</source>
-        <translation type="unfinished"></translation>
+        <translation>เพิ่มและลบเส้น</translation>
     </message>
 </context>
 <context>
@@ -4996,7 +4996,7 @@ is already in the list.</source>
         <location line="+46"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+46"/>
         <source>Three Points</source>
-        <translation type="unfinished"></translation>
+        <translation>สามจุด</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5223,7 +5223,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Background Color:</source>
-        <translation type="unfinished"></translation>
+        <translation>สีพื้นหลัง:</translation>
     </message>
 </context>
 <context>
@@ -5231,7 +5231,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1115"/>
         <source>Add Active SubLayer</source>
-        <translation type="unfinished"></translation>
+        <translation>เพิ่มชั้นย่อยที่ใช้งาน</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5479,7 +5479,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Width : </source>
-        <translation type="unfinished"></translation>
+        <translation>ความกว้าง : </translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5519,7 +5519,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation type="unfinished"></translation>
+        <translation>จัดแนวกับจุดเริ่มต้น</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5529,7 +5529,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation type="unfinished"></translation>
+        <translation>จัดแนวกับจุดปลาย</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -5622,17 +5622,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
-        <translation type="unfinished"></translation>
+        <translation>สาม: ขวา</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/21_ThreeLeft.ui" line="+14"/>
         <source>Three: Left</source>
-        <translation type="unfinished"></translation>
+        <translation>สาม: ซ้าย</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/22_ThreeAbove.ui" line="+14"/>
         <source>Three: Above</source>
-        <translation type="unfinished"></translation>
+        <translation>สาม: ด้านบน</translation>
     </message>
 </context>
 <context>
@@ -5827,7 +5827,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Use system cursors</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้เคอร์เซอร์ระบบ</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5897,7 +5897,7 @@ is already in the list.</source>
     <message>
         <location line="+35"/>
         <source>Apply line weight to points</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้น้ำหนักเส้นกับจุด</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5942,7 +5942,7 @@ is already in the list.</source>
     <message>
         <location line="-121"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-        <translation type="unfinished"></translation>
+        <translation>เรนเดอร์โพลีไลน์ที่มีความกว้างกำหนดเองอย่างน้อย 1 พิกเซลเสมอ</translation>
     </message>
     <message>
         <location line="+182"/>
@@ -5962,7 +5962,7 @@ is already in the list.</source>
     <message>
         <location line="+45"/>
         <source>Timeout for hatch rendering:</source>
-        <translation type="unfinished"></translation>
+        <translation>หมดเวลาสำหรับการเรนเดอร์แรเงา:</translation>
     </message>
     <message>
         <location line="-361"/>
@@ -5982,7 +5982,7 @@ is already in the list.</source>
     <message>
         <location line="+217"/>
         <source>Text height threshold (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>ขีดจำกัดความสูงข้อความ (px):</translation>
     </message>
     <message>
         <location line="-147"/>
@@ -6010,7 +6010,7 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>Background:</source>
-        <translation type="unfinished"></translation>
+        <translation>พื้นหลัง:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6070,7 +6070,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Use secondary selection color</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้สีการเลือกรอง</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6150,7 +6150,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>ตัวคูณการจางของชุดทำงาน:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -6901,7 +6901,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation>จุดศูนย์กลาง:</translation>
     </message>
     <message>
         <location line="+207"/>
@@ -7019,7 +7019,7 @@ is already in the list.</source>
     <message>
         <location line="-431"/>
         <source>Weighted</source>
-        <translation type="unfinished"></translation>
+        <translation>ถ่วงน้ำหนัก</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -7388,7 +7388,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation>จุดศูนย์กลาง:</translation>
     </message>
     <message>
         <location line="+125"/>
@@ -7436,7 +7436,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>ความสูงข้อความ:</translation>
     </message>
 </context>
 <context>
@@ -8169,17 +8169,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.js" line="+60"/>
         <source>Choose line or arc</source>
-        <translation type="unfinished"></translation>
+        <translation>เลือกเส้นหรือส่วนโค้ง</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation type="unfinished"></translation>
+        <translation>จำนวน:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>จำนวนที่จะยืดหรือหด (ลบ)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
@@ -8250,7 +8250,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้ความยาวคงที่สำหรับเส้น</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8260,7 +8260,7 @@ is already in the list.</source>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้มุมคงที่สำหรับเส้น</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8371,7 +8371,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
         <source>Angle &amp;Bisector</source>
-        <translation type="unfinished"></translation>
+        <translation>เส้นแบ่ง&amp;ครึ่งมุม</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8559,7 +8559,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Choose circle, arc or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>เลือกวงกลม ส่วนโค้ง หรือวงรี</translation>
     </message>
     <message>
         <location line="+141"/>
@@ -8717,7 +8717,7 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>Choose circle, arc or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>เลือกวงกลม ส่วนโค้ง หรือวงรี</translation>
     </message>
     <message>
         <location line="+85"/>
@@ -8873,7 +8873,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/MenuBar/PreferencesPage.ui" line="+17"/>
         <source>Use native menu bar</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้แถบเมนูดั้งเดิม</translation>
     </message>
 </context>
 <context>
@@ -8919,7 +8919,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้ชั้นและคุณลักษณะปัจจุบัน</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
@@ -8929,7 +8929,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้กล่องโต้ตอบสำหรับตัวเลือกเครื่องมือ</translation>
     </message>
 </context>
 <context>
@@ -8957,7 +8957,7 @@ is already in the list.</source>
     <message>
         <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้ชั้นและ&amp;คุณลักษณะปัจจุบัน</translation>
     </message>
 </context>
 <context>
@@ -9501,7 +9501,7 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Top:</source>
-        <translation type="unfinished"></translation>
+        <translation>บน:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -10162,7 +10162,7 @@ is already in the list.</source>
     <message>
         <location line="-37"/>
         <source>Allow adding custom properties</source>
-        <translation type="unfinished"></translation>
+        <translation>อนุญาตให้เพิ่มคุณสมบัติกำหนดเอง</translation>
     </message>
     <message>
         <location line="-17"/>
@@ -10182,7 +10182,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Always format property values as decimal numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>จัดรูปแบบค่าคุณสมบัติเป็นตัวเลขทศนิยมเสมอ</translation>
     </message>
     <message>
         <location line="+113"/>
@@ -10262,7 +10262,7 @@ is already in the list.</source>
     <message>
         <location line="+201"/>
         <source>Use auto measurement</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้การวัดอัตโนมัติ</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -10528,7 +10528,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้กล่องโต้ตอบสำหรับตัวเลือกเครื่องมือ</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.js" line="+47"/>
@@ -10573,7 +10573,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้ชั้นและคุณลักษณะปัจจุบัน</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10654,17 +10654,17 @@ is already in the list.</source>
     <message>
         <location line="+97"/>
         <source>Angle &amp;a:</source>
-        <translation type="unfinished"></translation>
+        <translation>มุม &amp;a:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Angle &amp;b:</source>
-        <translation type="unfinished"></translation>
+        <translation>มุม &amp;b:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้ชั้นและ&amp;คุณลักษณะปัจจุบัน</translation>
     </message>
 </context>
 <context>
@@ -10707,7 +10707,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้ชั้นและ&amp;คุณลักษณะปัจจุบัน</translation>
     </message>
 </context>
 <context>
@@ -10821,12 +10821,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>All black entities and layers will be saved as white.</source>
-        <translation type="unfinished"></translation>
+        <translation>วัตถุและชั้นสีดำทั้งหมดจะถูกบันทึกเป็นสีขาว</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All custom colors will be adjusted to the nearest fixed color.</source>
-        <translation type="unfinished"></translation>
+        <translation>สีกำหนดเองทั้งหมดจะถูกปรับเป็นสีคงที่ที่ใกล้ที่สุด</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10884,7 +10884,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้กล่องโต้ตอบไฟล์ระบบ</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -10957,7 +10957,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้กล่องโต้ตอบสำหรับตัวเลือกเครื่องมือ</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
@@ -11002,7 +11002,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้ชั้นและคุณลักษณะปัจจุบัน</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11086,7 +11086,7 @@ is already in the list.</source>
     <message>
         <location line="+25"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้ชั้นและ&amp;คุณลักษณะปัจจุบัน</translation>
     </message>
 </context>
 <context>
@@ -11846,7 +11846,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>ติ๊กสำหรับพิกัดสัมพัทธ์</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11889,7 +11889,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>ติ๊กสำหรับพิกัดสัมพัทธ์</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12138,7 +12138,7 @@ is already in the list.</source>
     <message>
         <location line="+70"/>
         <source>Tick for Closed Spline</source>
-        <translation type="unfinished"></translation>
+        <translation>ติ๊กสำหรับสไปลน์ปิด</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12342,7 +12342,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Tab Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>แถบแท็บ</translation>
     </message>
 </context>
 <context>
@@ -12442,7 +12442,7 @@ is already in the list.</source>
     <message>
         <location line="+20"/>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>ตามเข็มนาฬิกา</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -12593,7 +12593,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Almost equal</source>
-        <translation type="unfinished"></translation>
+        <translation>เกือบเท่ากัน</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12668,7 +12668,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Text Height in Drawing Units</source>
-        <translation type="unfinished"></translation>
+        <translation>ความสูงข้อความในหน่วยการเขียนแบบ</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -12736,12 +12736,12 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Attribute Details</source>
-        <translation type="unfinished"></translation>
+        <translation>รายละเอียดคุณลักษณะ</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Tag:</source>
-        <translation type="unfinished"></translation>
+        <translation>แท็ก:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -12756,7 +12756,7 @@ is already in the list.</source>
     <message>
         <location line="+39"/>
         <source>Text Geometry</source>
-        <translation type="unfinished"></translation>
+        <translation>เรขาคณิตข้อความ</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12883,7 +12883,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation type="unfinished"></translation>
+        <translation>สาม: ด้านล่าง</translation>
     </message>
 </context>
 <context>
@@ -12891,7 +12891,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>สาม: แนวนอน</translation>
     </message>
 </context>
 <context>
@@ -12899,7 +12899,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>สาม: แนวตั้ง</translation>
     </message>
 </context>
 <context>
@@ -13023,7 +13023,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Translate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้กล่องโต้ตอบสำหรับตัวเลือกเครื่องมือ</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.js" line="+44"/>
@@ -13058,7 +13058,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้ชั้นและคุณลักษณะปัจจุบัน</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>
@@ -13101,7 +13101,7 @@ is already in the list.</source>
     <message>
         <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้ชั้นและ&amp;คุณลักษณะปัจจุบัน</translation>
     </message>
 </context>
 <context>
@@ -13140,12 +13140,12 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้ชั้นและคุณลักษณะปัจจุบัน</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้กล่องโต้ตอบสำหรับตัวเลือกเครื่องมือ</translation>
     </message>
 </context>
 <context>
@@ -13183,7 +13183,7 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>ใช้ชั้นและ&amp;คุณลักษณะปัจจุบัน</translation>
     </message>
 </context>
 <context>
@@ -13245,7 +13245,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>สอง: แนวนอน</translation>
     </message>
 </context>
 <context>
@@ -13253,7 +13253,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>สอง: แนวตั้ง</translation>
     </message>
 </context>
 <context>
@@ -13376,7 +13376,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Angstrom</source>
-        <translation type="unfinished"></translation>
+        <translation>อังสตรอม</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13605,7 +13605,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>phi</source>
-        <translation type="unfinished"></translation>
+        <translation>ฟาย</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13620,7 +13620,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>omega</source>
-        <translation type="unfinished"></translation>
+        <translation>โอเมก้า</translation>
     </message>
     <message>
         <location line="-4"/>
@@ -13839,7 +13839,7 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+4"/>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>ตามเข็มนาฬิกา</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -14042,12 +14042,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>วัตถุที่ไม่รู้จัก</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Object</source>
-        <translation type="unfinished"></translation>
+        <translation>วัตถุที่ไม่รู้จัก</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14172,7 +14172,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Attribute Definitions</source>
-        <translation type="unfinished"></translation>
+        <translation>คำจำกัดความคุณลักษณะ</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14212,12 +14212,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>มิติมุม</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>มิติมุม</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14242,7 +14242,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Arc Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>มิติส่วนโค้ง</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14252,7 +14252,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Diametric Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>มิติเส้นผ่านศูนย์กลาง</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14427,7 +14427,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Text based</source>
-        <translation type="unfinished"></translation>
+        <translation>ตามข้อความ</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14473,7 +14473,7 @@ is already in the list.</source>
         <location line="+2"/>
         <location line="+9"/>
         <source>Unknown Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>วัตถุที่ไม่รู้จัก</translation>
     </message>
     <message>
         <location line="-9"/>
@@ -14530,7 +14530,7 @@ is already in the list.</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Display Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>แสดงตาราง</translation>
     </message>
     <message>
         <location line="-446"/>
