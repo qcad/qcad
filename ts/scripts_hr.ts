@@ -1326,7 +1326,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js" line="+80"/>
         <source>&amp;Fix Block Names</source>
-        <translation>&Popravi imena blokova</translation>
+        <translation>&amp;Popravi imena blokova</translation>
     </message>
 </context>
 <context>
@@ -1392,7 +1392,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation>&Izvezi popis blokova</translation>
+        <translation>&amp;Izvezi popis blokova</translation>
     </message>
 </context>
 <context>
@@ -1410,7 +1410,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation>&Izvezi popis referenci blokova</translation>
+        <translation>&amp;Izvezi popis referenci blokova</translation>
     </message>
 </context>
 <context>
@@ -1428,7 +1428,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
-        <translation>&Prekinuto segmentom</translation>
+        <translation>&amp;Prekinuto segmentom</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.ui" line="+17"/>
@@ -1451,7 +1451,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation>&Prekinuto s razmakom</translation>
+        <translation>&amp;Prekinuto s razmakom</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
@@ -1489,7 +1489,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation>&Ručno prekinuto</translation>
+        <translation>&amp;Ručno prekinuto</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
@@ -2040,7 +2040,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>&Tangenta, točka, polumjer</translation>
+        <translation>&amp;Tangenta, točka, polumjer</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2066,7 +2066,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Window/CloseAll/CloseAllInit.js" line="+2"/>
         <source>&amp;Close All</source>
-        <translation>&Zatvori sve</translation>
+        <translation>&amp;Zatvori sve</translation>
     </message>
 </context>
 <context>
@@ -2082,7 +2082,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/CloseFile/CloseFileInit.js" line="+2"/>
         <source>&amp;Close</source>
-        <translation>&Zatvori</translation>
+        <translation>&amp;Zatvori</translation>
     </message>
 </context>
 <context>
@@ -2163,7 +2163,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="-20"/>
         <source>&amp;Command Line</source>
-        <translation>&Naredbeni redak</translation>
+        <translation>&amp;Naredbeni redak</translation>
     </message>
     <message>
         <location line="+199"/>
@@ -2256,7 +2256,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/Examples/CommandLineExamples/CommandLineExamples.js" line="+50"/>
         <source>&amp;Command Line</source>
-        <translation>&Naredbeni redak</translation>
+        <translation>&amp;Naredbeni redak</translation>
     </message>
 </context>
 <context>
@@ -2264,7 +2264,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/View/CommandLineFocus/CommandLineFocusInit.js" line="+2"/>
         <source>&amp;Focus on Command Line</source>
-        <translation>&Fokusiraj na naredbeni redak</translation>
+        <translation>&amp;Fokusiraj na naredbeni redak</translation>
     </message>
 </context>
 <context>
@@ -2272,7 +2272,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/CommandLineTools/CommandLineTools.js" line="+50"/>
         <source>&amp;Command Line Tools</source>
-        <translation>&Alati naredbenog retka</translation>
+        <translation>&amp;Alati naredbenog retka</translation>
     </message>
 </context>
 <context>
@@ -2361,7 +2361,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/Copy/CopyInit.js" line="+2"/>
         <source>&amp;Copy</source>
-        <translation>&Kopiraj</translation>
+        <translation>&amp;Kopiraj</translation>
     </message>
 </context>
 <context>
@@ -2369,7 +2369,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/CopyWithReference/CopyWithReferenceInit.js" line="+2"/>
         <source>&amp;Copy with Reference</source>
-        <translation>&Kopiraj s referencom</translation>
+        <translation>&amp;Kopiraj s referencom</translation>
     </message>
 </context>
 <context>
@@ -2382,7 +2382,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/CounterInit.js" line="+2"/>
         <source>&amp;Counter</source>
-        <translation>&Brojač</translation>
+        <translation>&amp;Brojač</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2489,7 +2489,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/Cut/CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
-        <translation>&Izreži</translation>
+        <translation>&amp;Izreži</translation>
     </message>
 </context>
 <context>
@@ -2497,7 +2497,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/CutWithReference/CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
-        <translation>&Izreži s referencom</translation>
+        <translation>&amp;Izreži s referencom</translation>
     </message>
 </context>
 <context>
@@ -2581,7 +2581,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/Delete/DeleteInit.js" line="+2"/>
         <source>&amp;Delete</source>
-        <translation>&Izbriši</translation>
+        <translation>&amp;Izbriši</translation>
     </message>
 </context>
 <context>
@@ -2589,7 +2589,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Select/DeselectAll/DeselectAllInit.js" line="+2"/>
         <source>&amp;Deselect All</source>
-        <translation>&Poništi odabir svega</translation>
+        <translation>&amp;Poništi odabir svega</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2610,7 +2610,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
-        <translation>&Poništi odabir entiteta sloja</translation>
+        <translation>&amp;Poništi odabir entiteta sloja</translation>
     </message>
 </context>
 <context>
@@ -2618,7 +2618,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/DevDebug/DevDebug.js" line="+45"/>
         <source>&amp;Debug Mode</source>
-        <translation>&Način otklanjanja grešaka</translation>
+        <translation>&amp;Način otklanjanja grešaka</translation>
     </message>
 </context>
 <context>
@@ -3198,7 +3198,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>&amp;Format:</source>
-        <translation>&Format:</translation>
+        <translation>&amp;Format:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3281,7 +3281,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Divide/DivideInit.js" line="+2"/>
         <source>&amp;Divide</source>
-        <translation>&Podijeli</translation>
+        <translation>&amp;Podijeli</translation>
     </message>
 </context>
 <context>
@@ -3289,7 +3289,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/DraftMode/DraftMode.js" line="+86"/>
         <source>&amp;Draft Mode</source>
-        <translation>&Način skice</translation>
+        <translation>&amp;Način skice</translation>
     </message>
 </context>
 <context>
@@ -3302,7 +3302,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>&Crtaj</translation>
+        <translation>&amp;Crtaj</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -3407,7 +3407,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/DrawExamples.js" line="+51"/>
         <source>&amp;Draw</source>
-        <translation>&Crtaj</translation>
+        <translation>&amp;Crtaj</translation>
     </message>
 </context>
 <context>
@@ -4076,7 +4076,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation>&Crtaj iz CSV</translation>
+        <translation>&amp;Crtaj iz CSV</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4089,7 +4089,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
-        <translation>&Redoslijed crtanja</translation>
+        <translation>&amp;Redoslijed crtanja</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -4132,7 +4132,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
-        <translation>&Nacrtaj poliliniju</translation>
+        <translation>&amp;Nacrtaj poliliniju</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4192,7 +4192,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
-        <translation>&Dupliciraj</translation>
+        <translation>&amp;Dupliciraj</translation>
     </message>
 </context>
 <context>
@@ -4394,7 +4394,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>&amp;Edit</source>
-        <translation>&Uredi</translation>
+        <translation>&amp;Uredi</translation>
     </message>
 </context>
 <context>
@@ -4446,7 +4446,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/EditLayer/EditLayerInit.js" line="+2"/>
         <source>&amp;Edit Layer</source>
-        <translation>&Uredi sloj</translation>
+        <translation>&amp;Uredi sloj</translation>
     </message>
 </context>
 <context>
@@ -4591,7 +4591,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseCPP/EllipseCPPInit.js" line="+2"/>
         <source>&amp;Ellipse (Center, Point, Ratio)</source>
-        <translation>&Elipsa (Središte, točka, omjer)</translation>
+        <translation>&amp;Elipsa (Središte, točka, omjer)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4717,7 +4717,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>&Izlaz</translation>
+        <translation>&amp;Izlaz</translation>
     </message>
 </context>
 <context>
@@ -4725,7 +4725,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/ExAddBlock/ExAddBlock.js" line="+85"/>
         <source>&amp;Create Block</source>
-        <translation>&Stvori blok</translation>
+        <translation>&amp;Stvori blok</translation>
     </message>
 </context>
 <context>
@@ -4746,7 +4746,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation>&Izvezi CSV</translation>
+        <translation>&amp;Izvezi CSV</translation>
     </message>
 </context>
 <context>
@@ -4772,7 +4772,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExDirListing/ExDirListing.js" line="+66"/>
         <source>&amp;Directory Listing</source>
-        <translation>&Popis direktorija</translation>
+        <translation>&amp;Popis direktorija</translation>
     </message>
 </context>
 <context>
@@ -4837,7 +4837,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation>&Čepasti spoj</translation>
+        <translation>&amp;Čepasti spoj</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5056,7 +5056,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExportInit.js" line="+2"/>
         <source>&amp;Export XML</source>
-        <translation>&Izvezi XML</translation>
+        <translation>&amp;Izvezi XML</translation>
     </message>
 </context>
 <context>
@@ -5074,7 +5074,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImportInit.js" line="+2"/>
         <source>&amp;Import XML</source>
-        <translation>&Uvezi XML</translation>
+        <translation>&amp;Uvezi XML</translation>
     </message>
 </context>
 <context>
@@ -5100,7 +5100,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation>&Razgradi</translation>
+        <translation>&amp;Razgradi</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+137"/>
@@ -5161,7 +5161,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>&amp;File</source>
-        <translation>&Datoteka</translation>
+        <translation>&amp;Datoteka</translation>
     </message>
     <message>
         <location line="+106"/>
@@ -5560,7 +5560,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
         <source>&amp;FlexPainter</source>
-        <translation>&FlexPainter</translation>
+        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -5653,7 +5653,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/Forum/ForumInit.js" line="+2"/>
         <source>&amp;Forum</source>
-        <translation>&Forum</translation>
+        <translation>&amp;Forum</translation>
     </message>
 </context>
 <context>
@@ -6306,7 +6306,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>&amp;Hatch</source>
-        <translation>&Šrafura</translation>
+        <translation>&amp;Šrafura</translation>
     </message>
 </context>
 <context>
@@ -6372,7 +6372,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>&Šrafura iz odabira</translation>
+        <translation>&amp;Šrafura iz odabira</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -6385,7 +6385,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/Help.js" line="+60"/>
         <source>&amp;Help</source>
-        <translation>&Pomoć</translation>
+        <translation>&amp;Pomoć</translation>
     </message>
 </context>
 <context>
@@ -6401,7 +6401,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/HideAllLayers/HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide All Layers</source>
-        <translation>&Sakrij sve slojeve</translation>
+        <translation>&amp;Sakrij sve slojeve</translation>
     </message>
 </context>
 <context>
@@ -6409,7 +6409,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/IOExamples.js" line="+51"/>
         <source>&amp;Import/Export</source>
-        <translation>&Uvoz/Izvoz</translation>
+        <translation>&amp;Uvoz/Izvoz</translation>
     </message>
 </context>
 <context>
@@ -6467,7 +6467,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
         <source>&amp;Insert Bitmap</source>
-        <translation>&Umetni sliku</translation>
+        <translation>&amp;Umetni sliku</translation>
     </message>
 </context>
 <context>
@@ -6500,7 +6500,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFileInit.js" line="+2"/>
         <source>&amp;Import</source>
-        <translation>&Uvoz</translation>
+        <translation>&amp;Uvoz</translation>
     </message>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
@@ -6583,7 +6583,7 @@ is already in the list.</source>
     <message>
         <location line="+69"/>
         <source>&amp;Import Points</source>
-        <translation>&Uvezi točke</translation>
+        <translation>&amp;Uvezi točke</translation>
     </message>
 </context>
 <context>
@@ -6644,7 +6644,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngleInit.js" line="+2"/>
         <source>&amp;Angle</source>
-        <translation>&Kut</translation>
+        <translation>&amp;Kut</translation>
     </message>
 </context>
 <context>
@@ -6941,7 +6941,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
-        <translation>&Centroid površine</translation>
+        <translation>&amp;Centroid površine</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6984,7 +6984,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation>&Pravac / Azimut</translation>
+        <translation>&amp;Pravac / Azimut</translation>
     </message>
 </context>
 <context>
@@ -7439,7 +7439,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>&amp;Info</source>
-        <translation>&Informacije</translation>
+        <translation>&amp;Informacije</translation>
     </message>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
@@ -7762,7 +7762,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/InvertSelection/InvertSelectionInit.js" line="+2"/>
         <source>&amp;Invert Selection</source>
-        <translation>&Obrni odabir</translation>
+        <translation>&amp;Obrni odabir</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7806,7 +7806,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
         <source>&amp;Isometric Projection</source>
-        <translation>&Izometrijska projekcija</translation>
+        <translation>&amp;Izometrijska projekcija</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
@@ -7859,7 +7859,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridLeft/IsometricGridLeft.js" line="+35"/>
         <source>&amp;Left Projection</source>
-        <translation>&Lijeva projekcija</translation>
+        <translation>&amp;Lijeva projekcija</translation>
     </message>
 </context>
 <context>
@@ -7875,7 +7875,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridRight/IsometricGridRight.js" line="+35"/>
         <source>&amp;Right Projection</source>
-        <translation>&Desna projekcija</translation>
+        <translation>&amp;Desna projekcija</translation>
     </message>
 </context>
 <context>
@@ -7883,7 +7883,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridTop/IsometricGridTop.js" line="+143"/>
         <source>&amp;Top Projection</source>
-        <translation>&Gornja projekcija</translation>
+        <translation>&amp;Gornja projekcija</translation>
     </message>
 </context>
 <context>
@@ -7891,7 +7891,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsometricProjection.js" line="+49"/>
         <source>&amp;Isometric Projection</source>
-        <translation>&Izometrijska projekcija</translation>
+        <translation>&amp;Izometrijska projekcija</translation>
     </message>
 </context>
 <context>
@@ -7899,7 +7899,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricView.js" line="+44"/>
         <source>&amp;Isometric View</source>
-        <translation>&Izometrijski prikaz</translation>
+        <translation>&amp;Izometrijski prikaz</translation>
     </message>
 </context>
 <context>
@@ -7959,7 +7959,7 @@ is already in the list.</source>
     <message>
         <location line="+27"/>
         <source>&amp;Layer</source>
-        <translation>&Sloj</translation>
+        <translation>&amp;Sloj</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -8104,7 +8104,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/LayerExamples.js" line="+50"/>
         <source>&amp;Layer</source>
-        <translation>&Sloj</translation>
+        <translation>&amp;Sloj</translation>
     </message>
 </context>
 <context>
@@ -8123,7 +8123,7 @@ is already in the list.</source>
     <message>
         <location line="-54"/>
         <source>&amp;Layer List</source>
-        <translation>&Popis slojeva</translation>
+        <translation>&amp;Popis slojeva</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/LayerList/PreferencesPage.ui" line="+19"/>
@@ -8174,7 +8174,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>&Pokazivač od odabranog teksta</translation>
+        <translation>&amp;Pokazivač od odabranog teksta</translation>
     </message>
 </context>
 <context>
@@ -8187,7 +8187,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
-        <translation>&Produži / Skrati</translation>
+        <translation>&amp;Produži / Skrati</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
@@ -8210,7 +8210,7 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>&amp;Line</source>
-        <translation>&Linija</translation>
+        <translation>&amp;Linija</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line.ui" line="+17"/>
@@ -8465,7 +8465,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation>&Čepasti spoj od 2 točke</translation>
+        <translation>&amp;Čepasti spoj od 2 točke</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8521,7 +8521,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Line</source>
-        <translation>&Vodoravna linija</translation>
+        <translation>&amp;Vodoravna linija</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8786,7 +8786,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineVertical/LineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Line</source>
-        <translation>&Okomita linija</translation>
+        <translation>&amp;Okomita linija</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8960,12 +8960,12 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&Izbriši original</translation>
+        <translation>&amp;Izbriši original</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>&Zadrži original</translation>
+        <translation>&amp;Zadrži original</translation>
     </message>
     <message>
         <location line="+85"/>
@@ -9047,7 +9047,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>&Crtaj</translation>
+        <translation>&amp;Crtaj</translation>
     </message>
 </context>
 <context>
@@ -9065,7 +9065,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>&amp;Import/Export</source>
-        <translation>&Uvoz/Izvoz</translation>
+        <translation>&amp;Uvoz/Izvoz</translation>
     </message>
 </context>
 <context>
@@ -9083,7 +9083,7 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>&amp;Information</source>
-        <translation>&Informacije</translation>
+        <translation>&amp;Informacije</translation>
     </message>
 </context>
 <context>
@@ -9119,7 +9119,7 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>&amp;Select</source>
-        <translation>&Odaberi</translation>
+        <translation>&amp;Odaberi</translation>
     </message>
 </context>
 <context>
@@ -9604,7 +9604,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation>&Zalijepi</translation>
+        <translation>&amp;Zalijepi</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
@@ -9706,7 +9706,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>&amp;Point</source>
-        <translation>&Točka</translation>
+        <translation>&amp;Točka</translation>
     </message>
 </context>
 <context>
@@ -9797,7 +9797,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>&amp;Polyline</source>
-        <translation>&Polilinija</translation>
+        <translation>&amp;Polilinija</translation>
     </message>
 </context>
 <context>
@@ -10383,7 +10383,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
-        <translation>&Očisti popis</translation>
+        <translation>&amp;Očisti popis</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10401,7 +10401,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Redo/RedoInit.js" line="+2"/>
         <source>&amp;Redo</source>
-        <translation>&Ponovi</translation>
+        <translation>&amp;Ponovi</translation>
     </message>
 </context>
 <context>
@@ -10430,7 +10430,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/RemoveLayer/RemoveLayerInit.js" line="+2"/>
         <source>&amp;Delete Layer</source>
-        <translation>&Izbriši sloj</translation>
+        <translation>&amp;Izbriši sloj</translation>
     </message>
 </context>
 <context>
@@ -10656,12 +10656,12 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&Izbriši original</translation>
+        <translation>&amp;Izbriši original</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>&Zadrži original</translation>
+        <translation>&amp;Zadrži original</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10699,12 +10699,12 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&Izbriši original</translation>
+        <translation>&amp;Izbriši original</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>&Zadrži original</translation>
+        <translation>&amp;Zadrži original</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10714,7 +10714,7 @@ is already in the list.</source>
     <message>
         <location line="+97"/>
         <source>&amp;Angle (a):</source>
-        <translation>&Kut (a):</translation>
+        <translation>&amp;Kut (a):</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11068,12 +11068,12 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&Izbriši original</translation>
+        <translation>&amp;Izbriši original</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>&Zadrži original</translation>
+        <translation>&amp;Zadrži original</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11137,7 +11137,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>&amp;Select</source>
-        <translation>&Odaberi</translation>
+        <translation>&amp;Odaberi</translation>
     </message>
 </context>
 <context>
@@ -11823,7 +11823,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAutoInit.js" line="+2"/>
         <source>&amp;Auto</source>
-        <translation>&Automatski</translation>
+        <translation>&amp;Automatski</translation>
     </message>
 </context>
 <context>
@@ -11831,7 +11831,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapCenter/SnapCenterInit.js" line="+2"/>
         <source>&amp;Center</source>
-        <translation>&Središte</translation>
+        <translation>&amp;Središte</translation>
     </message>
 </context>
 <context>
@@ -11849,7 +11849,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
         <source>&amp;Coordinate</source>
-        <translation>&Koordinata</translation>
+        <translation>&amp;Koordinata</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
@@ -11930,7 +11930,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistanceInit.js" line="+2"/>
         <source>&amp;Distance</source>
-        <translation>&Udaljenost</translation>
+        <translation>&amp;Udaljenost</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
@@ -11953,7 +11953,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation>&Ručna udaljenost</translation>
+        <translation>&amp;Ručna udaljenost</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11986,7 +11986,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapEnd/SnapEndInit.js" line="+2"/>
         <source>&amp;End</source>
-        <translation>&Kraj</translation>
+        <translation>&amp;Kraj</translation>
     </message>
 </context>
 <context>
@@ -11994,7 +11994,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>&Slobodno</translation>
+        <translation>&amp;Slobodno</translation>
     </message>
 </context>
 <context>
@@ -12002,7 +12002,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapGrid/SnapGridInit.js" line="+2"/>
         <source>&amp;Grid</source>
-        <translation>&Mreža</translation>
+        <translation>&amp;Mreža</translation>
     </message>
 </context>
 <context>
@@ -12010,7 +12010,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersection/SnapIntersectionInit.js" line="+2"/>
         <source>&amp;Intersection</source>
-        <translation>&Presjek</translation>
+        <translation>&amp;Presjek</translation>
     </message>
 </context>
 <context>
@@ -12038,7 +12038,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation>&Ručni presjek</translation>
+        <translation>&amp;Ručni presjek</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17"/>
@@ -12051,7 +12051,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapMiddle/SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
-        <translation>&Sredina</translation>
+        <translation>&amp;Sredina</translation>
     </message>
 </context>
 <context>
@@ -12536,12 +12536,12 @@ is already in the list.</source>
     <message>
         <location line="+274"/>
         <source>&amp;Undo</source>
-        <translation>&Poništi</translation>
+        <translation>&amp;Poništi</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Redo</source>
-        <translation>&Ponovi</translation>
+        <translation>&amp;Ponovi</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12551,22 +12551,22 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>&amp;Copy</source>
-        <translation>&Kopiraj</translation>
+        <translation>&amp;Kopiraj</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation>&Zalijepi</translation>
+        <translation>&amp;Zalijepi</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Bold</source>
-        <translation>&Podebljano</translation>
+        <translation>&amp;Podebljano</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Italic</source>
-        <translation>&Kurziv</translation>
+        <translation>&amp;Kurziv</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -12586,7 +12586,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>&amp;Color...</source>
-        <translation>&Boja...</translation>
+        <translation>&amp;Boja...</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12954,7 +12954,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/ToggleGrid/ToggleGrid.js" line="+90"/>
         <source>&amp;Grid</source>
-        <translation>&Mreža</translation>
+        <translation>&amp;Mreža</translation>
     </message>
 </context>
 <context>
@@ -13022,7 +13022,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/ToolMatrixFocus/ToolMatrixFocusInit.js" line="+2"/>
         <source>&amp;Focus on Tool Matrix</source>
-        <translation>&Fokusiraj na matricu alata</translation>
+        <translation>&amp;Fokusiraj na matricu alata</translation>
     </message>
 </context>
 <context>
@@ -13109,12 +13109,12 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&Izbriši original</translation>
+        <translation>&amp;Izbriši original</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>&Zadrži original</translation>
+        <translation>&amp;Zadrži original</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13186,12 +13186,12 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&Izbriši original</translation>
+        <translation>&amp;Izbriši original</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>&Zadrži original</translation>
+        <translation>&amp;Zadrži original</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13201,7 +13201,7 @@ is already in the list.</source>
     <message>
         <location line="+97"/>
         <source>&amp;Angle (a):</source>
-        <translation>&Kut (a):</translation>
+        <translation>&amp;Kut (a):</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -13320,7 +13320,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Undo/UndoInit.js" line="+2"/>
         <source>&amp;Undo</source>
-        <translation>&Poništi</translation>
+        <translation>&amp;Poništi</translation>
     </message>
 </context>
 <context>
@@ -13495,7 +13495,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>&amp;View</source>
-        <translation>&Prikaz</translation>
+        <translation>&amp;Prikaz</translation>
     </message>
 </context>
 <context>
@@ -13938,7 +13938,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Window/Window.js" line="+122"/>
         <source>&amp;Window</source>
-        <translation>&Prozor</translation>
+        <translation>&amp;Prozor</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -13959,7 +13959,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Construction Line</source>
-        <translation>&Vodoravna konstrukijska linija</translation>
+        <translation>&amp;Vodoravna konstrukijska linija</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13972,7 +13972,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Construction Line</source>
-        <translation>&Okomita konstrukijska linija</translation>
+        <translation>&amp;Okomita konstrukijska linija</translation>
     </message>
     <message>
         <location line="+3"/>

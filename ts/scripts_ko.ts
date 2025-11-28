@@ -2754,7 +2754,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2"/>
         <source>&amp;Angular</source>
-        <translation>각도(&A)</translation>
+        <translation>각도(&amp;A)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10332,7 +10332,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/QtExamples.js" line="+50"/>
         <source>&amp;Qt</source>
-        <translation>Qt(&Q)</translation>
+        <translation>Qt(&amp;Q)</translation>
     </message>
 </context>
 <context>
@@ -10525,7 +10525,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation>반전(&R)</translation>
+        <translation>반전(&amp;R)</translation>
     </message>
 </context>
 <context>
