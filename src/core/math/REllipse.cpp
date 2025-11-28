@@ -733,9 +733,6 @@ RBox REllipse::getBoundingBox() const {
         }
     };
 
-    // ratio b/a:
-    double ratio = minor / major;
-
     // extremes where dX/dt = 0  -> tan(t) = - (b/a) * tan(phi)
     double tx = atan(-ratio * tan(phi));
     ParamChecker::includeParam(tx,       major, minor, phi, c, pa1, pa2, rev, minX, minY, maxX, maxY);
