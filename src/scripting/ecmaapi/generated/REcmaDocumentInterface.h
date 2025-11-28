@@ -532,6 +532,9 @@
         xRefFileChanged
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        loadXRefs
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         bindXRef
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

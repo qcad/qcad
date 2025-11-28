@@ -433,6 +433,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, xRefFileChanged, "xRefFileChanged");
             
+            REcmaHelper::registerFunction(&engine, proto, loadXRefs, "loadXRefs");
+            
             REcmaHelper::registerFunction(&engine, proto, bindXRef, "bindXRef");
             
         engine.setDefaultPrototype(
@@ -11454,6 +11456,78 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::xRefFileChanged", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::loadXRefs
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::loadXRefs", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::loadXRefs";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("loadXRefs", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->loadXRefs();
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QSet < QString > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray or QVariantMap
+                    QSet < QString >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->loadXRefs(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.loadXRefs().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::loadXRefs", context, engine);
             return result;
         }
          QScriptValue

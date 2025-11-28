@@ -1256,6 +1256,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="loadXRefs" cppName="loadXRefs" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QSet &lt; QString &gt; &amp;"
+        typeName="QSet &lt; QString &gt;" name="paths"
+        hasDefault="true" default="RDEFAULT_QSET_QSTRING"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="bindXRef" cppName="bindXRef" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

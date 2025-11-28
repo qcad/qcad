@@ -35,6 +35,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSnap.h"</cpp:file></cpp:include>
 
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QLIST_QREAL</name> <name>QList</name>&lt;qreal&gt;()</cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QSET_QSTRING</name> <name>QSet</name>&lt;QString&gt;()</cpp:define>
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_MIN1</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_MIN1</name> -1</cpp:define>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
@@ -379,7 +380,7 @@
     <function_decl><type><name>QVariant</name></type> <name>eval</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>ext</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>script</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>xRefFileChanged</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>path</name></decl></param>)</parameter_list>;</function_decl>
-    <decl_stmt><decl><type><name>void</name></type> <name>loadXRefs</name><argument_list>(<argument><expr><name>const</name> <name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name>&amp; <name>paths</name> = <call><name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <function_decl><type><name>void</name></type> <name>loadXRefs</name><parameter_list>(<param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name>&amp;</type> <name>paths</name> =<init> <expr><name>RDEFAULT_QSET_QSTRING</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>bindXRef</name><parameter_list>(<param><decl><type><name>RBlock</name>*</type> <name>block</name></decl></param>)</parameter_list>;</function_decl>
 
 <comment type="line">//    QTransform getInputTransform() const {</comment>
