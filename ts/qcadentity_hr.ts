@@ -219,7 +219,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Sredina</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -470,7 +470,7 @@
     <message>
         <location line="+3"/>
         <source>Text Rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotacija teksta</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -619,7 +619,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished"></translation>
+        <translation>Namotaj</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -745,7 +745,7 @@
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation type="unfinished"></translation>
+        <translation>Splajn</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -939,12 +939,12 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Srednja točka</translation>
     </message>
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
         <source>Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Okvir</translation>
     </message>
 </context>
 </TS>

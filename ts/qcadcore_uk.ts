@@ -321,7 +321,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>XRef File Name</source>
+        <source>External reference</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

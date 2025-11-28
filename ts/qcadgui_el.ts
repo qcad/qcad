@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/gui/RCadToolBar.cpp" line="+139"/>
         <source>Vertical/Horizontal</source>
-        <translation type="unfinished">Κάθετη/Οριζόντια</translation>
+        <translation>Κατακόρυφο/Οριζόντιο</translation>
     </message>
 </context>
 <context>
@@ -15,7 +15,7 @@
         <location filename="../src/gui/RCadToolBarPanel.cpp" line="+23"/>
         <location line="+63"/>
         <source>Back</source>
-        <translation type="unfinished">Πίσω</translation>
+        <translation>Πίσω</translation>
     </message>
 </context>
 <context>
@@ -23,7 +23,7 @@
     <message>
         <location filename="../src/gui/RColorCombo.cpp" line="+154"/>
         <source>Custom</source>
-        <translation type="unfinished">Προσαρμοσμένο</translation>
+        <translation>Προσαρμοσμένο</translation>
     </message>
 </context>
 <context>
@@ -31,52 +31,52 @@
     <message>
         <location filename="../src/gui/REventHandler.cpp" line="+211"/>
         <source>Grid</source>
-        <translation type="unfinished">Πλέγμα</translation>
+        <translation>Πλέγμα</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>End</source>
-        <translation type="unfinished">Τέλος</translation>
+        <translation>Τέλος</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation type="unfinished">Στην οντότητα</translation>
+        <translation>Στην οντότητα</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Perpendicular</source>
-        <translation type="unfinished">Κάθετη</translation>
+        <translation>Κάθετο</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Tangential</source>
-        <translation type="unfinished">Tangential</translation>
+        <translation>Εφαπτόμενο</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Center</source>
-        <translation type="unfinished">Κέντρο</translation>
+        <translation>Κέντρο</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation type="unfinished">Μέση</translation>
+        <translation>Μέση</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Intersection</source>
-        <translation type="unfinished">Διασταύρωση</translation>
+        <translation>Τομή</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Reference</source>
-        <translation type="unfinished">Αναφορά</translation>
+        <translation>Αναφορά</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Distance</source>
-        <translation type="unfinished">Απόσταση</translation>
+        <translation>Απόσταση</translation>
     </message>
 </context>
 <context>
@@ -84,7 +84,7 @@
     <message>
         <location filename="../src/gui/RMathLineEdit.cpp" line="+188"/>
         <source>Invalid</source>
-        <translation type="unfinished">Μη έγκυρο</translation>
+        <translation>Μη έγκυρο</translation>
     </message>
 </context>
 </TS>

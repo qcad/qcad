@@ -71,6 +71,7 @@ DrawBoundingBox.init = function(basePath) {
     var action = new RGuiAction(qsTr("Draw &Bounding Box"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DrawBoundingBox.js");
+    action.setDefaultCommands(["boundingbox"]);
     action.setGroupSortOrder(54500);
     action.setSortOrder(100);
     action.setWidgetNames(["MiscDrawMenu"]);
