@@ -322,7 +322,7 @@
     <message>
         <location line="+1"/>
         <source>XRef File Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nume fișier XRef</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
@@ -342,7 +342,7 @@
     <message>
         <location line="+1"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referință externă</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1068,17 +1068,17 @@
     <message>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Punct 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Punct 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Plantă</translation>
     </message>
     <message>
         <location line="+2"/>
