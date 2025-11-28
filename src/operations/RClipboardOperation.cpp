@@ -666,6 +666,11 @@ QSharedPointer<RBlock> RClipboardOperation::copyBlock(
                 destBlock->setName(destBlockName);
             }
 
+            // make XRef path absolute for copied block as we don't know the destination (might be clipboard which has no base path):
+            if (destBlock->isXRef()) {
+                destBlock->setXRefFileName(srcBlock->getFullXRefFilePath());
+            }
+
             if (dest.hasBlock(destBlockName)) {
                 if (!transaction.overwriteBlock(destBlock)) {
                     destBlock = dest.queryBlock(destBlockName);

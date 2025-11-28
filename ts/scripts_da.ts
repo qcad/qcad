@@ -1259,12 +1259,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan ikke redigere ekstern reference</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan ikke redigere blok fra ekstern reference</translation>
     </message>
 </context>
 <context>
@@ -5937,7 +5937,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Punktlængde i linjemønstre:</translation>
     </message>
     <message>
         <location line="+47"/>

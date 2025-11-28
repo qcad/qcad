@@ -46,10 +46,104 @@
         <expr_stmt><expr><name>clear</name> = <name>on</name></expr>;</expr_stmt>
     }</block></function>
 
+    <comment type="line">// setter / getters:</comment>
+    <function><type><name>void</name></type> <name>setScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>scale</name> = <name>s</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>double</name></type> <name>getScale</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>scale</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setAngle</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>angle</name> = <name>a</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>double</name></type> <name>getAngle</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>angle</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setCenter</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>c</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>center</name> = <name>c</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>RVector</name></type> <name>getCenter</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>center</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setFlipHorizontal</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>flipHorizontal</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>getFlipHorizontal</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>flipHorizontal</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setFlipVertical</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>flipVertical</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>getFlipVertical</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>flipVertical</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setToCurrentLayer</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>toCurrentLayer</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>getToCurrentLayer</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>toCurrentLayer</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setToCurrentBlock</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>toCurrentBlock</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>getToCurrentBlock</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>toCurrentBlock</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setOverwriteLayers</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>overwriteLayers</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>getOverwriteLayers</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>overwriteLayers</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setOverwriteBlocks</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>overwriteBlocks</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>getOverwriteBlocks</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>overwriteBlocks</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setBlockName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>n</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>blockName</name> = <name>n</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>QString</name></type> <name>getBlockName</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>blockName</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setLayerName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>n</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>layerName</name> = <name>n</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>QString</name></type> <name>getLayerName</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>layerName</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setSelectionOnly</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>selectionOnly</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>getSelectionOnly</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>selectionOnly</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setToModelSpaceBlock</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>toModelSpaceBlock</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>getToModelSpaceBlock</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>toModelSpaceBlock</name></expr>;</return>
+    }</block></function>
+
 </public><private>private:
-    <decl_stmt><decl><type><name>bool</name></type> <name>clear</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>RVector</name></type> <name>offset</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RDocument</name>&amp;</type> <name>src</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>RVector</name></type> <name>offset</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>scale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>angle</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>center</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>flipHorizontal</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>flipVertical</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>toCurrentLayer</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>toCurrentBlock</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>overwriteLayers</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>overwriteBlocks</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>blockName</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>layerName</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>selectionOnly</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>clear</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>toModelSpaceBlock</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RCopyOperation*</argument>)</argument_list></macro>

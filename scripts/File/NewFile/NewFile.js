@@ -273,7 +273,7 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
 
     // Qt 5 / Unity bug workaround:
     // breaks Ubuntu Unity menu on start:
-    if (RS.getSystemId()!=="linux" || !RSettings.isQt(5) || appWin.property("starting")!==true) {
+    if (RS.getSystemId()!=="linux" || !RSettings.isQt(5) || appWin.property("__starting__")!==true) {
         appWin.disable();
     }
     for (var i=0; i<5; i++) {
@@ -300,6 +300,7 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
         // replacement dialog, etc):
         for (k=0; k<NewFile.postOpenActions.length; k++) {
             if (!isNull(NewFile.postOpenActions[k])) {
+                include(NewFile.postOpenActions[k]);
                 action = RGuiAction.getByScriptFile(NewFile.postOpenActions[k]);
                 if (!isNull(action)) {
                     action.slotTrigger();

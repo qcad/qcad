@@ -219,7 +219,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Keskmine</translation>
+        <translation>Keskpunkt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -939,7 +939,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-        <translation type="unfinished">Keskmine punkt</translation>
+        <translation>Keskpunkt</translation>
     </message>
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
