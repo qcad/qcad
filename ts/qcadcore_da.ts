@@ -36,7 +36,7 @@
     <message>
         <location line="+3"/>
         <source>Meter</source>
-        <translation>Måler</translation>
+        <translation>Meter</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -321,7 +321,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>XRef File Name</source>
+        <source>External reference</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -347,7 +347,7 @@
     <message>
         <location line="+1"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekstern Reference</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1068,17 +1068,17 @@
     <message>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Punkt 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Punkt 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation type="unfinished"></translation>
+        <translation>Plante</translation>
     </message>
     <message>
         <location line="+2"/>

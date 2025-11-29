@@ -245,7 +245,7 @@
     <message>
         <location line="+1"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>外部参照</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -260,7 +260,7 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="+75"/>
         <source>Pixel Unit</source>
-        <translation type="unfinished">画素数単位</translation>
+        <translation>ピクセル単位</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -324,11 +324,11 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation type="unfinished">リファレンス所有</translation>
+        <translation>参照によって所有</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>XRef File Name</source>
+        <source>External reference</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -383,7 +383,7 @@
     <message>
         <location line="+1"/>
         <source>Layer</source>
-        <translation>画層</translation>
+        <translation>レイヤー</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -421,7 +421,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation type="unfinished">親 ID</translation>
+        <translation>親ID</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -474,17 +474,17 @@
     <message>
         <location line="+1"/>
         <source>Selected</source>
-        <translation type="unfinished">選択された</translation>
+        <translation>選択済み</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Object Invisible</source>
-        <translation type="unfinished">オブジェクト・インビジブル</translation>
+        <translation>オブジェクト非表示</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation type="unfinished">ワーキングセット</translation>
+        <translation>作業セット</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -587,12 +587,12 @@
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation type="unfinished">バックワード</translation>
+        <translation>後方</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation type="unfinished">アップサイドダウン</translation>
+        <translation>上下逆</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
@@ -625,12 +625,12 @@
     <message>
         <location line="+2"/>
         <source>Frozen Layers</source>
-        <translation type="unfinished">フローズン・レイヤー</translation>
+        <translation>凍結レイヤー</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer ID</source>
-        <translation type="unfinished">レイヤーID</translation>
+        <translation>レイヤーID</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-8"/>
@@ -663,7 +663,7 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation type="unfinished">折りたたみ</translation>
+        <translation>折りたたみ済み</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -678,7 +678,7 @@
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation type="unfinished">オフはフリーズです</translation>
+        <translation>オフは凍結</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
@@ -733,17 +733,17 @@
     <message>
         <location filename="../src/core/RDimStyle.cpp" line="+71"/>
         <source>Style</source>
-        <translation type="unfinished">スタイル</translation>
+        <translation>スタイル</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overall scale</source>
-        <translation type="unfinished">全体規模</translation>
+        <translation>全体スケール</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation type="unfinished">リニア測定係数</translation>
+        <translation>線形測定係数</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -753,7 +753,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation type="unfinished">寸法線のギャップ</translation>
+        <translation>寸法線間隔</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -763,92 +763,92 @@
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation type="unfinished">ディメンションラインインクリメント</translation>
+        <translation>寸法線増分</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation type="unfinished">エクステンションラインの延長</translation>
+        <translation>補助線延長</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation type="unfinished">内線オフセット</translation>
+        <translation>補助線オフセット</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text position vertical</source>
-        <translation type="unfinished">テキスト位置縦</translation>
+        <translation>文字位置垂直</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text horizontal</source>
-        <translation type="unfinished">テキスト水平</translation>
+        <translation>文字水平配置</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation type="unfinished">ティックサイズ</translation>
+        <translation>目盛りサイズ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
-        <translation type="unfinished">リニア方式</translation>
+        <translation>線形形式</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal places</source>
-        <translation type="unfinished">小数点以下の桁数</translation>
+        <translation>小数点以下桁数</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal separator</source>
-        <translation type="unfinished">小数点以下のセパレータ</translation>
+        <translation>小数点区切り文字</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zero suppression</source>
-        <translation type="unfinished">ゼロサプレス</translation>
+        <translation>ゼロ省略</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation type="unfinished">アンギュラフォーマット</translation>
+        <translation>角度形式</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation type="unfinished">角度のある小数点以下の桁数</translation>
+        <translation>角度小数点以下桁数</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation type="unfinished">角度ゼロサプレッション</translation>
+        <translation>角度ゼロ省略</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation type="unfinished">アーキテクチャー・チック</translation>
+        <translation>建築目盛り</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text color</source>
-        <translation type="unfinished">文字色</translation>
+        <translation>文字色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation type="unfinished">アローブロック</translation>
+        <translation>矢印ブロック</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 1</source>
-        <translation type="unfinished">アローブロック1</translation>
+        <translation>矢印ブロック1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation type="unfinished">アローブロック2</translation>
+        <translation>矢印ブロック2</translation>
     </message>
 </context>
 <context>
@@ -1068,22 +1068,22 @@
     <message>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished"></translation>
+        <translation>点1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished"></translation>
+        <translation>点2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation type="unfinished"></translation>
+        <translation>プラント</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Water</source>
-        <translation type="unfinished">水</translation>
+        <translation>水道</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1098,37 +1098,37 @@
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation type="unfinished">コミュニケーション</translation>
+        <translation>通信</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Electric</source>
-        <translation type="unfinished">電気</translation>
+        <translation>電気</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Low Voltage</source>
-        <translation type="unfinished">低電圧</translation>
+        <translation>低圧</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>High Voltage</source>
-        <translation type="unfinished">高電圧</translation>
+        <translation>高圧</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation type="unfinished">オーバーヘッドパワー</translation>
+        <translation>架空電力</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation type="unfinished">ファール</translation>
+        <translation>汚水</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished">ファウルライジング</translation>
+        <translation>汚水立管</translation>
     </message>
 </context>
 <context>

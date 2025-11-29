@@ -685,36 +685,65 @@ RS::Side REllipse::getSideOfPoint(const RVector& point) const {
 }
 
 RBox REllipse::getBoundingBox() const {
-    double radius1 = getMajorRadius();
-    double radius2 = getMinorRadius();
-    double angle = getAngle();
-    double a1 = ((!isReversed()) ? startParam : endParam);
-    double a2 = ((!isReversed()) ? endParam : startParam);
-    RVector startPoint = getStartPoint();
-    RVector endPoint = getEndPoint();
+    double major = getMajorRadius();
+    double minor = getMinorRadius();
+    double phi   = getAngle();
+    RVector c    = center;
 
-    double minX = qMin(startPoint.x, endPoint.x);
-    double minY = qMin(startPoint.y, endPoint.y);
-    double maxX = qMax(startPoint.x, endPoint.x);
-    double maxY = qMax(startPoint.y, endPoint.y);
+    // arc parameter range and direction:
+    double pa1 = getStartParam();
+    double pa2 = getEndParam();
+    bool   rev = isReversed();
 
-    // kind of a brute force. TODO: exact calculation
-    RVector vp;
-    double a = a1;
-    do {
-        vp.set(center.x + radius1 * cos(a),
-               center.y + radius2 * sin(a));
-        vp.rotate(angle, center);
+    // start / end points are always part of the bounding box:
+    RVector sp = getStartPoint();
+    RVector ep = getEndPoint();
 
-        minX = qMin(minX, vp.x);
-        minY = qMin(minY, vp.y);
-        maxX = qMax(maxX, vp.x);
-        maxY = qMax(maxY, vp.y);
+    double minX = qMin(sp.x, ep.x);
+    double minY = qMin(sp.y, ep.y);
+    double maxX = qMax(sp.x, ep.x);
+    double maxY = qMax(sp.y, ep.y);
 
-        a += 0.03;
-    } while (RMath::isAngleBetween(a, a1, a2, false) && a<4*M_PI);
+    struct ParamChecker {
+        static void includeParam(
+            double t,
+            double major, double minor, double phi,
+            const RVector& c,
+            double pa1, double pa2, bool rev,
+            double& minX, double& minY,
+            double& maxX, double& maxY
+            ) {
 
-    return RBox(RVector(minX,minY), RVector(maxX,maxY));
+            t = RMath::getNormalizedAngle(t);
+
+            if (!RMath::isAngleBetween(t, pa1, pa2, rev)) {
+                return;
+            }
+
+            double ct = cos(t);
+            double st = sin(t);
+
+            double x = c.x + major * ct * cos(phi) - minor * st * sin(phi);
+            double y = c.y + major * ct * sin(phi) + minor * st * cos(phi);
+
+            minX = qMin(minX, x);
+            minY = qMin(minY, y);
+            maxX = qMax(maxX, x);
+            maxY = qMax(maxY, y);
+        }
+    };
+
+    // extremes where dX/dt = 0  -> tan(t) = - (b/a) * tan(phi)
+    double tx = atan(-ratio * tan(phi));
+    ParamChecker::includeParam(tx,       major, minor, phi, c, pa1, pa2, rev, minX, minY, maxX, maxY);
+    ParamChecker::includeParam(tx+M_PI,  major, minor, phi, c, pa1, pa2, rev, minX, minY, maxX, maxY);
+
+    // extremes where dY/dt = 0  -> tan(t) = (b/a) * cot(phi) = (b/a) / tan(phi)
+    double ty = atan(ratio / tan(phi));
+    ParamChecker::includeParam(ty,       major, minor, phi, c, pa1, pa2, rev, minX, minY, maxX, maxY);
+    ParamChecker::includeParam(ty+M_PI,  major, minor, phi, c, pa1, pa2, rev, minX, minY, maxX, maxY);
+
+    return RBox(RVector(minX, minY), RVector(maxX, maxY));
 }
 
 QList<RVector> REllipse::getEndPoints() const {

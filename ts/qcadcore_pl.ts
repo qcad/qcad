@@ -245,7 +245,7 @@
     <message>
         <location line="+1"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Odniesienie zewnętrzne</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -329,7 +329,7 @@
     <message>
         <location line="+1"/>
         <source>XRef File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nazwa pliku XRef</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
@@ -1068,17 +1068,17 @@
     <message>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Punkt 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Punkt 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation type="unfinished"></translation>
+        <translation>Instalacja</translation>
     </message>
     <message>
         <location line="+2"/>

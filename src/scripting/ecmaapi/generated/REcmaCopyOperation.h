@@ -57,6 +57,84 @@
         ;static  QScriptValue
         setClear
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setFlipHorizontal
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getFlipHorizontal
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setFlipVertical
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getFlipVertical
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setToCurrentLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getToCurrentLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setToCurrentBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getToCurrentBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setOverwriteLayers
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getOverwriteLayers
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setOverwriteBlocks
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getOverwriteBlocks
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setBlockName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getBlockName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setLayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setSelectionOnly
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSelectionOnly
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setToModelSpaceBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getToModelSpaceBlock
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

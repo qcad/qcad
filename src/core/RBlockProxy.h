@@ -25,6 +25,8 @@
 #include <QList>
 #include <QString>
 
+#include "RTransaction.h"
+
 class RDocument;
 class RBlock;
 
@@ -38,9 +40,19 @@ class QCADCORE_EXPORT RBlockProxy {
 public:
     virtual ~RBlockProxy() {}
 
-    virtual bool loadXRef(RBlock* block) = 0;
+    virtual bool loadXRef(RBlock* block) {
+        QStringList dummy;
+        return loadXRef(block, dummy);
+    }
+
+    virtual RTransaction loadXRefs(RDocument& document, const QSet<QString>& paths, QStringList& xRefFileNames) = 0;
+
+    virtual bool loadXRef(RBlock* block, QStringList& nestedXRefFileNames) = 0;
+
     virtual void unloadXRef(RBlock* block) = 0;
     virtual QString getFullXRefFilePath(const RBlock* block) = 0;
+
+    virtual RTransaction bindXRef(RBlock* block, bool useTransaction = true) = 0;
 };
 
 #endif

@@ -336,8 +336,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>XRef File Name</source>
-        <translation>外部參考檔案名稱</translation>
+        <source>External reference</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
