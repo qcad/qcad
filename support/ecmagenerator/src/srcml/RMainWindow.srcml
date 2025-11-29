@@ -293,6 +293,8 @@
     <function_decl><type><name>static</name> <name>void</name></type> <name>messageHandler</name><parameter_list>(<param><decl><type><name>QtMsgType</name></type> <name>type</name></decl></param>, <param><decl><type><name>const</name> <name>char</name>*</type> <name>msg</name></decl></param>)</parameter_list>;</function_decl>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
+    <function><type><name>virtual</name> <name>void</name></type> <name>reloadXRefs</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>di</name></decl></param>, <param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name>&amp;</type> <name>dirtyXRefPaths</name></decl></param>)</parameter_list> <block>{}</block></function>
+
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setCommandPrompt</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name> =<init> <expr>""</expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setLeftMouseTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name> =<init> <expr>""</expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setRightMouseTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name> =<init> <expr>""</expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>

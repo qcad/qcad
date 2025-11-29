@@ -26,6 +26,7 @@
 #include <QMap>
 #include <QStack>
 #include <QQueue>
+#include <QFileSystemWatcher>
 
 #include "RAction.h"
 #include "RLineweight.h"
@@ -33,6 +34,7 @@
 #include "RSnap.h"
 
 #define RDEFAULT_QLIST_QREAL QList<qreal>()
+#define RDEFAULT_QSET_QSTRING QSet<QString>()
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1
 #endif
@@ -376,6 +378,10 @@ public:
 
     QVariant eval(const QString& ext, const QString& script);
 
+    void xRefFileChanged(const QString& path);
+    void loadXRefs(const QSet<QString>& paths = RDEFAULT_QSET_QSTRING);
+    void bindXRef(RBlock* block);
+
 //    QTransform getInputTransform() const {
 //        return inputTransform;
 //    }
@@ -430,6 +436,9 @@ private:
     QMap<QString, int> tags;
 
     RDocument* previewDocument;
+
+    QSet<QString> dirtyXRefPaths;
+    QFileSystemWatcher fileSystemWatcher;
 
     // transform for all input coordinates:
 //    QTransform inputTransform;
