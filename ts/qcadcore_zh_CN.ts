@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/core/RUnit.cpp" line="+272"/>
         <source>None</source>
-        <translation type="unfinished">无</translation>
+        <translation>无</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -51,7 +51,7 @@
     <message>
         <location line="+3"/>
         <source>Mil</source>
-        <translation>百万</translation>
+        <translation>密耳</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -96,7 +96,7 @@
     <message>
         <location line="+3"/>
         <source>Astro</source>
-        <translation type="unfinished">天体</translation>
+        <translation>天文单位</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -217,7 +217,7 @@
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+48"/>
         <source>Current Layer ID</source>
-        <translation type="unfinished">当前图层 ID</translation>
+        <translation>当前图层 ID</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -319,22 +319,22 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation type="unfinished">由参考资料拥有</translation>
+        <translation>由参照拥有</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>XRef File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>外部参照文件名</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
         <source>Referenced Block</source>
-        <translation type="unfinished">被引用的区块</translation>
+        <translation>引用块</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>外部参照</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -421,7 +421,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation type="unfinished">父母身份</translation>
+        <translation>父级 ID</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -479,12 +479,12 @@
     <message>
         <location line="+1"/>
         <source>Object Invisible</source>
-        <translation type="unfinished">隐形物体</translation>
+        <translation>对象不可见</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation type="unfinished">工作套装</translation>
+        <translation>工作集</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -541,7 +541,7 @@
     <message>
         <location line="+1"/>
         <source>Text Width</source>
-        <translation type="unfinished">文本宽度</translation>
+        <translation>文本宽度</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -625,12 +625,12 @@
     <message>
         <location line="+2"/>
         <source>Frozen Layers</source>
-        <translation type="unfinished">冷冻层</translation>
+        <translation>冻结图层</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer ID</source>
-        <translation type="unfinished">层 ID</translation>
+        <translation>图层 ID</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-8"/>
@@ -733,122 +733,122 @@
     <message>
         <location filename="../src/core/RDimStyle.cpp" line="+71"/>
         <source>Style</source>
-        <translation type="unfinished">风格</translation>
+        <translation>样式</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overall scale</source>
-        <translation type="unfinished">总体规模</translation>
+        <translation>全局比例</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation type="unfinished">线性测量系数</translation>
+        <translation>线性测量比例</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text height</source>
-        <translation type="unfinished">文字高度</translation>
+        <translation>文字高度</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation type="unfinished">尺寸线间隙</translation>
+        <translation>尺寸线间隙</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow size</source>
-        <translation type="unfinished">箭头大小</translation>
+        <translation>箭头大小</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation type="unfinished">尺寸线增量</translation>
+        <translation>尺寸线增量</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation type="unfinished">延长线延长</translation>
+        <translation>尺寸界线延伸</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation type="unfinished">延长线偏移</translation>
+        <translation>尺寸界线偏移</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text position vertical</source>
-        <translation type="unfinished">文本位置垂直</translation>
+        <translation>文本垂直位置</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text horizontal</source>
-        <translation type="unfinished">文本水平</translation>
+        <translation>文本水平对齐</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation type="unfinished">勾股大小</translation>
+        <translation>标记大小</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
-        <translation type="unfinished">线性格式</translation>
+        <translation>线性格式</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal places</source>
-        <translation type="unfinished">小数点位</translation>
+        <translation>小数位数</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal separator</source>
-        <translation type="unfinished">小数点分离器</translation>
+        <translation>小数分隔符</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zero suppression</source>
-        <translation type="unfinished">零压制</translation>
+        <translation>零抑制</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation type="unfinished">角度格式</translation>
+        <translation>角度格式</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation type="unfinished">角的小数位</translation>
+        <translation>角度小数位数</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation type="unfinished">角度零点抑制</translation>
+        <translation>角度零抑制</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation type="unfinished">勾股建筑</translation>
+        <translation>建筑标记</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text color</source>
-        <translation type="unfinished">文字颜色</translation>
+        <translation>文字颜色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation type="unfinished">箭头区块</translation>
+        <translation>箭头块</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 1</source>
-        <translation type="unfinished">箭头区块1</translation>
+        <translation>箭头块 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation type="unfinished">箭头区块2</translation>
+        <translation>箭头块 2</translation>
     </message>
 </context>
 <context>
@@ -864,7 +864,7 @@
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+51"/>
         <source>Name</source>
-        <translation type="unfinished">名称</translation>
+        <translation>名称</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1068,22 +1068,22 @@
     <message>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished"></translation>
+        <translation>点 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished"></translation>
+        <translation>点 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation type="unfinished"></translation>
+        <translation>植物</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Water</source>
-        <translation type="unfinished">水</translation>
+        <translation>水管</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1098,37 +1098,37 @@
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation type="unfinished">沟通</translation>
+        <translation>通信线</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Electric</source>
-        <translation type="unfinished">电动</translation>
+        <translation>电线</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Low Voltage</source>
-        <translation type="unfinished">低电压</translation>
+        <translation>低压线</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>High Voltage</source>
-        <translation type="unfinished">高压电</translation>
+        <translation>高压线</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation type="unfinished">高架电源</translation>
+        <translation>架空电力线</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation type="unfinished">犯规</translation>
+        <translation>污水管</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished">恶性膨胀</translation>
+        <translation>污水上升管</translation>
     </message>
 </context>
 <context>
