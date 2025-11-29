@@ -202,6 +202,13 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; QString &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="bindXRef" cppName="bindXRef" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="useTransaction"
+        hasDefault="true" default="true" isConst="false" />
+      </variant>
+    </method>
     <method name="getProperty" cppName="getProperty"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

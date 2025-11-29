@@ -683,13 +683,15 @@ function main() {
     // open files given on command line:
     var clickedFilesAndArgs = filesToOpen.concat(args.slice(1));
     QCoreApplication.processEvents();
-    appWin.setProperty("starting", true);
+    appWin.setProperty("__starting__", true);
     var restored = false;
     if (typeof(restoreFiles)=="function") {
+        appWin.setProperty("__restoring__", true);
         restored = restoreFiles();
+        appWin.setProperty("__restoring__", false);
     }
     openFiles(clickedFilesAndArgs, !recovered && !restored);
-    appWin.setProperty("starting", false);
+    appWin.setProperty("__starting__", false);
 
     RPluginLoader.postInitPlugins(RPluginInterface.LoadedFiles);
 

@@ -219,7 +219,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Sredina</translation>
+        <translation>Sredina</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -459,7 +459,7 @@
     <message>
         <location line="+3"/>
         <source>Text Rotation</source>
-        <translation type="unfinished">Obračanje besedila</translation>
+        <translation>Obračanje besedila</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -551,7 +551,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished">Navijanje</translation>
+        <translation>Navijanje</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -682,7 +682,7 @@
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation type="unfinished">Spline</translation>
+        <translation>Krivulja</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -873,14 +873,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation type="unfinished">Lokacija</translation>
+        <translation>Lokacija</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-        <translation type="unfinished">Smer</translation>
+        <translation>Smer</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -939,12 +939,12 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-        <translation type="unfinished">Srednja točka</translation>
+        <translation>Srednja točka</translation>
     </message>
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
         <source>Frame</source>
-        <translation type="unfinished">Okvir</translation>
+        <translation>Okvir</translation>
     </message>
 </context>
 </TS>

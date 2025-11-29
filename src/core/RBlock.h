@@ -201,6 +201,8 @@ public:
     QSet<QString> getXRefLayerNames() const;
     QSet<QString> getXRefBlockNames() const;
 
+    void bindXRef(bool useTransaction = true);
+
     virtual QPair<QVariant, RPropertyAttributes> getProperty(RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false, bool showOnRequest = false);
     virtual bool setProperty(RPropertyTypeId propertyTypeId,

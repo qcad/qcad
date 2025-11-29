@@ -317,11 +317,11 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>U vlasništvu reference</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>XRef File Name</source>
+        <source>External reference</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -347,7 +347,7 @@
     <message>
         <location line="+1"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Vanjska referenca</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -597,7 +597,7 @@
     <message>
         <location line="+1"/>
         <source>Object Invisible</source>
-        <translation type="unfinished"></translation>
+        <translation>Objekt nevidljiv</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -723,12 +723,12 @@
     <message>
         <location line="+2"/>
         <source>Frozen Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Zamrznuti slojevi</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID sloja</translation>
     </message>
     <message>
         <location filename="../src/core/RDimStyle.cpp" line="+71"/>
@@ -738,7 +738,7 @@
     <message>
         <location line="+1"/>
         <source>Overall scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukupno mjerilo</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1068,22 +1068,22 @@
     <message>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Točka 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Točka 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogon</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Water</source>
-        <translation type="unfinished"></translation>
+        <translation>Voda</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1098,37 +1098,37 @@
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation type="unfinished"></translation>
+        <translation>Komunikacija</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Electric</source>
-        <translation type="unfinished"></translation>
+        <translation>Električna</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Low Voltage</source>
-        <translation type="unfinished"></translation>
+        <translation>Niski napon</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>High Voltage</source>
-        <translation type="unfinished"></translation>
+        <translation>Visoki napon</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation type="unfinished"></translation>
+        <translation>Nadzemno napajanje</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation type="unfinished"></translation>
+        <translation>Otpadna</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished"></translation>
+        <translation>Otpadna uzdižuća</translation>
     </message>
 </context>
 <context>

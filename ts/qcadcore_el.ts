@@ -6,107 +6,107 @@
     <message>
         <location filename="../src/core/RUnit.cpp" line="+272"/>
         <source>None</source>
-        <translation type="unfinished">Κανένα</translation>
+        <translation>Κανένα</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inch</source>
-        <translation type="unfinished">Ίντσα</translation>
+        <translation>Ίντσα</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Foot</source>
-        <translation type="unfinished">Πόδι</translation>
+        <translation>Πόδι</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mile</source>
-        <translation type="unfinished">Μίλι</translation>
+        <translation>Μίλι</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Millimeter</source>
-        <translation type="unfinished">Millimeter</translation>
+        <translation>Χιλιοστόμετρο</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Centimeter</source>
-        <translation type="unfinished">Εκατοστόμετρο</translation>
+        <translation>Εκατοστόμετρο</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Meter</source>
-        <translation type="unfinished">Μετρητής</translation>
+        <translation>Μέτρο</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Kilometer</source>
-        <translation type="unfinished">Χιλιόμετρα</translation>
+        <translation>Χιλιόμετρο</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Microinch</source>
-        <translation type="unfinished">Microinch</translation>
+        <translation>Μικροΐντσα</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mil</source>
-        <translation type="unfinished">Mil</translation>
+        <translation>Χιλιοστό της ίντσας</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Yard</source>
-        <translation type="unfinished">Αυλή</translation>
+        <translation>Γιάρδα</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angstrom</source>
-        <translation type="unfinished">Angstrom</translation>
+        <translation>Άνγκστρομ</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Nanometer</source>
-        <translation type="unfinished">Νανόμετρο</translation>
+        <translation>Νανόμετρο</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Micron</source>
-        <translation type="unfinished">Micron</translation>
+        <translation>Μικρόμετρο</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Decimeter</source>
-        <translation type="unfinished">Δεκάμετρο</translation>
+        <translation>Δεκατόμετρο</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Decameter</source>
-        <translation type="unfinished">Δεκάμετρος</translation>
+        <translation>Δεκάμετρο</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hectometer</source>
-        <translation type="unfinished">Hectometer</translation>
+        <translation>Εκατόμετρο</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Gigameter</source>
-        <translation type="unfinished">Gigameter</translation>
+        <translation>Γιγάμετρο</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Astro</source>
-        <translation type="unfinished">Astro</translation>
+        <translation>Αστρονομική Μονάδα</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Lightyear</source>
-        <translation type="unfinished">Lightyear</translation>
+        <translation>Έτος φωτός</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Parsec</source>
-        <translation type="unfinished">Parsec</translation>
+        <translation>Παρσέκ</translation>
     </message>
 </context>
 <context>
@@ -114,102 +114,102 @@
     <message>
         <location filename="../src/core/RColor.cpp" line="+340"/>
         <source>By Layer</source>
-        <translation type="unfinished">Με στρώμα</translation>
+        <translation>Ανά στρώμα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">Με μπλοκ</translation>
+        <translation>Ανά μπλοκ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Red</source>
-        <translation type="unfinished">Κόκκινο</translation>
+        <translation>Κόκκινο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Green</source>
-        <translation type="unfinished">Πράσινο</translation>
+        <translation>Πράσινο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Blue</source>
-        <translation type="unfinished">Μπλε</translation>
+        <translation>Μπλε</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cyan</source>
-        <translation type="unfinished">Κυανό</translation>
+        <translation>Κυανό</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Magenta</source>
-        <translation type="unfinished">Ματζέντα</translation>
+        <translation>Ματζέντα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Yellow</source>
-        <translation type="unfinished">Κίτρινο</translation>
+        <translation>Κίτρινο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Orange</source>
-        <translation type="unfinished">Πορτοκαλί</translation>
+        <translation>Πορτοκαλί</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Red</source>
-        <translation type="unfinished">Σκούρο κόκκινο</translation>
+        <translation>Σκούρο κόκκινο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Green</source>
-        <translation type="unfinished">Σκούρο πράσινο</translation>
+        <translation>Σκούρο πράσινο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Blue</source>
-        <translation type="unfinished">Σκούρο μπλε</translation>
+        <translation>Σκούρο μπλε</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation type="unfinished">Σκούρο κυανό</translation>
+        <translation>Σκούρο κυανό</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation type="unfinished">Σκούρο ματζέντα</translation>
+        <translation>Σκούρο ματζέντα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Yellow</source>
-        <translation type="unfinished">Σκούρο κίτρινο</translation>
+        <translation>Σκούρο κίτρινο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Black</source>
-        <translation type="unfinished">Μαύρο</translation>
+        <translation>Μαύρο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gray</source>
-        <translation type="unfinished">Γκρι</translation>
+        <translation>Γκρι</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Light Gray</source>
-        <translation type="unfinished">Ανοιχτό γκρι</translation>
+        <translation>Ανοιχτό γκρι</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation type="unfinished">Λευκό</translation>
+        <translation>Λευκό</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Others...</source>
-        <translation type="unfinished">Άλλοι...</translation>
+        <translation>Άλλα...</translation>
     </message>
 </context>
 <context>
@@ -217,22 +217,22 @@
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+48"/>
         <source>Current Layer ID</source>
-        <translation type="unfinished">Τρέχον αναγνωριστικό στρώματος</translation>
+        <translation>ID Τρέχοντος Στρώματος</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished">Μονάδα σχεδίασης</translation>
+        <translation>Μονάδα Σχεδίασης</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished">Κλίμακα τύπου γραμμής</translation>
+        <translation>Κλίμακα Τύπου Γραμμής</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation type="unfinished">Γραμματοσειρά διάστασης</translation>
+        <translation>Γραμματοσειρά Διαστάσεων</translation>
     </message>
 </context>
 <context>
@@ -243,24 +243,24 @@
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="+81"/>
         <source>Name</source>
-        <translation type="unfinished">Όνομα</translation>
+        <translation>Όνομα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">Κρυφό</translation>
+        <translation>Κρυφό</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pixel Unit</source>
-        <translation type="unfinished">Μονάδα Pixel</translation>
+        <translation>Μονάδα Εικονοστοιχείου</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation type="unfinished">Προέλευση</translation>
+        <translation>Αρχή</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -276,7 +276,7 @@
         <location line="+8"/>
         <location line="+2"/>
         <source>X</source>
-        <translation type="unfinished">X</translation>
+        <translation>X</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -292,7 +292,7 @@
         <location line="+8"/>
         <location line="+2"/>
         <source>Y</source>
-        <translation type="unfinished">Y</translation>
+        <translation>Y</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -307,42 +307,42 @@
         <location filename="../src/core/RViewportEntity.cpp" line="-9"/>
         <location line="+10"/>
         <source>Z</source>
-        <translation type="unfinished">Z</translation>
+        <translation>Z</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Layout</source>
-        <translation type="unfinished">Διάταξη</translation>
+        <translation>Διάταξη</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation type="unfinished">Κατέχεται από Αναφορά</translation>
+        <translation>Ιδιοκτησία Αναφοράς</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>XRef File Name</source>
+        <source>External reference</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
         <source>Circular (recursive) block referencing detected:</source>
-        <translation type="unfinished">Εντοπίστηκε κυκλική (αναδρομική) αναφορά σε μπλοκ:</translation>
+        <translation>Ανιχνεύθηκε κυκλική (αναδρομική) αναφορά μπλοκ:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block name:</source>
-        <translation type="unfinished">Όνομα μπλοκ:</translation>
+        <translation>Όνομα μπλοκ:</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
         <source>Referenced Block</source>
-        <translation type="unfinished">Αναφερόμενο μπλοκ</translation>
+        <translation>Μπλοκ Αναφοράς</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Εξωτερική Αναφορά</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -352,7 +352,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished">Θέση</translation>
+        <translation>Θέση</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -360,211 +360,211 @@
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+3"/>
         <source>Scale</source>
-        <translation type="unfinished">Κλίμακα</translation>
+        <translation>Κλίμακα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation type="unfinished">Γωνία</translation>
+        <translation>Γωνία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Columns</source>
-        <translation type="unfinished">Στήλες</translation>
+        <translation>Στήλες</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rows</source>
-        <translation type="unfinished">Σειρές</translation>
+        <translation>Σειρές</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
-        <translation type="unfinished">Απόσταση στηλών</translation>
+        <translation>Απόσταση Στηλών</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
-        <translation type="unfinished">Απόσταση γραμμής</translation>
+        <translation>Απόσταση Σειρών</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Attributes</source>
-        <translation type="unfinished">Χαρακτηριστικά</translation>
+        <translation>Χαρακτηριστικά</translation>
     </message>
     <message>
         <location filename="../src/core/RDimStyle.cpp" line="+71"/>
         <source>Style</source>
-        <translation type="unfinished">Στυλ</translation>
+        <translation>Στυλ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overall scale</source>
-        <translation type="unfinished">Συνολική κλίμακα</translation>
+        <translation>Συνολική κλίμακα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation type="unfinished">Γραμμικός παράγοντας μέτρησης</translation>
+        <translation>Συντελεστής γραμμικής μέτρησης</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text height</source>
-        <translation type="unfinished">Ύψος κειμένου</translation>
+        <translation>Ύψος κειμένου</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation type="unfinished">Χάσμα γραμμής διάστασης</translation>
+        <translation>Κενό γραμμής διάστασης</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow size</source>
-        <translation type="unfinished">Μέγεθος βέλους</translation>
+        <translation>Μέγεθος βέλους</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation type="unfinished">Προσαύξηση γραμμής διάστασης</translation>
+        <translation>Προσαύξηση γραμμής διάστασης</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation type="unfinished">Επέκταση γραμμής επέκτασης</translation>
+        <translation>Επέκταση γραμμής επέκτασης</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation type="unfinished">Μετατόπιση γραμμής επέκτασης</translation>
+        <translation>Μετατόπιση γραμμής επέκτασης</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text position vertical</source>
-        <translation type="unfinished">Θέση κειμένου κάθετα</translation>
+        <translation>Κατακόρυφη θέση κειμένου</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text horizontal</source>
-        <translation type="unfinished">Κείμενο οριζόντιο</translation>
+        <translation>Οριζόντιο κείμενο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation type="unfinished">Μέγεθος τσιμπούρι</translation>
+        <translation>Μέγεθος σημαδιού</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
-        <translation type="unfinished">Γραμμική μορφή</translation>
+        <translation>Γραμμική μορφή</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal places</source>
-        <translation type="unfinished">Δεκαδικά ψηφία</translation>
+        <translation>Δεκαδικά ψηφία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal separator</source>
-        <translation type="unfinished">Δεκαδικός διαχωριστής</translation>
+        <translation>Υποδιαστολή</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zero suppression</source>
-        <translation type="unfinished">Μηδενική καταστολή</translation>
+        <translation>Απόκρυψη μηδενικών</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation type="unfinished">Γωνιακή μορφή</translation>
+        <translation>Γωνιακή μορφή</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation type="unfinished">Γωνιακά δεκαδικά ψηφία</translation>
+        <translation>Δεκαδικά ψηφία γωνίας</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation type="unfinished">Καταστολή γωνιακού μηδενός</translation>
+        <translation>Απόκρυψη μηδενικών γωνίας</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation type="unfinished">Architectur tick</translation>
+        <translation>Αρχιτεκτονικό σημάδι</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text color</source>
-        <translation type="unfinished">Χρώμα κειμένου</translation>
+        <translation>Χρώμα κειμένου</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation type="unfinished">Μπλοκ βέλους</translation>
+        <translation>Μπλοκ βέλους</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 1</source>
-        <translation type="unfinished">Μπλοκ βέλους 1</translation>
+        <translation>Μπλοκ βέλους 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation type="unfinished">Μπλοκ βέλους 2</translation>
+        <translation>Μπλοκ βέλους 2</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+94"/>
         <location filename="../src/core/RObject.cpp" line="+70"/>
         <source>Type</source>
-        <translation type="unfinished">Τύπος</translation>
+        <translation>Τύπος</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Block</source>
-        <translation type="unfinished">Μπλοκ</translation>
+        <translation>Μπλοκ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Layer</source>
-        <translation type="unfinished">Στρώμα</translation>
+        <translation>Στρώμα</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+9"/>
         <source>Linetype</source>
-        <translation type="unfinished">Linetype</translation>
+        <translation>Τύπος γραμμής</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished">Κλίμακα τύπου γραμμής</translation>
+        <translation>Κλίμακα Τύπου Γραμμής</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
-        <translation type="unfinished">Γραμμικό βάρος</translation>
+        <translation>Πάχος γραμμής</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
-        <translation type="unfinished">Χρώμα</translation>
+        <translation>Χρώμα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Displayed Color</source>
-        <translation type="unfinished">Εμφανιζόμενο χρώμα</translation>
+        <translation>Εμφανιζόμενο χρώμα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation type="unfinished">Σειρά κλήρωσης</translation>
+        <translation>Σειρά σχεδίασης</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation type="unfinished">Id γονέα</translation>
+        <translation>ID γονέα</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -572,283 +572,283 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Boundary</source>
-        <translation type="unfinished">Όρια</translation>
+        <translation>Όριο</translation>
     </message>
     <message>
         <location line="-3"/>
         <location filename="../src/core/RLayout.cpp" line="+3"/>
         <source>Left</source>
-        <translation type="unfinished">Αριστερά</translation>
+        <translation>Αριστερά</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished">Κάτω μέρος</translation>
+        <translation>Κάτω</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Right</source>
-        <translation type="unfinished">Δεξιά</translation>
+        <translation>Δεξιά</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Top</source>
-        <translation type="unfinished">Κορυφή</translation>
+        <translation>Πάνω</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation type="unfinished">Μέγεθος</translation>
+        <translation>Μέγεθος</translation>
     </message>
     <message>
         <location line="-1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
-        <translation type="unfinished">Πλάτος</translation>
+        <translation>Πλάτος</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
-        <translation type="unfinished">Ύψος</translation>
+        <translation>Ύψος</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="-7"/>
         <source>Off</source>
-        <translation type="unfinished">Off</translation>
+        <translation>Ανενεργό</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation type="unfinished">Κατεψυγμένο</translation>
+        <translation>Παγωμένο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Locked</source>
-        <translation type="unfinished">Κλειδωμένο</translation>
+        <translation>Κλειδωμένο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation type="unfinished">Καταρρεύσει</translation>
+        <translation>Συμπτυγμένο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation type="unfinished">Plottable</translation>
+        <translation>Εκτυπώσιμο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation type="unfinished">Snappable</translation>
+        <translation>Με δυνατότητα πιασίματος</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation type="unfinished">Το Off είναι Freeze</translation>
+        <translation>Απενεργοποίηση = Πάγωμα</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="-23"/>
         <source>Tab Order</source>
-        <translation type="unfinished">Σειρά καρτελών</translation>
+        <translation>Σειρά καρτελών</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Limits</source>
-        <translation type="unfinished">Ελάχιστα όρια</translation>
+        <translation>Ελάχιστα όρια</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Limits</source>
-        <translation type="unfinished">Μέγιστα όρια</translation>
+        <translation>Μέγιστα όρια</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation type="unfinished">Βάση εισαγωγής</translation>
+        <translation>Βάση εισαγωγής</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation type="unfinished">Ελάχιστες εκτάσεις</translation>
+        <translation>Ελάχιστες εκτάσεις</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation type="unfinished">Μέγιστη έκταση</translation>
+        <translation>Μέγιστες εκτάσεις</translation>
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+162"/>
         <source>Custom</source>
-        <translation type="unfinished">Προσαρμοσμένο</translation>
+        <translation>Προσαρμοσμένο</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation type="unfinished">Λαβή</translation>
+        <translation>Λαβή</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Protected</source>
-        <translation type="unfinished">Προστατευμένο</translation>
+        <translation>Προστατευμένο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Selected</source>
-        <translation type="unfinished">Επιλεγμένα</translation>
+        <translation>Επιλεγμένο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Object Invisible</source>
-        <translation type="unfinished">Αντικείμενο Αόρατο</translation>
+        <translation>Αντικείμενο αόρατο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation type="unfinished">Σετ εργασίας</translation>
+        <translation>Σύνολο εργασίας</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
         <source>Simple</source>
-        <translation type="unfinished">Απλό</translation>
+        <translation>Απλό</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation type="unfinished">Θέση κειμένου</translation>
+        <translation>Θέση κειμένου</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation type="unfinished">Κείμενο</translation>
+        <translation>Κείμενο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plain Text</source>
-        <translation type="unfinished">Απλό κείμενο</translation>
+        <translation>Απλό κείμενο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Font Name</source>
-        <translation type="unfinished">Όνομα γραμματοσειράς</translation>
+        <translation>Όνομα γραμματοσειράς</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Height</source>
-        <translation type="unfinished">Ύψος κειμένου</translation>
+        <translation>Ύψος κειμένου</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Width</source>
-        <translation type="unfinished">Πλάτος κειμένου</translation>
+        <translation>Πλάτος κειμένου</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Angle</source>
-        <translation type="unfinished">Γωνία κειμένου</translation>
+        <translation>Γωνία κειμένου</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>X Scale</source>
-        <translation type="unfinished">X Κλίμακα</translation>
+        <translation>Κλίμακα X</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bold</source>
-        <translation type="unfinished">Τολμηρό</translation>
+        <translation>Έντονο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Italic</source>
-        <translation type="unfinished">Πλάγια</translation>
+        <translation>Πλάγιο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Line Spacing</source>
-        <translation type="unfinished">Απόσταση γραμμών</translation>
+        <translation>Απόσταση γραμμών</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Alignment</source>
-        <translation type="unfinished">Ευθυγράμμιση</translation>
+        <translation>Στοίχιση</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Horizontal</source>
-        <translation type="unfinished">Οριζόντια</translation>
+        <translation>Οριζόντιο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Vertical</source>
-        <translation type="unfinished">Κατακόρυφο</translation>
+        <translation>Κατακόρυφο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation type="unfinished">Προς τα πίσω</translation>
+        <translation>Προς τα πίσω</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation type="unfinished">Ανάποδα</translation>
+        <translation>Ανάποδα</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
         <source>Rotation</source>
-        <translation type="unfinished">Περιστροφή</translation>
+        <translation>Περιστροφή</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation type="unfinished">Στο</translation>
+        <translation>Ενεργό</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation type="unfinished">Κέντρο προβολής</translation>
+        <translation>Κέντρο προβολής</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation type="unfinished">Προβολή στόχου</translation>
+        <translation>Στόχος προβολής</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Overall</source>
-        <translation type="unfinished">Συνολικά</translation>
+        <translation>Συνολικά</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Frozen Layers</source>
-        <translation type="unfinished">Κατεψυγμένα στρώματα</translation>
+        <translation>Παγωμένα στρώματα</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer ID</source>
-        <translation type="unfinished">Αναγνωριστικό στρώματος</translation>
+        <translation>ID στρώματος</translation>
     </message>
 </context>
 <context>
@@ -856,7 +856,7 @@
     <message>
         <location filename="../src/core/RGuiAction.cpp" line="+203"/>
         <source>Requires selection</source>
-        <translation type="unfinished">Απαιτεί επιλογή</translation>
+        <translation>Απαιτεί επιλογή</translation>
     </message>
 </context>
 <context>
@@ -864,22 +864,22 @@
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+51"/>
         <source>Name</source>
-        <translation type="unfinished">Όνομα</translation>
+        <translation>Όνομα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Description</source>
-        <translation type="unfinished">Περιγραφή</translation>
+        <translation>Περιγραφή</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished">Μετρικό</translation>
+        <translation>Μετρικό</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation type="unfinished">Μοτίβο</translation>
+        <translation>Μοτίβο</translation>
     </message>
 </context>
 <context>
@@ -887,248 +887,248 @@
     <message>
         <location filename="../src/core/RLinetypePattern.cpp" line="+912"/>
         <source>By Layer</source>
-        <translation type="unfinished">Με στρώμα</translation>
+        <translation>Ανά στρώμα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">Με μπλοκ</translation>
+        <translation>Ανά μπλοκ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Continuous</source>
-        <translation type="unfinished">Συνεχής</translation>
+        <translation>Συνεχής</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Border</source>
-        <translation type="unfinished">Σύνορα</translation>
+        <translation>Περίγραμμα</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished">Κέντρο</translation>
+        <translation>Κέντρο</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation type="unfinished">Τελεία παύλα</translation>
+        <translation>Παύλα τελεία</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dashed</source>
-        <translation type="unfinished">Διακεκομμένο</translation>
+        <translation>Διακεκομμένη</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation type="unfinished">Διαχωρίστε το</translation>
+        <translation>Διαίρεση</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dot</source>
-        <translation type="unfinished">Σημείο</translation>
+        <translation>Τελεία</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">Κρυφό</translation>
+        <translation>Κρυφό</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation type="unfinished">Φάντασμα</translation>
+        <translation>Φάντασμα</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation type="unfinished">Παύλα ISO</translation>
+        <translation>ISO παύλα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation type="unfinished">Χώρος παύλας ISO</translation>
+        <translation>ISO παύλα κενό</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation type="unfinished">Τελεία με μεγάλη παύλα ISO</translation>
+        <translation>ISO μακρά παύλα τελεία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-dot</source>
-        <translation type="unfinished">ISO long-dash double-dot</translation>
+        <translation>ISO μακρά παύλα διπλή τελεία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation type="unfinished">ISO long-dash triple-dot</translation>
+        <translation>ISO μακρά παύλα τριπλή τελεία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dot</source>
-        <translation type="unfinished">Κουκκίδα ISO</translation>
+        <translation>ISO τελεία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation type="unfinished">ISO long-dash short-dash</translation>
+        <translation>ISO μακρά παύλα σύντομη παύλα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation type="unfinished">ISO long-dash double-short-dash</translation>
+        <translation>ISO μακρά παύλα διπλή σύντομη παύλα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash dot</source>
-        <translation type="unfinished">ISO παύλα τελεία</translation>
+        <translation>ISO παύλα τελεία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash dot</source>
-        <translation type="unfinished">Τελεία με διπλή παύλα ISO</translation>
+        <translation>ISO διπλή παύλα τελεία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash double-dot</source>
-        <translation type="unfinished">ISO παύλα διπλή τελεία</translation>
+        <translation>ISO παύλα διπλή τελεία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash double-dot</source>
-        <translation type="unfinished">ISO διπλή παύλα διπλή τελεία</translation>
+        <translation>ISO διπλή παύλα διπλή τελεία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash triple-dot</source>
-        <translation type="unfinished">ISO παύλα τριπλή τελεία</translation>
+        <translation>ISO παύλα τριπλή τελεία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
-        <translation type="unfinished">ISO διπλή παύλα τριπλή τελεία</translation>
+        <translation>ISO διπλή παύλα τριπλή τελεία</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hot Water Supply</source>
-        <translation type="unfinished">Παροχή ζεστού νερού</translation>
+        <translation>Παροχή ζεστού νερού</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hot Water</source>
-        <translation type="unfinished">Ζεστό νερό</translation>
+        <translation>Ζεστό νερό</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gas Line</source>
-        <translation type="unfinished">Γραμμή αερίου</translation>
+        <translation>Γραμμή αερίου</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation type="unfinished">Κτυπήματα</translation>
+        <translation>Μόνωση</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zig Zag</source>
-        <translation type="unfinished">Ζιγκ Ζαγκ</translation>
+        <translation>Ζιγκ-ζαγκ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation type="unfinished">Κομμάτια</translation>
+        <translation>Ράγες</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation type="unfinished">Fenceline 1</translation>
+        <translation>Φράχτης 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 2</source>
-        <translation type="unfinished">Fenceline 2</translation>
+        <translation>Φράχτης 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Σημείο 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Σημείο 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation type="unfinished"></translation>
+        <translation>Φυτό</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Water</source>
-        <translation type="unfinished">Νερό</translation>
+        <translation>Νερό</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drainage</source>
-        <translation type="unfinished">Αποχέτευση</translation>
+        <translation>Αποχέτευση</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drainage Reversed</source>
-        <translation type="unfinished">Αποστράγγιση Αντιστρέφεται</translation>
+        <translation>Αποχέτευση αντίστροφη</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation type="unfinished">Επικοινωνία</translation>
+        <translation>Επικοινωνία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Electric</source>
-        <translation type="unfinished">Ηλεκτρικό</translation>
+        <translation>Ηλεκτρικό</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Low Voltage</source>
-        <translation type="unfinished">Χαμηλή τάση</translation>
+        <translation>Χαμηλή τάση</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>High Voltage</source>
-        <translation type="unfinished">Υψηλή τάση</translation>
+        <translation>Υψηλή τάση</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation type="unfinished">Εναέρια ισχύς</translation>
+        <translation>Εναέρια ηλεκτροδότηση</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation type="unfinished">Foul</translation>
+        <translation>Ακάθαρτα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished">Foul Rising</translation>
+        <translation>Ανερχόμενα ακάθαρτα</translation>
     </message>
 </context>
 <context>
@@ -1136,137 +1136,137 @@
     <message>
         <location filename="../src/core/RLineweight.cpp" line="+37"/>
         <source>By Layer</source>
-        <translation type="unfinished">Με στρώμα</translation>
+        <translation>Ανά στρώμα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">Με μπλοκ</translation>
+        <translation>Ανά μπλοκ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default</source>
-        <translation type="unfinished">Προεπιλογή</translation>
+        <translation>Προεπιλογή</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.00mm</source>
-        <translation type="unfinished">0.00mm</translation>
+        <translation>0.00mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.05mm</source>
-        <translation type="unfinished">0.05mm</translation>
+        <translation>0.05mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.09mm</source>
-        <translation type="unfinished">0.09mm</translation>
+        <translation>0.09mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.13mm (ISO)</source>
-        <translation type="unfinished">0.13mm (ISO)</translation>
+        <translation>0.13mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.15mm</source>
-        <translation type="unfinished">0.15mm</translation>
+        <translation>0.15mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.18mm (ISO)</source>
-        <translation type="unfinished">0.18mm (ISO)</translation>
+        <translation>0.18mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.20mm</source>
-        <translation type="unfinished">0.20mm</translation>
+        <translation>0.20mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.25mm (ISO)</source>
-        <translation type="unfinished">0.25mm (ISO)</translation>
+        <translation>0.25mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.30mm</source>
-        <translation type="unfinished">0.30mm</translation>
+        <translation>0.30mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.35mm (ISO)</source>
-        <translation type="unfinished">0.35mm (ISO)</translation>
+        <translation>0.35mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.40mm</source>
-        <translation type="unfinished">0.40mm</translation>
+        <translation>0.40mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.50mm (ISO)</source>
-        <translation type="unfinished">0.50mm (ISO)</translation>
+        <translation>0.50mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.53mm</source>
-        <translation type="unfinished">0.53mm</translation>
+        <translation>0.53mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.60mm</source>
-        <translation type="unfinished">0.60mm</translation>
+        <translation>0.60mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.70mm (ISO)</source>
-        <translation type="unfinished">0.70mm (ISO)</translation>
+        <translation>0.70mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.80mm</source>
-        <translation type="unfinished">0.80mm</translation>
+        <translation>0.80mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.90mm</source>
-        <translation type="unfinished">0.90mm</translation>
+        <translation>0.90mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.00mm (ISO)</source>
-        <translation type="unfinished">1.00mm (ISO)</translation>
+        <translation>1.00mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.06mm</source>
-        <translation type="unfinished">1.06mm</translation>
+        <translation>1.06mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.20mm</source>
-        <translation type="unfinished">1.20mm</translation>
+        <translation>1.20mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.40mm (ISO)</source>
-        <translation type="unfinished">1.40mm (ISO)</translation>
+        <translation>1.40mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.58mm</source>
-        <translation type="unfinished">1.58mm</translation>
+        <translation>1.58mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.00mm (ISO)</source>
-        <translation type="unfinished">2.00mm (ISO)</translation>
+        <translation>2.00mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.11mm</source>
-        <translation type="unfinished">2.11mm</translation>
+        <translation>2.11mm</translation>
     </message>
 </context>
 </TS>

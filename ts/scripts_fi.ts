@@ -1254,12 +1254,12 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Ulkoista viitettä ei voi muokata</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Ulkoisesta viitteestä peräisin olevaa lohkoa ei voi muokata</translation>
     </message>
     <message>
         <location line="-109"/>
@@ -5917,7 +5917,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pisteen pituus viivamalleissa:</translation>
     </message>
     <message>
         <location line="+47"/>
@@ -6303,7 +6303,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Hatch</source>
-        <translation>&amp;Kuvionti</translation>
+        <translation>&amp;Kuviointi</translation>
     </message>
 </context>
 <context>
@@ -6311,7 +6311,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation>Kuviotäyttö</translation>
+        <translation>Kuviointi</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9070,7 +9070,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+41"/>
         <source>Misc</source>
-        <translation>Misc</translation>
+        <translation>Sekalaiset</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10974,7 +10974,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+0"/>
         <source>Scale</source>
-        <translation>Asteikko</translation>
+        <translation>Mittakaava</translation>
     </message>
     <message>
         <location line="+32"/>
