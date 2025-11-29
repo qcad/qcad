@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/gui/RCadToolBar.cpp" line="+139"/>
         <source>Vertical/Horizontal</source>
-        <translation type="unfinished">Вертикальний/Горизонтальний</translation>
+        <translation>Вертикальний/Горизонтальний</translation>
     </message>
 </context>
 <context>
@@ -15,7 +15,7 @@
         <location filename="../src/gui/RCadToolBarPanel.cpp" line="+23"/>
         <location line="+63"/>
         <source>Back</source>
-        <translation type="unfinished">Назад</translation>
+        <translation>Назад</translation>
     </message>
 </context>
 <context>
@@ -23,7 +23,7 @@
     <message>
         <location filename="../src/gui/RColorCombo.cpp" line="+154"/>
         <source>Custom</source>
-        <translation type="unfinished">Нестандартний</translation>
+        <translation>Довільний</translation>
     </message>
 </context>
 <context>
@@ -31,52 +31,52 @@
     <message>
         <location filename="../src/gui/REventHandler.cpp" line="+211"/>
         <source>Grid</source>
-        <translation type="unfinished">Сітка</translation>
+        <translation>Сітка</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>End</source>
-        <translation type="unfinished">Кінець</translation>
+        <translation>Кінцева точка</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation type="unfinished">Про суб&apos;єкта господарювання</translation>
+        <translation>На об&apos;єкті</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Perpendicular</source>
-        <translation type="unfinished">Перпендикулярний</translation>
+        <translation>Перпендикуляр</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Tangential</source>
-        <translation type="unfinished">Тангенціальний</translation>
+        <translation>Дотична</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Center</source>
-        <translation type="unfinished">Центр</translation>
+        <translation>Центр</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation type="unfinished">Середній</translation>
+        <translation>Середина</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Intersection</source>
-        <translation type="unfinished">Перехрестя</translation>
+        <translation>Перетин</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Reference</source>
-        <translation type="unfinished">Посилання</translation>
+        <translation>Базова точка</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Distance</source>
-        <translation type="unfinished">Відстань</translation>
+        <translation>Відстань</translation>
     </message>
 </context>
 <context>
@@ -84,7 +84,7 @@
     <message>
         <location filename="../src/gui/RMathLineEdit.cpp" line="+188"/>
         <source>Invalid</source>
-        <translation type="unfinished">Недійсний</translation>
+        <translation>Недійсне</translation>
     </message>
 </context>
 </TS>

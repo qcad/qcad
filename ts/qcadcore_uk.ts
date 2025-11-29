@@ -6,107 +6,107 @@
     <message>
         <location filename="../src/core/RUnit.cpp" line="+272"/>
         <source>None</source>
-        <translation type="unfinished">Немає</translation>
+        <translation>Немає</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inch</source>
-        <translation type="unfinished">Дюйм</translation>
+        <translation>Дюйм</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Foot</source>
-        <translation type="unfinished">Нога</translation>
+        <translation>Фут</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mile</source>
-        <translation type="unfinished">Майл</translation>
+        <translation>Миля</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Millimeter</source>
-        <translation type="unfinished">Міліметр</translation>
+        <translation>Міліметр</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Centimeter</source>
-        <translation type="unfinished">Сантиметр</translation>
+        <translation>Сантиметр</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Meter</source>
-        <translation type="unfinished">Лічильник</translation>
+        <translation>Метр</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Kilometer</source>
-        <translation type="unfinished">Кілометр</translation>
+        <translation>Кілометр</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Microinch</source>
-        <translation type="unfinished">Мікродюймовий</translation>
+        <translation>Мікродюйм</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mil</source>
-        <translation type="unfinished">Мільйон</translation>
+        <translation>Міл</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Yard</source>
-        <translation type="unfinished">Двір</translation>
+        <translation>Ярд</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angstrom</source>
-        <translation type="unfinished">Angstrom</translation>
+        <translation>Ангстрем</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Nanometer</source>
-        <translation type="unfinished">Нанометр</translation>
+        <translation>Нанометр</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Micron</source>
-        <translation type="unfinished">Мікрон</translation>
+        <translation>Мікрон</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Decimeter</source>
-        <translation type="unfinished">Дециметр</translation>
+        <translation>Дециметр</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Decameter</source>
-        <translation type="unfinished">Декаметр</translation>
+        <translation>Декаметр</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hectometer</source>
-        <translation type="unfinished">Гектометр</translation>
+        <translation>Гектометр</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Gigameter</source>
-        <translation type="unfinished">Гігаметр</translation>
+        <translation>Гігаметр</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Astro</source>
-        <translation type="unfinished">Астро</translation>
+        <translation>Астрономічна одиниця</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Lightyear</source>
-        <translation type="unfinished">Світловий рік</translation>
+        <translation>Світловий рік</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Parsec</source>
-        <translation type="unfinished">Парсек</translation>
+        <translation>Парсек</translation>
     </message>
 </context>
 <context>
@@ -114,102 +114,102 @@
     <message>
         <location filename="../src/core/RColor.cpp" line="+340"/>
         <source>By Layer</source>
-        <translation type="unfinished">По шарам</translation>
+        <translation>За шаром</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">За блоками</translation>
+        <translation>За блоком</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Red</source>
-        <translation type="unfinished">Червоний</translation>
+        <translation>Червоний</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Green</source>
-        <translation type="unfinished">Зелений</translation>
+        <translation>Зелений</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Blue</source>
-        <translation type="unfinished">Синій</translation>
+        <translation>Синій</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cyan</source>
-        <translation type="unfinished">Блакитний</translation>
+        <translation>Блакитний</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Magenta</source>
-        <translation type="unfinished">Пурпурний</translation>
+        <translation>Пурпурний</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Yellow</source>
-        <translation type="unfinished">Жовтий</translation>
+        <translation>Жовтий</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Orange</source>
-        <translation type="unfinished">Помаранчевий</translation>
+        <translation>Помаранчевий</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Red</source>
-        <translation type="unfinished">Темно-червоний</translation>
+        <translation>Темно-червоний</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Green</source>
-        <translation type="unfinished">Темно-зелений</translation>
+        <translation>Темно-зелений</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Blue</source>
-        <translation type="unfinished">Темно-синій</translation>
+        <translation>Темно-синій</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation type="unfinished">Темно-синій</translation>
+        <translation>Темно-синій</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation type="unfinished">Темно-пурпурний</translation>
+        <translation>Темно-пурпурний</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Yellow</source>
-        <translation type="unfinished">Темно-жовтий</translation>
+        <translation>Темно-жовтий</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Black</source>
-        <translation type="unfinished">Чорний</translation>
+        <translation>Чорний</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gray</source>
-        <translation type="unfinished">Сірий</translation>
+        <translation>Сірий</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Light Gray</source>
-        <translation type="unfinished">Світло-сірий</translation>
+        <translation>Світло-сірий</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation type="unfinished">Білий</translation>
+        <translation>Білий</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Others...</source>
-        <translation type="unfinished">Інші...</translation>
+        <translation>Інші...</translation>
     </message>
 </context>
 <context>
@@ -217,22 +217,22 @@
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+48"/>
         <source>Current Layer ID</source>
-        <translation type="unfinished">Поточний ідентифікатор шару</translation>
+        <translation>Поточний ідентифікатор шару</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished">Блок малювання</translation>
+        <translation>Одиниці креслення</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished">Шкала лінійного типу</translation>
+        <translation>Масштаб типу лінії</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation type="unfinished">Розмір шрифту</translation>
+        <translation>Шрифт розмірів</translation>
     </message>
 </context>
 <context>
@@ -243,24 +243,24 @@
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="+81"/>
         <source>Name</source>
-        <translation type="unfinished">Ім&apos;я та прізвище</translation>
+        <translation>Ім&apos;я та прізвище</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">Прихований</translation>
+        <translation>Невидима</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pixel Unit</source>
-        <translation type="unfinished">Одиниця виміру пікселів</translation>
+        <translation>Одиниця виміру пікселів</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation type="unfinished">Походження</translation>
+        <translation>Початок координат</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -276,7 +276,7 @@
         <location line="+8"/>
         <location line="+2"/>
         <source>X</source>
-        <translation type="unfinished">X</translation>
+        <translation>X</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -292,7 +292,7 @@
         <location line="+8"/>
         <location line="+2"/>
         <source>Y</source>
-        <translation type="unfinished">Y</translation>
+        <translation>Y</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -307,17 +307,17 @@
         <location filename="../src/core/RViewportEntity.cpp" line="-9"/>
         <location line="+10"/>
         <source>Z</source>
-        <translation type="unfinished">Z</translation>
+        <translation>Z</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Layout</source>
-        <translation type="unfinished">Макет</translation>
+        <translation>Компонування</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation type="unfinished">Належить на правах власності</translation>
+        <translation>Належить посиланню</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -327,22 +327,22 @@
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
         <source>Circular (recursive) block referencing detected:</source>
-        <translation type="unfinished">Виявлено циклічне (рекурсивне) блочне посилання:</translation>
+        <translation>Виявлено циклічне (рекурсивне) блочне посилання:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block name:</source>
-        <translation type="unfinished">Ім&apos;я блоку:</translation>
+        <translation>Ім&apos;я блоку:</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
         <source>Referenced Block</source>
-        <translation type="unfinished">Блок посилань</translation>
+        <translation>Посилання на блок</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -352,7 +352,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished">Посада</translation>
+        <translation>Позиція</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -360,211 +360,211 @@
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+3"/>
         <source>Scale</source>
-        <translation type="unfinished">Масштаб</translation>
+        <translation>Масштаб</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation type="unfinished">Кут</translation>
+        <translation>Кут</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Columns</source>
-        <translation type="unfinished">Колонки</translation>
+        <translation>Колонки</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rows</source>
-        <translation type="unfinished">Ряди</translation>
+        <translation>Ряди</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
-        <translation type="unfinished">Відстань між стовпчиками</translation>
+        <translation>Відстань між стовпчиками</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
-        <translation type="unfinished">Міжряддя</translation>
+        <translation>Міжряддя</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Attributes</source>
-        <translation type="unfinished">Атрибути</translation>
+        <translation>Атрибути</translation>
     </message>
     <message>
         <location filename="../src/core/RDimStyle.cpp" line="+71"/>
         <source>Style</source>
-        <translation type="unfinished">Стиль</translation>
+        <translation>Стиль</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overall scale</source>
-        <translation type="unfinished">Загальний масштаб</translation>
+        <translation>Загальний масштаб</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation type="unfinished">Лінійний коефіцієнт вимірювання</translation>
+        <translation>Коефіцієнт лінійних вимірювань</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text height</source>
-        <translation type="unfinished">Висота тексту</translation>
+        <translation>Висота тексту</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation type="unfinished">Зазор між габаритними лініями</translation>
+        <translation>Зазор розмірної лінії</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow size</source>
-        <translation type="unfinished">Розмір стрілки</translation>
+        <translation>Розмір стрілки</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation type="unfinished">Крок розмірної лінії</translation>
+        <translation>Крок розмірної лінії</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation type="unfinished">Подовження телефонної лінії</translation>
+        <translation>Виступ виносної лінії</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation type="unfinished">Зсув лінії розширення</translation>
+        <translation>Відступ виносної лінії</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text position vertical</source>
-        <translation type="unfinished">Положення тексту вертикальне</translation>
+        <translation>Вертикальне положення тексту</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text horizontal</source>
-        <translation type="unfinished">Текст горизонтальний</translation>
+        <translation>Горизонтальний текст</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation type="unfinished">Розмір кліща</translation>
+        <translation>Розмір засічки</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
-        <translation type="unfinished">Лінійний формат</translation>
+        <translation>Лінійний формат</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal places</source>
-        <translation type="unfinished">Десяткові знаки</translation>
+        <translation>Десяткові знаки</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal separator</source>
-        <translation type="unfinished">Десятковий роздільник</translation>
+        <translation>Десятковий роздільник</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zero suppression</source>
-        <translation type="unfinished">Нульове придушення</translation>
+        <translation>Пропуск нулів</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation type="unfinished">Кутовий формат</translation>
+        <translation>Кутовий формат</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation type="unfinished">Кутові десяткові знаки</translation>
+        <translation>Кутові десяткові знаки</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation type="unfinished">Придушення кутового нуля</translation>
+        <translation>Пропуск кутових нулів</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation type="unfinished">Архітектурний тик</translation>
+        <translation>Архітектурна засічка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text color</source>
-        <translation type="unfinished">Колір тексту</translation>
+        <translation>Колір тексту</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation type="unfinished">Стрілочний блок</translation>
+        <translation>Блок стрілки</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 1</source>
-        <translation type="unfinished">Стрілочний блок 1</translation>
+        <translation>Блок стрілки 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation type="unfinished">Стрілочний блок 2</translation>
+        <translation>Блок стрілки 2</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+94"/>
         <location filename="../src/core/RObject.cpp" line="+70"/>
         <source>Type</source>
-        <translation type="unfinished">Тип</translation>
+        <translation>Тип</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Block</source>
-        <translation type="unfinished">Блок</translation>
+        <translation>Блок</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Layer</source>
-        <translation type="unfinished">Шар</translation>
+        <translation>Шар</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+9"/>
         <source>Linetype</source>
-        <translation type="unfinished">Тип лінійки</translation>
+        <translation>Тип лінії</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished">Шкала лінійного типу</translation>
+        <translation>Масштаб типу лінії</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
-        <translation type="unfinished">Лінійна вага</translation>
+        <translation>Товщина лінії</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
-        <translation type="unfinished">Колір</translation>
+        <translation>Колір</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Displayed Color</source>
-        <translation type="unfinished">Відображуваний колір</translation>
+        <translation>Відображуваний колір</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation type="unfinished">Замовлення на проведення жеребкування</translation>
+        <translation>Порядок відображення</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation type="unfinished">Ідентифікатор батька</translation>
+        <translation>Ідентифікатор батька</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -572,283 +572,283 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Boundary</source>
-        <translation type="unfinished">Кордон</translation>
+        <translation>Межа</translation>
     </message>
     <message>
         <location line="-3"/>
         <location filename="../src/core/RLayout.cpp" line="+3"/>
         <source>Left</source>
-        <translation type="unfinished">Ліворуч</translation>
+        <translation>Зліва</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished">Дно</translation>
+        <translation>Знизу</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Right</source>
-        <translation type="unfinished">Так</translation>
+        <translation>Справа</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Top</source>
-        <translation type="unfinished">Топ</translation>
+        <translation>Зверху</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation type="unfinished">Розмір</translation>
+        <translation>Розмір</translation>
     </message>
     <message>
         <location line="-1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
-        <translation type="unfinished">Ширина</translation>
+        <translation>Ширина</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
-        <translation type="unfinished">Висота</translation>
+        <translation>Висота</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="-7"/>
         <source>Off</source>
-        <translation type="unfinished">Вимкнено</translation>
+        <translation>Вимкнений</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation type="unfinished">Заморожений</translation>
+        <translation>Заморожений</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Locked</source>
-        <translation type="unfinished">Закрито</translation>
+        <translation>Заблокований</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation type="unfinished">Звалився</translation>
+        <translation>Згорнутий</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation type="unfinished">Здатний до побудови графіків</translation>
+        <translation>Друкується</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation type="unfinished">Застібається</translation>
+        <translation>Прив'язується</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation type="unfinished">Вимкнено - значить, заморожено</translation>
+        <translation>Вимкнення = заморозити</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="-23"/>
         <source>Tab Order</source>
-        <translation type="unfinished">Порядок вкладок</translation>
+        <translation>Порядок вкладок</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Limits</source>
-        <translation type="unfinished">Мінімальні ліміти</translation>
+        <translation>Мінімальні межі</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Limits</source>
-        <translation type="unfinished">Максимальні ліміти</translation>
+        <translation>Максимальні межі</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation type="unfinished">Вставна база</translation>
+        <translation>База вставки</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation type="unfinished">Мінімальні розміри</translation>
+        <translation>Мінімальні габарити</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation type="unfinished">Максимальні довжини</translation>
+        <translation>Максимальні габарити</translation>
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+162"/>
         <source>Custom</source>
-        <translation type="unfinished">Нестандартний</translation>
+        <translation>Довільний</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation type="unfinished">Ручка</translation>
+        <translation>Ідентифікатор</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Protected</source>
-        <translation type="unfinished">Захищений</translation>
+        <translation>Захищений</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Selected</source>
-        <translation type="unfinished">Вибране</translation>
+        <translation>Вибраний</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Object Invisible</source>
-        <translation type="unfinished">Об&apos;єкт-невидимка</translation>
+        <translation>Об&apos;єкт-невидимка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation type="unfinished">Робочий набір</translation>
+        <translation>Робочий набір</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
         <source>Simple</source>
-        <translation type="unfinished">Простий</translation>
+        <translation>Простий</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation type="unfinished">Позиція тексту</translation>
+        <translation>Позиція тексту</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation type="unfinished">Текст</translation>
+        <translation>Текст</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plain Text</source>
-        <translation type="unfinished">Звичайний текст</translation>
+        <translation>Звичайний текст</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Font Name</source>
-        <translation type="unfinished">Назва шрифту</translation>
+        <translation>Назва шрифту</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Height</source>
-        <translation type="unfinished">Висота тексту</translation>
+        <translation>Висота тексту</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Width</source>
-        <translation type="unfinished">Ширина тексту</translation>
+        <translation>Ширина тексту</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Angle</source>
-        <translation type="unfinished">Кут нахилу тексту</translation>
+        <translation>Кут нахилу тексту</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>X Scale</source>
-        <translation type="unfinished">Х-шкала</translation>
+        <translation>Х-шкала</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bold</source>
-        <translation type="unfinished">Bold</translation>
+        <translation>Напівжирний</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Italic</source>
-        <translation type="unfinished">Курсив</translation>
+        <translation>Курсив</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Line Spacing</source>
-        <translation type="unfinished">Міжрядковий інтервал</translation>
+        <translation>Міжрядковий інтервал</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Alignment</source>
-        <translation type="unfinished">Вирівнювання</translation>
+        <translation>Вирівнювання</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Horizontal</source>
-        <translation type="unfinished">Горизонтальні</translation>
+        <translation>Горизонтальне</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Vertical</source>
-        <translation type="unfinished">Вертикальний</translation>
+        <translation>Вертикальне</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation type="unfinished">Назад</translation>
+        <translation>Зворотний</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation type="unfinished">Догори ногами</translation>
+        <translation>Перевернутий</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
         <source>Rotation</source>
-        <translation type="unfinished">Ротація</translation>
+        <translation>Обертання</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation type="unfinished">На</translation>
+        <translation>Увімкнений</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation type="unfinished">Центр перегляду</translation>
+        <translation>Центр виду</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation type="unfinished">Переглянути ціль</translation>
+        <translation>Ціль виду</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Overall</source>
-        <translation type="unfinished">Загалом</translation>
+        <translation>Загальний</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Frozen Layers</source>
-        <translation type="unfinished">Заморожені шари</translation>
+        <translation>Заморожені шари</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer ID</source>
-        <translation type="unfinished">Ідентифікатор шару</translation>
+        <translation>ID шару</translation>
     </message>
 </context>
 <context>
@@ -856,7 +856,7 @@
     <message>
         <location filename="../src/core/RGuiAction.cpp" line="+203"/>
         <source>Requires selection</source>
-        <translation type="unfinished">Потребує відбору</translation>
+        <translation>Потрібно виділити</translation>
     </message>
 </context>
 <context>
@@ -864,22 +864,22 @@
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+51"/>
         <source>Name</source>
-        <translation type="unfinished">Ім&apos;я та прізвище</translation>
+        <translation>Ім&apos;я та прізвище</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Description</source>
-        <translation type="unfinished">Опис</translation>
+        <translation>Опис</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished">Метрика</translation>
+        <translation>Метрична</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation type="unfinished">Візерунок</translation>
+        <translation>Шаблон</translation>
     </message>
 </context>
 <context>
@@ -887,248 +887,248 @@
     <message>
         <location filename="../src/core/RLinetypePattern.cpp" line="+912"/>
         <source>By Layer</source>
-        <translation type="unfinished">По шарам</translation>
+        <translation>За шаром</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">За блоками</translation>
+        <translation>За блоком</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Continuous</source>
-        <translation type="unfinished">Безперервний</translation>
+        <translation>Суцільна</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Border</source>
-        <translation type="unfinished">Кордон</translation>
+        <translation>Межова</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished">Центр</translation>
+        <translation>Осьова</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation type="unfinished">Тире - крапка</translation>
+        <translation>Штрихпунктирна</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dashed</source>
-        <translation type="unfinished">Пунктир</translation>
+        <translation>Штрихова</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation type="unfinished">Поділ</translation>
+        <translation>Ділильна</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dot</source>
-        <translation type="unfinished">Точка</translation>
+        <translation>Пунктирна</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">Прихований</translation>
+        <translation>Невидима</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation type="unfinished">Фантом</translation>
+        <translation>Фантомна</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation type="unfinished">Тире ISO</translation>
+        <translation>Тире ISO</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation type="unfinished">Простір для тире ISO</translation>
+        <translation>Простір для тире ISO</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation type="unfinished">ISO довга крапка з тире</translation>
+        <translation>ISO довга крапка з тире</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-dot</source>
-        <translation type="unfinished">ISO довгий тире подвійна крапка</translation>
+        <translation>ISO довгий тире подвійна крапка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation type="unfinished">ISO довгий тире потрійна крапка</translation>
+        <translation>ISO довгий тире потрійна крапка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dot</source>
-        <translation type="unfinished">Точка ISO</translation>
+        <translation>Точка ISO</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation type="unfinished">ISO довге тире коротке тире</translation>
+        <translation>ISO довге тире коротке тире</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation type="unfinished">ISO довге тире подвійне коротке тире</translation>
+        <translation>ISO довге тире подвійне коротке тире</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash dot</source>
-        <translation type="unfinished">ISO тире крапка</translation>
+        <translation>ISO тире крапка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash dot</source>
-        <translation type="unfinished">ISO подвійна крапка з тире</translation>
+        <translation>ISO подвійна крапка з тире</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash double-dot</source>
-        <translation type="unfinished">Тире ISO подвійна крапка</translation>
+        <translation>Тире ISO подвійна крапка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash double-dot</source>
-        <translation type="unfinished">ISO подвійне тире подвійна крапка</translation>
+        <translation>ISO подвійне тире подвійна крапка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash triple-dot</source>
-        <translation type="unfinished">Тире ISO потрійна крапка</translation>
+        <translation>Тире ISO потрійна крапка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
-        <translation type="unfinished">ISO подвійне тире потрійна крапка</translation>
+        <translation>ISO подвійне тире потрійна крапка</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hot Water Supply</source>
-        <translation type="unfinished">Гаряче водопостачання</translation>
+        <translation>Гаряче водопостачання</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hot Water</source>
-        <translation type="unfinished">Гаряча вода</translation>
+        <translation>Гаряча вода</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gas Line</source>
-        <translation type="unfinished">Газопровід</translation>
+        <translation>Газопровід</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation type="unfinished">Ватин</translation>
+        <translation>Ватин</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zig Zag</source>
-        <translation type="unfinished">Зигзаг</translation>
+        <translation>Зигзаг</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation type="unfinished">Треки</translation>
+        <translation>Треки</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation type="unfinished">Лінія огорожі 1</translation>
+        <translation>Лінія огорожі 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 2</source>
-        <translation type="unfinished">Лінія огорожі 2</translation>
+        <translation>Лінія огорожі 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Water</source>
-        <translation type="unfinished">Вода</translation>
+        <translation>Вода</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drainage</source>
-        <translation type="unfinished">Дренаж</translation>
+        <translation>Дренаж</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drainage Reversed</source>
-        <translation type="unfinished">Дренаж реверсивний</translation>
+        <translation>Дренаж реверсивний</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation type="unfinished">Комунікація</translation>
+        <translation>Комунікація</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Electric</source>
-        <translation type="unfinished">Електричний</translation>
+        <translation>Електричний</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Low Voltage</source>
-        <translation type="unfinished">Низька напруга</translation>
+        <translation>Низька напруга</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>High Voltage</source>
-        <translation type="unfinished">Висока напруга</translation>
+        <translation>Висока напруга</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation type="unfinished">Повітряні лінії електропередач</translation>
+        <translation>Повітряні лінії електропередач</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation type="unfinished">Фол!</translation>
+        <translation>Каналізація</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished">Foul Rising</translation>
+        <translation>Напірна каналізація</translation>
     </message>
 </context>
 <context>
@@ -1136,137 +1136,137 @@
     <message>
         <location filename="../src/core/RLineweight.cpp" line="+37"/>
         <source>By Layer</source>
-        <translation type="unfinished">По шарам</translation>
+        <translation>За шаром</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">За блоками</translation>
+        <translation>За блоком</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default</source>
-        <translation type="unfinished">За замовчуванням</translation>
+        <translation>За замовчуванням</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.00mm</source>
-        <translation type="unfinished">0.00 мм</translation>
+        <translation>0.00 мм</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.05mm</source>
-        <translation type="unfinished">0.05 мм</translation>
+        <translation>0.05 мм</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.09mm</source>
-        <translation type="unfinished">0.09мм</translation>
+        <translation>0.09мм</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.13mm (ISO)</source>
-        <translation type="unfinished">0.13 мм (ISO)</translation>
+        <translation>0.13 мм (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.15mm</source>
-        <translation type="unfinished">0.15 мм</translation>
+        <translation>0.15 мм</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.18mm (ISO)</source>
-        <translation type="unfinished">0.18 мм (ISO)</translation>
+        <translation>0.18 мм (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.20mm</source>
-        <translation type="unfinished">0.20 мм</translation>
+        <translation>0.20 мм</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.25mm (ISO)</source>
-        <translation type="unfinished">0.25 мм (ISO)</translation>
+        <translation>0.25 мм (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.30mm</source>
-        <translation type="unfinished">0.30 мм</translation>
+        <translation>0.30 мм</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.35mm (ISO)</source>
-        <translation type="unfinished">0.35 мм (ISO)</translation>
+        <translation>0.35 мм (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.40mm</source>
-        <translation type="unfinished">0.40 мм</translation>
+        <translation>0.40 мм</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.50mm (ISO)</source>
-        <translation type="unfinished">0.50 мм (ISO)</translation>
+        <translation>0.50 мм (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.53mm</source>
-        <translation type="unfinished">0.53 мм</translation>
+        <translation>0.53 мм</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.60mm</source>
-        <translation type="unfinished">0.60 мм</translation>
+        <translation>0.60 мм</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.70mm (ISO)</source>
-        <translation type="unfinished">0.70 мм (ISO)</translation>
+        <translation>0.70 мм (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.80mm</source>
-        <translation type="unfinished">0.80 мм</translation>
+        <translation>0.80 мм</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.90mm</source>
-        <translation type="unfinished">0.90 мм</translation>
+        <translation>0.90 мм</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.00mm (ISO)</source>
-        <translation type="unfinished">1.00 мм (ISO)</translation>
+        <translation>1.00 мм (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.06mm</source>
-        <translation type="unfinished">1.06мм</translation>
+        <translation>1.06мм</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.20mm</source>
-        <translation type="unfinished">1.20 мм</translation>
+        <translation>1.20 мм</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.40mm (ISO)</source>
-        <translation type="unfinished">1.40 мм (ISO)</translation>
+        <translation>1.40 мм (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.58mm</source>
-        <translation type="unfinished">1.58 мм</translation>
+        <translation>1.58 мм</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.00mm (ISO)</source>
-        <translation type="unfinished">2.00 мм (ISO)</translation>
+        <translation>2.00 мм (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.11mm</source>
-        <translation type="unfinished">2.11 мм</translation>
+        <translation>2.11 мм</translation>
     </message>
 </context>
 </TS>
