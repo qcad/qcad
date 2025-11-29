@@ -1252,12 +1252,12 @@ Vill du återställa den?</translation>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan inte redigera extern referens</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan inte redigera block från extern referens</translation>
     </message>
     <message>
         <location line="-109"/>
@@ -5915,7 +5915,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Punktlängd i linjemönster:</translation>
     </message>
     <message>
         <location line="+47"/>

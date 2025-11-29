@@ -16,7 +16,7 @@
     </message>
     <message>
         <source>Hide %1</source>
-        <translation type="unfinished">隐藏 %1</translation>
+        <translation>隐藏 %1</translation>
     </message>
     <message>
         <source>Hide Others</source>
@@ -28,7 +28,7 @@
     </message>
     <message>
         <source>Preferences...</source>
-        <translation type="unfinished">首选项设置…</translation>
+        <translation>首选项设置…</translation>
     </message>
     <message>
         <source>Quit %1</source>
@@ -47,7 +47,7 @@
     </message>
     <message>
         <source>Operation on socket is not supported</source>
-        <translation type="unfinished">不支持套接字操作</translation>
+        <translation>不支持套接字操作</translation>
     </message>
     <message>
         <source>Host not found</source>
@@ -167,14 +167,14 @@
     </message>
     <message>
         <source>Incompatible Qt Library Error</source>
-        <translation type="unfinished">Qt 库不兼容</translation>
+        <translation>Qt 库不兼容</translation>
     </message>
 </context>
 <context>
     <name>QCocoaMenuItem</name>
     <message>
         <source>About Qt</source>
-        <translation type="unfinished">关于 Qt</translation>
+        <translation>关于 Qt</translation>
     </message>
     <message>
         <source>About</source>
@@ -236,7 +236,7 @@
     <name>QColorDialog</name>
     <message>
         <source>Hu&amp;e:</source>
-        <translation type="unfinished">色相(&amp;E)：</translation>
+        <translation>色相(&amp;E)：</translation>
     </message>
     <message>
         <source>&amp;Sat:</source>
@@ -260,7 +260,7 @@
     </message>
     <message>
         <source>A&amp;lpha channel:</source>
-        <translation type="unfinished">Alpha 通道(&amp;A)：</translation>
+        <translation>Alpha 通道(&amp;A)：</translation>
     </message>
     <message>
         <source>&amp;HTML:</source>
@@ -269,7 +269,7 @@
     <message>
         <source>Cursor at %1, %2, color: %3
 Press ESC to cancel</source>
-        <translation type="unfinished">光标位置 (%1, %2), 颜色: %3
+        <translation>光标位置 (%1, %2), 颜色: %3
 按下 ESC 键取消</translation>
     </message>
     <message>
@@ -316,7 +316,7 @@ Press ESC to cancel</source>
     </message>
     <message>
         <source>Displays this help.</source>
-        <translation type="unfinished">显示此帮助。</translation>
+        <translation>显示此帮助。</translation>
     </message>
     <message>
         <source>Unknown option &apos;%1&apos;.</source>
@@ -371,7 +371,7 @@ Press ESC to cancel</source>
     <message>
         <source>QT_LAYOUT_DIRECTION</source>
         <comment>Translate this string to the string &apos;LTR&apos; in left-to-right languages or to &apos;RTL&apos; in right-to-left languages (such as Hebrew and Arabic) to get proper widget layout.</comment>
-        <translation type="unfinished">LTR</translation>
+        <translation>LTR</translation>
     </message>
 </context>
 <context>
@@ -445,7 +445,7 @@ Press ESC to cancel</source>
     <message>
         <source>None</source>
         <comment>CUPS Banner page</comment>
-        <translation type="unfinished">无</translation>
+        <translation>无</translation>
     </message>
     <message>
         <source>Standard</source>
@@ -482,46 +482,46 @@ Press ESC to cancel</source>
     <name>QDB2Driver</name>
     <message>
         <source>Unable to connect</source>
-        <translation type="unfinished">无法连接</translation>
+        <translation>无法连接</translation>
     </message>
     <message>
         <source>Unable to commit transaction</source>
-        <translation type="unfinished">无法提交事务</translation>
+        <translation>无法提交事务</translation>
     </message>
     <message>
         <source>Unable to rollback transaction</source>
-        <translation type="unfinished">无法回滚事务</translation>
+        <translation>无法回滚事务</translation>
     </message>
     <message>
         <source>Unable to set autocommit</source>
-        <translation type="unfinished">无法设置自动提交</translation>
+        <translation>无法设置自动提交</translation>
     </message>
 </context>
 <context>
     <name>QDB2Result</name>
     <message>
         <source>Unable to execute statement</source>
-        <translation type="unfinished">无法执行语句</translation>
+        <translation>无法执行语句</translation>
     </message>
     <message>
         <source>Unable to prepare statement</source>
-        <translation type="unfinished">无法准备语句</translation>
+        <translation>无法准备语句</translation>
     </message>
     <message>
         <source>Unable to bind variable</source>
-        <translation type="unfinished">无法帮定变量</translation>
+        <translation>无法帮定变量</translation>
     </message>
     <message>
         <source>Unable to fetch record %1</source>
-        <translation type="unfinished">无法获取记录 %1</translation>
+        <translation>无法获取记录 %1</translation>
     </message>
     <message>
         <source>Unable to fetch next</source>
-        <translation type="unfinished">无法获取下一个</translation>
+        <translation>无法获取下一个</translation>
     </message>
     <message>
         <source>Unable to fetch first</source>
-        <translation type="unfinished">无法获取第一个</translation>
+        <translation>无法获取第一个</translation>
     </message>
 </context>
 <context>
@@ -688,7 +688,7 @@ Press ESC to cancel</source>
     </message>
     <message>
         <source>Undocks and re-attaches the dock widget</source>
-        <translation type="unfinished">卸载并重新附加停靠小部件</translation>
+        <translation>卸载并重新附加停靠小部件</translation>
     </message>
     <message>
         <source>Close</source>
@@ -696,7 +696,7 @@ Press ESC to cancel</source>
     </message>
     <message>
         <source>Closes the dock widget</source>
-        <translation type="unfinished">关闭停靠小部件</translation>
+        <translation>关闭停靠小部件</translation>
     </message>
 </context>
 <context>
@@ -742,7 +742,7 @@ Press ESC to cancel</source>
     </message>
     <message>
         <source>Unable to restore from %1: %2</source>
-        <translation type="unfinished">无法从 %1 恢复到 %2</translation>
+        <translation>无法从 %1 恢复到 %2</translation>
     </message>
     <message>
         <source>Will not rename sequential file using block copy</source>
@@ -774,7 +774,7 @@ Press ESC to cancel</source>
     <name>QFileDevice</name>
     <message>
         <source>No file engine available or engine does not support UnMapExtension</source>
-        <translation type="unfinished">没有可用的文件引擎或引擎不支持 UnMapExtension</translation>
+        <translation>没有可用的文件引擎或引擎不支持 UnMapExtension</translation>
     </message>
 </context>
 <context>
@@ -3702,279 +3702,279 @@ Please turn one of those options off.</source>
     </message>
     <message>
         <source>numbers out of order in {} quantifier</source>
-        <translation type="unfinished">numbers out of order in {} quantifier</translation>
+        <translation>numbers out of order in {} quantifier</translation>
     </message>
     <message>
         <source>number too big in {} quantifier</source>
-        <translation type="unfinished">number too big in {} quantifier</translation>
+        <translation>number too big in {} quantifier</translation>
     </message>
     <message>
         <source>missing terminating ] for character class</source>
-        <translation type="unfinished">missing terminating ] for character class</translation>
+        <translation>missing terminating ] for character class</translation>
     </message>
     <message>
         <source>invalid escape sequence in character class</source>
-        <translation type="unfinished">invalid escape sequence in character class</translation>
+        <translation>invalid escape sequence in character class</translation>
     </message>
     <message>
         <source>range out of order in character class</source>
-        <translation type="unfinished">range out of order in character class</translation>
+        <translation>range out of order in character class</translation>
     </message>
     <message>
         <source>nothing to repeat</source>
-        <translation type="unfinished">nothing to repeat</translation>
+        <translation>nothing to repeat</translation>
     </message>
     <message>
         <source>internal error: unexpected repeat</source>
-        <translation type="unfinished">internal error: unexpected repeat</translation>
+        <translation>internal error: unexpected repeat</translation>
     </message>
     <message>
         <source>unrecognized character after (? or (?-</source>
-        <translation type="unfinished">unrecognized character after (? or (?-</translation>
+        <translation>unrecognized character after (? or (?-</translation>
     </message>
     <message>
         <source>POSIX named classes are supported only within a class</source>
-        <translation type="unfinished">POSIX named classes are supported only within a class</translation>
+        <translation>POSIX named classes are supported only within a class</translation>
     </message>
     <message>
         <source>missing )</source>
-        <translation type="unfinished">missing )</translation>
+        <translation>missing )</translation>
     </message>
     <message>
         <source>reference to non-existent subpattern</source>
-        <translation type="unfinished">reference to non-existent subpattern</translation>
+        <translation>reference to non-existent subpattern</translation>
     </message>
     <message>
         <source>erroffset passed as NULL</source>
-        <translation type="unfinished">erroffset passed as NULL</translation>
+        <translation>erroffset passed as NULL</translation>
     </message>
     <message>
         <source>unknown option bit(s) set</source>
-        <translation type="unfinished">unknown option bit(s) set</translation>
+        <translation>unknown option bit(s) set</translation>
     </message>
     <message>
         <source>missing ) after comment</source>
-        <translation type="unfinished">missing ) after comment</translation>
+        <translation>missing ) after comment</translation>
     </message>
     <message>
         <source>regular expression is too large</source>
-        <translation type="unfinished">regular expression is too large</translation>
+        <translation>regular expression is too large</translation>
     </message>
     <message>
         <source>failed to get memory</source>
-        <translation type="unfinished">failed to get memory</translation>
+        <translation>failed to get memory</translation>
     </message>
     <message>
         <source>unmatched parentheses</source>
-        <translation type="unfinished">unmatched parentheses</translation>
+        <translation>unmatched parentheses</translation>
     </message>
     <message>
         <source>internal error: code overflow</source>
-        <translation type="unfinished">internal error: code overflow</translation>
+        <translation>internal error: code overflow</translation>
     </message>
     <message>
         <source>unrecognized character after (?&lt;</source>
-        <translation type="unfinished">unrecognized character after (?&lt;</translation>
+        <translation>unrecognized character after (?&lt;</translation>
     </message>
     <message>
         <source>lookbehind assertion is not fixed length</source>
-        <translation type="unfinished">lookbehind assertion is not fixed length</translation>
+        <translation>lookbehind assertion is not fixed length</translation>
     </message>
     <message>
         <source>malformed number or name after (?(</source>
-        <translation type="unfinished">malformed number or name after (?(</translation>
+        <translation>malformed number or name after (?(</translation>
     </message>
     <message>
         <source>conditional group contains more than two branches</source>
-        <translation type="unfinished">conditional group contains more than two branches</translation>
+        <translation>conditional group contains more than two branches</translation>
     </message>
     <message>
         <source>assertion expected after (?(</source>
-        <translation type="unfinished">assertion expected after (?(</translation>
+        <translation>assertion expected after (?(</translation>
     </message>
     <message>
         <source>(?R or (?[+-]digits must be followed by )</source>
-        <translation type="unfinished">(?R or (?[+-]digits must be followed by )</translation>
+        <translation>(?R or (?[+-]digits must be followed by )</translation>
     </message>
     <message>
         <source>unknown POSIX class name</source>
-        <translation type="unfinished">unknown POSIX class name</translation>
+        <translation>unknown POSIX class name</translation>
     </message>
     <message>
         <source>POSIX collating elements are not supported</source>
-        <translation type="unfinished">POSIX collating elements are not supported</translation>
+        <translation>POSIX collating elements are not supported</translation>
     </message>
     <message>
         <source>this version of PCRE is not compiled with PCRE_UTF8 support</source>
-        <translation type="unfinished">this version of PCRE is not compiled with PCRE_UTF8 support</translation>
+        <translation>this version of PCRE is not compiled with PCRE_UTF8 support</translation>
     </message>
     <message>
         <source>character value in \x{...} sequence is too large</source>
-        <translation type="unfinished">character value in \x{...} sequence is too large</translation>
+        <translation>character value in \x{...} sequence is too large</translation>
     </message>
     <message>
         <source>invalid condition (?(0)</source>
-        <translation type="unfinished">invalid condition (?(0)</translation>
+        <translation>invalid condition (?(0)</translation>
     </message>
     <message>
         <source>\C not allowed in lookbehind assertion</source>
-        <translation type="unfinished">\C not allowed in lookbehind assertion</translation>
+        <translation>\C not allowed in lookbehind assertion</translation>
     </message>
     <message>
         <source>PCRE does not support \L, \l, \N{name}, \U, or \u</source>
-        <translation type="unfinished">PCRE does not support \L, \l, \N{name}, \U, or \u</translation>
+        <translation>PCRE does not support \L, \l, \N{name}, \U, or \u</translation>
     </message>
     <message>
         <source>number after (?C is &gt; 255</source>
-        <translation type="unfinished">number after (?C is &gt; 255</translation>
+        <translation>number after (?C is &gt; 255</translation>
     </message>
     <message>
         <source>closing ) for (?C expected</source>
-        <translation type="unfinished">closing ) for (?C expected</translation>
+        <translation>closing ) for (?C expected</translation>
     </message>
     <message>
         <source>recursive call could loop indefinitely</source>
-        <translation type="unfinished">recursive call could loop indefinitely</translation>
+        <translation>recursive call could loop indefinitely</translation>
     </message>
     <message>
         <source>unrecognized character after (?P</source>
-        <translation type="unfinished">unrecognized character after (?P</translation>
+        <translation>unrecognized character after (?P</translation>
     </message>
     <message>
         <source>syntax error in subpattern name (missing terminator)</source>
-        <translation type="unfinished">syntax error in subpattern name (missing terminator)</translation>
+        <translation>syntax error in subpattern name (missing terminator)</translation>
     </message>
     <message>
         <source>two named subpatterns have the same name</source>
-        <translation type="unfinished">two named subpatterns have the same name</translation>
+        <translation>two named subpatterns have the same name</translation>
     </message>
     <message>
         <source>invalid UTF-8 string</source>
-        <translation type="unfinished">invalid UTF-8 string</translation>
+        <translation>invalid UTF-8 string</translation>
     </message>
     <message>
         <source>support for \P, \p, and \X has not been compiled</source>
-        <translation type="unfinished">support for \P, \p, and \X has not been compiled</translation>
+        <translation>support for \P, \p, and \X has not been compiled</translation>
     </message>
     <message>
         <source>malformed \P or \p sequence</source>
-        <translation type="unfinished">malformed \P or \p sequence</translation>
+        <translation>malformed \P or \p sequence</translation>
     </message>
     <message>
         <source>unknown property name after \P or \p</source>
-        <translation type="unfinished">unknown property name after \P or \p</translation>
+        <translation>unknown property name after \P or \p</translation>
     </message>
     <message>
         <source>subpattern name is too long (maximum 32 characters)</source>
-        <translation type="unfinished">subpattern name is too long (maximum 32 characters)</translation>
+        <translation>subpattern name is too long (maximum 32 characters)</translation>
     </message>
     <message>
         <source>too many named subpatterns (maximum 10000)</source>
-        <translation type="unfinished">too many named subpatterns (maximum 10000)</translation>
+        <translation>too many named subpatterns (maximum 10000)</translation>
     </message>
     <message>
         <source>octal value is greater than \377 (not in UTF-8 mode)</source>
-        <translation type="unfinished">octal value is greater than \377 (not in UTF-8 mode)</translation>
+        <translation>octal value is greater than \377 (not in UTF-8 mode)</translation>
     </message>
     <message>
         <source>internal error: overran compiling workspace</source>
-        <translation type="unfinished">internal error: overran compiling workspace</translation>
+        <translation>internal error: overran compiling workspace</translation>
     </message>
     <message>
         <source>internal error: previously-checked referenced subpattern not found</source>
-        <translation type="unfinished">internal error: previously-checked referenced subpattern not found</translation>
+        <translation>internal error: previously-checked referenced subpattern not found</translation>
     </message>
     <message>
         <source>DEFINE group contains more than one branch</source>
-        <translation type="unfinished">DEFINE group contains more than one branch</translation>
+        <translation>DEFINE group contains more than one branch</translation>
     </message>
     <message>
         <source>repeating a DEFINE group is not allowed</source>
-        <translation type="unfinished">repeating a DEFINE group is not allowed</translation>
+        <translation>repeating a DEFINE group is not allowed</translation>
     </message>
     <message>
         <source>inconsistent NEWLINE options</source>
-        <translation type="unfinished">inconsistent NEWLINE options</translation>
+        <translation>inconsistent NEWLINE options</translation>
     </message>
     <message>
         <source>\g is not followed by a braced, angle-bracketed, or quoted name/number or by a plain number</source>
-        <translation type="unfinished">\g is not followed by a braced, angle-bracketed, or quoted name/number or by a plain number</translation>
+        <translation>\g is not followed by a braced, angle-bracketed, or quoted name/number or by a plain number</translation>
     </message>
     <message>
         <source>a numbered reference must not be zero</source>
-        <translation type="unfinished">a numbered reference must not be zero</translation>
+        <translation>a numbered reference must not be zero</translation>
     </message>
     <message>
         <source>an argument is not allowed for (*ACCEPT), (*FAIL), or (*COMMIT)</source>
-        <translation type="unfinished">an argument is not allowed for (*ACCEPT), (*FAIL), or (*COMMIT)</translation>
+        <translation>an argument is not allowed for (*ACCEPT), (*FAIL), or (*COMMIT)</translation>
     </message>
     <message>
         <source>(*VERB) not recognized</source>
-        <translation type="unfinished">(*VERB) not recognized</translation>
+        <translation>(*VERB) not recognized</translation>
     </message>
     <message>
         <source>number is too big</source>
-        <translation type="unfinished">number is too big</translation>
+        <translation>number is too big</translation>
     </message>
     <message>
         <source>subpattern name expected</source>
-        <translation type="unfinished">subpattern name expected</translation>
+        <translation>subpattern name expected</translation>
     </message>
     <message>
         <source>digit expected after (?+</source>
-        <translation type="unfinished">digit expected after (?+</translation>
+        <translation>digit expected after (?+</translation>
     </message>
     <message>
         <source>] is an invalid data character in JavaScript compatibility mode</source>
-        <translation type="unfinished">] is an invalid data character in JavaScript compatibility mode</translation>
+        <translation>] is an invalid data character in JavaScript compatibility mode</translation>
     </message>
     <message>
         <source>different names for subpatterns of the same number are not allowed</source>
-        <translation type="unfinished">different names for subpatterns of the same number are not allowed</translation>
+        <translation>different names for subpatterns of the same number are not allowed</translation>
     </message>
     <message>
         <source>(*MARK) must have an argument</source>
-        <translation type="unfinished">(*MARK) must have an argument</translation>
+        <translation>(*MARK) must have an argument</translation>
     </message>
     <message>
         <source>this version of PCRE is not compiled with PCRE_UCP support</source>
-        <translation type="unfinished">this version of PCRE is not compiled with PCRE_UCP support</translation>
+        <translation>this version of PCRE is not compiled with PCRE_UCP support</translation>
     </message>
     <message>
         <source>\c must be followed by an ASCII character</source>
-        <translation type="unfinished">\c must be followed by an ASCII character</translation>
+        <translation>\c must be followed by an ASCII character</translation>
     </message>
     <message>
         <source>\k is not followed by a braced, angle-bracketed, or quoted name</source>
-        <translation type="unfinished">\k is not followed by a braced, angle-bracketed, or quoted name</translation>
+        <translation>\k is not followed by a braced, angle-bracketed, or quoted name</translation>
     </message>
     <message>
         <source>internal error: unknown opcode in find_fixedlength()</source>
-        <translation type="unfinished">internal error: unknown opcode in find_fixedlength()</translation>
+        <translation>internal error: unknown opcode in find_fixedlength()</translation>
     </message>
     <message>
         <source>\N is not supported in a class</source>
-        <translation type="unfinished">\N is not supported in a class</translation>
+        <translation>\N is not supported in a class</translation>
     </message>
     <message>
         <source>too many forward references</source>
-        <translation type="unfinished">too many forward references</translation>
+        <translation>too many forward references</translation>
     </message>
     <message>
         <source>disallowed Unicode code point (&gt;= 0xd800 &amp;&amp; &lt;= 0xdfff)</source>
-        <translation type="unfinished">disallowed Unicode code point (&gt;= 0xd800 &amp;&amp; &lt;= 0xdfff)</translation>
+        <translation>disallowed Unicode code point (&gt;= 0xd800 &amp;&amp; &lt;= 0xdfff)</translation>
     </message>
     <message>
         <source>invalid UTF-16 string</source>
-        <translation type="unfinished">invalid UTF-16 string</translation>
+        <translation>invalid UTF-16 string</translation>
     </message>
     <message>
         <source>name is too long in (*MARK), (*PRUNE), (*SKIP), or (*THEN)</source>
-        <translation type="unfinished">name is too long in (*MARK), (*PRUNE), (*SKIP), or (*THEN)</translation>
+        <translation>name is too long in (*MARK), (*PRUNE), (*SKIP), or (*THEN)</translation>
     </message>
     <message>
         <source>character value in \u.... sequence is too large</source>
-        <translation type="unfinished">character value in \u.... sequence is too large</translation>
+        <translation>character value in \u.... sequence is too large</translation>
     </message>
 </context>
 <context>
@@ -4474,343 +4474,343 @@ Please turn one of those options off.</source>
     </message>
     <message>
         <source>Monitor Brightness Up</source>
-        <translation type="unfinished">Monitor Brightness Up</translation>
+        <translation>Monitor Brightness Up</translation>
     </message>
     <message>
         <source>Monitor Brightness Down</source>
-        <translation type="unfinished">Monitor Brightness Down</translation>
+        <translation>Monitor Brightness Down</translation>
     </message>
     <message>
         <source>Keyboard Light On/Off</source>
-        <translation type="unfinished">Keyboard Light On/Off</translation>
+        <translation>Keyboard Light On/Off</translation>
     </message>
     <message>
         <source>Keyboard Brightness Up</source>
-        <translation type="unfinished">Keyboard Brightness Up</translation>
+        <translation>Keyboard Brightness Up</translation>
     </message>
     <message>
         <source>Keyboard Brightness Down</source>
-        <translation type="unfinished">Keyboard Brightness Down</translation>
+        <translation>Keyboard Brightness Down</translation>
     </message>
     <message>
         <source>Power Off</source>
-        <translation type="unfinished">Power Off</translation>
+        <translation>Power Off</translation>
     </message>
     <message>
         <source>Wake Up</source>
-        <translation type="unfinished">Wake Up</translation>
+        <translation>Wake Up</translation>
     </message>
     <message>
         <source>Eject</source>
-        <translation type="unfinished">Eject</translation>
+        <translation>Eject</translation>
     </message>
     <message>
         <source>Screensaver</source>
-        <translation type="unfinished">Screensaver</translation>
+        <translation>Screensaver</translation>
     </message>
     <message>
         <source>WWW</source>
-        <translation type="unfinished">WWW</translation>
+        <translation>WWW</translation>
     </message>
     <message>
         <source>Sleep</source>
-        <translation type="unfinished">Sleep</translation>
+        <translation>Sleep</translation>
     </message>
     <message>
         <source>LightBulb</source>
-        <translation type="unfinished">LightBulb</translation>
+        <translation>LightBulb</translation>
     </message>
     <message>
         <source>Shop</source>
-        <translation type="unfinished">Shop</translation>
+        <translation>Shop</translation>
     </message>
     <message>
         <source>History</source>
-        <translation type="unfinished">History</translation>
+        <translation>History</translation>
     </message>
     <message>
         <source>Add Favorite</source>
-        <translation type="unfinished">Add Favorite</translation>
+        <translation>Add Favorite</translation>
     </message>
     <message>
         <source>Hot Links</source>
-        <translation type="unfinished">Hot Links</translation>
+        <translation>Hot Links</translation>
     </message>
     <message>
         <source>Adjust Brightness</source>
-        <translation type="unfinished">Adjust Brightness</translation>
+        <translation>Adjust Brightness</translation>
     </message>
     <message>
         <source>Finance</source>
-        <translation type="unfinished">Finance</translation>
+        <translation>Finance</translation>
     </message>
     <message>
         <source>Community</source>
-        <translation type="unfinished">Community</translation>
+        <translation>Community</translation>
     </message>
     <message>
         <source>Audio Rewind</source>
-        <translation type="unfinished">Audio Rewind</translation>
+        <translation>Audio Rewind</translation>
     </message>
     <message>
         <source>Back Forward</source>
-        <translation type="unfinished">Back Forward</translation>
+        <translation>Back Forward</translation>
     </message>
     <message>
         <source>Application Left</source>
-        <translation type="unfinished">Application Left</translation>
+        <translation>Application Left</translation>
     </message>
     <message>
         <source>Application Right</source>
-        <translation type="unfinished">Application Right</translation>
+        <translation>Application Right</translation>
     </message>
     <message>
         <source>Book</source>
-        <translation type="unfinished">Book</translation>
+        <translation>Book</translation>
     </message>
     <message>
         <source>CD</source>
-        <translation type="unfinished">CD</translation>
+        <translation>CD</translation>
     </message>
     <message>
         <source>Calculator</source>
-        <translation type="unfinished">Calculator</translation>
+        <translation>Calculator</translation>
     </message>
     <message>
         <source>Clear</source>
-        <translation type="unfinished">Clear</translation>
+        <translation>Clear</translation>
     </message>
     <message>
         <source>Clear Grab</source>
-        <translation type="unfinished">Clear Grab</translation>
+        <translation>Clear Grab</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation type="unfinished">Close</translation>
+        <translation>Close</translation>
     </message>
     <message>
         <source>Copy</source>
-        <translation type="unfinished">Copy</translation>
+        <translation>Copy</translation>
     </message>
     <message>
         <source>Cut</source>
-        <translation type="unfinished">Cut</translation>
+        <translation>Cut</translation>
     </message>
     <message>
         <source>Display</source>
-        <translation type="unfinished">Display</translation>
+        <translation>Display</translation>
     </message>
     <message>
         <source>DOS</source>
-        <translation type="unfinished">DOS</translation>
+        <translation>DOS</translation>
     </message>
     <message>
         <source>Documents</source>
-        <translation type="unfinished">Documents</translation>
+        <translation>Documents</translation>
     </message>
     <message>
         <source>Spreadsheet</source>
-        <translation type="unfinished">Spreadsheet</translation>
+        <translation>Spreadsheet</translation>
     </message>
     <message>
         <source>Browser</source>
-        <translation type="unfinished">Browser</translation>
+        <translation>Browser</translation>
     </message>
     <message>
         <source>Game</source>
-        <translation type="unfinished">Game</translation>
+        <translation>Game</translation>
     </message>
     <message>
         <source>Go</source>
-        <translation type="unfinished">Go</translation>
+        <translation>Go</translation>
     </message>
     <message>
         <source>iTouch</source>
-        <translation type="unfinished">iTouch</translation>
+        <translation>iTouch</translation>
     </message>
     <message>
         <source>Logoff</source>
-        <translation type="unfinished">Logoff</translation>
+        <translation>Logoff</translation>
     </message>
     <message>
         <source>Market</source>
-        <translation type="unfinished">Market</translation>
+        <translation>Market</translation>
     </message>
     <message>
         <source>Meeting</source>
-        <translation type="unfinished">Meeting</translation>
+        <translation>Meeting</translation>
     </message>
     <message>
         <source>Keyboard Menu</source>
-        <translation type="unfinished">Keyboard Menu</translation>
+        <translation>Keyboard Menu</translation>
     </message>
     <message>
         <source>Menu PB</source>
-        <translation type="unfinished">Menu PB</translation>
+        <translation>Menu PB</translation>
     </message>
     <message>
         <source>My Sites</source>
-        <translation type="unfinished">My Sites</translation>
+        <translation>My Sites</translation>
     </message>
     <message>
         <source>News</source>
-        <translation type="unfinished">News</translation>
+        <translation>News</translation>
     </message>
     <message>
         <source>Home Office</source>
-        <translation type="unfinished">Home Office</translation>
+        <translation>Home Office</translation>
     </message>
     <message>
         <source>Option</source>
-        <translation type="unfinished">Option</translation>
+        <translation>Option</translation>
     </message>
     <message>
         <source>Paste</source>
-        <translation type="unfinished">Paste</translation>
+        <translation>Paste</translation>
     </message>
     <message>
         <source>Phone</source>
-        <translation type="unfinished">Phone</translation>
+        <translation>Phone</translation>
     </message>
     <message>
         <source>Reply</source>
-        <translation type="unfinished">Reply</translation>
+        <translation>Reply</translation>
     </message>
     <message>
         <source>Reload</source>
-        <translation type="unfinished">Reload</translation>
+        <translation>Reload</translation>
     </message>
     <message>
         <source>Rotate Windows</source>
-        <translation type="unfinished">Rotate Windows</translation>
+        <translation>Rotate Windows</translation>
     </message>
     <message>
         <source>Rotation PB</source>
-        <translation type="unfinished">Rotation PB</translation>
+        <translation>Rotation PB</translation>
     </message>
     <message>
         <source>Rotation KB</source>
-        <translation type="unfinished">Rotation KB</translation>
+        <translation>Rotation KB</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished">Save</translation>
+        <translation>Save</translation>
     </message>
     <message>
         <source>Send</source>
-        <translation type="unfinished">Send</translation>
+        <translation>Send</translation>
     </message>
     <message>
         <source>Spellchecker</source>
-        <translation type="unfinished">Spellchecker</translation>
+        <translation>Spellchecker</translation>
     </message>
     <message>
         <source>Split Screen</source>
-        <translation type="unfinished">Split Screen</translation>
+        <translation>Split Screen</translation>
     </message>
     <message>
         <source>Support</source>
-        <translation type="unfinished">Support</translation>
+        <translation>Support</translation>
     </message>
     <message>
         <source>Task Panel</source>
-        <translation type="unfinished">Task Panel</translation>
+        <translation>Task Panel</translation>
     </message>
     <message>
         <source>Terminal</source>
-        <translation type="unfinished">Terminal</translation>
+        <translation>Terminal</translation>
     </message>
     <message>
         <source>Tools</source>
-        <translation type="unfinished">Tools</translation>
+        <translation>Tools</translation>
     </message>
     <message>
         <source>Travel</source>
-        <translation type="unfinished">Travel</translation>
+        <translation>Travel</translation>
     </message>
     <message>
         <source>Video</source>
-        <translation type="unfinished">Video</translation>
+        <translation>Video</translation>
     </message>
     <message>
         <source>Word Processor</source>
-        <translation type="unfinished">Word Processor</translation>
+        <translation>Word Processor</translation>
     </message>
     <message>
         <source>XFer</source>
-        <translation type="unfinished">XFer</translation>
+        <translation>XFer</translation>
     </message>
     <message>
         <source>Zoom In</source>
-        <translation type="unfinished">Zoom In</translation>
+        <translation>Zoom In</translation>
     </message>
     <message>
         <source>Zoom Out</source>
-        <translation type="unfinished">Zoom Out</translation>
+        <translation>Zoom Out</translation>
     </message>
     <message>
         <source>Away</source>
-        <translation type="unfinished">Away</translation>
+        <translation>Away</translation>
     </message>
     <message>
         <source>Messenger</source>
-        <translation type="unfinished">Messenger</translation>
+        <translation>Messenger</translation>
     </message>
     <message>
         <source>WebCam</source>
-        <translation type="unfinished">WebCam</translation>
+        <translation>WebCam</translation>
     </message>
     <message>
         <source>Mail Forward</source>
-        <translation type="unfinished">Mail Forward</translation>
+        <translation>Mail Forward</translation>
     </message>
     <message>
         <source>Pictures</source>
-        <translation type="unfinished">Pictures</translation>
+        <translation>Pictures</translation>
     </message>
     <message>
         <source>Music</source>
-        <translation type="unfinished">Music</translation>
+        <translation>Music</translation>
     </message>
     <message>
         <source>Battery</source>
-        <translation type="unfinished">Battery</translation>
+        <translation>Battery</translation>
     </message>
     <message>
         <source>Bluetooth</source>
-        <translation type="unfinished">Bluetooth</translation>
+        <translation>Bluetooth</translation>
     </message>
     <message>
         <source>Wireless</source>
-        <translation type="unfinished">Wireless</translation>
+        <translation>Wireless</translation>
     </message>
     <message>
         <source>Ultra Wide Band</source>
-        <translation type="unfinished">Ultra Wide Band</translation>
+        <translation>Ultra Wide Band</translation>
     </message>
     <message>
         <source>Audio Forward</source>
-        <translation type="unfinished">Audio Forward</translation>
+        <translation>Audio Forward</translation>
     </message>
     <message>
         <source>Audio Repeat</source>
-        <translation type="unfinished">Audio Repeat</translation>
+        <translation>Audio Repeat</translation>
     </message>
     <message>
         <source>Audio Random Play</source>
-        <translation type="unfinished">Audio Random Play</translation>
+        <translation>Audio Random Play</translation>
     </message>
     <message>
         <source>Subtitle</source>
-        <translation type="unfinished">Subtitle</translation>
+        <translation>Subtitle</translation>
     </message>
     <message>
         <source>Audio Cycle Track</source>
-        <translation type="unfinished">Audio Cycle Track</translation>
+        <translation>Audio Cycle Track</translation>
     </message>
     <message>
         <source>Time</source>
-        <translation type="unfinished">Time</translation>
+        <translation>Time</translation>
     </message>
     <message>
         <source>Select</source>
@@ -4818,19 +4818,19 @@ Please turn one of those options off.</source>
     </message>
     <message>
         <source>View</source>
-        <translation type="unfinished">View</translation>
+        <translation>View</translation>
     </message>
     <message>
         <source>Top Menu</source>
-        <translation type="unfinished">Top Menu</translation>
+        <translation>Top Menu</translation>
     </message>
     <message>
         <source>Suspend</source>
-        <translation type="unfinished">Suspend</translation>
+        <translation>Suspend</translation>
     </message>
     <message>
         <source>Hibernate</source>
-        <translation type="unfinished">Hibernate</translation>
+        <translation>Hibernate</translation>
     </message>
     <message>
         <source>Print Screen</source>
@@ -4934,143 +4934,143 @@ Please turn one of those options off.</source>
     </message>
     <message>
         <source>Kanji</source>
-        <translation type="unfinished">Kanji</translation>
+        <translation>Kanji</translation>
     </message>
     <message>
         <source>Muhenkan</source>
-        <translation type="unfinished">Muhenkan</translation>
+        <translation>Muhenkan</translation>
     </message>
     <message>
         <source>Henkan</source>
-        <translation type="unfinished">Henkan</translation>
+        <translation>Henkan</translation>
     </message>
     <message>
         <source>Romaji</source>
-        <translation type="unfinished">Romaji</translation>
+        <translation>Romaji</translation>
     </message>
     <message>
         <source>Hiragana</source>
-        <translation type="unfinished">Hiragana</translation>
+        <translation>Hiragana</translation>
     </message>
     <message>
         <source>Katakana</source>
-        <translation type="unfinished">Katakana</translation>
+        <translation>Katakana</translation>
     </message>
     <message>
         <source>Hiragana Katakana</source>
-        <translation type="unfinished">Hiragana Katakana</translation>
+        <translation>Hiragana Katakana</translation>
     </message>
     <message>
         <source>Zenkaku</source>
-        <translation type="unfinished">Zenkaku</translation>
+        <translation>Zenkaku</translation>
     </message>
     <message>
         <source>Hankaku</source>
-        <translation type="unfinished">Hankaku</translation>
+        <translation>Hankaku</translation>
     </message>
     <message>
         <source>Zenkaku Hankaku</source>
-        <translation type="unfinished">Zenkaku Hankaku</translation>
+        <translation>Zenkaku Hankaku</translation>
     </message>
     <message>
         <source>Touroku</source>
-        <translation type="unfinished">Touroku</translation>
+        <translation>Touroku</translation>
     </message>
     <message>
         <source>Massyo</source>
-        <translation type="unfinished">Massyo</translation>
+        <translation>Massyo</translation>
     </message>
     <message>
         <source>Kana Lock</source>
-        <translation type="unfinished">Kana Lock</translation>
+        <translation>Kana Lock</translation>
     </message>
     <message>
         <source>Kana Shift</source>
-        <translation type="unfinished">Kana Shift</translation>
+        <translation>Kana Shift</translation>
     </message>
     <message>
         <source>Eisu Shift</source>
-        <translation type="unfinished">Eisu Shift</translation>
+        <translation>Eisu Shift</translation>
     </message>
     <message>
         <source>Eisu toggle</source>
-        <translation type="unfinished">Eisu toggle</translation>
+        <translation>Eisu toggle</translation>
     </message>
     <message>
         <source>Code input</source>
-        <translation type="unfinished">Code input</translation>
+        <translation>Code input</translation>
     </message>
     <message>
         <source>Multiple Candidate</source>
-        <translation type="unfinished">Multiple Candidate</translation>
+        <translation>Multiple Candidate</translation>
     </message>
     <message>
         <source>Previous Candidate</source>
-        <translation type="unfinished">Previous Candidate</translation>
+        <translation>Previous Candidate</translation>
     </message>
     <message>
         <source>Hangul</source>
-        <translation type="unfinished">Hangul</translation>
+        <translation>Hangul</translation>
     </message>
     <message>
         <source>Hangul Start</source>
-        <translation type="unfinished">Hangul Start</translation>
+        <translation>Hangul Start</translation>
     </message>
     <message>
         <source>Hangul End</source>
-        <translation type="unfinished">Hangul End</translation>
+        <translation>Hangul End</translation>
     </message>
     <message>
         <source>Hangul Hanja</source>
-        <translation type="unfinished">Hangul Hanja</translation>
+        <translation>Hangul Hanja</translation>
     </message>
     <message>
         <source>Hangul Jamo</source>
-        <translation type="unfinished">Hangul Jamo</translation>
+        <translation>Hangul Jamo</translation>
     </message>
     <message>
         <source>Hangul Romaja</source>
-        <translation type="unfinished">Hangul Romaja</translation>
+        <translation>Hangul Romaja</translation>
     </message>
     <message>
         <source>Hangul Jeonja</source>
-        <translation type="unfinished">Hangul Jeonja</translation>
+        <translation>Hangul Jeonja</translation>
     </message>
     <message>
         <source>Hangul Banja</source>
-        <translation type="unfinished">Hangul Banja</translation>
+        <translation>Hangul Banja</translation>
     </message>
     <message>
         <source>Hangul PreHanja</source>
-        <translation type="unfinished">Hangul PreHanja</translation>
+        <translation>Hangul PreHanja</translation>
     </message>
     <message>
         <source>Hangul PostHanja</source>
-        <translation type="unfinished">Hangul PostHanja</translation>
+        <translation>Hangul PostHanja</translation>
     </message>
     <message>
         <source>Hangul Special</source>
-        <translation type="unfinished">Hangul Special</translation>
+        <translation>Hangul Special</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished">Cancel</translation>
+        <translation>Cancel</translation>
     </message>
     <message>
         <source>Printer</source>
-        <translation type="unfinished">Printer</translation>
+        <translation>Printer</translation>
     </message>
     <message>
         <source>Execute</source>
-        <translation type="unfinished">Execute</translation>
+        <translation>Execute</translation>
     </message>
     <message>
         <source>Play</source>
-        <translation type="unfinished">Play</translation>
+        <translation>Play</translation>
     </message>
     <message>
         <source>Zoom</source>
-        <translation type="unfinished">Zoom</translation>
+        <translation>Zoom</translation>
     </message>
     <message>
         <source>Ctrl</source>
@@ -5090,7 +5090,7 @@ Please turn one of those options off.</source>
     </message>
     <message>
         <source>Num</source>
-        <translation type="unfinished">Num</translation>
+        <translation>Num</translation>
     </message>
     <message>
         <source>+</source>
@@ -5419,7 +5419,7 @@ Please turn one of those options off.</source>
     <name>QSslSocket</name>
     <message>
         <source>Error creating SSL context (%1)</source>
-        <translation type="unfinished">创建 SSL 上下文错误（%1）</translation>
+        <translation>创建 SSL 上下文错误（%1）</translation>
     </message>
     <message>
         <source>Invalid or empty cipher list (%1)</source>
@@ -5439,103 +5439,103 @@ Please turn one of those options off.</source>
     </message>
     <message>
         <source>Private key does not certify public key, %1</source>
-        <translation type="unfinished">Private key does not certify public key, %1</translation>
+        <translation>Private key does not certify public key, %1</translation>
     </message>
     <message>
         <source>No error</source>
-        <translation type="unfinished">无错误</translation>
+        <translation>无错误</translation>
     </message>
     <message>
         <source>The issuer certificate could not be found</source>
-        <translation type="unfinished">找不到发行者证书</translation>
+        <translation>找不到发行者证书</translation>
     </message>
     <message>
         <source>The certificate signature could not be decrypted</source>
-        <translation type="unfinished">无法解密证书签名</translation>
+        <translation>无法解密证书签名</translation>
     </message>
     <message>
         <source>The public key in the certificate could not be read</source>
-        <translation type="unfinished">无法读取证书中的公钥</translation>
+        <translation>无法读取证书中的公钥</translation>
     </message>
     <message>
         <source>The signature of the certificate is invalid</source>
-        <translation type="unfinished">证书的签名无效</translation>
+        <translation>证书的签名无效</translation>
     </message>
     <message>
         <source>The certificate is not yet valid</source>
-        <translation type="unfinished">证书尚未生效</translation>
+        <translation>证书尚未生效</translation>
     </message>
     <message>
         <source>The certificate has expired</source>
-        <translation type="unfinished">证书已过期</translation>
+        <translation>证书已过期</translation>
     </message>
     <message>
         <source>The certificate&apos;s notBefore field contains an invalid time</source>
-        <translation type="unfinished">证书的 notBefore 字段包含无效的时间</translation>
+        <translation>证书的 notBefore 字段包含无效的时间</translation>
     </message>
     <message>
         <source>The certificate&apos;s notAfter field contains an invalid time</source>
-        <translation type="unfinished">The certificate&apos;s notAfter field contains an invalid time</translation>
+        <translation>The certificate&apos;s notAfter field contains an invalid time</translation>
     </message>
     <message>
         <source>The certificate is self-signed, and untrusted</source>
-        <translation type="unfinished">The certificate is self-signed, and untrusted</translation>
+        <translation>The certificate is self-signed, and untrusted</translation>
     </message>
     <message>
         <source>The root certificate of the certificate chain is self-signed, and untrusted</source>
-        <translation type="unfinished">The root certificate of the certificate chain is self-signed, and untrusted</translation>
+        <translation>The root certificate of the certificate chain is self-signed, and untrusted</translation>
     </message>
     <message>
         <source>The issuer certificate of a locally looked up certificate could not be found</source>
-        <translation type="unfinished">The issuer certificate of a locally looked up certificate could not be found</translation>
+        <translation>The issuer certificate of a locally looked up certificate could not be found</translation>
     </message>
     <message>
         <source>No certificates could be verified</source>
-        <translation type="unfinished">No certificates could be verified</translation>
+        <translation>No certificates could be verified</translation>
     </message>
     <message>
         <source>One of the CA certificates is invalid</source>
-        <translation type="unfinished">One of the CA certificates is invalid</translation>
+        <translation>One of the CA certificates is invalid</translation>
     </message>
     <message>
         <source>The basicConstraints path length parameter has been exceeded</source>
-        <translation type="unfinished">The basicConstraints path length parameter has been exceeded</translation>
+        <translation>The basicConstraints path length parameter has been exceeded</translation>
     </message>
     <message>
         <source>The supplied certificate is unsuitable for this purpose</source>
-        <translation type="unfinished">The supplied certificate is unsuitable for this purpose</translation>
+        <translation>The supplied certificate is unsuitable for this purpose</translation>
     </message>
     <message>
         <source>The root CA certificate is not trusted for this purpose</source>
-        <translation type="unfinished">The root CA certificate is not trusted for this purpose</translation>
+        <translation>The root CA certificate is not trusted for this purpose</translation>
     </message>
     <message>
         <source>The root CA certificate is marked to reject the specified purpose</source>
-        <translation type="unfinished">The root CA certificate is marked to reject the specified purpose</translation>
+        <translation>The root CA certificate is marked to reject the specified purpose</translation>
     </message>
     <message>
         <source>The current candidate issuer certificate was rejected because its subject name did not match the issuer name of the current certificate</source>
-        <translation type="unfinished">The current candidate issuer certificate was rejected because its subject name did not match the issuer name of the current certificate</translation>
+        <translation>The current candidate issuer certificate was rejected because its subject name did not match the issuer name of the current certificate</translation>
     </message>
     <message>
         <source>The current candidate issuer certificate was rejected because its issuer name and serial number was present and did not match the authority key identifier of the current certificate</source>
-        <translation type="unfinished">The current candidate issuer certificate was rejected because its issuer name and serial number was present and did not match the authority key identifier of the current certificate</translation>
+        <translation>The current candidate issuer certificate was rejected because its issuer name and serial number was present and did not match the authority key identifier of the current certificate</translation>
     </message>
     <message>
         <source>The peer did not present any certificate</source>
-        <translation type="unfinished">The peer did not present any certificate</translation>
+        <translation>The peer did not present any certificate</translation>
     </message>
     <message>
         <source>The host name did not match any of the valid hosts for this certificate</source>
-        <translation type="unfinished">The host name did not match any of the valid hosts for this certificate</translation>
+        <translation>The host name did not match any of the valid hosts for this certificate</translation>
     </message>
     <message>
         <source>The peer certificate is blacklisted</source>
-        <translation type="unfinished">The peer certificate is blacklisted</translation>
+        <translation>The peer certificate is blacklisted</translation>
     </message>
     <message>
         <source>Unknown error</source>
-        <translation type="unfinished">Unknown error</translation>
+        <translation>Unknown error</translation>
     </message>
     <message>
         <source>Error creating SSL session, %1</source>
@@ -5547,7 +5547,7 @@ Please turn one of those options off.</source>
     </message>
     <message>
         <source>Unable to init SSL Context: %1</source>
-        <translation type="unfinished">Unable to init SSL Context: %1</translation>
+        <translation>Unable to init SSL Context: %1</translation>
     </message>
     <message>
         <source>Unable to write data: %1</source>
@@ -5555,11 +5555,11 @@ Please turn one of those options off.</source>
     </message>
     <message>
         <source>Unable to decrypt data: %1</source>
-        <translation type="unfinished">Unable to decrypt data: %1</translation>
+        <translation>Unable to decrypt data: %1</translation>
     </message>
     <message>
         <source>The TLS/SSL connection has been closed</source>
-        <translation type="unfinished">The TLS/SSL connection has been closed</translation>
+        <translation>The TLS/SSL connection has been closed</translation>
     </message>
     <message>
         <source>Error while reading: %1</source>
@@ -5574,90 +5574,90 @@ Please turn one of those options off.</source>
     <name>QStandardPaths</name>
     <message>
         <source>Desktop</source>
-        <translation type="unfinished">桌面</translation>
+        <translation>桌面</translation>
     </message>
     <message>
         <source>Documents</source>
-        <translation type="unfinished">文档</translation>
+        <translation>文档</translation>
     </message>
     <message>
         <source>Fonts</source>
-        <translation type="unfinished">字体</translation>
+        <translation>字体</translation>
     </message>
     <message>
         <source>Applications</source>
-        <translation type="unfinished">应用程序</translation>
+        <translation>应用程序</translation>
     </message>
     <message>
         <source>Music</source>
-        <translation type="unfinished">音乐</translation>
+        <translation>音乐</translation>
     </message>
     <message>
         <source>Movies</source>
-        <translation type="unfinished">影片</translation>
+        <translation>影片</translation>
     </message>
     <message>
         <source>Pictures</source>
-        <translation type="unfinished">图片</translation>
+        <translation>图片</translation>
     </message>
     <message>
         <source>Temporary Directory</source>
-        <translation type="unfinished">临时目录</translation>
+        <translation>临时目录</translation>
     </message>
     <message>
         <source>Home</source>
-        <translation type="unfinished">首页</translation>
+        <translation>首页</translation>
     </message>
     <message>
         <source>Application Data</source>
-        <translation type="unfinished">应用程序数据</translation>
+        <translation>应用程序数据</translation>
     </message>
     <message>
         <source>Cache</source>
-        <translation type="unfinished">缓存</translation>
+        <translation>缓存</translation>
     </message>
     <message>
         <source>Shared Data</source>
-        <translation type="unfinished">共享数据</translation>
+        <translation>共享数据</translation>
     </message>
     <message>
         <source>Runtime</source>
-        <translation type="unfinished">运行时</translation>
+        <translation>运行时</translation>
     </message>
     <message>
         <source>Configuration</source>
-        <translation type="unfinished">配置</translation>
+        <translation>配置</translation>
     </message>
     <message>
         <source>Shared Configuration</source>
-        <translation type="unfinished">共享配置</translation>
+        <translation>共享配置</translation>
     </message>
     <message>
         <source>Shared Cache</source>
-        <translation type="unfinished">共享缓存</translation>
+        <translation>共享缓存</translation>
     </message>
     <message>
         <source>Download</source>
-        <translation type="unfinished">下载</translation>
+        <translation>下载</translation>
     </message>
 </context>
 <context>
     <name>QStateMachine</name>
     <message>
         <source>Missing initial state in compound state &apos;%1&apos;</source>
-        <translation type="unfinished">Missing initial state in compound state &apos;%1&apos;</translation>
+        <translation>Missing initial state in compound state &apos;%1&apos;</translation>
     </message>
     <message>
         <source>Missing default state in history state &apos;%1&apos;</source>
-        <translation type="unfinished">Missing default state in history state &apos;%1&apos;</translation>
+        <translation>Missing default state in history state &apos;%1&apos;</translation>
     </message>
     <message>
         <source>No common ancestor for targets and source of transition from state &apos;%1&apos;</source>
-        <translation type="unfinished">No common ancestor for targets and source of transition from state &apos;%1&apos;</translation>
+        <translation>No common ancestor for targets and source of transition from state &apos;%1&apos;</translation>
     </message>
     <message>
         <source>Unknown error</source>
-        <translation type="unfinished">Unknown error</translation>
+        <translation>Unknown error</translation>
     </message>
 </context>
 <context>
@@ -5716,50 +5716,50 @@ Please turn one of those options off.</source>
     <name>QTgaFile</name>
     <message>
         <source>Could not read image data</source>
-        <translation type="unfinished">Could not read image data</translation>
+        <translation>Could not read image data</translation>
     </message>
     <message>
         <source>Sequential device (eg socket) for image read not supported</source>
-        <translation type="unfinished">Sequential device (eg socket) for image read not supported</translation>
+        <translation>Sequential device (eg socket) for image read not supported</translation>
     </message>
     <message>
         <source>Seek file/device for image read failed</source>
-        <translation type="unfinished">Seek file/device for image read failed</translation>
+        <translation>Seek file/device for image read failed</translation>
     </message>
     <message>
         <source>Image header read failed</source>
-        <translation type="unfinished">Image header read failed</translation>
+        <translation>Image header read failed</translation>
     </message>
     <message>
         <source>Image type not supported</source>
-        <translation type="unfinished">Image type not supported</translation>
+        <translation>Image type not supported</translation>
     </message>
     <message>
         <source>Image depth not valid</source>
-        <translation type="unfinished">Image depth not valid</translation>
+        <translation>Image depth not valid</translation>
     </message>
     <message>
         <source>Could not seek to image read footer</source>
-        <translation type="unfinished">Could not seek to image read footer</translation>
+        <translation>Could not seek to image read footer</translation>
     </message>
     <message>
         <source>Could not read footer</source>
-        <translation type="unfinished">Could not read footer</translation>
+        <translation>Could not read footer</translation>
     </message>
     <message>
         <source>Image type (non-TrueVision 2.0) not supported</source>
-        <translation type="unfinished">Image type (non-TrueVision 2.0) not supported</translation>
+        <translation>Image type (non-TrueVision 2.0) not supported</translation>
     </message>
     <message>
         <source>Could not reset to read data</source>
-        <translation type="unfinished">Could not reset to read data</translation>
+        <translation>Could not reset to read data</translation>
     </message>
 </context>
 <context>
     <name>QUndoGroup</name>
     <message>
         <source>Undo %1</source>
-        <translation type="unfinished">Undo %1</translation>
+        <translation>Undo %1</translation>
     </message>
     <message>
         <source>Undo</source>
@@ -5768,7 +5768,7 @@ Please turn one of those options off.</source>
     </message>
     <message>
         <source>Redo %1</source>
-        <translation type="unfinished">Redo %1</translation>
+        <translation>Redo %1</translation>
     </message>
     <message>
         <source>Redo</source>
@@ -5787,7 +5787,7 @@ Please turn one of those options off.</source>
     <name>QUndoStack</name>
     <message>
         <source>Undo %1</source>
-        <translation type="unfinished">Undo %1</translation>
+        <translation>Undo %1</translation>
     </message>
     <message>
         <source>Undo</source>
@@ -5796,7 +5796,7 @@ Please turn one of those options off.</source>
     </message>
     <message>
         <source>Redo %1</source>
-        <translation type="unfinished">Redo %1</translation>
+        <translation>Redo %1</translation>
     </message>
     <message>
         <source>Redo</source>
@@ -5848,19 +5848,19 @@ Please turn one of those options off.</source>
     </message>
     <message>
         <source>LRI Left-to-right isolate</source>
-        <translation type="unfinished">LRI Left-to-right isolate</translation>
+        <translation>LRI Left-to-right isolate</translation>
     </message>
     <message>
         <source>RLI Right-to-left isolate</source>
-        <translation type="unfinished">RLI Right-to-left isolate</translation>
+        <translation>RLI Right-to-left isolate</translation>
     </message>
     <message>
         <source>FSI First strong isolate</source>
-        <translation type="unfinished">FSI First strong isolate</translation>
+        <translation>FSI First strong isolate</translation>
     </message>
     <message>
         <source>PDI Pop directional isolate</source>
-        <translation type="unfinished">PDI Pop directional isolate</translation>
+        <translation>PDI Pop directional isolate</translation>
     </message>
     <message>
         <source>Insert Unicode control character</source>

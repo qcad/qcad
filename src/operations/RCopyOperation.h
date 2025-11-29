@@ -45,10 +45,104 @@ public:
         clear = on;
     }
 
+    // setter / getters:
+    void setScale(double s) {
+        scale = s;
+    }
+    double getScale() const {
+        return scale;
+    }
+    void setAngle(double a) {
+        angle = a;
+    }
+    double getAngle() const {
+        return angle;
+    }
+    void setCenter(const RVector& c) {
+        center = c;
+    }
+    RVector getCenter() const {
+        return center;
+    }
+    void setFlipHorizontal(bool on) {
+        flipHorizontal = on;
+    }
+    bool getFlipHorizontal() const {
+        return flipHorizontal;
+    }
+    void setFlipVertical(bool on) {
+        flipVertical = on;
+    }
+    bool getFlipVertical() const {
+        return flipVertical;
+    }
+    void setToCurrentLayer(bool on) {
+        toCurrentLayer = on;
+    }
+    bool getToCurrentLayer() const {
+        return toCurrentLayer;
+    }
+    void setToCurrentBlock(bool on) {
+        toCurrentBlock = on;
+    }
+    bool getToCurrentBlock() const {
+        return toCurrentBlock;
+    }
+    void setOverwriteLayers(bool on) {
+        overwriteLayers = on;
+    }
+    bool getOverwriteLayers() const {
+        return overwriteLayers;
+    }
+    void setOverwriteBlocks(bool on) {
+        overwriteBlocks = on;
+    }
+    bool getOverwriteBlocks() const {
+        return overwriteBlocks;
+    }
+    void setBlockName(const QString& n) {
+        blockName = n;
+    }
+    QString getBlockName() const {
+        return blockName;
+    }
+    void setLayerName(const QString& n) {
+        layerName = n;
+    }
+    QString getLayerName() const {
+        return layerName;
+    }
+    void setSelectionOnly(bool on) {
+        selectionOnly = on;
+    }
+    bool getSelectionOnly() const {
+        return selectionOnly;
+    }
+    void setToModelSpaceBlock(bool on) {
+        toModelSpaceBlock = on;
+    }
+    bool getToModelSpaceBlock() const {
+        return toModelSpaceBlock;
+    }
+
 private:
-    bool clear;
-    RVector offset;
     RDocument& src;
+
+    RVector offset;
+    double scale;
+    double angle;
+    RVector center;
+    bool flipHorizontal;
+    bool flipVertical;
+    bool toCurrentLayer;
+    bool toCurrentBlock;
+    bool overwriteLayers;
+    bool overwriteBlocks;
+    QString blockName;
+    QString layerName;
+    bool selectionOnly;
+    bool clear;
+    bool toModelSpaceBlock;
 };
 
 Q_DECLARE_METATYPE(RCopyOperation*)

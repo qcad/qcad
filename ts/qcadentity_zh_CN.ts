@@ -219,7 +219,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">中层</translation>
+        <translation>中点</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -276,7 +276,7 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
         <source>Total Length</source>
-        <translation>相交</translation>
+        <translation>总长度</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -289,7 +289,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <source>Area</source>
-        <translation>区域</translation>
+        <translation>面积</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -369,7 +369,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
-        <translation>维弧</translation>
+        <translation>尺寸弧</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>
@@ -414,12 +414,12 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>领先结束点</translation>
+        <translation>引线终点</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
         <source>Dimension Angle</source>
-        <translation>维度角度</translation>
+        <translation>尺寸角度</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
@@ -459,7 +459,7 @@
     <message>
         <location line="+3"/>
         <source>Text Rotation</source>
-        <translation type="unfinished">文字旋转</translation>
+        <translation>文字旋转</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -531,7 +531,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Point</source>
-        <translation>启动点</translation>
+        <translation>起点</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -541,17 +541,17 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>End Point</source>
-        <translation>结束点</translation>
+        <translation>终点</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-10"/>
         <source>Solid</source>
-        <translation>立体的</translation>
+        <translation>实心</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished">卷绕</translation>
+        <translation>缠绕</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -682,7 +682,7 @@
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation type="unfinished">花键</translation>
+        <translation>样条曲线</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -697,13 +697,13 @@
     <message>
         <location line="+1"/>
         <source>Closed</source>
-        <translation>关闭</translation>
+        <translation>闭合</translation>
     </message>
     <message>
         <location line="+4"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+0"/>
         <source>Bulge</source>
-        <translation>凸出的</translation>
+        <translation>凸度</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -745,18 +745,18 @@
         <location line="+1"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <source>Size 1</source>
-        <translation type="unfinished">尺寸 1</translation>
+        <translation>尺寸 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <source>Size 2</source>
-        <translation type="unfinished">尺寸 2</translation>
+        <translation>尺寸 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Z</source>
-        <translation type="unfinished">全局 Z</translation>
+        <translation>全局 Z</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
@@ -805,7 +805,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished">点 1</translation>
+        <translation>点 1</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -818,7 +818,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished">点 2</translation>
+        <translation>点 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -831,7 +831,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 3</source>
-        <translation type="unfinished">点 3</translation>
+        <translation>点 3</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -844,7 +844,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 4</source>
-        <translation type="unfinished">点 4</translation>
+        <translation>点 4</translation>
     </message>
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
@@ -939,12 +939,12 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-        <translation type="unfinished">中点</translation>
+        <translation>中点</translation>
     </message>
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
         <source>Frame</source>
-        <translation type="unfinished">框架</translation>
+        <translation>框架</translation>
     </message>
 </context>
 </TS>

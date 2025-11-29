@@ -147,6 +147,9 @@
         getXRefBlockNames
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        bindXRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

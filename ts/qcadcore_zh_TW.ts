@@ -51,7 +51,7 @@
     <message>
         <location line="+3"/>
         <source>Mil</source>
-        <translation type="unfinished">null</translation>
+        <translation>密耳</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -91,22 +91,22 @@
     <message>
         <location line="+3"/>
         <source>Gigameter</source>
-        <translation type="unfinished">null</translation>
+        <translation>百萬公里</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Astro</source>
-        <translation type="unfinished">null</translation>
+        <translation>天文單位</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Lightyear</source>
-        <translation type="unfinished">null</translation>
+        <translation>光年</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Parsec</source>
-        <translation type="unfinished">null</translation>
+        <translation>秒差距</translation>
     </message>
 </context>
 <context>
@@ -114,12 +114,12 @@
     <message>
         <location filename="../src/core/RColor.cpp" line="+340"/>
         <source>By Layer</source>
-        <translation type="unfinished">null</translation>
+        <translation>依圖層</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">null</translation>
+        <translation>依圖塊</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -154,37 +154,37 @@
     <message>
         <location line="+1"/>
         <source>Orange</source>
-        <translation type="unfinished">null</translation>
+        <translation>橙色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Red</source>
-        <translation type="unfinished">null</translation>
+        <translation>深紅</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Green</source>
-        <translation type="unfinished">null</translation>
+        <translation>深綠</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Blue</source>
-        <translation type="unfinished">null</translation>
+        <translation>深藍</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation type="unfinished">null</translation>
+        <translation>深青</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation type="unfinished">null</translation>
+        <translation>深洋紅</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Yellow</source>
-        <translation type="unfinished">null</translation>
+        <translation>深黃</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -199,7 +199,7 @@
     <message>
         <location line="+1"/>
         <source>Light Gray</source>
-        <translation type="unfinished">null</translation>
+        <translation>淺灰</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -209,7 +209,7 @@
     <message>
         <location line="+2"/>
         <source>Others...</source>
-        <translation type="unfinished">null</translation>
+        <translation>其他...</translation>
     </message>
 </context>
 <context>
@@ -217,22 +217,22 @@
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+48"/>
         <source>Current Layer ID</source>
-        <translation type="unfinished">null</translation>
+        <translation>目前圖層 ID</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished">null</translation>
+        <translation>繪圖單位</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished">null</translation>
+        <translation>線型比例</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation type="unfinished">null</translation>
+        <translation>標註字型</translation>
     </message>
 </context>
 <context>
@@ -248,12 +248,12 @@
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">null</translation>
+        <translation>隱藏</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+95"/>
         <source>Block</source>
-        <translation type="unfinished">null</translation>
+        <translation>圖塊</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+102"/>
@@ -268,7 +268,7 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="+1"/>
         <source>Pixel Unit</source>
-        <translation type="unfinished">null</translation>
+        <translation>像素單位</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -291,7 +291,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation type="unfinished">null</translation>
+        <translation>原點</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -322,32 +322,32 @@
         <location filename="../src/core/RViewportEntity.cpp" line="-9"/>
         <location line="+10"/>
         <source>Z</source>
-        <translation type="unfinished">null</translation>
+        <translation>Z</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Layout</source>
-        <translation type="unfinished">null</translation>
+        <translation>配置</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation type="unfinished">擁有者 參考</translation>
+        <translation>由參考擁有</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>XRef File Name</source>
+        <source>External reference</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
         <source>Referenced Block</source>
-        <translation type="unfinished">null</translation>
+        <translation>參考圖塊</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>外部參考</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -360,7 +360,7 @@
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation type="unfinished">null</translation>
+        <translation>角度</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -375,17 +375,17 @@
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
-        <translation type="unfinished">null</translation>
+        <translation>欄間距</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
-        <translation type="unfinished">null</translation>
+        <translation>列間距</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Attributes</source>
-        <translation type="unfinished">null</translation>
+        <translation>屬性</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="-1"/>
@@ -402,18 +402,18 @@
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+9"/>
         <source>Linetype</source>
-        <translation type="unfinished">null</translation>
+        <translation>線型</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished">null</translation>
+        <translation>線型比例</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
-        <translation type="unfinished">null</translation>
+        <translation>線寬</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -424,17 +424,17 @@
     <message>
         <location line="+1"/>
         <source>Displayed Color</source>
-        <translation type="unfinished">null</translation>
+        <translation>顯示顏色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation type="unfinished">null</translation>
+        <translation>繪製順序</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation type="unfinished">null</translation>
+        <translation>父層 ID</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -442,7 +442,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Boundary</source>
-        <translation type="unfinished">null</translation>
+        <translation>邊界</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -491,12 +491,12 @@
     <message>
         <location filename="../src/core/RLayer.cpp" line="-7"/>
         <source>Off</source>
-        <translation type="unfinished">null</translation>
+        <translation>關閉</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation type="unfinished">null</translation>
+        <translation>凍結</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -506,22 +506,22 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation type="unfinished">null</translation>
+        <translation>摺疊</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation type="unfinished">null</translation>
+        <translation>可列印</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation type="unfinished">null</translation>
+        <translation>可捕捉</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation type="unfinished">null</translation>
+        <translation>關閉即凍結</translation>
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
@@ -537,27 +537,27 @@
     <message>
         <location line="+1"/>
         <source>Protected</source>
-        <translation type="unfinished">null</translation>
+        <translation>保護</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Selected</source>
-        <translation type="unfinished">null</translation>
+        <translation>已選取</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Object Invisible</source>
-        <translation type="unfinished">null</translation>
+        <translation>物件不可見</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation type="unfinished">null</translation>
+        <translation>工作集</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
         <source>Simple</source>
-        <translation type="unfinished">null</translation>
+        <translation>簡單</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -574,32 +574,32 @@
     <message>
         <location line="+1"/>
         <source>Plain Text</source>
-        <translation type="unfinished">null</translation>
+        <translation>純文字</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Font Name</source>
-        <translation type="unfinished">null</translation>
+        <translation>字型名稱</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Height</source>
-        <translation type="unfinished">null</translation>
+        <translation>文字高度</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Width</source>
-        <translation type="unfinished">null</translation>
+        <translation>文字寬度</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Angle</source>
-        <translation type="unfinished">null</translation>
+        <translation>文字角度</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>X Scale</source>
-        <translation type="unfinished">null</translation>
+        <translation>X 比例</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -609,12 +609,12 @@
     <message>
         <location line="+1"/>
         <source>Italic</source>
-        <translation type="unfinished">null</translation>
+        <translation>斜體</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Line Spacing</source>
-        <translation type="unfinished">null</translation>
+        <translation>行距</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -635,220 +635,220 @@
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation type="unfinished">null</translation>
+        <translation>向後</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation type="unfinished">null</translation>
+        <translation>顛倒</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
         <source>Rotation</source>
-        <translation type="unfinished">null</translation>
+        <translation>旋轉</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation type="unfinished">null</translation>
+        <translation>開啟</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation type="unfinished">null</translation>
+        <translation>視圖中心</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation type="unfinished">null</translation>
+        <translation>視圖目標</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Overall</source>
-        <translation type="unfinished">null</translation>
+        <translation>整體</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Frozen Layers</source>
-        <translation type="unfinished">冷凍層</translation>
+        <translation>凍結圖層</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer ID</source>
-        <translation type="unfinished">層 ID</translation>
+        <translation>圖層 ID</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="-23"/>
         <source>Tab Order</source>
-        <translation type="unfinished">null</translation>
+        <translation>定位順序</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Limits</source>
-        <translation type="unfinished">null</translation>
+        <translation>最小限制</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Limits</source>
-        <translation type="unfinished">null</translation>
+        <translation>最大限制</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation type="unfinished">null</translation>
+        <translation>插入基點</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation type="unfinished">null</translation>
+        <translation>最小範圍</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation type="unfinished">null</translation>
+        <translation>最大範圍</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
         <source>Circular (recursive) block referencing detected:</source>
-        <translation type="unfinished">null</translation>
+        <translation>偵測到循環（遞迴）圖塊參考：</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block name:</source>
-        <translation type="unfinished">null</translation>
+        <translation>圖塊名稱：</translation>
     </message>
     <message>
         <location filename="../src/core/RDimStyle.cpp" line="+71"/>
         <source>Style</source>
-        <translation type="unfinished">null</translation>
+        <translation>樣式</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overall scale</source>
-        <translation type="unfinished">null</translation>
+        <translation>整體比例</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation type="unfinished">null</translation>
+        <translation>線性測量係數</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text height</source>
-        <translation type="unfinished">null</translation>
+        <translation>文字高度</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation type="unfinished">null</translation>
+        <translation>標註線間隙</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow size</source>
-        <translation type="unfinished">null</translation>
+        <translation>箭頭大小</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation type="unfinished">null</translation>
+        <translation>標註線增量</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation type="unfinished">null</translation>
+        <translation>延伸線延伸</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation type="unfinished">null</translation>
+        <translation>延伸線偏移</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text position vertical</source>
-        <translation type="unfinished">null</translation>
+        <translation>文字垂直位置</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text horizontal</source>
-        <translation type="unfinished">null</translation>
+        <translation>文字水平</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation type="unfinished">null</translation>
+        <translation>刻度大小</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
-        <translation type="unfinished">null</translation>
+        <translation>線性格式</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal places</source>
-        <translation type="unfinished">null</translation>
+        <translation>小數位數</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal separator</source>
-        <translation type="unfinished">null</translation>
+        <translation>小數分隔符</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zero suppression</source>
-        <translation type="unfinished">null</translation>
+        <translation>零抑制</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation type="unfinished">null</translation>
+        <translation>角度格式</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation type="unfinished">null</translation>
+        <translation>角度小數位數</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation type="unfinished">null</translation>
+        <translation>角度零抑制</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation type="unfinished">null</translation>
+        <translation>建築刻度</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text color</source>
-        <translation type="unfinished">null</translation>
+        <translation>文字顏色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation type="unfinished">null</translation>
+        <translation>箭頭圖塊</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 1</source>
-        <translation type="unfinished">null</translation>
+        <translation>箭頭圖塊 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation type="unfinished">null</translation>
+        <translation>箭頭圖塊 2</translation>
     </message>
 </context>
 <context>
@@ -856,7 +856,7 @@
     <message>
         <location filename="../src/core/RGuiAction.cpp" line="+203"/>
         <source>Requires selection</source>
-        <translation type="unfinished">null</translation>
+        <translation>需要選取</translation>
     </message>
 </context>
 <context>
@@ -874,7 +874,7 @@
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished">null</translation>
+        <translation>公制</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -887,17 +887,17 @@
     <message>
         <location filename="../src/core/RLinetypePattern.cpp" line="+912"/>
         <source>By Layer</source>
-        <translation type="unfinished">null</translation>
+        <translation>依圖層</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">null</translation>
+        <translation>依圖塊</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Continuous</source>
-        <translation type="unfinished">null</translation>
+        <translation>連續</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -911,224 +911,224 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished">null</translation>
+        <translation>中心線</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation type="unfinished">null</translation>
+        <translation>點畫線</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dashed</source>
-        <translation type="unfinished">null</translation>
+        <translation>虛線</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation type="unfinished">null</translation>
+        <translation>分割線</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dot</source>
-        <translation type="unfinished">null</translation>
+        <translation>點線</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">null</translation>
+        <translation>隱藏線</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation type="unfinished">null</translation>
+        <translation>假想線</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation type="unfinished">null</translation>
+        <translation>ISO 虛線</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation type="unfinished">null</translation>
+        <translation>ISO 虛線間隔</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation type="unfinished">null</translation>
+        <translation>ISO 長虛線點</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-dot</source>
-        <translation type="unfinished">null</translation>
+        <translation>ISO 長虛線雙點</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation type="unfinished">null</translation>
+        <translation>ISO 長虛線三點</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dot</source>
-        <translation type="unfinished">null</translation>
+        <translation>ISO 點</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation type="unfinished">null</translation>
+        <translation>ISO 長虛線短虛線</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation type="unfinished">null</translation>
+        <translation>ISO 長虛線雙短虛線</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash dot</source>
-        <translation type="unfinished">null</translation>
+        <translation>ISO 虛線點</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash dot</source>
-        <translation type="unfinished">null</translation>
+        <translation>ISO 雙虛線點</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash double-dot</source>
-        <translation type="unfinished">null</translation>
+        <translation>ISO 虛線雙點</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash double-dot</source>
-        <translation type="unfinished">null</translation>
+        <translation>ISO 雙虛線雙點</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash triple-dot</source>
-        <translation type="unfinished">null</translation>
+        <translation>ISO 虛線三點</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
-        <translation type="unfinished">null</translation>
+        <translation>ISO 雙虛線三點</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hot Water Supply</source>
-        <translation type="unfinished">null</translation>
+        <translation>熱水供應</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hot Water</source>
-        <translation type="unfinished">null</translation>
+        <translation>熱水</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gas Line</source>
-        <translation type="unfinished">null</translation>
+        <translation>瓦斯管線</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation type="unfinished">null</translation>
+        <translation>填充線</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zig Zag</source>
-        <translation type="unfinished">null</translation>
+        <translation>鋸齒線</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation type="unfinished">null</translation>
+        <translation>軌道</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation type="unfinished">null</translation>
+        <translation>圍欄線 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 2</source>
-        <translation type="unfinished">null</translation>
+        <translation>圍欄線 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished"></translation>
+        <translation>點 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished"></translation>
+        <translation>點 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation type="unfinished"></translation>
+        <translation>植物</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Water</source>
-        <translation type="unfinished">null</translation>
+        <translation>自來水</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drainage</source>
-        <translation type="unfinished">null</translation>
+        <translation>排水</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drainage Reversed</source>
-        <translation type="unfinished">null</translation>
+        <translation>反向排水</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation type="unfinished">null</translation>
+        <translation>通訊</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Electric</source>
-        <translation type="unfinished">null</translation>
+        <translation>電力</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Low Voltage</source>
-        <translation type="unfinished">null</translation>
+        <translation>低壓</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>High Voltage</source>
-        <translation type="unfinished">null</translation>
+        <translation>高壓</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation type="unfinished">null</translation>
+        <translation>架空電力</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation type="unfinished">null</translation>
+        <translation>污水</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished">null</translation>
+        <translation>污水上升</translation>
     </message>
 </context>
 <context>
@@ -1136,12 +1136,12 @@
     <message>
         <location filename="../src/core/RLineweight.cpp" line="+37"/>
         <source>By Layer</source>
-        <translation type="unfinished">null</translation>
+        <translation>依圖層</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">null</translation>
+        <translation>依圖塊</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1151,122 +1151,122 @@
     <message>
         <location line="+1"/>
         <source>0.00mm</source>
-        <translation type="unfinished">null</translation>
+        <translation>0.00mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.05mm</source>
-        <translation type="unfinished">null</translation>
+        <translation>0.05mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.09mm</source>
-        <translation type="unfinished">null</translation>
+        <translation>0.09mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.13mm (ISO)</source>
-        <translation type="unfinished">null</translation>
+        <translation>0.13mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.15mm</source>
-        <translation type="unfinished">null</translation>
+        <translation>0.15mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.18mm (ISO)</source>
-        <translation type="unfinished">null</translation>
+        <translation>0.18mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.20mm</source>
-        <translation type="unfinished">null</translation>
+        <translation>0.20mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.25mm (ISO)</source>
-        <translation type="unfinished">null</translation>
+        <translation>0.25mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.30mm</source>
-        <translation type="unfinished">null</translation>
+        <translation>0.30mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.35mm (ISO)</source>
-        <translation type="unfinished">null</translation>
+        <translation>0.35mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.40mm</source>
-        <translation type="unfinished">null</translation>
+        <translation>0.40mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.50mm (ISO)</source>
-        <translation type="unfinished">null</translation>
+        <translation>0.50mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.53mm</source>
-        <translation type="unfinished">null</translation>
+        <translation>0.53mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.60mm</source>
-        <translation type="unfinished">null</translation>
+        <translation>0.60mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.70mm (ISO)</source>
-        <translation type="unfinished">null</translation>
+        <translation>0.70mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.80mm</source>
-        <translation type="unfinished">null</translation>
+        <translation>0.80mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.90mm</source>
-        <translation type="unfinished">null</translation>
+        <translation>0.90mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.00mm (ISO)</source>
-        <translation type="unfinished">null</translation>
+        <translation>1.00mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.06mm</source>
-        <translation type="unfinished">null</translation>
+        <translation>1.06mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.20mm</source>
-        <translation type="unfinished">null</translation>
+        <translation>1.20mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.40mm (ISO)</source>
-        <translation type="unfinished">null</translation>
+        <translation>1.40mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.58mm</source>
-        <translation type="unfinished">null</translation>
+        <translation>1.58mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.00mm (ISO)</source>
-        <translation type="unfinished">null</translation>
+        <translation>2.00mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.11mm</source>
-        <translation type="unfinished">null</translation>
+        <translation>2.11mm</translation>
     </message>
 </context>
 </TS>
