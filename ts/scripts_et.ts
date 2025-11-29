@@ -6,7 +6,7 @@
     <message>
         <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
-        <translation type="unfinished">Umbes %1</translation>
+        <translation>Teave %1</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -24,12 +24,12 @@
     <message>
         <location line="-164"/>
         <source>Build Date:</source>
-        <translation type="unfinished">Ehituskuupäev:</translation>
+        <translation>Ehitamise kuupäev:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Revision:</source>
-        <translation type="unfinished">Läbivaatamine:</translation>
+        <translation>Revisjon:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -45,7 +45,7 @@
     <message>
         <location line="+2"/>
         <source>Compiler:</source>
-        <translation type="unfinished">Koostaja:</translation>
+        <translation>Kompilaator:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -193,7 +193,7 @@
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
-        <translation type="unfinished">Umbes...</translation>
+        <translation>&amp;Teave...</translation>
     </message>
 </context>
 <context>
@@ -413,7 +413,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
-        <translation type="unfinished">Vale raadius</translation>
+        <translation>Kehtetu raadius</translation>
     </message>
     <message>
         <location line="+48"/>
@@ -457,7 +457,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+85"/>
         <source>Invalid angle</source>
-        <translation type="unfinished">Vale nurk</translation>
+        <translation>Kehtetu nurk</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -510,7 +510,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+81"/>
         <source>Invalid height</source>
-        <translation type="unfinished">Vale kõrgus</translation>
+        <translation>Kehtetu kõrgus</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -563,7 +563,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+85"/>
         <source>Invalid length</source>
-        <translation type="unfinished">Vale pikkus</translation>
+        <translation>Kehtetu pikkus</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -621,7 +621,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+81"/>
         <source>Invalid radius</source>
-        <translation type="unfinished">Vale raadius</translation>
+        <translation>Kehtetu raadius</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -988,7 +988,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Perpendicular</source>
-        <translation type="unfinished">Ristkülikukujuline</translation>
+        <translation>Risti</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1232,7 +1232,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
-        <translation type="unfinished">Vale pildi suurus (laius x kõrgus peab olema väiksem kui %1)</translation>
+        <translation>Kehtetu pildi suurus (laius x kõrgus peab olema väiksem kui %1)</translation>
     </message>
 </context>
 <context>
@@ -1679,7 +1679,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+107"/>
         <source>Invalid radius</source>
-        <translation type="unfinished">Vale raadius</translation>
+        <translation>Kehtetu raadius</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2162,12 +2162,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+199"/>
         <source>Invalid value:</source>
-        <translation type="unfinished">Vale väärtus:</translation>
+        <translation>Kehtetu väärtus:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Invalid coordinate or distance &quot;%1&quot;.</source>
-        <translation type="unfinished">Vale koordinaat või kaugus &quot;%1&quot;.</translation>
+        <translation>Kehtetu koordinaat või kaugus &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -3341,7 +3341,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Keskmine</translation>
+        <translation>Keskpunkt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4234,7 +4234,7 @@ is already in the list.</source>
     <message>
         <location line="+578"/>
         <source>Invalid position</source>
-        <translation type="unfinished">Vale asend</translation>
+        <translation>Kehtetu asend</translation>
     </message>
     <message>
         <location line="+175"/>
@@ -4525,7 +4525,7 @@ is already in the list.</source>
     <message>
         <location line="+249"/>
         <source>Invalid major radius.</source>
-        <translation type="unfinished">Vale suur raadius.</translation>
+        <translation>Kehtetu suur raadius.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -8297,17 +8297,17 @@ is already in the list.</source>
     <message>
         <location line="-31"/>
         <source>Start</source>
-        <translation type="unfinished">Start</translation>
+        <translation>Alguspunkt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Keskmine</translation>
+        <translation>Keskpunkt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation type="unfinished">End</translation>
+        <translation>Otspunkt</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2"/>
@@ -8680,17 +8680,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="-45"/>
         <source>Start</source>
-        <translation type="unfinished">Start</translation>
+        <translation>Alguspunkt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Keskmine</translation>
+        <translation>Keskpunkt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation type="unfinished">End</translation>
+        <translation>Otspunkt</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2"/>
@@ -10564,7 +10564,7 @@ is already in the list.</source>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-        <translation type="unfinished">Vale pöördenurk</translation>
+        <translation>Kehtetu pöördenurk</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
@@ -10993,7 +10993,7 @@ is already in the list.</source>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-        <translation type="unfinished">Vale skaalategur</translation>
+        <translation>Kehtetu skaalategur</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
@@ -11682,7 +11682,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
-        <translation type="unfinished">Ristkülikukujuline</translation>
+        <translation>Ristkülik</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12061,7 +12061,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapPerpendicular/SnapPerpendicularInit.js" line="+2"/>
         <source>&amp;Perpendicular</source>
-        <translation type="unfinished">Ristkülikukujuline</translation>
+        <translation>&amp;Risti</translation>
     </message>
 </context>
 <context>
@@ -13375,7 +13375,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Meter</source>
-        <translation type="unfinished">Arvesti</translation>
+        <translation>Meeter</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13395,7 +13395,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Yard</source>
-        <translation type="unfinished">Hoov</translation>
+        <translation>Jard</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13755,7 +13755,7 @@ is already in the list.</source>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation type="unfinished">Keskmine</translation>
+        <translation>Keskpunkt</translation>
     </message>
     <message>
         <location line="-6"/>

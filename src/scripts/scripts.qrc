@@ -465,8 +465,10 @@
     <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.ui">../../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.ui</file>
     <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js">../../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js</file>
     <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/Tests/EllipseArcCPPATest00.js">../../scripts/Draw/Ellipse/EllipseArcCPPA/Tests/EllipseArcCPPATest00.js</file>
+    <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/Tests/EllipseArcCPPATest10.js">../../scripts/Draw/Ellipse/EllipseArcCPPA/Tests/EllipseArcCPPATest10.js</file>
     <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/Tests/lines.dxf">../../scripts/Draw/Ellipse/EllipseArcCPPA/Tests/lines.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/Tests/required/EllipseArcCPPATest00_000.dxf">../../scripts/Draw/Ellipse/EllipseArcCPPA/Tests/required/EllipseArcCPPATest00_000.dxf</file>
+    <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/Tests/required/EllipseArcCPPATest10_000.dxf">../../scripts/Draw/Ellipse/EllipseArcCPPA/Tests/required/EllipseArcCPPATest10_000.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseCPP/EllipseCPP-inverse.svg">../../scripts/Draw/Ellipse/EllipseCPP/EllipseCPP-inverse.svg</file>
     <file alias="scripts/Draw/Ellipse/EllipseCPP/EllipseCPP.js">../../scripts/Draw/Ellipse/EllipseCPP/EllipseCPP.js</file>
     <file alias="scripts/Draw/Ellipse/EllipseCPP/EllipseCPP.svg">../../scripts/Draw/Ellipse/EllipseCPP/EllipseCPP.svg</file>
@@ -2034,6 +2036,7 @@
     <file alias="scripts/Modify/Offset/Tests/OffsetTest00.js">../../scripts/Modify/Offset/Tests/OffsetTest00.js</file>
     <file alias="scripts/Modify/Offset/Tests/OffsetTest01.js">../../scripts/Modify/Offset/Tests/OffsetTest01.js</file>
     <file alias="scripts/Modify/Offset/Tests/OffsetTest02.js">../../scripts/Modify/Offset/Tests/OffsetTest02.js</file>
+    <file alias="scripts/Modify/Offset/Tests/required/OffsetCavalierTest00_001.dxf">../../scripts/Modify/Offset/Tests/required/OffsetCavalierTest00_001.dxf</file>
     <file alias="scripts/Modify/Offset/Tests/required/OffsetTest00_000.dxf">../../scripts/Modify/Offset/Tests/required/OffsetTest00_000.dxf</file>
     <file alias="scripts/Modify/Offset/Tests/required/OffsetTest00_001.dxf">../../scripts/Modify/Offset/Tests/required/OffsetTest00_001.dxf</file>
     <file alias="scripts/Modify/Offset/Tests/required/OffsetTest01_000.dxf">../../scripts/Modify/Offset/Tests/required/OffsetTest01_000.dxf</file>

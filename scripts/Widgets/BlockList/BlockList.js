@@ -516,21 +516,15 @@ RBlockListQt.prototype.enableActions = function(insertable, renamable, removable
  * (double click).
  */
 RBlockListQt.prototype.editBlock = function() {
-    var items = BlockList.getSelectedItems();
+    var block = this.getSelectedBlock();
 
     var action = undefined;
 
-    if (items.length===1) {
+    if (!isNull(block) && block.isXRef() && !block.isFromXRef()) {
         // one single block selected in block list:
-        // check if block is an XRef:
-        var item = items[0];
-        var blockName = this.getBlockName(item);
-        var doc = this.di.getDocument();
-        var block = doc.queryBlockDirect(blockName);
-        if (!isNull(block) && block.isXRef()) {
-            // editing XRef triggers rename which also allows editing the path:
-            action = RGuiAction.getByScriptFile("scripts/Block/RenameBlock/RenameBlock.js");
-        }
+
+        // editing XRef triggers rename which also allows editing the path:
+        action = RGuiAction.getByScriptFile("scripts/Block/RenameBlock/RenameBlock.js");
     }
 
     if (isNull(action)) {
@@ -542,6 +536,21 @@ RBlockListQt.prototype.editBlock = function() {
     }
 
     this.blockActivated();
+};
+
+/**
+ * If one item is selected, return the corresponding block otherwise undefined.
+ */
+RBlockListQt.prototype.getSelectedBlock = function() {
+    var items = BlockList.getSelectedItems();
+    if (items.length===1) {
+        // one single block selected in block list:
+        var item = items[0];
+        var blockName = this.getBlockName(item);
+        var doc = this.di.getDocument();
+        return doc.queryBlockDirect(blockName);
+    }
+    return undefined;
 };
 
 

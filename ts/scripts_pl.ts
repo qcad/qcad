@@ -1256,12 +1256,12 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie można edytować odniesienia zewnętrznego</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie można edytować bloku z odniesienia zewnętrznego</translation>
     </message>
     <message>
         <location line="-109"/>
@@ -6007,7 +6007,7 @@ jest już na liście.</translation>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Długość kropki we wzorach linii:</translation>
     </message>
     <message>
         <location line="+41"/>

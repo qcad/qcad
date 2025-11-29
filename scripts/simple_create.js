@@ -223,6 +223,30 @@ function addCircle(center, radius) {
 }
 
 /**
+ * Adds an ellipse to the drawing.
+ * \ingroup ecma_simple
+ *
+ * \code
+ * addEllipse(cx,cy, mx,my, ratio, startParam,endParam, reversed)
+ * addEllipse([cx,cy], [mx,my], ratio, startParam,endParam, reversed)
+ * addEllipse(new RVector(cx,cy), new RVector(mx,my), ratio, startParam,endParam, reversed)
+ * \endcode
+ */
+function addEllipse(center, majorPoint, ratio, startParam,endParam, reversed) {
+    if (arguments.length===8) {
+        return addEllipse(new RVector(arguments[0], arguments[1]), new RVector(arguments[2], arguments[3]), arguments[4], arguments[5], arguments[6], arguments[7]);
+    }
+
+    if (isArray(center)) {
+        center = new RVector(center);
+    }
+    if (isArray(majorPoint)) {
+        majorPoint = new RVector(majorPoint);
+    }
+    return addShape(new REllipse(center, majorPoint, ratio, startParam, endParam, reversed));
+}
+
+/**
  * Adds a polyline to the drawing.
  * \ingroup ecma_simple
  * \author Andrew Mustun

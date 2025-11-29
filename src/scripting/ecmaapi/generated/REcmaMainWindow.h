@@ -340,6 +340,9 @@
         handleUserCommand
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        reloadXRefs
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setCommandPrompt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
