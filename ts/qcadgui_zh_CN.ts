@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/gui/RCadToolBar.cpp" line="+139"/>
         <source>Vertical/Horizontal</source>
-        <translation type="unfinished">垂直/水平</translation>
+        <translation>垂直/水平</translation>
     </message>
 </context>
 <context>
@@ -15,7 +15,7 @@
         <location filename="../src/gui/RCadToolBarPanel.cpp" line="+23"/>
         <location line="+63"/>
         <source>Back</source>
-        <translation type="unfinished">返回</translation>
+        <translation>返回</translation>
     </message>
 </context>
 <context>
@@ -41,7 +41,7 @@
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation type="unfinished">在实体</translation>
+        <translation>实体上</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -76,7 +76,7 @@
     <message>
         <location line="+3"/>
         <source>Distance</source>
-        <translation type="unfinished">距离</translation>
+        <translation>距离</translation>
     </message>
 </context>
 <context>

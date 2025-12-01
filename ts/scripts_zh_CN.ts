@@ -50,7 +50,7 @@
     <message>
         <location line="+3"/>
         <source>License Key:</source>
-        <translation type="unfinished">许可证密钥：</translation>
+        <translation>许可证密钥：</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -95,12 +95,12 @@
     <message>
         <location line="+1"/>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
-        <translation type="unfinished">Qt 在&lt;a href=&apos;%1&apos;&gt;LGPL 开源许可&lt;/a&gt;下与 QCAD 一起开发，它赋予了用户各种权利，包括为您的平台重新编译 Qt 库的权利。要做到这一点，请遵循 Qt 网站上显示的&lt;a href=&apos;%2&apos;&gt;文件说明&lt;/a&gt;。</translation>
+        <translation>Qt 在&lt;a href=&apos;%1&apos;&gt;LGPL 开源许可&lt;/a&gt;下与 QCAD 一起开发，它赋予了用户各种权利，包括为您的平台重新编译 Qt 库的权利。要做到这一点，请遵循 Qt 网站上显示的&lt;a href=&apos;%2&apos;&gt;文件说明&lt;/a&gt;。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
-        <translation type="unfinished">该程序按原样提供，没有任何形式的保证，包括对设计、适销性和特定用途的适用性的保证。</translation>
+        <translation>该程序按原样提供，没有任何形式的保证，包括对设计、适销性和特定用途的适用性的保证。</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -110,7 +110,7 @@
     <message>
         <location line="+6"/>
         <source>No plugins found.</source>
-        <translation type="unfinished">没有发现任何插件。</translation>
+        <translation>没有发现任何插件。</translation>
     </message>
     <message>
         <location line="+44"/>
@@ -211,7 +211,7 @@
     <message>
         <location line="+31"/>
         <source>Themes</source>
-        <translation type="unfinished">主题</translation>
+        <translation>主题</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -272,7 +272,7 @@
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
         <source>Application Preferences</source>
-        <translation type="unfinished">程序首选项</translation>
+        <translation>应用程序首选项</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -322,12 +322,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Block/AddBlock/AddBlockInit.js" line="+2"/>
         <source>&amp;Add Empty Block</source>
-        <translation type="unfinished">创建空白块(&amp;A)</translation>
+        <translation>添加空白块(&amp;A)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Add new empty block</source>
-        <translation type="unfinished">创建一个空白块</translation>
+        <translation>添加新的空白块</translation>
     </message>
 </context>
 <context>
@@ -335,34 +335,34 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/AddCentroidDialog.ui" line="+14"/>
         <source>Add  point mass 2D Centroid</source>
-        <translation type="unfinished">添加点质量 2D 质心</translation>
+        <translation>添加点质量二维质心</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position Y:</source>
-        <translation type="unfinished">位置 Y：</translation>
+        <translation>位置 Y：</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+7"/>
         <location line="+49"/>
         <source>0.00</source>
-        <translation type="unfinished">0.00</translation>
+        <translation>0.00</translation>
     </message>
     <message>
         <location line="-42"/>
         <source>Position X:</source>
-        <translation type="unfinished">位置 X：</translation>
+        <translation>位置 X：</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Point mass:</source>
-        <translation type="unfinished">点状质量：</translation>
+        <translation>点质量：</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
-        <translation type="unfinished">重置为&quot;未定义&quot;。</translation>
+        <translation>重置为&quot;未定义&quot;。</translation>
     </message>
 </context>
 <context>
@@ -869,33 +869,35 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/File/AutoSave/AutoSave.js" line="+35"/>
         <source>File</source>
-        <translation type="unfinished">文件</translation>
+        <translation>文件</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Autosave</source>
-        <translation type="unfinished">自动保存</translation>
+        <translation>自动保存</translation>
     </message>
     <message>
         <location line="+100"/>
         <source>Autosaving to:</source>
-        <translation type="unfinished">自动保存到：</translation>
+        <translation>自动保存到：</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Autosave failed:</source>
-        <translation type="unfinished">自动保存失败：</translation>
+        <translation>自动保存失败：</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Autosave complete.</source>
-        <translation type="unfinished">自动保存完成。</translation>
+        <translation>自动保存完成。</translation>
     </message>
     <message numerus="yes">
         <location line="+19"/>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation type="unfinished">
+        <translation>
+            <numerusform>发现了%n个无标题图纸的自动保存备份文件。
+你希望恢复它们吗？</numerusform>
             <numerusform>发现了%n个无标题图纸的自动保存备份文件。
 你希望恢复它们吗？</numerusform>
         </translation>
@@ -903,17 +905,17 @@ Do you wish to recover it/them?</source>
     <message>
         <location line="+5"/>
         <source>Recover Files?</source>
-        <translation type="unfinished">恢复文件？</translation>
+        <translation>恢复文件？</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Recovered</source>
-        <translation type="unfinished">已恢复</translation>
+        <translation>已恢复</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Recover File?</source>
-        <translation type="unfinished">恢复文件？</translation>
+        <translation>恢复文件？</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -927,37 +929,37 @@ Do you wish to recover it?</source>
         <location line="+11"/>
         <location line="+5"/>
         <source>Cannot rename file:</source>
-        <translation type="unfinished">无法重命名文件：</translation>
+        <translation>无法重命名文件：</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Moved autosave backup file to:</source>
-        <translation type="unfinished">将自动保存备份文件移至：</translation>
+        <translation>将自动保存备份文件移动到：</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Moved original file to:</source>
-        <translation type="unfinished">将原始文件移至：</translation>
+        <translation>将原始文件移动到：</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Cannot remove file:</source>
-        <translation type="unfinished">无法删除文件：</translation>
+        <translation>无法删除文件：</translation>
     </message>
     <message>
         <location filename="../scripts/File/AutoSave/PreferencesPage.ui" line="+17"/>
         <source>Enable Autosave</source>
-        <translation type="unfinished">启用自动保存</translation>
+        <translation>启用自动保存</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Autosave Interval:</source>
-        <translation type="unfinished">自动保存间隔：</translation>
+        <translation>自动保存间隔：</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>min</source>
-        <translation type="unfinished">闽</translation>
+        <translation>分钟</translation>
     </message>
 </context>
 <context>
@@ -965,12 +967,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Snap/SnapAuto/PreferencesPage.ui" line="+17"/>
         <source>Auto Snap</source>
-        <translation type="unfinished">自动捕捉</translation>
+        <translation>自动捕捉</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Intersections</source>
-        <translation type="unfinished">交叉口</translation>
+        <translation>交点</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -980,42 +982,42 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Middle points</source>
-        <translation type="unfinished">中间点</translation>
+        <translation>中点</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Center points</source>
-        <translation type="unfinished">中心点</translation>
+        <translation>中心点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Perpendicular</source>
-        <translation type="unfinished">垂直</translation>
+        <translation>垂直</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Tangential</source>
-        <translation type="unfinished">切线</translation>
+        <translation>切向</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Reference points</source>
-        <translation type="unfinished">参考点</translation>
+        <translation>参考点</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Grid points</source>
-        <translation type="unfinished">网格点</translation>
+        <translation>网格点</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation type="unfinished">实体上的点</translation>
+        <translation>实体上的点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Free positioning</source>
-        <translation type="unfinished">自由定位</translation>
+        <translation>自由定位</translation>
     </message>
 </context>
 <context>
@@ -1023,7 +1025,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/AutoTrim/AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation type="unfinished">自动饰件</translation>
+        <translation>自动修剪</translation>
     </message>
 </context>
 <context>
@@ -1031,7 +1033,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/View/Zoom/AutoZoom/AutoZoomInit.js" line="+2"/>
         <source>&amp;Auto Zoom</source>
-        <translation type="unfinished">自动变焦</translation>
+        <translation>自动缩放</translation>
     </message>
 </context>
 <context>
@@ -1039,13 +1041,13 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2Pdf.js" line="+30"/>
         <source>Export to PDF</source>
-        <translation type="unfinished">导出到PDF</translation>
+        <translation>导出到 PDF</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
         <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
-        <translation type="unfinished">Batch2Pdf可见布局块</translation>
+        <translation>批量导出可见布局块为 PDF(&amp;B)</translation>
     </message>
 </context>
 <context>
@@ -1053,12 +1055,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished">图形视图</translation>
+        <translation>图形视图</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Behavior</source>
-        <translation type="unfinished">行为习惯</translation>
+        <translation>行为</translation>
     </message>
 </context>
 <context>
@@ -1066,37 +1068,37 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
-        <translation type="unfinished">这两个实体不能被斜面化。</translation>
+        <translation>这两个实体不能倒角。</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished">第一个实体不能被修剪。</translation>
+        <translation>第一个实体不能修剪。</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished">第二个实体不能修剪。</translation>
+        <translation>第二个实体不能修剪。</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
-        <translation type="unfinished">倒角/斜面</translation>
+        <translation>倒角/斜切</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="unfinished">修剪</translation>
+        <translation>修剪</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Length 1:</source>
-        <translation type="unfinished">长度 1：</translation>
+        <translation>长度 1：</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Length 2:</source>
-        <translation type="unfinished">长度 2：</translation>
+        <translation>长度 2：</translation>
     </message>
 </context>
 <context>
@@ -1104,129 +1106,129 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExport.js" line="+78"/>
         <source>Error while generating bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished">生成位图文件&quot;%1 &quot;时出错：%2</translation>
+        <translation>生成位图文件&quot;%1 &quot;时出错：%2</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished">位图文件已被导出到&quot;%1&quot;。</translation>
+        <translation>位图文件已被导出到&quot;%1&quot;。</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Files</source>
-        <translation type="unfinished">文件</translation>
+        <translation>文件</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Export as Bitmap</source>
-        <translation type="unfinished">导出为位图</translation>
+        <translation>导出为位图</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
-        <translation type="unfinished">位图导出...</translation>
+        <translation>位图导出...</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportDialog.ui" line="+14"/>
         <source>Bitmap Export</source>
-        <translation type="unfinished">位图导出</translation>
+        <translation>位图导出</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Size</source>
-        <translation type="unfinished">尺寸</translation>
+        <translation>尺寸</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Width:</source>
-        <translation type="unfinished">宽度：</translation>
+        <translation>宽度：</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Height:</source>
-        <translation type="unfinished">高度：</translation>
+        <translation>高度：</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Pixels per drawing unit:</source>
-        <translation type="unfinished">每个绘图单位的像素：</translation>
+        <translation>每个绘图单位的像素：</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Export bounding box of selection</source>
-        <translation type="unfinished">导出选区的边界盒</translation>
+        <translation>导出选区的边界盒</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Background</source>
-        <translation type="unfinished">背景</translation>
+        <translation>背景</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>White</source>
-        <translation type="unfinished">白色</translation>
+        <translation>白色</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Black</source>
-        <translation type="unfinished">黑色</translation>
+        <translation>黑色</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Transparent</source>
-        <translation type="unfinished">透明</translation>
+        <translation>透明</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Color</source>
         <comment>Title of group box</comment>
-        <translation type="unfinished">颜色</translation>
+        <translation>颜色</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Monochrome</source>
-        <translation type="unfinished">单色</translation>
+        <translation>单色</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Grayscale</source>
-        <translation type="unfinished">灰度</translation>
+        <translation>灰度</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Color</source>
         <comment>Radio button choice</comment>
-        <translation type="unfinished">颜色</translation>
+        <translation>颜色</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Anti-aliasing</source>
-        <translation type="unfinished">抗锯齿</translation>
+        <translation>抗锯齿</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use anti-aliasing</source>
-        <translation type="unfinished">使用抗锯齿</translation>
+        <translation>使用抗锯齿</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Margin</source>
-        <translation type="unfinished">边距</translation>
+        <translation>边距</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Margin:</source>
-        <translation type="unfinished">边距：</translation>
+        <translation>边距：</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>px</source>
-        <translation type="unfinished">px</translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation type="unfinished">增加额外的边距以补偿线重</translation>
+        <translation>增加额外的边距以补偿线重</translation>
     </message>
 </context>
 <context>
@@ -1234,7 +1236,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
-        <translation type="unfinished">无效的图像大小（宽度x高度必须小于%1）。</translation>
+        <translation>无效的图像大小（宽度x高度必须小于%1）。</translation>
     </message>
 </context>
 <context>
@@ -1247,17 +1249,17 @@ Do you wish to recover it?</source>
     <message>
         <location line="+109"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation type="unfinished">在原地编辑区块时不能编辑区块</translation>
+        <translation>在原地编辑区块时不能编辑区块</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation type="unfinished"></translation>
+        <translation>无法编辑外部参照</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation type="unfinished"></translation>
+        <translation>无法编辑来自外部参照的块</translation>
     </message>
     <message>
         <location line="-109"/>
@@ -1271,7 +1273,7 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Block/BlockDialog.js" line="+79"/>
         <source>block</source>
         <comment>default block name prefix</comment>
-        <translation type="unfinished">块</translation>
+        <translation>块</translation>
     </message>
     <message>
         <location line="+51"/>
@@ -1291,7 +1293,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+11"/>
         <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation type="unfinished">块&quot;%1 &quot;已经存在&lt;br&gt;并将被覆盖。</translation>
+        <translation>块&quot;%1 &quot;已经存在&lt;br&gt;并将被覆盖。</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1301,7 +1303,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block</source>
-        <translation type="unfinished">区块</translation>
+        <translation>区块</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1314,7 +1316,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/BlockExamples.js" line="+51"/>
         <source>&amp;Block</source>
-        <translation type="unfinished">块(&amp;B)</translation>
+        <translation>块(&amp;B)</translation>
     </message>
 </context>
 <context>
@@ -1322,7 +1324,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js" line="+80"/>
         <source>&amp;Fix Block Names</source>
-        <translation type="unfinished">修复区块名称</translation>
+        <translation>修复区块名称</translation>
     </message>
 </context>
 <context>
@@ -1330,7 +1332,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
         <source>Widgets</source>
-        <translation type="unfinished">小工具</translation>
+        <translation>小工具</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1342,12 +1344,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+19"/>
         <source>Hide internal blocks</source>
-        <translation type="unfinished">隐藏内部区块</translation>
+        <translation>隐藏内部区块</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Enable alternating row colors</source>
-        <translation type="unfinished">启用交替的行色</translation>
+        <translation>启用交替的行色</translation>
     </message>
 </context>
 <context>
@@ -1355,22 +1357,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js" line="+47"/>
         <source>Block:</source>
-        <translation type="unfinished">块：</translation>
+        <translation>块：</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation type="unfinished">区块参考ID：</translation>
+        <translation>区块参考ID：</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Block attribute:</source>
-        <translation type="unfinished">块属性：</translation>
+        <translation>块属性：</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>&amp;List Block Attributes</source>
-        <translation type="unfinished">列表块属性</translation>
+        <translation>列表块属性</translation>
     </message>
 </context>
 <context>
@@ -1378,17 +1380,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
-        <translation type="unfinished">输出区块列表（CSV）</translation>
+        <translation>输出区块列表（CSV）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>CSV</source>
-        <translation type="unfinished">CSV</translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation type="unfinished">输出区块列表(&amp;E)</translation>
+        <translation>输出区块列表(&amp;E)</translation>
     </message>
 </context>
 <context>
@@ -1396,17 +1398,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
         <source>Export Block References List (CSV)</source>
-        <translation type="unfinished">导出区块参考列表（CSV）</translation>
+        <translation>导出区块参考列表（CSV）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>CSV</source>
-        <translation type="unfinished">CSV</translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation type="unfinished">输出区块参考列表(&amp;E)</translation>
+        <translation>输出区块参考列表(&amp;E)</translation>
     </message>
 </context>
 <context>
@@ -1414,22 +1416,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+59"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
-        <translation type="unfinished">选择线、弧、圆、椭圆、花线或多线段</translation>
+        <translation>选择线、弧、圆、椭圆、花线或多线段</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse segment</source>
-        <translation type="unfinished">选择线、弧、圆或椭圆段</translation>
+        <translation>选择线、弧、圆或椭圆段</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
-        <translation type="unfinished">分割段</translation>
+        <translation>分割段</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation type="unfinished">移除部分</translation>
+        <translation>移除部分</translation>
     </message>
 </context>
 <context>
@@ -1437,22 +1439,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.js" line="+54"/>
         <source>Choose line, arc or circle</source>
-        <translation type="unfinished">选择线、弧或圆</translation>
+        <translation>选择线、弧或圆</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Specify point</source>
-        <translation type="unfinished">指定点</translation>
+        <translation>指定点</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation type="unfinished">突破缺口</translation>
+        <translation>突破缺口</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
-        <translation type="unfinished">差距：</translation>
+        <translation>差距：</translation>
     </message>
 </context>
 <context>
@@ -1460,37 +1462,37 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.js" line="+79"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished">选择直线、弧线、圆、椭圆、花线或折线来分解</translation>
+        <translation>选择直线、弧线、圆、椭圆、花线或折线来分解</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="unfinished">选择直线、弧线、圆或椭圆来分割</translation>
+        <translation>选择直线、弧线、圆或椭圆来分割</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>First break point</source>
-        <translation type="unfinished">第一个突破点</translation>
+        <translation>第一个突破点</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation type="unfinished">第二个破发点</translation>
+        <translation>第二个破发点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Click the part of the circle or ellipse to remove</source>
-        <translation type="unfinished">点击要删除的圆或椭圆的部分</translation>
+        <translation>点击要删除的圆或椭圆的部分</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation type="unfinished">手动打断(&amp;B)</translation>
+        <translation>手动打断(&amp;B)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation type="unfinished">移除部分</translation>
+        <translation>移除部分</translation>
     </message>
 </context>
 <context>
@@ -1498,7 +1500,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Help/BrowseUserManual/BrowseUserManualInit.js" line="+2"/>
         <source>Browse User Manual</source>
-        <translation type="unfinished">浏览用户手册</translation>
+        <translation>浏览用户手册</translation>
     </message>
 </context>
 <context>
@@ -1506,32 +1508,32 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
-        <translation type="unfinished">小工具</translation>
+        <translation>小工具</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>CAD Toolbar</source>
-        <translation type="unfinished">CAD工具条</translation>
+        <translation>CAD工具条</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
-        <translation type="unfinished">图标大小：</translation>
+        <translation>图标大小：</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>Pixel</source>
-        <translation type="unfinished">像素</translation>
+        <translation>像素</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation type="unfinished">px</translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Columns:</source>
-        <translation type="unfinished">列数：</translation>
+        <translation>列数：</translation>
     </message>
 </context>
 <context>
@@ -1539,53 +1541,53 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+401"/>
         <source>Expand all</source>
-        <translation type="unfinished">展开全部</translation>
+        <translation>展开全部</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Collapse all</source>
-        <translation type="unfinished">折叠所有</translation>
+        <translation>折叠所有</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>List View</source>
-        <translation type="unfinished">列表查看</translation>
+        <translation>列表查看</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Icon View</source>
-        <translation type="unfinished">图标视图</translation>
+        <translation>图标视图</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Widgets</source>
-        <translation type="unfinished">小工具</translation>
+        <translation>小工具</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+53"/>
         <source>Tool Matrix</source>
-        <translation type="unfinished">工具矩阵</translation>
+        <translation>工具矩阵</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
         <source>Icon size:</source>
-        <translation type="unfinished">图标大小：</translation>
+        <translation>图标大小：</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Pixel</source>
-        <translation type="unfinished">像素</translation>
+        <translation>像素</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation type="unfinished">px</translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>List view</source>
-        <translation type="unfinished">列表查看</translation>
+        <translation>列表查看</translation>
     </message>
 </context>
 <context>
@@ -1593,7 +1595,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/ChangeFontToArial/ChangeFontToArial.js" line="+65"/>
         <source>Set Font to Arial</source>
-        <translation type="unfinished">设置字体为 Arial</translation>
+        <translation>设置字体为 Arial</translation>
     </message>
 </context>
 <context>
@@ -1602,27 +1604,27 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+68"/>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
-        <translation type="unfinished">检查更新...</translation>
+        <translation>检查更新...</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Version information not found.</source>
-        <translation type="unfinished">没有找到版本信息。</translation>
+        <translation>没有找到版本信息。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>No connection to server or file not found. Please try again later.</source>
-        <translation type="unfinished">没有连接到服务器或没有找到文件。请稍后再试。</translation>
+        <translation>没有连接到服务器或没有找到文件。请稍后再试。</translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesInit.js" line="+6"/>
         <source>Check for &amp;Updates...</source>
-        <translation type="unfinished">检查更新...</translation>
+        <translation>检查更新...</translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+53"/>
         <source>Automatically check for updates</source>
-        <translation type="unfinished">自动检查更新</translation>
+        <translation>自动检查更新</translation>
     </message>
 </context>
 <context>
@@ -2054,7 +2056,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
-        <translation type="unfinished">参考点</translation>
+        <translation>参考点</translation>
     </message>
 </context>
 <context>
@@ -2062,7 +2064,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Window/CloseAll/CloseAllInit.js" line="+2"/>
         <source>&amp;Close All</source>
-        <translation type="unfinished">关闭所有(&amp;C)</translation>
+        <translation>关闭所有(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -2070,7 +2072,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation type="unfinished">正在关闭绘图...</translation>
+        <translation>正在关闭绘图...</translation>
     </message>
 </context>
 <context>
@@ -2078,7 +2080,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/CloseFile/CloseFileInit.js" line="+2"/>
         <source>&amp;Close</source>
-        <translation type="unfinished">关闭(&amp;C)</translation>
+        <translation>关闭(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -2086,12 +2088,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished">图形视图</translation>
+        <translation>图形视图</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Colors</source>
-        <translation type="unfinished">颜色</translation>
+        <translation>颜色</translation>
     </message>
 </context>
 <context>
@@ -2099,47 +2101,47 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/ColorSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished">新图纸的默认值</translation>
+        <translation>新图纸的默认值</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Printing - Colors</source>
-        <translation type="unfinished">打印 - 颜色</translation>
+        <translation>打印 - 颜色</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation type="unfinished">打印中</translation>
+        <translation>打印中</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Colors</source>
-        <translation type="unfinished">颜色</translation>
+        <translation>颜色</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/PreferencesPage.ui" line="+19"/>
         <source>Background color:</source>
-        <translation type="unfinished">背景颜色：</translation>
+        <translation>背景颜色：</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Color Mode</source>
-        <translation type="unfinished">彩色模式</translation>
+        <translation>彩色模式</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Full color</source>
-        <translation type="unfinished">全彩色</translation>
+        <translation>全彩色</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Grayscale</source>
-        <translation type="unfinished">灰度</translation>
+        <translation>灰度</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Black / white</source>
-        <translation type="unfinished">黑色/白色</translation>
+        <translation>黑色/白色</translation>
     </message>
 </context>
 <context>
@@ -2147,7 +2149,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.js" line="+30"/>
         <source>Widgets</source>
-        <translation type="unfinished">小工具</translation>
+        <translation>小工具</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2164,57 +2166,57 @@ Do you wish to recover it?</source>
     <message>
         <location line="+199"/>
         <source>Invalid value:</source>
-        <translation type="unfinished">无效值：</translation>
+        <translation>无效值：</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Invalid coordinate or distance &quot;%1&quot;.</source>
-        <translation type="unfinished">无效的坐标或距离&quot;%1&quot;。</translation>
+        <translation>无效的坐标或距离&quot;%1&quot;。</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
-        <translation type="unfinished">未知命令或无效的坐标或值：&quot;%1&quot;</translation>
+        <translation>未知命令或无效的坐标或值：&quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Numbers may be entered as: &quot;%1&quot;</source>
-        <translation type="unfinished">数字可输入为：&quot;%1&quot;</translation>
+        <translation>数字可输入为：&quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinates may be entered as: &quot;%1&quot; (absolute) or &quot;%2&quot; (relative) or &quot;%3&quot; (polar) or &quot;%4&quot; (relative polar)</source>
-        <translation type="unfinished">坐标可以输入：&quot;%1&quot;（绝对）或&quot;%2&quot;（相对）或&quot;%3&quot;（极地）或&quot;%4&quot;（相对极地）。</translation>
+        <translation>坐标可以输入：&quot;%1&quot;（绝对）或&quot;%2&quot;（相对）或&quot;%3&quot;（极地）或&quot;%4&quot;（相对极地）。</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>You may change the number / coordinate format in the application preferences.</source>
-        <translation type="unfinished">你可以在应用程序首选项中改变数字/坐标格式。</translation>
+        <translation>你可以在应用程序首选项中改变数字/坐标格式。</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation type="unfinished">交易失败。请检查区块递归和锁定或不可见的层或区块。</translation>
+        <translation>交易失败。请检查区块递归和锁定或不可见的层或区块。</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Warning</source>
-        <translation type="unfinished">警告</translation>
+        <translation>警告</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Info</source>
-        <translation type="unfinished">信息</translation>
+        <translation>信息</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Expression</source>
-        <translation type="unfinished">表达方式</translation>
+        <translation>表达方式</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Coordinate</source>
-        <translation type="unfinished">协调</translation>
+        <translation>协调</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2229,22 +2231,22 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>: </source>
-        <translation type="unfinished">:</translation>
+        <translation>：</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History size:</source>
-        <translation type="unfinished">历史大小：</translation>
+        <translation>历史大小：</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Show warnings as dialog</source>
-        <translation type="unfinished">以对话形式显示警告</translation>
+        <translation>以对话形式显示警告</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Show information as dialog</source>
-        <translation type="unfinished">以对话形式显示信息</translation>
+        <translation>以对话形式显示信息</translation>
     </message>
 </context>
 <context>
@@ -2252,7 +2254,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/Examples/CommandLineExamples/CommandLineExamples.js" line="+50"/>
         <source>&amp;Command Line</source>
-        <translation type="unfinished">命令行(&amp;C)</translation>
+        <translation>命令行(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -2260,7 +2262,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/View/CommandLineFocus/CommandLineFocusInit.js" line="+2"/>
         <source>&amp;Focus on Command Line</source>
-        <translation type="unfinished">专注于命令行</translation>
+        <translation>专注于命令行</translation>
     </message>
 </context>
 <context>
@@ -2268,7 +2270,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/CommandLineTools/CommandLineTools.js" line="+50"/>
         <source>&amp;Command Line Tools</source>
-        <translation type="unfinished">命令行工具(&amp;C)</translation>
+        <translation>命令行工具(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -2276,12 +2278,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.js" line="+86"/>
         <source>Nothing to be done.</source>
-        <translation type="unfinished">没什么可做的。</translation>
+        <translation>没什么可做的。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unit &quot;%1&quot; selected. Nothing to be done</source>
-        <translation type="unfinished">单位&quot;%1 &quot;被选中。没有什么可做的</translation>
+        <translation>单位&quot;%1 &quot;被选中。没有什么可做的</translation>
     </message>
     <message>
         <location line="+144"/>
@@ -2291,27 +2293,27 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
         <source>Convert Drawing &amp;Unit</source>
-        <translation type="unfinished">转换绘图单位</translation>
+        <translation>转换绘图单位</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
-        <translation type="unfinished">将绘图转换为不同的绘图单位</translation>
+        <translation>将绘图转换为不同的绘图单位</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.ui" line="+20"/>
         <source>From:</source>
-        <translation type="unfinished">从：</translation>
+        <translation>从：</translation>
     </message>
     <message>
         <location line="+56"/>
         <source>To:</source>
-        <translation type="unfinished">到：</translation>
+        <translation>到：</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Convert:</source>
-        <translation type="unfinished">转换：</translation>
+        <translation>转换：</translation>
     </message>
 </context>
 <context>
@@ -2319,37 +2321,37 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
-        <translation type="unfinished">小工具</translation>
+        <translation>小工具</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Coordinate Display</source>
-        <translation type="unfinished">坐标显示</translation>
+        <translation>坐标显示</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui" line="+72"/>
         <source>Absolute Cartesian Coordinate</source>
-        <translation type="unfinished">绝对直角坐标</translation>
+        <translation>绝对直角坐标</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Absolute Polar Coordinate</source>
-        <translation type="unfinished">绝对极坐标</translation>
+        <translation>绝对极坐标</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Cartesian Coordinate</source>
-        <translation type="unfinished">相对直角坐标</translation>
+        <translation>相对直角坐标</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Polar Coordinate</source>
-        <translation type="unfinished">相对极坐标</translation>
+        <translation>相对极坐标</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/PreferencesPage.ui" line="+17"/>
         <source>Forced update every N mouse moves:</source>
-        <translation type="unfinished">每移动N次鼠标就强制更新一次：</translation>
+        <translation>每移动N次鼠标就强制更新一次：</translation>
     </message>
 </context>
 <context>
@@ -2357,7 +2359,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/Copy/CopyInit.js" line="+2"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished">复制(&amp;C)</translation>
+        <translation>复制(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -2365,7 +2367,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/CopyWithReference/CopyWithReferenceInit.js" line="+2"/>
         <source>&amp;Copy with Reference</source>
-        <translation type="unfinished">使用参考复制(&amp;C)</translation>
+        <translation>使用参考复制(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -2373,42 +2375,42 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
-        <translation type="unfinished">位置</translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/CounterInit.js" line="+2"/>
         <source>&amp;Counter</source>
-        <translation type="unfinished">计数器</translation>
+        <translation>计数器</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Auto increment number</source>
-        <translation type="unfinished">自动递增数</translation>
+        <translation>自动递增数</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.ui" line="+17"/>
         <source>Start:</source>
-        <translation type="unfinished">开始：</translation>
+        <translation>开始：</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Increment:</source>
-        <translation type="unfinished">增量：</translation>
+        <translation>增量：</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Number Format:</source>
-        <translation type="unfinished">数字格式：</translation>
+        <translation>数字格式：</translation>
     </message>
     <message>
         <location line="+89"/>
         <source>Prefix:</source>
-        <translation type="unfinished">前缀：</translation>
+        <translation>前缀：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Suffix:</source>
-        <translation type="unfinished">后缀：</translation>
+        <translation>后缀：</translation>
     </message>
 </context>
 <context>
@@ -2429,17 +2431,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/Cross.js" line="+56"/>
         <source>Select arc, circle, ellipse or elliptical arc</source>
-        <translation type="unfinished">选择弧、圆、椭圆或椭圆弧</translation>
+        <translation>选择弧、圆、椭圆或椭圆弧</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/CrossInit.js" line="+2"/>
         <source>Centerline Cross</source>
-        <translation type="unfinished">中心线十字架</translation>
+        <translation>中心线十字架</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
-        <translation type="unfinished">以弧线、圆圈或椭圆绘制中心线十字架</translation>
+        <translation>以弧线、圆圈或椭圆绘制中心线十字架</translation>
     </message>
 </context>
 <context>
@@ -2447,32 +2449,32 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/Cross.ui" line="+17"/>
         <source>X:</source>
-        <translation type="unfinished">X:</translation>
+        <translation>X：</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Y:</source>
-        <translation type="unfinished">Y 方向比例：</translation>
+        <translation>Y 方向比例：</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Mode:</source>
-        <translation type="unfinished">模式：</translation>
+        <translation>模式：</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Extension</source>
-        <translation type="unfinished">延伸</translation>
+        <translation>延伸</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Total length</source>
-        <translation type="unfinished">总长度</translation>
+        <translation>总长度</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Percent</source>
-        <translation type="unfinished">百分比</translation>
+        <translation>百分比</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -2485,7 +2487,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/Cut/CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
-        <translation type="unfinished">剪切(&amp;C)</translation>
+        <translation>剪切(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -2493,7 +2495,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/CutWithReference/CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
-        <translation type="unfinished">用参考剪切(&amp;C)</translation>
+        <translation>用参考剪切(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -2501,52 +2503,52 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
-        <translation type="unfinished">选择实体或地区</translation>
+        <translation>选择实体或地区</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
-        <translation type="unfinished">移动实体或引用</translation>
+        <translation>移动实体或引用</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation type="unfinished">第二个角落</translation>
+        <translation>第二个角落</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of reference point</source>
-        <translation type="unfinished">参考点的目标点</translation>
+        <translation>参考点的目标点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation type="unfinished">选择的目标点</translation>
+        <translation>选择的目标点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Move entity to desired location</source>
-        <translation type="unfinished">将实体移至所需位置</translation>
+        <translation>将实体移至所需位置</translation>
     </message>
     <message>
         <location line="+409"/>
         <source>Move Reference Point</source>
-        <translation type="unfinished">移动参考点</translation>
+        <translation>移动参考点</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Selection</source>
-        <translation type="unfinished">移动选择</translation>
+        <translation>移动选择</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation type="unfinished">移动实体</translation>
+        <translation>移动实体</translation>
     </message>
     <message>
         <location line="+127"/>
         <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation type="unfinished">编辑区块&quot;%1&quot;&lt;br&gt;完成后选择&lt;i&gt;区块&gt;返回主图&lt;/i&gt;。</translation>
+        <translation>编辑区块&quot;%1&quot;&lt;br&gt;完成后选择&lt;i&gt;区块&gt;返回主图&lt;/i&gt;。</translation>
     </message>
 </context>
 <context>
@@ -2554,22 +2556,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Navigation/DefaultNavigation/DefaultNavigation.js" line="+47"/>
         <source>Graphics View</source>
-        <translation type="unfinished">图形视图</translation>
+        <translation>图形视图</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Navigation</source>
-        <translation type="unfinished">导航</translation>
+        <translation>导航</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Zoom (Wheel Mouse)</source>
-        <translation type="unfinished">缩放（滚轮鼠标）</translation>
+        <translation>缩放（滚轮鼠标）</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
-        <translation type="unfinished">滚动（跟踪板，多点触摸鼠标）</translation>
+        <translation>滚动（跟踪板，多点触摸鼠标）</translation>
     </message>
 </context>
 <context>
@@ -2577,7 +2579,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/Delete/DeleteInit.js" line="+2"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished">删除(&amp;D)</translation>
+        <translation>删除(&amp;D)</translation>
     </message>
 </context>
 <context>
@@ -2585,12 +2587,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Select/DeselectAll/DeselectAllInit.js" line="+2"/>
         <source>&amp;Deselect All</source>
-        <translation type="unfinished">取消选择所有(&amp;D)</translation>
+        <translation>取消选择所有(&amp;D)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Deselect all entities</source>
-        <translation type="unfinished">取消选择所有实体</translation>
+        <translation>取消选择所有实体</translation>
     </message>
 </context>
 <context>
@@ -2606,7 +2608,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
-        <translation type="unfinished">取消选择图层实体(&amp;D)</translation>
+        <translation>取消选择图层实体(&amp;D)</translation>
     </message>
 </context>
 <context>
@@ -2614,7 +2616,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/DevDebug/DevDebug.js" line="+45"/>
         <source>&amp;Debug Mode</source>
-        <translation type="unfinished">调试模式(&amp;D)</translation>
+        <translation>调试模式(&amp;D)</translation>
     </message>
 </context>
 <context>
@@ -2622,88 +2624,88 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="unfinished">字符射表</translation>
+        <translation>字符射表</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
         <source>Dialog</source>
-        <translation type="unfinished">对话框</translation>
+        <translation>对话框</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Arcs and Circles</source>
-        <translation type="unfinished">弧线和圆圈</translation>
+        <translation>弧线和圆圈</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into line segments (fixed length)</source>
-        <translation type="unfinished">成线段（固定长度）</translation>
+        <translation>成线段（固定长度）</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>into line segments (fixed angle)</source>
-        <translation type="unfinished">变成线段（固定角度）</translation>
+        <translation>变成线段（固定角度）</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Ellipses</source>
-        <translation type="unfinished">椭圆</translation>
+        <translation>椭圆</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into polyline with arc segments</source>
-        <translation type="unfinished">变成带有弧线段的折线</translation>
+        <translation>变成带有弧线段的折线</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+16"/>
         <source>into polyline with line segments</source>
-        <translation type="unfinished">变成带有线段的多段线</translation>
+        <translation>变成带有线段的多段线</translation>
     </message>
     <message>
         <location line="-8"/>
         <source>Splines</source>
-        <translation type="unfinished">样条</translation>
+        <translation>样条</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Dimensions</source>
-        <translation type="unfinished">尺寸</translation>
+        <translation>尺寸</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into lines, solids and texts</source>
-        <translation type="unfinished">变成线条、实体和文字</translation>
+        <translation>变成线条、实体和文字</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation type="unfinished">舱口</translation>
+        <translation>舱口</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into lines</source>
-        <translation type="unfinished">成行</translation>
+        <translation>成行</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Blocks</source>
-        <translation type="unfinished">块状物</translation>
+        <translation>块状物</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into entities</source>
-        <translation type="unfinished">变成实体</translation>
+        <translation>变成实体</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/Dialog.ui" line="+94"/>
         <source>OK</source>
-        <translation type="unfinished">认可</translation>
+        <translation>认可</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Cancel</source>
-        <translation type="unfinished">取消</translation>
+        <translation>取消</translation>
     </message>
 </context>
 <context>
@@ -2764,7 +2766,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation type="unfinished">使用最大角度</translation>
+        <translation>使用最大角度</translation>
     </message>
 </context>
 <context>
@@ -2859,7 +2861,8 @@ Do you wish to recover it?</source>
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
-        <translation type="unfinished">
+        <translation>
+            <numerusform>重置了%n尺寸的标签位置。</numerusform>
             <numerusform>重置了%n尺寸的标签位置。</numerusform>
         </translation>
     </message>
@@ -2975,7 +2978,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+26"/>
         <source>D&amp;imension</source>
-        <translation type="unfinished">标注(&amp;I)</translation>
+        <translation>标注(&amp;I)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Dimension.ui" line="+29"/>
@@ -3010,7 +3013,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation type="unfinished">字体为绘图的显示比例</translation>
+        <translation>字体为绘图的显示比例</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3023,17 +3026,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation type="unfinished">尺寸表</translation>
+        <translation>尺寸表</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
-        <translation type="unfinished">新尺寸的比例不是1:1。尺寸标签将显示与图纸中的测量值不同的值。你可以在顶部的选项工具栏中纠正比例系数。</translation>
+        <translation>新尺寸的比例不是1:1。尺寸标签将显示与图纸中的测量值不同的值。你可以在顶部的选项工具栏中纠正比例系数。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this warning again</source>
-        <translation type="unfinished">不要再显示这个警告</translation>
+        <translation>不要再显示这个警告</translation>
     </message>
 </context>
 <context>
@@ -3041,190 +3044,190 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished">新图纸的默认值</translation>
+        <translation>新图纸的默认值</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Dimension Settings</source>
-        <translation type="unfinished">尺寸设置</translation>
+        <translation>尺寸设置</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation type="unfinished">尺寸</translation>
+        <translation>尺寸</translation>
     </message>
     <message>
         <location line="+112"/>
         <source>point</source>
-        <translation type="unfinished">点</translation>
+        <translation>点</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>comma</source>
-        <translation type="unfinished">逗号</translation>
+        <translation>逗号</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation type="unfinished">空间</translation>
+        <translation>空间</translation>
     </message>
     <message>
         <location line="+309"/>
         <source>Unit / Format</source>
-        <translation type="unfinished">单位/格式</translation>
+        <translation>单位/格式</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
-        <translation type="unfinished">图纸单位必须是 &quot;英寸 &quot;才能显示 &quot;建筑 &quot;或 &quot;工程 &quot;格式中的尺寸标签。格式改为 &quot;十进制&quot;。</translation>
+        <translation>图纸单位必须是 &quot;英寸 &quot;才能显示 &quot;建筑 &quot;或 &quot;工程 &quot;格式中的尺寸标签。格式改为 &quot;十进制&quot;。</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
         <source>Dimension Style</source>
-        <translation type="unfinished">尺寸风格</translation>
+        <translation>尺寸风格</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Horizontal text labels</source>
-        <translation type="unfinished">横向文本标签</translation>
+        <translation>横向文本标签</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Text above dimension line</source>
-        <translation type="unfinished">尺寸线以上的文本</translation>
+        <translation>尺寸线以上的文本</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Sizes</source>
-        <translation type="unfinished">尺寸</translation>
+        <translation>尺寸</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Keep proportions</source>
-        <translation type="unfinished">保持纵横比</translation>
+        <translation>保持纵横比</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Dimension line gap:</source>
-        <translation type="unfinished">尺寸线间隙：</translation>
+        <translation>尺寸线间隙：</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Arrow size:</source>
-        <translation type="unfinished">箭头大小：</translation>
+        <translation>箭头大小：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Extension line extension:</source>
-        <translation type="unfinished">延长线延长：</translation>
+        <translation>延长线延长：</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>Text height:</source>
-        <translation type="unfinished">文字高度：</translation>
+        <translation>文字高度：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Extension line offset:</source>
-        <translation type="unfinished">延长线偏移：</translation>
+        <translation>延长线偏移：</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dimension line increment:</source>
-        <translation type="unfinished">尺寸线增量：</translation>
+        <translation>尺寸线增量：</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Size scale factor:</source>
-        <translation type="unfinished">尺寸比例系数：</translation>
+        <translation>尺寸比例系数：</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Arrow Style</source>
-        <translation type="unfinished">箭头式</translation>
+        <translation>箭头式</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Arrow</source>
-        <translation type="unfinished">箭头</translation>
+        <translation>箭头</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation type="unfinished">建筑打钩</translation>
+        <translation>建筑打钩</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Label</source>
-        <translation type="unfinished">标签</translation>
+        <translation>标签</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Label font:</source>
-        <translation type="unfinished">标签字体：</translation>
+        <translation>标签字体：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Label color:</source>
-        <translation type="unfinished">标签颜色：</translation>
+        <translation>标签颜色：</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Number Format</source>
-        <translation type="unfinished">数字格式</translation>
+        <translation>数字格式</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Decimal separator:</source>
-        <translation type="unfinished">小数点分离器：</translation>
+        <translation>小数点分离器：</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Label Format</source>
-        <translation type="unfinished">标签格式</translation>
+        <translation>标签格式</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Linear Dimensions</source>
-        <translation type="unfinished">线性尺寸</translation>
+        <translation>线性尺寸</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Format:</source>
-        <translation type="unfinished">格式：</translation>
+        <translation>格式：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>P&amp;recision:</source>
-        <translation type="unfinished">精度：</translation>
+        <translation>精度：</translation>
     </message>
     <message>
         <location line="+32"/>
         <location line="+60"/>
         <source>Show trailing zeros</source>
-        <translation type="unfinished">显示尾部零点</translation>
+        <translation>显示尾部零点</translation>
     </message>
     <message>
         <location line="-50"/>
         <source>Angular Dimensions</source>
-        <translation type="unfinished">角度尺寸</translation>
+        <translation>角度尺寸</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>F&amp;ormat:</source>
-        <translation type="unfinished">格式：</translation>
+        <translation>格式：</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Pre&amp;cision:</source>
-        <translation type="unfinished">精度：</translation>
+        <translation>精度：</translation>
     </message>
     <message>
         <location line="+32"/>
         <location line="+19"/>
         <source>Preview</source>
-        <translation type="unfinished">预览</translation>
+        <translation>预览</translation>
     </message>
 </context>
 <context>
@@ -3241,7 +3244,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Folder not added</source>
-        <translation type="unfinished">未添加的文件夹</translation>
+        <translation>未添加的文件夹</translation>
     </message>
 </context>
 <context>
@@ -3249,7 +3252,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation type="unfinished">显示距离/角度</translation>
+        <translation>显示距离/角度</translation>
     </message>
 </context>
 <context>
@@ -3257,27 +3260,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Divide/Divide.js" line="+68"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation type="unfinished">选择直线、弧线、圆、椭圆、花线或折线</translation>
+        <translation>选择直线、弧线、圆、椭圆、花线或折线</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation type="unfinished">选择直线，弧，圆或者椭圆</translation>
+        <translation>选择直线，弧，圆或者椭圆</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Specify point</source>
-        <translation type="unfinished">指定点</translation>
+        <translation>指定点</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Specify second point</source>
-        <translation type="unfinished">指定第二个点</translation>
+        <translation>指定第二个点</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Divide/DivideInit.js" line="+2"/>
         <source>&amp;Divide</source>
-        <translation type="unfinished">分割</translation>
+        <translation>分割</translation>
     </message>
 </context>
 <context>
@@ -3285,7 +3288,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/DraftMode/DraftMode.js" line="+86"/>
         <source>&amp;Draft Mode</source>
-        <translation type="unfinished">草案模式</translation>
+        <translation>草案模式</translation>
     </message>
 </context>
 <context>
@@ -3311,12 +3314,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+73"/>
         <source>First corner</source>
-        <translation type="unfinished">第一个角落</translation>
+        <translation>第一个角落</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second corner</source>
-        <translation type="unfinished">第二个角落</translation>
+        <translation>第二个角落</translation>
     </message>
 </context>
 <context>
@@ -3324,52 +3327,52 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/DrawBasedOnRectangleSize.js" line="+46"/>
         <source>Top Left</source>
-        <translation type="unfinished">左上角</translation>
+        <translation>左上角</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation type="unfinished">返回顶部</translation>
+        <translation>返回顶部</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top Right</source>
-        <translation type="unfinished">右上角</translation>
+        <translation>右上角</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Left</source>
-        <translation type="unfinished">左侧</translation>
+        <translation>左侧</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">中点</translation>
+        <translation>中点</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished">右侧</translation>
+        <translation>右侧</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Left</source>
-        <translation type="unfinished">左下角</translation>
+        <translation>左下角</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished">底部</translation>
+        <translation>底部</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Right</source>
-        <translation type="unfinished">右下角</translation>
+        <translation>右下角</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Position</source>
-        <translation type="unfinished">位置</translation>
+        <translation>位置</translation>
     </message>
 </context>
 <context>
@@ -3377,17 +3380,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/DrawBasedOnThreeCircles.js" line="+72"/>
         <source>First arc or circle</source>
-        <translation type="unfinished">第一个弧或圆</translation>
+        <translation>第一个弧或圆</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second arc or circle</source>
-        <translation type="unfinished">第二个弧或圆</translation>
+        <translation>第二个弧或圆</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Third arc or circle</source>
-        <translation type="unfinished">第三条弧线或圆圈</translation>
+        <translation>第三条弧线或圆圈</translation>
     </message>
 </context>
 <context>
@@ -3395,7 +3398,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js" line="+71"/>
         <source>Draw &amp;Bounding Box</source>
-        <translation type="unfinished">绘制包围盒</translation>
+        <translation>绘制包围盒</translation>
     </message>
 </context>
 <context>
@@ -3403,7 +3406,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/DrawExamples.js" line="+51"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished">绘制(&amp;D)</translation>
+        <translation>绘制(&amp;D)</translation>
     </message>
 </context>
 <context>
@@ -3411,72 +3414,72 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js" line="+74"/>
         <source>First vertex</source>
-        <translation type="unfinished">第一个顶点</translation>
+        <translation>第一个顶点</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Next vertex</source>
-        <translation type="unfinished">下一个顶点</translation>
+        <translation>下一个顶点</translation>
     </message>
     <message>
         <location line="+525"/>
         <source>close</source>
-        <translation type="unfinished">关闭</translation>
+        <translation>关闭</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>undo</source>
-        <translation type="unfinished">撤销</translation>
+        <translation>撤销</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>redo</source>
-        <translation type="unfinished">重做</translation>
+        <translation>重做</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>arc</source>
-        <translation type="unfinished">弧线</translation>
+        <translation>弧线</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation type="unfinished">关闭多线条</translation>
+        <translation>关闭多线条</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished">恢复前一段</translation>
+        <translation>恢复前一段</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation type="unfinished">重做部分</translation>
+        <translation>重做部分</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished">带半径的弧线</translation>
+        <translation>带半径的弧线</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation type="unfinished">扫描</translation>
+        <translation>扫描</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished">限制长度或角度</translation>
+        <translation>限制长度或角度</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation type="unfinished">绘制 Fms 车道(&amp;F)</translation>
+        <translation>绘制 Fms 车道(&amp;F)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation type="unfinished">绘制 FMS 车道（肋骨）</translation>
+        <translation>绘制 FMS 车道（肋骨）</translation>
     </message>
 </context>
 <context>
@@ -3486,122 +3489,122 @@ is already in the list.</source>
         <location line="+15"/>
         <location line="+1275"/>
         <source>Command ended.</source>
-        <translation type="unfinished">指挥结束。</translation>
+        <translation>指挥结束。</translation>
     </message>
     <message>
         <location line="-1293"/>
         <source>No import file selected.</source>
-        <translation type="unfinished">没有选择导入文件。</translation>
+        <translation>没有选择导入文件。</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>No file opened.</source>
-        <translation type="unfinished">没有打开文件。</translation>
+        <translation>没有打开文件。</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>DrawFromCSV script (v3.03) by CVH</source>
-        <translation type="unfinished">DrawFromCSV脚本（v3.03） 作者：CVH</translation>
+        <translation>DrawFromCSV脚本（v3.03） 作者：CVH</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation type="unfinished">铸造CSV</translation>
+        <translation>铸造CSV</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Reading from file: %1</source>
-        <translation type="unfinished">从文件中读取：%1</translation>
+        <translation>从文件中读取：%1</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Switched to comma/dot CSV style.</source>
-        <translation type="unfinished">改为逗号/点的CSV风格。</translation>
+        <translation>改为逗号/点的CSV风格。</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/dot CSV style.</source>
-        <translation type="unfinished">改为分号/点的CSV风格。</translation>
+        <translation>改为分号/点的CSV风格。</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/comma CSV style.</source>
-        <translation type="unfinished">改为分号/逗号的CSV风格。</translation>
+        <translation>改为分号/逗号的CSV风格。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Unsupported or invalid CSV style, ignored. Text line: %1</source>
-        <translation type="unfinished">不支持或无效的CSV样式，忽略不计。文本行：%1</translation>
+        <translation>不支持或无效的CSV样式，忽略不计。文本行：%1</translation>
     </message>
     <message>
         <location line="+82"/>
         <source>Setting new relative origin failed, ignored. Text line: %1</source>
-        <translation type="unfinished">设置新的相对原点失败，被忽略。文本行：%1</translation>
+        <translation>设置新的相对原点失败，被忽略。文本行：%1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Setting new rounding radius failed, ignored. Text line: %1</source>
-        <translation type="unfinished">设置新的四舍五入半径失败，忽略不计。文本行：%1</translation>
+        <translation>设置新的四舍五入半径失败，忽略不计。文本行：%1</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Rounding polylines requires QCAD Professional, ignored. Text line: %1</source>
-        <translation type="unfinished">圆滑的多段线需要QCAD专业版，忽略不计。文本行：%1</translation>
+        <translation>圆滑的多段线需要QCAD专业版，忽略不计。文本行：%1</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Can not switch to non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">不能切换到不存在的层，被忽略。文本行: %1%2 图层: %3</translation>
+        <translation>不能切换到不存在的层，被忽略。文本行: %1%2 图层: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct set active &apos;Layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">不是一个正确的设置激活的&apos;Layer&apos;开关，被忽略。文本行：%1</translation>
+        <translation>不是一个正确的设置激活的&apos;Layer&apos;开关，被忽略。文本行：%1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">不是一个正确的 &quot;新层 &quot;开关，被忽略。文本行：%1</translation>
+        <translation>不是一个正确的 &quot;新层 &quot;开关，被忽略。文本行：%1</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">不能隐藏不存在的层，忽略不计。文本行: %1%2 图层: %3</translation>
+        <translation>不能隐藏不存在的层，忽略不计。文本行: %1%2 图层: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;HideLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">不是一个正确的&apos;HideLayer&apos;开关，忽略。文本行：%1</translation>
+        <translation>不是一个正确的&apos;HideLayer&apos;开关，忽略。文本行：%1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">不能冻结不存在的层，忽略不计。文本行: %1%2 层: %3</translation>
+        <translation>不能冻结不存在的层，忽略不计。文本行: %1%2 层: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;FreezeLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">不是一个正确的&apos;FreezeLayer&apos;开关，忽略了。文本行：%1</translation>
+        <translation>不是一个正确的&apos;FreezeLayer&apos;开关，忽略了。文本行：%1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not lock non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">不能锁定不存在的层，忽略不计。文本行: %1%2 图层: %3</translation>
+        <translation>不能锁定不存在的层，忽略不计。文本行: %1%2 图层: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;LockLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">不是一个正确的&apos;LockLayer&apos;开关，忽略不计。文本行：%1</translation>
+        <translation>不是一个正确的&apos;LockLayer&apos;开关，忽略不计。文本行：%1</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Can not allow non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">不能允许不存在的层，被忽略。文本行: %1%2 层: %3</translation>
+        <translation>不能允许不存在的层，被忽略。文本行: %1%2 层: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;AllowLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">不是一个正确的&apos;AllowLayer&apos;开关，忽略。文本行：%1</translation>
+        <translation>不是一个正确的&apos;AllowLayer&apos;开关，忽略。文本行：%1</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -3626,7 +3629,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+135"/>
         <source>Low field count.</source>
-        <translation type="unfinished">场地数量少。</translation>
+        <translation>场地数量少。</translation>
     </message>
     <message>
         <location line="-656"/>
@@ -3655,7 +3658,7 @@ is already in the list.</source>
         <location line="+25"/>
         <location line="+23"/>
         <source>Odd field count.</source>
-        <translation type="unfinished">奇数场数。</translation>
+        <translation>奇数场数。</translation>
     </message>
     <message>
         <location line="-655"/>
@@ -3667,7 +3670,7 @@ is already in the list.</source>
         <location line="+188"/>
         <location line="+168"/>
         <source>Rv Invalid.</source>
-        <translation type="unfinished">Rv 无效。</translation>
+        <translation>Rv 无效。</translation>
     </message>
     <message>
         <location line="-640"/>
@@ -3683,7 +3686,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+62"/>
         <source>Rv1 Invalid.</source>
-        <translation type="unfinished">Rv1 无效。</translation>
+        <translation>Rv1 无效。</translation>
     </message>
     <message>
         <location line="-503"/>
@@ -3701,7 +3704,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+35"/>
         <source>Rv2 Invalid.</source>
-        <translation type="unfinished">Rv2无效。</translation>
+        <translation>Rv2无效。</translation>
     </message>
     <message>
         <location line="-510"/>
@@ -3714,7 +3717,7 @@ is already in the list.</source>
         <location line="+49"/>
         <location line="+67"/>
         <source>Equal positions.</source>
-        <translation type="unfinished">平等地位。</translation>
+        <translation>平等地位。</translation>
     </message>
     <message>
         <location line="-265"/>
@@ -3727,7 +3730,7 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+33"/>
         <source>Radius Invalid.</source>
-        <translation type="unfinished">半径无效。</translation>
+        <translation>半径无效。</translation>
     </message>
     <message>
         <location line="-298"/>
@@ -3737,22 +3740,22 @@ is already in the list.</source>
         <location line="+35"/>
         <location line="+150"/>
         <source>Angle Invalid.</source>
-        <translation type="unfinished">角度无效。</translation>
+        <translation>角度无效。</translation>
     </message>
     <message>
         <location line="-527"/>
         <source>Angle1 Invalid.</source>
-        <translation type="unfinished">角度1无效。</translation>
+        <translation>角度1无效。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angle2 Invalid.</source>
-        <translation type="unfinished">角度2无效。</translation>
+        <translation>角度2无效。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Equal angles.</source>
-        <translation type="unfinished">平等的角度。</translation>
+        <translation>平等的角度。</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -3762,7 +3765,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-2.</source>
-        <translation type="unfinished">平等位置1-2。</translation>
+        <translation>平等位置1-2。</translation>
     </message>
     <message>
         <location line="-286"/>
@@ -3774,7 +3777,7 @@ is already in the list.</source>
         <location line="+32"/>
         <location line="+35"/>
         <source>Rv3 Invalid.</source>
-        <translation type="unfinished">Rv3无效。</translation>
+        <translation>Rv3无效。</translation>
     </message>
     <message>
         <location line="-354"/>
@@ -3784,7 +3787,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-3.</source>
-        <translation type="unfinished">平等地位1-3。</translation>
+        <translation>平等地位1-3。</translation>
     </message>
     <message>
         <location line="-287"/>
@@ -3794,7 +3797,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 2-3.</source>
-        <translation type="unfinished">平等地位2-3。</translation>
+        <translation>平等地位2-3。</translation>
     </message>
     <message>
         <location line="-284"/>
@@ -3802,28 +3805,28 @@ is already in the list.</source>
         <location line="+168"/>
         <location line="+2"/>
         <source>Near co-linear positions.</source>
-        <translation type="unfinished">接近共线位置。</translation>
+        <translation>接近共线位置。</translation>
     </message>
     <message>
         <location line="-168"/>
         <source>Arc Invalid.</source>
-        <translation type="unfinished">弧线无效。</translation>
+        <translation>弧线无效。</translation>
     </message>
     <message>
         <location line="+46"/>
         <location line="+47"/>
         <source>Center Invalid.</source>
-        <translation type="unfinished">中心无效。</translation>
+        <translation>中心无效。</translation>
     </message>
     <message>
         <location line="-21"/>
         <source>Radius too small.</source>
-        <translation type="unfinished">半径太小。</translation>
+        <translation>半径太小。</translation>
     </message>
     <message>
         <location line="+98"/>
         <source>Circle Invalid.</source>
-        <translation type="unfinished">圈子无效。</translation>
+        <translation>圈子无效。</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -3831,45 +3834,45 @@ is already in the list.</source>
         <location line="+30"/>
         <location line="+35"/>
         <source>Rv4 Invalid.</source>
-        <translation type="unfinished">Rv4无效。</translation>
+        <translation>Rv4无效。</translation>
     </message>
     <message>
         <location line="-97"/>
         <location line="+33"/>
         <source>Equal positions 1-4.</source>
-        <translation type="unfinished">平等地位1-4。</translation>
+        <translation>平等地位1-4。</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 2-4.</source>
-        <translation type="unfinished">平等地位2-4。</translation>
+        <translation>平等地位2-4。</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 3-4.</source>
-        <translation type="unfinished">平等地位3-4。</translation>
+        <translation>平等地位3-4。</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Size Invalid.</source>
-        <translation type="unfinished">尺寸无效。</translation>
+        <translation>尺寸无效。</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Size in X Invalid.</source>
-        <translation type="unfinished">尺寸在X中无效。</translation>
+        <translation>尺寸在X中无效。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size in Y Invalid.</source>
-        <translation type="unfinished">尺寸在Y中无效。</translation>
+        <translation>尺寸在Y中无效。</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Polygon: less than 5 references.</source>
-        <translation type="unfinished">多角形：少于5个参考。</translation>
+        <translation>多角形：少于5个参考。</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3877,207 +3880,207 @@ is already in the list.</source>
         <location line="+26"/>
         <location line="+28"/>
         <source>Rv%1 Invalid.</source>
-        <translation type="unfinished">Rv%1 无效。</translation>
+        <translation>Rv%1 无效。</translation>
     </message>
     <message>
         <location line="-61"/>
         <source>Polyline, less than 2 references.</source>
-        <translation type="unfinished">多段线，少于2个参考。</translation>
+        <translation>多段线，少于2个参考。</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Bulge%1 Invalid.</source>
-        <translation type="unfinished">Bulge%1 无效。</translation>
+        <translation>Bulge%1 无效。</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Unsupported QCAD Professional feature.</source>
-        <translation type="unfinished">不支持的QCAD专业版功能。</translation>
+        <translation>不支持的QCAD专业版功能。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>3th degree fit point Spline, less than 3 references.</source>
-        <translation type="unfinished">3 度拟合点样条，少于 3 个参考点。</translation>
+        <translation>3 度拟合点样条，少于 3 个参考点。</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>3th degree control point Spline, less than 4 references.</source>
-        <translation type="unfinished">3 度控制点样条，少于 4 个参考。</translation>
+        <translation>3 度控制点样条，少于 4 个参考。</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Height Invalid.</source>
-        <translation type="unfinished">高度无效。</translation>
+        <translation>高度无效。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Width Invalid.</source>
-        <translation type="unfinished">宽度无效。</translation>
+        <translation>宽度无效。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid.</source>
-        <translation type="unfinished">垂直排列无效。</translation>
+        <translation>垂直排列无效。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid.</source>
-        <translation type="unfinished">水平排列无效。</translation>
+        <translation>水平排列无效。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing direction Invalid.</source>
-        <translation type="unfinished">绘图方向无效。</translation>
+        <translation>绘图方向无效。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing style Invalid.</source>
-        <translation type="unfinished">行距样式 无效。</translation>
+        <translation>行距样式 无效。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing Invalid.</source>
-        <translation type="unfinished">行间距 无效。</translation>
+        <translation>行间距 无效。</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Unsupported method. Text line: %1</source>
-        <translation type="unfinished">不支持的方法。文本行：%1</translation>
+        <translation>不支持的方法。文本行：%1</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Error with first optional list.</source>
-        <translation type="unfinished">在第一个可选列表中出现错误。</translation>
+        <translation>在第一个可选列表中出现错误。</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Error with second optional list.</source>
-        <translation type="unfinished">在第二个可选列表中出现错误。</translation>
+        <translation>在第二个可选列表中出现错误。</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Not a correct entry, ignored. Text line: %1 &gt; %2</source>
-        <translation type="unfinished">不是正确的条目，忽略不计。文本行： %1 &gt; %2</translation>
+        <translation>不是正确的条目，忽略不计。文本行： %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation type="unfinished">铸造的条目：%1在%2的文本行中</translation>
+        <translation>铸造的条目：%1在%2的文本行中</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Nothing casted.</source>
-        <translation type="unfinished">没有投下任何东西。</translation>
+        <translation>没有投下任何东西。</translation>
     </message>
     <message>
         <location line="+227"/>
         <source>Attributes empty. Text line: %1</source>
-        <translation type="unfinished">属性为空。文本行：%1</translation>
+        <translation>属性为空。文本行：%1</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
-        <translation type="unfinished">不是一个正确的图层名称，忽略不计。文本行: %1%2 名称：%3</translation>
+        <translation>不是一个正确的图层名称，忽略不计。文本行: %1%2 名称：%3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Layer doesn&apos;t exist, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">图层不存在，忽略不计。文本行: %1%2 图层: %3</translation>
+        <translation>图层不存在，忽略不计。文本行: %1%2 图层: %3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Not a correct color, ignored. Text line: %1%2 Color: %3</source>
-        <translation type="unfinished">不是一个正确的颜色，忽略不计。文本行: %1%2 颜色: %3</translation>
+        <translation>不是一个正确的颜色，忽略不计。文本行: %1%2 颜色: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation type="unfinished">不是一个正确的线重，忽略不计。文本行: %1%2 重量: %3</translation>
+        <translation>不是一个正确的线重，忽略不计。文本行: %1%2 重量: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
-        <translation type="unfinished">不是一个正确的Linetype，被忽略。文本行: %1%2 类型：%3</translation>
+        <translation>不是一个正确的Linetype，被忽略。文本行: %1%2 类型：%3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation type="unfinished">不是正确的Linetype比例，忽略不计。文本行: %1%2 比例: %3</translation>
+        <translation>不是正确的Linetype比例，忽略不计。文本行: %1%2 比例: %3</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Unsupported attribute, ignored. Text line: %1 &gt; %2</source>
-        <translation type="unfinished">不支持的属性，忽略不计。文本行： %1 &gt; %2</translation>
+        <translation>不支持的属性，忽略不计。文本行： %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
-        <translation type="unfinished">不是一个正确的图层名称。文本行: %1%2 名称：%3</translation>
+        <translation>不是一个正确的图层名称。文本行: %1%2 名称：%3</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">父层不存在。文本行: %1%2 层: %3</translation>
+        <translation>父层不存在。文本行: %1%2 层: %3</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Not a correct color. Text line: %1%2 Color: %3</source>
-        <translation type="unfinished">不是一个正确的颜色。文本行: %1%2 颜色: %3</translation>
+        <translation>不是一个正确的颜色。文本行: %1%2 颜色: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation type="unfinished">不是一个正确的线重。文本行: %1%2 重量: %3</translation>
+        <translation>不是一个正确的线重。文本行: %1%2 重量: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
-        <translation type="unfinished">不是正确的Linetype。文本行: %1%2 类型：%3</translation>
+        <translation>不是正确的Linetype。文本行: %1%2 类型：%3</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Add/Update layer ignored.</source>
-        <translation type="unfinished">添加/更新层被忽略。</translation>
+        <translation>添加/更新层被忽略。</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Updated layer: %1</source>
-        <translation type="unfinished">已更新图层: %1</translation>
+        <translation>已更新图层: %1</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Added new layer: %1</source>
-        <translation type="unfinished">添加了新层：%1</translation>
+        <translation>添加了新层：%1</translation>
     </message>
     <message>
         <location line="-447"/>
         <source>Importing CSV complete. Command ended.</source>
-        <translation type="unfinished">导入CSV完成。命令结束。</translation>
+        <translation>导入CSV完成。命令结束。</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Draw from CSV</source>
-        <translation type="unfinished">从CSV中提取</translation>
+        <translation>从CSV中提取</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>CSV</source>
-        <translation type="unfinished">CSV</translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation type="unfinished">全部文件</translation>
+        <translation>全部文件</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation type="unfinished">从CSV中提取</translation>
+        <translation>从CSV中提取</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
-        <translation type="unfinished">根据CSV文件中的文本条目绘制实体</translation>
+        <translation>根据CSV文件中的文本条目绘制实体</translation>
     </message>
 </context>
 <context>
@@ -4085,12 +4088,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
-        <translation type="unfinished">抽签顺序</translation>
+        <translation>抽签顺序</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation type="unfinished">抽签顺序</translation>
+        <translation>抽签顺序</translation>
     </message>
 </context>
 <context>
@@ -4098,72 +4101,72 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+78"/>
         <source>First vertex</source>
-        <translation type="unfinished">第一个顶点</translation>
+        <translation>第一个顶点</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next vertex</source>
-        <translation type="unfinished">下一个顶点</translation>
+        <translation>下一个顶点</translation>
     </message>
     <message>
         <location line="+469"/>
         <source>close</source>
-        <translation type="unfinished">关闭</translation>
+        <translation>关闭</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>undo</source>
-        <translation type="unfinished">撤销</translation>
+        <translation>撤销</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>redo</source>
-        <translation type="unfinished">重做</translation>
+        <translation>重做</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>arc</source>
-        <translation type="unfinished">弧线</translation>
+        <translation>弧线</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
-        <translation type="unfinished">绘制折线</translation>
+        <translation>绘制折线</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
-        <translation type="unfinished">用线段和弧段绘制折线</translation>
+        <translation>用线段和弧段绘制折线</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation type="unfinished">关闭多线条</translation>
+        <translation>关闭多线条</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished">带半径的弧线</translation>
+        <translation>带半径的弧线</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation type="unfinished">清扫：</translation>
+        <translation>清扫：</translation>
     </message>
     <message>
         <location line="-71"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished">恢复前一段</translation>
+        <translation>恢复前一段</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation type="unfinished">重做部分</translation>
+        <translation>重做部分</translation>
     </message>
     <message>
         <location line="+93"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished">限制长度或角度</translation>
+        <translation>限制长度或角度</translation>
     </message>
 </context>
 <context>
@@ -4171,7 +4174,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation type="unfinished">绘图首选项</translation>
+        <translation>绘图首选项</translation>
     </message>
 </context>
 <context>
@@ -4179,14 +4182,15 @@ is already in the list.</source>
     <message numerus="yes">
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
-        <translation type="unfinished">
+        <translation>
+            <numerusform>%n 个实体重复</numerusform>
             <numerusform>%n 个实体重复</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
-        <translation type="unfinished">重复(&amp;D)</translation>
+        <translation>重复(&amp;D)</translation>
     </message>
 </context>
 <context>
@@ -4194,154 +4198,154 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/EAction.js" line="+64"/>
         <source>Back</source>
-        <translation type="unfinished">返回</translation>
+        <translation>返回</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+2127"/>
         <source>Cancel</source>
-        <translation type="unfinished">取消</translation>
+        <translation>取消</translation>
     </message>
     <message>
         <location line="-2126"/>
         <source>Done</source>
-        <translation type="unfinished">完成</translation>
+        <translation>完成</translation>
     </message>
     <message>
         <location line="+284"/>
         <location line="+127"/>
         <source>Active Tool:</source>
-        <translation type="unfinished">活动工具：</translation>
+        <translation>活动工具：</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>None</source>
-        <translation type="unfinished">无</translation>
+        <translation>无</translation>
     </message>
     <message>
         <location line="+668"/>
         <source>Options</source>
-        <translation type="unfinished">选项</translation>
+        <translation>选项</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Main Tools</source>
-        <translation type="unfinished">主要工具</translation>
+        <translation>主要工具</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>CAD Tools</source>
-        <translation type="unfinished">CAD 工具</translation>
+        <translation>CAD 工具</translation>
     </message>
     <message>
         <location line="+578"/>
         <source>Invalid position</source>
-        <translation type="unfinished">无效位置</translation>
+        <translation>无效位置</translation>
     </message>
     <message>
         <location line="+175"/>
         <source>Entity is not in working set.</source>
-        <translation type="unfinished">实体不在工作集中。</translation>
+        <translation>实体不在工作集中。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity is on a locked layer.</source>
-        <translation type="unfinished">实体在一个锁定的层上。</translation>
+        <translation>实体在一个锁定的层上。</translation>
     </message>
     <message>
         <location line="+233"/>
         <source>Length:</source>
-        <translation type="unfinished">长度：</translation>
+        <translation>长度：</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Entity is not a block reference.</source>
-        <translation type="unfinished">实体不是一个块参考。</translation>
+        <translation>实体不是一个块参考。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
-        <translation type="unfinished">实体不是线或弧。</translation>
+        <translation>实体不是线或弧。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or polyline.</source>
-        <translation type="unfinished">实体不是直线、弧线或折线。</translation>
+        <translation>实体不是直线、弧线或折线。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line.</source>
-        <translation type="unfinished">实体不是一条线。</translation>
+        <translation>实体不是一条线。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation type="unfinished">实体不是一个弧形。</translation>
+        <translation>实体不是一个弧形。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
-        <translation type="unfinished">实体不是一个弧形或圆形。</translation>
+        <translation>实体不是一个弧形或圆形。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
-        <translation type="unfinished">实体不是线、弧或圆。</translation>
+        <translation>实体不是线、弧或圆。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation type="unfinished">实体不是直线、弧线、样条、椭圆弧或多线。</translation>
+        <translation>实体不是直线、弧线、样条、椭圆弧或多线。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
-        <translation type="unfinished">实体不是弧线、圆或椭圆。</translation>
+        <translation>实体不是弧线、圆或椭圆。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
-        <translation type="unfinished">实体不是线、弧、圆或椭圆。</translation>
+        <translation>实体不是线、弧、圆或椭圆。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation type="unfinished">实体不是线、弧、圆、椭圆或折线。</translation>
+        <translation>实体不是线、弧、圆、椭圆或折线。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation type="unfinished">实体不是线、弧、圆、椭圆或样条。</translation>
+        <translation>实体不是线、弧、圆、椭圆或样条。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation type="unfinished">实体不是直线、弧线、圆、花线或多线。</translation>
+        <translation>实体不是直线、弧线、圆、花线或多线。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished">实体不是直线、弧线、圆、椭圆、花线或多线。</translation>
+        <translation>实体不是直线、弧线、圆、椭圆、花线或多线。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished">实体不是圆、椭圆、样条线或折线。</translation>
+        <translation>实体不是圆、椭圆、样条线或折线。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
-        <translation type="unfinished">实体不是折线。</translation>
+        <translation>实体不是折线。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a closed polyline.</source>
-        <translation type="unfinished">实体不是封闭的多段线。</translation>
+        <translation>实体不是封闭的多段线。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation type="unfinished">实体不是一个有拟合点的样条。</translation>
+        <translation>实体不是一个有拟合点的样条。</translation>
     </message>
 </context>
 <context>
@@ -4349,33 +4353,33 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
         <source>Show ECMAScript Shell</source>
-        <translation type="unfinished">显示 ECMAScript 外壳</translation>
+        <translation>显示 ECMAScript 外壳</translation>
     </message>
     <message>
         <location line="+55"/>
         <source>&amp;Script Shell</source>
-        <translation type="unfinished">脚本外壳(&amp;S)</translation>
+        <translation>脚本外壳(&amp;S)</translation>
     </message>
     <message>
         <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
-        <translation type="unfinished">脚本外壳</translation>
+        <translation>脚本外壳</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShellDialog.ui" line="+20"/>
         <source>ECMAScript Shell</source>
-        <translation type="unfinished">ECMAScript 外壳</translation>
+        <translation>ECMAScript 外壳</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &quot;safe&quot; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;你即将启用ECMAScript Shell。&lt;/p&gt;&lt;p&gt;通过ECMAScript Shell，你可以&lt;span style=&quot; color:#ff0000;&quot;&gt;修改你的绘图&lt;/span&gt;，但也可以&lt;span style=&quot; color：#ff0000;&quot;&gt;删除文件&lt;/span&gt;或&lt;span style=&quot; color:#ff0000;&quot;&gt;崩溃应用程序&lt;/span&gt;，这可能导致&lt;span style=&quot; color:#ff0000;&quot;&gt;数据损失&lt;/span&gt;。&lt;/p&gt;&lt;p&gt;对于没有经验的程序员，建议将ECMAScript shell的使用限制在&lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt;，这被认为是 &quot;安全 &quot;使用的。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;你即将启用ECMAScript Shell。&lt;/p&gt;&lt;p&gt;通过ECMAScript Shell，你可以&lt;span style=&quot; color:#ff0000;&quot;&gt;修改你的绘图&lt;/span&gt;，但也可以&lt;span style=&quot; color：#ff0000;&quot;&gt;删除文件&lt;/span&gt;或&lt;span style=&quot; color:#ff0000;&quot;&gt;崩溃应用程序&lt;/span&gt;，这可能导致&lt;span style=&quot; color:#ff0000;&quot;&gt;数据损失&lt;/span&gt;。&lt;/p&gt;&lt;p&gt;对于没有经验的程序员，建议将ECMAScript shell的使用限制在&lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt;，这被认为是 &quot;安全 &quot;使用的。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
-        <translation type="unfinished">不再显示该对话框</translation>
+        <translation>不再显示该对话框</translation>
     </message>
 </context>
 <context>
@@ -4383,7 +4387,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Edit.js" line="+65"/>
         <source>Edit Tools</source>
-        <translation type="unfinished">编辑工具</translation>
+        <translation>编辑工具</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -4427,12 +4431,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation type="unfinished">选择舱口</translation>
+        <translation>选择舱口</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation type="unfinished">编辑舱口</translation>
+        <translation>编辑舱口</translation>
     </message>
 </context>
 <context>
@@ -4440,7 +4444,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/EditLayer/EditLayerInit.js" line="+2"/>
         <source>&amp;Edit Layer</source>
-        <translation type="unfinished">编辑层</translation>
+        <translation>编辑层</translation>
     </message>
 </context>
 <context>
@@ -4456,17 +4460,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/EditText/EditText.js" line="+61"/>
         <source>Choose text</source>
-        <translation type="unfinished">选择文本</translation>
+        <translation>选择文本</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditText/EditTextInit.js" line="+2"/>
         <source>Edit Te&amp;xt</source>
-        <translation type="unfinished">编辑文本(&amp;X)</translation>
+        <translation>编辑文本(&amp;X)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Edit text</source>
-        <translation type="unfinished">编辑文本</translation>
+        <translation>编辑文本</translation>
     </message>
 </context>
 <context>
@@ -4711,7 +4715,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation type="unfinished">逃避(&amp;E)</translation>
+        <translation>逃避(&amp;E)</translation>
     </message>
 </context>
 <context>
@@ -4719,7 +4723,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/ExAddBlock/ExAddBlock.js" line="+85"/>
         <source>&amp;Create Block</source>
-        <translation type="unfinished">创建区块</translation>
+        <translation>创建区块</translation>
     </message>
 </context>
 <context>
@@ -4727,12 +4731,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExAddLayer/ExAddLayer.js" line="+44"/>
         <source>Added layer &quot;MyLayer&quot;</source>
-        <translation type="unfinished">添加层 &quot;MyLayer&quot;</translation>
+        <translation>添加层 &quot;MyLayer&quot;</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Layer</source>
-        <translation type="unfinished">添加图层</translation>
+        <translation>添加图层</translation>
     </message>
 </context>
 <context>
@@ -4740,7 +4744,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished">导出 CSV</translation>
+        <translation>导出 CSV</translation>
     </message>
 </context>
 <context>
@@ -4748,17 +4752,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js" line="+59"/>
         <source>Deleted line with ID %1</source>
-        <translation type="unfinished">删除了ID为%1的行</translation>
+        <translation>删除了ID为%1的行</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>You can use &lt;i&gt;Edit &gt; Undo&lt;/i&gt; to restore the line entity.</source>
-        <translation type="unfinished">你可以使用&lt;i&gt;Edit &gt; Undo&lt;/i&gt;来恢复行实体。</translation>
+        <translation>你可以使用&lt;i&gt;Edit &gt; Undo&lt;/i&gt;来恢复行实体。</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Add and Delete Line</source>
-        <translation type="unfinished">添加和删除线</translation>
+        <translation>添加和删除线</translation>
     </message>
 </context>
 <context>
@@ -4766,7 +4770,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExDirListing/ExDirListing.js" line="+66"/>
         <source>&amp;Directory Listing</source>
-        <translation type="unfinished">目录列表</translation>
+        <translation>目录列表</translation>
     </message>
 </context>
 <context>
@@ -4774,7 +4778,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawColors/ExDrawColors.js" line="+66"/>
         <source>Draw &amp;Colors</source>
-        <translation type="unfinished">绘制颜色</translation>
+        <translation>绘制颜色</translation>
     </message>
 </context>
 <context>
@@ -4782,7 +4786,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js" line="+85"/>
         <source>Draw &amp;Fonts</source>
-        <translation type="unfinished">绘制字体</translation>
+        <translation>绘制字体</translation>
     </message>
 </context>
 <context>
@@ -4790,17 +4794,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js" line="+48"/>
         <source>Clockwise polyline:</source>
-        <translation type="unfinished">顺时针的折线：</translation>
+        <translation>顺时针的折线：</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Counterclockwise polyline:</source>
-        <translation type="unfinished">逆时针的折线：</translation>
+        <translation>逆时针的折线：</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&amp;Output Polyline Vertices</source>
-        <translation type="unfinished">输出多段线顶点(&amp;O)</translation>
+        <translation>输出多段线顶点(&amp;O)</translation>
     </message>
 </context>
 <context>
@@ -4808,12 +4812,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ExLayerCustomProperty.js" line="+43"/>
         <source>Added custom property &quot;MyCustomProperty&quot; to layer &quot;0&quot;.</source>
-        <translation type="unfinished">为图层 &quot;0 &quot;添加了自定义属性 &quot;MyCustomProperty&quot;。</translation>
+        <translation>为图层 &quot;0 &quot;添加了自定义属性 &quot;MyCustomProperty&quot;。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Add Custom Property to a Layer</source>
-        <translation type="unfinished">为图层添加自定义属性</translation>
+        <translation>为图层添加自定义属性</translation>
     </message>
 </context>
 <context>
@@ -4821,22 +4825,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove.js" line="+56"/>
         <source>First corner</source>
-        <translation type="unfinished">第一个角落</translation>
+        <translation>第一个角落</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation type="unfinished">第二个角落</translation>
+        <translation>第二个角落</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation type="unfinished">燕尾式接头</translation>
+        <translation>燕尾式接头</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished">绘制一个燕尾榫</translation>
+        <translation>绘制一个燕尾榫</translation>
     </message>
 </context>
 <context>
@@ -4844,7 +4848,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExMainWindow/ExMainWindow.js" line="+50"/>
         <source>&amp;Main Window</source>
-        <translation type="unfinished">主窗口</translation>
+        <translation>主窗口</translation>
     </message>
 </context>
 <context>
@@ -4852,7 +4856,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+48"/>
         <source>&amp;Mandelbrot Example</source>
-        <translation type="unfinished">曼德尔布罗特的例子</translation>
+        <translation>曼德尔布罗特的例子</translation>
     </message>
 </context>
 <context>
@@ -4860,7 +4864,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js" line="+73"/>
         <source>&amp;Spiral</source>
-        <translation type="unfinished">螺旋式</translation>
+        <translation>螺旋式</translation>
     </message>
 </context>
 <context>
@@ -4868,12 +4872,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
         <source>Hello World.</source>
-        <translation type="unfinished">你好，世界。</translation>
+        <translation>你好，世界。</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Minimal Example</source>
-        <translation type="unfinished">最小的例子</translation>
+        <translation>最小的例子</translation>
     </message>
 </context>
 <context>
@@ -4881,12 +4885,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.js" line="+51"/>
         <source>&amp;Minimal Example 2</source>
-        <translation type="unfinished">最小的例子2</translation>
+        <translation>最小的例子2</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished">半径：</translation>
+        <translation>半径：</translation>
     </message>
 </context>
 <context>
@@ -4894,7 +4898,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
-        <translation type="unfinished">运行过程</translation>
+        <translation>运行过程</translation>
     </message>
 </context>
 <context>
@@ -4902,22 +4906,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ExRegisterFileExporter.js" line="+37"/>
         <source>Example Files %1</source>
-        <translation type="unfinished">示例文件 %1</translation>
+        <translation>示例文件 %1</translation>
     </message>
     <message>
         <location line="+84"/>
         <source>Info</source>
-        <translation type="unfinished">信息</translation>
+        <translation>信息</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Registered a file exporter for file type &quot;.example&quot;. Use File &gt; Save As to see the filter in action.</source>
-        <translation type="unfinished">为文件类型&quot;.example &quot;注册了一个文件导出器。使用 &quot;文件&quot;&gt;&quot;另存为 &quot;来查看过滤器的运行情况。</translation>
+        <translation>为文件类型&quot;.example &quot;注册了一个文件导出器。使用 &quot;文件&quot;&gt;&quot;另存为 &quot;来查看过滤器的运行情况。</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>&amp;Register File Exporter</source>
-        <translation type="unfinished">注册文件导出器(&amp;R)</translation>
+        <translation>注册文件导出器(&amp;R)</translation>
     </message>
 </context>
 <context>
@@ -4925,27 +4929,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ExRegisterFileImporter.js" line="+37"/>
         <source>Example Files %1</source>
-        <translation type="unfinished">示例文件 %1</translation>
+        <translation>示例文件 %1</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Read from file: &quot;%1&quot;</source>
-        <translation type="unfinished">从文件中读取：&quot;%1&quot;</translation>
+        <translation>从文件中读取：&quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Info</source>
-        <translation type="unfinished">信息</translation>
+        <translation>信息</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Registered a file importer for file type &quot;.example&quot;. Use File &gt; Open to see the filter in action.</source>
-        <translation type="unfinished">为文件类型&quot;.example &quot;注册了一个文件导入器。使用 &quot;文件&quot;&gt;&quot;打开 &quot;来查看过滤器的运行情况。</translation>
+        <translation>为文件类型&quot;.example &quot;注册了一个文件导入器。使用 &quot;文件&quot;&gt;&quot;打开 &quot;来查看过滤器的运行情况。</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>&amp;Register File Importer</source>
-        <translation type="unfinished">注册文件导入器</translation>
+        <translation>注册文件导入器</translation>
     </message>
 </context>
 <context>
@@ -4953,27 +4957,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.js" line="+60"/>
         <source>&amp;Resize Window</source>
-        <translation type="unfinished">调整窗口大小</translation>
+        <translation>调整窗口大小</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui" line="+14"/>
         <source>Enter Size</source>
-        <translation type="unfinished">输入尺寸</translation>
+        <translation>输入尺寸</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Size:</source>
-        <translation type="unfinished">尺寸：</translation>
+        <translation>尺寸：</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>1280x720 (720p) 16:9</source>
-        <translation type="unfinished">1280x720 (720p) 16:9</translation>
+        <translation>1280x720 (720p) 16:9</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
-        <translation type="unfinished">1920x1080（1080p，全高清）16：9</translation>
+        <translation>1920x1080（1080p，全高清）16：9</translation>
     </message>
 </context>
 <context>
@@ -4981,12 +4985,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExText/ExText.js" line="+69"/>
         <source>Text</source>
-        <translation type="unfinished">文本</translation>
+        <translation>文本</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw text</source>
-        <translation type="unfinished">绘制文本</translation>
+        <translation>绘制文本</translation>
     </message>
 </context>
 <context>
@@ -4995,19 +4999,19 @@ is already in the list.</source>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js" line="+58"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+58"/>
         <source>Position</source>
-        <translation type="unfinished">位置</translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location line="+46"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+46"/>
         <source>Three Points</source>
-        <translation type="unfinished">三点</translation>
+        <translation>三点</translation>
     </message>
     <message>
         <location line="+3"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
-        <translation type="unfinished">抽到三分</translation>
+        <translation>抽到三分</translation>
     </message>
 </context>
 <context>
@@ -5015,14 +5019,15 @@ is already in the list.</source>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
-        <translation type="unfinished">
+        <translation>
+            <numerusform>交易影响了 %n 个对象。</numerusform>
             <numerusform>交易影响了 %n 个对象。</numerusform>
         </translation>
     </message>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
-        <translation type="unfinished">交易监听器</translation>
+        <translation>交易监听器</translation>
     </message>
 </context>
 <context>
@@ -5030,7 +5035,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/ExWidget.js" line="+28"/>
         <source>&amp;Widget</source>
-        <translation type="unfinished">小工具</translation>
+        <translation>小工具</translation>
     </message>
 </context>
 <context>
@@ -5038,17 +5043,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExport.js" line="+39"/>
         <source>All Files</source>
-        <translation type="unfinished">全部文件</translation>
+        <translation>全部文件</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Export XML</source>
-        <translation type="unfinished">导出 XML</translation>
+        <translation>导出 XML</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExportInit.js" line="+2"/>
         <source>&amp;Export XML</source>
-        <translation type="unfinished">导出 XML(&amp;E)</translation>
+        <translation>导出 XML(&amp;E)</translation>
     </message>
 </context>
 <context>
@@ -5056,17 +5061,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImport.js" line="+73"/>
         <source>All Files</source>
-        <translation type="unfinished">全部文件</translation>
+        <translation>全部文件</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Import XML</source>
-        <translation type="unfinished">导入XML</translation>
+        <translation>导入XML</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImportInit.js" line="+2"/>
         <source>&amp;Import XML</source>
-        <translation type="unfinished">导入XML</translation>
+        <translation>导入XML</translation>
     </message>
 </context>
 <context>
@@ -5074,7 +5079,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/Examples.js" line="+55"/>
         <source>Script &amp;Examples</source>
-        <translation type="unfinished">脚本示例</translation>
+        <translation>脚本示例</translation>
     </message>
 </context>
 <context>
@@ -5082,57 +5087,57 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Explode/Explode.js" line="+30"/>
         <source>Modify</source>
-        <translation type="unfinished">修改</translation>
+        <translation>修改</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation type="unfinished">爆炸</translation>
+        <translation>爆炸</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation type="unfinished">爆炸</translation>
+        <translation>爆炸</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+137"/>
         <source>Spline approximation tolerance:</source>
-        <translation type="unfinished">样条近似的容忍度：</translation>
+        <translation>样条近似的容忍度：</translation>
     </message>
     <message>
         <location line="-118"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation type="unfinished">用线段将花样滑移到多段线上</translation>
+        <translation>用线段将花样滑移到多段线上</translation>
     </message>
     <message>
         <location line="+111"/>
         <source>Ellipse segments (per full ellipse):</source>
-        <translation type="unfinished">椭圆段（每个完整的椭圆）：</translation>
+        <translation>椭圆段（每个完整的椭圆）：</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Convert splines from texts to arcs or lines if appropriate</source>
-        <translation type="unfinished">如果合适的话，将样条从文本转换为弧线或直线</translation>
+        <translation>如果合适的话，将样条从文本转换为弧线或直线</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Explode circles into polylines with two half circles</source>
-        <translation type="unfinished">用两个半圆将圆爆发成多段线</translation>
+        <translation>用两个半圆将圆爆发成多段线</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Explode text glyphs to polylines</source>
-        <translation type="unfinished">将文字的字形扩展为多段线</translation>
+        <translation>将文字的字形扩展为多段线</translation>
     </message>
     <message>
         <location line="-80"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation type="unfinished">将多行文本分解成多个简单文本块</translation>
+        <translation>将多行文本分解成多个简单文本块</translation>
     </message>
     <message>
         <location line="-41"/>
         <source>Spline segments:</source>
-        <translation type="unfinished">样条片段：</translation>
+        <translation>样条片段：</translation>
     </message>
 </context>
 <context>
@@ -5140,7 +5145,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/FAQ/FAQInit.js" line="+2"/>
         <source>FA&amp;Qs (online)</source>
-        <translation type="unfinished">常见问题(在线)</translation>
+        <translation>常见问题(在线)</translation>
     </message>
 </context>
 <context>
@@ -5148,7 +5153,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/File.js" line="+65"/>
         <source>File Tools</source>
-        <translation type="unfinished">文件工具</translation>
+        <translation>文件工具</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -5159,17 +5164,17 @@ is already in the list.</source>
         <location line="+106"/>
         <location line="+76"/>
         <source>Format:</source>
-        <translation type="unfinished">格式：</translation>
+        <translation>格式：</translation>
     </message>
     <message>
         <location line="-39"/>
         <source>Overwrite File?</source>
-        <translation type="unfinished">覆盖文件？</translation>
+        <translation>覆盖文件？</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation type="unfinished">文件&quot;%1 &quot;已经存在。你是否希望覆盖它？</translation>
+        <translation>文件&quot;%1 &quot;已经存在。你是否希望覆盖它？</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -5183,52 +5188,52 @@ is already in the list.</source>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
         <location line="+244"/>
         <source>%1 First Start</source>
-        <translation type="unfinished">%1 首次启动</translation>
+        <translation>%1 首次启动</translation>
     </message>
     <message>
         <location line="-5"/>
         <source>Black</source>
-        <translation type="unfinished">黑色</translation>
+        <translation>黑色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation type="unfinished">白</translation>
+        <translation>白</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Language:</source>
-        <translation type="unfinished">语言：</translation>
+        <translation>语言：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Welcome to %1</source>
-        <translation type="unfinished">欢迎来到%1</translation>
+        <translation>欢迎来到%1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
-        <translation type="unfinished">请选择用于新绘图的设置。所有这些设置都可以在以后的偏好对话框中改变。</translation>
+        <translation>请选择用于新绘图的设置。所有这些设置都可以在以后的偏好对话框中改变。</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Unit:</source>
-        <translation type="unfinished">单位：</translation>
+        <translation>单位：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default Paper Size:</source>
-        <translation type="unfinished">默认的纸张尺寸：</translation>
+        <translation>默认的纸张尺寸：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal Point:</source>
-        <translation type="unfinished">小数点：</translation>
+        <translation>小数点：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Background Color:</source>
-        <translation type="unfinished">背景颜色：</translation>
+        <translation>背景颜色：</translation>
     </message>
 </context>
 <context>
@@ -5236,17 +5241,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1115"/>
         <source>Add Active SubLayer</source>
-        <translation type="unfinished">添加活动子层</translation>
+        <translation>添加活动子层</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>FP added layer:</source>
-        <translation type="unfinished">FP增加了一层：</translation>
+        <translation>FP增加了一层：</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation type="unfinished">模仿滚筒印章的方式在选区上涂抹。</translation>
+        <translation>模仿滚筒印章的方式在选区上涂抹。</translation>
     </message>
 </context>
 <context>
@@ -5254,297 +5259,297 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation type="unfinished">画家选项</translation>
+        <translation>画家选项</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation type="unfinished">画家的铸造选择</translation>
+        <translation>画家的铸造选择</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation type="unfinished">翻转画师</translation>
+        <translation>翻转画师</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation type="unfinished">在小组中投票</translation>
+        <translation>在小组中投票</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation type="unfinished">投在子层上</translation>
+        <translation>投在子层上</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Begin Apex</source>
-        <translation type="unfinished">添加开始顶点</translation>
+        <translation>添加开始顶点</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add End Apex</source>
-        <translation type="unfinished">添加结束顶点</translation>
+        <translation>添加结束顶点</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add Insertions</source>
-        <translation type="unfinished">添加插入物</translation>
+        <translation>添加插入物</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation type="unfinished">画家集</translation>
+        <translation>画家集</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation type="unfinished">镜子画家超过基线。</translation>
+        <translation>镜子画家超过基线。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation type="unfinished">将所有铸件归入一个操作。</translation>
+        <translation>将所有铸件归入一个操作。</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation type="unfinished">从在开放的形式上铸造一个开始的顶点开始。</translation>
+        <translation>从在开放的形式上铸造一个开始的顶点开始。</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation type="unfinished">以在开放的形式上铸造一个端部的顶点结束。</translation>
+        <translation>以在开放的形式上铸造一个端部的顶点结束。</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
-        <translation type="unfinished">在两者之间添加插入物，如间隔物、结点。(未实施)</translation>
+        <translation>在两者之间添加插入物，如间隔物、结点。(未实施)</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation type="unfinished">画家的预览。</translation>
+        <translation>画家的预览。</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation type="unfinished">选择油漆工组。</translation>
+        <translation>选择油漆工组。</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation type="unfinished">窗帘绳</translation>
+        <translation>窗帘绳</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation type="unfinished">正交条</translation>
+        <translation>正交条</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation type="unfinished">正交点全球（OrthogonalPointsGlobal</translation>
+        <translation>正交点全球（OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation type="unfinished">正弦波</translation>
+        <translation>正弦波</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation type="unfinished">正弦波全球</translation>
+        <translation>正弦波全球</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>3PhaseWaveGlobal</source>
-        <translation type="unfinished">3PhaseWaveGlobal</translation>
+        <translation>3PhaseWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation type="unfinished">三角波</translation>
+        <translation>三角波</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation type="unfinished">锯齿波</translation>
+        <translation>锯齿波</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation type="unfinished">鱿鱼</translation>
+        <translation>鱿鱼</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation type="unfinished">阶梯波</translation>
+        <translation>阶梯波</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation type="unfinished">正方形的形状</translation>
+        <translation>正方形的形状</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation type="unfinished">方形弯曲的形状</translation>
+        <translation>方形弯曲的形状</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>AllPainterDataTypes</source>
-        <translation type="unfinished">所有画师数据类型</translation>
+        <translation>所有画师数据类型</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Insertion type</source>
-        <translation type="unfinished">插入类型</translation>
+        <translation>插入类型</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of insertion.</source>
-        <translation type="unfinished">插入的预览。</translation>
+        <translation>插入的预览。</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation type="unfinished">选择插入或输入空隙。(未实施)</translation>
+        <translation>选择插入或输入空隙。(未实施)</translation>
     </message>
     <message>
         <location line="+277"/>
         <source>Version</source>
-        <translation type="unfinished">版本</translation>
+        <translation>版本</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>FlexPainter Beta 0.42e © CVH 2020 </source>
-        <translation type="unfinished">FlexPainter Beta 0.42e © CVH 2020</translation>
+        <translation>FlexPainter Beta 0.42e © CVH 2020</translation>
     </message>
     <message>
         <location line="+272"/>
         <source>Document Units.</source>
-        <translation type="unfinished">文件单位。</translation>
+        <translation>文件单位。</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation type="unfinished">输入油漆工的宽度。(+0)</translation>
+        <translation>输入油漆工的宽度。(+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation type="unfinished">输入主画师的步长。(+0)</translation>
+        <translation>输入主画师的步长。(+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation type="unfinished">输入主画师的长度。(+)</translation>
+        <translation>输入主画师的长度。(+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation type="unfinished">保持油漆工的比例。</translation>
+        <translation>保持油漆工的比例。</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation type="unfinished">选择步骤大小的百分比。</translation>
+        <translation>选择步骤大小的百分比。</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation type="unfinished">调整缩放比例f 1.00-0.90，以适应整个表格。</translation>
+        <translation>调整缩放比例f 1.00-0.90，以适应整个表格。</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation type="unfinished">粗略的信息。(持续开启)</translation>
+        <translation>粗略的信息。(持续开启)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation type="unfinished">删除了涂在基础实体上的。(持久性关闭)</translation>
+        <translation>删除了涂在基础实体上的。(持久性关闭)</translation>
     </message>
     <message>
         <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation type="unfinished">&lt;输入空间大小&gt;。</translation>
+        <translation>&lt;输入空间大小&gt;。</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Curtain Rope Knot</source>
-        <translation type="unfinished">窗帘绳结</translation>
+        <translation>窗帘绳结</translation>
     </message>
     <message>
         <location line="+543"/>
         <source>#Undefined#</source>
-        <translation type="unfinished">#未定义#</translation>
+        <translation>#未定义#</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Width : </source>
-        <translation type="unfinished">宽度：</translation>
+        <translation>宽度：</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation type="unfinished">重复画图器选项</translation>
+        <translation>重复画图器选项</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Stepsize :</source>
-        <translation type="unfinished">步骤大小：</translation>
+        <translation>步骤大小：</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Length :</source>
-        <translation type="unfinished">长度：</translation>
+        <translation>长度：</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Closed Forms shifting % :</source>
-        <translation type="unfinished">封闭式移位%：</translation>
+        <translation>封闭式移位%：</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation type="unfinished">打开表单缩放选项</translation>
+        <translation>打开表单缩放选项</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dynamically scale to fit</source>
-        <translation type="unfinished">动态缩放以适应</translation>
+        <translation>动态缩放以适应</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation type="unfinished">与开始对齐</translation>
+        <translation>与开始对齐</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Centered</source>
-        <translation type="unfinished">中心化</translation>
+        <translation>中心化</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation type="unfinished">与末端对齐</translation>
+        <translation>与末端对齐</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation type="unfinished">冗长的 *</translation>
+        <translation>冗长的 *</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
-        <translation type="unfinished">删除基础实体 *</translation>
+        <translation>删除基础实体 *</translation>
     </message>
 </context>
 <context>
@@ -5552,7 +5557,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
         <source>&amp;FlexPainter</source>
-        <translation type="unfinished">弹性画师</translation>
+        <translation>弹性画师</translation>
     </message>
 </context>
 <context>
@@ -5560,7 +5565,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js" line="+2"/>
         <source>Flip Hori&amp;zontal</source>
-        <translation type="unfinished">水平翻转</translation>
+        <translation>水平翻转</translation>
     </message>
 </context>
 <context>
@@ -5568,7 +5573,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/FlipVertical/FlipVerticalInit.js" line="+2"/>
         <source>Flip Verti&amp;cal</source>
-        <translation type="unfinished">垂直翻转</translation>
+        <translation>垂直翻转</translation>
     </message>
 </context>
 <context>
@@ -5576,22 +5581,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js" line="+39"/>
         <source>Flush Undo History</source>
-        <translation type="unfinished">冲洗撤消历史</translation>
+        <translation>冲洗撤消历史</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation type="unfinished">你确定要冲刷撤销/重做交易历史吗？</translation>
+        <translation>你确定要冲刷撤销/重做交易历史吗？</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This cannot be undone.</source>
-        <translation type="unfinished">这是不可能被撤销的。</translation>
+        <translation>这是不可能被撤销的。</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flush &amp;Undo History</source>
-        <translation type="unfinished">冲洗撤消历史</translation>
+        <translation>冲洗撤消历史</translation>
     </message>
 </context>
 <context>
@@ -5599,12 +5604,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/FontPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished">图形视图</translation>
+        <translation>图形视图</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Fonts</source>
-        <translation type="unfinished">字体</translation>
+        <translation>字体</translation>
     </message>
 </context>
 <context>
@@ -5612,32 +5617,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui" line="+14"/>
         <source>Form</source>
-        <translation type="unfinished">形状</translation>
+        <translation>形状</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Cube size:</source>
-        <translation type="unfinished">方块大小：</translation>
+        <translation>方块大小：</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation type="unfinished">绘制胶合板</translation>
+        <translation>绘制胶合板</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
-        <translation type="unfinished">三: 右边</translation>
+        <translation>三: 右边</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/21_ThreeLeft.ui" line="+14"/>
         <source>Three: Left</source>
-        <translation type="unfinished">三：左侧</translation>
+        <translation>三：左侧</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/22_ThreeAbove.ui" line="+14"/>
         <source>Three: Above</source>
-        <translation type="unfinished">三: 以上</translation>
+        <translation>三: 以上</translation>
     </message>
 </context>
 <context>
@@ -5653,7 +5658,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation type="unfinished">四：平等</translation>
+        <translation>四：平等</translation>
     </message>
 </context>
 <context>
@@ -5661,7 +5666,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation type="unfinished">四：左侧</translation>
+        <translation>四：左侧</translation>
     </message>
 </context>
 <context>
@@ -5669,7 +5674,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation type="unfinished">四r: 右边</translation>
+        <translation>四r: 右边</translation>
     </message>
 </context>
 <context>
@@ -5677,332 +5682,332 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+32"/>
         <source>Right-Click</source>
-        <translation type="unfinished">右键点击</translation>
+        <translation>右键点击</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Right-click to deselect entities</source>
-        <translation type="unfinished">右键单击以取消选择实体</translation>
+        <translation>右键单击以取消选择实体</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Double-Click</source>
-        <translation type="unfinished">双击</translation>
+        <translation>双击</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Double-click to edit text</source>
-        <translation type="unfinished">双击来编辑文本</translation>
+        <translation>双击来编辑文本</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation type="unfinished">双击来编辑舱口</translation>
+        <translation>双击来编辑舱口</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation type="unfinished">双击区块参考，打开区块</translation>
+        <translation>双击区块参考，打开区块</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation type="unfinished">原地编辑区块参考</translation>
+        <translation>原地编辑区块参考</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Double-click to select contour</source>
-        <translation type="unfinished">双击选择轮廓线</translation>
+        <translation>双击选择轮廓线</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Tolerance:</source>
-        <translation type="unfinished">容忍：</translation>
+        <translation>容忍：</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Right double-click to reset</source>
-        <translation type="unfinished">右键双击来重置</translation>
+        <translation>右键双击来重置</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Blocks</source>
-        <translation type="unfinished">块状物</translation>
+        <translation>块状物</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Select block references together with attributes</source>
-        <translation type="unfinished">选择块的引用和属性</translation>
+        <translation>选择块的引用和属性</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Hide attributes when block references are hidden</source>
-        <translation type="unfinished">当块引用被隐藏时隐藏属性</translation>
+        <translation>当块引用被隐藏时隐藏属性</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cursor Range</source>
-        <translation type="unfinished">游标范围</translation>
+        <translation>游标范围</translation>
     </message>
     <message>
         <location line="+55"/>
         <source>Cursor range for picking entities:</source>
-        <translation type="unfinished">用于挑选实体的光标范围：</translation>
+        <translation>用于挑选实体的光标范围：</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>Cursor range for snap:</source>
-        <translation type="unfinished">捕捉的光标范围：</translation>
+        <translation>捕捉的光标范围：</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-        <translation type="unfinished">突出显示（和提升）范围内的图像</translation>
+        <translation>突出显示（和提升）范围内的图像</translation>
     </message>
     <message>
         <location line="-64"/>
         <source>Highlight entity within range</source>
-        <translation type="unfinished">突出显示范围内的实体</translation>
+        <translation>突出显示范围内的实体</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/PreferencesPage.ui" line="+34"/>
         <source>Automatically scale grid</source>
-        <translation type="unfinished">自动缩放网格</translation>
+        <translation>自动缩放网格</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Automatically scale meta grid</source>
-        <translation type="unfinished">自动缩放元网格</translation>
+        <translation>自动缩放元网格</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Solid grid lines</source>
-        <translation type="unfinished">实心网格线</translation>
+        <translation>实心网格线</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Minimal grid spacing (px):</source>
-        <translation type="unfinished">最小的网格间距（px）：</translation>
+        <translation>最小的网格间距（px）：</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation type="unfinished">原产地</translation>
+        <translation>原产地</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation type="unfinished">显示大原点轴</translation>
+        <translation>显示大原点轴</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Rulers and Scrollbars</source>
-        <translation type="unfinished">标尺和滚动条</translation>
+        <translation>标尺和滚动条</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show rulers</source>
-        <translation type="unfinished">显示标尺</translation>
+        <translation>显示标尺</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show scrollbars</source>
-        <translation type="unfinished">显示滚动条</translation>
+        <translation>显示滚动条</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Cursor</source>
-        <translation type="unfinished">光标</translation>
+        <translation>光标</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show crosshairs</source>
-        <translation type="unfinished">显示十字准线</translation>
+        <translation>显示十字准线</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show large crosshairs</source>
-        <translation type="unfinished">显示大型十字准线</translation>
+        <translation>显示大型十字准线</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>This can be used if cursors are not visible on external monitors</source>
-        <translation type="unfinished">如果光标在外部显示器上不可见，可以使用这个方法。</translation>
+        <translation>如果光标在外部显示器上不可见，可以使用这个方法。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use system cursors</source>
-        <translation type="unfinished">使用系统游标</translation>
+        <translation>使用系统游标</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Auto Zoom</source>
-        <translation type="unfinished">自动缩放</translation>
+        <translation>自动缩放</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Margin (px):</source>
-        <translation type="unfinished">边距(px)：</translation>
+        <translation>边距(px)：</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Auto zoom on load</source>
-        <translation type="unfinished">负载时自动变焦</translation>
+        <translation>负载时自动变焦</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Color Adjustment</source>
-        <translation type="unfinished">颜色调整</translation>
+        <translation>颜色调整</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Color lightness threshold:</source>
-        <translation type="unfinished">色彩明度阈值：</translation>
+        <translation>色彩明度阈值：</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Prevent white on white / black on black display</source>
-        <translation type="unfinished">防止白底白字/黑底黑字显示</translation>
+        <translation>防止白底白字/黑底黑字显示</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Disable for printing</source>
-        <translation type="unfinished">禁用于打印</translation>
+        <translation>禁用于打印</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Linetypes and Lineweights</source>
-        <translation type="unfinished">线型和线重</translation>
+        <translation>线型和线重</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation type="unfinished">默认线重：</translation>
+        <translation>默认线重：</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Automatically use screen based linetypes in model view</source>
-        <translation type="unfinished">在模型视图中自动使用基于屏幕的线型</translation>
+        <translation>在模型视图中自动使用基于屏幕的线型</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation type="unfinished">在模型视图中自动切换到基于屏幕的线型</translation>
+        <translation>在模型视图中自动切换到基于屏幕的线型</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation type="unfinished">按线重比例划分线型图案</translation>
+        <translation>按线重比例划分线型图案</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation type="unfinished">线重0.00mm的图案刻度：</translation>
+        <translation>线重0.00mm的图案刻度：</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Apply line weight to points</source>
-        <translation type="unfinished">将线权重应用于点</translation>
+        <translation>将线权重应用于点</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Display and Performance</source>
-        <translation type="unfinished">显示和性能</translation>
+        <translation>显示和性能</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Anti-aliasing on by default</source>
-        <translation type="unfinished">默认情况下，抗锯齿打开</translation>
+        <translation>默认情况下，抗锯齿打开</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Use full resolution for Retina / high resolution display</source>
-        <translation type="unfinished">对视网膜/高分辨率显示器使用全分辨率</translation>
+        <translation>对视网膜/高分辨率显示器使用全分辨率</translation>
     </message>
     <message>
         <location line="+596"/>
         <source>Reference point size (px):</source>
-        <translation type="unfinished">参考点尺寸（px）：</translation>
+        <translation>参考点尺寸（px）：</translation>
     </message>
     <message>
         <location line="+209"/>
         <source>Allocation limit for bitmaps (MB):</source>
-        <translation type="unfinished">位图分配限制（MB）：</translation>
+        <translation>位图分配限制（MB）：</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation type="unfinished"></translation>
+        <translation>线型图案中的点长度：</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Persistent selection</source>
-        <translation type="unfinished">持续性的选择</translation>
+        <translation>持续性的选择</translation>
     </message>
     <message>
         <location line="-766"/>
         <source>Number of preview entities:</source>
-        <translation type="unfinished">预览实体的数量：</translation>
+        <translation>预览实体的数量：</translation>
     </message>
     <message>
         <location line="-121"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-        <translation type="unfinished">始终将自定义宽度的多段线渲染为至少 1 像素宽</translation>
+        <translation>始终将自定义宽度的多段线渲染为至少 1 像素宽</translation>
     </message>
     <message>
         <location line="+182"/>
         <source>Display arcs as lines below this angle (degrees):</source>
-        <translation type="unfinished">在这个角度（度数）以下以线的形式显示弧线：</translation>
+        <translation>在这个角度（度数）以下以线的形式显示弧线：</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
-        <translation type="unfinished">渲染弧线的最小角度步骤（度）：</translation>
+        <translation>渲染弧线的最小角度步骤（度）：</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Display entities with more than N dashes as continuous:</source>
-        <translation type="unfinished">将有N个以上破折号的实体显示为连续：</translation>
+        <translation>将有N个以上破折号的实体显示为连续：</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Timeout for hatch rendering:</source>
-        <translation type="unfinished">孵化器渲染的超时：</translation>
+        <translation>孵化器渲染的超时：</translation>
     </message>
     <message>
         <location line="-361"/>
         <source>auto</source>
-        <translation type="unfinished">自动</translation>
+        <translation>自动</translation>
     </message>
     <message>
         <location line="-11"/>
         <source>Number of threads:</source>
-        <translation type="unfinished">线程的数量：</translation>
+        <translation>线程的数量：</translation>
     </message>
     <message>
         <location line="+437"/>
         <source>Maximum selected entities with reference points:</source>
-        <translation type="unfinished">有参考点的最大选定实体：</translation>
+        <translation>有参考点的最大选定实体：</translation>
     </message>
     <message>
         <location line="+217"/>
         <source>Text height threshold (px):</source>
-        <translation type="unfinished">文本高度阈值（px）：</translation>
+        <translation>文本高度阈值（px）：</translation>
     </message>
     <message>
         <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
-        <translation type="unfinished">具有显示参考点的最大选定实体：</translation>
+        <translation>具有显示参考点的最大选定实体：</translation>
     </message>
     <message>
         <location line="+219"/>
         <source>Maximum complexity for solid fills at high quality:</source>
-        <translation type="unfinished">最复杂的高质量固体填充：</translation>
+        <translation>最复杂的高质量固体填充：</translation>
     </message>
     <message>
         <location line="+143"/>
         <source>Selection</source>
-        <translation type="unfinished">选择</translation>
+        <translation>选择</translation>
     </message>
 </context>
 <context>
@@ -6010,107 +6015,107 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
         <source>Graphics View</source>
-        <translation type="unfinished">图形视图</translation>
+        <translation>图形视图</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Background:</source>
-        <translation type="unfinished">背景：</translation>
+        <translation>背景：</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Cursor</source>
-        <translation type="unfinished">游标</translation>
+        <translation>游标</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Crosshairs:</source>
-        <translation type="unfinished">十字线：</translation>
+        <translation>十字线：</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation type="unfinished">不活跃的十字线：</translation>
+        <translation>不活跃的十字线：</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation type="unfinished">原产地</translation>
+        <translation>原产地</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Origin:</source>
-        <translation type="unfinished">原产地：</translation>
+        <translation>原产地：</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Relative zero:</source>
-        <translation type="unfinished">相对零度：</translation>
+        <translation>相对零度：</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Grid</source>
-        <translation type="unfinished">栅格</translation>
+        <translation>栅格</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Grid:</source>
-        <translation type="unfinished">格：</translation>
+        <translation>格：</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Meta grid:</source>
-        <translation type="unfinished">Meta网格：</translation>
+        <translation>Meta网格：</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection</source>
-        <translation type="unfinished">选择</translation>
+        <translation>选择</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Primary selection color:</source>
-        <translation type="unfinished">主要选择颜色：</translation>
+        <translation>主要选择颜色：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use secondary selection color</source>
-        <translation type="unfinished">使用二级选择颜色</translation>
+        <translation>使用二级选择颜色</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Secondary selection color:</source>
-        <translation type="unfinished">次要选择颜色：</translation>
+        <translation>次要选择颜色：</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Primary reference points:</source>
-        <translation type="unfinished">主要参考点：</translation>
+        <translation>主要参考点：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Secondary reference points:</source>
-        <translation type="unfinished">次要参考点：</translation>
+        <translation>次要参考点：</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection box border:</source>
-        <translation type="unfinished">选择框边框：</translation>
+        <translation>选择框边框：</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Selection box fill:</source>
-        <translation type="unfinished">选择框的填充：</translation>
+        <translation>选择框的填充：</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation type="unfinished">交叉选择框的填充：</translation>
+        <translation>交叉选择框的填充：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start points:</source>
-        <translation type="unfinished">起点：</translation>
+        <translation>起点：</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6120,52 +6125,52 @@ is already in the list.</source>
     <message>
         <location line="+47"/>
         <source>Tertiary reference points:</source>
-        <translation type="unfinished">三级参考点：</translation>
+        <translation>三级参考点：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Snap Tools</source>
-        <translation type="unfinished">捕捉工具</translation>
+        <translation>捕捉工具</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Snap label:</source>
-        <translation type="unfinished">捕捉标签：</translation>
+        <translation>捕捉标签：</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Info Tools</source>
-        <translation type="unfinished">信息工具</translation>
+        <translation>信息工具</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Measurements and labels:</source>
-        <translation type="unfinished">测量和标签：</translation>
+        <translation>测量和标签：</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished">绘制工具</translation>
+        <translation>绘制工具</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Auxiliary shapes:</source>
-        <translation type="unfinished">辅助形状：</translation>
+        <translation>辅助形状：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation type="unfinished">工作集消退系数：</translation>
+        <translation>工作集消退系数：</translation>
     </message>
     <message>
         <location line="+75"/>
         <source>Zoom Tools</source>
-        <translation type="unfinished">缩放工具</translation>
+        <translation>缩放工具</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Zoom box border:</source>
-        <translation type="unfinished">缩放框边框：</translation>
+        <translation>缩放框边框：</translation>
     </message>
 </context>
 <context>
@@ -6173,17 +6178,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
-        <translation type="unfinished">标尺字体：</translation>
+        <translation>标尺字体：</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Snap label font:</source>
-        <translation type="unfinished">捕捉标签字体：</translation>
+        <translation>捕捉标签字体：</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Info label font:</source>
-        <translation type="unfinished">信息标签字体：</translation>
+        <translation>信息标签字体：</translation>
     </message>
 </context>
 <context>
@@ -6191,47 +6196,47 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+322"/>
         <source>Mouse wheel zoom factor:</source>
-        <translation type="unfinished">鼠标滚轮缩放系数：</translation>
+        <translation>鼠标滚轮缩放系数：</translation>
     </message>
     <message>
         <location line="-275"/>
         <source>Limit zoom and scroll to prevent overflows</source>
-        <translation type="unfinished">限制缩放和滚动以防止溢出</translation>
+        <translation>限制缩放和滚动以防止溢出</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Enable pan gesture</source>
-        <translation type="unfinished">启用平移手势</translation>
+        <translation>启用平移手势</translation>
     </message>
     <message>
         <location line="+289"/>
         <source>Reverse mouse wheel direction for zoom</source>
-        <translation type="unfinished">反转鼠标滚轮方向进行缩放</translation>
+        <translation>反转鼠标滚轮方向进行缩放</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Limit scrolling to vertical and horizontal</source>
-        <translation type="unfinished">限制垂直和水平滚动</translation>
+        <translation>限制垂直和水平滚动</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Panning threshold (px):</source>
-        <translation type="unfinished">平移阈值（px）：</translation>
+        <translation>平移阈值（px）：</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Panning speed:</source>
-        <translation type="unfinished">平移速度：</translation>
+        <translation>平移速度：</translation>
     </message>
     <message>
         <location line="-331"/>
         <source>Mouse wheel / two finger swipe:</source>
-        <translation type="unfinished">鼠标滚轮/双指轻扫：</translation>
+        <translation>鼠标滚轮/双指轻扫：</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Middle mouse button zoom factor:</source>
-        <translation type="unfinished">鼠标中键缩放系数：</translation>
+        <translation>鼠标中键缩放系数：</translation>
     </message>
 </context>
 <context>
@@ -6239,12 +6244,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished">图形视图</translation>
+        <translation>图形视图</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Appearance</source>
-        <translation type="unfinished">外观</translation>
+        <translation>外观</translation>
     </message>
 </context>
 <context>
@@ -6252,12 +6257,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/GridPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished">图形视图</translation>
+        <translation>图形视图</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Grid</source>
-        <translation type="unfinished">栅格</translation>
+        <translation>栅格</translation>
     </message>
 </context>
 <context>
@@ -6265,18 +6270,18 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/GridSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished">新图纸的默认值</translation>
+        <translation>新图纸的默认值</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Grid</source>
-        <translation type="unfinished">栅格</translation>
+        <translation>栅格</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished">一般</translation>
+        <translation>一般</translation>
     </message>
     <message>
         <location line="+84"/>
@@ -6285,7 +6290,7 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+1"/>
         <source>auto</source>
-        <translation type="unfinished">汽车</translation>
+        <translation>汽车</translation>
     </message>
 </context>
 <context>
@@ -6293,7 +6298,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation type="unfinished">舱口工具</translation>
+        <translation>舱口工具</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -6359,17 +6364,17 @@ is already in the list.</source>
     <message>
         <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="unfinished">每个边界实体必须是直线，弧，圆，椭圆弧，椭圆，折线或曲线. 发现：</translation>
+        <translation>每个边界实体必须是直线，弧，圆，椭圆弧，椭圆，折线或曲线. 发现：</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation type="unfinished">从选择中孵化</translation>
+        <translation>从选择中孵化</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation type="unfinished">从选定的边界创建舱口或实体填充</translation>
+        <translation>从选定的边界创建舱口或实体填充</translation>
     </message>
 </context>
 <context>
@@ -6467,97 +6472,97 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
-        <translation type="unfinished">导入文件%1时出错</translation>
+        <translation>导入文件%1时出错</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation type="unfinished">没有找到导入筛选器。正在中止...</translation>
+        <translation>没有找到导入筛选器。正在中止...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>All Files</source>
-        <translation type="unfinished">全部文件</translation>
+        <translation>全部文件</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Import Drawing</source>
-        <translation type="unfinished">导入图纸</translation>
+        <translation>导入图纸</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Format:</source>
-        <translation type="unfinished">格式：</translation>
+        <translation>格式：</translation>
     </message>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFileInit.js" line="+2"/>
         <source>&amp;Import</source>
-        <translation type="unfinished">导入(&amp;I)</translation>
+        <translation>导入(&amp;I)</translation>
     </message>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation type="unfinished">如 Block：</translation>
+        <translation>如 Block：</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Rotation:</source>
-        <translation type="unfinished">旋转：</translation>
+        <translation>旋转：</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="unfinished">根据这个角度&lt;br&gt;旋转粘贴的实体</translation>
+        <translation>根据这个角度&lt;br&gt;旋转粘贴的实体</translation>
     </message>
     <message>
         <location line="+110"/>
         <source>Scale:</source>
-        <translation type="unfinished">缩放：</translation>
+        <translation>缩放：</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="unfinished">根据此比例&lt;br&gt;缩放粘贴的实体</translation>
+        <translation>根据此比例&lt;br&gt;缩放粘贴的实体</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished">水平翻转粘贴的实体</translation>
+        <translation>水平翻转粘贴的实体</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished">垂直翻转粘贴的实体</translation>
+        <translation>垂直翻转粘贴的实体</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished">粘贴所有实体&lt;br&gt;到当前层&lt;br&gt;而不是原层</translation>
+        <translation>粘贴所有实体&lt;br&gt;到当前层&lt;br&gt;而不是原层</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished">至当前层</translation>
+        <translation>至当前层</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished">覆盖图层</translation>
+        <translation>覆盖图层</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished">覆盖区块</translation>
+        <translation>覆盖区块</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished">用剪贴板中的层覆盖图中现有层</translation>
+        <translation>用剪贴板中的层覆盖图中现有层</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished">用剪贴板中的块覆盖图中现有块</translation>
+        <translation>用剪贴板中的块覆盖图中现有块</translation>
     </message>
 </context>
 <context>
@@ -6565,17 +6570,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/ImportPoints/ImportPoints.js" line="+39"/>
         <source>All Files</source>
-        <translation type="unfinished">全部文件</translation>
+        <translation>全部文件</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation type="unfinished">导入点</translation>
+        <translation>导入点</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>&amp;Import Points</source>
-        <translation type="unfinished">导入点(&amp;I)</translation>
+        <translation>导入点(&amp;I)</translation>
     </message>
 </context>
 <context>
@@ -6583,37 +6588,37 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroid.js" line="+78"/>
         <source>Position</source>
-        <translation type="unfinished">位置</translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation type="unfinished">指定位置</translation>
+        <translation>指定位置</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>2D point mass Centroid</source>
-        <translation type="unfinished">二维点质量 中心点</translation>
+        <translation>二维点质量 中心点</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Undefined</source>
-        <translation type="unfinished">未定义</translation>
+        <translation>未定义</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19"/>
         <source>Add &amp;custom 2D centroid</source>
-        <translation type="unfinished">添加自定义2D中心点</translation>
+        <translation>添加自定义2D中心点</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
-        <translation type="unfinished">创建一个可定制的二维中心点标记</translation>
+        <translation>创建一个可定制的二维中心点标记</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new point mass 2D Centroid marker customizable by dialog</source>
-        <translation type="unfinished">创建一个新的点状质量的二维中心点标记，可通过对话框自定义。</translation>
+        <translation>创建一个新的点状质量的二维中心点标记，可通过对话框自定义。</translation>
     </message>
 </context>
 <context>
@@ -6621,22 +6626,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngle.js" line="+67"/>
         <source>Specify first line</source>
-        <translation type="unfinished">指定第一行</translation>
+        <translation>指定第一行</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second line</source>
-        <translation type="unfinished">指定第二行</translation>
+        <translation>指定第二行</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Angle:</source>
-        <translation type="unfinished">角度：</translation>
+        <translation>角度：</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngleInit.js" line="+2"/>
         <source>&amp;Angle</source>
-        <translation type="unfinished">角度</translation>
+        <translation>角度</translation>
     </message>
 </context>
 <context>
@@ -6644,7 +6649,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+70"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
-        <translation type="unfinished">选择弧、圆、椭圆或椭圆弧</translation>
+        <translation>选择弧、圆、椭圆或椭圆弧</translation>
     </message>
     <message>
         <location line="+236"/>
@@ -6654,24 +6659,24 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+22"/>
         <source>Area</source>
-        <translation type="unfinished">地区</translation>
+        <translation>地区</translation>
     </message>
     <message>
         <location line="-108"/>
         <location line="+66"/>
         <source>Circumference</source>
-        <translation type="unfinished">周长</translation>
+        <translation>周长</translation>
     </message>
     <message>
         <location line="-59"/>
         <source>Circle area:</source>
-        <translation type="unfinished">圈子面积：</translation>
+        <translation>圈子面积：</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+67"/>
         <source>circumference:</source>
-        <translation type="unfinished">周长：</translation>
+        <translation>周长：</translation>
     </message>
     <message>
         <location line="-54"/>
@@ -6680,20 +6685,20 @@ is already in the list.</source>
         <location line="+22"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+122"/>
         <source>Length</source>
-        <translation type="unfinished">长度</translation>
+        <translation>长度</translation>
     </message>
     <message>
         <location line="-88"/>
         <location line="+67"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
-        <translation type="unfinished">和弦</translation>
+        <translation>和弦</translation>
     </message>
     <message>
         <location line="-60"/>
         <location line="+24"/>
         <source>Ellipse arc area:</source>
-        <translation type="unfinished">椭圆弧面积：</translation>
+        <translation>椭圆弧面积：</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -6701,84 +6706,84 @@ is already in the list.</source>
         <location line="+43"/>
         <location line="+22"/>
         <source>arc length:</source>
-        <translation type="unfinished">弧长：</translation>
+        <translation>弧长：</translation>
     </message>
     <message>
         <location line="-88"/>
         <location line="+67"/>
         <source>chord:</source>
-        <translation type="unfinished">和弦：</translation>
+        <translation>和弦：</translation>
     </message>
     <message>
         <location line="-52"/>
         <source>Distance</source>
-        <translation type="unfinished">距离</translation>
+        <translation>距离</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>distance:</source>
-        <translation type="unfinished">距离：</translation>
+        <translation>距离：</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Ellipse area:</source>
-        <translation type="unfinished">椭圆面积：</translation>
+        <translation>椭圆面积：</translation>
     </message>
     <message>
         <location line="+22"/>
         <location line="+22"/>
         <source>Arc area:</source>
-        <translation type="unfinished">弧形区域：</translation>
+        <translation>弧形区域：</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Radius</source>
-        <translation type="unfinished">半径</translation>
+        <translation>半径</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>radius:</source>
-        <translation type="unfinished">半径：</translation>
+        <translation>半径：</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleAreaInit.js" line="+2"/>
         <source>Arc/Circle/Ellipse Area</source>
-        <translation type="unfinished">弧形/圆形/椭圆区域</translation>
+        <translation>弧形/圆形/椭圆区域</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-89"/>
         <source>Mode:</source>
-        <translation type="unfinished">模式：</translation>
+        <translation>模式：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Calculate Area of Segment</source>
-        <translation type="unfinished">计算段的面积</translation>
+        <translation>计算段的面积</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Calculate Area of Sector</source>
-        <translation type="unfinished">计算部门的面积</translation>
+        <translation>计算部门的面积</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Add:</source>
-        <translation type="unfinished">加：</translation>
+        <translation>加：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Add entities to drawing</source>
-        <translation type="unfinished">在绘图中添加实体</translation>
+        <translation>在绘图中添加实体</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity</source>
-        <translation type="unfinished">实体</translation>
+        <translation>实体</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Add lengths/circumference to drawing</source>
-        <translation type="unfinished">将长度/周长添加到绘图中</translation>
+        <translation>将长度/周长添加到绘图中</translation>
     </message>
 </context>
 <context>
@@ -6786,32 +6791,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+70"/>
         <source>Set next polygon corner</source>
-        <translation type="unfinished">设置下一个多边形角</translation>
+        <translation>设置下一个多边形角</translation>
     </message>
     <message>
         <location line="+125"/>
         <source>Polygon area:</source>
-        <translation type="unfinished">多边形面积：</translation>
+        <translation>多边形面积：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>circumference:</source>
-        <translation type="unfinished">周长：</translation>
+        <translation>周长：</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
-        <translation type="unfinished">多角形区域</translation>
+        <translation>多角形区域</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.ui" line="+17"/>
         <source>Calculate length and close tool.</source>
-        <translation type="unfinished">计算长度并关闭工具。</translation>
+        <translation>计算长度并关闭工具。</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Close Tool.</source>
-        <translation type="unfinished">关闭工具。</translation>
+        <translation>关闭工具。</translation>
     </message>
 </context>
 <context>
@@ -6819,131 +6824,131 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js" line="+123"/>
         <source>No selection.</source>
-        <translation type="unfinished">没有选择。</translation>
+        <translation>没有选择。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished">请先做出选择。命令终止。</translation>
+        <translation>请先做出选择。命令终止。</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not implemented. Command terminated.</source>
-        <translation type="unfinished">未执行。命令被终止。</translation>
+        <translation>未执行。命令被终止。</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+2"/>
         <source>Area 2D Centroid script (v0.32) by CVH</source>
-        <translation type="unfinished">区域二维中心点脚本(v0.32) by CVH</translation>
+        <translation>区域二维中心点脚本(v0.32) by CVH</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Arc sector mode</source>
-        <translation type="unfinished">弧形扇形模式</translation>
+        <translation>弧形扇形模式</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Enclosed area:</source>
-        <translation type="unfinished">封闭的区域：</translation>
+        <translation>封闭的区域：</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Approximated enclosed area:</source>
-        <translation type="unfinished">大约的封闭面积：</translation>
+        <translation>大约的封闭面积：</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation type="unfinished">加盖的区域：</translation>
+        <translation>加盖的区域：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Total hatched area:</source>
-        <translation type="unfinished">总的来说，帽子的面积：</translation>
+        <translation>总的来说，帽子的面积：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation type="unfinished">差异性加盖的区域：</translation>
+        <translation>差异性加盖的区域：</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>2D area Centroid</source>
-        <translation type="unfinished">二维区域 中心点</translation>
+        <translation>二维区域 中心点</translation>
     </message>
     <message>
         <location line="-89"/>
         <source>Multiple entities in selection.</source>
-        <translation type="unfinished">选择中的多个实体。</translation>
+        <translation>选择中的多个实体。</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Centroid markers circle in selection. No results.</source>
-        <translation type="unfinished">中心点标记圈在选择中。没有结果。</translation>
+        <translation>中心点标记圈在选择中。没有结果。</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Unsupported entity type. No results.</source>
-        <translation type="unfinished">不支持的实体类型。没有结果。</translation>
+        <translation>不支持的实体类型。没有结果。</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>No results.</source>
-        <translation type="unfinished">没有结果。</translation>
+        <translation>没有结果。</translation>
     </message>
     <message>
         <location line="+49"/>
         <location line="+6"/>
         <source>(Incl. approximations)</source>
-        <translation type="unfinished">(包括近似值)</translation>
+        <translation>(包括近似值)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Approximated centroid:</source>
-        <translation type="unfinished">近似的中心点：</translation>
+        <translation>近似的中心点：</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Centroid:</source>
-        <translation type="unfinished">中心点：</translation>
+        <translation>中心点：</translation>
     </message>
     <message>
         <location line="+207"/>
         <location line="+578"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation type="unfinished">遇到一个不支持自定义宽度的折线</translation>
+        <translation>遇到一个不支持自定义宽度的折线</translation>
     </message>
     <message>
         <location line="-488"/>
         <location line="+596"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation type="unfinished">遇到一个不支持自定义宽度的多边形</translation>
+        <translation>遇到一个不支持自定义宽度的多边形</translation>
     </message>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation type="unfinished">未处理的形状来自孵化循环。</translation>
+        <translation>未处理的形状来自孵化循环。</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Self-intersecting shape near (%1). No Results.</source>
-        <translation type="unfinished">靠近(%1)的自相交形状。没有结果。</translation>
+        <translation>靠近(%1)的自相交形状。没有结果。</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
-        <translation type="unfinished">面积中心点</translation>
+        <translation>面积中心点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
-        <translation type="unfinished">为一个选定的实体创建一个区域的2D Centroid</translation>
+        <translation>为一个选定的实体创建一个区域的2D Centroid</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</source>
-        <translation type="unfinished">为选定的实体创建一个新的统一面积密度的二维中心点标记和数值标签。</translation>
+        <translation>为选定的实体创建一个新的统一面积密度的二维中心点标记和数值标签。</translation>
     </message>
 </context>
 <context>
@@ -6951,32 +6956,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
         <source>Reference</source>
-        <translation type="unfinished">参考资料</translation>
+        <translation>参考资料</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Direction</source>
-        <translation type="unfinished">方向</translation>
+        <translation>方向</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Distance:</source>
-        <translation type="unfinished">距离：</translation>
+        <translation>距离：</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation type="unfinished">轴承：</translation>
+        <translation>轴承：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Azimuth:</source>
-        <translation type="unfinished">Azimuth：</translation>
+        <translation>方位角：</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation type="unfinished">轴承/方位角</translation>
+        <translation>轴承/方位角</translation>
     </message>
 </context>
 <context>
@@ -6984,52 +6989,52 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+52"/>
         <source>2D Centroid</source>
-        <translation type="unfinished">二维中心点</translation>
+        <translation>二维中心点</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point mass</source>
-        <translation type="unfinished">点质量</translation>
+        <translation>点质量</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Area</source>
-        <translation type="unfinished">地区</translation>
+        <translation>地区</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Wire</source>
-        <translation type="unfinished">电线</translation>
+        <translation>电线</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>X position</source>
-        <translation type="unfinished">X位置</translation>
+        <translation>X位置</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Y position</source>
-        <translation type="unfinished">Y位置</translation>
+        <translation>Y位置</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Undefined</source>
-        <translation type="unfinished">未定义</translation>
+        <translation>未定义</translation>
     </message>
     <message>
         <location line="+428"/>
         <source>2D &amp;Centroids</source>
-        <translation type="unfinished">二维中心点</translation>
+        <translation>二维中心点</translation>
     </message>
     <message>
         <location line="-431"/>
         <source>Weighted</source>
-        <translation type="unfinished">加权</translation>
+        <translation>加权</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Density</source>
-        <translation type="unfinished">密度</translation>
+        <translation>密度</translation>
     </message>
 </context>
 <context>
@@ -7037,12 +7042,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+192"/>
         <source>2D Centroids transaction listener active.</source>
-        <translation type="unfinished">二维中心点交易监听器激活。</translation>
+        <translation>二维中心点交易监听器激活。</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Deactivated/removed the 2D Centroids transaction listener.</source>
-        <translation type="unfinished">停用/删除了2D Centroids交易监听器。</translation>
+        <translation>停用/删除了2D Centroids交易监听器。</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -7050,22 +7055,22 @@ is already in the list.</source>
         <location line="+40"/>
         <location line="+5"/>
         <source>Syntax error: &apos;%1&apos; parse error</source>
-        <translation type="unfinished">语法错误：&apos;%1&apos;解析错误</translation>
+        <translation>语法错误：&apos;%1&apos;解析错误</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
         <source>Centroid &amp;Listener</source>
-        <translation type="unfinished">中心点监听器</translation>
+        <translation>中心点监听器</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation type="unfinished">(取消)激活2D中心点的交易监听器</translation>
+        <translation>(取消)激活2D中心点的交易监听器</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(De-)Activate a transaction listener for binding changes applied to 2D Centroid markers</source>
-        <translation type="unfinished">(为应用于二维中心点标记的绑定更改激活事务监听器。</translation>
+        <translation>(为应用于二维中心点标记的绑定更改激活事务监听器。</translation>
     </message>
 </context>
 <context>
@@ -7073,22 +7078,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEE.js" line="+62"/>
         <source>Specify first entity</source>
-        <translation type="unfinished">指定第一个实体</translation>
+        <translation>指定第一个实体</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second entity</source>
-        <translation type="unfinished">指定第二个实体</translation>
+        <translation>指定第二个实体</translation>
     </message>
     <message>
         <location line="+95"/>
         <source>Distance:</source>
-        <translation type="unfinished">距离：</translation>
+        <translation>距离：</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEEInit.js" line="+2"/>
         <source>Distance &amp;Entity to Entity</source>
-        <translation type="unfinished">实体与实体的距离</translation>
+        <translation>实体与实体的距离</translation>
     </message>
 </context>
 <context>
@@ -7096,22 +7101,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEP.js" line="+59"/>
         <source>Specify entity</source>
-        <translation type="unfinished">指定实体</translation>
+        <translation>指定实体</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Specify point</source>
-        <translation type="unfinished">指定点</translation>
+        <translation>指定点</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Distance:</source>
-        <translation type="unfinished">距离：</translation>
+        <translation>距离：</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
-        <translation type="unfinished">实体到点的距离</translation>
+        <translation>实体到点的距离</translation>
     </message>
 </context>
 <context>
@@ -7119,37 +7124,37 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePP.js" line="+59"/>
         <source>First point</source>
-        <translation type="unfinished">第一点</translation>
+        <translation>第一点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished">第二点</translation>
+        <translation>第二点</translation>
     </message>
     <message>
         <location line="+53"/>
         <source>Distance:</source>
-        <translation type="unfinished">距离：</translation>
+        <translation>距离：</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Delta X:</source>
-        <translation type="unfinished">德尔塔X：</translation>
+        <translation>德尔塔X：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta Y:</source>
-        <translation type="unfinished">Delta Y：</translation>
+        <translation>增量 Y：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle:</source>
-        <translation type="unfinished">角度：</translation>
+        <translation>角度：</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
-        <translation type="unfinished">点到点的距离</translation>
+        <translation>点到点的距离</translation>
     </message>
 </context>
 <context>
@@ -7157,12 +7162,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoPosition/InfoPosition.js" line="+55"/>
         <source>Point</source>
-        <translation type="unfinished">点</translation>
+        <translation>点</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoPosition/InfoPositionInit.js" line="+2"/>
         <source>&amp;Position</source>
-        <translation type="unfinished">位置(&amp;P)</translation>
+        <translation>位置(&amp;P)</translation>
     </message>
 </context>
 <context>
@@ -7170,7 +7175,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoPositionPol/InfoPositionPolInit.js" line="+2"/>
         <source>&amp;Polar Position</source>
-        <translation type="unfinished">极地位置</translation>
+        <translation>极地位置</translation>
     </message>
 </context>
 <context>
@@ -7178,7 +7183,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoPositionPolRel/InfoPositionPolRelInit.js" line="+2"/>
         <source>Relative P&amp;olar Position</source>
-        <translation type="unfinished">相对极地位置</translation>
+        <translation>相对极地位置</translation>
     </message>
 </context>
 <context>
@@ -7186,7 +7191,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoPositionRel/InfoPositionRelInit.js" line="+2"/>
         <source>&amp;Relative Position</source>
-        <translation type="unfinished">相对位置</translation>
+        <translation>相对位置</translation>
     </message>
 </context>
 <context>
@@ -7194,131 +7199,131 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js" line="+105"/>
         <source>No selection.</source>
-        <translation type="unfinished">没有选择。</translation>
+        <translation>没有选择。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished">请先做出选择。命令终止。</translation>
+        <translation>请先做出选择。命令终止。</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>2D Centroids weighted sum script (v0.24) by CVH.</source>
-        <translation type="unfinished">二维中心点加权和脚本（v0.24），由CVH编写。</translation>
+        <translation>二维中心点加权和脚本（v0.24），由CVH编写。</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Encountered a missing coordinate value.</source>
-        <translation type="unfinished">遇到了一个缺失的坐标值。</translation>
+        <translation>遇到了一个缺失的坐标值。</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Encountered an invalid coordinate value.</source>
-        <translation type="unfinished">遇到了一个无效的坐标值。</translation>
+        <translation>遇到了一个无效的坐标值。</translation>
     </message>
     <message>
         <location line="+8"/>
         <location line="+11"/>
         <location line="+10"/>
         <source>Encountered a missing &apos;%1&apos; value.</source>
-        <translation type="unfinished">遇到了一个缺失的&apos;%1&apos;值。</translation>
+        <translation>遇到了一个缺失的&apos;%1&apos;值。</translation>
     </message>
     <message>
         <location line="-16"/>
         <location line="+11"/>
         <location line="+17"/>
         <source>Encountered an invalid &apos;%1&apos; value.</source>
-        <translation type="unfinished">遇到了一个无效的&apos;%1&apos;值。</translation>
+        <translation>遇到了一个无效的&apos;%1&apos;值。</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Encountered an unknown marker type.</source>
-        <translation type="unfinished">遇到了一个未知的标记类型。</translation>
+        <translation>遇到了一个未知的标记类型。</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>No result.</source>
-        <translation type="unfinished">没有结果。</translation>
+        <translation>没有结果。</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>No 2D Centroid markers found in the selection.</source>
-        <translation type="unfinished">在选择中没有发现二维中心点标记。</translation>
+        <translation>在选择中没有发现二维中心点标记。</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Single marker selected, point mass = %1</source>
-        <translation type="unfinished">选定单个标记，点质量=%1</translation>
+        <translation>选定单个标记，点质量=%1</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Density is undefined</source>
-        <translation type="unfinished">密度未定</translation>
+        <translation>密度未定</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Results in a division by zero.</source>
-        <translation type="unfinished">结果是除以0。</translation>
+        <translation>结果是除以0。</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Results in a NaN value.</source>
-        <translation type="unfinished">结果是一个NaN值。</translation>
+        <translation>结果是一个NaN值。</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Combined 2D Centroid</source>
-        <translation type="unfinished">合并的二维中心点</translation>
+        <translation>合并的二维中心点</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Combined uniform point mass (%1):</source>
-        <translation type="unfinished">组合的均匀点质量（%1）：</translation>
+        <translation>组合的均匀点质量（%1）：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combined point mass (%1):</source>
-        <translation type="unfinished">合并点质量（%1）：</translation>
+        <translation>合并点质量（%1）：</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>All densities are undefined</source>
-        <translation type="unfinished">所有的密度都是未定义的</translation>
+        <translation>所有的密度都是未定义的</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Some densities are undefined</source>
-        <translation type="unfinished">一些密度是未定义的</translation>
+        <translation>一些密度是未定义的</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>area (Informational):</source>
-        <translation type="unfinished">地区（信息）：</translation>
+        <translation>地区（信息）：</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>wire length (Informational):</source>
-        <translation type="unfinished">线长 (Informational)：</translation>
+        <translation>线长 (Informational)：</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Combined centroid:</source>
-        <translation type="unfinished">合并中心点：</translation>
+        <translation>合并中心点：</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
         <source>&amp;Sum 2D Centroids weighted</source>
-        <translation type="unfinished">加权的二维中心点之和</translation>
+        <translation>加权的二维中心点之和</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
-        <translation type="unfinished">结合选定的二维中心点标记进行加权处理</translation>
+        <translation>结合选定的二维中心点标记进行加权处理</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combines selected 2D Centroid markers, summing all properties weighted</source>
-        <translation type="unfinished">结合选定的二维中心点标记，对所有属性进行加权求和</translation>
+        <translation>结合选定的二维中心点标记，对所有属性进行加权求和</translation>
     </message>
 </context>
 <context>
@@ -7326,99 +7331,99 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js" line="+121"/>
         <source>No selection.</source>
-        <translation type="unfinished">没有选择。</translation>
+        <translation>没有选择。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished">请先做出选择。命令终止。</translation>
+        <translation>请先做出选择。命令终止。</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Length:</source>
-        <translation type="unfinished">长度：</translation>
+        <translation>长度：</translation>
     </message>
     <message>
         <location line="+35"/>
         <location line="+7"/>
         <source>Approximated length:</source>
-        <translation type="unfinished">大约的长度：</translation>
+        <translation>大约的长度：</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Unsupported entity type. No results.</source>
-        <translation type="unfinished">不支持的实体类型。没有结果。</translation>
+        <translation>不支持的实体类型。没有结果。</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>No results.</source>
-        <translation type="unfinished">没有结果。</translation>
+        <translation>没有结果。</translation>
     </message>
     <message>
         <location line="-71"/>
         <source>Wire 2D Centroid script (v0.32) by CVH</source>
-        <translation type="unfinished">Wire 2D Centroid脚本(v0.32) by CVH</translation>
+        <translation>Wire 2D Centroid脚本(v0.32) by CVH</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>2D Centroid markers circle in selection. No results.</source>
-        <translation type="unfinished">二维中心点标记圈在选择中。没有结果。</translation>
+        <translation>二维中心点标记圈在选择中。没有结果。</translation>
     </message>
     <message>
         <location line="+55"/>
         <source>Results in a division by zero.</source>
-        <translation type="unfinished">结果是除以0。</translation>
+        <translation>结果是除以0。</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>2D wire Centroid</source>
-        <translation type="unfinished">二维导线中心点</translation>
+        <translation>二维导线中心点</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Total length:</source>
-        <translation type="unfinished">总长度：</translation>
+        <translation>总长度：</translation>
     </message>
     <message>
         <location line="+4"/>
         <location line="+6"/>
         <source>(Incl. approximations)</source>
-        <translation type="unfinished">(包括近似值)</translation>
+        <translation>(包括近似值)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Approximated centroid:</source>
-        <translation type="unfinished">近似的中心点：</translation>
+        <translation>近似的中心点：</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Centroid:</source>
-        <translation type="unfinished">中心点：</translation>
+        <translation>中心点：</translation>
     </message>
     <message>
         <location line="+125"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation type="unfinished">遇到一个不支持自定义宽度的折线</translation>
+        <translation>遇到一个不支持自定义宽度的折线</translation>
     </message>
     <message>
         <location line="+105"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation type="unfinished">遇到一个不支持自定义宽度的多边形</translation>
+        <translation>遇到一个不支持自定义宽度的多边形</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+19"/>
         <source>&amp;Wire Centroid</source>
-        <translation type="unfinished">线路中心点</translation>
+        <translation>线路中心点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
-        <translation type="unfinished">为一个选区创建一个线状的2D中心点</translation>
+        <translation>为一个选区创建一个线状的2D中心点</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</source>
-        <translation type="unfinished">为选定的实体创建一个新的统一线性密度二维中心点标记和数值标签</translation>
+        <translation>为选定的实体创建一个新的统一线性密度二维中心点标记和数值标签</translation>
     </message>
 </context>
 <context>
@@ -7436,12 +7441,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation type="unfinished">在绘图中添加测量值</translation>
+        <translation>在绘图中添加测量值</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished">文字高度：</translation>
+        <translation>文字高度：</translation>
     </message>
 </context>
 <context>
@@ -7449,47 +7454,47 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal point:</source>
-        <translation type="unfinished">小数点：</translation>
+        <translation>小数点：</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Cartesian coordinate separator:</source>
-        <translation type="unfinished">笛卡尔坐标分离器：</translation>
+        <translation>笛卡尔坐标分离器：</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Polar coordinate separator:</source>
-        <translation type="unfinished">极坐标分离器：</translation>
+        <translation>极坐标分离器：</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative coordinate prefix:</source>
-        <translation type="unfinished">相对坐标前缀：</translation>
+        <translation>相对坐标前缀：</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Examples</source>
-        <translation type="unfinished">实例</translation>
+        <translation>实例</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Absolute Cartesian coordinate:</source>
-        <translation type="unfinished">绝对直角坐标：</translation>
+        <translation>绝对直角坐标：</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Absolute polar coordinate:</source>
-        <translation type="unfinished">绝对极坐标：</translation>
+        <translation>绝对极坐标：</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative Cartesian coordinate:</source>
-        <translation type="unfinished">相对直角坐标：</translation>
+        <translation>相对直角坐标：</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative polar coordinate:</source>
-        <translation type="unfinished">相对极坐标：</translation>
+        <translation>相对极坐标：</translation>
     </message>
 </context>
 <context>
@@ -7497,18 +7502,18 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
-        <translation type="unfinished">一般</translation>
+        <translation>一般</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Coordinate Format</source>
-        <translation type="unfinished">坐标格式</translation>
+        <translation>坐标格式</translation>
     </message>
     <message>
         <location line="+16"/>
         <location line="+33"/>
         <source>Comma</source>
-        <translation type="unfinished">逗号</translation>
+        <translation>逗号</translation>
     </message>
     <message>
         <location line="-33"/>
@@ -7516,42 +7521,42 @@ is already in the list.</source>
         <location line="+5"/>
         <location line="+21"/>
         <source>(Default)</source>
-        <translation type="unfinished">(默认)</translation>
+        <translation>(默认)</translation>
     </message>
     <message>
         <location line="-31"/>
         <source>Semicolon</source>
-        <translation type="unfinished">分号</translation>
+        <translation>分号</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Less Than</source>
-        <translation type="unfinished">少于</translation>
+        <translation>少于</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation type="unfinished">在</translation>
+        <translation>在</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Percentage</source>
-        <translation type="unfinished">百分比</translation>
+        <translation>百分比</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dollar</source>
-        <translation type="unfinished">美元</translation>
+        <translation>美元</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hash</source>
-        <translation type="unfinished">哈什</translation>
+        <translation>哈什</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Dot</source>
-        <translation type="unfinished">点</translation>
+        <translation>点</translation>
     </message>
 </context>
 <context>
@@ -7653,7 +7658,7 @@ is already in the list.</source>
     <message>
         <location line="+29"/>
         <source>Adjusted invalid block name to &quot;%1&quot;</source>
-        <translation type="unfinished">将无效的区块名称调整为&quot;%1&quot;</translation>
+        <translation>将无效的区块名称调整为&quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+83"/>
@@ -7698,12 +7703,12 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished">覆盖图层</translation>
+        <translation>覆盖图层</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished">覆盖区块</translation>
+        <translation>覆盖区块</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -7726,27 +7731,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
         <source>Cannot read file:</source>
-        <translation type="unfinished">无法读取文件：</translation>
+        <translation>无法读取文件：</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No constructor found in file:</source>
-        <translation type="unfinished">文件中没有找到构造函数：</translation>
+        <translation>文件中没有找到构造函数：</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;init&apos; function found in file:</source>
-        <translation type="unfinished">文件中没有发现&apos;init&apos;函数：</translation>
+        <translation>文件中没有发现&apos;init&apos;函数：</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;generate&apos; function found in file:</source>
-        <translation type="unfinished">文件中没有发现&apos;generate&apos;函数：</translation>
+        <translation>文件中没有发现&apos;generate&apos;函数：</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;generatePreview&apos; function found in file:</source>
-        <translation type="unfinished">文件中没有发现&apos;generatePreview&apos;函数：</translation>
+        <translation>文件中没有发现&apos;generatePreview&apos;函数：</translation>
     </message>
 </context>
 <context>
@@ -7754,12 +7759,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/InvertSelection/InvertSelectionInit.js" line="+2"/>
         <source>&amp;Invert Selection</source>
-        <translation type="unfinished">反向选择(&amp;I)</translation>
+        <translation>反向选择(&amp;I)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Invert the current selection</source>
-        <translation type="unfinished">反转当前选择</translation>
+        <translation>反转当前选择</translation>
     </message>
 </context>
 <context>
@@ -7767,83 +7772,83 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.js" line="+50"/>
         <source>Isometric</source>
-        <translation type="unfinished">等高线</translation>
+        <translation>等高线</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Isometric True Scale</source>
-        <translation type="unfinished">等距真实比例</translation>
+        <translation>等距真实比例</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Planometric</source>
-        <translation type="unfinished">平面几何学</translation>
+        <translation>平面几何学</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimetric</source>
-        <translation type="unfinished">计量学</translation>
+        <translation>计量学</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation type="unfinished">内阁</translation>
+        <translation>内阁</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cavalier</source>
-        <translation type="unfinished">骑士</translation>
+        <translation>骑士</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
         <source>&amp;Isometric Projection</source>
-        <translation type="unfinished">等距投射(&amp;I)</translation>
+        <translation>等距投射(&amp;I)</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
         <source>Top</source>
-        <translation type="unfinished">顶部</translation>
+        <translation>顶部</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Bottom</source>
-        <translation type="unfinished">底部</translation>
+        <translation>底部</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Left</source>
-        <translation type="unfinished">左侧</translation>
+        <translation>左侧</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation type="unfinished">左后方</translation>
+        <translation>左后方</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Right</source>
-        <translation type="unfinished">右侧</translation>
+        <translation>右侧</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation type="unfinished">右后方</translation>
+        <translation>右后方</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
-        <translation type="unfinished">投影前逆时针旋转选区</translation>
+        <translation>投影前逆时针旋转选区</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
-        <translation type="unfinished">投影前顺时针旋转选择</translation>
+        <translation>投影前顺时针旋转选择</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished">方法</translation>
+        <translation>方法</translation>
     </message>
 </context>
 <context>
@@ -7851,7 +7856,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridLeft/IsometricGridLeft.js" line="+35"/>
         <source>&amp;Left Projection</source>
-        <translation type="unfinished">左侧投射</translation>
+        <translation>左侧投射</translation>
     </message>
 </context>
 <context>
@@ -7859,7 +7864,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridOff/IsometricGridOff.js" line="+35"/>
         <source>Isometric Grid &amp;Off</source>
-        <translation type="unfinished">关闭等距网格</translation>
+        <translation>关闭等距网格</translation>
     </message>
 </context>
 <context>
@@ -7867,7 +7872,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridRight/IsometricGridRight.js" line="+35"/>
         <source>&amp;Right Projection</source>
-        <translation type="unfinished">右边投影(&amp;R)</translation>
+        <translation>右边投影(&amp;R)</translation>
     </message>
 </context>
 <context>
@@ -7875,7 +7880,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridTop/IsometricGridTop.js" line="+143"/>
         <source>&amp;Top Projection</source>
-        <translation type="unfinished">顶部投射</translation>
+        <translation>顶部投射</translation>
     </message>
 </context>
 <context>
@@ -7883,7 +7888,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsometricProjection.js" line="+49"/>
         <source>&amp;Isometric Projection</source>
-        <translation type="unfinished">等距投射</translation>
+        <translation>等距投射</translation>
     </message>
 </context>
 <context>
@@ -7891,7 +7896,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricView.js" line="+44"/>
         <source>&amp;Isometric View</source>
-        <translation type="unfinished">等高线视图</translation>
+        <translation>等高线视图</translation>
     </message>
 </context>
 <context>
@@ -7899,12 +7904,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
-        <translation type="unfinished">捷径超时：</translation>
+        <translation>捷径超时：</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Enable keyboard navigation in list widgets</source>
-        <translation type="unfinished">在列表部件中启用键盘导航</translation>
+        <translation>在列表部件中启用键盘导航</translation>
     </message>
 </context>
 <context>
@@ -7912,12 +7917,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/KeyboardPreferences.js" line="+24"/>
         <source>General</source>
-        <translation type="unfinished">一般</translation>
+        <translation>一般</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Keyboard</source>
-        <translation type="unfinished">键盘</translation>
+        <translation>键盘</translation>
     </message>
 </context>
 <context>
@@ -7925,7 +7930,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of user interface:</source>
-        <translation type="unfinished">用户界面的语言：</translation>
+        <translation>用户界面的语言：</translation>
     </message>
 </context>
 <context>
@@ -7933,12 +7938,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+62"/>
         <source>Language Settings</source>
-        <translation type="unfinished">语言设置</translation>
+        <translation>语言设置</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Language</source>
-        <translation type="unfinished">语言</translation>
+        <translation>语言</translation>
     </message>
 </context>
 <context>
@@ -7956,52 +7961,52 @@ is already in the list.</source>
     <message>
         <location line="+43"/>
         <source>Showing all layers</source>
-        <translation type="unfinished">显示所有层</translation>
+        <translation>显示所有层</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hiding all layers</source>
-        <translation type="unfinished">隐藏所有层</translation>
+        <translation>隐藏所有层</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Thawing all layers</source>
-        <translation type="unfinished">解冻所有层面</translation>
+        <translation>解冻所有层面</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Freezing all layers</source>
-        <translation type="unfinished">冻结所有层数</translation>
+        <translation>冻结所有层数</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Locking all layers</source>
-        <translation type="unfinished">锁定所有层</translation>
+        <translation>锁定所有层</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unlocking all layers</source>
-        <translation type="unfinished">解锁所有层级</translation>
+        <translation>解锁所有层级</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
         <source>Default lineweight for new layers:</source>
-        <translation type="unfinished">新图层的默认线重：</translation>
+        <translation>新图层的默认线重：</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Default color for new layers:</source>
-        <translation type="unfinished">新层的默认颜色：</translation>
+        <translation>新层的默认颜色：</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation type="unfinished">0 层的默认线重：</translation>
+        <translation>0 层的默认线重：</translation>
     </message>
     <message>
         <location line="-48"/>
         <source>Default color for layer 0:</source>
-        <translation type="unfinished">0 层的默认颜色：</translation>
+        <translation>0 层的默认颜色：</translation>
     </message>
 </context>
 <context>
@@ -8009,32 +8014,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/LayerCompatibility.js" line="+30"/>
         <source>Layer</source>
-        <translation type="unfinished">图层</translation>
+        <translation>图层</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Compatibility</source>
-        <translation type="unfinished">兼容性</translation>
+        <translation>兼容性</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/PreferencesPage.ui" line="+17"/>
         <source>Layer 0</source>
-        <translation type="unfinished">第0层</translation>
+        <translation>第0层</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Layer 0 behaves like a regular layer (QCAD)</source>
-        <translation type="unfinished">图层 0 的行为就像一个普通的图层（QCAD）。</translation>
+        <translation>图层 0 的行为就像一个普通的图层（QCAD）。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Layer 0 behaves differently (best compatibility)</source>
-        <translation type="unfinished">第 0 层的行为是不同的（最佳的兼容性）。</translation>
+        <translation>第 0 层的行为是不同的（最佳的兼容性）。</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation type="unfinished">第 0 层块中的实体具有块参考的属性和可见性。</translation>
+        <translation>第 0 层块中的实体具有块参考的属性和可见性。</translation>
     </message>
 </context>
 <context>
@@ -8043,52 +8048,52 @@ is already in the list.</source>
         <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
         <source>layer</source>
         <comment>default layer name prefix</comment>
-        <translation type="unfinished">层</translation>
+        <translation>层</translation>
     </message>
     <message>
         <location line="+158"/>
         <source>Leading or trailing spaces.</source>
-        <translation type="unfinished">前导或尾随空格。</translation>
+        <translation>前导或尾随空格。</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Layer name is empty.</source>
-        <translation type="unfinished">层名是空的。</translation>
+        <translation>层名是空的。</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Layer already exists.</source>
-        <translation type="unfinished">层已经存在。</translation>
+        <translation>层已经存在。</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer</source>
-        <translation type="unfinished">图层</translation>
+        <translation>图层</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Layer name:</source>
-        <translation type="unfinished">层名：</translation>
+        <translation>层名：</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Attributes</source>
-        <translation type="unfinished">属性</translation>
+        <translation>属性</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Color:</source>
-        <translation type="unfinished">颜色：</translation>
+        <translation>颜色：</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation type="unfinished">线重：</translation>
+        <translation>线重：</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
-        <translation type="unfinished">线型：</translation>
+        <translation>线型：</translation>
     </message>
 </context>
 <context>
@@ -8096,7 +8101,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/LayerExamples.js" line="+50"/>
         <source>&amp;Layer</source>
-        <translation type="unfinished">图层(&amp;L)</translation>
+        <translation>图层(&amp;L)</translation>
     </message>
 </context>
 <context>
@@ -8104,7 +8109,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+200"/>
         <source>Widgets</source>
-        <translation type="unfinished">小工具</translation>
+        <translation>小工具</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -8120,7 +8125,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/LayerList/PreferencesPage.ui" line="+19"/>
         <source>Enable alternating row colors</source>
-        <translation type="unfinished">启用交替的行色</translation>
+        <translation>启用交替的行色</translation>
     </message>
 </context>
 <context>
@@ -8133,12 +8138,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Next vertex</source>
-        <translation type="unfinished">下一个顶点</translation>
+        <translation>下一个顶点</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segment</source>
-        <translation type="unfinished">撤销最后一个片段</translation>
+        <translation>撤销最后一个片段</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -8161,12 +8166,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation type="unfinished">标注引线成功创建</translation>
+        <translation>标注引线成功创建</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation type="unfinished">选定文本中的标注引线</translation>
+        <translation>选定文本中的标注引线</translation>
     </message>
 </context>
 <context>
@@ -8174,22 +8179,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.js" line="+60"/>
         <source>Choose line or arc</source>
-        <translation type="unfinished">选择直线或弧线</translation>
+        <translation>选择直线或弧线</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
-        <translation type="unfinished">加长/缩短(&amp;L)</translation>
+        <translation>加长/缩短(&amp;L)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation type="unfinished">数量：</translation>
+        <translation>数量：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation type="unfinished">延长或缩短的数量（负数）</translation>
+        <translation>延长或缩短的数量（负数）</translation>
     </message>
 </context>
 <context>
@@ -8197,32 +8202,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/Line.js" line="+83"/>
         <source>Line Tools</source>
-        <translation type="unfinished">线路工具</translation>
+        <translation>线路工具</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Line</source>
-        <translation type="unfinished">线路</translation>
+        <translation>线路</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation type="unfinished">与原来的实体类型相同</translation>
+        <translation>与原来的实体类型相同</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Line Segment</source>
-        <translation type="unfinished">线段</translation>
+        <translation>线段</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Infinite Line</source>
-        <translation type="unfinished">无限线</translation>
+        <translation>无限线</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation type="unfinished">雷</translation>
+        <translation>雷</translation>
     </message>
 </context>
 <context>
@@ -8230,17 +8235,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+76"/>
         <source>First point</source>
-        <translation type="unfinished">第一点</translation>
+        <translation>第一点</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next point</source>
-        <translation type="unfinished">下一个点</translation>
+        <translation>下一个点</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
-        <translation type="unfinished">关闭序列</translation>
+        <translation>关闭序列</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8250,27 +8255,27 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation type="unfinished">重做部分</translation>
+        <translation>重做部分</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation type="unfinished">线路使用固定长度</translation>
+        <translation>线路使用固定长度</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Length:</source>
-        <translation type="unfinished">长度：</translation>
+        <translation>长度：</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation type="unfinished">线条使用固定角度</translation>
+        <translation>线条使用固定角度</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angle:</source>
-        <translation type="unfinished">角度：</translation>
+        <translation>角度：</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -8288,12 +8293,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.js" line="+71"/>
         <source>Position</source>
-        <translation type="unfinished">位置</translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation type="unfinished">指定位置</translation>
+        <translation>指定位置</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2"/>
@@ -8308,42 +8313,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.js" line="-31"/>
         <source>Start</source>
-        <translation type="unfinished">起点</translation>
+        <translation>起点</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">中点</translation>
+        <translation>中点</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation type="unfinished">终点</translation>
+        <translation>终点</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation type="unfinished">线路长度</translation>
+        <translation>线路长度</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Length:</source>
-        <translation type="unfinished">长度：</translation>
+        <translation>长度：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Line angle</source>
-        <translation type="unfinished">线角</translation>
+        <translation>线角</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angle:</source>
-        <translation type="unfinished">角度：</translation>
+        <translation>角度：</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">参考点：</translation>
+        <translation>参考点：</translation>
     </message>
 </context>
 <context>
@@ -8381,7 +8386,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
-        <translation type="unfinished">绘制角平分线、三分线，...</translation>
+        <translation>绘制角平分线、三分线，...</translation>
     </message>
 </context>
 <context>
@@ -8389,57 +8394,57 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js" line="+63"/>
         <source>First point</source>
-        <translation type="unfinished">第一点</translation>
+        <translation>第一点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished">第二点</translation>
+        <translation>第二点</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation type="unfinished">从 2 点开始的盒式连接</translation>
+        <translation>从 2 点开始的盒式连接</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation type="unfinished">抽屉式箱形接头的指、槽和天窗</translation>
+        <translation>抽屉式箱形接头的指、槽和天窗</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
         <source>Depth:</source>
-        <translation type="unfinished">深度：</translation>
+        <translation>深度：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Finger Width:</source>
-        <translation type="unfinished">手指宽度：</translation>
+        <translation>手指宽度：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Finger/Slot Ratio:</source>
-        <translation type="unfinished">指/槽比：</translation>
+        <translation>指/槽比：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Style:</source>
-        <translation type="unfinished">风格</translation>
+        <translation>风格</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Finger first</source>
-        <translation type="unfinished">手指先行</translation>
+        <translation>手指先行</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Slot first</source>
-        <translation type="unfinished">槽位第一</translation>
+        <translation>槽位第一</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Tenons</source>
-        <translation type="unfinished">榫头</translation>
+        <translation>榫头</translation>
     </message>
 </context>
 <context>
@@ -8447,42 +8452,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
         <source>First point</source>
-        <translation type="unfinished">第一点</translation>
+        <translation>第一点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished">第二点</translation>
+        <translation>第二点</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation type="unfinished">由 2 个点组成的燕尾榫头(&amp;D)</translation>
+        <translation>由 2 个点组成的燕尾榫头(&amp;D)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished">绘制一个燕尾榫</translation>
+        <translation>绘制一个燕尾榫</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+17"/>
         <source>Number of Dovetails:</source>
-        <translation type="unfinished">燕尾服的数量：</translation>
+        <translation>燕尾服的数量：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail Height:</source>
-        <translation type="unfinished">燕尾槽高度：</translation>
+        <translation>燕尾槽高度：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail Gradient:</source>
-        <translation type="unfinished">燕尾梯度：</translation>
+        <translation>燕尾梯度：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation type="unfinished">燕尾槽/销子的比例：</translation>
+        <translation>燕尾槽/销子的比例：</translation>
     </message>
 </context>
 <context>
@@ -8490,7 +8495,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehandInit.js" line="+2"/>
         <source>&amp;Freehand Line</source>
-        <translation type="unfinished">自由手绘线</translation>
+        <translation>自由手绘线</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8500,12 +8505,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehand.js" line="+55"/>
         <source>Press to start drawing</source>
-        <translation type="unfinished">按下开始绘图</translation>
+        <translation>按下开始绘图</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Release to stop drawing</source>
-        <translation type="unfinished">释放以停止绘图</translation>
+        <translation>释放以停止绘图</translation>
     </message>
 </context>
 <context>
@@ -8523,12 +8528,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished">长度：</translation>
+        <translation>长度：</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">参考点：</translation>
+        <translation>参考点：</translation>
     </message>
 </context>
 <context>
@@ -8541,17 +8546,17 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">参考点：</translation>
+        <translation>参考点：</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js" line="+2"/>
         <source>&amp;Orthogonal</source>
-        <translation type="unfinished">正交</translation>
+        <translation>正交</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
-        <translation type="unfinished">绘制与基地实体正交的线</translation>
+        <translation>绘制与基地实体正交的线</translation>
     </message>
 </context>
 <context>
@@ -8569,17 +8574,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangent.js" line="+71"/>
         <source>Choose line</source>
-        <translation type="unfinished">选择线</translation>
+        <translation>选择线</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose circle, arc or ellipse</source>
-        <translation type="unfinished">选择圆、弧或椭圆</translation>
+        <translation>选择圆、弧或椭圆</translation>
     </message>
     <message>
         <location line="+141"/>
         <source>No tangent possible</source>
-        <translation type="unfinished">不可能有切线</translation>
+        <translation>不可能有切线</translation>
     </message>
 </context>
 <context>
@@ -8597,12 +8602,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished">距离：</translation>
+        <translation>距离：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished">数量：</translation>
+        <translation>数量：</translation>
     </message>
 </context>
 <context>
@@ -8628,27 +8633,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.js" line="+68"/>
         <source>First arc or circle</source>
-        <translation type="unfinished">第一个弧或圆</translation>
+        <translation>第一个弧或圆</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second arc or circle</source>
-        <translation type="unfinished">第二个弧或圆</translation>
+        <translation>第二个弧或圆</translation>
     </message>
     <message>
         <location line="+106"/>
         <source>No solution</source>
-        <translation type="unfinished">无解决方案</translation>
+        <translation>无解决方案</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
-        <translation type="unfinished">两个圆的根轴</translation>
+        <translation>两个圆的根轴</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished">长度：</translation>
+        <translation>长度：</translation>
     </message>
 </context>
 <context>
@@ -8656,52 +8661,52 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+77"/>
         <source>Choose base line, arc, circle, ellipse or polyline</source>
-        <translation type="unfinished">选择基线、弧线、圆、椭圆或折线</translation>
+        <translation>选择基线、弧线、圆、椭圆或折线</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Set position</source>
-        <translation type="unfinished">设置位置</translation>
+        <translation>设置位置</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2"/>
         <source>R&amp;elative Angle</source>
-        <translation type="unfinished">相对角度</translation>
+        <translation>相对角度</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
-        <translation type="unfinished">绘制与基地实体相对角度的直线</translation>
+        <translation>绘制与基地实体相对角度的直线</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.ui" line="+17"/>
         <source>Relative Angle:</source>
-        <translation type="unfinished">相对角度：</translation>
+        <translation>相对角度：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Length:</source>
-        <translation type="unfinished">长度：</translation>
+        <translation>长度：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">参考点：</translation>
+        <translation>参考点：</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="-45"/>
         <source>Start</source>
-        <translation type="unfinished">起点</translation>
+        <translation>起点</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">中点</translation>
+        <translation>中点</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation type="unfinished">终点</translation>
+        <translation>终点</translation>
     </message>
 </context>
 <context>
@@ -8709,7 +8714,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineSimilarityAxes/LineSimilarityAxesInit.js" line="+2"/>
         <source>Similarity Axes of 3 Circles</source>
-        <translation type="unfinished">3 个圆的相似性轴</translation>
+        <translation>3 个圆的相似性轴</translation>
     </message>
 </context>
 <context>
@@ -8717,32 +8722,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1.js" line="+65"/>
         <source>Choose start point of tangent</source>
-        <translation type="unfinished">选择切线的起始点</translation>
+        <translation>选择切线的起始点</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Choose circle, arc or ellipse</source>
-        <translation type="unfinished">选择圆、弧或椭圆</translation>
+        <translation>选择圆、弧或椭圆</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>No tangent possible.</source>
-        <translation type="unfinished">不可能有切入点。</translation>
+        <translation>不可能有切入点。</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
-        <translation type="unfinished">无法画出从圆内点到圆的切线</translation>
+        <translation>无法画出从圆内点到圆的切线</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1Init.js" line="+2"/>
         <source>&amp;Tangent (Point, Circle)</source>
-        <translation type="unfinished">切线（点、圆）</translation>
+        <translation>切线（点、圆）</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
-        <translation type="unfinished">绘制切线（点、圆）。</translation>
+        <translation>绘制切线（点、圆）。</translation>
     </message>
 </context>
 <context>
@@ -8750,27 +8755,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2.js" line="+71"/>
         <source>Choose first circle or arc</source>
-        <translation type="unfinished">选择第一个圆或弧</translation>
+        <translation>选择第一个圆或弧</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose second circle or arc</source>
-        <translation type="unfinished">选择第二个圆或弧</translation>
+        <translation>选择第二个圆或弧</translation>
     </message>
     <message>
         <location line="+142"/>
         <source>No tangent possible</source>
-        <translation type="unfinished">不可能有切线</translation>
+        <translation>不可能有切线</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2Init.js" line="+2"/>
         <source>Tan&amp;gent (Two Circles)</source>
-        <translation type="unfinished">相切（两个圆）</translation>
+        <translation>相切（两个圆）</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
-        <translation type="unfinished">绘制切线（圆，圆）。</translation>
+        <translation>绘制切线（圆，圆）。</translation>
     </message>
 </context>
 <context>
@@ -8778,12 +8783,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineVertical/LineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Line</source>
-        <translation type="unfinished">垂直线</translation>
+        <translation>垂直线</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw vertical line</source>
-        <translation type="unfinished">绘制垂直线</translation>
+        <translation>绘制垂直线</translation>
     </message>
 </context>
 <context>
@@ -8791,7 +8796,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/LinetypeMode/LinetypeMode.js" line="+86"/>
         <source>Screen-based Line&amp;types</source>
-        <translation type="unfinished">基于屏幕的线型</translation>
+        <translation>基于屏幕的线型</translation>
     </message>
 </context>
 <context>
@@ -8799,28 +8804,28 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/LinetypeSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished">新图纸的默认值</translation>
+        <translation>新图纸的默认值</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Linetype</source>
-        <translation type="unfinished">线条类型</translation>
+        <translation>线条类型</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished">一般</translation>
+        <translation>一般</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global linetype scale:</source>
-        <translation type="unfinished">全局线型比例：</translation>
+        <translation>全局线型比例：</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Scale of linetypes matches the scale of each viewport</source>
-        <translation type="unfinished">线条类型的比例与每个视口的比例一致</translation>
+        <translation>线条类型的比例与每个视口的比例一致</translation>
     </message>
 </context>
 <context>
@@ -8828,7 +8833,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ListenerExamples.js" line="+50"/>
         <source>&amp;Listeners</source>
-        <translation type="unfinished">听众</translation>
+        <translation>听众</translation>
     </message>
 </context>
 <context>
@@ -8836,7 +8841,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/LockAllLayers/LockAllLayersInit.js" line="+2"/>
         <source>&amp;Lock All Layers</source>
-        <translation type="unfinished">锁定所有层级</translation>
+        <translation>锁定所有层级</translation>
     </message>
 </context>
 <context>
@@ -8844,7 +8849,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/LockRelativeZero/LockRelativeZeroInit.js" line="+2"/>
         <source>&amp;Lock Relative Zero</source>
-        <translation type="unfinished">锁定相对零点(&amp;L)</translation>
+        <translation>锁定相对零点(&amp;L)</translation>
     </message>
 </context>
 <context>
@@ -8852,7 +8857,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/MathExamples.js" line="+51"/>
         <source>&amp;Mathematics</source>
-        <translation type="unfinished">数学</translation>
+        <translation>数学</translation>
     </message>
 </context>
 <context>
@@ -8860,7 +8865,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/NewFile/MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
-        <translation type="unfinished">无题</translation>
+        <translation>无题</translation>
     </message>
 </context>
 <context>
@@ -8868,17 +8873,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/MenuBar/MenuBar.js" line="+24"/>
         <source>Widgets</source>
-        <translation type="unfinished">小工具</translation>
+        <translation>小工具</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Menu Bar</source>
-        <translation type="unfinished">菜单栏</translation>
+        <translation>菜单栏</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/MenuBar/PreferencesPage.ui" line="+17"/>
         <source>Use native menu bar</source>
-        <translation type="unfinished">使用本地菜单栏</translation>
+        <translation>使用本地菜单栏</translation>
     </message>
 </context>
 <context>
@@ -8886,12 +8891,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MenusAndToolBars.js" line="+32"/>
         <source>MenusAndToolBars() is running...</source>
-        <translation type="unfinished">MenusAndToolBars()正在运行...</translation>
+        <translation>MenusAndToolBars()正在运行...</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Menus and Toolbars</source>
-        <translation type="unfinished">菜单和工具条</translation>
+        <translation>菜单和工具条</translation>
     </message>
 </context>
 <context>
@@ -8899,42 +8904,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.js" line="+44"/>
         <source>Modify</source>
-        <translation type="unfinished">修改</translation>
+        <translation>修改</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation type="unfinished">镜像</translation>
+        <translation>镜像</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>First point of symmetry axis</source>
-        <translation type="unfinished">对称轴的第一点</translation>
+        <translation>对称轴的第一点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point of symmetry axis</source>
-        <translation type="unfinished">对称轴的第二点</translation>
+        <translation>对称轴的第二点</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation type="unfinished">镜像(&amp;M)</translation>
+        <translation>镜像(&amp;M)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">复制</translation>
+        <translation>复制</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">使用当前图层和属性</translation>
+        <translation>使用当前图层和属性</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">使用工具选项的对话框</translation>
+        <translation>使用工具选项的对话框</translation>
     </message>
 </context>
 <context>
@@ -8942,27 +8947,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation type="unfinished">镜子选项</translation>
+        <translation>镜子选项</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished">复制数量</translation>
+        <translation>复制数量</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished">删除原文</translation>
+        <translation>删除原文</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished">保持原样</translation>
+        <translation>保持原样</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">使用当前层和属性</translation>
+        <translation>使用当前层和属性</translation>
     </message>
 </context>
 <context>
@@ -8988,17 +8993,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/MiscBlock.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished">其他</translation>
+        <translation>其他</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation type="unfinished">其他块状工具</translation>
+        <translation>其他块状工具</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>&amp;Block</source>
-        <translation type="unfinished">块(&amp;B)</translation>
+        <translation>块(&amp;B)</translation>
     </message>
 </context>
 <context>
@@ -9006,17 +9011,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/MiscDevelopment.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished">其他</translation>
+        <translation>其他</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Development Tools</source>
-        <translation type="unfinished">其他开发工具</translation>
+        <translation>其他开发工具</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>De&amp;velopment</source>
-        <translation type="unfinished">开发(&amp;V)</translation>
+        <translation>开发(&amp;V)</translation>
     </message>
 </context>
 <context>
@@ -9024,22 +9029,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/MiscDraw.js" line="+52"/>
         <source>Misc</source>
-        <translation type="unfinished">其他</translation>
+        <translation>其他</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Drawing Tools</source>
-        <translation type="unfinished">其他绘图工具</translation>
+        <translation>其他绘图工具</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Misc Draw</source>
-        <translation type="unfinished">其他绘图</translation>
+        <translation>其他绘图</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished">绘图(&amp;D)</translation>
+        <translation>绘图(&amp;D)</translation>
     </message>
 </context>
 <context>
@@ -9047,17 +9052,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MiscIO.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished">其他</translation>
+        <translation>其他</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Import / Export Tools</source>
-        <translation type="unfinished">其他导入/导出工具</translation>
+        <translation>其他导入/导出工具</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>&amp;Import/Export</source>
-        <translation type="unfinished">导入/导出(&amp;I)</translation>
+        <translation>导入/导出(&amp;I)</translation>
     </message>
 </context>
 <context>
@@ -9065,17 +9070,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+41"/>
         <source>Misc</source>
-        <translation type="unfinished">其他</translation>
+        <translation>其他</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Misc Information Tools</source>
-        <translation type="unfinished">其他信息工具</translation>
+        <translation>其他信息工具</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Information</source>
-        <translation type="unfinished">信息(&amp;I)</translation>
+        <translation>信息(&amp;I)</translation>
     </message>
 </context>
 <context>
@@ -9083,17 +9088,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/MiscModify.js" line="+44"/>
         <source>Misc</source>
-        <translation type="unfinished">其他</translation>
+        <translation>其他</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Misc Modification Tools</source>
-        <translation type="unfinished">其他修改工具</translation>
+        <translation>其他修改工具</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished">修改(&amp;M)</translation>
+        <translation>修改(&amp;M)</translation>
     </message>
 </context>
 <context>
@@ -9101,17 +9106,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/MiscSelect.js" line="+52"/>
         <source>Misc</source>
-        <translation type="unfinished">其他</translation>
+        <translation>其他</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Selection Tools</source>
-        <translation type="unfinished">其他选择工具</translation>
+        <translation>其他选择工具</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Select</source>
-        <translation type="unfinished">选择(&amp;S)</translation>
+        <translation>选择(&amp;S)</translation>
     </message>
 </context>
 <context>
@@ -9132,22 +9137,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/ModifyCorner.js" line="+86"/>
         <source>Choose corner</source>
-        <translation type="unfinished">选择角落</translation>
+        <translation>选择角落</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Choose first entity</source>
-        <translation type="unfinished">选择第一个实体</translation>
+        <translation>选择第一个实体</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second entity</source>
-        <translation type="unfinished">选择第二个实体</translation>
+        <translation>选择第二个实体</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation type="unfinished">设定点</translation>
+        <translation>设定点</translation>
     </message>
 </context>
 <context>
@@ -9155,7 +9160,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ModifyExamples.js" line="+49"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished">修改(&amp;M)</translation>
+        <translation>修改(&amp;M)</translation>
     </message>
 </context>
 <context>
@@ -9163,22 +9168,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
-        <translation type="unfinished">导入 MOL</translation>
+        <translation>导入 MOL</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All Files</source>
-        <translation type="unfinished">全部文件</translation>
+        <translation>全部文件</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>MOL Files</source>
-        <translation type="unfinished">MOL 文件</translation>
+        <translation>MOL 文件</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
         <source>Leetro MOL Import...</source>
-        <translation type="unfinished">Leetro MOL 导入...</translation>
+        <translation>Leetro MOL 导入...</translation>
     </message>
 </context>
 <context>
@@ -9186,12 +9191,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImporter.js" line="+161"/>
         <source>Importing Leetro MOL file...</source>
-        <translation type="unfinished">导入 Leetro MOL 文件...</translation>
+        <translation>导入 Leetro MOL 文件...</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Abort</source>
-        <translation type="unfinished">中止</translation>
+        <translation>中止</translation>
     </message>
 </context>
 <context>
@@ -9199,7 +9204,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/MouseDisplay/MouseDisplay.ui" line="+32"/>
         <source>Form</source>
-        <translation type="unfinished">形状</translation>
+        <translation>形状</translation>
     </message>
 </context>
 <context>
@@ -9207,23 +9212,23 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
         <source>Enter Position</source>
-        <translation type="unfinished">输入位置</translation>
+        <translation>输入位置</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position X:</source>
-        <translation type="unfinished">位置 X：</translation>
+        <translation>位置 X：</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+14"/>
         <source>0.00</source>
-        <translation type="unfinished">0.00</translation>
+        <translation>0.00</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Position Y:</source>
-        <translation type="unfinished">位置 Y：</translation>
+        <translation>位置 Y：</translation>
     </message>
 </context>
 <context>
@@ -9231,7 +9236,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js" line="+53"/>
         <source>My Scripts</source>
-        <translation type="unfinished">我的脚本</translation>
+        <translation>我的脚本</translation>
     </message>
 </context>
 <context>
@@ -9239,17 +9244,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="unfinished">字符映射</translation>
+        <translation>字符映射</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>MyLineEdit</source>
-        <translation type="unfinished">我的线上编辑</translation>
+        <translation>我的线上编辑</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>MyButton</source>
-        <translation type="unfinished">我的按钮</translation>
+        <translation>我的按钮</translation>
     </message>
 </context>
 <context>
@@ -9257,77 +9262,77 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
-        <translation type="unfinished">打开绘图：</translation>
+        <translation>打开绘图：</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Import Error</source>
-        <translation type="unfinished">导入错误</translation>
+        <translation>导入错误</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Cannot open file</source>
-        <translation type="unfinished">无法打开文件</translation>
+        <translation>无法打开文件</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No suitable Importer found. Please check file format and extension.</source>
-        <translation type="unfinished">没有找到合适的导入器。请检查文件格式和扩展名。</translation>
+        <translation>没有找到合适的导入器。请检查文件格式和扩展名。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>File not found.</source>
-        <translation type="unfinished">没有找到文件。</translation>
+        <translation>没有找到文件。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Please check your access rights, the file format and file extension.</source>
-        <translation type="unfinished">请检查您的访问权限、文件格式和文件扩展名。</translation>
+        <translation>请检查您的访问权限、文件格式和文件扩展名。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Import failed.</source>
-        <translation type="unfinished">导入失败。</translation>
+        <translation>导入失败。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>File is empty.</source>
-        <translation type="unfinished">文件是空的。</translation>
+        <translation>文件是空的。</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Drawing loaded successfully:</source>
-        <translation type="unfinished">绘图加载成功：</translation>
+        <translation>绘图加载成功：</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Format:</source>
-        <translation type="unfinished">格式：</translation>
+        <translation>格式：</translation>
     </message>
     <message>
         <location line="+143"/>
         <source>Untitled %1</source>
-        <translation type="unfinished">未命名 %1</translation>
+        <translation>未命名 %1</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>read-only</source>
-        <translation type="unfinished">只读</translation>
+        <translation>只读</translation>
     </message>
     <message>
         <location line="+63"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
-        <translation type="unfinished">您是否要保存您在&lt;br&gt;文件&apos;%1&apos;中所作的修改？</translation>
+        <translation>您是否要保存您在&lt;br&gt;文件&apos;%1&apos;中所作的修改？</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Your changes will be lost if you don&apos;t save them.</source>
-        <translation type="unfinished">如果你不保存，你的修改就会丢失。</translation>
+        <translation>如果你不保存，你的修改就会丢失。</translation>
     </message>
     <message>
         <location filename="../scripts/File/NewFile/NewFileInit.js" line="+2"/>
         <source>&amp;New</source>
-        <translation type="unfinished">新建(&amp;N)</translation>
+        <translation>新建(&amp;N)</translation>
     </message>
 </context>
 <context>
@@ -9335,7 +9340,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Window/NextWindow/NextWindowInit.js" line="+2"/>
         <source>&amp;Next</source>
-        <translation type="unfinished">下一步(&amp;N)</translation>
+        <translation>下一步(&amp;N)</translation>
     </message>
 </context>
 <context>
@@ -9343,41 +9348,43 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.js" line="+77"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation type="unfinished">选择直线，弧，圆或者椭圆</translation>
+        <translation>选择直线，弧，圆或者椭圆</translation>
     </message>
     <message numerus="yes">
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
-        <translation type="unfinished">
+        <translation>
+            <numerusform>半径在%n个同心圆后下降到0.0以下。</numerusform>
             <numerusform>半径在%n个同心圆后下降到0.0以下。</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
-        <translation type="unfinished">
+        <translation>
+            <numerusform>半径在%n个同心圆后下降到0.0以下。</numerusform>
             <numerusform>半径在%n个同心圆后下降到0.0以下。</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
-        <translation type="unfinished">偏移量（含距离）</translation>
+        <translation>偏移量（含距离）</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
-        <translation type="unfinished">偏移线、弧、圆或椭圆</translation>
+        <translation>偏移线、弧、圆或椭圆</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished">距离：</translation>
+        <translation>距离：</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Number:</source>
-        <translation type="unfinished">数量：</translation>
+        <translation>数量：</translation>
     </message>
 </context>
 <context>
@@ -9390,17 +9397,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
-        <translation type="unfinished">指定点</translation>
+        <translation>指定点</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
-        <translation type="unfinished">偏移（通过点）</translation>
+        <translation>偏移（通过点）</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation type="unfinished">通过点偏移直线、弧线、圆或椭圆</translation>
+        <translation>通过点偏移直线、弧线、圆或椭圆</translation>
     </message>
 </context>
 <context>
@@ -9408,27 +9415,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFile.js" line="+47"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation type="unfinished">没有找到导入筛选器。正在中止…</translation>
+        <translation>没有找到导入筛选器。正在中止…</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Open Drawing</source>
-        <translation type="unfinished">打开绘图</translation>
+        <translation>打开绘图</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All Files</source>
-        <translation type="unfinished">全部文件</translation>
+        <translation>全部文件</translation>
     </message>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFileInit.js" line="+2"/>
         <source>&amp;Open</source>
-        <translation type="unfinished">打开(&amp;O)</translation>
+        <translation>打开(&amp;O)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Open an existing drawing</source>
-        <translation type="unfinished">打开一个现有图纸</translation>
+        <translation>打开一个现有图纸</translation>
     </message>
 </context>
 <context>
@@ -9436,132 +9443,132 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished">新建图纸的默认值</translation>
+        <translation>新建图纸的默认值</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Printing - Page</source>
-        <translation type="unfinished">打印 - 页码</translation>
+        <translation>打印 - 页码</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation type="unfinished">打印中</translation>
+        <translation>打印中</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Page</source>
-        <translation type="unfinished">页码</translation>
+        <translation>页码</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Custom</source>
-        <translation type="unfinished">自定义</translation>
+        <translation>自定义</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116"/>
         <source>Page Orientation</source>
-        <translation type="unfinished">页面定位</translation>
+        <translation>页面定位</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Portrait</source>
-        <translation type="unfinished">肖像</translation>
+        <translation>肖像</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Landscape</source>
-        <translation type="unfinished">景观</translation>
+        <translation>景观</translation>
     </message>
     <message>
         <location line="-113"/>
         <source>Paper</source>
-        <translation type="unfinished">纸张</translation>
+        <translation>纸张</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Paper size:</source>
-        <translation type="unfinished">纸张大小：</translation>
+        <translation>纸张大小：</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Paper width:</source>
-        <translation type="unfinished">纸张宽度：</translation>
+        <translation>纸张宽度：</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Paper height:</source>
-        <translation type="unfinished">纸张高度：</translation>
+        <translation>纸张高度：</translation>
     </message>
     <message>
         <location line="+66"/>
         <source>Margins</source>
-        <translation type="unfinished">边距</translation>
+        <translation>边距</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Left:</source>
-        <translation type="unfinished">左侧:</translation>
+        <translation>左侧:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Top:</source>
-        <translation type="unfinished">顶部：</translation>
+        <translation>顶部：</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation type="unfinished">右侧:</translation>
+        <translation>右侧:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Bottom:</source>
-        <translation type="unfinished">底部：</translation>
+        <translation>底部：</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Set to Printer Margins</source>
-        <translation type="unfinished">设置为打印机页边距</translation>
+        <translation>设置为打印机页边距</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Scale and Position</source>
-        <translation type="unfinished">比例和位置</translation>
+        <translation>比例和位置</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Scale:</source>
-        <translation type="unfinished">缩放(S)：</translation>
+        <translation>缩放(S)：</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Offset X:</source>
-        <translation type="unfinished">偏移 X：</translation>
+        <translation>偏移 X：</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Offset Y:</source>
-        <translation type="unfinished">偏移 Y：</translation>
+        <translation>偏移 Y：</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Zero-Point</source>
-        <translation type="unfinished">零点</translation>
+        <translation>零点</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Miscellaneous</source>
-        <translation type="unfinished">其他</translation>
+        <translation>其他</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Point size (mm):</source>
-        <translation type="unfinished">点尺寸（毫米）：</translation>
+        <translation>点尺寸（毫米）：</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Show paper borders</source>
-        <translation type="unfinished">显示纸张边框</translation>
+        <translation>显示纸张边框</translation>
     </message>
 </context>
 <context>
@@ -9569,7 +9576,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/PanZoom/PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation type="unfinished">平移变焦</translation>
+        <translation>平移变焦</translation>
     </message>
 </context>
 <context>
@@ -9577,77 +9584,77 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.js" line="+52"/>
         <source>Edit</source>
-        <translation type="unfinished">编辑</translation>
+        <translation>编辑</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Paste</source>
-        <translation type="unfinished">粘贴</translation>
+        <translation>粘贴</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Position</source>
-        <translation type="unfinished">位置</translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished">粘贴</translation>
+        <translation>粘贴</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished">旋转：</translation>
+        <translation>旋转：</translation>
     </message>
     <message>
         <location line="+129"/>
         <source>Scale:</source>
-        <translation type="unfinished">缩放：</translation>
+        <translation>缩放：</translation>
     </message>
     <message>
         <location line="+91"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished">水平翻转粘贴的实体</translation>
+        <translation>水平翻转粘贴的实体</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished">垂直翻转粘贴的实体</translation>
+        <translation>垂直翻转粘贴的实体</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished">粘贴所有实体&lt;br&gt;到当前层&lt;br&gt;而不是原层</translation>
+        <translation>粘贴所有实体&lt;br&gt;到当前层&lt;br&gt;而不是原层</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished">至当前层</translation>
+        <translation>至当前层</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished">覆盖图层</translation>
+        <translation>覆盖图层</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished">覆盖区块</translation>
+        <translation>覆盖区块</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished">用剪贴板中的层覆盖图中现有层</translation>
+        <translation>用剪贴板中的层覆盖图中现有层</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished">用剪贴板中的块覆盖图中现有块</translation>
+        <translation>用剪贴板中的块覆盖图中现有块</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
         <source>Reset to defaults every time tool is used</source>
-        <translation type="unfinished">每次使用工具时都重置为默认值</translation>
+        <translation>每次使用工具时都重置为默认值</translation>
     </message>
 </context>
 <context>
@@ -9655,12 +9662,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/PdfExport/PdfExportInit.js" line="+2"/>
         <source>P&amp;DF Export</source>
-        <translation type="unfinished">PDF 导出(&amp;D)</translation>
+        <translation>PDF 导出(&amp;D)</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
-        <translation type="unfinished">将当前图纸导出为 PDF 格式</translation>
+        <translation>将当前图纸导出为 PDF 格式</translation>
     </message>
 </context>
 <context>
@@ -9668,12 +9675,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/PenToolBar/PenToolBar.js" line="+26"/>
         <source>Pen</source>
-        <translation type="unfinished">笔</translation>
+        <translation>笔</translation>
     </message>
     <message>
         <location line="+73"/>
         <source>Reset to Defaults</source>
-        <translation type="unfinished">重置为默认值</translation>
+        <translation>重置为默认值</translation>
     </message>
 </context>
 <context>
@@ -9681,7 +9688,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.js" line="+74"/>
         <source>&amp;Persistent Widgets</source>
-        <translation type="unfinished">持久性的小工具(&amp;P)</translation>
+        <translation>持久性的小工具(&amp;P)</translation>
     </message>
 </context>
 <context>
@@ -9689,12 +9696,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Point/Point.js" line="+71"/>
         <source>Point Tools</source>
-        <translation type="unfinished">点工具</translation>
+        <translation>点工具</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Point</source>
-        <translation type="unfinished">观点</translation>
+        <translation>观点</translation>
     </message>
 </context>
 <context>
@@ -9702,17 +9709,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1P.js" line="+51"/>
         <source>Position</source>
-        <translation type="unfinished">位置</translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1PInit.js" line="+2"/>
         <source>Single &amp;Point</source>
-        <translation type="unfinished">单点</translation>
+        <translation>单点</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw single point</source>
-        <translation type="unfinished">绘制单点</translation>
+        <translation>绘制单点</translation>
     </message>
 </context>
 <context>
@@ -9720,28 +9727,28 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PointDisplaySettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished">新图纸的默认值</translation>
+        <translation>新图纸的默认值</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Point Display</source>
-        <translation type="unfinished">积分显示</translation>
+        <translation>积分显示</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished">一般</translation>
+        <translation>一般</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode:</source>
-        <translation type="unfinished">模式：</translation>
+        <translation>模式：</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Size (pixel):</source>
-        <translation type="unfinished">尺寸（像素）：</translation>
+        <translation>尺寸（像素）：</translation>
     </message>
 </context>
 <context>
@@ -9749,17 +9756,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPole.js" line="+67"/>
         <source>Arc or circle</source>
-        <translation type="unfinished">弧形或圆形</translation>
+        <translation>弧形或圆形</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Line</source>
-        <translation type="unfinished">线路</translation>
+        <translation>线路</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2"/>
         <source>Pole of Line and Circle</source>
-        <translation type="unfinished">线和圆的极点</translation>
+        <translation>线和圆的极点</translation>
     </message>
 </context>
 <context>
@@ -9767,12 +9774,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenter.js" line="+45"/>
         <source>No solution</source>
-        <translation type="unfinished">无方案</translation>
+        <translation>无方案</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation type="unfinished">三个圆圈的权力中心</translation>
+        <translation>三个圆圈的权力中心</translation>
     </message>
 </context>
 <context>
@@ -9780,12 +9787,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
         <source>Polyline Tools</source>
-        <translation type="unfinished">多段线工具</translation>
+        <translation>多段线工具</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Polyline</source>
-        <translation type="unfinished">多边形</translation>
+        <translation>多边形</translation>
     </message>
 </context>
 <context>
@@ -9793,114 +9800,114 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished">选择直线、弧线、圆、椭圆、花线或折线来分解</translation>
+        <translation>选择直线、弧线、圆、椭圆、花线或折线来分解</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="unfinished">选择直线、弧线、圆或椭圆来分割</translation>
+        <translation>选择直线、弧线、圆或椭圆来分割</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Pick the first point</source>
-        <translation type="unfinished">挑选第一个点</translation>
+        <translation>挑选第一个点</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the first break point</source>
-        <translation type="unfinished">选择第一个破发点</translation>
+        <translation>选择第一个破发点</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Pick the second point</source>
-        <translation type="unfinished">选择第二个点</translation>
+        <translation>选择第二个点</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the second break point</source>
-        <translation type="unfinished">选择第二个破发点</translation>
+        <translation>选择第二个破发点</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation type="unfinished">分割段</translation>
+        <translation>分割段</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
-        <translation type="unfinished">删除换行段</translation>
+        <translation>删除换行段</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Remove the line segment between the break symbol</source>
-        <translation type="unfinished">删除断裂符号之间的线段</translation>
+        <translation>删除断裂符号之间的线段</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Remove Segment</source>
-        <translation type="unfinished">移除部分</translation>
+        <translation>移除部分</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Inherit entity properties</source>
-        <translation type="unfinished">继承实体属性</translation>
+        <translation>继承实体属性</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit all properties from the chosen entity</source>
-        <translation type="unfinished">继承所选实体的所有属性</translation>
+        <translation>继承所选实体的所有属性</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit</source>
-        <translation type="unfinished">继承</translation>
+        <translation>继承</translation>
     </message>
     <message>
         <location line="+17"/>
         <location line="+16"/>
         <source>Peak ratio</source>
-        <translation type="unfinished">峰值比率</translation>
+        <translation>峰值比率</translation>
     </message>
     <message>
         <location line="-13"/>
         <location line="+16"/>
         <source>The ratio of the peak height to the break width</source>
-        <translation type="unfinished">峰高与断裂宽度之比</translation>
+        <translation>峰高与断裂宽度之比</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Peak Ratio:</source>
-        <translation type="unfinished">峰值比率：</translation>
+        <translation>峰值比率：</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>First/Last segment inclined</source>
-        <translation type="unfinished">第一/最后一段倾斜</translation>
+        <translation>第一/最后一段倾斜</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are inclined</source>
-        <translation type="unfinished">断裂符号的第一段和最后一段是倾斜的</translation>
+        <translation>断裂符号的第一段和最后一段是倾斜的</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>First/Last segment vertical</source>
-        <translation type="unfinished">第一/最后一段垂直</translation>
+        <translation>第一/最后一段垂直</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are vertical</source>
-        <translation type="unfinished">断裂符号的第一段和最后一段是垂直的</translation>
+        <translation>断裂符号的第一段和最后一段是垂直的</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
         <source>&amp;Polyline break symbol from 2 points</source>
-        <translation type="unfinished">从2点开始的折线断裂符号</translation>
+        <translation>从2点开始的折线断裂符号</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation type="unfinished">从2个点画一个折线断点符号</translation>
+        <translation>从2个点画一个折线断点符号</translation>
     </message>
 </context>
 <context>
@@ -9910,27 +9917,27 @@ is already in the list.</source>
         <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
-        <translation type="unfinished">首选项</translation>
+        <translation>首选项</translation>
     </message>
     <message>
         <location line="-79"/>
         <source>Filter</source>
-        <translation type="unfinished">过滤器</translation>
+        <translation>过滤器</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Expand Tree</source>
-        <translation type="unfinished">扩展树</translation>
+        <translation>扩展树</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation type="unfinished">折叠树</translation>
+        <translation>折叠树</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Restore to Default Values</source>
-        <translation type="unfinished">恢复到默认值</translation>
+        <translation>恢复到默认值</translation>
     </message>
 </context>
 <context>
@@ -9938,7 +9945,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/PreviousView/PreviousViewInit.js" line="+2"/>
         <source>&amp;Previous View</source>
-        <translation type="unfinished">上一个查看(&amp;P)</translation>
+        <translation>上一个查看(&amp;P)</translation>
     </message>
 </context>
 <context>
@@ -9946,7 +9953,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Window/PreviousWindow/PreviousWindowInit.js" line="+2"/>
         <source>&amp;Previous</source>
-        <translation type="unfinished">上一个(&amp;P)</translation>
+        <translation>上一个(&amp;P)</translation>
     </message>
 </context>
 <context>
@@ -9954,12 +9961,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/Print/PrintInit.js" line="+2"/>
         <source>&amp;Print</source>
-        <translation type="unfinished">打印(&amp;P)</translation>
+        <translation>打印(&amp;P)</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Print current drawing</source>
-        <translation type="unfinished">打印当前图纸</translation>
+        <translation>打印当前图纸</translation>
     </message>
 </context>
 <context>
@@ -9967,12 +9974,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/PrintCurrentView/PrintCurrentViewInit.js" line="+2"/>
         <source>Print &amp;Current View</source>
-        <translation type="unfinished">打印当前视图</translation>
+        <translation>打印当前视图</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Print current view</source>
-        <translation type="unfinished">打印当前视图</translation>
+        <translation>打印当前视图</translation>
     </message>
 </context>
 <context>
@@ -9980,153 +9987,153 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+96"/>
         <source>Auto Paper Size</source>
-        <translation type="unfinished">自动纸张尺寸</translation>
+        <translation>自动纸张尺寸</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
-        <translation type="unfinished">纸张尺寸被设置为自定义尺寸（%1x%2mm）。你想把它改成你的打印机的默认纸张尺寸（%3）吗？</translation>
+        <translation>纸张尺寸被设置为自定义尺寸（%1x%2mm）。你想把它改成你的打印机的默认纸张尺寸（%3）吗？</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Auto fit</source>
-        <translation type="unfinished">自动配合</translation>
+        <translation>自动配合</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Auto fit drawing to paper?</source>
-        <translation type="unfinished">自动将图画贴在纸上？</translation>
+        <translation>自动将图画贴在纸上？</translation>
     </message>
     <message>
         <location line="+211"/>
         <source>Drag to move paper</source>
-        <translation type="unfinished">拖动以移动纸张</translation>
+        <translation>拖动以移动纸张</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Done</source>
-        <translation type="unfinished">完成</translation>
+        <translation>完成</translation>
     </message>
     <message>
         <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
-        <translation type="unfinished">页面设置</translation>
+        <translation>页面设置</translation>
     </message>
     <message>
         <location line="+277"/>
         <source>Export to PDF</source>
-        <translation type="unfinished">导出到 PDF</translation>
+        <translation>导出到 PDF</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Exporting to %1...</source>
-        <translation type="unfinished">导出到 %1...</translation>
+        <translation>导出到 %1...</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Export complete: %1</source>
-        <translation type="unfinished">导出完成: %1</translation>
+        <translation>导出完成: %1</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Export failed (cannot open file for writing): %1</source>
-        <translation type="unfinished">导出失败（无法打开文件进行写入）：%1</translation>
+        <translation>导出失败（无法打开文件进行写入）：%1</translation>
     </message>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreviewInit.js" line="+2"/>
         <source>Print Pre&amp;view</source>
-        <translation type="unfinished">打印预览(&amp;V)</translation>
+        <translation>打印预览(&amp;V)</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
-        <translation type="unfinished">预览当前图纸的打印方式</translation>
+        <translation>预览当前图纸的打印方式</translation>
     </message>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.ui" line="+17"/>
         <source>Close Print Preview</source>
-        <translation type="unfinished">关闭打印预览</translation>
+        <translation>关闭打印预览</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Print...</source>
-        <translation type="unfinished">打印...</translation>
+        <translation>打印...</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Export as PDF...</source>
-        <translation type="unfinished">导出为 PDF 格式...</translation>
+        <translation>导出为 PDF 格式...</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Scale:</source>
-        <translation type="unfinished">缩放：</translation>
+        <translation>缩放：</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation type="unfinished">绘图的显示比例</translation>
+        <translation>绘图的显示比例</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Move Paper Position</source>
-        <translation type="unfinished">移动纸张位置</translation>
+        <translation>移动纸张位置</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
-        <translation type="unfinished">自动将图纸装入页面</translation>
+        <translation>自动将图纸装入页面</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Auto Center</source>
-        <translation type="unfinished">自动居中</translation>
+        <translation>自动居中</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Portrait</source>
-        <translation type="unfinished">肖像</translation>
+        <translation>肖像</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Landscape</source>
-        <translation type="unfinished">景观</translation>
+        <translation>景观</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Auto zoom to page</source>
-        <translation type="unfinished">自动放大到页面</translation>
+        <translation>自动放大到页面</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Full Color Mode</source>
-        <translation type="unfinished">全彩模式</translation>
+        <translation>全彩模式</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Grayscale Mode</source>
-        <translation type="unfinished">灰度模式</translation>
+        <translation>灰度模式</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Black / White Mode</source>
-        <translation type="unfinished">黑/白模式</translation>
+        <translation>黑/白模式</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Show Paper Borders</source>
-        <translation type="unfinished">显示纸质边框</translation>
+        <translation>显示纸质边框</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Print Crop Marks</source>
-        <translation type="unfinished">打印裁剪标记</translation>
+        <translation>打印裁剪标记</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Show More Options</source>
-        <translation type="unfinished">显示更多选项</translation>
+        <translation>显示更多选项</translation>
     </message>
 </context>
 <context>
@@ -10134,22 +10141,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
-        <translation type="unfinished">投影工具</translation>
+        <translation>投影工具</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Projection</source>
-        <translation type="unfinished">投影</translation>
+        <translation>投影</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Reference point</source>
-        <translation type="unfinished">参考点</translation>
+        <translation>参考点</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation type="unfinished">目标点</translation>
+        <translation>目标点</translation>
     </message>
 </context>
 <context>
@@ -10157,174 +10164,174 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
         <source>:</source>
-        <translation type="unfinished">:</translation>
+        <translation>：</translation>
     </message>
     <message>
         <location line="+189"/>
         <source>No Selection</source>
-        <translation type="unfinished">没有选择</translation>
+        <translation>没有选择</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Specific Properties</source>
-        <translation type="unfinished">具体属性</translation>
+        <translation>具体属性</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Dependent Entities</source>
-        <translation type="unfinished">附属实体</translation>
+        <translation>附属实体</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Custom</source>
-        <translation type="unfinished">自定义</translation>
+        <translation>自定义</translation>
     </message>
     <message>
         <location line="+204"/>
         <source>Index</source>
-        <translation type="unfinished">索引</translation>
+        <translation>索引</translation>
     </message>
     <message>
         <location line="+79"/>
         <source>Remove this property from selected objects</source>
-        <translation type="unfinished">从选定的对象中删除该属性</translation>
+        <translation>从选定的对象中删除该属性</translation>
     </message>
     <message>
         <location line="+68"/>
         <source>All</source>
-        <translation type="unfinished">全部</translation>
+        <translation>全部</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Add custom property to selected objects</source>
-        <translation type="unfinished">为选定的对象添加自定义属性</translation>
+        <translation>为选定的对象添加自定义属性</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Show</source>
-        <translation type="unfinished">显示</translation>
+        <translation>显示</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show all properties</source>
-        <translation type="unfinished">显示所有属性</translation>
+        <translation>显示所有属性</translation>
     </message>
     <message>
         <location line="+140"/>
         <source>Auto</source>
-        <translation type="unfinished">自动</translation>
+        <translation>自动</translation>
     </message>
     <message>
         <location line="+201"/>
         <source>Use auto measurement</source>
-        <translation type="unfinished">使用自动测量</translation>
+        <translation>使用自动测量</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Yes</source>
-        <translation type="unfinished">是</translation>
+        <translation>是</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No</source>
-        <translation type="unfinished">无</translation>
+        <translation>无</translation>
     </message>
     <message>
         <location line="+430"/>
         <source>*VARIES*</source>
-        <translation type="unfinished">*差异*</translation>
+        <translation>*差异*</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Widgets</source>
-        <translation type="unfinished">小工具</translation>
+        <translation>小工具</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
-        <translation type="unfinished">属性编辑器</translation>
+        <translation>属性编辑器</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+24"/>
         <source>Display Z coordinates</source>
-        <translation type="unfinished">显示 Z 坐标</translation>
+        <translation>显示 Z 坐标</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Display properties of current block and current layer</source>
-        <translation type="unfinished">显示当前块和当前层的属性</translation>
+        <translation>显示当前块和当前层的属性</translation>
     </message>
     <message>
         <location line="-37"/>
         <source>Allow adding custom properties</source>
-        <translation type="unfinished">允许添加自定义属性</translation>
+        <translation>允许添加自定义属性</translation>
     </message>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation type="unfinished">自动舱口长度计算的最大复杂度：</translation>
+        <translation>自动舱口长度计算的最大复杂度：</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Update delay [ms]:</source>
-        <translation type="unfinished">更新延迟 [毫秒]：</translation>
+        <translation>更新延迟 [毫秒]：</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
-        <translation type="unfinished">始终显示所有属性（这可能会减慢选择实体的速度）。</translation>
+        <translation>始终显示所有属性（这可能会减慢选择实体的速度）。</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Always format property values as decimal numbers</source>
-        <translation type="unfinished">始终将属性值格式化为十进制数字</translation>
+        <translation>始终将属性值格式化为十进制数字</translation>
     </message>
     <message>
         <location line="+113"/>
         <source>Only update when nothing changes during update delay</source>
-        <translation type="unfinished">只有在更新延迟期间无变化时才更新</translation>
+        <translation>只有在更新延迟期间无变化时才更新</translation>
     </message>
     <message>
         <location line="-154"/>
         <source>Decimals / precision for displayed property values:</source>
-        <translation type="unfinished">显示的属性值的小数/精度：</translation>
+        <translation>显示的属性值的小数/精度：</translation>
     </message>
     <message>
         <location line="+101"/>
         <source>Display advanced dimension style overrides</source>
-        <translation type="unfinished">显示高级尺寸样式覆盖</translation>
+        <translation>显示高级尺寸样式覆盖</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translation type="unfinished">选择：</translation>
+        <translation>选择：</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>General Properties</source>
-        <translation type="unfinished">常规属性</translation>
+        <translation>常规属性</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Color:</source>
-        <translation type="unfinished">颜色：</translation>
+        <translation>颜色：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Handle:</source>
-        <translation type="unfinished">处理：</translation>
+        <translation>处理：</translation>
     </message>
     <message>
         <location line="+94"/>
         <source>Linetype Scale:</source>
-        <translation type="unfinished">线型比例：</translation>
+        <translation>线型比例：</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Protected:</source>
-        <translation type="unfinished">受保护：</translation>
+        <translation>受保护：</translation>
     </message>
 </context>
 <context>
@@ -10332,7 +10339,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/QtExamples.js" line="+50"/>
         <source>&amp;Qt</source>
-        <translation type="unfinished">&amp;Qt</translation>
+        <translation>&amp;Qt</translation>
     </message>
 </context>
 <context>
@@ -10340,7 +10347,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished">退出(&amp;Q)</translation>
+        <translation>退出(&amp;Q)</translation>
     </message>
 </context>
 <context>
@@ -10348,12 +10355,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeDialog.ui" line="+14"/>
         <source>Readme</source>
-        <translation type="unfinished">阅读手册</translation>
+        <translation>阅读手册</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Don&apos;t show this dialog at startup</source>
-        <translation type="unfinished">不在启动时显示此对话框</translation>
+        <translation>不在启动时显示此对话框</translation>
     </message>
 </context>
 <context>
@@ -10361,27 +10368,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFiles.js" line="+35"/>
         <source>File</source>
-        <translation type="unfinished">文件</translation>
+        <translation>文件</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Recent Files</source>
-        <translation type="unfinished">最近的文件</translation>
+        <translation>最近的文件</translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
-        <translation type="unfinished">清除列表(&amp;C)</translation>
+        <translation>清除列表(&amp;C)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation type="unfinished">打开最近(&amp;R)</translation>
+        <translation>打开最近(&amp;R)</translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/PreferencesPage.ui" line="+17"/>
         <source>Recent files history size:</source>
-        <translation type="unfinished">最近的文件历史大小：</translation>
+        <translation>最近的文件历史大小：</translation>
     </message>
 </context>
 <context>
@@ -10389,7 +10396,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Redo/RedoInit.js" line="+2"/>
         <source>&amp;Redo</source>
-        <translation type="unfinished">重做(&amp;R)</translation>
+        <translation>重做(&amp;R)</translation>
     </message>
 </context>
 <context>
@@ -10397,7 +10404,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/ReloadLinetypes/ReloadLinetypes.js" line="+48"/>
         <source>Reload Linetype Definitions</source>
-        <translation type="unfinished">重新加载线型定义</translation>
+        <translation>重新加载线型定义</translation>
     </message>
 </context>
 <context>
@@ -10410,7 +10417,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Delete selected block</source>
-        <translation type="unfinished">删除所选块</translation>
+        <translation>删除所选块</translation>
     </message>
 </context>
 <context>
@@ -10418,7 +10425,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/RemoveLayer/RemoveLayerInit.js" line="+2"/>
         <source>&amp;Delete Layer</source>
-        <translation type="unfinished">删除图层(&amp;D)</translation>
+        <translation>删除图层(&amp;D)</translation>
     </message>
 </context>
 <context>
@@ -10434,7 +10441,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/ReportBug/ReportBugInit.js" line="+2"/>
         <source>Report &amp;Bug</source>
-        <translation type="unfinished">报告错误</translation>
+        <translation>报告错误</translation>
     </message>
 </context>
 <context>
@@ -10442,7 +10449,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/ReportTranslationError/ReportTranslationErrorInit.js" line="+3"/>
         <source>Report &amp;Translation Error</source>
-        <translation type="unfinished">报告翻译错误(&amp;T)</translation>
+        <translation>报告翻译错误(&amp;T)</translation>
     </message>
 </context>
 <context>
@@ -10450,12 +10457,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Reset/ResetInit.js" line="+5"/>
         <source>Reset</source>
-        <translation type="unfinished">重置</translation>
+        <translation>重置</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Reset / Idle</source>
-        <translation type="unfinished">复位/闲置(&amp;R)</translation>
+        <translation>复位/闲置(&amp;R)</translation>
     </message>
 </context>
 <context>
@@ -10463,29 +10470,29 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLengthInit.js" line="+2"/>
         <source>Restrict &amp;Angle or Length</source>
-        <translation type="unfinished">限制角度或长度</translation>
+        <translation>限制角度或长度</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+80"/>
         <source>Angle:</source>
-        <translation type="unfinished">角度：</translation>
+        <translation>角度：</translation>
     </message>
     <message>
         <location line="-40"/>
         <location line="+66"/>
         <source>Base:</source>
-        <translation type="unfinished">基地：</translation>
+        <translation>基地：</translation>
     </message>
     <message>
         <location line="-40"/>
         <location line="+66"/>
         <source>Multiples</source>
-        <translation type="unfinished">倍数</translation>
+        <translation>倍数</translation>
     </message>
     <message>
         <location line="-115"/>
         <source>Distance:</source>
-        <translation type="unfinished">距离：</translation>
+        <translation>距离：</translation>
     </message>
 </context>
 <context>
@@ -10493,7 +10500,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/RestrictHorizontal/RestrictHorizontalInit.js" line="+2"/>
         <source>Restrict &amp;Horizontally</source>
-        <translation type="unfinished">横向限制</translation>
+        <translation>横向限制</translation>
     </message>
 </context>
 <context>
@@ -10501,7 +10508,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/RestrictOff/RestrictOffInit.js" line="+2"/>
         <source>Restrictions &amp;Off</source>
-        <translation type="unfinished">限制关闭</translation>
+        <translation>限制关闭</translation>
     </message>
 </context>
 <context>
@@ -10509,7 +10516,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/RestrictOrthogonal/RestrictOrthogonalInit.js" line="+2"/>
         <source>Restrict &amp;Orthogonally</source>
-        <translation type="unfinished">限制正交</translation>
+        <translation>限制正交</translation>
     </message>
 </context>
 <context>
@@ -10517,7 +10524,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/RestrictVertical/RestrictVerticalInit.js" line="+2"/>
         <source>Restrict &amp;Vertically</source>
-        <translation type="unfinished">纵向限制</translation>
+        <translation>纵向限制</translation>
     </message>
 </context>
 <context>
@@ -10525,7 +10532,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation type="unfinished">反向(&amp;R)</translation>
+        <translation>反向(&amp;R)</translation>
     </message>
 </context>
 <context>
@@ -10533,67 +10540,67 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.js" line="+47"/>
         <source>Modify</source>
-        <translation type="unfinished">修改</translation>
+        <translation>修改</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotate</source>
-        <translation type="unfinished">旋转</translation>
+        <translation>旋转</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Center point</source>
-        <translation type="unfinished">中心点</translation>
+        <translation>中心点</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Reference point</source>
-        <translation type="unfinished">参考点</translation>
+        <translation>参考点</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Target point</source>
-        <translation type="unfinished">目标点</translation>
+        <translation>目标点</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-        <translation type="unfinished">旋转角度无效</translation>
+        <translation>旋转角度无效</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
-        <translation type="unfinished">旋转</translation>
+        <translation>旋转</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">使用工具选项的对话框</translation>
+        <translation>使用工具选项的对话框</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">复制</translation>
+        <translation>复制</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">复制数量：</translation>
+        <translation>复制数量：</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">使用当前图层和属性</translation>
+        <translation>使用当前图层和属性</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation type="unfinished">角度：</translation>
+        <translation>角度：</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Define angle using mouse cursor</source>
-        <translation type="unfinished">使用鼠标光标定义角度</translation>
+        <translation>使用鼠标光标定义角度</translation>
     </message>
 </context>
 <context>
@@ -10601,32 +10608,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.js" line="+67"/>
         <source>Center of primary rotation</source>
-        <translation type="unfinished">主旋转中心</translation>
+        <translation>主旋转中心</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Center of secondary rotation</source>
-        <translation type="unfinished">二级旋转中心</translation>
+        <translation>二级旋转中心</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation type="unfinished">旋转二</translation>
+        <translation>旋转二</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation type="unfinished">主要角度：</translation>
+        <translation>主要角度：</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Secondary Angle:</source>
-        <translation type="unfinished">次要角度：</translation>
+        <translation>次要角度：</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Copies:</source>
-        <translation type="unfinished">复制：</translation>
+        <translation>复制：</translation>
     </message>
 </context>
 <context>
@@ -10634,42 +10641,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation type="unfinished">转动两个选项</translation>
+        <translation>转动两个选项</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished">复制数量</translation>
+        <translation>复制数量</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished">删除原文</translation>
+        <translation>删除原文</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished">保持原样</translation>
+        <translation>保持原样</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished">多份</translation>
+        <translation>多份</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>Angle &amp;a:</source>
-        <translation type="unfinished">角度a：</translation>
+        <translation>角度a：</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Angle &amp;b:</source>
-        <translation type="unfinished">角度 b：</translation>
+        <translation>角度 b：</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">使用当前层和属性</translation>
+        <translation>使用当前层和属性</translation>
     </message>
 </context>
 <context>
@@ -10677,42 +10684,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateDialog.ui" line="+14"/>
         <source>Rotate Options</source>
-        <translation type="unfinished">旋转选项</translation>
+        <translation>旋转选项</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished">复制数量</translation>
+        <translation>复制数量</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished">删除原文</translation>
+        <translation>删除原文</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished">保持原样</translation>
+        <translation>保持原样</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished">多份</translation>
+        <translation>多份</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>&amp;Angle (a):</source>
-        <translation type="unfinished">角度(a)：</translation>
+        <translation>角度(a)：</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Define angle using mouse cursor</source>
-        <translation type="unfinished">使用鼠标光标定义角度</translation>
+        <translation>使用鼠标光标定义角度</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">使用当前层和属性</translation>
+        <translation>使用当前层和属性</translation>
     </message>
 </context>
 <context>
@@ -10720,32 +10727,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Round/Round.js" line="+60"/>
         <source>The two entities cannot be rounded.</source>
-        <translation type="unfinished">这两个实体不能取整。</translation>
+        <translation>这两个实体不能取整。</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished">第一个实体不能被修剪。</translation>
+        <translation>第一个实体不能修剪。</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished">第二个实体不能修剪。</translation>
+        <translation>第二个实体不能修剪。</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation type="unfinished">圆(&amp;R)</translation>
+        <translation>圆(&amp;R)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="unfinished">修剪</translation>
+        <translation>修剪</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished">半径：</translation>
+        <translation>半径：</translation>
     </message>
 </context>
 <context>
@@ -10753,47 +10760,47 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScript.js" line="+60"/>
         <source>Open Script File</source>
-        <translation type="unfinished">打开脚本文件</translation>
+        <translation>打开脚本文件</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All Files</source>
-        <translation type="unfinished">全部文件</translation>
+        <translation>全部文件</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>ECMAScript Files</source>
-        <translation type="unfinished">ECMAScript文件</translation>
+        <translation>ECMAScript文件</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Run Script</source>
-        <translation type="unfinished">运行脚本</translation>
+        <translation>运行脚本</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js" line="+2"/>
         <source>R&amp;un Script</source>
-        <translation type="unfinished">运行脚本</translation>
+        <translation>运行脚本</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Open and run a script file</source>
-        <translation type="unfinished">打开并运行一个脚本文件</translation>
+        <translation>打开并运行一个脚本文件</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20"/>
         <source>Running Script</source>
-        <translation type="unfinished">运行脚本</translation>
+        <translation>运行脚本</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to run the following script(s):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;This script could potentially modify your drawings, modify or delete your files or access your network connection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;It is strongly recommended to only run scripts from trusted sources.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;你即将运行以下脚本：&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;这个脚本有可能修改你的绘图，修改或删除你的文件或访问你的网络连接。&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600; color:#ff0000;&quot;&gt;强烈建议只运行来自可信来源的脚本。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;你即将运行以下脚本：&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;这个脚本有可能修改你的绘图，修改或删除你的文件或访问你的网络连接。&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600; color:#ff0000;&quot;&gt;强烈建议只运行来自可信来源的脚本。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
-        <translation type="unfinished">不要再显示这个对话框</translation>
+        <translation>不要再显示这个对话框</translation>
     </message>
 </context>
 <context>
@@ -10801,82 +10808,82 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/Save/Save.js" line="+99"/>
         <source>Overwrite File?</source>
-        <translation type="unfinished">覆盖文件？</translation>
+        <translation>覆盖文件？</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation type="unfinished">文件&quot;%1 &quot;已经存在。你是否希望覆盖它？</translation>
+        <translation>文件&quot;%1 &quot;已经存在。你是否希望覆盖它？</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>File Format Version Not Recommended</source>
-        <translation type="unfinished">不推荐的文件格式版本</translation>
+        <translation>不推荐的文件格式版本</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
-        <translation type="unfinished">你所使用的文件格式版本不被推荐：&quot;%1&quot;。</translation>
+        <translation>你所使用的文件格式版本不被推荐：&quot;%1&quot;。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Custom properties will not be saved.</source>
-        <translation type="unfinished">自定义属性将不会被保存。</translation>
+        <translation>自定义属性将不会被保存。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All black entities and layers will be saved as white.</source>
-        <translation type="unfinished">所有的黑色实体和图层将被保存为白色。</translation>
+        <translation>所有的黑色实体和图层将被保存为白色。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All custom colors will be adjusted to the nearest fixed color.</source>
-        <translation type="unfinished">所有定制的颜色将被调整到最接近的固定颜色。</translation>
+        <translation>所有定制的颜色将被调整到最接近的固定颜色。</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Proceed?</source>
-        <translation type="unfinished">继续？</translation>
+        <translation>继续？</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Saving...</source>
-        <translation type="unfinished">正在保存...</translation>
+        <translation>正在保存...</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Saving to file format version &quot;%1&quot;.</source>
-        <translation type="unfinished">保存为文件格式版本&quot;%1&quot;。</translation>
+        <translation>保存为文件格式版本&quot;%1&quot;。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Black entities and layers are saved as white.</source>
-        <translation type="unfinished">黑色实体和图层被保存为白色。</translation>
+        <translation>黑色实体和图层被保存为白色。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Custom colors are adjusted to the nearest fixed color.</source>
-        <translation type="unfinished">自定义颜色被调整为最接近的固定颜色。</translation>
+        <translation>自定义颜色被调整为最接近的固定颜色。</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>File %1 has not been saved.</source>
-        <translation type="unfinished">文件 %1 没有被保存。</translation>
+        <translation>文件 %1 没有被保存。</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Saved file:</source>
-        <translation type="unfinished">保存的文件：</translation>
+        <translation>保存的文件：</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Format:</source>
-        <translation type="unfinished">格式：</translation>
+        <translation>格式：</translation>
     </message>
     <message>
         <location filename="../scripts/File/Save/SaveInit.js" line="+2"/>
         <source>&amp;Save</source>
-        <translation type="unfinished">保存(&amp;S)</translation>
+        <translation>保存(&amp;S)</translation>
     </message>
 </context>
 <context>
@@ -10884,77 +10891,77 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAs.js" line="+38"/>
         <source>File</source>
-        <translation type="unfinished">文件</translation>
+        <translation>文件</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Open/Save</source>
-        <translation type="unfinished">打开/保存</translation>
+        <translation>打开/保存</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
-        <translation type="unfinished">没有找到导出筛选器。正在中止…</translation>
+        <translation>没有找到导出筛选器。正在中止…</translation>
     </message>
     <message>
         <location line="+84"/>
         <source>Format:</source>
-        <translation type="unfinished">格式：</translation>
+        <translation>格式：</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAsInit.js" line="+2"/>
         <source>Save &amp;As...</source>
-        <translation type="unfinished">另存为(&amp;A)...</translation>
+        <translation>另存为(&amp;A)...</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/PreferencesPage.ui" line="+17"/>
         <source>File Dialog</source>
-        <translation type="unfinished">文件对话框</translation>
+        <translation>文件对话框</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation type="unfinished">使用系统文件对话框</translation>
+        <translation>使用系统文件对话框</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Opening</source>
-        <translation type="unfinished">正在打开</translation>
+        <translation>正在打开</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
-        <translation type="unfinished">允许打开零尺寸的文件（如不同步到磁盘的在线文件）。</translation>
+        <translation>允许打开零尺寸的文件（如不同步到磁盘的在线文件）。</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
-        <translation type="unfinished">将 DXF/DWG 中的字符串解码为 UTF-8（实验性）</translation>
+        <translation>将 DXF/DWG 中的字符串解码为 UTF-8（实验性）</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Saving</source>
-        <translation type="unfinished">保存中</translation>
+        <translation>保存中</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default format:</source>
-        <translation type="unfinished">默认格式：</translation>
+        <translation>默认格式：</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
-        <translation type="unfinished">保存为不支持 24bit 颜色的文件格式时显示警告</translation>
+        <translation>保存为不支持 24bit 颜色的文件格式时显示警告</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Store &quot;last saved by&quot; file information as:</source>
-        <translation type="unfinished">将 &quot;最后保存者 &quot;的文件信息存储为：</translation>
+        <translation>将 &quot;最后保存者 &quot;的文件信息存储为：</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>(empty for username)</source>
-        <translation type="unfinished">(用户名为空)</translation>
+        <translation>(用户名为空)</translation>
     </message>
 </context>
 <context>
@@ -10962,83 +10969,83 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
         <source>Scale</source>
-        <translation type="unfinished">缩放</translation>
+        <translation>缩放</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Modify</source>
-        <translation type="unfinished">修改</translation>
+        <translation>修改</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Focus point</source>
-        <translation type="unfinished">关注点</translation>
+        <translation>关注点</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Reference point</source>
-        <translation type="unfinished">参考点</translation>
+        <translation>参考点</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Target point</source>
-        <translation type="unfinished">目标点</translation>
+        <translation>目标点</translation>
     </message>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-        <translation type="unfinished">比例系数无效</translation>
+        <translation>比例系数无效</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation type="unfinished">缩放(&amp;S)</translation>
+        <translation>缩放(&amp;S)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">使用工具选项的对话框</translation>
+        <translation>使用工具选项的对话框</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">复制</translation>
+        <translation>复制</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">复制数量：</translation>
+        <translation>复制数量：</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">使用当前图层和属性</translation>
+        <translation>使用当前图层和属性</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation type="unfinished">因素十：</translation>
+        <translation>因素十：</translation>
     </message>
     <message>
         <location line="+10"/>
         <location line="+17"/>
         <source>1</source>
-        <translation type="unfinished">1</translation>
+        <translation>1</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Factor y:</source>
-        <translation type="unfinished">因素y：</translation>
+        <translation>因素y：</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Proportional</source>
-        <translation type="unfinished">比例</translation>
+        <translation>比例</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished">使用鼠标光标定义因子</translation>
+        <translation>使用鼠标光标定义因子</translation>
     </message>
 </context>
 <context>
@@ -11046,52 +11053,52 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation type="unfinished">缩放选择</translation>
+        <translation>缩放选择</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished">复制数量</translation>
+        <translation>复制数量</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished">删除原始(&amp;D)</translation>
+        <translation>删除原始(&amp;D)</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished">保持原始(&amp;K)</translation>
+        <translation>保持原始(&amp;K)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished">多个副本(&amp;M)</translation>
+        <translation>多个副本(&amp;M)</translation>
     </message>
     <message>
         <location line="+115"/>
         <source>Factor x:</source>
-        <translation type="unfinished">因素 x：</translation>
+        <translation>因素 x：</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Factor y:</source>
-        <translation type="unfinished">因素 y：</translation>
+        <translation>因素 y：</translation>
     </message>
     <message>
         <location line="-26"/>
         <source>Proportional</source>
-        <translation type="unfinished">比例</translation>
+        <translation>比例</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished">使用鼠标光标定义因子</translation>
+        <translation>使用鼠标光标定义因子</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">使用当前层和属性</translation>
+        <translation>使用当前层和属性</translation>
     </message>
 </context>
 <context>
@@ -11099,7 +11106,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/PreferencesPage.ui" line="+17"/>
         <source>Rescan scripts folder on startup</source>
-        <translation type="unfinished">启动时重新扫描脚本文件夹</translation>
+        <translation>启动时重新扫描脚本文件夹</translation>
     </message>
 </context>
 <context>
@@ -11107,7 +11114,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js" line="+24"/>
         <source>Scripting</source>
-        <translation type="unfinished">脚本</translation>
+        <translation>脚本</translation>
     </message>
 </context>
 <context>
@@ -11115,12 +11122,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/Select.js" line="+216"/>
         <source>Selection Tools</source>
-        <translation type="unfinished">选择工具</translation>
+        <translation>选择工具</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Selection Tools Panel</source>
-        <translation type="unfinished">选择工具面板</translation>
+        <translation>选择工具面板</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -11138,7 +11145,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Select all visible entities</source>
-        <translation type="unfinished">选择所有可见的实体</translation>
+        <translation>选择所有可见的实体</translation>
     </message>
 </context>
 <context>
@@ -11154,17 +11161,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColor.js" line="+64"/>
         <source>Select one or more objects only of the desired color</source>
-        <translation type="unfinished">只选择一个或多个所需颜色的对象</translation>
+        <translation>只选择一个或多个所需颜色的对象</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Selected all visible entities of color %1</source>
-        <translation type="unfinished">选择了所有颜色为%1的可见实体</translation>
+        <translation>选择了所有颜色为%1的可见实体</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js" line="+2"/>
         <source>By Color</source>
-        <translation type="unfinished">按颜色分类</translation>
+        <translation>按颜色分类</translation>
     </message>
 </context>
 <context>
@@ -11172,7 +11179,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation type="unfinished">选择一种颜色的所有对象</translation>
+        <translation>选择一种颜色的所有对象</translation>
     </message>
 </context>
 <context>
@@ -11180,17 +11187,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js" line="+58"/>
         <source>Object selected:</source>
-        <translation type="unfinished">选择的对象：</translation>
+        <translation>选择的对象：</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Object is not a drawing entity:</source>
-        <translation type="unfinished">对象不是一个绘图实体：</translation>
+        <translation>对象不是一个绘图实体：</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation type="unfinished">按处理方式</translation>
+        <translation>按处理方式</translation>
     </message>
 </context>
 <context>
@@ -11198,12 +11205,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation type="unfinished">按手柄选择</translation>
+        <translation>按手柄选择</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation type="unfinished">手柄（六角）：</translation>
+        <translation>手柄（六角）：</translation>
     </message>
 </context>
 <context>
@@ -11211,52 +11218,52 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+54"/>
         <source>Choose entity of contour</source>
-        <translation type="unfinished">选择轮廓实体</translation>
+        <translation>选择轮廓实体</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation type="unfinished">(去)选择轮廓线</translation>
+        <translation>(去)选择轮廓线</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select connected entities</source>
-        <translation type="unfinished">(取消) 选择连接的实体</translation>
+        <translation>(取消) 选择连接的实体</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished">模式：</translation>
+        <translation>模式：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished">替换当前选择</translation>
+        <translation>替换当前选择</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished">添加到当前选择中</translation>
+        <translation>添加到当前选择中</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished">从当前选择中减去</translation>
+        <translation>从当前选择中减去</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished">与当前选择相交</translation>
+        <translation>与当前选择相交</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Tolerance:</source>
-        <translation type="unfinished">容忍：</translation>
+        <translation>容忍：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Same Layer</source>
-        <translation type="unfinished">同一层</translation>
+        <translation>同一层</translation>
     </message>
 </context>
 <context>
@@ -11264,47 +11271,47 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.js" line="+90"/>
         <source>First point</source>
-        <translation type="unfinished">第一点</translation>
+        <translation>第一点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished">第二点</translation>
+        <translation>第二点</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation type="unfinished">(解除）选择相交的实体</translation>
+        <translation>(解除）选择相交的实体</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
-        <translation type="unfinished">(去) 选择所有与直线相交的实体</translation>
+        <translation>(去) 选择所有与直线相交的实体</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished">模式：</translation>
+        <translation>模式：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished">替换当前选择</translation>
+        <translation>替换当前选择</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished">添加到当前选择中</translation>
+        <translation>添加到当前选择中</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished">从当前选择中减去</translation>
+        <translation>从当前选择中减去</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished">与当前选择相交</translation>
+        <translation>与当前选择相交</translation>
     </message>
 </context>
 <context>
@@ -11312,17 +11319,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
-        <translation type="unfinished">%1实体被添加到选择中。</translation>
+        <translation>%1实体被添加到选择中。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
-        <translation type="unfinished">%1实体从选择中移除。</translation>
+        <translation>%1实体从选择中移除。</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer Entities</source>
-        <translation type="unfinished">选择图层实体</translation>
+        <translation>选择图层实体</translation>
     </message>
 </context>
 <context>
@@ -11330,42 +11337,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
-        <translation type="unfinished">在图层上选择实体</translation>
+        <translation>在图层上选择实体</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation type="unfinished">(解除) 选择图层(&amp;L)</translation>
+        <translation>(解除) 选择图层(&amp;L)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation type="unfinished">(解除）选择同一图层上的所有实体</translation>
+        <translation>(解除）选择同一图层上的所有实体</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished">模式：</translation>
+        <translation>模式：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished">替换当前选择</translation>
+        <translation>替换当前选择</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished">添加到当前选择中</translation>
+        <translation>添加到当前选择中</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished">从当前选择中减去</translation>
+        <translation>从当前选择中减去</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished">与当前选择相交</translation>
+        <translation>与当前选择相交</translation>
     </message>
 </context>
 <context>
@@ -11373,52 +11380,52 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+74"/>
         <source>First corner</source>
-        <translation type="unfinished">第一个角落</translation>
+        <translation>第一个角落</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second corner</source>
-        <translation type="unfinished">第二个角落</translation>
+        <translation>第二个角落</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation type="unfinished">(去)选择矩形区域</translation>
+        <translation>(去)选择矩形区域</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
-        <translation type="unfinished">(解除）选择一个矩形内的所有实体</translation>
+        <translation>(解除）选择一个矩形内的所有实体</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished">模式：</translation>
+        <translation>模式：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished">替换当前选择</translation>
+        <translation>替换当前选择</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished">添加到当前选择中</translation>
+        <translation>添加到当前选择中</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished">从当前选择中减去</translation>
+        <translation>从当前选择中减去</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished">与当前选择相交</translation>
+        <translation>与当前选择相交</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Cross Selection</source>
-        <translation type="unfinished">交叉选择</translation>
+        <translation>交叉选择</translation>
     </message>
 </context>
 <context>
@@ -11426,41 +11433,44 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.js" line="+58"/>
         <source>No entities selected.</source>
-        <translation type="unfinished">没有选择实体。</translation>
+        <translation>没有选择实体。</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
-        <translation type="unfinished">在&quot;%3 &quot;层上的%1 %2</translation>
+        <translation>在&quot;%3 &quot;层上的%1 %2</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 %2 on %3 Layers</source>
-        <translation type="unfinished">%1 %2在 %3层</translation>
+        <translation>%1 %2在 %3层</translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
-        <translation type="unfinished">
+        <translation>
+            <numerusform>%n 层的实体&quot;%1&quot;</numerusform>
             <numerusform>%n 层的实体&quot;%1&quot;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
-        <translation type="unfinished">
+        <translation>
+            <numerusform>%n 实体</numerusform>
             <numerusform>%n 实体</numerusform>
         </translation>
     </message>
     <message>
         <location line="+0"/>
         <source>on</source>
-        <translation type="unfinished">关于</translation>
+        <translation>关于</translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
         <source>%n Layers</source>
-        <translation type="unfinished">
+        <translation>
+            <numerusform>%n层</numerusform>
             <numerusform>%n层</numerusform>
         </translation>
     </message>
@@ -11474,7 +11484,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
         <source>Form</source>
-        <translation type="unfinished">形状</translation>
+        <translation>形状</translation>
     </message>
 </context>
 <context>
@@ -11482,12 +11492,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZero.js" line="+50"/>
         <source>Position</source>
-        <translation type="unfinished">位置</translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZeroInit.js" line="+2"/>
         <source>Set &amp;Relative Zero</source>
-        <translation type="unfinished">设置相对零点(&amp;R)</translation>
+        <translation>设置相对零点(&amp;R)</translation>
     </message>
 </context>
 <context>
@@ -11495,27 +11505,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.js" line="+78"/>
         <source>Shape Tools</source>
-        <translation type="unfinished">塑形工具</translation>
+        <translation>塑形工具</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Shape</source>
-        <translation type="unfinished">形状</translation>
+        <translation>形状</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
         <source>Create Polyline</source>
-        <translation type="unfinished">创建折线</translation>
+        <translation>创建折线</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Fill</source>
-        <translation type="unfinished">填充</translation>
+        <translation>填充</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Radius:</source>
-        <translation type="unfinished">半径：</translation>
+        <translation>半径：</translation>
     </message>
 </context>
 <context>
@@ -11524,27 +11534,27 @@ is already in the list.</source>
         <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
-        <translation type="unfinished">至少有两点是相同的。</translation>
+        <translation>至少有两点是相同的。</translation>
     </message>
     <message>
         <location line="-22"/>
         <source>No circle possible.</source>
-        <translation type="unfinished">不可能有圆圈。</translation>
+        <translation>不可能有圆圈。</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>No arc possible.</source>
-        <translation type="unfinished">不可能有电弧。</translation>
+        <translation>不可能有电弧。</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Invalid number of segments: %1.</source>
-        <translation type="unfinished">无效的段数：%1。</translation>
+        <translation>无效的段数：%1。</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
-        <translation type="unfinished">无效的椭圆主要/次要： %1 / %2。</translation>
+        <translation>无效的椭圆主要/次要： %1 / %2。</translation>
     </message>
 </context>
 <context>
@@ -11552,27 +11562,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.js" line="+61"/>
         <source>Center</source>
-        <translation type="unfinished">中心</translation>
+        <translation>中心</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Middle of Side</source>
-        <translation type="unfinished">侧面中间</translation>
+        <translation>侧面中间</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
-        <translation type="unfinished">多边形（中心，侧面）</translation>
+        <translation>多边形（中心，侧面）</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
-        <translation type="unfinished">从中心和边的中间点画出规则的多边形</translation>
+        <translation>从中心和边的中间点画出规则的多边形</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="unfinished">角落：</translation>
+        <translation>角落：</translation>
     </message>
 </context>
 <context>
@@ -11580,42 +11590,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+61"/>
         <source>First side</source>
-        <translation type="unfinished">第一面</translation>
+        <translation>第一面</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>First Corner</source>
-        <translation type="unfinished">第一角</translation>
+        <translation>第一角</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second side</source>
-        <translation type="unfinished">第二面</translation>
+        <translation>第二面</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Second Corner</source>
-        <translation type="unfinished">第二个角落</translation>
+        <translation>第二个角落</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
-        <translation type="unfinished">多边形（侧面，侧面）</translation>
+        <translation>多边形（侧面，侧面）</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
-        <translation type="unfinished">从两条对边或两个对角的中间点画出正多边形</translation>
+        <translation>从两条对边或两个对角的中间点画出正多边形</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="unfinished">角落：</translation>
+        <translation>角落：</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Corner to Corner</source>
-        <translation type="unfinished">角落到角落</translation>
+        <translation>角落到角落</translation>
     </message>
 </context>
 <context>
@@ -11623,27 +11633,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+61"/>
         <source>Center</source>
-        <translation type="unfinished">中心</translation>
+        <translation>中心</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Corner point</source>
-        <translation type="unfinished">角落点</translation>
+        <translation>角落点</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
-        <translation type="unfinished">多边形（中心，角落）</translation>
+        <translation>多边形（中心，角落）</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
-        <translation type="unfinished">从中心点和角点绘制规则的多边形</translation>
+        <translation>从中心点和角点绘制规则的多边形</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="unfinished">角落：</translation>
+        <translation>角落：</translation>
     </message>
 </context>
 <context>
@@ -11651,27 +11661,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+60"/>
         <source>First corner</source>
-        <translation type="unfinished">第一个角落</translation>
+        <translation>第一个角落</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Corner point</source>
-        <translation type="unfinished">角落点</translation>
+        <translation>角落点</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (2 Points of Side)</source>
-        <translation type="unfinished">多边形 (2个点的侧面)</translation>
+        <translation>多边形 (2个点的侧面)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
-        <translation type="unfinished">从一侧的端点画出规则的多边形</translation>
+        <translation>从一侧的端点画出规则的多边形</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="unfinished">角落：</translation>
+        <translation>角落：</translation>
     </message>
 </context>
 <context>
@@ -11679,17 +11689,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
-        <translation type="unfinished">长方形</translation>
+        <translation>长方形</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw rectangle from two corners</source>
-        <translation type="unfinished">从两个角开始画矩形</translation>
+        <translation>从两个角开始画矩形</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished">角度：</translation>
+        <translation>角度：</translation>
     </message>
 </context>
 <context>
@@ -11697,40 +11707,40 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
-        <translation type="unfinished">长方形与尺寸</translation>
+        <translation>长方形与尺寸</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw rectangle with position and size</source>
-        <translation type="unfinished">绘制带有位置和大小的矩形</translation>
+        <translation>绘制带有位置和大小的矩形</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
         <source>Width:</source>
-        <translation type="unfinished">宽度：</translation>
+        <translation>宽度：</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
         <source>Height:</source>
-        <translation type="unfinished">高度：</translation>
+        <translation>高度：</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="-10"/>
         <source>Angle:</source>
-        <translation type="unfinished">角度：</translation>
+        <translation>角度：</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">参考点：</translation>
+        <translation>参考点：</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101"/>
         <source>Create Polyline</source>
-        <translation type="unfinished">创建折线</translation>
+        <translation>创建折线</translation>
     </message>
 </context>
 <context>
@@ -11738,7 +11748,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/ShowActiveLayer/ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
-        <translation type="unfinished">只显示活跃</translation>
+        <translation>只显示活跃</translation>
     </message>
 </context>
 <context>
@@ -11754,7 +11764,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/ShowAllLayers/ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show All Layers</source>
-        <translation type="unfinished">显示所有图层</translation>
+        <translation>显示所有图层</translation>
     </message>
 </context>
 <context>
@@ -11762,12 +11772,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadme.js" line="+46"/>
         <source>File &quot;%1&quot; doesn&apos;t exist.</source>
-        <translation type="unfinished">文件&quot;%1 &quot;不存在。</translation>
+        <translation>文件&quot;%1 &quot;不存在。</translation>
     </message>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
-        <translation type="unfinished">显示自述</translation>
+        <translation>显示自述</translation>
     </message>
 </context>
 <context>
@@ -11775,7 +11785,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation type="unfinished">单人</translation>
+        <translation>单人</translation>
     </message>
 </context>
 <context>
@@ -11796,17 +11806,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation type="unfinished">捕捉</translation>
+        <translation>捕捉</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation type="unfinished">自动捕捉</translation>
+        <translation>自动捕捉</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAutoInit.js" line="+2"/>
         <source>&amp;Auto</source>
-        <translation type="unfinished">自动</translation>
+        <translation>自动</translation>
     </message>
 </context>
 <context>
@@ -11814,7 +11824,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapCenter/SnapCenterInit.js" line="+2"/>
         <source>&amp;Center</source>
-        <translation type="unfinished">中心</translation>
+        <translation>中心</translation>
     </message>
 </context>
 <context>
@@ -11822,47 +11832,47 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+88"/>
         <source>Set coordinate</source>
-        <translation type="unfinished">设置坐标</translation>
+        <translation>设置坐标</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Enter</source>
-        <translation type="unfinished">进入</translation>
+        <translation>进入</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
         <source>&amp;Coordinate</source>
-        <translation type="unfinished">协调</translation>
+        <translation>协调</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
         <source>X Coordinate</source>
-        <translation type="unfinished">X 坐标</translation>
+        <translation>X 坐标</translation>
     </message>
     <message>
         <location line="-19"/>
         <source>x:</source>
-        <translation type="unfinished">x:</translation>
+        <translation>x：</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>y:</source>
-        <translation type="unfinished">y:</translation>
+        <translation>y：</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Y Coordinate</source>
-        <translation type="unfinished">Y坐标</translation>
+        <translation>Y坐标</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
-        <translation type="unfinished">为相对坐标打勾</translation>
+        <translation>为相对坐标打勾</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished">相关</translation>
+        <translation>相关</translation>
     </message>
 </context>
 <context>
@@ -11870,42 +11880,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
         <source>&amp;Polar Coordinate</source>
-        <translation type="unfinished">极坐标</translation>
+        <translation>极坐标</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+39"/>
         <source>Radius (Distance)</source>
-        <translation type="unfinished">半径（距离）</translation>
+        <translation>半径（距离）</translation>
     </message>
     <message>
         <location line="-22"/>
         <source>r:</source>
-        <translation type="unfinished">r:</translation>
+        <translation>r：</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Radius</source>
-        <translation type="unfinished">半径</translation>
+        <translation>半径</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>&lt;:</source>
-        <translation type="unfinished">&lt;:</translation>
+        <translation>&lt;：</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Angle</source>
-        <translation type="unfinished">角度</translation>
+        <translation>角度</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
-        <translation type="unfinished">为相对坐标打勾</translation>
+        <translation>为相对坐标打勾</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished">相关</translation>
+        <translation>相关</translation>
     </message>
 </context>
 <context>
@@ -11913,12 +11923,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistanceInit.js" line="+2"/>
         <source>&amp;Distance</source>
-        <translation type="unfinished">距离</translation>
+        <translation>距离</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished">快照距离</translation>
+        <translation>快照距离</translation>
     </message>
 </context>
 <context>
@@ -11926,42 +11936,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.js" line="+36"/>
         <source>Specify first point to measure distance from</source>
-        <translation type="unfinished">指定测量距离的第一个点</translation>
+        <translation>指定测量距离的第一个点</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Second point</source>
-        <translation type="unfinished">第二点</translation>
+        <translation>第二点</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation type="unfinished">距离手动(&amp;D)</translation>
+        <translation>距离手动(&amp;D)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Snap distance between 2 points</source>
-        <translation type="unfinished">2个点之间的卡口距离</translation>
+        <translation>2个点之间的卡口距离</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished">快照距离</translation>
+        <translation>快照距离</translation>
     </message>
     <message>
         <location line="+75"/>
         <source>Distance</source>
-        <translation type="unfinished">距离</translation>
+        <translation>距离</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Percentage</source>
-        <translation type="unfinished">百分比</translation>
+        <translation>百分比</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Fraction</source>
-        <translation type="unfinished">分数</translation>
+        <translation>分数</translation>
     </message>
 </context>
 <context>
@@ -11969,7 +11979,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapEnd/SnapEndInit.js" line="+2"/>
         <source>&amp;End</source>
-        <translation type="unfinished">结束</translation>
+        <translation>结束</translation>
     </message>
 </context>
 <context>
@@ -11977,7 +11987,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation type="unfinished">自由(&amp;F)</translation>
+        <translation>自由(&amp;F)</translation>
     </message>
 </context>
 <context>
@@ -11985,7 +11995,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapGrid/SnapGridInit.js" line="+2"/>
         <source>&amp;Grid</source>
-        <translation type="unfinished">栅格</translation>
+        <translation>栅格</translation>
     </message>
 </context>
 <context>
@@ -11993,7 +12003,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersection/SnapIntersectionInit.js" line="+2"/>
         <source>&amp;Intersection</source>
-        <translation type="unfinished">交叉点</translation>
+        <translation>交叉点</translation>
     </message>
 </context>
 <context>
@@ -12001,32 +12011,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation type="unfinished">捕捉</translation>
+        <translation>捕捉</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation type="unfinished">交叉口手动</translation>
+        <translation>交叉口手动</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>First entity</source>
-        <translation type="unfinished">第一个实体</translation>
+        <translation>第一个实体</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity</source>
-        <translation type="unfinished">第二实体</translation>
+        <translation>第二实体</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation type="unfinished">交叉口手动(&amp;S)</translation>
+        <translation>交叉口手动(&amp;S)</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17"/>
         <source>Terminate manual intersection tool after one use</source>
-        <translation type="unfinished">使用一次后，终止手动相交工具</translation>
+        <translation>使用一次后，终止手动相交工具</translation>
     </message>
 </context>
 <context>
@@ -12034,7 +12044,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapMiddle/SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
-        <translation type="unfinished">中层</translation>
+        <translation>中层</translation>
     </message>
 </context>
 <context>
@@ -12042,7 +12052,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation type="unfinished">中层手动(&amp;M)</translation>
+        <translation>中层手动(&amp;M)</translation>
     </message>
 </context>
 <context>
@@ -12050,7 +12060,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapOnEntity/SnapOnEntityInit.js" line="+2"/>
         <source>&amp;On Entity</source>
-        <translation type="unfinished">关于实体</translation>
+        <translation>关于实体</translation>
     </message>
 </context>
 <context>
@@ -12058,7 +12068,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapPerpendicular/SnapPerpendicularInit.js" line="+2"/>
         <source>&amp;Perpendicular</source>
-        <translation type="unfinished">垂直度</translation>
+        <translation>垂直度</translation>
     </message>
 </context>
 <context>
@@ -12066,7 +12076,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapReference/SnapReferenceInit.js" line="+2"/>
         <source>&amp;Reference</source>
-        <translation type="unfinished">参考资料</translation>
+        <translation>参考资料</translation>
     </message>
 </context>
 <context>
@@ -12074,7 +12084,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
         <source>Center of &amp;Selection</source>
-        <translation type="unfinished">选择中心</translation>
+        <translation>选择中心</translation>
     </message>
 </context>
 <context>
@@ -12082,7 +12092,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapTangential/SnapTangentialInit.js" line="+2"/>
         <source>&amp;Tangential</source>
-        <translation type="unfinished">切线</translation>
+        <translation>切向</translation>
     </message>
 </context>
 <context>
@@ -12090,7 +12100,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapXManual/SnapXManualInit.js" line="+2"/>
         <source>&amp;X/Y from Points</source>
-        <translation type="unfinished">从 X/Y 点(&amp;X/)</translation>
+        <translation>从 X/Y 点(&amp;X/)</translation>
     </message>
 </context>
 <context>
@@ -12098,7 +12108,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapYManual/SnapYManualInit.js" line="+2"/>
         <source>&amp;Y/X from Points</source>
-        <translation type="unfinished">从 Y/X 点(&amp;Y)</translation>
+        <translation>从 Y/X 点(&amp;Y)</translation>
     </message>
 </context>
 <context>
@@ -12106,12 +12116,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Spline/Spline.js" line="+72"/>
         <source>Spline Tools</source>
-        <translation type="unfinished">样条工具</translation>
+        <translation>样条工具</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Spline</source>
-        <translation type="unfinished">样条(&amp;S)</translation>
+        <translation>样条(&amp;S)</translation>
     </message>
 </context>
 <context>
@@ -12119,47 +12129,47 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.js" line="+60"/>
         <source>First control point</source>
-        <translation type="unfinished">第一个控制点</translation>
+        <translation>第一个控制点</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Next control point</source>
-        <translation type="unfinished">下一个控制点</translation>
+        <translation>下一个控制点</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
-        <translation type="unfinished">样条 (控制点)(&amp;S)</translation>
+        <translation>样条 (控制点)(&amp;S)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw spline from control points</source>
-        <translation type="unfinished">从控制点绘制样条</translation>
+        <translation>从控制点绘制样条</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
         <source>Undo Last Control Point</source>
-        <translation type="unfinished">撤销最后一个控制点</translation>
+        <translation>撤销最后一个控制点</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Degree:</source>
-        <translation type="unfinished">学位：</translation>
+        <translation>学位：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose Spline Degree</source>
-        <translation type="unfinished">选择样条度</translation>
+        <translation>选择样条度</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Tick for Closed Spline</source>
-        <translation type="unfinished">为封闭式样条打勾</translation>
+        <translation>为封闭式样条打勾</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Closed</source>
-        <translation type="unfinished">关闭</translation>
+        <translation>关闭</translation>
     </message>
 </context>
 <context>
@@ -12167,7 +12177,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/SplineToLine/SplineToLine.js" line="+71"/>
         <source>Convert Straight Splines to Lines</source>
-        <translation type="unfinished">将直线样条转换为线</translation>
+        <translation>将直线样条转换为线</translation>
     </message>
 </context>
 <context>
@@ -12175,52 +12185,52 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/StatusBar/StatusBar.js" line="+32"/>
         <source>Widgets</source>
-        <translation type="unfinished">小工具</translation>
+        <translation>小工具</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Status Bar</source>
-        <translation type="unfinished">状态栏</translation>
+        <translation>状态栏</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Status Bar</source>
-        <translation type="unfinished">状态栏</translation>
+        <translation>状态栏</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47"/>
         <source>Status bar font:</source>
-        <translation type="unfinished">状态栏字体：</translation>
+        <translation>状态栏字体：</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Status Bar Widgets</source>
-        <translation type="unfinished">状态栏小工具</translation>
+        <translation>状态栏小工具</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinate display</source>
-        <translation type="unfinished">坐标显示</translation>
+        <translation>坐标显示</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Mouse display</source>
-        <translation type="unfinished">鼠标显示</translation>
+        <translation>鼠标显示</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selection display</source>
-        <translation type="unfinished">选择显示</translation>
+        <translation>选择显示</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Progress display</source>
-        <translation type="unfinished">进度显示</translation>
+        <translation>进度显示</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Show status tips</source>
-        <translation type="unfinished">显示状态提示</translation>
+        <translation>显示状态提示</translation>
     </message>
 </context>
 <context>
@@ -12228,37 +12238,37 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Stretch/Stretch.js" line="+59"/>
         <source>First corner</source>
-        <translation type="unfinished">第一个角落</translation>
+        <translation>第一个角落</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second corner</source>
-        <translation type="unfinished">第二个角落</translation>
+        <translation>第二个角落</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Reference point</source>
-        <translation type="unfinished">参考点</translation>
+        <translation>参考点</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation type="unfinished">目标点</translation>
+        <translation>目标点</translation>
     </message>
     <message>
         <location line="+141"/>
         <source>No selected entities in given range</source>
-        <translation type="unfinished">在给定范围内没有选定的实体</translation>
+        <translation>在给定范围内没有选定的实体</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No entities in given range</source>
-        <translation type="unfinished">在给定范围内没有实体</translation>
+        <translation>在给定范围内没有实体</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
-        <translation type="unfinished">伸展</translation>
+        <translation>伸展</translation>
     </message>
 </context>
 <context>
@@ -12266,63 +12276,63 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
-        <translation type="unfinished">文件</translation>
+        <translation>文件</translation>
     </message>
     <message>
         <location line="+0"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
-        <translation type="unfinished">SVG 导入</translation>
+        <translation>SVG 导入</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Import SVG</source>
-        <translation type="unfinished">导入 SVG</translation>
+        <translation>导入 SVG</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All Files</source>
-        <translation type="unfinished">全部文件</translation>
+        <translation>全部文件</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>SVG Files</source>
-        <translation type="unfinished">SVG 文件</translation>
+        <translation>SVG 文件</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
-        <translation type="unfinished">SVG 导入(&amp;I)...</translation>
+        <translation>SVG 导入(&amp;I)...</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/PreferencesPage.ui" line="+17"/>
         <source>Splines</source>
-        <translation type="unfinished">样条</translation>
+        <translation>样条</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
-        <translation type="unfinished">如果合适的话，自动将样条转换为直线/弧线</translation>
+        <translation>如果合适的话，自动将样条转换为直线/弧线</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Layers</source>
-        <translation type="unfinished">图层</translation>
+        <translation>图层</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import groups as layers</source>
-        <translation type="unfinished">以图层形式导入组</translation>
+        <translation>以图层形式导入组</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>
         <source>Resolution:</source>
-        <translation type="unfinished">分辨率：</translation>
+        <translation>分辨率：</translation>
     </message>
     <message>
         <location line="+57"/>
         <source>Pixels / Inch</source>
-        <translation type="unfinished">像素/英寸</translation>
+        <translation>像素/英寸</translation>
     </message>
 </context>
 <context>
@@ -12330,7 +12340,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation type="unfinished">SVG 文件 %1</translation>
+        <translation>SVG 文件 %1</translation>
     </message>
 </context>
 <context>
@@ -12338,17 +12348,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/TabBar/TabBar.js" line="+24"/>
         <source>Widgets</source>
-        <translation type="unfinished">小工具</translation>
+        <translation>小工具</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Tab Bar</source>
-        <translation type="unfinished">标签栏</translation>
+        <translation>标签栏</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/TabBar/PreferencesPage.ui" line="+17"/>
         <source>Show tab bar</source>
-        <translation type="unfinished">显示标签栏</translation>
+        <translation>显示标签栏</translation>
     </message>
 </context>
 <context>
@@ -12356,109 +12366,109 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Text/Text.js" line="+89"/>
         <source>Position</source>
-        <translation type="unfinished">位置</translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextInit.js" line="+2"/>
         <source>&amp;Text</source>
-        <translation type="unfinished">文本</translation>
+        <translation>文本</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw text</source>
-        <translation type="unfinished">绘制文本</translation>
+        <translation>绘制文本</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Text:</source>
-        <translation type="unfinished">正文</translation>
+        <translation>正文</translation>
     </message>
     <message>
         <location line="+33"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+33"/>
         <source>Height:</source>
-        <translation type="unfinished">高度：</translation>
+        <translation>高度：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Angle:</source>
-        <translation type="unfinished">角度：</translation>
+        <translation>角度：</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
         <source>Font size in text dialog preview:</source>
-        <translation type="unfinished">文本对话框预览中的字体大小：</translation>
+        <translation>文本对话框预览中的字体大小：</translation>
     </message>
     <message>
         <location line="+99"/>
         <source>Show font preview in font controls</source>
-        <translation type="unfinished">在字体控件中显示字体预览</translation>
+        <translation>在字体控件中显示字体预览</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Use reduced selection of fonts:</source>
-        <translation type="unfinished">使用减少的字体选择：</translation>
+        <translation>使用减少的字体选择：</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Uncheck all</source>
-        <translation type="unfinished">取消勾选所有</translation>
+        <translation>取消勾选所有</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Check all</source>
-        <translation type="unfinished">检查所有</translation>
+        <translation>检查所有</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-17"/>
         <source>Text</source>
-        <translation type="unfinished">文本</translation>
+        <translation>文本</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Text height</source>
-        <translation type="unfinished">文字高度</translation>
+        <translation>文字高度</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Spacing</source>
-        <translation type="unfinished">株距</translation>
+        <translation>株距</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Letter spacing</source>
-        <translation type="unfinished">字母间距</translation>
+        <translation>字母间距</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Direction:</source>
-        <translation type="unfinished">方向：</translation>
+        <translation>方向：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Counter Clockwise</source>
-        <translation type="unfinished">逆时针</translation>
+        <translation>逆时针</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise</source>
-        <translation type="unfinished">顺时针</translation>
+        <translation>顺时针</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Fit text to line, arc or circle</source>
-        <translation type="unfinished">使文字适合于直线、弧线或圆圈</translation>
+        <translation>使文字适合于直线、弧线或圆圈</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Fit</source>
-        <translation type="unfinished">适合</translation>
+        <translation>适合</translation>
     </message>
 </context>
 <context>
@@ -12466,22 +12476,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.js" line="+41"/>
         <source>Arrow position</source>
-        <translation type="unfinished">箭头位置</translation>
+        <translation>箭头位置</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Choose text</source>
-        <translation type="unfinished">选择文本</translation>
+        <translation>选择文本</translation>
     </message>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation type="unfinished">标注引线成功创建</translation>
+        <translation>标注引线成功创建</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation type="unfinished">文本对齐的标注引线(&amp;T)</translation>
+        <translation>文本对齐的标注引线(&amp;T)</translation>
     </message>
 </context>
 <context>
@@ -12490,23 +12500,23 @@ is already in the list.</source>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.js" line="+99"/>
         <location line="+1"/>
         <source>Select Entity</source>
-        <translation type="unfinished">选择实体</translation>
+        <translation>选择实体</translation>
     </message>
     <message>
         <location line="+6"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished">位置</translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js" line="+2"/>
         <source>&amp;Text Along Entity</source>
-        <translation type="unfinished">沿着实体的文本</translation>
+        <translation>沿着实体的文本</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw text along an entity</source>
-        <translation type="unfinished">沿着一个实体绘制文本</translation>
+        <translation>沿着一个实体绘制文本</translation>
     </message>
 </context>
 <context>
@@ -12514,184 +12524,184 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
         <source>Default value:</source>
-        <translation type="unfinished">默认值：</translation>
+        <translation>默认值：</translation>
     </message>
     <message>
         <location line="+274"/>
         <source>&amp;Undo</source>
-        <translation type="unfinished">撤销(&amp;U)</translation>
+        <translation>撤销(&amp;U)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Redo</source>
-        <translation type="unfinished">重做(&amp;R)</translation>
+        <translation>重做(&amp;R)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation type="unfinished">剪切(&amp;T)</translation>
+        <translation>剪切(&amp;T)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished">复制(&amp;C)</translation>
+        <translation>复制(&amp;C)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished">粘贴(&amp;P)</translation>
+        <translation>粘贴(&amp;P)</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Bold</source>
-        <translation type="unfinished">粗体(&amp;B)</translation>
+        <translation>粗体(&amp;B)</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Italic</source>
-        <translation type="unfinished">斜体(&amp;I)</translation>
+        <translation>斜体(&amp;I)</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Underline</source>
-        <translation type="unfinished">下划线(&amp;U)</translation>
+        <translation>下划线(&amp;U)</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Subscript</source>
-        <translation type="unfinished">下标(&amp;S)</translation>
+        <translation>下标(&amp;S)</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Superscript</source>
-        <translation type="unfinished">上标(&amp;S)</translation>
+        <translation>上标(&amp;S)</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Color...</source>
-        <translation type="unfinished">颜色(&amp;C)...</translation>
+        <translation>颜色(&amp;C)...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Special Characters...</source>
-        <translation type="unfinished">特殊字符(&amp;S)...</translation>
+        <translation>特殊字符(&amp;S)...</translation>
     </message>
     <message>
         <location line="+348"/>
         <source>Others...</source>
-        <translation type="unfinished">其他...</translation>
+        <translation>其他...</translation>
     </message>
     <message>
         <location line="+139"/>
         <source>Degree</source>
-        <translation type="unfinished">度</translation>
+        <translation>度</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus-Minus</source>
-        <translation type="unfinished">正负值</translation>
+        <translation>正负值</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Diameter</source>
-        <translation type="unfinished">直径</translation>
+        <translation>直径</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal</source>
-        <translation type="unfinished">几乎相等</translation>
+        <translation>几乎相等</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Multiplication</source>
-        <translation type="unfinished">乘法</translation>
+        <translation>乘法</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation type="unfinished">部门</translation>
+        <translation>部门</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished">Δ</translation>
+        <translation>Δ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pi</source>
-        <translation type="unfinished">貔貅</translation>
+        <translation>貔貅</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Identity</source>
-        <translation type="unfinished">身份</translation>
+        <translation>身份</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Not equal</source>
-        <translation type="unfinished">不平等</translation>
+        <translation>不平等</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation type="unfinished">欧姆</translation>
+        <translation>欧姆</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Omega</source>
-        <translation type="unfinished">欧米茄</translation>
+        <translation>欧米茄</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Squared</source>
-        <translation type="unfinished">方形</translation>
+        <translation>方形</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation type="unfinished">立体</translation>
+        <translation>立体</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation type="unfinished">无断层空间</translation>
+        <translation>无断层空间</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
         <source>Text</source>
-        <translation type="unfinished">文本</translation>
+        <translation>文本</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Main Font</source>
-        <translation type="unfinished">主字体</translation>
+        <translation>主字体</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Height:</source>
-        <translation type="unfinished">高度：</translation>
+        <translation>高度：</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Text Height in Drawing Units</source>
-        <translation type="unfinished">以绘图单位计算的文本高度</translation>
+        <translation>以绘图单位计算的文本高度</translation>
     </message>
     <message>
         <location line="+18"/>
         <location line="+268"/>
         <source>Bold</source>
-        <translation type="unfinished">胆大心细</translation>
+        <translation>胆大心细</translation>
     </message>
     <message>
         <location line="-261"/>
         <location line="+274"/>
         <source>Italic</source>
-        <translation type="unfinished">斜体</translation>
+        <translation>斜体</translation>
     </message>
     <message>
         <location line="-260"/>
         <source>Text fits on one line and has no formatting</source>
-        <translation type="unfinished">文本适合在一行中，没有格式化</translation>
+        <translation>文本适合在一行中，没有格式化</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12703,152 +12713,152 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Rich Text</source>
-        <translation type="unfinished">丰富的文本</translation>
+        <translation>丰富的文本</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cut</source>
-        <translation type="unfinished">剪切</translation>
+        <translation>剪切</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Copy</source>
-        <translation type="unfinished">复制</translation>
+        <translation>复制</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paste</source>
-        <translation type="unfinished">粘贴</translation>
+        <translation>粘贴</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Ctrl+B</source>
-        <translation type="unfinished">Ctrl+B</translation>
+        <translation>Ctrl+B</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Ctrl+I</source>
-        <translation type="unfinished">Ctrl+I</translation>
+        <translation>Ctrl+I</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Insert Symbol...</source>
-        <translation type="unfinished">插入符号...</translation>
+        <translation>插入符号...</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Source</source>
-        <translation type="unfinished">来源</translation>
+        <translation>来源</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Attribute Details</source>
-        <translation type="unfinished">属性详情</translation>
+        <translation>属性详情</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Tag:</source>
-        <translation type="unfinished">标记：</translation>
+        <translation>标记：</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation type="unfinished">提示：</translation>
+        <translation>提示：</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Value:</source>
-        <translation type="unfinished">值：</translation>
+        <translation>值：</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Text Geometry</source>
-        <translation type="unfinished">文本几何学</translation>
+        <translation>文本几何学</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Line spacing factor:</source>
-        <translation type="unfinished">行距系数：</translation>
+        <translation>行距系数：</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Line Spacing Factor</source>
-        <translation type="unfinished">行距系数</translation>
+        <translation>行距系数</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Angle:</source>
-        <translation type="unfinished">角度：</translation>
+        <translation>角度：</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Rotation Angle</source>
-        <translation type="unfinished">旋转角度</translation>
+        <translation>旋转角度</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Alignment</source>
-        <translation type="unfinished">统一口径</translation>
+        <translation>统一口径</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Top Left</source>
-        <translation type="unfinished">左上角</translation>
+        <translation>左上角</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Top Center</source>
-        <translation type="unfinished">顶部中心</translation>
+        <translation>顶部中心</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Middle Right</source>
-        <translation type="unfinished">右边中间</translation>
+        <translation>右边中间</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Top Right</source>
-        <translation type="unfinished">右上角</translation>
+        <translation>右上角</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Middle Center</source>
-        <translation type="unfinished">中部中心</translation>
+        <translation>中部中心</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Middle Left</source>
-        <translation type="unfinished">左中部</translation>
+        <translation>左中部</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Left</source>
-        <translation type="unfinished">底部左侧</translation>
+        <translation>底部左侧</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Center</source>
-        <translation type="unfinished">基地中心</translation>
+        <translation>基地中心</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Right</source>
-        <translation type="unfinished">底座右方</translation>
+        <translation>底座右方</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Bottom Left</source>
-        <translation type="unfinished">左下角</translation>
+        <translation>左下角</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Bottom Center</source>
-        <translation type="unfinished">底部中心</translation>
+        <translation>底部中心</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Bottom Right</source>
-        <translation type="unfinished">右下角</translation>
+        <translation>右下角</translation>
     </message>
 </context>
 <context>
@@ -12856,12 +12866,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/TextPreferences.js" line="+30"/>
         <source>Draw</source>
-        <translation type="unfinished">绘制</translation>
+        <translation>绘制</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Text</source>
-        <translation type="unfinished">文本</translation>
+        <translation>文本</translation>
     </message>
 </context>
 <context>
@@ -12869,7 +12879,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
         <source>User interface theme:</source>
-        <translation type="unfinished">用户界面主题：</translation>
+        <translation>用户界面主题：</translation>
     </message>
 </context>
 <context>
@@ -12877,12 +12887,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
         <source>General</source>
-        <translation type="unfinished">一般</translation>
+        <translation>一般</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Theme</source>
-        <translation type="unfinished">主题</translation>
+        <translation>主题</translation>
     </message>
 </context>
 <context>
@@ -12890,7 +12900,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation type="unfinished">三是：下面</translation>
+        <translation>三是：下面</translation>
     </message>
 </context>
 <context>
@@ -12898,7 +12908,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
-        <translation type="unfinished">三：横向</translation>
+        <translation>三：横向</translation>
     </message>
 </context>
 <context>
@@ -12906,7 +12916,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
-        <translation type="unfinished">三：纵向</translation>
+        <translation>三：纵向</translation>
     </message>
 </context>
 <context>
@@ -12914,7 +12924,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToBack/ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation type="unfinished">送到后面</translation>
+        <translation>送到后面</translation>
     </message>
 </context>
 <context>
@@ -12922,7 +12932,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToFront/ToFrontInit.js" line="+2"/>
         <source>Bring to &amp;Front</source>
-        <translation type="unfinished">带到前面来</translation>
+        <translation>带到前面来</translation>
     </message>
 </context>
 <context>
@@ -12938,7 +12948,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/ToggleGrid/ToggleGrid.js" line="+90"/>
         <source>&amp;Grid</source>
-        <translation type="unfinished">栅格</translation>
+        <translation>栅格</translation>
     </message>
 </context>
 <context>
@@ -12946,7 +12956,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/ToggleLayerLock/ToggleLayerLockInit.js" line="+2"/>
         <source>&amp;Toggle Lock Status</source>
-        <translation type="unfinished">切换锁定状态</translation>
+        <translation>切换锁定状态</translation>
     </message>
 </context>
 <context>
@@ -12954,7 +12964,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/ToggleLayerVisibility/ToggleLayerVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
-        <translation type="unfinished">切换可见性(&amp;T)</translation>
+        <translation>切换可见性(&amp;T)</translation>
     </message>
 </context>
 <context>
@@ -12962,17 +12972,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon size:</source>
-        <translation type="unfinished">图标大小：</translation>
+        <translation>图标大小：</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Pixel</source>
-        <translation type="unfinished">像素</translation>
+        <translation>像素</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation type="unfinished">px</translation>
+        <translation>px</translation>
     </message>
 </context>
 <context>
@@ -12980,12 +12990,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+85"/>
         <source>Widgets</source>
-        <translation type="unfinished">小工具</translation>
+        <translation>小工具</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Toolbars</source>
-        <translation type="unfinished">工具栏</translation>
+        <translation>工具栏</translation>
     </message>
 </context>
 <context>
@@ -12993,12 +13003,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/ToolBarPreferences.js" line="+30"/>
         <source>Widgets</source>
-        <translation type="unfinished">小工具</translation>
+        <translation>小工具</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Toolbars</source>
-        <translation type="unfinished">工具栏</translation>
+        <translation>工具栏</translation>
     </message>
 </context>
 <context>
@@ -13006,7 +13016,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/ToolMatrixFocus/ToolMatrixFocusInit.js" line="+2"/>
         <source>&amp;Focus on Tool Matrix</source>
-        <translation type="unfinished">关注工具矩阵</translation>
+        <translation>关注工具矩阵</translation>
     </message>
 </context>
 <context>
@@ -13014,7 +13024,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.ui" line="+40"/>
         <source>Filter</source>
-        <translation type="unfinished">过滤器</translation>
+        <translation>过滤器</translation>
     </message>
 </context>
 <context>
@@ -13022,7 +13032,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Transform.js" line="+47"/>
         <source>This tool requires a selection</source>
-        <translation type="unfinished">这个工具需要选择</translation>
+        <translation>这个工具需要选择</translation>
     </message>
 </context>
 <context>
@@ -13030,52 +13040,52 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.js" line="+44"/>
         <source>Modify</source>
-        <translation type="unfinished">修改</translation>
+        <translation>修改</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Copy</source>
-        <translation type="unfinished">移动/复制</translation>
+        <translation>移动/复制</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Reference point</source>
-        <translation type="unfinished">参考点</translation>
+        <translation>参考点</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation type="unfinished">目标点</translation>
+        <translation>目标点</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>
         <source>&amp;Move / Copy</source>
-        <translation type="unfinished">移动/复制(&amp;M)</translation>
+        <translation>移动/复制(&amp;M)</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
-        <translation type="unfinished">一次或多次移动或复制实体</translation>
+        <translation>一次或多次移动或复制实体</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">使用工具选项的对话框</translation>
+        <translation>使用工具选项的对话框</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">复制</translation>
+        <translation>复制</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">复制数量：</translation>
+        <translation>复制数量：</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">使用当前图层和属性</translation>
+        <translation>使用当前图层和属性</translation>
     </message>
 </context>
 <context>
@@ -13083,32 +13093,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateDialog.ui" line="+14"/>
         <source>Move / Copy Options</source>
-        <translation type="unfinished">移动/复制选项</translation>
+        <translation>移动/复制选项</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished">复制数量</translation>
+        <translation>复制数量</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished">删除原文</translation>
+        <translation>删除原文</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished">保持原样</translation>
+        <translation>保持原样</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished">多份</translation>
+        <translation>多份</translation>
     </message>
     <message>
         <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">使用当前层和属性</translation>
+        <translation>使用当前层和属性</translation>
     </message>
 </context>
 <context>
@@ -13116,43 +13126,43 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
         <source>M&amp;ove and Rotate</source>
-        <translation type="unfinished">移动和旋转</translation>
+        <translation>移动和旋转</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished">角度：</translation>
+        <translation>角度：</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-        <translation type="unfinished">修改</translation>
+        <translation>修改</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished">移动/旋转</translation>
+        <translation>移动/旋转</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
         <source>Copy</source>
-        <translation type="unfinished">复制</translation>
+        <translation>复制</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">复制数量：</translation>
+        <translation>复制数量：</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">使用当前图层和属性</translation>
+        <translation>使用当前图层和属性</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">使用工具选项的对话框</translation>
+        <translation>使用工具选项的对话框</translation>
     </message>
 </context>
 <context>
@@ -13160,37 +13170,37 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateDialog.ui" line="+14"/>
         <source>Move and Rotate Options</source>
-        <translation type="unfinished">移动和旋转选项</translation>
+        <translation>移动和旋转选项</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished">复制数量</translation>
+        <translation>复制数量</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished">删除原文</translation>
+        <translation>删除原文</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished">保持原样</translation>
+        <translation>保持原样</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished">多份</translation>
+        <translation>多份</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>&amp;Angle (a):</source>
-        <translation type="unfinished">角度(a)：</translation>
+        <translation>角度(a)：</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">使用当前层和属性</translation>
+        <translation>使用当前层和属性</translation>
     </message>
 </context>
 <context>
@@ -13198,37 +13208,37 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Trim/Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
-        <translation type="unfinished">选择限制性实体</translation>
+        <translation>选择限制性实体</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose entity to trim</source>
-        <translation type="unfinished">选择要修剪的实体</translation>
+        <translation>选择要修剪的实体</translation>
     </message>
     <message>
         <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
-        <translation type="unfinished">这两个实体不相交，或者目前不支持修剪。</translation>
+        <translation>这两个实体不相交，或者目前不支持修剪。</translation>
     </message>
     <message>
         <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished">第一个实体不能被修剪。</translation>
+        <translation>第一个实体不能修剪。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation type="unfinished">实体不能被修剪。</translation>
+        <translation>实体不能被修剪。</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished">第二个实体不能修剪。</translation>
+        <translation>第二个实体不能修剪。</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation type="unfinished">修剪</translation>
+        <translation>修剪</translation>
     </message>
 </context>
 <context>
@@ -13236,7 +13246,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/TrimBoth/TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
-        <translation type="unfinished">修剪两者</translation>
+        <translation>修剪两者</translation>
     </message>
 </context>
 <context>
@@ -13244,7 +13254,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/Tutorials.js" line="+56"/>
         <source>Script &amp;Tutorials</source>
-        <translation type="unfinished">脚本教程</translation>
+        <translation>脚本教程</translation>
     </message>
 </context>
 <context>
@@ -13252,7 +13262,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
-        <translation type="unfinished">二：横向</translation>
+        <translation>二：横向</translation>
     </message>
 </context>
 <context>
@@ -13260,7 +13270,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation type="unfinished">二：垂直</translation>
+        <translation>二：垂直</translation>
     </message>
 </context>
 <context>
@@ -13268,22 +13278,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
-        <translation type="unfinished">这些设置会影响 QCAD 用户界面的分辨率和比例。如果 QCAD 的用户界面有问题，例如图标或文本标签非常大或非常小，可以调整这些偏好。</translation>
+        <translation>这些设置会影响 QCAD 用户界面的分辨率和比例。如果 QCAD 的用户界面有问题，例如图标或文本标签非常大或非常小，可以调整这些偏好。</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto screen scale factor</source>
-        <translation type="unfinished">自动屏幕比例系数</translation>
+        <translation>自动屏幕比例系数</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Enable high DPI scaling</source>
-        <translation type="unfinished">启用高 DPI 缩放功能</translation>
+        <translation>启用高 DPI 缩放功能</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Scale factor:</source>
-        <translation type="unfinished">比例因子：</translation>
+        <translation>比例因子：</translation>
     </message>
 </context>
 <context>
@@ -13291,12 +13301,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/UiPreferences.js" line="+29"/>
         <source>General</source>
-        <translation type="unfinished">常规</translation>
+        <translation>常规</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>User Interface</source>
-        <translation type="unfinished">用户界面</translation>
+        <translation>用户界面</translation>
     </message>
 </context>
 <context>
@@ -13312,88 +13322,88 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished">新图纸的默认值</translation>
+        <translation>新图纸的默认值</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished">绘图单元</translation>
+        <translation>绘图单元</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished">一般</translation>
+        <translation>一般</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>None</source>
-        <translation type="unfinished">无</translation>
+        <translation>无</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Inch</source>
-        <translation type="unfinished">英吋</translation>
+        <translation>英吋</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foot</source>
-        <translation type="unfinished">脚</translation>
+        <translation>脚</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mile</source>
-        <translation type="unfinished">一英里</translation>
+        <translation>一英里</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Millimeter</source>
-        <translation type="unfinished">毫米</translation>
+        <translation>毫米</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Centimeter</source>
-        <translation type="unfinished">厘米</translation>
+        <translation>厘米</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Meter</source>
-        <translation type="unfinished">仪表</translation>
+        <translation>仪表</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Kilometer</source>
-        <translation type="unfinished">千米</translation>
+        <translation>千米</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Microinch</source>
-        <translation type="unfinished">显微英寸</translation>
+        <translation>显微英寸</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mil</source>
-        <translation type="unfinished">米尔</translation>
+        <translation>米尔</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Yard</source>
-        <translation type="unfinished">院子</translation>
+        <translation>院子</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angstrom</source>
-        <translation type="unfinished">安斯通</translation>
+        <translation>安斯通</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Nanometer</source>
-        <translation type="unfinished">纳米级</translation>
+        <translation>纳米级</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Micron</source>
-        <translation type="unfinished">美光公司</translation>
+        <translation>美光公司</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13408,52 +13418,52 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Hectometer</source>
-        <translation type="unfinished">湿度计</translation>
+        <translation>湿度计</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gigameter</source>
-        <translation type="unfinished">千分尺</translation>
+        <translation>千分尺</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Astro</source>
-        <translation type="unfinished">宇宙飞船</translation>
+        <translation>宇宙飞船</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lightyear</source>
-        <translation type="unfinished">光年</translation>
+        <translation>光年</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Parsec</source>
-        <translation type="unfinished">昴宿星系</translation>
+        <translation>昴宿星系</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Imperial</source>
-        <translation type="unfinished">帝国</translation>
+        <translation>帝国</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished">公制</translation>
+        <translation>公制</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing unit:</source>
-        <translation type="unfinished">绘图单位：</translation>
+        <translation>绘图单位：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paper unit:</source>
-        <translation type="unfinished">论文单位：</translation>
+        <translation>论文单位：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Measurement system (for line types and hatch patterns):</source>
-        <translation type="unfinished">测量系统（用于线型和孵化图案）：</translation>
+        <translation>测量系统（用于线型和孵化图案）：</translation>
     </message>
 </context>
 <context>
@@ -13461,7 +13471,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/UnlockAllLayers/UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
-        <translation type="unfinished">解锁所有层级</translation>
+        <translation>解锁所有层级</translation>
     </message>
 </context>
 <context>
@@ -13469,7 +13479,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
         <source>View Tools</source>
-        <translation type="unfinished">查看工具</translation>
+        <translation>查看工具</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -13487,17 +13497,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/ViewToolBars/ViewToolBarsPostInit.js" line="+6"/>
         <source>&amp;Toolbars and Widgets</source>
-        <translation type="unfinished">工具栏和小工具</translation>
+        <translation>工具栏和小工具</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Widgets</source>
-        <translation type="unfinished">小工具</translation>
+        <translation>小工具</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Toolbars</source>
-        <translation type="unfinished">工具栏</translation>
+        <translation>工具栏</translation>
     </message>
 </context>
 <context>
@@ -13505,17 +13515,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
-        <translation type="unfinished">视口</translation>
+        <translation>视口</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Preview</source>
-        <translation type="unfinished">预览</translation>
+        <translation>预览</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished">网格间距&lt;元网格间距</translation>
+        <translation>网格间距&lt;元网格间距</translation>
     </message>
 </context>
 <context>
@@ -13523,22 +13533,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/ViewportSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished">新图纸的默认值</translation>
+        <translation>新图纸的默认值</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layout - Viewports</source>
-        <translation type="unfinished">布局 - 视口</translation>
+        <translation>布局 - 视口</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layout</source>
-        <translation type="unfinished">布局</translation>
+        <translation>布局</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewports</source>
-        <translation type="unfinished">视口</translation>
+        <translation>视口</translation>
     </message>
 </context>
 <context>
@@ -13546,22 +13556,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
-        <translation type="unfinished">不支持掉线数据</translation>
+        <translation>不支持掉线数据</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
-        <translation type="unfinished">无法将文件导入到现有图纸中：</translation>
+        <translation>无法将文件导入到现有图纸中：</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Importing file:</source>
-        <translation type="unfinished">导入文件：</translation>
+        <translation>导入文件：</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Importing URL: </source>
-        <translation type="unfinished">导入URL：</translation>
+        <translation>导入URL：</translation>
     </message>
 </context>
 <context>
@@ -13569,7 +13579,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/Website/WebsiteInit.js" line="+2"/>
         <source>Visit &amp;Website</source>
-        <translation type="unfinished">访问网站</translation>
+        <translation>访问网站</translation>
     </message>
 </context>
 <context>
@@ -13577,298 +13587,298 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/WidgetFactory.js" line="+1168"/>
         <source>Restore defaults</source>
-        <translation type="unfinished">恢复默认值</translation>
+        <translation>恢复默认值</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Insert Symbol</source>
-        <translation type="unfinished">插入符号</translation>
+        <translation>插入符号</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Diameter</source>
-        <translation type="unfinished">直径</translation>
+        <translation>直径</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Arc</source>
-        <translation type="unfinished">弧</translation>
+        <translation>弧</translation>
     </message>
     <message>
         <location line="-5"/>
         <source>Plus/Minus</source>
-        <translation type="unfinished">正/负</translation>
+        <translation>正/负</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Pi</source>
-        <translation type="unfinished">貔貅</translation>
+        <translation>貔貅</translation>
     </message>
     <message>
         <location line="-3"/>
         <source>Phi</source>
-        <translation type="unfinished">菲</translation>
+        <translation>菲</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>phi</source>
-        <translation type="unfinished">斐尔</translation>
+        <translation>斐尔</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alt phi</source>
-        <translation type="unfinished">碱液</translation>
+        <translation>碱液</translation>
     </message>
     <message>
         <location line="-5"/>
         <source>Ohm</source>
-        <translation type="unfinished">欧姆</translation>
+        <translation>欧姆</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>omega</source>
-        <translation type="unfinished">欧米茄</translation>
+        <translation>欧米茄</translation>
     </message>
     <message>
         <location line="-4"/>
         <source>Multiplication</source>
-        <translation type="unfinished">乘法</translation>
+        <translation>乘法</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Division</source>
-        <translation type="unfinished">部门</translation>
+        <translation>部门</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Square</source>
-        <translation type="unfinished">正方形</translation>
+        <translation>正方形</translation>
     </message>
     <message>
         <location line="-18"/>
         <source>Delta</source>
-        <translation type="unfinished">Δ</translation>
+        <translation>Δ</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Degrees</source>
-        <translation type="unfinished">学位</translation>
+        <translation>学位</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Almost Equal</source>
-        <translation type="unfinished">几乎平等</translation>
+        <translation>几乎平等</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation type="unfinished">角度</translation>
+        <translation>角度</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Asymptotically Equal</source>
-        <translation type="unfinished">渐近相等</translation>
+        <translation>渐近相等</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Center Line</source>
-        <translation type="unfinished">中心线</translation>
+        <translation>中心线</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Electrical Phase</source>
-        <translation type="unfinished">电相</translation>
+        <translation>电相</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Identity</source>
-        <translation type="unfinished">身份</translation>
+        <translation>身份</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not Equal</source>
-        <translation type="unfinished">不平等</translation>
+        <translation>不平等</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Omega</source>
-        <translation type="unfinished">欧米茄</translation>
+        <translation>欧米茄</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Property Line</source>
-        <translation type="unfinished">财产线</translation>
+        <translation>财产线</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation type="unfinished">下标2</translation>
+        <translation>下标2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square Root</source>
-        <translation type="unfinished">平方根</translation>
+        <translation>平方根</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Squared</source>
-        <translation type="unfinished">方形</translation>
+        <translation>方形</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation type="unfinished">立体</translation>
+        <translation>立体</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Stacked text</source>
-        <translation type="unfinished">叠加文本</translation>
+        <translation>叠加文本</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Measured value</source>
-        <translation type="unfinished">测量值</translation>
+        <translation>测量值</translation>
     </message>
     <message>
         <location line="+162"/>
         <source>Left</source>
-        <translation type="unfinished">左侧</translation>
+        <translation>左侧</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished">中心</translation>
+        <translation>中心</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished">右侧</translation>
+        <translation>右侧</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Aligned</source>
-        <translation type="unfinished">统一</translation>
+        <translation>统一</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation type="unfinished">中点</translation>
+        <translation>中点</translation>
     </message>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation type="unfinished">适合</translation>
+        <translation>适合</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation type="unfinished">返回顶部</translation>
+        <translation>返回顶部</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Base</source>
-        <translation type="unfinished">基地</translation>
+        <translation>基地</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished">底部</translation>
+        <translation>底部</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Scientific</source>
-        <translation type="unfinished">科学</translation>
+        <translation>科学</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal</source>
-        <translation type="unfinished">十进制</translation>
+        <translation>十进制</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Engineering</source>
-        <translation type="unfinished">工程学</translation>
+        <translation>工程学</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectural</source>
-        <translation type="unfinished">建筑</translation>
+        <translation>建筑</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fractional</source>
-        <translation type="unfinished">碎碎念</translation>
+        <translation>碎碎念</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Centered</source>
-        <translation type="unfinished">中心化</translation>
+        <translation>中心化</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+38"/>
         <source>Show trailing zeroes</source>
-        <translation type="unfinished">显示尾部的零</translation>
+        <translation>显示尾部的零</translation>
     </message>
     <message>
         <location line="-9"/>
         <source>Decimal Degrees</source>
-        <translation type="unfinished">十进制度数</translation>
+        <translation>十进制度数</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Deg/min/sec</source>
-        <translation type="unfinished">度/分/秒</translation>
+        <translation>度/分/秒</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gradians</source>
-        <translation type="unfinished">格拉迪亚斯</translation>
+        <translation>格拉迪亚斯</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Radians</source>
-        <translation type="unfinished">弧度</translation>
+        <translation>弧度</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Surveyor&apos;s units</source>
-        <translation type="unfinished">测量员单位</translation>
+        <translation>测量员单位</translation>
     </message>
     <message>
         <location line="-28"/>
         <location line="+35"/>
         <source>Suppress trailing zeroes</source>
-        <translation type="unfinished">抑制后面的零</translation>
+        <translation>抑制后面的零</translation>
     </message>
     <message>
         <location line="+22"/>
         <location line="+4"/>
         <source>Clockwise</source>
-        <translation type="unfinished">顺时针</translation>
+        <translation>顺时针</translation>
     </message>
     <message>
         <location line="-3"/>
         <location line="+4"/>
         <source>Counterclockwise</source>
-        <translation type="unfinished">逆时针</translation>
+        <translation>逆时针</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Preceding</source>
-        <translation type="unfinished">前面</translation>
+        <translation>前面</translation>
     </message>
     <message>
         <location line="-86"/>
         <location line="+87"/>
         <source>Above</source>
-        <translation type="unfinished">以上</translation>
+        <translation>以上</translation>
     </message>
     <message>
         <location line="-74"/>
         <source>Include 0&apos;0&quot;</source>
-        <translation type="unfinished">包括0&apos;0&quot;</translation>
+        <translation>包括0&apos;0&quot;</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13879,34 +13889,34 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+2"/>
         <source>(unsupported)</source>
-        <translation type="unfinished">(不支持)</translation>
+        <translation>(不支持)</translation>
     </message>
     <message>
         <location line="-39"/>
         <source>Include 0&apos;, suppress 0&quot;</source>
-        <translation type="unfinished">包括0&apos;，抑制0&quot;</translation>
+        <translation>包括0&apos;，抑制0&quot;</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Include 0&quot;, suppress 0&apos;</source>
-        <translation type="unfinished">包括0&quot;，抑制0&apos;</translation>
+        <translation>包括0&quot;，抑制0&apos;</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+35"/>
         <source>Suppress leading zeroes</source>
-        <translation type="unfinished">抑制前导零值</translation>
+        <translation>抑制前导零值</translation>
     </message>
     <message>
         <location line="-33"/>
         <location line="+35"/>
         <source>Suppress leading / trailing zeroes</source>
-        <translation type="unfinished">抑制前导/尾随的零</translation>
+        <translation>抑制前导/尾随的零</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>None</source>
-        <translation type="unfinished">无</translation>
+        <translation>无</translation>
     </message>
 </context>
 <context>
@@ -13914,7 +13924,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/Widgets.js" line="+56"/>
         <source>&amp;Widgets</source>
-        <translation type="unfinished">小工具</translation>
+        <translation>小工具</translation>
     </message>
 </context>
 <context>
@@ -13935,7 +13945,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/WindowZoom/WindowZoomInit.js" line="+2"/>
         <source>&amp;Window Zoom</source>
-        <translation type="unfinished">窗口放大</translation>
+        <translation>窗口放大</translation>
     </message>
 </context>
 <context>
@@ -13943,12 +13953,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Construction Line</source>
-        <translation type="unfinished">水平施工线</translation>
+        <translation>水平施工线</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw horizontal construction line</source>
-        <translation type="unfinished">绘制水平施工线</translation>
+        <translation>绘制水平施工线</translation>
     </message>
 </context>
 <context>
@@ -13956,12 +13966,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Construction Line</source>
-        <translation type="unfinished">垂直施工线</translation>
+        <translation>垂直施工线</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw vertical construction line</source>
-        <translation type="unfinished">绘制垂直施工线</translation>
+        <translation>绘制垂直施工线</translation>
     </message>
 </context>
 <context>
@@ -13969,17 +13979,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/Zoom.js" line="+51"/>
         <source>Zoom</source>
-        <translation type="unfinished">缩放</translation>
+        <translation>缩放</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Zoom Tools</source>
-        <translation type="unfinished">缩放工具</translation>
+        <translation>缩放工具</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Zoom</source>
-        <translation type="unfinished">缩放</translation>
+        <translation>缩放</translation>
     </message>
 </context>
 <context>
@@ -13987,7 +13997,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomIn/ZoomInInit.js" line="+2"/>
         <source>Zoom &amp;In</source>
-        <translation type="unfinished">放大</translation>
+        <translation>放大</translation>
     </message>
 </context>
 <context>
@@ -13995,7 +14005,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomOut/ZoomOutInit.js" line="+2"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished">缩小</translation>
+        <translation>缩小</translation>
     </message>
 </context>
 <context>
@@ -14003,12 +14013,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelection.js" line="+31"/>
         <source>No selection found.</source>
-        <translation type="unfinished">没有找到选择。</translation>
+        <translation>没有找到选择。</translation>
     </message>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelectionInit.js" line="+2"/>
         <source>Zoom to &amp;Selection</source>
-        <translation type="unfinished">缩放到选择</translation>
+        <translation>缩放到选择</translation>
     </message>
 </context>
 <context>
@@ -14016,22 +14026,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/autostart.js" line="+237"/>
         <source>Loading add-on translations...</source>
-        <translation type="unfinished">加载附加的翻译...</translation>
+        <translation>加载附加的翻译...</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Loading add-ons...</source>
-        <translation type="unfinished">正在加载附加组件...</translation>
+        <translation>正在加载附加组件...</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Initializing add-ons...</source>
-        <translation type="unfinished">初始化附加组件...</translation>
+        <translation>初始化附加组件...</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Initializing add-ons:</source>
-        <translation type="unfinished">初始化附加组件：</translation>
+        <translation>初始化附加组件：</translation>
     </message>
 </context>
 <context>
@@ -14039,489 +14049,489 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
-        <translation type="unfinished">对象</translation>
+        <translation>对象</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Object</source>
-        <translation type="unfinished">对象</translation>
+        <translation>对象</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation type="unfinished">未知对象</translation>
+        <translation>未知对象</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Object</source>
-        <translation type="unfinished">未知对象</translation>
+        <translation>未知对象</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Blocks</source>
-        <translation type="unfinished">块状物</translation>
+        <translation>块状物</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block</source>
-        <translation type="unfinished">块</translation>
+        <translation>块</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layers</source>
-        <translation type="unfinished">图层</translation>
+        <translation>图层</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer</source>
-        <translation type="unfinished">图层</translation>
+        <translation>图层</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layouts</source>
-        <translation type="unfinished">布局</translation>
+        <translation>布局</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layout</source>
-        <translation type="unfinished">布局</translation>
+        <translation>布局</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Linetypes</source>
-        <translation type="unfinished">线条类型</translation>
+        <translation>线条类型</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Linetype</source>
-        <translation type="unfinished">线条类型</translation>
+        <translation>线条类型</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Views</source>
-        <translation type="unfinished">视图</translation>
+        <translation>视图</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation type="unfinished">视图</translation>
+        <translation>视图</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Dimension Styles</source>
-        <translation type="unfinished">尺寸样式</translation>
+        <translation>尺寸样式</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension Style</source>
-        <translation type="unfinished">尺寸样式</translation>
+        <translation>尺寸样式</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entities</source>
-        <translation type="unfinished">实体</translation>
+        <translation>实体</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Entity</source>
-        <translation type="unfinished">实体</translation>
+        <translation>实体</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>3dFaces</source>
-        <translation type="unfinished">3D 面</translation>
+        <translation>3D 面</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>3dFace</source>
-        <translation type="unfinished">3D 面</translation>
+        <translation>3D 面</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References</source>
-        <translation type="unfinished">区块参考</translation>
+        <translation>区块参考</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference</source>
-        <translation type="unfinished">区块参考</translation>
+        <translation>区块参考</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation type="unfinished">块参考和属性</translation>
+        <translation>块参考和属性</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation type="unfinished">块参考和属性</translation>
+        <translation>块参考和属性</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arc</source>
-        <translation type="unfinished">弧</translation>
+        <translation>弧</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Arcs</source>
-        <translation type="unfinished">弧线</translation>
+        <translation>弧线</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attributes</source>
-        <translation type="unfinished">属性</translation>
+        <translation>属性</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute</source>
-        <translation type="unfinished">属性</translation>
+        <translation>属性</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attribute Definitions</source>
-        <translation type="unfinished">属性定义</translation>
+        <translation>属性定义</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute Definition</source>
-        <translation type="unfinished">属性定义</translation>
+        <translation>属性定义</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Circles</source>
-        <translation type="unfinished">圆圈</translation>
+        <translation>圆圈</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Circle</source>
-        <translation type="unfinished">圆圈</translation>
+        <translation>圆圈</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Dimensions</source>
-        <translation type="unfinished">尺寸</translation>
+        <translation>尺寸</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation type="unfinished">尺寸</translation>
+        <translation>尺寸</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Aligned Dimensions</source>
-        <translation type="unfinished">对齐尺寸</translation>
+        <translation>对齐尺寸</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Aligned Dimension</source>
-        <translation type="unfinished">对齐尺寸</translation>
+        <translation>对齐尺寸</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions</source>
-        <translation type="unfinished">角度尺寸</translation>
+        <translation>角度尺寸</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension</source>
-        <translation type="unfinished">角度尺寸</translation>
+        <translation>角度尺寸</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Lines)</source>
-        <translation type="unfinished">角度尺寸（2 行）</translation>
+        <translation>角度尺寸（2 行）</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Lines)</source>
-        <translation type="unfinished">角度尺寸（2 行）</translation>
+        <translation>角度尺寸（2 行）</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Points)</source>
-        <translation type="unfinished">角度尺寸（3 分）</translation>
+        <translation>角度尺寸（3 分）</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Points)</source>
-        <translation type="unfinished">角度尺寸（3 分）</translation>
+        <translation>角度尺寸（3 分）</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arc Dimension</source>
-        <translation type="unfinished">弧形尺寸</translation>
+        <translation>弧形尺寸</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Diametric Dimensions</source>
-        <translation type="unfinished">直径尺寸</translation>
+        <translation>直径尺寸</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Diametric Dimension</source>
-        <translation type="unfinished">直径尺寸</translation>
+        <translation>直径尺寸</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation type="unfinished">有序尺寸</translation>
+        <translation>有序尺寸</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ordinate Dimension</source>
-        <translation type="unfinished">奥德赛尺寸</translation>
+        <translation>奥德赛尺寸</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
-        <translation type="unfinished">旋转的尺寸</translation>
+        <translation>旋转的尺寸</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
-        <translation type="unfinished">旋转的尺寸</translation>
+        <translation>旋转的尺寸</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Radial Dimensions</source>
-        <translation type="unfinished">径向尺寸</translation>
+        <translation>径向尺寸</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Radial Dimension</source>
-        <translation type="unfinished">径向尺寸</translation>
+        <translation>径向尺寸</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ellipses</source>
-        <translation type="unfinished">椭圆</translation>
+        <translation>椭圆</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ellipse</source>
-        <translation type="unfinished">椭圆</translation>
+        <translation>椭圆</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hatch</source>
-        <translation type="unfinished">图案填充</translation>
+        <translation>图案填充</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatches</source>
-        <translation type="unfinished">舱口</translation>
+        <translation>舱口</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Images</source>
-        <translation type="unfinished">图片</translation>
+        <translation>图片</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Image</source>
-        <translation type="unfinished">图片</translation>
+        <translation>图片</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation type="unfinished">标注引线</translation>
+        <translation>标注引线</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation type="unfinished">标注引线</translation>
+        <translation>标注引线</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Tolerances</source>
-        <translation type="unfinished">公差</translation>
+        <translation>公差</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Tolerance</source>
-        <translation type="unfinished">公差</translation>
+        <translation>公差</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Lines</source>
-        <translation type="unfinished">线条</translation>
+        <translation>线条</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Line</source>
-        <translation type="unfinished">线条</translation>
+        <translation>线条</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Infinite Lines</source>
-        <translation type="unfinished">无限线</translation>
+        <translation>无限线</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Infinite Line</source>
-        <translation type="unfinished">无限线</translation>
+        <translation>无限线</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rays</source>
-        <translation type="unfinished">辐射</translation>
+        <translation>辐射</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation type="unfinished">辐射</translation>
+        <translation>辐射</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Points</source>
-        <translation type="unfinished">点</translation>
+        <translation>点</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Point</source>
-        <translation type="unfinished">点</translation>
+        <translation>点</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Polylines</source>
-        <translation type="unfinished">多边形</translation>
+        <translation>多边形</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Polyline</source>
-        <translation type="unfinished">多边形</translation>
+        <translation>多边形</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation type="unfinished">固体</translation>
+        <translation>固体</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Solid</source>
-        <translation type="unfinished">固体</translation>
+        <translation>固体</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation type="unfinished">痕迹</translation>
+        <translation>痕迹</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation type="unfinished">追踪</translation>
+        <translation>追踪</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation type="unfinished">面部</translation>
+        <translation>面部</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation type="unfinished">面部</translation>
+        <translation>面部</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Splines</source>
-        <translation type="unfinished">样条</translation>
+        <translation>样条</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Spline</source>
-        <translation type="unfinished">样条</translation>
+        <translation>样条</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Text based</source>
-        <translation type="unfinished">基于文本</translation>
+        <translation>基于文本</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Texts</source>
-        <translation type="unfinished">文本</translation>
+        <translation>文本</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Text</source>
-        <translation type="unfinished">文本</translation>
+        <translation>文本</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation type="unfinished">视口</translation>
+        <translation>视口</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation type="unfinished">视口</translation>
+        <translation>视口</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished">歼灭战</translation>
+        <translation>歼灭战</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished">歼灭战</translation>
+        <translation>歼灭战</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished">外部参考资料</translation>
+        <translation>外部参考资料</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished">外部参考</translation>
+        <translation>外部参考</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+9"/>
         <source>Unknown Entities</source>
-        <translation type="unfinished">未知的实体</translation>
+        <translation>未知的实体</translation>
     </message>
     <message>
         <location line="-9"/>
         <location line="+9"/>
         <source>Unknown Entity</source>
-        <translation type="unfinished">未知的实体</translation>
+        <translation>未知的实体</translation>
     </message>
     <message>
         <location line="+106"/>
         <source>All CAD Files</source>
-        <translation type="unfinished">所有 CAD 文件</translation>
+        <translation>所有 CAD 文件</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DXF Files</source>
-        <translation type="unfinished">DXF 文件</translation>
+        <translation>DXF 文件</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>SVG Files</source>
-        <translation type="unfinished">SVG 文件</translation>
+        <translation>SVG 文件</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DXF Drawing</source>
-        <translation type="unfinished">DXF 图纸</translation>
+        <translation>DXF 图纸</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DWG Drawing</source>
-        <translation type="unfinished">DWG 图纸</translation>
+        <translation>DWG 图纸</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>PDF File</source>
-        <translation type="unfinished">PDF 文件</translation>
+        <translation>PDF 文件</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>PDF/A-1B File</source>
-        <translation type="unfinished">PDF/A-1B 文件</translation>
+        <translation>PDF/A-1B 文件</translation>
     </message>
 </context>
 <context>
@@ -14529,7 +14539,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation type="unfinished">视口1</translation>
+        <translation>视口1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -14537,7 +14547,7 @@ is already in the list.</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Display Grid</source>
-        <translation type="unfinished">显示网格</translation>
+        <translation>显示网格</translation>
     </message>
     <message>
         <location line="-446"/>
@@ -14545,7 +14555,7 @@ is already in the list.</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Isometric Grid</source>
-        <translation type="unfinished">等距网格</translation>
+        <translation>等距网格</translation>
     </message>
     <message>
         <location line="-449"/>
@@ -14553,7 +14563,7 @@ is already in the list.</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Grid Spacing</source>
-        <translation type="unfinished">网格间距</translation>
+        <translation>网格间距</translation>
     </message>
     <message>
         <location line="-450"/>
@@ -14565,7 +14575,7 @@ is already in the list.</source>
         <location line="+116"/>
         <location line="+30"/>
         <source>Y:</source>
-        <translation type="unfinished">Y 方向比例：</translation>
+        <translation>Y 方向比例：</translation>
     </message>
     <message>
         <location line="-512"/>
@@ -14577,7 +14587,7 @@ is already in the list.</source>
         <location line="+62"/>
         <location line="+63"/>
         <source>X:</source>
-        <translation type="unfinished">X:</translation>
+        <translation>X：</translation>
     </message>
     <message>
         <location line="-462"/>
@@ -14585,22 +14595,22 @@ is already in the list.</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Meta Grid Spacing</source>
-        <translation type="unfinished">元网格间距</translation>
+        <translation>元网格间距</translation>
     </message>
     <message>
         <location line="-390"/>
         <source>Viewport 2</source>
-        <translation type="unfinished">视口2</translation>
+        <translation>视口2</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 3</source>
-        <translation type="unfinished">视口3</translation>
+        <translation>视口3</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 4</source>
-        <translation type="unfinished">视口4</translation>
+        <translation>视口4</translation>
     </message>
 </context>
 <context>
@@ -14612,17 +14622,17 @@ is already in the list.</source>
         <location line="+66"/>
         <location line="+124"/>
         <source>ID does not refer to an entity:</source>
-        <translation type="unfinished">ID 不指实体：</translation>
+        <translation>ID 不指实体：</translation>
     </message>
     <message>
         <location line="-42"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished">第一个实体不能被修剪。</translation>
+        <translation>第一个实体不能修剪。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation type="unfinished">实体不能被修剪。</translation>
+        <translation>实体不能被修剪。</translation>
     </message>
     <message>
         <location line="+10"/>
