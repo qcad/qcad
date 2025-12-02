@@ -1332,7 +1332,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2090,7 +2090,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Grafički prikaz</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2558,7 +2558,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Navigation/DefaultNavigation/DefaultNavigation.js" line="+47"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Grafički prikaz</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -5497,7 +5497,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">0</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -5607,7 +5607,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/FontPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Grafički prikaz</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6018,7 +6018,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Grafički prikaz</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -6247,7 +6247,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Grafički prikaz</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6260,7 +6260,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/GridPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Grafički prikaz</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -7952,7 +7952,7 @@ is already in the list.</source>
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../scripts/Layer/Layer.js" line="+97"/>
+        <location filename="../scripts/Layer/Layer.js" line="+99"/>
         <source>Layer Tools</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9226,7 +9226,7 @@ is already in the list.</source>
         <location line="+7"/>
         <location line="+14"/>
         <source>0.00</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">0.00</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -9313,7 +9313,7 @@ is already in the list.</source>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Untitled %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10028,7 +10028,7 @@ is already in the list.</source>
     <message>
         <location line="+277"/>
         <source>Export to PDF</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Izvezi u PDF</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -10737,7 +10737,7 @@ is already in the list.</source>
     <message>
         <location line="+48"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prvi entitet ne može biti obrezan.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -10752,7 +10752,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Obreži</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11035,7 +11035,7 @@ is already in the list.</source>
         <location line="+10"/>
         <location line="+17"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1</translation>
     </message>
     <message>
         <location line="-10"/>
@@ -11818,7 +11818,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Automatsko hvatanje</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAutoInit.js" line="+2"/>
@@ -12450,7 +12450,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">0</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -13229,7 +13229,7 @@ is already in the list.</source>
     <message>
         <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prvi entitet ne može biti obrezan.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13746,7 +13746,7 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+171"/>
         <source>Left</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14633,7 +14633,7 @@ is already in the list.</source>
     <message>
         <location line="-42"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prvi entitet ne može biti obrezan.</translation>
     </message>
     <message>
         <location line="+3"/>

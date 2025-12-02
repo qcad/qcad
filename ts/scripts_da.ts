@@ -1330,7 +1330,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -7969,7 +7969,7 @@ er allerede på listen.</translation>
         <translation>Standardlinjestyrke for lag 0:</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/Layer.js" line="+97"/>
+        <location filename="../scripts/Layer/Layer.js" line="+99"/>
         <source>Layer Tools</source>
         <translation>Værktøjer til lag</translation>
     </message>
@@ -9310,7 +9310,7 @@ er allerede på listen.</translation>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Untitled %1</source>
         <translation>Uden titel %1</translation>
     </message>
@@ -13740,7 +13740,7 @@ er allerede på listen.</translation>
         <translation>Målt værdi</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+171"/>
         <source>Left</source>
         <translation>Venstre</translation>
     </message>

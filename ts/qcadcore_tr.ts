@@ -45,11 +45,16 @@
     </message>
     <message>
         <location line="+3"/>
-        <source>Mikroinç</source>
-        <translation>Mikroinç</translation>
+        <source>Microinch</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+15"/>
+        <source>Micron</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-12"/>
         <source>Mil</source>
         <translation>Mil</translation>
     </message>
@@ -69,12 +74,7 @@
         <translation>Nanometre</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Mikron</source>
-        <translation>Mikron</translation>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Decimeter</source>
         <translation>Desimetre</translation>
     </message>
@@ -138,13 +138,13 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Camgöbeği</source>
-        <translation>Camgöbeği</translation>
+        <source>Cyan</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Eflatun</source>
-        <translation>Eflatun</translation>
+        <source>Magenta</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -411,8 +411,8 @@
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+9"/>
-        <source>Çizgi Tipi</source>
-        <translation>Çizgi Tipi</translation>
+        <source>Linetype</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -827,8 +827,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Mimari işaret</source>
-        <translation>Mimari işaret</translation>
+        <source>Architectur tick</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1057,13 +1057,13 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Çit Çizgisi 1</source>
-        <translation>Çit Çizgisi 1</translation>
+        <source>Fenceline 1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Çit Çizgisi 2</source>
-        <translation>Çit Çizgisi 2</translation>
+        <source>Fenceline 2</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>

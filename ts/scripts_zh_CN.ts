@@ -898,8 +898,6 @@ Do you wish to recover it/them?</source>
         <translation>
             <numerusform>发现了%n个无标题图纸的自动保存备份文件。
 你希望恢复它们吗？</numerusform>
-            <numerusform>发现了%n个无标题图纸的自动保存备份文件。
-你希望恢复它们吗？</numerusform>
         </translation>
     </message>
     <message>
@@ -1330,7 +1328,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
         <source>Widgets</source>
         <translation>小工具</translation>
     </message>
@@ -2863,7 +2861,6 @@ Do you wish to recover it?</source>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
             <numerusform>重置了%n尺寸的标签位置。</numerusform>
-            <numerusform>重置了%n尺寸的标签位置。</numerusform>
         </translation>
     </message>
     <message>
@@ -4184,7 +4181,6 @@ is already in the list.</source>
         <source>%n entity/ies duplicated</source>
         <translation>
             <numerusform>%n 个实体重复</numerusform>
-            <numerusform>%n 个实体重复</numerusform>
         </translation>
     </message>
     <message>
@@ -5020,7 +5016,6 @@ is already in the list.</source>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation>
-            <numerusform>交易影响了 %n 个对象。</numerusform>
             <numerusform>交易影响了 %n 个对象。</numerusform>
         </translation>
     </message>
@@ -7949,7 +7944,7 @@ is already in the list.</source>
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../scripts/Layer/Layer.js" line="+97"/>
+        <location filename="../scripts/Layer/Layer.js" line="+99"/>
         <source>Layer Tools</source>
         <translation>图层工具</translation>
     </message>
@@ -9310,7 +9305,7 @@ is already in the list.</source>
         <translation>格式：</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Untitled %1</source>
         <translation>未命名 %1</translation>
     </message>
@@ -9355,14 +9350,12 @@ is already in the list.</source>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>半径在%n个同心圆后下降到0.0以下。</numerusform>
-            <numerusform>半径在%n个同心圆后下降到0.0以下。</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation>
-            <numerusform>半径在%n个同心圆后下降到0.0以下。</numerusform>
             <numerusform>半径在%n个同心圆后下降到0.0以下。</numerusform>
         </translation>
     </message>
@@ -11450,14 +11443,12 @@ is already in the list.</source>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation>
             <numerusform>%n 层的实体&quot;%1&quot;</numerusform>
-            <numerusform>%n 层的实体&quot;%1&quot;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation>
-            <numerusform>%n 实体</numerusform>
             <numerusform>%n 实体</numerusform>
         </translation>
     </message>
@@ -11470,7 +11461,6 @@ is already in the list.</source>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation>
-            <numerusform>%n层</numerusform>
             <numerusform>%n层</numerusform>
         </translation>
     </message>
@@ -13740,7 +13730,7 @@ is already in the list.</source>
         <translation>测量值</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+171"/>
         <source>Left</source>
         <translation>左侧</translation>
     </message>

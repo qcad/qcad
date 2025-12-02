@@ -1330,7 +1330,7 @@ Ali jo želite obnoviti?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
         <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -7975,7 +7975,7 @@ je že na seznamu.</translation>
         <translation>Privzeta debelina črte za nove plasti:</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/Layer.js" line="+97"/>
+        <location filename="../scripts/Layer/Layer.js" line="+99"/>
         <source>Layer Tools</source>
         <translation>Orodja plasti</translation>
     </message>
@@ -9316,7 +9316,7 @@ je že na seznamu.</translation>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Untitled %1</source>
         <translation>Brez naslova %1</translation>
     </message>
@@ -13756,7 +13756,7 @@ je že na seznamu.</translation>
         <translation>Izmerjena vrednost</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+171"/>
         <source>Left</source>
         <translation>Levo</translation>
     </message>

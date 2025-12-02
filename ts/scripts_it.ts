@@ -1330,7 +1330,7 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
         <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -7969,7 +7969,7 @@ is already in the list.</source>
         <translation>Spessore di linea predefinito per nuovi livello:</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/Layer.js" line="+97"/>
+        <location filename="../scripts/Layer/Layer.js" line="+99"/>
         <source>Layer Tools</source>
         <translation>Strumenti di livello</translation>
     </message>
@@ -9310,7 +9310,7 @@ is already in the list.</source>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Untitled %1</source>
         <translation>Senza titolo %1</translation>
     </message>
@@ -13741,7 +13741,7 @@ is already in the list.</source>
         <translation>Valore misurato</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+171"/>
         <source>Left</source>
         <translation>Sinistra</translation>
     </message>

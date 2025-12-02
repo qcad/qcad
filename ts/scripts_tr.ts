@@ -1327,7 +1327,7 @@ Kurtarmak ister misiniz?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
         <source>Widgets</source>
         <translation>Widgetler</translation>
     </message>
@@ -7943,7 +7943,7 @@ zaten listede.</translation>
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../scripts/Layer/Layer.js" line="+97"/>
+        <location filename="../scripts/Layer/Layer.js" line="+99"/>
         <source>Layer Tools</source>
         <translation>Katman Araçları</translation>
     </message>
@@ -8803,8 +8803,8 @@ zaten listede.</translation>
     <message>
         <location line="+0"/>
         <location line="+2"/>
-        <source>Çizgi Tipi</source>
-        <translation>Çizgi Tipi</translation>
+        <source>Linetype</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9304,7 +9304,7 @@ zaten listede.</translation>
         <translation>Biçim:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Untitled %1</source>
         <translation>%1 isimsiz</translation>
     </message>
@@ -12101,16 +12101,16 @@ zaten listede.</translation>
     </message>
 </context>
 <context>
-    <name>Eğri</name>
+    <name>Spline</name>
     <message>
         <location filename="../scripts/Draw/Spline/Spline.js" line="+72"/>
         <source>Spline Tools</source>
-        <translation>Spline Aletleri</translation>
+        <translation type="unfinished">Spline Aletleri</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Spline</source>
-        <translation>Eğri</translation>
+        <translation type="unfinished">Eğri</translation>
     </message>
 </context>
 <context>
@@ -13729,7 +13729,7 @@ zaten listede.</translation>
         <translation>Ölçülen değer</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+171"/>
         <source>Left</source>
         <translation>Sol</translation>
     </message>
@@ -14092,8 +14092,8 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Çizgi Tipi</source>
-        <translation>Çizgi Tipi</translation>
+        <source>Linetype</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14427,8 +14427,8 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Eğri</source>
-        <translation>Eğri</translation>
+        <source>Spline</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

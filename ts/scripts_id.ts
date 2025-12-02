@@ -1328,7 +1328,7 @@ Apakah Anda ingin memulihkannya?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
         <source>Widgets</source>
         <translation type="unfinished">Widget</translation>
     </message>
@@ -7964,7 +7964,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Bobot garis default untuk lapisan 0:</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/Layer.js" line="+97"/>
+        <location filename="../scripts/Layer/Layer.js" line="+99"/>
         <source>Layer Tools</source>
         <translation type="unfinished">Alat Lapisan</translation>
     </message>
@@ -9305,7 +9305,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Format:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Untitled %1</source>
         <translation type="unfinished">Tanpa judul %1</translation>
     </message>
@@ -13730,7 +13730,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Nilai yang diukur</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+171"/>
         <source>Left</source>
         <translation type="unfinished">Kiri</translation>
     </message>

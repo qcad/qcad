@@ -1330,7 +1330,7 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>
@@ -7949,7 +7949,7 @@ on jo luettelossa.</translation>
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../scripts/Layer/Layer.js" line="+97"/>
+        <location filename="../scripts/Layer/Layer.js" line="+99"/>
         <source>Layer Tools</source>
         <translation>Tasotyökalut</translation>
     </message>
@@ -9310,7 +9310,7 @@ on jo luettelossa.</translation>
         <translation>Muoto:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Untitled %1</source>
         <translation>Nimetön %1</translation>
     </message>
@@ -13740,7 +13740,7 @@ on jo luettelossa.</translation>
         <translation>Mitattu arvo</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+171"/>
         <source>Left</source>
         <translation>Vasen</translation>
     </message>

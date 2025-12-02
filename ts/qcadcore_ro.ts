@@ -321,8 +321,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>XRef File Name</source>
-        <translation type="unfinished">Nume fișier XRef</translation>
+        <source>External reference</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>

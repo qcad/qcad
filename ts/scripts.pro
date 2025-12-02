@@ -192,6 +192,7 @@ SOURCES = \
 ../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.js \
 ../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js \
 ../scripts/Draw/Ellipse/EllipseArcCPPA/Tests/EllipseArcCPPATest00.js \
+../scripts/Draw/Ellipse/EllipseArcCPPA/Tests/EllipseArcCPPATest10.js \
 ../scripts/Draw/Ellipse/EllipseCPP/EllipseCPP.js \
 ../scripts/Draw/Ellipse/EllipseCPP/EllipseCPPInit.js \
 ../scripts/Draw/Ellipse/EllipseCPP/Tests/EllipseCPPTest00.js \

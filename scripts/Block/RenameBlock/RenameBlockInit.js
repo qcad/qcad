@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("RenameBlock", "Re&name Block"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("RenameBlock", "Re&name Block") + "…", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/RenameBlock.js");
     action.setDefaultShortcut(new QKeySequence("b,n"));
