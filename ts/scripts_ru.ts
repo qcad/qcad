@@ -335,34 +335,34 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/AddCentroidDialog.ui" line="+14"/>
         <source>Add  point mass 2D Centroid</source>
-        <translation type="unfinished">Добавить массу точки 2D Центроид</translation>
+        <translation>Добавить точечную массу 2D-центроида</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position Y:</source>
-        <translation type="unfinished">Положение Y:</translation>
+        <translation>Положение Y:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+7"/>
         <location line="+49"/>
         <source>0.00</source>
-        <translation type="unfinished">0.00</translation>
+        <translation>0.00</translation>
     </message>
     <message>
         <location line="-42"/>
         <source>Position X:</source>
-        <translation type="unfinished">Положение X:</translation>
+        <translation>Положение X:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Point mass:</source>
-        <translation type="unfinished">Точечная масса:</translation>
+        <translation>Точечная масса:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
-        <translation type="unfinished">Сброс на &apos;Undefined&apos;</translation>
+        <translation>Сброс в &apos;Не определено&apos;</translation>
     </message>
 </context>
 <context>
@@ -1090,12 +1090,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+17"/>
         <source>Length 1:</source>
-        <translation type="unfinished">Длина 1:</translation>
+        <translation>Длина 1:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Length 2:</source>
-        <translation type="unfinished">Длина 2:</translation>
+        <translation>Длина 2:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -1164,7 +1164,7 @@ Do you wish to recover it?</source>
         <location line="+10"/>
         <source>Color</source>
         <comment>Title of group box</comment>
-        <translation type="unfinished">Цвет</translation>
+        <translation>Цвет</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1180,7 +1180,7 @@ Do you wish to recover it?</source>
         <location line="+7"/>
         <source>Color</source>
         <comment>Radio button choice</comment>
-        <translation type="unfinished">Цвет</translation>
+        <translation>Цвет</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1256,12 +1256,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Невозможно редактировать внешнюю ссылку</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Невозможно редактировать блок из внешней ссылки</translation>
     </message>
     <message>
         <location line="-109"/>
@@ -1400,17 +1400,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
         <source>Export Block References List (CSV)</source>
-        <translation type="unfinished">Экспорт списка ссылок на блоки (CSV)</translation>
+        <translation>Экспорт списка ссылок на блоки (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>CSV</source>
-        <translation type="unfinished">CSV</translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation type="unfinished">Экспорт списка ссылок блока</translation>
+        <translation>&amp;Экспорт списка ссылок блока</translation>
     </message>
 </context>
 <context>
@@ -2461,7 +2461,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+36"/>
         <source>Mode:</source>
-        <translation type="unfinished">Режим:</translation>
+        <translation>Режим:</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -2768,7 +2768,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation type="unfinished">Используйте максимальный угол</translation>
+        <translation>Использовать максимальный угол</translation>
     </message>
 </context>
 <context>
@@ -3417,72 +3417,72 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js" line="+74"/>
         <source>First vertex</source>
-        <translation type="unfinished">Первая вершина</translation>
+        <translation>Первая вершина</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Next vertex</source>
-        <translation type="unfinished">Следующая вершина</translation>
+        <translation>Следующая вершина</translation>
     </message>
     <message>
         <location line="+525"/>
         <source>close</source>
-        <translation type="unfinished">закрыть</translation>
+        <translation>закрыть</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>undo</source>
-        <translation type="unfinished">отменить</translation>
+        <translation>отменить</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>redo</source>
-        <translation type="unfinished">вернуть</translation>
+        <translation>вернуть</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>arc</source>
-        <translation type="unfinished">дуга</translation>
+        <translation>дуга</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation type="unfinished">Закрыть ломаную</translation>
+        <translation>Закрыть полилинию</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished">Отменить предыдущий сегмент</translation>
+        <translation>Отменить предыдущий сегмент</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation type="unfinished">Вернуть сегмент</translation>
+        <translation>Вернуть сегмент</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished">Дуга с радиусом:</translation>
+        <translation>Дуга с радиусом:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation type="unfinished">Развёртка</translation>
+        <translation>Угол дуги</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished">Ограничить длину или угол</translation>
+        <translation>Ограничить длину или угол</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation type="unfinished">Draw Fms Lanes</translation>
+        <translation>Рисовать полосы FMS</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation type="unfinished">Рисунок FMS Полосы (ребра)</translation>
+        <translation>Рисовать полосы FMS (рёбра)</translation>
     </message>
 </context>
 <context>
@@ -4139,12 +4139,12 @@ is already in the list.</source>
     <message>
         <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished">Дуга с радиусом:</translation>
+        <translation>Дуга с радиусом:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation type="unfinished">Подметать:</translation>
+        <translation>Угол дуги:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -4334,7 +4334,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished">Объект не является окружностью, эллипсом, сплайном или полилинией.</translation>
+        <translation>Объект не является окружностью, эллипсом, сплайном или полилинией.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4344,7 +4344,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a closed polyline.</source>
-        <translation type="unfinished">Объект не является замкнутой полилинией.</translation>
+        <translation>Объект не является замкнутой полилинией.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4748,7 +4748,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished">Экспорт CSV</translation>
+        <translation>&amp;Экспорт CSV</translation>
     </message>
 </context>
 <context>
@@ -4894,7 +4894,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished">Радиус:</translation>
+        <translation>Радиус:</translation>
     </message>
 </context>
 <context>
@@ -5742,7 +5742,7 @@ is already in the list.</source>
     <message>
         <location line="+64"/>
         <source>Highlight (and raise) images within range</source>
-        <translation type="unfinished">Выделяйте (и поднимайте) изображения в пределах досягаемости</translation>
+        <translation>Подсвечивать (и выводить на передний план) изображения в диапазоне</translation>
     </message>
     <message>
         <location line="-269"/>
@@ -5912,7 +5912,7 @@ is already in the list.</source>
     <message>
         <location line="+72"/>
         <source>Maximum complexity for solid fills at high quality:</source>
-        <translation type="unfinished">Максимальная сложность для сплошных заливок высокого качества:</translation>
+        <translation>Максимальная сложность для сплошных заливок в высоком качестве:</translation>
     </message>
     <message>
         <location line="+149"/>
@@ -5977,7 +5977,7 @@ is already in the list.</source>
     <message>
         <location line="+103"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-        <translation type="unfinished">Всегда отображайте полилинии с пользовательской шириной не менее 1 пикселя</translation>
+        <translation>Всегда отображать полилинии с пользовательской шириной не менее 1 пикселя</translation>
     </message>
     <message>
         <location line="+121"/>
@@ -6002,12 +6002,12 @@ is already in the list.</source>
     <message>
         <location line="+414"/>
         <source>Allocation limit for bitmaps (MB):</source>
-        <translation type="unfinished">Предел выделения для растровых изображений (МБ):</translation>
+        <translation>Лимит памяти для растровых изображений (МБ):</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Длина точки в образцах линий:</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -6216,7 +6216,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Limit scrolling to vertical and horizontal</source>
-        <translation type="unfinished">Ограничение вертикальной и горизонтальной прокрутки</translation>
+        <translation>Ограничить прокрутку вертикальной и горизонтальной</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6226,7 +6226,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Panning speed:</source>
-        <translation type="unfinished">Скорость панорамирования:</translation>
+        <translation>Скорость панорамирования:</translation>
     </message>
     <message>
         <location line="-324"/>
@@ -6507,7 +6507,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation type="unfinished">Как Блок:</translation>
+        <translation>Как блок:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6547,17 +6547,17 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished">К текущему слою</translation>
+        <translation>На текущий слой</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished">Перезапись слоев</translation>
+        <translation>Перезаписывать слои</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished">Блоки перезаписи</translation>
+        <translation>Перезаписывать блоки</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -6593,37 +6593,37 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroid.js" line="+78"/>
         <source>Position</source>
-        <translation type="unfinished">Положение</translation>
+        <translation>Положение</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation type="unfinished">Указать положение</translation>
+        <translation>Указать положение</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>2D point mass Centroid</source>
-        <translation type="unfinished">масса двумерной точки Центроид</translation>
+        <translation>Точечная масса 2D-центроида</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Undefined</source>
-        <translation type="unfinished">Неопределенный</translation>
+        <translation>Не определено</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19"/>
         <source>Add &amp;custom 2D centroid</source>
-        <translation type="unfinished">Добавить пользовательский 2D центроид</translation>
+        <translation>Добавить &amp;пользовательский 2D-центроид</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
-        <translation type="unfinished">Создание настраиваемого 2D маркера центроида</translation>
+        <translation>Создать настраиваемый маркер 2D-центроида</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new point mass 2D Centroid marker customizable by dialog</source>
-        <translation type="unfinished">Создает новую точечную массу 2D Centroid marker, настраиваемую с помощью диалога</translation>
+        <translation>Создаёт новый маркер точечной массы 2D-центроида, настраиваемый через диалог</translation>
     </message>
 </context>
 <context>
@@ -6845,12 +6845,12 @@ is already in the list.</source>
         <location line="+5"/>
         <location line="+2"/>
         <source>Area 2D Centroid script (v0.32) by CVH</source>
-        <translation type="unfinished">Скрипт Area 2D Centroid (v0.32) by CVH</translation>
+        <translation>Скрипт Area 2D Centroid (v0.32) от CVH</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Arc sector mode</source>
-        <translation type="unfinished">Режим дугового сектора</translation>
+        <translation>Режим дугового сектора</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -6880,7 +6880,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>2D area Centroid</source>
-        <translation type="unfinished">двумерная область Центроид</translation>
+        <translation>2D-центроид площади</translation>
     </message>
     <message>
         <location line="-89"/>
@@ -6948,12 +6948,12 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
-        <translation type="unfinished">Создать область 2D Centroid для выбранного объекта</translation>
+        <translation>Создать 2D-центроид площади для выбранного объекта</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</source>
-        <translation type="unfinished">Создает новый маркер 2D Centroid с равномерной плотностью ареала и метки значений для выбранного объекта</translation>
+        <translation>Создаёт новый маркер 2D-центроида с равномерной плотностью площади и метки значений для выбранного объекта</translation>
     </message>
 </context>
 <context>
@@ -6961,32 +6961,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
         <source>Reference</source>
-        <translation type="unfinished">Привязка</translation>
+        <translation>Точка привязки</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Direction</source>
-        <translation type="unfinished">Направление</translation>
+        <translation>Направление</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Distance:</source>
-        <translation type="unfinished">Расстояние:</translation>
+        <translation>Расстояние:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation type="unfinished">Подшипник:</translation>
+        <translation>Пеленг:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Azimuth:</source>
-        <translation type="unfinished">Азимут:</translation>
+        <translation>Азимут:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation type="unfinished">Пеленг / Азимут</translation>
+        <translation>&amp;Пеленг / Азимут</translation>
     </message>
 </context>
 <context>
@@ -6999,17 +6999,17 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Point mass</source>
-        <translation type="unfinished">Точечная масса</translation>
+        <translation>Точечная масса</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Area</source>
-        <translation type="unfinished">Площадь</translation>
+        <translation>Площадь</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Wire</source>
-        <translation type="unfinished">Провод</translation>
+        <translation>Линия</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7024,12 +7024,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Undefined</source>
-        <translation type="unfinished">Неопределенный</translation>
+        <translation>Не определено</translation>
     </message>
     <message>
         <location line="+428"/>
         <source>2D &amp;Centroids</source>
-        <translation type="unfinished">2D центроиды</translation>
+        <translation>2D-&amp;центроиды</translation>
     </message>
     <message>
         <location line="-431"/>
@@ -7047,12 +7047,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+192"/>
         <source>2D Centroids transaction listener active.</source>
-        <translation type="unfinished">активен слушатель транзакций 2D Centroids.</translation>
+        <translation>Слушатель транзакций 2D-центроидов активен.</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Deactivated/removed the 2D Centroids transaction listener.</source>
-        <translation type="unfinished">Деактивирован/удален слушатель транзакции 2D Centroids.</translation>
+        <translation>Слушатель транзакций 2D-центроидов деактивирован/удалён.</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -7060,22 +7060,22 @@ is already in the list.</source>
         <location line="+40"/>
         <location line="+5"/>
         <source>Syntax error: &apos;%1&apos; parse error</source>
-        <translation type="unfinished">Синтаксическая ошибка: ошибка разбора &apos;%1&apos;</translation>
+        <translation>Синтаксическая ошибка: ошибка разбора &apos;%1&apos;</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
         <source>Centroid &amp;Listener</source>
-        <translation type="unfinished">Слушатель центроида</translation>
+        <translation>&amp;Слушатель центроида</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation type="unfinished">(Де-)активация слушателя транзакций для 2D центроидов</translation>
+        <translation>(Де-)активация слушателя транзакций для 2D-центроидов</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(De-)Activate a transaction listener for binding changes applied to 2D Centroid markers</source>
-        <translation type="unfinished">(Де-)активация слушателя транзакций для изменений привязки, применяемых к маркерам 2D Centroid</translation>
+        <translation>(Де-)активация слушателя транзакций для изменений привязки, применяемых к маркерам 2D-центроидов</translation>
     </message>
 </context>
 <context>
@@ -7214,121 +7214,121 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>2D Centroids weighted sum script (v0.24) by CVH.</source>
-        <translation type="unfinished">скрипт взвешенной суммы 2D центроидов (v0.24) от CVH.</translation>
+        <translation>Скрипт взвешенной суммы 2D-центроидов (v0.24) от CVH.</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Encountered a missing coordinate value.</source>
-        <translation type="unfinished">Встречается отсутствующее значение координат.</translation>
+        <translation>Обнаружено отсутствующее значение координат.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Encountered an invalid coordinate value.</source>
-        <translation type="unfinished">Встречено недопустимое значение координат.</translation>
+        <translation>Обнаружено недопустимое значение координат.</translation>
     </message>
     <message>
         <location line="+8"/>
         <location line="+11"/>
         <location line="+10"/>
         <source>Encountered a missing &apos;%1&apos; value.</source>
-        <translation type="unfinished">Встречено отсутствующее значение &apos;%1&apos;.</translation>
+        <translation>Обнаружено отсутствующее значение &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="-16"/>
         <location line="+11"/>
         <location line="+17"/>
         <source>Encountered an invalid &apos;%1&apos; value.</source>
-        <translation type="unfinished">Встречено недопустимое значение &apos;%1&apos;.</translation>
+        <translation>Обнаружено недопустимое значение &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Encountered an unknown marker type.</source>
-        <translation type="unfinished">Встретился неизвестный тип маркера.</translation>
+        <translation>Обнаружен неизвестный тип маркера.</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>No result.</source>
-        <translation type="unfinished">Безрезультатно.</translation>
+        <translation>Нет результата.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>No 2D Centroid markers found in the selection.</source>
-        <translation type="unfinished">В выборке не найдено ни одного маркера 2D Centroid.</translation>
+        <translation>В выборке не найдено маркеров 2D-центроидов.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Single marker selected, point mass = %1</source>
-        <translation type="unfinished">Выбран один маркер, масса точки = %1</translation>
+        <translation>Выбран один маркер, масса точки = %1</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Density is undefined</source>
-        <translation type="unfinished">Плотность не определена</translation>
+        <translation>Плотность не определена</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Results in a division by zero.</source>
-        <translation type="unfinished">Приводит к делению на ноль.</translation>
+        <translation>Приводит к делению на ноль.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Results in a NaN value.</source>
-        <translation type="unfinished">Выдает значение NaN.</translation>
+        <translation>Выдаёт значение NaN.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Combined 2D Centroid</source>
-        <translation type="unfinished">Комбинированная двухмерная центроид</translation>
+        <translation>Комбинированный 2D-центроид</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Combined uniform point mass (%1):</source>
-        <translation type="unfinished">Комбинированная равномерная точечная масса (%1):</translation>
+        <translation>Комбинированная равномерная точечная масса (%1):</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combined point mass (%1):</source>
-        <translation type="unfinished">Масса комбинированной точки (%1):</translation>
+        <translation>Масса комбинированной точки (%1):</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>All densities are undefined</source>
-        <translation type="unfinished">Все плотности не определены</translation>
+        <translation>Все плотности не определены</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Some densities are undefined</source>
-        <translation type="unfinished">Некоторые плотности не определены</translation>
+        <translation>Некоторые плотности не определены</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>area (Informational):</source>
-        <translation type="unfinished">область (Информационная):</translation>
+        <translation>площадь (информационная):</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>wire length (Informational):</source>
-        <translation type="unfinished">длина провода (Информационный):</translation>
+        <translation>длина линии (информационная):</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Combined centroid:</source>
-        <translation type="unfinished">Объединенный центроид:</translation>
+        <translation>Комбинированный центроид:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
         <source>&amp;Sum 2D Centroids weighted</source>
-        <translation type="unfinished">Сумма взвешенных центроидов 2D</translation>
+        <translation>&amp;Сумма взвешенных 2D-центроидов</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
-        <translation type="unfinished">Объединить выбранные двухмерные центроидные маркеры взвешенными</translation>
+        <translation>Объединить выбранные маркеры 2D-центроидов взвешенно</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combines selected 2D Centroid markers, summing all properties weighted</source>
-        <translation type="unfinished">Объединяет выбранные двухмерные центроидные маркеры, суммируя все взвешенные свойства</translation>
+        <translation>Объединяет выбранные маркеры 2D-центроидов, суммируя все свойства взвешенно</translation>
     </message>
 </context>
 <context>
@@ -7367,22 +7367,22 @@ is already in the list.</source>
     <message>
         <location line="-71"/>
         <source>Wire 2D Centroid script (v0.32) by CVH</source>
-        <translation type="unfinished">Скрипт Wire 2D Centroid (v0.32) by CVH</translation>
+        <translation>Скрипт Wire 2D Centroid (v0.32) от CVH</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>2D Centroid markers circle in selection. No results.</source>
-        <translation type="unfinished">2D Центроид маркеры круг в выделении. Нет результатов.</translation>
+        <translation>Маркеры 2D-центроидов в выделении образуют замкнутый круг. Нет результатов.</translation>
     </message>
     <message>
         <location line="+55"/>
         <source>Results in a division by zero.</source>
-        <translation type="unfinished">Приводит к делению на ноль.</translation>
+        <translation>Приводит к делению на ноль.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>2D wire Centroid</source>
-        <translation type="unfinished">двухмерная проволока Центроид</translation>
+        <translation>2D-центроид линии</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -7423,12 +7423,12 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
-        <translation type="unfinished">Создание проводного 2D центроида для выделения</translation>
+        <translation>Создать 2D-центроид линии для выделения</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</source>
-        <translation type="unfinished">Создает новый маркер 2D Centroid с равномерной линейной плотностью и метки значений для выбранных объектов</translation>
+        <translation>Создаёт новый маркер 2D-центроида с равномерной линейной плотностью и метки значений для выбранных объектов</translation>
     </message>
 </context>
 <context>
@@ -7446,12 +7446,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation type="unfinished">Добавить измерение к чертежу</translation>
+        <translation>Добавить измерение к чертежу</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished">Высота текста:</translation>
+        <translation>Высота текста:</translation>
     </message>
 </context>
 <context>
@@ -7708,12 +7708,12 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished">Перезапись слоев</translation>
+        <translation>Перезаписывать слои</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished">Блоки перезаписи</translation>
+        <translation>Перезаписывать блоки</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -7736,27 +7736,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
         <source>Cannot read file:</source>
-        <translation type="unfinished">Невозможно прочитать файл:</translation>
+        <translation>Невозможно прочитать файл:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No constructor found in file:</source>
-        <translation type="unfinished">В файле не найден конструктор:</translation>
+        <translation>В файле не найден конструктор:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;init&apos; function found in file:</source>
-        <translation type="unfinished">В файле не найдена функция &apos;init&apos;:</translation>
+        <translation>В файле не найдена функция &apos;init&apos;:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;generate&apos; function found in file:</source>
-        <translation type="unfinished">В файле не найдена функция &apos;generate&apos;:</translation>
+        <translation>В файле не найдена функция &apos;generate&apos;:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;generatePreview&apos; function found in file:</source>
-        <translation type="unfinished">В файле не найдена функция &apos;generatePreview&apos;:</translation>
+        <translation>В файле не найдена функция &apos;generatePreview&apos;:</translation>
     </message>
 </context>
 <context>
@@ -7817,7 +7817,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished">Метод:</translation>
+        <translation>Метод:</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -8265,22 +8265,22 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation type="unfinished">Используйте фиксированную длину линии</translation>
+        <translation>Использовать фиксированную длину линии</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Length:</source>
-        <translation type="unfinished">Длина:</translation>
+        <translation>Длина:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation type="unfinished">Используйте фиксированный угол для линии</translation>
+        <translation>Использовать фиксированный угол линии</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angle:</source>
-        <translation type="unfinished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -8333,27 +8333,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation type="unfinished">Длина линии</translation>
+        <translation>Длина линии</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Length:</source>
-        <translation type="unfinished">Длина:</translation>
+        <translation>Длина:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Line angle</source>
-        <translation type="unfinished">Угол наклона линии</translation>
+        <translation>Угол наклона линии</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angle:</source>
-        <translation type="unfinished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Точка привязки:</translation>
+        <translation>Точка привязки:</translation>
     </message>
 </context>
 <context>
@@ -8424,7 +8424,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Style:</source>
-        <translation type="unfinished">Стиль:</translation>
+        <translation>Стиль:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -8533,12 +8533,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished">Длина:</translation>
+        <translation>Длина:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Точка привязки:</translation>
+        <translation>Точка привязки:</translation>
     </message>
 </context>
 <context>
@@ -8551,7 +8551,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Точка привязки:</translation>
+        <translation>Точка привязки:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js" line="+2"/>
@@ -8607,12 +8607,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished">Расстояние:</translation>
+        <translation>Расстояние:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished">Количество:</translation>
+        <translation>Количество:</translation>
     </message>
 </context>
 <context>
@@ -8648,7 +8648,7 @@ is already in the list.</source>
     <message>
         <location line="+106"/>
         <source>No solution</source>
-        <translation type="unfinished">Нет решения</translation>
+        <translation>Нет решения</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
@@ -8686,7 +8686,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Точка привязки:</translation>
+        <translation>Точка привязки:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="-45"/>
@@ -8939,7 +8939,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">Использовать текущий слой и атрибуты</translation>
+        <translation>Использовать текущий слой и атрибуты</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
@@ -9386,12 +9386,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished">Расстояние:</translation>
+        <translation>Расстояние:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Number:</source>
-        <translation type="unfinished">Количество:</translation>
+        <translation>Количество:</translation>
     </message>
 </context>
 <context>
@@ -9510,37 +9510,37 @@ is already in the list.</source>
     <message>
         <location line="+66"/>
         <source>Margins</source>
-        <translation type="unfinished">Поля</translation>
+        <translation>Поля</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Left:</source>
-        <translation type="unfinished">Левый:</translation>
+        <translation>Слева:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Top:</source>
-        <translation type="unfinished">Топ:</translation>
+        <translation>Сверху:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation type="unfinished">Верно:</translation>
+        <translation>Справа:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Bottom:</source>
-        <translation type="unfinished">Дно:</translation>
+        <translation>Снизу:</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Set to Printer Margins</source>
-        <translation type="unfinished">Установите поля принтера</translation>
+        <translation>Установить поля принтера</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Scale and Position</source>
-        <translation type="unfinished">Масштаб и положение</translation>
+        <translation>Масштаб и положение</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9631,17 +9631,17 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished">К текущему слою</translation>
+        <translation>На текущий слой</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished">Перезапись слоев</translation>
+        <translation>Перезаписывать слои</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished">Блоки перезаписи</translation>
+        <translation>Перезаписывать блоки</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -9994,22 +9994,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+96"/>
         <source>Auto Paper Size</source>
-        <translation type="unfinished">Автоматический размер бумаги</translation>
+        <translation>Автоматический размер бумаги</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
-        <translation type="unfinished">Размер бумаги установлен на пользовательский размер (%1x%2 мм). Вы хотите изменить его на размер бумаги по умолчанию для вашего принтера (%3)?</translation>
+        <translation>Размер бумаги установлен на пользовательский размер (%1×%2 мм). Изменить его на размер бумаги по умолчанию для вашего принтера (%3)?</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Auto fit</source>
-        <translation type="unfinished">Автоматическая подгонка</translation>
+        <translation>Автоматическая подгонка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Auto fit drawing to paper?</source>
-        <translation type="unfinished">Автоматическая подгонка рисунка к бумаге?</translation>
+        <translation>Автоматически подогнать чертёж под бумагу?</translation>
     </message>
     <message>
         <location line="+211"/>
@@ -10025,7 +10025,7 @@ is already in the list.</source>
         <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
-        <translation type="unfinished">Настройки страницы</translation>
+        <translation>Настройки страницы</translation>
     </message>
     <message>
         <location line="+277"/>
@@ -10308,12 +10308,12 @@ is already in the list.</source>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation type="unfinished">Максимальная сложность для автоматического расчета длины люка:</translation>
+        <translation>Максимальная сложность для автоматического расчёта длины штриховки:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Update delay [ms]:</source>
-        <translation type="unfinished">Задержка обновления [мс]:</translation>
+        <translation>Задержка обновления [мс]:</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -10328,7 +10328,7 @@ is already in the list.</source>
     <message>
         <location line="+113"/>
         <source>Only update when nothing changes during update delay</source>
-        <translation type="unfinished">Обновляйте только тогда, когда ничего не меняется во время задержки обновления</translation>
+        <translation>Обновлять только при отсутствии изменений во время задержки обновления</translation>
     </message>
     <message>
         <location line="-154"/>
@@ -10489,7 +10489,7 @@ is already in the list.</source>
         <location line="-40"/>
         <location line="+66"/>
         <source>Multiples</source>
-        <translation type="unfinished">Multiples</translation>
+        <translation>Кратные</translation>
     </message>
     <message>
         <location line="-115"/>
@@ -10572,7 +10572,7 @@ is already in the list.</source>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-        <translation type="unfinished">Недопустимый угол поворота</translation>
+        <translation>Недопустимый угол поворота</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -10597,7 +10597,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">Использовать текущий слой и атрибуты</translation>
+        <translation>Использовать текущий слой и атрибуты</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10754,7 +10754,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished">Радиус:</translation>
+        <translation>Радиус:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -11001,7 +11001,7 @@ is already in the list.</source>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-        <translation type="unfinished">Недопустимый масштабный коэффициент</translation>
+        <translation>Недопустимый коэффициент масштабирования</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -11026,7 +11026,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">Использовать текущий слой и атрибуты</translation>
+        <translation>Использовать текущий слой и атрибуты</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11525,7 +11525,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
         <source>Create Polyline</source>
-        <translation type="unfinished">Создать ломаную</translation>
+        <translation>Создать полилинию</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11709,7 +11709,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
 </context>
 <context>
@@ -11728,13 +11728,13 @@ is already in the list.</source>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
         <source>Width:</source>
-        <translation type="unfinished">Ширина:</translation>
+        <translation>Ширина:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
         <source>Height:</source>
-        <translation type="unfinished">Высота:</translation>
+        <translation>Высота:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -11857,12 +11857,12 @@ is already in the list.</source>
     <message>
         <location line="-19"/>
         <source>x:</source>
-        <translation type="unfinished">x:</translation>
+        <translation>x:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>y:</source>
-        <translation type="unfinished">y:</translation>
+        <translation>y:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -11877,7 +11877,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished">Относительно</translation>
+        <translation>Относительно</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
@@ -11895,17 +11895,17 @@ is already in the list.</source>
     <message>
         <location line="-22"/>
         <source>r:</source>
-        <translation type="unfinished">r:</translation>
+        <translation>r:</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Radius</source>
-        <translation type="unfinished">Радиус</translation>
+        <translation>Радиус</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>&lt;:</source>
-        <translation type="unfinished">&lt;:</translation>
+        <translation>&lt;:</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -11920,7 +11920,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished">Относительно</translation>
+        <translation>Относительно</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -11938,7 +11938,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished">Расстояние до щелчка:</translation>
+        <translation>Расстояние привязки:</translation>
     </message>
 </context>
 <context>
@@ -11956,7 +11956,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished">Расстояние до щелчка:</translation>
+        <translation>Расстояние привязки:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12337,12 +12337,12 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Layers</source>
-        <translation type="unfinished">Слои</translation>
+        <translation>Слои</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import groups as layers</source>
-        <translation type="unfinished">Импортируйте группы как слои</translation>
+        <translation>Импортировать группы как слои</translation>
     </message>
 </context>
 <context>
@@ -12382,7 +12382,7 @@ is already in the list.</source>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Text:</source>
-        <translation type="unfinished">Текст:</translation>
+        <translation>Текст:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -13095,7 +13095,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">Использовать текущий слой и атрибуты</translation>
+        <translation>Использовать текущий слой и атрибуты</translation>
     </message>
 </context>
 <context>
@@ -13147,32 +13147,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-        <translation type="unfinished">Изменить</translation>
+        <translation>Изменить</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished">Перемещение/поворот</translation>
+        <translation>Перемещение/Поворот</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
         <source>Copy</source>
-        <translation type="unfinished">Копировать</translation>
+        <translation>Копировать</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Число копий:</translation>
+        <translation>Количество копий:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">Использовать текущий слой и атрибуты</translation>
+        <translation>Использовать текущий слой и атрибуты</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">Использовать диалоговое окно для параметров инструмента</translation>
+        <translation>Использовать диалоговое окно для параметров инструмента</translation>
     </message>
 </context>
 <context>
@@ -13571,12 +13571,12 @@ is already in the list.</source>
     <message>
         <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
-        <translation type="unfinished">Невозможно импортировать файл в существующий чертеж:</translation>
+        <translation>Невозможно импортировать файл в существующий чертёж:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Importing file:</source>
-        <translation type="unfinished">Импортирование файла:</translation>
+        <translation>Импортирование файла:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -13672,72 +13672,72 @@ is already in the list.</source>
     <message>
         <location line="-10"/>
         <source>Degrees</source>
-        <translation type="unfinished">Степени</translation>
+        <translation>Градусы</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Almost Equal</source>
-        <translation type="unfinished">Почти равные</translation>
+        <translation>Приблизительно равно</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation type="unfinished">Угол</translation>
+        <translation>Угол</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Asymptotically Equal</source>
-        <translation type="unfinished">Асимптотически равны</translation>
+        <translation>Асимптотически равно</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Center Line</source>
-        <translation type="unfinished">Линия центра</translation>
+        <translation>Осевая линия</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Electrical Phase</source>
-        <translation type="unfinished">Электрическая фаза</translation>
+        <translation>Электрическая фаза</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Identity</source>
-        <translation type="unfinished">Идентично</translation>
+        <translation>Тождественно</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not Equal</source>
-        <translation type="unfinished">Не равны</translation>
+        <translation>Не равно</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Omega</source>
-        <translation type="unfinished">Омега</translation>
+        <translation>Омега</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Property Line</source>
-        <translation type="unfinished">Линия собственности</translation>
+        <translation>Граничная линия</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation type="unfinished">Абонемент 2</translation>
+        <translation>Индекс 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square Root</source>
-        <translation type="unfinished">Квадратный корень</translation>
+        <translation>Квадратный корень</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Squared</source>
-        <translation type="unfinished">Квадратный</translation>
+        <translation>Квадрат</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation type="unfinished">Кубический</translation>
+        <translation>Куб</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14249,22 +14249,22 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Lines)</source>
-        <translation type="unfinished">Угловые размеры (2 линии)</translation>
+        <translation>Угловые размеры (2 линии)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Lines)</source>
-        <translation type="unfinished">Угловое измерение (2 линии)</translation>
+        <translation>Угловой размер (2 линии)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Points)</source>
-        <translation type="unfinished">Угловые размеры (3 балла)</translation>
+        <translation>Угловые размеры (3 точки)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Points)</source>
-        <translation type="unfinished">Угловое измерение (3 балла)</translation>
+        <translation>Угловой размер (3 точки)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14479,22 +14479,22 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished">Wipeouts</translation>
+        <translation>Маски</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished">Wipeout</translation>
+        <translation>Маска</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished">Внешние ссылки</translation>
+        <translation>Внешние ссылки</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished">Внешняя ссылка</translation>
+        <translation>Внешняя ссылка</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14632,7 +14632,7 @@ is already in the list.</source>
         <location line="+66"/>
         <location line="+124"/>
         <source>ID does not refer to an entity:</source>
-        <translation type="unfinished">ID не относится к сущности:</translation>
+        <translation>ID не относится к объекту:</translation>
     </message>
     <message>
         <location line="-42"/>

@@ -319,12 +319,12 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation type="unfinished">Принадлежит справочнику</translation>
+        <translation>Принадлежит ссылке</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>XRef File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя файла внешней ссылки</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
@@ -334,7 +334,7 @@
     <message>
         <location line="+1"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Внешняя ссылка</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -625,12 +625,12 @@
     <message>
         <location line="+2"/>
         <source>Frozen Layers</source>
-        <translation type="unfinished">Замороженные слои</translation>
+        <translation>Замороженные слои</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer ID</source>
-        <translation type="unfinished">Идентификатор слоя</translation>
+        <translation>Идентификатор слоя</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-8"/>
@@ -1068,22 +1068,22 @@
     <message>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Точка 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Точка 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation type="unfinished"></translation>
+        <translation>Завод</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Water</source>
-        <translation type="unfinished">Вода</translation>
+        <translation>Вода</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1098,37 +1098,37 @@
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation type="unfinished">Общение</translation>
+        <translation>Связь</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Electric</source>
-        <translation type="unfinished">Электрический</translation>
+        <translation>Электричество</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Low Voltage</source>
-        <translation type="unfinished">Низкое напряжение</translation>
+        <translation>Низкое напряжение</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>High Voltage</source>
-        <translation type="unfinished">Высокое напряжение</translation>
+        <translation>Высокое напряжение</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation type="unfinished">Накладная мощность</translation>
+        <translation>Воздушная ЛЭП</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation type="unfinished">Foul</translation>
+        <translation>Канализация</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished">Восстание фолов</translation>
+        <translation>Напорная канализация</translation>
     </message>
 </context>
 <context>
