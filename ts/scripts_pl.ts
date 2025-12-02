@@ -1332,7 +1332,7 @@ Czy chcesz go odzyskać?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
         <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -7974,7 +7974,7 @@ jest już na liście.</translation>
         <translation>Domyślna szerokość linii dla nowych warstw:</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/Layer.js" line="+97"/>
+        <location filename="../scripts/Layer/Layer.js" line="+99"/>
         <source>Layer Tools</source>
         <translation>Narzędzia warstwy</translation>
     </message>
@@ -9315,7 +9315,7 @@ jest już na liście.</translation>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Untitled %1</source>
         <translation>Bez tytułu %1</translation>
     </message>
@@ -13750,7 +13750,7 @@ jest już na liście.</translation>
         <translation>Wartość zmierzona</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+171"/>
         <source>Left</source>
         <translation>Lewo</translation>
     </message>

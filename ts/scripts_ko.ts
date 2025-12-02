@@ -1328,7 +1328,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
         <source>Widgets</source>
         <translation>위젯</translation>
     </message>
@@ -7964,7 +7964,7 @@ is already in the list.</source>
         <translation>레이어 0의 기본 선 가중치입니다:</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/Layer.js" line="+97"/>
+        <location filename="../scripts/Layer/Layer.js" line="+99"/>
         <source>Layer Tools</source>
         <translation>레이어 도구</translation>
     </message>
@@ -9305,7 +9305,7 @@ is already in the list.</source>
         <translation>형식:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Untitled %1</source>
         <translation>제목 없음 %1</translation>
     </message>
@@ -13730,7 +13730,7 @@ is already in the list.</source>
         <translation>측정값</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+171"/>
         <source>Left</source>
         <translation>왼쪽</translation>
     </message>

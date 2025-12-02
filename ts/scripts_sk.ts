@@ -1332,7 +1332,7 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>
@@ -7974,7 +7974,7 @@ už existuje v zozname.</translation>
         <translation>Predvolená hrúbka čiary pre novú vrstvu:</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/Layer.js" line="+97"/>
+        <location filename="../scripts/Layer/Layer.js" line="+99"/>
         <source>Layer Tools</source>
         <translation>Nástroje Vstvy</translation>
     </message>
@@ -9315,7 +9315,7 @@ už existuje v zozname.</translation>
         <translation>Formát:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Untitled %1</source>
         <translation>Bez názvu %1</translation>
     </message>
@@ -13750,7 +13750,7 @@ už existuje v zozname.</translation>
         <translation>Nameraná hodnota</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+171"/>
         <source>Left</source>
         <translation>Vľavo</translation>
     </message>

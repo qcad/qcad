@@ -410,8 +410,8 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>Ordinat</source>
-        <translation>Ordinat</translation>
+        <source>Ordinate</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -672,8 +672,8 @@
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
-        <source>Köşe Noktası</source>
-        <translation>Köşe Noktası</translation>
+        <source>Vertex</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+201"/>
@@ -744,8 +744,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Eğri</source>
-        <translation>Eğri</translation>
+        <source>Spline</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -765,8 +765,8 @@
     <message>
         <location line="+4"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+0"/>
-        <source>Kavis</source>
-        <translation>Kavis</translation>
+        <source>Bulge</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>

@@ -328,8 +328,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>XRef File Name</source>
-        <translation>Nazwa pliku XRef</translation>
+        <source>External reference</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>

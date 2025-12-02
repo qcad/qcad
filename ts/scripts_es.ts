@@ -1330,7 +1330,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
         <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -7969,7 +7969,7 @@ ya está en la lista.</translation>
         <translation>Grosor de línea por defecto para nuevas capas:</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/Layer.js" line="+97"/>
+        <location filename="../scripts/Layer/Layer.js" line="+99"/>
         <source>Layer Tools</source>
         <translation>Herramientas de capa</translation>
     </message>
@@ -9310,7 +9310,7 @@ ya está en la lista.</translation>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Untitled %1</source>
         <translation>Sin título %1</translation>
     </message>
@@ -13740,7 +13740,7 @@ ya está en la lista.</translation>
         <translation>Valor medido</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+171"/>
         <source>Left</source>
         <translation>Izquierda</translation>
     </message>

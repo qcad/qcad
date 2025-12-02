@@ -1328,7 +1328,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+585"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
         <source>Widgets</source>
         <translation>Εργαλεία</translation>
     </message>
@@ -7967,7 +7967,7 @@ is already in the list.</source>
         <translation type="unfinished">Προεπιλεγμένο βάρος γραμμής για το επίπεδο 0:</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/Layer.js" line="+97"/>
+        <location filename="../scripts/Layer/Layer.js" line="+99"/>
         <source>Layer Tools</source>
         <translation type="unfinished">Εργαλεία στρώματος</translation>
     </message>
@@ -9308,7 +9308,7 @@ is already in the list.</source>
         <translation>Μορφή:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Untitled %1</source>
         <translation type="unfinished">Χωρίς τίτλο %1</translation>
     </message>
@@ -13738,7 +13738,7 @@ is already in the list.</source>
         <translation type="unfinished">Μετρούμενη τιμή</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+171"/>
         <source>Left</source>
         <translation>Αριστερά</translation>
     </message>

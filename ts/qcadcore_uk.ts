@@ -646,7 +646,7 @@
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation>Прив'язується</translation>
+        <translation>Прив&apos;язується</translation>
     </message>
     <message>
         <location line="+1"/>
