@@ -347,7 +347,7 @@
     <message>
         <location line="+1"/>
         <source>External Reference</source>
-        <translation></translation>
+        <translation>Dış Referans</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1068,17 +1068,17 @@
     <message>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation></translation>
+        <translation>Nokta 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation></translation>
+        <translation>Nokta 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation></translation>
+        <translation>Tesis</translation>
     </message>
     <message>
         <location line="+2"/>

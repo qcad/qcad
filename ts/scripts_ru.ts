@@ -1256,12 +1256,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation></translation>
+        <translation>Невозможно редактировать внешнюю ссылку</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation></translation>
+        <translation>Невозможно редактировать блок из внешней ссылки</translation>
     </message>
     <message>
         <location line="-109"/>
@@ -6007,7 +6007,7 @@ is already in the list.</source>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation></translation>
+        <translation>Длина точки в линейных шаблонах:</translation>
     </message>
     <message>
         <location line="+41"/>

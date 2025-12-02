@@ -1257,12 +1257,12 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation></translation>
+        <translation>Tidak dapat mengedit referensi eksternal</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation></translation>
+        <translation>Tidak dapat mengedit blok dari referensi eksternal</translation>
     </message>
 </context>
 <context>
@@ -5992,7 +5992,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation></translation>
+        <translation>Panjang titik dalam pola garis:</translation>
     </message>
     <message>
         <location line="+41"/>

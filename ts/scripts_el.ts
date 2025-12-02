@@ -1257,12 +1257,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation></translation>
+        <translation>Δεν είναι δυνατή η επεξεργασία εξωτερικής αναφοράς</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation></translation>
+        <translation>Δεν είναι δυνατή η επεξεργασία μπλοκ από εξωτερική αναφορά</translation>
     </message>
 </context>
 <context>
@@ -5995,7 +5995,7 @@ is already in the list.</source>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation></translation>
+        <translation>Μήκος κουκκίδας σε μοτίβα γραμμών:</translation>
     </message>
     <message>
         <location line="+41"/>

@@ -1080,7 +1080,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation></translation>
+        <translation>Drugi entitet ne može biti obrezan.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -1123,22 +1123,22 @@ Do you wish to recover it?</source>
     <message>
         <location line="+12"/>
         <source>Export as Bitmap</source>
-        <translation></translation>
+        <translation>Izvezi kao Bitmap</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
-        <translation></translation>
+        <translation>Izvoz bit&amp;mape...</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportDialog.ui" line="+14"/>
         <source>Bitmap Export</source>
-        <translation></translation>
+        <translation>Izvoz bitmape</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Size</source>
-        <translation></translation>
+        <translation>Veličina</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1153,84 +1153,84 @@ Do you wish to recover it?</source>
     <message>
         <location line="+23"/>
         <source>Pixels per drawing unit:</source>
-        <translation></translation>
+        <translation>Pikseli po jedinici crteža:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Export bounding box of selection</source>
-        <translation></translation>
+        <translation>Izvezi ograničavajući okvir odabira</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Background</source>
-        <translation></translation>
+        <translation>Pozadina</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>White</source>
-        <translation></translation>
+        <translation>Bijela</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Black</source>
-        <translation></translation>
+        <translation>Crna</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Transparent</source>
-        <translation></translation>
+        <translation>Prozirno</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Color</source>
         <comment>Title of group box</comment>
-        <translation></translation>
+        <translation>Boja</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Monochrome</source>
-        <translation></translation>
+        <translation>Jednobojno</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Grayscale</source>
-        <translation></translation>
+        <translation>Sivi tonovi</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Color</source>
         <comment>Radio button choice</comment>
-        <translation></translation>
+        <translation>Boja</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Anti-aliasing</source>
-        <translation></translation>
+        <translation>Anti-aliasing</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use anti-aliasing</source>
-        <translation></translation>
+        <translation>Koristi anti-aliasing</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Margin</source>
-        <translation></translation>
+        <translation>Margina</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Margin:</source>
-        <translation></translation>
+        <translation>Margina:</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>px</source>
-        <translation></translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation></translation>
+        <translation>Dodaj dodatnu marginu za kompenzaciju debljine linije</translation>
     </message>
 </context>
 <context>
@@ -1238,7 +1238,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
-        <translation></translation>
+        <translation>Nevažeća veličina slike (širina x visina mora biti manja od %1)</translation>
     </message>
 </context>
 <context>
@@ -1334,24 +1334,24 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
         <source>Widgets</source>
-        <translation></translation>
+        <translation>Dodatci</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
-        <translation></translation>
+        <translation>Popis blokova</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+19"/>
         <source>Hide internal blocks</source>
-        <translation></translation>
+        <translation>Sakrij interne blokove</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Enable alternating row colors</source>
-        <translation></translation>
+        <translation>Omogući naizmjenične boje redaka</translation>
     </message>
 </context>
 <context>
@@ -1359,22 +1359,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js" line="+47"/>
         <source>Block:</source>
-        <translation></translation>
+        <translation>Blok:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation></translation>
+        <translation>ID reference bloka:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Block attribute:</source>
-        <translation></translation>
+        <translation>Atribut bloka:</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>&amp;List Block Attributes</source>
-        <translation></translation>
+        <translation>&amp;Popis atributa bloka</translation>
     </message>
 </context>
 <context>
@@ -1382,12 +1382,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
-        <translation></translation>
+        <translation>Izvezi popis blokova (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>CSV</source>
-        <translation></translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -1400,12 +1400,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
         <source>Export Block References List (CSV)</source>
-        <translation></translation>
+        <translation>Izvezi popis referenci blokova (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>CSV</source>
-        <translation></translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -1418,12 +1418,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+59"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
-        <translation></translation>
+        <translation>Odaberite liniju, luk, krug, elipsu, spline ili segment polilinije</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse segment</source>
-        <translation></translation>
+        <translation>Odaberite liniju, luk, krug ili segment elipse</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
@@ -1433,7 +1433,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation></translation>
+        <translation>Ukloni segment</translation>
     </message>
 </context>
 <context>
@@ -1441,12 +1441,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.js" line="+54"/>
         <source>Choose line, arc or circle</source>
-        <translation></translation>
+        <translation>Odaberite liniju, luk ili krug</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Specify point</source>
-        <translation></translation>
+        <translation>Odredite točku</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
@@ -1456,7 +1456,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
-        <translation></translation>
+        <translation>Razmak:</translation>
     </message>
 </context>
 <context>
@@ -1464,27 +1464,27 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.js" line="+79"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation></translation>
+        <translation>Odaberite liniju, luk, krug, elipsu, spline ili poliliniju za razbijanje</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation></translation>
+        <translation>Odaberite liniju, luk, krug ili elipsu za razbijanje</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>First break point</source>
-        <translation></translation>
+        <translation>Prva točka prekida</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation></translation>
+        <translation>Druga točka prekida</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Click the part of the circle or ellipse to remove</source>
-        <translation></translation>
+        <translation>Kliknite dio kruga ili elipse za uklanjanje</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
@@ -1494,7 +1494,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation></translation>
+        <translation>Ukloni segment</translation>
     </message>
 </context>
 <context>
@@ -1502,7 +1502,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Help/BrowseUserManual/BrowseUserManualInit.js" line="+2"/>
         <source>Browse User Manual</source>
-        <translation></translation>
+        <translation>Pregledaj korisnički priručnik</translation>
     </message>
 </context>
 <context>
@@ -1510,32 +1510,32 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
-        <translation></translation>
+        <translation>Dodatci</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>CAD Toolbar</source>
-        <translation></translation>
+        <translation>CAD alatna traka</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
-        <translation></translation>
+        <translation>Veličina ikone:</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>Pixel</source>
-        <translation></translation>
+        <translation>Piksel</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation></translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Columns:</source>
-        <translation></translation>
+        <translation>Stupci:</translation>
     </message>
 </context>
 <context>
@@ -1543,53 +1543,53 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+401"/>
         <source>Expand all</source>
-        <translation></translation>
+        <translation>Proširi sve</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Collapse all</source>
-        <translation></translation>
+        <translation>Sažmi sve</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>List View</source>
-        <translation></translation>
+        <translation>Prikaz popisa</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Icon View</source>
-        <translation></translation>
+        <translation>Prikaz ikona</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Widgets</source>
-        <translation></translation>
+        <translation>Dodatci</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+53"/>
         <source>Tool Matrix</source>
-        <translation></translation>
+        <translation>Matrica alata</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
         <source>Icon size:</source>
-        <translation></translation>
+        <translation>Veličina ikone:</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Pixel</source>
-        <translation></translation>
+        <translation>Piksel</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation></translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>List view</source>
-        <translation></translation>
+        <translation>Prikaz popisa</translation>
     </message>
 </context>
 <context>
@@ -1597,7 +1597,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/ChangeFontToArial/ChangeFontToArial.js" line="+65"/>
         <source>Set Font to Arial</source>
-        <translation></translation>
+        <translation>Postavi font na Arial</translation>
     </message>
 </context>
 <context>

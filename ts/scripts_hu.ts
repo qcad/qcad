@@ -1257,12 +1257,12 @@ Szeretné helyreállítani?</translation>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation></translation>
+        <translation>Nem szerkeszthető a külső hivatkozás</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation></translation>
+        <translation>Nem szerkeszthető a blokk külső hivatkozásból</translation>
     </message>
 </context>
 <context>
@@ -3802,7 +3802,7 @@ már szerepel a listában.</translation>
         <location line="+168"/>
         <location line="+2"/>
         <source>Near co-linear positions.</source>
-        <translation></translation>
+        <translation>Majdnem kollineáris pozíciók.</translation>
     </message>
     <message>
         <location line="-168"/>
@@ -4449,7 +4449,7 @@ már szerepel a listában.</translation>
         <location filename="../scripts/Block/EditMainDrawing/EditMainDrawingInit.js" line="+2"/>
         <source>&amp;Return to Main Drawing</source>
         <translatorcomment>Szerepel a &quot;DefaultAction&quot; egy szövegében is!</translatorcomment>
-        <translation></translation>
+        <translation>Vissza a &amp;fő rajzhoz</translation>
     </message>
 </context>
 <context>
@@ -5540,7 +5540,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation></translation>
+        <translation>Bőbeszédű *</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5938,7 +5938,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation></translation>
+        <translation>Pontok hossza a vonalas mintákban:</translation>
     </message>
     <message>
         <location line="+47"/>
@@ -11456,7 +11456,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+0"/>
         <source>on</source>
-        <translation></translation>
+        <translation>be</translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
@@ -13187,7 +13187,7 @@ már szerepel a listában.</translation>
         <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translatorcomment>&quot;(a)&quot; refers to the angle that indicated as angle &quot;a&quot; in the figure of the dialog</translatorcomment>
-        <translation></translation>
+        <translation>&amp;Szög (a):</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -14412,7 +14412,7 @@ már szerepel a listában.</translation>
         <location line="+0"/>
         <source>Trace</source>
         <translatorcomment>A trace is a filled area with 3 or 4 corners.</translatorcomment>
-        <translation></translation>
+        <translation>Nyom</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14423,7 +14423,7 @@ már szerepel a listában.</translation>
         <location line="+0"/>
         <source>Face</source>
         <translatorcomment>A face is the same as Trace but can also be 3D.</translatorcomment>
-        <translation></translation>
+        <translation>Felület</translation>
     </message>
     <message>
         <location line="+2"/>

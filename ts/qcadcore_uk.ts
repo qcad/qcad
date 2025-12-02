@@ -342,7 +342,7 @@
     <message>
         <location line="+1"/>
         <source>External Reference</source>
-        <translation></translation>
+        <translation>Зовнішнє посилання</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1068,17 +1068,17 @@
     <message>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation></translation>
+        <translation>Точка 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation></translation>
+        <translation>Точка 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation></translation>
+        <translation>Завод</translation>
     </message>
     <message>
         <location line="+2"/>

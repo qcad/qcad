@@ -1251,12 +1251,12 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation></translation>
+        <translation>Dış referans düzenlenemiyor</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation></translation>
+        <translation>Dış referanstan blok düzenlenemiyor</translation>
     </message>
     <message>
         <location line="-109"/>
@@ -5911,7 +5911,7 @@ zaten listede.</translation>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation></translation>
+        <translation>Çizgi desenlerinde nokta uzunluğu:</translation>
     </message>
     <message>
         <location line="+47"/>
@@ -8804,7 +8804,7 @@ zaten listede.</translation>
         <location line="+0"/>
         <location line="+2"/>
         <source>Linetype</source>
-        <translation></translation>
+        <translation>Çizgi Tipi</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14093,7 +14093,7 @@ zaten listede.</translation>
     <message>
         <location line="+0"/>
         <source>Linetype</source>
-        <translation></translation>
+        <translation>Çizgi Tipi</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14428,7 +14428,7 @@ zaten listede.</translation>
     <message>
         <location line="+0"/>
         <source>Spline</source>
-        <translation></translation>
+        <translation>Eğri</translation>
     </message>
     <message>
         <location line="+2"/>

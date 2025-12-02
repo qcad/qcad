@@ -256,7 +256,7 @@
         <location filename="../src/core/RBlock.cpp" line="+75"/>
         <source>Pixel Unit</source>
         <translatorcomment>The units of the entity are measured in pixels rather than drawing units, i.e. 10 means 10 pixels on the screen.</translatorcomment>
-        <translation></translation>
+        <translation>Pixel egység</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -344,7 +344,7 @@
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <source>Scale</source>
         <translatorcomment>Blokk beszúrásakor használja, az eredetinél kisebb vagy nagyobb mérethez</translatorcomment>
-        <translation></translation>
+        <translation>Lépték</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -355,25 +355,25 @@
         <location line="+1"/>
         <source>Columns</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
-        <translation></translation>
+        <translation>Oszlopok</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rows</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
-        <translation></translation>
+        <translation>Sorok</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
-        <translation></translation>
+        <translation>Oszlopköz</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
         <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
-        <translation></translation>
+        <translation>Sorköz</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -622,13 +622,13 @@
         <location line="+1"/>
         <source>View Target</source>
         <translatorcomment>The point at the center of a viewport, the point we are looking at.</translatorcomment>
-        <translation></translation>
+        <translation>Nézet célja</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Overall</source>
         <translatorcomment>The main viewport used to display the whole drawing.</translatorcomment>
-        <translation></translation>
+        <translation>Teljes</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -687,7 +687,7 @@
         <location line="+1"/>
         <source>Off is Freeze</source>
         <translatorcomment>Switching a layer off means that it will also be frozen.</translatorcomment>
-        <translation></translation>
+        <translation>Ki = Fagyasztott</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
@@ -768,7 +768,7 @@
         <location line="+1"/>
         <source>Arrow size</source>
         <translatorcomment>Nyíl vagy </translatorcomment>
-        <translation></translation>
+        <translation>Nyíl mérete</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -794,19 +794,19 @@
         <location line="+1"/>
         <source>Text horizontal</source>
         <translatorcomment>A preference to show the dimension label always horizontally rather than aligned with the dimension line.</translatorcomment>
-        <translation></translation>
+        <translation>Szöveg vízszintesen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tick size</source>
         <translatorcomment>A méretvonal végén nyíl helyett használható ferde vonalszakasz mérete</translatorcomment>
-        <translation></translation>
+        <translation>Jelölés mérete</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
         <translatorcomment>Azt adja meg, hogy a méretvonalra írt számot pl 1.5 vagy 1 1/2 stb formátumban írja rá</translatorcomment>
-        <translation></translation>
+        <translation>Lineáris formátum</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -852,7 +852,7 @@
         <location line="+1"/>
         <source>Arrow block</source>
         <translatorcomment>A block containing the arrow of a dimension.</translatorcomment>
-        <translation></translation>
+        <translation>Nyíl blokk</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1138,13 +1138,13 @@
         <location line="+2"/>
         <source>Foul</source>
         <translatorcomment>A line type used for foul (dirty) water.</translatorcomment>
-        <translation></translation>
+        <translation>Szennyezett víz</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
         <translatorcomment>A line type used for foul (dirty) water that is rising.</translatorcomment>
-        <translation></translation>
+        <translation>Emelkedő szennyezett víz</translation>
     </message>
 </context>
 <context>
