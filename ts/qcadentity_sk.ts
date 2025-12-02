@@ -219,7 +219,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Stred</translation>
+        <translation>Stred</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -459,7 +459,7 @@
     <message>
         <location line="+3"/>
         <source>Text Rotation</source>
-        <translation type="unfinished">Otáčanie textu</translation>
+        <translation>Otáčanie textu</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -551,12 +551,12 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation type="unfinished">Navíjanie</translation>
+        <translation>Navíjanie</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alpha</source>
-        <translation type="unfinished">Alfa</translation>
+        <translation>Alfa</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -682,7 +682,7 @@
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation type="unfinished">Drážkovanie</translation>
+        <translation>Drážkovanie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -920,31 +920,31 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation type="unfinished">Umiestnenie</translation>
+        <translation>Umiestnenie</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-        <translation type="unfinished">Smer</translation>
+        <translation>Smer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation type="unfinished">Text</translation>
+        <translation>Text</translation>
     </message>
     <message>
         <location filename="../src/entity/RLineEntity.cpp" line="-7"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-        <translation type="unfinished">Stredný bod</translation>
+        <translation>Stredný bod</translation>
     </message>
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
         <source>Frame</source>
-        <translation type="unfinished">Rám</translation>
+        <translation>Rám</translation>
     </message>
 </context>
 </TS>

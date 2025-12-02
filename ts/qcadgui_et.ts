@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/gui/RCadToolBar.cpp" line="+139"/>
         <source>Vertical/Horizontal</source>
-        <translation type="unfinished">Vertikaalne/horisontaalne</translation>
+        <translation>Vertikaalne/horisontaalne</translation>
     </message>
 </context>
 <context>
@@ -15,7 +15,7 @@
         <location filename="../src/gui/RCadToolBarPanel.cpp" line="+23"/>
         <location line="+63"/>
         <source>Back</source>
-        <translation type="unfinished">Tagasi</translation>
+        <translation>Tagasi</translation>
     </message>
 </context>
 <context>
@@ -23,7 +23,7 @@
     <message>
         <location filename="../src/gui/RColorCombo.cpp" line="+154"/>
         <source>Custom</source>
-        <translation type="unfinished">Kohandatud</translation>
+        <translation>Kohandatud</translation>
     </message>
 </context>
 <context>
