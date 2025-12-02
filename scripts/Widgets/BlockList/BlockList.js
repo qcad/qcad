@@ -97,14 +97,14 @@ RBlockListQt.getWidget = function() {
  * Add an additional action to be used in the context menu.
  * Can be used by plugins to hook into the block list context menu.
  */
-RBlockListQt.addContextMenuScriptFile = function(scriptFile, blockList) {
+RBlockListQt.addContextMenuScriptFile = function(scriptFile, blockList, xRefOnly) {
     //var blockList = RBlockListQt.getWidget();
     if (isNull(blockList)) {
         return;
     }
 
     var scriptFiles = RBlockListQt.getContextMenuScriptFiles(blockList);
-    scriptFiles.push(scriptFile);
+    scriptFiles.push([scriptFile, xRefOnly]);
     blockList.setProperty("ContextMenuScriptFiles", scriptFiles);
 };
 
@@ -127,6 +127,14 @@ RBlockListQt.prototype.contextMenuEvent = function(e) {
         this.setCurrentItem(item);
     }
 
+    var document = this.di.getDocument();
+    var blockName = this.getBlockName(item);
+    var block = document.queryBlockDirect(blockName);
+    var isXRef = false;
+    if (!isNull(block)) {
+        isXRef = block.isXRef();
+    }
+
     var menu = new QMenu();
 
     RGuiAction.getByScriptFile("scripts/Block/ToggleBlockVisibility/ToggleBlockVisibility.js").addToMenu(menu);
@@ -140,18 +148,29 @@ RBlockListQt.prototype.contextMenuEvent = function(e) {
     RGuiAction.getByScriptFile("scripts/Block/SelectBlockReferences/SelectBlockReferences.js").addToMenu(menu);
     RGuiAction.getByScriptFile("scripts/Block/DeselectBlockReferences/DeselectBlockReferences.js").addToMenu(menu);
 
-    RBlockListQt.complementContextMenu(menu, RBlockListQt.getWidget());
+    RBlockListQt.complementContextMenu(menu, RBlockListQt.getWidget(), isXRef);
 
     menu.exec(QCursor.pos());
 
     e.ignore();
 };
 
-RBlockListQt.complementContextMenu = function(menu, blockListWidget) {
+RBlockListQt.complementContextMenu = function(menu, blockListWidget, isXRef) {
+    if (isNull(isXRef)) {
+        isXRef = false;
+    }
+
     // add additional context menu actions provided by plugins:
     var scriptFiles = RBlockListQt.getContextMenuScriptFiles(blockListWidget);
     for (var i=0; i<scriptFiles.length; i++) {
-        var scriptFile = scriptFiles[i];
+        var scriptFile = scriptFiles[i][0];
+        var xRefOnly = scriptFiles[i][1];
+
+        if (xRefOnly && !isXRef) {
+            // menu not applicable for non-XRef blocks:
+            continue;
+        }
+
         var a = RGuiAction.getByScriptFile(scriptFile);
         if (!isNull(a)) {
             a.addToMenu(menu);
