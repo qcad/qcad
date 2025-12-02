@@ -1080,7 +1080,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation></translation>
+        <translation>Drugi entitet ne može biti obrezan.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -1123,22 +1123,22 @@ Do you wish to recover it?</source>
     <message>
         <location line="+12"/>
         <source>Export as Bitmap</source>
-        <translation></translation>
+        <translation>Izvezi kao Bitmap</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
-        <translation></translation>
+        <translation>Izvoz bit&amp;mape...</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportDialog.ui" line="+14"/>
         <source>Bitmap Export</source>
-        <translation></translation>
+        <translation>Izvoz bitmape</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Size</source>
-        <translation></translation>
+        <translation>Veličina</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1153,84 +1153,84 @@ Do you wish to recover it?</source>
     <message>
         <location line="+23"/>
         <source>Pixels per drawing unit:</source>
-        <translation></translation>
+        <translation>Pikseli po jedinici crteža:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Export bounding box of selection</source>
-        <translation></translation>
+        <translation>Izvezi ograničavajući okvir odabira</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Background</source>
-        <translation></translation>
+        <translation>Pozadina</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>White</source>
-        <translation></translation>
+        <translation>Bijela</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Black</source>
-        <translation></translation>
+        <translation>Crna</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Transparent</source>
-        <translation></translation>
+        <translation>Prozirno</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Color</source>
         <comment>Title of group box</comment>
-        <translation></translation>
+        <translation>Boja</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Monochrome</source>
-        <translation></translation>
+        <translation>Jednobojno</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Grayscale</source>
-        <translation></translation>
+        <translation>Sivi tonovi</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Color</source>
         <comment>Radio button choice</comment>
-        <translation></translation>
+        <translation>Boja</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Anti-aliasing</source>
-        <translation></translation>
+        <translation>Anti-aliasing</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use anti-aliasing</source>
-        <translation></translation>
+        <translation>Koristi anti-aliasing</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Margin</source>
-        <translation></translation>
+        <translation>Margina</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Margin:</source>
-        <translation></translation>
+        <translation>Margina:</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>px</source>
-        <translation></translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation></translation>
+        <translation>Dodaj dodatnu marginu za kompenzaciju debljine linije</translation>
     </message>
 </context>
 <context>
@@ -1238,7 +1238,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
-        <translation></translation>
+        <translation>Nevažeća veličina slike (širina x visina mora biti manja od %1)</translation>
     </message>
 </context>
 <context>

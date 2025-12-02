@@ -1258,12 +1258,12 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation></translation>
+        <translation>Nevar rediģēt ārējo atsauci</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation></translation>
+        <translation>Nevar rediģēt bloku no ārējās atsauces</translation>
     </message>
 </context>
 <context>
@@ -5999,7 +5999,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation></translation>
+        <translation>Punkta garums līniju rakstos:</translation>
     </message>
     <message>
         <location line="+41"/>

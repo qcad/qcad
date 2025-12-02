@@ -5939,7 +5939,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation></translation>
+        <translation>Taško ilgis linijų raštuose:</translation>
     </message>
     <message>
         <location line="+47"/>

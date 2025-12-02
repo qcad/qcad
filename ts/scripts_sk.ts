@@ -1256,12 +1256,12 @@ Prajete si ho obnoviť?</translation>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation></translation>
+        <translation>Nie je možné upraviť externú referenciu</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation></translation>
+        <translation>Nie je možné upraviť blok z externej referencie</translation>
     </message>
     <message>
         <location line="-109"/>
@@ -5907,7 +5907,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation></translation>
+        <translation>Dĺžka bodu v líniových vzoroch:</translation>
     </message>
     <message>
         <location line="+47"/>
