@@ -1251,17 +1251,17 @@ Do you wish to recover it?</source>
     <message>
         <location line="+109"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation></translation>
+        <translation>Ne možete uređivati blok dok uređujete blok izravno.</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation></translation>
+        <translation>Nije moguće uređivati vanjsku referencu.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation></translation>
+        <translation>Nije moguće uređivati blok iz vanjske reference.</translation>
     </message>
     <message>
         <location line="-109"/>
@@ -1275,7 +1275,7 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Block/BlockDialog.js" line="+79"/>
         <source>block</source>
         <comment>default block name prefix</comment>
-        <translation></translation>
+        <translation>blok</translation>
     </message>
     <message>
         <location line="+51"/>
@@ -1295,7 +1295,8 @@ Do you wish to recover it?</source>
     <message>
         <location line="+11"/>
         <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation></translation>
+        <translation>Blok &quot;%1&quot; već postoji&lt;br&gt;i bit će prepisan.
+</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1305,7 +1306,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block</source>
-        <translation></translation>
+        <translation>Blok</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1606,27 +1607,27 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+68"/>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
-        <translation></translation>
+        <translation>Provjera ažuriranja...</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Version information not found.</source>
-        <translation></translation>
+        <translation>Informacije o verziji nisu pronađene.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>No connection to server or file not found. Please try again later.</source>
-        <translation></translation>
+        <translation>Nema veze sa serverom ili datoteka nije pronađena. Pokušajte ponovno kasnije.</translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesInit.js" line="+6"/>
         <source>Check for &amp;Updates...</source>
-        <translation></translation>
+        <translation>Provjeri ima li &amp;ažuriranja...</translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+53"/>
         <source>Automatically check for updates</source>
-        <translation></translation>
+        <translation>Automatski provjeravaj ima li ažuriranja</translation>
     </message>
 </context>
 <context>
@@ -1754,7 +1755,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
         <source>2 Tan&amp;gents and Point</source>
-        <translation></translation>
+        <translation>2 tangente i točka</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2022,7 +2023,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2PInit.js" line="+2"/>
         <source>&amp;Tangent and 2 Points</source>
-        <translation></translation>
+        <translation>Tangenta i 2 točke</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2035,7 +2036,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.js" line="+39"/>
         <source>Point on circle</source>
-        <translation></translation>
+        <translation>Točka na kružnici</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js" line="+2"/>
