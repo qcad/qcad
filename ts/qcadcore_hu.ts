@@ -325,7 +325,7 @@
     <message>
         <location line="+1"/>
         <source>External reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Külső hivatkozás</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
@@ -335,7 +335,7 @@
     <message>
         <location line="+1"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Külső hivatkozás</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1082,17 +1082,17 @@
     <message>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Pont 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Pont 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation type="unfinished"></translation>
+        <translation>Üzem</translation>
     </message>
     <message>
         <location line="+2"/>

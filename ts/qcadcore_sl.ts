@@ -324,7 +324,7 @@
     <message>
         <location line="+1"/>
         <source>External reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Zunanja referenca</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
