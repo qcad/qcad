@@ -193,7 +193,7 @@
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
-        <translation type="unfinished">Apie...</translation>
+        <translation>Apie...</translation>
     </message>
 </context>
 <context>
@@ -895,7 +895,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
         <location line="+19"/>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -1125,7 +1125,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
-        <translation type="unfinished">Bitmap eksportas...</translation>
+        <translation>Bitmap eksportas...</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportDialog.ui" line="+14"/>
@@ -1603,7 +1603,7 @@ Ar norite jį atkurti?</translation>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+68"/>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
-        <translation type="unfinished">Atnaujinimų tikrinimas...</translation>
+        <translation>Atnaujinimų tikrinimas...</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1618,7 +1618,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesInit.js" line="+6"/>
         <source>Check for &amp;Updates...</source>
-        <translation type="unfinished">Patikrinkite, ar yra atnaujinimų...</translation>
+        <translation>Patikrinkite, ar yra atnaujinimų...</translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+53"/>
@@ -2071,7 +2071,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation type="unfinished">Baigiamasis brėžinys...</translation>
+        <translation>Baigiamasis brėžinys...</translation>
     </message>
 </context>
 <context>
@@ -2860,7 +2860,7 @@ Ar norite jį atkurti?</translation>
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -2968,7 +2968,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished">Delta</translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="+122"/>
@@ -3509,7 +3509,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation type="unfinished">Cast CSV</translation>
+        <translation>Cast CSV</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3920,7 +3920,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid.</source>
-        <translation type="unfinished">Vert. alignment Invalid.</translation>
+        <translation>Vert. alignment Invalid.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4182,7 +4182,7 @@ jau yra sąraše.</translation>
     <message numerus="yes">
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -5020,7 +5020,7 @@ jau yra sąraše.</translation>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -5271,7 +5271,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation type="unfinished">Flip Painters</translation>
+        <translation>Flip Painters</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5341,27 +5341,27 @@ jau yra sąraše.</translation>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation type="unfinished">CurtainRope</translation>
+        <translation>CurtainRope</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation type="unfinished">OrthogonalBar</translation>
+        <translation>OrthogonalBar</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation type="unfinished">OrthogonalPointsGlobal</translation>
+        <translation>OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation type="unfinished">SinusoidWave</translation>
+        <translation>SinusoidWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation type="unfinished">SinusoidWaveGlobal</translation>
+        <translation>SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5371,12 +5371,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation type="unfinished">TriangleWave</translation>
+        <translation>TriangleWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation type="unfinished">SawtoothWave</translation>
+        <translation>SawtoothWave</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5386,22 +5386,22 @@ jau yra sąraše.</translation>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation type="unfinished">SteppedWave</translation>
+        <translation>SteppedWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation type="unfinished">SqauredShape</translation>
+        <translation>SqauredShape</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation type="unfinished">SqauredShapeFlexing</translation>
+        <translation>SqauredShapeFlexing</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>AllPainterDataTypes</source>
-        <translation type="unfinished">AllPainterDataTypes</translation>
+        <translation>AllPainterDataTypes</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5849,7 +5849,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+8"/>
         <source>Margin (px):</source>
-        <translation type="unfinished">Margin (px):</translation>
+        <translation>Margin (px):</translation>
     </message>
     <message>
         <location line="+69"/>
@@ -5939,7 +5939,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+47"/>
@@ -6479,7 +6479,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+31"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation type="unfinished">Importo filtrų nerasta. Nutraukiama...</translation>
+        <translation>Importo filtrų nerasta. Nutraukiama...</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7141,12 +7141,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+4"/>
         <source>Delta X:</source>
-        <translation type="unfinished">Delta X:</translation>
+        <translation>Delta X:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta Y:</source>
-        <translation type="unfinished">Delta Y:</translation>
+        <translation>Delta Y:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7553,7 +7553,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Hash</source>
-        <translation type="unfinished">Hash</translation>
+        <translation>Hash</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -7800,7 +7800,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Cavalier</source>
-        <translation type="unfinished">Cavalier</translation>
+        <translation>Cavalier</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -8378,7 +8378,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
-        <translation type="unfinished">Nubraižykite kampo bisektrisę, trisektrisę, ...</translation>
+        <translation>Nubraižykite kampo bisektrisę, trisektrisę, ...</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisector.ui" line="+17"/>
@@ -8893,7 +8893,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MenusAndToolBars.js" line="+32"/>
         <source>MenusAndToolBars() is running...</source>
-        <translation type="unfinished">MenusAndToolBars() veikia...</translation>
+        <translation>MenusAndToolBars() veikia...</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9185,7 +9185,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
         <source>Leetro MOL Import...</source>
-        <translation type="unfinished">&quot;Leetro MOL&quot; importas...</translation>
+        <translation>&quot;Leetro MOL&quot; importas...</translation>
     </message>
 </context>
 <context>
@@ -9193,12 +9193,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImporter.js" line="+161"/>
         <source>Importing Leetro MOL file...</source>
-        <translation type="unfinished">Leetro MOL failo importavimas...</translation>
+        <translation>Leetro MOL failo importavimas...</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Abort</source>
-        <translation type="unfinished">Abort</translation>
+        <translation>Abort</translation>
     </message>
 </context>
 <context>
@@ -9251,12 +9251,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+6"/>
         <source>MyLineEdit</source>
-        <translation type="unfinished">MyLineEdit</translation>
+        <translation>MyLineEdit</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>MyButton</source>
-        <translation type="unfinished">MyButton</translation>
+        <translation>MyButton</translation>
     </message>
 </context>
 <context>
@@ -9355,7 +9355,7 @@ jau yra sąraše.</translation>
     <message numerus="yes">
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -9364,7 +9364,7 @@ jau yra sąraše.</translation>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -9419,7 +9419,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFile.js" line="+47"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation type="unfinished">Importo filtrų nerasta. Nutraukiama...</translation>
+        <translation>Importo filtrų nerasta. Nutraukiama...</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -10032,7 +10032,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+13"/>
         <source>Exporting to %1...</source>
-        <translation type="unfinished">Eksportavimas į %1...</translation>
+        <translation>Eksportavimas į %1...</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -10062,12 +10062,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+17"/>
         <source>Print...</source>
-        <translation type="unfinished">Spausdinti...</translation>
+        <translation>Spausdinti...</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Export as PDF...</source>
-        <translation type="unfinished">Eksportuoti kaip PDF...</translation>
+        <translation>Eksportuoti kaip PDF...</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10359,7 +10359,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeDialog.ui" line="+14"/>
         <source>Readme</source>
-        <translation type="unfinished">Readme</translation>
+        <translation>Readme</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -10852,7 +10852,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+16"/>
         <source>Saving...</source>
-        <translation type="unfinished">Taupymas...</translation>
+        <translation>Taupymas...</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10905,7 +10905,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
-        <translation type="unfinished">Eksporto filtrų nerasta. Nutraukiama...</translation>
+        <translation>Eksporto filtrų nerasta. Nutraukiama...</translation>
     </message>
     <message>
         <location line="+84"/>
@@ -10915,7 +10915,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAsInit.js" line="+2"/>
         <source>Save &amp;As...</source>
-        <translation type="unfinished">Išsaugoti kaip...</translation>
+        <translation>Išsaugoti kaip...</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/PreferencesPage.ui" line="+17"/>
@@ -11452,7 +11452,7 @@ jau yra sąraše.</translation>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -11461,7 +11461,7 @@ jau yra sąraše.</translation>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -11475,7 +11475,7 @@ jau yra sąraše.</translation>
     <message numerus="yes">
         <location line="+0"/>
         <source>%n Layers</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -11813,7 +11813,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation type="unfinished">Snap</translation>
+        <translation>Snap</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -12018,7 +12018,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation type="unfinished">Snap</translation>
+        <translation>Snap</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -12309,7 +12309,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
-        <translation type="unfinished">SVG importas...</translation>
+        <translation>SVG importas...</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/PreferencesPage.ui" line="+17"/>
@@ -12586,17 +12586,17 @@ jau yra sąraše.</translation>
     <message>
         <location line="+18"/>
         <source>&amp;Color...</source>
-        <translation type="unfinished">Spalva...</translation>
+        <translation>Spalva...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Special Characters...</source>
-        <translation type="unfinished">Specialieji simboliai...</translation>
+        <translation>Specialieji simboliai...</translation>
     </message>
     <message>
         <location line="+348"/>
         <source>Others...</source>
-        <translation type="unfinished">Kiti...</translation>
+        <translation>Kiti...</translation>
     </message>
     <message>
         <location line="+139"/>
@@ -12631,7 +12631,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished">Delta</translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12656,7 +12656,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Omega</source>
-        <translation type="unfinished">Omega</translation>
+        <translation>Omega</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12740,17 +12740,17 @@ jau yra sąraše.</translation>
     <message>
         <location line="+170"/>
         <source>Ctrl+B</source>
-        <translation type="unfinished">Ctrl+B</translation>
+        <translation>Ctrl+B</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Ctrl+I</source>
-        <translation type="unfinished">Ctrl+I</translation>
+        <translation>Ctrl+I</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Insert Symbol...</source>
-        <translation type="unfinished">Įterpti simbolį...</translation>
+        <translation>Įterpti simbolį...</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -13450,7 +13450,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+6"/>
         <source>Imperial</source>
-        <translation type="unfinished">Imperial</translation>
+        <translation>Imperial</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13634,7 +13634,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Alt phi</source>
-        <translation type="unfinished">Alt phi</translation>
+        <translation>Alt phi</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -13644,7 +13644,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+2"/>
         <source>omega</source>
-        <translation type="unfinished">omega</translation>
+        <translation>omega</translation>
     </message>
     <message>
         <location line="-4"/>
@@ -13664,7 +13664,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="-18"/>
         <source>Delta</source>
-        <translation type="unfinished">Delta</translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="-10"/>
@@ -13709,7 +13709,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+2"/>
         <source>Omega</source>
-        <translation type="unfinished">Omega</translation>
+        <translation>Omega</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -13841,7 +13841,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Gradians</source>
-        <translation type="unfinished">Gradians</translation>
+        <translation>Gradians</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14033,17 +14033,17 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/autostart.js" line="+237"/>
         <source>Loading add-on translations...</source>
-        <translation type="unfinished">Įkeliami priedų vertimai...</translation>
+        <translation>Įkeliami priedų vertimai...</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Loading add-ons...</source>
-        <translation type="unfinished">Įkeliami priedai...</translation>
+        <translation>Įkeliami priedai...</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Initializing add-ons...</source>
-        <translation type="unfinished">Inicializuoti priedus...</translation>
+        <translation>Inicializuoti priedus...</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -14426,7 +14426,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation type="unfinished">Trace</translation>
+        <translation>Trace</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14481,7 +14481,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished">Wipeout</translation>
+        <translation>Wipeout</translation>
     </message>
     <message>
         <location line="+2"/>

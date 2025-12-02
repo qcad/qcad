@@ -329,7 +329,7 @@
     <message>
         <location line="+1"/>
         <source>External reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Odniesienie zewnętrzne</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
