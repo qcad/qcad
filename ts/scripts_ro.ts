@@ -895,8 +895,9 @@ modificările preferințelor să intre în vigoare.</translation>
         <location line="+19" />
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation type="unfinished">%n fișier(e) de salvare automată pentru desen(e) fără titlu a(u) fost găsite.
-Doriți să le recuperați?<numerusform />
+        <translation type="unfinished">
+            <numerusform>%n fișier(e) de salvare automată pentru desen(e) fără titlu a(u) fost găsite.
+Doriți să le recuperați?</numerusform>
             <numerusform />
             <numerusform />
         </translation>
@@ -2860,7 +2861,8 @@ Doriți să îl recuperați?</translation>
     <message numerus="yes">
         <location line="+3" />
         <source>Label position of %n dimension(s) was reset.</source>
-        <translation type="unfinished">Poziția etichetei pentru %n cotă/cote a fost resetată.<numerusform />
+        <translation type="unfinished">
+            <numerusform>Poziția etichetei pentru %n cotă/cote a fost resetată.</numerusform>
             <numerusform />
             <numerusform />
         </translation>
@@ -4181,7 +4183,8 @@ este deja în listă.</translation>
     <message numerus="yes">
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85" />
         <source>%n entity/ies duplicated</source>
-        <translation type="unfinished">%n entitate/entități duplicată/duplicate<numerusform />
+        <translation type="unfinished">
+            <numerusform>%n entitate/entități duplicată/duplicate</numerusform>
             <numerusform />
             <numerusform />
         </translation>
@@ -5018,7 +5021,8 @@ este deja în listă.</translation>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50" />
         <source>Transaction affected %n object(s).</source>
-        <translation type="unfinished">Tranzacția a afectat %n obiect(e).<numerusform />
+        <translation type="unfinished">
+            <numerusform>Tranzacția a afectat %n obiect(e).</numerusform>
             <numerusform />
             <numerusform />
         </translation>
@@ -9352,7 +9356,8 @@ este deja în listă.</translation>
     <message numerus="yes">
         <location line="+94" />
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
-        <translation type="unfinished">Raza a scăzut sub 0.0 după %n cerc(uri) concentrice.<numerusform />
+        <translation type="unfinished">
+            <numerusform>Raza a scăzut sub 0.0 după %n cerc(uri) concentrice.</numerusform>
             <numerusform />
             <numerusform />
         </translation>
@@ -9360,7 +9365,8 @@ este deja în listă.</translation>
     <message numerus="yes">
         <location line="+3" />
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
-        <translation type="unfinished">Raza a scăzut sub 0.0 după %n arc(uri) concentrice.<numerusform />
+        <translation type="unfinished">
+            <numerusform>Raza a scăzut sub 0.0 după %n arc(uri) concentrice.</numerusform>
             <numerusform />
             <numerusform />
         </translation>
@@ -11447,7 +11453,8 @@ este deja în listă.</translation>
     <message numerus="yes">
         <location line="+4" />
         <source>%n Entities on Layer "%1"</source>
-        <translation type="unfinished">%n Entități pe stratul "%1"<numerusform />
+        <translation type="unfinished">
+            <numerusform>%n Entități pe stratul "%1"</numerusform>
             <numerusform />
             <numerusform />
         </translation>
@@ -11455,7 +11462,8 @@ este deja în listă.</translation>
     <message numerus="yes">
         <location line="+3" />
         <source>%n Entities</source>
-        <translation type="unfinished">%n Entități<numerusform />
+        <translation type="unfinished">
+            <numerusform>%n Entități</numerusform>
             <numerusform />
             <numerusform />
         </translation>
@@ -11468,7 +11476,8 @@ este deja în listă.</translation>
     <message numerus="yes">
         <location line="+0" />
         <source>%n Layers</source>
-        <translation type="unfinished">%n Straturi<numerusform />
+        <translation type="unfinished">
+            <numerusform>%n Straturi</numerusform>
             <numerusform />
             <numerusform />
         </translation>
