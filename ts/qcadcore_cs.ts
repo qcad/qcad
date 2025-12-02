@@ -322,7 +322,7 @@
     <message>
         <location line="+1"/>
         <source>External reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Externí odkaz</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+95"/>

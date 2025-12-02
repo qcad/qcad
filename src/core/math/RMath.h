@@ -106,10 +106,10 @@ public:
      * \nonscriptable
      */
     template <class T>
-    static void swap( T &a, T &b) {
+    static void swap(T &a, T &b) noexcept {
         const T ttmp(a);
-        a=b;
-        b=ttmp;
+        a = b;
+        b = ttmp;
     }
 
     static double trunc(double v);

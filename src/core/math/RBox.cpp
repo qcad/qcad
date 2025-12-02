@@ -78,7 +78,7 @@ bool RBox::isValid() const {
 
 /**
  * \return True if this box is sane (i.e. both diagonally opposite corners are
- * valid and not Infitiy or NaN).
+ * valid and not Infinity or NaN).
  */
 bool RBox::isSane() const {
     return (c1.isSane() && c2.isSane());
@@ -325,14 +325,14 @@ RVector RBox::getCenter() const {
 }
 
 /**
- * \return Minimum point of this box (minimum X,Z and Z).
+ * \return Minimum point of this box (minimum X, Y and Z).
  */
 RVector RBox::getMinimum() const {
     return RVector::getMinimum(c1, c2);
 }
 
 /**
- * \return Maximum point of this box (maximum X,Z and Z).
+ * \return Maximum point of this box (maximum X, Y and Z).
  */
 RVector RBox::getMaximum() const {
     return RVector::getMaximum(c1, c2);

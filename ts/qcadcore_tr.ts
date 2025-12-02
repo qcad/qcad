@@ -46,12 +46,12 @@
     <message>
         <location line="+3"/>
         <source>Microinch</source>
-        <translation type="unfinished"></translation>
+        <translation>Mikroinç</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Micron</source>
-        <translation type="unfinished"></translation>
+        <translation>Mikron</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -139,12 +139,12 @@
     <message>
         <location line="+1"/>
         <source>Cyan</source>
-        <translation type="unfinished"></translation>
+        <translation>Camgöbeği</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Magenta</source>
-        <translation type="unfinished"></translation>
+        <translation>Eflatun</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -322,7 +322,7 @@
     <message>
         <location line="+1"/>
         <source>External reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Harici referans</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
@@ -347,7 +347,7 @@
     <message>
         <location line="+1"/>
         <source>External Reference</source>
-        <translation></translation>
+        <translation>Dış Referans</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -412,7 +412,7 @@
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+9"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation>Çizgi tipi</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -828,7 +828,7 @@
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation type="unfinished"></translation>
+        <translation>Mimari işaret</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1058,27 +1058,27 @@
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Çit çizgisi 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Çit çizgisi 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation></translation>
+        <translation>Nokta 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation></translation>
+        <translation>Nokta 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation></translation>
+        <translation>Tesis</translation>
     </message>
     <message>
         <location line="+2"/>

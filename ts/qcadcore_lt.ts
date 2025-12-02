@@ -209,7 +209,7 @@
     <message>
         <location line="+2"/>
         <source>Others...</source>
-        <translation type="unfinished">Kiti...</translation>
+        <translation>Kiti...</translation>
     </message>
 </context>
 <context>
@@ -322,7 +322,7 @@
     <message>
         <location line="+1"/>
         <source>External reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Išorinė nuoroda</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+95"/>
@@ -1048,7 +1048,7 @@
     <message>
         <location line="+1"/>
         <source>Zig Zag</source>
-        <translation type="unfinished">Zig Zag</translation>
+        <translation>Zig Zag</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1078,7 +1078,7 @@
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation type="unfinished"></translation>
+        <translation>Įrenginys</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1123,12 +1123,12 @@
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation type="unfinished">Foul</translation>
+        <translation>Foul</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished">Foul Rising</translation>
+        <translation>Foul Rising</translation>
     </message>
 </context>
 <context>
