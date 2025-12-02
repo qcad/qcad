@@ -70,37 +70,37 @@
     <message>
         <location line="+1"/>
         <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
-        <translation></translation>
+        <translation>นี่หมายความว่าทุกคนสามารถ&lt;a href=&apos;%1&apos;&gt;มีส่วนร่วม&lt;/a&gt;ได้!</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
-        <translation></translation>
+        <translation>เครื่องมือ คุณสมบัติ และรูปแบบไฟล์เพิ่มเติมรวมถึง DWG มีอยู่ใน &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; หรือ &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
-        <translation></translation>
+        <translation>ปลั๊กอินและส่วนเสริมสคริปต์อยู่ภายใต้ใบอนุญาตของแต่ละรายการ (ดูแท็บ &quot;ปลั๊กอิน&quot;)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
-        <translation></translation>
+        <translation>ชื่อแบรนด์หรือชื่อผลิตภัณฑ์ทั้งหมดเป็นเครื่องหมายการค้าหรือเครื่องหมายการค้าจดทะเบียนของผู้ถือครองแต่ละราย</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
-        <translation></translation>
+        <translation>ส่วนหนึ่งของซอฟต์แวร์นี้ © %1 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
-        <translation></translation>
+        <translation>Qt มาพร้อมกับ QCAD ภายใต้ &lt;a href=&apos;%1&apos;&gt;ใบอนุญาตโอเพ่นซอร์ส LGPL&lt;/a&gt; ซึ่งให้สิทธิ์ต่างๆ แก่คุณในฐานะผู้ใช้ รวมถึงสิทธิ์ในการคอมไพล์ไลบรารี Qt ใหม่สำหรับแพลตฟอร์มของคุณ โดยทำตาม &lt;a href=&apos;%2&apos;&gt;เอกสารที่แสดงบนเว็บไซต์ Qt&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
-        <translation></translation>
+        <translation>โปรแกรมนี้จัดให้ตามสภาพ โดยไม่มีการรับประกันใดๆ ทั้งสิ้น รวมถึงการรับประกันการออกแบบ ความสามารถในการขาย และความเหมาะสมสำหรับวัตถุประสงค์เฉพาะ</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -293,7 +293,8 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation></translation>
+        <translation>กรุณาเริ่ม QCAD ใหม่เพื่อให้
+การเปลี่ยนแปลงการตั้งค่ามีผล</translation>
     </message>
     <message>
         <location line="+86"/>
@@ -308,12 +309,12 @@ the preference changes to take effect.</source>
     <message>
         <location line="+1"/>
         <source>Changes will affect new drawings but NOT the current drawing.</source>
-        <translation></translation>
+        <translation>การเปลี่ยนแปลงจะมีผลต่อการเขียนแบบใหม่แต่ไม่มีผลต่อการเขียนแบบปัจจุบัน</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation></translation>
+        <translation>การตั้งค่าของการเขียนแบบปัจจุบันสามารถเปลี่ยนได้ที่&lt;br/&gt;&lt;i&gt;แก้ไข &amp;gt; การตั้งค่าการเขียนแบบ&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
