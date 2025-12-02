@@ -411,7 +411,7 @@
     <message>
         <location line="+2"/>
         <source>Ordinate</source>
-        <translation></translation>
+        <translation>Ordinat</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -673,7 +673,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Vertex</source>
-        <translation></translation>
+        <translation>Köşe</translation>
     </message>
     <message>
         <location line="+201"/>
@@ -745,7 +745,7 @@
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation></translation>
+        <translation>Eğri</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -766,7 +766,7 @@
         <location line="+4"/>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+0"/>
         <source>Bulge</source>
-        <translation></translation>
+        <translation>Çıkıntı</translation>
     </message>
     <message>
         <location line="+3"/>

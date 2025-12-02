@@ -1254,12 +1254,12 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation></translation>
+        <translation>Impossible de modifier la référence externe</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation></translation>
+        <translation>Impossible de modifier le bloc à partir de la référence externe</translation>
     </message>
     <message>
         <location line="-109"/>
@@ -6002,7 +6002,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation></translation>
+        <translation>Longueur des points dans les motifs de lignes :</translation>
     </message>
     <message>
         <location line="+41"/>

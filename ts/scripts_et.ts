@@ -293,7 +293,8 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation></translation>
+        <translation>Palun taaskäivitage QCAD, et
+eelistuste muudatused jõustuksid.</translation>
     </message>
     <message>
         <location line="+86"/>
@@ -920,7 +921,8 @@ Kas soovite need taastada?</numerusform>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation></translation>
+        <translation>Automaatse salvestamise varufail faili &quot;%1&quot; jaoks on olemas.
+Kas soovite seda taastada?</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -1257,12 +1259,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation></translation>
+        <translation>Ei saa redigeerida välist viidet</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation></translation>
+        <translation>Ei saa redigeerida plokki välisest viitest</translation>
     </message>
 </context>
 <context>
@@ -3235,7 +3237,9 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation></translation>
+        <translation>Kaust
+&quot;%1&quot;
+on juba loendis.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -5993,7 +5997,7 @@ is already in the list.</source>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation></translation>
+        <translation>Punkti pikkus joonemustrites:</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -11474,7 +11478,8 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation></translation>
+        <translation>Valitud olemid:
+%1.</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12702,7 +12707,8 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation></translation>
+        <translation>Lihtne tekst
+(üks rida, vorming puudub)</translation>
     </message>
     <message>
         <location line="+21"/>

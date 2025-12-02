@@ -1259,12 +1259,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation></translation>
+        <translation>Не може да редактирате външна препратка</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation></translation>
+        <translation>Не може да редактирате блок от външна препратка</translation>
     </message>
 </context>
 <context>
@@ -5997,7 +5997,7 @@ is already in the list.</source>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation></translation>
+        <translation>Дължина на точката в линейни шаблони:</translation>
     </message>
     <message>
         <location line="+41"/>
