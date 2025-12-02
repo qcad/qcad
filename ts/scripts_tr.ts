@@ -8804,7 +8804,7 @@ zaten listede.</translation>
         <location line="+0"/>
         <location line="+2"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -12105,12 +12105,12 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Draw/Spline/Spline.js" line="+72"/>
         <source>Spline Tools</source>
-        <translation type="unfinished">Spline Aletleri</translation>
+        <translation>Spline Aletleri</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Spline</source>
-        <translation type="unfinished">Eğri</translation>
+        <translation>Eğri</translation>
     </message>
 </context>
 <context>
@@ -14093,7 +14093,7 @@ zaten listede.</translation>
     <message>
         <location line="+0"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14428,7 +14428,7 @@ zaten listede.</translation>
     <message>
         <location line="+0"/>
         <source>Spline</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
