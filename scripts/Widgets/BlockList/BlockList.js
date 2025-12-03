@@ -104,8 +104,11 @@ RBlockListQt.addContextMenuScriptFile = function(scriptFile, blockList, xRefOnly
     }
 
     var scriptFiles = RBlockListQt.getContextMenuScriptFiles(blockList);
-    scriptFiles.push([scriptFile, xRefOnly]);
+    var scriptFileXRefOnly = RBlockListQt.getContextMenuScriptFileXRefOnly(blockList);
+    scriptFiles.push(scriptFile);
+    scriptFileXRefOnly.push(xRefOnly);
     blockList.setProperty("ContextMenuScriptFiles", scriptFiles);
+    blockList.setProperty("ContextMenuScriptFileXRefOnly", scriptFileXRefOnly);
 };
 
 RBlockListQt.getContextMenuScriptFiles = function(blockList) {
@@ -119,6 +122,19 @@ RBlockListQt.getContextMenuScriptFiles = function(blockList) {
         scriptFiles = [];
     }
     return scriptFiles;
+};
+
+RBlockListQt.getContextMenuScriptFileXRefOnly = function(blockList) {
+    //var blockList = RBlockListQt.getWidget();
+    if (isNull(blockList)) {
+        return [];
+    }
+
+    var scriptFileXRefOnly = blockList.property("ContextMenuScriptFileXRefOnly");
+    if (isNull(scriptFileXRefOnly)) {
+        scriptFileXRefOnly = [];
+    }
+    return scriptFileXRefOnly;
 };
 
 RBlockListQt.prototype.contextMenuEvent = function(e) {
@@ -162,9 +178,10 @@ RBlockListQt.complementContextMenu = function(menu, blockListWidget, isXRef) {
 
     // add additional context menu actions provided by plugins:
     var scriptFiles = RBlockListQt.getContextMenuScriptFiles(blockListWidget);
-    for (var i=0; i<scriptFiles.length; i++) {
-        var scriptFile = scriptFiles[i][0];
-        var xRefOnly = scriptFiles[i][1];
+    var scriptFileXRefOnly = RBlockListQt.getContextMenuScriptFileXRefOnly(blockListWidget);
+    for (var i=0; i<scriptFiles.length && i<scriptFileXRefOnly.length; i++) {
+        var scriptFile = scriptFiles[i];
+        var xRefOnly = scriptFiles[i];
 
         if (xRefOnly && !isXRef) {
             // menu not applicable for non-XRef blocks:
