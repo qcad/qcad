@@ -109,13 +109,13 @@ public:
     RVector getLerp(const RVector& v, double t) const;
     RVector getUnitVector() const;
     void setX(double x);
-    double getX();
+    double getX() const;
     void setY(double y);
-    double getY();
+    double getY() const;
     void setZ(double z);
-    double getZ();
+    double getZ() const;
 
-    bool isInWindow(const RVector& firstCorner, const RVector& secondCorner);
+    bool isInWindow(const RVector& firstCorner, const RVector& secondCorner) const;
 
     RVector move(const RVector& offset);
 
@@ -276,11 +276,11 @@ public:
     }
 
     static bool lessThanEqualXY(const RVector& v1, const RVector& v2) {
-        return v1.x <= v2.x && v2.y <= v2.y;
+        return v1.x <= v2.x && v1.y <= v2.y;
     }
 
     static bool greaterThanEqualXY(const RVector& v1, const RVector& v2) {
-        return v1.x >= v2.x && v2.y >= v2.y;
+        return v1.x >= v2.x && v1.y >= v2.y;
     }
 
 

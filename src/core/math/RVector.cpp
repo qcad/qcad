@@ -81,7 +81,7 @@ void RVector::setX(double x) {
     this->x = x;
 }
 
-double RVector::getX() {
+double RVector::getX() const {
     return x;
 }
 
@@ -89,7 +89,7 @@ void RVector::setY(double y) {
     this->y = y;
 }
 
-double RVector::getY() {
+double RVector::getY() const {
     return y;
 }
 
@@ -97,7 +97,7 @@ void RVector::setZ(double z) {
     this->z = z;
 }
 
-double RVector::getZ() {
+double RVector::getZ() const {
     return z;
 }
 
@@ -294,7 +294,7 @@ double RVector::getDistanceTo2D(const RVector& v) const {
  * \return true if this vector is within the given range (2d).
  */
 bool RVector::isInWindow(const RVector& firstCorner,
-        const RVector& secondCorner) {
+        const RVector& secondCorner) const {
 
     double minX = qMin(firstCorner.x, secondCorner.x);
     double maxX = qMax(firstCorner.x, secondCorner.x);
@@ -1030,7 +1030,7 @@ RVector RVector::getCrossProduct(const RVector& v1, const RVector& v2) {
     return RVector(v1.y * v2.z - v1.z * v2.y, v1.z * v2.x - v1.x * v2.z, v1.x
             * v2.y - v1.y * v2.x, v1.valid && v2.valid);
 }
-::
+
 /**
  * Generic 3d transformation. \c m must be a 3x3 matrix.
  */
