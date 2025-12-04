@@ -922,8 +922,6 @@ QList<RVector> RShape::getIntersectionPointsLT(const RLine& line1,
 
 QList<RVector> RShape::getIntersectionPointsLS(const RLine& line1,
             const RSpline& spline2, bool limited) {
-//    qDebug() << "RShape::getIntersectionPointsLS";
-
     if (RSpline::hasProxy()) {
         RSplineProxy* proxy = RSpline::getSplineProxy();
         return proxy->getIntersectionPoints(spline2, line1, limited);
