@@ -2527,6 +2527,8 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
 
                     if (block->isUndone()) {
                         block->unloadXRef();
+                        fileSystemWatcher.removePath(block->getFullXRefFilePath());
+                            //.addPath(block->getFullXRefFilePath());
                     }
                     else {
                         if (blockNameHasChanged) {
