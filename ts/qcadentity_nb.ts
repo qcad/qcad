@@ -637,7 +637,7 @@
     <message>
         <location line="+1"/>
         <source>From Entity</source>
-        <translation>Fra enhet</translation>
+        <translation>Fra entitet</translation>
     </message>
     <message>
         <location line="+1"/>

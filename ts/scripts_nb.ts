@@ -2503,7 +2503,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
-        <translation>Velg enhet eller region</translation>
+        <translation>Velg entitet eller region</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2543,7 +2543,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation>Flytte enhet</translation>
+        <translation>Flytt entitet</translation>
     </message>
     <message>
         <location line="+127"/>
@@ -4245,12 +4245,12 @@ er allerede i listen.</translation>
     <message>
         <location line="+175"/>
         <source>Entity is not in working set.</source>
-        <translation>Enheten er ikke i arbeidssett.</translation>
+        <translation>Entiteten er ikke i arbeidssett.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity is on a locked layer.</source>
-        <translation>Enheten er på et låst lag.</translation>
+        <translation>Entiteten er på et låst lag.</translation>
     </message>
     <message>
         <location line="+233"/>
@@ -4260,12 +4260,12 @@ er allerede i listen.</translation>
     <message>
         <location line="+62"/>
         <source>Entity is not a block reference.</source>
-        <translation>Enhet er ikke en blokkreferanse.</translation>
+        <translation>Entitet er ikke en blokkreferanse.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
-        <translation>Enhet er ikke en linje eller bue.</translation>
+        <translation>Entitet er ikke en linje eller bue.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4275,22 +4275,22 @@ er allerede i listen.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line.</source>
-        <translation>Enhet er ikke en linje.</translation>
+        <translation>Entitet er ikke en linje.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation>Enhet er ikke en bue.</translation>
+        <translation>Entitet er ikke en bue.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
-        <translation>Enhet er ikke en bue eller sirkel.</translation>
+        <translation>Entitet er ikke en bue eller sirkel.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
-        <translation>Enhet er ikke en linje, bue eller sirkel.</translation>
+        <translation>Entitet er ikke en linje, bue eller sirkel.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4300,17 +4300,17 @@ er allerede i listen.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
-        <translation>Enhet er ikke en bue, sirkel eller ellipse.</translation>
+        <translation>Entitet er ikke en bue, sirkel eller ellipse.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
-        <translation>Enhet er ikke en linje, bue, sirkel eller ellipse.</translation>
+        <translation>Entitet er ikke en linje, bue, sirkel eller ellipse.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation>Enhet er ikke en linje, bue, sirkel, ellipse eller polylinje.</translation>
+        <translation>Entitet er ikke en linje, bue, sirkel, ellipse eller polylinje.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4330,17 +4330,17 @@ er allerede i listen.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation>Enheten er ikke en sirkel, ellipse, spline eller polylinje.</translation>
+        <translation>Entiteten er ikke en sirkel, ellipse, spline eller polylinje.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
-        <translation>Enhet er ikke en polylinje.</translation>
+        <translation>Entitet er ikke en polylinje.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a closed polyline.</source>
-        <translation>Enheten er ikke en lukket polylinje.</translation>
+        <translation>Entiteten er ikke en lukket polylinje.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7093,7 +7093,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEEInit.js" line="+2"/>
         <source>Distance &amp;Entity to Entity</source>
-        <translation>Avstand enhet til enhet</translation>
+        <translation>Avstand &amp;Entitet til entitet</translation>
     </message>
 </context>
 <context>
@@ -7116,7 +7116,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
-        <translation>Avstand Enhet til punkt</translation>
+        <translation>Avstand &amp;Entitet til punkt</translation>
     </message>
 </context>
 <context>
@@ -8212,7 +8212,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation>Samme enhetstype som original</translation>
+        <translation>Samme entitetstype som original</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -11218,7 +11218,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+54"/>
         <source>Choose entity of contour</source>
-        <translation>Velg enhet av kontur</translation>
+        <translation>Velg entitet av kontur</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
@@ -11337,7 +11337,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
-        <translation>Velg enhet på lag</translation>
+        <translation>Velg entitet på lag</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.ui" line="+17"/>
@@ -12500,7 +12500,7 @@ er allerede i listen.</translation>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.js" line="+99"/>
         <location line="+1"/>
         <source>Select Entity</source>
-        <translation>Velg enhet</translation>
+        <translation>Velg entitet</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12511,7 +12511,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js" line="+2"/>
         <source>&amp;Text Along Entity</source>
-        <translation>Tekst langs enhet</translation>
+        <translation>&amp;Tekst langs entitet</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13213,7 +13213,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+13"/>
         <source>Choose entity to trim</source>
-        <translation>Velg enhet å trimme</translation>
+        <translation>Velg entitet å trimme</translation>
     </message>
     <message>
         <location line="+174"/>
@@ -14496,7 +14496,7 @@ er allerede i listen.</translation>
         <location line="-9"/>
         <location line="+9"/>
         <source>Unknown Entity</source>
-        <translation>Ukjent enhet</translation>
+        <translation>Ukjent entitet</translation>
     </message>
     <message>
         <location line="+106"/>
