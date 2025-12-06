@@ -370,7 +370,7 @@ preferanseendringene skal tre i kraft.</translation>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
-        <translation>Legg til egendefinert eiendom</translation>
+        <translation>Legg til egendefinert egenskap</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -833,7 +833,7 @@ preferanseendringene skal tre i kraft.</translation>
     <message>
         <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
-        <translation>Tegn bue tangentiell til enhet, gjennom punkt med radius</translation>
+        <translation>Tegn bue tangentiell til entitet, gjennom punkt med radius</translation>
     </message>
 </context>
 <context>
@@ -1012,7 +1012,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation>Poeng på enhet</translation>
+        <translation>Poeng på entitet</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1073,12 +1073,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Første enhet kan ikke trimmes.</translation>
+        <translation>Første entitet kan ikke trimmes.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Andre enhet kan ikke trimmes.</translation>
+        <translation>Andre entitet kan ikke trimmes.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
@@ -2025,7 +2025,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
-        <translation>Tegn sirkel gjennom to punkter og tangerende til en enhet</translation>
+        <translation>Tegn sirkel gjennom to punkter og tangerende til en entitet</translation>
     </message>
 </context>
 <context>
@@ -2048,7 +2048,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
-        <translation>Tegn sirkel tangentiell til enhet, gjennom punkt med radius</translation>
+        <translation>Tegn sirkel tangentiell til entitet, gjennom punkt med radius</translation>
     </message>
 </context>
 <context>
@@ -2508,7 +2508,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
-        <translation>Flytt enhet eller referanse</translation>
+        <translation>Flytt entitet eller referanse</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -2528,7 +2528,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Move entity to desired location</source>
-        <translation>Flytt enheten til ønsket sted</translation>
+        <translation>Flytt entiteten til ønsket sted</translation>
     </message>
     <message>
         <location line="+409"/>
@@ -5767,7 +5767,7 @@ er allerede i listen.</translation>
     <message>
         <location line="-64"/>
         <source>Highlight entity within range</source>
-        <translation>Fremhev enhet innenfor rekkevidde</translation>
+        <translation>Fremhev entitet innenfor rekkevidde</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/PreferencesPage.ui" line="+34"/>
@@ -6943,12 +6943,12 @@ er allerede i listen.</translation>
     <message>
         <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
-        <translation>Opprett et område 2D-sentroide for en valgt enhet</translation>
+        <translation>Opprett et område 2D-sentroide for en valgt entitet</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</source>
-        <translation>Oppretter en ny, ensartet 2D-sentroidmarkør for arealtetthet og verdietiketter for en valgt enhet</translation>
+        <translation>Oppretter en ny, ensartet 2D-sentroidmarkør for arealtetthet og verdietiketter for en valgt entitet</translation>
     </message>
 </context>
 <context>
@@ -7078,12 +7078,12 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEE.js" line="+62"/>
         <source>Specify first entity</source>
-        <translation>Spesifiser første enhet</translation>
+        <translation>Spesifiser første entitet</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second entity</source>
-        <translation>Spesifiser andre enhet</translation>
+        <translation>Spesifiser andre entitet</translation>
     </message>
     <message>
         <location line="+95"/>
@@ -7101,7 +7101,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEP.js" line="+59"/>
         <source>Specify entity</source>
-        <translation>Spesifiser enhet</translation>
+        <translation>Spesifiser entitet</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9142,12 +9142,12 @@ er allerede i listen.</translation>
     <message>
         <location line="+17"/>
         <source>Choose first entity</source>
-        <translation>Velg første enhet</translation>
+        <translation>Velg første entitet</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second entity</source>
-        <translation>Velg andre enhet</translation>
+        <translation>Velg andre entitet</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9850,12 +9850,12 @@ er allerede i listen.</translation>
     <message>
         <location line="+17"/>
         <source>Inherit entity properties</source>
-        <translation>Arve enhetsegenskaper</translation>
+        <translation>Arve entitetsegenskaper</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit all properties from the chosen entity</source>
-        <translation>Arve alle egenskaper fra den valgte enheten</translation>
+        <translation>Arve alle egenskaper fra den valgte entiteten</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10209,7 +10209,7 @@ er allerede i listen.</translation>
     <message>
         <location line="-41"/>
         <source>Decimals / precision for displayed property values:</source>
-        <translation>Desimaler / presisjon for viste eiendomsverdier:</translation>
+        <translation>Desimaler / presisjon for viste egenskapsverdier:</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
@@ -10301,7 +10301,7 @@ er allerede i listen.</translation>
         <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
-        <translation>Eiendomsredaktør</translation>
+        <translation>Egenskapseditor</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
@@ -10732,12 +10732,12 @@ er allerede i listen.</translation>
     <message>
         <location line="+48"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Første enhet kan ikke trimmes.</translation>
+        <translation>Første entitet kan ikke trimmes.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Andre enhet kan ikke trimmes.</translation>
+        <translation>Andre entitet kan ikke trimmes.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
@@ -12026,12 +12026,12 @@ er allerede i listen.</translation>
     <message>
         <location line="+13"/>
         <source>First entity</source>
-        <translation>Første enhet</translation>
+        <translation>Første entitet</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity</source>
-        <translation>Andre enhet</translation>
+        <translation>Andre entitet</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
@@ -12516,7 +12516,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+3"/>
         <source>Draw text along an entity</source>
-        <translation>Tegn tekst langs en enhet</translation>
+        <translation>Tegn tekst langs en entitet</translation>
     </message>
 </context>
 <context>
@@ -13208,7 +13208,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Modify/Trim/Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
-        <translation>Velg begrensende enhet</translation>
+        <translation>Velg begrensende entitet</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -13223,7 +13223,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Første enhet kan ikke trimmes.</translation>
+        <translation>Første entitet kan ikke trimmes.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13233,7 +13233,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+13"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Andre enhet kan ikke trimmes.</translation>
+        <translation>Andre entitet kan ikke trimmes.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
@@ -13702,7 +13702,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+1"/>
         <source>Property Line</source>
-        <translation>Eiendomslinje</translation>
+        <translation>Egenskapslinje</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14622,12 +14622,12 @@ er allerede i listen.</translation>
         <location line="+66"/>
         <location line="+124"/>
         <source>ID does not refer to an entity:</source>
-        <translation>ID refererer ikke til en enhet:</translation>
+        <translation>ID refererer ikke til en entitet:</translation>
     </message>
     <message>
         <location line="-42"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Første enhet kan ikke trimmes.</translation>
+        <translation>Første entitet kan ikke trimmes.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14637,7 +14637,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+10"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Andre enhet kan ikke trimmes.</translation>
+        <translation>Andre entitet kan ikke trimmes.</translation>
     </message>
 </context>
 </TS>
