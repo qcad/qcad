@@ -56,7 +56,7 @@
     <message>
         <location line="+3"/>
         <source>Yard</source>
-        <translation>Verftet</translation>
+        <translation>Yard</translation>
     </message>
     <message>
         <location line="+3"/>
