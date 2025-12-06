@@ -6,7 +6,7 @@
     <message>
         <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
-        <translation>Omtrent %1</translation>
+        <translation>Om %1</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -6659,7 +6659,7 @@ er allerede i listen.</translation>
         <location line="+22"/>
         <location line="+22"/>
         <source>Area</source>
-        <translation>Område</translation>
+        <translation>Areal</translation>
     </message>
     <message>
         <location line="-108"/>
@@ -6845,7 +6845,7 @@ er allerede i listen.</translation>
         <location line="+5"/>
         <location line="+2"/>
         <source>Area 2D Centroid script (v0.32) by CVH</source>
-        <translation>Område 2D Centroid-skript (v0.32) av CVH</translation>
+        <translation>Areal 2D Centroid-skript (v0.32) av CVH</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -6865,7 +6865,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+19"/>
         <source>Approximated enclosed area:</source>
-        <translation>Omtrentlig inngjerdet område:</translation>
+        <translation>Tilnærmet innesluttet areal:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -6999,7 +6999,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+1"/>
         <source>Area</source>
-        <translation>Område</translation>
+        <translation>Areal</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7357,7 +7357,7 @@ er allerede i listen.</translation>
         <location line="+7"/>
         <location line="+7"/>
         <source>Approximated length:</source>
-        <translation>Omtrentlig lengde:</translation>
+        <translation>Tilnærmet lengde:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12060,7 +12060,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Snap/SnapOnEntity/SnapOnEntityInit.js" line="+2"/>
         <source>&amp;On Entity</source>
-        <translation>Om enhet</translation>
+        <translation>På entitet</translation>
     </message>
 </context>
 <context>
@@ -13403,7 +13403,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+1"/>
         <source>Yard</source>
-        <translation>Verftet</translation>
+        <translation>Yard</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -289,7 +289,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <source>Area</source>
-        <translation>Område</translation>
+        <translation>Areal</translation>
     </message>
     <message>
         <location line="+1"/>
