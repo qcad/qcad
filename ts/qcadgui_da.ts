@@ -36,17 +36,17 @@
     <message>
         <location line="+3"/>
         <source>End</source>
-        <translation>Slut</translation>
+        <translation>Endepunkt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation>På enheden</translation>
+        <translation>På objekt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Perpendicular</source>
-        <translation>Lodret</translation>
+        <translation>Vinkelret</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -61,12 +61,12 @@
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation>Midt</translation>
+        <translation>Midtpunkt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Intersection</source>
-        <translation>Krydsningspunkt</translation>
+        <translation>Skæringspunkt</translation>
     </message>
     <message>
         <location line="+3"/>

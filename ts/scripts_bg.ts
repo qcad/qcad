@@ -3347,7 +3347,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Среден</translation>
+        <translation>Средна точка</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8308,12 +8308,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Среден</translation>
+        <translation>Средна точка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation>Край на</translation>
+        <translation>Крайна точка</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2"/>
@@ -8691,12 +8691,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Среден</translation>
+        <translation>Средна точка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation>Край на</translation>
+        <translation>Крайна точка</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2"/>
@@ -11979,7 +11979,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapEnd/SnapEndInit.js" line="+2"/>
         <source>&amp;End</source>
-        <translation>Край на</translation>
+        <translation>Крайна точка</translation>
     </message>
 </context>
 <context>
@@ -12003,7 +12003,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersection/SnapIntersectionInit.js" line="+2"/>
         <source>&amp;Intersection</source>
-        <translation>Кръстовище</translation>
+        <translation>Пресечна точка</translation>
     </message>
 </context>
 <context>
@@ -12044,7 +12044,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapMiddle/SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
-        <translation>Среден</translation>
+        <translation>Средна точка</translation>
     </message>
 </context>
 <context>
@@ -12060,7 +12060,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapOnEntity/SnapOnEntityInit.js" line="+2"/>
         <source>&amp;On Entity</source>
-        <translation>За субекта</translation>
+        <translation>Върху обект</translation>
     </message>
 </context>
 <context>
@@ -13763,7 +13763,7 @@ is already in the list.</source>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation>Среден</translation>
+        <translation>Средна точка</translation>
     </message>
     <message>
         <location line="-6"/>

@@ -992,7 +992,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Perpendicular</source>
-        <translation>Lodret</translation>
+        <translation>Vinkelret</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -8313,7 +8313,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation>Slut</translation>
+        <translation>Endepunkt</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2"/>
@@ -8696,7 +8696,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation>Slut</translation>
+        <translation>Endepunkt</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2"/>
@@ -12068,7 +12068,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Snap/SnapPerpendicular/SnapPerpendicularInit.js" line="+2"/>
         <source>&amp;Perpendicular</source>
-        <translation>&amp;Lodret</translation>
+        <translation>&amp;Vinkelret</translation>
     </message>
 </context>
 <context>

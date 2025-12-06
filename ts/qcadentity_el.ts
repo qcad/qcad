@@ -219,7 +219,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Μέση</translation>
+        <translation>Μέσο</translation>
     </message>
     <message>
         <location line="+1"/>
