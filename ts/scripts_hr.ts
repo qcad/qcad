@@ -2198,7 +2198,7 @@ Do you wish to recover it?</source>
         <message>
             <location line="+69" />
             <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-            <translation />
+            <translation>Transakcija neuspjela. Provjerite rekurzije blokova te zaključane ili nevidljive slojeve ili blokove.</translation>
         </message>
         <message>
             <location line="+11" />
@@ -2328,32 +2328,32 @@ Do you wish to recover it?</source>
         <message>
             <location line="+0" />
             <source>Coordinate Display</source>
-            <translation />
+            <translation>Prikaz koordinata</translation>
         </message>
         <message>
             <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui" line="+72" />
             <source>Absolute Cartesian Coordinate</source>
-            <translation />
+            <translation>Apsolutna kartezijanska koordinata</translation>
         </message>
         <message>
             <location line="+21" />
             <source>Absolute Polar Coordinate</source>
-            <translation />
+            <translation>Apsolutna polarna koordinata</translation>
         </message>
         <message>
             <location line="+21" />
             <source>Relative Cartesian Coordinate</source>
-            <translation />
+            <translation>Relativna kartezijanska koordinata</translation>
         </message>
         <message>
             <location line="+21" />
             <source>Relative Polar Coordinate</source>
-            <translation />
+            <translation>Relativna polarna koordinata</translation>
         </message>
         <message>
             <location filename="../scripts/Widgets/CoordinateDisplay/PreferencesPage.ui" line="+17" />
             <source>Forced update every N mouse moves:</source>
-            <translation />
+            <translation>Prisilno ažuriranje svakih N pokreta miša:</translation>
         </message>
     </context>
     <context>
@@ -2387,32 +2387,32 @@ Do you wish to recover it?</source>
         <message>
             <location line="+3" />
             <source>Auto increment number</source>
-            <translation />
+            <translation>Automatski inkrementiraj broj</translation>
         </message>
         <message>
             <location filename="../scripts/Misc/MiscDraw/Counter/Counter.ui" line="+17" />
             <source>Start:</source>
-            <translation />
+            <translation>Početak:</translation>
         </message>
         <message>
             <location line="+24" />
             <source>Increment:</source>
-            <translation />
+            <translation>Prirast:</translation>
         </message>
         <message>
             <location line="+24" />
             <source>Number Format:</source>
-            <translation />
+            <translation>Format broja:</translation>
         </message>
         <message>
             <location line="+89" />
             <source>Prefix:</source>
-            <translation />
+            <translation>Prefiks:</translation>
         </message>
         <message>
             <location line="+30" />
             <source>Suffix:</source>
-            <translation />
+            <translation>Sufiks:</translation>
         </message>
     </context>
     <context>
@@ -2433,17 +2433,17 @@ Do you wish to recover it?</source>
         <message>
             <location filename="../scripts/Misc/MiscDraw/Cross/Cross.js" line="+56" />
             <source>Select arc, circle, ellipse or elliptical arc</source>
-            <translation />
+            <translation>Odaberite luk, krug, elipsu ili eliptični luk</translation>
         </message>
         <message>
             <location filename="../scripts/Misc/MiscDraw/Cross/CrossInit.js" line="+2" />
             <source>Centerline Cross</source>
-            <translation />
+            <translation>Križ središnje linije</translation>
         </message>
         <message>
             <location line="+3" />
             <source>Draw centerline cross in arcs, circles or ellipses</source>
-            <translation />
+            <translation>Nacrtaj križ središnje linije u lukovima, krugovima ili elipsama</translation>
         </message>
     </context>
     <context>
@@ -2471,12 +2471,12 @@ Do you wish to recover it?</source>
         <message>
             <location line="+5" />
             <source>Total length</source>
-            <translation />
+            <translation>Ukupna duljina</translation>
         </message>
         <message>
             <location line="+5" />
             <source>Percent</source>
-            <translation />
+            <translation>Posto</translation>
         </message>
         <message>
             <location line="+15" />
@@ -2505,12 +2505,12 @@ Do you wish to recover it?</source>
         <message>
             <location filename="../scripts/DefaultAction.js" line="+92" />
             <source>Select entity or region</source>
-            <translation />
+            <translation>Odaberi entitet ili regiju</translation>
         </message>
         <message>
             <location line="+2" />
             <source>Move entity or reference</source>
-            <translation />
+            <translation>Premjesti entitet ili referencu</translation>
         </message>
         <message>
             <location line="+11" />
@@ -2520,37 +2520,37 @@ Do you wish to recover it?</source>
         <message>
             <location line="+7" />
             <source>Target point of reference point</source>
-            <translation />
+            <translation>Ciljna točka referentne točke</translation>
         </message>
         <message>
             <location line="+7" />
             <source>Target point of selection</source>
-            <translation />
+            <translation>Ciljna točka odabira</translation>
         </message>
         <message>
             <location line="+7" />
             <source>Move entity to desired location</source>
-            <translation />
+            <translation>Premjesti entitet na željenu lokaciju</translation>
         </message>
         <message>
             <location line="+409" />
             <source>Move Reference Point</source>
-            <translation />
+            <translation>Premjesti referentnu točku</translation>
         </message>
         <message>
             <location line="+24" />
             <source>Move Selection</source>
-            <translation />
+            <translation>Premjesti odabir</translation>
         </message>
         <message>
             <location line="+24" />
             <source>Move Entity</source>
-            <translation />
+            <translation>Premjesti entitet</translation>
         </message>
         <message>
             <location line="+127" />
             <source>Editing block "%1"&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-            <translation />
+            <translation>Uređivanje bloka "%1"&lt;br&gt;Odaberite &lt;i&gt;Blok &gt; Povratak na glavni crtež&lt;/i&gt; kada završite</translation>
         </message>
     </context>
     <context>
@@ -2563,17 +2563,17 @@ Do you wish to recover it?</source>
         <message>
             <location line="+0" />
             <source>Navigation</source>
-            <translation />
+            <translation>Navigacija</translation>
         </message>
         <message>
             <location line="+5" />
             <source>Zoom (Wheel Mouse)</source>
-            <translation />
+            <translation>Uvećanje (kotačić miša)</translation>
         </message>
         <message>
             <location line="+1" />
             <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
-            <translation />
+            <translation>Pomicanje (touchpad, multi-touch miš)</translation>
         </message>
     </context>
     <context>
@@ -2594,7 +2594,7 @@ Do you wish to recover it?</source>
         <message>
             <location line="+3" />
             <source>Deselect all entities</source>
-            <translation />
+            <translation>Poništi odabir svih entiteta</translation>
         </message>
     </context>
     <context>
@@ -2636,17 +2636,17 @@ Do you wish to recover it?</source>
         <message>
             <location line="+8" />
             <source>Arcs and Circles</source>
-            <translation />
+            <translation>Lukovi i krugovi</translation>
         </message>
         <message>
             <location line="+8" />
             <source>into line segments (fixed length)</source>
-            <translation />
+            <translation>u linijske segmente (fiksne duljine)</translation>
         </message>
         <message>
             <location line="+5" />
             <source>into line segments (fixed angle)</source>
-            <translation />
+            <translation>u linijske segmente (fiksnog kuta)</translation>
         </message>
         <message>
             <location line="+11" />
@@ -2662,7 +2662,7 @@ Do you wish to recover it?</source>
             <location line="+5" />
             <location line="+16" />
             <source>into polyline with line segments</source>
-            <translation />
+            <translation>u poliliniju s linijskim segmentima</translation>
         </message>
         <message>
             <location line="-8" />
@@ -2677,7 +2677,7 @@ Do you wish to recover it?</source>
         <message>
             <location line="+8" />
             <source>into lines, solids and texts</source>
-            <translation />
+            <translation>u linije, čvrsta tijela i tekstove</translation>
         </message>
         <message>
             <location line="+8" />
@@ -2687,7 +2687,7 @@ Do you wish to recover it?</source>
         <message>
             <location line="+8" />
             <source>into lines</source>
-            <translation />
+            <translation>u linije</translation>
         </message>
         <message>
             <location line="+8" />
@@ -2697,7 +2697,7 @@ Do you wish to recover it?</source>
         <message>
             <location line="+8" />
             <source>into entities</source>
-            <translation />
+            <translation>u entitete</translation>
         </message>
         <message>
             <location filename="../scripts/Widgets/Dialog.ui" line="+94" />
@@ -2768,7 +2768,7 @@ Do you wish to recover it?</source>
         <message>
             <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17" />
             <source>Use Maximum Angle</source>
-            <translation />
+            <translation>Koristi maksimalni kut</translation>
         </message>
     </context>
     <context>
@@ -2863,8 +2863,7 @@ Do you wish to recover it?</source>
         <message numerus="yes">
             <location line="+3" />
             <source>Label position of %n dimension(s) was reset.</source>
-            <translation>
-                <numerusform />
+            <translation>Pozicija oznake %n kote/a je resetirana.<numerusform />
                 <numerusform />
                 <numerusform />
             </translation>
@@ -3029,7 +3028,7 @@ Do you wish to recover it?</source>
         <message>
             <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14" />
             <source>Dimension Scale</source>
-            <translation />
+            <translation>Mjera kote</translation>
         </message>
         <message>
             <location line="+9" />
@@ -3039,7 +3038,7 @@ Do you wish to recover it?</source>
         <message>
             <location line="+10" />
             <source>Don't show this warning again</source>
-            <translation />
+            <translation>Ne prikazuj više ovo upozorenje</translation>
         </message>
     </context>
     <context>
@@ -3053,7 +3052,7 @@ Do you wish to recover it?</source>
             <location line="+0" />
             <location line="+2" />
             <source>Dimension Settings</source>
-            <translation />
+            <translation>Postavke kote</translation>
         </message>
         <message>
             <location line="+0" />
@@ -3068,17 +3067,17 @@ Do you wish to recover it?</source>
         <message>
             <location line="+1" />
             <source>comma</source>
-            <translation />
+            <translation>zarez</translation>
         </message>
         <message>
             <location line="+1" />
             <source>space</source>
-            <translation />
+            <translation>razmak</translation>
         </message>
         <message>
             <location line="+309" />
             <source>Unit / Format</source>
-            <translation />
+            <translation>Jedinica / Format</translation>
         </message>
         <message>
             <location line="+1" />
@@ -3093,17 +3092,17 @@ Do you wish to recover it?</source>
         <message>
             <location line="+6" />
             <source>Horizontal text labels</source>
-            <translation />
+            <translation>Vodoravne oznake teksta</translation>
         </message>
         <message>
             <location line="+20" />
             <source>Text above dimension line</source>
-            <translation />
+            <translation>Tekst iznad linije kote</translation>
         </message>
         <message>
             <location line="+13" />
             <source>Sizes</source>
-            <translation />
+            <translation>Veličine</translation>
         </message>
         <message>
             <location line="+8" />
@@ -3113,52 +3112,52 @@ Do you wish to recover it?</source>
         <message>
             <location line="+46" />
             <source>Dimension line gap:</source>
-            <translation />
+            <translation>Razmak linije kote:</translation>
         </message>
         <message>
             <location line="+42" />
             <source>Arrow size:</source>
-            <translation />
+            <translation>Veličina strelice:</translation>
         </message>
         <message>
             <location line="+10" />
             <source>Extension line extension:</source>
-            <translation />
+            <translation>Produžetak produžne linije:</translation>
         </message>
         <message>
             <location line="+64" />
             <source>Text height:</source>
-            <translation />
+            <translation>Visina teksta:</translation>
         </message>
         <message>
             <location line="+10" />
             <source>Extension line offset:</source>
-            <translation />
+            <translation>Pomak produžne linije:</translation>
         </message>
         <message>
             <location line="+24" />
             <source>Dimension line increment:</source>
-            <translation />
+            <translation>Prirast linije kote:</translation>
         </message>
         <message>
             <location line="+28" />
             <source>Size scale factor:</source>
-            <translation />
+            <translation>Faktor mjerila veličine:</translation>
         </message>
         <message>
             <location line="+38" />
             <source>Arrow Style</source>
-            <translation />
+            <translation>Stil strelice</translation>
         </message>
         <message>
             <location line="+12" />
             <source>Arrow</source>
-            <translation />
+            <translation>Strelica</translation>
         </message>
         <message>
             <location line="+10" />
             <source>Architectural tick</source>
-            <translation />
+            <translation>Arhitektonska oznaka</translation>
         </message>
         <message>
             <location line="+23" />
@@ -3168,32 +3167,32 @@ Do you wish to recover it?</source>
         <message>
             <location line="+6" />
             <source>Label font:</source>
-            <translation />
+            <translation>Font oznake:</translation>
         </message>
         <message>
             <location line="+10" />
             <source>Label color:</source>
-            <translation />
+            <translation>Boja oznake:</translation>
         </message>
         <message>
             <location line="+13" />
             <source>Number Format</source>
-            <translation />
+            <translation>Format broja</translation>
         </message>
         <message>
             <location line="+6" />
             <source>Decimal separator:</source>
-            <translation />
+            <translation>Decimalni separator:</translation>
         </message>
         <message>
             <location line="+26" />
             <source>Label Format</source>
-            <translation />
+            <translation>Format oznake</translation>
         </message>
         <message>
             <location line="+6" />
             <source>Linear Dimensions</source>
-            <translation />
+            <translation>Linearne kote</translation>
         </message>
         <message>
             <location line="+8" />
@@ -3240,7 +3239,9 @@ Do you wish to recover it?</source>
             <source>The folder
 "%1"
 is already in the list.</source>
-            <translation />
+            <translation>Mapa
+"%1"
+večpostoji na popisu.</translation>
         </message>
         <message>
             <location line="+2" />
@@ -3261,7 +3262,7 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/Modify/Divide/Divide.js" line="+68" />
             <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-            <translation />
+            <translation>Odaberite liniju, luk, krug, elipsu, krivulju ili poliliniju</translation>
         </message>
         <message>
             <location line="+3" />
@@ -3505,7 +3506,7 @@ is already in the list.</source>
         <message>
             <location line="+11" />
             <source>DrawFromCSV script (v3.03) by CVH</source>
-            <translation />
+            <translation>DrawFromCSV skripta (v3.03) autora CVH</translation>
         </message>
         <message>
             <location line="+38" />
@@ -3520,7 +3521,7 @@ is already in the list.</source>
         <message>
             <location line="+46" />
             <source>Switched to comma/dot CSV style.</source>
-            <translation />
+            <translation>Prebačeno na zarez/točka CSV stil.</translation>
         </message>
         <message>
             <location line="+5" />
@@ -3530,7 +3531,7 @@ is already in the list.</source>
         <message>
             <location line="+5" />
             <source>Switched to semicolon/comma CSV style.</source>
-            <translation />
+            <translation>Prebačeno na točka-zarez/zarez CSV stil.</translation>
         </message>
         <message>
             <location line="+4" />
@@ -4467,7 +4468,7 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/Modify/EditText/EditTextInit.js" line="+2" />
             <source>Edit Te&amp;xt</source>
-            <translation />
+            <translation>&amp;Uredi tekst</translation>
         </message>
         <message>
             <location line="+4" />
@@ -4842,7 +4843,7 @@ is already in the list.</source>
         <message>
             <location line="+3" />
             <source>Draw a dovetail joint</source>
-            <translation />
+            <translation>Nacrtaj lastino pero zglob</translation>
         </message>
     </context>
     <context>
@@ -4908,7 +4909,7 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ExRegisterFileExporter.js" line="+37" />
             <source>Example Files %1</source>
-            <translation />
+            <translation>Primjeri datoteka %1</translation>
         </message>
         <message>
             <location line="+84" />
@@ -4931,7 +4932,7 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ExRegisterFileImporter.js" line="+37" />
             <source>Example Files %1</source>
-            <translation />
+            <translation>Primjeri datoteka %1</translation>
         </message>
         <message>
             <location line="+54" />
@@ -4992,7 +4993,7 @@ is already in the list.</source>
         <message>
             <location line="+3" />
             <source>Draw text</source>
-            <translation />
+            <translation>Nacrtaj tekst</translation>
         </message>
     </context>
     <context>
@@ -5172,12 +5173,12 @@ is already in the list.</source>
         <message>
             <location line="-39" />
             <source>Overwrite File?</source>
-            <translation />
+            <translation>Prepisati datoteku?</translation>
         </message>
         <message>
             <location line="+1" />
             <source>The file "%1" already exists. Do you wish to overwrite it?</source>
-            <translation />
+            <translation>Datoteka "%1" već postoji. Želite li je prepisati?</translation>
         </message>
         <message>
             <location line="+26" />
@@ -5537,7 +5538,7 @@ is already in the list.</source>
         <message>
             <location line="+10" />
             <source>Centered</source>
-            <translation />
+            <translation>Centrirano</translation>
         </message>
         <message>
             <location line="+7" />
@@ -5795,7 +5796,7 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+32" />
             <source>Origin</source>
-            <translation />
+            <translation>Ishodište</translation>
         </message>
         <message>
             <location line="+6" />
@@ -5820,7 +5821,7 @@ is already in the list.</source>
         <message>
             <location line="+13" />
             <source>Cursor</source>
-            <translation />
+            <translation>Pokazivač</translation>
         </message>
         <message>
             <location line="+6" />
@@ -5980,7 +5981,7 @@ is already in the list.</source>
         <message>
             <location line="-361" />
             <source>auto</source>
-            <translation />
+            <translation>automatski</translation>
         </message>
         <message>
             <location line="-11" />
@@ -6028,7 +6029,7 @@ is already in the list.</source>
         <message>
             <location line="+33" />
             <source>Cursor</source>
-            <translation />
+            <translation>Pokazivač</translation>
         </message>
         <message>
             <location line="+18" />
@@ -6043,12 +6044,12 @@ is already in the list.</source>
         <message>
             <location line="+33" />
             <source>Origin</source>
-            <translation />
+            <translation>Ishodište</translation>
         </message>
         <message>
             <location line="+12" />
             <source>Origin:</source>
-            <translation />
+            <translation>Ishodište:</translation>
         </message>
         <message>
             <location line="+36" />
@@ -6133,7 +6134,7 @@ is already in the list.</source>
         <message>
             <location line="+30" />
             <source>Snap Tools</source>
-            <translation />
+            <translation>Alati hvatanja</translation>
         </message>
         <message>
             <location line="+12" />
@@ -6168,7 +6169,7 @@ is already in the list.</source>
         <message>
             <location line="+75" />
             <source>Zoom Tools</source>
-            <translation />
+            <translation>Alati uvećanja</translation>
         </message>
         <message>
             <location line="+12" />
@@ -6293,7 +6294,7 @@ is already in the list.</source>
             <location line="+22" />
             <location line="+1" />
             <source>auto</source>
-            <translation />
+            <translation>automatski</translation>
         </message>
     </context>
     <context>
@@ -6324,12 +6325,12 @@ is already in the list.</source>
         <message>
             <location line="+6" />
             <source>Solid Fill</source>
-            <translation />
+            <translation>Čvrsta ispuna</translation>
         </message>
         <message>
             <location line="+10" />
             <source>Hatch Pattern</source>
-            <translation />
+            <translation>Uzorak šrafure</translation>
         </message>
         <message>
             <location line="+16" />
@@ -6480,7 +6481,7 @@ is already in the list.</source>
         <message>
             <location line="+31" />
             <source>No import filters have been found. Aborting...</source>
-            <translation />
+            <translation>Nisu pronađeni filtri uvoza. Prekid...</translation>
         </message>
         <message>
             <location line="+4" />
@@ -6540,12 +6541,12 @@ is already in the list.</source>
         <message>
             <location line="+21" />
             <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-            <translation />
+            <translation>Zalijepi sve entitete&lt;br&gt;na trenutni sloj&lt;br&gt;umjesto izvornog sloja</translation>
         </message>
         <message>
             <location line="+3" />
             <source>To Current Layer</source>
-            <translation />
+            <translation>Na trenutni sloj</translation>
         </message>
         <message>
             <location line="+10" />
@@ -6606,7 +6607,7 @@ is already in the list.</source>
         <message>
             <location line="+37" />
             <source>Undefined</source>
-            <translation />
+            <translation>Nedefinirano</translation>
         </message>
         <message>
             <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19" />
@@ -6679,7 +6680,7 @@ is already in the list.</source>
             <location line="+1" />
             <location line="+67" />
             <source>circumference:</source>
-            <translation />
+            <translation>opseg:</translation>
         </message>
         <message>
             <location line="-54" />
@@ -6804,7 +6805,7 @@ is already in the list.</source>
         <message>
             <location line="+1" />
             <source>circumference:</source>
-            <translation />
+            <translation>opseg:</translation>
         </message>
         <message>
             <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2" />
@@ -6893,23 +6894,23 @@ is already in the list.</source>
         <message>
             <location line="+29" />
             <source>Unsupported entity type. No results.</source>
-            <translation />
+            <translation>Nepodržana vrsta entiteta. Nema rezultata.</translation>
         </message>
         <message>
             <location line="+8" />
             <source>No results.</source>
-            <translation />
+            <translation>Nema rezultata.</translation>
         </message>
         <message>
             <location line="+49" />
             <location line="+6" />
             <source>(Incl. approximations)</source>
-            <translation />
+            <translation>(Uklj. aproksimacije)</translation>
         </message>
         <message>
             <location line="+4" />
             <source>Approximated centroid:</source>
-            <translation />
+            <translation>Aproksimativno težište:</translation>
         </message>
         <message>
             <location line="+0" />
@@ -6920,13 +6921,13 @@ is already in the list.</source>
             <location line="+207" />
             <location line="+578" />
             <source>Encountered an unsupported polyline with custom widths</source>
-            <translation />
+            <translation>Naišla na nepodržanu poliliniju s prilagođenim širinama</translation>
         </message>
         <message>
             <location line="-488" />
             <location line="+596" />
             <source>Encountered an unsupported polygon with custom widths</source>
-            <translation />
+            <translation>Naišlo na nepodržani poligon s prilagođenim širinama</translation>
         </message>
         <message>
             <location line="+686" />
@@ -7022,7 +7023,7 @@ is already in the list.</source>
         <message>
             <location line="+1" />
             <source>Undefined</source>
-            <translation />
+            <translation>Nedefinirano</translation>
         </message>
         <message>
             <location line="+428" />
@@ -7266,7 +7267,7 @@ is already in the list.</source>
         <message>
             <location line="+10" />
             <source>Results in a division by zero.</source>
-            <translation />
+            <translation>Rezultira dijeljenjem s nulom.</translation>
         </message>
         <message>
             <location line="+11" />
@@ -7355,12 +7356,12 @@ is already in the list.</source>
         <message>
             <location line="+7" />
             <source>Unsupported entity type. No results.</source>
-            <translation />
+            <translation>Nepodržana vrsta entiteta. Nema rezultata.</translation>
         </message>
         <message>
             <location line="+15" />
             <source>No results.</source>
-            <translation />
+            <translation>Nema rezultata.</translation>
         </message>
         <message>
             <location line="-71" />
@@ -7375,7 +7376,7 @@ is already in the list.</source>
         <message>
             <location line="+55" />
             <source>Results in a division by zero.</source>
-            <translation />
+            <translation>Rezultira dijeljenjem s nulom.</translation>
         </message>
         <message>
             <location line="+13" />
@@ -7385,18 +7386,18 @@ is already in the list.</source>
         <message>
             <location line="+39" />
             <source>Total length:</source>
-            <translation />
+            <translation>Ukupna duljina:</translation>
         </message>
         <message>
             <location line="+4" />
             <location line="+6" />
             <source>(Incl. approximations)</source>
-            <translation />
+            <translation>(Uklj. aproksimacije)</translation>
         </message>
         <message>
             <location line="+4" />
             <source>Approximated centroid:</source>
-            <translation />
+            <translation>Aproksimativno težište:</translation>
         </message>
         <message>
             <location line="+0" />
@@ -7406,12 +7407,12 @@ is already in the list.</source>
         <message>
             <location line="+125" />
             <source>Encountered an unsupported polyline with custom widths</source>
-            <translation />
+            <translation>Naišla na nepodržanu poliliniju s prilagođenim širinama</translation>
         </message>
         <message>
             <location line="+105" />
             <source>Encountered an unsupported polygon with custom widths</source>
-            <translation />
+            <translation>Naišlo na nepodržani poligon s prilagođenim širinama</translation>
         </message>
         <message>
             <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+19" />
@@ -7544,7 +7545,7 @@ is already in the list.</source>
         <message>
             <location line="+1" />
             <source>Percentage</source>
-            <translation />
+            <translation>Postotak</translation>
         </message>
         <message>
             <location line="+1" />
@@ -8091,12 +8092,12 @@ is already in the list.</source>
         <message>
             <location line="+29" />
             <source>Lineweight:</source>
-            <translation />
+            <translation>Debljina linije:</translation>
         </message>
         <message>
             <location line="+26" />
             <source>Linetype:</source>
-            <translation />
+            <translation>Vrsta linije:</translation>
         </message>
     </context>
     <context>
@@ -8169,7 +8170,7 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78" />
             <source>Leader was created successfully</source>
-            <translation />
+            <translation>Pokazivač uspješno stvoren</translation>
         </message>
         <message>
             <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2" />
@@ -8225,12 +8226,12 @@ is already in the list.</source>
         <message>
             <location line="+23" />
             <source>Infinite Line</source>
-            <translation />
+            <translation>Beskonačna linija</translation>
         </message>
         <message>
             <location line="+17" />
             <source>Ray</source>
-            <translation />
+            <translation>Zraka</translation>
         </message>
     </context>
     <context>
@@ -8470,7 +8471,7 @@ is already in the list.</source>
         <message>
             <location line="+3" />
             <source>Draw a dovetail joint</source>
-            <translation />
+            <translation>Nacrtaj lastino pero zglob</translation>
         </message>
         <message>
             <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+17" />
@@ -8813,7 +8814,7 @@ is already in the list.</source>
             <location line="+0" />
             <location line="+2" />
             <source>Linetype</source>
-            <translation />
+            <translation>Vrsta linije</translation>
         </message>
         <message>
             <location line="+0" />
@@ -9285,7 +9286,7 @@ is already in the list.</source>
         <message>
             <location line="+4" />
             <source>File not found.</source>
-            <translation />
+            <translation>Datoteka nije pronađena.</translation>
         </message>
         <message>
             <location line="+3" />
@@ -9420,7 +9421,7 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/File/OpenFile/OpenFile.js" line="+47" />
             <source>No import filters have been found. Aborting...</source>
-            <translation />
+            <translation>Nisu pronađeni filtri uvoza. Prekid...</translation>
         </message>
         <message>
             <location line="+26" />
@@ -9629,12 +9630,12 @@ is already in the list.</source>
         <message>
             <location line="+21" />
             <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-            <translation />
+            <translation>Zalijepi sve entitete&lt;br&gt;na trenutni sloj&lt;br&gt;umjesto izvornog sloja</translation>
         </message>
         <message>
             <location line="+3" />
             <source>To Current Layer</source>
-            <translation />
+            <translation>Na trenutni sloj</translation>
         </message>
         <message>
             <location line="+10" />
@@ -9667,7 +9668,7 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/File/PdfExport/PdfExportInit.js" line="+2" />
             <source>P&amp;DF Export</source>
-            <translation />
+            <translation>&amp;PDF izvoz</translation>
         </message>
         <message>
             <location line="+6" />
@@ -9927,7 +9928,7 @@ is already in the list.</source>
         <message>
             <location line="-79" />
             <source>Filter</source>
-            <translation />
+            <translation>Filtar</translation>
         </message>
         <message>
             <location line="+10" />
@@ -10331,7 +10332,7 @@ is already in the list.</source>
         <message>
             <location line="+94" />
             <source>Linetype Scale:</source>
-            <translation />
+            <translation>Mjerilo vrste linije:</translation>
         </message>
         <message>
             <location line="+52" />
@@ -10378,7 +10379,7 @@ is already in the list.</source>
         <message>
             <location line="+0" />
             <source>Recent Files</source>
-            <translation />
+            <translation>Nedavne datoteke</translation>
         </message>
         <message>
             <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59" />
@@ -10605,7 +10606,7 @@ is already in the list.</source>
         <message>
             <location line="+26" />
             <source>Define angle using mouse cursor</source>
-            <translation />
+            <translation>Definiraj kut pomoću pokazivača miša</translation>
         </message>
     </context>
     <context>
@@ -10719,7 +10720,7 @@ is already in the list.</source>
         <message>
             <location line="+20" />
             <source>Define angle using mouse cursor</source>
-            <translation />
+            <translation>Definiraj kut pomoću pokazivača miša</translation>
         </message>
         <message>
             <location line="+16" />
@@ -10813,12 +10814,12 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/File/Save/Save.js" line="+99" />
             <source>Overwrite File?</source>
-            <translation />
+            <translation>Prepisati datoteku?</translation>
         </message>
         <message>
             <location line="+1" />
             <source>The file "%1" already exists. Do you wish to overwrite it?</source>
-            <translation />
+            <translation>Datoteka "%1" već postoji. Želite li je prepisati?</translation>
         </message>
         <message>
             <location line="+21" />
@@ -11029,7 +11030,7 @@ is already in the list.</source>
         <message>
             <location line="+14" />
             <source>Factor x:</source>
-            <translation />
+            <translation>Faktor x:</translation>
         </message>
         <message>
             <location line="+10" />
@@ -11040,17 +11041,17 @@ is already in the list.</source>
         <message>
             <location line="-10" />
             <source>Factor y:</source>
-            <translation />
+            <translation>Faktor y:</translation>
         </message>
         <message>
             <location line="+17" />
             <source>Proportional</source>
-            <translation />
+            <translation>Proporcionalno</translation>
         </message>
         <message>
             <location line="+17" />
             <source>Define factor using mouse cursor</source>
-            <translation />
+            <translation>Definiraj faktor pomoću pokazivača miša</translation>
         </message>
     </context>
     <context>
@@ -11083,22 +11084,22 @@ is already in the list.</source>
         <message>
             <location line="+115" />
             <source>Factor x:</source>
-            <translation />
+            <translation>Faktor x:</translation>
         </message>
         <message>
             <location line="+49" />
             <source>Factor y:</source>
-            <translation />
+            <translation>Faktor y:</translation>
         </message>
         <message>
             <location line="-26" />
             <source>Proportional</source>
-            <translation />
+            <translation>Proporcionalno</translation>
         </message>
         <message>
             <location line="+70" />
             <source>Define factor using mouse cursor</source>
-            <translation />
+            <translation>Definiraj faktor pomoću pokazivača miša</translation>
         </message>
         <message>
             <location line="+25" />
@@ -11522,7 +11523,7 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/Draw/Shape/Shape.ui" line="+17" />
             <source>Create Polyline</source>
-            <translation />
+            <translation>Stvori poliliniju</translation>
         </message>
         <message>
             <location line="+17" />
@@ -11645,7 +11646,7 @@ is already in the list.</source>
         <message>
             <location line="+7" />
             <source>Corner point</source>
-            <translation />
+            <translation>Točka kuta</translation>
         </message>
         <message>
             <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2" />
@@ -11673,7 +11674,7 @@ is already in the list.</source>
         <message>
             <location line="+7" />
             <source>Corner point</source>
-            <translation />
+            <translation>Točka kuta</translation>
         </message>
         <message>
             <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2" />
@@ -11747,7 +11748,7 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101" />
             <source>Create Polyline</source>
-            <translation />
+            <translation>Stvori poliliniju</translation>
         </message>
     </context>
     <context>
@@ -11800,7 +11801,7 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/Snap/Snap.js" line="+57" />
             <source>Snap Tools</source>
-            <translation />
+            <translation>Alati hvatanja</translation>
         </message>
         <message>
             <location line="+25" />
@@ -11874,12 +11875,12 @@ is already in the list.</source>
         <message>
             <location line="+16" />
             <source>Tick for Relative Coordinate</source>
-            <translation />
+            <translation>Označi za relativnu koordinatu</translation>
         </message>
         <message>
             <location line="+3" />
             <source>Relative</source>
-            <translation />
+            <translation>Relativno</translation>
         </message>
     </context>
     <context>
@@ -11917,12 +11918,12 @@ is already in the list.</source>
         <message>
             <location line="+16" />
             <source>Tick for Relative Coordinate</source>
-            <translation />
+            <translation>Označi za relativnu koordinatu</translation>
         </message>
         <message>
             <location line="+3" />
             <source>Relative</source>
-            <translation />
+            <translation>Relativno</translation>
         </message>
     </context>
     <context>
@@ -11935,7 +11936,7 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17" />
             <source>Snap Distance:</source>
-            <translation />
+            <translation>Udaljenost hvatanja:</translation>
         </message>
     </context>
     <context>
@@ -11963,7 +11964,7 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17" />
             <source>Snap Distance:</source>
-            <translation />
+            <translation>Udaljenost hvatanja:</translation>
         </message>
         <message>
             <location line="+75" />
@@ -11973,7 +11974,7 @@ is already in the list.</source>
         <message>
             <location line="+5" />
             <source>Percentage</source>
-            <translation />
+            <translation>Postotak</translation>
         </message>
         <message>
             <location line="+5" />
@@ -12383,7 +12384,7 @@ is already in the list.</source>
         <message>
             <location line="+3" />
             <source>Draw text</source>
-            <translation />
+            <translation>Nacrtaj tekst</translation>
         </message>
         <message>
             <location filename="../scripts/Draw/Text/Text.ui" line="+17" />
@@ -12475,7 +12476,7 @@ is already in the list.</source>
         <message>
             <location line="+3" />
             <source>Fit</source>
-            <translation />
+            <translation>Prilagodi</translation>
         </message>
     </context>
     <context>
@@ -12493,7 +12494,7 @@ is already in the list.</source>
         <message>
             <location line="+102" />
             <source>Leader was created successfully</source>
-            <translation />
+            <translation>Pokazivač uspješno stvoren</translation>
         </message>
         <message>
             <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2" />
@@ -12621,12 +12622,12 @@ is already in the list.</source>
         <message>
             <location line="+1" />
             <source>Multiplication</source>
-            <translation />
+            <translation>Množenje</translation>
         </message>
         <message>
             <location line="+1" />
             <source>Division</source>
-            <translation />
+            <translation>Dijeljenje</translation>
         </message>
         <message>
             <location line="+1" />
@@ -12636,12 +12637,12 @@ is already in the list.</source>
         <message>
             <location line="+1" />
             <source>Pi</source>
-            <translation />
+            <translation>Pi</translation>
         </message>
         <message>
             <location line="+1" />
             <source>Identity</source>
-            <translation />
+            <translation>Identitet</translation>
         </message>
         <message>
             <location line="+1" />
@@ -12651,22 +12652,22 @@ is already in the list.</source>
         <message>
             <location line="+1" />
             <source>Ohm</source>
-            <translation />
+            <translation>Om</translation>
         </message>
         <message>
             <location line="+1" />
             <source>Omega</source>
-            <translation />
+            <translation>Omega</translation>
         </message>
         <message>
             <location line="+1" />
             <source>Squared</source>
-            <translation />
+            <translation>Na kvadrat</translation>
         </message>
         <message>
             <location line="+1" />
             <source>Cubed</source>
-            <translation />
+            <translation>Na kub</translation>
         </message>
         <message>
             <location line="+1" />
@@ -12988,7 +12989,7 @@ is already in the list.</source>
         <message>
             <location line="+3" />
             <source>px</source>
-            <translation />
+            <translation>px</translation>
         </message>
     </context>
     <context>
@@ -13030,7 +13031,7 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.ui" line="+40" />
             <source>Filter</source>
-            <translation />
+            <translation>Filtar</translation>
         </message>
     </context>
     <context>
@@ -13066,7 +13067,7 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2" />
             <source>&amp;Move / Copy</source>
-            <translation />
+            <translation>&amp;Premjesti / Kopiraj</translation>
         </message>
         <message>
             <location line="+9" />
@@ -13234,7 +13235,7 @@ is already in the list.</source>
         <message>
             <location line="+3" />
             <source>Entity cannot be trimmed.</source>
-            <translation />
+            <translation>Entitet ne može biti obrezan.</translation>
         </message>
         <message>
             <location line="+13" />
@@ -13549,7 +13550,7 @@ is already in the list.</source>
         <message>
             <location line="+2" />
             <source>Layout</source>
-            <translation />
+            <translation>Raspored</translation>
         </message>
         <message>
             <location line="+0" />
@@ -13618,7 +13619,7 @@ is already in the list.</source>
         <message>
             <location line="+23" />
             <source>Pi</source>
-            <translation />
+            <translation>Pi</translation>
         </message>
         <message>
             <location line="-3" />
@@ -13638,7 +13639,7 @@ is already in the list.</source>
         <message>
             <location line="-5" />
             <source>Ohm</source>
-            <translation />
+            <translation>Om</translation>
         </message>
         <message>
             <location line="+2" />
@@ -13648,12 +13649,12 @@ is already in the list.</source>
         <message>
             <location line="-4" />
             <source>Multiplication</source>
-            <translation />
+            <translation>Množenje</translation>
         </message>
         <message>
             <location line="-13" />
             <source>Division</source>
-            <translation />
+            <translation>Dijeljenje</translation>
         </message>
         <message>
             <location line="+25" />
@@ -13698,7 +13699,7 @@ is already in the list.</source>
         <message>
             <location line="+2" />
             <source>Identity</source>
-            <translation />
+            <translation>Identitet</translation>
         </message>
         <message>
             <location line="+4" />
@@ -13708,7 +13709,7 @@ is already in the list.</source>
         <message>
             <location line="+2" />
             <source>Omega</source>
-            <translation />
+            <translation>Omega</translation>
         </message>
         <message>
             <location line="+6" />
@@ -13728,12 +13729,12 @@ is already in the list.</source>
         <message>
             <location line="+2" />
             <source>Squared</source>
-            <translation />
+            <translation>Na kvadrat</translation>
         </message>
         <message>
             <location line="+1" />
             <source>Cubed</source>
-            <translation />
+            <translation>Na kub</translation>
         </message>
         <message>
             <location line="+1" />
@@ -13774,7 +13775,7 @@ is already in the list.</source>
         <message>
             <location line="-6" />
             <source>Fit</source>
-            <translation />
+            <translation>Prilagodi</translation>
         </message>
         <message>
             <location line="+5" />
@@ -13819,7 +13820,7 @@ is already in the list.</source>
         <message>
             <location line="+5" />
             <source>Centered</source>
-            <translation />
+            <translation>Centrirano</translation>
         </message>
         <message>
             <location line="+13" />
@@ -13990,7 +13991,7 @@ is already in the list.</source>
         <message>
             <location line="+14" />
             <source>Zoom Tools</source>
-            <translation />
+            <translation>Alati uvećanja</translation>
         </message>
         <message>
             <location line="+27" />
@@ -14100,7 +14101,7 @@ is already in the list.</source>
         <message>
             <location line="+0" />
             <source>Layout</source>
-            <translation />
+            <translation>Raspored</translation>
         </message>
         <message>
             <location line="+2" />
@@ -14110,7 +14111,7 @@ is already in the list.</source>
         <message>
             <location line="+0" />
             <source>Linetype</source>
-            <translation />
+            <translation>Vrsta linije</translation>
         </message>
         <message>
             <location line="+2" />
@@ -14155,7 +14156,7 @@ is already in the list.</source>
         <message>
             <location line="+2" />
             <source>Block References</source>
-            <translation />
+            <translation>Reference bloka</translation>
         </message>
         <message>
             <location line="+0" />
@@ -14230,7 +14231,7 @@ is already in the list.</source>
         <message>
             <location line="+0" />
             <source>Aligned Dimension</source>
-            <translation />
+            <translation>Poravnata kota</translation>
         </message>
         <message>
             <location line="+2" />
@@ -14240,7 +14241,7 @@ is already in the list.</source>
         <message>
             <location line="+0" />
             <source>Angular Dimension</source>
-            <translation />
+            <translation>Kutna kota</translation>
         </message>
         <message>
             <location line="+2" />
@@ -14275,7 +14276,7 @@ is already in the list.</source>
         <message>
             <location line="+0" />
             <source>Diametric Dimension</source>
-            <translation />
+            <translation>Dijametralna kota</translation>
         </message>
         <message>
             <location line="+2" />
@@ -14285,7 +14286,7 @@ is already in the list.</source>
         <message>
             <location line="+0" />
             <source>Ordinate Dimension</source>
-            <translation />
+            <translation>Ordinatna kota</translation>
         </message>
         <message>
             <location line="+2" />
@@ -14305,7 +14306,7 @@ is already in the list.</source>
         <message>
             <location line="+0" />
             <source>Radial Dimension</source>
-            <translation />
+            <translation>Radijalna kota</translation>
         </message>
         <message>
             <location line="+2" />
@@ -14345,7 +14346,7 @@ is already in the list.</source>
         <message>
             <location line="+0" />
             <source>Leader</source>
-            <translation />
+            <translation>Pokazivač</translation>
         </message>
         <message>
             <location line="+2" />
@@ -14375,7 +14376,7 @@ is already in the list.</source>
         <message>
             <location line="+0" />
             <source>Infinite Line</source>
-            <translation />
+            <translation>Beskonačna linija</translation>
         </message>
         <message>
             <location line="+2" />
@@ -14385,7 +14386,7 @@ is already in the list.</source>
         <message>
             <location line="+0" />
             <source>Ray</source>
-            <translation />
+            <translation>Zraka</translation>
         </message>
         <message>
             <location line="+2" />
@@ -14638,7 +14639,7 @@ is already in the list.</source>
         <message>
             <location line="+3" />
             <source>Entity cannot be trimmed.</source>
-            <translation />
+            <translation>Entitet ne može biti obrezan.</translation>
         </message>
         <message>
             <location line="+10" />
