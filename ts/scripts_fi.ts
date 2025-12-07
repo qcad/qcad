@@ -11464,7 +11464,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+0"/>
         <source>on</source>
-        <translation> </translation>
+        <translation>on</translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
