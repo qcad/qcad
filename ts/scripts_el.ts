@@ -3345,7 +3345,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Μέση</translation>
+        <translation>Μέσο</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8306,12 +8306,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Μέση</translation>
+        <translation>Μέσο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation>Τέλος</translation>
+        <translation>Άκρο</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2"/>
@@ -8689,12 +8689,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Μέση</translation>
+        <translation>Μέσο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation>Τέλος</translation>
+        <translation>Άκρο</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2"/>
@@ -11977,7 +11977,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapEnd/SnapEndInit.js" line="+2"/>
         <source>&amp;End</source>
-        <translation>Τέλος</translation>
+        <translation>Άκρο</translation>
     </message>
 </context>
 <context>
@@ -12042,7 +12042,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapMiddle/SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
-        <translation>Μέση</translation>
+        <translation>Μέσο</translation>
     </message>
 </context>
 <context>
@@ -12058,7 +12058,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapOnEntity/SnapOnEntityInit.js" line="+2"/>
         <source>&amp;On Entity</source>
-        <translation>Στην οντότητα</translation>
+        <translation>Σε οντότητα</translation>
     </message>
 </context>
 <context>
@@ -13761,7 +13761,7 @@ is already in the list.</source>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation>Μέση</translation>
+        <translation>Μέσο</translation>
     </message>
     <message>
         <location line="-6"/>
