@@ -3202,13 +3202,13 @@ Do you wish to recover it?</source>
         <message>
             <location line="+10" />
             <source>P&amp;recision:</source>
-            <translation />
+            <translation>P&amp;reciznost:</translation>
         </message>
         <message>
             <location line="+32" />
             <location line="+60" />
             <source>Show trailing zeros</source>
-            <translation />
+            <translation>Prikaži nule na kraju</translation>
         </message>
         <message>
             <location line="-50" />
@@ -3218,12 +3218,12 @@ Do you wish to recover it?</source>
         <message>
             <location line="+8" />
             <source>F&amp;ormat:</source>
-            <translation />
+            <translation>F&amp;ormat:</translation>
         </message>
         <message>
             <location line="+20" />
             <source>Pre&amp;cision:</source>
-            <translation />
+            <translation>Pre&amp;ciznost:</translation>
         </message>
         <message>
             <location line="+32" />
@@ -3246,7 +3246,7 @@ večpostoji na popisu.</translation>
         <message>
             <location line="+2" />
             <source>Folder not added</source>
-            <translation />
+            <translation>Mapa nije dodana</translation>
         </message>
     </context>
     <context>
@@ -3254,7 +3254,7 @@ večpostoji na popisu.</translation>
         <message>
             <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2" />
             <source>Display &amp;Distance/Angle</source>
-            <translation />
+            <translation>Prikaži &amp;udaljenost/kut</translation>
         </message>
     </context>
     <context>
@@ -3277,7 +3277,7 @@ večpostoji na popisu.</translation>
         <message>
             <location line="+10" />
             <source>Specify second point</source>
-            <translation />
+            <translation>Odredite drugu točku</translation>
         </message>
         <message>
             <location filename="../scripts/Modify/Divide/DivideInit.js" line="+2" />
@@ -3392,7 +3392,7 @@ večpostoji na popisu.</translation>
         <message>
             <location line="+10" />
             <source>Third arc or circle</source>
-            <translation />
+            <translation>Treći luk ili krug</translation>
         </message>
     </context>
     <context>
@@ -3400,7 +3400,7 @@ večpostoji na popisu.</translation>
         <message>
             <location filename="../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js" line="+71" />
             <source>Draw &amp;Bounding Box</source>
-            <translation />
+            <translation>Nacrtaj &amp;granični okvir</translation>
         </message>
     </context>
     <context>
@@ -3421,7 +3421,7 @@ večpostoji na popisu.</translation>
         <message>
             <location line="+12" />
             <source>Next vertex</source>
-            <translation />
+            <translation>Sljedeći vrh</translation>
         </message>
         <message>
             <location line="+525" />
@@ -3466,7 +3466,7 @@ večpostoji na popisu.</translation>
         <message>
             <location line="+26" />
             <source>Sweep</source>
-            <translation />
+            <translation>Provlačenje</translation>
         </message>
         <message>
             <location line="+39" />
@@ -3476,12 +3476,12 @@ večpostoji na popisu.</translation>
         <message>
             <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2" />
             <source>Draw &amp;Fms Lanes</source>
-            <translation />
+            <translation>Nacrtaj &amp;FMS trake</translation>
         </message>
         <message>
             <location line="+3" />
             <source>Draw FMS Lanes (ribs)</source>
-            <translation />
+            <translation>Nacrtaj FMS trake (rebra)</translation>
         </message>
     </context>
     <context>
@@ -3491,17 +3491,17 @@ večpostoji na popisu.</translation>
             <location line="+15" />
             <location line="+1275" />
             <source>Command ended.</source>
-            <translation />
+            <translation>Naredba završena.</translation>
         </message>
         <message>
             <location line="-1293" />
             <source>No import file selected.</source>
-            <translation />
+            <translation>Nije odabrana datoteka za uvoz.</translation>
         </message>
         <message>
             <location line="+15" />
             <source>No file opened.</source>
-            <translation />
+            <translation>Nije otvorena datoteka.</translation>
         </message>
         <message>
             <location line="+11" />
@@ -3511,12 +3511,12 @@ večpostoji na popisu.</translation>
         <message>
             <location line="+38" />
             <source>Cast CSV</source>
-            <translation />
+            <translation>Prilagodi CSV</translation>
         </message>
         <message>
             <location line="+5" />
             <source>Reading from file: %1</source>
-            <translation />
+            <translation>Čitanje iz datoteke: %1</translation>
         </message>
         <message>
             <location line="+46" />
@@ -3526,7 +3526,7 @@ večpostoji na popisu.</translation>
         <message>
             <location line="+5" />
             <source>Switched to semicolon/dot CSV style.</source>
-            <translation />
+            <translation>Prebačeno na točka-zarez/točka CSV stil.</translation>
         </message>
         <message>
             <location line="+5" />
@@ -3536,22 +3536,22 @@ večpostoji na popisu.</translation>
         <message>
             <location line="+4" />
             <source>Unsupported or invalid CSV style, ignored. Text line: %1</source>
-            <translation />
+            <translation>Nepodržani ili neispravan CSV stil, ignorirano. Tekstualna linija: %1</translation>
         </message>
         <message>
             <location line="+82" />
             <source>Setting new relative origin failed, ignored. Text line: %1</source>
-            <translation />
+            <translation>Postavljanje novog relativnog ishodišta neuspjelo, ignorirano. Tekstualna linija: %1</translation>
         </message>
         <message>
             <location line="+15" />
             <source>Setting new rounding radius failed, ignored. Text line: %1</source>
-            <translation />
+            <translation>Postavljanje novog polumjera zaobljenja neuspjelo, ignorirano. Tekstualna linija: %1</translation>
         </message>
         <message>
             <location line="+6" />
             <source>Rounding polylines requires QCAD Professional, ignored. Text line: %1</source>
-            <translation />
+            <translation>Zaobljenje polilinija zahtijeva QCAD Professional, ignorirano. Tekstualna linija: %1</translation>
         </message>
         <message>
             <location line="+16" />
@@ -3561,22 +3561,22 @@ večpostoji na popisu.</translation>
         <message>
             <location line="+5" />
             <source>Not a correct set active 'Layer' switch, ignored. Text line: %1</source>
-            <translation />
+            <translation>Nije ispravan prekidač za postavljanje aktivnog 'Sloja', ignorirano. Tekstualna linija: %1</translation>
         </message>
         <message>
             <location line="+15" />
             <source>Not a correct 'New layer' switch, ignored. Text line: %1</source>
-            <translation />
+            <translation>Nije ispravan prekidač 'Novi sloj', ignorirano. Tekstualna linija: %1</translation>
         </message>
         <message>
             <location line="+25" />
             <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-            <translation />
+            <translation>Ne mogu sakriti nepostojeće slojeve, ignorirano. Tekstualna linija: %1%2 Sloj: %3</translation>
         </message>
         <message>
             <location line="+5" />
             <source>Not a correct 'HideLayer' switch, ignored. Text line: %1</source>
-            <translation />
+            <translation>Nije ispravan prekidač 'SakriSloj', ignorirano. Tekstualna linija: %1</translation>
         </message>
         <message>
             <location line="+28" />
@@ -3631,7 +3631,7 @@ večpostoji na popisu.</translation>
             <location line="+33" />
             <location line="+135" />
             <source>Low field count.</source>
-            <translation />
+            <translation>Nizak broj polja.</translation>
         </message>
         <message>
             <location line="-656" />
@@ -3660,7 +3660,7 @@ večpostoji na popisu.</translation>
             <location line="+25" />
             <location line="+23" />
             <source>Odd field count.</source>
-            <translation />
+            <translation>Neparan broj polja.</translation>
         </message>
         <message>
             <location line="-655" />
@@ -4153,7 +4153,7 @@ večpostoji na popisu.</translation>
         <message>
             <location line="+36" />
             <source>Sweep:</source>
-            <translation />
+            <translation>Provlačenje:</translation>
         </message>
         <message>
             <location line="-71" />
@@ -6960,7 +6960,7 @@ večpostoji na popisu.</translation>
         <message>
             <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41" />
             <source>Reference</source>
-            <translation />
+            <translation>Referenca</translation>
         </message>
         <message>
             <location line="+7" />
@@ -10327,7 +10327,7 @@ večpostoji na popisu.</translation>
         <message>
             <location line="+10" />
             <source>Handle:</source>
-            <translation />
+            <translation>Ručka:</translation>
         </message>
         <message>
             <location line="+94" />
@@ -12084,7 +12084,7 @@ večpostoji na popisu.</translation>
         <message>
             <location filename="../scripts/Snap/SnapReference/SnapReferenceInit.js" line="+2" />
             <source>&amp;Reference</source>
-            <translation />
+            <translation>&amp;Referenca</translation>
         </message>
     </context>
     <context>
@@ -12177,7 +12177,7 @@ večpostoji na popisu.</translation>
         <message>
             <location line="+3" />
             <source>Closed</source>
-            <translation />
+            <translation>Zatvoreno</translation>
         </message>
     </context>
     <context>
@@ -12770,7 +12770,7 @@ večpostoji na popisu.</translation>
         <message>
             <location line="+17" />
             <source>Prompt:</source>
-            <translation />
+            <translation>Upit:</translation>
         </message>
         <message>
             <location line="+17" />
@@ -12899,7 +12899,7 @@ večpostoji na popisu.</translation>
         <message>
             <location line="+0" />
             <source>Theme</source>
-            <translation />
+            <translation>Tema</translation>
         </message>
     </context>
     <context>
@@ -13764,7 +13764,7 @@ večpostoji na popisu.</translation>
         <message>
             <location line="+1" />
             <source>Aligned</source>
-            <translation />
+            <translation>Poravnato</translation>
         </message>
         <message>
             <location line="+1" />
@@ -14416,7 +14416,7 @@ večpostoji na popisu.</translation>
         <message>
             <location line="+0" />
             <source>Solid</source>
-            <translation />
+            <translation>Čvrsto</translation>
         </message>
         <message>
             <location line="+2" />
@@ -14431,12 +14431,12 @@ večpostoji na popisu.</translation>
         <message>
             <location line="+2" />
             <source>Faces</source>
-            <translation />
+            <translation>Plohe</translation>
         </message>
         <message>
             <location line="+0" />
             <source>Face</source>
-            <translation />
+            <translation>Ploha</translation>
         </message>
         <message>
             <location line="+2" />
