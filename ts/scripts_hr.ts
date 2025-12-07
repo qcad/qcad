@@ -192,7 +192,7 @@
         <message>
             <location filename="../scripts/Help/About/AboutInit.js" line="+2" />
             <source>&amp;About...</source>
-            <translation>%O programu...</translation>
+            <translation>&amp;O programu...</translation>
         </message>
     </context>
     <context>
@@ -4486,7 +4486,7 @@ večpostoji na popisu.</translation>
         <message>
             <location line="+22" />
             <source>&amp;Ellipse</source>
-            <translation>%Elipsa</translation>
+            <translation>&amp;Elipsa</translation>
         </message>
     </context>
     <context>
