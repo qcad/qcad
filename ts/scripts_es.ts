@@ -2587,7 +2587,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Select/DeselectAll/DeselectAllInit.js" line="+2"/>
         <source>&amp;Deselect All</source>
-        <translation>Anular todas las selecciones</translation>
+        <translation>&amp;Anular todas las selecciones</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3474,7 +3474,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation>Sorteo Fms Lanes</translation>
+        <translation>&amp;Dibujar carriles Fms</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -6608,7 +6608,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19"/>
         <source>Add &amp;custom 2D centroid</source>
-        <translation>Añadir centroide 2D personalizado</translation>
+        <translation>Añadir centroide 2D &amp;personalizado</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -7024,7 +7024,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+428"/>
         <source>2D &amp;Centroids</source>
-        <translation>Centroides 2D</translation>
+        <translation>&amp;Centroides 2D</translation>
     </message>
     <message>
         <location line="-431"/>
@@ -7060,7 +7060,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
         <source>Centroid &amp;Listener</source>
-        <translation>Escuchar el centroide</translation>
+        <translation>Escuchar el &amp;centroide</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7313,7 +7313,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
         <source>&amp;Sum 2D Centroids weighted</source>
-        <translation>Suma de centros 2D ponderados</translation>
+        <translation>&amp;Suma de centros 2D ponderados</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -8386,7 +8386,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
-        <translation>Bisectriz</translation>
+        <translation>Dibujar bisectriz, trisectriz, ...</translation>
     </message>
 </context>
 <context>
@@ -8462,7 +8462,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation>Junta de cola de pato desde 2 puntos</translation>
+        <translation>&amp;Junta de cola de pato desde 2 puntos</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11281,7 +11281,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation>(De-)seleccione entidades intersectadas</translation>
+        <translation>(De-)seleccionar entidades in&amp;tersectadas</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13953,7 +13953,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Construction Line</source>
-        <translation>Línea de construcción horizontal</translation>
+        <translation>Línea de construcción &amp;horizontal</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13966,7 +13966,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Construction Line</source>
-        <translation>Línea de construcción vertical</translation>
+        <translation>Línea de construcción &amp;vertical</translation>
     </message>
     <message>
         <location line="+3"/>

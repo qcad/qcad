@@ -440,7 +440,7 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location line="+22"/>
         <source>&amp;Arc</source>
-        <translation>Kaari</translation>
+        <translation>&amp;Kaari</translation>
     </message>
 </context>
 <context>
@@ -1047,7 +1047,7 @@ Haluatko palauttaa sen?</translation>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
         <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
-        <translation>Batch2Pdf näkyvät ulkoasulohkot</translation>
+        <translation>&amp;Batch2Pdf näkyvät ulkoasulohkot</translation>
     </message>
 </context>
 <context>
@@ -3200,7 +3200,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+10"/>
         <source>P&amp;recision:</source>
-        <translation>Tarkkuus:</translation>
+        <translation>&amp;Tarkkuus:</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -3474,7 +3474,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation>Piirrä Fms Lanes</translation>
+        <translation>&amp;Piirrä Fms Lanes</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4075,7 +4075,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation>Piirrä CSV:stä</translation>
+        <translation>&amp;Piirrä CSV:stä</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4744,7 +4744,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation>Vie CSV</translation>
+        <translation>&amp;Vie CSV</translation>
     </message>
 </context>
 <context>
@@ -4752,7 +4752,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js" line="+59"/>
         <source>Deleted line with ID %1</source>
-        <translation>Poistettu rivi tunnuksella % 1</translation>
+        <translation>Poistettu rivi tunnuksella %1</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5557,7 +5557,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
         <source>&amp;FlexPainter</source>
-        <translation>FlexPainter</translation>
+        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -6608,7 +6608,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19"/>
         <source>Add &amp;custom 2D centroid</source>
-        <translation>Lisää mukautettu 2D-keskipiste</translation>
+        <translation>Lisää &amp;mukautettu 2D-keskipiste</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6938,7 +6938,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
-        <translation>Alueen keskipiste</translation>
+        <translation>&amp;Alueen keskipiste</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6981,7 +6981,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation>Suuntima / atsimuutti</translation>
+        <translation>&amp;Suuntima / atsimuutti</translation>
     </message>
 </context>
 <context>
@@ -7024,7 +7024,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+428"/>
         <source>2D &amp;Centroids</source>
-        <translation>2D-keskipisteet</translation>
+        <translation>2D-&amp;keskipisteet</translation>
     </message>
     <message>
         <location line="-431"/>
@@ -7060,7 +7060,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
         <source>Centroid &amp;Listener</source>
-        <translation>Centroid kuuntelija</translation>
+        <translation>Centroid &amp;kuuntelija</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7313,7 +7313,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
         <source>&amp;Sum 2D Centroids weighted</source>
-        <translation>Summa 2D-keskipisteiden painotettu</translation>
+        <translation>&amp;Summa 2D-keskipisteiden painotettu</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7413,7 +7413,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+19"/>
         <source>&amp;Wire Centroid</source>
-        <translation>Langan keskipiste</translation>
+        <translation>&amp;Langan keskipiste</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -8171,7 +8171,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>Leader valikoidusta tekstistä</translation>
+        <translation>&amp;Leader valikoidusta tekstistä</translation>
     </message>
 </context>
 <context>
@@ -8551,7 +8551,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js" line="+2"/>
         <source>&amp;Orthogonal</source>
-        <translation>Kohtisuora</translation>
+        <translation>&amp;Kohtisuora</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9080,7 +9080,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+22"/>
         <source>&amp;Information</source>
-        <translation>Tiedot</translation>
+        <translation>&amp;Tiedot</translation>
     </message>
 </context>
 <context>
@@ -9902,7 +9902,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
         <source>&amp;Polyline break symbol from 2 points</source>
-        <translation>Polylinjan katkaisusymboli 2 pisteestä</translation>
+        <translation>&amp;Polylinjan katkaisusymboli 2 pisteestä</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10441,7 +10441,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Help/ReportBug/ReportBugInit.js" line="+2"/>
         <source>Report &amp;Bug</source>
-        <translation>Ilmoita ohjelmointivirheestä</translation>
+        <translation>Ilmoita &amp;ohjelmointivirheestä</translation>
     </message>
 </context>
 <context>
@@ -11420,7 +11420,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation>Valitse (peru) suorakulmainen alue</translation>
+        <translation>Valitse (peru) &amp;suorakulmainen alue</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11464,7 +11464,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+0"/>
         <source>on</source>
-        <translation> </translation>
+        <translation>on</translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
@@ -12312,7 +12312,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
-        <translation>SVG tuonti ...</translation>
+        <translation>SVG &amp;tuonti ...</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/PreferencesPage.ui" line="+17"/>
@@ -12491,7 +12491,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>Tekstin mukainen johtaja</translation>
+        <translation>&amp;Tekstin mukainen johtaja</translation>
     </message>
 </context>
 <context>
@@ -12539,7 +12539,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation>Leikkaa</translation>
+        <translation>Lei&amp;kkaa</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12924,7 +12924,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToBack/ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation>Lähetä takaisin</translation>
+        <translation>Lähetä ta&amp;kaisin</translation>
     </message>
 </context>
 <context>
@@ -13997,7 +13997,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomIn/ZoomInInit.js" line="+2"/>
         <source>Zoom &amp;In</source>
-        <translation>Lähennä</translation>
+        <translation>Lähen&amp;nä</translation>
     </message>
 </context>
 <context>
@@ -14005,7 +14005,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomOut/ZoomOutInit.js" line="+2"/>
         <source>Zoom &amp;Out</source>
-        <translation>Loitonna</translation>
+        <translation>L&amp;oitonna</translation>
     </message>
 </context>
 <context>
