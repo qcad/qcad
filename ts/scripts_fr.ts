@@ -2262,7 +2262,7 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location filename="../scripts/View/CommandLineFocus/CommandLineFocusInit.js" line="+2"/>
         <source>&amp;Focus on Command Line</source>
-        <translation>Curseur dans la ligne de commande</translation>
+        <translation>&amp;Curseur dans la ligne de commande</translation>
     </message>
 </context>
 <context>
@@ -2487,7 +2487,7 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location filename="../scripts/Edit/Cut/CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
-        <translation>Couper</translation>
+        <translation>&amp;Couper</translation>
     </message>
 </context>
 <context>
@@ -2579,7 +2579,7 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location filename="../scripts/Edit/Delete/DeleteInit.js" line="+2"/>
         <source>&amp;Delete</source>
-        <translation>Supprimer</translation>
+        <translation>&amp;Supprimer</translation>
     </message>
 </context>
 <context>
@@ -3474,7 +3474,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation>Tirage au sort Fms Lanes</translation>
+        <translation>&amp;Dessiner les lignes Fms</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4174,7 +4174,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation>Préférences de dessin</translation>
+        <translation>&amp;Préférences de dessin</translation>
     </message>
 </context>
 <context>
@@ -4715,7 +4715,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>Échapement</translation>
+        <translation>&amp;Échapement</translation>
     </message>
 </context>
 <context>
@@ -6382,7 +6382,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Help/Help.js" line="+60"/>
         <source>&amp;Help</source>
-        <translation>Aide</translation>
+        <translation>&amp;Aide</translation>
     </message>
 </context>
 <context>
@@ -6608,7 +6608,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19"/>
         <source>Add &amp;custom 2D centroid</source>
-        <translation>Ajouter un centroïde 2D personnalisé</translation>
+        <translation>Ajouter un centroïde 2D &amp;personnalisé</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -7024,7 +7024,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+428"/>
         <source>2D &amp;Centroids</source>
-        <translation>Centroïdes 2D</translation>
+        <translation>&amp;Centroïdes 2D</translation>
     </message>
     <message>
         <location line="-431"/>
@@ -7060,7 +7060,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
         <source>Centroid &amp;Listener</source>
-        <translation>Écouteur de centroïde</translation>
+        <translation>&amp;Écouteur de centroïde</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7313,7 +7313,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
         <source>&amp;Sum 2D Centroids weighted</source>
-        <translation>Somme des centroïdes 2D pondérés</translation>
+        <translation>&amp;Somme des centroïdes 2D pondérés</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10532,7 +10532,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation>Inverse</translation>
+        <translation>&amp;Inverse</translation>
     </message>
 </context>
 <context>
@@ -11281,7 +11281,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation>(Dé)sélectionner des entités intersectées</translation>
+        <translation>(Dé)sélectionner des entités in&amp;tersectées</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11824,7 +11824,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCenter/SnapCenterInit.js" line="+2"/>
         <source>&amp;Center</source>
-        <translation>Centrer</translation>
+        <translation>&amp;Centrer</translation>
     </message>
 </context>
 <context>
@@ -11979,7 +11979,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Snap/SnapEnd/SnapEndInit.js" line="+2"/>
         <source>&amp;End</source>
-        <translation>Fin</translation>
+        <translation>&amp;Fin</translation>
     </message>
 </context>
 <context>
@@ -11995,7 +11995,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Snap/SnapGrid/SnapGridInit.js" line="+2"/>
         <source>&amp;Grid</source>
-        <translation>Grille</translation>
+        <translation>&amp;Grille</translation>
     </message>
 </context>
 <context>
@@ -12948,7 +12948,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/View/ToggleGrid/ToggleGrid.js" line="+90"/>
         <source>&amp;Grid</source>
-        <translation>Grille</translation>
+        <translation>&amp;Grille</translation>
     </message>
 </context>
 <context>
