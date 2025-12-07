@@ -6,7 +6,7 @@
         <message>
             <location filename="../scripts/Help/About/About.js" line="+68" />
             <source>About %1</source>
-            <translation>%%1 정보</translation>
+            <translation>%1 정보</translation>
         </message>
         <message>
             <location line="+53" />
@@ -55,17 +55,17 @@
         <message>
             <location line="+5" />
             <source>%1 is an application for computer-aided design (CAD).</source>
-            <translation>%%1은(는) CAD(컴퓨터 지원 설계) 응용 프로그램입니다.</translation>
+            <translation>%1은(는) CAD(컴퓨터 지원 설계) 응용 프로그램입니다.</translation>
         </message>
         <message>
             <location line="+4" />
             <source>%1 is based on QCAD, a free (open source) software.</source>
-            <translation>%%1은 무료(오픈 소스) 소프트웨어인 QCAD를 기반으로 합니다.</translation>
+            <translation>%1은 무료(오픈 소스) 소프트웨어인 QCAD를 기반으로 합니다.</translation>
         </message>
         <message>
             <location line="+3" />
             <source>%1 is free (open source) software.</source>
-            <translation>%%1은 무료(오픈 소스) 소프트웨어입니다.</translation>
+            <translation>%1은 무료(오픈 소스) 소프트웨어입니다.</translation>
         </message>
         <message>
             <location line="+1" />
@@ -90,7 +90,7 @@
         <message>
             <location line="+3" />
             <source>Portions of this software © %1 The Qt Company Ltd.</source>
-            <translation>이 소프트웨어의 일부 © %%%1 The Qt Company Ltd.</translation>
+            <translation>이 소프트웨어의 일부 © %1 The Qt Company Ltd.</translation>
         </message>
         <message>
             <location line="+1" />
@@ -895,8 +895,8 @@ the preference changes to take effect.</source>
             <location line="+19" />
             <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-            <translation>제목 없는 도면에 대한 %n개의 자동 저장 백업 파일을 찾았습니다.
-복원하시겠습니까?<numerusform>제목 없는 그림(들)에 대한 %n 자동 저장 백업 파일을 찾았습니다.
+            <translation>
+                <numerusform>제목 없는 그림(들)에 대한 %n 자동 저장 백업 파일을 찾았습니다.
 해당 파일을 복구하시겠습니까?</numerusform>
             </translation>
         </message>
@@ -1104,7 +1104,7 @@ Do you wish to recover it?</source>
         <message>
             <location filename="../scripts/File/BitmapExport/BitmapExport.js" line="+78" />
             <source>Error while generating bitmap file "%1": %2</source>
-            <translation>비트맵 파일 "%1": %%%2을(를) 생성하는 동안 오류가 발생했습니다</translation>
+            <translation>비트맵 파일 "%1": %2을(를) 생성하는 동안 오류가 발생했습니다</translation>
         </message>
         <message>
             <location line="+5" />
@@ -2286,7 +2286,7 @@ Do you wish to recover it?</source>
         <message>
             <location line="+144" />
             <source>Converted drawing from %1 to %2</source>
-            <translation>%%1에서 %%%2로 변환된 도면</translation>
+            <translation>%1에서 %2로 변환된 도면</translation>
         </message>
         <message>
             <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.ui" line="+20" />
@@ -2859,7 +2859,8 @@ Do you wish to recover it?</source>
         <message numerus="yes">
             <location line="+3" />
             <source>Label position of %n dimension(s) was reset.</source>
-            <translation>%n개의 치수 레이블 위치가 재설정되었습니다.<numerusform>%n차원의 레이블 위치가 재설정되었습니다.</numerusform>
+            <translation>
+                <numerusform>%n차원의 레이블 위치가 재설정되었습니다.</numerusform>
             </translation>
         </message>
         <message>
@@ -3550,7 +3551,7 @@ is already in the list.</source>
         <message>
             <location line="+16" />
             <source>Can not switch to non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-            <translation>존재하지 않는 레이어로 전환할 수 없으며 무시됩니다. 텍스트 줄: %1%%%2 레이어: %3</translation>
+            <translation>존재하지 않는 레이어로 전환할 수 없으며 무시됩니다. 텍스트 줄: %1%2 레이어: %3</translation>
         </message>
         <message>
             <location line="+5" />
@@ -3565,7 +3566,7 @@ is already in the list.</source>
         <message>
             <location line="+25" />
             <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-            <translation>존재하지 않는 레이어를 숨길 수 없으며 무시됩니다. 텍스트 줄: %1%%%2 레이어: %3</translation>
+            <translation>존재하지 않는 레이어를 숨길 수 없으며 무시됩니다. 텍스트 줄: %1%2 레이어: %3</translation>
         </message>
         <message>
             <location line="+5" />
@@ -3575,7 +3576,7 @@ is already in the list.</source>
         <message>
             <location line="+28" />
             <source>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-            <translation>존재하지 않는 레이어를 고정할 수 없으며 무시됩니다. 텍스트 줄: %1%%%2 레이어: %3</translation>
+            <translation>존재하지 않는 레이어를 고정할 수 없으며 무시됩니다. 텍스트 줄: %1%2 레이어: %3</translation>
         </message>
         <message>
             <location line="+5" />
@@ -3585,7 +3586,7 @@ is already in the list.</source>
         <message>
             <location line="+28" />
             <source>Can not lock non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-            <translation>존재하지 않는 레이어를 잠글 수 없으므로 무시됩니다. 텍스트 줄: %1%%%2 레이어: %3</translation>
+            <translation>존재하지 않는 레이어를 잠글 수 없으므로 무시됩니다. 텍스트 줄: %1%2 레이어: %3</translation>
         </message>
         <message>
             <location line="+5" />
@@ -3595,7 +3596,7 @@ is already in the list.</source>
         <message>
             <location line="+30" />
             <source>Can not allow non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-            <translation>존재하지 않는 레이어를 허용할 수 없으므로 무시됩니다. 텍스트 줄: %1%%%2 레이어: %3</translation>
+            <translation>존재하지 않는 레이어를 허용할 수 없으므로 무시됩니다. 텍스트 줄: %1%2 레이어: %3</translation>
         </message>
         <message>
             <location line="+5" />
@@ -3876,7 +3877,7 @@ is already in the list.</source>
             <location line="+26" />
             <location line="+28" />
             <source>Rv%1 Invalid.</source>
-            <translation>Rv%%%1 유효하지 않습니다.</translation>
+            <translation>Rv%1 유효하지 않습니다.</translation>
         </message>
         <message>
             <location line="-61" />
@@ -3886,7 +3887,7 @@ is already in the list.</source>
         <message>
             <location line="+9" />
             <source>Bulge%1 Invalid.</source>
-            <translation>Bulge%%%1 유효하지 않습니다.</translation>
+            <translation>Bulge%1 유효하지 않습니다.</translation>
         </message>
         <message>
             <location line="+18" />
@@ -3956,12 +3957,12 @@ is already in the list.</source>
         <message>
             <location line="+43" />
             <source>Not a correct entry, ignored. Text line: %1 &gt; %2</source>
-            <translation>올바른 입력이 아니므로 무시됩니다. 텍스트 줄: %%%1 &gt; %2</translation>
+            <translation>올바른 입력이 아니므로 무시됩니다. 텍스트 줄: %1 &gt; %2</translation>
         </message>
         <message>
             <location line="+80" />
             <source>Casted entries: %1 out of %2 text lines</source>
-            <translation>캐스팅된 항목: %%%2 텍스트 줄 중 %1개</translation>
+            <translation>캐스팅된 항목: %2 텍스트 줄 중 %1개</translation>
         </message>
         <message>
             <location line="+2" />
@@ -3996,62 +3997,62 @@ is already in the list.</source>
         <message>
             <location line="+24" />
             <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
-            <translation>올바른 레이어 이름이 아니므로 무시됩니다. 텍스트 줄: %1%%%2 이름: %3</translation>
+            <translation>올바른 레이어 이름이 아니므로 무시됩니다. 텍스트 줄: %1%2 이름: %3</translation>
         </message>
         <message>
             <location line="+8" />
             <source>Layer doesn't exist, ignored. Text line: %1%2 Layer: %3</source>
-            <translation>레이어가 존재하지 않으므로 무시되었습니다. 텍스트 줄: %1%%%2 레이어: %3</translation>
+            <translation>레이어가 존재하지 않으므로 무시되었습니다. 텍스트 줄: %1%2 레이어: %3</translation>
         </message>
         <message>
             <location line="+8" />
             <source>Not a correct color, ignored. Text line: %1%2 Color: %3</source>
-            <translation>올바른 색이 아니므로 무시됩니다. 텍스트 줄: %1%%%2 색상: %3</translation>
+            <translation>올바른 색이 아니므로 무시됩니다. 텍스트 줄: %1%2 색상: %3</translation>
         </message>
         <message>
             <location line="+11" />
             <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-            <translation>올바른 선 가중치가 아니므로 무시되었습니다. 텍스트 줄: %1%%%2 가중치: %3</translation>
+            <translation>올바른 선 가중치가 아니므로 무시되었습니다. 텍스트 줄: %1%2 가중치: %3</translation>
         </message>
         <message>
             <location line="+11" />
             <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
-            <translation>올바른 선 유형이 아니므로 무시되었습니다. 텍스트 줄: %1%%%2 유형: %3</translation>
+            <translation>올바른 선 유형이 아니므로 무시되었습니다. 텍스트 줄: %1%2 유형: %3</translation>
         </message>
         <message>
             <location line="+10" />
             <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-            <translation>올바른 선형 눈금이 아니므로 무시되었습니다. 텍스트 줄: %1%%%2 배율: %3</translation>
+            <translation>올바른 선형 눈금이 아니므로 무시되었습니다. 텍스트 줄: %1%2 배율: %3</translation>
         </message>
         <message>
             <location line="+9" />
             <source>Unsupported attribute, ignored. Text line: %1 &gt; %2</source>
-            <translation>지원되지 않는 속성이 무시되었습니다. 텍스트 줄: %%%1 &gt; %2</translation>
+            <translation>지원되지 않는 속성이 무시되었습니다. 텍스트 줄: %1 &gt; %2</translation>
         </message>
         <message>
             <location line="+48" />
             <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
-            <translation>레이어 이름이 올바르지 않습니다. 텍스트 줄: %1%%%2 이름: %3</translation>
+            <translation>레이어 이름이 올바르지 않습니다. 텍스트 줄: %1%2 이름: %3</translation>
         </message>
         <message>
             <location line="+7" />
             <source>Parent layer doesn't exist. Text line: %1%2 Layer: %3</source>
-            <translation>상위 레이어가 없습니다. 텍스트 줄: %1%%%2 레이어: %3</translation>
+            <translation>상위 레이어가 없습니다. 텍스트 줄: %1%2 레이어: %3</translation>
         </message>
         <message>
             <location line="+31" />
             <source>Not a correct color. Text line: %1%2 Color: %3</source>
-            <translation>올바른 색이 아닙니다. 텍스트 줄: %1%%%2 색상: %3</translation>
+            <translation>올바른 색이 아닙니다. 텍스트 줄: %1%2 색상: %3</translation>
         </message>
         <message>
             <location line="+10" />
             <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-            <translation>선 가중치가 올바르지 않습니다. 텍스트 줄: %1%%%2 가중치: %3</translation>
+            <translation>선 가중치가 올바르지 않습니다. 텍스트 줄: %1%2 가중치: %3</translation>
         </message>
         <message>
             <location line="+10" />
             <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
-            <translation>올바른 선 유형이 아닙니다. 텍스트 줄: %1%%%2 유형입니다: %3</translation>
+            <translation>올바른 선 유형이 아닙니다. 텍스트 줄: %1%2 유형입니다: %3</translation>
         </message>
         <message>
             <location line="+18" />
@@ -4178,7 +4179,8 @@ is already in the list.</source>
         <message numerus="yes">
             <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85" />
             <source>%n entity/ies duplicated</source>
-            <translation>%n개의 엔티티가 복제되었습니다<numerusform>중복된 엔티티 %n개</numerusform>
+            <translation>
+                <numerusform>중복된 엔티티 %n개</numerusform>
             </translation>
         </message>
         <message>
@@ -4746,7 +4748,7 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js" line="+59" />
             <source>Deleted line with ID %1</source>
-            <translation>ID %%%1로 삭제된 줄</translation>
+            <translation>ID %1로 삭제된 줄</translation>
         </message>
         <message>
             <location line="+1" />
@@ -5013,7 +5015,8 @@ is already in the list.</source>
         <message numerus="yes">
             <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50" />
             <source>Transaction affected %n object(s).</source>
-            <translation>트랜잭션이 %n개의 객체에 영향을 주었습니다.<numerusform>트랜잭션이 %n 개체에 영향을 미쳤습니다.</numerusform>
+            <translation>
+                <numerusform>트랜잭션이 %n 개체에 영향을 미쳤습니다.</numerusform>
             </translation>
         </message>
         <message>
@@ -5180,7 +5183,7 @@ is already in the list.</source>
             <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38" />
             <location line="+244" />
             <source>%1 First Start</source>
-            <translation>%%1 첫 시작</translation>
+            <translation>%1 첫 시작</translation>
         </message>
         <message>
             <location line="-5" />
@@ -5200,7 +5203,7 @@ is already in the list.</source>
         <message>
             <location line="+1" />
             <source>Welcome to %1</source>
-            <translation>%%1에 오신 것을 환영합니다</translation>
+            <translation>%1에 오신 것을 환영합니다</translation>
         </message>
         <message>
             <location line="+1" />
@@ -6351,7 +6354,7 @@ is already in the list.</source>
         <message>
             <location line="+17" />
             <source>Loop not closed at point %1/%2.</source>
-            <translation>%%%%1/%%%2 지점에서 루프가 닫히지 않았습니다.</translation>
+            <translation>%1/%2 지점에서 루프가 닫히지 않았습니다.</translation>
         </message>
         <message>
             <location line="+96" />
@@ -6464,7 +6467,7 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75" />
             <source>Error while importing file %1</source>
-            <translation>%%1 파일을 가져오는 동안 오류가 발생했습니다</translation>
+            <translation>%1 파일을 가져오는 동안 오류가 발생했습니다</translation>
         </message>
         <message>
             <location line="+31" />
@@ -9345,13 +9348,15 @@ is already in the list.</source>
         <message numerus="yes">
             <location line="+94" />
             <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
-            <translation>%n개의 동심원 이후 반지름이 0.0 미만으로 떨어졌습니다.<numerusform>동심원을 %n번 돌고 난 후 반경이 0.0 아래로 떨어졌습니다.</numerusform>
+            <translation>
+                <numerusform>동심원을 %n번 돌고 난 후 반경이 0.0 아래로 떨어졌습니다.</numerusform>
             </translation>
         </message>
         <message numerus="yes">
             <location line="+3" />
             <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
-            <translation>%n개의 동심 호 이후 반지름이 0.0 미만으로 떨어졌습니다.<numerusform>%n번의 동심원 호 이후 반경이 0.0 아래로 떨어졌습니다.</numerusform>
+            <translation>
+                <numerusform>%n번의 동심원 호 이후 반경이 0.0 아래로 떨어졌습니다.</numerusform>
             </translation>
         </message>
         <message>
@@ -10016,7 +10021,7 @@ is already in the list.</source>
         <message>
             <location line="+13" />
             <source>Exporting to %1...</source>
-            <translation>%%1로 내보내는 중...</translation>
+            <translation>%1로 내보내는 중...</translation>
         </message>
         <message>
             <location line="+5" />
@@ -10856,7 +10861,7 @@ is already in the list.</source>
         <message>
             <location line="+6" />
             <source>File %1 has not been saved.</source>
-            <translation>파일 %%%1이(가) 저장되지 않았습니다.</translation>
+            <translation>파일 %1이(가) 저장되지 않았습니다.</translation>
         </message>
         <message>
             <location line="+21" />
@@ -11154,7 +11159,7 @@ is already in the list.</source>
         <message>
             <location line="+16" />
             <source>Selected all visible entities of color %1</source>
-            <translation>색 %%%1의 표시된 모든 개체를 선택했습니다</translation>
+            <translation>색 %1의 표시된 모든 개체를 선택했습니다</translation>
         </message>
         <message>
             <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js" line="+2" />
@@ -11307,12 +11312,12 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68" />
             <source>%1 entities added to selection.</source>
-            <translation>선택 항목에 %%%1 개체를 추가했습니다.</translation>
+            <translation>선택 항목에 %1 개체를 추가했습니다.</translation>
         </message>
         <message>
             <location line="+4" />
             <source>%1 entities removed from selection.</source>
-            <translation>선택에서 %%%1 개체를 제거했습니다.</translation>
+            <translation>선택에서 %1 개체를 제거했습니다.</translation>
         </message>
         <message>
             <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2" />
@@ -11426,23 +11431,25 @@ is already in the list.</source>
         <message>
             <location line="+22" />
             <source>%1 %2 on Layer "%3"</source>
-            <translation>레이어 "%3"의 %%%1 %2</translation>
+            <translation>레이어 "%3"의 %1 %2</translation>
         </message>
         <message>
             <location line="+3" />
             <source>%1 %2 on %3 Layers</source>
-            <translation>%%3 레이어에 %%%1 %2</translation>
+            <translation>%3 레이어에 %1 %2</translation>
         </message>
         <message numerus="yes">
             <location line="+4" />
             <source>%n Entities on Layer "%1"</source>
-            <translation>"%1" 레이어의 %n개 엔티티<numerusform>%n 레이어 '%1'의 엔티티;</numerusform>
+            <translation>
+                <numerusform>%n 레이어 '%1'의 엔티티;</numerusform>
             </translation>
         </message>
         <message numerus="yes">
             <location line="+3" />
             <source>%n Entities</source>
-            <translation>%n개 엔티티<numerusform>%n개 엔티티</numerusform>
+            <translation>
+                <numerusform>%n개 엔티티</numerusform>
             </translation>
         </message>
         <message>
@@ -11453,7 +11460,8 @@ is already in the list.</source>
         <message numerus="yes">
             <location line="+0" />
             <source>%n Layers</source>
-            <translation>%n개 레이어<numerusform>%n개의 레이어</numerusform>
+            <translation>
+                <numerusform>%n개의 레이어</numerusform>
             </translation>
         </message>
         <message>
@@ -11536,7 +11544,7 @@ is already in the list.</source>
         <message>
             <location line="+6" />
             <source>Invalid ellipse major / minor: %1 / %2.</source>
-            <translation>잘못된 타원 메이저/마이너: %%%1 / %2입니다.</translation>
+            <translation>잘못된 타원 메이저/마이너: %1 / %2입니다.</translation>
         </message>
     </context>
     <context>

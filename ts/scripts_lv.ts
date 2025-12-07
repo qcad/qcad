@@ -895,8 +895,8 @@ lai stātos spēkā preferenču izmaiņas.</translation>
             <location line="+19" />
             <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-            <translation>Atrasti %n automātiskās saglabāšanas rezerves faili nenosauktiem zīmējumiem.
-Vai vēlaties tos atjaunot?<numerusform />
+            <translation>
+                <numerusform />
                 <numerusform />
                 <numerusform />
             </translation>
@@ -2860,7 +2860,8 @@ Vai vēlaties to atjaunot?</translation>
         <message numerus="yes">
             <location line="+3" />
             <source>Label position of %n dimension(s) was reset.</source>
-            <translation>%n izmēru etiķešu pozīcija tika atiestatīta.<numerusform />
+            <translation>
+                <numerusform />
                 <numerusform />
                 <numerusform />
             </translation>
@@ -4181,7 +4182,8 @@ jau ir sarakstā.</translation>
         <message numerus="yes">
             <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85" />
             <source>%n entity/ies duplicated</source>
-            <translation>%n elementi(-u) dublēti<numerusform />
+            <translation>
+                <numerusform />
                 <numerusform />
                 <numerusform />
             </translation>
@@ -5018,7 +5020,8 @@ jau ir sarakstā.</translation>
         <message numerus="yes">
             <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50" />
             <source>Transaction affected %n object(s).</source>
-            <translation>Transakcija ietekmēja %n objektu(-s).<numerusform />
+            <translation>
+                <numerusform />
                 <numerusform />
                 <numerusform />
             </translation>
@@ -9352,7 +9355,8 @@ jau ir sarakstā.</translation>
         <message numerus="yes">
             <location line="+94" />
             <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
-            <translation>Rādiuss nokrita zem 0.0 pēc %n koncentriskām riņķa līnijām.<numerusform />
+            <translation>
+                <numerusform />
                 <numerusform />
                 <numerusform />
             </translation>
@@ -9360,7 +9364,8 @@ jau ir sarakstā.</translation>
         <message numerus="yes">
             <location line="+3" />
             <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
-            <translation>Rādiuss nokrita zem 0.0 pēc %n koncentriskajiem lokiem.<numerusform />
+            <translation>
+                <numerusform />
                 <numerusform />
                 <numerusform />
             </translation>
@@ -11447,7 +11452,8 @@ jau ir sarakstā.</translation>
         <message numerus="yes">
             <location line="+4" />
             <source>%n Entities on Layer "%1"</source>
-            <translation>%n elementi(-u) slānī "%1"<numerusform />
+            <translation>
+                <numerusform />
                 <numerusform />
                 <numerusform />
             </translation>
@@ -11455,7 +11461,8 @@ jau ir sarakstā.</translation>
         <message numerus="yes">
             <location line="+3" />
             <source>%n Entities</source>
-            <translation>%n elementi(-u)<numerusform />
+            <translation>
+                <numerusform />
                 <numerusform />
                 <numerusform />
             </translation>
@@ -11468,7 +11475,8 @@ jau ir sarakstā.</translation>
         <message numerus="yes">
             <location line="+0" />
             <source>%n Layers</source>
-            <translation>%n slāņi(-u)<numerusform />
+            <translation>
+                <numerusform />
                 <numerusform />
                 <numerusform />
             </translation>
