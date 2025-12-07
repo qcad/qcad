@@ -516,7 +516,7 @@ aby wprowadzić zmiany preferencji.</translation>
     <message>
         <location line="+8"/>
         <source>The two points are identical</source>
-        <translation>Te dwa punkty są takie same</translation>
+        <translation>Te dwa punkty są identyczne</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PH.ui" line="+17"/>
@@ -536,7 +536,7 @@ aby wprowadzić zmiany preferencji.</translation>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation>Zgodnie z ruchem wskazówek zegara (w prawo)</translation>
+        <translation>Zgodnie z ruchem wskazówek zegara (ujemny)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
@@ -569,7 +569,7 @@ aby wprowadzić zmiany preferencji.</translation>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation>Te dwa punkty są takie same</translation>
+        <translation>Te dwa punkty są identyczne</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -579,7 +579,7 @@ aby wprowadzić zmiany preferencji.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PL.ui" line="+17"/>
         <source>Length:</source>
-        <translation>Odległość:</translation>
+        <translation>Długość:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -594,7 +594,7 @@ aby wprowadzić zmiany preferencji.</translation>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation>Zgodnie z ruchem wskazówek zegara (w prawo)</translation>
+        <translation>Zgodnie z ruchem wskazówek zegara (ujemny)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
@@ -761,7 +761,7 @@ aby wprowadzić zmiany preferencji.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentric.ui" line="+17"/>
         <source>Distance:</source>
-        <translation>Odległość:</translation>
+        <translation>Długość:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -1955,7 +1955,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentric.ui" line="+17"/>
         <source>Distance:</source>
-        <translation>Odległość:</translation>
+        <translation>Długość:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -3375,7 +3375,7 @@ jest już na liście.</translation>
     <message>
         <location line="+51"/>
         <source>Position</source>
-        <translation>Położenie</translation>
+        <translation>Pozycja</translation>
     </message>
 </context>
 <context>
@@ -4642,12 +4642,12 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.ui" line="+17"/>
         <source>Distance:</source>
-        <translation>Odległość:</translation>
+        <translation>Długość:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>Ilość:</translation>
+        <translation>Liczba:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
@@ -4665,7 +4665,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Ilość:</translation>
+        <translation>Liczba:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
@@ -6971,7 +6971,7 @@ jest już na liście.</translation>
     <message>
         <location line="+42"/>
         <source>Distance:</source>
-        <translation>Odległość:</translation>
+        <translation>Długość:</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -7093,7 +7093,7 @@ jest już na liście.</translation>
     <message>
         <location line="+95"/>
         <source>Distance:</source>
-        <translation>Odległość:</translation>
+        <translation>Długość:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEEInit.js" line="+2"/>
@@ -7116,7 +7116,7 @@ jest już na liście.</translation>
     <message>
         <location line="+81"/>
         <source>Distance:</source>
-        <translation>Odległość:</translation>
+        <translation>Długość:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2"/>
@@ -7139,7 +7139,7 @@ jest już na liście.</translation>
     <message>
         <location line="+53"/>
         <source>Distance:</source>
-        <translation>Odległość:</translation>
+        <translation>Długość:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -8607,12 +8607,12 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Distance:</source>
-        <translation>Odległość:</translation>
+        <translation>Długość:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>Numer:</translation>
+        <translation>Liczba:</translation>
     </message>
 </context>
 <context>
@@ -8998,7 +8998,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/MiscBlock.js" line="+51"/>
         <source>Misc</source>
-        <translation>Misc</translation>
+        <translation>Różne</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -9016,7 +9016,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/MiscDevelopment.js" line="+51"/>
         <source>Misc</source>
-        <translation>Misc</translation>
+        <translation>Różne</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -9034,7 +9034,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/MiscDraw.js" line="+52"/>
         <source>Misc</source>
-        <translation>Misc</translation>
+        <translation>Różne</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -9057,7 +9057,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/MiscIO.js" line="+51"/>
         <source>Misc</source>
-        <translation>Misc</translation>
+        <translation>Różne</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -9075,7 +9075,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+41"/>
         <source>Misc</source>
-        <translation>Misc</translation>
+        <translation>Różne</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9093,7 +9093,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/MiscModify.js" line="+44"/>
         <source>Misc</source>
-        <translation>Misc</translation>
+        <translation>Różne</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9111,7 +9111,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/MiscSelect.js" line="+52"/>
         <source>Misc</source>
-        <translation>Misc</translation>
+        <translation>Różne</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -9386,7 +9386,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
         <source>Distance:</source>
-        <translation>Odległość:</translation>
+        <translation>Długość:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -10494,7 +10494,7 @@ jest już na liście.</translation>
     <message>
         <location line="-115"/>
         <source>Distance:</source>
-        <translation>Odległość:</translation>
+        <translation>Długość:</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLengthInit.js" line="+2"/>
@@ -11951,7 +11951,7 @@ jest już na liście.</translation>
     <message>
         <location line="+32"/>
         <source>Second point</source>
-        <translation>Drugi punkt</translation>
+        <translation>Punkt drugi</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
