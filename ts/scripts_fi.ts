@@ -4752,7 +4752,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js" line="+59"/>
         <source>Deleted line with ID %1</source>
-        <translation>Poistettu rivi tunnuksella % 1</translation>
+        <translation>Poistettu rivi tunnuksella %1</translation>
     </message>
     <message>
         <location line="+1"/>
