@@ -3347,7 +3347,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Midten</translation>
+        <translation>Midtpunkt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8308,7 +8308,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Midten</translation>
+        <translation>Midtpunkt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8691,7 +8691,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Midten</translation>
+        <translation>Midtpunkt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12044,7 +12044,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddle/SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
-        <translation>Midten</translation>
+        <translation>Midtpunkt</translation>
     </message>
 </context>
 <context>
@@ -13763,7 +13763,7 @@ er allerede i listen.</translation>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation>Midten</translation>
+        <translation>Midtpunkt</translation>
     </message>
     <message>
         <location line="-6"/>

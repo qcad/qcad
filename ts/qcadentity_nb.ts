@@ -219,7 +219,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Midten</translation>
+        <translation>Midtpunkt</translation>
     </message>
     <message>
         <location line="+1"/>

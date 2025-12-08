@@ -119,7 +119,7 @@
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation>Pelo Bloco</translation>
+        <translation>Pelo bloco</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -227,7 +227,7 @@
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Escala do Tipo de Linha</translation>
+        <translation>Escala do tipo de linha</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -892,7 +892,7 @@
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation>Pelo Bloco</translation>
+        <translation>Pelo bloco</translation>
     </message>
     <message>
         <location line="+1"/>

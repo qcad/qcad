@@ -414,7 +414,7 @@ de wijzigingen door te voeren.</translation>
     <message>
         <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
-        <translation>Ongeldig straal</translation>
+        <translation>Ongeldige straal</translation>
     </message>
     <message>
         <location line="+48"/>
@@ -483,7 +483,7 @@ de wijzigingen door te voeren.</translation>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation>Met de klok mee (negatieve)</translation>
+        <translation>Met de klok mee (negatief)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PAInit.js" line="+2"/>
@@ -536,7 +536,7 @@ de wijzigingen door te voeren.</translation>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation>Met de klok mee (negatieve)</translation>
+        <translation>Met de klok mee (negatief)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
@@ -594,7 +594,7 @@ de wijzigingen door te voeren.</translation>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation>Met de klok mee (negatieve)</translation>
+        <translation>Met de klok mee (negatief)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
@@ -1683,7 +1683,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location line="+107"/>
         <source>Invalid radius</source>
-        <translation>Ongeldig straal</translation>
+        <translation>Ongeldige straal</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2928,7 +2928,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location line="+1"/>
         <source>Radius</source>
-        <translation>Radius</translation>
+        <translation>Straal</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3347,7 +3347,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Middel</translation>
+        <translation>Midden</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7772,7 +7772,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
         <source>Top</source>
-        <translation>Boven</translation>
+        <translation>Bovenkant</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -9358,7 +9358,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.js" line="+77"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation>Lijn, boog, cirkel of ellips kiezen</translation>
+        <translation>Kies lijn, boog, cirkel of ellips</translation>
     </message>
     <message numerus="yes">
         <location line="+94"/>
@@ -11620,7 +11620,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Hoeken:</translation>
+        <translation>Hoekpunten:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -11643,7 +11643,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Hoeken:</translation>
+        <translation>Hoekpunten:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
@@ -13747,7 +13747,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+1"/>
         <source>Center</source>
-        <translation>Middelpunt</translation>
+        <translation>Centrum</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13873,7 +13873,7 @@ is al in de lijst.</translation>
         <location line="-86"/>
         <location line="+87"/>
         <source>Above</source>
-        <translation>Boven</translation>
+        <translation>Bovenkant</translation>
     </message>
     <message>
         <location line="-74"/>

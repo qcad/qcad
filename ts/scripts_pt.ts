@@ -743,7 +743,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.ui" line="+17"/>
         <source>Direction:</source>
-        <translation>Direcção:</translation>
+        <translation>Direção:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -753,7 +753,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation>No sentido dos ponteiros do relógio (Negativo)</translation>
+        <translation>Horário (negativo)</translation>
     </message>
 </context>
 <context>
@@ -1703,7 +1703,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Radius:</translation>
+        <translation>Raio:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -1934,7 +1934,7 @@ Você deseja recuperá-lo?</translation>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCR.ui" line="+17"/>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="+89"/>
         <source>Radius:</source>
-        <translation>Radius:</translation>
+        <translation>Raio:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -4571,7 +4571,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.ui" line="+17"/>
         <source>Direction:</source>
-        <translation>Direcção:</translation>
+        <translation>Direção:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4581,7 +4581,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation>No sentido dos ponteiros do relógio (Negativo)</translation>
+        <translation>Horário (negativo)</translation>
     </message>
 </context>
 <context>
@@ -6482,7 +6482,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+4"/>
         <source>All Files</source>
-        <translation>Todos os Arquivos</translation>
+        <translation>Todos os arquivos</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11380,12 +11380,12 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+74"/>
         <source>First corner</source>
-        <translation>Primeiro canto</translation>
+        <translation>Primeiro vértice</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second corner</source>
-        <translation>Segundo canto</translation>
+        <translation>Segundo vértice</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
@@ -12238,12 +12238,12 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Modify/Stretch/Stretch.js" line="+59"/>
         <source>First corner</source>
-        <translation>Primeiro canto</translation>
+        <translation>Primeiro vértice</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second corner</source>
-        <translation>Segundo canto</translation>
+        <translation>Segundo vértice</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -12723,7 +12723,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+10"/>
         <source>Copy</source>
-        <translation>Cópia</translation>
+        <translation>Copie</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13147,7 +13147,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
         <source>Copy</source>
-        <translation>Cópia</translation>
+        <translation>Copie</translation>
     </message>
     <message>
         <location line="+14"/>
