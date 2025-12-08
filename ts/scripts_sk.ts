@@ -12350,7 +12350,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation>Súbory SVG% 1</translation>
+        <translation>Súbory SVG %1</translation>
     </message>
 </context>
 <context>
