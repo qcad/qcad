@@ -860,7 +860,7 @@ the preference changes to take effect.</source>
         <message>
             <location line="+3" />
             <source>Draw arc tangential to base entity</source>
-            <translation>วาด อาร์ก แทนเจนต์ to ฐาน องค์ประกอบ</translation>
+            <translation>วาดอาร์กแทนเจนต์กับองค์ประกอบฐาน</translation>
         </message>
     </context>
     <context>
@@ -1413,12 +1413,12 @@ Do you wish to recover it?</source>
         <message>
             <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+59" />
             <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
-            <translation>เลือก เส้น อาร์ก วงกลม วงรี สไปลน์ or พอลิไลน์ segment</translation>
+            <translation>เลือกเส้น อาร์ก วงกลม วงรี สไปลน์ หรือส่วนพอลิไลน์</translation>
         </message>
         <message>
             <location line="+3" />
             <source>Choose line, arc, circle or ellipse segment</source>
-            <translation>เลือก เส้น อาร์ก วงกลม or วงรี segment</translation>
+            <translation>เลือกเส้น อาร์ก วงกลม หรือส่วนวงรี</translation>
         </message>
         <message>
             <location filename="../scripts/Modify/BreakOut/BreakOut.ui" line="+17" />
@@ -1459,12 +1459,12 @@ Do you wish to recover it?</source>
         <message>
             <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.js" line="+79" />
             <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-            <translation>เลือก เส้น อาร์ก วงกลม วงรี สไปลน์ or พอลิไลน์ to break up</translation>
+            <translation>เลือกเส้น อาร์ก วงกลม วงรี สไปลน์ หรือพอลิไลน์เพื่อแยก</translation>
         </message>
         <message>
             <location line="+3" />
             <source>Choose line, arc, circle or ellipse to break up</source>
-            <translation>เลือก เส้น อาร์ก วงกลม or วงรี to break up</translation>
+            <translation>เลือกเส้น อาร์ก วงกลม หรือวงรีเพื่อแยก</translation>
         </message>
         <message>
             <location line="+10" />
@@ -1715,7 +1715,7 @@ Do you wish to recover it?</source>
         <message>
             <location line="+4" />
             <source>Draw circle from 2 points and radius</source>
-            <translation>วาด วงกลม from 2 points and รัศมี</translation>
+            <translation>วาดวงกลมจาก 2 จุดและรัศมี</translation>
         </message>
     </context>
     <context>
@@ -8548,7 +8548,7 @@ is already in the list.</source>
         <message>
             <location line="+3" />
             <source>Draw line orthogonal to base entity</source>
-            <translation>วาด เส้น orthogonal to ฐาน องค์ประกอบ</translation>
+            <translation>วาดเส้นตั้งฉากกับองค์ประกอบฐาน</translation>
         </message>
     </context>
     <context>
@@ -8698,7 +8698,7 @@ is already in the list.</source>
         <message>
             <location line="+3" />
             <source>Draw line with relative angle to base entity</source>
-            <translation>วาด เส้น with relative มุม to ฐาน องค์ประกอบ</translation>
+            <translation>วาดเส้นด้วยมุมสัมพัทธ์กับองค์ประกอบฐาน</translation>
         </message>
     </context>
     <context>
@@ -9790,12 +9790,12 @@ is already in the list.</source>
         <message>
             <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108" />
             <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-            <translation>เลือก เส้น อาร์ก วงกลม วงรี สไปลน์ or พอลิไลน์ to break up</translation>
+            <translation>เลือกเส้น อาร์ก วงกลม วงรี สไปลน์ หรือพอลิไลน์เพื่อแยก</translation>
         </message>
         <message>
             <location line="+3" />
             <source>Choose line, arc, circle or ellipse to break up</source>
-            <translation>เลือก เส้น อาร์ก วงกลม or วงรี to break up</translation>
+            <translation>เลือกเส้น อาร์ก วงกลม หรือวงรีเพื่อแยก</translation>
         </message>
         <message>
             <location line="+10" />
