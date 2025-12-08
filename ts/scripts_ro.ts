@@ -314,7 +314,7 @@ modificările preferințelor să intre în vigoare.</translation>
     <message>
         <location line="+1" />
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation>Preferințele desenului curent pot fi modificate la&lt;br/&gt;&lt;i&gt;Edit gt; Drawing Preferences&lt;/i&gt;.</translation>
+        <translation>Preferințele desenului curent pot fi modificate la&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</translation>
     </message>
 </context>
 <context>
