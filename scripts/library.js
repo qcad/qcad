@@ -3530,6 +3530,16 @@ function createValidator(rx, parent) {
     }
 }
 
+function parseXml(fileName, handler) {
+    var fi = new QFileInfo(fileName);
+    var file = new QFile(fi.absoluteFilePath());
+    var xmlReader = new QXmlSimpleReader();
+    var source = new QXmlInputSource(file);
+    xmlReader.setContentHandler(handler);
+    var ret = xmlReader.parse(source, false);
+    file.close();
+}
+
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     QPlainTextEdit.prototype.toPlainText = function() {

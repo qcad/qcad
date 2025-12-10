@@ -41,7 +41,7 @@
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation>Om enhet</translation>
+        <translation>På entitet</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -61,7 +61,7 @@
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation>Midten</translation>
+        <translation>Midtpunkt</translation>
     </message>
     <message>
         <location line="+3"/>

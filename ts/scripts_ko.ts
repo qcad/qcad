@@ -6,7 +6,7 @@
     <message>
         <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
-        <translation>약 %1</translation>
+        <translation>%1 정보</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -29,7 +29,7 @@
     <message>
         <location line="+2"/>
         <source>Revision:</source>
-        <translation>수정:</translation>
+        <translation>리비전:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -55,17 +55,17 @@
     <message>
         <location line="+5"/>
         <source>%1 is an application for computer-aided design (CAD).</source>
-        <translation>1은(는) CAD(컴퓨터 지원 설계) 응용 프로그램입니다.</translation>
+        <translation>%1은(는) CAD(컴퓨터 지원 설계) 응용 프로그램입니다.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 is based on QCAD, a free (open source) software.</source>
-        <translation>1은 무료(오픈 소스) 소프트웨어인 QCAD를 기반으로 합니다.</translation>
+        <translation>%1은 무료(오픈 소스) 소프트웨어인 QCAD를 기반으로 합니다.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 is free (open source) software.</source>
-        <translation>1은 무료(오픈 소스) 소프트웨어입니다.</translation>
+        <translation>%1은 무료(오픈 소스) 소프트웨어입니다.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1328,7 +1328,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
         <source>Widgets</source>
         <translation>위젯</translation>
     </message>
@@ -2286,7 +2286,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+144"/>
         <source>Converted drawing from %1 to %2</source>
-        <translation>1에서 %2로 변환된 도면</translation>
+        <translation>%1에서 %2로 변환된 도면</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.ui" line="+20"/>
@@ -5183,7 +5183,7 @@ is already in the list.</source>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
         <location line="+244"/>
         <source>%1 First Start</source>
-        <translation>1 첫 시작</translation>
+        <translation>%1 첫 시작</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -5203,7 +5203,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Welcome to %1</source>
-        <translation>1에 오신 것을 환영합니다</translation>
+        <translation>%1에 오신 것을 환영합니다</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6354,7 +6354,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation>1/%2 지점에서 루프가 닫히지 않았습니다.</translation>
+        <translation>%1/%2 지점에서 루프가 닫히지 않았습니다.</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -6467,7 +6467,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>Error while importing file %1</source>
-        <translation>1 파일을 가져오는 동안 오류가 발생했습니다</translation>
+        <translation>%1 파일을 가져오는 동안 오류가 발생했습니다</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -10021,7 +10021,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Exporting to %1...</source>
-        <translation>1로 내보내는 중...</translation>
+        <translation>%1로 내보내는 중...</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -11436,7 +11436,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>%1 %2 on %3 Layers</source>
-        <translation>3 레이어에 %1 %2</translation>
+        <translation>%3 레이어에 %1 %2</translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>

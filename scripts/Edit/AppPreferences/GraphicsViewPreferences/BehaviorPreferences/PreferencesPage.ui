@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>604</width>
-    <height>558</height>
+    <width>656</width>
+    <height>689</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,11 +21,11 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>602</width>
-     <height>556</height>
+     <width>654</width>
+     <height>687</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout_4">
+   <layout class="QVBoxLayout" name="verticalLayout_5">
     <item>
      <widget class="QGroupBox" name="RightClick">
       <property name="title">
@@ -307,7 +307,7 @@
        <item>
         <spacer name="horizontalSpacer">
          <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+          <enum>Qt::Orientation::Horizontal</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -321,9 +321,32 @@
      </widget>
     </item>
     <item>
+     <widget class="QGroupBox" name="groupBox_7">
+      <property name="title">
+       <string>Selection</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QCheckBox" name="PersistentSelection">
+         <property name="text">
+          <string>Persistent selection</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="EscapeClearsSelection">
+         <property name="text">
+          <string>Escape clears selection</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
      <spacer name="verticalSpacer">
       <property name="orientation">
-       <enum>Qt::Vertical</enum>
+       <enum>Qt::Orientation::Vertical</enum>
       </property>
       <property name="sizeHint" stdset="0">
        <size>

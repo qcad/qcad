@@ -896,9 +896,12 @@ the preference changes to take effect.</source>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Знайдено %n файл автозбереження для креслення без назви.
+Ви хочете його відновити?</numerusform>
+            <numerusform>Знайдено %n файли автозбереження для креслень без назви.
+Ви хочете їх відновити?</numerusform>
+            <numerusform>Знайдено %n файлів автозбереження для креслень без назви.
+Ви хочете їх відновити?</numerusform>
         </translation>
     </message>
     <message>
@@ -1329,7 +1332,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
         <source>Widgets</source>
         <translation>Віджети</translation>
     </message>
@@ -2861,9 +2864,9 @@ Do you wish to recover it?</source>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Скинуто позицію мітки для %n розміру.</numerusform>
+            <numerusform>Скинуто позиції міток для %n розмірів.</numerusform>
+            <numerusform>Скинуто позиції міток для %n розмірів.</numerusform>
         </translation>
     </message>
     <message>
@@ -4183,9 +4186,9 @@ is already in the list.</source>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Продубльовано %n об&apos;єкт</numerusform>
+            <numerusform>Продубльовано %n об&apos;єкти</numerusform>
+            <numerusform>Продубльовано %n об&apos;єктів</numerusform>
         </translation>
     </message>
     <message>
@@ -5021,9 +5024,9 @@ is already in the list.</source>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Транзакція вплинула на %n об&apos;єкт.</numerusform>
+            <numerusform>Транзакція вплинула на %n об&apos;єкти.</numerusform>
+            <numerusform>Транзакція вплинула на %n об&apos;єктів.</numerusform>
         </translation>
     </message>
     <message>
@@ -9356,18 +9359,18 @@ is already in the list.</source>
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Радіус опустився нижче 0.0 після %n концентричного кола.</numerusform>
+            <numerusform>Радіус опустився нижче 0.0 після %n концентричних кіл.</numerusform>
+            <numerusform>Радіус опустився нижче 0.0 після %n концентричних кіл.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Радіус опустився нижче 0.0 після %n концентричної дуги.</numerusform>
+            <numerusform>Радіус опустився нижче 0.0 після %n концентричних дуг.</numerusform>
+            <numerusform>Радіус опустився нижче 0.0 після %n концентричних дуг.</numerusform>
         </translation>
     </message>
     <message>
@@ -11453,18 +11456,18 @@ is already in the list.</source>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n об&apos;єкт на шарі &quot;%1&quot;</numerusform>
+            <numerusform>%n об&apos;єкти на шарі &quot;%1&quot;</numerusform>
+            <numerusform>%n об&apos;єктів на шарі &quot;%1&quot;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n об&apos;єкт</numerusform>
+            <numerusform>%n об&apos;єкти</numerusform>
+            <numerusform>%n об&apos;єктів</numerusform>
         </translation>
     </message>
     <message>
@@ -11476,9 +11479,9 @@ is already in the list.</source>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n шар</numerusform>
+            <numerusform>%n шари</numerusform>
+            <numerusform>%n шарів</numerusform>
         </translation>
     </message>
     <message>

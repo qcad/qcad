@@ -36,12 +36,12 @@
     <message>
         <location line="+3"/>
         <source>End</source>
-        <translation>Край на</translation>
+        <translation>Крайна точка</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation>За субекта</translation>
+        <translation>Върху обект</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -61,12 +61,12 @@
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation>Среден</translation>
+        <translation>Средна точка</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Intersection</source>
-        <translation>Кръстовище</translation>
+        <translation>Пресечна точка</translation>
     </message>
     <message>
         <location line="+3"/>

@@ -36,12 +36,12 @@
     <message>
         <location line="+3"/>
         <source>End</source>
-        <translation>Τέλος</translation>
+        <translation>Άκρο</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation>Στην οντότητα</translation>
+        <translation>Σε οντότητα</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -61,7 +61,7 @@
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation>Μέση</translation>
+        <translation>Μέσο</translation>
     </message>
     <message>
         <location line="+3"/>

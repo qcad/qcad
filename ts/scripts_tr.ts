@@ -896,7 +896,8 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation>
-            <numerusform></numerusform>
+            <numerusform>İsimsiz çizim(ler) için %n otomatik kayıt yedekleme dosyası bulundu.
+Kurtarmak ister misiniz?</numerusform>
         </translation>
     </message>
     <message>
@@ -1327,7 +1328,7 @@ Kurtarmak ister misiniz?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
         <source>Widgets</source>
         <translation>Widgetler</translation>
     </message>
@@ -5015,7 +5016,7 @@ zaten listede.</translation>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation>
-            <numerusform></numerusform>
+            <numerusform>İşlem %n nesneyi etkiledi.</numerusform>
         </translation>
     </message>
     <message>
@@ -9348,14 +9349,14 @@ zaten listede.</translation>
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
-            <numerusform></numerusform>
+            <numerusform>%n eşmerkezli daire sonrası yarıçap 0.0&apos;ın altına düştü.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation>
-            <numerusform></numerusform>
+            <numerusform>%n eşmerkezli yay sonrası yarıçap 0.0&apos;ın altına düştü.</numerusform>
         </translation>
     </message>
     <message>
@@ -11441,14 +11442,14 @@ zaten listede.</translation>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation>
-            <numerusform></numerusform>
+            <numerusform>&quot;%1&quot; Katmanında %n Nesne</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation>
-            <numerusform></numerusform>
+            <numerusform>%n Nesne</numerusform>
         </translation>
     </message>
     <message>
@@ -11460,7 +11461,7 @@ zaten listede.</translation>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation>
-            <numerusform></numerusform>
+            <numerusform>%n Katman</numerusform>
         </translation>
     </message>
     <message>

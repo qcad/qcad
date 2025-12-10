@@ -24,7 +24,7 @@
     <message>
         <location line="-164"/>
         <source>Build Date:</source>
-        <translation>Būvniecības datums:</translation>
+        <translation>Kompilācijas datums:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -45,7 +45,7 @@
     <message>
         <location line="+2"/>
         <source>Compiler:</source>
-        <translation>Sastādītājs:</translation>
+        <translation>Kompilators:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1329,7 +1329,7 @@ Vai vēlaties to atjaunot?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
         <source>Widgets</source>
         <translation>Logrīki</translation>
     </message>

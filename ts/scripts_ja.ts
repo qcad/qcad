@@ -1328,7 +1328,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
         <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -11312,12 +11312,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
-        <translation>1 つのエンティティが選択に追加されました。</translation>
+        <translation>%1 個のエンティティが選択に追加されました。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
-        <translation>1 つのエンティティが選択から削除されました。</translation>
+        <translation>%1 個のエンティティが選択から削除されました。</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>

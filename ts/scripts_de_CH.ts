@@ -1330,7 +1330,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
         <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>

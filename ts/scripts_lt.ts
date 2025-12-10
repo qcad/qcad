@@ -45,7 +45,7 @@
     <message>
         <location line="+2"/>
         <source>Compiler:</source>
-        <translation>Sudarytojas:</translation>
+        <translation>Kompiliatorius:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1329,7 +1329,7 @@ Ar norite jį atkurti?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
         <source>Widgets</source>
         <translation>Valdikliai</translation>
     </message>

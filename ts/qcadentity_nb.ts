@@ -219,7 +219,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Midten</translation>
+        <translation>Midtpunkt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -289,7 +289,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <source>Area</source>
-        <translation>Område</translation>
+        <translation>Areal</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -637,7 +637,7 @@
     <message>
         <location line="+1"/>
         <source>From Entity</source>
-        <translation>Fra enhet</translation>
+        <translation>Fra entitet</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -41,7 +41,7 @@
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation>Objekt</translation>
+        <translation>Na objektu</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -61,7 +61,7 @@
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation>Uprostřed</translation>
+        <translation>Střední bod</translation>
     </message>
     <message>
         <location line="+3"/>

@@ -1332,7 +1332,7 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+614"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>
@@ -12350,7 +12350,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation>Súbory SVG% 1</translation>
+        <translation>Súbory SVG %1</translation>
     </message>
 </context>
 <context>
