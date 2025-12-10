@@ -29,5 +29,6 @@ BehaviorPreferences.initPreferences = function(pageWidget, calledByPrefDialog, d
 
     if (!hasPlugin("PROTOOLS")) {
         widgets["DoubleClickEditBlockInPlace"].visible = false;
+        widgets["EscapeClearsSelection"].visible = false;
     }
 };
