@@ -1108,6 +1108,21 @@ PrintPreviewImpl.prototype.slotAutoZoomToPage = function() {
  * are changed (e.g. offset).
  */
 PrintPreviewImpl.prototype.updateFromPreferences = function() {
+    // 20261212: only if document is current document:
+    // signal is triggered for all documents:
+    var currentDoc = EAction.getDocument();
+    var thisDoc = this.getDocument();
+    if (RSettings.getQtVersion()>=0x060000) {
+        if (currentDoc.__PROXY__.getAddress()!==thisDoc.__PROXY__.getAddress()) {
+            return;
+        }
+    }
+    else {
+        if (currentDoc.toString()!==thisDoc.toString()) {
+            return;
+        }
+    }
+
     this.showUiOptions(true);
     this.updateBackgroundDecoration();
     this.updateBackgroundTransform();

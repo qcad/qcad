@@ -440,6 +440,43 @@ function addSimpleText(text, position, height, angle, font, vAlign, hAlign, bold
 }
 
 /**
+ * Adds a solid (filled quadrilateral or triangle) to the drawing.
+ * \ingroup ecma_simple
+ *
+ * \code
+ * addSolid(x1,y1, x2,y2, x3,y3, x4,y4)
+ * addSolid([x1,y1], [x2,y2], [x3,y3], [x4,y4])
+ * addSolid(new RVector(x1,y1), new RVector(x2,y2), new RVector(x3,y3), new RVector(x4,y4))
+ * \endcode
+ */
+function addSolid(p1, p2, p3, p4) {
+    if (arguments.length===8) {
+        return addSolid(new RVector(arguments[0], arguments[1]), new RVector(arguments[2], arguments[3]), new RVector(arguments[4], arguments[5]), new RVector(arguments[6], arguments[7]));
+    }
+
+    if (isArray(p1)) {
+        p1 = new RVector(p1);
+    }
+    if (isArray(p2)) {
+        p2 = new RVector(p2);
+    }
+    if (isArray(p3)) {
+        p3 = new RVector(p3);
+    }
+    if (isArray(p4)) {
+        p4 = new RVector(p4);
+    }
+
+    var doc = getTransactionDocument();
+    if (isNull(doc)) {
+        return undefined;
+    }
+
+    var entity = new RSolidEntity(doc, new RSolidData(p1, p2, p3, p4));
+    return addEntity(entity);
+}
+
+/**
  * Adds the given RShapes to the drawing as new entities using current layer and attributes.
  * \ingroup ecma_simple
  *
@@ -471,9 +508,28 @@ function addShape(shape, color, linetype, lineweight) {
     }
 
     var entity = shapeToEntity(doc, shape);
+
+    return addEntity(entity, color, linetype, lineweight);
+}
+
+/**
+ * Adds the given REntity to the drawing using layer and attributes as set by the entity.
+ * \ingroup ecma_simple
+ *
+ * \return The added entity. The entity does not yet have a valid ID if it was added within a
+ * transaction.
+ */
+function addEntity(entity, color, linetype, lineweight) {
     if (!isNull(color)) {
         entity.setColor(color);
     }
+    else {
+        var doc = getTransactionDocument();
+        if (!isNull(doc)) {
+            entity.setColor(doc.getCurrentColor());
+        }
+    }
+
     if (isNumber(linetype)) {
         entity.setLinetypeId(linetype);
     }
@@ -484,17 +540,6 @@ function addShape(shape, color, linetype, lineweight) {
         entity.setLineweight(lineweight);
     }
 
-    return addEntity(entity);
-}
-
-/**
- * Adds the given REntity to the drawing using layer and attributes as set by the entity.
- * \ingroup ecma_simple
- *
- * \return The added entity. The entity does not yet have a valid ID if it was added within a
- * transaction.
- */
-function addEntity(entity) {
     return addObject(entity);
 }
 
