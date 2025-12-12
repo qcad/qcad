@@ -55,7 +55,7 @@
    <item row="12" column="0" colspan="2">
     <spacer name="verticalSpacer">
      <property name="orientation">
-      <enum>Qt::Vertical</enum>
+      <enum>Qt::Orientation::Vertical</enum>
      </property>
      <property name="sizeHint" stdset="0">
       <size>
@@ -99,11 +99,26 @@
       <bool>true</bool>
      </property>
      <property name="currentText">
-      <string notr="true">2000</string>
+      <string notr="true">100</string>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>2</number>
      </property>
+     <item>
+      <property name="text">
+       <string notr="true">1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">10</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">100</string>
+      </property>
+     </item>
      <item>
       <property name="text">
        <string notr="true">1000</string>

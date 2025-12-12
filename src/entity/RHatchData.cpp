@@ -1384,6 +1384,23 @@ int RHatchData::getComplexity() const {
     int total = 0;
     for (int i=0; i<boundary.length(); i++) {
         total += boundary[i].length();
+        for (int k=0; k<boundary[i].length(); k++) {
+            if (!boundary[i][k].isNull()) {
+                if (boundary[i][k]->getShapeType()==RShape::Polyline) {
+                    QSharedPointer<RPolyline> pl = boundary[i][k].dynamicCast<RPolyline>();
+                    total += pl->countVertices();
+                }
+                if (boundary[i][k]->getShapeType()==RShape::Spline) {
+                    QSharedPointer<RSpline> sp = boundary[i][k].dynamicCast<RSpline>();
+                    if (sp->hasFitPoints()) {
+                        total += sp->countFitPoints();
+                    }
+                    else {
+                        total += sp->countControlPoints();
+                    }
+                }
+            }
+        }
     }
     return total;
 }

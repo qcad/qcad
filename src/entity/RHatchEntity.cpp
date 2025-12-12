@@ -386,7 +386,7 @@ QPair<QVariant, RPropertyAttributes> RHatchEntity::getProperty(
     // human readable properties (not relevant for transactions):
     if (humanReadable) {
         if (propertyTypeId == PropertyLength) {
-            int maxComplexity = RSettings::getIntValue("PropertyEditor/MaxHatchComplexityForAutoLength", 2000);
+            int maxComplexity = RSettings::getIntValue("PropertyEditor/MaxHatchComplexityForAutoLength", 100);
             if (getComplexity()>maxComplexity) {
                 if (showOnRequest) {
                     QVariant v;
