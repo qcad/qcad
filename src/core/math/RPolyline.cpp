@@ -1315,9 +1315,6 @@ bool RPolyline::contains(const RVector& point, bool borderIsInside, double toler
     if (hasArcSegments()) {
         if (RPolyline::hasProxy()) {
             bool ret = RPolyline::getPolylineProxy()->contains(*this, point, borderIsInside, tolerance);
-            qDebug("pl:");
-            dump();
-            qDebug() << "point: " << point.x << " / " << point.y;
             return ret;
         }
         else {
