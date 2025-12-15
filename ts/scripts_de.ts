@@ -13278,7 +13278,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
-        <translation>Diese Einstellungen beeinflussen die Auflösung und die Skalierung der QCAD Benutzeroberfläche. Diese Einstellungen können angepasst werden, wenn es Probleme mit der Benutzeroberfläche von QCAD gibt, wie z.B. sehr grosse oder sehr kleine Icons oder Textbeschriftungen.</translation>
+        <translation>Diese Einstellungen beeinflussen die Auflösung und die Skalierung der QCAD Benutzeroberfläche. Diese Einstellungen können angepasst werden, wenn es Probleme mit der Benutzeroberfläche von QCAD gibt, wie z.B. sehr große oder sehr kleine Icons oder Textbeschriftungen.</translation>
     </message>
     <message>
         <location line="+17"/>
