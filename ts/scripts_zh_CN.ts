@@ -5760,7 +5760,12 @@ is already in the list.</source>
         <translation>突出显示（和提升）范围内的图像</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-102"/>
         <source>Highlight entity within range</source>
         <translation>突出显示范围内的实体</translation>
     </message>
@@ -5935,12 +5940,13 @@ is already in the list.</source>
         <translation>线型图案中的点长度：</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+95"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+47"/>
         <source>Persistent selection</source>
         <translation>持续性的选择</translation>
     </message>
     <message>
-        <location line="-766"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-766"/>
         <source>Number of preview entities:</source>
         <translation>预览实体的数量：</translation>
     </message>
@@ -6000,7 +6006,8 @@ is already in the list.</source>
         <translation>最复杂的高质量固体填充：</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="-6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+143"/>
         <source>Selection</source>
         <translation>选择</translation>
     </message>
@@ -10282,17 +10289,17 @@ is already in the list.</source>
         <translation>始终将属性值格式化为十进制数字</translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+128"/>
         <source>Only update when nothing changes during update delay</source>
         <translation>只有在更新延迟期间无变化时才更新</translation>
     </message>
     <message>
-        <location line="-154"/>
+        <location line="-169"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation>显示的属性值的小数/精度：</translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+116"/>
         <source>Display advanced dimension style overrides</source>
         <translation>显示高级尺寸样式覆盖</translation>
     </message>

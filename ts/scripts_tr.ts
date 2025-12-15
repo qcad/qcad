@@ -5760,7 +5760,12 @@ zaten listede.</translation>
         <translation>Menzil içindeki görüntüleri vurgulayın (ve yükseltin)</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-102"/>
         <source>Highlight entity within range</source>
         <translation>Menzil içindeki varlığı vurgulayın</translation>
     </message>
@@ -5915,12 +5920,13 @@ zaten listede.</translation>
         <translation>Çizgi desenlerinde nokta uzunluğu:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+95"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+47"/>
         <source>Persistent selection</source>
         <translation>Kalıcı seçim</translation>
     </message>
     <message>
-        <location line="-766"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-766"/>
         <source>Number of preview entities:</source>
         <translation>Önizleme varlıklarının sayısı:</translation>
     </message>
@@ -5980,7 +5986,8 @@ zaten listede.</translation>
         <translation>Yüksek kalitede katı dolgular için maksimum karmaşıklık:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="-6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+143"/>
         <source>Selection</source>
         <translation>Seçim</translation>
     </message>
@@ -10190,17 +10197,17 @@ zaten listede.</translation>
         <translation>Özellik değerlerini her zaman ondalık sayı olarak biçimlendirin</translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+128"/>
         <source>Only update when nothing changes during update delay</source>
         <translation>Yalnızca güncelleme gecikmesi sırasında hiçbir şey değişmediğinde güncelleyin</translation>
     </message>
     <message>
-        <location line="-154"/>
+        <location line="-169"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation>Görüntülenen özellik değerleri için ondalıklar / hassasiyet:</translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+116"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Gelişmiş boyut stili geçersiz kılmalarını görüntüleme</translation>
     </message>

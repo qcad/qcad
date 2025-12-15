@@ -5760,7 +5760,12 @@ is already in the list.</source>
         <translation>범위 내 이미지 강조 표시(및 올리기)</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-102"/>
         <source>Highlight entity within range</source>
         <translation>범위 내 엔티티 강조 표시</translation>
     </message>
@@ -5995,12 +6000,14 @@ is already in the list.</source>
         <translation>선 패턴의 점 길이:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+89"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+41"/>
         <source>Selection</source>
         <translation>선택</translation>
     </message>
     <message>
         <location line="+6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+6"/>
         <source>Persistent selection</source>
         <translation>영구 선택</translation>
     </message>
@@ -10185,7 +10192,7 @@ is already in the list.</source>
         <translation>항상 모든 속성을 표시합니다(이렇게 하면 엔티티 선택 속도가 느려질 수 있음)</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+89"/>
         <source>Display advanced dimension style overrides</source>
         <translation>고급 차원 스타일 재정의 표시</translation>
     </message>
@@ -10195,7 +10202,7 @@ is already in the list.</source>
         <translation>업데이트 지연 중 변경 사항이 없는 경우에만 업데이트</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-128"/>
         <source>Always format property values as decimal numbers</source>
         <translation>속성 값의 형식은 항상 십진수로 지정</translation>
     </message>

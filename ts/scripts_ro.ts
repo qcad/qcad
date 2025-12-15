@@ -5770,7 +5770,12 @@ este deja în listă.</translation>
         <translation>Evidențiați (și ridicați) imaginile din raza de acțiune</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-102"/>
         <source>Highlight entity within range</source>
         <translation>Evidențiați entitatea din raza de acțiune</translation>
     </message>
@@ -6005,12 +6010,14 @@ este deja în listă.</translation>
         <translation>Lungime punct în modelele de linie:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+89"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+41"/>
         <source>Selection</source>
         <translation>Selecție</translation>
     </message>
     <message>
         <location line="+6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+6"/>
         <source>Persistent selection</source>
         <translation>Selecție persistentă</translation>
     </message>
@@ -10199,7 +10206,7 @@ este deja în listă.</translation>
         <translation>Afișați întotdeauna toate proprietățile (acest lucru poate încetini selecția entităților)</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+89"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Afișarea suprascrierilor avansate ale stilului dimensiunilor</translation>
     </message>
@@ -10209,7 +10216,7 @@ este deja în listă.</translation>
         <translation>Actualizați numai atunci când nimic nu se schimbă în timpul întârzierii actualizării</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-128"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Formatați întotdeauna valorile proprietăților ca numere zecimale</translation>
     </message>

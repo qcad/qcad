@@ -5770,7 +5770,12 @@ is already in the list.</source>
         <translation>Виділення (і підняття) зображень у межах діапазону</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-102"/>
         <source>Highlight entity within range</source>
         <translation>Виділити об&apos;єкт в межах діапазону</translation>
     </message>
@@ -6005,12 +6010,14 @@ is already in the list.</source>
         <translation>Довжина точки в лінійних шаблонах:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+89"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+41"/>
         <source>Selection</source>
         <translation>Відбір</translation>
     </message>
     <message>
         <location line="+6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+6"/>
         <source>Persistent selection</source>
         <translation>Наполегливий відбір</translation>
     </message>
@@ -10199,7 +10206,7 @@ is already in the list.</source>
         <translation>Завжди показувати всі властивості (це може уповільнити відбір об&apos;єктів)</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+89"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Відображення розширених перевизначень стилів розмірів</translation>
     </message>
@@ -10209,7 +10216,7 @@ is already in the list.</source>
         <translation>Оновлюйте лише тоді, коли під час затримки оновлення нічого не зміниться</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-128"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Завжди форматуйте значення властивостей у вигляді десяткових чисел</translation>
     </message>

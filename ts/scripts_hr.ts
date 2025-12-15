@@ -2189,7 +2189,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Coordinates may be entered as: &quot;%1&quot; (absolute) or &quot;%2&quot; (relative) or &quot;%3&quot; (polar) or &quot;%4&quot; (relative polar)</source>
-        <translation></translation>
+        <translation>Koordinate se mogu unijeti kao: &quot;%1&quot; (apsolutne) ili &quot;%2&quot; (relativne) ili &quot;%3&quot; (polarne) ili &quot;%4&quot; (relativne polarne)</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2865,9 +2865,9 @@ Do you wish to recover it?</source>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Položaj oznake za %n dimenziju je resetiran.</numerusform>
+            <numerusform>Položaj oznake za %n dimenzije je resetiran.</numerusform>
+            <numerusform>Položaj oznake za %n dimenzija je resetiran.</numerusform>
         </translation>
     </message>
     <message>
@@ -3035,7 +3035,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+9"/>
         <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
-        <translation></translation>
+        <translation>Mjerilo za nove dimenzije nije 1:1. Oznake dimenzija pokazat će vrijednosti koje se razlikuju od izmjerene vrijednosti na crtežu. Faktor razmjera možete ispraviti na alatnoj traci opcija na vrhu.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3084,7 +3084,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
-        <translation></translation>
+        <translation>Jedinica crteža mora biti &quot;inč&quot; za prikaz oznaka dimenzija u formatima &quot;Arhitektonski&quot; ili &quot;Inženjerski&quot;. Format je promijenjen u &quot;Decimalni&quot;.</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
@@ -5771,7 +5771,12 @@ večpostoji na popisu.</translation>
         <translation></translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-102"/>
         <source>Highlight entity within range</source>
         <translation></translation>
     </message>
@@ -5946,12 +5951,13 @@ večpostoji na popisu.</translation>
         <translation></translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+95"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+47"/>
         <source>Persistent selection</source>
         <translation></translation>
     </message>
     <message>
-        <location line="-766"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-766"/>
         <source>Number of preview entities:</source>
         <translation></translation>
     </message>
@@ -6011,7 +6017,8 @@ večpostoji na popisu.</translation>
         <translation></translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="-6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+143"/>
         <source>Selection</source>
         <translation>Odabir</translation>
     </message>
@@ -10297,17 +10304,17 @@ večpostoji na popisu.</translation>
         <translation></translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+128"/>
         <source>Only update when nothing changes during update delay</source>
         <translation></translation>
     </message>
     <message>
-        <location line="-154"/>
+        <location line="-169"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation></translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+116"/>
         <source>Display advanced dimension style overrides</source>
         <translation></translation>
     </message>

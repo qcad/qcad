@@ -5740,7 +5740,12 @@ est déjà dans la liste.</translation>
         <translation>Mettre en évidence (et augmenter) les images dans la gamme</translation>
     </message>
     <message>
-        <location line="-269"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-307"/>
         <source>Right-Click</source>
         <translation>Clic-droit</translation>
     </message>
@@ -5905,12 +5910,13 @@ est déjà dans la liste.</translation>
         <translation>Seuil de hauteur du texte (px):</translation>
     </message>
     <message>
-        <location line="+221"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+102"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+221"/>
         <source>Persistent selection</source>
         <translation>Sélection persistante</translation>
     </message>
     <message>
-        <location line="-1082"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1082"/>
         <source>Color lightness threshold:</source>
         <translation>Seuil de couleur :</translation>
     </message>
@@ -6005,7 +6011,8 @@ est déjà dans la liste.</translation>
         <translation>Longueur des points dans les motifs de lignes :</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="-6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+41"/>
         <source>Selection</source>
         <translation>Sélection</translation>
     </message>
@@ -10319,17 +10326,17 @@ est déjà dans la liste.</translation>
         <translation>Toujours formater les valeurs des propriétés sous forme de nombres décimaux</translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+128"/>
         <source>Only update when nothing changes during update delay</source>
         <translation>Ne mettre à jour que si rien ne change pendant le délai de mise à jour</translation>
     </message>
     <message>
-        <location line="-154"/>
+        <location line="-169"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation>Décimales / précision pour les valeurs de propriété affichées :</translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+116"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Afficher les remplacements de style de cote avancés</translation>
     </message>

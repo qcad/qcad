@@ -5760,7 +5760,12 @@ on jo luettelossa.</translation>
         <translation>Korosta (ja nosta) kuvia kantaman sisällä</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-102"/>
         <source>Highlight entity within range</source>
         <translation>Korosta alueen sisällä oleva kokonaisuus</translation>
     </message>
@@ -5920,12 +5925,13 @@ on jo luettelossa.</translation>
         <translation>Pisteen pituus viivamalleissa:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+102"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+47"/>
         <source>Persistent selection</source>
         <translation>Pysyvä valinta</translation>
     </message>
     <message>
-        <location line="-864"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-864"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
@@ -6005,7 +6011,8 @@ on jo luettelossa.</translation>
         <translation>Maksimaalinen monimutkaisuus kiinteitä täytteitä varten korkealla laadulla:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="-6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+143"/>
         <source>Selection</source>
         <translation>Valinta</translation>
     </message>
@@ -10197,17 +10204,17 @@ on jo luettelossa.</translation>
         <translation>Muotoile ominaisuuksien arvot aina desimaalilukuina</translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+128"/>
         <source>Only update when nothing changes during update delay</source>
         <translation>Päivitä vain, kun mikään ei muutu päivitysviiveen aikana</translation>
     </message>
     <message>
-        <location line="-154"/>
+        <location line="-169"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation>Näytettävien ominaisuuksien arvojen desimaalit / tarkkuus:</translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+116"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Näytä laajennetun ulottuvuuden tyylin ohitukset</translation>
     </message>

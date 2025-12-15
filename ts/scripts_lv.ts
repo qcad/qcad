@@ -5767,7 +5767,12 @@ jau ir sarakstā.</translation>
         <translation>Izcelt (un paaugstināt) attēlus diapazonā</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-102"/>
         <source>Highlight entity within range</source>
         <translation>Izcelt objektu diapazonā</translation>
     </message>
@@ -6002,12 +6007,14 @@ jau ir sarakstā.</translation>
         <translation>Punkta garums līniju rakstos:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+89"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+41"/>
         <source>Selection</source>
         <translation>Atlase</translation>
     </message>
     <message>
         <location line="+6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+6"/>
         <source>Persistent selection</source>
         <translation>Pastāvīgā atlase</translation>
     </message>
@@ -10196,7 +10203,7 @@ jau ir sarakstā.</translation>
         <translation>Vienmēr parādīt visas īpašības (tas var palēnināt vienību atlasi)</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+89"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Rādīt uzlaboto dimensiju stila pārspīlējumus</translation>
     </message>
@@ -10206,7 +10213,7 @@ jau ir sarakstā.</translation>
         <translation>Atjaunināt tikai tad, ja atjaunināšanas kavēšanās laikā nekas nemainās</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-128"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Vienmēr formatējiet īpašību vērtības kā decimālskaitļus</translation>
     </message>

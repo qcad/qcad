@@ -5765,7 +5765,12 @@ is already in the list.</translation>
         <translation>Highlight (and raise) images within range</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-102"/>
         <source>Highlight entity within range</source>
         <translation>Highlight entity within range</translation>
     </message>
@@ -5930,12 +5935,13 @@ is already in the list.</translation>
         <translation>Maximum complexity for solid fills at high quality:</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+95"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+149"/>
         <source>Persistent selection</source>
         <translation>Persistent selection</translation>
     </message>
     <message>
-        <location line="-990"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-990"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatically use screen based linetypes in model view</translation>
     </message>
@@ -6005,7 +6011,8 @@ is already in the list.</translation>
         <translation>Dot length in line patterns:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="-6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+41"/>
         <source>Selection</source>
         <translation>Selection</translation>
     </message>
@@ -10197,17 +10204,17 @@ is already in the list.</translation>
         <translation>Always format property values as decimal numbers</translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+128"/>
         <source>Only update when nothing changes during update delay</source>
         <translation>Only update when nothing changes during update delay</translation>
     </message>
     <message>
-        <location line="-154"/>
+        <location line="-169"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation>Decimals / precision for displayed property values:</translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+116"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Display advanced dimension style overrides</translation>
     </message>

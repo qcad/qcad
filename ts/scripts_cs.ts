@@ -5763,7 +5763,12 @@ již v seznamu je.</translation>
         <translation>Zvýraznění (a zvednutí) obrázků v dosahu</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-102"/>
         <source>Highlight entity within range</source>
         <translation>Zvýraznit prvek v dosahu</translation>
     </message>
@@ -5908,12 +5913,13 @@ již v seznamu je.</translation>
         <translation>Délka tečky ve vzorech čar:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+102"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+47"/>
         <source>Persistent selection</source>
         <translation>Trvalý výběr</translation>
     </message>
     <message>
-        <location line="-1082"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1082"/>
         <source>Color lightness threshold:</source>
         <translation>Prahová hodnota světla barvy:</translation>
     </message>
@@ -6008,7 +6014,8 @@ již v seznamu je.</translation>
         <translation>Maximální složitost pro pevné výplně ve vysoké kvalitě:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="-6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+143"/>
         <source>Selection</source>
         <translation>Výběr</translation>
     </message>
@@ -10202,17 +10209,17 @@ již v seznamu je.</translation>
         <translation>Hodnoty vlastností vždy formátovat jako desetinná čísla</translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+128"/>
         <source>Only update when nothing changes during update delay</source>
         <translation>Aktualizovat pouze tehdy, když se během prodlevy aktualizace nic nezmění</translation>
     </message>
     <message>
-        <location line="-154"/>
+        <location line="-169"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation>Desetinná místa / přesnost pro zobrazené hodnoty vlastností:</translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+116"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Zobrazení rozšířených předvoleb stylů rozměrů</translation>
     </message>

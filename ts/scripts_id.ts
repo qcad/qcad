@@ -5760,7 +5760,12 @@ sudah ada dalam daftar.</translation>
         <translation>Menyorot (dan membesarkan) gambar dalam jangkauan</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-102"/>
         <source>Highlight entity within range</source>
         <translation>Menyorot entitas dalam jangkauan</translation>
     </message>
@@ -5995,12 +6000,14 @@ sudah ada dalam daftar.</translation>
         <translation>Panjang titik dalam pola garis:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+89"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+41"/>
         <source>Selection</source>
         <translation>Seleksi</translation>
     </message>
     <message>
         <location line="+6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+6"/>
         <source>Persistent selection</source>
         <translation>Seleksi yang gigih</translation>
     </message>
@@ -10185,7 +10192,7 @@ sudah ada dalam daftar.</translation>
         <translation>Selalu tampilkan semua properti (hal ini dapat memperlambat pemilihan entitas)</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+89"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Menampilkan penggantian gaya dimensi lanjutan</translation>
     </message>
@@ -10195,7 +10202,7 @@ sudah ada dalam daftar.</translation>
         <translation>Hanya perbarui jika tidak ada perubahan selama penundaan pembaruan</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-128"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Selalu memformat nilai properti sebagai angka desimal</translation>
     </message>

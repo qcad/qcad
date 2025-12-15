@@ -5765,7 +5765,12 @@ is already in the list.</source>
         <translation>Подчертаване (и повдигане) на изображения в обхвата</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-102"/>
         <source>Highlight entity within range</source>
         <translation>Подчертаване на обект в обхвата</translation>
     </message>
@@ -6000,12 +6005,14 @@ is already in the list.</source>
         <translation>Дължина на точката в линейни шаблони:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+89"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+41"/>
         <source>Selection</source>
         <translation>Избор</translation>
     </message>
     <message>
         <location line="+6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+6"/>
         <source>Persistent selection</source>
         <translation>Постоянна селекция</translation>
     </message>
@@ -10192,7 +10199,7 @@ is already in the list.</source>
         <translation>Винаги показвайте всички свойства (това може да забави избора на обекти)</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+89"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Показване на разширени пренастройки на стила на измеренията</translation>
     </message>
@@ -10202,7 +10209,7 @@ is already in the list.</source>
         <translation>Актуализирайте само когато нищо не се промени по време на забавянето на актуализирането</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-128"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Винаги форматирайте стойностите на свойствата като десетични числа</translation>
     </message>
