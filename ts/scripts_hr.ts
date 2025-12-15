@@ -3823,7 +3823,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="-21" />
         <source>Radius too small.</source>
-        <translation />
+        <translation>Radius too small.</translation>
     </message>
     <message>
         <location line="+98" />
@@ -3842,19 +3842,19 @@ večpostoji na popisu.</translation>
         <location line="-97" />
         <location line="+33" />
         <source>Equal positions 1-4.</source>
-        <translation />
+        <translation>Equal positions 1-4.</translation>
     </message>
     <message>
         <location line="-32" />
         <location line="+33" />
         <source>Equal positions 2-4.</source>
-        <translation />
+        <translation>Equal positions 2-4.</translation>
     </message>
     <message>
         <location line="-32" />
         <location line="+33" />
         <source>Equal positions 3-4.</source>
-        <translation />
+        <translation>Equal positions 3-4.</translation>
     </message>
     <message>
         <location line="+19" />
@@ -3874,7 +3874,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+28" />
         <source>Polygon: less than 5 references.</source>
-        <translation />
+        <translation>Polygon: less than 5 references.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -3887,7 +3887,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="-61" />
         <source>Polyline, less than 2 references.</source>
-        <translation />
+        <translation>Polyline, less than 2 references.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -3897,7 +3897,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+18" />
         <source>Unsupported QCAD Professional feature.</source>
-        <translation />
+        <translation>Unsupported QCAD Professional feature.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -3947,127 +3947,127 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+37" />
         <source>Unsupported method. Text line: %1</source>
-        <translation />
+        <translation>Unsupported method. Text line: %1</translation>
     </message>
     <message>
         <location line="+19" />
         <source>Error with first optional list.</source>
-        <translation />
+        <translation>Error with first optional list.</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Error with second optional list.</source>
-        <translation />
+        <translation>Error with second optional list.</translation>
     </message>
     <message>
         <location line="+43" />
         <source>Not a correct entry, ignored. Text line: %1 &gt; %2</source>
-        <translation />
+        <translation>Not a correct entry, ignored. Text line: %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+80" />
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation />
+        <translation>Casted entries: %1 out of %2 text lines</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Nothing casted.</source>
-        <translation />
+        <translation>Nothing casted.</translation>
     </message>
     <message>
         <location line="+227" />
         <source>Attributes empty. Text line: %1</source>
-        <translation />
+        <translation>Attributes empty. Text line: %1</translation>
     </message>
     <message>
         <location line="+24" />
         <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
-        <translation />
+        <translation>Not a correct layer name, ignored. Text line: %1%2 Name: %3</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Layer doesn't exist, ignored. Text line: %1%2 Layer: %3</source>
-        <translation />
+        <translation>Layer doesn't exist, ignored. Text line: %1%2 Layer: %3</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Not a correct color, ignored. Text line: %1%2 Color: %3</source>
-        <translation />
+        <translation>Not a correct color, ignored. Text line: %1%2 Color: %3</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation />
+        <translation>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
-        <translation />
+        <translation>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation />
+        <translation>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Unsupported attribute, ignored. Text line: %1 &gt; %2</source>
-        <translation />
+        <translation>Unsupported attribute, ignored. Text line: %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+48" />
         <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
-        <translation />
+        <translation>Not a correct layer name. Text line: %1%2 Name: %3</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Parent layer doesn't exist. Text line: %1%2 Layer: %3</source>
-        <translation />
+        <translation>Parent layer doesn't exist. Text line: %1%2 Layer: %3</translation>
     </message>
     <message>
         <location line="+31" />
         <source>Not a correct color. Text line: %1%2 Color: %3</source>
-        <translation />
+        <translation>Not a correct color. Text line: %1%2 Color: %3</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation />
+        <translation>Not a correct Lineweight. Text line: %1%2 Weight: %3</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
-        <translation />
+        <translation>Not a correct Linetype. Text line: %1%2 Type: %3</translation>
     </message>
     <message>
         <location line="+18" />
         <source>Add/Update layer ignored.</source>
-        <translation />
+        <translation>Add/Update layer ignored.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Updated layer: %1</source>
-        <translation />
+        <translation>Updated layer: %1</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Added new layer: %1</source>
-        <translation />
+        <translation>Added new layer: %1</translation>
     </message>
     <message>
         <location line="-447" />
         <source>Importing CSV complete. Command ended.</source>
-        <translation />
+        <translation>Importing CSV complete. Command ended.</translation>
     </message>
     <message>
         <location line="+46" />
         <source>Draw from CSV</source>
-        <translation />
+        <translation>Draw from CSV</translation>
     </message>
     <message>
         <location line="+2" />
         <source>CSV</source>
-        <translation />
+        <translation>CSV</translation>
     </message>
     <message>
         <location line="+0" />
@@ -4082,7 +4082,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+6" />
         <source>Draws entities based on textual entries in a CSV file</source>
-        <translation />
+        <translation>Draws entities based on textual entries in a CSV file</translation>
     </message>
 </context>
 <context>
@@ -4095,7 +4095,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+12" />
         <source>Draw Order</source>
-        <translation />
+        <translation>Draw Order</translation>
     </message>
 </context>
 <context>
@@ -4138,7 +4138,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Draw polyline with line and arc segments</source>
-        <translation />
+        <translation>Draw polyline with line and arc segments</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.ui" line="+23" />
@@ -4176,7 +4176,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43" />
         <source>Drawing &amp;Preferences</source>
-        <translation />
+        <translation>Drawing &amp;Preferences</translation>
     </message>
 </context>
 <context>
@@ -4200,7 +4200,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/EAction.js" line="+64" />
         <source>Back</source>
-        <translation />
+        <translation>Back</translation>
     </message>
     <message>
         <location line="+1" />
@@ -4232,27 +4232,27 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+28" />
         <source>Main Tools</source>
-        <translation />
+        <translation>Main Tools</translation>
     </message>
     <message>
         <location line="+21" />
         <source>CAD Tools</source>
-        <translation />
+        <translation>CAD Tools</translation>
     </message>
     <message>
         <location line="+578" />
         <source>Invalid position</source>
-        <translation />
+        <translation>Invalid position</translation>
     </message>
     <message>
         <location line="+175" />
         <source>Entity is not in working set.</source>
-        <translation />
+        <translation>Entity is not in working set.</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Entity is on a locked layer.</source>
-        <translation />
+        <translation>Entity is on a locked layer.</translation>
     </message>
     <message>
         <location line="+233" />
@@ -4262,92 +4262,92 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+62" />
         <source>Entity is not a block reference.</source>
-        <translation />
+        <translation>Entity is not a block reference.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Entity is not a line or arc.</source>
-        <translation />
+        <translation>Entity is not a line or arc.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Entity is not a line, arc or polyline.</source>
-        <translation />
+        <translation>Entity is not a line, arc or polyline.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Entity is not a line.</source>
-        <translation />
+        <translation>Entity is not a line.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Entity is not an arc.</source>
-        <translation />
+        <translation>Entity is not an arc.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Entity is not an arc or circle.</source>
-        <translation />
+        <translation>Entity is not an arc or circle.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Entity is not a line, arc or circle.</source>
-        <translation />
+        <translation>Entity is not a line, arc or circle.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation />
+        <translation>Entity is not a line, arc, spline, ellipse arc or polyline.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Entity is not an arc, circle or ellipse.</source>
-        <translation />
+        <translation>Entity is not an arc, circle or ellipse.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Entity is not a line, arc, circle or ellipse.</source>
-        <translation />
+        <translation>Entity is not a line, arc, circle or ellipse.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation />
+        <translation>Entity is not a line, arc, circle, ellipse or polyline.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation />
+        <translation>Entity is not a line, arc, circle, ellipse or spline.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation />
+        <translation>Entity is not a line, arc, circle, spline or polyline.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation />
+        <translation>Entity is not a line, arc, circle, ellipse, spline or polyline.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation />
+        <translation>Entity is not a circle, ellipse, spline or polyline.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Entity is not a polyline.</source>
-        <translation />
+        <translation>Entity is not a polyline.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Entity is not a closed polyline.</source>
-        <translation />
+        <translation>Entity is not a closed polyline.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Entity is not a spline with fit points.</source>
-        <translation />
+        <translation>Entity is not a spline with fit points.</translation>
     </message>
 </context>
 <context>
@@ -4355,7 +4355,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58" />
         <source>Show ECMAScript Shell</source>
-        <translation />
+        <translation>Show ECMAScript Shell</translation>
     </message>
     <message>
         <location line="+55" />
@@ -4366,17 +4366,17 @@ večpostoji na popisu.</translation>
         <location line="+34" />
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14" />
         <source>Script Shell</source>
-        <translation />
+        <translation>Script Shell</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShellDialog.ui" line="+20" />
         <source>ECMAScript Shell</source>
-        <translation />
+        <translation>ECMAScript Shell</translation>
     </message>
     <message>
         <location line="+15" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=" color:#ff0000;"&gt;modify your drawings&lt;/span&gt; but also &lt;span style=" color:#ff0000;"&gt;delete files&lt;/span&gt; or &lt;span style=" color:#ff0000;"&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=" color:#ff0000;"&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href="http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html"&gt;&lt;span style=" text-decoration: underline; color:#0000ff;"&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be "safe" to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation />
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spremate se omogućiti ECMAScript ljusku.&lt;/p&gt;&lt;p&gt;Kroz ECMAScript ljusku možete &lt;span style=" color:#ff0000;"&gt;modificirati svoje crteže&lt;/span&gt; ali također &lt;span style=" color:#ff0000;"&gt;izbrisati datoteke&lt;/span&gt; ili &lt;span style=" color:#ff0000;"&gt;srušiti aplikaciju&lt;/span&gt; što može dovesti do &lt;span style=" color:#ff0000;"&gt;gubitka podataka&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Za neiskusne programere, preporučuje se ograničiti upotrebu ECMAScript ljuske na &lt;a href="http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html"&gt;&lt;span style=" text-decoration: underline; color:#0000ff;"&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; koji se smatra "sigurnim" za upotrebu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -4389,7 +4389,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/Edit.js" line="+65" />
         <source>Edit Tools</source>
-        <translation />
+        <translation>Edit Tools</translation>
     </message>
     <message>
         <location line="+26" />
@@ -4433,12 +4433,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61" />
         <source>Choose hatch</source>
-        <translation />
+        <translation>Choose hatch</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2" />
         <source>Edit &amp;Hatch</source>
-        <translation />
+        <translation>Edit &amp;Hatch</translation>
     </message>
 </context>
 <context>
@@ -4472,7 +4472,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+4" />
         <source>Edit text</source>
-        <translation />
+        <translation>Edit text</translation>
     </message>
 </context>
 <context>
@@ -4498,32 +4498,32 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+7" />
         <source>Major point of ellipse or major radius</source>
-        <translation />
+        <translation>Major point of ellipse or major radius</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Major point of ellipse</source>
-        <translation />
+        <translation>Major point of ellipse</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Minor point of ellipse or minor radius</source>
-        <translation />
+        <translation>Minor point of ellipse or minor radius</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Minor point of ellipse</source>
-        <translation />
+        <translation>Minor point of ellipse</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Rotation angle</source>
-        <translation />
+        <translation>Rotation angle</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Start parameter</source>
-        <translation />
+        <translation>Start parameter</translation>
     </message>
     <message>
         <location line="+7" />
@@ -4645,7 +4645,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Draw parallel curve to ellipse</source>
-        <translation />
+        <translation>Draw parallel curve to ellipse</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.ui" line="+17" />
@@ -4663,12 +4663,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2" />
         <source>Parallel Curve (&amp;through Point)</source>
-        <translation />
+        <translation>Parallel Curve (&amp;through Point)</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Draw parallel curve to ellipse through point</source>
-        <translation />
+        <translation>Draw parallel curve to ellipse through point</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17" />
@@ -4682,13 +4682,13 @@ večpostoji na popisu.</translation>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRR.ui" line="+17" />
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="+129" />
         <source>X Radius:</source>
-        <translation />
+        <translation>X Radius:</translation>
     </message>
     <message>
         <location line="+23" />
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-10" />
         <source>Y Radius:</source>
-        <translation />
+        <translation>Y Radius:</translation>
     </message>
     <message>
         <location line="+30" />
@@ -4733,7 +4733,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExAddLayer/ExAddLayer.js" line="+44" />
         <source>Added layer "MyLayer"</source>
-        <translation />
+        <translation>Added layer "MyLayer"</translation>
     </message>
     <message>
         <location line="+13" />
@@ -4754,17 +4754,17 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js" line="+59" />
         <source>Deleted line with ID %1</source>
-        <translation />
+        <translation>Deleted line with ID %1</translation>
     </message>
     <message>
         <location line="+1" />
         <source>You can use &lt;i&gt;Edit &gt; Undo&lt;/i&gt; to restore the line entity.</source>
-        <translation />
+        <translation>You can use &lt;i&gt;Edit &gt; Undo&lt;/i&gt; to restore the line entity.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Add and Delete Line</source>
-        <translation />
+        <translation>Add and Delete Line</translation>
     </message>
 </context>
 <context>
@@ -4780,7 +4780,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawColors/ExDrawColors.js" line="+66" />
         <source>Draw &amp;Colors</source>
-        <translation />
+        <translation>Draw &amp;Colors</translation>
     </message>
 </context>
 <context>
@@ -4788,7 +4788,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js" line="+85" />
         <source>Draw &amp;Fonts</source>
-        <translation />
+        <translation>Draw &amp;Fonts</translation>
     </message>
 </context>
 <context>
@@ -4801,7 +4801,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Counterclockwise polyline:</source>
-        <translation />
+        <translation>Counterclockwise polyline:</translation>
     </message>
     <message>
         <location line="+15" />
@@ -4814,12 +4814,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ExLayerCustomProperty.js" line="+43" />
         <source>Added custom property "MyCustomProperty" to layer "0".</source>
-        <translation />
+        <translation>Added custom property "MyCustomProperty" to layer "0".</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Add Custom Property to a Layer</source>
-        <translation />
+        <translation>Add Custom Property to a Layer</translation>
     </message>
 </context>
 <context>
@@ -4874,7 +4874,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12" />
         <source>Hello World.</source>
-        <translation />
+        <translation>Hello World.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -4918,7 +4918,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+1" />
         <source>Registered a file exporter for file type ".example". Use File &gt; Save As to see the filter in action.</source>
-        <translation />
+        <translation>Registered a file exporter for file type ".example". Use File &gt; Save As to see the filter in action.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -4936,7 +4936,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+54" />
         <source>Read from file: "%1"</source>
-        <translation />
+        <translation>Read from file: "%1"</translation>
     </message>
     <message>
         <location line="+35" />
@@ -4946,7 +4946,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+1" />
         <source>Registered a file importer for file type ".example". Use File &gt; Open to see the filter in action.</source>
-        <translation />
+        <translation>Registered a file importer for file type ".example". Use File &gt; Open to see the filter in action.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -4964,7 +4964,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui" line="+14" />
         <source>Enter Size</source>
-        <translation />
+        <translation>Enter Size</translation>
     </message>
     <message>
         <location line="+8" />
@@ -5007,13 +5007,13 @@ večpostoji na popisu.</translation>
         <location line="+46" />
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+46" />
         <source>Three Points</source>
-        <translation />
+        <translation>Three Points</translation>
     </message>
     <message>
         <location line="+3" />
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3" />
         <source>Draw three points</source>
-        <translation />
+        <translation>Draw three points</translation>
     </message>
 </context>
 <context>
@@ -5021,8 +5021,7 @@ večpostoji na popisu.</translation>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50" />
         <source>Transaction affected %n object(s).</source>
-        <translation>
-            <numerusform />
+        <translation>Transaction affected %n object(s).<numerusform />
             <numerusform />
             <numerusform />
         </translation>
@@ -5051,7 +5050,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+1" />
         <source>Export XML</source>
-        <translation />
+        <translation>Export XML</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExportInit.js" line="+2" />
@@ -5069,7 +5068,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+1" />
         <source>Import XML</source>
-        <translation />
+        <translation>Import XML</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImportInit.js" line="+2" />
@@ -5082,7 +5081,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/Examples.js" line="+55" />
         <source>Script &amp;Examples</source>
-        <translation />
+        <translation>Script &amp;Examples</translation>
     </message>
 </context>
 <context>
@@ -5105,42 +5104,42 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+137" />
         <source>Spline approximation tolerance:</source>
-        <translation />
+        <translation>Spline approximation tolerance:</translation>
     </message>
     <message>
         <location line="-118" />
         <source>Explode splines to polylines with line segments</source>
-        <translation />
+        <translation>Explode splines to polylines with line segments</translation>
     </message>
     <message>
         <location line="+111" />
         <source>Ellipse segments (per full ellipse):</source>
-        <translation />
+        <translation>Ellipse segments (per full ellipse):</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Convert splines from texts to arcs or lines if appropriate</source>
-        <translation />
+        <translation>Convert splines from texts to arcs or lines if appropriate</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Explode circles into polylines with two half circles</source>
-        <translation />
+        <translation>Explode circles into polylines with two half circles</translation>
     </message>
     <message>
         <location line="+90" />
         <source>Explode text glyphs to polylines</source>
-        <translation />
+        <translation>Explode text glyphs to polylines</translation>
     </message>
     <message>
         <location line="-80" />
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation />
+        <translation>Explode multiline texts into multiple simple text blocks</translation>
     </message>
     <message>
         <location line="-41" />
         <source>Spline segments:</source>
-        <translation />
+        <translation>Spline segments:</translation>
     </message>
 </context>
 <context>
@@ -5148,7 +5147,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Help/FAQ/FAQInit.js" line="+2" />
         <source>FA&amp;Qs (online)</source>
-        <translation />
+        <translation>FA&amp;Qs (online)</translation>
     </message>
 </context>
 <context>
@@ -5156,7 +5155,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/File/File.js" line="+65" />
         <source>File Tools</source>
-        <translation />
+        <translation>File Tools</translation>
     </message>
     <message>
         <location line="+26" />
@@ -5196,27 +5195,27 @@ večpostoji na popisu.</translation>
     <message>
         <location line="-5" />
         <source>Black</source>
-        <translation />
+        <translation>Black</translation>
     </message>
     <message>
         <location line="+1" />
         <source>White</source>
-        <translation />
+        <translation>White</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Language:</source>
-        <translation />
+        <translation>Language:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Welcome to %1</source>
-        <translation />
+        <translation>Welcome to %1</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
-        <translation />
+        <translation>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -5226,17 +5225,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+1" />
         <source>Default Paper Size:</source>
-        <translation />
+        <translation>Default Paper Size:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Decimal Point:</source>
-        <translation />
+        <translation>Decimal Point:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Background Color:</source>
-        <translation />
+        <translation>Background Color:</translation>
     </message>
 </context>
 <context>
@@ -5244,17 +5243,17 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1115" />
         <source>Add Active SubLayer</source>
-        <translation />
+        <translation>Add Active SubLayer</translation>
     </message>
     <message>
         <location line="+6" />
         <source>FP added layer:</source>
-        <translation />
+        <translation>FP added layer:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11" />
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation />
+        <translation>Paints over selection mimicking a roller stamp</translation>
     </message>
 </context>
 <context>
@@ -5262,107 +5261,107 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14" />
         <source>Painter Options</source>
-        <translation />
+        <translation>Painter Options</translation>
     </message>
     <message>
         <location line="+25" />
         <source>Painters casting options</source>
-        <translation />
+        <translation>Painters casting options</translation>
     </message>
     <message>
         <location line="+21" />
         <source>Flip Painters</source>
-        <translation />
+        <translation>Flip Painters</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Cast in group</source>
-        <translation />
+        <translation>Cast in group</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Cast on sub-layer</source>
-        <translation />
+        <translation>Cast on sub-layer</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Add Begin Apex</source>
-        <translation />
+        <translation>Add Begin Apex</translation>
     </message>
     <message>
         <location line="+16" />
         <source>Add End Apex</source>
-        <translation />
+        <translation>Add End Apex</translation>
     </message>
     <message>
         <location line="+16" />
         <source>Add Insertions</source>
-        <translation />
+        <translation>Add Insertions</translation>
     </message>
     <message>
         <location line="+26" />
         <source>Painter set</source>
-        <translation />
+        <translation>Painter set</translation>
     </message>
     <message>
         <location line="-101" />
         <source>Mirror painters over baseline.</source>
-        <translation />
+        <translation>Mirror painters over baseline.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Group all castings to one operation.</source>
-        <translation />
+        <translation>Group all castings to one operation.</translation>
     </message>
     <message>
         <location line="+30" />
         <source>Start with casting a begin apex on open forms.</source>
-        <translation />
+        <translation>Start with casting a begin apex on open forms.</translation>
     </message>
     <message>
         <location line="+16" />
         <source>End with casting an end apex on open forms.</source>
-        <translation />
+        <translation>End with casting an end apex on open forms.</translation>
     </message>
     <message>
         <location line="+16" />
         <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
-        <translation />
+        <translation>Add insertions in between eg. spacers, knots. (Not implemented)</translation>
     </message>
     <message>
         <location line="+65" />
         <source>Preview of painters.</source>
-        <translation />
+        <translation>Preview of painters.</translation>
     </message>
     <message>
         <location line="+41" />
         <source>Select painter set.</source>
-        <translation />
+        <translation>Select painter set.</translation>
     </message>
     <message>
         <location line="+22" />
         <source>CurtainRope</source>
-        <translation />
+        <translation>CurtainRope</translation>
     </message>
     <message>
         <location line="+5" />
         <source>OrthogonalBar</source>
-        <translation />
+        <translation>OrthogonalBar</translation>
     </message>
     <message>
         <location line="+5" />
         <source>OrthogonalPointsGlobal</source>
-        <translation />
+        <translation>OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5" />
         <source>SinusoidWave</source>
-        <translation />
+        <translation>SinusoidWave</translation>
     </message>
     <message>
         <location line="+5" />
         <source>SinusoidWaveGlobal</source>
-        <translation />
+        <translation>SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5" />
@@ -5372,52 +5371,52 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+5" />
         <source>TriangleWave</source>
-        <translation />
+        <translation>TriangleWave</translation>
     </message>
     <message>
         <location line="+5" />
         <source>SawtoothWave</source>
-        <translation />
+        <translation>SawtoothWave</translation>
     </message>
     <message>
         <location line="+5" />
         <source>SqaureWave</source>
-        <translation />
+        <translation>SqaureWave</translation>
     </message>
     <message>
         <location line="+5" />
         <source>SteppedWave</source>
-        <translation />
+        <translation>SteppedWave</translation>
     </message>
     <message>
         <location line="+5" />
         <source>SqauredShape</source>
-        <translation />
+        <translation>SqauredShape</translation>
     </message>
     <message>
         <location line="+5" />
         <source>SqauredShapeFlexing</source>
-        <translation />
+        <translation>SqauredShapeFlexing</translation>
     </message>
     <message>
         <location line="+5" />
         <source>AllPainterDataTypes</source>
-        <translation />
+        <translation>AllPainterDataTypes</translation>
     </message>
     <message>
         <location line="+16" />
         <source>Insertion type</source>
-        <translation />
+        <translation>Insertion type</translation>
     </message>
     <message>
         <location line="+36" />
         <source>Preview of insertion.</source>
-        <translation />
+        <translation>Preview of insertion.</translation>
     </message>
     <message>
         <location line="+38" />
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation />
+        <translation>Select Insertion or Enter void space. (Not implemented)</translation>
     </message>
     <message>
         <location line="+277" />
@@ -5427,52 +5426,52 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>FlexPainter Beta 0.42e © CVH 2020 </source>
-        <translation />
+        <translation>FlexPainter Beta 0.42e © CVH 2020 </translation>
     </message>
     <message>
         <location line="+272" />
         <source>Document Units.</source>
-        <translation />
+        <translation>Document Units.</translation>
     </message>
     <message>
         <location line="+39" />
         <source>Enter painter width. (+0)</source>
-        <translation />
+        <translation>Enter painter width. (+0)</translation>
     </message>
     <message>
         <location line="+90" />
         <source>Enter main painter stepsize. (+0)</source>
-        <translation />
+        <translation>Enter main painter stepsize. (+0)</translation>
     </message>
     <message>
         <location line="+16" />
         <source>Enter main painter length. (+)</source>
-        <translation />
+        <translation>Enter main painter length. (+)</translation>
     </message>
     <message>
         <location line="+22" />
         <source>Keep painters proportional.</source>
-        <translation />
+        <translation>Keep painters proportional.</translation>
     </message>
     <message>
         <location line="+30" />
         <source>Select percentage of Stepsize.</source>
-        <translation />
+        <translation>Select percentage of Stepsize.</translation>
     </message>
     <message>
         <location line="+86" />
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation />
+        <translation>Adapt scaling f 1.00-0.90 to fit the whole form.</translation>
     </message>
     <message>
         <location line="+92" />
         <source>Verbose info. (persistent on)</source>
-        <translation />
+        <translation>Verbose info. (persistent on)</translation>
     </message>
     <message>
         <location line="+16" />
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation />
+        <translation>Deleted painted over base entities. (persistent off)</translation>
     </message>
     <message>
         <location line="-933" />
@@ -5482,7 +5481,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+5" />
         <source>Curtain Rope Knot</source>
-        <translation />
+        <translation>Curtain Rope Knot</translation>
     </message>
     <message>
         <location line="+543" />
@@ -5492,7 +5491,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+36" />
         <source>Width : </source>
-        <translation />
+        <translation>Width : </translation>
     </message>
     <message>
         <location line="+16" />
@@ -5502,37 +5501,37 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+9" />
         <source>Repetitive Painter options</source>
-        <translation />
+        <translation>Repetitive Painter options</translation>
     </message>
     <message>
         <location line="+65" />
         <source>Stepsize :</source>
-        <translation />
+        <translation>Stepsize :</translation>
     </message>
     <message>
         <location line="+16" />
         <source>Length :</source>
-        <translation />
+        <translation>Length :</translation>
     </message>
     <message>
         <location line="+52" />
         <source>Closed Forms shifting % :</source>
-        <translation />
+        <translation>Closed Forms shifting % :</translation>
     </message>
     <message>
         <location line="+62" />
         <source>Open forms scaling options</source>
-        <translation />
+        <translation>Open forms scaling options</translation>
     </message>
     <message>
         <location line="+24" />
         <source>Dynamically scale to fit</source>
-        <translation />
+        <translation>Dynamically scale to fit</translation>
     </message>
     <message>
         <location line="+36" />
         <source>Align with begin</source>
-        <translation />
+        <translation>Align with begin</translation>
     </message>
     <message>
         <location line="+10" />
@@ -5542,17 +5541,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+7" />
         <source>Align with End</source>
-        <translation />
+        <translation>Align with End</translation>
     </message>
     <message>
         <location line="+39" />
         <source>Verbose *</source>
-        <translation />
+        <translation>Verbose *</translation>
     </message>
     <message>
         <location line="+16" />
         <source>Delete Base Entities *</source>
-        <translation />
+        <translation>Delete Base Entities *</translation>
     </message>
 </context>
 <context>
@@ -5568,7 +5567,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js" line="+2" />
         <source>Flip Hori&amp;zontal</source>
-        <translation />
+        <translation>Flip Hori&amp;zontal</translation>
     </message>
 </context>
 <context>
@@ -5576,7 +5575,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/FlipVertical/FlipVerticalInit.js" line="+2" />
         <source>Flip Verti&amp;cal</source>
-        <translation />
+        <translation>Flip Verti&amp;cal</translation>
     </message>
 </context>
 <context>
@@ -5584,22 +5583,22 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js" line="+39" />
         <source>Flush Undo History</source>
-        <translation />
+        <translation>Flush Undo History</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation />
+        <translation>Are you sure that you want to flush the undo / redo transaction history?</translation>
     </message>
     <message>
         <location line="+1" />
         <source>This cannot be undone.</source>
-        <translation />
+        <translation>This cannot be undone.</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Flush &amp;Undo History</source>
-        <translation />
+        <translation>Flush &amp;Undo History</translation>
     </message>
 </context>
 <context>
@@ -5612,7 +5611,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0" />
         <source>Fonts</source>
-        <translation />
+        <translation>Fonts</translation>
     </message>
 </context>
 <context>
@@ -5625,27 +5624,27 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+6" />
         <source>Cube size:</source>
-        <translation />
+        <translation>Cube size:</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Draw glue lap</source>
-        <translation />
+        <translation>Draw glue lap</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14" />
         <source>Three: Right</source>
-        <translation />
+        <translation>Three: Right</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/21_ThreeLeft.ui" line="+14" />
         <source>Three: Left</source>
-        <translation />
+        <translation>Three: Left</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/22_ThreeAbove.ui" line="+14" />
         <source>Three: Above</source>
-        <translation />
+        <translation>Three: Above</translation>
     </message>
 </context>
 <context>
@@ -5661,7 +5660,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/30_FourEqual.ui" line="+14" />
         <source>Four: Equal</source>
-        <translation />
+        <translation>Four: Equal</translation>
     </message>
 </context>
 <context>
@@ -5669,7 +5668,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/32_FourLeft.ui" line="+14" />
         <source>Four: Left</source>
-        <translation />
+        <translation>Four: Left</translation>
     </message>
 </context>
 <context>
@@ -5677,7 +5676,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/31_FourRight.ui" line="+14" />
         <source>Four: Right</source>
-        <translation />
+        <translation>Four: Right</translation>
     </message>
 </context>
 <context>
@@ -5685,42 +5684,42 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+32" />
         <source>Right-Click</source>
-        <translation />
+        <translation>Right-Click</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Right-click to deselect entities</source>
-        <translation />
+        <translation>Right-click to deselect entities</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Double-Click</source>
-        <translation />
+        <translation>Double-Click</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Double-click to edit text</source>
-        <translation />
+        <translation>Double-click to edit text</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Double-click to edit hatch</source>
-        <translation />
+        <translation>Double-click to edit hatch</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Double-click on block reference opens block</source>
-        <translation />
+        <translation>Double-click on block reference opens block</translation>
     </message>
     <message>
         <location line="+28" />
         <source>Edit block reference in-place</source>
-        <translation />
+        <translation>Edit block reference in-place</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Double-click to select contour</source>
-        <translation />
+        <translation>Double-click to select contour</translation>
     </message>
     <message>
         <location line="+15" />
@@ -5730,7 +5729,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+16" />
         <source>Right double-click to reset</source>
-        <translation />
+        <translation>Right double-click to reset</translation>
     </message>
     <message>
         <location line="+10" />
@@ -5740,62 +5739,62 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+6" />
         <source>Select block references together with attributes</source>
-        <translation />
+        <translation>Select block references together with attributes</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Hide attributes when block references are hidden</source>
-        <translation />
+        <translation>Hide attributes when block references are hidden</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Cursor Range</source>
-        <translation />
+        <translation>Cursor Range</translation>
     </message>
     <message>
         <location line="+55" />
         <source>Cursor range for picking entities:</source>
-        <translation />
+        <translation>Cursor range for picking entities:</translation>
     </message>
     <message>
         <location line="+64" />
         <source>Cursor range for snap:</source>
-        <translation />
+        <translation>Cursor range for snap:</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Highlight (and raise) images within range</source>
-        <translation />
+        <translation>Highlight (and raise) images within range</translation>
     </message>
     <message>
         <location line="+38" />
         <source>Escape clears selection</source>
-        <translation type="unfinished" />
+        <translation type="unfinished">Escape clears selection</translation>
     </message>
     <message>
         <location line="-102" />
         <source>Highlight entity within range</source>
-        <translation />
+        <translation>Highlight entity within range</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/PreferencesPage.ui" line="+34" />
         <source>Automatically scale grid</source>
-        <translation />
+        <translation>Automatically scale grid</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Automatically scale meta grid</source>
-        <translation />
+        <translation>Automatically scale meta grid</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Solid grid lines</source>
-        <translation />
+        <translation>Solid grid lines</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Minimal grid spacing (px):</source>
-        <translation />
+        <translation>Minimal grid spacing (px):</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+32" />
@@ -5805,22 +5804,22 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+6" />
         <source>Show large origin axis</source>
-        <translation />
+        <translation>Show large origin axis</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Rulers and Scrollbars</source>
-        <translation />
+        <translation>Rulers and Scrollbars</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Show rulers</source>
-        <translation />
+        <translation>Show rulers</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Show scrollbars</source>
-        <translation />
+        <translation>Show scrollbars</translation>
     </message>
     <message>
         <location line="+13" />
@@ -5830,158 +5829,158 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+6" />
         <source>Show crosshairs</source>
-        <translation />
+        <translation>Show crosshairs</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Show large crosshairs</source>
-        <translation />
+        <translation>Show large crosshairs</translation>
     </message>
     <message>
         <location line="+10" />
         <source>This can be used if cursors are not visible on external monitors</source>
-        <translation />
+        <translation>This can be used if cursors are not visible on external monitors</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Use system cursors</source>
-        <translation />
+        <translation>Use system cursors</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Auto Zoom</source>
-        <translation />
+        <translation>Auto Zoom</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Margin (px):</source>
-        <translation />
+        <translation>Margin (px):</translation>
     </message>
     <message>
         <location line="+69" />
         <source>Auto zoom on load</source>
-        <translation />
+        <translation>Auto zoom on load</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Color Adjustment</source>
-        <translation />
+        <translation>Color Adjustment</translation>
     </message>
     <message>
         <location line="+29" />
         <source>Color lightness threshold:</source>
-        <translation />
+        <translation>Color lightness threshold:</translation>
     </message>
     <message>
         <location line="+29" />
         <source>Prevent white on white / black on black display</source>
-        <translation />
+        <translation>Prevent white on white / black on black display</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Disable for printing</source>
-        <translation />
+        <translation>Disable for printing</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Linetypes and Lineweights</source>
-        <translation />
+        <translation>Linetypes and Lineweights</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Default lineweight:</source>
-        <translation />
+        <translation>Default lineweight:</translation>
     </message>
     <message>
         <location line="+35" />
         <source>Automatically use screen based linetypes in model view</source>
-        <translation />
+        <translation>Automatically use screen based linetypes in model view</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation />
+        <translation>Auto switch to screen based linetypes in model view</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Scale linetype patterns by line weight</source>
-        <translation />
+        <translation>Scale linetype patterns by line weight</translation>
     </message>
     <message>
         <location line="+28" />
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation />
+        <translation>Pattern scale for lineweight 0.00mm:</translation>
     </message>
     <message>
         <location line="+35" />
         <source>Apply line weight to points</source>
-        <translation />
+        <translation>Apply line weight to points</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Display and Performance</source>
-        <translation />
+        <translation>Display and Performance</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Anti-aliasing on by default</source>
-        <translation />
+        <translation>Anti-aliasing on by default</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Use full resolution for Retina / high resolution display</source>
-        <translation />
+        <translation>Use full resolution for Retina / high resolution display</translation>
     </message>
     <message>
         <location line="+596" />
         <source>Reference point size (px):</source>
-        <translation />
+        <translation>Reference point size (px):</translation>
     </message>
     <message>
         <location line="+209" />
         <source>Allocation limit for bitmaps (MB):</source>
-        <translation />
+        <translation>Allocation limit for bitmaps (MB):</translation>
     </message>
     <message>
         <location line="+42" />
         <source>Dot length in line patterns:</source>
-        <translation />
+        <translation>Dot length in line patterns:</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+95" />
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+47" />
         <source>Persistent selection</source>
-        <translation />
+        <translation>Persistent selection</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-766" />
         <source>Number of preview entities:</source>
-        <translation />
+        <translation>Number of preview entities:</translation>
     </message>
     <message>
         <location line="-121" />
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-        <translation />
+        <translation>Always render polylines with custom widths at least 1 pixel wide</translation>
     </message>
     <message>
         <location line="+182" />
         <source>Display arcs as lines below this angle (degrees):</source>
-        <translation />
+        <translation>Display arcs as lines below this angle (degrees):</translation>
     </message>
     <message>
         <location line="+72" />
         <source>Minimum angle step for rendering arcs (degrees):</source>
-        <translation />
+        <translation>Minimum angle step for rendering arcs (degrees):</translation>
     </message>
     <message>
         <location line="+85" />
         <source>Display entities with more than N dashes as continuous:</source>
-        <translation />
+        <translation>Display entities with more than N dashes as continuous:</translation>
     </message>
     <message>
         <location line="+45" />
         <source>Timeout for hatch rendering:</source>
-        <translation />
+        <translation>Timeout for hatch rendering:</translation>
     </message>
     <message>
         <location line="-361" />
@@ -5991,27 +5990,27 @@ večpostoji na popisu.</translation>
     <message>
         <location line="-11" />
         <source>Number of threads:</source>
-        <translation />
+        <translation>Number of threads:</translation>
     </message>
     <message>
         <location line="+437" />
         <source>Maximum selected entities with reference points:</source>
-        <translation />
+        <translation>Maximum selected entities with reference points:</translation>
     </message>
     <message>
         <location line="+217" />
         <source>Text height threshold (px):</source>
-        <translation />
+        <translation>Text height threshold (px):</translation>
     </message>
     <message>
         <location line="-147" />
         <source>Maximum selected entities with displayed reference points:</source>
-        <translation />
+        <translation>Maximum selected entities with displayed reference points:</translation>
     </message>
     <message>
         <location line="+219" />
         <source>Maximum complexity for solid fills at high quality:</source>
-        <translation />
+        <translation>Maximum complexity for solid fills at high quality:</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="-6" />
@@ -6040,12 +6039,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+18" />
         <source>Crosshairs:</source>
-        <translation />
+        <translation>Crosshairs:</translation>
     </message>
     <message>
         <location line="+36" />
         <source>Inactive crosshairs:</source>
-        <translation />
+        <translation>Inactive crosshairs:</translation>
     </message>
     <message>
         <location line="+33" />
@@ -6060,7 +6059,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+36" />
         <source>Relative zero:</source>
-        <translation />
+        <translation>Relative zero:</translation>
     </message>
     <message>
         <location line="+33" />
@@ -6075,7 +6074,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+36" />
         <source>Meta grid:</source>
-        <translation />
+        <translation>Meta grid:</translation>
     </message>
     <message>
         <location line="+33" />
@@ -6085,57 +6084,57 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+12" />
         <source>Primary selection color:</source>
-        <translation />
+        <translation>Primary selection color:</translation>
     </message>
     <message>
         <location line="+30" />
         <source>Use secondary selection color</source>
-        <translation />
+        <translation>Use secondary selection color</translation>
     </message>
     <message>
         <location line="+16" />
         <source>Secondary selection color:</source>
-        <translation />
+        <translation>Secondary selection color:</translation>
     </message>
     <message>
         <location line="+36" />
         <source>Primary reference points:</source>
-        <translation />
+        <translation>Primary reference points:</translation>
     </message>
     <message>
         <location line="+30" />
         <source>Secondary reference points:</source>
-        <translation />
+        <translation>Secondary reference points:</translation>
     </message>
     <message>
         <location line="+33" />
         <source>Selection box border:</source>
-        <translation />
+        <translation>Selection box border:</translation>
     </message>
     <message>
         <location line="+36" />
         <source>Selection box fill:</source>
-        <translation />
+        <translation>Selection box fill:</translation>
     </message>
     <message>
         <location line="+36" />
         <source>Cross-selection box fill:</source>
-        <translation />
+        <translation>Cross-selection box fill:</translation>
     </message>
     <message>
         <location line="+30" />
         <source>Start points:</source>
-        <translation />
+        <translation>Start points:</translation>
     </message>
     <message>
         <location line="+7" />
         <source>End points:</source>
-        <translation />
+        <translation>End points:</translation>
     </message>
     <message>
         <location line="+47" />
         <source>Tertiary reference points:</source>
-        <translation />
+        <translation>Tertiary reference points:</translation>
     </message>
     <message>
         <location line="+30" />
@@ -6145,17 +6144,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+12" />
         <source>Snap label:</source>
-        <translation />
+        <translation>Snap label:</translation>
     </message>
     <message>
         <location line="+33" />
         <source>Info Tools</source>
-        <translation />
+        <translation>Info Tools</translation>
     </message>
     <message>
         <location line="+12" />
         <source>Measurements and labels:</source>
-        <translation />
+        <translation>Measurements and labels:</translation>
     </message>
     <message>
         <location line="+33" />
@@ -6165,12 +6164,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+12" />
         <source>Auxiliary shapes:</source>
-        <translation />
+        <translation>Auxiliary shapes:</translation>
     </message>
     <message>
         <location line="+30" />
         <source>Working set fading factor:</source>
-        <translation />
+        <translation>Working set fading factor:</translation>
     </message>
     <message>
         <location line="+75" />
@@ -6180,7 +6179,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+12" />
         <source>Zoom box border:</source>
-        <translation />
+        <translation>Zoom box border:</translation>
     </message>
 </context>
 <context>
@@ -6188,17 +6187,17 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50" />
         <source>Ruler font:</source>
-        <translation />
+        <translation>Ruler font:</translation>
     </message>
     <message>
         <location line="+19" />
         <source>Snap label font:</source>
-        <translation />
+        <translation>Snap label font:</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Info label font:</source>
-        <translation />
+        <translation>Info label font:</translation>
     </message>
 </context>
 <context>
@@ -6206,47 +6205,47 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+322" />
         <source>Mouse wheel zoom factor:</source>
-        <translation />
+        <translation>Mouse wheel zoom factor:</translation>
     </message>
     <message>
         <location line="-275" />
         <source>Limit zoom and scroll to prevent overflows</source>
-        <translation />
+        <translation>Limit zoom and scroll to prevent overflows</translation>
     </message>
     <message>
         <location line="-7" />
         <source>Enable pan gesture</source>
-        <translation />
+        <translation>Enable pan gesture</translation>
     </message>
     <message>
         <location line="+289" />
         <source>Reverse mouse wheel direction for zoom</source>
-        <translation />
+        <translation>Reverse mouse wheel direction for zoom</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Limit scrolling to vertical and horizontal</source>
-        <translation />
+        <translation>Limit scrolling to vertical and horizontal</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Panning threshold (px):</source>
-        <translation />
+        <translation>Panning threshold (px):</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Panning speed:</source>
-        <translation />
+        <translation>Panning speed:</translation>
     </message>
     <message>
         <location line="-331" />
         <source>Mouse wheel / two finger swipe:</source>
-        <translation />
+        <translation>Mouse wheel / two finger swipe:</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Middle mouse button zoom factor:</source>
-        <translation />
+        <translation>Middle mouse button zoom factor:</translation>
     </message>
 </context>
 <context>
@@ -6259,7 +6258,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0" />
         <source>Appearance</source>
-        <translation />
+        <translation>Appearance</translation>
     </message>
 </context>
 <context>
@@ -6308,7 +6307,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72" />
         <source>Hatch Tools</source>
-        <translation />
+        <translation>Hatch Tools</translation>
     </message>
     <message>
         <location line="+26" />
@@ -6374,7 +6373,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+96" />
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation />
+        <translation>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2" />
@@ -6384,7 +6383,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+4" />
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation />
+        <translation>Create hatch or solid fill from selected boundary</translation>
     </message>
 </context>
 <context>
@@ -6482,7 +6481,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75" />
         <source>Error while importing file %1</source>
-        <translation />
+        <translation>Error while importing file %1</translation>
     </message>
     <message>
         <location line="+31" />
@@ -6497,7 +6496,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Import Drawing</source>
-        <translation />
+        <translation>Import Drawing</translation>
     </message>
     <message>
         <location line="+9" />
@@ -6512,7 +6511,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17" />
         <source>As Block:</source>
-        <translation />
+        <translation>As Block:</translation>
     </message>
     <message>
         <location line="+18" />
@@ -6585,7 +6584,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+1" />
         <source>Import Points</source>
-        <translation />
+        <translation>Import Points</translation>
     </message>
     <message>
         <location line="+69" />
@@ -6618,17 +6617,17 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19" />
         <source>Add &amp;custom 2D centroid</source>
-        <translation />
+        <translation>Add &amp;custom 2D centroid</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Create a customizable 2D Centroid marker</source>
-        <translation />
+        <translation>Create a customizable 2D Centroid marker</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Creates a new point mass 2D Centroid marker customizable by dialog</source>
-        <translation />
+        <translation>Creates a new point mass 2D Centroid marker customizable by dialog</translation>
     </message>
 </context>
 <context>
@@ -6636,12 +6635,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngle.js" line="+67" />
         <source>Specify first line</source>
-        <translation />
+        <translation>Specify first line</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Specify second line</source>
-        <translation />
+        <translation>Specify second line</translation>
     </message>
     <message>
         <location line="+96" />
@@ -6659,7 +6658,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+70" />
         <source>Choose arc, circle, ellipse or elliptical arc</source>
-        <translation />
+        <translation>Choose arc, circle, ellipse or elliptical arc</translation>
     </message>
     <message>
         <location line="+236" />
@@ -6675,12 +6674,12 @@ večpostoji na popisu.</translation>
         <location line="-108" />
         <location line="+66" />
         <source>Circumference</source>
-        <translation />
+        <translation>Circumference</translation>
     </message>
     <message>
         <location line="-59" />
         <source>Circle area:</source>
-        <translation />
+        <translation>Circle area:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6702,13 +6701,13 @@ večpostoji na popisu.</translation>
         <location line="+67" />
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16" />
         <source>Chord</source>
-        <translation />
+        <translation>Chord</translation>
     </message>
     <message>
         <location line="-60" />
         <location line="+24" />
         <source>Ellipse arc area:</source>
-        <translation />
+        <translation>Ellipse arc area:</translation>
     </message>
     <message>
         <location line="-23" />
@@ -6716,13 +6715,13 @@ večpostoji na popisu.</translation>
         <location line="+43" />
         <location line="+22" />
         <source>arc length:</source>
-        <translation />
+        <translation>arc length:</translation>
     </message>
     <message>
         <location line="-88" />
         <location line="+67" />
         <source>chord:</source>
-        <translation />
+        <translation>chord:</translation>
     </message>
     <message>
         <location line="-52" />
@@ -6732,18 +6731,18 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+9" />
         <source>distance:</source>
-        <translation />
+        <translation>distance:</translation>
     </message>
     <message>
         <location line="+19" />
         <source>Ellipse area:</source>
-        <translation />
+        <translation>Ellipse area:</translation>
     </message>
     <message>
         <location line="+22" />
         <location line="+22" />
         <source>Arc area:</source>
-        <translation />
+        <translation>Arc area:</translation>
     </message>
     <message>
         <location line="-7" />
@@ -6753,12 +6752,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+9" />
         <source>radius:</source>
-        <translation />
+        <translation>radius:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleAreaInit.js" line="+2" />
         <source>Arc/Circle/Ellipse Area</source>
-        <translation />
+        <translation>Arc/Circle/Ellipse Area</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-89" />
@@ -6768,12 +6767,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+10" />
         <source>Calculate Area of Segment</source>
-        <translation />
+        <translation>Calculate Area of Segment</translation>
     </message>
     <message>
         <location line="+23" />
         <source>Calculate Area of Sector</source>
-        <translation />
+        <translation>Calculate Area of Sector</translation>
     </message>
     <message>
         <location line="+30" />
@@ -6783,7 +6782,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+10" />
         <source>Add entities to drawing</source>
-        <translation />
+        <translation>Add entities to drawing</translation>
     </message>
     <message>
         <location line="+3" />
@@ -6793,7 +6792,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+26" />
         <source>Add lengths/circumference to drawing</source>
-        <translation />
+        <translation>Add lengths/circumference to drawing</translation>
     </message>
 </context>
 <context>
@@ -6801,12 +6800,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+70" />
         <source>Set next polygon corner</source>
-        <translation />
+        <translation>Set next polygon corner</translation>
     </message>
     <message>
         <location line="+125" />
         <source>Polygon area:</source>
-        <translation />
+        <translation>Polygon area:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6816,17 +6815,17 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2" />
         <source>Pol&amp;ygonal Area</source>
-        <translation />
+        <translation>Pol&amp;ygonal Area</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.ui" line="+17" />
         <source>Calculate length and close tool.</source>
-        <translation />
+        <translation>Calculate length and close tool.</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Close Tool.</source>
-        <translation />
+        <translation>Close Tool.</translation>
     </message>
 </context>
 <context>
@@ -6844,43 +6843,43 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+9" />
         <source>Not implemented. Command terminated.</source>
-        <translation />
+        <translation>Not implemented. Command terminated.</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+2" />
         <source>Area 2D Centroid script (v0.32) by CVH</source>
-        <translation />
+        <translation>Area 2D Centroid script (v0.32) by CVH</translation>
     </message>
     <message>
         <location line="-1" />
         <source>Arc sector mode</source>
-        <translation />
+        <translation>Arc sector mode</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Enclosed area:</source>
-        <translation />
+        <translation>Enclosed area:</translation>
     </message>
     <message>
         <location line="+46" />
         <source>Approximated enclosed area:</source>
-        <translation />
+        <translation>Approximated enclosed area:</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Hatched area:</source>
-        <translation />
+        <translation>Hatched area:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Total hatched area:</source>
-        <translation />
+        <translation>Total hatched area:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Differential hatched area:</source>
-        <translation />
+        <translation>Differential hatched area:</translation>
     </message>
     <message>
         <location line="+21" />
@@ -6890,12 +6889,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="-89" />
         <source>Multiple entities in selection.</source>
-        <translation />
+        <translation>Multiple entities in selection.</translation>
     </message>
     <message>
         <location line="+43" />
         <source>Centroid markers circle in selection. No results.</source>
-        <translation />
+        <translation>Centroid markers circle in selection. No results.</translation>
     </message>
     <message>
         <location line="+29" />
@@ -6938,12 +6937,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+686" />
         <source>Unhandled shape from hatch loop.</source>
-        <translation />
+        <translation>Unhandled shape from hatch loop.</translation>
     </message>
     <message>
         <location line="+70" />
         <source>Self-intersecting shape near (%1). No Results.</source>
-        <translation />
+        <translation>Self-intersecting shape near (%1). No Results.</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19" />
@@ -6953,12 +6952,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+7" />
         <source>Create an area 2D Centroid for a selected entity</source>
-        <translation />
+        <translation>Create an area 2D Centroid for a selected entity</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</source>
-        <translation />
+        <translation>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</translation>
     </message>
 </context>
 <context>
@@ -6981,12 +6980,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+72" />
         <source>Bearing:</source>
-        <translation />
+        <translation>Bearing:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Azimuth:</source>
-        <translation />
+        <translation>Azimuth:</translation>
     </message>
     <message>
         <location line="+36" />
@@ -7004,7 +7003,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+1" />
         <source>Point mass</source>
-        <translation />
+        <translation>Point mass</translation>
     </message>
     <message>
         <location line="+1" />
@@ -7014,17 +7013,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+1" />
         <source>Wire</source>
-        <translation />
+        <translation>Wire</translation>
     </message>
     <message>
         <location line="+3" />
         <source>X position</source>
-        <translation />
+        <translation>X position</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Y position</source>
-        <translation />
+        <translation>Y position</translation>
     </message>
     <message>
         <location line="+1" />
@@ -7039,12 +7038,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="-431" />
         <source>Weighted</source>
-        <translation />
+        <translation>Weighted</translation>
     </message>
     <message>
         <location line="-1" />
         <source>Density</source>
-        <translation />
+        <translation>Density</translation>
     </message>
 </context>
 <context>
@@ -7057,7 +7056,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+20" />
         <source>Deactivated/removed the 2D Centroids transaction listener.</source>
-        <translation />
+        <translation>Deactivated/removed the 2D Centroids transaction listener.</translation>
     </message>
     <message>
         <location line="+25" />
@@ -7065,12 +7064,12 @@ večpostoji na popisu.</translation>
         <location line="+40" />
         <location line="+5" />
         <source>Syntax error: '%1' parse error</source>
-        <translation />
+        <translation>Syntax error: '%1' parse error</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19" />
         <source>Centroid &amp;Listener</source>
-        <translation />
+        <translation>Centroid &amp;Listener</translation>
     </message>
     <message>
         <location line="+7" />
@@ -7088,12 +7087,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEE.js" line="+62" />
         <source>Specify first entity</source>
-        <translation />
+        <translation>Specify first entity</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Specify second entity</source>
-        <translation />
+        <translation>Specify second entity</translation>
     </message>
     <message>
         <location line="+95" />
@@ -7103,7 +7102,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEEInit.js" line="+2" />
         <source>Distance &amp;Entity to Entity</source>
-        <translation />
+        <translation>Distance &amp;Entity to Entity</translation>
     </message>
 </context>
 <context>
@@ -7111,7 +7110,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEP.js" line="+59" />
         <source>Specify entity</source>
-        <translation />
+        <translation>Specify entity</translation>
     </message>
     <message>
         <location line="+8" />
@@ -7126,7 +7125,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2" />
         <source>Distance &amp;Entity to Point</source>
-        <translation />
+        <translation>Distance &amp;Entity to Point</translation>
     </message>
 </context>
 <context>
@@ -7149,12 +7148,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+4" />
         <source>Delta X:</source>
-        <translation />
+        <translation>Delta X:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Delta Y:</source>
-        <translation />
+        <translation>Delta Y:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -7164,7 +7163,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2" />
         <source>Distance &amp;Point to Point</source>
-        <translation />
+        <translation>Distance &amp;Point to Point</translation>
     </message>
 </context>
 <context>
@@ -7193,7 +7192,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Information/InfoPositionPolRel/InfoPositionPolRelInit.js" line="+2" />
         <source>Relative P&amp;olar Position</source>
-        <translation />
+        <translation>Relative P&amp;olar Position</translation>
     </message>
 </context>
 <context>
@@ -7224,31 +7223,31 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+38" />
         <source>Encountered a missing coordinate value.</source>
-        <translation />
+        <translation>Encountered a missing coordinate value.</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Encountered an invalid coordinate value.</source>
-        <translation />
+        <translation>Encountered an invalid coordinate value.</translation>
     </message>
     <message>
         <location line="+8" />
         <location line="+11" />
         <location line="+10" />
         <source>Encountered a missing '%1' value.</source>
-        <translation />
+        <translation>Encountered a missing '%1' value.</translation>
     </message>
     <message>
         <location line="-16" />
         <location line="+11" />
         <location line="+17" />
         <source>Encountered an invalid '%1' value.</source>
-        <translation />
+        <translation>Encountered an invalid '%1' value.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Encountered an unknown marker type.</source>
-        <translation />
+        <translation>Encountered an unknown marker type.</translation>
     </message>
     <message>
         <location line="+33" />
@@ -7263,12 +7262,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+8" />
         <source>Single marker selected, point mass = %1</source>
-        <translation />
+        <translation>Single marker selected, point mass = %1</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Density is undefined</source>
-        <translation />
+        <translation>Density is undefined</translation>
     </message>
     <message>
         <location line="+10" />
@@ -7278,47 +7277,47 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+11" />
         <source>Results in a NaN value.</source>
-        <translation />
+        <translation>Results in a NaN value.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Combined 2D Centroid</source>
-        <translation />
+        <translation>Combined 2D Centroid</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Combined uniform point mass (%1):</source>
-        <translation />
+        <translation>Combined uniform point mass (%1):</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Combined point mass (%1):</source>
-        <translation />
+        <translation>Combined point mass (%1):</translation>
     </message>
     <message>
         <location line="+6" />
         <source>All densities are undefined</source>
-        <translation />
+        <translation>All densities are undefined</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Some densities are undefined</source>
-        <translation />
+        <translation>Some densities are undefined</translation>
     </message>
     <message>
         <location line="+8" />
         <source>area (Informational):</source>
-        <translation />
+        <translation>area (Informational):</translation>
     </message>
     <message>
         <location line="+1" />
         <source>wire length (Informational):</source>
-        <translation />
+        <translation>wire length (Informational):</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Combined centroid:</source>
-        <translation />
+        <translation>Combined centroid:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19" />
@@ -7328,12 +7327,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+7" />
         <source>Combine selected 2D Centroid markers weighted</source>
-        <translation />
+        <translation>Combine selected 2D Centroid markers weighted</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Combines selected 2D Centroid markers, summing all properties weighted</source>
-        <translation />
+        <translation>Combines selected 2D Centroid markers, summing all properties weighted</translation>
     </message>
 </context>
 <context>
@@ -7357,7 +7356,7 @@ večpostoji na popisu.</translation>
         <location line="+35" />
         <location line="+7" />
         <source>Approximated length:</source>
-        <translation />
+        <translation>Approximated length:</translation>
     </message>
     <message>
         <location line="+7" />
@@ -7372,7 +7371,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="-71" />
         <source>Wire 2D Centroid script (v0.32) by CVH</source>
-        <translation />
+        <translation>Wire 2D Centroid script (v0.32) by CVH</translation>
     </message>
     <message>
         <location line="+35" />
@@ -7428,12 +7427,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+7" />
         <source>Create a wire 2D Centroid for a selection</source>
-        <translation />
+        <translation>Create a wire 2D Centroid for a selection</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</source>
-        <translation />
+        <translation>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</translation>
     </message>
 </context>
 <context>
@@ -7441,7 +7440,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Information/Information.js" line="+350" />
         <source>Information Tools</source>
-        <translation />
+        <translation>Information Tools</translation>
     </message>
     <message>
         <location line="+26" />
@@ -7451,7 +7450,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17" />
         <source>Add Measurement to Drawing</source>
-        <translation />
+        <translation>Add Measurement to Drawing</translation>
     </message>
     <message>
         <location line="+17" />
@@ -7464,22 +7463,22 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19" />
         <source>Decimal point:</source>
-        <translation />
+        <translation>Decimal point:</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Cartesian coordinate separator:</source>
-        <translation />
+        <translation>Cartesian coordinate separator:</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Polar coordinate separator:</source>
-        <translation />
+        <translation>Polar coordinate separator:</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Relative coordinate prefix:</source>
-        <translation />
+        <translation>Relative coordinate prefix:</translation>
     </message>
     <message>
         <location line="+16" />
@@ -7499,12 +7498,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+14" />
         <source>Relative Cartesian coordinate:</source>
-        <translation />
+        <translation>Relative Cartesian coordinate:</translation>
     </message>
     <message>
         <location line="+21" />
         <source>Relative polar coordinate:</source>
-        <translation />
+        <translation>Relative polar coordinate:</translation>
     </message>
 </context>
 <context>
@@ -7517,13 +7516,13 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0" />
         <source>Coordinate Format</source>
-        <translation />
+        <translation>Coordinate Format</translation>
     </message>
     <message>
         <location line="+16" />
         <location line="+33" />
         <source>Comma</source>
-        <translation />
+        <translation>Comma</translation>
     </message>
     <message>
         <location line="-33" />
@@ -7536,17 +7535,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="-31" />
         <source>Semicolon</source>
-        <translation />
+        <translation>Semicolon</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Less Than</source>
-        <translation />
+        <translation>Less Than</translation>
     </message>
     <message>
         <location line="+5" />
         <source>At</source>
-        <translation />
+        <translation>At</translation>
     </message>
     <message>
         <location line="+1" />
@@ -7556,17 +7555,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+1" />
         <source>Dollar</source>
-        <translation />
+        <translation>Dollar</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Hash</source>
-        <translation />
+        <translation>Hash</translation>
     </message>
     <message>
         <location line="+18" />
         <source>Dot</source>
-        <translation />
+        <translation>Dot</translation>
     </message>
 </context>
 <context>
@@ -7624,13 +7623,13 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+18" />
         <source>Single Block</source>
-        <translation />
+        <translation>Single Block</translation>
     </message>
     <message>
         <location line="+17" />
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+14" />
         <source>Array of Blocks</source>
-        <translation />
+        <translation>Array of Blocks</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockInit.js" line="+2" />
@@ -7640,22 +7639,22 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+8" />
         <source>Columns:</source>
-        <translation />
+        <translation>Columns:</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Rows:</source>
-        <translation />
+        <translation>Rows:</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Column Spacing:</source>
-        <translation />
+        <translation>Column Spacing:</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Row Spacing:</source>
-        <translation />
+        <translation>Row Spacing:</translation>
     </message>
 </context>
 <context>
@@ -7663,12 +7662,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+106" />
         <source>Cannot import file from URL: </source>
-        <translation />
+        <translation>Ne mogu import file from URL: </translation>
     </message>
     <message>
         <location line="+29" />
         <source>Adjusted invalid block name to "%1"</source>
-        <translation />
+        <translation>Adjusted invalid block name to "%1"</translation>
     </message>
     <message>
         <location line="+83" />
@@ -7774,7 +7773,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Invert the current selection</source>
-        <translation />
+        <translation>Invert the current selection</translation>
     </message>
 </context>
 <context>
@@ -7782,33 +7781,33 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.js" line="+50" />
         <source>Isometric</source>
-        <translation />
+        <translation>Isometric</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Isometric True Scale</source>
-        <translation />
+        <translation>Isometric True Scale</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Planometric</source>
-        <translation />
+        <translation>Planometric</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Dimetric</source>
-        <translation />
+        <translation>Dimetric</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
         <source>Cabinet</source>
-        <translation />
+        <translation>Cabinet</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Cavalier</source>
-        <translation />
+        <translation>Cavalier</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2" />
@@ -7833,7 +7832,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+17" />
         <source>Left back</source>
-        <translation />
+        <translation>Left back</translation>
     </message>
     <message>
         <location line="+24" />
@@ -7843,7 +7842,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+17" />
         <source>Right back</source>
-        <translation />
+        <translation>Right back</translation>
     </message>
     <message>
         <location line="+24" />
@@ -7858,7 +7857,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+18" />
         <source>Method:</source>
-        <translation />
+        <translation>Method:</translation>
     </message>
 </context>
 <context>
@@ -7874,7 +7873,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridOff/IsometricGridOff.js" line="+35" />
         <source>Isometric Grid &amp;Off</source>
-        <translation />
+        <translation>Isometric Grid &amp;Off</translation>
     </message>
 </context>
 <context>
@@ -7914,12 +7913,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17" />
         <source>Shortcut timeout:</source>
-        <translation />
+        <translation>Shortcut timeout:</translation>
     </message>
     <message>
         <location line="+52" />
         <source>Enable keyboard navigation in list widgets</source>
-        <translation />
+        <translation>Enable keyboard navigation in list widgets</translation>
     </message>
 </context>
 <context>
@@ -7932,7 +7931,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0" />
         <source>Keyboard</source>
-        <translation />
+        <translation>Keyboard</translation>
     </message>
 </context>
 <context>
@@ -7940,7 +7939,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20" />
         <source>Language of user interface:</source>
-        <translation />
+        <translation>Language of user interface:</translation>
     </message>
 </context>
 <context>
@@ -7948,12 +7947,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+62" />
         <source>Language Settings</source>
-        <translation />
+        <translation>Language Settings</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Language</source>
-        <translation />
+        <translation>Language</translation>
     </message>
 </context>
 <context>
@@ -7961,7 +7960,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+99" />
         <source>Layer Tools</source>
-        <translation />
+        <translation>Layer Tools</translation>
     </message>
     <message>
         <location line="+27" />
@@ -7971,52 +7970,52 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+43" />
         <source>Showing all layers</source>
-        <translation />
+        <translation>Showing all layers</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Hiding all layers</source>
-        <translation />
+        <translation>Hiding all layers</translation>
     </message>
     <message>
         <location line="+51" />
         <source>Thawing all layers</source>
-        <translation />
+        <translation>Thawing all layers</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Freezing all layers</source>
-        <translation />
+        <translation>Freezing all layers</translation>
     </message>
     <message>
         <location line="+31" />
         <source>Locking all layers</source>
-        <translation />
+        <translation>Locking all layers</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Unlocking all layers</source>
-        <translation />
+        <translation>Unlocking all layers</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33" />
         <source>Default lineweight for new layers:</source>
-        <translation />
+        <translation>Default lineweight for new layers:</translation>
     </message>
     <message>
         <location line="+34" />
         <source>Default color for new layers:</source>
-        <translation />
+        <translation>Default color for new layers:</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Default lineweight for layer 0:</source>
-        <translation />
+        <translation>Default lineweight for layer 0:</translation>
     </message>
     <message>
         <location line="-48" />
         <source>Default color for layer 0:</source>
-        <translation />
+        <translation>Default color for layer 0:</translation>
     </message>
 </context>
 <context>
@@ -8029,27 +8028,27 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0" />
         <source>Compatibility</source>
-        <translation />
+        <translation>Compatibility</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/PreferencesPage.ui" line="+17" />
         <source>Layer 0</source>
-        <translation />
+        <translation>Layer 0</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Layer 0 behaves like a regular layer (QCAD)</source>
-        <translation />
+        <translation>Layer 0 behaves like a regular layer (QCAD)</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Layer 0 behaves differently (best compatibility)</source>
-        <translation />
+        <translation>Layer 0 behaves differently (best compatibility)</translation>
     </message>
     <message>
         <location line="+25" />
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation />
+        <translation>Entities in blocks on layer 0 take on attributes and visibility of block reference.</translation>
     </message>
 </context>
 <context>
@@ -8068,12 +8067,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+7" />
         <source>Layer name is empty.</source>
-        <translation />
+        <translation>Layer name is empty.</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Layer already exists.</source>
-        <translation />
+        <translation>Layer already exists.</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+17" />
@@ -8083,7 +8082,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+11" />
         <source>Layer name:</source>
-        <translation />
+        <translation>Layer name:</translation>
     </message>
     <message>
         <location line="+28" />
@@ -8125,7 +8124,7 @@ večpostoji na popisu.</translation>
         <location line="+0" />
         <location line="+109" />
         <source>Layer List</source>
-        <translation />
+        <translation>Layer List</translation>
     </message>
     <message>
         <location line="-54" />
@@ -8135,7 +8134,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/LayerList/PreferencesPage.ui" line="+19" />
         <source>Enable alternating row colors</source>
-        <translation />
+        <translation>Enable alternating row colors</translation>
     </message>
 </context>
 <context>
@@ -8153,7 +8152,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23" />
         <source>Undo Last Segment</source>
-        <translation />
+        <translation>Undo Last Segment</translation>
     </message>
     <message>
         <location line="+14" />
@@ -8189,7 +8188,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.js" line="+60" />
         <source>Choose line or arc</source>
-        <translation />
+        <translation>Choose line or arc</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2" />
@@ -8199,12 +8198,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17" />
         <source>Amount:</source>
-        <translation />
+        <translation>Amount:</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation />
+        <translation>Amount to lengthen or shorten (negative)</translation>
     </message>
 </context>
 <context>
@@ -8212,7 +8211,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line.js" line="+83" />
         <source>Line Tools</source>
-        <translation />
+        <translation>Line Tools</translation>
     </message>
     <message>
         <location line="+22" />
@@ -8222,12 +8221,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line.ui" line="+17" />
         <source>Same Entity Type as Original</source>
-        <translation />
+        <translation>Same Entity Type as Original</translation>
     </message>
     <message>
         <location line="+23" />
         <source>Line Segment</source>
-        <translation />
+        <translation>Line Segment</translation>
     </message>
     <message>
         <location line="+23" />
@@ -8250,12 +8249,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+10" />
         <source>Next point</source>
-        <translation />
+        <translation>Next point</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23" />
         <source>Close Sequence</source>
-        <translation />
+        <translation>Close Sequence</translation>
     </message>
     <message>
         <location line="+24" />
@@ -8270,7 +8269,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+18" />
         <source>Use fixed length for line</source>
-        <translation />
+        <translation>Use fixed length for line</translation>
     </message>
     <message>
         <location line="+3" />
@@ -8280,7 +8279,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+24" />
         <source>Use fixed angle for line</source>
-        <translation />
+        <translation>Use fixed angle for line</translation>
     </message>
     <message>
         <location line="+3" />
@@ -8313,12 +8312,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2" />
         <source>Line from &amp;Angle</source>
-        <translation />
+        <translation>Line from &amp;Angle</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Draw line at a given absolute angle</source>
-        <translation />
+        <translation>Draw line at a given absolute angle</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.js" line="-31" />
@@ -8338,7 +8337,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17" />
         <source>Line length</source>
-        <translation />
+        <translation>Line length</translation>
     </message>
     <message>
         <location line="+3" />
@@ -8348,7 +8347,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+30" />
         <source>Line angle</source>
-        <translation />
+        <translation>Line angle</translation>
     </message>
     <message>
         <location line="+3" />
@@ -8414,27 +8413,27 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2" />
         <source>Box &amp;Joint from 2 Points</source>
-        <translation />
+        <translation>Box &amp;Joint from 2 Points</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation />
+        <translation>Draw Box Joint Fingers, Slots and Tennons</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17" />
         <source>Depth:</source>
-        <translation />
+        <translation>Depth:</translation>
     </message>
     <message>
         <location line="+30" />
         <source>Finger Width:</source>
-        <translation />
+        <translation>Finger Width:</translation>
     </message>
     <message>
         <location line="+30" />
         <source>Finger/Slot Ratio:</source>
-        <translation />
+        <translation>Finger/Slot Ratio:</translation>
     </message>
     <message>
         <location line="+30" />
@@ -8444,17 +8443,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+11" />
         <source>Finger first</source>
-        <translation />
+        <translation>Finger first</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Slot first</source>
-        <translation />
+        <translation>Slot first</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Tenons</source>
-        <translation />
+        <translation>Tenons</translation>
     </message>
 </context>
 <context>
@@ -8482,22 +8481,22 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+17" />
         <source>Number of Dovetails:</source>
-        <translation />
+        <translation>Number of Dovetails:</translation>
     </message>
     <message>
         <location line="+30" />
         <source>Dovetail Height:</source>
-        <translation />
+        <translation>Dovetail Height:</translation>
     </message>
     <message>
         <location line="+30" />
         <source>Dovetail Gradient:</source>
-        <translation />
+        <translation>Dovetail Gradient:</translation>
     </message>
     <message>
         <location line="+30" />
         <source>Dovetail/Pin Ratio:</source>
-        <translation />
+        <translation>Dovetail/Pin Ratio:</translation>
     </message>
 </context>
 <context>
@@ -8520,7 +8519,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Draw freehand line</source>
-        <translation />
+        <translation>Draw freehand line</translation>
     </message>
 </context>
 <context>
@@ -8533,7 +8532,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Draw horizontal line</source>
-        <translation />
+        <translation>Draw horizontal line</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17" />
@@ -8589,12 +8588,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangentInit.js" line="+2" />
         <source>Orthogonal / Tange&amp;nt</source>
-        <translation />
+        <translation>Orthogonal / Tange&amp;nt</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
-        <translation />
+        <translation>Draw line orthogonal to line and tangent to circle, arc or ellipse</translation>
     </message>
 </context>
 <context>
@@ -8602,12 +8601,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallelInit.js" line="+2" />
         <source>Para&amp;llel (with Distance)</source>
-        <translation />
+        <translation>Para&amp;llel (with Distance)</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Draw parallel to existing line or concentric arc, circle</source>
-        <translation />
+        <translation>Draw parallel to existing line or concentric arc, circle</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17" />
@@ -8625,12 +8624,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2" />
         <source>Par&amp;allel (through Point)</source>
-        <translation />
+        <translation>Par&amp;allel (through Point)</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Draw parallel line or concentric arc or circle through a given point</source>
-        <translation />
+        <translation>Draw parallel line or concentric arc or circle through a given point</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17" />
@@ -8658,7 +8657,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2" />
         <source>Radical Axis of 2 Circles</source>
-        <translation />
+        <translation>Radical Axis of 2 Circles</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17" />
@@ -8671,7 +8670,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+77" />
         <source>Choose base line, arc, circle, ellipse or polyline</source>
-        <translation />
+        <translation>Choose base line, arc, circle, ellipse or polyline</translation>
     </message>
     <message>
         <location line="+10" />
@@ -8711,12 +8710,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2" />
         <source>R&amp;elative Angle</source>
-        <translation />
+        <translation>R&amp;elative Angle</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Draw line with relative angle to base entity</source>
-        <translation />
+        <translation>Draw line with relative angle to base entity</translation>
     </message>
 </context>
 <context>
@@ -8724,7 +8723,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineSimilarityAxes/LineSimilarityAxesInit.js" line="+2" />
         <source>Similarity Axes of 3 Circles</source>
-        <translation />
+        <translation>Similarity Axes of 3 Circles</translation>
     </message>
 </context>
 <context>
@@ -8732,7 +8731,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1.js" line="+65" />
         <source>Choose start point of tangent</source>
-        <translation />
+        <translation>Choose start point of tangent</translation>
     </message>
     <message>
         <location line="+12" />
@@ -8747,7 +8746,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+25" />
         <source>Cannot draw tangent from point inside circle to circle</source>
-        <translation />
+        <translation>Ne mogu draw tangent from point inside circle to circle</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1Init.js" line="+2" />
@@ -8757,7 +8756,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Draw tangent (point, circle)</source>
-        <translation />
+        <translation>Draw tangent (point, circle)</translation>
     </message>
 </context>
 <context>
@@ -8765,12 +8764,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2.js" line="+71" />
         <source>Choose first circle or arc</source>
-        <translation />
+        <translation>Choose first circle or arc</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Choose second circle or arc</source>
-        <translation />
+        <translation>Choose second circle or arc</translation>
     </message>
     <message>
         <location line="+142" />
@@ -8780,12 +8779,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2Init.js" line="+2" />
         <source>Tan&amp;gent (Two Circles)</source>
-        <translation />
+        <translation>Tan&amp;gent (Two Circles)</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Draw tangent (circle, circle)</source>
-        <translation />
+        <translation>Draw tangent (circle, circle)</translation>
     </message>
 </context>
 <context>
@@ -8798,7 +8797,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Draw vertical line</source>
-        <translation />
+        <translation>Draw vertical line</translation>
     </message>
 </context>
 <context>
@@ -8806,7 +8805,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/View/LinetypeMode/LinetypeMode.js" line="+86" />
         <source>Screen-based Line&amp;types</source>
-        <translation />
+        <translation>Screen-based Line&amp;types</translation>
     </message>
 </context>
 <context>
@@ -8830,12 +8829,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19" />
         <source>Global linetype scale:</source>
-        <translation />
+        <translation>Global linetype scale:</translation>
     </message>
     <message>
         <location line="+35" />
         <source>Scale of linetypes matches the scale of each viewport</source>
-        <translation />
+        <translation>Scale of linetypes matches the scale of each viewport</translation>
     </message>
 </context>
 <context>
@@ -8875,7 +8874,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/File/NewFile/MdiChildEmpty.ui" line="+20" />
         <source>Untitled</source>
-        <translation />
+        <translation>Untitled</translation>
     </message>
 </context>
 <context>
@@ -8893,7 +8892,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/MenuBar/PreferencesPage.ui" line="+17" />
         <source>Use native menu bar</source>
-        <translation />
+        <translation>Use native menu bar</translation>
     </message>
 </context>
 <context>
@@ -8901,7 +8900,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MenusAndToolBars.js" line="+32" />
         <source>MenusAndToolBars() is running...</source>
-        <translation />
+        <translation>MenusAndToolBars() is running...</translation>
     </message>
     <message>
         <location line="+6" />
@@ -8924,12 +8923,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+27" />
         <source>First point of symmetry axis</source>
-        <translation />
+        <translation>First point of symmetry axis</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Second point of symmetry axis</source>
-        <translation />
+        <translation>Second point of symmetry axis</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2" />
@@ -8957,7 +8956,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorDialog.ui" line="+14" />
         <source>Mirror Options</source>
-        <translation />
+        <translation>Mirror Options</translation>
     </message>
     <message>
         <location line="+10" />
@@ -8985,7 +8984,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/Misc.js" line="+60" />
         <source>Misc Tools</source>
-        <translation />
+        <translation>Misc Tools</translation>
     </message>
     <message>
         <location line="+21" />
@@ -9008,7 +9007,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+9" />
         <source>Misc Block Tools</source>
-        <translation />
+        <translation>Misc Block Tools</translation>
     </message>
     <message>
         <location line="+21" />
@@ -9026,12 +9025,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+9" />
         <source>Misc Development Tools</source>
-        <translation />
+        <translation>Misc Development Tools</translation>
     </message>
     <message>
         <location line="+22" />
         <source>De&amp;velopment</source>
-        <translation />
+        <translation>De&amp;velopment</translation>
     </message>
 </context>
 <context>
@@ -9044,12 +9043,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+9" />
         <source>Misc Drawing Tools</source>
-        <translation />
+        <translation>Misc Drawing Tools</translation>
     </message>
     <message>
         <location line="+21" />
         <source>Misc Draw</source>
-        <translation />
+        <translation>Misc Draw</translation>
     </message>
     <message>
         <location line="+4" />
@@ -9067,7 +9066,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+9" />
         <source>Misc Import / Export Tools</source>
-        <translation />
+        <translation>Misc Import / Export Tools</translation>
     </message>
     <message>
         <location line="+21" />
@@ -9085,7 +9084,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+10" />
         <source>Misc Information Tools</source>
-        <translation />
+        <translation>Misc Information Tools</translation>
     </message>
     <message>
         <location line="+22" />
@@ -9103,7 +9102,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+10" />
         <source>Misc Modification Tools</source>
-        <translation />
+        <translation>Misc Modification Tools</translation>
     </message>
     <message>
         <location line="+22" />
@@ -9121,7 +9120,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+9" />
         <source>Misc Selection Tools</source>
-        <translation />
+        <translation>Misc Selection Tools</translation>
     </message>
     <message>
         <location line="+22" />
@@ -9134,7 +9133,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Modify.js" line="+99" />
         <source>Modification Tools</source>
-        <translation />
+        <translation>Modification Tools</translation>
     </message>
     <message>
         <location line="+26" />
@@ -9147,22 +9146,22 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/ModifyCorner.js" line="+86" />
         <source>Choose corner</source>
-        <translation />
+        <translation>Choose corner</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Choose first entity</source>
-        <translation />
+        <translation>Choose first entity</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Choose second entity</source>
-        <translation />
+        <translation>Choose second entity</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Set point</source>
-        <translation />
+        <translation>Set point</translation>
     </message>
 </context>
 <context>
@@ -9178,7 +9177,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40" />
         <source>Import MOL</source>
-        <translation />
+        <translation>Import MOL</translation>
     </message>
     <message>
         <location line="+1" />
@@ -9188,12 +9187,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0" />
         <source>MOL Files</source>
-        <translation />
+        <translation>MOL Files</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7" />
         <source>Leetro MOL Import...</source>
-        <translation />
+        <translation>Leetro MOL Import...</translation>
     </message>
 </context>
 <context>
@@ -9201,7 +9200,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImporter.js" line="+161" />
         <source>Importing Leetro MOL file...</source>
-        <translation />
+        <translation>Importing Leetro MOL file...</translation>
     </message>
     <message>
         <location line="+1" />
@@ -9222,7 +9221,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14" />
         <source>Enter Position</source>
-        <translation />
+        <translation>Enter Position</translation>
     </message>
     <message>
         <location line="+6" />
@@ -9246,7 +9245,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js" line="+53" />
         <source>My Scripts</source>
-        <translation />
+        <translation>My Scripts</translation>
     </message>
 </context>
 <context>
@@ -9259,12 +9258,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+6" />
         <source>MyLineEdit</source>
-        <translation />
+        <translation>MyLineEdit</translation>
     </message>
     <message>
         <location line="+7" />
         <source>MyButton</source>
-        <translation />
+        <translation>MyButton</translation>
     </message>
 </context>
 <context>
@@ -9272,22 +9271,22 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/File/NewFile/NewFile.js" line="+144" />
         <source>Opening drawing:</source>
-        <translation />
+        <translation>Opening drawing:</translation>
     </message>
     <message>
         <location line="+26" />
         <source>Import Error</source>
-        <translation />
+        <translation>Import Error</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Cannot open file</source>
-        <translation />
+        <translation>Ne mogu open file</translation>
     </message>
     <message>
         <location line="+3" />
         <source>No suitable Importer found. Please check file format and extension.</source>
-        <translation />
+        <translation>No suitable Importer found. Please check file format and extension.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -9297,22 +9296,22 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Please check your access rights, the file format and file extension.</source>
-        <translation />
+        <translation>Please check your access rights, the file format and file extension.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Import failed.</source>
-        <translation />
+        <translation>Import failed.</translation>
     </message>
     <message>
         <location line="+3" />
         <source>File is empty.</source>
-        <translation />
+        <translation>File is empty.</translation>
     </message>
     <message>
         <location line="+16" />
         <source>Drawing loaded successfully:</source>
-        <translation />
+        <translation>Drawing loaded successfully:</translation>
     </message>
     <message>
         <location line="+4" />
@@ -9322,22 +9321,22 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+144" />
         <source>Untitled %1</source>
-        <translation />
+        <translation>Untitled %1</translation>
     </message>
     <message>
         <location line="+18" />
         <source>read-only</source>
-        <translation />
+        <translation>read-only</translation>
     </message>
     <message>
         <location line="+63" />
         <source>Do you want to save the changes you made in&lt;br&gt;the document '%1'?</source>
-        <translation />
+        <translation>Do you want to save the changes you made in&lt;br&gt;the document '%1'?</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Your changes will be lost if you don't save them.</source>
-        <translation />
+        <translation>Your changes will be lost if you don't save them.</translation>
     </message>
     <message>
         <location filename="../scripts/File/NewFile/NewFileInit.js" line="+2" />
@@ -9363,8 +9362,7 @@ večpostoji na popisu.</translation>
     <message numerus="yes">
         <location line="+94" />
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
-        <translation>
-            <numerusform />
+        <translation>Radius dropped below 0.0 after %n concentric circle(s).<numerusform />
             <numerusform />
             <numerusform />
         </translation>
@@ -9372,8 +9370,7 @@ večpostoji na popisu.</translation>
     <message numerus="yes">
         <location line="+3" />
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
-        <translation>
-            <numerusform />
+        <translation>Radius dropped below 0.0 after %n concentric arc(s).<numerusform />
             <numerusform />
             <numerusform />
         </translation>
@@ -9381,12 +9378,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2" />
         <source>Offset (with Distance)</source>
-        <translation />
+        <translation>Offset (with Distance)</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Offset line, arc, circle or ellipse</source>
-        <translation />
+        <translation>Offset line, arc, circle or ellipse</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.ui" line="+17" />
@@ -9409,12 +9406,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2" />
         <source>Offset (through Point)</source>
-        <translation />
+        <translation>Offset (through Point)</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation />
+        <translation>Offset line, arc, circle or ellipse through point</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.ui" line="+17" />
@@ -9432,7 +9429,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+26" />
         <source>Open Drawing</source>
-        <translation />
+        <translation>Open Drawing</translation>
     </message>
     <message>
         <location line="+1" />
@@ -9447,7 +9444,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+5" />
         <source>Open an existing drawing</source>
-        <translation />
+        <translation>Open an existing drawing</translation>
     </message>
 </context>
 <context>
@@ -9460,7 +9457,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0" />
         <source>Printing - Page</source>
-        <translation />
+        <translation>Printing - Page</translation>
     </message>
     <message>
         <location line="+2" />
@@ -9470,7 +9467,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0" />
         <source>Page</source>
-        <translation />
+        <translation>Page</translation>
     </message>
     <message>
         <location line="+8" />
@@ -9480,7 +9477,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116" />
         <source>Page Orientation</source>
-        <translation />
+        <translation>Page Orientation</translation>
     </message>
     <message>
         <location line="+6" />
@@ -9495,22 +9492,22 @@ večpostoji na popisu.</translation>
     <message>
         <location line="-113" />
         <source>Paper</source>
-        <translation />
+        <translation>Paper</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Paper size:</source>
-        <translation />
+        <translation>Paper size:</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Paper width:</source>
-        <translation />
+        <translation>Paper width:</translation>
     </message>
     <message>
         <location line="+37" />
         <source>Paper height:</source>
-        <translation />
+        <translation>Paper height:</translation>
     </message>
     <message>
         <location line="+66" />
@@ -9540,12 +9537,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+86" />
         <source>Set to Printer Margins</source>
-        <translation />
+        <translation>Set to Printer Margins</translation>
     </message>
     <message>
         <location line="+25" />
         <source>Scale and Position</source>
-        <translation />
+        <translation>Scale and Position</translation>
     </message>
     <message>
         <location line="+8" />
@@ -9555,32 +9552,32 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+17" />
         <source>Offset X:</source>
-        <translation />
+        <translation>Offset X:</translation>
     </message>
     <message>
         <location line="+37" />
         <source>Offset Y:</source>
-        <translation />
+        <translation>Offset Y:</translation>
     </message>
     <message>
         <location line="+28" />
         <source>Zero-Point</source>
-        <translation />
+        <translation>Zero-Point</translation>
     </message>
     <message>
         <location line="+25" />
         <source>Miscellaneous</source>
-        <translation />
+        <translation>Miscellaneous</translation>
     </message>
     <message>
         <location line="+16" />
         <source>Point size (mm):</source>
-        <translation />
+        <translation>Point size (mm):</translation>
     </message>
     <message>
         <location line="-10" />
         <source>Show paper borders</source>
-        <translation />
+        <translation>Show paper borders</translation>
     </message>
 </context>
 <context>
@@ -9666,7 +9663,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17" />
         <source>Reset to defaults every time tool is used</source>
-        <translation />
+        <translation>Reset to defaults every time tool is used</translation>
     </message>
 </context>
 <context>
@@ -9679,7 +9676,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+6" />
         <source>Exports the current drawing as PDF</source>
-        <translation />
+        <translation>Exports the current drawing as PDF</translation>
     </message>
 </context>
 <context>
@@ -9687,12 +9684,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/PenToolBar/PenToolBar.js" line="+26" />
         <source>Pen</source>
-        <translation />
+        <translation>Pen</translation>
     </message>
     <message>
         <location line="+73" />
         <source>Reset to Defaults</source>
-        <translation />
+        <translation>Reset to Defaults</translation>
     </message>
 </context>
 <context>
@@ -9708,7 +9705,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Point/Point.js" line="+71" />
         <source>Point Tools</source>
-        <translation />
+        <translation>Point Tools</translation>
     </message>
     <message>
         <location line="+26" />
@@ -9726,12 +9723,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1PInit.js" line="+2" />
         <source>Single &amp;Point</source>
-        <translation />
+        <translation>Single &amp;Point</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Draw single point</source>
-        <translation />
+        <translation>Draw single point</translation>
     </message>
 </context>
 <context>
@@ -9745,7 +9742,7 @@ večpostoji na popisu.</translation>
         <location line="+0" />
         <location line="+2" />
         <source>Point Display</source>
-        <translation />
+        <translation>Point Display</translation>
     </message>
     <message>
         <location line="+0" />
@@ -9760,7 +9757,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+17" />
         <source>Size (pixel):</source>
-        <translation />
+        <translation>Size (pixel):</translation>
     </message>
 </context>
 <context>
@@ -9768,7 +9765,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPole.js" line="+67" />
         <source>Arc or circle</source>
-        <translation />
+        <translation>Arc or circle</translation>
     </message>
     <message>
         <location line="+9" />
@@ -9778,7 +9775,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2" />
         <source>Pole of Line and Circle</source>
-        <translation />
+        <translation>Pole of Line and Circle</translation>
     </message>
 </context>
 <context>
@@ -9791,7 +9788,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2" />
         <source>Power Center of Three Circles</source>
-        <translation />
+        <translation>Power Center of Three Circles</translation>
     </message>
 </context>
 <context>
@@ -9799,7 +9796,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73" />
         <source>Polyline Tools</source>
-        <translation />
+        <translation>Polyline Tools</translation>
     </message>
     <message>
         <location line="+26" />
@@ -9812,104 +9809,104 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108" />
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation />
+        <translation>Choose line, arc, circle, ellipse, spline or polyline to break up</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation />
+        <translation>Choose line, arc, circle or ellipse to break up</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Pick the first point</source>
-        <translation />
+        <translation>Pick the first point</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Pick the first break point</source>
-        <translation />
+        <translation>Pick the first break point</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Pick the second point</source>
-        <translation />
+        <translation>Pick the second point</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Pick the second break point</source>
-        <translation />
+        <translation>Pick the second break point</translation>
     </message>
     <message>
         <location line="+170" />
         <source>Break Out Segment</source>
-        <translation />
+        <translation>Break Out Segment</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23" />
         <source>Remove line break segment</source>
-        <translation />
+        <translation>Remove line break segment</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Remove the line segment between the break symbol</source>
-        <translation />
+        <translation>Remove the line segment between the break symbol</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Remove Segment</source>
-        <translation />
+        <translation>Remove Segment</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Inherit entity properties</source>
-        <translation />
+        <translation>Inherit entity properties</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Inherit all properties from the chosen entity</source>
-        <translation />
+        <translation>Inherit all properties from the chosen entity</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Inherit</source>
-        <translation />
+        <translation>Inherit</translation>
     </message>
     <message>
         <location line="+17" />
         <location line="+16" />
         <source>Peak ratio</source>
-        <translation />
+        <translation>Peak ratio</translation>
     </message>
     <message>
         <location line="-13" />
         <location line="+16" />
         <source>The ratio of the peak height to the break width</source>
-        <translation />
+        <translation>The ratio of the peak height to the break width</translation>
     </message>
     <message>
         <location line="-13" />
         <source>Peak Ratio:</source>
-        <translation />
+        <translation>Peak Ratio:</translation>
     </message>
     <message>
         <location line="+81" />
         <source>First/Last segment inclined</source>
-        <translation />
+        <translation>First/Last segment inclined</translation>
     </message>
     <message>
         <location line="+3" />
         <source>The first and last segment of the break symbol are inclined</source>
-        <translation />
+        <translation>The first and last segment of the break symbol are inclined</translation>
     </message>
     <message>
         <location line="+23" />
         <source>First/Last segment vertical</source>
-        <translation />
+        <translation>First/Last segment vertical</translation>
     </message>
     <message>
         <location line="+3" />
         <source>The first and last segment of the break symbol are vertical</source>
-        <translation />
+        <translation>The first and last segment of the break symbol are vertical</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2" />
@@ -9919,7 +9916,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation />
+        <translation>Draw a polyline break symbol from 2 points</translation>
     </message>
 </context>
 <context>
@@ -9939,17 +9936,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+10" />
         <source>Expand Tree</source>
-        <translation />
+        <translation>Expand Tree</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Collapse Tree</source>
-        <translation />
+        <translation>Collapse Tree</translation>
     </message>
     <message>
         <location line="+72" />
         <source>Restore to Default Values</source>
-        <translation />
+        <translation>Restore to Default Values</translation>
     </message>
 </context>
 <context>
@@ -9978,7 +9975,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+6" />
         <source>Print current drawing</source>
-        <translation />
+        <translation>Print current drawing</translation>
     </message>
 </context>
 <context>
@@ -9986,12 +9983,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/File/PrintCurrentView/PrintCurrentViewInit.js" line="+2" />
         <source>Print &amp;Current View</source>
-        <translation />
+        <translation>Print &amp;Current View</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Print current view</source>
-        <translation />
+        <translation>Print current view</translation>
     </message>
 </context>
 <context>
@@ -9999,27 +9996,27 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+96" />
         <source>Auto Paper Size</source>
-        <translation />
+        <translation>Auto Paper Size</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
-        <translation />
+        <translation>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</translation>
     </message>
     <message>
         <location line="+40" />
         <source>Auto fit</source>
-        <translation />
+        <translation>Auto fit</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Auto fit drawing to paper?</source>
-        <translation />
+        <translation>Auto fit drawing to paper?</translation>
     </message>
     <message>
         <location line="+211" />
         <source>Drag to move paper</source>
-        <translation />
+        <translation>Drag to move paper</translation>
     </message>
     <message>
         <location line="+1" />
@@ -10030,7 +10027,7 @@ večpostoji na popisu.</translation>
         <location line="+203" />
         <location line="+3" />
         <source>Page Settings</source>
-        <translation />
+        <translation>Page Settings</translation>
     </message>
     <message>
         <location line="+277" />
@@ -10040,17 +10037,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+13" />
         <source>Exporting to %1...</source>
-        <translation />
+        <translation>Exporting to %1...</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Export complete: %1</source>
-        <translation />
+        <translation>Export complete: %1</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Export failed (cannot open file for writing): %1</source>
-        <translation />
+        <translation>Export failed (cannot open file for writing): %1</translation>
     </message>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreviewInit.js" line="+2" />
@@ -10060,12 +10057,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+7" />
         <source>Preview how current drawing would be printed</source>
-        <translation />
+        <translation>Preview how current drawing would be printed</translation>
     </message>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.ui" line="+17" />
         <source>Close Print Preview</source>
-        <translation />
+        <translation>Close Print Preview</translation>
     </message>
     <message>
         <location line="+17" />
@@ -10075,7 +10072,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+17" />
         <source>Export as PDF...</source>
-        <translation />
+        <translation>Export as PDF...</translation>
     </message>
     <message>
         <location line="+18" />
@@ -10090,17 +10087,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+18" />
         <source>Move Paper Position</source>
-        <translation />
+        <translation>Move Paper Position</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Auto fit drawing to page(s)</source>
-        <translation />
+        <translation>Auto fit drawing to page(s)</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Auto Center</source>
-        <translation />
+        <translation>Auto Center</translation>
     </message>
     <message>
         <location line="+18" />
@@ -10115,37 +10112,37 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+27" />
         <source>Auto zoom to page</source>
-        <translation />
+        <translation>Auto zoom to page</translation>
     </message>
     <message>
         <location line="+18" />
         <source>Full Color Mode</source>
-        <translation />
+        <translation>Full Color Mode</translation>
     </message>
     <message>
         <location line="+23" />
         <source>Grayscale Mode</source>
-        <translation />
+        <translation>Grayscale Mode</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Black / White Mode</source>
-        <translation />
+        <translation>Black / White Mode</translation>
     </message>
     <message>
         <location line="+27" />
         <source>Show Paper Borders</source>
-        <translation />
+        <translation>Show Paper Borders</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Print Crop Marks</source>
-        <translation />
+        <translation>Print Crop Marks</translation>
     </message>
     <message>
         <location line="+24" />
         <source>Show More Options</source>
-        <translation />
+        <translation>Show More Options</translation>
     </message>
 </context>
 <context>
@@ -10153,7 +10150,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Projection/Projection.js" line="+84" />
         <source>Projection Tools</source>
-        <translation />
+        <translation>Projection Tools</translation>
     </message>
     <message>
         <location line="+22" />
@@ -10186,12 +10183,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+20" />
         <source>Specific Properties</source>
-        <translation />
+        <translation>Specific Properties</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Dependent Entities</source>
-        <translation />
+        <translation>Dependent Entities</translation>
     </message>
     <message>
         <location line="+18" />
@@ -10201,12 +10198,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+204" />
         <source>Index</source>
-        <translation />
+        <translation>Index</translation>
     </message>
     <message>
         <location line="+79" />
         <source>Remove this property from selected objects</source>
-        <translation />
+        <translation>Remove this property from selected objects</translation>
     </message>
     <message>
         <location line="+68" />
@@ -10216,7 +10213,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+24" />
         <source>Add custom property to selected objects</source>
-        <translation />
+        <translation>Add custom property to selected objects</translation>
     </message>
     <message>
         <location line="+45" />
@@ -10226,7 +10223,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+1" />
         <source>Show all properties</source>
-        <translation />
+        <translation>Show all properties</translation>
     </message>
     <message>
         <location line="+140" />
@@ -10236,7 +10233,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+201" />
         <source>Use auto measurement</source>
-        <translation />
+        <translation>Use auto measurement</translation>
     </message>
     <message>
         <location line="+43" />
@@ -10263,57 +10260,57 @@ večpostoji na popisu.</translation>
         <location line="+83" />
         <location line="+10" />
         <source>Property Editor</source>
-        <translation />
+        <translation>Property Editor</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+24" />
         <source>Display Z coordinates</source>
-        <translation />
+        <translation>Display Z coordinates</translation>
     </message>
     <message>
         <location line="+47" />
         <source>Display properties of current block and current layer</source>
-        <translation />
+        <translation>Display properties of current block and current layer</translation>
     </message>
     <message>
         <location line="-37" />
         <source>Allow adding custom properties</source>
-        <translation />
+        <translation>Allow adding custom properties</translation>
     </message>
     <message>
         <location line="-17" />
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation />
+        <translation>Maximum complexity for automatic hatch length calculation:</translation>
     </message>
     <message>
         <location line="+27" />
         <source>Update delay [ms]:</source>
-        <translation />
+        <translation>Update delay [ms]:</translation>
     </message>
     <message>
         <location line="+34" />
         <source>Always show all properties (this may slow down selection of entities)</source>
-        <translation />
+        <translation>Always show all properties (this may slow down selection of entities)</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Always format property values as decimal numbers</source>
-        <translation />
+        <translation>Always format property values as decimal numbers</translation>
     </message>
     <message>
         <location line="+128" />
         <source>Only update when nothing changes during update delay</source>
-        <translation />
+        <translation>Only update when nothing changes during update delay</translation>
     </message>
     <message>
         <location line="-169" />
         <source>Decimals / precision for displayed property values:</source>
-        <translation />
+        <translation>Decimals / precision for displayed property values:</translation>
     </message>
     <message>
         <location line="+116" />
         <source>Display advanced dimension style overrides</source>
-        <translation />
+        <translation>Display advanced dimension style overrides</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40" />
@@ -10323,7 +10320,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+31" />
         <source>General Properties</source>
-        <translation />
+        <translation>General Properties</translation>
     </message>
     <message>
         <location line="+31" />
@@ -10343,7 +10340,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+52" />
         <source>Protected:</source>
-        <translation />
+        <translation>Protected:</translation>
     </message>
 </context>
 <context>
@@ -10367,12 +10364,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeDialog.ui" line="+14" />
         <source>Readme</source>
-        <translation />
+        <translation>Readme</translation>
     </message>
     <message>
         <location line="+15" />
         <source>Don't show this dialog at startup</source>
-        <translation />
+        <translation>Don't show this dialog at startup</translation>
     </message>
 </context>
 <context>
@@ -10395,12 +10392,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+10" />
         <source>Open &amp;Recent</source>
-        <translation />
+        <translation>Open &amp;Recent</translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/PreferencesPage.ui" line="+17" />
         <source>Recent files history size:</source>
-        <translation />
+        <translation>Recent files history size:</translation>
     </message>
 </context>
 <context>
@@ -10416,7 +10413,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/ReloadLinetypes/ReloadLinetypes.js" line="+48" />
         <source>Reload Linetype Definitions</source>
-        <translation />
+        <translation>Reload Linetype Definitions</translation>
     </message>
 </context>
 <context>
@@ -10453,7 +10450,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Help/ReportBug/ReportBugInit.js" line="+2" />
         <source>Report &amp;Bug</source>
-        <translation />
+        <translation>Report &amp;Bug</translation>
     </message>
 </context>
 <context>
@@ -10461,7 +10458,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Help/ReportTranslationError/ReportTranslationErrorInit.js" line="+3" />
         <source>Report &amp;Translation Error</source>
-        <translation />
+        <translation>Report &amp;Translation Error</translation>
     </message>
 </context>
 <context>
@@ -10482,7 +10479,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLengthInit.js" line="+2" />
         <source>Restrict &amp;Angle or Length</source>
-        <translation />
+        <translation>Restrict &amp;Angle or Length</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+80" />
@@ -10493,13 +10490,13 @@ večpostoji na popisu.</translation>
         <location line="-40" />
         <location line="+66" />
         <source>Base:</source>
-        <translation />
+        <translation>Base:</translation>
     </message>
     <message>
         <location line="-40" />
         <location line="+66" />
         <source>Multiples</source>
-        <translation />
+        <translation>Multiples</translation>
     </message>
     <message>
         <location line="-115" />
@@ -10512,7 +10509,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictHorizontal/RestrictHorizontalInit.js" line="+2" />
         <source>Restrict &amp;Horizontally</source>
-        <translation />
+        <translation>Restrict &amp;Horizontally</translation>
     </message>
 </context>
 <context>
@@ -10520,7 +10517,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictOff/RestrictOffInit.js" line="+2" />
         <source>Restrictions &amp;Off</source>
-        <translation />
+        <translation>Restrictions &amp;Off</translation>
     </message>
 </context>
 <context>
@@ -10528,7 +10525,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictOrthogonal/RestrictOrthogonalInit.js" line="+2" />
         <source>Restrict &amp;Orthogonally</source>
-        <translation />
+        <translation>Restrict &amp;Orthogonally</translation>
     </message>
 </context>
 <context>
@@ -10536,7 +10533,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Snap/RestrictVertical/RestrictVerticalInit.js" line="+2" />
         <source>Restrict &amp;Vertically</source>
-        <translation />
+        <translation>Restrict &amp;Vertically</translation>
     </message>
 </context>
 <context>
@@ -10562,7 +10559,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+30" />
         <source>Center point</source>
-        <translation />
+        <translation>Center point</translation>
     </message>
     <message>
         <location line="+10" />
@@ -10577,7 +10574,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+62" />
         <source>Invalid rotation angle</source>
-        <translation />
+        <translation>Invalid rotation angle</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2" />
@@ -10620,32 +10617,32 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.js" line="+67" />
         <source>Center of primary rotation</source>
-        <translation />
+        <translation>Center of primary rotation</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Center of secondary rotation</source>
-        <translation />
+        <translation>Center of secondary rotation</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2" />
         <source>Rotate T&amp;wo</source>
-        <translation />
+        <translation>Rotate T&amp;wo</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.ui" line="+17" />
         <source>Primary Angle:</source>
-        <translation />
+        <translation>Primary Angle:</translation>
     </message>
     <message>
         <location line="+27" />
         <source>Secondary Angle:</source>
-        <translation />
+        <translation>Secondary Angle:</translation>
     </message>
     <message>
         <location line="+27" />
         <source>Copies:</source>
-        <translation />
+        <translation>Copies:</translation>
     </message>
 </context>
 <context>
@@ -10653,7 +10650,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Dialog.ui" line="+14" />
         <source>Rotate Two Options</source>
-        <translation />
+        <translation>Rotate Two Options</translation>
     </message>
     <message>
         <location line="+10" />
@@ -10678,12 +10675,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+97" />
         <source>Angle &amp;a:</source>
-        <translation />
+        <translation>Angle &amp;a:</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Angle &amp;b:</source>
-        <translation />
+        <translation>Angle &amp;b:</translation>
     </message>
     <message>
         <location line="+22" />
@@ -10696,7 +10693,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateDialog.ui" line="+14" />
         <source>Rotate Options</source>
-        <translation />
+        <translation>Rotate Options</translation>
     </message>
     <message>
         <location line="+10" />
@@ -10739,7 +10736,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Round/Round.js" line="+60" />
         <source>The two entities cannot be rounded.</source>
-        <translation />
+        <translation>The two entities cannot be rounded.</translation>
     </message>
     <message>
         <location line="+48" />
@@ -10772,7 +10769,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScript.js" line="+60" />
         <source>Open Script File</source>
-        <translation />
+        <translation>Open Script File</translation>
     </message>
     <message>
         <location line="+1" />
@@ -10782,32 +10779,32 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0" />
         <source>ECMAScript Files</source>
-        <translation />
+        <translation>ECMAScript Files</translation>
     </message>
     <message>
         <location line="+21" />
         <source>Run Script</source>
-        <translation />
+        <translation>Run Script</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js" line="+2" />
         <source>R&amp;un Script</source>
-        <translation />
+        <translation>R&amp;un Script</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Open and run a script file</source>
-        <translation />
+        <translation>Open and run a script file</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20" />
         <source>Running Script</source>
-        <translation />
+        <translation>Running Script</translation>
     </message>
     <message>
         <location line="+15" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to run the following script(s):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;This script could potentially modify your drawings, modify or delete your files or access your network connection.&lt;/p&gt;&lt;p&gt;&lt;span style=" font-weight:600; color:#ff0000;"&gt;It is strongly recommended to only run scripts from trusted sources.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation />
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spremate se pokrenuti sljedeću skriptu/skripte:&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;Ova skripta bi potencijalno mogla modificirati vaše crteže, modificirati ili izbrisati vaše datoteke ili pristupiti vašoj mrežnoj vezi.&lt;/p&gt;&lt;p&gt;&lt;span style=" font-weight:600; color:#ff0000;"&gt;Strogo se preporučuje pokretati samo skripte iz pouzdanih izvora.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -10830,32 +10827,32 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+21" />
         <source>File Format Version Not Recommended</source>
-        <translation />
+        <translation>File Format Version Not Recommended</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The file format version you are using is not recommended: "%1".</source>
-        <translation />
+        <translation>The file format version you are using is not recommended: "%1".</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Custom properties will not be saved.</source>
-        <translation />
+        <translation>Custom properties will not be saved.</translation>
     </message>
     <message>
         <location line="+1" />
         <source>All black entities and layers will be saved as white.</source>
-        <translation />
+        <translation>All black entities and layers will be saved as white.</translation>
     </message>
     <message>
         <location line="+1" />
         <source>All custom colors will be adjusted to the nearest fixed color.</source>
-        <translation />
+        <translation>All custom colors will be adjusted to the nearest fixed color.</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Proceed?</source>
-        <translation />
+        <translation>Proceed?</translation>
     </message>
     <message>
         <location line="+16" />
@@ -10865,27 +10862,27 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Saving to file format version "%1".</source>
-        <translation />
+        <translation>Saving to file format version "%1".</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Black entities and layers are saved as white.</source>
-        <translation />
+        <translation>Black entities and layers are saved as white.</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Custom colors are adjusted to the nearest fixed color.</source>
-        <translation />
+        <translation>Custom colors are adjusted to the nearest fixed color.</translation>
     </message>
     <message>
         <location line="+6" />
         <source>File %1 has not been saved.</source>
-        <translation />
+        <translation>File %1 has not been saved.</translation>
     </message>
     <message>
         <location line="+21" />
         <source>Saved file:</source>
-        <translation />
+        <translation>Saved file:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -10908,7 +10905,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0" />
         <source>Open/Save</source>
-        <translation />
+        <translation>Open/Save</translation>
     </message>
     <message>
         <location line="+33" />
@@ -10923,17 +10920,17 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAsInit.js" line="+2" />
         <source>Save &amp;As...</source>
-        <translation />
+        <translation>Save &amp;As...</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/PreferencesPage.ui" line="+17" />
         <source>File Dialog</source>
-        <translation />
+        <translation>File Dialog</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Use system file dialog</source>
-        <translation />
+        <translation>Use system file dialog</translation>
     </message>
     <message>
         <location line="+13" />
@@ -10943,12 +10940,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+6" />
         <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
-        <translation />
+        <translation>Allow opening of zero size files (e.g. online files that are not synched to disk)</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
-        <translation />
+        <translation>Decode strings in DXF/DWG as UTF-8 (experimental)</translation>
     </message>
     <message>
         <location line="+10" />
@@ -10958,17 +10955,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+8" />
         <source>Default format:</source>
-        <translation />
+        <translation>Default format:</translation>
     </message>
     <message>
         <location line="+37" />
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
-        <translation />
+        <translation>Show warning when saving to a file format that does not support 24bit colors</translation>
     </message>
     <message>
         <location line="+27" />
         <source>Store "last saved by" file information as:</source>
-        <translation />
+        <translation>Store "last saved by" file information as:</translation>
     </message>
     <message>
         <location line="+14" />
@@ -10991,7 +10988,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+32" />
         <source>Focus point</source>
-        <translation />
+        <translation>Focus point</translation>
     </message>
     <message>
         <location line="+11" />
@@ -11006,7 +11003,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+66" />
         <source>Invalid scale factor</source>
-        <translation />
+        <translation>Invalid scale factor</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2" />
@@ -11065,7 +11062,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleDialog.ui" line="+14" />
         <source>Scale Options</source>
-        <translation />
+        <translation>Scale Options</translation>
     </message>
     <message>
         <location line="+10" />
@@ -11118,7 +11115,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/PreferencesPage.ui" line="+17" />
         <source>Rescan scripts folder on startup</source>
-        <translation />
+        <translation>Rescan scripts folder on startup</translation>
     </message>
 </context>
 <context>
@@ -11126,7 +11123,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js" line="+24" />
         <source>Scripting</source>
-        <translation />
+        <translation>Scripting</translation>
     </message>
 </context>
 <context>
@@ -11134,12 +11131,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Select/Select.js" line="+216" />
         <source>Selection Tools</source>
-        <translation />
+        <translation>Selection Tools</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Selection Tools Panel</source>
-        <translation />
+        <translation>Selection Tools Panel</translation>
     </message>
     <message>
         <location line="+9" />
@@ -11157,7 +11154,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Select all visible entities</source>
-        <translation />
+        <translation>Select all visible entities</translation>
     </message>
 </context>
 <context>
@@ -11173,17 +11170,17 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColor.js" line="+64" />
         <source>Select one or more objects only of the desired color</source>
-        <translation />
+        <translation>Select one or more objects only of the desired color</translation>
     </message>
     <message>
         <location line="+16" />
         <source>Selected all visible entities of color %1</source>
-        <translation />
+        <translation>Selected all visible entities of color %1</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js" line="+2" />
         <source>By Color</source>
-        <translation />
+        <translation>By Color</translation>
     </message>
 </context>
 <context>
@@ -11191,7 +11188,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Select all objects of a color</source>
-        <translation />
+        <translation>Select all objects of a color</translation>
     </message>
 </context>
 <context>
@@ -11199,17 +11196,17 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js" line="+58" />
         <source>Object selected:</source>
-        <translation />
+        <translation>Object selected:</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Object is not a drawing entity:</source>
-        <translation />
+        <translation>Object is not a drawing entity:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2" />
         <source>By Handle</source>
-        <translation />
+        <translation>By Handle</translation>
     </message>
 </context>
 <context>
@@ -11217,12 +11214,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17" />
         <source>Selection by Handle</source>
-        <translation />
+        <translation>Selection by Handle</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Handle (hex):</source>
-        <translation />
+        <translation>Handle (hex):</translation>
     </message>
 </context>
 <context>
@@ -11230,7 +11227,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+54" />
         <source>Choose entity of contour</source>
-        <translation />
+        <translation>Choose entity of contour</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2" />
@@ -11275,7 +11272,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+30" />
         <source>Same Layer</source>
-        <translation />
+        <translation>Same Layer</translation>
     </message>
 </context>
 <context>
@@ -11349,7 +11346,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.js" line="+68" />
         <source>Choose entity on layer</source>
-        <translation />
+        <translation>Choose entity on layer</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2" />
@@ -11437,7 +11434,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+27" />
         <source>Cross Selection</source>
-        <translation />
+        <translation>Cross Selection</translation>
     </message>
 </context>
 <context>
@@ -11490,7 +11487,8 @@ večpostoji na popisu.</translation>
         <location line="+4" />
         <source>Selected entities:
 %1.</source>
-        <translation />
+        <translation>Selected entities:
+%1.</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26" />
@@ -11508,7 +11506,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZeroInit.js" line="+2" />
         <source>Set &amp;Relative Zero</source>
-        <translation />
+        <translation>Set &amp;Relative Zero</translation>
     </message>
 </context>
 <context>
@@ -11516,7 +11514,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.js" line="+78" />
         <source>Shape Tools</source>
-        <translation />
+        <translation>Shape Tools</translation>
     </message>
     <message>
         <location line="+26" />
@@ -11531,7 +11529,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+17" />
         <source>Fill</source>
-        <translation />
+        <translation>Fill</translation>
     </message>
     <message>
         <location line="+14" />
@@ -11545,7 +11543,7 @@ večpostoji na popisu.</translation>
         <location filename="../scripts/ShapeAlgorithms.js" line="+1427" />
         <location line="+29" />
         <source>At least two points are identical.</source>
-        <translation />
+        <translation>At least two points are identical.</translation>
     </message>
     <message>
         <location line="-22" />
@@ -11560,12 +11558,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+19" />
         <source>Invalid number of segments: %1.</source>
-        <translation />
+        <translation>Invalid number of segments: %1.</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Invalid ellipse major / minor: %1 / %2.</source>
-        <translation />
+        <translation>Invalid ellipse major / minor: %1 / %2.</translation>
     </message>
 </context>
 <context>
@@ -11578,17 +11576,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+8" />
         <source>Middle of Side</source>
-        <translation />
+        <translation>Middle of Side</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2" />
         <source>Pol&amp;ygon (Center, Side)</source>
-        <translation />
+        <translation>Pol&amp;ygon (Center, Side)</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Draw regular polygon from center and middle point of side</source>
-        <translation />
+        <translation>Draw regular polygon from center and middle point of side</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17" />
@@ -11601,7 +11599,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+61" />
         <source>First side</source>
-        <translation />
+        <translation>First side</translation>
     </message>
     <message>
         <location line="+2" />
@@ -11611,7 +11609,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+8" />
         <source>Second side</source>
-        <translation />
+        <translation>Second side</translation>
     </message>
     <message>
         <location line="+2" />
@@ -11621,12 +11619,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2" />
         <source>Polygo&amp;n (Side, Side)</source>
-        <translation />
+        <translation>Polygo&amp;n (Side, Side)</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
-        <translation />
+        <translation>Draw regular polygon from middle points of two opposite sides or two opposite corners</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui" line="+17" />
@@ -11636,7 +11634,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+24" />
         <source>Corner to Corner</source>
-        <translation />
+        <translation>Corner to Corner</translation>
     </message>
 </context>
 <context>
@@ -11654,12 +11652,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2" />
         <source>Pol&amp;ygon (Center, Corner)</source>
-        <translation />
+        <translation>Pol&amp;ygon (Center, Corner)</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Draw regular polygon from center and corner point</source>
-        <translation />
+        <translation>Draw regular polygon from center and corner point</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17" />
@@ -11682,12 +11680,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2" />
         <source>Polygo&amp;n (2 Points of Side)</source>
-        <translation />
+        <translation>Polygo&amp;n (2 Points of Side)</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Draw regular polygon from end points of one side</source>
-        <translation />
+        <translation>Draw regular polygon from end points of one side</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17" />
@@ -11705,7 +11703,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+4" />
         <source>Draw rectangle from two corners</source>
-        <translation />
+        <translation>Draw rectangle from two corners</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17" />
@@ -11718,12 +11716,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js" line="+2" />
         <source>Rectangle with &amp;Size</source>
-        <translation />
+        <translation>Rectangle with &amp;Size</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Draw rectangle with position and size</source>
-        <translation />
+        <translation>Draw rectangle with position and size</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17" />
@@ -11759,7 +11757,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Layer/ShowActiveLayer/ShowActiveLayerInit.js" line="+2" />
         <source>Show &amp;Only Active</source>
-        <translation />
+        <translation>Show &amp;Only Active</translation>
     </message>
 </context>
 <context>
@@ -11783,12 +11781,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadme.js" line="+46" />
         <source>File "%1" doesn't exist.</source>
-        <translation />
+        <translation>File "%1" doesn't exist.</translation>
     </message>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeInit.js" line="+2" />
         <source>Show &amp;Readme</source>
-        <translation />
+        <translation>Show &amp;Readme</translation>
     </message>
 </context>
 <context>
@@ -11796,7 +11794,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/00_Single.ui" line="+14" />
         <source>Single</source>
-        <translation />
+        <translation>Single</translation>
     </message>
 </context>
 <context>
@@ -11843,12 +11841,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+88" />
         <source>Set coordinate</source>
-        <translation />
+        <translation>Set coordinate</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Enter</source>
-        <translation />
+        <translation>Enter</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2" />
@@ -11858,22 +11856,22 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36" />
         <source>X Coordinate</source>
-        <translation />
+        <translation>X Coordinate</translation>
     </message>
     <message>
         <location line="-19" />
         <source>x:</source>
-        <translation />
+        <translation>x:</translation>
     </message>
     <message>
         <location line="+35" />
         <source>y:</source>
-        <translation />
+        <translation>y:</translation>
     </message>
     <message>
         <location line="+19" />
         <source>Y Coordinate</source>
-        <translation />
+        <translation>Y Coordinate</translation>
     </message>
     <message>
         <location line="+16" />
@@ -11896,12 +11894,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+39" />
         <source>Radius (Distance)</source>
-        <translation />
+        <translation>Radius (Distance)</translation>
     </message>
     <message>
         <location line="-22" />
         <source>r:</source>
-        <translation />
+        <translation>r:</translation>
     </message>
     <message>
         <location line="+9" />
@@ -11947,7 +11945,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.js" line="+36" />
         <source>Specify first point to measure distance from</source>
-        <translation />
+        <translation>Specify first point to measure distance from</translation>
     </message>
     <message>
         <location line="+32" />
@@ -11962,7 +11960,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Snap distance between 2 points</source>
-        <translation />
+        <translation>Snap distance between 2 points</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17" />
@@ -11982,7 +11980,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+5" />
         <source>Fraction</source>
-        <translation />
+        <translation>Fraction</translation>
     </message>
 </context>
 <context>
@@ -12027,17 +12025,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0" />
         <source>Intersection Manual</source>
-        <translation />
+        <translation>Intersection Manual</translation>
     </message>
     <message>
         <location line="+13" />
         <source>First entity</source>
-        <translation />
+        <translation>First entity</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Second entity</source>
-        <translation />
+        <translation>Second entity</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2" />
@@ -12047,7 +12045,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17" />
         <source>Terminate manual intersection tool after one use</source>
-        <translation />
+        <translation>Terminate manual intersection tool after one use</translation>
     </message>
 </context>
 <context>
@@ -12095,7 +12093,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2" />
         <source>Center of &amp;Selection</source>
-        <translation />
+        <translation>Center of &amp;Selection</translation>
     </message>
 </context>
 <context>
@@ -12127,7 +12125,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Spline/Spline.js" line="+72" />
         <source>Spline Tools</source>
-        <translation />
+        <translation>Spline Tools</translation>
     </message>
     <message>
         <location line="+26" />
@@ -12140,12 +12138,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.js" line="+60" />
         <source>First control point</source>
-        <translation />
+        <translation>First control point</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Next control point</source>
-        <translation />
+        <translation>Next control point</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2" />
@@ -12155,27 +12153,27 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Draw spline from control points</source>
-        <translation />
+        <translation>Draw spline from control points</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23" />
         <source>Undo Last Control Point</source>
-        <translation />
+        <translation>Undo Last Control Point</translation>
     </message>
     <message>
         <location line="+21" />
         <source>Degree:</source>
-        <translation />
+        <translation>Degree:</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Choose Spline Degree</source>
-        <translation />
+        <translation>Choose Spline Degree</translation>
     </message>
     <message>
         <location line="+70" />
         <source>Tick for Closed Spline</source>
-        <translation />
+        <translation>Tick for Closed Spline</translation>
     </message>
     <message>
         <location line="+3" />
@@ -12188,7 +12186,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/SplineToLine/SplineToLine.js" line="+71" />
         <source>Convert Straight Splines to Lines</source>
-        <translation />
+        <translation>Convert Straight Splines to Lines</translation>
     </message>
 </context>
 <context>
@@ -12211,37 +12209,37 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47" />
         <source>Status bar font:</source>
-        <translation />
+        <translation>Status bar font:</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Status Bar Widgets</source>
-        <translation />
+        <translation>Status Bar Widgets</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Coordinate display</source>
-        <translation />
+        <translation>Coordinate display</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Mouse display</source>
-        <translation />
+        <translation>Mouse display</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Selection display</source>
-        <translation />
+        <translation>Selection display</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Progress display</source>
-        <translation />
+        <translation>Progress display</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Show status tips</source>
-        <translation />
+        <translation>Show status tips</translation>
     </message>
 </context>
 <context>
@@ -12293,12 +12291,12 @@ večpostoji na popisu.</translation>
         <location line="+0" />
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14" />
         <source>SVG Import</source>
-        <translation />
+        <translation>SVG Import</translation>
     </message>
     <message>
         <location line="+44" />
         <source>Import SVG</source>
-        <translation />
+        <translation>Import SVG</translation>
     </message>
     <message>
         <location line="+1" />
@@ -12313,7 +12311,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2" />
         <source>SVG &amp;Import...</source>
-        <translation />
+        <translation>SVG &amp;Import...</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/PreferencesPage.ui" line="+17" />
@@ -12323,7 +12321,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+6" />
         <source>Automatically convert splines to lines / arcs if appropriate</source>
-        <translation />
+        <translation>Automatically convert splines to lines / arcs if appropriate</translation>
     </message>
     <message>
         <location line="+13" />
@@ -12333,7 +12331,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+6" />
         <source>Import groups as layers</source>
-        <translation />
+        <translation>Import groups as layers</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8" />
@@ -12343,7 +12341,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+57" />
         <source>Pixels / Inch</source>
-        <translation />
+        <translation>Pixels / Inch</translation>
     </message>
 </context>
 <context>
@@ -12351,7 +12349,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9" />
         <source>SVG Files %1</source>
-        <translation />
+        <translation>SVG Files %1</translation>
     </message>
 </context>
 <context>
@@ -12364,12 +12362,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0" />
         <source>Tab Bar</source>
-        <translation />
+        <translation>Tab Bar</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/TabBar/PreferencesPage.ui" line="+17" />
         <source>Show tab bar</source>
-        <translation />
+        <translation>Show tab bar</translation>
     </message>
 </context>
 <context>
@@ -12409,27 +12407,27 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19" />
         <source>Font size in text dialog preview:</source>
-        <translation />
+        <translation>Font size in text dialog preview:</translation>
     </message>
     <message>
         <location line="+99" />
         <source>Show font preview in font controls</source>
-        <translation />
+        <translation>Show font preview in font controls</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Use reduced selection of fonts:</source>
-        <translation />
+        <translation>Use reduced selection of fonts:</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Uncheck all</source>
-        <translation />
+        <translation>Uncheck all</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Check all</source>
-        <translation />
+        <translation>Check all</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-17" />
@@ -12439,17 +12437,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+27" />
         <source>Text height</source>
-        <translation />
+        <translation>Text height</translation>
     </message>
     <message>
         <location line="+23" />
         <source>Spacing</source>
-        <translation />
+        <translation>Spacing</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Letter spacing</source>
-        <translation />
+        <translation>Letter spacing</translation>
     </message>
     <message>
         <location line="+3" />
@@ -12474,7 +12472,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+30" />
         <source>Fit text to line, arc or circle</source>
-        <translation />
+        <translation>Fit text to line, arc or circle</translation>
     </message>
     <message>
         <location line="+3" />
@@ -12511,7 +12509,7 @@ večpostoji na popisu.</translation>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.js" line="+99" />
         <location line="+1" />
         <source>Select Entity</source>
-        <translation />
+        <translation>Select Entity</translation>
     </message>
     <message>
         <location line="+6" />
@@ -12527,7 +12525,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Draw text along an entity</source>
-        <translation />
+        <translation>Draw text along an entity</translation>
     </message>
 </context>
 <context>
@@ -12535,7 +12533,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250" />
         <source>Default value:</source>
-        <translation />
+        <translation>Default value:</translation>
     </message>
     <message>
         <location line="+274" />
@@ -12600,17 +12598,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+348" />
         <source>Others...</source>
-        <translation />
+        <translation>Others...</translation>
     </message>
     <message>
         <location line="+139" />
         <source>Degree</source>
-        <translation />
+        <translation>Degree</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Plus-Minus</source>
-        <translation />
+        <translation>Plus-Minus</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12620,7 +12618,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+1" />
         <source>Almost equal</source>
-        <translation />
+        <translation>Almost equal</translation>
     </message>
     <message>
         <location line="+1" />
@@ -12650,7 +12648,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+1" />
         <source>Not equal</source>
-        <translation />
+        <translation>Not equal</translation>
     </message>
     <message>
         <location line="+1" />
@@ -12675,7 +12673,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+1" />
         <source>No-break space</source>
-        <translation />
+        <translation>No-break space</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14" />
@@ -12685,7 +12683,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+14" />
         <source>Main Font</source>
-        <translation />
+        <translation>Main Font</translation>
     </message>
     <message>
         <location line="+24" />
@@ -12695,7 +12693,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+7" />
         <source>Text Height in Drawing Units</source>
-        <translation />
+        <translation>Text Height in Drawing Units</translation>
     </message>
     <message>
         <location line="+18" />
@@ -12712,18 +12710,19 @@ večpostoji na popisu.</translation>
     <message>
         <location line="-260" />
         <source>Text fits on one line and has no formatting</source>
-        <translation />
+        <translation>Text fits on one line and has no formatting</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Simple text
 (one line, no formatting)</source>
-        <translation />
+        <translation>Simple text
+(one line, no formatting)</translation>
     </message>
     <message>
         <location line="+21" />
         <source>Rich Text</source>
-        <translation />
+        <translation>Rich Text</translation>
     </message>
     <message>
         <location line="+36" />
@@ -12743,32 +12742,32 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+170" />
         <source>Ctrl+B</source>
-        <translation />
+        <translation>Ctrl+B</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Ctrl+I</source>
-        <translation />
+        <translation>Ctrl+I</translation>
     </message>
     <message>
         <location line="+50" />
         <source>Insert Symbol...</source>
-        <translation />
+        <translation>Insert Symbol...</translation>
     </message>
     <message>
         <location line="+40" />
         <source>Source</source>
-        <translation />
+        <translation>Source</translation>
     </message>
     <message>
         <location line="+23" />
         <source>Attribute Details</source>
-        <translation />
+        <translation>Attribute Details</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Tag:</source>
-        <translation />
+        <translation>Tag:</translation>
     </message>
     <message>
         <location line="+17" />
@@ -12783,17 +12782,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+39" />
         <source>Text Geometry</source>
-        <translation />
+        <translation>Text Geometry</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Line spacing factor:</source>
-        <translation />
+        <translation>Line spacing factor:</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Line Spacing Factor</source>
-        <translation />
+        <translation>Line Spacing Factor</translation>
     </message>
     <message>
         <location line="+16" />
@@ -12803,7 +12802,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+13" />
         <source>Rotation Angle</source>
-        <translation />
+        <translation>Rotation Angle</translation>
     </message>
     <message>
         <location line="+25" />
@@ -12818,12 +12817,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+32" />
         <source>Top Center</source>
-        <translation />
+        <translation>Top Center</translation>
     </message>
     <message>
         <location line="+29" />
         <source>Middle Right</source>
-        <translation />
+        <translation>Middle Right</translation>
     </message>
     <message>
         <location line="+29" />
@@ -12833,27 +12832,27 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+29" />
         <source>Middle Center</source>
-        <translation />
+        <translation>Middle Center</translation>
     </message>
     <message>
         <location line="+29" />
         <source>Middle Left</source>
-        <translation />
+        <translation>Middle Left</translation>
     </message>
     <message>
         <location line="+29" />
         <source>Base Left</source>
-        <translation />
+        <translation>Base Left</translation>
     </message>
     <message>
         <location line="+29" />
         <source>Base Center</source>
-        <translation />
+        <translation>Base Center</translation>
     </message>
     <message>
         <location line="+29" />
         <source>Base Right</source>
-        <translation />
+        <translation>Base Right</translation>
     </message>
     <message>
         <location line="+29" />
@@ -12863,7 +12862,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+29" />
         <source>Bottom Center</source>
-        <translation />
+        <translation>Bottom Center</translation>
     </message>
     <message>
         <location line="+29" />
@@ -12889,7 +12888,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20" />
         <source>User interface theme:</source>
-        <translation />
+        <translation>User interface theme:</translation>
     </message>
 </context>
 <context>
@@ -12910,7 +12909,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/23_ThreeBelow.ui" line="+14" />
         <source>Three: Below</source>
-        <translation />
+        <translation>Three: Below</translation>
     </message>
 </context>
 <context>
@@ -12918,7 +12917,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/25_ThreeHorizontal.ui" line="+14" />
         <source>Three: Horizontal</source>
-        <translation />
+        <translation>Three: Horizontal</translation>
     </message>
 </context>
 <context>
@@ -12926,7 +12925,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/24_ThreeVertical.ui" line="+14" />
         <source>Three: Vertical</source>
-        <translation />
+        <translation>Three: Vertical</translation>
     </message>
 </context>
 <context>
@@ -12934,7 +12933,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToBack/ToBackInit.js" line="+2" />
         <source>Send to Bac&amp;k</source>
-        <translation />
+        <translation>Send to Bac&amp;k</translation>
     </message>
 </context>
 <context>
@@ -12942,7 +12941,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToFront/ToFrontInit.js" line="+2" />
         <source>Bring to &amp;Front</source>
-        <translation />
+        <translation>Bring to &amp;Front</translation>
     </message>
 </context>
 <context>
@@ -12982,12 +12981,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19" />
         <source>Icon size:</source>
-        <translation />
+        <translation>Icon size:</translation>
     </message>
     <message>
         <location line="+72" />
         <source>Pixel</source>
-        <translation />
+        <translation>Pixel</translation>
     </message>
     <message>
         <location line="+3" />
@@ -13042,7 +13041,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Transform.js" line="+47" />
         <source>This tool requires a selection</source>
-        <translation />
+        <translation>This tool requires a selection</translation>
     </message>
 </context>
 <context>
@@ -13055,7 +13054,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0" />
         <source>Move/Copy</source>
-        <translation />
+        <translation>Move/Copy</translation>
     </message>
     <message>
         <location line="+27" />
@@ -13075,7 +13074,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+9" />
         <source>Move or copy entities once or multiple times</source>
-        <translation />
+        <translation>Move or copy entities once or multiple times</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/PreferencesPage.ui" line="+17" />
@@ -13103,7 +13102,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateDialog.ui" line="+14" />
         <source>Move / Copy Options</source>
-        <translation />
+        <translation>Move / Copy Options</translation>
     </message>
     <message>
         <location line="+10" />
@@ -13136,7 +13135,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2" />
         <source>M&amp;ove and Rotate</source>
-        <translation />
+        <translation>M&amp;ove and Rotate</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17" />
@@ -13152,7 +13151,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0" />
         <source>Move/Rotate</source>
-        <translation />
+        <translation>Move/Rotate</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27" />
@@ -13180,7 +13179,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateDialog.ui" line="+14" />
         <source>Move and Rotate Options</source>
-        <translation />
+        <translation>Move and Rotate Options</translation>
     </message>
     <message>
         <location line="+10" />
@@ -13218,17 +13217,17 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/Trim/Trim.js" line="+77" />
         <source>Choose limiting entity</source>
-        <translation />
+        <translation>Choose limiting entity</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Choose entity to trim</source>
-        <translation />
+        <translation>Choose entity to trim</translation>
     </message>
     <message>
         <location line="+174" />
         <source>The two entities don't intersect, or are currently not supported for trimming.</source>
-        <translation />
+        <translation>The two entities don't intersect, or are currently not supported for trimming.</translation>
     </message>
     <message>
         <location line="+74" />
@@ -13256,7 +13255,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Modify/TrimBoth/TrimBothInit.js" line="+2" />
         <source>Trim &amp;Both</source>
-        <translation />
+        <translation>Trim &amp;Both</translation>
     </message>
 </context>
 <context>
@@ -13264,7 +13263,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/Tutorials.js" line="+56" />
         <source>Script &amp;Tutorials</source>
-        <translation />
+        <translation>Script &amp;Tutorials</translation>
     </message>
 </context>
 <context>
@@ -13272,7 +13271,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/11_TwoHorizontal.ui" line="+14" />
         <source>Two: Horizontal</source>
-        <translation />
+        <translation>Two: Horizontal</translation>
     </message>
 </context>
 <context>
@@ -13280,7 +13279,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/10_TwoVertical.ui" line="+14" />
         <source>Two: Vertical</source>
-        <translation />
+        <translation>Two: Vertical</translation>
     </message>
 </context>
 <context>
@@ -13288,22 +13287,22 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17" />
         <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
-        <translation />
+        <translation>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Auto screen scale factor</source>
-        <translation />
+        <translation>Auto screen scale factor</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Enable high DPI scaling</source>
-        <translation />
+        <translation>Enable high DPI scaling</translation>
     </message>
     <message>
         <location line="+12" />
         <source>Scale factor:</source>
-        <translation />
+        <translation>Scale factor:</translation>
     </message>
 </context>
 <context>
@@ -13316,7 +13315,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0" />
         <source>User Interface</source>
-        <translation />
+        <translation>User Interface</translation>
     </message>
 </context>
 <context>
@@ -13338,7 +13337,7 @@ večpostoji na popisu.</translation>
         <location line="+0" />
         <location line="+2" />
         <source>Drawing Unit</source>
-        <translation />
+        <translation>Drawing Unit</translation>
     </message>
     <message>
         <location line="+0" />
@@ -13353,102 +13352,102 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+1" />
         <source>Inch</source>
-        <translation />
+        <translation>Inch</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Foot</source>
-        <translation />
+        <translation>Foot</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Mile</source>
-        <translation />
+        <translation>Mile</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Millimeter</source>
-        <translation />
+        <translation>Millimeter</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Centimeter</source>
-        <translation />
+        <translation>Centimeter</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Meter</source>
-        <translation />
+        <translation>Meter</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Kilometer</source>
-        <translation />
+        <translation>Kilometer</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Microinch</source>
-        <translation />
+        <translation>Microinch</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Mil</source>
-        <translation />
+        <translation>Mil</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Yard</source>
-        <translation />
+        <translation>Yard</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Angstrom</source>
-        <translation />
+        <translation>Angstrom</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Nanometer</source>
-        <translation />
+        <translation>Nanometer</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Micron</source>
-        <translation />
+        <translation>Micron</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Decimeter</source>
-        <translation />
+        <translation>Decimeter</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Decameter</source>
-        <translation />
+        <translation>Decameter</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Hectometer</source>
-        <translation />
+        <translation>Hectometer</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Gigameter</source>
-        <translation />
+        <translation>Gigameter</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Astro</source>
-        <translation />
+        <translation>Astro</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Lightyear</source>
-        <translation />
+        <translation>Lightyear</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Parsec</source>
-        <translation />
+        <translation>Parsec</translation>
     </message>
     <message>
         <location line="+6" />
@@ -13463,17 +13462,17 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17" />
         <source>Drawing unit:</source>
-        <translation />
+        <translation>Drawing unit:</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Paper unit:</source>
-        <translation />
+        <translation>Paper unit:</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Measurement system (for line types and hatch patterns):</source>
-        <translation />
+        <translation>Measurement system (for line types and hatch patterns):</translation>
     </message>
 </context>
 <context>
@@ -13489,7 +13488,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/View/View.js" line="+64" />
         <source>View Tools</source>
-        <translation />
+        <translation>View Tools</translation>
     </message>
     <message>
         <location line="+27" />
@@ -13535,7 +13534,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105" />
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation />
+        <translation>Grid Spacing &lt; Meta Grid Spacing</translation>
     </message>
 </context>
 <context>
@@ -13548,7 +13547,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0" />
         <source>Layout - Viewports</source>
-        <translation />
+        <translation>Layout - Viewports</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13566,22 +13565,22 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354" />
         <source>Dropped data not supported</source>
-        <translation />
+        <translation>Dropped data not supported</translation>
     </message>
     <message>
         <location line="+29" />
         <source>Cannot import file into existing drawing:</source>
-        <translation />
+        <translation>Ne mogu import file into existing drawing:</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Importing file:</source>
-        <translation />
+        <translation>Importing file:</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Importing URL: </source>
-        <translation />
+        <translation>Importing URL: </translation>
     </message>
 </context>
 <context>
@@ -13589,7 +13588,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Help/Website/WebsiteInit.js" line="+2" />
         <source>Visit &amp;Website</source>
-        <translation />
+        <translation>Visit &amp;Website</translation>
     </message>
 </context>
 <context>
@@ -13597,12 +13596,12 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/WidgetFactory.js" line="+1168" />
         <source>Restore defaults</source>
-        <translation />
+        <translation>Restore defaults</translation>
     </message>
     <message>
         <location line="+54" />
         <source>Insert Symbol</source>
-        <translation />
+        <translation>Insert Symbol</translation>
     </message>
     <message>
         <location line="+6" />
@@ -13627,17 +13626,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="-3" />
         <source>Phi</source>
-        <translation />
+        <translation>Phi</translation>
     </message>
     <message>
         <location line="+1" />
         <source>phi</source>
-        <translation />
+        <translation>phi</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Alt phi</source>
-        <translation />
+        <translation>Alt phi</translation>
     </message>
     <message>
         <location line="-5" />
@@ -13647,7 +13646,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>omega</source>
-        <translation />
+        <translation>omega</translation>
     </message>
     <message>
         <location line="-4" />
@@ -13672,12 +13671,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="-10" />
         <source>Degrees</source>
-        <translation />
+        <translation>Degrees</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Almost Equal</source>
-        <translation />
+        <translation>Almost Equal</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13687,17 +13686,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>Asymptotically Equal</source>
-        <translation />
+        <translation>Asymptotically Equal</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Center Line</source>
-        <translation />
+        <translation>Center Line</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Electrical Phase</source>
-        <translation />
+        <translation>Electrical Phase</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13707,7 +13706,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+4" />
         <source>Not Equal</source>
-        <translation />
+        <translation>Not Equal</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13717,17 +13716,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+6" />
         <source>Property Line</source>
-        <translation />
+        <translation>Property Line</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Subscript 2</source>
-        <translation />
+        <translation>Subscript 2</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Square Root</source>
-        <translation />
+        <translation>Square Root</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13742,12 +13741,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+1" />
         <source>Stacked text</source>
-        <translation />
+        <translation>Stacked text</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Measured value</source>
-        <translation />
+        <translation>Measured value</translation>
     </message>
     <message>
         <location line="+171" />
@@ -13788,7 +13787,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>Base</source>
-        <translation />
+        <translation>Base</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13798,27 +13797,27 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+5" />
         <source>Scientific</source>
-        <translation />
+        <translation>Scientific</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Decimal</source>
-        <translation />
+        <translation>Decimal</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Engineering</source>
-        <translation />
+        <translation>Engineering</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Architectural</source>
-        <translation />
+        <translation>Architectural</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Fractional</source>
-        <translation />
+        <translation>Fractional</translation>
     </message>
     <message>
         <location line="+5" />
@@ -13829,38 +13828,38 @@ večpostoji na popisu.</translation>
         <location line="+13" />
         <location line="+38" />
         <source>Show trailing zeroes</source>
-        <translation />
+        <translation>Show trailing zeroes</translation>
     </message>
     <message>
         <location line="-9" />
         <source>Decimal Degrees</source>
-        <translation />
+        <translation>Decimal Degrees</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Deg/min/sec</source>
-        <translation />
+        <translation>Deg/min/sec</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Gradians</source>
-        <translation />
+        <translation>Gradians</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Radians</source>
-        <translation />
+        <translation>Radians</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Surveyor's units</source>
-        <translation />
+        <translation>Surveyor's units</translation>
     </message>
     <message>
         <location line="-28" />
         <location line="+35" />
         <source>Suppress trailing zeroes</source>
-        <translation />
+        <translation>Suppress trailing zeroes</translation>
     </message>
     <message>
         <location line="+22" />
@@ -13872,12 +13871,12 @@ večpostoji na popisu.</translation>
         <location line="-3" />
         <location line="+4" />
         <source>Counterclockwise</source>
-        <translation />
+        <translation>Counterclockwise</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Preceding</source>
-        <translation />
+        <translation>Preceding</translation>
     </message>
     <message>
         <location line="-86" />
@@ -13888,7 +13887,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="-74" />
         <source>Include 0'0"</source>
-        <translation />
+        <translation>Include 0'0"</translation>
     </message>
     <message>
         <location line="+0" />
@@ -13904,24 +13903,24 @@ večpostoji na popisu.</translation>
     <message>
         <location line="-39" />
         <source>Include 0', suppress 0"</source>
-        <translation />
+        <translation>Include 0', suppress 0"</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Include 0", suppress 0'</source>
-        <translation />
+        <translation>Include 0", suppress 0'</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+35" />
         <source>Suppress leading zeroes</source>
-        <translation />
+        <translation>Suppress leading zeroes</translation>
     </message>
     <message>
         <location line="-33" />
         <location line="+35" />
         <source>Suppress leading / trailing zeroes</source>
-        <translation />
+        <translation>Suppress leading / trailing zeroes</translation>
     </message>
     <message>
         <location line="+35" />
@@ -13947,7 +13946,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+13" />
         <source>Window Tools</source>
-        <translation />
+        <translation>Window Tools</translation>
     </message>
 </context>
 <context>
@@ -13968,7 +13967,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Draw horizontal construction line</source>
-        <translation />
+        <translation>Draw horizontal construction line</translation>
     </message>
 </context>
 <context>
@@ -13981,7 +13980,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3" />
         <source>Draw vertical construction line</source>
-        <translation />
+        <translation>Draw vertical construction line</translation>
     </message>
 </context>
 <context>
@@ -14028,7 +14027,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelectionInit.js" line="+2" />
         <source>Zoom to &amp;Selection</source>
-        <translation />
+        <translation>Zoom to &amp;Selection</translation>
     </message>
 </context>
 <context>
@@ -14036,22 +14035,22 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/autostart.js" line="+237" />
         <source>Loading add-on translations...</source>
-        <translation />
+        <translation>Loading add-on translations...</translation>
     </message>
     <message>
         <location line="+31" />
         <source>Loading add-ons...</source>
-        <translation />
+        <translation>Loading add-ons...</translation>
     </message>
     <message>
         <location line="+15" />
         <source>Initializing add-ons...</source>
-        <translation />
+        <translation>Initializing add-ons...</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Initializing add-ons:</source>
-        <translation />
+        <translation>Initializing add-ons:</translation>
     </message>
 </context>
 <context>
@@ -14059,22 +14058,22 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/library.js" line="+1304" />
         <source>Objects</source>
-        <translation />
+        <translation>Objects</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Object</source>
-        <translation />
+        <translation>Object</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Unknown Objects</source>
-        <translation />
+        <translation>Unknown Objects</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Unknown Object</source>
-        <translation />
+        <translation>Unknown Object</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14099,7 +14098,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>Layouts</source>
-        <translation />
+        <translation>Layouts</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14109,7 +14108,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>Linetypes</source>
-        <translation />
+        <translation>Linetypes</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14119,7 +14118,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>Views</source>
-        <translation />
+        <translation>Views</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14129,7 +14128,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>Dimension Styles</source>
-        <translation />
+        <translation>Dimension Styles</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14164,17 +14163,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0" />
         <source>Block Reference</source>
-        <translation />
+        <translation>Block Reference</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Block References and Attributes</source>
-        <translation />
+        <translation>Block References and Attributes</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Block Reference and Attributes</source>
-        <translation />
+        <translation>Block Reference and Attributes</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14199,12 +14198,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>Attribute Definitions</source>
-        <translation />
+        <translation>Attribute Definitions</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Attribute Definition</source>
-        <translation />
+        <translation>Attribute Definition</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14229,7 +14228,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>Aligned Dimensions</source>
-        <translation />
+        <translation>Aligned Dimensions</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14249,32 +14248,32 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>Angular Dimensions (2 Lines)</source>
-        <translation />
+        <translation>Angular Dimensions (2 Lines)</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Angular Dimension (2 Lines)</source>
-        <translation />
+        <translation>Angular Dimension (2 Lines)</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Angular Dimensions (3 Points)</source>
-        <translation />
+        <translation>Angular Dimensions (3 Points)</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Angular Dimension (3 Points)</source>
-        <translation />
+        <translation>Angular Dimension (3 Points)</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Arc Dimension</source>
-        <translation />
+        <translation>Arc Dimension</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Diametric Dimensions</source>
-        <translation />
+        <translation>Diametric Dimensions</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14284,7 +14283,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>Ordinate Dimensions</source>
-        <translation />
+        <translation>Ordinate Dimensions</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14294,17 +14293,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>Rotated Dimensions</source>
-        <translation />
+        <translation>Rotated Dimensions</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Rotated Dimension</source>
-        <translation />
+        <translation>Rotated Dimension</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Radial Dimensions</source>
-        <translation />
+        <translation>Radial Dimensions</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14334,17 +14333,17 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>Images</source>
-        <translation />
+        <translation>Images</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Image</source>
-        <translation />
+        <translation>Image</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Leaders</source>
-        <translation />
+        <translation>Leaders</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14354,7 +14353,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>Tolerances</source>
-        <translation />
+        <translation>Tolerances</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14374,7 +14373,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>Infinite Lines</source>
-        <translation />
+        <translation>Infinite Lines</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14384,7 +14383,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>Rays</source>
-        <translation />
+        <translation>Rays</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14414,7 +14413,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>Solids</source>
-        <translation />
+        <translation>Solids</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14424,12 +14423,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>Traces</source>
-        <translation />
+        <translation>Traces</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Trace</source>
-        <translation />
+        <translation>Trace</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14454,12 +14453,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2" />
         <source>Text based</source>
-        <translation />
+        <translation>Text based</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Texts</source>
-        <translation />
+        <translation>Texts</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14474,22 +14473,22 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+0" />
         <source>Viewport</source>
-        <translation />
+        <translation>Viewport</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Wipeouts</source>
-        <translation />
+        <translation>Wipeouts</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Wipeout</source>
-        <translation />
+        <translation>Wipeout</translation>
     </message>
     <message>
         <location line="+2" />
         <source>External References</source>
-        <translation />
+        <translation>External References</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14500,18 +14499,18 @@ večpostoji na popisu.</translation>
         <location line="+2" />
         <location line="+9" />
         <source>Unknown Entities</source>
-        <translation />
+        <translation>Unknown Entities</translation>
     </message>
     <message>
         <location line="-9" />
         <location line="+9" />
         <source>Unknown Entity</source>
-        <translation />
+        <translation>Unknown Entity</translation>
     </message>
     <message>
         <location line="+106" />
         <source>All CAD Files</source>
-        <translation />
+        <translation>All CAD Files</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14526,22 +14525,22 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+1" />
         <source>DXF Drawing</source>
-        <translation />
+        <translation>DXF Drawing</translation>
     </message>
     <message>
         <location line="+1" />
         <source>DWG Drawing</source>
-        <translation />
+        <translation>DWG Drawing</translation>
     </message>
     <message>
         <location line="+1" />
         <source>PDF File</source>
-        <translation />
+        <translation>PDF File</translation>
     </message>
     <message>
         <location line="+1" />
         <source>PDF/A-1B File</source>
-        <translation />
+        <translation>PDF/A-1B File</translation>
     </message>
 </context>
 <context>
@@ -14549,7 +14548,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/PreferencesPage.ui" line="+29" />
         <source>Viewport 1</source>
-        <translation />
+        <translation>Viewport 1</translation>
     </message>
     <message>
         <location line="+6" />
@@ -14557,7 +14556,7 @@ večpostoji na popisu.</translation>
         <location line="+152" />
         <location line="+152" />
         <source>Display Grid</source>
-        <translation />
+        <translation>Display Grid</translation>
     </message>
     <message>
         <location line="-446" />
@@ -14565,7 +14564,7 @@ večpostoji na popisu.</translation>
         <location line="+152" />
         <location line="+152" />
         <source>Isometric Grid</source>
-        <translation />
+        <translation>Isometric Grid</translation>
     </message>
     <message>
         <location line="-449" />
@@ -14605,22 +14604,22 @@ večpostoji na popisu.</translation>
         <location line="+152" />
         <location line="+152" />
         <source>Meta Grid Spacing</source>
-        <translation />
+        <translation>Meta Grid Spacing</translation>
     </message>
     <message>
         <location line="-390" />
         <source>Viewport 2</source>
-        <translation />
+        <translation>Viewport 2</translation>
     </message>
     <message>
         <location line="+152" />
         <source>Viewport 3</source>
-        <translation />
+        <translation>Viewport 3</translation>
     </message>
     <message>
         <location line="+152" />
         <source>Viewport 4</source>
-        <translation />
+        <translation>Viewport 4</translation>
     </message>
 </context>
 <context>
@@ -14632,7 +14631,7 @@ večpostoji na popisu.</translation>
         <location line="+66" />
         <location line="+124" />
         <source>ID does not refer to an entity:</source>
-        <translation />
+        <translation>ID does not refer to an entity:</translation>
     </message>
     <message>
         <location line="-42" />
