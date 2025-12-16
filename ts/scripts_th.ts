@@ -894,8 +894,8 @@ the preference changes to take effect.</source>
         <location line="+19" />
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation>พบไฟล์สำรองบันทึกอัตโนมัติ %n ไฟล์สำหรับแบบร่างที่ไม่มีชื่อ
-คุณต้องการกู้คืนหรือไม่?<numerusform>พบไฟล์สำรองบันทึกอัตโนมัติ %n ไฟล์สำหรับแบบที่ไม่มีชื่อ
+        <translation>
+<numerusform>พบไฟล์สำรองบันทึกอัตโนมัติ %n ไฟล์สำหรับแบบที่ไม่มีชื่อ
 คุณต้องการกู้คืนหรือไม่?</numerusform>
         </translation>
     </message>
@@ -2858,7 +2858,7 @@ Do you wish to recover it?</source>
     <message numerus="yes">
         <location line="+3" />
         <source>Label position of %n dimension(s) was reset.</source>
-        <translation>ตำแหน่งป้ายกำกับของ %n มิติถูกรีเซ็ตแล้ว<numerusform>รีเซ็ตตำแหน่งป้ายกำกับของ %n มิติแล้ว</numerusform>
+        <translation><numerusform>รีเซ็ตตำแหน่งป้ายกำกับของ %n มิติแล้ว</numerusform>
         </translation>
     </message>
     <message>
@@ -4177,7 +4177,7 @@ is already in the list.</translation>
     <message numerus="yes">
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85" />
         <source>%n entity/ies duplicated</source>
-        <translation>%n เอนทิตีที่ถูกทำซ้ำ<numerusform>ทำสำเนา %n องค์ประกอบแล้ว</numerusform>
+        <translation><numerusform>ทำสำเนา %n องค์ประกอบแล้ว</numerusform>
         </translation>
     </message>
     <message>
@@ -5012,7 +5012,7 @@ is already in the list.</translation>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50" />
         <source>Transaction affected %n object(s).</source>
-        <translation>Transaction affected %n object(s).<numerusform>ธุรกรรมส่งผลต่อ %n วัตถุ</numerusform>
+        <translation><numerusform>ธุรกรรมส่งผลต่อ %n วัตถุ</numerusform>
         </translation>
     </message>
     <message>
@@ -9351,13 +9351,13 @@ is already in the list.</translation>
     <message numerus="yes">
         <location line="+94" />
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
-        <translation>Radius dropped below 0.0 after %n concentric circle(s).<numerusform>รัศมีลดลงต่ำกว่า 0.0 หลังจาก %n วงกลมศูนย์กลางร่วม</numerusform>
+        <translation><numerusform>รัศมีลดลงต่ำกว่า 0.0 หลังจาก %n วงกลมศูนย์กลางร่วม</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3" />
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
-        <translation>Radius dropped below 0.0 after %n concentric arc(s).<numerusform>รัศมีลดลงต่ำกว่า 0.0 หลังจาก %n อาร์กศูนย์กลางร่วม</numerusform>
+        <translation><numerusform>รัศมีลดลงต่ำกว่า 0.0 หลังจาก %n อาร์กศูนย์กลางร่วม</numerusform>
         </translation>
     </message>
     <message>
@@ -11442,13 +11442,13 @@ is already in the list.</translation>
     <message numerus="yes">
         <location line="+4" />
         <source>%n Entities on Layer "%1"</source>
-        <translation>%n เอนทิตีบนเลเยอร์ "%1"<numerusform>%n องค์ประกอบบนชั้น "%1"</numerusform>
+        <translation><numerusform>%n องค์ประกอบบนชั้น "%1"</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3" />
         <source>%n Entities</source>
-        <translation>%n เอนทิตี<numerusform>%n องค์ประกอบ</numerusform>
+        <translation><numerusform>%n องค์ประกอบ</numerusform>
         </translation>
     </message>
     <message>
@@ -11459,7 +11459,7 @@ is already in the list.</translation>
     <message numerus="yes">
         <location line="+0" />
         <source>%n Layers</source>
-        <translation>%n เลเยอร์<numerusform>%n ชั้น</numerusform>
+        <translation><numerusform>%n ชั้น</numerusform>
         </translation>
     </message>
     <message>

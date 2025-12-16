@@ -894,8 +894,8 @@ primjenjivanje promijenjenih postavki.</translation>
         <location line="+19" />
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation>%n datoteka/datoteke automatskog spremanja za neimenovani crtež/crteže je/su pronađena/pronađene.
-Želite li ih vratiti?<numerusform>Pronađena je %n sigurnosna kopija automatskog spremanja za neimenovani crtež.
+        <translation>
+<numerusform>Pronađena je %n sigurnosna kopija automatskog spremanja za neimenovani crtež.
 Želite li je vratiti?</numerusform>
             <numerusform>Pronađene su %n sigurnosne kopije automatskog spremanja za neimenovane crteže.
 Želite li ih vratiti?</numerusform>
@@ -2863,7 +2863,7 @@ Do you wish to recover it?</source>
     <message numerus="yes">
         <location line="+3" />
         <source>Label position of %n dimension(s) was reset.</source>
-        <translation>Položaj oznake %n dimenzija/dimenzije je resetiran.<numerusform>Položaj oznake za %n dimenziju je resetiran.</numerusform>
+        <translation><numerusform>Položaj oznake za %n dimenziju je resetiran.</numerusform>
             <numerusform>Položaj oznake za %n dimenzije je resetiran.</numerusform>
             <numerusform>Položaj oznake za %n dimenzija je resetiran.</numerusform>
         </translation>
@@ -4184,7 +4184,7 @@ večpostoji na popisu.</translation>
     <message numerus="yes">
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85" />
         <source>%n entity/ies duplicated</source>
-        <translation>%n entitet/entiteti duplicirani<numerusform />
+        <translation><numerusform />
             <numerusform />
             <numerusform />
         </translation>
@@ -5021,7 +5021,7 @@ večpostoji na popisu.</translation>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50" />
         <source>Transaction affected %n object(s).</source>
-        <translation>Transaction affected %n object(s).<numerusform />
+        <translation><numerusform />
             <numerusform />
             <numerusform />
         </translation>
@@ -9362,7 +9362,7 @@ večpostoji na popisu.</translation>
     <message numerus="yes">
         <location line="+94" />
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
-        <translation>Radius dropped below 0.0 after %n concentric circle(s).<numerusform />
+        <translation><numerusform />
             <numerusform />
             <numerusform />
         </translation>
@@ -9370,7 +9370,7 @@ večpostoji na popisu.</translation>
     <message numerus="yes">
         <location line="+3" />
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
-        <translation>Radius dropped below 0.0 after %n concentric arc(s).<numerusform />
+        <translation><numerusform />
             <numerusform />
             <numerusform />
         </translation>
@@ -11457,7 +11457,7 @@ večpostoji na popisu.</translation>
     <message numerus="yes">
         <location line="+4" />
         <source>%n Entities on Layer "%1"</source>
-        <translation>%n Entiteti na sloju "%1"<numerusform />
+        <translation><numerusform />
             <numerusform />
             <numerusform />
         </translation>
@@ -11465,7 +11465,7 @@ večpostoji na popisu.</translation>
     <message numerus="yes">
         <location line="+3" />
         <source>%n Entities</source>
-        <translation>%n Entiteti<numerusform />
+        <translation><numerusform />
             <numerusform />
             <numerusform />
         </translation>
@@ -11478,7 +11478,7 @@ večpostoji na popisu.</translation>
     <message numerus="yes">
         <location line="+0" />
         <source>%n Layers</source>
-        <translation>%n Slojevi<numerusform />
+        <translation><numerusform />
             <numerusform />
             <numerusform />
         </translation>
