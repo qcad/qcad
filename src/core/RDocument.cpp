@@ -382,8 +382,12 @@ void RDocument::initLinetypes(RTransaction* transaction) {
         transaction = new RTransaction(storage, "", false);
     }
 
+    RStorage& s = getStorage();
+
     QList<QSharedPointer<RObject> > lts = getDefaultLinetypes();
     for (int i=0; i<lts.length(); i++) {
+        // make sure linetype has no handle assigned to not avoid handle collisions with objects loaded from DXF/DWG:
+        s.setObjectHandle(*lts[i], RObject::UNKNOWN_HANDLE);
         transaction->addObject(lts[i]);
     }
 

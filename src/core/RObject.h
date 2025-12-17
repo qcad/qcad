@@ -70,6 +70,7 @@ public:
     const static Id INVALID_ID;
     typedef int Handle;
     const static Handle INVALID_HANDLE;
+    const static Handle UNKNOWN_HANDLE;
 
     static RPropertyTypeId PropertyCustom;
     static RPropertyTypeId PropertyType;
