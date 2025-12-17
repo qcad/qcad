@@ -146,7 +146,7 @@ QString RTextRenderer::rxUnicodeStr = "\\\\[Uu]\\+([0-9a-fA-F]{4})";
 QRegularExpression RTextRenderer::rxUnicode(rxUnicodeStr);
 // optional break at space or zero-width space (ZWSP, u200B) for wrapping text:
 // ZWSP is inserted between CJK characters to allow for line wrapping anywhere:
-QString RTextRenderer::rxOptionalBreakStr = "[\\s\u200B]+";
+QString RTextRenderer::rxOptionalBreakStr = QString::fromWCharArray(L"[\\s\u200B]+");
 QRegularExpression RTextRenderer::rxOptionalBreak(rxOptionalBreakStr);
 
 QString rxAllTmp =
@@ -550,14 +550,12 @@ void RTextRenderer::render() {
     // inject zero width space between all Han/Hiragana/Katakana characters:
     // matches a position between two Han/Hiragana/Katakana characters
     static const QRegularExpression reCjkAll(
-        QStringLiteral(
             // between two CJK characters:
-            "(?<=[\\p{Han}\\p{Hiragana}\\p{Katakana}])(?=[\\p{Han}\\p{Hiragana}\\p{Katakana}])"
+            QString::fromWCharArray(L"(?<=[\\p{Han}\\p{Hiragana}\\p{Katakana}])(?=[\\p{Han}\\p{Hiragana}\\p{Katakana}])") +
             // between CJK and non-CJK characters:
-            "|(?<=[\\p{Han}\\p{Hiragana}\\p{Katakana}])(?=[^\\p{Han}\\p{Hiragana}\\p{Katakana}])"
+            QString::fromWCharArray(L"|(?<=[\\p{Han}\\p{Hiragana}\\p{Katakana}])(?=[^\\p{Han}\\p{Hiragana}\\p{Katakana}])") +
             // between non-CJK and CJK characters:
-            "|(?<=[^\\p{Han}\\p{Hiragana}\\p{Katakana}])(?=[\\p{Han}\\p{Hiragana}\\p{Katakana}])"
-            )
+            QString::fromWCharArray(L"|(?<=[^\\p{Han}\\p{Hiragana}\\p{Katakana}])(?=[\\p{Han}\\p{Hiragana}\\p{Katakana}])")
         );
 
     if (target==PainterPaths) {
