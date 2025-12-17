@@ -9728,7 +9728,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1PInit.js" line="+2"/>
         <source>Single &amp;Point</source>
-        <translation>Single Point</translation>
+        <translation>Єдина точка</translation>
     </message>
     <message>
         <location line="+3"/>
