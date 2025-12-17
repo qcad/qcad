@@ -3,9 +3,6 @@ add_definitions(-DQT_SHAREDPOINTER_TRACK_POINTERS)
 if(MSVC)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")
 
-    # Old MSVC: treat source code as UTF-8 
-    add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
-
     # min / max macros in Windows.h break std::numeric_limits<type>::min / max:
     add_definitions(-DNOMINMAX)
 endif()
