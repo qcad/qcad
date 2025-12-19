@@ -578,7 +578,7 @@
         <location line="-3"/>
         <location filename="../src/core/RLayout.cpp" line="+3"/>
         <source>Left</source>
-        <translation>Ліворуч</translation>
+        <translation>Зліва</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -590,7 +590,7 @@
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Right</source>
-        <translation>Праворуч</translation>
+        <translation>Справа</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -958,72 +958,72 @@
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation>Тире ISO</translation>
+        <translation>ISO штрихова</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation>Простір для тире ISO</translation>
+        <translation>ISO штрихова розріджена</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation>ISO довга крапка з тире</translation>
+        <translation>ISO штрихпунктирна, довгий штрих</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-dot</source>
-        <translation>ISO довгий тире подвійна крапка</translation>
+        <translation>ISO штрихпунктирна, довгий штрих, подвійна точка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation>ISO довгий тире потрійна крапка</translation>
+        <translation>ISO штрихпунктирна, довгий штрих, потрійна точка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dot</source>
-        <translation>Точка ISO</translation>
+        <translation>ISO пунктирна</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation>ISO довге тире коротке тире</translation>
+        <translation>ISO штрихова, довгий штрих, короткий штрих</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation>ISO довге тире подвійне коротке тире</translation>
+        <translation>ISO штрихова, довгий штрих, подвійний короткий штрих</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash dot</source>
-        <translation>ISO тире крапка</translation>
+        <translation>ISO штрихпунктирна</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash dot</source>
-        <translation>ISO подвійна крапка з тире</translation>
+        <translation>ISO штрихпунктирна, подвійний штрих, точка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash double-dot</source>
-        <translation>Тире ISO подвійна крапка</translation>
+        <translation>ISO штрихпунктирна, штрих, подвійна точка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash double-dot</source>
-        <translation>ISO подвійне тире подвійна крапка</translation>
+        <translation>ISO штрихпунктирна, подвійний штрих, подвійна точка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash triple-dot</source>
-        <translation>Тире ISO потрійна крапка</translation>
+        <translation>ISO штрихпунктирна, потрійна точка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
-        <translation>ISO подвійне тире потрійна крапка</translation>
+        <translation>ISO штрихпунктирна, подвійний штрих, потрійна точка</translation>
     </message>
     <message>
         <location line="+2"/>
