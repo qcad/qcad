@@ -370,7 +370,7 @@
     <message>
         <location line="+1"/>
         <source>Columns</source>
-        <translation>Стовпчики</translation>
+        <translation>Колонки</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -385,7 +385,7 @@
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
-        <translation>Відстань між рядами</translation>
+        <translation>Міжряддя</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -564,7 +564,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation>Ідентифікатор батька</translation>
+        <translation>Ідентифікатор батьківського елемента</translation>
     </message>
     <message>
         <location line="+2"/>
