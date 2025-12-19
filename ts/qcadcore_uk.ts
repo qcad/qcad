@@ -564,7 +564,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation>Ідентифікатор батьківського елемента</translation>
+        <translation>Ідентифікатор батька</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -578,7 +578,7 @@
         <location line="-3"/>
         <location filename="../src/core/RLayout.cpp" line="+3"/>
         <source>Left</source>
-        <translation>Зліва</translation>
+        <translation>Ліворуч</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -590,7 +590,7 @@
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Right</source>
-        <translation>Справа</translation>
+        <translation>Праворуч</translation>
     </message>
     <message>
         <location line="+1"/>
