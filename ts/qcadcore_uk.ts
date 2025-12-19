@@ -174,7 +174,7 @@
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation>Темно-синій</translation>
+        <translation>Темно-бірюзовий</translation>
     </message>
     <message>
         <location line="+1"/>

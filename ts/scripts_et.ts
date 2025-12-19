@@ -5765,7 +5765,12 @@ on juba loendis.</translation>
         <translation>Kauguses olevate piltide esiletõstmine (ja tõstmine)</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-102"/>
         <source>Highlight entity within range</source>
         <translation>Rõhutage üksus vahemikus</translation>
     </message>
@@ -6000,12 +6005,14 @@ on juba loendis.</translation>
         <translation>Punkti pikkus joonemustrites:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+89"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+41"/>
         <source>Selection</source>
         <translation>Valik</translation>
     </message>
     <message>
         <location line="+6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+6"/>
         <source>Persistent selection</source>
         <translation>Püsiv valik</translation>
     </message>
@@ -10192,7 +10199,7 @@ on juba loendis.</translation>
         <translation>Näita alati kõiki omadusi (see võib aeglustada objektide valimist)</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+89"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Näita täiustatud mõõtmete stiili ületamise võimalust</translation>
     </message>
@@ -10202,7 +10209,7 @@ on juba loendis.</translation>
         <translation>Uuendatakse ainult siis, kui midagi ei muutu uuendamise viivituse ajal</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-128"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Vormindage omaduste väärtused alati kümnendarvudena</translation>
     </message>

@@ -5761,7 +5761,12 @@ már szerepel a listában.</translation>
         <translation>Képek elszínezése (és felemelése) a hatósugárban</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-102"/>
         <source>Highlight entity within range</source>
         <translation>Elemek elszínezése a hatósugárban</translation>
     </message>
@@ -5941,12 +5946,13 @@ már szerepel a listában.</translation>
         <translation>Pontok hossza a vonalas mintákban:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+95"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+47"/>
         <source>Persistent selection</source>
         <translation>Kijelölés megőrzése</translation>
     </message>
     <message>
-        <location line="-766"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-766"/>
         <source>Number of preview entities:</source>
         <translation>Előnézeti elemek száma:</translation>
     </message>
@@ -6001,7 +6007,8 @@ már szerepel a listában.</translation>
         <translation>Maximálisan kijelölt elemekek megjelenített referenciapontokkal:</translation>
     </message>
     <message>
-        <location line="+362"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="-6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+362"/>
         <source>Selection</source>
         <translation>Kijelölés</translation>
     </message>
@@ -10283,17 +10290,17 @@ már szerepel a listában.</translation>
         <translation>Mindig tizedesszámként jelenítse meg az értékeket</translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+128"/>
         <source>Only update when nothing changes during update delay</source>
         <translation>Frissítés csak ha semmi sem változik a frissítési késleltetés alatt</translation>
     </message>
     <message>
-        <location line="-154"/>
+        <location line="-169"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation>Tizedesjegyek, a megjelenített értékek pontossága:</translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+116"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Speciális méretezési stílus felülbírálás megjelenítése</translation>
     </message>

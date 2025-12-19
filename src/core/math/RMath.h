@@ -106,7 +106,7 @@ public:
      * \nonscriptable
      */
     template <class T>
-    static void swap(T &a, T &b) noexcept {
+    static void swap(T &a, T &b) /*noexcept*/ {
         const T ttmp(a);
         a = b;
         b = ttmp;

@@ -5763,7 +5763,12 @@ is already in the list.</source>
         <translation>Επισημάνετε (και αναδείξτε) εικόνες εντός εμβέλειας</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-102"/>
         <source>Highlight entity within range</source>
         <translation>Επισημάνετε την οντότητα εντός εμβέλειας</translation>
     </message>
@@ -5998,12 +6003,14 @@ is already in the list.</source>
         <translation>Μήκος κουκκίδας σε μοτίβα γραμμών:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+89"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+41"/>
         <source>Selection</source>
         <translation>Επιλογή</translation>
     </message>
     <message>
         <location line="+6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+6"/>
         <source>Persistent selection</source>
         <translation>Επίμονη επιλογή</translation>
     </message>
@@ -10190,7 +10197,7 @@ is already in the list.</source>
         <translation>Να εμφανίζονται πάντα όλες οι ιδιότητες (αυτό μπορεί να επιβραδύνει την επιλογή των οντοτήτων)</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+89"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Εμφάνιση προηγμένων παρακάμψεων στυλ διάστασης</translation>
     </message>
@@ -10200,7 +10207,7 @@ is already in the list.</source>
         <translation>Ενημέρωση μόνο όταν δεν αλλάζει τίποτα κατά τη διάρκεια της καθυστέρησης ενημέρωσης</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-128"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Διαμορφώνετε πάντα τις τιμές των ιδιοτήτων ως δεκαδικούς αριθμούς</translation>
     </message>

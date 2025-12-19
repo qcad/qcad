@@ -5763,7 +5763,12 @@ finns redan i listan.</translation>
         <translation>Markera (och höja) bilder inom räckvidd</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-102"/>
         <source>Highlight entity within range</source>
         <translation>Markera enhet inom räckvidden</translation>
     </message>
@@ -5918,12 +5923,13 @@ finns redan i listan.</translation>
         <translation>Punktlängd i linjemönster:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+95"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+47"/>
         <source>Persistent selection</source>
         <translation>Beständigt urval</translation>
     </message>
     <message>
-        <location line="-766"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-766"/>
         <source>Number of preview entities:</source>
         <translation>Antal förhandsvisade objekt:</translation>
     </message>
@@ -5978,12 +5984,13 @@ finns redan i listan.</translation>
         <translation>Maximal komplexitet för solida fyllningar med hög kvalitet:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="-6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+143"/>
         <source>Selection</source>
         <translation>Urval</translation>
     </message>
     <message>
-        <location line="-699"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-699"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Visa bågar som linjer under denna vinkel (grader):</translation>
     </message>
@@ -10287,17 +10294,17 @@ finns redan i listan.</translation>
         <translation>Formatera alltid egenskapsvärden som decimaltal</translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+128"/>
         <source>Only update when nothing changes during update delay</source>
         <translation>Uppdatera endast när inget ändras under uppdateringsfördröjningen</translation>
     </message>
     <message>
-        <location line="-154"/>
+        <location line="-169"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation>Decimaler/precision för visade egenskapsvärden:</translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+116"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Visa avancerade dimensionsstilar som åsidosätts</translation>
     </message>

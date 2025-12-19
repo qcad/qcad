@@ -5765,7 +5765,12 @@ er allerede i listen.</translation>
         <translation>Fremheve (og heve) bilder innenfor rekkevidde</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-102"/>
         <source>Highlight entity within range</source>
         <translation>Fremhev entitet innenfor rekkevidde</translation>
     </message>
@@ -6000,12 +6005,14 @@ er allerede i listen.</translation>
         <translation>Punktlengde i linjemønstre:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+89"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+41"/>
         <source>Selection</source>
         <translation>Utvalg</translation>
     </message>
     <message>
         <location line="+6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+6"/>
         <source>Persistent selection</source>
         <translation>Vedvarende seleksjon</translation>
     </message>
@@ -10192,7 +10199,7 @@ er allerede i listen.</translation>
         <translation>Vis alltid alle egenskaper (dette kan gjøre utvalget av enheter tregere)</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+89"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Vis avanserte overstyringer av dimensjonsstil</translation>
     </message>
@@ -10202,7 +10209,7 @@ er allerede i listen.</translation>
         <translation>Oppdater bare når ingenting endres under oppdateringsforsinkelsen</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-128"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Formater alltid egenskapsverdier som desimaltall</translation>
     </message>

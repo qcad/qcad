@@ -5745,7 +5745,12 @@ jest już na liście.</translation>
         <translation>Podświetlanie (i podnoszenie) obrazów w zasięgu</translation>
     </message>
     <message>
-        <location line="-269"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-307"/>
         <source>Right-Click</source>
         <translation>Kliknięcie prawym przyciskiem</translation>
     </message>
@@ -5905,12 +5910,13 @@ jest już na liście.</translation>
         <translation>Maksymalna złożoność dla solidnych wypełnień w wysokiej jakości:</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+102"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+149"/>
         <source>Persistent selection</source>
         <translation>Trwała selekcja</translation>
     </message>
     <message>
-        <location line="-1082"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1082"/>
         <source>Color lightness threshold:</source>
         <translation>Próg jasności koloru:</translation>
     </message>
@@ -6010,7 +6016,8 @@ jest już na liście.</translation>
         <translation>Długość kropki we wzorach linii:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="-6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+41"/>
         <source>Selection</source>
         <translation>Wybór</translation>
     </message>
@@ -10326,17 +10333,17 @@ jest już na liście.</translation>
         <translation>Zawsze formatuj wartości właściwości jako liczby dziesiętne</translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+128"/>
         <source>Only update when nothing changes during update delay</source>
         <translation>Aktualizuj tylko wtedy, gdy nic się nie zmieni podczas opóźnienia aktualizacji</translation>
     </message>
     <message>
-        <location line="-154"/>
+        <location line="-169"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation>Wartości dziesiętne / precyzja dla wyświetlanych wartości właściwości:</translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+116"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Wyświetl zaawansowane nadpisywanie stylów wymiarów</translation>
     </message>

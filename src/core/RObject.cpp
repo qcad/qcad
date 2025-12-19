@@ -27,6 +27,7 @@
 #include "RSettings.h"
 
 const RObject::Id RObject::INVALID_ID = -1;
+const RObject::Handle RObject::UNKNOWN_HANDLE = -2;
 const RObject::Handle RObject::INVALID_HANDLE = -1;
 QMap<QString, QMap<QString, RPropertyAttributes> > RObject::customPropertyAttributes;
 

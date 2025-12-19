@@ -5740,7 +5740,12 @@ já se encontra na lista.</translation>
         <translation>Destacar (e aumentar) imagens dentro do alcance</translation>
     </message>
     <message>
-        <location line="-269"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-307"/>
         <source>Right-Click</source>
         <translation>Clique do Botão Direito</translation>
     </message>
@@ -5905,12 +5910,13 @@ já se encontra na lista.</translation>
         <translation>Limite da altura do texto (px):</translation>
     </message>
     <message>
-        <location line="+221"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+102"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+221"/>
         <source>Persistent selection</source>
         <translation>Seleção Persistente</translation>
     </message>
     <message>
-        <location line="-1082"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1082"/>
         <source>Color lightness threshold:</source>
         <translation>Limites para a luminosidade da cor:</translation>
     </message>
@@ -6005,7 +6011,8 @@ já se encontra na lista.</translation>
         <translation>Comprimento do ponto em padrões de linha:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="-6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+41"/>
         <source>Selection</source>
         <translation>Seleção</translation>
     </message>
@@ -10319,17 +10326,17 @@ já se encontra na lista.</translation>
         <translation>Sempre formatar valores de propriedade como números decimais</translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+128"/>
         <source>Only update when nothing changes during update delay</source>
         <translation>Atualizar apenas quando nada se altera durante o atraso da atualização</translation>
     </message>
     <message>
-        <location line="-154"/>
+        <location line="-169"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation>Decimais / precisão para valores de propriedade exibidos:</translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+116"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Exibição de estilo avançado de cotas</translation>
     </message>

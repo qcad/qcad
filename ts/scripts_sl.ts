@@ -5746,7 +5746,12 @@ je že na seznamu.</translation>
         <translation>Izrazite (in povečajte) slike v območju</translation>
     </message>
     <message>
-        <location line="-269"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-307"/>
         <source>Right-Click</source>
         <translation>Desni klik</translation>
     </message>
@@ -5921,12 +5926,13 @@ je že na seznamu.</translation>
         <translation>Prag višine besedila (px):</translation>
     </message>
     <message>
-        <location line="+221"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+102"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+221"/>
         <source>Persistent selection</source>
         <translation>Trajni izbor</translation>
     </message>
     <message>
-        <location line="-1082"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1082"/>
         <source>Color lightness threshold:</source>
         <translation>Prag svetlosti barv:</translation>
     </message>
@@ -6011,7 +6017,8 @@ je že na seznamu.</translation>
         <translation>Dolžina pike v črtnih vzorcih:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="-6"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+41"/>
         <source>Selection</source>
         <translation>Izbor</translation>
     </message>
@@ -10329,17 +10336,17 @@ je že na seznamu.</translation>
         <translation>Vrednosti lastnosti vedno oblikujte kot decimalna števila</translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+128"/>
         <source>Only update when nothing changes during update delay</source>
         <translation>Posodobite samo, če se med zamikom posodobitve nič ne spremeni</translation>
     </message>
     <message>
-        <location line="-154"/>
+        <location line="-169"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation>Decimalna mesta / natančnost za prikazane vrednosti lastnosti:</translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+116"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Prikaz naprednih slogov dimenzij</translation>
     </message>
