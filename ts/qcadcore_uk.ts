@@ -370,7 +370,7 @@
     <message>
         <location line="+1"/>
         <source>Columns</source>
-        <translation>Колонки</translation>
+        <translation>Стовпчики</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -385,7 +385,7 @@
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
-        <translation>Міжряддя</translation>
+        <translation>Відстань між рядами</translation>
     </message>
     <message>
         <location line="+3"/>
