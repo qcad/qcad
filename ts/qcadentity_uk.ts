@@ -542,7 +542,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Point</source>
-        <translation>Точка відліку</translation>
+        <translation>Початкова точка</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -565,7 +565,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation>Пункт 1</translation>
+        <translation>Точка 1</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -578,7 +578,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation>Пункт 2</translation>
+        <translation>Точка 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -591,7 +591,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 3</source>
-        <translation>Пункт 3</translation>
+        <translation>Точка 3</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -604,7 +604,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 4</source>
-        <translation>Пункт 4</translation>
+        <translation>Точка 4</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-10"/>
