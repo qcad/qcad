@@ -430,18 +430,18 @@
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
         <source>Dimension Angle</source>
-        <translation>Розмірний кут</translation>
+        <translation>Кутовий розмір</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
         <source>Label</source>
-        <translation>Етикетка</translation>
+        <translation>Позначка</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Tolerance</source>
-        <translation>Толерантність</translation>
+        <translation>Допуск</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -475,27 +475,27 @@
     <message>
         <location line="+3"/>
         <source>Flip First Arrow</source>
-        <translation>Повернути першу стрілку</translation>
+        <translation>Перекинути першу стрілку</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation>Повернути другу стрілку</translation>
+        <translation>Перевернути другу стрілку</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation>Фіксована виносна лінія</translation>
+        <translation>Стаціонарний телефонний зв&apos;язок</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation>Довжина виносної лінії</translation>
+        <translation>Довжина лінії розширення</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Auto Label</source>
-        <translation>Автоматична позначка</translation>
+        <translation>Автоматична етикетка</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -510,14 +510,14 @@
     <message>
         <location line="+1"/>
         <source>Auto Label Position</source>
-        <translation>Автоматичне положення етикетки</translation>
+        <translation>Автоматичне положення позначки</translation>
     </message>
     <message>
         <location filename="../src/entity/REllipseEntity.cpp" line="-17"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation>Основний пункт</translation>
+        <translation>Головна точка</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -527,7 +527,7 @@
     <message>
         <location line="+1"/>
         <source>Start Parameter</source>
-        <translation>Стартовий параметр</translation>
+        <translation>Початковий параметр</translation>
     </message>
     <message>
         <location line="+1"/>
