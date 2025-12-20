@@ -826,7 +826,7 @@
     <message>
         <location line="+2"/>
         <source>Global Z</source>
-        <translation>Global Z</translation>
+        <translation>Глобальна Z</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
@@ -846,7 +846,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Second Point</source>
-        <translation>Другий пункт</translation>
+        <translation>Друга точка</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -867,31 +867,31 @@
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
         <source>Closed Periodic</source>
-        <translation>Закрите Періодичне</translation>
+        <translation>Замкнена періодична</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation>Ступінь</translation>
+        <translation>Порядок</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Control Point</source>
-        <translation>Контрольний пункт</translation>
+        <translation>Контрольна точка</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation>Fit Point</translation>
+        <translation>Точка апроксимації</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Knot Vector</source>
-        <translation>Knot Vector</translation>
+        <translation>Вектор вузлів</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -901,19 +901,19 @@
     <message>
         <location line="+6"/>
         <source>Use Start Tangent</source>
-        <translation>Використовуйте Початковий тангенс</translation>
+        <translation>Використовувати початкову дотичну</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Tangent</source>
-        <translation>Стартовий тангенс</translation>
+        <translation>Початкова дотична</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use End Tangent</source>
-        <translation>Використовуйте кінцеву дотичну</translation>
+        <translation>Використовувати кінцеву дотичну</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -927,7 +927,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation>Місцезнаходження</translation>
+        <translation>Положення</translation>
     </message>
     <message>
         <location line="+1"/>
