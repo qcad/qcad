@@ -406,26 +406,26 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-11"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation>Походження</translation>
+        <translation>Початок координат</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate</source>
-        <translation>Наказую</translation>
+        <translation>Ордината</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Defining Point</source>
-        <translation>Визначальний момент</translation>
+        <translation>Визначальна точка</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>Leader End Point</translation>
+        <translation>Кінцева точка виноски</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
