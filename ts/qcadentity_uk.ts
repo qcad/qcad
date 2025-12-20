@@ -369,14 +369,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation>Точка хорди</translation>
+        <translation>Chord Point</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation>Віддалена точка хорди</translation>
+        <translation>Дальня точка акорду</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-10"/>
@@ -390,14 +390,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 1</source>
-        <translation>Точка розширення 1</translation>
+        <translation>Виносна точка 1</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 2</source>
-        <translation>Пункт продовження 2</translation>
+        <translation>Виносна точка 2</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
