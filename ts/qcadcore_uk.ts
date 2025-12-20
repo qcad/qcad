@@ -1161,7 +1161,7 @@
     <message>
         <location line="+1"/>
         <source>0.09mm</source>
-        <translation>0.09мм</translation>
+        <translation>0.09 мм</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1241,7 +1241,7 @@
     <message>
         <location line="+1"/>
         <source>1.06mm</source>
-        <translation>1.06мм</translation>
+        <translation>1.06 мм</translation>
     </message>
     <message>
         <location line="+1"/>
