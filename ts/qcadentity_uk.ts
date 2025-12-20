@@ -609,17 +609,17 @@
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-10"/>
         <source>Solid</source>
-        <translation>Солідний</translation>
+        <translation>Суцільне</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation>Намотування</translation>
+        <translation>Правило обходу</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alpha</source>
-        <translation>Альфа</translation>
+        <translation>Прозорість</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -627,17 +627,17 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation>Візерунок</translation>
+        <translation>Шаблон</translation>
     </message>
     <message>
         <location line="-3"/>
         <source>Name</source>
-        <translation>Ім&apos;я та прізвище</translation>
+        <translation>Назва</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>From Entity</source>
-        <translation>Від суб&apos;єкта господарювання</translation>
+        <translation>З об’єкта</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -673,7 +673,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Vertex</source>
-        <translation>Vertex</translation>
+        <translation>Вершина</translation>
     </message>
     <message>
         <location line="+201"/>
