@@ -430,18 +430,18 @@
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
         <source>Dimension Angle</source>
-        <translation>Кутовий розмір</translation>
+        <translation>Розмірний кут</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
         <source>Label</source>
-        <translation>Позначка</translation>
+        <translation>Етикетка</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Tolerance</source>
-        <translation>Допуск</translation>
+        <translation>Толерантність</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -475,27 +475,27 @@
     <message>
         <location line="+3"/>
         <source>Flip First Arrow</source>
-        <translation>Перекинути першу стрілку</translation>
+        <translation>Повернути першу стрілку</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation>Перевернути другу стрілку</translation>
+        <translation>Повернути другу стрілку</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation>Стаціонарний телефонний зв&apos;язок</translation>
+        <translation>Фіксована виносна лінія</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation>Довжина лінії розширення</translation>
+        <translation>Довжина виносної лінії</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Auto Label</source>
-        <translation>Автоматична етикетка</translation>
+        <translation>Автоматична позначка</translation>
     </message>
     <message>
         <location line="+1"/>
