@@ -375,7 +375,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+8"/>
         <source>Name:</source>
-        <translation>Ім&apos;я:</translation>
+        <translation>Назва:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1285,12 +1285,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Block name is empty.</source>
-        <translation>Ім&apos;я блоку пусте.</translation>
+        <translation>Назва блоку пуста.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block name is invalid.</source>
-        <translation>Ім&apos;я блоку невірне.</translation>
+        <translation>Назва блоку невірна.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1310,7 +1310,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Block name:</source>
-        <translation>Ім&apos;я блоку:</translation>
+        <translation>Назва блоку:</translation>
     </message>
 </context>
 <context>
@@ -8070,7 +8070,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Layer name is empty.</source>
-        <translation>Ім&apos;я шару порожнє.</translation>
+        <translation>Назва шару порожня.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -8085,7 +8085,7 @@ is already in the list.</source>
     <message>
         <location line="+11"/>
         <source>Layer name:</source>
-        <translation>Ім&apos;я шару:</translation>
+        <translation>Назва шару:</translation>
     </message>
     <message>
         <location line="+28"/>
