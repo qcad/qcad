@@ -2715,12 +2715,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAligned.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation>Початок першої додаткової лінії</translation>
+        <translation>Початок першої виносної лінії</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation>Початок другої додаткової лінії</translation>
+        <translation>Початок другої виносної лінії</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2735,7 +2735,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Draw aligned dimension</source>
-        <translation>Вирівняний розмір на кресленні</translation>
+        <translation>Побудувати вирівняний розмір</translation>
     </message>
 </context>
 <context>
@@ -2763,12 +2763,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Draw angular dimension</source>
-        <translation>Накреслити кутовий розмір</translation>
+        <translation>Побудувати кутовий розмір</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation>Використовуйте максимальний кут</translation>
+        <translation>Використовувати максимальний кут</translation>
     </message>
 </context>
 <context>
@@ -2791,7 +2791,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw diametric dimension</source>
-        <translation>Намалювати діаметральний розмір</translation>
+        <translation>Побудувати діаметральний розмір</translation>
     </message>
 </context>
 <context>
@@ -2799,12 +2799,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimHorizontal/DimHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal</source>
-        <translation>Горизонтальні</translation>
+        <translation>Горизонтальний</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw horizontal dimension</source>
-        <translation>Накреслити горизонтальний розмір</translation>
+        <translation>Побудувати горизонтальний розмір</translation>
     </message>
 </context>
 <context>
@@ -2812,12 +2812,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation>Розташування функції</translation>
+        <translation>Розташування елемента</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Кінцева точка лідера</translation>
+        <translation>Кінцева точка виноски</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
@@ -2827,7 +2827,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Draw ordinate dimension</source>
-        <translation>Розмір ординат креслення</translation>
+        <translation>Побудувати ординатний розмір</translation>
     </message>
 </context>
 <context>
@@ -2850,7 +2850,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw radial dimension</source>
-        <translation>Накреслити радіальний розмір</translation>
+        <translation>Побудувати радіальний розмір</translation>
     </message>
 </context>
 <context>
@@ -2872,7 +2872,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegenInit.js" line="+2"/>
         <source>&amp;Reset Label Position</source>
-        <translation>Скинути позицію етикетки</translation>
+        <translation>Скинути позицію мітки</translation>
     </message>
 </context>
 <context>
@@ -2880,12 +2880,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation>Початок першої додаткової лінії</translation>
+        <translation>Початок першої виносної лінії</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation>Початок другої додаткової лінії</translation>
+        <translation>Початок другої виносної лінії</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2900,7 +2900,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
-        <translation>Поворотний (лінійний)</translation>
+        <translation>Повернутий (лінійний)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2926,7 +2926,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/Dimension.js" line="+60"/>
         <source>No prefix</source>
-        <translation>Без приставки</translation>
+        <translation>Без префікса</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2936,7 +2936,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>Metric screw</source>
-        <translation>Метричний гвинт</translation>
+        <translation>Метрична різьба</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2966,7 +2966,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation>Площа</translation>
+        <translation>Квадратний переріз</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2981,12 +2981,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+26"/>
         <source>D&amp;imension</source>
-        <translation>Вимір</translation>
+        <translation>Розміри</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Dimension.ui" line="+29"/>
         <source>Label:</source>
-        <translation>Етикетка:</translation>
+        <translation>Напис:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -2996,7 +2996,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+19"/>
         <source>Enter fixed label or leave empty for automatic label</source>
-        <translation>Введіть фіксовану етикетку або залиште порожнім для автоматичного маркування</translation>
+        <translation>Введіть фіксований напис або залиште порожнім для автоматичного напису</translation>
     </message>
     <message>
         <location line="+61"/>
@@ -3006,12 +3006,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+54"/>
         <source>Lower tolerance</source>
-        <translation>Менша толерантність</translation>
+        <translation>Нижній допуск</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Scale</source>
-        <translation>Масштабувати</translation>
+        <translation>Масштаб</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -3029,7 +3029,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation>Шкала розмірів</translation>
+        <translation>Масштаб розмірів</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3039,7 +3039,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this warning again</source>
-        <translation>Не показуйте це попередження більше</translation>
+        <translation>Більше не показувати це попередження</translation>
     </message>
 </context>
 <context>
@@ -3063,7 +3063,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+112"/>
         <source>point</source>
-        <translation>точка</translation>
+        <translation>крапка</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3073,7 +3073,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation>простір</translation>
+        <translation>пропуст</translation>
     </message>
     <message>
         <location line="+309"/>
@@ -3093,7 +3093,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Horizontal text labels</source>
-        <translation>Горизонтальні текстові етикетки</translation>
+        <translation>Горизонтальні текстові написи</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3108,12 +3108,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Keep proportions</source>
-        <translation>Дотримуйтесь пропорцій</translation>
+        <translation>Зберігати пропорції</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Dimension line gap:</source>
-        <translation>Зазор між габаритними лініями:</translation>
+        <translation>Зазор розмірної лінії:</translation>
     </message>
     <message>
         <location line="+42"/>
@@ -3123,7 +3123,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Extension line extension:</source>
-        <translation>Подовження лінії зв&apos;язку:</translation>
+        <translation>Подовження виносної лінії:</translation>
     </message>
     <message>
         <location line="+64"/>
@@ -3133,7 +3133,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Extension line offset:</source>
-        <translation>Зсув лінії розширення:</translation>
+        <translation>Зсув виносної лінії:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -3153,32 +3153,32 @@ Do you wish to recover it?</source>
     <message>
         <location line="+12"/>
         <source>Arrow</source>
-        <translation>Стріла</translation>
+        <translation>Стрілка</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>Архітектурна галочка</translation>
+        <translation>Архітектурна риска</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Label</source>
-        <translation>Етикетка</translation>
+        <translation>Напис</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Label font:</source>
-        <translation>Шрифт етикетки:</translation>
+        <translation>Шрифт напису:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Label color:</source>
-        <translation>Колір етикетки:</translation>
+        <translation>Колір напису:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Number Format</source>
-        <translation>Формат номера</translation>
+        <translation>Формат числа</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3188,7 +3188,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+26"/>
         <source>Label Format</source>
-        <translation>Формат етикетки</translation>
+        <translation>Формат напису</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3242,7 +3242,7 @@ Do you wish to recover it?</source>
 is already in the list.</source>
         <translation>Папка
 &quot;%1&quot;
-вже є в списку.</translation>
+вже є у списку.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3278,7 +3278,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Specify second point</source>
-        <translation>Вкажіть другий пункт</translation>
+        <translation>Вкажіть другу точку</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Divide/DivideInit.js" line="+2"/>
@@ -3291,7 +3291,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/DraftMode/DraftMode.js" line="+86"/>
         <source>&amp;Draft Mode</source>
-        <translation>Черновий режим</translation>
+        <translation>Чорновий режим</translation>
     </message>
 </context>
 <context>
@@ -3299,12 +3299,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Draw.js" line="+61"/>
         <source>Draw</source>
-        <translation>Жеребкування</translation>
+        <translation>Креслення</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>Жеребкування</translation>
+        <translation>Креслення</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -3317,12 +3317,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+73"/>
         <source>First corner</source>
-        <translation>Перший поворот</translation>
+        <translation>Перший кут</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second corner</source>
-        <translation>Другий поворот</translation>
+        <translation>Другий кут</translation>
     </message>
 </context>
 <context>
@@ -3330,12 +3330,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/DrawBasedOnRectangleSize.js" line="+46"/>
         <source>Top Left</source>
-        <translation>Вгорі зліва</translation>
+        <translation>Вгорі ліворуч</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation>Топ</translation>
+        <translation>Верх</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3350,22 +3350,22 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Середина</translation>
+        <translation>Центр</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation>Так</translation>
+        <translation>Праворуч</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Left</source>
-        <translation>Внизу зліва</translation>
+        <translation>Внизу ліворуч</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation>Дно</translation>
+        <translation>Низ</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3401,7 +3401,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js" line="+71"/>
         <source>Draw &amp;Bounding Box</source>
-        <translation>Draw Bounding Box</translation>
+        <translation>Побудувати обмежувальну рамку</translation>
     </message>
 </context>
 <context>
@@ -3409,7 +3409,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/DrawExamples.js" line="+51"/>
         <source>&amp;Draw</source>
-        <translation>Жеребкування</translation>
+        <translation>Креслення</translation>
     </message>
 </context>
 <context>
@@ -3427,7 +3427,7 @@ is already in the list.</source>
     <message>
         <location line="+525"/>
         <source>close</source>
-        <translation>близький</translation>
+        <translation>замкнути</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3437,7 +3437,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>redo</source>
-        <translation>переробити</translation>
+        <translation>повторити</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3447,7 +3447,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation>Замкнена ламана</translation>
+        <translation>Замкнути ламану</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -3457,7 +3457,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Повторний сегмент</translation>
+        <translation>Повторити сегмент</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3467,22 +3467,22 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation>Зачистка</translation>
+        <translation>Розгортка</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Restrict length or angle</source>
-        <translation>Обмеження довжини або кута</translation>
+        <translation>Обмежити довжину або кут</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation>Намалювати смуги Fms</translation>
+        <translation>Побудувати смуги Fms</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation>Намалюйте смуги FMS (ребра)</translation>
+        <translation>Побудувати смуги FMS (ребра)</translation>
     </message>
 </context>
 <context>
@@ -3497,7 +3497,7 @@ is already in the list.</source>
         <location line="+15"/>
         <location line="+1275"/>
         <source>Command ended.</source>
-        <translation>Командування закінчилося.</translation>
+        <translation>Команду завершено.</translation>
     </message>
     <message>
         <location line="-1278"/>
@@ -3512,7 +3512,7 @@ is already in the list.</source>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation>Литий CSV</translation>
+        <translation>Обробка CSV</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3537,7 +3537,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Unsupported or invalid CSV style, ignored. Text line: %1</source>
-        <translation>Непідтримуваний або невірний стиль CSV ігнорується. Текстовий рядок: %1</translation>
+        <translation>Непідтримуваний або некоректний стиль CSV ігнорується. Текстовий рядок: %1</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -3577,7 +3577,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;HideLayer&apos; switch, ignored. Text line: %1</source>
-        <translation>Не коректний перемикач &apos;HideLayer&apos;, ігнорується. Текстовий рядок: %1</translation>
+        <translation>Неправильний перемикач &apos;HideLayer&apos;, ігнорується. Текстовий рядок: %1</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -3597,7 +3597,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;LockLayer&apos; switch, ignored. Text line: %1</source>
-        <translation>Не коректний перемикач &apos;LockLayer&apos;, ігнорується. Текстовий рядок: %1</translation>
+        <translation>Неправильний перемикач &apos;LockLayer&apos;, ігнорується. Текстовий рядок: %1</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -3607,7 +3607,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;AllowLayer&apos; switch, ignored. Text line: %1</source>
-        <translation>Не коректний перемикач &apos;AllowLayer&apos;, ігнорується. Текстовий рядок: %1</translation>
+        <translation>Неправильний перемикач &apos;AllowLayer&apos;, ігнорується. Текстовий рядок: %1</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -3632,7 +3632,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+135"/>
         <source>Low field count.</source>
-        <translation>Низька кількість полів.</translation>
+        <translation>Недостатня кількість полів.</translation>
     </message>
     <message>
         <location line="-656"/>
@@ -3673,7 +3673,7 @@ is already in the list.</source>
         <location line="+188"/>
         <location line="+168"/>
         <source>Rv Invalid.</source>
-        <translation>Rv Недійсний.</translation>
+        <translation>Rv помилковий.</translation>
     </message>
     <message>
         <location line="-640"/>
@@ -3689,7 +3689,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+62"/>
         <source>Rv1 Invalid.</source>
-        <translation>Rv1 Недійсний.</translation>
+        <translation>Rv1 помилковий.</translation>
     </message>
     <message>
         <location line="-503"/>
@@ -3707,7 +3707,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+35"/>
         <source>Rv2 Invalid.</source>
-        <translation>Rv2 Недійсний.</translation>
+        <translation>Rv2 помилковий.</translation>
     </message>
     <message>
         <location line="-510"/>
@@ -3720,7 +3720,7 @@ is already in the list.</source>
         <location line="+49"/>
         <location line="+67"/>
         <source>Equal positions.</source>
-        <translation>Рівні позиції.</translation>
+        <translation>Однакові позиції.</translation>
     </message>
     <message>
         <location line="-265"/>
@@ -3733,7 +3733,7 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+33"/>
         <source>Radius Invalid.</source>
-        <translation>Радіус недійсний.</translation>
+        <translation>Радіус помилковий.</translation>
     </message>
     <message>
         <location line="-298"/>
@@ -3743,22 +3743,22 @@ is already in the list.</source>
         <location line="+35"/>
         <location line="+150"/>
         <source>Angle Invalid.</source>
-        <translation>Кут невірний.</translation>
+        <translation>Кут помилковий.</translation>
     </message>
     <message>
         <location line="-527"/>
         <source>Angle1 Invalid.</source>
-        <translation>Кут1 Недійсний.</translation>
+        <translation>Кут 1 помилковий.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angle2 Invalid.</source>
-        <translation>Кут 2 Недійсний.</translation>
+        <translation>Кут 2 помилковий.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Equal angles.</source>
-        <translation>Рівні кути.</translation>
+        <translation>Однакові кути.</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -3768,7 +3768,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-2.</source>
-        <translation>Рівні позиції 1-2.</translation>
+        <translation>Однакові позиції 1-2.</translation>
     </message>
     <message>
         <location line="-286"/>
@@ -3780,7 +3780,7 @@ is already in the list.</source>
         <location line="+32"/>
         <location line="+35"/>
         <source>Rv3 Invalid.</source>
-        <translation>Rv3 Недійсний.</translation>
+        <translation>Rv3 помилковий.</translation>
     </message>
     <message>
         <location line="-354"/>
@@ -3790,7 +3790,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-3.</source>
-        <translation>Рівні позиції 1-3.</translation>
+        <translation>Однакові позиції 1-3.</translation>
     </message>
     <message>
         <location line="-287"/>
@@ -3800,7 +3800,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 2-3.</source>
-        <translation>Рівні позиції 2-3.</translation>
+        <translation>Однакові позиції 2-3.</translation>
     </message>
     <message>
         <location line="-284"/>
@@ -3808,18 +3808,18 @@ is already in the list.</source>
         <location line="+168"/>
         <location line="+2"/>
         <source>Near co-linear positions.</source>
-        <translation>Поблизу співвісних позицій.</translation>
+        <translation>Майже колінеарні позиції.</translation>
     </message>
     <message>
         <location line="-168"/>
         <source>Arc Invalid.</source>
-        <translation>Дуга недійсна.</translation>
+        <translation>Дуга помилкова.</translation>
     </message>
     <message>
         <location line="+46"/>
         <location line="+47"/>
         <source>Center Invalid.</source>
-        <translation>Центр недійсний.</translation>
+        <translation>Центр помилковий.</translation>
     </message>
     <message>
         <location line="-21"/>
@@ -3829,7 +3829,7 @@ is already in the list.</source>
     <message>
         <location line="+98"/>
         <source>Circle Invalid.</source>
-        <translation>Обведіть кружечком &quot;Недійсний&quot;.</translation>
+        <translation>Коло помилкове.</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -3837,45 +3837,45 @@ is already in the list.</source>
         <location line="+30"/>
         <location line="+35"/>
         <source>Rv4 Invalid.</source>
-        <translation>Rv4 Недійсний.</translation>
+        <translation>Rv4 помилковий.</translation>
     </message>
     <message>
         <location line="-97"/>
         <location line="+33"/>
         <source>Equal positions 1-4.</source>
-        <translation>Рівноправні позиції 1-4.</translation>
+        <translation>Однакові позиції 1-4.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 2-4.</source>
-        <translation>Рівноправні позиції 2-4.</translation>
+        <translation>Однакові позиції 2-4.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 3-4.</source>
-        <translation>Рівні позиції 3-4.</translation>
+        <translation>Однакові позиції 3-4.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Size Invalid.</source>
-        <translation>Розмір невірний.</translation>
+        <translation>Розмір помилковий.</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Size in X Invalid.</source>
-        <translation>Розмір в X Невірно.</translation>
+        <translation>Розмір за віссю X помилковий.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size in Y Invalid.</source>
-        <translation>Розмір в Y Невірно.</translation>
+        <translation>Розмір за віссю Y помилковий.</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Polygon: less than 5 references.</source>
-        <translation>Полігон: менше 5 посилань.</translation>
+        <translation>Полігон: менше 5 опорних точок.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3883,17 +3883,17 @@ is already in the list.</source>
         <location line="+26"/>
         <location line="+28"/>
         <source>Rv%1 Invalid.</source>
-        <translation>Rv%1 Недійсний.</translation>
+        <translation>Rv%1 помилковий.</translation>
     </message>
     <message>
         <location line="-61"/>
         <source>Polyline, less than 2 references.</source>
-        <translation>Полілінія, менше 2 посилань.</translation>
+        <translation>Полілінія, менше 2 опорних точок.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Bulge%1 Invalid.</source>
-        <translation>Опуклість%1 Невірно.</translation>
+        <translation>Опуклість%1 помилкова.</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3903,47 +3903,47 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>3th degree fit point Spline, less than 3 references.</source>
-        <translation>точка посадки 3-го ступеня Сплайн, менше 3 посилань.</translation>
+        <translation>Сплайн апроксимації 3-го порядку: менше 3 опорних точок.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>3th degree control point Spline, less than 4 references.</source>
-        <translation>контрольна точка 3-го ступеня Сплайн, менше 4-х посилань.</translation>
+        <translation>Сплайн з керувальними точками 3-го порядку: менше 4 опорних точок.</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Height Invalid.</source>
-        <translation>Зростання не відповідає нормі.</translation>
+        <translation>Висота помилкова.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Width Invalid.</source>
-        <translation>Width Invalid.</translation>
+        <translation>Ширина помилкова.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid.</source>
-        <translation>Вирівнювання по вертикалі Невірно.</translation>
+        <translation>Вертикальне вирівнювання помилкове.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid.</source>
-        <translation>Вирівнювання по горизонталі Невірно.</translation>
+        <translation>Горизонтальне вирівнювання помилкове.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing direction Invalid.</source>
-        <translation>Напрямок малювання Неправильний.</translation>
+        <translation>Напрямок креслення помилковий.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing style Invalid.</source>
-        <translation>Стиль міжрядкового інтервалу Invalid.</translation>
+        <translation>Стиль міжрядкового інтервалу помилковий.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing Invalid.</source>
-        <translation>Міжрядковий інтервал Неправильний.</translation>
+        <translation>Міжрядковий інтервал помилковий.</translation>
     </message>
     <message>
         <location line="+37"/>
@@ -3968,7 +3968,7 @@ is already in the list.</source>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Закинуті записи: %1 з %2 текстових рядків</translation>
+        <translation>Оброблено записів: %1 з %2 текстових рядків</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3978,12 +3978,12 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Nothing casted.</source>
-        <translation>Нічого литого.</translation>
+        <translation>Жодного запису не оброблено.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Draw from CSV</source>
-        <translation>Отримати з CSV</translation>
+        <translation>Побудувати з CSV</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4013,22 +4013,22 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Not a correct color, ignored. Text line: %1%2 Color: %3</source>
-        <translation>Неправильний колір ігнорується. Текстовий рядок: %1%2 Колір: %3</translation>
+        <translation>Неправильний колір, ігнорується. Текстовий рядок: %1%2 Колір: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation>Неправильна вага рядка, ігнорується. Текстовий рядок: %1%2 Вага: %3</translation>
+        <translation>Неправильна товщина лінії, ігнорується. Текстовий рядок: %1%2 Вага: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
-        <translation>Неправильний тип лініатури, ігнорується. Текстовий рядок: %1%2 Тип: %3</translation>
+        <translation>Неправильний тип лінії, ігнорується. Текстовий рядок: %1%2 Тип: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation>Неправильний масштаб Linetype, ігнорується. Текстовий рядок: %1%2 Масштаб: %3</translation>
+        <translation>Неправильний масштаб типу лінії, ігнорується. Текстовий рядок: %1%2 Масштаб: %3</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4053,12 +4053,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation>Неправильна вага рядка. Текстовий рядок: %1%2 Вага: %3</translation>
+        <translation>Неправильна товщина лінії. Текстовий рядок: %1%2 Вага: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
-        <translation>Неправильний тип шрифту. Текстовий рядок: %1%2 Тип: %3</translation>
+        <translation>Неправильний тип лінії. Текстовий рядок: %1%2 Тип: %3</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -4078,12 +4078,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation>Отримати з CSV</translation>
+        <translation>Побудувати з CSV</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
-        <translation>Малює сутності на основі текстових записів у файлі CSV</translation>
+        <translation>Створює об&apos;єкти на основі текстових записів у файлі CSV</translation>
     </message>
 </context>
 <context>
