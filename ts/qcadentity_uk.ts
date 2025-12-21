@@ -369,14 +369,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation>Chord Point</translation>
+        <translation>Точка хорди</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation>Дальня точка акорду</translation>
+        <translation>Віддалена точка хорди</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-10"/>
@@ -430,18 +430,18 @@
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
         <source>Dimension Angle</source>
-        <translation>Розмірний кут</translation>
+        <translation>Кутовий розмір</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
         <source>Label</source>
-        <translation>Етикетка</translation>
+        <translation>Позначка</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Tolerance</source>
-        <translation>Толерантність</translation>
+        <translation>Допуск</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -510,14 +510,14 @@
     <message>
         <location line="+1"/>
         <source>Auto Label Position</source>
-        <translation>Автоматичне положення етикетки</translation>
+        <translation>Автоматичне положення позначки</translation>
     </message>
     <message>
         <location filename="../src/entity/REllipseEntity.cpp" line="-17"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation>Основний пункт</translation>
+        <translation>Головна точка</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -527,7 +527,7 @@
     <message>
         <location line="+1"/>
         <source>Start Parameter</source>
-        <translation>Стартовий параметр</translation>
+        <translation>Початковий параметр</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -542,7 +542,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Point</source>
-        <translation>Точка відліку</translation>
+        <translation>Початкова точка</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -565,7 +565,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation>Пункт 1</translation>
+        <translation>Точка 1</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -578,7 +578,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation>Пункт 2</translation>
+        <translation>Точка 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -591,7 +591,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 3</source>
-        <translation>Пункт 3</translation>
+        <translation>Точка 3</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -604,22 +604,22 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 4</source>
-        <translation>Пункт 4</translation>
+        <translation>Точка 4</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-10"/>
         <source>Solid</source>
-        <translation>Солідний</translation>
+        <translation>Суцільне</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation>Намотування</translation>
+        <translation>Правило обходу</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alpha</source>
-        <translation>Альфа</translation>
+        <translation>Прозорість</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -627,7 +627,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation>Візерунок</translation>
+        <translation>Шаблон</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -637,7 +637,7 @@
     <message>
         <location line="+1"/>
         <source>From Entity</source>
-        <translation>Від суб&apos;єкта господарювання</translation>
+        <translation>З об&apos;єкта</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -673,7 +673,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Vertex</source>
-        <translation>Vertex</translation>
+        <translation>Вершина</translation>
     </message>
     <message>
         <location line="+201"/>
