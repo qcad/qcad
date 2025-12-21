@@ -243,7 +243,7 @@
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="+81"/>
         <source>Name</source>
-        <translation>Ім&apos;я та прізвище</translation>
+        <translation>Назва</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -332,7 +332,7 @@
     <message>
         <location line="+2"/>
         <source>Block name:</source>
-        <translation>Ім&apos;я блоку:</translation>
+        <translation>Назва блоку:</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
@@ -864,7 +864,7 @@
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+51"/>
         <source>Name</source>
-        <translation>Ім&apos;я та прізвище</translation>
+        <translation>Назва</translation>
     </message>
     <message>
         <location line="+1"/>

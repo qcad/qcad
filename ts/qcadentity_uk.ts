@@ -632,7 +632,7 @@
     <message>
         <location line="-3"/>
         <source>Name</source>
-        <translation>Ім&apos;я та прізвище</translation>
+        <translation>Назва</translation>
     </message>
     <message>
         <location line="+1"/>
