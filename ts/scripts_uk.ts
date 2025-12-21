@@ -19,7 +19,7 @@
         <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
-        <translation>Інтернет:</translation>
+        <translation>Вебсайт:</translation>
     </message>
     <message>
         <location line="-164"/>
@@ -55,7 +55,7 @@
     <message>
         <location line="+5"/>
         <source>%1 is an application for computer-aided design (CAD).</source>
-        <translation>%1 - програма для автоматизованого проектування (САПР).</translation>
+        <translation>%1 - програма для автоматизованого проєктування (САПР).</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -100,7 +100,7 @@
     <message>
         <location line="+1"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
-        <translation>Програма надається &quot;ЯК Є&quot; БЕЗ ЖОДНИХ ГАРАНТІЙ, У ТОМУ ЧИСЛІ ГАРАНТІЙ ПРОЕКТУ, ТОВАРНОСТІ ТА ПРИДАТНОСТІ ДЛЯ КОНКРЕТНОЇ ЦІЛІ.</translation>
+        <translation>Програма надається &quot;ЯК Є&quot; БЕЗ ЖОДНИХ ГАРАНТІЙ, У ТОМУ ЧИСЛІ ГАРАНТІЙ ПРОЄКТУ, ТОВАРНОСТІ ТА ПРИДАТНОСТІ ДЛЯ КОНКРЕТНОЇ ЦІЛІ.</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -178,7 +178,7 @@
     <message>
         <location line="+7"/>
         <source>No script add-ons found.</source>
-        <translation>Доповнень до сценарію не знайдено.</translation>
+        <translation>Доповнень до скриптів не знайдено.</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -206,7 +206,7 @@
     <message>
         <location line="+65"/>
         <source>Hatch Patterns</source>
-        <translation>Візерунки штрихування</translation>
+        <translation>Шаблони штрихування</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -231,7 +231,7 @@
     <message>
         <location line="+4"/>
         <source>Testing, Feedback and Minor Fixes</source>
-        <translation>Тестування, зворотній зв&apos;язок та незначні виправлення</translation>
+        <translation>Тестування, зворотний зв&apos;язок та незначні виправлення</translation>
     </message>
 </context>
 <context>
@@ -282,12 +282,12 @@
     <message>
         <location line="+326"/>
         <source>Apply preferences</source>
-        <translation>Застосувати преференції</translation>
+        <translation>Застосувати налаштування</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Restart required</source>
-        <translation>Потрібне перезавантаження</translation>
+        <translation>Потрібен перезапуск</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -314,7 +314,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+1"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation>Параметри поточного креслення можна змінити в розділі &lt;br/&gt;&lt;i&gt;Редагування параметрів&lt;/i&gt;.</translation>
+        <translation>Параметри поточного креслення можна змінити в розділі &lt;br/&gt;&lt;i&gt;Редагувати &amp;gt; Налаштування креслення&lt;/i&gt;.</translation>
     </message>
 </context>
 <context>
@@ -335,12 +335,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/AddCentroidDialog.ui" line="+14"/>
         <source>Add  point mass 2D Centroid</source>
-        <translation>Додати масу точки 2D Центроїд</translation>
+        <translation>Додати 2D-центроїд точкової маси</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position Y:</source>
-        <translation>Позиція Y:</translation>
+        <translation>Координата Y:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -352,7 +352,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="-42"/>
         <source>Position X:</source>
-        <translation>Позиція Х:</translation>
+        <translation>Координата Х:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -362,7 +362,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
-        <translation>Скинути на &quot;Невизначено</translation>
+        <translation>Скинути до &quot;Невизначено&quot;</translation>
     </message>
 </context>
 <context>
@@ -380,7 +380,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+10"/>
         <source>Value:</source>
-        <translation>Цінність:</translation>
+        <translation>Значення:</translation>
     </message>
 </context>
 <context>
@@ -414,7 +414,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
-        <translation>Неправильний радіус</translation>
+        <translation>Недопустимий радіус</translation>
     </message>
     <message>
         <location line="+48"/>
@@ -448,7 +448,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PA.js" line="+65"/>
         <source>Start point</source>
-        <translation>Точка відліку</translation>
+        <translation>Початкова точка</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -458,12 +458,12 @@ the preference changes to take effect.</source>
     <message>
         <location line="+85"/>
         <source>Invalid angle</source>
-        <translation>Неправильний кут</translation>
+        <translation>Некоректний кут</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation>Ці два пункти ідентичні</translation>
+        <translation>Обидві точки збігаються</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PA.ui" line="+17"/>
@@ -488,7 +488,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PAInit.js" line="+2"/>
         <source>&amp;2 Points and Angle</source>
-        <translation>2 Точки і кут</translation>
+        <translation>2 точки і кут</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -501,7 +501,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PH.js" line="+65"/>
         <source>Start point</source>
-        <translation>Точка відліку</translation>
+        <translation>Початкова точка</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -511,17 +511,17 @@ the preference changes to take effect.</source>
     <message>
         <location line="+81"/>
         <source>Invalid height</source>
-        <translation>Неправильна висота</translation>
+        <translation>Некоректна висота</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>The two points are identical</source>
-        <translation>Ці два пункти ідентичні</translation>
+        <translation>Обидві точки збігаються</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PH.ui" line="+17"/>
         <source>Height:</source>
-        <translation>Зростання:</translation>
+        <translation>Висота:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -541,12 +541,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
         <source>2 Points and &amp;Height</source>
-        <translation>2 Точки і висота</translation>
+        <translation>2 точки і висота</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
-        <translation>Намалюйте дугу з 2 точок і висоту</translation>
+        <translation>Побудувати дугу з двох точок і висоти</translation>
     </message>
 </context>
 <context>
@@ -554,7 +554,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PL.js" line="+65"/>
         <source>Start point</source>
-        <translation>Точка відліку</translation>
+        <translation>Початкова точка</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -564,17 +564,17 @@ the preference changes to take effect.</source>
     <message>
         <location line="+85"/>
         <source>Invalid length</source>
-        <translation>Неправильна довжина</translation>
+        <translation>Некоректна довжина</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation>Ці два пункти ідентичні</translation>
+        <translation>Обидві точки збігаються</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>The distance between the two points must be less than the arc length</source>
-        <translation>Відстань між двома точками повинна бути менше довжини дуги</translation>
+        <translation>Відстань між двома точками має бути меншою за довжину дуги</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PL.ui" line="+17"/>
@@ -599,12 +599,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
         <source>&amp;2 Points and Length</source>
-        <translation>2 Бали та довжина</translation>
+        <translation>2 точки і довжина</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
-        <translation>Намалюйте дугу з 2 точок і довжину</translation>
+        <translation>Побудувати дугу з двох точок і довжини</translation>
     </message>
 </context>
 <context>
@@ -612,7 +612,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PR.js" line="+67"/>
         <source>Start point</source>
-        <translation>Точка відліку</translation>
+        <translation>Початкова точка</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -622,12 +622,12 @@ the preference changes to take effect.</source>
     <message>
         <location line="+81"/>
         <source>Invalid radius</source>
-        <translation>Неправильний радіус</translation>
+        <translation>Некоректний радіус</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation>Ці два пункти ідентичні</translation>
+        <translation>Обидві точки збігаються</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PR.ui" line="+17"/>
@@ -657,7 +657,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+10"/>
         <source>Shorter Arc</source>
-        <translation>Більш коротка дуга</translation>
+        <translation>Коротша дуга</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -667,12 +667,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation>2 Точки і радіус</translation>
+        <translation>2 точки і радіус</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
-        <translation>Намалюйте дугу з 2 точок і радіуса</translation>
+        <translation>Побудувати дугу з двох точок і радіуса</translation>
     </message>
 </context>
 <context>
@@ -7845,12 +7845,12 @@ is already in the list.</source>
     <message>
         <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
-        <translation>Перед проектуванням поверніть вибір проти годинникової стрілки</translation>
+        <translation>Перед проєктуванням поверніть вибір проти годинникової стрілки</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
-        <translation>Поверніть вибір за годинниковою стрілкою перед проектуванням</translation>
+        <translation>Поверніть вибір за годинниковою стрілкою перед проєктуванням</translation>
     </message>
     <message>
         <location line="+18"/>
