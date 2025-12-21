@@ -1738,7 +1738,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+11"/>
         <source>Point on circle line</source>
-        <translation>Точка на лінії кола</translation>
+        <translation>Точка на колі</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1754,12 +1754,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
         <source>2 Tan&amp;gents and Point</source>
-        <translation>2 Дотичні та точка</translation>
+        <translation>2 дотичні й точка</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
-        <translation>Проведіть коло, дотичне до двох сутностей, через точку</translation>
+        <translation>Побудувати коло, дотичне до двох об&apos;єктів, через точку</translation>
     </message>
 </context>
 <context>
@@ -1792,7 +1792,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
         <source>2 &amp;Tangents and Radius</source>
-        <translation>2 Дотичні та радіус</translation>
+        <translation>2 дотичні та радіус</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1805,27 +1805,27 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3P/Circle3P.js" line="+63"/>
         <source>First point</source>
-        <translation>Перший пункт</translation>
+        <translation>Перша точка</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second point</source>
-        <translation>Другий момент</translation>
+        <translation>Друга точка</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Third point</source>
-        <translation>Третій пункт</translation>
+        <translation>Третя точка</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3P/Circle3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation>3 бали</translation>
+        <translation>Три точки</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle from 3 points</source>
-        <translation>Намалюйте коло з 3 точок</translation>
+        <translation>Побудувати коло з 3 точок</translation>
     </message>
 </context>
 <context>
@@ -1859,12 +1859,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3T/Circle3TInit.js" line="+2"/>
         <source>3 T&amp;angents</source>
-        <translation>3 Тангенси</translation>
+        <translation>3 дотичні</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
-        <translation>Проведіть коло по дотичній до трьох об&apos;єктів</translation>
+        <translation>Побудувати коло, дотичне до трьох об&apos;єктів</translation>
     </message>
 </context>
 <context>
@@ -1894,7 +1894,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Draw circle from center and diameter</source>
-        <translation>Накресліть коло з центру та діаметру</translation>
+        <translation>Побудувати коло за центром і діаметром</translation>
     </message>
 </context>
 <context>
@@ -1917,7 +1917,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
-        <translation>Намалюйте коло з центру і поставте точку на колі</translation>
+        <translation>Побудувати коло за центром і точкою на колі</translation>
     </message>
 </context>
 <context>
@@ -1947,7 +1947,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Draw circle from center and radius</source>
-        <translation>Накресліть коло з центру та радіусу</translation>
+        <translation>Побудувати коло за центром і радіусом</translation>
     </message>
 </context>
 <context>
@@ -1960,17 +1960,17 @@ Do you wish to recover it?</source>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>Номер:</translation>
+        <translation>Кількість:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
-        <translation>Концентричний (з відстанню)</translation>
+        <translation>Концентричне (з відстанню)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw concentric circle</source>
-        <translation>Намалюйте концентричне коло</translation>
+        <translation>Побудувати концентричне коло</translation>
     </message>
 </context>
 <context>
@@ -1978,17 +1978,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Номер:</translation>
+        <translation>Кількість:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation>Концентричний (наскрізний)</translation>
+        <translation>Концентричне (через точку)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw concentric circle through point</source>
-        <translation>Проведіть концентричне коло через точку</translation>
+        <translation>Побудувати концентричне коло через точку</translation>
     </message>
 </context>
 <context>
@@ -2001,12 +2001,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+12"/>
         <source>First point on circle line</source>
-        <translation>Перша точка на лінії кола</translation>
+        <translation>Перша точка на колі</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second point on circle line</source>
-        <translation>Друга точка на лінії кола</translation>
+        <translation>Друга точка на колі</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2022,12 +2022,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2PInit.js" line="+2"/>
         <source>&amp;Tangent and 2 Points</source>
-        <translation>Тангенс і 2 точки</translation>
+        <translation>Дотична і 2 точки</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
-        <translation>Проведіть коло через дві точки і дотичну до одного об&apos;єкта</translation>
+        <translation>Побудувати коло через дві точки, дотичне до одного об&apos;єкта</translation>
     </message>
 </context>
 <context>
@@ -2045,12 +2045,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>Дотична, Точка, Радіус</translation>
+        <translation>Дотична, точка, радіус</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
-        <translation>Побудувати коло, дотичне до сутності, через точку з радіусом</translation>
+        <translation>Побудувати коло, дотичне до об&apos;єкта, через точку з радіусом</translation>
     </message>
 </context>
 <context>
@@ -2074,7 +2074,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation>Заключний розіграш...</translation>
+        <translation>Закриття креслення...</translation>
     </message>
 </context>
 <context>
@@ -2090,7 +2090,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Графічний вигляд</translation>
+        <translation>Графічний перегляд</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2103,7 +2103,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/ColorSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation>Значення за замовчуванням для нових креслень</translation>
+        <translation>Параметри за замовчуванням для нових креслень</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2123,7 +2123,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/PreferencesPage.ui" line="+19"/>
         <source>Background color:</source>
-        <translation>Колір фону:</translation>
+        <translation>Колір тла:</translation>
     </message>
     <message>
         <location line="+44"/>
@@ -2168,17 +2168,17 @@ Do you wish to recover it?</source>
     <message>
         <location line="+199"/>
         <source>Invalid value:</source>
-        <translation>Невірне значення:</translation>
+        <translation>Некоректне значення:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Invalid coordinate or distance &quot;%1&quot;.</source>
-        <translation>Невірна координата або відстань &quot;%1&quot;.</translation>
+        <translation>Неправильна координата або відстань &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
-        <translation>Невідома команда або невірна координата чи значення: &quot;%1&quot;</translation>
+        <translation>Невідома команда або неправильна координата чи значення: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2213,7 +2213,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+22"/>
         <source>Expression</source>
-        <translation>Вираження</translation>
+        <translation>Вираз</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2223,12 +2223,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Command</source>
-        <translation>Командування</translation>
+        <translation>Команда</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Command:</source>
-        <translation>Командир:</translation>
+        <translation>Команда:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2248,7 +2248,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Show information as dialog</source>
-        <translation>Показати інформацію у вигляді діалогу</translation>
+        <translation>Показувати інформацію у вигляді діалогу</translation>
     </message>
 </context>
 <context>
@@ -2264,7 +2264,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/View/CommandLineFocus/CommandLineFocusInit.js" line="+2"/>
         <source>&amp;Focus on Command Line</source>
-        <translation>Фокус на командну лінію</translation>
+        <translation>Фокус на командний рядок</translation>
     </message>
 </context>
 <context>
@@ -2280,12 +2280,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.js" line="+86"/>
         <source>Nothing to be done.</source>
-        <translation>Нічого не поробиш.</translation>
+        <translation>Нічого не потрібно робити.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unit &quot;%1&quot; selected. Nothing to be done</source>
-        <translation>Вибрано блок &quot;%1&quot;. Нічого не потрібно робити</translation>
+        <translation>Одиницю вимірювання &quot;%1&quot; вибрано. Нічого не потрібно робити.</translation>
     </message>
     <message>
         <location line="+144"/>
@@ -2295,7 +2295,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.ui" line="+20"/>
         <source>From:</source>
-        <translation>Звідки?</translation>
+        <translation>Від?</translation>
     </message>
     <message>
         <location line="+56"/>
@@ -2305,17 +2305,17 @@ Do you wish to recover it?</source>
     <message>
         <location line="+33"/>
         <source>Convert:</source>
-        <translation>Навернись:</translation>
+        <translation>Змінити:</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
         <source>Convert Drawing &amp;Unit</source>
-        <translation>Переобладнати волочильний агрегат</translation>
+        <translation>Змінити одиницю вимірювання креслення</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
-        <translation>Конвертувати креслення в іншу одиницю креслення</translation>
+        <translation>Конвертувати креслення в іншу одиницю вимірювання</translation>
     </message>
 </context>
 <context>
@@ -2361,7 +2361,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/Copy/CopyInit.js" line="+2"/>
         <source>&amp;Copy</source>
-        <translation>Прийом</translation>
+        <translation>Копіювати</translation>
     </message>
 </context>
 <context>
@@ -2369,7 +2369,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/CopyWithReference/CopyWithReferenceInit.js" line="+2"/>
         <source>&amp;Copy with Reference</source>
-        <translation>Копія з посиланням</translation>
+        <translation>Копіювати з опорною точкою</translation>
     </message>
 </context>
 <context>
@@ -2382,7 +2382,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.ui" line="+17"/>
         <source>Start:</source>
-        <translation>Починай:</translation>
+        <translation>Початкове значення:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -2412,7 +2412,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Auto increment number</source>
-        <translation>Автоматичне збільшення числа</translation>
+        <translation>Автоматичне збільшення значення</translation>
     </message>
 </context>
 <context>
@@ -2425,7 +2425,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/CreateBlock/CreateBlockInit.js" line="+2"/>
         <source>&amp;Create Block from Selection</source>
-        <translation>Створити блок з виділення</translation>
+        <translation>Створити блок з виділеного</translation>
     </message>
 </context>
 <context>
@@ -2433,17 +2433,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/Cross.js" line="+56"/>
         <source>Select arc, circle, ellipse or elliptical arc</source>
-        <translation>Вибір дуги, кола, еліпса або еліптичної дуги</translation>
+        <translation>Виберіть дугу, коло, еліпс або еліптичну дугу</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/CrossInit.js" line="+2"/>
         <source>Centerline Cross</source>
-        <translation>Центральний хрест</translation>
+        <translation>Осьове перехрестя</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
-        <translation>Намалюйте центральну лінію хреста дугами, колами або еліпсами</translation>
+        <translation>Побудувати осьове перехрестя для дуг, кіл або еліпсів</translation>
     </message>
 </context>
 <context>
@@ -2466,7 +2466,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+41"/>
         <source>Extension</source>
-        <translation>Розширення</translation>
+        <translation>Нарощування</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2476,7 +2476,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Percent</source>
-        <translation>У відсотках</translation>
+        <translation>Відсотки</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -2497,7 +2497,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/CutWithReference/CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
-        <translation>Вирізати з посиланням</translation>
+        <translation>Вирізати з опорною точкою</translation>
     </message>
 </context>
 <context>
@@ -2505,17 +2505,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
-        <translation>Виберіть організацію або регіон</translation>
+        <translation>Виберіть об&apos;єкт або область</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
-        <translation>Перемістити об&apos;єкт або посилання</translation>
+        <translation>Перемістити об&apos;єкт або опорну точку</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation>Другий поворот</translation>
+        <translation>Другий кут</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2525,12 +2525,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation>Цільова точка відбору</translation>
+        <translation>Цільова точка виділення</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Move entity to desired location</source>
-        <translation>Перемістити підприємство в потрібне місце</translation>
+        <translation>Перемістити об&apos;єкт у потрібне місце</translation>
     </message>
     <message>
         <location line="+409"/>
@@ -2540,7 +2540,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+24"/>
         <source>Move Selection</source>
-        <translation>Вибір переміщення</translation>
+        <translation>Перемістити виділене</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -2589,12 +2589,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Select/DeselectAll/DeselectAllInit.js" line="+2"/>
         <source>&amp;Deselect All</source>
-        <translation>Зніміть позначку з усіх пунктів</translation>
+        <translation>Зняти виділення з усього</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Deselect all entities</source>
-        <translation>Зніміть позначку з усіх об&apos;єктів</translation>
+        <translation>ЗЗняти виділення з усіх об&apos;єктів</translation>
     </message>
 </context>
 <context>
@@ -2602,7 +2602,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/DeselectBlockReferences/DeselectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Deselect Block References</source>
-        <translation>Зніміть позначку з пункту Блокувати посилання</translation>
+        <translation>Зняти виділення з посилань на блоки</translation>
     </message>
 </context>
 <context>
@@ -2610,7 +2610,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
-        <translation>Зніміть позначку з об&apos;єктів шару</translation>
+        <translation>Зняти позначку з об&apos;єктів шару</translation>
     </message>
 </context>
 <context>
@@ -2626,7 +2626,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Карта персонажів</translation>
+        <translation>Таблиця символів</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
@@ -2682,12 +2682,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation>Люки</translation>
+        <translation>Штрихування</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into lines</source>
-        <translation>в рядки</translation>
+        <translation>на лінії</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2697,7 +2697,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>into entities</source>
-        <translation>на суб&apos;єкти господарювання</translation>
+        <translation>на об&apos;єкти</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/Dialog.ui" line="+94"/>
