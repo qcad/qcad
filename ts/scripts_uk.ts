@@ -680,7 +680,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc3P/Arc3P.js" line="+62"/>
         <source>Start point</source>
-        <translation>Точка відліку</translation>
+        <translation>Початкова точка</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -695,12 +695,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc3P/Arc3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation>3 бали</translation>
+        <translation>3 точки</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw arc from 3 points</source>
-        <translation>Намалюйте дугу з 3 точок</translation>
+        <translation>побудувати дугу з 3 точок</translation>
     </message>
 </context>
 <context>
@@ -728,7 +728,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+7"/>
         <source>End angle</source>
-        <translation>Торцевий кут</translation>
+        <translation>Кінцевий кут</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.ui" line="+17"/>
@@ -753,7 +753,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
-        <translation>Намалюйте дугу з центру, точки на дузі та кути</translation>
+        <translation>Побудувати дугу з центра, точки на дузі та кутів</translation>
     </message>
 </context>
 <context>
@@ -776,7 +776,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+4"/>
         <source>Draw concentric arc</source>
-        <translation>Намалювати концентричну дугу</translation>
+        <translation>Побудувати концентричну дугу</translation>
     </message>
 </context>
 <context>
@@ -789,12 +789,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation>Концентричний (наскрізний)</translation>
+        <translation>Концентричний (через точку)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw concentric arc through point</source>
-        <translation>Проведіть концентричну дугу через точку</translation>
+        <translation>Побудувати концентричну дугу через точку</translation>
     </message>
 </context>
 <context>
@@ -812,7 +812,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation>Обираємо рішення</translation>
+        <translation>Оберіть рішення</translation>
     </message>
     <message>
         <location line="+128"/>
@@ -828,12 +828,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>Дотична, Точка, Радіус</translation>
+        <translation>Дотична, точка, радіус</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
-        <translation>Проведіть дугу, дотичну до сутності, через точку з радіусом</translation>
+        <translation>Проведіть дугу, дотичну до елемента, через точку з радіусом</translation>
     </message>
 </context>
 <context>
@@ -846,7 +846,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+7"/>
         <source>Choose end point of arc</source>
-        <translation>Вибір кінцевої точки дуги</translation>
+        <translation>Виберіть кінцеву точку дуги</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.ui" line="+17"/>
@@ -861,7 +861,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
-        <translation>Накреслити дугу по дотичній до базового елемента</translation>
+        <translation>Побудувати дугу по дотичній до базового елемента</translation>
     </message>
 </context>
 <context>
@@ -923,7 +923,7 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation>Файл автоматичного збереження резервної копії для &quot;%1&quot; існує.
+        <translation>Файл автозбереження резервної копії для &quot;%1&quot; існує.
 Ви бажаєте його відновити?</translation>
     </message>
     <message>
@@ -941,7 +941,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+16"/>
         <source>Moved original file to:</source>
-        <translation>Перемістив оригінальний файл на:</translation>
+        <translation>Оригінальний файл переміщено в:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -974,7 +974,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Intersections</source>
-        <translation>Перехрестя</translation>
+        <translation>Перетини</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -999,12 +999,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Tangential</source>
-        <translation>Тангенціальний</translation>
+        <translation>Дотичний</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Reference points</source>
-        <translation>Орієнтири</translation>
+        <translation>Опорні точки</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1014,7 +1014,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation>Бали по суб&apos;єкту господарювання</translation>
+        <translation>Точки на об&apos;єкті</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1049,7 +1049,7 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
         <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
-        <translation>Видимі блоки верстки Batch2Pdf</translation>
+        <translation>Batch2Pdf (видимі блоки макета)</translation>
     </message>
 </context>
 <context>
@@ -1057,7 +1057,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Графічний вигляд</translation>
+        <translation>Графічний перегляд</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1070,22 +1070,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
-        <translation>Ці дві сутності не можуть бути зведені нанівець.</translation>
+        <translation>До цих двох об&apos;єктів неможливо застосувати фаску.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Першу сутність не можна обрізати.</translation>
+        <translation>Перший об&apos;єкт не можна обрізати.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Другий суб&apos;єкт не може бути обрізаний.</translation>
+        <translation>Другий об&apos;єкт не можна обрізати.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
         <source>Trim</source>
-        <translation>Обрізка</translation>
+        <translation>Обрізання</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -1143,7 +1143,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+23"/>
         <source>Height:</source>
-        <translation>Зростання:</translation>
+        <translation>Висота:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1158,7 +1158,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Background</source>
-        <translation>Передумови</translation>
+        <translation>Тло</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1205,17 +1205,17 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Use anti-aliasing</source>
-        <translation>Використовуйте згладжування</translation>
+        <translation>Використовувати згладжування</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Margin</source>
-        <translation>Маржа</translation>
+        <translation>Поле</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Margin:</source>
-        <translation>Маржа:</translation>
+        <translation>Поле:</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -1225,7 +1225,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation>Додайте додатковий запас для компенсації ваги волосіні</translation>
+        <translation>Додати додаткове поле для компенсації товщини ліній.</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
@@ -1238,7 +1238,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
-        <translation>Неправильний розмір зображення (ширина x висота повинна бути менше %1)</translation>
+        <translation>Неправильний розмір зображення (ширина x висота має бути меншою за %1)</translation>
     </message>
 </context>
 <context>
@@ -1246,7 +1246,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/Block.js" line="+68"/>
         <source>Block Tools</source>
-        <translation>Інструменти для блокування</translation>
+        <translation>Інструменти роботи з блоками</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -1290,7 +1290,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Block name is invalid.</source>
-        <translation>Ім&apos;я блоку невірне.</translation>
+        <translation>Ім&apos;я блоку некоректне.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1341,7 +1341,7 @@ Do you wish to recover it?</source>
         <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
-        <translation>Список блокування</translation>
+        <translation>Список блоків</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+19"/>
@@ -1364,7 +1364,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation>Ідентифікатор блоку:</translation>
+        <translation>Ідентифікатор посилання на блок:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1382,7 +1382,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
-        <translation>Список блокування експорту (CSV)</translation>
+        <translation>Експорт списку блоків (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1392,7 +1392,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation>Список блокування експорту</translation>
+        <translation>Експорт списку блоків</translation>
     </message>
 </context>
 <context>
@@ -1400,7 +1400,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
         <source>Export Block References List (CSV)</source>
-        <translation>Список посилань на експортні блоки (CSV)</translation>
+        <translation>Експорт списку посилань на блоки (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1410,7 +1410,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation>Список посилань на експортний блок</translation>
+        <translation>Експорт списку посилань на блоки</translation>
     </message>
 </context>
 <context>
@@ -1433,7 +1433,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
-        <translation>Виокремлений сегмент</translation>
+        <translation>Розірвати сегмент</translation>
     </message>
 </context>
 <context>
@@ -1456,7 +1456,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation>Розрив розриву</translation>
+        <translation>Розрив з проміжком</translation>
     </message>
 </context>
 <context>
@@ -1474,12 +1474,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>First break point</source>
-        <translation>Перший брейк-пойнт</translation>
+        <translation>Перша точка розриву</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation>Другий брейк-пойнт</translation>
+        <translation>Друга точка розриву</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1494,7 +1494,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation>Посібник з розриву зв&apos;язку</translation>
+        <translation>Ручний розрив</translation>
     </message>
 </context>
 <context>
@@ -1520,7 +1520,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
-        <translation>Розмір іконки:</translation>
+        <translation>Розмір піктограми:</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -1535,7 +1535,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+9"/>
         <source>Columns:</source>
-        <translation>Колони:</translation>
+        <translation>Стовпці:</translation>
     </message>
 </context>
 <context>
@@ -1548,7 +1548,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Collapse all</source>
-        <translation>Згорнути всі</translation>
+        <translation>Згорнути все</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1558,7 +1558,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Icon View</source>
-        <translation>Перегляд іконок</translation>
+        <translation>Перегляд піктограм</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -1569,12 +1569,12 @@ Do you wish to recover it?</source>
         <location line="+0"/>
         <location line="+53"/>
         <source>Tool Matrix</source>
-        <translation>Інструментальна матриця</translation>
+        <translation>Матриця інструментів</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
         <source>Icon size:</source>
-        <translation>Розмір іконки:</translation>
+        <translation>Розмір піктограми:</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -1611,7 +1611,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Version information not found.</source>
-        <translation>Інформація про версію не знайдена.</translation>
+        <translation>Інформацію про версію не знайдено.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1626,7 +1626,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesInit.js" line="+6"/>
         <source>Check for &amp;Updates...</source>
-        <translation>Перевірте наявність оновлень...</translation>
+        <translation>Перевірити наявність оновлень...</translation>
     </message>
 </context>
 <context>
@@ -1634,7 +1634,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle.js" line="+71"/>
         <source>Circle Tools</source>
-        <translation>Кругові інструменти</translation>
+        <translation>Інструменти побудови кола</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -1647,27 +1647,27 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2P/Circle2P.js" line="+58"/>
         <source>First point</source>
-        <translation>Перший пункт</translation>
+        <translation>Перша точка</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Другий момент</translation>
+        <translation>Друга точка</translation>
     </message>
     <message>
         <location line="+83"/>
         <source>The two points are identical</source>
-        <translation>Ці два пункти ідентичні</translation>
+        <translation>Обидві точки збігаються</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2P/Circle2PInit.js" line="+2"/>
         <source>&amp;2 Points</source>
-        <translation>2 Бали</translation>
+        <translation>2 точки</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
-        <translation>Намалюйте коло з 2 діаметрально протилежних точок</translation>
+        <translation>Побудувати коло за двома діаметрально протилежними точками</translation>
     </message>
 </context>
 <context>
@@ -1675,22 +1675,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.js" line="+65"/>
         <source>First point</source>
-        <translation>Перший пункт</translation>
+        <translation>Перша точка</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Другий момент</translation>
+        <translation>Друга точка</translation>
     </message>
     <message>
         <location line="+107"/>
         <source>Invalid radius</source>
-        <translation>Неправильний радіус</translation>
+        <translation>Некоректний радіус</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation>Ці два пункти ідентичні</translation>
+        <translation>Обидві точки збігаються</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.ui" line="+17"/>
@@ -1700,27 +1700,27 @@ Do you wish to recover it?</source>
     <message>
         <location line="+30"/>
         <source>Solution:</source>
-        <translation>Рішення:</translation>
+        <translation>Розв&apos;язок:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Center Left of Line P1 - P2</source>
-        <translation>По центру зліва від лінії P1 - P2</translation>
+        <translation>Центр ліворуч від лінії P1–P2</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
-        <translation>Центр праворуч від лінії P1 - P2</translation>
+        <translation>Центр праворуч від лінії P1–P2</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation>2 Точки і радіус</translation>
+        <translation>2 точки і радіус</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
-        <translation>Побудувати коло з 2 точок і радіуса</translation>
+        <translation>Побудувати коло з двох точок і радіуса</translation>
     </message>
 </context>
 <context>
