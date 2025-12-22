@@ -4096,7 +4096,7 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation>Замовлення на проведення жеребкування</translation>
+        <translation>Порядок відображення</translation>
     </message>
 </context>
 <context>
@@ -4114,7 +4114,7 @@ is already in the list.</source>
     <message>
         <location line="+469"/>
         <source>close</source>
-        <translation>близький</translation>
+        <translation>замкнути</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4124,7 +4124,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>redo</source>
-        <translation>переробити</translation>
+        <translation>повторити</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4134,7 +4134,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation>Замкнена ламана</translation>
+        <translation>Замкнути полілінію</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -4144,7 +4144,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation>Зачистити:</translation>
+        <translation>Розгортка:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -4154,22 +4154,22 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Повторний сегмент</translation>
+        <translation>Повторити сегмент</translation>
     </message>
     <message>
         <location line="+93"/>
         <source>Restrict length or angle</source>
-        <translation>Обмеження довжини або кута</translation>
+        <translation>Обмежити довжину або кут</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
-        <translation>Намалювати полілінію</translation>
+        <translation>Побудувати полілінію</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
-        <translation>Побудова ламаної з відрізками та дугами</translation>
+        <translation>Побудувати полілінію з відрізками та дугами</translation>
     </message>
 </context>
 <context>
@@ -4177,7 +4177,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation>Налаштування малювання</translation>
+        <translation>Налаштування креслення</translation>
     </message>
 </context>
 <context>
@@ -4194,7 +4194,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
-        <translation>Дублікат</translation>
+        <translation>Дублювати</translation>
     </message>
 </context>
 <context>
@@ -4244,17 +4244,17 @@ is already in the list.</source>
     <message>
         <location line="+578"/>
         <source>Invalid position</source>
-        <translation>Невірна позиція</translation>
+        <translation>Неправильна позиція</translation>
     </message>
     <message>
         <location line="+175"/>
         <source>Entity is not in working set.</source>
-        <translation>Підприємство відсутнє в робочому наборі.</translation>
+        <translation>Об&apos;єкт не входить до робочого набору.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity is on a locked layer.</source>
-        <translation>Підприємство знаходиться на заблокованому шарі.</translation>
+        <translation>Об&apos;єкт знаходиться на заблокованому шарі.</translation>
     </message>
     <message>
         <location line="+233"/>
@@ -4264,92 +4264,92 @@ is already in the list.</source>
     <message>
         <location line="+62"/>
         <source>Entity is not a block reference.</source>
-        <translation>Сутність не є блочним посиланням.</translation>
+        <translation>Об&apos;єкт не є блочним посиланням.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
-        <translation>Сутність не є лінією або дугою.</translation>
+        <translation>Об&apos;єкт не є лінією або дугою.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or polyline.</source>
-        <translation>Сутність не є лінією, дугою або полілінією.</translation>
+        <translation>Об&apos;єкт не є лінією, дугою або полілінією.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line.</source>
-        <translation>Сутність - це не лінія.</translation>
+        <translation>Об&apos;єкт не є лінією.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation>Сутність не є дугою.</translation>
+        <translation>Об&apos;єкт не є дугою.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
-        <translation>Сутність не є дугою або колом.</translation>
+        <translation>Об&apos;єкт не є дугою або колом.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
-        <translation>Сутність не є лінією, дугою або колом.</translation>
+        <translation>Об&apos;єкт не є лінією, дугою або колом.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation>Сутність не є лінією, дугою, сплайном, дугою еліпса або полілінією.</translation>
+        <translation>Об&apos;єкт не є лінією, дугою, сплайном, дугою еліпса або полілінією.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
-        <translation>Сутність не є дугою, колом або еліпсом.</translation>
+        <translation>Об&apos;єкт не є дугою, колом або еліпсом.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
-        <translation>Сутність не є лінією, дугою, колом або еліпсом.</translation>
+        <translation>Об&apos;єкт не є лінією, дугою, колом або еліпсом.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation>Сутність не є лінією, дугою, колом, еліпсом або ламаною.</translation>
+        <translation>Об&apos;єкт не є лінією, дугою, колом, еліпсом або ламаною.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation>Сутність не є лінією, дугою, колом, еліпсом або сплайном.</translation>
+        <translation>Об&apos;єкт не є лінією, дугою, колом, еліпсом або сплайном.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation>Сутність не є лінією, дугою, колом, сплайном або полілінією.</translation>
+        <translation>Об&apos;єкт не є лінією, дугою, колом, сплайном або полілінією.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation>Сутність не є лінією, дугою, колом, еліпсом, сплайном або полілінією.</translation>
+        <translation>Об&apos;єкт не є лінією, дугою, колом, еліпсом, сплайном або полілінією.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation>Сутність не є колом, еліпсом, сплайном або полілінією.</translation>
+        <translation>Об&apos;єкт не є колом, еліпсом, сплайном або полілінією.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
-        <translation>Сутність не є полілінією.</translation>
+        <translation>Об&apos;єкт не є полілінією.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a closed polyline.</source>
-        <translation>Сутність не є замкненою ламаною.</translation>
+        <translation>Об&apos;єкт не є замкненою полілінією.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation>Сутність не є сплайном з точками прилягання.</translation>
+        <translation>Об&apos;єкт не є сплайном з точками прилягання.</translation>
     </message>
 </context>
 <context>
@@ -4357,7 +4357,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
         <source>Show ECMAScript Shell</source>
-        <translation>Показати оболонку ECMAScript</translation>
+        <translation>Показати ECMAScript Shell</translation>
     </message>
     <message>
         <location line="+55"/>
@@ -4378,7 +4378,7 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &quot;safe&quot; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ви збираєтеся увімкнути ECMAScript Shell.&lt;/p&gt;&lt;p&gt;За допомогою ECMAScript Shell ви можете &lt;span style=&quot; color:#ff0000;&quot;&gt;модифікувати свої креслення&lt;/span&gt;, а також &lt;span style=&quot; color:#ff0000;&quot;&gt;видаляти файли&lt;/span&gt; або &lt;span style=&quot; color:#ff0000;&quot;&gt;викликати збій програми&lt;/span&gt;, що може призвести до &lt;span style=&quot; color:#ff0000;&quot;&gt;втрати даних&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Для недосвідчених програмістів рекомендується обмежити використання оболонки ECMAScript до &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt;, який вважається &quot;безпечним&quot; у використанні.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;.</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ви збираєтеся увімкнути ECMAScript Shell.&lt;/p&gt;&lt;p&gt;За допомогою ECMAScript Shell ви можете &lt;span style=&quot; color:#ff0000;&quot;&gt;модифікувати свої креслення&lt;/span&gt;, а також &lt;span style=&quot; color:#ff0000;&quot;&gt;видаляти файли&lt;/span&gt; або &lt;span style=&quot; color:#ff0000;&quot;&gt;викликати збій програми&lt;/span&gt;, що може призвести до &lt;span style=&quot; color:#ff0000;&quot;&gt;втрати даних&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Для недосвідчених програмістів рекомендується обмежити використання ECMAScript Shell до &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt;, який вважається &quot;безпечним&quot; у використанні.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4404,7 +4404,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/EditBlock/EditBlockInit.js" line="+2"/>
         <source>&amp;Edit Block</source>
-        <translation>Блок редагування</translation>
+        <translation>Редагувати блок</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4422,12 +4422,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
-        <translation>Редагування блоку з довідника</translation>
+        <translation>Редагувати блок з посилання</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit block based on chosen block reference</source>
-        <translation>Редагування блоку на основі обраного посилання на блок</translation>
+        <translation>Редагувати блок на основі обраного посилання на блок</translation>
     </message>
 </context>
 <context>
@@ -4435,12 +4435,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation>Виберіть люк</translation>
+        <translation>Виберіть штрихування</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation>Редагувати люк</translation>
+        <translation>Редагувати штрихування</translation>
     </message>
 </context>
 <context>
@@ -4448,7 +4448,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/EditLayer/EditLayerInit.js" line="+2"/>
         <source>&amp;Edit Layer</source>
-        <translation>Редагування шару</translation>
+        <translation>Редагувати шар</translation>
     </message>
 </context>
 <context>
@@ -4482,7 +4482,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+89"/>
         <source>Ellipse Tools</source>
-        <translation>Ellipse Tools</translation>
+        <translation>Інструменти еліпса</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -4500,22 +4500,22 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Major point of ellipse or major radius</source>
-        <translation>Велика точка еліпса або великий радіус</translation>
+        <translation>Точка великої піввісі еліпса або велика піввісь</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Major point of ellipse</source>
-        <translation>Велика точка еліпса</translation>
+        <translation>Точка великої піввісі еліпса</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Minor point of ellipse or minor radius</source>
-        <translation>Мала точка еліпса або малий радіус</translation>
+        <translation>Точка малої піввісі еліпса або мала піввісь</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Minor point of ellipse</source>
-        <translation>Мала точка еліпса</translation>
+        <translation>Точка малої піввісі еліпса</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4535,12 +4535,12 @@ is already in the list.</source>
     <message>
         <location line="+249"/>
         <source>Invalid major radius.</source>
-        <translation>Неправильний головний радіус.</translation>
+        <translation>Неправильна велика піввісь.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Major radius:</source>
-        <translation>Великий радіус:</translation>
+        <translation>Велика піввісь:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -4550,7 +4550,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Minor radius:</source>
-        <translation>Невеликий радіус:</translation>
+        <translation>Мала піввісь:</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -4560,7 +4560,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>End angle:</source>
-        <translation>Торцевий кут:</translation>
+        <translation>Кінцевий кут:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.ui" line="+17"/>
@@ -4585,7 +4585,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
-        <translation>Побудувати дугу еліпса з центру, основної точки, відношення та кутів</translation>
+        <translation>Побудувати дугу еліпса з центра, точки великої піввісі, відношення та кутів</translation>
     </message>
 </context>
 <context>
@@ -4593,12 +4593,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseCPP/EllipseCPPInit.js" line="+2"/>
         <source>&amp;Ellipse (Center, Point, Ratio)</source>
-        <translation>Еліпс (Центр, Точка, Відношення)</translation>
+        <translation>Еліпс (центр, точка, відношення)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
-        <translation>Накресліть повний еліпс з центру, головної точки та відношення</translation>
+        <translation>Побудувати повний еліпс з центра, точки великої піввісі та відношення</translation>
     </message>
 </context>
 <context>
@@ -4607,7 +4607,7 @@ is already in the list.</source>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDD.ui" line="+17"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="+19"/>
         <source>X Diameter:</source>
-        <translation>Х-образний діаметр:</translation>
+        <translation>Діаметр Х:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -4624,7 +4624,7 @@ is already in the list.</source>
     <message>
         <location line="+39"/>
         <source>Reference Point:</source>
-        <translation>Точка відліку:</translation>
+        <translation>Опорна точка:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js" line="+2"/>
@@ -4634,7 +4634,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
-        <translation>Накреслити еліпс з положенням та діаметрами</translation>
+        <translation>Побудувати еліпс за положенням і діаметрами</translation>
     </message>
 </context>
 <context>
@@ -4647,7 +4647,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>Номер:</translation>
+        <translation>Кількість:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
@@ -4665,7 +4665,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Номер:</translation>
+        <translation>Кількість:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
@@ -4675,7 +4675,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
-        <translation>Провести паралельну криву до еліпса через точку</translation>
+        <translation>Побудувати паралельну криву до еліпса через точку</translation>
     </message>
 </context>
 <context>
@@ -4684,7 +4684,7 @@ is already in the list.</source>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRR.ui" line="+17"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="+129"/>
         <source>X Radius:</source>
-        <translation>Радіус Ікс:</translation>
+        <translation>Радіус X:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -4701,7 +4701,7 @@ is already in the list.</source>
     <message>
         <location line="+39"/>
         <source>Reference Point:</source>
-        <translation>Точка відліку:</translation>
+        <translation>Опорна точка:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRInit.js" line="+2"/>
@@ -4711,7 +4711,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
-        <translation>Побудувати еліпс з позицією та радіусами</translation>
+        <translation>Побудувати еліпс за положенням та радіусами</translation>
     </message>
 </context>
 <context>
@@ -4719,7 +4719,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>Втеча</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -4774,7 +4774,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExDirListing/ExDirListing.js" line="+66"/>
         <source>&amp;Directory Listing</source>
-        <translation>Внесення до каталогу</translation>
+        <translation>Список каталогу</translation>
     </message>
 </context>
 <context>
@@ -4782,7 +4782,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawColors/ExDrawColors.js" line="+66"/>
         <source>Draw &amp;Colors</source>
-        <translation>Намалюй кольори</translation>
+        <translation>Вивести кольори</translation>
     </message>
 </context>
 <context>
@@ -4790,7 +4790,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js" line="+85"/>
         <source>Draw &amp;Fonts</source>
-        <translation>Малювати шрифти</translation>
+        <translation>Вивести шрифти</translation>
     </message>
 </context>
 <context>
@@ -4829,22 +4829,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove.js" line="+56"/>
         <source>First corner</source>
-        <translation>Перший поворот</translation>
+        <translation>Перший кут</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation>Другий поворот</translation>
+        <translation>Другий кут</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation>З&apos;єднання типу &quot;ластівчин хвіст</translation>
+        <translation>З&apos;єднання типу &quot;ластівчин хвіст&quot;</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a dovetail joint</source>
-        <translation>Намалюйте з&apos;єднання &quot;ластівчин хвіст</translation>
+        <translation>Побудувати з&apos;єднання типу &quot;ластівчин хвіст&quot;</translation>
     </message>
 </context>
 <context>
@@ -4902,7 +4902,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
-        <translation>Процес запуску</translation>
+        <translation>Запустити процес</translation>
     </message>
 </context>
 <context>
@@ -4953,7 +4953,7 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>&amp;Register File Importer</source>
-        <translation>Зареєструвати імпортер файлів</translation>
+        <translation>Зареєструвати імпортера файлів</translation>
     </message>
 </context>
 <context>
@@ -4994,7 +4994,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw text</source>
-        <translation>Намалювати текст</translation>
+        <translation>Створити текст</translation>
     </message>
 </context>
 <context>
@@ -5003,7 +5003,7 @@ is already in the list.</source>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js" line="+58"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+58"/>
         <source>Position</source>
-        <translation>Позиція</translation>
+        <translation>Положення</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -5015,7 +5015,7 @@ is already in the list.</source>
         <location line="+3"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
-        <translation>Розіграш трьох очок</translation>
+        <translation>Побудувати три точки</translation>
     </message>
 </context>
 <context>
@@ -5048,7 +5048,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExport.js" line="+39"/>
         <source>All Files</source>
-        <translation>Всі файли</translation>
+        <translation>Усі файли</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5066,7 +5066,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImport.js" line="+73"/>
         <source>All Files</source>
-        <translation>Всі файли</translation>
+        <translation>Усі файли</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5092,17 +5092,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Explode/Explode.js" line="+30"/>
         <source>Modify</source>
-        <translation>Зміна</translation>
+        <translation>Модифікація</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>Вибух!</translation>
+        <translation>Розбити!</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation>Вибух!</translation>
+        <translation>Розбити!</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+19"/>
@@ -5112,7 +5112,7 @@ is already in the list.</source>
     <message>
         <location line="+104"/>
         <source>Spline segments:</source>
-        <translation>Сплайн-сегменти:</translation>
+        <translation>Сегменти сплайна:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -5184,7 +5184,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>All Files</source>
-        <translation>Всі файли</translation>
+        <translation>Усі файли</translation>
     </message>
 </context>
 <context>
@@ -5193,7 +5193,7 @@ is already in the list.</source>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
         <location line="+244"/>
         <source>%1 First Start</source>
-        <translation>%1 Перший старт</translation>
+        <translation>Початковий запуск %1</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -5218,12 +5218,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
-        <translation>Будь ласка, виберіть налаштування, які будуть використовуватися для нових креслень. Всі ці налаштування можуть бути змінені пізніше в діалоговому вікні Параметри.</translation>
+        <translation>Будь ласка, виберіть налаштування, які будуть використовуватися для нових креслень. Усі ці налаштування можуть бути змінені пізніше в діалоговому вікні Параметри.</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Unit:</source>
-        <translation>Підрозділ:</translation>
+        <translation>Одиниця:</translation>
     </message>
     <message>
         <location line="+1"/>
