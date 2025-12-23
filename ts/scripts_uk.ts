@@ -7179,7 +7179,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoPosition/InfoPositionInit.js" line="+2"/>
         <source>&amp;Position</source>
-        <translation>Посада</translation>
+        <translation>Розміщення</translation>
     </message>
 </context>
 <context>
@@ -7187,7 +7187,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoPositionPol/InfoPositionPolInit.js" line="+2"/>
         <source>&amp;Polar Position</source>
-        <translation>Полярне положення</translation>
+        <translation>Полярне розміщення</translation>
     </message>
 </context>
 <context>
@@ -7195,7 +7195,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoPositionPolRel/InfoPositionPolRelInit.js" line="+2"/>
         <source>Relative P&amp;olar Position</source>
-        <translation>Відносне полярне положення</translation>
+        <translation>Відносне полярне розміщення</translation>
     </message>
 </context>
 <context>
@@ -7203,7 +7203,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoPositionRel/InfoPositionRelInit.js" line="+2"/>
         <source>&amp;Relative Position</source>
-        <translation>Відносне положення</translation>
+        <translation>Відносне розміщення</translation>
     </message>
 </context>
 <context>
@@ -7211,17 +7211,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js" line="+105"/>
         <source>No selection.</source>
-        <translation>Без вибору.</translation>
+        <translation>Нічого не вибрано.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation>Будь ласка, спочатку зробіть вибір. Командування припинено.</translation>
+        <translation>Будь ласка, спочатку щось виберіть. Команду завершено.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>2D Centroids weighted sum script (v0.24) by CVH.</source>
-        <translation>сценарій зваженої суми 2D центроїдів (v0.24) від CVH.</translation>
+        <translation>Скрипт зваженої суми центроїдів 2D (v0.24), CVH.</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -7231,21 +7231,21 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Encountered an invalid coordinate value.</source>
-        <translation>Виникло невірне значення координат.</translation>
+        <translation>Виявлено некоректне значення координати.</translation>
     </message>
     <message>
         <location line="+8"/>
         <location line="+11"/>
         <location line="+10"/>
         <source>Encountered a missing &apos;%1&apos; value.</source>
-        <translation>Виявлено відсутнє значення &apos;%1&apos;.</translation>
+        <translation>Виявлено некоректне значення &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="-16"/>
         <location line="+11"/>
         <location line="+17"/>
         <source>Encountered an invalid &apos;%1&apos; value.</source>
-        <translation>Виникла помилка, пов&apos;язана з невірним значенням &apos;%1&apos;.</translation>
+        <translation>Виникла помилка, пов&apos;язана з некоректним значенням &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7255,7 +7255,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>No result.</source>
-        <translation>Безрезультатно.</translation>
+        <translation>Немає результату.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -7310,12 +7310,12 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>area (Informational):</source>
-        <translation>(Інформаційний):</translation>
+        <translation>площа (інформаційно):</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>wire length (Informational):</source>
-        <translation>довжина проводу (інформаційна):</translation>
+        <translation>довжина проводу (інформаційно):</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -7330,12 +7330,12 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
-        <translation>Об&apos;єднати вибрані 2D центроїдні маркери зваженими</translation>
+        <translation>Об&apos;єднати вибрані маркери центроїдів 2D із зважуванням</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combines selected 2D Centroid markers, summing all properties weighted</source>
-        <translation>Об&apos;єднує вибрані 2D маркери центроїда, підсумовуючи всі властивості з урахуванням ваги</translation>
+        <translation>Об&apos;єднує вибрані маркери 2D центроїда, підсумовуючи всі властивості з урахуванням ваги</translation>
     </message>
 </context>
 <context>
@@ -7343,17 +7343,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js" line="+121"/>
         <source>No selection.</source>
-        <translation>Без вибору.</translation>
+        <translation>Нічого не вибрано.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation>Будь ласка, спочатку зробіть вибір. Командування припинено.</translation>
+        <translation>Будь ласка, спочатку оберіть щось. Команду завершено.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Wire 2D Centroid script (v0.32) by CVH</source>
-        <translation>Скрипт Wire 2D Centroid (v0.32) від CVH</translation>
+        <translation>Скрипт центроїда лінійного об&apos;єкта 2D (v0.32) від CVH</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7363,7 +7363,7 @@ is already in the list.</source>
     <message>
         <location line="+28"/>
         <source>2D Centroid markers circle in selection. No results.</source>
-        <translation>2D Центроїдні маркери кружляють у виділенні. Немає результатів.</translation>
+        <translation>У вибірці виявлено маркери центроїдів 2D. Результати відсутні.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7374,12 +7374,12 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Unsupported entity type. No results.</source>
-        <translation>Непідтримуваний тип суб&apos;єкта. Немає результатів.</translation>
+        <translation>Непідтримуваний тип об&apos;єкта. Результати відсутні.</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>No results.</source>
-        <translation>Безрезультатно.</translation>
+        <translation>Результати відсутні.</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -7389,7 +7389,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>2D wire Centroid</source>
-        <translation>2D дротовий центроїд</translation>
+        <translation>Центроїд лінійного об&apos;єкта 2D</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -7415,27 +7415,27 @@ is already in the list.</source>
     <message>
         <location line="+125"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation>Зіткнулися з непідтримуваною полілінією з нестандартною шириною</translation>
+        <translation>Виявлено непідтримувану полілінію з користувацькою шириною</translation>
     </message>
     <message>
         <location line="+105"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation>Зустрівся непідтримуваний полігон з нестандартною шириною</translation>
+        <translation>Виявлено непідтримуваний полігон з користувацькою шириною</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+19"/>
         <source>&amp;Wire Centroid</source>
-        <translation>Дротяний центроїд</translation>
+        <translation>Центроїд лінійного об&apos;єкта</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
-        <translation>Створення дротяного 2D центроїда для виділення</translation>
+        <translation>Створити центроїд лінійного об&apos;єкта 2D для вибраного</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</source>
-        <translation>Створює новий однорідний за лінійною щільністю 2D маркер центроїда та мітки значень для вибору об&apos;єктів</translation>
+        <translation>Створити новий однорідний за лінійною щільністю 2D маркер центроїда та мітки значень для вибору об&apos;єктів</translation>
     </message>
 </context>
 <context>
@@ -7514,7 +7514,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
-        <translation>Генеральний</translation>
+        <translation>Загальні</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -7543,32 +7543,32 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Less Than</source>
-        <translation>Менше, ніж</translation>
+        <translation>Менше</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation>За адресою</translation>
+        <translation>@ (символ)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Percentage</source>
-        <translation>У відсотках</translation>
+        <translation>% (символ)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dollar</source>
-        <translation>Долар</translation>
+        <translation>$ (символ)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hash</source>
-        <translation>Хеш</translation>
+        <translation># (символ)</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Dot</source>
-        <translation>Точка</translation>
+        <translation>Крапка</translation>
     </message>
 </context>
 <context>
@@ -7576,12 +7576,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlock.js" line="+117"/>
         <source>Position</source>
-        <translation>Позиція</translation>
+        <translation>Положення</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlock.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation>Ротація:</translation>
+        <translation>Поворот:</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -7591,12 +7591,12 @@ is already in the list.</source>
     <message>
         <location line="+110"/>
         <source>Scale X:</source>
-        <translation>Шкала Х:</translation>
+        <translation>Масштаб X:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
-        <translation>Масштабний блок в X&lt;br&gt;за цим коефіцієнтом</translation>
+        <translation>Масштабувати блок по X&lt;br&gt;за цим коефіцієнтом</translation>
     </message>
     <message>
         <location line="+68"/>
@@ -7606,22 +7606,22 @@ is already in the list.</source>
     <message>
         <location line="+25"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translation>Масштабування блоку по Y&lt;br&gt;за цим коефіцієнтом</translation>
+        <translation>Масштабувати блок по Y&lt;br&gt;за цим коефіцієнтом</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Keep Proportions</source>
-        <translation>Дотримуйтесь пропорцій</translation>
+        <translation>Зберігати пропорції</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
-        <translation>Перекидний блок&lt;br&gt;горизонтально</translation>
+        <translation>Віддзеркалити блок&lt;br&gt;горизонтально</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
-        <translation>Перекидний блок&lt;br&gt;вертикально</translation>
+        <translation>Віддзеркалити блок&lt;br&gt;вертикально</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -7637,27 +7637,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+8"/>
         <source>Columns:</source>
-        <translation>Колони:</translation>
+        <translation>Стовпці:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Rows:</source>
-        <translation>Ряди:</translation>
+        <translation>Рядки:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Column Spacing:</source>
-        <translation>Інтервал між стовпчиками:</translation>
+        <translation>Інтервал між стовпцями:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Row Spacing:</source>
-        <translation>Міжряддя:</translation>
+        <translation>Інтервал між рядками:</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translation>Вставний блок</translation>
+        <translation>Вставити блок</translation>
     </message>
 </context>
 <context>
@@ -7670,17 +7670,17 @@ is already in the list.</source>
     <message>
         <location line="+29"/>
         <source>Adjusted invalid block name to &quot;%1&quot;</source>
-        <translation>Виправлено невірне ім&apos;я блоку на &quot;%1&quot;</translation>
+        <translation>Виправлено некоректне ім&apos;я блоку на &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+83"/>
         <source>Position</source>
-        <translation>Позиція</translation>
+        <translation>Положення</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation>Ротація:</translation>
+        <translation>Поворот:</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -7695,17 +7695,17 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Масштабування вставлених об&apos;єктів&lt;br&gt;за цим фактором</translation>
+        <translation>Масштабувати вставлені об&apos;єкти&lt;br&gt;за цим коефіцієнтом</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Перевернути вставлені об&apos;єкти&lt;br&gt;по горизонталі</translation>
+        <translation>Віддзеркалити вставлені об&apos;єкти&lt;br&gt;горизонтально</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Перевернути вставлені об&apos;єкти&lt;br&gt;вертикально</translation>
+        <translation>Віддзеркалити вставлені об&apos;єкти&lt;br&gt;вертикально</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -7730,7 +7730,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItemInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translation>Вставний блок</translation>
+        <translation>Вставити блок</translation>
     </message>
 </context>
 <context>
@@ -7738,7 +7738,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
-        <translation>Вставка сценарію</translation>
+        <translation>Вставити скрипт</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
@@ -7776,7 +7776,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Invert the current selection</source>
-        <translation>Інвертувати поточний вибір</translation>
+        <translation>Інвертувати поточне виділення</translation>
     </message>
 </context>
 <context>
@@ -7789,7 +7789,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Isometric True Scale</source>
-        <translation>Ізометрична справжня шкала</translation>
+        <translation>Ізометрія з істинним масштабом</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7805,22 +7805,22 @@ is already in the list.</source>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation>Кабінет міністрів</translation>
+        <translation>Кабінетна проєкція</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cavalier</source>
-        <translation>Кавалер</translation>
+        <translation>Кавалерійська проєкція</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
         <source>Top</source>
-        <translation>Топ</translation>
+        <translation>Зверху</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Bottom</source>
-        <translation>Дно</translation>
+        <translation>Знизу</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -7830,27 +7830,27 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation>Лівий захисник</translation>
+        <translation>Ліворуч позаду</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Right</source>
-        <translation>Так</translation>
+        <translation>Праворуч</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation>Зараз повернуся</translation>
+        <translation>Праворуч позаду</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
-        <translation>Перед проєктуванням поверніть вибір проти годинникової стрілки</translation>
+        <translation>Перед проєктуванням повернути вибір проти годинникової стрілки</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
-        <translation>Поверніть вибір за годинниковою стрілкою перед проєктуванням</translation>
+        <translation>Перед проєктуванням повернути вибір за годинниковою стрілкою</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -7860,7 +7860,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
         <source>&amp;Isometric Projection</source>
-        <translation>Ізометрична проекція</translation>
+        <translation>Ізометрична проєкція</translation>
     </message>
 </context>
 <context>
@@ -7868,7 +7868,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridLeft/IsometricGridLeft.js" line="+35"/>
         <source>&amp;Left Projection</source>
-        <translation>Ліва проекція</translation>
+        <translation>Ліва проєкція</translation>
     </message>
 </context>
 <context>
@@ -7884,7 +7884,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridRight/IsometricGridRight.js" line="+35"/>
         <source>&amp;Right Projection</source>
-        <translation>Пряма проекція</translation>
+        <translation>Права проєкція</translation>
     </message>
 </context>
 <context>
@@ -7892,7 +7892,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridTop/IsometricGridTop.js" line="+143"/>
         <source>&amp;Top Projection</source>
-        <translation>Верхня проекція</translation>
+        <translation>Верхня проєкція</translation>
     </message>
 </context>
 <context>
@@ -7900,7 +7900,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsometricProjection.js" line="+49"/>
         <source>&amp;Isometric Projection</source>
-        <translation>Ізометрична проекція</translation>
+        <translation>Ізометрична проєкція</translation>
     </message>
 </context>
 <context>
@@ -7908,7 +7908,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricView.js" line="+44"/>
         <source>&amp;Isometric View</source>
-        <translation>Ізометричний вид</translation>
+        <translation>Ізометричний перегляд</translation>
     </message>
 </context>
 <context>
@@ -7916,7 +7916,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
-        <translation>Короткий тайм-аут:</translation>
+        <translation>Тайм-аут комбінацій клавіш:</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -7929,7 +7929,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/KeyboardPreferences.js" line="+24"/>
         <source>General</source>
-        <translation>Генеральний</translation>
+        <translation>Загальні</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -7968,7 +7968,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Default lineweight for new layers:</source>
-        <translation>Лінійна вага за замовчуванням для нових шарів:</translation>
+        <translation>Товщина лінії за замовчуванням для нових шарів:</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -7978,7 +7978,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation>Лінійна вага за замовчуванням для шару 0:</translation>
+        <translation>Товщина лінії за замовчуванням для шару 0:</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+99"/>
@@ -7998,27 +7998,27 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Hiding all layers</source>
-        <translation>Приховування всіх шарів</translation>
+        <translation>Приховати всі шари</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Thawing all layers</source>
-        <translation>Розморожування всіх шарів</translation>
+        <translation>Розморозити всі шари</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Freezing all layers</source>
-        <translation>Заморожування всіх шарів</translation>
+        <translation>Заморозити всі шари</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Locking all layers</source>
-        <translation>Блокування всіх шарів</translation>
+        <translation>Заблокувати всі шари</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unlocking all layers</source>
-        <translation>Розблокування всіх шарів</translation>
+        <translation>Розблокувати всі шари</translation>
     </message>
 </context>
 <context>
@@ -8036,7 +8036,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/PreferencesPage.ui" line="+17"/>
         <source>Layer 0</source>
-        <translation>Рівень 0</translation>
+        <translation>Шар 0</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -8046,12 +8046,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Layer 0 behaves differently (best compatibility)</source>
-        <translation>Рівень 0 поводиться інакше (найкраща сумісність)</translation>
+        <translation>Шар 0 поводиться інакше (найкраща сумісність)</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation>Сутності в блоках на рівні 0 отримують атрибути та видимість посилання на блок.</translation>
+        <translation>Об&apos;єкти в блоках на шарі 0 успадковують атрибути та видимість посилання на блок.</translation>
     </message>
 </context>
 <context>
@@ -8065,7 +8065,7 @@ is already in the list.</source>
     <message>
         <location line="+158"/>
         <source>Leading or trailing spaces.</source>
-        <translation>Початкові або кінцеві пробіли.</translation>
+        <translation>Початкові або кінцеві пропуски.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -8075,7 +8075,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Layer already exists.</source>
-        <translation>Прошарок вже існує.</translation>
+        <translation>Шар уже існує.</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
@@ -8100,12 +8100,12 @@ is already in the list.</source>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation>Лінійна вага:</translation>
+        <translation>Товщина лінії:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
-        <translation>Лінійний тип:</translation>
+        <translation>Тип лінії:</translation>
     </message>
 </context>
 <context>
@@ -8160,17 +8160,17 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Arrow head</source>
-        <translation>Наконечник стріли</translation>
+        <translation>Наконечник стрілки</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>Лідер</translation>
+        <translation>Виноска</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Лідер розіграшу (послідовність ліній зі стрілкою)</translation>
+        <translation>Побудувати виноску (послідовність ліній зі стрілкою)</translation>
     </message>
 </context>
 <context>
@@ -8178,12 +8178,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Лідер створено успішно</translation>
+        <translation>Виноску успішно створено</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>Лідер з виділеного тексту</translation>
+        <translation>Виноска з виділеного тексту</translation>
     </message>
 </context>
 <context>
@@ -8196,12 +8196,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation>Сума:</translation>
+        <translation>Величина:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation>Сума до подовження або скорочення (від&apos;ємне значення)</translation>
+        <translation>Величина подовження або скорочення (від&apos;ємне значення)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
@@ -8224,7 +8224,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation>Той самий тип організації, що і в оригіналі</translation>
+        <translation>Той самий тип об&apos;єкта, що й в оригіналі</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -8239,7 +8239,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation>Рей</translation>
+        <translation>Промінь</translation>
     </message>
 </context>
 <context>
@@ -8247,17 +8247,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+76"/>
         <source>First point</source>
-        <translation>Перший пункт</translation>
+        <translation>Перша точка</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next point</source>
-        <translation>Наступний пункт</translation>
+        <translation>Наступна точка</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
-        <translation>Закрита послідовність</translation>
+        <translation>Замкнути послідовність</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8267,12 +8267,12 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation>Повторний сегмент</translation>
+        <translation>Повторити сегмент</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation>Використовуйте фіксовану довжину лінії</translation>
+        <translation>Використовувати фіксовану довжину лінії</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8282,7 +8282,7 @@ is already in the list.</source>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation>Використовуйте фіксований кут для лінії</translation>
+        <translation>Використовувати фіксований кут для лінії</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8297,7 +8297,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
-        <translation>Намалюйте одну лінію або послідовність ліній</translation>
+        <translation>Побудувати одну лінію або послідовність ліній</translation>
     </message>
 </context>
 <context>
@@ -8305,17 +8305,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.js" line="+71"/>
         <source>Position</source>
-        <translation>Позиція</translation>
+        <translation>Положення</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation>Вкажіть посаду</translation>
+        <translation>Вкажіть положення</translation>
     </message>
     <message>
         <location line="-31"/>
         <source>Start</source>
-        <translation>Старт</translation>
+        <translation>Початок</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8325,17 +8325,17 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation>Кінцева точка</translation>
+        <translation>Кінець</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2"/>
         <source>Line from &amp;Angle</source>
-        <translation>Лінія з кута</translation>
+        <translation>Лінія за кутом</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
-        <translation>Проведення лінії під заданим абсолютним кутом</translation>
+        <translation>Побудувати лінію під заданим абсолютним кутом</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
@@ -8388,7 +8388,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>Номер:</translation>
+        <translation>Кількість:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
@@ -8406,12 +8406,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js" line="+63"/>
         <source>First point</source>
-        <translation>Перший пункт</translation>
+        <translation>Перша точка</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Другий момент</translation>
+        <translation>Друга точка</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
@@ -8421,12 +8421,12 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Finger Width:</source>
-        <translation>Ширина пальця:</translation>
+        <translation>Ширина шипа:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Finger/Slot Ratio:</source>
-        <translation>Співвідношення пальців і прорізів:</translation>
+        <translation>Співвідношення шипів і пазів:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8436,12 +8436,12 @@ is already in the list.</source>
     <message>
         <location line="+11"/>
         <source>Finger first</source>
-        <translation>Спочатку палець</translation>
+        <translation>Спочатку шип</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Slot first</source>
-        <translation>Слот перший</translation>
+        <translation>Спочатку паз</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -8456,7 +8456,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation>Суглобові пальці, прорізи та теніски Draw Box</translation>
+        <translation>Побудувати шипи, пази та тенони коробкового з&apos;єднання</translation>
     </message>
 </context>
 <context>
@@ -8464,17 +8464,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
         <source>First point</source>
-        <translation>Перший пункт</translation>
+        <translation>Перша точка</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Другий момент</translation>
+        <translation>Друга точка</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+17"/>
         <source>Number of Dovetails:</source>
-        <translation>Кількість голубів:</translation>
+        <translation>Кількість шипів типу &quot;ластівчин хвіст&quot;:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8499,7 +8499,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw a dovetail joint</source>
-        <translation>Намалюйте з&apos;єднання &quot;ластівчин хвіст</translation>
+        <translation>Побудувати з&apos;єднання &quot;ластівчин хвіст&quot;</translation>
     </message>
 </context>
 <context>
@@ -8512,17 +8512,17 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Release to stop drawing</source>
-        <translation>Відпустіть, щоб зупинити малювання</translation>
+        <translation>Відпустіть, щоб припинити малювання</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehandInit.js" line="+2"/>
         <source>&amp;Freehand Line</source>
-        <translation>Freehand Line</translation>
+        <translation>Лінія від руки</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw freehand line</source>
-        <translation>Намалюйте лінію від руки</translation>
+        <translation>Побудувати лінію від руки</translation>
     </message>
 </context>
 <context>
@@ -8535,7 +8535,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw horizontal line</source>
-        <translation>Проведіть горизонтальну лінію</translation>
+        <translation>Побудувати горизонтальну лінію</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17"/>
@@ -8563,12 +8563,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js" line="+2"/>
         <source>&amp;Orthogonal</source>
-        <translation>Ортогональні</translation>
+        <translation>Ортогональна</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
-        <translation>Проведіть лінію, ортогональну до базової сутності</translation>
+        <translation>Побудувати лінію, ортогональну до базового об&apos;єкта</translation>
     </message>
 </context>
 <context>
@@ -8576,7 +8576,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangent.js" line="+71"/>
         <source>Choose line</source>
-        <translation>Виберіть рядок</translation>
+        <translation>Виберіть лінію</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -8604,12 +8604,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallelInit.js" line="+2"/>
         <source>Para&amp;llel (with Distance)</source>
-        <translation>Паралельно (з відстанню)</translation>
+        <translation>Паралельна (з відстанню)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
-        <translation>Провести паралельну до існуючої лінію або концентричну дугу, коло</translation>
+        <translation>Побудувати паралельну до наявної лінію або концентричну дугу чи коло</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
@@ -8619,7 +8619,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation>Номер:</translation>
+        <translation>Кількість:</translation>
     </message>
 </context>
 <context>
@@ -8627,17 +8627,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Номер:</translation>
+        <translation>Кількість:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2"/>
         <source>Par&amp;allel (through Point)</source>
-        <translation>Паралельно (через пункт)</translation>
+        <translation>Паралельна (через точку)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
-        <translation>Провести паралельну пряму або концентричну дугу чи коло через задану точку</translation>
+        <translation>Побудувати паралельну пряму або концентричну дугу чи коло через задану точку</translation>
     </message>
 </context>
 <context>
@@ -8678,7 +8678,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Set position</source>
-        <translation>Встановлене положення</translation>
+        <translation>Задати положення</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.ui" line="+17"/>
@@ -8698,7 +8698,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="-45"/>
         <source>Start</source>
-        <translation>Старт</translation>
+        <translation>Початок</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8708,7 +8708,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation>Кінцева точка</translation>
+        <translation>Кінець</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2"/>
@@ -8718,7 +8718,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
-        <translation>Провести лінію з відносним кутом до базової сутності</translation>
+        <translation>Побудувати лінію з відносним кутом до базового об&apos;єкта</translation>
     </message>
 </context>
 <context>
@@ -8759,7 +8759,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
-        <translation>Побудувати дотичну (точку, коло)</translation>
+        <translation>Побудувати дотичну (точка, коло)</translation>
     </message>
 </context>
 <context>
@@ -8787,7 +8787,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
-        <translation>Провести дотичну (коло, окружність)</translation>
+        <translation>Побудувати дотичну (коло, коло)</translation>
     </message>
 </context>
 <context>
@@ -8800,7 +8800,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw vertical line</source>
-        <translation>Проведіть вертикальну лінію</translation>
+        <translation>Побудувати вертикальну лінію</translation>
     </message>
 </context>
 <context>
@@ -8808,7 +8808,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/LinetypeMode/LinetypeMode.js" line="+86"/>
         <source>Screen-based Line&amp;types</source>
-        <translation>Екранні шрифти Linetypes</translation>
+        <translation>Екранні типи ліній</translation>
     </message>
 </context>
 <context>
@@ -8822,22 +8822,22 @@ is already in the list.</source>
         <location line="+0"/>
         <location line="+2"/>
         <source>Linetype</source>
-        <translation>Тип лінійки</translation>
+        <translation>Тип лінії</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation>Генеральний</translation>
+        <translation>Загальні</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global linetype scale:</source>
-        <translation>Глобальна шкала лінійних типів:</translation>
+        <translation>Глобальний масштаб типів ліній:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Scale of linetypes matches the scale of each viewport</source>
-        <translation>Масштаб лінійних типів відповідає масштабу кожного видового вікна</translation>
+        <translation>Масштаб типів ліній відповідає масштабу кожного вікна перегляду</translation>
     </message>
 </context>
 <context>
@@ -8845,7 +8845,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ListenerExamples.js" line="+50"/>
         <source>&amp;Listeners</source>
-        <translation>Слухачі</translation>
+        <translation>Обробники подій</translation>
     </message>
 </context>
 <context>
@@ -8853,7 +8853,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/LockAllLayers/LockAllLayersInit.js" line="+2"/>
         <source>&amp;Lock All Layers</source>
-        <translation>Блокування всіх шарів</translation>
+        <translation>Заблокувати всі шари</translation>
     </message>
 </context>
 <context>
@@ -8861,7 +8861,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/LockRelativeZero/LockRelativeZeroInit.js" line="+2"/>
         <source>&amp;Lock Relative Zero</source>
-        <translation>Блокування відносного нуля</translation>
+        <translation>Заблокувати відносний нуль</translation>
     </message>
 </context>
 <context>
@@ -8916,42 +8916,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.js" line="+44"/>
         <source>Modify</source>
-        <translation>Зміна</translation>
+        <translation>Змінити</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation>Віддзеркалити</translation>
+        <translation>Дзеркальне відображення</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>First point of symmetry axis</source>
-        <translation>Перша точка осі симетрії</translation>
+        <translation>Перша точка осі відображення</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point of symmetry axis</source>
-        <translation>Друга точка осі симетрії</translation>
+        <translation>Друга точка осі відображення</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
         <source>Copy</source>
-        <translation>Прийом</translation>
+        <translation>Копіювати</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation>Використання поточного шару та атрибутів</translation>
+        <translation>Використовувати поточний шар і атрибути</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation>Дзеркало</translation>
+        <translation>Дзеркальне відображення</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation>Діалогове вікно для вибору параметрів інструменту</translation>
+        <translation>Використовувати діалогове вікно для вибору параметрів інструменту</translation>
     </message>
 </context>
 <context>
@@ -8959,12 +8959,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation>Параметри дзеркала</translation>
+        <translation>Параметри дзеркального відображення</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation>Кількість примірників</translation>
+        <translation>Кількість копій</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -8974,12 +8974,12 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>Зберігайте оригінал</translation>
+        <translation>Зберегти оригінал</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Використовувати поточний шар та атрибути</translation>
+        <translation>Використовувати поточний шар і атрибути</translation>
     </message>
 </context>
 <context>
@@ -9033,7 +9033,7 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>De&amp;velopment</source>
-        <translation>Розвиток</translation>
+        <translation>Розроблення</translation>
     </message>
 </context>
 <context>
@@ -9046,17 +9046,17 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Misc Drawing Tools</source>
-        <translation>Інші інструменти для малювання</translation>
+        <translation>Інші інструменти малювання</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Misc Draw</source>
-        <translation>Жеребкування</translation>
+        <translation>Інше креслення</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>Жеребкування</translation>
+        <translation>Креслення</translation>
     </message>
 </context>
 <context>
@@ -9128,7 +9128,7 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>&amp;Select</source>
-        <translation>Виберіть</translation>
+        <translation>Вибрати</translation>
     </message>
 </context>
 <context>
@@ -9154,17 +9154,17 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Choose first entity</source>
-        <translation>Виберіть перший об&apos;єкт</translation>
+        <translation>Оберіть перший об&apos;єкт</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second entity</source>
-        <translation>Оберіть другий суб&apos;єкт</translation>
+        <translation>Оберіть другий об&apos;єкт</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation>Заданне значення</translation>
+        <translation>Задайте точку</translation>
     </message>
 </context>
 <context>
@@ -9180,7 +9180,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
-        <translation>Імпортний МОЛ</translation>
+        <translation>Імпорт MOL</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9190,7 +9190,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation>Всі файли</translation>
+        <translation>Усі файли</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
