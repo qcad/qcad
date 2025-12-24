@@ -9224,12 +9224,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
         <source>Enter Position</source>
-        <translation>Ввести позицію</translation>
+        <translation>Введіть координати</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position X:</source>
-        <translation>Позиція Х:</translation>
+        <translation>Координата X:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -9240,7 +9240,7 @@ is already in the list.</source>
     <message>
         <location line="-7"/>
         <source>Position Y:</source>
-        <translation>Позиція Y:</translation>
+        <translation>Координата Y:</translation>
     </message>
 </context>
 <context>
@@ -9248,7 +9248,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js" line="+53"/>
         <source>My Scripts</source>
-        <translation>Мої сценарії</translation>
+        <translation>Мої скрипти</translation>
     </message>
 </context>
 <context>
@@ -9256,7 +9256,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Карта персонажів</translation>
+        <translation>Таблиця символів</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9274,7 +9274,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
-        <translation>Малюнок відкриття:</translation>
+        <translation>Відкрити креслення:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -9304,7 +9304,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Import failed.</source>
-        <translation>Імпорт не пройшов.</translation>
+        <translation>Помилка імпорту.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9329,7 +9329,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>read-only</source>
-        <translation>тільки для читання</translation>
+        <translation>лише для читання</translation>
     </message>
     <message>
         <location line="+63"/>
@@ -9344,7 +9344,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/NewFile/NewFileInit.js" line="+2"/>
         <source>&amp;New</source>
-        <translation>Новий</translation>
+        <translation>Створити</translation>
     </message>
 </context>
 <context>
@@ -9398,7 +9398,7 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Number:</source>
-        <translation>Номер:</translation>
+        <translation>Кількість:</translation>
     </message>
 </context>
 <context>
@@ -9411,7 +9411,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Номер:</translation>
+        <translation>Кількість:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
@@ -9434,17 +9434,17 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Open Drawing</source>
-        <translation>Відкритий розіграш</translation>
+        <translation>Відкрити креслення</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All Files</source>
-        <translation>Всі файли</translation>
+        <translation>Усі файли</translation>
     </message>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFileInit.js" line="+2"/>
         <source>&amp;Open</source>
-        <translation>Відкрито</translation>
+        <translation>Відкрити</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -9477,7 +9477,7 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Custom</source>
-        <translation>Нестандартний</translation>
+        <translation>Користувацький</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116"/>
@@ -9487,12 +9487,12 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Portrait</source>
-        <translation>Портрет</translation>
+        <translation>Книжкова</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Landscape</source>
-        <translation>Ландшафт</translation>
+        <translation>Альбомна</translation>
     </message>
     <message>
         <location line="-113"/>
@@ -9517,7 +9517,7 @@ is already in the list.</source>
     <message>
         <location line="+66"/>
         <source>Margins</source>
-        <translation>Маржинальність</translation>
+        <translation>Поля</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9532,17 +9532,17 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation>Гаразд:</translation>
+        <translation>Праворуч:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Bottom:</source>
-        <translation>До дна:</translation>
+        <translation>Знизу:</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Set to Printer Margins</source>
-        <translation>Установлено на Поля принтера</translation>
+        <translation>Установити поля принтера</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -9582,7 +9582,7 @@ is already in the list.</source>
     <message>
         <location line="-10"/>
         <source>Show paper borders</source>
-        <translation>Показати паперові бордюри</translation>
+        <translation>Показувати межі аркуша</translation>
     </message>
 </context>
 <context>
@@ -9590,7 +9590,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/PanZoom/PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation>Панорамний зум</translation>
+        <translation>Панорамування і масштабування</translation>
     </message>
 </context>
 <context>
@@ -9603,17 +9603,17 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Paste</source>
-        <translation>Паста</translation>
+        <translation>Вставити</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Position</source>
-        <translation>Позиція</translation>
+        <translation>Положення</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation>Ротація:</translation>
+        <translation>Поворот:</translation>
     </message>
     <message>
         <location line="+129"/>
@@ -9623,7 +9623,7 @@ is already in the list.</source>
     <message>
         <location line="+91"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Перевернути вставлені об&apos;єкти&lt;br&gt;по горизонталі</translation>
+        <translation>Перевернути вставлені об&apos;єкти&lt;br&gt;горизонтально</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -9663,7 +9663,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation>Паста</translation>
+        <translation>Вставити</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
@@ -9689,7 +9689,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/PenToolBar/PenToolBar.js" line="+26"/>
         <source>Pen</source>
-        <translation>Ручка</translation>
+        <translation>Перо</translation>
     </message>
     <message>
         <location line="+73"/>
@@ -9710,7 +9710,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Point/Point.js" line="+71"/>
         <source>Point Tools</source>
-        <translation>Точкові інструменти</translation>
+        <translation>Інструменти точки</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -9723,12 +9723,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1P.js" line="+51"/>
         <source>Position</source>
-        <translation>Позиція</translation>
+        <translation>Положення</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1PInit.js" line="+2"/>
         <source>Single &amp;Point</source>
-        <translation>Єдина точка</translation>
+        <translation>Одна точка</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9747,12 +9747,12 @@ is already in the list.</source>
         <location line="+0"/>
         <location line="+2"/>
         <source>Point Display</source>
-        <translation>Точковий дисплей</translation>
+        <translation>Відображення точок</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation>Генеральний</translation>
+        <translation>Загальні</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
@@ -9780,7 +9780,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2"/>
         <source>Pole of Line and Circle</source>
-        <translation>Полюс Лінії і Кола</translation>
+        <translation>Полюс лінії і кола</translation>
     </message>
 </context>
 <context>
@@ -9801,12 +9801,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
         <source>Polyline Tools</source>
-        <translation>Polyline Tools</translation>
+        <translation>Інструменти полілінії</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Polyline</source>
-        <translation>Полілайн</translation>
+        <translation>Полілінія</translation>
     </message>
 </context>
 <context>
@@ -9824,37 +9824,37 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Pick the first point</source>
-        <translation>Виберіть перший пункт</translation>
+        <translation>Виберіть першу точку</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the first break point</source>
-        <translation>Виберіть перший брейк-пойнт</translation>
+        <translation>Виберіть першу точку розриву</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Pick the second point</source>
-        <translation>Виберіть другий пункт</translation>
+        <translation>Виберіть другу точку</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the second break point</source>
-        <translation>Виберіть другий брейк-пойнт</translation>
+        <translation>Виберіть другу точку розриву</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation>Сегмент &quot;Break Out</translation>
+        <translation>Сегмент розриву</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
-        <translation>Видалити сегмент розриву рядка</translation>
+        <translation>Видалити сегмент розриву лінії</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Remove the line segment between the break symbol</source>
-        <translation>Видалити відрізок рядка між символом розриву</translation>
+        <translation>Видалити відрізок лінії між символами розриву</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9864,12 +9864,12 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Inherit entity properties</source>
-        <translation>Успадковувати майно підприємства</translation>
+        <translation>Успадковувати властивості об&apos;єкта</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit all properties from the chosen entity</source>
-        <translation>Успадкувати все майно від обраного суб&apos;єкта господарювання</translation>
+        <translation>Успадковувати всі властивості вибраного об&apos;єкта</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9880,7 +9880,7 @@ is already in the list.</source>
         <location line="+17"/>
         <location line="+16"/>
         <source>Peak ratio</source>
-        <translation>Пікове співвідношення</translation>
+        <translation>Коефіцієнт піка</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -9891,7 +9891,7 @@ is already in the list.</source>
     <message>
         <location line="-13"/>
         <source>Peak Ratio:</source>
-        <translation>Піковий коефіцієнт:</translation>
+        <translation>Коефіцієнт піка:</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -9921,7 +9921,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation>Намалюйте символ розриву полілінії з 2 точок</translation>
+        <translation>Побудувати символ розриву полілінії з 2 точок</translation>
     </message>
 </context>
 <context>
@@ -9931,7 +9931,7 @@ is already in the list.</source>
         <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
-        <translation>Уподобання</translation>
+        <translation>Налаштування</translation>
     </message>
     <message>
         <location line="-79"/>
@@ -9946,12 +9946,12 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation>Дерево обвалу</translation>
+        <translation>Згорнути дерево</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Restore to Default Values</source>
-        <translation>Відновлення до значень за замовчуванням</translation>
+        <translation>Відновити значення за замовчуванням</translation>
     </message>
 </context>
 <context>
@@ -10011,22 +10011,22 @@ is already in the list.</source>
     <message>
         <location line="+40"/>
         <source>Auto fit</source>
-        <translation>Автоматична підгонка</translation>
+        <translation>Автоматичне припасування</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Auto fit drawing to paper?</source>
-        <translation>Автоматичне припасування креслення до паперу?</translation>
+        <translation>Автоматично припасувати креслення до розміру паперу?</translation>
     </message>
     <message>
         <location line="+211"/>
         <source>Drag to move paper</source>
-        <translation>Перетягування для переміщення паперу</translation>
+        <translation>Перетягніть для переміщення паперу</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Done</source>
-        <translation>Зроблено</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location line="+203"/>
@@ -10037,12 +10037,12 @@ is already in the list.</source>
     <message>
         <location line="+277"/>
         <source>Export to PDF</source>
-        <translation>Експорт в PDF</translation>
+        <translation>Експорт у PDF</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Exporting to %1...</source>
-        <translation>Експорт в %1...</translation>
+        <translation>Експорт у %1...</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -10057,7 +10057,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.ui" line="+17"/>
         <source>Close Print Preview</source>
-        <translation>Закрити попередній перегляд для друку</translation>
+        <translation>Закрити попередній перегляд друку</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -10067,7 +10067,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Export as PDF...</source>
-        <translation>Експорт в PDF...</translation>
+        <translation>Експорт у PDF...</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10082,7 +10082,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Move Paper Position</source>
-        <translation>Переміщення положення паперу</translation>
+        <translation>Перемістити положення паперу</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -10092,22 +10092,22 @@ is already in the list.</source>
     <message>
         <location line="+11"/>
         <source>Auto Center</source>
-        <translation>Автоцентр</translation>
+        <translation>Автоматичне центрування</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Portrait</source>
-        <translation>Портрет</translation>
+        <translation>Книжкова орієнтація</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Landscape</source>
-        <translation>Ландшафт</translation>
+        <translation>Альбомна орієнтація</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Auto zoom to page</source>
-        <translation>Автоматичне масштабування сторінки</translation>
+        <translation>Автоматичне масштабування до сторінки</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10137,7 +10137,7 @@ is already in the list.</source>
     <message>
         <location line="+24"/>
         <source>Show More Options</source>
-        <translation>Показати більше опцій</translation>
+        <translation>Показати додаткові параметри</translation>
     </message>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreviewInit.js" line="+2"/>
@@ -10155,12 +10155,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
-        <translation>Проекційні інструменти</translation>
+        <translation>Проєкційні інструменти</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Projection</source>
-        <translation>Прогнозування</translation>
+        <translation>Проєкція</translation>
     </message>
     <message>
         <location line="+37"/>
@@ -10193,7 +10193,7 @@ is already in the list.</source>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Максимальна складність для автоматичного розрахунку довжини люка:</translation>
+        <translation>Максимальна складність для автоматичного розрахунку довжини штрихування:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10213,12 +10213,12 @@ is already in the list.</source>
     <message>
         <location line="+53"/>
         <source>Only update when nothing changes during update delay</source>
-        <translation>Оновлюйте лише тоді, коли під час затримки оновлення нічого не зміниться</translation>
+        <translation>Оновлювати лише за відсутності змін протягом затримки оновлення</translation>
     </message>
     <message>
         <location line="-128"/>
         <source>Always format property values as decimal numbers</source>
-        <translation>Завжди форматуйте значення властивостей у вигляді десяткових чисел</translation>
+        <translation>Завжди форматувати значення властивостей як десяткові числа</translation>
     </message>
     <message>
         <location line="-41"/>
@@ -10233,7 +10233,7 @@ is already in the list.</source>
     <message>
         <location line="+189"/>
         <source>No Selection</source>
-        <translation>Без вибору</translation>
+        <translation>Нічого не вибрано</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -10243,12 +10243,12 @@ is already in the list.</source>
     <message>
         <location line="+20"/>
         <source>Dependent Entities</source>
-        <translation>Залежні підприємства</translation>
+        <translation>Залежні об&apos;єкти</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Custom</source>
-        <translation>Нестандартний</translation>
+        <translation>Користувацькі</translation>
     </message>
     <message>
         <location line="+204"/>
@@ -10288,7 +10288,7 @@ is already in the list.</source>
     <message>
         <location line="+201"/>
         <source>Use auto measurement</source>
-        <translation>Використовуйте автоматичне вимірювання</translation>
+        <translation>Використовувати автоматичне вимірювання</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -10320,7 +10320,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translation>Відбір:</translation>
+        <translation>Виділення:</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -10335,17 +10335,17 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Handle:</source>
-        <translation>Ручку:</translation>
+        <translation>Ідентифікатор:</translation>
     </message>
     <message>
         <location line="+94"/>
         <source>Linetype Scale:</source>
-        <translation>Шкала лінійного типу:</translation>
+        <translation>Масштаб типу лінії:</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Protected:</source>
-        <translation>Під захистом:</translation>
+        <translation>Захищено:</translation>
     </message>
 </context>
 <context>
@@ -10361,7 +10361,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
         <source>&amp;Quit</source>
-        <translation>Звільнися</translation>
+        <translation>Вийти</translation>
     </message>
 </context>
 <context>
@@ -10397,12 +10397,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
-        <translation>Чистий список</translation>
+        <translation>Очистити список</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation>Відкрити Останні</translation>
+        <translation>Відкрити нещодавні</translation>
     </message>
 </context>
 <context>
@@ -10471,12 +10471,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Reset/ResetInit.js" line="+5"/>
         <source>Reset</source>
-        <translation>Перезавантаження</translation>
+        <translation>Скинути</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Reset / Idle</source>
-        <translation>Сброс / холостий хід</translation>
+        <translation>Скинути / режим очікування</translation>
     </message>
 </context>
 <context>
@@ -10506,7 +10506,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLengthInit.js" line="+2"/>
         <source>Restrict &amp;Angle or Length</source>
-        <translation>Обмеження кута або довжини</translation>
+        <translation>Обмежити кут або довжину</translation>
     </message>
 </context>
 <context>
@@ -10514,7 +10514,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/RestrictHorizontal/RestrictHorizontalInit.js" line="+2"/>
         <source>Restrict &amp;Horizontally</source>
-        <translation>Обмеження по горизонталі</translation>
+        <translation>Обмежити по горизонталі</translation>
     </message>
 </context>
 <context>
@@ -10538,7 +10538,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/RestrictVertical/RestrictVerticalInit.js" line="+2"/>
         <source>Restrict &amp;Vertically</source>
-        <translation>Обмеження по вертикалі</translation>
+        <translation>Обмежити по вертикалі</translation>
     </message>
 </context>
 <context>
@@ -10546,7 +10546,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation>Реверс</translation>
+        <translation>Обернути напрям</translation>
     </message>
 </context>
 <context>
@@ -10559,7 +10559,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.js" line="+47"/>
         <source>Modify</source>
-        <translation>Зміна</translation>
+        <translation>Редагування</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10589,17 +10589,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
-        <translation>Прийом</translation>
+        <translation>Копія</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation>Кількість примірників:</translation>
+        <translation>Кількість копій:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation>Використання поточного шару та атрибутів</translation>
+        <translation>Використовувати поточний шар і атрибути</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10609,7 +10609,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Define angle using mouse cursor</source>
-        <translation>Визначення кута за допомогою курсору миші</translation>
+        <translation>Вказати кут за допомогою курсора миші</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -10647,7 +10647,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation>Поворот два</translation>
+        <translation>Поворот на два центри</translation>
     </message>
 </context>
 <context>
@@ -10655,12 +10655,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation>Обертайте два варіанти</translation>
+        <translation>Параметри повороту на два центри</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation>Кількість примірників</translation>
+        <translation>Кількість копій</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -10670,22 +10670,22 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>Зберігайте оригінал</translation>
+        <translation>Зберегти оригінал</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation>Кілька примірників</translation>
+        <translation>Кілька копій</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>Angle &amp;a:</source>
-        <translation>Кут А:</translation>
+        <translation>Кут a:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Angle &amp;b:</source>
-        <translation>Кут Б:</translation>
+        <translation>Кут b:</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -10703,7 +10703,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation>Кількість примірників</translation>
+        <translation>Кількість копій</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -10713,12 +10713,12 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>Зберігайте оригінал</translation>
+        <translation>Зберегти оригінал</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation>Кілька примірників</translation>
+        <translation>Кілька копій</translation>
     </message>
     <message>
         <location line="+97"/>
@@ -10728,7 +10728,7 @@ is already in the list.</source>
     <message>
         <location line="+20"/>
         <source>Define angle using mouse cursor</source>
-        <translation>Визначення кута за допомогою курсору миші</translation>
+        <translation>Вказати кут за допомогою курсора миші</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -10741,22 +10741,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Round/Round.js" line="+60"/>
         <source>The two entities cannot be rounded.</source>
-        <translation>Ці дві величини не можуть бути округлені.</translation>
+        <translation>Ці два об&apos;єкти не можна заокруглити.</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Першу сутність не можна обрізати.</translation>
+        <translation>Перший об&apos;єкт не може бути обрізаний.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Другий суб&apos;єкт не може бути обрізаний.</translation>
+        <translation>Другий об&apos;єкт не може бути обрізаний.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation>Обрізка</translation>
+        <translation>Обрізання</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -10766,7 +10766,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation>Круглий</translation>
+        <translation>Заокруглення</translation>
     </message>
 </context>
 <context>
@@ -10774,7 +10774,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScript.js" line="+60"/>
         <source>Open Script File</source>
-        <translation>Відкрити файл сценарію</translation>
+        <translation>Відкрити файл скрипта</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10794,7 +10794,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20"/>
         <source>Running Script</source>
-        <translation>Запущений скрипт</translation>
+        <translation>Виконання скрипта</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -10814,7 +10814,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Open and run a script file</source>
-        <translation>Відкрийте і запустіть файл скрипта</translation>
+        <translation>Відкрити та запустити файл скрипта</translation>
     </message>
 </context>
 <context>
@@ -10832,7 +10832,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>File Format Version Not Recommended</source>
-        <translation>Версія формату файлу Не рекомендується</translation>
+        <translation>Версія формату файлу не рекомендована</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10857,17 +10857,17 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Proceed?</source>
-        <translation>Приступимо?</translation>
+        <translation>Продовжити?</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Saving...</source>
-        <translation>Врятувати...</translation>
+        <translation>Збереження...</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Saving to file format version &quot;%1&quot;.</source>
-        <translation>Збереження у файл формату версії &quot;%1&quot;.</translation>
+        <translation>Зберегти у файл формату версії &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10905,32 +10905,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/SaveAs/PreferencesPage.ui" line="+17"/>
         <source>File Dialog</source>
-        <translation>Діалогове вікно &quot;Файл</translation>
+        <translation>Діалогове вікно файлів</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation>Діалогове вікно використання системного файлу</translation>
+        <translation>Використовувати системне діалогове вікно файлів</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Opening</source>
-        <translation>Відкриття</translation>
+        <translation>Відкрити</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
-        <translation>Дозволяє відкривати файли нульового розміру (наприклад, онлайн-файли, які не синхронізовані з диском)</translation>
+        <translation>Дозволити відкриття файлів нульового розміру (наприклад, онлайн-файли, які не синхронізовані з диском)</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
-        <translation>Декодування рядків в DXF/DWG в UTF-8 (експериментально)</translation>
+        <translation>Декодувати рядки DXF/DWG як UTF-8 (експериментально)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Saving</source>
-        <translation>Заощадження</translation>
+        <translation>Збереження</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -10950,7 +10950,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>(empty for username)</source>
-        <translation>(пусто для імені користувача)</translation>
+        <translation>(залиште порожнім для імені користувача)</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAs.js" line="+38"/>
@@ -10983,12 +10983,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation>Діалогове вікно для вибору параметрів інструменту</translation>
+        <translation>Використовувати діалогове вікно параметрів інструмента</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
         <source>Modify</source>
-        <translation>Зміна</translation>
+        <translation>Змінити</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10998,7 +10998,7 @@ is already in the list.</source>
     <message>
         <location line="+32"/>
         <source>Focus point</source>
-        <translation>Точка фокусу</translation>
+        <translation>Фокусна точка</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -11013,27 +11013,27 @@ is already in the list.</source>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-        <translation>Неправильний масштабний коефіцієнт</translation>
+        <translation>Некоректний коефіцієнт масштабування</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
         <source>Copy</source>
-        <translation>Прийом</translation>
+        <translation>Копіювати</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation>Кількість примірників:</translation>
+        <translation>Кількість копій:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation>Використання поточного шару та атрибутів</translation>
+        <translation>Використовувати поточний шар та атрибути</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation>Фактор Ікс:</translation>
+        <translation>Коефіцієнт X:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11044,7 +11044,7 @@ is already in the list.</source>
     <message>
         <location line="-10"/>
         <source>Factor y:</source>
-        <translation>Фактор Y:</translation>
+        <translation>Коефіцієнт Y:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11054,7 +11054,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
-        <translation>Визначити коефіцієнт за допомогою курсору миші</translation>
+        <translation>Вказати коефіцієнт за допомогою курсора миші</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -11067,12 +11067,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation>Параметри шкали</translation>
+        <translation>Параметри масштабування</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation>Кількість примірників</translation>
+        <translation>Кількість копій</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -11082,17 +11082,17 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>Зберігайте оригінал</translation>
+        <translation>Залишити оригінал</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation>Кілька примірників</translation>
+        <translation>Кілька копій</translation>
     </message>
     <message>
         <location line="+115"/>
         <source>Factor x:</source>
-        <translation>Фактор Ікс:</translation>
+        <translation>Коефіцієнт X:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -11102,17 +11102,17 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Factor y:</source>
-        <translation>Фактор Y:</translation>
+        <translation>Коефіцієнт Y:</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Define factor using mouse cursor</source>
-        <translation>Визначити коефіцієнт за допомогою курсору миші</translation>
+        <translation>Вказати коефіцієнт за допомогою курсора миші</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Використовувати поточний шар та атрибути</translation>
+        <translation>Використати поточний шар та атрибути</translation>
     </message>
 </context>
 <context>
@@ -11120,7 +11120,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/PreferencesPage.ui" line="+17"/>
         <source>Rescan scripts folder on startup</source>
-        <translation>Перезавантажити папку скриптів при запуску</translation>
+        <translation>Повторно сканувати папку скриптів під час запуску</translation>
     </message>
 </context>
 <context>
@@ -11128,7 +11128,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js" line="+24"/>
         <source>Scripting</source>
-        <translation>Написання сценаріїв</translation>
+        <translation>Написання скриптів</translation>
     </message>
 </context>
 <context>
@@ -11146,7 +11146,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>&amp;Select</source>
-        <translation>Виберіть</translation>
+        <translation>Виділення</translation>
     </message>
 </context>
 <context>
@@ -11167,7 +11167,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/SelectBlockReferences/SelectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Select Block References</source>
-        <translation>Виберіть Блокування посилань</translation>
+        <translation>Виділити посилання на блоки</translation>
     </message>
 </context>
 <context>
@@ -11201,7 +11201,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js" line="+58"/>
         <source>Object selected:</source>
-        <translation>Об&apos;єкт обрано:</translation>
+        <translation>Об&apos;єкт вибрано:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11211,7 +11211,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation>За ручку</translation>
+        <translation>За ідентифікатором</translation>
     </message>
 </context>
 <context>
@@ -11219,12 +11219,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation>Вибір ручкою</translation>
+        <translation>Виділення за ідентифікатором</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation>Рукоятка (шестигранна):</translation>
+        <translation>Ідентифікатор (hex):</translation>
     </message>
 </context>
 <context>
@@ -11257,27 +11257,27 @@ is already in the list.</source>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Перетинається з поточним виділенням</translation>
+        <translation>Перетнути з поточним виділенням</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Tolerance:</source>
-        <translation>Толерантність:</translation>
+        <translation>Допуск:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Same Layer</source>
-        <translation>Той самий рівень</translation>
+        <translation>Той самий шар</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation>(Вимкнення) виділення контуру</translation>
+        <translation>(Зняття)Виділення контуру</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select connected entities</source>
-        <translation>(Де-)Вибір пов&apos;язаних організацій</translation>
+        <translation>(Зняття)Виділення пов&apos;язаних об&apos;єктів</translation>
     </message>
 </context>
 <context>
@@ -11285,12 +11285,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.js" line="+90"/>
         <source>First point</source>
-        <translation>Перший пункт</translation>
+        <translation>Перша точка</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Другий момент</translation>
+        <translation>Друга точка</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
@@ -11315,17 +11315,17 @@ is already in the list.</source>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Перетинається з поточним виділенням</translation>
+        <translation>Перетнути з поточним виділенням</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation>(Виділення) перехресних сутностей</translation>
+        <translation>(Зняття)Виділення перетнутих об&apos;єктів</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
-        <translation>(Де-)Виділити всі об&apos;єкти, які перетинаються лінією</translation>
+        <translation>(Зняти)Виділити всі об&apos;єкти, які перетинаються лінією</translation>
     </message>
 </context>
 <context>
@@ -11333,17 +11333,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
-        <translation>%1 суб&apos;єктів господарювання додано до вибірки.</translation>
+        <translation>%1 об&apos;єктів додано до виділення.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
-        <translation>%1 суб&apos;єктів господарювання знято з відбору.</translation>
+        <translation>%1 об&apos;єктів вилучено з виділення.</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer Entities</source>
-        <translation>Вибір об&apos;єктів шару</translation>
+        <translation>Виділити об&apos;єкти шару</translation>
     </message>
 </context>
 <context>
@@ -11351,7 +11351,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
-        <translation>Вибір об&apos;єкта на шарі</translation>
+        <translation>Виберіть об&apos;єкт на шарі</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.ui" line="+17"/>
@@ -11376,17 +11376,17 @@ is already in the list.</source>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Перетинається з поточним виділенням</translation>
+        <translation>Перетнути з поточним виділенням</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation>(Вимкнення) виділення шару</translation>
+        <translation>(Зняття)Виділення шару</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation>(Де-)Виділення всіх об&apos;єктів на одному шарі</translation>
+        <translation>(Зняти)Виділити всі об&apos;єкти на одному шарі</translation>
     </message>
 </context>
 <context>
@@ -11394,12 +11394,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+74"/>
         <source>First corner</source>
-        <translation>Перший поворот</translation>
+        <translation>Перший кут</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second corner</source>
-        <translation>Другий поворот</translation>
+        <translation>Другий кут</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
@@ -11424,22 +11424,22 @@ is already in the list.</source>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Перетинається з поточним виділенням</translation>
+        <translation>Перетнути з поточним виділенням</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Cross Selection</source>
-        <translation>Перехресний відбір</translation>
+        <translation>Перехресне виділення</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation>(Вимкнення) виділення прямокутної області</translation>
+        <translation>(Зняття)Виділення прямокутної області</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
-        <translation>(Де-)Виділення всіх сутностей всередині прямокутника</translation>
+        <translation>(Зняти)Виділити всіх об&apos;єкти всередині прямокутника</translation>
     </message>
 </context>
 <context>
@@ -11447,7 +11447,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.js" line="+58"/>
         <source>No entities selected.</source>
-        <translation>Не обрано жодного суб&apos;єкта господарювання.</translation>
+        <translation>Не вибрано жодного об&apos;єкта.</translation>
     </message>
     <message>
         <location line="+22"/>
