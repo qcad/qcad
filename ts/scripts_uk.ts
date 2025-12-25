@@ -5359,7 +5359,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation>SinusoidWave/translation>
+        <translation>SinusoidWave</translation>
     </message>
     <message>
         <location line="+5"/>
