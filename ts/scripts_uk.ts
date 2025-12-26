@@ -3304,7 +3304,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>Креслення</translation>
+        <translation>Побудова</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -4396,7 +4396,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>&amp;Edit</source>
-        <translation>Редагувати</translation>
+        <translation>Редагування</translation>
     </message>
 </context>
 <context>
@@ -9141,7 +9141,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>&amp;Modify</source>
-        <translation>Змінити</translation>
+        <translation>Модифікація</translation>
     </message>
 </context>
 <context>
