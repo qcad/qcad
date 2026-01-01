@@ -71,7 +71,7 @@
     <message>
         <location line="+3"/>
         <source>Micron</source>
-        <translation>Мікрон</translation>
+        <translation>Мікрометр</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -139,7 +139,7 @@
     <message>
         <location line="+1"/>
         <source>Cyan</source>
-        <translation>Блакитний</translation>
+        <translation>Бірюзовий</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -248,12 +248,12 @@
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation>Невидима</translation>
+        <translation>Приховано</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pixel Unit</source>
-        <translation>Одиниця виміру пікселів</translation>
+        <translation>Піксельна одиниця</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -312,7 +312,7 @@
     <message>
         <location line="+1"/>
         <source>Layout</source>
-        <translation>Компонування</translation>
+        <translation>Макет</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -337,7 +337,7 @@
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
         <source>Referenced Block</source>
-        <translation>Посилання на блок</translation>
+        <translation>Пов&apos;язаний бло</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -370,7 +370,7 @@
     <message>
         <location line="+1"/>
         <source>Columns</source>
-        <translation>Колонки</translation>
+        <translation>Стовпці</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -385,7 +385,7 @@
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
-        <translation>Міжряддя</translation>
+        <translation>Відстань між рядами</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -564,7 +564,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation>Ідентифікатор батька</translation>
+        <translation>Ідентифікатор батьківського елемента</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -578,7 +578,7 @@
         <location line="-3"/>
         <location filename="../src/core/RLayout.cpp" line="+3"/>
         <source>Left</source>
-        <translation>Зліва</translation>
+        <translation>Ліворуч</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -590,7 +590,7 @@
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Right</source>
-        <translation>Справа</translation>
+        <translation>Праворуч</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -646,7 +646,7 @@
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation>Прив&apos;язується</translation>
+        <translation>Прив&apos;язуваний</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -769,7 +769,7 @@
     <message>
         <location line="+1"/>
         <source>X Scale</source>
-        <translation>Х-шкала</translation>
+        <translation>Масштаб за X</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -805,7 +805,7 @@
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation>Зворотний</translation>
+        <translation>Віддзеркалений</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1043,7 +1043,7 @@
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation>Ватин</translation>
+        <translation>Покриття</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1053,7 +1053,7 @@
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation>Треки</translation>
+        <translation>Шляхи</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1078,7 +1078,7 @@
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation>Завод</translation>
+        <translation>Виробництво</translation>
     </message>
     <message>
         <location line="+2"/>
