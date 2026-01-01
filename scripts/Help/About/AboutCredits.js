@@ -115,7 +115,7 @@ var credits =
         [ "oltulu",              "Turkish (tr) translation" ],
         [ "Piotr Sokół",         "Polish (pl) translation" ],
         [ "Eduardo Passeto",     "Portuguese (pt) translation" ],
-        [ "Do-nt-Ukr",           "Ukrainian (uk) translation" ],
+        [ "Valerii Makhynko",    "Ukrainian (uk) translation" ],
     ],
     [
         qsTr("Templates"),
