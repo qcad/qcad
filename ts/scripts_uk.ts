@@ -5637,17 +5637,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
-        <translation>Три: Праворуч</translation>
+        <translation>Три: праворуч</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/21_ThreeLeft.ui" line="+14"/>
         <source>Three: Left</source>
-        <translation>Три: Ліворуч</translation>
+        <translation>Три: ліворуч</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/22_ThreeAbove.ui" line="+14"/>
         <source>Three: Above</source>
-        <translation>Три: Вище</translation>
+        <translation>Три: зверху</translation>
     </message>
 </context>
 <context>
@@ -5663,7 +5663,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation>Чотири: Рівні</translation>
+        <translation>Чотири: рівні</translation>
     </message>
 </context>
 <context>
@@ -5671,7 +5671,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation>Чотири: Ліворуч</translation>
+        <translation>Чотири: ліворуч</translation>
     </message>
 </context>
 <context>
@@ -5679,7 +5679,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation>Чотири: Праворуч</translation>
+        <translation>Чотири: праворуч</translation>
     </message>
 </context>
 <context>
@@ -11802,7 +11802,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation>Один</translation>
+        <translation>Одне</translation>
     </message>
 </context>
 <context>
