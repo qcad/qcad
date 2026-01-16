@@ -71,7 +71,7 @@
     <message>
         <location line="+3"/>
         <source>Micron</source>
-        <translation>Мікрон</translation>
+        <translation>Мікрометр</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -139,7 +139,7 @@
     <message>
         <location line="+1"/>
         <source>Cyan</source>
-        <translation>Блакитний</translation>
+        <translation>Бірюзовий</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -174,7 +174,7 @@
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation>Темно-синій</translation>
+        <translation>Темно-бірюзовий</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -243,17 +243,17 @@
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="+81"/>
         <source>Name</source>
-        <translation>Ім&apos;я та прізвище</translation>
+        <translation>Назва</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation>Невидима</translation>
+        <translation>Приховано</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pixel Unit</source>
-        <translation>Одиниця виміру пікселів</translation>
+        <translation>Піксельна одиниця</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -312,7 +312,7 @@
     <message>
         <location line="+1"/>
         <source>Layout</source>
-        <translation>Компонування</translation>
+        <translation>Макет</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -332,12 +332,12 @@
     <message>
         <location line="+2"/>
         <source>Block name:</source>
-        <translation>Ім&apos;я блоку:</translation>
+        <translation>Назва блоку:</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
         <source>Referenced Block</source>
-        <translation>Посилання на блок</translation>
+        <translation>Пов&apos;язаний бло</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -370,7 +370,7 @@
     <message>
         <location line="+1"/>
         <source>Columns</source>
-        <translation>Колонки</translation>
+        <translation>Стовпці</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -385,7 +385,7 @@
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
-        <translation>Міжряддя</translation>
+        <translation>Відстань між рядами</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -564,7 +564,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation>Ідентифікатор батька</translation>
+        <translation>Ідентифікатор батьківського елемента</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -578,7 +578,7 @@
         <location line="-3"/>
         <location filename="../src/core/RLayout.cpp" line="+3"/>
         <source>Left</source>
-        <translation>Зліва</translation>
+        <translation>Ліворуч</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -590,7 +590,7 @@
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Right</source>
-        <translation>Справа</translation>
+        <translation>Праворуч</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -646,7 +646,7 @@
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation>Прив&apos;язується</translation>
+        <translation>Прив&apos;язуваний</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -769,7 +769,7 @@
     <message>
         <location line="+1"/>
         <source>X Scale</source>
-        <translation>Х-шкала</translation>
+        <translation>Масштаб за X</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -805,7 +805,7 @@
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation>Зворотний</translation>
+        <translation>Віддзеркалений</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -864,7 +864,7 @@
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+51"/>
         <source>Name</source>
-        <translation>Ім&apos;я та прізвище</translation>
+        <translation>Назва</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -958,72 +958,72 @@
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation>Тире ISO</translation>
+        <translation>ISO штрихова</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation>Простір для тире ISO</translation>
+        <translation>ISO штрихова розріджена</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation>ISO довга крапка з тире</translation>
+        <translation>ISO штрихпунктирна, довгий штрих</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-dot</source>
-        <translation>ISO довгий тире подвійна крапка</translation>
+        <translation>ISO штрихпунктирна, довгий штрих, подвійна точка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation>ISO довгий тире потрійна крапка</translation>
+        <translation>ISO штрихпунктирна, довгий штрих, потрійна точка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dot</source>
-        <translation>Точка ISO</translation>
+        <translation>ISO пунктирна</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation>ISO довге тире коротке тире</translation>
+        <translation>ISO штрихова, довгий штрих, короткий штрих</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation>ISO довге тире подвійне коротке тире</translation>
+        <translation>ISO штрихова, довгий штрих, подвійний короткий штрих</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash dot</source>
-        <translation>ISO тире крапка</translation>
+        <translation>ISO штрихпунктирна</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash dot</source>
-        <translation>ISO подвійна крапка з тире</translation>
+        <translation>ISO штрихпунктирна, подвійний штрих, точка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash double-dot</source>
-        <translation>Тире ISO подвійна крапка</translation>
+        <translation>ISO штрихпунктирна, штрих, подвійна точка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash double-dot</source>
-        <translation>ISO подвійне тире подвійна крапка</translation>
+        <translation>ISO штрихпунктирна, подвійний штрих, подвійна точка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash triple-dot</source>
-        <translation>Тире ISO потрійна крапка</translation>
+        <translation>ISO штрихпунктирна, потрійна точка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
-        <translation>ISO подвійне тире потрійна крапка</translation>
+        <translation>ISO штрихпунктирна, подвійний штрих, потрійна точка</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1043,7 +1043,7 @@
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation>Ватин</translation>
+        <translation>Покриття</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1053,7 +1053,7 @@
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation>Треки</translation>
+        <translation>Шляхи</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1078,7 +1078,7 @@
     <message>
         <location line="+1"/>
         <source>Plant</source>
-        <translation>Завод</translation>
+        <translation>Виробництво</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1161,7 +1161,7 @@
     <message>
         <location line="+1"/>
         <source>0.09mm</source>
-        <translation>0.09мм</translation>
+        <translation>0.09 мм</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1241,7 +1241,7 @@
     <message>
         <location line="+1"/>
         <source>1.06mm</source>
-        <translation>1.06мм</translation>
+        <translation>1.06 мм</translation>
     </message>
     <message>
         <location line="+1"/>
