@@ -265,6 +265,13 @@ void RPropertyEditor::sleep(QPromise<void>& promise, RDocument* document, bool o
  * any other value to change filter.
  */
 void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest) {
+#if QT_VERSION >= 0x060000
+    static QFuture<void> future = QFuture<void>();
+
+    // always cancel future, for example when current doc is changed:
+    terminate = true;
+#endif
+
     if (updatesDisabled) {
         return;
     }
@@ -281,7 +288,6 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
     int lazyUpdate = RSettings::getBoolValue("PropertyEditor/LazyUpdate", true);
     if (lazyUpdate && !showOnRequest && gotSelection) {
         // sleep, then update property editor if sleep was not interrupted by other call:
-        static QFuture<void> future = QFuture<void>();
 
         if (future.isRunning()) {
             // selection has changed before the property editor started to update:
