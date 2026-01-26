@@ -521,6 +521,20 @@ function main() {
         var pixmap = new QPixmap(fn);
         splash = new QSplashScreen(pixmap);
         splash.objectName = "Splash";
+
+        // move splash to same screen where main app was last seen:
+        var screenIndex = RSettings.getIntValue("Appearance/Screen", -1);
+        if (screenIndex>=0) {
+            var screens = QGuiApplication.screens();
+            if (screenIndex >= 0 && screenIndex < screens.length) {
+                var screen = screens[screenIndex];
+                var screenGeometry = screen.geometry();
+                var x = screenGeometry.x() + (screenGeometry.width() - pixmap.width()) / 2;
+                var y = screenGeometry.y() + (screenGeometry.height() - pixmap.height()) / 2;
+                splash.move(x, y);
+            }
+        }
+
         splash.show();
     }
 

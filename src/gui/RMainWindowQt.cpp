@@ -26,6 +26,7 @@
 #include <QTabBar>
 #include <QToolBar>
 #include <QToolButton>
+#include <QWindow>
 
 #include <RSingleApplication.h>
 
@@ -634,6 +635,13 @@ void RMainWindowQt::writeSettings() {
     RSettings::getQSettings()->setValue("Appearance/FullScreen", isFullScreen());
     RSettings::getQSettings()->setValue("Appearance/Maximized", isMaximized());
     RSettings::getQSettings()->setValue("Appearance/StatusBar", statusBar()->isVisible());
+
+    // remember screen index for splash screen on next start up:
+    if (windowHandle()!=NULL) {
+        QScreen* screen = windowHandle()->screen();
+        int screenIndex = QGuiApplication::screens().indexOf(screen);
+        RSettings::getQSettings()->setValue("Appearance/Screen", screenIndex);
+    }
 
     RSettings::getQSettings()->sync();
 }
