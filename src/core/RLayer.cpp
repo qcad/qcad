@@ -151,7 +151,7 @@ bool RLayer::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, 
     ret = ret || RObject::setMember(color, value, PropertyColor == propertyTypeId);
 
     if (propertyTypeId == PropertyLinetype) {
-        if (value.type() == QVariant::Int || value.type() == QVariant::LongLong) {
+        if (value.typeId() == QVariant::Int || value.typeId() == QVariant::LongLong) {
             ret = ret || RObject::setMember(linetypeId, value.toInt(), true);
         } else {
             RDocument* document = getDocument();
@@ -163,7 +163,7 @@ bool RLayer::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, 
         }
     }
     else if (propertyTypeId == PropertyLineweight) {
-        if (value.type()==QVariant::Int || value.type()==QVariant::Double) {
+        if (value.typeId()==QVariant::Int || value.typeId()==QVariant::Double) {
             ret = ret || RObject::setMember((int&)lineweight,
                 value.value<int>(), true);
         }

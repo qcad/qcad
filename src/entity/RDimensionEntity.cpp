@@ -252,7 +252,7 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
         if (RDimStyle::propertyVariables[i].first==propertyTypeId) {
 
             if (propertyTypeId==RDimensionEntity::PropertyDimdsep) {
-                if (value.type()==QVariant::String) {
+                if (value.typeId()==QVariant::String) {
                     QString str = value.toString();
                     if (str.length()>=1) {
                         getData().setDimXVariant(RDimStyle::propertyVariables[i].second, str.at(0).unicode());

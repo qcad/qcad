@@ -1401,7 +1401,7 @@ void RDxfImporter::addImage(const DL_ImageData& data) {
 
     QSharedPointer<RImageEntity> entity(new RImageEntity(document, d));
     importEntity(entity);
-    images.insertMulti(handle, entity->getId());
+    images.insert(handle, entity->getId());
 }
 
 void RDxfImporter::linkImage(const DL_ImageDefData& data) {

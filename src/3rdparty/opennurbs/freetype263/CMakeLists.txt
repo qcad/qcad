@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.16)
+cmake_minimum_required(VERSION 3.16)
 project( opennurbs_public_freetype C)
 
 include_directories("include")
@@ -48,7 +48,7 @@ set( SOURCES
     src/winfonts/winfnt.c
 )
 
-add_library( opennurbs_public_freetype STATIC
+add_library( opennurbs_public_freetype SHARED
     ${SOURCES}
 )
 

@@ -2518,8 +2518,9 @@ bool ON_FileIterator::NextItem()
   for(;;)
   {
     current_file_attributes = 0;
-    struct dirent* dp = 0;
-    int readdir_errno = readdir_r(m_impl->m_dir, &m_impl->m_dirent, &dp);
+    errno = 0;
+    struct dirent* dp = readdir(m_impl->m_dir);
+    int readdir_errno = errno;
     if ( 0 !=  readdir_errno )
       break;
     if ( 0 == dp )
