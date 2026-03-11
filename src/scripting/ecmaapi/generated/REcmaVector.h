@@ -306,7 +306,7 @@
         getAverage
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getUnion
+        getIntersection
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getUnique

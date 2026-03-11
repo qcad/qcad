@@ -75,7 +75,7 @@ SOURCES += \
     RScriptHandlerRegistry.cpp \
     RSelectionChangedEvent.cpp \
     RSettings.cpp \
-    RShapesExporter.cpp \
+    RLinetypePatternExporter.cpp \
     RSingleApplication.cpp \
     RSingleton.cpp \
     RSnap.cpp \
@@ -100,6 +100,7 @@ SOURCES += \
     RViewportEntity.cpp \
     RWheelEvent.cpp \
     RWidget.cpp \
+    bridges/RSettingsBridge.cpp \
     math/RArc.cpp \
     math/RBox.cpp \
     math/RCircle.cpp \
@@ -150,6 +151,7 @@ HEADERS = \
     RDocumentVariables.h \
     RDocumentInterface.h \
     RDxfServices.h \
+    RDxfServicesProxy.h \
     REntity.h \
     REntityData.h \
     REntityExportListener.h \
@@ -236,7 +238,7 @@ HEADERS = \
     RSelectionChangedEvent.h \
     RSelectionListener.h \
     RSettings.h \
-    RShapesExporter.h \
+    RLinetypePatternExporter.h \
     RSingleApplication.h \
     RSingleton.h \
     RSnap.h \
@@ -269,6 +271,7 @@ HEADERS = \
     RViewportEntity.h \
     RWheelEvent.h \
     RWidget.h \
+    bridges/RSettingsBridge.h \
     math/RArc.h \
     math/RArcProxy.h \
     math/RBox.h \
@@ -309,6 +312,8 @@ r_static_libs {
 else {
     CONFIG += plugin
 }
+
+CONFIG += c++11
 
 QT += concurrent
 

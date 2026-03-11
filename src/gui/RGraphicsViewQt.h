@@ -122,7 +122,7 @@ private:
     RVector mousePressModelPosition;
     bool gotMouseButtonPress;
 
-    // backend to render to bitmap (can be QPainter or Skia):
+    // backend to render to bitmap:
     RGraphicsViewImage* imageView;
 };
 

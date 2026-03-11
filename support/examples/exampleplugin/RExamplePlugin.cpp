@@ -6,7 +6,7 @@ RPluginInfo RExamplePlugin::getPluginInfo() {
     ret.set("ID", "EXAMPLE");
     ret.set("Name", "Example Plugin");
     ret.set("License", "GPLv3");
-    ret.set("URL", "http://qcad.org");
+    ret.set("URL", "https://qcad.org");
     return ret;
 }
 

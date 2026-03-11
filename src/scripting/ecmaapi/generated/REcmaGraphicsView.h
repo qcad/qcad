@@ -178,6 +178,9 @@
         zoomToEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getBuffer
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         centerToPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

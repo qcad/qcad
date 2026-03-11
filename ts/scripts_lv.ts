@@ -219,7 +219,7 @@
         <translation>Tulkojumi</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+17"/>
         <source>Templates</source>
         <translation>Šabloni</translation>
     </message>
@@ -3233,7 +3233,7 @@ Vai vēlaties to atjaunot?</translation>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+88"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
@@ -4203,18 +4203,18 @@ jau ir sarakstā.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation>Atcelt</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation>Paveikts</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+127"/>
+        <location line="+129"/>
         <source>Active Tool:</source>
         <translation>Aktīvais rīks:</translation>
     </message>
@@ -4234,12 +4234,12 @@ jau ir sarakstā.</translation>
         <translation>Galvenie rīki</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+22"/>
         <source>CAD Tools</source>
         <translation>CAD rīki</translation>
     </message>
     <message>
-        <location line="+578"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation>Nederīga pozīcija</translation>
     </message>
@@ -5767,12 +5767,17 @@ jau ir sarakstā.</translation>
         <translation>Izcelt (un paaugstināt) attēlus diapazonā</translation>
     </message>
     <message>
-        <location line="+38"/>
-        <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <location line="+7"/>
+        <source>Highlight (and raise) hatches and solid fills within range</source>
+        <translation>Izcelt (un paaugstināt) šķeltos un blīvos pildījumus diapazonā</translation>
     </message>
     <message>
-        <location line="-102"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation>Escape notīra atlasi</translation>
+    </message>
+    <message>
+        <location line="-109"/>
         <source>Highlight entity within range</source>
         <translation>Izcelt objektu diapazonā</translation>
     </message>
@@ -6007,7 +6012,7 @@ jau ir sarakstā.</translation>
         <translation>Punkta garums līniju rakstos:</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+89"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+96"/>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+41"/>
         <source>Selection</source>
         <translation>Atlase</translation>
@@ -6030,6 +6035,11 @@ jau ir sarakstā.</translation>
         <location line="+12"/>
         <source>Background:</source>
         <translation>Pamatinformācija:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Display color of color by block:</source>
+        <translation>Krāsas attēlošanas krāsa pēc bloka:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6480,11 +6490,16 @@ jau ir sarakstā.</translation>
     <name>ImportFile</name>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
+        <source>File type not supported %1</source>
+        <translation>Faila tips %1 netiek atbalstīts</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Error while importing file %1</source>
         <translation>Kļūda, importējot failu %1</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+36"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Importa filtri nav atrasti. Pārtraucam...</translation>
     </message>
@@ -9319,7 +9334,7 @@ jau ir sarakstā.</translation>
         <translation>Formāts:</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+149"/>
         <source>Untitled %1</source>
         <translation>Bez nosaukuma %1</translation>
     </message>
@@ -11537,7 +11552,7 @@ jau ir sarakstā.</translation>
         <translation>Aizpildiet</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location filename="../scripts/Draw/Shape/Shape2.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Rādiuss:</translation>
     </message>
@@ -11545,7 +11560,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vismaz divi punkti ir identiski.</translation>
@@ -12536,12 +12551,12 @@ jau ir sarakstā.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
         <source>Default value:</source>
         <translation>Noklusējuma vērtība:</translation>
     </message>
     <message>
-        <location line="+274"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>Atcelt</translation>
     </message>
@@ -12702,30 +12717,33 @@ jau ir sarakstā.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <location line="+268"/>
+        <location line="+274"/>
         <source>Bold</source>
         <translation>Bold</translation>
     </message>
     <message>
-        <location line="-261"/>
-        <location line="+274"/>
+        <location line="-267"/>
+        <location line="+280"/>
         <source>Italic</source>
         <translation>Kursīvais</translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="-266"/>
         <source>Text fits on one line and has no formatting</source>
         <translation>Teksts iekļaujas vienā rindā un tam nav formatējuma</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Simple text
-(one line, no formatting)</source>
-        <translation>Vienkāršs teksts
-(viena rinda, bez formatēšanas)</translation>
+        <source>Simple text</source>
+        <translation>Vienkāršs teksts</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+7"/>
+        <source>(one line, no formatting)</source>
+        <translation>(viena rinda, bez formatēšanas)</translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Rich Text</source>
         <translation>Bagātīgais teksts</translation>
     </message>
@@ -14272,6 +14290,7 @@ jau ir sarakstā.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Arc Dimension</source>
         <translation>Loka dimensija</translation>
     </message>
@@ -14457,6 +14476,7 @@ jau ir sarakstā.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Text based</source>
         <translation>Uz teksta balstīts</translation>
     </message>

@@ -468,7 +468,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     globalObject.setProperty("download", engine->newFunction(ecmaDownload));
     globalObject.setProperty("downloadToFile", engine->newFunction(ecmaDownloadToFile));
     globalObject.setProperty("mSleep", engine->newFunction(ecmaMSleep));
-    globalObject.setProperty("parseXml", engine->newFunction(ecmaParseXml));
+    globalObject.setProperty("parseXmlQt5", engine->newFunction(ecmaParseXml));
     globalObject.setProperty("qApp", engine->newQObject(dynamic_cast<RSingleApplication*>(qApp)));
     //globalObject.setProperty("getShapeIntersections", engine->newFunction(ecmaGetShapeIntersections));
 

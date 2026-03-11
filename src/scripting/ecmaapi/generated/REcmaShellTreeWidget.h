@@ -58,6 +58,12 @@
         
     
     
+      void scrollToData(
+                const QString & data, Qt::ItemDataRole role
+            );
+        
+    
+    
       void contextMenuEvent(
                 QContextMenuEvent * e
             );

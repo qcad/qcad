@@ -25,7 +25,7 @@ RPluginInfo RDxfPlugin::getPluginInfo() {
         )
     );
     ret.set("License", "GPLv2+");
-    ret.set("URL", "http://www.qcad.org");
+    ret.set("URL", "https://qcad.org");
     return ret;
 }
 

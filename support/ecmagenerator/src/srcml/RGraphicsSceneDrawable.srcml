@@ -99,15 +99,15 @@
         <return>return <expr><name>type</name></expr>;</return>
     }</block></function>
 
-    <function><type><name>bool</name></type> <name>isPainterPath</name><parameter_list>()</parameter_list> <block>{
+    <function><type><name>bool</name></type> <name>isPainterPath</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>type</name>==<name>PainterPath</name> || <name>type</name>==<name>PainterPathRay</name> || <name>type</name>==<name>PainterPathXLine</name></expr>;</return>
     }</block></function>
 
-    <function><type><name>bool</name></type> <name>isText</name><parameter_list>()</parameter_list> <block>{
+    <function><type><name>bool</name></type> <name>isText</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>type</name>==<name>Text</name></expr>;</return>
     }</block></function>
 
-    <function><type><name>bool</name></type> <name>isImage</name><parameter_list>()</parameter_list> <block>{
+    <function><type><name>bool</name></type> <name>isImage</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>type</name>==<name>Image</name></expr>;</return>
     }</block></function>
 

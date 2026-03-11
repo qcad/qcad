@@ -45,7 +45,7 @@ RPluginInfo TransactionListenerPlugin::getPluginInfo() {
     ret.set("ID", "TRANSACTIONLISTENERPLUGIN");
     ret.set("Name", "Transaction Listener Example Plugin");
     ret.set("License", "Public Domain");
-    ret.set("URL", "http://qcad.org");
+    ret.set("URL", "https://qcad.org");
     return ret;
 }
 

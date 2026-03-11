@@ -2865,6 +2865,14 @@ function restoreOverrideCursor() {
     }
 }
 
+/**
+ * \return Global cursor position as QPoint.
+ * Overridable by plugins.
+ */
+function getGlobalCursorPos() {
+    return QCursor.pos();
+}
+
 function initUserShortcuts() {
     var keys = RSettings.getAllKeys("Shortcuts");
 
@@ -3211,7 +3219,9 @@ function writeTextFile(fileName, str) {
         setUtf8Codec(textStream);
         textStream.writeString(str);
         file.close();
+        return true;
     }
+    return false;
 }
 
 function getKeyboardModifiers(event) {
@@ -3531,13 +3541,21 @@ function createValidator(rx, parent) {
 }
 
 function parseXml(fileName, handler) {
-    var fi = new QFileInfo(fileName);
-    var file = new QFile(fi.absoluteFilePath());
-    var xmlReader = new QXmlSimpleReader();
-    var source = new QXmlInputSource(file);
-    xmlReader.setContentHandler(handler);
-    var ret = xmlReader.parse(source, false);
-    file.close();
+    // Qt 6: use JS implementation:
+    if (RSettings.getQtVersion()>=0x060000) {
+        var fi = new QFileInfo(fileName);
+        var file = new QFile(fi.absoluteFilePath());
+        var xmlReader = new QXmlSimpleReader();
+        var source = new QXmlInputSource(file);
+        xmlReader.setContentHandler(handler);
+        var ret = xmlReader.parse(source, false);
+        file.close();
+    }
+
+    // Qt 5: implementation in RScriptHandlerEcma:
+    else {
+        parseXmlQt5(fileName, handler);
+    }
 }
 
 // fix QPlainTextEdit API for Qt 5:

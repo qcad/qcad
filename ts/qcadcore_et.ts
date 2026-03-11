@@ -514,7 +514,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+94"/>
-        <location filename="../src/core/RObject.cpp" line="+70"/>
+        <location filename="../src/core/RObject.cpp" line="+71"/>
         <source>Type</source>
         <translation>Tüüp</translation>
     </message>

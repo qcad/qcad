@@ -98,8 +98,14 @@
            <string>Text fits on one line and has no formatting</string>
           </property>
           <property name="text">
-           <string>Simple text
-(one line, no formatting)</string>
+           <string>Simple text</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>(one line, no formatting)</string>
           </property>
          </widget>
         </item>

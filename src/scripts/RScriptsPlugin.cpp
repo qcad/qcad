@@ -27,7 +27,7 @@ RPluginInfo RScriptsPlugin::getPluginInfo() {
     ret.set("Name", "QCAD");
     ret.set("Description", "QCAD Scripts.");
     ret.set("License", "GPLv3");
-    ret.set("URL", "http://qcad.org");
+    ret.set("URL", "https://qcad.org");
 
     ret.set("OverridePriority", "0");
     ret.set("SplashOverride", ":/scripts/splashscreen.png");

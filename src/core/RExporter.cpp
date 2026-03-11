@@ -35,7 +35,7 @@
 #include "RPainterPathSource.h"
 #include "RPolyline.h"
 #include "RSettings.h"
-#include "RShapesExporter.h"
+#include "RLinetypePatternExporter.h"
 #include "RSpline.h"
 #include "RStorage.h"
 #include "RTextBasedData.h"
@@ -345,7 +345,7 @@ QBrush RExporter::getBrush(const RPainterPath& path) {
             }
             else {
                 // this can happen (by block at top level):
-                color = RColor(Qt::white);
+                color = RSettings::getByBlockColor();
                 //qWarning("color by block but current block reference is NULL");
                 //Q_ASSERT(false);
             }
@@ -530,15 +530,15 @@ bool RExporter::exportDocument() {
     if (!exportDocumentSettings()) {
         return false;
     }
-    qDebug() << "exporting linetypes";
+    //qDebug() << "exporting linetypes";
     exportLinetypes();
-    qDebug() << "exporting layers";
+    //qDebug() << "exporting layers";
     exportLayers();
-    qDebug() << "exporting layer states";
+    //qDebug() << "exporting layer states";
     exportLayerStates();
-    qDebug() << "exporting blocks";
+    //qDebug() << "exporting blocks";
     exportBlocks();
-    qDebug() << "exporting views";
+    //qDebug() << "exporting views";
     exportViews();
     //qDebug() << "exporting entities";
     if (isVisualExporter()) {
@@ -1395,7 +1395,7 @@ void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
 //    RPolyline pl;
     if (!arc.isReversed()) {
         // Arc Counterclockwise:
-        if(a1>a2-RS::AngleTolerance) {
+        if(a1>=a2) {
             a2+=2*M_PI;
         }
         for (a=a1+aStep; a<=a2; a+=aStep) {
@@ -1408,7 +1408,7 @@ void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
         }
     } else {
         // Arc Clockwise:
-        if (a1<a2+RS::AngleTolerance) {
+        if (a1<=a2) {
             a2-=2*M_PI;
         }
         for (a=a1-aStep; a>=a2; a-=aStep) {
@@ -1562,7 +1562,7 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
     if (!continuous) {
         if (getEntity()!=NULL && (getEntity()->getType()!=RS::EntitySpline || RSpline::hasProxy())) {
             // we have a spline proxy:
-            RShapesExporter(*this, QList<QSharedPointer<RShape> >() << spline.clone(), offset);
+            RLinetypePatternExporter(*this, QList<QSharedPointer<RShape> >() << spline.clone(), offset);
         }
         else {
             // fallback if we don't have a spline proxy:
@@ -1638,7 +1638,7 @@ void RExporter::exportExplodable(const RExplodable& explodable, double offset) {
 
     if (getEntity()!=NULL && (getEntity()->getType()!=RS::EntitySpline || RSpline::hasProxy())) {
         // all explodable entities including splines if we have a spline proxy:
-        RShapesExporter(*this, sub, offset);
+        RLinetypePatternExporter(*this, sub, offset);
         return;
     }
 
@@ -1759,8 +1759,25 @@ double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
         }
     }
 
+    // only if patterns are enabled (e.g. SVG export),
+    // counter-scale line patterns by viewport scale (if we are in a viewport)
+    // to get the same pattern size independent of the viewport scale:
+    if (enablePatterns) {
+        if (blockRefViewportStack.size()>0) {
+            QSharedPointer<REntity> topLevel0 = blockRefViewportStack[0];
+            if (!topLevel0.isNull() && topLevel0->isOfType(RS::EntityViewport)) {
+                QSharedPointer<RViewportEntity> vp = topLevel0.dynamicCast<RViewportEntity>();
+                double vpScale = vp->getScale();
+                if (vpScale>1e-6) {
+                    factor /= vpScale;
+                }
+            }
+        }
+    }
+
     if (blockRefViewportStack.size()>1) {
         // if top level entity is viewport and second level entity is block ref, we are rendering a block reference in a viewport:
+        // scale line type pattern by block reference scale (VP scale is already applied above):
         QSharedPointer<REntity> topLevel0 = blockRefViewportStack[0];
         QSharedPointer<REntity> topLevel1 = blockRefViewportStack[1];
         if (!topLevel0.isNull() && topLevel0->isOfType(RS::EntityViewport) &&

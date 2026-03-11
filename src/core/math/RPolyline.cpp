@@ -1553,18 +1553,53 @@ double RPolyline::getArea() const {
 }
 
 double RPolyline::getLength() const {
-    double ret = 0.0;
+    double totalLength = 0.0;
+    int count = vertices.count();
 
-    QList<QSharedPointer<RShape> > sub = getExploded();
-    QList<QSharedPointer<RShape> >::iterator it;
-    for (it=sub.begin(); it!=sub.end(); ++it) {
-        double l = (*it)->getLength();
-        if (RMath::isNormal(l)) {
-            ret += l;
+    if (count < 2) {
+        return 0.0;
+    }
+
+    // iterate through each segment
+    // if closed, we include the segment from the last vertex back to the first
+    int segments = closed ? count : count - 1;
+
+    for (int i = 0; i < segments; ++i) {
+        const RVector& v1 = vertices[i];
+        const RVector& v2 = vertices[(i + 1) % count];
+
+        if (!v1.isSane() || !v2.isSane()) {
+            continue;
+        }
+
+        double dist = v1.getDistanceTo(v2);
+
+        // Skip zero-length segments (overlapping vertices)
+        if (dist < 1e-12) {
+            continue;
+        }
+
+        double b = bulges[i];
+
+        if (qAbs(b) < 1e-9) {
+            // straight line segment
+            totalLength += dist;
+        } else {
+            // arc segment
+            // the bulge 'b' is tan(angle / 4)
+            // angle in radians = 4 * atan(b)
+            double angle = 4.0 * atan(b);
+
+            // geometry relationship: chord_length = 2 * radius * sin(angle / 2)
+            // radius = dist / (2 * sin(angle / 2))
+            // length = radius * angle
+
+            double radius = qAbs(dist / (2.0 * sin(angle / 2.0)));
+            totalLength += qAbs(radius * angle);
         }
     }
 
-    return ret;
+    return totalLength;
 }
 
 /**

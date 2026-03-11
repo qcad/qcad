@@ -98,15 +98,15 @@ public:
         return type;
     }
 
-    bool isPainterPath() {
+    bool isPainterPath() const {
         return type==PainterPath || type==PainterPathRay || type==PainterPathXLine;
     }
 
-    bool isText() {
+    bool isText() const {
         return type==Text;
     }
 
-    bool isImage() {
+    bool isImage() const {
         return type==Image;
     }
 

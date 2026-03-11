@@ -219,7 +219,7 @@
         <translation>Tłumaczenia</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+17"/>
         <source>Templates</source>
         <translation>Szablony</translation>
     </message>
@@ -3236,7 +3236,7 @@ Czy chcesz go odzyskać?</translation>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+88"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
@@ -4206,18 +4206,18 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation>Gotowe</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+127"/>
+        <location line="+129"/>
         <source>Active Tool:</source>
         <translation>Aktywne narzędzie:</translation>
     </message>
@@ -4237,12 +4237,12 @@ jest już na liście.</translation>
         <translation>Narzędzia główne</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+22"/>
         <source>CAD Tools</source>
         <translation>Narzędzia CAD</translation>
     </message>
     <message>
-        <location line="+578"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation>Nieprawidłowa pozycja</translation>
     </message>
@@ -5745,12 +5745,17 @@ jest już na liście.</translation>
         <translation>Podświetlanie (i podnoszenie) obrazów w zasięgu</translation>
     </message>
     <message>
-        <location line="+38"/>
-        <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <location line="+7"/>
+        <source>Highlight (and raise) hatches and solid fills within range</source>
+        <translation>Podświetlanie (i podnoszenie) kreskowań i wypełnień w zasięgu</translation>
     </message>
     <message>
-        <location line="-307"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation>Escape czyści zaznaczenie</translation>
+    </message>
+    <message>
+        <location line="-314"/>
         <source>Right-Click</source>
         <translation>Kliknięcie prawym przyciskiem</translation>
     </message>
@@ -5910,7 +5915,7 @@ jest już na liście.</translation>
         <translation>Maksymalna złożoność dla solidnych wypełnień w wysokiej jakości:</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+102"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+109"/>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+149"/>
         <source>Persistent selection</source>
         <translation>Trwała selekcja</translation>
@@ -6033,6 +6038,11 @@ jest już na liście.</translation>
         <location line="+12"/>
         <source>Background:</source>
         <translation>Tło:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Display color of color by block:</source>
+        <translation>Kolor wyświetlania koloru przez blok:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6483,11 +6493,16 @@ jest już na liście.</translation>
     <name>ImportFile</name>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
+        <source>File type not supported %1</source>
+        <translation>Typ pliku %1 nie jest obsługiwany</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Error while importing file %1</source>
         <translation>Błąd podczas importowania pliku %1</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+36"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Nie odnaleziono filtrów importowania. Anulowanie...</translation>
     </message>
@@ -9322,7 +9337,7 @@ jest już na liście.</translation>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+149"/>
         <source>Untitled %1</source>
         <translation>Bez tytułu %1</translation>
     </message>
@@ -11540,7 +11555,7 @@ jest już na liście.</translation>
         <translation>Wypełnienie</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location filename="../scripts/Draw/Shape/Shape2.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Promień:</translation>
     </message>
@@ -11548,7 +11563,7 @@ jest już na liście.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Co najmniej dwa punkty są identyczne.</translation>
@@ -12539,12 +12554,12 @@ jest już na liście.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
         <source>Default value:</source>
         <translation>Domyślna wartość:</translation>
     </message>
     <message>
-        <location line="+274"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>Undo</translation>
     </message>
@@ -12705,30 +12720,23 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <location line="+268"/>
+        <location line="+274"/>
         <source>Bold</source>
         <translation>Bold</translation>
     </message>
     <message>
-        <location line="-261"/>
-        <location line="+274"/>
+        <location line="-267"/>
+        <location line="+280"/>
         <source>Italic</source>
         <translation>Italic</translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="-266"/>
         <source>Text fits on one line and has no formatting</source>
         <translation>Tekst mieści się w jednej linii i nie ma formatowania</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Simple text
-(one line, no formatting)</source>
-        <translation>Prosty tekst
-(jedna linia, bez formatowania)</translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+30"/>
         <source>Rich Text</source>
         <translation>Bogaty tekst</translation>
     </message>
@@ -12833,7 +12841,17 @@ jest już na liście.</translation>
         <translation>Lewa górna</translation>
     </message>
     <message>
-        <location line="+206"/>
+        <location line="-574"/>
+        <source>Simple text</source>
+        <translation>Prosty tekst</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>(one line, no formatting)</source>
+        <translation>(jeden wiersz, bez formatowania)</translation>
+    </message>
+    <message>
+        <location line="+773"/>
         <source>Base Center</source>
         <translation>Podstawa - środek</translation>
     </message>
@@ -14275,6 +14293,7 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Arc Dimension</source>
         <translation>Wymiar łuku</translation>
     </message>
@@ -14460,6 +14479,7 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Text based</source>
         <translation>Na podstawie tekstu</translation>
     </message>

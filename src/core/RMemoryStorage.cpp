@@ -1076,7 +1076,7 @@ void RMemoryStorage::setObjectHandle(RObject& object, RObject::Handle objectHand
         objectHandleMap.remove(object.getHandle());
     }
 
-    if (objectHandleMap.contains(objectHandle)) {
+    if (objectHandleMap.contains(objectHandle) && objectHandle!=RObject::UNKNOWN_HANDLE) {
         qWarning() << "cannot assign original handle to object" << QString("0x%1").arg(objectHandle, 0, 16);
         QSharedPointer<RObject> obj = queryObjectByHandle(objectHandle);
         if (obj.isNull()) {

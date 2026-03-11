@@ -180,7 +180,6 @@ int main(int argc, char *argv[]) {
 #endif
     }
     if (RSettings::getBoolValue("Ui/EnableHighDpiScaling", false)==true) {
-        qDebug() << "enable high dpi scaling";
         QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     }
     else {
@@ -423,7 +422,6 @@ int main(int argc, char *argv[]) {
     RScriptHandler* handler = RScriptHandlerRegistry::getGlobalScriptHandler("js");
     if (handler!=NULL) {
         // got a custom JS handler from a plugin:
-        qWarning() << "using custom script handler from plugin";
         handler->autostart(autostartFile, arguments.mid(i+1));
         delete handler;
     }

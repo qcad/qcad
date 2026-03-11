@@ -34,7 +34,7 @@
    <item>
     <widget class="Line" name="SeparatorClose">
      <property name="orientation">
-      <enum>Qt::Orientation::Vertical</enum>
+      <enum>Qt::Vertical</enum>
      </property>
     </widget>
    </item>
@@ -75,7 +75,7 @@
    <item>
     <widget class="Line" name="SeparatorRedo">
      <property name="orientation">
-      <enum>Qt::Orientation::Vertical</enum>
+      <enum>Qt::Vertical</enum>
      </property>
     </widget>
    </item>
@@ -108,7 +108,7 @@
    <item>
     <widget class="Line" name="line">
      <property name="orientation">
-      <enum>Qt::Orientation::Vertical</enum>
+      <enum>Qt::Vertical</enum>
      </property>
     </widget>
    </item>
@@ -144,7 +144,7 @@
    <item>
     <widget class="Line" name="line_3">
      <property name="orientation">
-      <enum>Qt::Orientation::Vertical</enum>
+      <enum>Qt::Vertical</enum>
      </property>
     </widget>
    </item>

@@ -49,6 +49,8 @@ public:
 
     QTreeWidgetItem* getActiveItem();
 
+    void scrollToData(const QString& data, Qt::ItemDataRole role);
+
 protected:
     virtual void contextMenuEvent(QContextMenuEvent* e);
     virtual void mousePressEvent(QMouseEvent* e);

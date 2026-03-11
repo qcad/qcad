@@ -158,8 +158,8 @@ About.prototype.initAboutApp = function(textBrowser) {
             + "<p/>"
             + "<p>" + qsTr("All brand or product names are trademarks or registered trademarks of their respective holders.") + "</p>"
             + "<p/>"
-            + "<p>© 1994-2025 RibbonSoft, GmbH.</p>"
-            + "<p>" + qsTr("Portions of this software © %1 The Qt Company Ltd.").arg("2008-2025") + "</p>"
+            + "<p>© 1994-2026 RibbonSoft, GmbH.</p>"
+            + "<p>" + qsTr("Portions of this software © %1 The Qt Company Ltd.").arg("2008-2026") + "</p>"
             + "<p>" + qsTr("Qt ships with QCAD under the <a href='%1'>LGPL Open Source license</a> which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the <a href='%2'>documentation shown on the Qt website</a>.").arg("https://www.gnu.org/licenses/lgpl-3.0.html").arg("https://doc.qt.io/qt-5/build-sources.html") + "</p>"
             + "<p>" + qsTr("The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.") + "</p>"
             + "<p/>"
@@ -568,7 +568,7 @@ About.prototype.initAboutLicenses = function(textBrowser) {
 
     if (RSettings.getQtVersion() >= 0x060000) {
         html += "<h2>qtjsapi</h2>"
-        html += "<p>Copyright 2024-2025 RibbonSoft, GmbH</p>"
+        html += "<p>Copyright 2024-2026 RibbonSoft, GmbH</p>"
               + "<p>The MIT License (MIT)</p>"
               + "<p>Permission is hereby granted, free of charge, to any person obtaining a "
               + "copy of this software and associated documentation files (the “Software”), "

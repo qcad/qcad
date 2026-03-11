@@ -389,7 +389,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="-1"/>
-        <location filename="../src/core/RObject.cpp" line="+70"/>
+        <location filename="../src/core/RObject.cpp" line="+71"/>
         <source>Type</source>
         <translation>類型</translation>
     </message>

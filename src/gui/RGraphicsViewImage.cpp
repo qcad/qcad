@@ -51,7 +51,6 @@ RGraphicsViewImage::RGraphicsViewImage(QObject* parent)
       lastSize(0,0),
       lastOffset(RVector::invalid),
       lastFactor(-1.0),
-      painter(NULL),
       doPaintOrigin(true),
       isSelected(false),
       bgColorLightness(0),
@@ -155,10 +154,11 @@ void RGraphicsViewImage::regenerate(bool force) {
     repaintView();
     viewportChangeEvent();
 
-    if (widget!=NULL) {
-        // this calls updateImage:
-        widget->update();
-    }
+    // 20260414: this is already handled in repaintView, no need to call it here again:
+    // if (widget!=NULL) {
+    //     // this calls updateImage:
+    //     widget->update();
+    // }
 }
 
 /**
@@ -991,7 +991,7 @@ void RGraphicsViewImage::paintBackground(RGraphicsViewWorker* worker, const QRec
 
             QTransform t;
             t.scale(1,-1);
-            QTransform savedTransform2 = painter->transform();
+            QTransform savedTransform2 = worker->getTransform();
             worker->setTransform(t, true);
             worker->drawText(box, flags, text.getText());
             worker->setTransform(savedTransform2);
@@ -1106,33 +1106,6 @@ void RGraphicsViewImage::paintOverlay() {
             }
         }
     }
-}
-
-void RGraphicsViewImage::initPainter(QPaintDevice& device, bool erase, bool screen, const QRect& rect) {
-    painter = new QPainter(&device);
-    if (antialiasing) {
-        painter->setRenderHint(QPainter::Antialiasing);
-    }
-    if (erase) {
-        QRect r = rect;
-        if (rect.isNull()) {
-            r = QRect(0,0,lastSize.width(),lastSize.height());
-        }
-        // erase background to transparent:
-        painter->setCompositionMode(QPainter::CompositionMode_Clear);
-        painter->eraseRect(r);
-        painter->setCompositionMode(QPainter::CompositionMode_SourceOver);
-    }
-
-    //if (!rect.isNull()) {
-        //painter->setClipRect(rect);
-    //}
-
-    if (!screen) {
-        painter->setWorldTransform(transform);
-    }
-    //painter->setPen(QPen());
-    //return painter;
 }
 
 void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) {
@@ -1819,7 +1792,9 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
         //RVector sp = path.getStartPoint();
         RVector sp = path.getBoundingBox().getCenter();
         path.move(-sp);
-        path.scale(1/factor,1/factor);
+        double dpr = getDevicePixelRatio();
+        double f = 1/factor*dpr;
+        path.scale(f,f);
         path.move(sp);
     }
 
@@ -2667,33 +2642,4 @@ double RGraphicsViewImage::getDevicePixelRatio() const {
     }
 
     return 1;
-}
-
-void RGraphicsViewImage::endPaint() const {
-    if (painter==NULL) {
-        return;
-    }
-
-    painter->end();
-}
-
-void RGraphicsViewImage::setBrush(const QBrush& brush) const {
-    if (painter==NULL) {
-        return;
-    }
-    painter->setBrush(brush);
-}
-
-void RGraphicsViewImage::setPen(const QPen& pen) const {
-    if (painter==NULL) {
-        return;
-    }
-    painter->setPen(pen);
-}
-
-void RGraphicsViewImage::drawLine(const QLineF& line) const {
-    if (painter==NULL) {
-        return;
-    }
-    painter->drawLine(line);
 }

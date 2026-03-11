@@ -31,7 +31,7 @@ function ShapePolygonAFPP(guiAction) {
     this.corner2 = undefined;
     this.cornerToCorner = false;
 
-    this.setUiOptions(["../Shape.ui", "ShapePolygonAFPP.ui"]);
+    this.setUiOptions(["../Shape.ui", "ShapePolygonAFPP.ui", "../Shape2.ui"]);
 }
 
 ShapePolygonAFPP.prototype = new Shape();

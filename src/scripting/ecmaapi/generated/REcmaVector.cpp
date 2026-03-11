@@ -274,7 +274,7 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getAverage, "getAverage");
             
-            REcmaHelper::registerFunction(&engine, &ctor, getUnion, "getUnion");
+            REcmaHelper::registerFunction(&engine, &ctor, getIntersection, "getIntersection");
             
             REcmaHelper::registerFunction(&engine, &ctor, getUnique, "getUnique");
             
@@ -6948,12 +6948,12 @@
             return result;
         }
          QScriptValue
-        REcmaVector::getUnion
+        REcmaVector::getIntersection
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaVector::getUnion", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getUnion";
+            //REcmaHelper::functionStart("REcmaVector::getIntersection", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getIntersection";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
@@ -6994,7 +6994,7 @@
     // return type 'QList < RVector >'
     QList < RVector > cppResult =
         RVector::
-       getUnion(a0
+       getIntersection(a0
         ,
     a1);
         // return type: QList < RVector >
@@ -7052,7 +7052,7 @@
     // return type 'QList < RVector >'
     QList < RVector > cppResult =
         RVector::
-       getUnion(a0
+       getIntersection(a0
         ,
     a1
         ,
@@ -7066,10 +7066,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getUnion().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getIntersection().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaVector::getUnion", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getIntersection", context, engine);
             return result;
         }
          QScriptValue

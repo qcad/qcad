@@ -219,7 +219,7 @@
         <translation>Käännökset</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+17"/>
         <source>Templates</source>
         <translation>Mallit</translation>
     </message>
@@ -3233,7 +3233,7 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+88"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
@@ -4202,18 +4202,18 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation>Valmis</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+127"/>
+        <location line="+129"/>
         <source>Active Tool:</source>
         <translation>Aktiivinen työkalu:</translation>
     </message>
@@ -4233,12 +4233,12 @@ on jo luettelossa.</translation>
         <translation>Päätyökalut</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+22"/>
         <source>CAD Tools</source>
         <translation>CAD työkalut</translation>
     </message>
     <message>
-        <location line="+578"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation>Virheellinen sijainti</translation>
     </message>
@@ -5760,12 +5760,17 @@ on jo luettelossa.</translation>
         <translation>Korosta (ja nosta) kuvia kantaman sisällä</translation>
     </message>
     <message>
-        <location line="+38"/>
-        <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <location line="+7"/>
+        <source>Highlight (and raise) hatches and solid fills within range</source>
+        <translation>Korosta (ja nosta) vinoviivat ja kiinteät täytöt kantaman sisällä</translation>
     </message>
     <message>
-        <location line="-102"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation>Escape tyhjentää valinnan</translation>
+    </message>
+    <message>
+        <location line="-109"/>
         <source>Highlight entity within range</source>
         <translation>Korosta alueen sisällä oleva kokonaisuus</translation>
     </message>
@@ -5925,7 +5930,7 @@ on jo luettelossa.</translation>
         <translation>Pisteen pituus viivamalleissa:</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+102"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+109"/>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+47"/>
         <source>Persistent selection</source>
         <translation>Pysyvä valinta</translation>
@@ -6028,6 +6033,11 @@ on jo luettelossa.</translation>
         <location line="+12"/>
         <source>Background:</source>
         <translation>Tausta:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Display color of color by block:</source>
+        <translation>Näyttöväri väriä lohkon mukaan:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6478,11 +6488,16 @@ on jo luettelossa.</translation>
     <name>ImportFile</name>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
+        <source>File type not supported %1</source>
+        <translation>Tiedostotyyppiä %1 ei tueta</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Error while importing file %1</source>
         <translation>Virhe tuotaessa tiedostoa %1</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+36"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Tuontisuodattimia ei löydetty. Keskeytetään ...</translation>
     </message>
@@ -9317,7 +9332,7 @@ on jo luettelossa.</translation>
         <translation>Muoto:</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+149"/>
         <source>Untitled %1</source>
         <translation>Nimetön %1</translation>
     </message>
@@ -11530,7 +11545,7 @@ on jo luettelossa.</translation>
         <translation>Täyte</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location filename="../scripts/Draw/Shape/Shape2.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Säde:</translation>
     </message>
@@ -11538,7 +11553,7 @@ on jo luettelossa.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vähintään kaksi pistettä ovat samat.</translation>
@@ -12529,12 +12544,12 @@ on jo luettelossa.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
         <source>Default value:</source>
         <translation>Oletusarvo:</translation>
     </message>
     <message>
-        <location line="+274"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Kumoa</translation>
     </message>
@@ -12695,30 +12710,23 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <location line="+268"/>
+        <location line="+274"/>
         <source>Bold</source>
         <translation>Lihavointi</translation>
     </message>
     <message>
-        <location line="-261"/>
-        <location line="+274"/>
+        <location line="-267"/>
+        <location line="+280"/>
         <source>Italic</source>
         <translation>Kursiivi</translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="-266"/>
         <source>Text fits on one line and has no formatting</source>
         <translation>Teksti mahtuu yhdelle viivalle eikä sisällä muotoilua</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Simple text
-(one line, no formatting)</source>
-        <translation>Pelkkä teksti
-(yksi rivi, ei muotoilua)</translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+30"/>
         <source>Rich Text</source>
         <translation>Muotoiltu teksti</translation>
     </message>
@@ -12823,7 +12831,17 @@ on jo luettelossa.</translation>
         <translation>Yläkeski</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="-606"/>
+        <source>Simple text</source>
+        <translation>Yksinkertainen teksti</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>(one line, no formatting)</source>
+        <translation>(yksi rivi, ei muotoilua)</translation>
+    </message>
+    <message>
+        <location line="+628"/>
         <source>Middle Right</source>
         <translation>Keskioikea</translation>
     </message>
@@ -14265,6 +14283,7 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Arc Dimension</source>
         <translation>Kaarimitta</translation>
     </message>
@@ -14450,6 +14469,7 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Text based</source>
         <translation>Tekstiin perustuva</translation>
     </message>

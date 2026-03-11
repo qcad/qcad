@@ -219,7 +219,7 @@
         <translation>Oversættelser</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+17"/>
         <source>Templates</source>
         <translation>Skabeloner</translation>
     </message>
@@ -3233,7 +3233,7 @@ Do you wish to recover it?</source>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+88"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
@@ -4202,18 +4202,18 @@ er allerede på listen.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation>Annuller</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation>Udført</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+127"/>
+        <location line="+129"/>
         <source>Active Tool:</source>
         <translation>Aktivt værktøj:</translation>
     </message>
@@ -4233,12 +4233,12 @@ er allerede på listen.</translation>
         <translation>Vigtigste værktøjer</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+22"/>
         <source>CAD Tools</source>
         <translation>CAD-værktøjer</translation>
     </message>
     <message>
-        <location line="+578"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation>Ugyldig position</translation>
     </message>
@@ -5765,12 +5765,17 @@ er allerede på listen.</translation>
         <translation>Fremhæv (og hæv) billeder inden for rækkevidde</translation>
     </message>
     <message>
-        <location line="+38"/>
-        <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <location line="+7"/>
+        <source>Highlight (and raise) hatches and solid fills within range</source>
+        <translation>Fremhæv (og hæv) skraveringer og massive udfyldninger inden for rækkevidde</translation>
     </message>
     <message>
-        <location line="-102"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation>Escape rydder valg</translation>
+    </message>
+    <message>
+        <location line="-109"/>
         <source>Highlight entity within range</source>
         <translation>Fremhæv enhed inden for området</translation>
     </message>
@@ -5945,7 +5950,7 @@ er allerede på listen.</translation>
         <translation>Punktlængde i linjemønstre:</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+95"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+102"/>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+47"/>
         <source>Persistent selection</source>
         <translation>Vedvarende udvælgelse</translation>
@@ -6028,6 +6033,11 @@ er allerede på listen.</translation>
         <location line="+12"/>
         <source>Background:</source>
         <translation>Baggrund:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Display color of color by block:</source>
+        <translation>Visningsfarve for farve pr. blok:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6478,11 +6488,16 @@ er allerede på listen.</translation>
     <name>ImportFile</name>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
+        <source>File type not supported %1</source>
+        <translation>Filtypen %1 understøttes ikke</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Error while importing file %1</source>
         <translation>Fejl under import af fil %1</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+36"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Der er ikke fundet nogen importfiltre. Afbryder...</translation>
     </message>
@@ -9317,7 +9332,7 @@ er allerede på listen.</translation>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+149"/>
         <source>Untitled %1</source>
         <translation>Uden titel %1</translation>
     </message>
@@ -11530,7 +11545,7 @@ er allerede på listen.</translation>
         <translation>Fyld</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location filename="../scripts/Draw/Shape/Shape2.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Radius:</translation>
     </message>
@@ -11538,7 +11553,7 @@ er allerede på listen.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Mindst to punkter er identiske.</translation>
@@ -12529,12 +12544,12 @@ er allerede på listen.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
         <source>Default value:</source>
         <translation>Standardværdi:</translation>
     </message>
     <message>
-        <location line="+274"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Undo</translation>
     </message>
@@ -12695,30 +12710,33 @@ er allerede på listen.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <location line="+268"/>
+        <location line="+274"/>
         <source>Bold</source>
         <translation>Fed</translation>
     </message>
     <message>
-        <location line="-261"/>
-        <location line="+274"/>
+        <location line="-267"/>
+        <location line="+280"/>
         <source>Italic</source>
         <translation>Kursiv</translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="-266"/>
         <source>Text fits on one line and has no formatting</source>
         <translation>Teksten passer på én linje og har ingen formatering</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Simple text
-(one line, no formatting)</source>
-        <translation>Enkel tekst
-(én linje, ingen formatering)</translation>
+        <source>Simple text</source>
+        <translation>Simpel tekst</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+7"/>
+        <source>(one line, no formatting)</source>
+        <translation>(én linje, ingen formatering)</translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Rich Text</source>
         <translation>Rig tekst</translation>
     </message>
@@ -14265,6 +14283,7 @@ er allerede på listen.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Arc Dimension</source>
         <translation>Bue dimension</translation>
     </message>
@@ -14450,6 +14469,7 @@ er allerede på listen.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Text based</source>
         <translation>Tekstbaseret</translation>
     </message>

@@ -159,6 +159,14 @@ public:
     bool zoomToSelection(int margin = RDEFAULT_MIN1);
     bool zoomToEntities(const QSet<RObject::Id>& ids, int margin = RDEFAULT_MIN1);
 
+    /**
+     * @brief getBuffer
+     * @return Buffer to rendered graphics view, if supported by the implementation.
+     */
+    virtual QImage getBuffer() const {
+        return QImage();
+    }
+
     virtual void centerToPoint(const RVector& point);
     virtual void centerToBox(const RBox& box);
     virtual void pan(const RVector& delta, bool regen=true);

@@ -71,8 +71,14 @@ ImportFile.prototype.beginEvent = function() {
 
     this.fileName = fileDialogInfo[0];
 
+    if (this.isSupported(this.fileName)===false) {
+        EAction.handleUserWarning(qsTr("File type not supported %1").arg(this.fileName));
+        this.terminate();
+        return;
+    }
+
     if (this.sourceDi.importFile(this.fileName, fileDialogInfo[1], false)!==RDocumentInterface.IoErrorNoError) {
-        EAction.handleUserWarning(qsTr("Error while importing file %1").arg(fileDialogInfo[0]));
+        EAction.handleUserWarning(qsTr("Error while importing file %1").arg(this.fileName));
         if (!isNull(this.sourceDi)) {
             destr(this.sourceDi);
             this.sourceDi = undefined;
@@ -80,6 +86,11 @@ ImportFile.prototype.beginEvent = function() {
         this.terminate();
         return;
     }
+};
+
+// override to reject certain file types:
+ImportFile.prototype.isSupported = function(fileName) {
+    return true;
 };
 
 ImportFile.prototype.finishEvent = function() {

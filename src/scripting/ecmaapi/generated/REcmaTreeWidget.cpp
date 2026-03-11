@@ -69,6 +69,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getActiveItem, "getActiveItem");
             
+            REcmaHelper::registerFunction(&engine, proto, scrollToData, "scrollToData");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RTreeWidget*>(), *proto);
 
@@ -453,6 +455,74 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTreeWidget::getActiveItem", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTreeWidget::scrollToData
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTreeWidget::scrollToData", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTreeWidget::scrollToData";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTreeWidget* self = 
+                        getSelf("scrollToData", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: Qt::ItemDataRole */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    Qt::ItemDataRole
+                    a1 =
+                    (Qt::ItemDataRole)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->scrollToData(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTreeWidget.scrollToData().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTreeWidget::scrollToData", context, engine);
             return result;
         }
          QScriptValue REcmaTreeWidget::toString

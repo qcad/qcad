@@ -151,6 +151,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getStatusBarFont, "getStatusBarFont");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getByBlockColor, "getByBlockColor");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getSelectionColor, "getSelectionColor");
             
             REcmaHelper::registerFunction(&engine, &ctor, getReferencePointColor, "getReferencePointColor");
@@ -279,6 +281,12 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, clearRecentFiles, "clearRecentFiles");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getThumbnailFilePath, "getThumbnailFilePath");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, addThumbnail, "addThumbnail");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, removeThumbnail, "removeThumbnail");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getColor, "getColor");
             
             REcmaHelper::registerFunction(&engine, &ctor, hasValue, "hasValue");
@@ -392,6 +400,8 @@
             REcmaHelper::registerFunction(&engine, &ctor, appendOpenGLMessage, "appendOpenGLMessage");
             
             REcmaHelper::registerFunction(&engine, &ctor, getOpenGLMessages, "getOpenGLMessages");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, useQml, "useQml");
             
 
     // static properties:
@@ -3204,6 +3214,45 @@
             return result;
         }
          QScriptValue
+        REcmaSettings::getByBlockColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getByBlockColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getByBlockColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        RSettings::
+       getByBlockColor();
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getByBlockColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getByBlockColor", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSettings::getSelectionColor
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -5629,6 +5678,57 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QImage */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument is reference
+                    QImage*
+                    ap1 =
+                    qscriptvalue_cast<
+                    QImage*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+
+                           return REcmaHelper::throwError("RSettings: Argument 1 is not of type QImage* or QSharedPointer<QImage>.",
+                               context);
+                    }
+                    QImage& a1 = *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       addRecentFile(a0
+        ,
+    a1);
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.addRecentFile().",
                    context);
@@ -5752,6 +5852,170 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::clearRecentFiles", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getThumbnailFilePath
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getThumbnailFilePath", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getThumbnailFilePath";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getThumbnailFilePath(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getThumbnailFilePath().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getThumbnailFilePath", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::addThumbnail
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::addThumbnail", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::addThumbnail";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QImage */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument is reference
+                    QImage*
+                    ap1 =
+                    qscriptvalue_cast<
+                    QImage*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+
+                           return REcmaHelper::throwError("RSettings: Argument 1 is not of type QImage* or QSharedPointer<QImage>.",
+                               context);
+                    }
+                    QImage& a1 = *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       addThumbnail(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.addThumbnail().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::addThumbnail", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::removeThumbnail
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::removeThumbnail", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::removeThumbnail";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       removeThumbnail(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.removeThumbnail().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::removeThumbnail", context, engine);
             return result;
         }
          QScriptValue
@@ -8417,6 +8681,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getOpenGLMessages", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::useQml
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::useQml", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::useQml";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       useQml();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.useQml().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::useQml", context, engine);
             return result;
         }
          QScriptValue REcmaSettings::toString

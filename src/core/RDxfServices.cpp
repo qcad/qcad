@@ -27,6 +27,8 @@
 QMap<unsigned int, QRgb> RDxfServices::aci;
 QMap<QRgb, unsigned int> RDxfServices::revAci;
 
+RDxfServicesProxy* RDxfServices::dxfServicesProxy = NULL;
+
 RDxfServices::RDxfServices() :
     version2GotDIMZIN(false),
     version2GotDIMAZIN(false),
@@ -2276,6 +2278,15 @@ QString RDxfServices::parseUnicode(const QString& str) {
     }
 #endif
     return ret;
+}
+
+QString RDxfServices::decodeMifString(const QString& input) {
+    if (dxfServicesProxy!=NULL) {
+        return dxfServicesProxy->decodeMifString(input);
+    }
+    else {
+        return input;
+    }
 }
 
 void RDxfServices::autoFixLinetypePattern(RLinetypePattern& pattern) {

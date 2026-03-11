@@ -35,7 +35,7 @@
 #include "RMainWindow.h"
 #include "RPainterPathExporter.h"
 #include "RSettings.h"
-#include "RShapesExporter.h"
+#include "RLinetypePatternExporter.h"
 #include "RTransform.h"
 #include "RTriangle.h"
 #include "RUnit.h"
@@ -303,7 +303,7 @@ void RGraphicsSceneQt::transformAndApplyPatternPath(RPainterPath& path) const {
                 length += pathShapes[i]->getLength();
             }
             //qDebug() << "pattern offset:" << lp.getPatternOffset(length);
-            RShapesExporter(ppe, pathShapes, lp.getPatternOffset(length));
+            RLinetypePatternExporter(ppe, pathShapes, lp.getPatternOffset(length));
             RPainterPath p = ppe.getPainterPath();
             //qDebug() << "path with dashes:" << p;
             pathWithPattern.addPath(p);
@@ -335,7 +335,7 @@ void RGraphicsSceneQt::transformAndApplyPatternPath(RPainterPath& path) const {
                 }
 
                 //qDebug() << "pattern offset:" << lp.getPatternOffset(length);
-                RShapesExporter(ppe, shapes, offset);
+                RLinetypePatternExporter(ppe, shapes, offset);
                 //lp.getPatternOffset(length));
                 RPainterPath p = ppe.getPainterPath();
                 pathWithPattern.addPath(p);

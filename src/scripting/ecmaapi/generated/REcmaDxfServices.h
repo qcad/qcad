@@ -154,6 +154,9 @@
         parseUnicode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        decodeMifString
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         autoFixLinetypePattern
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -167,6 +170,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasProxy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

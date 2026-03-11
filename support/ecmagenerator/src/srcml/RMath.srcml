@@ -107,10 +107,10 @@
      * \nonscriptable
      */</comment>
     <template>template <parameter_list>&lt;<param><type>class</type> <name>T</name></param>&gt;</parameter_list>
-    <function><type><name>static</name> <name>void</name></type> <name>swap</name><parameter_list>( <param><decl><type><name>T</name> &amp;</type><name>a</name></decl></param>, <param><decl><type><name>T</name> &amp;</type><name>b</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>static</name> <name>void</name></type> <name>swap</name><parameter_list>(<param><decl><type><name>T</name> &amp;</type><name>a</name></decl></param>, <param><decl><type><name>T</name> &amp;</type><name>b</name></decl></param>)</parameter_list> <comment type="block">/*noexcept*/</comment> <block>{
         <function_decl><type><name>const</name> <name>T</name></type> <name>ttmp</name><parameter_list>(<param><decl><type><name>a</name></type></decl></param>)</parameter_list>;</function_decl>
-        <expr_stmt><expr><name>a</name>=<name>b</name></expr>;</expr_stmt>
-        <expr_stmt><expr><name>b</name>=<name>ttmp</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>a</name> = <name>b</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>b</name> = <name>ttmp</name></expr>;</expr_stmt>
     }</block></function></template>
 
     <function_decl><type><name>static</name> <name>double</name></type> <name>trunc</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
