@@ -412,16 +412,6 @@ protected:
     virtual void paintDocument(const QRect& rect = QRect());
     virtual void paintBackground(RGraphicsViewWorker* worker, const QRect& rect = QRect());
 
-    virtual void endPaint() const;
-    virtual void setBrush(const QBrush& brush) const;
-    virtual void setPen(const QPen& pen) const;
-    virtual void drawLine(const QLineF& line) const;
-
-    /**
-     * \nonscriptable
-     */
-    void initPainter(QPaintDevice& device, bool erase, bool screen = false, const QRect& rect = QRect());
-
     void invalidate(bool force=false);
     virtual void initWorkers();
     virtual RGraphicsViewWorker* initWorker(int threadId);
@@ -456,7 +446,6 @@ protected:
     mutable QTransform transform;
     QTransform previousView;
 
-    QPainter* painter;
     bool doPaintOrigin;
 
     bool isSelected;
