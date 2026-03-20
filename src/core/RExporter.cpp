@@ -1395,7 +1395,7 @@ void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
 //    RPolyline pl;
     if (!arc.isReversed()) {
         // Arc Counterclockwise:
-        if(a1>a2-RS::AngleTolerance) {
+        if(a1>a2) {
             a2+=2*M_PI;
         }
         for (a=a1+aStep; a<=a2; a+=aStep) {
@@ -1408,7 +1408,7 @@ void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
         }
     } else {
         // Arc Clockwise:
-        if (a1<a2+RS::AngleTolerance) {
+        if (a1<a2) {
             a2-=2*M_PI;
         }
         for (a=a1-aStep; a>=a2; a-=aStep) {

@@ -155,7 +155,7 @@ bool RMath::isInf(double v) {
 }
 
 bool RMath::isSane(double v) {
-    return !isNaN(v) && !isInf(v) && v>-1e12 && v<1e12;
+    return !isNaN(v) && !isInf(v);
 }
 
 /**

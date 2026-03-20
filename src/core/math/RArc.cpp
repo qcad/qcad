@@ -416,12 +416,12 @@ double RArc::getAngleLength(bool allowForZeroLength) const {
 
     // full circle or zero length arc:
     if (!allowForZeroLength) {
-        if (ret < RS::PointTolerance) {
+        if (ret < 1.0e-16) {
             ret = 2 * M_PI;
         }
     }
     else {
-        if (ret > 2 * M_PI - RS::PointTolerance) {
+        if (ret > 2 * M_PI - 1.0e-16) {
             ret = 0.0;
         }
     }
