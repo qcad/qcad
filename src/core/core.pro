@@ -150,6 +150,7 @@ HEADERS = \
     RDocumentVariables.h \
     RDocumentInterface.h \
     RDxfServices.h \
+    RDxfServicesProxy.h \
     REntity.h \
     REntityData.h \
     REntityExportListener.h \

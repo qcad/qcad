@@ -31,6 +31,7 @@ add_library(qcadcore SHARED
     RBlock.cpp RBlock.h
     RBlockProxy.h
     RBlockListener.h
+    RDxfServicesProxy.h
     RKeyListener.h
     RMainWindowProxy.h
     RBlockReferenceData.cpp RBlockReferenceData.h
