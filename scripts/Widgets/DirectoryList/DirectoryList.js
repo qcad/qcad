@@ -68,10 +68,14 @@ DirectoryList.prototype.doInit = function(pageWidget, listWidgetName, fileDlgTit
             EAction.activateMainWindow();
             return;
         }
+
         var dir = files[0];
+        if (dir.endsWith("/")) {
+            dir = dir.substring(0, dir.length - 1);
+        }
 
         var found = false;
-        for ( var i = 0; i < listWidget.count; ++i) {
+        for (var i = 0; i < listWidget.count; ++i) {
             var item = listWidget.item(i);
             if (item.text() == dir) {
                 found = true;
