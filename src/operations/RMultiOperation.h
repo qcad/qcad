@@ -1,14 +1,17 @@
 #ifndef RMULTIOPERATION_H
 #define RMULTIOPERATION_H
 
-#include "ROperation.h"
+#include "operations_global.h"
+
 #include <QList>
+
+#include "ROperation.h"
 
 /**
  * \brief An operation that bundles several ROperation objects into one.
  * This allows grouping multiple edits into a single undo/redo step.
  */
-class RMultiOperation : public ROperation {
+class QCADOPERATIONS_EXPORT RMultiOperation : public ROperation {
 public:
     RMultiOperation(bool undoable = true)
         : ROperation(undoable) {
