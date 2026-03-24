@@ -144,6 +144,8 @@ QString RTextRenderer::escNoOpStr = "%%";
 QRegularExpression RTextRenderer::escNoOp(escNoOpStr);
 QString RTextRenderer::rxUnicodeStr = "\\\\[Uu]\\+([0-9a-fA-F]{4})";
 QRegularExpression RTextRenderer::rxUnicode(rxUnicodeStr);
+QString RTextRenderer::rxMifStr = "\\\\M\\+5([0-9A-F]{4})";
+QRegularExpression RTextRenderer::rxMif(rxMifStr);
 // optional break at space or zero-width space (ZWSP, u200B) for wrapping text:
 // ZWSP is inserted between CJK characters to allow for line wrapping anywhere:
 QString RTextRenderer::rxOptionalBreakStr = QString::fromWCharArray(L"[\\s\u200B]+");
@@ -189,6 +191,7 @@ QString rxAllTmp =
     + RTextRenderer::rxDiameterStr + "|"
     + RTextRenderer::rxUnderlineStr + "|"
     + RTextRenderer::rxUnicodeStr + "|"
+    + RTextRenderer::rxMifStr + "|"
       // keep at the end as replacing \p first will break \pqc;, etc.
     + RTextRenderer::rxLineFeedStr;
 
@@ -255,18 +258,8 @@ void RTextRenderer::renderSimple() {
     text.replace(RTextRenderer::rxNoOpEnd, "");
     // unicode:
     text = RDxfServices::parseUnicode(text);
-//    QRegExp reg;
-//    reg.setPattern(rxUnicode);
-//    int ucPos = 0;
-//    bool ok = true;
-//    int uc = 0;
-//    while ((ucPos = reg.indexIn(text, 0)) != -1) {
-//        uc = reg.cap(1).toInt(&ok, 16);
-//        if (!ok) {
-//            break;
-//        }
-//        text.replace(ucPos, reg.matchedLength(), QChar(uc));
-//    }
+    // maker interchange format (MIF):
+    text = RDxfServices::decodeMifString(text);
 
     bool leadingSpaces = false;
     bool trailingSpaces = false;
@@ -1336,16 +1329,14 @@ void RTextRenderer::render() {
             }
         }
 
-//        // unicode (5 hex digits):
-//        reg.setPattern(rxUnicodeM);
-//        if (RS::exactMatch(reg, formatting)) {
-//            uint code = reg.cap(1).toInt(0, 16);
-//            qDebug() << QString("M code: %1").arg(code, 0, 16);
-//            QString c = QString::fromUcs4(&code, 1);
-//            qDebug() << QString("M char: %1").arg(c);
-//            textBlock += c;
-//            continue;
-//        }
+        // Maker Interchange Format (MIF):
+        {
+            QRegularExpressionMatch match;
+            if (RS::exactMatch(rxMif, match, formatting)) {
+                textBlock += RDxfServices::decodeMifString(RS::captured(rxMif, match, 0));
+                continue;
+            }
+        }
 
         // curly braket open:
         //reg = rxCurlyOpen;
@@ -2100,7 +2091,8 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
 
         RPainterPath glyph = font->getGlyph(ch, draft);
         // glyph not available in font (show as question mark):
-        if (glyph.elementCount()==0) {
+        // never show non-breaking space as question mark:
+        if (glyph.elementCount()==0 && QString(ch)!=QStringLiteral("\u200B")) {
             glyph = font->getGlyph('?', draft);
         }
         // if question mark is not available, show nothing:
