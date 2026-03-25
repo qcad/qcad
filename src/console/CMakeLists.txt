@@ -1,3 +1,3 @@
 include(../../CMakeInclude.txt)
-include(../run/CMakeInclude.txt)
 project(qcadcmd.com)
+include(../run/CMakeInclude.txt)
