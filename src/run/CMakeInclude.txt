@@ -149,3 +149,19 @@ if(win32-msvc2010)
     )
 endif()
 
+set(PLUGIN_DIRS
+    platforms
+    platforminputcontexts
+    xcbglintegrations
+)
+
+foreach(PLUGIN_DIR ${PLUGIN_DIRS})
+    file(GLOB PLUGIN_FILES "${QT_INSTALL_PLUGINS}/${PLUGIN_DIR}/*.so")
+
+    if (NOT PLUGIN_FILES)
+        message(FATAL_ERROR "Required Qt plugins not found for dir '${PLUGIN_DIR}' in '${QT_INSTALL_PLUGINS}/${PLUGIN_DIR}'")
+    endif()
+
+    file(COPY ${PLUGIN_FILES} DESTINATION ${CMAKE_CURRENT_LIST_DIR}/../../plugins/${PLUGIN_DIR})
+endforeach()
+

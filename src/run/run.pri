@@ -113,50 +113,24 @@ else {
             }
         }
 
-        greaterThan(QT_MAJOR_VERSION, 4) {
-            #system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libqxcb.so" "$${DESTDIR}/../platforms")
-            #system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libqoffscreen.so" "$${DESTDIR}/../platforms")
-            #system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libqminimal.so" "$${DESTDIR}/../platforms")
-            #system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libqlinuxfb.so" "$${DESTDIR}/../platforms")
-            system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libq*.so" "$${DESTDIR}/../platforms")
-            system(cp "$$[QT_INSTALL_PLUGINS]/platforminputcontexts/*.so" "$${DESTDIR}/../platforminputcontexts")
-            system(cp "$$[QT_INSTALL_PLUGINS]/xcbglintegrations/*.so" "$${DESTDIR}/../xcbglintegrations")
-            system(cp -r "$$[QT_INSTALL_PLUGINS]/wayland-*" "$${DESTDIR}/../")
-        }
+        system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libq*.so" "$${DESTDIR}/../plugins/platforms")
+        system(cp "$$[QT_INSTALL_PLUGINS]/platforminputcontexts/*.so" "$${DESTDIR}/../plugins/platforminputcontexts")
+        system(cp "$$[QT_INSTALL_PLUGINS]/xcbglintegrations/*.so" "$${DESTDIR}/../plugins/xcbglintegrations")
+        system(cp -r "$$[QT_INSTALL_PLUGINS]/wayland-*" "$${DESTDIR}/../plugins/")
     }
 
     else:win32 {
-        greaterThan(QT_MAJOR_VERSION, 4) {
-            FILES += \
-                imageformats\\qgif.dll \
-                imageformats\\qico.dll \
-                imageformats\\qjpeg.dll \
-                imageformats\\qsvg.dll \
-                imageformats\\qtga.dll \
-                imageformats\\qtiff.dll \
-                imageformats\\qwbmp.dll \
-                sqldrivers\\qsqlite.dll \
-                sqldrivers\\qsqlodbc.dll \\
-                printsupport\\windowsprintersupport.dll
-        }
-
-        contains(QT_VERSION, ^4\\..*\\..*) {
-            FILES += \
-                imageformats\\qgif4.dll \
-                imageformats\\qico4.dll \
-                imageformats\\qjpeg4.dll \
-                imageformats\\qsvg4.dll \
-                imageformats\\qtiff4.dll \
-                sqldrivers\\qsqlite4.dll \
-                codecs\\qcncodecs4.dll \
-                codecs\\qjpcodecs4.dll \
-                codecs\\qkrcodecs4.dll \
-                codecs\\qtwcodecs4.dll
-        }
-
-        contains(QT_VERSION, ^4\\.8\\..*) {
-            FILES += imageformats\\qtga4.dll
-        }
+        FILES += \
+            imageformats\\qgif.dll \
+            imageformats\\qico.dll \
+            imageformats\\qjpeg.dll \
+            imageformats\\qsvg.dll \
+            imageformats\\qtga.dll \
+            imageformats\\qtiff.dll \
+            imageformats\\qwbmp.dll \
+            sqldrivers\\qsqlite.dll \
+            sqldrivers\\qsqlodbc.dll \\
+            printsupport\\windowsprintersupport.dll
 
         DESTDIR_WIN = $${DESTDIR}
         DESTDIR_WIN ~= s,/,\\,g
@@ -178,14 +152,9 @@ else {
         }
 
         # copy Qt libraries into same dir as exe to avoid Qt version mixup:
-        greaterThan(QT_MAJOR_VERSION, 4) {
-            system(copy "$${QT_INSTALL_BINS_WIN}\\*.dll" "$${DESTDIR_WIN}")
-            system(copy "$${QT_INSTALL_PLUGINS_WIN}\\platforms\\*.dll" "$${DESTDIR_WIN}\\..\\platforms")
-            system(copy "$${QT_INSTALL_PLUGINS_WIN}\\styles\\*.dll" "$${DESTDIR_WIN}\\..\\styles")
-        }
-        else {
-            system(copy "$${QT_INSTALL_LIBS_WIN}\\*.dll" "$${DESTDIR_WIN}")
-        }
+        system(copy "$${QT_INSTALL_BINS_WIN}\\*.dll" "$${DESTDIR_WIN}")
+        system(copy "$${QT_INSTALL_PLUGINS_WIN}\\platforms\\*.dll" "$${DESTDIR_WIN}\\..\\plugins\\platforms")
+        system(copy "$${QT_INSTALL_PLUGINS_WIN}\\styles\\*.dll" "$${DESTDIR_WIN}\\..\\styles")
     }
 }
 
