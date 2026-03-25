@@ -1,1 +1,1 @@
-Copy QWebView plugin from folder $QTDIR/plugins/designer here.
+Copy contents of folder $QTDIR/plugins/designer here.
