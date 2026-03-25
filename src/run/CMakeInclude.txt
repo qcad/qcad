@@ -122,11 +122,11 @@ if(NOT r_no_opennurbs)
     )
 endif()
 
-if(linux-g++)
-    target_link_libraries(${PROJECT_NAME} PRIVATE
-        GLU
-    )
-endif()
+#if(linux-g++)
+#    target_link_libraries(${PROJECT_NAME} PRIVATE
+#       GLU
+#    )
+#endif()
 
 
 if(${CMAKE_SYSTEM_NAME} STREQUAL "Darwin")
@@ -152,40 +152,53 @@ endif()
 
 # 1. Find the qmake executable
 # If you are using Qt6, the target is usually Qt6::qmake
-get_target_property(QMAKE_EXECUTABLE Qt6::qmake IMPORTED_LOCATION)
+#get_target_property(QMAKE_EXECUTABLE Qt6::qmake IMPORTED_LOCATION)
 
-if(NOT QMAKE_EXECUTABLE)
-    message(FATAL_ERROR "Could not find qmake executable. Ensure find_package(Qt6 ...) was called.")
-endif()
+#if(NOT QMAKE_EXECUTABLE)
+#    message(FATAL_ERROR "Could not find qmake executable. Ensure find_package(Qt6 ...) was called.")
+#endif()
 
 # 2. Query the plugins directory
-execute_process(
-    COMMAND ${QMAKE_EXECUTABLE} -query QT_INSTALL_PLUGINS
-    OUTPUT_VARIABLE QT_INSTALL_PLUGINS
-    OUTPUT_STRIP_TRAILING_WHITESPACE
-    RESULT_VARIABLE QMAKE_QUERY_RESULT
-)
+#execute_process(
+#    COMMAND ${QMAKE_EXECUTABLE} -query QT_INSTALL_PLUGINS
+#    OUTPUT_VARIABLE QT_INSTALL_PLUGINS
+#    OUTPUT_STRIP_TRAILING_WHITESPACE
+#    RESULT_VARIABLE QMAKE_QUERY_RESULT
+#)
 
 # 3. Check if the query itself failed
-if(NOT QMAKE_QUERY_RESULT EQUAL 0)
-    message(FATAL_ERROR "Failed to query qmake for QT_INSTALL_PLUGINS. Exit code: ${QMAKE_QUERY_RESULT}")
-endif()
+#if(NOT QMAKE_QUERY_RESULT EQUAL 0)
+#    message(FATAL_ERROR "Failed to query qmake for QT_INSTALL_PLUGINS. Exit code: ${QMAKE_QUERY_RESULT}")
+#endif()
 
-message(STATUS "Qt Plugins located at: ${QT_INSTALL_PLUGINS}")
+#message(STATUS "Qt Plugins located at: ${QT_INSTALL_PLUGINS}")
 
-set(PLUGIN_DIRS
-    platforms
-    platforminputcontexts
-    xcbglintegrations
-)
-
-foreach(PLUGIN_DIR ${PLUGIN_DIRS})
-    file(GLOB PLUGIN_FILES "${QT_INSTALL_PLUGINS}/${PLUGIN_DIR}/*.so")
-
-    if (NOT PLUGIN_FILES)
-        message(FATAL_ERROR "Required Qt plugins not found for dir '${PLUGIN_DIR}' in '${QT_INSTALL_PLUGINS}/${PLUGIN_DIR}'")
-    endif()
-
-    file(COPY ${PLUGIN_FILES} DESTINATION ${CMAKE_CURRENT_LIST_DIR}/../../plugins/${PLUGIN_DIR})
-endforeach()
-
+#if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+#    set(PLUGIN_DIRS
+#        designer
+#        generic
+#        help
+#        iconengines
+#        imageformats
+#        platforminputcontexts
+#        platforms
+#        printsupport
+#        sqldrivers
+#        tls
+#        wayland-decoration-client
+#        wayland-graphics-integration-client
+#        wayland-shell-integration
+#        xcbglintegrations
+#    )
+#
+#    foreach(PLUGIN_DIR ${PLUGIN_DIRS})
+#        file(GLOB PLUGIN_FILES "${QT_INSTALL_PLUGINS}/${PLUGIN_DIR}/*.so")
+#
+#        if (NOT PLUGIN_FILES)
+#            message(FATAL_ERROR "Required Qt plugins not found for dir '${PLUGIN_DIR}' in '${QT_INSTALL_PLUGINS}/${PLUGIN_DIR}'")
+#        endif()
+#
+#        message(STATUS "Copying plugins in '${QT_INSTALL_PLUGINS}/${PLUGIN_DIR}'...")
+#        file(COPY ${PLUGIN_FILES} DESTINATION ${CMAKE_CURRENT_LIST_DIR}/../../plugins/${PLUGIN_DIR})
+#    endforeach()
+#endif()
