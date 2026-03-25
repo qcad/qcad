@@ -47,114 +47,114 @@ else {
 }
 
 # copy Qt plugins to QCAD plugin folder:
-!build_pass {
-    macx {
-        FILES = \
-            imageformats/libqgif.dylib \
-            imageformats/libqico.dylib \
-            imageformats/libqjpeg.dylib \
-            imageformats/libqsvg.dylib \
-            imageformats/libqtiff.dylib \
-            sqldrivers/libqsqlite.dylib \
-            sqldrivers/libqsqlodbc.dylib
-
-        greaterThan(QT_MAJOR_VERSION, 4) {
-            FILES += imageformats/libqtga.dylib
-            FILES += printsupport/libcocoaprintersupport.dylib
-        }
-        else {
-            FILES += \
-                codecs/libqcncodecs.dylib \
-                codecs/libqjpcodecs.dylib \
-                codecs/libqkrcodecs.dylib \
-                codecs/libqtwcodecs.dylib
-        }
-
-        contains(QT_VERSION, ^4\\.8\\..*) {
-            FILES += imageformats/libqtga.dylib
-        }
-
-        for(FILE,FILES) {
-            !exists("$${DESTDIR}/../plugins/$${FILE}") {
-                message("copying file $$[QT_INSTALL_PLUGINS]/$${FILE}")
-                system(cp "$$[QT_INSTALL_PLUGINS]/$${FILE}" "$${DESTDIR}/../plugins/$${FILE}")
-            }
-        }
-    }
-
-    else:unix {
-        FILES = \
-            imageformats/libqgif.so \
-            imageformats/libqico.so \
-            imageformats/libqjpeg.so \
-            imageformats/libqsvg.so \
-            imageformats/libqtiff.so \
-            sqldrivers/libqsqlite.so
-
-        greaterThan(QT_MAJOR_VERSION, 4) {
-            FILES += imageformats/libqtga.so
-            FILES += printsupport/libcupsprintersupport.so
-        }
-        else {
-            FILES += \
-                codecs/libqcncodecs.so \
-                codecs/libqjpcodecs.so \
-                codecs/libqkrcodecs.so \
-                codecs/libqtwcodecs.so
-        }
-
-        contains(QT_VERSION, ^4\\.8\\..*) {
-            FILES += imageformats/libqtga.so
-        }
-
-        for(FILE,FILES) {
-            !exists("$${DESTDIR}/../plugins/$${FILE}") {
-                system(cp "$$[QT_INSTALL_PLUGINS]/$${FILE}" "$${DESTDIR}/../plugins/$${FILE}")
-            }
-        }
-
-        system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libq*.so" "$${DESTDIR}/../plugins/platforms")
-        system(cp "$$[QT_INSTALL_PLUGINS]/platforminputcontexts/*.so" "$${DESTDIR}/../plugins/platforminputcontexts")
-        system(cp "$$[QT_INSTALL_PLUGINS]/xcbglintegrations/*.so" "$${DESTDIR}/../plugins/xcbglintegrations")
-        system(cp -r "$$[QT_INSTALL_PLUGINS]/wayland-*" "$${DESTDIR}/../plugins/")
-    }
-
-    else:win32 {
-        FILES += \
-            imageformats\\qgif.dll \
-            imageformats\\qico.dll \
-            imageformats\\qjpeg.dll \
-            imageformats\\qsvg.dll \
-            imageformats\\qtga.dll \
-            imageformats\\qtiff.dll \
-            imageformats\\qwbmp.dll \
-            sqldrivers\\qsqlite.dll \
-            sqldrivers\\qsqlodbc.dll \\
-            printsupport\\windowsprintersupport.dll
-
-        DESTDIR_WIN = $${DESTDIR}
-        DESTDIR_WIN ~= s,/,\\,g
-        QT_INSTALL_PLUGINS_WIN = $$[QT_INSTALL_PLUGINS]
-        QT_INSTALL_PLUGINS_WIN ~= s,/,\\,g
-        QT_INSTALL_BINS_WIN = $$[QT_INSTALL_BINS]
-        QT_INSTALL_BINS_WIN ~= s,/,\\,g
-        QT_INSTALL_LIBS_WIN = $$[QT_INSTALL_LIBS]
-        QT_INSTALL_LIBS_WIN ~= s,/,\\,g
-
-        for(FILE,FILES) {
-            !exists("$${QT_INSTALL_PLUGINS_WIN}\\$${FILE}") {
-                error("File $${QT_INSTALL_PLUGINS_WIN}\\$${FILE} not found. This Qt plugin is required by QCAD.")
-            }
-            !exists("$${DESTDIR_WIN}\\..\\plugins\\$${FILE}") {
-                message(Copying $${FILE})
-                system(copy "$${QT_INSTALL_PLUGINS_WIN}\\$${FILE}" "$${DESTDIR_WIN}\\..\\plugins\\$${FILE}")
-            }
-        }
-
-        # copy Qt libraries into same dir as exe to avoid Qt version mixup:
-        system(copy "$${QT_INSTALL_BINS_WIN}\\*.dll" "$${DESTDIR_WIN}")
-        system(copy "$${QT_INSTALL_PLUGINS_WIN}\\platforms\\*.dll" "$${DESTDIR_WIN}\\..\\plugins\\platforms")
-        system(copy "$${QT_INSTALL_PLUGINS_WIN}\\styles\\*.dll" "$${DESTDIR_WIN}\\..\\styles")
-    }
-}
-
+#!build_pass {
+#    macx {
+#        FILES = \
+#            imageformats/libqgif.dylib \
+#            imageformats/libqico.dylib \
+#            imageformats/libqjpeg.dylib \
+#            imageformats/libqsvg.dylib \
+#            imageformats/libqtiff.dylib \
+#            sqldrivers/libqsqlite.dylib \
+#            sqldrivers/libqsqlodbc.dylib
+#
+#        greaterThan(QT_MAJOR_VERSION, 4) {
+#            FILES += imageformats/libqtga.dylib
+#            FILES += printsupport/libcocoaprintersupport.dylib
+#        }
+#        else {
+#            FILES += \
+#                codecs/libqcncodecs.dylib \
+#                codecs/libqjpcodecs.dylib \
+#                codecs/libqkrcodecs.dylib \
+#                codecs/libqtwcodecs.dylib
+#        }
+#
+#        contains(QT_VERSION, ^4\\.8\\..*) {
+#            FILES += imageformats/libqtga.dylib
+#        }
+#
+#        for(FILE,FILES) {
+#            !exists("$${DESTDIR}/../plugins/$${FILE}") {
+#                message("copying file $$[QT_INSTALL_PLUGINS]/$${FILE}")
+#                system(cp "$$[QT_INSTALL_PLUGINS]/$${FILE}" "$${DESTDIR}/../plugins/$${FILE}")
+#            }
+#        }
+#    }
+#
+#    else:unix {
+#        FILES = \
+#            imageformats/libqgif.so \
+#            imageformats/libqico.so \
+#            imageformats/libqjpeg.so \
+#            imageformats/libqsvg.so \
+#            imageformats/libqtiff.so \
+#            sqldrivers/libqsqlite.so
+#
+#        greaterThan(QT_MAJOR_VERSION, 4) {
+#            FILES += imageformats/libqtga.so
+#            FILES += printsupport/libcupsprintersupport.so
+#        }
+#        else {
+#            FILES += \
+#                codecs/libqcncodecs.so \
+#                codecs/libqjpcodecs.so \
+#                codecs/libqkrcodecs.so \
+#                codecs/libqtwcodecs.so
+#        }
+#
+#        contains(QT_VERSION, ^4\\.8\\..*) {
+#            FILES += imageformats/libqtga.so
+#        }
+#
+#        for(FILE,FILES) {
+#            !exists("$${DESTDIR}/../plugins/$${FILE}") {
+#                system(cp "$$[QT_INSTALL_PLUGINS]/$${FILE}" "$${DESTDIR}/../plugins/$${FILE}")
+#            }
+#        }
+#
+#        system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libq*.so" "$${DESTDIR}/../plugins/platforms")
+#        system(cp "$$[QT_INSTALL_PLUGINS]/platforminputcontexts/*.so" "$${DESTDIR}/../plugins/platforminputcontexts")
+#        system(cp "$$[QT_INSTALL_PLUGINS]/xcbglintegrations/*.so" "$${DESTDIR}/../plugins/xcbglintegrations")
+#        system(cp -r "$$[QT_INSTALL_PLUGINS]/wayland-*" "$${DESTDIR}/../plugins/")
+#    }
+#
+#    else:win32 {
+#        FILES += \
+#            imageformats\\qgif.dll \
+#            imageformats\\qico.dll \
+#            imageformats\\qjpeg.dll \
+#            imageformats\\qsvg.dll \
+#            imageformats\\qtga.dll \
+#            imageformats\\qtiff.dll \
+#            imageformats\\qwbmp.dll \
+#            sqldrivers\\qsqlite.dll \
+#            sqldrivers\\qsqlodbc.dll \\
+#            printsupport\\windowsprintersupport.dll
+#
+#        DESTDIR_WIN = $${DESTDIR}
+#        DESTDIR_WIN ~= s,/,\\,g
+#        QT_INSTALL_PLUGINS_WIN = $$[QT_INSTALL_PLUGINS]
+#        QT_INSTALL_PLUGINS_WIN ~= s,/,\\,g
+#        QT_INSTALL_BINS_WIN = $$[QT_INSTALL_BINS]
+#        QT_INSTALL_BINS_WIN ~= s,/,\\,g
+#        QT_INSTALL_LIBS_WIN = $$[QT_INSTALL_LIBS]
+#        QT_INSTALL_LIBS_WIN ~= s,/,\\,g
+#
+#        for(FILE,FILES) {
+#            !exists("$${QT_INSTALL_PLUGINS_WIN}\\$${FILE}") {
+#                error("File $${QT_INSTALL_PLUGINS_WIN}\\$${FILE} not found. This Qt plugin is required by QCAD.")
+#            }
+#            !exists("$${DESTDIR_WIN}\\..\\plugins\\$${FILE}") {
+#                message(Copying $${FILE})
+#                system(copy "$${QT_INSTALL_PLUGINS_WIN}\\$${FILE}" "$${DESTDIR_WIN}\\..\\plugins\\$${FILE}")
+#            }
+#        }
+#
+#        # copy Qt libraries into same dir as exe to avoid Qt version mixup:
+#        system(copy "$${QT_INSTALL_BINS_WIN}\\*.dll" "$${DESTDIR_WIN}")
+#        system(copy "$${QT_INSTALL_PLUGINS_WIN}\\platforms\\*.dll" "$${DESTDIR_WIN}\\..\\plugins\\platforms")
+#        system(copy "$${QT_INSTALL_PLUGINS_WIN}\\styles\\*.dll" "$${DESTDIR_WIN}\\..\\styles")
+#    }
+#}
+#
