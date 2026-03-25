@@ -149,6 +149,30 @@ if(win32-msvc2010)
     )
 endif()
 
+
+# 1. Find the qmake executable
+# If you are using Qt6, the target is usually Qt6::qmake
+get_target_property(QMAKE_EXECUTABLE Qt6::qmake IMPORTED_LOCATION)
+
+if(NOT QMAKE_EXECUTABLE)
+    message(FATAL_ERROR "Could not find qmake executable. Ensure find_package(Qt6 ...) was called.")
+endif()
+
+# 2. Query the plugins directory
+execute_process(
+    COMMAND ${QMAKE_EXECUTABLE} -query QT_INSTALL_PLUGINS
+    OUTPUT_VARIABLE QT_INSTALL_PLUGINS
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+    RESULT_VARIABLE QMAKE_QUERY_RESULT
+)
+
+# 3. Check if the query itself failed
+if(NOT QMAKE_QUERY_RESULT EQUAL 0)
+    message(FATAL_ERROR "Failed to query qmake for QT_INSTALL_PLUGINS. Exit code: ${QMAKE_QUERY_RESULT}")
+endif()
+
+message(STATUS "Qt Plugins located at: ${QT_INSTALL_PLUGINS}")
+
 set(PLUGIN_DIRS
     platforms
     platforminputcontexts
