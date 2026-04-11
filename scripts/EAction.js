@@ -1180,10 +1180,11 @@ EAction.getMainCadToolBarPanel = function() {
  * first time.
  * 
  * \param title Translated title to use for the CAD toolbar panel. E.g.
- * qsTr("Snap"). \param objectName Object name to use for the panel. Used mainly
- * for later identification of the panel. E.g. "snap". \param hasBackButton True
- * to display a back button at the top or left to allow the user to navigate
- * back to the main CAD toolbar panel.
+ * qsTr("Snap").
+ * \param objectName Object name to use for the panel. Used mainly
+ * for later identification of the panel. E.g. "snap".
+ * \param hasBackButton True to display a back button at the top or left to allow
+ * the user to navigate back to the main CAD toolbar panel.
  */
 EAction.getCadToolBarPanel = function(title, objectName, hasBackButton) {
     var appWin = EAction.getMainWindow();
@@ -1193,7 +1194,6 @@ EAction.getCadToolBarPanel = function(title, objectName, hasBackButton) {
     if (isNull(cadToolBar)) {
         cadToolBar = new RCadToolBar(qsTr("CAD Tools"), appWin);
         cadToolBar.objectName = "CadToolBar";
-//        cadToolBar.updateIconSize();
 
         cadToolBar.topLevelChanged.connect(function(onOff) {
             RSettings.setValue("CadToolBar/VerticalWhenFloating", false);
