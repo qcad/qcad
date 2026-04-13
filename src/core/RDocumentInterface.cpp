@@ -1432,6 +1432,8 @@ bool RDocumentInterface::exportFile(const QString& fileName, const QString& file
     }
     delete fileExporter;
 
+    updateThumbnail();
+
     return success;
 }
 
@@ -2950,4 +2952,16 @@ void RDocumentInterface::bindXRef(RBlock* block) {
 
     RTransaction t = proxy->bindXRef(block);
     objectChangeEvent(t);
+}
+
+void RDocumentInterface::updateThumbnail() {
+    RGraphicsView* view = getGraphicsViewWithFocus();
+    if (view!=NULL) {
+        thumbnail = view->getBuffer();
+        thumbnail = thumbnail.scaled(512, 512, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    }
+}
+
+QImage RDocumentInterface::getThumbnail() const {
+    return thumbnail;
 }
