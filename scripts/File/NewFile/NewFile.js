@@ -214,7 +214,7 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
         }
 
         RSettings.removeRecentFile(fileName);
-        RSettings.addRecentFile(fileName, documentInterface.getThumbnail());
+        RSettings.addRecentFile(fileName, di.getThumbnail());
     }
 
     if (!isOpen) {
