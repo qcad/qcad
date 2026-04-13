@@ -230,10 +230,14 @@ public:
     static QLocale getNumberLocale();
 
     static void initRecentFiles();
-    static void addRecentFile(const QString& fileName);
+    static void addRecentFile(const QString& fileName, const QImage& thumbnail=QImage());
     static void removeRecentFile(const QString& fileName);
     static QStringList getRecentFiles();
     static void clearRecentFiles();
+
+    static QString getThumbnailFilePath(const QString& fileName);
+    static void addThumbnail(const QString& fileName, const QImage& thumbnail);
+    static void removeThumbnail(const QString& fileName);
 
     static RColor getColor(const QString& key, const RColor& defaultValue=RDEFAULT_RCOLOR);
 
@@ -314,6 +318,8 @@ public:
 
     static void appendOpenGLMessage(const QString& msg);
     static QStringList getOpenGLMessages();
+
+    static bool useQml();
 
 private:
     static bool isInitialized();
