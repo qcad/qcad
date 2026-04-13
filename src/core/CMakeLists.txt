@@ -169,6 +169,7 @@ add_library(qcadcore SHARED
     RViewportEntity.cpp RViewportEntity.h
     RWheelEvent.cpp RWheelEvent.h
     RWidget.cpp RWidget.h
+    bridges/RSettingsBridge.cpp bridges/RSettingsBridge.h
     math/RArc.cpp math/RArc.h
     math/RArcProxy.h
     math/RBox.cpp math/RBox.h
@@ -202,6 +203,7 @@ add_library(qcadcore SHARED
 target_include_directories(qcadcore PUBLIC
     ../../src/3rdparty
     ../../src/core
+    ../../src/core/bridges
     ../../src/core/math
     ../../src/entity
     ../../src/grid
