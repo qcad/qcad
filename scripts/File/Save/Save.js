@@ -168,7 +168,7 @@ Save.prototype.save = function(fileName, fileVersion, overwriteWarning) {
         title = title.replace(/&/g, "&&");
         mdiChild.setWindowTitle(addDirtyFlag(title));
     }
-    RSettings.addRecentFile(fileName);
+    RSettings.addRecentFile(fileName, di.getThumbnail());
 
     appWin.handleUserMessage(qsTr("Saved file:") + " " + fileName);
     if (fileVersion.length!==0) {
