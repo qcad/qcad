@@ -293,7 +293,7 @@ public:
 
     virtual void paintOverlay();
 
-    QImage getBuffer() const;
+    virtual QImage getBuffer() const;
     QTransform getTransform() const;
 
     void clearBackground();
