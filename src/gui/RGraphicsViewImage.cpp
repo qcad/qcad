@@ -154,10 +154,11 @@ void RGraphicsViewImage::regenerate(bool force) {
     repaintView();
     viewportChangeEvent();
 
-    if (widget!=NULL) {
-        // this calls updateImage:
-        widget->update();
-    }
+    // 20260414: this is already handled in repaintView, no need to call it here again:
+    // if (widget!=NULL) {
+    //     // this calls updateImage:
+    //     widget->update();
+    // }
 }
 
 /**
