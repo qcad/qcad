@@ -212,9 +212,6 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
         if (document.getFileVersion().length!==0) {
             appWin.handleUserMessage(qsTr("Format:") + " " + document.getFileVersion());
         }
-
-        RSettings.removeRecentFile(fileName);
-        RSettings.addRecentFile(fileName, di.getThumbnail());
     }
 
     if (!isOpen) {
@@ -329,6 +326,17 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
 
         // in case the application does not have the focus, make sure the status of various buttons is still updated:
         appWin.notifyViewFocusListeners(di.getLastKnownViewWithFocus());
+    }
+
+    if (isOpen) {
+        // remove from recent files list and add again to make sure file is at the top:
+        RSettings.removeRecentFile(fileName);
+
+        // force image buffer update to make sure the thumbnail is up to date when added to recent files:
+        var view = di.getLastKnownViewWithFocus()
+        view.updateImage();
+        di.updateThumbnail();
+        RSettings.addRecentFile(fileName, di.getThumbnail());
     }
 
     return mdiChild;
