@@ -1768,6 +1768,12 @@ void RDocumentInterface::highlightEntity(REntity::Id entityId) {
         }
     }
 
+    if (entity->getType()==RS::EntityHatch) {
+        if (RSettings::getBoolValue("GraphicsView/HighlightHatch", false)==false) {
+            return;
+        }
+    }
+
     QList<RGraphicsScene*>::iterator it;
     for (it=scenes.begin(); it!=scenes.end(); it++) {
         (*it)->highlightEntity(*entity);

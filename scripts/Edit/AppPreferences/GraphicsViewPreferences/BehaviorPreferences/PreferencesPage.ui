@@ -302,6 +302,13 @@
            </property>
           </widget>
          </item>
+         <item row="4" column="0" colspan="2">
+          <widget class="QCheckBox" name="HighlightHatch">
+           <property name="text">
+            <string>Highlight (and raise) hatches and solid fills within range</string>
+           </property>
+          </widget>
+         </item>
         </layout>
        </item>
        <item>
