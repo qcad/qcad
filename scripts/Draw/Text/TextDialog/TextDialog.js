@@ -87,6 +87,7 @@ function TextDialog(mode) {
 }
 
 TextDialog.prototype = {};
+TextDialog.basePath = includeBasePath;
 
 TextDialog.Mode = {
     Text : 0,
@@ -136,6 +137,11 @@ TextDialog.prototype.show =  function(textDataIn) {
     this.textEdit = this.dialog.findChild("Text");
     this.sourceEdit = this.dialog.findChild("Source");
     this.tabWidget = this.dialog.findChild("TabWidget");
+
+    // var self = this;
+    // this.textEdit.textChanged.connect(function() {
+    //     qDebug("\n\nhtml: " + self.textEdit.html + "\n\n");
+    // });
 
     // main font combo box:
     var comboMainFont = this.dialog.findChild("MainFont");
@@ -399,7 +405,6 @@ TextDialog.prototype.show =  function(textDataIn) {
         else {
             // initial color is invalid (no document, never reached):
             this.initialColor = new RColor();
-            debugger;
         }
     }
 
@@ -515,8 +520,6 @@ TextDialog.prototype.show =  function(textDataIn) {
         return undefined;
     }
 };
-
-TextDialog.basePath = includeBasePath;
 
 TextDialog.prototype.setupEditActions = function() {
     var a;
