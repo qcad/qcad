@@ -3219,7 +3219,9 @@ function writeTextFile(fileName, str) {
         setUtf8Codec(textStream);
         textStream.writeString(str);
         file.close();
+        return true;
     }
+    return false;
 }
 
 function getKeyboardModifiers(event) {
