@@ -124,6 +124,7 @@ public:
     static QFont getInfoLabelFont();
     static QFont getStatusBarFont();
 
+    static RColor getByBlockColor();
     static RColor getSelectionColor();
     static RColor getReferencePointColor();
     static RColor getStartReferencePointColor();
@@ -335,6 +336,7 @@ private:
     static QFont* snapLabelFont;
     static QFont* infoLabelFont;
     static QFont* statusBarFont;
+    static RColor* byBlockColor;
     static RColor* selectionColor;
     static RColor* referencePointColor;
     static RColor* startReferencePointColor;

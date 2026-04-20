@@ -345,7 +345,7 @@ QBrush RExporter::getBrush(const RPainterPath& path) {
             }
             else {
                 // this can happen (by block at top level):
-                color = RColor(Qt::white);
+                color = RSettings::getByBlockColor();
                 //qWarning("color by block but current block reference is NULL");
                 //Q_ASSERT(false);
             }
@@ -530,15 +530,15 @@ bool RExporter::exportDocument() {
     if (!exportDocumentSettings()) {
         return false;
     }
-    qDebug() << "exporting linetypes";
+    //qDebug() << "exporting linetypes";
     exportLinetypes();
-    qDebug() << "exporting layers";
+    //qDebug() << "exporting layers";
     exportLayers();
-    qDebug() << "exporting layer states";
+    //qDebug() << "exporting layer states";
     exportLayerStates();
-    qDebug() << "exporting blocks";
+    //qDebug() << "exporting blocks";
     exportBlocks();
-    qDebug() << "exporting views";
+    //qDebug() << "exporting views";
     exportViews();
     //qDebug() << "exporting entities";
     if (isVisualExporter()) {

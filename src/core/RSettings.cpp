@@ -59,6 +59,7 @@ QFont* RSettings::rulerFont = NULL;
 QFont* RSettings::snapLabelFont = NULL;
 QFont* RSettings::infoLabelFont = NULL;
 QFont* RSettings::statusBarFont = NULL;
+RColor* RSettings::byBlockColor = NULL;
 RColor* RSettings::selectionColor = NULL;
 RColor* RSettings::referencePointColor = NULL;
 RColor* RSettings::startReferencePointColor = NULL;
@@ -859,6 +860,13 @@ QFont RSettings::getStatusBarFont() {
         statusBarFont = new QFont(getValue("StatusBar/Font", font).value<QFont>());
     }
     return *statusBarFont;
+}
+
+RColor RSettings::getByBlockColor() {
+    if (byBlockColor==NULL) {
+        byBlockColor = new RColor(getColor("GraphicsViewColors/ByBlockColor", RColor(255,255,255)));
+    }
+    return *byBlockColor;
 }
 
 RColor RSettings::getSelectionColor() {
@@ -2048,6 +2056,10 @@ void RSettings::resetCache() {
     if (statusBarFont!=NULL) {
         delete statusBarFont;
         statusBarFont = NULL;
+    }
+    if (byBlockColor!=NULL) {
+        delete byBlockColor;
+        byBlockColor = NULL;
     }
     if (selectionColor!=NULL) {
         delete selectionColor;
