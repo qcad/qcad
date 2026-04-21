@@ -329,9 +329,6 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
     }
 
     if (isOpen) {
-        // remove from recent files list and add again to make sure file is at the top:
-        RSettings.removeRecentFile(fileName);
-
         // force image buffer update to make sure the thumbnail is up to date when added to recent files:
         var view = di.getLastKnownViewWithFocus()
         view.updateImage();
