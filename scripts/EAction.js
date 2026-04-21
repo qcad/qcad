@@ -384,8 +384,10 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
             this.additionalOptionsToolBars.push(optionsToolBar);
         }
 
-        // show:
+        // remember settings group used to restore / save settings of this tool:
         this.settingsGroup = wOptions.objectName;
+
+        // move widgets from UI file widget to options tool bar and keep track of them in this.optionWidgetActions for later removal:
         var movedWidgets = WidgetFactory.moveChildren(wOptions, optionsToolBar, this.settingsGroup);
 
         this.optionWidgetActions = this.optionWidgetActions.concat(movedWidgets);
