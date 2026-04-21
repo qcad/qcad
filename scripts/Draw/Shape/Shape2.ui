@@ -6,37 +6,37 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>197</width>
+    <width>186</width>
     <height>50</height>
    </rect>
   </property>
   <layout class="QHBoxLayout">
    <item>
-    <widget class="QCheckBox" name="CreatePolyline">
+    <widget class="QCheckBox" name="RoundCorners">
      <property name="text">
-      <string>Create Polyline</string>
+      <string>Radius:</string>
      </property>
-     <property name="MoveToDialog" stdset="0">
-      <bool>true</bool>
+     <property name="AutoFocusWidget" stdset="0">
+      <string notr="true">Radius</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="Line" name="line_2">
-     <property name="orientation">
-      <enum>Qt::Orientation::Vertical</enum>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QCheckBox" name="Fill">
+    <widget class="RMathLineEdit" name="Radius">
      <property name="text">
-      <string>Fill</string>
+      <string notr="true">1</string>
      </property>
     </widget>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

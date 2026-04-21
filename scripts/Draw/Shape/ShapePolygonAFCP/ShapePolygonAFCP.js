@@ -31,7 +31,7 @@ function ShapePolygonAFCP(guiAction) {
     this.center = undefined;
     this.middleOfSide = undefined;
 
-    this.setUiOptions(["../Shape.ui", "ShapePolygonAFCP.ui"]);
+    this.setUiOptions(["../Shape.ui", "ShapePolygonAFCP.ui", "../Shape2.ui"]);
 }
 
 ShapePolygonAFCP.prototype = new Shape();

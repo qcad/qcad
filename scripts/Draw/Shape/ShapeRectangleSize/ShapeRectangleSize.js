@@ -36,7 +36,7 @@ function ShapeRectangleSize(guiAction) {
     this.includeBasePath = ShapeRectangleSize.includeBasePath;
     this.dialogUiFile = "ShapeRectangleSizeDialog.ui";
 
-    this.setUiOptions(["../Shape.ui", "ShapeRectangleSize.ui"]);
+    this.setUiOptions(["../Shape.ui", "ShapeRectangleSize.ui", "../Shape2.ui"]);
 }
 
 ShapeRectangleSize.prototype = new DrawBasedOnRectangleSize();
