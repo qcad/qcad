@@ -398,31 +398,31 @@ ShapeAlgorithms.autoSplit = function(shape, otherShapes, position, extend) {
         return [undefined, undefined, shape.clone()];
     }
 
-    // convert circle to arc:
-    if (isCircleShape(shape)) {
-        var ap = shape.getCenter().getAngleTo(position);
-        var arc = new RArc(shape.getCenter(), shape.getRadius(), ap, ap, false);
+    // convert circle to arc with start point and end point identical close to click point "position":
+    // if (isCircleShape(shape)) {
+    //     var ap = shape.getCenter().getAngleTo(position);
+    //     var arc = new RArc(shape.getCenter(), shape.getRadius(), ap, ap, false);
 
-        var maxD = undefined;
-        var p = undefined;
-        for (var i=0; i<ips.length; i++) {
-            var ip = ips[i];
-            var d  = arc.getDistanceFromStart(ip);
-            if (isNull(maxD) || d>maxD) {
-                maxD = d;
-                p = ip;
-            }
-        }
+    //     var maxD = undefined;
+    //     var p = undefined;
+    //     for (var i=0; i<ips.length; i++) {
+    //         var ip = ips[i];
+    //         var d  = arc.getDistanceFromStart(ip);
+    //         if (isNull(maxD) || d>maxD) {
+    //             maxD = d;
+    //             p = ip;
+    //         }
+    //     }
 
-        // no intersections:
-        if (isNull(p)) {
-            return [undefined, undefined, shape.clone()];
-        }
+    //     // no intersections:
+    //     if (isNull(p)) {
+    //         return [undefined, undefined, shape.clone()];
+    //     }
 
-        // angle at intersection point closest to end of arc is where we split the circle:
-        ap = shape.getCenter().getAngleTo(p);
-        shape = new RArc(shape.getCenter(), shape.getRadius(), ap, ap, false);
-    }
+    //     // angle at intersection point closest to end of arc is where we split the circle:
+    //     ap = shape.getCenter().getAngleTo(p);
+    //     shape = new RArc(shape.getCenter(), shape.getRadius(), ap, ap, false);
+    // }
 
     // find intersection points closest to position:
     // array of two distances and two point vectors:
@@ -693,43 +693,7 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
 
     // circles:
     else if (isCircleShape(shape)) {
-        if (isNull(cutDist1) || isNull(cutDist2)) {
-            rest1 = undefined;
-            rest2 = undefined;
-        }
-        else {
-            var angle1 = shape.getCenter().getAngleTo(cutPos1);
-            var angle2 = shape.getCenter().getAngleTo(cutPos2);
-
-            rest1 = new RArc(
-                        shape.getCenter(),
-                        shape.getRadius(),
-                        angle1, angle2,
-                        false);
-            rest2 = undefined;
-
-            segment = new RArc(
-                        shape.getCenter(),
-                        shape.getRadius(),
-                        angle2, angle1,
-                        false);
-
-            if (!isNull(position)) {
-                var cursorAngle = shape.getCenter().getAngleTo(position);
-
-                if (RMath.isAngleBetween(cursorAngle, angle1, angle2, false)) {
-                    rest1.setStartAngle(angle2);
-                    rest1.setEndAngle(angle1);
-                    segment.setStartAngle(angle1);
-                    segment.setEndAngle(angle2);
-                }
-            }
-
-            var angleLength1 = rest1.getAngleLength(true);
-            if (angleLength1<RS.AngleTolerance) {
-                rest1 = undefined;
-            }
-        }
+        return ShapeAlgorithms.splitCircleAtCuts(shape, cutPos1, cutPos2, position);
     }
 
     // ellipse arcs:
@@ -979,16 +943,57 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
     return ret;
 };
 
+
+/**
+ * Splits a circle into two arcs at cutPos1 and cutPos2.
+ * Returns the arc containing `position` as `segment` and the other as `rest1`.
+ *
+ * \param {RCircle} circle - the circle to split
+ * \param {RVector} cutPos1 - first cut point on the circle
+ * \param {RVector} cutPos2 - second cut point on the circle
+ * \param {RVector} position - point on the circle that identifies the segment
+ * \return {{segment: RArc, rest1: RArc}}
+ */
+ShapeAlgorithms.splitCircleAtCuts = function(circle, cutPos1, cutPos2, position) {
+    var center = circle.getCenter();
+    var radius = circle.getRadius();
+
+    // Angles of the three points as seen from the center
+    var a1   = center.getAngleTo(cutPos1);
+    var a2   = center.getAngleTo(cutPos2);
+    var aPos = center.getAngleTo(position);
+
+    // Both arcs are counter-clockwise (reversed = false).
+    // Arc A goes CCW from a1 -> a2, Arc B goes CCW from a2 -> a1.
+    var arcA = new RArc(center, radius, a1, a2, false);
+    var arcB = new RArc(center, radius, a2, a1, false);
+
+    var segment, rest1;
+    if (RMath.isAngleBetween(aPos, a1, a2, false)) {
+        segment = arcA;
+        rest1   = arcB;
+    } else {
+        segment = arcB;
+        rest1   = arcA;
+    }
+
+    var ret = [];
+
+    ret.push(rest1);
+    ret.push(undefined);  // rest2
+    ret.push(segment);
+
+    return ret;
+}
+
 /**
  * \return The two distances along the given shape identifying the
  * intersections points closest to the given position along with the cut positions:
  * [ [cutDist1, cutDist2], [cutPos1, cutPos2] ]
  *
- * \param onShape True: only return intersections on the shape
- * (for trimming, breaking, default).
- * False: Also consider intersection points outside of shape (for extending).
- * \param onOtherShapes True only return intersections on one of the other
- * shapes (for extending).
+ * \param shape Shape to check for intersections.
+ * \param intersections Array of intersection points to check.
+ * \param position Position to check for closest intersection points.
  */
 ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersections, position) {
 //    if (isNull(onShape)) {
@@ -1046,6 +1051,18 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
     if (isCircleShape(shape)) {
         var a = shape.getCenter().getAngleTo(position);
         shape = new RArc(shape.getCenter(), shape.getRadius(), a, a, false);
+
+        if (intersections.length===2) {
+            var d1 = shape.getDistanceFromStart(intersections[0]);
+            var d2 = shape.getDistanceFromStart(intersections[1]);
+            if (d1<d2) {
+                return [ [d1, d2], [intersections[0], intersections[1]] ];
+            }
+            else {
+                return [ [d2, d1], [intersections[1], intersections[0]] ];
+            }
+        }
+
         circular = true;
     }
 
@@ -1106,7 +1123,7 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
                 dist = dists[k];
 
                 // largest distance to start
-                // but smaller than click point:
+                // but smaller than distance to click point:
                 if (dist<pDist) {
                     if (isNull(cutDist1) || dist>cutDist1) {
                         cutDist1 = dist;
@@ -1122,7 +1139,7 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
                 }
 
                 // smallest distance to start
-                // but larger than click point
+                // but larger than distance to click point
                 if (dist>pDist) {
                     if (isNull(cutDist2) || dist<cutDist2) {
                         cutDist2 = dist;
