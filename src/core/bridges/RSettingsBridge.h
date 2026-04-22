@@ -1,8 +1,10 @@
+#include "core_global.h"
+
 #include <QObject>
 #include <QStringList>
 #include "RSettings.h"
 
-class RSettingsBridge : public QObject {
+class QCADCORE_EXPORT RSettingsBridge : public QObject {
     Q_OBJECT
 
 public:
