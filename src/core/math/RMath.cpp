@@ -122,10 +122,7 @@ double RMath::pow(double x, double y) {
  * \return true if v is non NaN and not Inf.
  */
 bool RMath::isNormal(double v) {
-    if (RMath::isNaN(v) || RMath::isInf(v)) {
-        return false;
-    }
-    return true;
+    return isSane(v);
 }
 
 /**
@@ -148,7 +145,8 @@ bool RMath::isInf(double v) {
 #ifdef Q_OS_MAC
     return std::fpclassify(v)==FP_INFINITE;
 #elif defined Q_OS_WIN
-    return !_finite(v);
+    // _finite returns false for both Inf and NaN, so exclude NaN explicitly:
+    return !_finite(v) && !_isnan(v);
 #else
     return std::fpclassify(v)==FP_INFINITE;
 #endif
@@ -171,7 +169,7 @@ double RMath::eval(const QString& expression, bool* ok) {
             *ok = false;
         }
         lastError = "Expression is empty";
-        //qDebug() << "RMath::evel: error: " << lastError;
+        //qDebug() << "RMath::eval: error: " << lastError;
         return RNANDOUBLE;
     }
 
@@ -483,6 +481,7 @@ double RMath::eval(const QString& expression, bool* ok) {
 
 #if QT_VERSION < 0x060000
     static QScriptEngine e;
+    static bool eInitialized = false;
 #endif
 
     if (mathExt.isNull()) {
@@ -499,17 +498,21 @@ double RMath::eval(const QString& expression, bool* ok) {
         }
         else {
             qDebug() << "file not found: input.js";
+            mathExt = "";
         }
     }
 
 #if QT_VERSION >= 0x060000
     if (jsEngine==NULL) {
         jsEngine = new QJSEngine();
+        jsEngine->evaluate(mathExt);
     }
-    jsEngine->evaluate(mathExt);
     QJSValue res = jsEngine->evaluate(expr);
 #else
-    e.evaluate(mathExt);
+    if (!eInitialized) {
+        e.evaluate(mathExt);
+        eInitialized = true;
+    }
     QScriptValue res = e.evaluate(expr);
 #endif
 
@@ -518,7 +521,7 @@ double RMath::eval(const QString& expression, bool* ok) {
             *ok = false;
         }
         lastError = res.toString();
-        //qDebug() << "RMath::evel: error: " << lastError;
+        //qDebug() << "RMath::eval: error: " << lastError;
         return RNANDOUBLE;
     }
 
@@ -527,7 +530,7 @@ double RMath::eval(const QString& expression, bool* ok) {
             *ok = false;
         }
         lastError = expr + " is not a number: " + res.toString();
-        //qDebug() << "RMath::evel: error: " << lastError;
+        //qDebug() << "RMath::eval: error: " << lastError;
         return RNANDOUBLE;
     }
 
@@ -539,7 +542,7 @@ double RMath::eval(const QString& expression, bool* ok) {
             *ok = false;
         }
         lastError = expr + " is not a normal number";
-        //qDebug() << "RMath::evel: error: " << lastError;
+        //qDebug() << "RMath::eval: error: " << lastError;
         return RNANDOUBLE;
     }
 
@@ -572,29 +575,14 @@ QString RMath::trimTrailingZeroes(const QString& s) {
     if (!s.contains('.')) {
         return s;
     }
-
-    QString ret = s;
-
-    bool done = false;
-    while (!done) {
-        if (ret.size()>0) {
-            if (ret.at(ret.size()-1)=='0') {
-                ret = ret.left(ret.size()-1);
-            }
-            else if (ret.at(ret.size()-1)=='.') {
-                ret = ret.left(ret.size()-1);
-                done = true;
-            }
-            else {
-                done = true;
-            }
-        }
-        else {
-            done = true;
-        }
+    int i = s.size() - 1;
+    while (i > 0 && s[i] == '0') {
+        --i;
     }
-
-    return ret;
+    if (s[i] == '.') {
+        --i;
+    }
+    return s.left(i + 1);
 }
 
 
@@ -716,18 +704,13 @@ bool RMath::isAngleBetween(double a, double a1, double a2, bool reversed) {
  * e.g. normalized angle from 8 is 1.716.
  */
 double RMath::getNormalizedAngle(double a) {
-    if (a >= 0.0) {
-        int n = (int) floor(a / (2*M_PI));
-        a -= 2*M_PI * n;
-    } else {
-        int n = (int) ceil(a / (-2*M_PI));
-        a += 2*M_PI * n;
+    a = fmod(a, 2.0*M_PI);
+    if (a < 0.0) {
+        a += 2.0*M_PI;
     }
-
-    if (a>2*M_PI-RS::AngleTolerance) {
+    if (a > 2.0*M_PI - RS::AngleTolerance) {
         a = 0.0;
     }
-
     return a;
 }
 
@@ -860,12 +843,8 @@ bool RMath::isAngleReadable(double angle, double tolerance) {
  * least \c tolerance radians.
  */
 bool RMath::isSameDirection(double dir1, double dir2, double tolerance) {
-    double diff = fabs(dir1 - dir2);
-    if (diff < tolerance || diff > 2*M_PI - tolerance) {
-        return true;
-    } else {
-        return false;
-    }
+    double diff = getNormalizedAngle(dir1 - dir2);
+    return diff < tolerance || diff > 2*M_PI - tolerance;
 }
 
 /**
