@@ -5768,7 +5768,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Az Escape törli a kijelölést</translation>
     </message>
     <message>
         <location line="-109"/>

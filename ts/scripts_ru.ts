@@ -5752,7 +5752,7 @@ is already in the list.</source>
     <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Escape очищает выделение</translation>
     </message>
     <message>
         <location line="-314"/>

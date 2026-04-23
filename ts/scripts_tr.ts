@@ -5767,7 +5767,7 @@ zaten listede.</translation>
     <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Escape seçimi temizler</translation>
     </message>
     <message>
         <location line="-109"/>

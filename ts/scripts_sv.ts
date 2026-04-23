@@ -5770,7 +5770,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Escape rensar urval</translation>
     </message>
     <message>
         <location line="-109"/>

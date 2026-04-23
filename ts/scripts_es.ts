@@ -5747,7 +5747,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Escape borra la selección</translation>
     </message>
     <message>
         <location line="-314"/>

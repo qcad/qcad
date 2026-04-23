@@ -5772,7 +5772,7 @@ on juba loendis.</translation>
     <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Escape kustutab valiku</translation>
     </message>
     <message>
         <location line="-109"/>

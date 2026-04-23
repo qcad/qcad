@@ -5772,7 +5772,7 @@ is already in the list.</translation>
     <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Escape clears selection</translation>
     </message>
     <message>
         <location line="-109"/>

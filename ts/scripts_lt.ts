@@ -5774,7 +5774,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Escape išvalo pasirinkimą</translation>
     </message>
     <message>
         <location line="-109"/>

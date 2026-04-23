@@ -5772,7 +5772,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Escape rydder valg</translation>
     </message>
     <message>
         <location line="-109"/>

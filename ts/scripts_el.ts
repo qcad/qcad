@@ -5770,7 +5770,7 @@ is already in the list.</source>
     <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Escape διαγράφει την επιλογή</translation>
     </message>
     <message>
         <location line="-109"/>
