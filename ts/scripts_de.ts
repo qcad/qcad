@@ -5742,7 +5742,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation type="unfinished"></translation>
+        <translation>Schraffuren und Füllungen im Bereich hervorheben (und anheben)</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -6037,7 +6037,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+36"/>
         <source>Display color of color by block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Anzeigefarbe für Farbe nach Block:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6489,7 +6489,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>File type not supported %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateityp %1 nicht unterstützt</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12848,12 +12848,12 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+3"/>
         <source>Simple text</source>
-        <translation type="unfinished"></translation>
+        <translation>Einfacher Text</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>(eine Zeile, keine Formatierung)</translation>
     </message>
     <message>
         <location line="+246"/>

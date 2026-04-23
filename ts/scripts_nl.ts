@@ -5742,7 +5742,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation type="unfinished"></translation>
+        <translation>Markeer (en verhoog) arceringen en effen vullingen binnen het bereik</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -6037,7 +6037,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+36"/>
         <source>Display color of color by block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Weergavekleur van kleur per blok:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6489,7 +6489,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>File type not supported %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandstype %1 wordt niet ondersteund</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12833,12 +12833,12 @@ is al in de lijst.</translation>
     <message>
         <location line="-606"/>
         <source>Simple text</source>
-        <translation type="unfinished"></translation>
+        <translation>Eenvoudige tekst</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>(één regel, geen opmaak)</translation>
     </message>
     <message>
         <location line="+628"/>

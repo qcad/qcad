@@ -5767,7 +5767,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation type="unfinished"></translation>
+        <translation>Marker (og hev) skraveringer og solide fyll innenfor området</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -6037,7 +6037,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+36"/>
         <source>Display color of color by block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Visningsfarge for farge etter blokk:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6489,7 +6489,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>File type not supported %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtypen %1 støttes ikke</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12728,12 +12728,12 @@ er allerede i listen.</translation>
     <message>
         <location line="+3"/>
         <source>Simple text</source>
-        <translation type="unfinished"></translation>
+        <translation>Enkel tekst</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>(én linje, ingen formatering)</translation>
     </message>
     <message>
         <location line="+20"/>

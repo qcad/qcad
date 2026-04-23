@@ -5762,7 +5762,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation type="unfinished"></translation>
+        <translation>高亮（並提升）範圍內的填充圖案和實心填充</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -6032,7 +6032,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Display color of color by block:</source>
-        <translation type="unfinished"></translation>
+        <translation>按塊顏色的顯示顏色：</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6484,7 +6484,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>File type not supported %1</source>
-        <translation type="unfinished"></translation>
+        <translation>不支援的檔案類型 %1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12718,12 +12718,12 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Simple text</source>
-        <translation type="unfinished"></translation>
+        <translation>簡單文字</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>（單行，無格式）</translation>
     </message>
     <message>
         <location line="+20"/>

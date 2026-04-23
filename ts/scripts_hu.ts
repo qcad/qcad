@@ -5763,7 +5763,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation type="unfinished"></translation>
+        <translation>Sraffozások és tömör kitöltések kiemelése (és emelése) a tartományon belül</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -6033,7 +6033,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+36"/>
         <source>Display color of color by block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Blokk szerinti szín megjelenítési színe:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6485,7 +6485,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>File type not supported %1</source>
-        <translation type="unfinished"></translation>
+        <translation>A fájltípus nem támogatott: %1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12719,12 +12719,12 @@ már szerepel a listában.</translation>
     <message>
         <location line="+3"/>
         <source>Simple text</source>
-        <translation type="unfinished"></translation>
+        <translation>Egyszerű szöveg</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>(egy sor, formázás nélkül)</translation>
     </message>
     <message>
         <location line="+20"/>

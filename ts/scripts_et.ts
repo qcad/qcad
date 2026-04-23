@@ -5767,7 +5767,7 @@ on juba loendis.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation type="unfinished"></translation>
+        <translation>Tõsta esile (ja tõsta üles) šrafeeringuid ja tahkeid täiteid vahemikus</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -6037,7 +6037,7 @@ on juba loendis.</translation>
     <message>
         <location line="+36"/>
         <source>Display color of color by block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuvavärvus ploki järgi värvi jaoks:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6489,7 +6489,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>File type not supported %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Failitüüp %1 ei ole toetatud</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12728,12 +12728,12 @@ on juba loendis.</translation>
     <message>
         <location line="+3"/>
         <source>Simple text</source>
-        <translation type="unfinished"></translation>
+        <translation>Lihtne tekst</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>(üks rida, ilma vormindamiseta)</translation>
     </message>
     <message>
         <location line="+20"/>

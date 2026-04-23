@@ -5762,7 +5762,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation type="unfinished"></translation>
+        <translation>범위 내 해치 및 솔리드 채우기 강조 표시(및 올리기)</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -6032,7 +6032,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Display color of color by block:</source>
-        <translation type="unfinished"></translation>
+        <translation>블록별 색상의 표시 색상:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6484,7 +6484,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>File type not supported %1</source>
-        <translation type="unfinished"></translation>
+        <translation>지원되지 않는 파일 형식 %1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12718,12 +12718,12 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Simple text</source>
-        <translation type="unfinished"></translation>
+        <translation>단순 텍스트</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>(한 줄, 서식 없음)</translation>
     </message>
     <message>
         <location line="+20"/>

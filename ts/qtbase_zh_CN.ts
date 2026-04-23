@@ -750,8 +750,7 @@ Press ESC to cancel</source>
     </message>
     <message>
         <source>Cannot remove source file</source>
-        <translation>
-      </translation>
+        <translation>无法删除源文件</translation>
     </message>
     <message>
         <source>Cannot open %1 for input</source>
@@ -2073,8 +2072,7 @@ Do you want to delete it anyway?</source>
     </message>
     <message>
         <source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems. It is also available for embedded Linux and other embedded and mobile operating systems.&lt;/p&gt;&lt;p&gt;Qt is available under three different licensing options designed to accommodate the needs of our various users.&lt;/p&gt;&lt;p&gt;Qt licensed under our commercial license agreement is appropriate for development of proprietary/commercial software where you do not want to share any source code with third parties or otherwise cannot comply with the terms of the GNU LGPL version 2.1 or GNU GPL version 3.0.&lt;/p&gt;&lt;p&gt;Qt licensed under the GNU LGPL version 2.1 is appropriate for the development of Qt applications provided you can comply with the terms and conditions of the GNU LGPL version 2.1.&lt;/p&gt;&lt;p&gt;Qt licensed under the GNU General Public License version 3.0 is appropriate for the development of Qt applications where you wish to use such applications in combination with software subject to the terms of the GNU GPL version 3.0 or where you are otherwise willing to comply with the terms of the GNU GPL version 3.0.&lt;/p&gt;&lt;p&gt;Please see &lt;a href=&quot;http://qt.digia.com/Product/Licensing/&quot;&gt;qt.digia.com/Product/Licensing&lt;/a&gt; for an overview of Qt licensing.&lt;/p&gt;&lt;p&gt;Copyright (C) 2014 Digia Plc and/or its subsidiary(-ies) and other contributors.&lt;/p&gt;&lt;p&gt;Qt and the Qt logo are trademarks of Digia Plc and/or its subsidiary(-ies).&lt;/p&gt;&lt;p&gt;Qt is developed as an open source project on &lt;a href=&quot;http://qt-project.org/&quot;&gt;qt-project.org&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Qt is a Digia product. See &lt;a href=&quot;http://qt.digia.com/&quot;&gt;qt.digia.com&lt;/a&gt; for more information.&lt;/p&gt;</source>
-        <translation>
-      </translation>
+        <translation>&lt;p&gt;Qt 是一个用于跨平台应用程序开发的 C++ 工具包。&lt;/p&gt;&lt;p&gt;Qt 提供了跨所有主要桌面操作系统的单源可移植性。它也适用于嵌入式 Linux 及其他嵌入式和移动操作系统。&lt;/p&gt;&lt;p&gt;Qt 提供三种不同的许可方式，以满足不同用户的需求。&lt;/p&gt;&lt;p&gt;Qt 商业许可证适用于开发专有/商业软件，适合不希望与第三方共享源代码或无法遵守 GNU LGPL 2.1 版或 GNU GPL 3.0 版条款的情况。&lt;/p&gt;&lt;p&gt;GNU LGPL 2.1 版许可下的 Qt 适用于能够遵守 GNU LGPL 2.1 版条款的 Qt 应用程序开发。&lt;/p&gt;&lt;p&gt;GNU GPL 3.0 版许可下的 Qt 适用于希望将应用程序与 GNU GPL 3.0 软件结合使用，或愿意遵守 GNU GPL 3.0 版条款的情况。&lt;/p&gt;&lt;p&gt;有关 Qt 许可的概述，请访问 &lt;a href=&quot;http://qt.digia.com/Product/Licensing/&quot;&gt;qt.digia.com/Product/Licensing&lt;/a&gt;。&lt;/p&gt;&lt;p&gt;版权所有 (C) 2014 Digia Plc 及其子公司和其他贡献者。&lt;/p&gt;&lt;p&gt;Qt 和 Qt 标志是 Digia Plc 及其子公司的商标。&lt;/p&gt;&lt;p&gt;Qt 是在 &lt;a href=&quot;http://qt-project.org/&quot;&gt;qt-project.org&lt;/a&gt; 上作为开源项目开发的。&lt;/p&gt;&lt;p&gt;Qt 是 Digia 的产品。有关更多信息，请访问 &lt;a href=&quot;http://qt.digia.com/&quot;&gt;qt.digia.com&lt;/a&gt;。&lt;/p&gt;</translation>
     </message>
     <message>
         <source>About Qt</source>
@@ -3578,8 +3576,7 @@ Please turn one of those options off.</source>
     </message>
     <message>
         <source>No program defined</source>
-        <translation>
-      </translation>
+        <translation>未定义程序</translation>
     </message>
     <message>
         <source>Could not open input redirection for reading</source>
