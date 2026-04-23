@@ -6037,7 +6037,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+36"/>
         <source>Display color of color by block:</source>
-        <translation>Couleur d'affichage de la couleur par bloc :</translation>
+        <translation>Couleur d&apos;affichage de la couleur par bloc :</translation>
     </message>
     <message>
         <location line="+33"/>
