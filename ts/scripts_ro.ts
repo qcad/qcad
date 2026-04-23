@@ -5772,7 +5772,7 @@ este deja în listă.</translation>
     <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Escape șterge selecția</translation>
     </message>
     <message>
         <location line="-102"/>

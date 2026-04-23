@@ -5765,7 +5765,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Escape vymaže výběr</translation>
     </message>
     <message>
         <location line="-102"/>

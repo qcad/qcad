@@ -5767,7 +5767,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Escape tømmer utvalg</translation>
     </message>
     <message>
         <location line="-102"/>
