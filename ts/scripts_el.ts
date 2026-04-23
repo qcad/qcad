@@ -219,7 +219,7 @@
         <translation>Μεταφράσεις</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+17"/>
         <source>Templates</source>
         <translation>Πρότυπα</translation>
     </message>
@@ -3231,7 +3231,7 @@ Do you wish to recover it?</source>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+88"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
@@ -4200,18 +4200,18 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation>Ακύρωση</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation>Έτοιμο</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+127"/>
+        <location line="+129"/>
         <source>Active Tool:</source>
         <translation>Ενεργό εργαλείο:</translation>
     </message>
@@ -4231,12 +4231,12 @@ is already in the list.</source>
         <translation>Κύρια εργαλεία</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+22"/>
         <source>CAD Tools</source>
         <translation>Εργαλεία CAD</translation>
     </message>
     <message>
-        <location line="+578"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation>Μη έγκυρη θέση</translation>
     </message>
@@ -5763,12 +5763,17 @@ is already in the list.</source>
         <translation>Επισημάνετε (και αναδείξτε) εικόνες εντός εμβέλειας</translation>
     </message>
     <message>
+        <location line="+7"/>
+        <source>Highlight (and raise) hatches and solid fills within range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-102"/>
+        <location line="-109"/>
         <source>Highlight entity within range</source>
         <translation>Επισημάνετε την οντότητα εντός εμβέλειας</translation>
     </message>
@@ -6003,7 +6008,7 @@ is already in the list.</source>
         <translation>Μήκος κουκκίδας σε μοτίβα γραμμών:</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+89"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+96"/>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+41"/>
         <source>Selection</source>
         <translation>Επιλογή</translation>
@@ -6026,6 +6031,11 @@ is already in the list.</source>
         <location line="+12"/>
         <source>Background:</source>
         <translation>Φόντο:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Display color of color by block:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6476,11 +6486,16 @@ is already in the list.</source>
     <name>ImportFile</name>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
+        <source>File type not supported %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Error while importing file %1</source>
         <translation>Σφάλμα κατά την εισαγωγή του αρχείου %1</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+36"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Δεν βρέθηκαν φίλτρα εισαγωγής. Ματαίωση...</translation>
     </message>
@@ -9315,7 +9330,7 @@ is already in the list.</source>
         <translation>Μορφή:</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+149"/>
         <source>Untitled %1</source>
         <translation>Χωρίς τίτλο %1</translation>
     </message>
@@ -11528,7 +11543,7 @@ is already in the list.</source>
         <translation>Συμπλήρωση</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location filename="../scripts/Draw/Shape/Shape2.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Ακτίνα:</translation>
     </message>
@@ -11536,7 +11551,7 @@ is already in the list.</source>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Τουλάχιστον δύο σημεία είναι πανομοιότυπα.</translation>
@@ -12527,12 +12542,12 @@ is already in the list.</source>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
         <source>Default value:</source>
         <translation>Προεπιλεγμένη τιμή:</translation>
     </message>
     <message>
-        <location line="+274"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Αναίρεση</translation>
     </message>
@@ -12693,30 +12708,33 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+18"/>
-        <location line="+268"/>
+        <location line="+274"/>
         <source>Bold</source>
         <translation>Έντονο</translation>
     </message>
     <message>
-        <location line="-261"/>
-        <location line="+274"/>
+        <location line="-267"/>
+        <location line="+280"/>
         <source>Italic</source>
         <translation>Πλάγιο</translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="-266"/>
         <source>Text fits on one line and has no formatting</source>
         <translation>Το κείμενο χωράει σε μία γραμμή και δεν έχει μορφοποίηση</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Simple text
-(one line, no formatting)</source>
-        <translation>Απλό κείμενο
-(μία γραμμή, χωρίς μορφοποίηση)</translation>
+        <source>Simple text</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+7"/>
+        <source>(one line, no formatting)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Rich Text</source>
         <translation>Πλούσιο κείμενο</translation>
     </message>
@@ -14263,6 +14281,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Arc Dimension</source>
         <translation>Διάσταση τόξου</translation>
     </message>
@@ -14448,6 +14467,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Text based</source>
         <translation>Βασισμένο σε κείμενο</translation>
     </message>

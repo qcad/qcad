@@ -219,7 +219,7 @@
         <translation>Переводы</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+17"/>
         <source>Templates</source>
         <translation>Шаблоны</translation>
     </message>
@@ -3236,7 +3236,7 @@ Do you wish to recover it?</source>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+88"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
@@ -4206,18 +4206,18 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation>Готово</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+127"/>
+        <location line="+129"/>
         <source>Active Tool:</source>
         <translation>Активный инструмент:</translation>
     </message>
@@ -4237,12 +4237,12 @@ is already in the list.</source>
         <translation>Главные инструменты</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+22"/>
         <source>CAD Tools</source>
         <translation>Инструменты САПР</translation>
     </message>
     <message>
-        <location line="+578"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation>Некорректное положение</translation>
     </message>
@@ -5745,12 +5745,17 @@ is already in the list.</source>
         <translation>Выделяйте (и поднимайте) изображения в пределах досягаемости</translation>
     </message>
     <message>
+        <location line="+7"/>
+        <source>Highlight (and raise) hatches and solid fills within range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-307"/>
+        <location line="-314"/>
         <source>Right-Click</source>
         <translation>Щелчок правой кнопкой</translation>
     </message>
@@ -5920,7 +5925,7 @@ is already in the list.</source>
         <translation>Максимальная сложность для сплошных заливок высокого качества:</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+102"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+109"/>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+149"/>
         <source>Persistent selection</source>
         <translation>Постоянное выделение</translation>
@@ -6033,6 +6038,11 @@ is already in the list.</source>
         <location line="+12"/>
         <source>Background:</source>
         <translation>Фон:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Display color of color by block:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6483,11 +6493,16 @@ is already in the list.</source>
     <name>ImportFile</name>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
+        <source>File type not supported %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Error while importing file %1</source>
         <translation>Ошибка при импорте файла %1</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+36"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Фильтры для импорта не найдены. Прервано...</translation>
     </message>
@@ -9322,7 +9337,7 @@ is already in the list.</source>
         <translation>Формат:</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+149"/>
         <source>Untitled %1</source>
         <translation>Без имени %1</translation>
     </message>
@@ -11540,7 +11555,7 @@ is already in the list.</source>
         <translation>Залить</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location filename="../scripts/Draw/Shape/Shape2.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Радиус:</translation>
     </message>
@@ -11548,7 +11563,7 @@ is already in the list.</source>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>По крайней мере две точки идентичны.</translation>
@@ -12539,12 +12554,12 @@ is already in the list.</source>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
         <source>Default value:</source>
         <translation>Значение по умолчанию:</translation>
     </message>
     <message>
-        <location line="+274"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Отменить</translation>
     </message>
@@ -12705,30 +12720,23 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+18"/>
-        <location line="+268"/>
+        <location line="+274"/>
         <source>Bold</source>
         <translation>Полужирный</translation>
     </message>
     <message>
-        <location line="-261"/>
-        <location line="+274"/>
+        <location line="-267"/>
+        <location line="+280"/>
         <source>Italic</source>
         <translation>Курсив</translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="-266"/>
         <source>Text fits on one line and has no formatting</source>
         <translation>Текст помещается на одной строке и не имеет форматирования</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Simple text
-(one line, no formatting)</source>
-        <translation>Простой текст
-(одна строка, без форматирования)</translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+30"/>
         <source>Rich Text</source>
         <translation>Текст с форматированием</translation>
     </message>
@@ -12833,7 +12841,17 @@ is already in the list.</source>
         <translation>Сверху и по центру</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="-606"/>
+        <source>Simple text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>(one line, no formatting)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+628"/>
         <source>Middle Right</source>
         <translation>Посередине и справа</translation>
     </message>
@@ -14275,6 +14293,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Arc Dimension</source>
         <translation>Размер дуги</translation>
     </message>
@@ -14460,6 +14479,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Text based</source>
         <translation>На основе текста</translation>
     </message>

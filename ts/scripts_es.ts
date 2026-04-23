@@ -219,7 +219,7 @@
         <translation>Traducciones</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+17"/>
         <source>Templates</source>
         <translation>Plantillas</translation>
     </message>
@@ -3233,7 +3233,7 @@ Do you wish to recover it?</source>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+88"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
@@ -4202,18 +4202,18 @@ ya está en la lista.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation>Terminar</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+127"/>
+        <location line="+129"/>
         <source>Active Tool:</source>
         <translation>Herramienta activa:</translation>
     </message>
@@ -4233,12 +4233,12 @@ ya está en la lista.</translation>
         <translation>Herramientas principales</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+22"/>
         <source>CAD Tools</source>
         <translation>Herramientas CAD</translation>
     </message>
     <message>
-        <location line="+578"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation>Posición no válida</translation>
     </message>
@@ -5740,12 +5740,17 @@ ya está en la lista.</translation>
         <translation>Resalte (y eleve) las imágenes dentro del alcance</translation>
     </message>
     <message>
+        <location line="+7"/>
+        <source>Highlight (and raise) hatches and solid fills within range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-307"/>
+        <location line="-314"/>
         <source>Right-Click</source>
         <translation>Botão direito do mouse</translation>
     </message>
@@ -5910,7 +5915,7 @@ ya está en la lista.</translation>
         <translation>Umbral de altura del texto (px):</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+102"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+109"/>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+221"/>
         <source>Persistent selection</source>
         <translation>Selección persistente</translation>
@@ -6028,6 +6033,11 @@ ya está en la lista.</translation>
         <location line="+12"/>
         <source>Background:</source>
         <translation>Fondo:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Display color of color by block:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6478,11 +6488,16 @@ ya está en la lista.</translation>
     <name>ImportFile</name>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
+        <source>File type not supported %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Error while importing file %1</source>
         <translation>Error al importar archivo %1</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+36"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>No se han encontrado filtros de importación. Anulando...</translation>
     </message>
@@ -9317,7 +9332,7 @@ ya está en la lista.</translation>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+149"/>
         <source>Untitled %1</source>
         <translation>Sin título %1</translation>
     </message>
@@ -11530,7 +11545,7 @@ ya está en la lista.</translation>
         <translation>Relleno</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location filename="../scripts/Draw/Shape/Shape2.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Radio:</translation>
     </message>
@@ -11538,7 +11553,7 @@ ya está en la lista.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Al menos dos puntos son idénticos.</translation>
@@ -12529,12 +12544,12 @@ ya está en la lista.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
         <source>Default value:</source>
         <translation>Por defecto:</translation>
     </message>
     <message>
-        <location line="+274"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Deshacer</translation>
     </message>
@@ -12695,35 +12710,38 @@ ya está en la lista.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <location line="+268"/>
+        <location line="+274"/>
         <source>Bold</source>
         <translation>Negrita</translation>
     </message>
     <message>
-        <location line="-261"/>
-        <location line="+274"/>
+        <location line="-267"/>
+        <location line="+280"/>
         <source>Italic</source>
         <translation>Cursivo</translation>
     </message>
     <message>
-        <location line="-257"/>
-        <source>Simple text
-(one line, no formatting)</source>
-        <translation>Texto simple
-(una línea, sin formato)</translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="-236"/>
         <source>Rich Text</source>
         <translation>Texto enriquecido</translation>
     </message>
     <message>
-        <location line="-24"/>
+        <location line="-30"/>
         <source>Text fits on one line and has no formatting</source>
         <translation>Texto cabe en una línea y no tiene formato</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+3"/>
+        <source>Simple text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>(one line, no formatting)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+56"/>
         <source>Cut</source>
         <translation>Cortar</translation>
     </message>
@@ -14265,6 +14283,7 @@ ya está en la lista.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Arc Dimension</source>
         <translation>Acotación del arco</translation>
     </message>
@@ -14450,6 +14469,7 @@ ya está en la lista.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Text based</source>
         <translation>Basado en texto</translation>
     </message>

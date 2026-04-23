@@ -219,7 +219,7 @@
         <translation>Překlady</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+17"/>
         <source>Templates</source>
         <translation>Šablony</translation>
     </message>
@@ -3234,7 +3234,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+88"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
@@ -4204,18 +4204,18 @@ již v seznamu je.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation>Storno</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation>Hotovo</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+127"/>
+        <location line="+129"/>
         <source>Active Tool:</source>
         <translation>Aktivní nástroj:</translation>
     </message>
@@ -4235,12 +4235,12 @@ již v seznamu je.</translation>
         <translation>Hlavní nástroje</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+22"/>
         <source>CAD Tools</source>
         <translation>CAD nástroje</translation>
     </message>
     <message>
-        <location line="+578"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation>Neplatná pozice</translation>
     </message>
@@ -5763,12 +5763,17 @@ již v seznamu je.</translation>
         <translation>Zvýraznění (a zvednutí) obrázků v dosahu</translation>
     </message>
     <message>
+        <location line="+7"/>
+        <source>Highlight (and raise) hatches and solid fills within range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-102"/>
+        <location line="-109"/>
         <source>Highlight entity within range</source>
         <translation>Zvýraznit prvek v dosahu</translation>
     </message>
@@ -5913,7 +5918,7 @@ již v seznamu je.</translation>
         <translation>Délka tečky ve vzorech čar:</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+102"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+109"/>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+47"/>
         <source>Persistent selection</source>
         <translation>Trvalý výběr</translation>
@@ -6031,6 +6036,11 @@ již v seznamu je.</translation>
         <location line="+12"/>
         <source>Background:</source>
         <translation>Pozadí:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Display color of color by block:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6481,11 +6491,16 @@ již v seznamu je.</translation>
     <name>ImportFile</name>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
+        <source>File type not supported %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Error while importing file %1</source>
         <translation>Chyba při importu souboru %1</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+36"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Nebyly nalezeny žádné filtry pro import. Přerušení...</translation>
     </message>
@@ -9320,7 +9335,7 @@ již v seznamu je.</translation>
         <translation>Formát:</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+149"/>
         <source>Untitled %1</source>
         <translation>Nepojmenovaný %1</translation>
     </message>
@@ -11538,7 +11553,7 @@ již v seznamu je.</translation>
         <translation>Vyplnit</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location filename="../scripts/Draw/Shape/Shape2.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Poloměr:</translation>
     </message>
@@ -11546,7 +11561,7 @@ již v seznamu je.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Alespoň 2 body jsou identické.</translation>
@@ -12537,12 +12552,12 @@ již v seznamu je.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
         <source>Default value:</source>
         <translation>Výchozí hodnota:</translation>
     </message>
     <message>
-        <location line="+274"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Zpět</translation>
     </message>
@@ -12703,30 +12718,23 @@ již v seznamu je.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <location line="+268"/>
+        <location line="+274"/>
         <source>Bold</source>
         <translation>Tučné</translation>
     </message>
     <message>
-        <location line="-261"/>
-        <location line="+274"/>
+        <location line="-267"/>
+        <location line="+280"/>
         <source>Italic</source>
         <translation>Kurzíva</translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="-266"/>
         <source>Text fits on one line and has no formatting</source>
         <translation>Text se upraví na jeden řádek a zruší se formátování</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Simple text
-(one line, no formatting)</source>
-        <translation>Jednoduchý text
-(jeden řádek, bez formátování)</translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+30"/>
         <source>Rich Text</source>
         <translation>Naformátovaný text</translation>
     </message>
@@ -12831,7 +12839,17 @@ již v seznamu je.</translation>
         <translation>Nahoře uprostřed</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="-606"/>
+        <source>Simple text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>(one line, no formatting)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+628"/>
         <source>Middle Right</source>
         <translation>Středně vpravo</translation>
     </message>
@@ -14273,6 +14291,7 @@ již v seznamu je.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Arc Dimension</source>
         <translation>Oblouková kóta</translation>
     </message>
@@ -14458,6 +14477,7 @@ již v seznamu je.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Text based</source>
         <translation>Základní text</translation>
     </message>
