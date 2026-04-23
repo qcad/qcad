@@ -5772,7 +5772,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Виділити (та підняти) штрихування та суцільні заливки в діапазоні</translation>
+        <translation>Виділення (і підняття) штрихувань і суцільних заливок у межах діапазону</translation>
     </message>
     <message>
         <location line="+38"/>

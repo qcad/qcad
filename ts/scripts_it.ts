@@ -5742,7 +5742,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Evidenzia (e alza) tratteggi e riempimenti solidi nell'intervallo</translation>
+        <translation>Evidenzia (e solleva) tratteggi e riempimenti solidi nel raggio d&apos;azione</translation>
     </message>
     <message>
         <location line="+38"/>

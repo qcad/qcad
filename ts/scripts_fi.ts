@@ -5762,7 +5762,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Korosta (ja nosta) vinoviivat ja kiinteät täytöt alueella</translation>
+        <translation>Korosta (ja nosta) vinoviivat ja kiinteät täytöt kantaman sisällä</translation>
     </message>
     <message>
         <location line="+38"/>

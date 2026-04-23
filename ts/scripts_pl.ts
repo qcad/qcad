@@ -5747,7 +5747,7 @@ jest już na liście.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Podświetl (i podnieś) kreskowania i wypełnienia w zakresie</translation>
+        <translation>Podświetlanie (i podnoszenie) kreskowań i wypełnień w zasięgu</translation>
     </message>
     <message>
         <location line="+38"/>

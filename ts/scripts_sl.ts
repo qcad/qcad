@@ -5748,7 +5748,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Označi (in dvigni) šrafure in trdne zapolnitve v obsegu</translation>
+        <translation>Izrazite (in povečajte) šrafure in trdne zapolnitve v območju</translation>
     </message>
     <message>
         <location line="+38"/>

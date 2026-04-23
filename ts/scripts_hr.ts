@@ -5768,7 +5768,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-        <translation>Highlight (and raise) images within range</translation>
+        <translation>Istakni (i podigni) slike unutar raspona</translation>
     </message>
     <message>
         <location line="+7"/>

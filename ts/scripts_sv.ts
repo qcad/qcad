@@ -5765,7 +5765,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Markera (och höj) mönsterfyllningar och heldragna fyllningar inom intervallet</translation>
+        <translation>Markera (och höja) mönsterfyllningar och heldragna fyllningar inom räckvidd</translation>
     </message>
     <message>
         <location line="+38"/>

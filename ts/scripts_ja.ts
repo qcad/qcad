@@ -5732,12 +5732,12 @@ is already in the list.</source>
     <message>
         <location line="+64"/>
         <source>Highlight (and raise) images within range</source>
-        <translation>範囲内の画像をハイライトする（上げる</translation>
+        <translation>範囲内の画像をハイライトする（上げる）</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>範囲内のハッチングとソリッド塗りつぶしをハイライト（および前面に表示）</translation>
+        <translation>範囲内のハッチングとソリッド塗りつぶしをハイライトする（上げる）</translation>
     </message>
     <message>
         <location line="+38"/>

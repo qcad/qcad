@@ -5742,7 +5742,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Markeer (en verhoog) arceringen en effen vullingen binnen het bereik</translation>
+        <translation>Arceringen en effen vullingen binnen bereik highlighten (en verhogen)</translation>
     </message>
     <message>
         <location line="+38"/>

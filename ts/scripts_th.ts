@@ -5757,7 +5757,7 @@ is already in the list.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-        <translation>Highlight (and raise) images within range</translation>
+        <translation>เน้น (และยก) ภาพในช่วง</translation>
     </message>
     <message>
         <location line="+7"/>

@@ -5742,7 +5742,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Mettre en surbrillance (et élever) les hachures et remplissages solides dans la plage</translation>
+        <translation>Mettre en évidence (et augmenter) les hachures et remplissages solides dans la gamme</translation>
     </message>
     <message>
         <location line="+38"/>

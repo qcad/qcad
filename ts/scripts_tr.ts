@@ -5762,7 +5762,7 @@ zaten listede.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Aralıktaki taramaları ve düz dolguları vurgula (ve yükselt)</translation>
+        <translation>Menzil içindeki taramaları ve düz dolguları vurgulayın (ve yükseltin)</translation>
     </message>
     <message>
         <location line="+38"/>
