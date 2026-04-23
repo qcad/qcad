@@ -5765,7 +5765,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Zvýraznit (a zvýšit) šrafování a plná vyplnění v rozsahu</translation>
+        <translation>Zvýraznění (a zvednutí) šrafování a plných vyplnění v dosahu</translation>
     </message>
     <message>
         <location line="+38"/>

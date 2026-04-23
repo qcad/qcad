@@ -5765,7 +5765,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Επισήμανση (και ανύψωση) διαγραμμίσεων και αδιαφανών γεμισμάτων εντός εύρους</translation>
+        <translation>Επισημάνετε (και αναδείξτε) διαγραμμίσεις και αδιαφανή γεμίσματα εντός εμβέλειας</translation>
     </message>
     <message>
         <location line="+38"/>

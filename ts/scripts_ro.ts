@@ -5772,7 +5772,7 @@ este deja în listă.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Evidențiați (și ridicați) hașurile și umpluturile solide din interval</translation>
+        <translation>Evidențiați (și ridicați) hașurile și umpluturile solide din raza de acțiune</translation>
     </message>
     <message>
         <location line="+38"/>

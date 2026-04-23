@@ -5767,7 +5767,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Fremhæv (og hæv) skraveringer og massive udfyldninger inden for området</translation>
+        <translation>Fremhæv (og hæv) skraveringer og massive udfyldninger inden for rækkevidde</translation>
     </message>
     <message>
         <location line="+38"/>

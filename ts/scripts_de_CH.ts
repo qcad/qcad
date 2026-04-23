@@ -5742,7 +5742,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Schraffuren und Füllungen im Bereich hervorheben (und anheben)</translation>
+        <translation>Hervorheben (und in den Vordergrund rücken) von Schraffuren und Füllungen in Reichweite</translation>
     </message>
     <message>
         <location line="+38"/>

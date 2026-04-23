@@ -5767,7 +5767,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Marker (og hev) skraveringer og solide fyll innenfor området</translation>
+        <translation>Fremheve (og heve) skraveringer og solide fyll innenfor rekkevidde</translation>
     </message>
     <message>
         <location line="+38"/>

@@ -5763,7 +5763,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Sraffozások és tömör kitöltések kiemelése (és emelése) a tartományon belül</translation>
+        <translation>Sraffozások és tömör kitöltések elszínezése (és felemelése) a hatósugárban</translation>
     </message>
     <message>
         <location line="+38"/>

@@ -5769,7 +5769,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Paryškinti (ir pakelti) šrafavimą ir kietas užpildas diapazone</translation>
+        <translation>Išryškinkite (ir pakelkite) šrafavimą ir kietas užpildas diapazone</translation>
     </message>
     <message>
         <location line="+38"/>

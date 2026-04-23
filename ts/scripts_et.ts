@@ -5767,7 +5767,7 @@ on juba loendis.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Tõsta esile (ja tõsta üles) šrafeeringuid ja tahkeid täiteid vahemikus</translation>
+        <translation>Kauguses olevate šrafeeringute ja tahkete täidete esiletõstmine (ja tõstmine)</translation>
     </message>
     <message>
         <location line="+38"/>

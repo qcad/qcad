@@ -5762,7 +5762,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Sorot (dan naikkan) arsiran dan isian padat dalam rentang</translation>
+        <translation>Menyorot (dan membesarkan) arsiran dan isian padat dalam jangkauan</translation>
     </message>
     <message>
         <location line="+38"/>

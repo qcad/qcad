@@ -5747,7 +5747,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>Zvýrazniť (a vyzdvihnúť) šrafovanie a plné výplne v rozsahu</translation>
+        <translation>Zvýraznenie (a zvýšenie) šrafovania a plných výplní v dosahu</translation>
     </message>
     <message>
         <location line="+38"/>

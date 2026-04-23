@@ -5762,7 +5762,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation>高亮（并提升）范围内的填充图案和实心填充</translation>
+        <translation>突出显示（和提升）范围内的填充图案和实心填充</translation>
     </message>
     <message>
         <location line="+38"/>
