@@ -5769,7 +5769,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+38" />
         <source>Escape clears selection</source>
-        <translation type="unfinished">Escape clears selection</translation>
+        <translation>Escape briše odabir</translation>
     </message>
     <message>
         <location line="-102" />

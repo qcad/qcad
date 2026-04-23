@@ -5769,7 +5769,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Escape notīra atlasi</translation>
     </message>
     <message>
         <location line="-102"/>

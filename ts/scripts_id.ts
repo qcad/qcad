@@ -5762,7 +5762,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+38"/>
         <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Escape menghapus pilihan</translation>
     </message>
     <message>
         <location line="-102"/>
