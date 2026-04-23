@@ -5762,7 +5762,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation type="unfinished"></translation>
+        <translation>Korosta (ja nosta) vinoviivat ja kiinteät täytöt alueella</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -6037,7 +6037,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+36"/>
         <source>Display color of color by block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Näyttöväri väriä lohkon mukaan:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6489,7 +6489,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>File type not supported %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedostotyyppiä %1 ei tueta</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12833,12 +12833,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="-606"/>
         <source>Simple text</source>
-        <translation type="unfinished"></translation>
+        <translation>Yksinkertainen teksti</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>(yksi rivi, ei muotoilua)</translation>
     </message>
     <message>
         <location line="+628"/>

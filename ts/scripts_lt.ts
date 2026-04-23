@@ -5769,7 +5769,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation type="unfinished"></translation>
+        <translation>Paryškinti (ir pakelti) šrafavimą ir kietas užpildas diapazone</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -6039,7 +6039,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+36"/>
         <source>Display color of color by block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloko spalvos rodoma spalva:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6491,7 +6491,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>File type not supported %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Failo tipas %1 nepalaikomas</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12735,12 +12735,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+3"/>
         <source>Simple text</source>
-        <translation type="unfinished"></translation>
+        <translation>Paprastas tekstas</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>(viena eilutė, be formatavimo)</translation>
     </message>
     <message>
         <location line="+20"/>

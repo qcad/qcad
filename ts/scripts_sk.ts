@@ -5747,7 +5747,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvýrazniť (a vyzdvihnúť) šrafovanie a plné výplne v rozsahu</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -6042,7 +6042,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+36"/>
         <source>Display color of color by block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Farba zobrazenia farby podľa bloku:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6494,7 +6494,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>File type not supported %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Typ súboru %1 nie je podporovaný</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12843,12 +12843,12 @@ už existuje v zozname.</translation>
     <message>
         <location line="-606"/>
         <source>Simple text</source>
-        <translation type="unfinished"></translation>
+        <translation>Jednoduchý text</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>(jeden riadok, bez formátovania)</translation>
     </message>
     <message>
         <location line="+628"/>

@@ -5762,7 +5762,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorot (dan naikkan) arsiran dan isian padat dalam rentang</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -6032,7 +6032,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+36"/>
         <source>Display color of color by block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Warna tampilan warna berdasarkan blok:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6484,7 +6484,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>File type not supported %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Jenis file tidak didukung %1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12718,12 +12718,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+3"/>
         <source>Simple text</source>
-        <translation type="unfinished"></translation>
+        <translation>Teks sederhana</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>(satu baris, tanpa pemformatan)</translation>
     </message>
     <message>
         <location line="+20"/>

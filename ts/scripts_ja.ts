@@ -5737,7 +5737,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation type="unfinished"></translation>
+        <translation>範囲内のハッチングとソリッド塗りつぶしをハイライト（および前面に表示）</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -6032,7 +6032,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Display color of color by block:</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロック別色の表示色:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6484,7 +6484,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>File type not supported %1</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイルタイプ %1 はサポートされていません</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12823,12 +12823,12 @@ is already in the list.</source>
     <message>
         <location line="-574"/>
         <source>Simple text</source>
-        <translation type="unfinished"></translation>
+        <translation>シンプルテキスト</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>（1行、書式なし）</translation>
     </message>
     <message>
         <location line="+773"/>

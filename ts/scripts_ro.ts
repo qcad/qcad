@@ -5772,7 +5772,7 @@ este deja în listă.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation type="unfinished"></translation>
+        <translation>Evidențiați (și ridicați) hașurile și umpluturile solide din interval</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -6042,7 +6042,7 @@ este deja în listă.</translation>
     <message>
         <location line="+36"/>
         <source>Display color of color by block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Culoarea de afișare a culorii după bloc:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6494,7 +6494,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>File type not supported %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipul de fișier %1 nu este acceptat</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12738,12 +12738,12 @@ este deja în listă.</translation>
     <message>
         <location line="+3"/>
         <source>Simple text</source>
-        <translation type="unfinished"></translation>
+        <translation>Text simplu</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>(o linie, fără formatare)</translation>
     </message>
     <message>
         <location line="+20"/>

@@ -5767,7 +5767,7 @@ is already in the list.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation type="unfinished"></translation>
+        <translation>Highlight (and raise) hatches and solid fills within range</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -6037,7 +6037,7 @@ is already in the list.</translation>
     <message>
         <location line="+36"/>
         <source>Display color of color by block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Display color of color by block:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6489,7 +6489,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>File type not supported %1</source>
-        <translation type="unfinished"></translation>
+        <translation>File type not supported %1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12728,12 +12728,12 @@ is already in the list.</translation>
     <message>
         <location line="+3"/>
         <source>Simple text</source>
-        <translation type="unfinished"></translation>
+        <translation>Simple text</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>(one line, no formatting)</translation>
     </message>
     <message>
         <location line="+20"/>

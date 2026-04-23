@@ -5765,7 +5765,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation type="unfinished"></translation>
+        <translation>Markera (och höj) mönsterfyllningar och heldragna fyllningar inom intervallet</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -6035,7 +6035,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+36"/>
         <source>Display color of color by block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Visningsfärg för blockfärg:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6487,7 +6487,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>File type not supported %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtypen %1 stöds inte</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12861,12 +12861,12 @@ finns redan i listan.</translation>
     <message>
         <location line="-722"/>
         <source>Simple text</source>
-        <translation type="unfinished"></translation>
+        <translation>Enkel text</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>(en rad, ingen formatering)</translation>
     </message>
     <message>
         <location line="+657"/>

@@ -5773,7 +5773,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation type="unfinished"></translation>
+        <translation>Istakni (i podigni) šrafure i pune ispune unutar raspona</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -6043,7 +6043,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+36"/>
         <source>Display color of color by block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Boja prikaza boje prema bloku:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6495,7 +6495,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>File type not supported %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrsta datoteke %1 nije podržana</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12739,12 +12739,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+3"/>
         <source>Simple text</source>
-        <translation type="unfinished"></translation>
+        <translation>Jednostavni tekst</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>(jedan red, bez oblikovanja)</translation>
     </message>
     <message>
         <location line="+20"/>
