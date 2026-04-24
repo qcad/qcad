@@ -665,6 +665,17 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="addRecentFile" cppName="addRecentFile"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+        <arg type="QImage &amp;" typeName="QImage" name="thumbnail"
+        hasDefault="true" default="RDEFAULT_QIMAGE"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="removeRecentFile" cppName="removeRecentFile"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
