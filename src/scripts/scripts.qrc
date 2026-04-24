@@ -733,6 +733,7 @@
     <file alias="scripts/Draw/Shape/Shape.js">../../scripts/Draw/Shape/Shape.js</file>
     <file alias="scripts/Draw/Shape/Shape.svg">../../scripts/Draw/Shape/Shape.svg</file>
     <file alias="scripts/Draw/Shape/Shape.ui">../../scripts/Draw/Shape/Shape.ui</file>
+    <file alias="scripts/Draw/Shape/Shape2.ui">../../scripts/Draw/Shape/Shape2.ui</file>
     <file alias="scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP-inverse.svg">../../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP-inverse.svg</file>
     <file alias="scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.js">../../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.js</file>
     <file alias="scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.svg">../../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.svg</file>
