@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2011-2018 by Andrew Mustun. All rights reserved.
- * 
+ *
  * This file is part of the QCAD project.
  *
  * QCAD is free software: you can redistribute it and/or modify
@@ -146,10 +146,27 @@ void RVector::setAngle(double a) {
  * \return The angle from zero to this vector (in rad), in range [0, 2*PI).
  */
 double RVector::getAngle() const {
-    if (getMagnitude2D() > 1.0e-6) {
-        return RMath::getNormalizedAngle(atan2(y, x));
+    double ret = 0.0;
+    double m = getMagnitude2D();
+
+    if (m > 1.0e-6) {
+        double dp = getDotProduct(*this, RVector(1.0, 0.0));
+        double ratio = dp / m;
+        if (ratio >= 1.0) {
+            // Along +X (or y so small it rounds away): angle = 0.
+            // Do NOT apply y < 0 flip here — that would return 2*PI.
+            ret = 0.0;
+        } else if (ratio <= -1.0) {
+            // Along -X: angle = PI regardless of tiny y.
+            ret = M_PI;
+        } else {
+            ret = acos(ratio);
+            if (y < 0.0) {
+                ret = 2*M_PI - ret;
+            }
+        }
     }
-    return 0.0;
+    return ret;
 }
 
 /**
