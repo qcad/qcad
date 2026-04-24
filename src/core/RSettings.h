@@ -46,6 +46,10 @@
 #define RDEFAULT_QSTRING QString()
 #endif
 
+#ifndef RDEFAULT_QIMAGE
+#define RDEFAULT_QIMAGE QImage()
+#endif
+
 #ifndef RDEFAULT_QSTRINGLIST
 #define RDEFAULT_QSTRINGLIST QStringList()
 #endif
@@ -231,7 +235,7 @@ public:
     static QLocale getNumberLocale();
 
     static void initRecentFiles();
-    static void addRecentFile(const QString& fileName, const QImage& thumbnail=QImage());
+    static void addRecentFile(const QString& fileName, const QImage& thumbnail=RDEFAULT_QIMAGE);
     static void removeRecentFile(const QString& fileName);
     static QStringList getRecentFiles();
     static void clearRecentFiles();
