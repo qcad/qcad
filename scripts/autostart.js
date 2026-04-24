@@ -524,7 +524,7 @@ function main() {
 
         // move splash to same screen where main app was last seen:
         var screenIndex = RSettings.getIntValue("Appearance/Screen", -1);
-        if (screenIndex>=0) {
+        if (screenIndex>=0 && isFunction(QGuiApplication.screens)) {
             var screens = QGuiApplication.screens();
             if (screenIndex >= 0 && screenIndex < screens.length) {
                 var screen = screens[screenIndex];
