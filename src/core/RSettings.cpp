@@ -794,6 +794,8 @@ QString RSettings::getThumbnailFilePath(const QString& fileName) {
 
 void RSettings::addThumbnail(const QString& fileName, const QImage& thumbnail) {
     QString thumbnailFilePath = getThumbnailFilePath(fileName);
+    // create cache dir if it does not exist yet:
+    QFileInfo(thumbnailFilePath).dir().mkpath(".");
     QImageWriter iw(thumbnailFilePath);
     if (!iw.write(thumbnail)) {
         qWarning() << "RSettings::addThumbnail: error:" << iw.errorString() << " file: " << thumbnailFilePath;
