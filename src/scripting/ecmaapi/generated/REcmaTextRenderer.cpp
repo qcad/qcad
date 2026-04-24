@@ -468,6 +468,14 @@
                 qScriptValueFromValue(&engine, RTextRenderer::rxUnicode),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxMifStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxMifStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxMif",
+                qScriptValueFromValue(&engine, RTextRenderer::rxMif),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxOptionalBreakStr",
                 qScriptValueFromValue(&engine, RTextRenderer::rxOptionalBreakStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

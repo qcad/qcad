@@ -100,6 +100,7 @@ SOURCES += \
     RViewportEntity.cpp \
     RWheelEvent.cpp \
     RWidget.cpp \
+    bridges/RSettingsBridge.cpp \
     math/RArc.cpp \
     math/RBox.cpp \
     math/RCircle.cpp \
@@ -270,6 +271,7 @@ HEADERS = \
     RViewportEntity.h \
     RWheelEvent.h \
     RWidget.h \
+    bridges/RSettingsBridge.h \
     math/RArc.h \
     math/RArcProxy.h \
     math/RBox.h \

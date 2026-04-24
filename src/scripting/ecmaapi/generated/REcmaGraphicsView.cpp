@@ -188,6 +188,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, zoomToEntities, "zoomToEntities");
             
+            REcmaHelper::registerFunction(&engine, proto, getBuffer, "getBuffer");
+            
             REcmaHelper::registerFunction(&engine, proto, centerToPoint, "centerToPoint");
             
             REcmaHelper::registerFunction(&engine, proto, centerToBox, "centerToBox");
@@ -3435,6 +3437,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsView::zoomToEntities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsView::getBuffer
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::getBuffer", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::getBuffer";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("getBuffer", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QImage'
+    QImage cppResult =
+        
+               self->getBuffer();
+        // return type: QImage
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.getBuffer().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::getBuffer", context, engine);
             return result;
         }
          QScriptValue

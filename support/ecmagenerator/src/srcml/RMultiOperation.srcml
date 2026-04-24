@@ -2,14 +2,17 @@
 <unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./operations" filename="RMultiOperation.h"><cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RMULTIOPERATION_H</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RMULTIOPERATION_H</name></cpp:define>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"ROperation.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"operations_global.h"</cpp:file></cpp:include>
+
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"ROperation.h"</cpp:file></cpp:include>
 
 <comment type="block">/**
  * \brief An operation that bundles several ROperation objects into one.
  * This allows grouping multiple edits into a single undo/redo step.
  */</comment>
-<class>class <name>RMultiOperation</name> <super>: <specifier>public</specifier> <name>ROperation</name></super> <block>{<private type="default">
+<class>class <macro><name>QCADOPERATIONS_EXPORT</name></macro> <name>RMultiOperation</name> <super>: <specifier>public</specifier> <name>ROperation</name></super> <block>{<private type="default">
 </private><public>public:
     <constructor><name>RMultiOperation</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undoable</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>
         <member_list>: <call><name>ROperation</name><argument_list>(<argument><expr><name>undoable</name></expr></argument>)</argument_list></call> </member_list><block>{

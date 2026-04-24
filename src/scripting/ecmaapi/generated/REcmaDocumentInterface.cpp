@@ -437,6 +437,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, bindXRef, "bindXRef");
             
+            REcmaHelper::registerFunction(&engine, proto, updateThumbnail, "updateThumbnail");
+            
+            REcmaHelper::registerFunction(&engine, proto, getThumbnail, "getThumbnail");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RDocumentInterface*>(), *proto);
 
@@ -11590,6 +11594,99 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::bindXRef", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::updateThumbnail
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::updateThumbnail", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::updateThumbnail";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("updateThumbnail", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateThumbnail();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.updateThumbnail().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::updateThumbnail", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::getThumbnail
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::getThumbnail", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::getThumbnail";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("getThumbnail", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QImage'
+    QImage cppResult =
+        
+               self->getThumbnail();
+        // return type: QImage
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.getThumbnail().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::getThumbnail", context, engine);
             return result;
         }
          QScriptValue REcmaDocumentInterface::toString
