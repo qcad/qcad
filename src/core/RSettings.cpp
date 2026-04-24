@@ -796,7 +796,7 @@ void RSettings::addThumbnail(const QString& fileName, const QImage& thumbnail) {
     QString thumbnailFilePath = getThumbnailFilePath(fileName);
     QImageWriter iw(thumbnailFilePath);
     if (!iw.write(thumbnail)) {
-        qDebug() << "error:" << iw.errorString();
+        qWarning() << "RSettings::addThumbnail: error:" << iw.errorString() << " file: " << thumbnailFilePath;
     }
 }
 
