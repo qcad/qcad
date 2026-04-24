@@ -61,6 +61,18 @@ QTreeWidgetItem* RTreeWidget::getActiveItem() {
     return currentItem();
 }
 
+void RTreeWidget::scrollToData(const QString& data, Qt::ItemDataRole role){
+    // scroll to item with given data:
+    QTreeWidgetItemIterator it(this);
+    while (*it) {
+        if ((*it)->data(0, role).toString()==data) {
+            scrollToItem(*it);
+            break;
+        }
+        ++it;
+    }
+}
+
 void RTreeWidget::contextMenuEvent(QContextMenuEvent* e) {
     if (e!=NULL) {
         QTreeWidgetItem* item = itemAt(e->pos());
