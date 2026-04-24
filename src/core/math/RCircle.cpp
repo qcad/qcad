@@ -32,10 +32,12 @@ RCircle::RCircle() :
     center(RVector::invalid), radius(0.0) {
 }
 
+/** Creates a circle from center coordinates and radius. */
 RCircle::RCircle(double cx, double cy, const double radius) :
     center(cx, cy), radius(radius) {
 }
 
+/** Creates a circle from a center point and radius. */
 RCircle::RCircle(const RVector& center, const double radius) :
     center(center), radius(radius) {
 }
@@ -43,12 +45,21 @@ RCircle::RCircle(const RVector& center, const double radius) :
 RCircle::~RCircle() {
 }
 
+/**
+ * Creates a circle with the given two points as diameter endpoints.
+ * The center is the midpoint and the radius is half the distance.
+ */
 RCircle RCircle::createFrom2Points(const RVector& p1, const RVector& p2) {
     RVector center = (p1+p2)/2.0;
     double radius = p1.getDistanceTo(p2)/2.0;
     return RCircle(center, radius);
 }
 
+/**
+ * Creates a circle through three points by finding the intersection of the
+ * perpendicular bisectors of the two chords p1–p2 and p2–p3.
+ * Returns an invalid circle if the three points are collinear.
+ */
 RCircle RCircle::createFrom3Points(const RVector& p1,
                                   const RVector& p2,
                                   const RVector& p3) {
@@ -84,96 +95,115 @@ RCircle RCircle::createFrom3Points(const RVector& p1,
     return RCircle(center, radius);
 }
 
+/** \return An RArc covering the full circle, starting at \c startAngle. */
 RArc RCircle::toArc(double startAngle) const {
     return RArc(getCenter(), getRadius(), startAngle, startAngle + 2*M_PI, false);
 }
 
+/** Sets the Z coordinate of the center point. */
 void RCircle::setZ(double z) {
     center.z = z;
 }
 
+/** \return List containing the center point (used for property-based transformations). */
 QList<RVector> RCircle::getVectorProperties() const {
     return QList<RVector>() << center;
 }
 
+/** \return List of scalar properties: radius. */
 QList<double> RCircle::getDoubleProperties() const {
     return QList<double>() << radius;
 }
 
+/** \return Center point of the circle. */
 RVector RCircle::getCenter() const{
     return center;
 }
 
+/** Sets the center point of the circle. */
 void RCircle::setCenter(const RVector& vector) {
     center = vector;
 }
 
+/** \return Radius of the circle. */
 double RCircle::getRadius() const{
     return radius;
 }
 
+/** Sets the radius of the circle. */
 void RCircle::setRadius(double r) {
     radius = r;
 }
 
+/** \return Axis-aligned bounding box (square of side 2*radius centred on center). */
 RBox RCircle::getBoundingBox() const {
-    return RBox(center - RVector(radius, radius), center + RVector(radius,
-            radius));
+    return RBox(center - RVector(radius, radius), center + RVector(radius, radius));
 }
 
+/** \return Circumference (same as getCircumference()). */
 double RCircle::getLength() const {
-    return 2 * radius * M_PI;
+    return getCircumference();
 }
 
+/** \return Diameter (2 * radius). */
 double RCircle::getDiameter() const {
     return 2*radius;
 }
 
+/** Sets the radius from a diameter value. */
 void RCircle::setDiameter(double d) {
     radius = d/2.0;
 }
 
+/** \return Circumference of the circle (2 * π * radius). */
 double RCircle::getCircumference() const {
-    return radius*2*M_PI;
+    return 2*M_PI*radius;
 }
 
+/** Sets the radius to match the given circumference. */
 void RCircle::setCircumference(double c) {
-    radius = c/M_PI/2.0;
+    radius = c / (2.0*M_PI);
 }
 
+/** \return Area of the circle (π * radius²). */
 double RCircle::getArea() const {
-    return radius*radius*M_PI;
+    return M_PI*radius*radius;
 }
 
+/** Sets the radius to match the given area. */
 void RCircle::setArea(double a) {
     radius = sqrt(fabs(a)/M_PI);
 }
 
+/** \return True if \c p is strictly inside the circle (distance to center < radius). */
 bool RCircle::contains(const RVector& p) const {
     return p.getDistanceTo(center) < radius;
-    // TODO: + RS::PointTolerance ?
 }
 
 //bool RCircle::touchesCircleInternally(const RCircle& other) const {
 //    return contains(other.center) || other.contains(center);
 //}
 
+/** \return Empty list — circles have no endpoint snaps. */
 QList<RVector> RCircle::getEndPoints() const {
     QList<RVector> ret;
     return ret;
 }
 
+/** \return Empty list — circles have no midpoint snaps. */
 QList<RVector> RCircle::getMiddlePoints() const {
     QList<RVector> ret;
     return ret;
 }
 
+/** \return List containing the center point of the circle. */
 QList<RVector> RCircle::getCenterPoints() const {
     QList<RVector> ret;
     ret.append(center);
     return ret;
 }
 
+/** \return The four quadrant points (0°, 90°, 180°, 270°) as snappable reference points. */
 QList<RVector> RCircle::getArcReferencePoints() const {
     QList<RVector> ret;
 
@@ -185,6 +215,7 @@ QList<RVector> RCircle::getArcReferencePoints() const {
     return ret;
 }
 
+/** \return Empty list — circles have no meaningful distance-to-end notion. */
 QList<RVector> RCircle::getPointsWithDistanceToEnd(double distance, int from) const {
     Q_UNUSED(distance)
     Q_UNUSED(from)
@@ -193,11 +224,16 @@ QList<RVector> RCircle::getPointsWithDistanceToEnd(double distance, int from) co
     return ret;
 }
 
+/** \return Dense set of sample points around the full circle. Delegates to RArc::getPointCloud. */
 QList<RVector> RCircle::getPointCloud(double segmentLength) const {
     RArc arc = toArc();
     return arc.getPointCloud(segmentLength);
 }
 
+/**
+ * \return RNANDOUBLE — circles have no defined tangent direction at a parametric distance
+ *         (they have no start point).
+ */
 double RCircle::getAngleAt(double distance, RS::From from) const {
     Q_UNUSED(distance)
     Q_UNUSED(from)
@@ -205,10 +241,16 @@ double RCircle::getAngleAt(double distance, RS::From from) const {
     return RNANDOUBLE;
 }
 
+/** \return Point on the circle at angle \c a (radians), preserving the center's Z coordinate. */
 RVector RCircle::getPointAtAngle(double a) const {
-    return RVector(center.x + cos(a) * radius, center.y + sin(a) * radius);
+    return RVector(center.x + cos(a) * radius, center.y + sin(a) * radius, center.z);
 }
 
+/**
+ * \return Vector from the nearest point on the circle to \c point.
+ *         Returns RVector::invalid if \c point is at the center (infinite solutions).
+ *         \c limited and \c strictRange are ignored (circles are unlimited).
+ */
 RVector RCircle::getVectorTo(const RVector& point, bool limited, double strictRange) const {
     Q_UNUSED(limited)
     Q_UNUSED(strictRange)
@@ -216,25 +258,31 @@ RVector RCircle::getVectorTo(const RVector& point, bool limited, double strictRa
     RVector v = (point - center).get2D();
 
     // point is at the center of the circle, infinite solutions:
-    if (v.getMagnitude()<RS::PointTolerance) {
+    if (v.getSquaredMagnitude() < RS::PointTolerance * RS::PointTolerance) {
         return RVector::invalid;
     }
 
     return RVector::createPolar(v.getMagnitude() - radius, v.getAngle());
 }
 
+/** \return The rightmost point of the circle (center + radius along X). */
 RVector RCircle::getPointOnShape() const {
-    return getCenter() + RVector(radius, 0);
+    return center + RVector(radius, 0);
 }
 
+/**
+ * Moves the circle by \c offset. Returns false if the offset is invalid or negligibly small.
+ * Uses squared magnitude to avoid a sqrt call; tolerance is squared accordingly.
+ */
 bool RCircle::move(const RVector& offset) {
-    if (!offset.isValid() || offset.getMagnitude() < RS::PointTolerance) {
+    if (!offset.isValid() || offset.getSquaredMagnitude() < RS::PointTolerance * RS::PointTolerance) {
         return false;
     }
     center += offset;
     return true;
 }
 
+/** Rotates the circle center around \c c by \c rotation radians (radius is invariant). */
 bool RCircle::rotate(double rotation, const RVector& c) {
     if (fabs(rotation) < RS::AngleTolerance) {
         return false;
@@ -243,45 +291,55 @@ bool RCircle::rotate(double rotation, const RVector& c) {
     return true;
 }
 
+/**
+ * Scales the circle by \c scaleFactors relative to \c c.
+ * Only scaleFactors.x is used for the radius (uniform XY scaling assumed).
+ */
 bool RCircle::scale(const RVector& scaleFactors, const RVector& c) {
     center.scale(scaleFactors, c);
-    radius *= scaleFactors.x;
-    if (radius < 0.0) {
-        radius *= -1.0;
-    }
+    radius = fabs(radius * scaleFactors.x);
     return true;
 }
 
+/** Mirrors the circle center about \c axis (radius is invariant). */
 bool RCircle::mirror(const RLine& axis) {
     center.mirror(axis);
     return true;
 }
 
+/** Flips the circle center horizontally (negates X; radius is invariant). */
 bool RCircle::flipHorizontal() {
     center.flipHorizontal();
     return true;
 }
 
+/** Flips the circle center vertically (negates Y; radius is invariant). */
 bool RCircle::flipVertical() {
     center.flipVertical();
     return true;
 }
 
+/**
+ * \return A new circle obtained by applying the 2D affine \c transform to the center
+ *         and deriving the new radius from the transformed rightmost point.
+ * \todo Return a transformed polyline for non-uniform transforms.
+ */
 QSharedPointer<RShape> RCircle::getTransformed(const QTransform& transform) const {
-    // TODO: return transformed polyline with line segments
-
     RVector ct = center.getTransformed2D(transform);
     RVector sp = center + RVector(radius, 0);
     RVector spt = sp.getTransformed2D(transform);
 
-    return QSharedPointer<RShape>(
-        new RCircle(
-            ct,
-            ct.getDistanceTo(spt)
-        )
-    );
+    return QSharedPointer<RShape>(new RCircle(ct, ct.getDistanceTo(spt)));
 }
 
+/**
+ * \return The (up to two) tangent lines from \c point to this circle.
+ *         Uses the Thales circle construction: the tangent points are the intersections
+ *         of this circle with the circle whose diameter is the segment from \c point to
+ *         the center. Returns an empty list if \c point is inside the circle.
+ *         The condition thalesRadius < radius/2 is equivalent to
+ *         distance(point, center) < radius (point inside circle).
+ */
 QList<RLine> RCircle::getTangents(const RVector& point) const {
     QList<RLine> ret;
 
@@ -308,6 +366,11 @@ QList<RLine> RCircle::getTangents(const RVector& point) const {
     return ret;
 }
 
+/**
+ * Splits the circle at the given \c points, returning a list of RArc segments.
+ * Points are sorted by angle from the first split point. The result is a set of
+ * arcs that together cover the full circle.
+ */
 QList<QSharedPointer<RShape> > RCircle::splitAt(const QList<RVector>& points) const {
     if (points.length()==0) {
         return RShape::splitAt(points);
@@ -340,6 +403,7 @@ QList<QSharedPointer<RShape> > RCircle::splitAt(const QList<RVector>& points) co
     return ret;
 }
 
+/** Prints circle properties to \c dbg for debugging. */
 void RCircle::print(QDebug dbg) const {
     dbg.nospace() << "RCircle(";
     RShape::print(dbg);
