@@ -447,15 +447,19 @@ void RArc::setArea(double a) {
 }
 
 /**
- * \return Area of the circular segment bounded by the arc and its chord.
- *         Computed as sector area minus triangle area (sagitta * chord / 2),
- *         where sagitta h = radius - sqrt(radius² - (chord/2)²).
+ * \return Area of the circular segment bounded by the arc and its chord
+ *         (the region between the arc and the straight line connecting start and end point).
+ *
+ *         Derivation: segment = sector − isosceles_triangle(center, p1, p2)
+ *           sector area  = r²θ/2
+ *           triangle area = r²sin(θ)/2
+ *           → segment     = r²(θ − sin θ)/2
+ *
+ *         This formula is correct for all arc angles (minor, major, full circle).
  */
 double RArc::getChordArea() const {
-    double a = getArea();
-    double c = RLine(getStartPoint(), getEndPoint()).getLength();
-    double h = radius - sqrt(radius*radius - (c/2.0)*(c/2.0));
-    return a - (h*c/2.0);
+    double theta = getAngleLength(false);
+    return 0.5 * radius * radius * (theta - sin(theta));
 }
 
 /**
