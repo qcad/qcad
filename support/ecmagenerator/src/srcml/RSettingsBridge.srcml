@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core/bridges" filename="RSettingsBridge.h"><cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QObject&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSettings.h"</cpp:file></cpp:include>
+
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RSettingsBridge</name> <super>: <specifier>public</specifier> <name>QObject</name></super> <block>{<private type="default">
+    <macro><name>Q_OBJECT</name></macro>
+
+</private><public>public:
+    <function><type><name>static</name> <name>RSettingsBridge</name>*</type> <name>instance</name><parameter_list>()</parameter_list> <block>{
+        <comment type="line">// If the instance doesn't exist yet, create it</comment>
+        <if>if <condition>(<expr>!<name>m_instance</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>m_instance</name> = new <call><name>RSettingsBridge</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+            
+            <comment type="line">// Optional: Ensure the instance is cleaned up when the app closes</comment>
+            <comment type="line">// by setting the application object as the parent.</comment>
+            <comment type="line">// m_instance-&gt;setParent(QCoreApplication::instance());</comment>
+        }</block></then></if>
+        <return>return <expr><name>m_instance</name></expr>;</return>
+    }</block></function>
+
+    <comment type="line">// Accessible from QML to get the latest list</comment>
+    <function><type><name>Q_INVOKABLE</name> <name>QStringList</name></type> <name>getRecentFiles</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RSettings</name>::<name>getRecentFiles</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <comment type="line">// The single, generic notification point</comment>
+    <function><type><name>static</name> <name>void</name></type> <name>notifyChange</name><parameter_list>()</parameter_list> <block>{
+        <if>if <condition>(<expr><name>m_instance</name></expr>)</condition><then> <block>{
+            <decl_stmt><decl><type><name>emit</name></type> <name>m_instance</name>-&gt;<name>settingsChanged</name><argument_list>()</argument_list></decl>;</decl_stmt>
+        }</block></then></if>
+    }</block></function>
+
+<label><name>signals</name>:</label>
+    <comment type="line">// One signal to rule them all</comment>
+    <function_decl><type><name>void</name></type> <name>settingsChanged</name><parameter_list>()</parameter_list>;</function_decl>
+
+</public><private>private:
+    <constructor><specifier>explicit</specifier> <name>RSettingsBridge</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>parent</name> =<init> <expr><name>nullptr</name></expr></init></decl></param>)</parameter_list> <member_list>: <call><name>QObject</name><argument_list>(<argument><expr><name>parent</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+    <decl_stmt><decl><type><name>static</name> <name>RSettingsBridge</name>*</type> <name>m_instance</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+</unit>
