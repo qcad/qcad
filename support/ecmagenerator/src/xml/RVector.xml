@@ -702,8 +702,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="getUnion" cppName="getUnion" specifier="public"
-    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+    <method name="getIntersection" cppName="getIntersection"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
       <variant returnType="QList &lt; RVector &gt;"
       isPureVirtual="false">
         <arg type="QList &lt; RVector &gt; &amp;"

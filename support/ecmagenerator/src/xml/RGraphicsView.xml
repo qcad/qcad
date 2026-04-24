@@ -353,6 +353,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getBuffer" cppName="getBuffer" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QImage" isPureVirtual="false" />
+    </method>
     <method name="centerToPoint" cppName="centerToPoint"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

@@ -125,6 +125,7 @@
     <function_decl><type><name>static</name> <name>QFont</name></type> <name>getInfoLabelFont</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QFont</name></type> <name>getStatusBarFont</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>static</name> <name>RColor</name></type> <name>getByBlockColor</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getSelectionColor</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getReferencePointColor</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getStartReferencePointColor</name><parameter_list>()</parameter_list>;</function_decl>
@@ -231,10 +232,14 @@
     <function_decl><type><name>static</name> <name>QLocale</name></type> <name>getNumberLocale</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>initRecentFiles</name><parameter_list>()</parameter_list>;</function_decl>
-    <function_decl><type><name>static</name> <name>void</name></type> <name>addRecentFile</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>)</parameter_list>;</function_decl>
+    <decl_stmt><decl><type><name>static</name> <name>void</name></type> <name>addRecentFile</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>fileName</name></expr></argument>, <argument><expr><name>const</name> <name>QImage</name>&amp; <name>thumbnail</name>=<call><name>QImage</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
     <function_decl><type><name>static</name> <name>void</name></type> <name>removeRecentFile</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QStringList</name></type> <name>getRecentFiles</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>void</name></type> <name>clearRecentFiles</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>getThumbnailFilePath</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>addThumbnail</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>, <param><decl><type><name>const</name> <name>QImage</name>&amp;</type> <name>thumbnail</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>removeThumbnail</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getColor</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>defaultValue</name>=<init><expr><name>RDEFAULT_RCOLOR</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
@@ -316,6 +321,8 @@
     <function_decl><type><name>static</name> <name>void</name></type> <name>appendOpenGLMessage</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>msg</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QStringList</name></type> <name>getOpenGLMessages</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>useQml</name><parameter_list>()</parameter_list>;</function_decl>
+
 </public><private>private:
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isInitialized</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>void</name></type> <name>shortenRecentFiles</name><parameter_list>()</parameter_list>;</function_decl>
@@ -330,6 +337,7 @@
     <decl_stmt><decl><type><name>static</name> <name>QFont</name>*</type> <name>snapLabelFont</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QFont</name>*</type> <name>infoLabelFont</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QFont</name>*</type> <name>statusBarFont</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>byBlockColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>selectionColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>referencePointColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>startReferencePointColor</name></decl>;</decl_stmt>

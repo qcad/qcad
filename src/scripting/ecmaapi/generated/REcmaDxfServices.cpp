@@ -140,6 +140,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, parseUnicode, "parseUnicode");
             
+            REcmaHelper::registerFunction(&engine, &ctor, decodeMifString, "decodeMifString");
+            
             REcmaHelper::registerFunction(&engine, &ctor, autoFixLinetypePattern, "autoFixLinetypePattern");
             
             REcmaHelper::registerFunction(&engine, &ctor, getFileQCADVersion, "getFileQCADVersion");
@@ -149,6 +151,8 @@
             REcmaHelper::registerFunction(&engine, &ctor, getAci, "getAci");
             
             REcmaHelper::registerFunction(&engine, &ctor, getColor, "getColor");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, hasProxy, "hasProxy");
             
 
     // static properties:
@@ -2279,6 +2283,56 @@
             return result;
         }
          QScriptValue
+        REcmaDxfServices::decodeMifString
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDxfServices::decodeMifString", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::decodeMifString";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RDxfServices::
+       decodeMifString(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.decodeMifString().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDxfServices::decodeMifString", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDxfServices::autoFixLinetypePattern
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2540,6 +2594,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDxfServices::getColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDxfServices::hasProxy
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDxfServices::hasProxy", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::hasProxy";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RDxfServices::
+       hasProxy();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.hasProxy().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDxfServices::hasProxy", context, engine);
             return result;
         }
          QScriptValue REcmaDxfServices::toString

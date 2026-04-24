@@ -32,6 +32,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RS.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RColor.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLineweight.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDxfServicesProxy.h"</cpp:file></cpp:include>
 
 
 <class_decl>class <name>RDocument</name>;</class_decl>
@@ -160,6 +161,8 @@
     <function_decl><type><name>static</name> <name>QString</name></type> <name>escapeUnicode</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>str</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>parseUnicode</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>str</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>decodeMifString</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>input</name></decl></param>)</parameter_list>;</function_decl>
+
     <function_decl><type><name>static</name> <name>void</name></type> <name>autoFixLinetypePattern</name><parameter_list>(<param><decl><type><name>RLinetypePattern</name>&amp;</type> <name>pattern</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>int</name></type> <name>getFileQCADVersion</name><parameter_list>(<param><decl><type><name>const</name> <name>RDocument</name>&amp;</type> <name>doc</name></decl></param>)</parameter_list>;</function_decl>
@@ -167,6 +170,27 @@
     <function_decl><type><name>static</name> <name>void</name></type> <name>initAci</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getAci</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>col</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getColor</name><parameter_list>(<param><decl><type><name>unsigned</name> <name>int</name></type> <name>index</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>static</name> <name>bool</name></type> <name>hasProxy</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>dxfServicesProxy</name>!=<name>NULL</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>static</name> <name>void</name></type> <name>setDxfServicesProxy</name><parameter_list>(<param><decl><type><name>RDxfServicesProxy</name>*</type> <name>p</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>dxfServicesProxy</name>!=<name>NULL</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr>delete <name>dxfServicesProxy</name></expr>;</expr_stmt>
+        }</block></then></if>
+        <expr_stmt><expr><name>dxfServicesProxy</name> = <name>p</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>static</name> <name>RDxfServicesProxy</name>*</type> <name>getDxfServicesProxy</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>dxfServicesProxy</name></expr>;</return>
+    }</block></function>
 
 </public><private>private:
     <decl_stmt><decl><type><name>bool</name></type> <name>version2GotDIMZIN</name></decl>;</decl_stmt>
@@ -189,6 +213,8 @@
 <cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
     <decl_stmt><decl><type><name>QTextCodec</name>*</type> <name>codec</name></decl>;</decl_stmt>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
+    <decl_stmt><decl><type><name>static</name> <name>RDxfServicesProxy</name>*</type> <name>dxfServicesProxy</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDxfServices::Type</argument>)</argument_list></macro>

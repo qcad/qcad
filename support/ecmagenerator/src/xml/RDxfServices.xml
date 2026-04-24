@@ -294,6 +294,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="decodeMifString" cppName="decodeMifString"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="input"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="autoFixLinetypePattern"
     cppName="autoFixLinetypePattern" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
@@ -328,6 +336,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="index"
         isConst="false" />
       </variant>
+    </method>
+    <method name="hasProxy" cppName="hasProxy" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
   </class>
 </unit>

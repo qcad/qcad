@@ -1272,5 +1272,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="updateThumbnail" cppName="updateThumbnail"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getThumbnail" cppName="getThumbnail"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QImage" isPureVirtual="false" />
+    </method>
   </class>
 </unit>

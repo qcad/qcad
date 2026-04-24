@@ -123,7 +123,7 @@
     <decl_stmt><decl><type><name>RVector</name></type> <name>mousePressModelPosition</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>gotMouseButtonPress</name></decl>;</decl_stmt>
 
-    <comment type="line">// backend to render to bitmap (can be QPainter or Skia):</comment>
+    <comment type="line">// backend to render to bitmap:</comment>
     <decl_stmt><decl><type><name>RGraphicsViewImage</name>*</type> <name>imageView</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 

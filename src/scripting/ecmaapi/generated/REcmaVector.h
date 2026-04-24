@@ -307,7 +307,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getIntersection
-        (QScriptContext* context, QScriptEngine* engine)
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getUnique
         (QScriptContext* context, QScriptEngine* engine) 

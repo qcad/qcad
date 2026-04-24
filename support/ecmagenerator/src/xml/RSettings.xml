@@ -337,6 +337,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QFont" isPureVirtual="false" />
     </method>
+    <method name="getByBlockColor" cppName="getByBlockColor"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false" />
+    </method>
     <method name="getSelectionColor" cppName="getSelectionColor"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
@@ -660,14 +665,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
-    <method name="addRecentFile" cppName="addRecentFile"
-    specifier="public" isStatic="true" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString"
-        name="fileName" isConst="true" />
-      </variant>
-    </method>
     <method name="removeRecentFile" cppName="removeRecentFile"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
@@ -685,6 +682,32 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getThumbnailFilePath"
+    cppName="getThumbnailFilePath" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+      </variant>
+    </method>
+    <method name="addThumbnail" cppName="addThumbnail"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+        <arg type="QImage &amp;" typeName="QImage" name="thumbnail"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="removeThumbnail" cppName="removeThumbnail"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
+      </variant>
     </method>
     <method name="getColor" cppName="getColor" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
@@ -1044,6 +1067,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QStringList" isPureVirtual="false" />
+    </method>
+    <method name="useQml" cppName="useQml" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
   </class>
 </unit>
