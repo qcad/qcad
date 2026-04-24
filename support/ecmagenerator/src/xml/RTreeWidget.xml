@@ -34,6 +34,16 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QTreeWidgetItem *"
       isPureVirtual="false" />
     </method>
+    <method name="scrollToData" cppName="scrollToData"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="data"
+        isConst="true" />
+        <arg type="Qt::ItemDataRole" typeName="Qt::ItemDataRole"
+        name="role" isConst="false" />
+      </variant>
+    </method>
     <method name="contextMenuEvent" cppName="contextMenuEvent"
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
