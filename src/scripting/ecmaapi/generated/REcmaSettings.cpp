@@ -273,6 +273,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, initRecentFiles, "initRecentFiles");
             
+            REcmaHelper::registerFunction(&engine, &ctor, addRecentFile, "addRecentFile");
+            
             REcmaHelper::registerFunction(&engine, &ctor, removeRecentFile, "removeRecentFile");
             
             REcmaHelper::registerFunction(&engine, &ctor, getRecentFiles, "getRecentFiles");
@@ -5636,6 +5638,102 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::initRecentFiles", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::addRecentFile
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::addRecentFile", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::addRecentFile";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       addRecentFile(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QImage */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument is reference
+                    QImage*
+                    ap1 =
+                    qscriptvalue_cast<
+                    QImage*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+
+                           return REcmaHelper::throwError("RSettings: Argument 1 is not of type QImage* or QSharedPointer<QImage>.",
+                               context);
+                    }
+                    QImage& a1 = *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       addRecentFile(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.addRecentFile().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::addRecentFile", context, engine);
             return result;
         }
          QScriptValue

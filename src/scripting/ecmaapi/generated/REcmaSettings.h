@@ -364,6 +364,9 @@
         initRecentFiles
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addRecentFile
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         removeRecentFile
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
