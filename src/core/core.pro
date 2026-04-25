@@ -310,6 +310,8 @@ else {
     CONFIG += plugin
 }
 
+CONFIG += c++11
+
 QT += concurrent
 
 NAME = $${RLIBNAME}core
