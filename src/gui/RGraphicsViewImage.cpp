@@ -1792,7 +1792,9 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
         //RVector sp = path.getStartPoint();
         RVector sp = path.getBoundingBox().getCenter();
         path.move(-sp);
-        path.scale(1/factor,1/factor);
+        double dpr = getDevicePixelRatio();
+        double f = 1/factor*dpr;
+        path.scale(f,f);
         path.move(sp);
     }
 
