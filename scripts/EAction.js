@@ -451,7 +451,6 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar, forDialog) {
  * \param saveToSettings if true, the state is saved to settings
  */
 EAction.prototype.hideUiOptions = function(saveToSettings) {
-    qDebug("EAction.prototype.hideUiOptions");
     if (isNull(saveToSettings)) {
         saveToSettings = true;
     }
@@ -469,7 +468,6 @@ EAction.prototype.hideUiOptions = function(saveToSettings) {
     }
 
     if (saveToSettings) {
-        qDebug("EAction.prototype.hideUiOptions: this.settingsGroup: " + this.settingsGroup);
         WidgetFactory.saveState(optionsToolBar, this.settingsGroup);
     }
 
