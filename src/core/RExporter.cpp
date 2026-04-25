@@ -1345,15 +1345,10 @@ void RExporter::exportArc(const RArc& arc, double offset) {
 }
 
 void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
-    qDebug() << "000";
     if (allowForZeroLength && arc.isFullCircle()) {
-        qDebug() << "001: allowForZeroLength: " << allowForZeroLength;
-        qDebug() << "001: arc.isFullCircle(): " << arc.isFullCircle();
-        qDebug() << "001";
         exportLineSegment(RLine(arc.getStartPoint(), arc.getEndPoint()), arc.getDirection1());
         return;
     }
-    qDebug() << "002";
 
     double segmentLength;
     if (pixelSizeHint>0.0) {
