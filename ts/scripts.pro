@@ -1130,6 +1130,7 @@ SOURCES = \
 ../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.ui \
 ../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.ui \
 ../scripts/Draw/Shape/Shape.ui \
+../scripts/Draw/Shape/Shape2.ui \
 ../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui \
 ../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui \
 ../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui \

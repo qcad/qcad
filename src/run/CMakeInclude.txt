@@ -122,11 +122,11 @@ if(NOT r_no_opennurbs)
     )
 endif()
 
-if(linux-g++)
-    target_link_libraries(${PROJECT_NAME} PRIVATE
-        GLU
-    )
-endif()
+#if(linux-g++)
+#    target_link_libraries(${PROJECT_NAME} PRIVATE
+#       GLU
+#    )
+#endif()
 
 
 if(${CMAKE_SYSTEM_NAME} STREQUAL "Darwin")
@@ -148,4 +148,3 @@ if(win32-msvc2010)
         _CRT_SECURE_NO_WARNINGS
     )
 endif()
-

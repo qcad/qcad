@@ -361,6 +361,8 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
 
     this.resuming = true;
 
+    this.settingsGroup = "";
+
     this.optionWidgetActions = [];
     for (var i = 0; i < this.uiFile.length; ++i) {
         var uiFile = this.uiFile[i];
@@ -384,8 +386,12 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
             this.additionalOptionsToolBars.push(optionsToolBar);
         }
 
-        // show:
-        this.settingsGroup = wOptions.objectName;
+        // remember settings group used to restore / save settings of this tool:
+        if (this.settingsGroup==="" || wOptions.objectName===this.getClassName()) {
+            this.settingsGroup = wOptions.objectName;
+        }
+
+        // move widgets from UI file widget to options tool bar and keep track of them in this.optionWidgetActions for later removal:
         var movedWidgets = WidgetFactory.moveChildren(wOptions, optionsToolBar, this.settingsGroup);
 
         this.optionWidgetActions = this.optionWidgetActions.concat(movedWidgets);
@@ -445,6 +451,7 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar, forDialog) {
  * \param saveToSettings if true, the state is saved to settings
  */
 EAction.prototype.hideUiOptions = function(saveToSettings) {
+    qDebug("EAction.prototype.hideUiOptions");
     if (isNull(saveToSettings)) {
         saveToSettings = true;
     }
@@ -462,6 +469,7 @@ EAction.prototype.hideUiOptions = function(saveToSettings) {
     }
 
     if (saveToSettings) {
+        qDebug("EAction.prototype.hideUiOptions: this.settingsGroup: " + this.settingsGroup);
         WidgetFactory.saveState(optionsToolBar, this.settingsGroup);
     }
 
@@ -1180,10 +1188,11 @@ EAction.getMainCadToolBarPanel = function() {
  * first time.
  * 
  * \param title Translated title to use for the CAD toolbar panel. E.g.
- * qsTr("Snap"). \param objectName Object name to use for the panel. Used mainly
- * for later identification of the panel. E.g. "snap". \param hasBackButton True
- * to display a back button at the top or left to allow the user to navigate
- * back to the main CAD toolbar panel.
+ * qsTr("Snap").
+ * \param objectName Object name to use for the panel. Used mainly
+ * for later identification of the panel. E.g. "snap".
+ * \param hasBackButton True to display a back button at the top or left to allow
+ * the user to navigate back to the main CAD toolbar panel.
  */
 EAction.getCadToolBarPanel = function(title, objectName, hasBackButton) {
     var appWin = EAction.getMainWindow();
@@ -1193,7 +1202,6 @@ EAction.getCadToolBarPanel = function(title, objectName, hasBackButton) {
     if (isNull(cadToolBar)) {
         cadToolBar = new RCadToolBar(qsTr("CAD Tools"), appWin);
         cadToolBar.objectName = "CadToolBar";
-//        cadToolBar.updateIconSize();
 
         cadToolBar.topLevelChanged.connect(function(onOff) {
             RSettings.setValue("CadToolBar/VerticalWhenFloating", false);

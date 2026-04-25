@@ -2865,6 +2865,14 @@ function restoreOverrideCursor() {
     }
 }
 
+/**
+ * \return Global cursor position as QPoint.
+ * Overridable by plugins.
+ */
+function getGlobalCursorPos() {
+    return QCursor.pos();
+}
+
 function initUserShortcuts() {
     var keys = RSettings.getAllKeys("Shortcuts");
 
@@ -3211,7 +3219,9 @@ function writeTextFile(fileName, str) {
         setUtf8Codec(textStream);
         textStream.writeString(str);
         file.close();
+        return true;
     }
+    return false;
 }
 
 function getKeyboardModifiers(event) {

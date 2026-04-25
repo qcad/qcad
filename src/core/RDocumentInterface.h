@@ -382,6 +382,9 @@ public:
     void loadXRefs(const QSet<QString>& paths = RDEFAULT_QSET_QSTRING);
     void bindXRef(RBlock* block);
 
+    void updateThumbnail();
+    QImage getThumbnail() const;
+
 //    QTransform getInputTransform() const {
 //        return inputTransform;
 //    }
@@ -439,6 +442,8 @@ private:
 
     QSet<QString> dirtyXRefPaths;
     QFileSystemWatcher fileSystemWatcher;
+
+    QImage thumbnail;
 
     // transform for all input coordinates:
 //    QTransform inputTransform;

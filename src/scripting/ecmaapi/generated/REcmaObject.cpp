@@ -160,6 +160,10 @@
                 qScriptValueFromValue(&engine, RObject::INVALID_HANDLE),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("UNKNOWN_HANDLE",
+                qScriptValueFromValue(&engine, RObject::UNKNOWN_HANDLE),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyCustom",
                 qScriptValueFromValue(&engine, RObject::PropertyCustom),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

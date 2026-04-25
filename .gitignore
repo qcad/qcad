@@ -83,3 +83,5 @@ meta_types
 CMakeLists.txt.user.*
 CMakeCache.txt.prev
 *.bak
+
+adinit.dat

@@ -115,7 +115,8 @@ RColor REntityData::getColor(const RColor& unresolvedColor, const QStack<QShared
 
     if (unresolvedColor.isByBlock()) {
         if (blockRefStack.isEmpty()) {
-            return RColor(Qt::white);
+            // entity with color ByBlock at top level, return default block color:
+            return RSettings::getByBlockColor();
         }
         return blockRefStack.top()->getColor(true, blockRefStack);
     }

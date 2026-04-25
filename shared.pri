@@ -218,6 +218,7 @@ CONFIG(debug, debug|release) {
 INCLUDEPATH += \
     $$PWD/src/core \
     $$PWD/src/core/math \
+    $$PWD/src/core/bridges \
     $$PWD/src/grid \
     $$PWD/src/snap \
     $$PWD/src/gui \

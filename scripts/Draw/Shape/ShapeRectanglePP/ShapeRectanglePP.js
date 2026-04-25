@@ -34,7 +34,7 @@ function ShapeRectanglePP(guiAction) {
     this.roundCorners = false;
     this.radius = 1.0;
 
-    this.setUiOptions(["../Shape.ui", "ShapeRectanglePP.ui"]);
+    this.setUiOptions(["../Shape.ui", "ShapeRectanglePP.ui", "../Shape2.ui"]);
 }
 
 ShapeRectanglePP.prototype = new DrawBasedOnRectanglePP();

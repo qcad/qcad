@@ -63,7 +63,7 @@ public:
     RArc toArc(double startAngle=0.0) const;
 
     virtual bool isValid() const {
-        return center.isValid();
+        return center.isValid() && radius>0.0;
     }
 
     virtual void setZ(double z);

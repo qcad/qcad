@@ -283,7 +283,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="getBuffer" cppName="getBuffer" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QImage" isPureVirtual="false" />
     </method>
     <method name="getTransform" cppName="getTransform"
@@ -673,34 +673,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RGraphicsViewWorker *"
         typeName="RGraphicsViewWorker *" name="worker"
         isConst="false" />
-      </variant>
-    </method>
-    <method name="endPaint" cppName="endPaint"
-    specifier="protected" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
-    </method>
-    <method name="setBrush" cppName="setBrush"
-    specifier="protected" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QBrush &amp;" typeName="QBrush" name="brush"
-        isConst="true" />
-      </variant>
-    </method>
-    <method name="setPen" cppName="setPen" specifier="protected"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QPen &amp;" typeName="QPen" name="pen"
-        isConst="true" />
-      </variant>
-    </method>
-    <method name="drawLine" cppName="drawLine"
-    specifier="protected" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QLineF &amp;" typeName="QLineF" name="line"
-        isConst="true" />
       </variant>
     </method>
     <method name="invalidate" cppName="invalidate"

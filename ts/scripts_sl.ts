@@ -219,7 +219,7 @@
         <translation>Prevodi</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+17"/>
         <source>Templates</source>
         <translation>Predloge</translation>
     </message>
@@ -3235,7 +3235,7 @@ Ali jo želite obnoviti?</translation>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+88"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
@@ -4206,18 +4206,18 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation>Končano</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+127"/>
+        <location line="+129"/>
         <source>Active Tool:</source>
         <translation>Aktivno orodje:</translation>
     </message>
@@ -4237,12 +4237,12 @@ je že na seznamu.</translation>
         <translation>Glavna orodja</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+22"/>
         <source>CAD Tools</source>
         <translation>CAD orodja</translation>
     </message>
     <message>
-        <location line="+578"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation>Nepravilen položaj</translation>
     </message>
@@ -5746,12 +5746,17 @@ je že na seznamu.</translation>
         <translation>Izrazite (in povečajte) slike v območju</translation>
     </message>
     <message>
-        <location line="+38"/>
-        <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <location line="+7"/>
+        <source>Highlight (and raise) hatches and solid fills within range</source>
+        <translation>Izrazite (in povečajte) šrafure in trdne zapolnitve v območju</translation>
     </message>
     <message>
-        <location line="-307"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation>Escape počisti izbor</translation>
+    </message>
+    <message>
+        <location line="-314"/>
         <source>Right-Click</source>
         <translation>Desni klik</translation>
     </message>
@@ -5926,7 +5931,7 @@ je že na seznamu.</translation>
         <translation>Prag višine besedila (px):</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+102"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+109"/>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+221"/>
         <source>Persistent selection</source>
         <translation>Trajni izbor</translation>
@@ -6034,6 +6039,11 @@ je že na seznamu.</translation>
         <location line="+12"/>
         <source>Background:</source>
         <translation>Ozadje:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Display color of color by block:</source>
+        <translation>Barva prikaza barve po bloku:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6484,11 +6494,16 @@ je že na seznamu.</translation>
     <name>ImportFile</name>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
+        <source>File type not supported %1</source>
+        <translation>Vrsta datoteke %1 ni podprta</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Error while importing file %1</source>
         <translation>Napaka med uvozom datoteke %1</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+36"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Niso bili najdeni nobeni filtri uvoza. Prekinjam...</translation>
     </message>
@@ -9323,7 +9338,7 @@ je že na seznamu.</translation>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+149"/>
         <source>Untitled %1</source>
         <translation>Brez naslova %1</translation>
     </message>
@@ -11546,7 +11561,7 @@ je že na seznamu.</translation>
         <translation>Polnilo</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location filename="../scripts/Draw/Shape/Shape2.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Polmer:</translation>
     </message>
@@ -11554,7 +11569,7 @@ je že na seznamu.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vsaj dve točki sta identični.</translation>
@@ -12545,12 +12560,12 @@ je že na seznamu.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
         <source>Default value:</source>
         <translation>Privzeta vrednost:</translation>
     </message>
     <message>
-        <location line="+274"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>Ra&amp;zveljavi</translation>
     </message>
@@ -12711,30 +12726,23 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <location line="+268"/>
+        <location line="+274"/>
         <source>Bold</source>
         <translation>Krepko</translation>
     </message>
     <message>
-        <location line="-261"/>
-        <location line="+274"/>
+        <location line="-267"/>
+        <location line="+280"/>
         <source>Italic</source>
         <translation>Poševno</translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="-266"/>
         <source>Text fits on one line and has no formatting</source>
         <translation>Besedilo v eni vrstici in brez oblikovanja</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Simple text
-(one line, no formatting)</source>
-        <translation>Preprosto besedilo
-(ena vrstica, brez oblikovanja)</translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+30"/>
         <source>Rich Text</source>
         <translation>Obogateno besedilo</translation>
     </message>
@@ -12839,7 +12847,17 @@ je že na seznamu.</translation>
         <translation>Zgoraj sredina</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="-606"/>
+        <source>Simple text</source>
+        <translation>Preprosto besedilo</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>(one line, no formatting)</source>
+        <translation>(ena vrstica, brez oblikovanja)</translation>
+    </message>
+    <message>
+        <location line="+628"/>
         <source>Middle Right</source>
         <translation>Sredina desno</translation>
     </message>
@@ -14281,6 +14299,7 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Arc Dimension</source>
         <translation>Dimenzije loka</translation>
     </message>
@@ -14466,6 +14485,7 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Text based</source>
         <translation>Temelječe na besedilu</translation>
     </message>

@@ -50,6 +50,8 @@
 
     <function_decl><type><name>QTreeWidgetItem</name>*</type> <name>getActiveItem</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>void</name></type> <name>scrollToData</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>data</name></decl></param>, <param><decl><type><name><name>Qt</name>::<name>ItemDataRole</name></name></type> <name>role</name></decl></param>)</parameter_list>;</function_decl>
+
 </public><protected>protected:
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>contextMenuEvent</name><parameter_list>(<param><decl><type><name>QContextMenuEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>mousePressEvent</name><parameter_list>(<param><decl><type><name>QMouseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>

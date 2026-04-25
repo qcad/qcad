@@ -335,6 +335,8 @@ public:
     static QRegularExpression escNoOp;
     static QString rxUnicodeStr;
     static QRegularExpression rxUnicode;
+    static QString rxMifStr;
+    static QRegularExpression rxMif;
     static QString rxOptionalBreakStr;
     static QRegularExpression rxOptionalBreak;
 

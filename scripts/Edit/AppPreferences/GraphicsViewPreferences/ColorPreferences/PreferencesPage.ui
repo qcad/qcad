@@ -68,6 +68,42 @@
          </property>
         </widget>
        </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label">
+         <property name="minimumSize">
+          <size>
+           <width>250</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Display color of color by block:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="RColorCombo" name="ByBlockColor">
+         <property name="currentIndex">
+          <number>-1</number>
+         </property>
+         <property name="onlyFixed" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="color" stdset="0">
+          <color>
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </property>
+         <property name="blackWhite" stdset="0">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>

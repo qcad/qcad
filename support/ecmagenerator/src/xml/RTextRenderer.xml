@@ -266,6 +266,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" />
     <property name="rxUnicode" type="QRegularExpression"
     isConst="false" isStatic="true" />
+    <property name="rxMifStr" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxMif" type="QRegularExpression"
+    isConst="false" isStatic="true" />
     <property name="rxOptionalBreakStr" type="QString"
     isConst="false" isStatic="true" />
     <property name="rxOptionalBreak" type="QRegularExpression"

@@ -708,7 +708,7 @@ QPainterPath::ElementType RPainterPath::getTypeAt(int i) const {
 }
 
 bool RPainterPath::isEmpty() const {
-    return QPainterPath::isEmpty() && points.isEmpty();
+    return QPainterPath::isEmpty() && points.isEmpty() && originalShapes.isEmpty();
 }
 
 void RPainterPath::rotateList(QList<RPainterPath>& pps, double angle) {

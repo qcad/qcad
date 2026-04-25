@@ -27,6 +27,7 @@ ColorPreferences.getPreferencesCategory = function() {
 ColorPreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {
     var defaults = [
                 [ "BackgroundColor", "#000000" ],
+                [ "ByBlockColor", "#FFFFFF" ],
                 [ "CrosshairColor", "#80ffc200" ],
                 [ "CrosshairColorInactive", "#806c4f00" ],
                 [ "OriginColor", "#ff0000" ],

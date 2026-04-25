@@ -33,6 +33,9 @@ RLine::RLine() :
     endPoint(RVector::invalid) {
 }
 
+/**
+ * Creates a line from two coordinate pairs.
+ */
 RLine::RLine(double x1, double y1, double x2, double y2) :
     startPoint(x1, y1),
     endPoint(x2, y2) {
@@ -46,29 +49,48 @@ RLine::RLine(const RVector& startPoint, const RVector& endPoint) :
     endPoint(endPoint) {
 }
 
+/**
+ * Creates a line from a start point, angle (in rad) and length.
+ */
 RLine::RLine(const RVector& startPoint, double angle, double distance) :
     startPoint(startPoint) {
 
     endPoint = startPoint + RVector::createPolar(distance, angle);
 }
 
+/**
+ * Sets the Z coordinate of both endpoints.
+ */
 void RLine::setZ(double z) {
     startPoint.z = z;
     endPoint.z = z;
 }
 
+/**
+ * \return List of the start and end point (used for property-based transformations).
+ */
 QList<RVector> RLine::getVectorProperties() const {
     return QList<RVector>() << startPoint << endPoint;
 }
 
+/**
+ * \return True if both endpoints are valid and finite.
+ */
 bool RLine::isValid() const {
     return startPoint.isSane() && endPoint.isSane();
 }
 
+/**
+ * \return Length of the line.
+ */
 double RLine::getLength() const {
     return startPoint.getDistanceTo(endPoint);
 }
 
+/**
+ * Sets the length of the line, adjusting the end point (fromStart=true) or
+ * the start point (fromStart=false), keeping the other endpoint fixed.
+ */
 void RLine::setLength(double l, bool fromStart) {
     if (fromStart) {
         endPoint = startPoint + RVector::createPolar(l, getAngle());
@@ -78,14 +100,23 @@ void RLine::setLength(double l, bool fromStart) {
     }
 }
 
+/**
+ * \return Angle of the line from start to end point (in rad).
+ */
 double RLine::getAngle() const {
     return startPoint.getAngleTo(endPoint);
 }
 
+/**
+ * Sets the angle of the line (in rad), keeping start point and length fixed.
+ */
 void RLine::setAngle(double a) {
     endPoint = startPoint + RVector::createPolar(getLength(), a);
 }
 
+/**
+ * \return True if this line is parallel to the given line (same or opposite direction).
+ */
 bool RLine::isParallel(const RLine& line) const {
     double a = getAngle();
     double oa = line.getAngle();
@@ -93,8 +124,13 @@ bool RLine::isParallel(const RLine& line) const {
     return RMath::isSameDirection(a, oa) || RMath::isSameDirection(a, oa + M_PI);
 }
 
+/**
+ * \return True if this line and the given line are collinear (lie on the same infinite line).
+ * Note: the triangle area tolerance comparison is in square units while RS::PointTolerance
+ * is a linear unit; this is an intentional simplification that works for typical CAD tolerances.
+ */
 bool RLine::isCollinear(const RLine& line) const {
-    // two points are collinear with a third point if the area of the triangle formed by these three points is zero:
+    // Three points are collinear if the area of the triangle they form is zero:
     if (RTriangle(startPoint, endPoint, line.getStartPoint()).getArea() > RS::PointTolerance) {
         return false;
     }
@@ -122,39 +158,66 @@ bool RLine::isHorizontal(double tolerance) const {
     return RMath::fuzzyCompare(startPoint.y, endPoint.y, tolerance);
 }
 
+/**
+ * \return Direction angle at the start of the line (start towards end, in rad).
+ */
 double RLine::getDirection1() const {
     return startPoint.getAngleTo(endPoint);
 }
 
+/**
+ * \return Direction angle at the end of the line (end towards start, in rad).
+ */
 double RLine::getDirection2() const {
     return endPoint.getAngleTo(startPoint);
 }
 
+/**
+ * \return Start point of the line.
+ */
 RVector RLine::getStartPoint() const {
     return startPoint;
 }
 
+/**
+ * Sets the start point of the line.
+ */
 void RLine::setStartPoint(const RVector& vector) {
     startPoint = vector;
 }
 
+/**
+ * \return End point of the line.
+ */
 RVector RLine::getEndPoint() const {
     return endPoint;
 }
 
+/**
+ * Sets the end point of the line.
+ */
 void RLine::setEndPoint(const RVector& vector) {
     endPoint = vector;
 }
 
+/**
+ * \return Midpoint of the line.
+ */
 RVector RLine::getMiddlePoint() const {
     return (startPoint + endPoint) / 2.0;
 }
 
+/**
+ * \return Axis-aligned bounding box of the line.
+ */
 RBox RLine::getBoundingBox() const {
     return RBox(RVector::getMinimum(startPoint, endPoint), RVector::getMaximum(
             startPoint, endPoint));
 }
 
+/**
+ * \return List containing start and end point.
+ */
 QList<RVector> RLine::getEndPoints() const {
     QList<RVector> ret;
     ret.append(startPoint);
@@ -162,16 +225,26 @@ QList<RVector> RLine::getEndPoints() const {
     return ret;
 }
 
+/**
+ * \return List containing the midpoint of the line.
+ */
 QList<RVector> RLine::getMiddlePoints() const {
     QList<RVector> ret;
     ret.append(getMiddlePoint());
     return ret;
 }
 
+/**
+ * \return Same as getMiddlePoints() (center = midpoint for a line).
+ */
 QList<RVector> RLine::getCenterPoints() const {
     return getMiddlePoints();
 }
 
+/**
+ * \return Points at the given distance from the start and/or end of the line,
+ *         measured along the line direction (controlled by the \c from flags).
+ */
 QList<RVector> RLine::getPointsWithDistanceToEnd(double distance, int from) const {
     QList<RVector> ret;
 
@@ -187,11 +260,16 @@ QList<RVector> RLine::getPointsWithDistanceToEnd(double distance, int from) cons
     return ret;
 }
 
+/**
+ * \return Points sampled along the line at intervals of \c segmentLength,
+ *         always including start and end points.
+ */
 QList<RVector> RLine::getPointCloud(double segmentLength) const {
     QList<RVector> ret;
     ret.append(startPoint);
-    if (segmentLength>getLength()/10000.0) {
-        for (double d = segmentLength; d<getLength(); d+=segmentLength) {
+    double len = getLength();
+    if (segmentLength > len / 10000.0) {
+        for (double d = segmentLength; d < len; d += segmentLength) {
             ret.append(getPointWithDistanceToStart(d));
         }
     }
@@ -199,6 +277,9 @@ QList<RVector> RLine::getPointCloud(double segmentLength) const {
     return ret;
 }
 
+/**
+ * \return Angle of the line at the given distance from the given end (always constant for a line).
+ */
 double RLine::getAngleAt(double distance, RS::From from) const {
     Q_UNUSED(distance)
     Q_UNUSED(from)
@@ -206,6 +287,13 @@ double RLine::getAngleAt(double distance, RS::From from) const {
     return getAngle();
 }
 
+/**
+ * \return Vector from the closest point on this line to \c point.
+ *         The projection is done in 2D (XY plane). When \c limited is true,
+ *         the closest point is clamped to the line segment; when the projection
+ *         falls outside the segment, the nearest endpoint vector is returned
+ *         only if it is within \c strictRange. Returns an invalid vector if out of range.
+ */
 RVector RLine::getVectorTo(const RVector& point, bool limited, double strictRange) const {
 
     RVector ae = (endPoint - startPoint).get2D();
@@ -239,6 +327,10 @@ RVector RLine::getVectorTo(const RVector& point, bool limited, double strictRang
     return point - closestPoint;
 }
 
+/**
+ * \return Which side of the line the given point is on (LeftHand or RightHand),
+ *         relative to the direction from start to end.
+ */
 RS::Side RLine::getSideOfPoint(const RVector& point) const {
     double entityAngle = getAngle();
     double angleToCoord = startPoint.getAngleTo(point);
@@ -253,6 +345,10 @@ RS::Side RLine::getSideOfPoint(const RVector& point) const {
 }
 
 
+/**
+ * Clips this line to the given 2D bounding box using the Liang-Barsky algorithm.
+ * Sets both endpoints to invalid if the line is entirely outside the box.
+ */
 void RLine::clipToXY(const RBox& box) {
     double x1 = startPoint.x;
     double y1 = startPoint.y;
@@ -280,9 +376,13 @@ void RLine::clipToXY(const RBox& box) {
         p = pPart[i];
         q = qPart[i];
 
-        if (p==0 && q<0) {
-            accept = false;
-            break;
+        if (p == 0) {
+            // line is parallel to this clipping edge
+            if (q < 0) {
+                accept = false;
+                break;
+            }
+            continue;  // parallel and inside: skip to next edge
         }
 
         r = q/p;
@@ -320,8 +420,11 @@ void RLine::clipToXY(const RBox& box) {
     }
 }
 
+/**
+ * Moves the line by the given offset. Returns false if the offset is invalid or negligibly small.
+ */
 bool RLine::move(const RVector& offset) {
-    if (!offset.isValid() || offset.getMagnitude() < RS::PointTolerance) {
+    if (!offset.isValid() || offset.getSquaredMagnitude() < RS::PointTolerance * RS::PointTolerance) {
         return false;
     }
     startPoint += offset;
@@ -329,6 +432,10 @@ bool RLine::move(const RVector& offset) {
     return true;
 }
 
+/**
+ * Rotates the line around \c center by \c rotation (in rad).
+ * Returns false if the rotation angle is negligibly small.
+ */
 bool RLine::rotate(double rotation, const RVector& center) {
     if (fabs(rotation) < RS::AngleTolerance) {
         return false;
@@ -338,37 +445,53 @@ bool RLine::rotate(double rotation, const RVector& center) {
     return true;
 }
 
+/**
+ * Scales the line by \c scaleFactors around \c center.
+ */
 bool RLine::scale(const RVector& scaleFactors, const RVector& center) {
     startPoint.scale(scaleFactors, center);
     endPoint.scale(scaleFactors, center);
     return true;
 }
 
+/**
+ * Mirrors the line at the given axis line.
+ */
 bool RLine::mirror(const RLine& axis) {
     startPoint.mirror(axis);
     endPoint.mirror(axis);
     return true;
 }
 
+/**
+ * Mirrors the line at the Y-axis (flips X coordinates).
+ */
 bool RLine::flipHorizontal() {
     startPoint.flipHorizontal();
     endPoint.flipHorizontal();
     return true;
 }
 
+/**
+ * Mirrors the line at the X-axis (flips Y coordinates).
+ */
 bool RLine::flipVertical() {
     startPoint.flipVertical();
     endPoint.flipVertical();
     return true;
 }
 
+/**
+ * Swaps start and end point, reversing the line direction.
+ */
 bool RLine::reverse() {
-    RVector v = startPoint;
-    startPoint = endPoint;
-    endPoint = v;
+    RMath::swap(startPoint, endPoint);
     return true;
 }
 
+/**
+ * Moves the start and/or end point by \c offset if they lie inside \c area.
+ */
 bool RLine::stretch(const RPolyline& area, const RVector& offset) {
     bool ret = false;
 
@@ -384,34 +507,40 @@ bool RLine::stretch(const RPolyline& area, const RVector& offset) {
     return ret;
 }
 
+/**
+ * Moves the line so that the start point coincides with \c dest.
+ */
 bool RLine::moveTo(const RVector& dest) {
     RVector offset = dest - startPoint;
     return move(offset);
 }
 
+/**
+ * \return A new line with both endpoints transformed by the given 2D transformation matrix.
+ */
 QSharedPointer<RShape> RLine::getTransformed(const QTransform& transform) const {
     return QSharedPointer<RShape>(new RLine(startPoint.getTransformed2D(transform), endPoint.getTransformed2D(transform)));
 }
 
+/**
+ * \return Which end of the line to trim, based on where the click point is relative
+ *         to the trim point. Returns EndingStart if the click is closer to the start direction.
+ */
 RS::Ending RLine::getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
     double lineAngle = getAngle();
     double angleToClickPoint = trimPoint.getAngleTo(clickPoint);
-    double angleDifference = lineAngle-angleToClickPoint;
+    double angleDifference = fabs(RMath::getAngleDifference180(lineAngle, angleToClickPoint));
 
-    if (angleDifference<0.0) {
-        angleDifference*=-1.0;
-    }
-    if (angleDifference>M_PI) {
-        angleDifference=2*M_PI-angleDifference;
-    }
-
-    if (angleDifference<M_PI/2.0) {
+    if (angleDifference < M_PI / 2.0) {
         return RS::EndingStart;
     } else {
         return RS::EndingEnd;
     }
 }
 
+/**
+ * Moves the start point to the closest point on the line to \c trimPoint.
+ */
 bool RLine::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint, bool extend) {
     Q_UNUSED(clickPoint)
     Q_UNUSED(extend)
@@ -423,6 +552,9 @@ bool RLine::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint, 
     return true;
 }
 
+/**
+ * Moves the end point to the closest point on the line to \c trimPoint.
+ */
 bool RLine::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint, bool extend) {
     Q_UNUSED(clickPoint)
     Q_UNUSED(extend)
@@ -434,10 +566,13 @@ bool RLine::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint, bo
     return true;
 }
 
+/**
+ * \return Signed arc-length distance from the start point to the projection of \c p
+ *         onto the (infinite) line. Positive in the line direction, negative behind the start.
+ */
 double RLine::getDistanceFromStart(const RVector& p) const {
-    double ret = startPoint.getDistanceTo(p);
-
     RVector p2 = getClosestPointOnShape(p, false);
+    double ret = startPoint.getDistanceTo(p2);
     double angle = startPoint.getAngleTo(p2);
     if (RMath::isSameDirection(getAngle(), angle, M_PI/2)) {
         return ret;
@@ -447,6 +582,11 @@ double RLine::getDistanceFromStart(const RVector& p) const {
     }
 }
 
+/**
+ * \return This line split into segments at the given points.
+ *         Points are sorted by distance from the start point. Duplicate or
+ *         endpoint-coincident points are handled gracefully.
+ */
 QList<QSharedPointer<RShape> > RLine::splitAt(const QList<RVector>& points) const {
     if (points.length()==0) {
         return RShape::splitAt(points);
@@ -474,6 +614,9 @@ QList<QSharedPointer<RShape> > RLine::splitAt(const QList<RVector>& points) cons
     return ret;
 }
 
+/**
+ * Writes a human-readable representation of this line to \c dbg.
+ */
 void RLine::print(QDebug dbg) const {
 //    dbg.nospace() << "RLine("
 //        << startPoint.x << "," << startPoint.y << " - "

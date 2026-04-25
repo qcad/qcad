@@ -31,7 +31,7 @@ class RPoint;
 class RTriangle;
 
 /**
- * Exports all exported geometry into one painter path.
+ * Exports all exported geometry into one painter path as line elements.
  */
 class QCADCORE_EXPORT RPainterPathExporter : public RExporter {
 public:

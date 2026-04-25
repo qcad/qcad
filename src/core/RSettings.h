@@ -46,6 +46,10 @@
 #define RDEFAULT_QSTRING QString()
 #endif
 
+#ifndef RDEFAULT_QIMAGE
+#define RDEFAULT_QIMAGE QImage()
+#endif
+
 #ifndef RDEFAULT_QSTRINGLIST
 #define RDEFAULT_QSTRINGLIST QStringList()
 #endif
@@ -124,6 +128,7 @@ public:
     static QFont getInfoLabelFont();
     static QFont getStatusBarFont();
 
+    static RColor getByBlockColor();
     static RColor getSelectionColor();
     static RColor getReferencePointColor();
     static RColor getStartReferencePointColor();
@@ -230,10 +235,14 @@ public:
     static QLocale getNumberLocale();
 
     static void initRecentFiles();
-    static void addRecentFile(const QString& fileName);
+    static void addRecentFile(const QString& fileName, const QImage& thumbnail=RDEFAULT_QIMAGE);
     static void removeRecentFile(const QString& fileName);
     static QStringList getRecentFiles();
     static void clearRecentFiles();
+
+    static QString getThumbnailFilePath(const QString& fileName);
+    static void addThumbnail(const QString& fileName, const QImage& thumbnail);
+    static void removeThumbnail(const QString& fileName);
 
     static RColor getColor(const QString& key, const RColor& defaultValue=RDEFAULT_RCOLOR);
 
@@ -315,6 +324,8 @@ public:
     static void appendOpenGLMessage(const QString& msg);
     static QStringList getOpenGLMessages();
 
+    static bool useQml();
+
 private:
     static bool isInitialized();
     static void shortenRecentFiles();
@@ -329,6 +340,7 @@ private:
     static QFont* snapLabelFont;
     static QFont* infoLabelFont;
     static QFont* statusBarFont;
+    static RColor* byBlockColor;
     static RColor* selectionColor;
     static RColor* referencePointColor;
     static RColor* startReferencePointColor;

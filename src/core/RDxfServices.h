@@ -31,6 +31,7 @@
 #include "RS.h"
 #include "RColor.h"
 #include "RLineweight.h"
+#include "RDxfServicesProxy.h"
 
 
 class RDocument;
@@ -159,6 +160,8 @@ public:
     static QString escapeUnicode(const QString& str);
     static QString parseUnicode(const QString& str);
 
+    static QString decodeMifString(const QString& input);
+
     static void autoFixLinetypePattern(RLinetypePattern& pattern);
 
     static int getFileQCADVersion(const RDocument& doc);
@@ -166,6 +169,27 @@ public:
     static void initAci();
     static int getAci(const RColor& col);
     static RColor getColor(unsigned int index);
+
+    static bool hasProxy() {
+        return dxfServicesProxy!=NULL;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static void setDxfServicesProxy(RDxfServicesProxy* p) {
+        if (dxfServicesProxy!=NULL) {
+            delete dxfServicesProxy;
+        }
+        dxfServicesProxy = p;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static RDxfServicesProxy* getDxfServicesProxy() {
+        return dxfServicesProxy;
+    }
 
 private:
     bool version2GotDIMZIN;
@@ -188,6 +212,8 @@ private:
 #else
     QTextCodec* codec;
 #endif
+
+    static RDxfServicesProxy* dxfServicesProxy;
 };
 
 Q_DECLARE_METATYPE(RDxfServices::Type)

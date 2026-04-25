@@ -31,7 +31,7 @@ function ShapePolygonCP(guiAction) {
     this.center = undefined;
     this.corner = undefined;
 
-    this.setUiOptions(["../Shape.ui", "ShapePolygonCP.ui"]);
+    this.setUiOptions(["../Shape.ui", "ShapePolygonCP.ui", "../Shape2.ui"]);
 }
 
 ShapePolygonCP.prototype = new Shape();

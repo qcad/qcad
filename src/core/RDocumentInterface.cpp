@@ -1432,6 +1432,8 @@ bool RDocumentInterface::exportFile(const QString& fileName, const QString& file
     }
     delete fileExporter;
 
+    updateThumbnail();
+
     return success;
 }
 
@@ -1743,6 +1745,13 @@ REntity::Id RDocumentInterface::getClosestEntity(const RVector& position,
     return document.queryClosestXY(position, range, draft, strictRange, includeLockedLayers, selectedOnly);
 }
 
+/**
+ * Highlights the given entity in all scenes.
+ *
+ * \param reason Reason for highlighting the entity.
+ * Only entities highlighted for mouse move are tracked as highlighted entities,
+ * not entities highlighted for other reasons (e.g. snap).
+ */
 void RDocumentInterface::highlightEntity(REntity::Id entityId) {
     QSharedPointer<REntity> entity = document.queryEntityDirect(entityId);
     if (entity.isNull()) {
@@ -1753,8 +1762,14 @@ void RDocumentInterface::highlightEntity(REntity::Id entityId) {
         return;
     }
 
-    if (RSettings::getBoolValue("GraphicsView/HighlightImage", false)==false) {
-        if (entity->getType()==RS::EntityImage) {
+    if (entity->getType()==RS::EntityImage) {
+        if (RSettings::getBoolValue("GraphicsView/HighlightImage", false)==false) {
+            return;
+        }
+    }
+
+    if (entity->getType()==RS::EntityHatch) {
+        if (RSettings::getBoolValue("GraphicsView/HighlightHatch", false)==false) {
             return;
         }
     }
@@ -2055,7 +2070,7 @@ bool RDocumentInterface::isSnapLocked() const {
 }
 
 /**
- * \return The last known mouse cursor position in model coordinates.
+ * \return The last known (snapped) mouse cursor position in model coordinates.
  */
 RVector RDocumentInterface::getCursorPosition() const {
     return cursorPosition;
@@ -2943,4 +2958,16 @@ void RDocumentInterface::bindXRef(RBlock* block) {
 
     RTransaction t = proxy->bindXRef(block);
     objectChangeEvent(t);
+}
+
+void RDocumentInterface::updateThumbnail() {
+    RGraphicsView* view = getGraphicsViewWithFocus();
+    if (view!=NULL) {
+        thumbnail = view->getBuffer();
+        thumbnail = thumbnail.scaled(512, 512, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    }
+}
+
+QImage RDocumentInterface::getThumbnail() const {
+    return thumbnail;
 }

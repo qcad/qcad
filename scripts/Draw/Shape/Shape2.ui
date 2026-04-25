@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Shape</class>
+ <widget class="QWidget" name="Shape">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>186</width>
+    <height>50</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout">
+   <item>
+    <widget class="QCheckBox" name="RoundCorners">
+     <property name="text">
+      <string>Radius:</string>
+     </property>
+     <property name="AutoFocusWidget" stdset="0">
+      <string notr="true">Radius</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Radius">
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

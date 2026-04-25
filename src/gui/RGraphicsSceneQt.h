@@ -170,8 +170,10 @@ public:
      */
     friend QDebug operator<<(QDebug dbg, RGraphicsSceneQt& gs);
 
-private:
+protected:
     RPainterPath currentPainterPath;
+
+private:
 
     QMap<RObject::Id, QList<RGraphicsSceneDrawable> > drawables;
     QMap<RObject::Id, RBox> clipRectangles;

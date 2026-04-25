@@ -55,7 +55,7 @@
    <item row="12" column="0" colspan="2">
     <spacer name="verticalSpacer">
      <property name="orientation">
-      <enum>Qt::Orientation::Vertical</enum>
+      <enum>Qt::Vertical</enum>
      </property>
      <property name="sizeHint" stdset="0">
       <size>

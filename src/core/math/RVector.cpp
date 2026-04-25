@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2011-2018 by Andrew Mustun. All rights reserved.
- * 
+ *
  * This file is part of the QCAD project.
  *
  * QCAD is free software: you can redistribute it and/or modify
@@ -45,7 +45,13 @@ RVector::RVector(double vx, double vy, double vz, bool valid_in) :
         RMath::isNormal(z);
 }
 
+/**
+ * Constructor from a list of up to three doubles (x, y, z). Missing components default to 0.
+ */
 RVector::RVector(const QList<double>& tuples) {
+    x = 0.0;
+    y = 0.0;
+    z = 0.0;
     if (tuples.length()>0) {
         x = tuples[0];
     }
@@ -61,18 +67,30 @@ RVector::RVector(const QList<double>& tuples) {
 RVector::~RVector() {
 }
 
+/**
+ * \return True if this vector is valid (not explicitly marked invalid).
+ */
 bool RVector::isValid() const {
     return valid;
 }
 
+/**
+ * \return True if all components are within PointTolerance of zero.
+ */
 bool RVector::isZero() const {
     return fabs(x)<RS::PointTolerance && fabs(y)<RS::PointTolerance && fabs(z)<RS::PointTolerance;
 }
 
+/**
+ * \return True if this vector is valid and all components are finite (not NaN or Inf).
+ */
 bool RVector::isSane() const {
     return isValid() && RMath::isSane(x) && RMath::isSane(y) && RMath::isSane(z);
 }
 
+/**
+ * \return True if any component is NaN.
+ */
 bool RVector::isNaN() const {
     return RMath::isNaN(x) || RMath::isNaN(y) || RMath::isNaN(z);
 }
@@ -116,13 +134,16 @@ void RVector::setPolar(double radius, double angle) {
     valid = RMath::isNormal(radius) && RMath::isNormal(angle);
 }
 
+/**
+ * Sets the direction of this vector to the given angle (in rad), preserving its magnitude.
+ */
 void RVector::setAngle(double a) {
     double m = getMagnitude();
     setPolar(m, a);
 }
 
 /**
- * \return The angle from zero to this vector (in rad).
+ * \return The angle from zero to this vector (in rad), in range [0, 2*PI).
  */
 double RVector::getAngle() const {
     double ret = 0.0;
@@ -130,40 +151,44 @@ double RVector::getAngle() const {
 
     if (m > 1.0e-6) {
         double dp = getDotProduct(*this, RVector(1.0, 0.0));
-        if (dp / m >= 1.0) {
+        double ratio = dp / m;
+        if (ratio >= 1.0) {
+            // Along +X (or y so small it rounds away): angle = 0.
+            // Do NOT apply y < 0 flip here — that would return 2*PI.
             ret = 0.0;
-        } else if (dp / m < -1.0) {
+        } else if (ratio <= -1.0) {
+            // Along -X: angle = PI regardless of tiny y.
             ret = M_PI;
         } else {
-            ret = acos(dp / m);
-        }
-        if (y < 0.0) {
-            ret = 2*M_PI - ret;
+            ret = acos(ratio);
+            if (y < 0.0) {
+                ret = 2*M_PI - ret;
+            }
         }
     }
     return ret;
 }
 
 /**
- * \return Angle between this vector and XY plane (horizontal plane).
+ * \return Elevation angle above the XY plane (in rad). Positive above, negative below.
+ *         Returns PI/2 for zero-length vectors.
  */
 double RVector::getAngleToPlaneXY() const {
-    RVector n(0, 0, 1);
     double m = getMagnitude();
 
     if (m < 1.0e-4) {
         return M_PI / 2;
     }
 
-    double arg = getDotProduct(*this, n) / m;
-
+    // dot product with (0,0,1) is just z; M_PI/2 - acos(z/m) == asin(z/m)
+    double arg = z / m;
     if (arg > 1.0) {
         arg = 1.0;
     } else if (arg < -1.0) {
         arg = -1.0;
     }
 
-    return M_PI / 2 - acos(arg);
+    return asin(arg);
 }
 
 /**
@@ -312,6 +337,9 @@ RVector RVector::move(const RVector& offset) {
     return *this;
 }
 
+/**
+ * Moves all vectors in the list by the given offset.
+ */
 void RVector::moveList(QList<RVector>& list, const RVector& offset) {
     for (int i=0; i<list.length(); i++) {
         list[i].move(offset);
@@ -319,18 +347,19 @@ void RVector::moveList(QList<RVector>& list, const RVector& offset) {
 }
 
 /**
- * Rotates this vector around 0/0 by the given angle.
+ * Rotates this vector around the origin by the given angle (in rad).
  */
 RVector RVector::rotate(double rotation) {
     if (!valid) {
         return *this;
     }
 
-    double r = getMagnitude2D();
-    double a = getAngle() + rotation;
-
-    x = cos(a) * r;
-    y = sin(a) * r;
+    double c = cos(rotation);
+    double s = sin(rotation);
+    double nx = x * c - y * s;
+    double ny = x * s + y * c;
+    x = nx;
+    y = ny;
 
     return *this;
 }
@@ -343,12 +372,19 @@ RVector RVector::rotate(double rotation, const RVector& center) {
     return *this;
 }
 
+/**
+ * \return A new vector equal to this vector rotated by \c rotation around \c center.
+ */
 RVector RVector::getRotated(double rotation, const RVector& center) const {
     RVector ret = *this;
     ret.rotate(rotation, center);
     return ret;
 }
 
+/**
+ * Rotates this vector around the given 3D axis line by the given angle (in rad).
+ * The axis direction is taken as startPoint - endPoint.
+ */
 RVector RVector::rotate3D(const RLine& axis, double rotation) {
     RVector off = -axis.getStartPoint();
     RVector ret = *this;
@@ -362,18 +398,27 @@ RVector RVector::rotate3D(const RLine& axis, double rotation) {
     return *this;
 }
 
+/**
+ * Rotates this vector by the given quaternion.
+ */
 RVector RVector::rotate3D(const QQuaternion& quaternion) {
     QVector3D qv = quaternion.rotatedVector(QVector3D(x, y, z));
     *this = RVector(qv.x(), qv.y(), qv.z());
     return *this;
 }
 
+/**
+ * Rotates all vectors in the list around the origin by the given angle (in rad).
+ */
 void RVector::rotateList(QList<RVector>& list, double rotation) {
     for (int i=0; i<list.length(); i++) {
         list[i].rotate(rotation);
     }
 }
 
+/**
+ * Rotates all vectors in the list around \c center by the given angle (in rad).
+ */
 void RVector::rotateList(QList<RVector>& list, double rotation, const RVector& center) {
     for (int i=0; i<list.length(); i++) {
         list[i].rotate(rotation, center);
@@ -402,18 +447,27 @@ RVector RVector::scale(const RVector& factors, const RVector& center) {
     return *this;
 }
 
+/**
+ * \return A new vector equal to this vector scaled by \c factors around \c center.
+ */
 RVector RVector::getScaled(const RVector& factors, const RVector& center) const {
     RVector ret = *this;
     ret.scale(factors, center);
     return ret;
 }
 
+/**
+ * Scales all vectors in the list by the given uniform factor around \c center.
+ */
 void RVector::scaleList(QList<RVector>& list, double factor, const RVector& center) {
     for (int i=0; i<list.length(); i++) {
         list[i].scale(factor, center);
     }
 }
 
+/**
+ * Scales all vectors in the list by the given per-axis factors around \c center.
+ */
 void RVector::scaleList(QList<RVector>& list, const RVector& factors, const RVector& center) {
     for (int i=0; i<list.length(); i++) {
         list[i].scale(factors, center);
@@ -439,12 +493,18 @@ RVector RVector::mirror(const RLine& axis) {
     return *this;
 }
 
+/**
+ * \return A new vector equal to this vector mirrored at the given axis line.
+ */
 RVector RVector::getMirrored(const RLine& axis) const {
     RVector ret = *this;
     ret.mirror(axis);
     return ret;
 }
 
+/**
+ * Mirrors this vector at the axis defined by two points.
+ */
 RVector RVector::mirror(const RVector& axis1, const RVector& axis2) {
    return mirror(RLine(axis1, axis2));
 }
@@ -709,8 +769,11 @@ RVector RVector::getNegated() const {
     return RVector(-x, -y, -z, valid);
 }
 
+/**
+ * \return A new vector with all components replaced by their absolute values.
+ */
 RVector RVector::getAbsolute() const {
-    return RVector(fabs(x), fabs(y), fabs(z));
+    return RVector(fabs(x), fabs(y), fabs(z), valid);
 }
 
 /**
@@ -789,10 +852,17 @@ bool RVector::operator ==(const RVector& v) const {
     return false;
 }
 
+/**
+ * \return True if \c vectors contains a vector approximately equal to \c v within \c tol.
+ */
 bool RVector::containsFuzzy(const QList<RVector>& vectors, const RVector& v, double tol) {
     return findFirstFuzzy(vectors, v, tol)!=-1;
 }
 
+/**
+ * \return Index of the first vector in \c vectors approximately equal to \c v within \c tol,
+ *         or -1 if not found.
+ */
 int RVector::findFirstFuzzy(const QList<RVector>& vectors, const RVector& v, double tol) {
     for (int i=0; i<vectors.length(); i++) {
         if (v.equalsFuzzy(vectors[i], tol)) {
@@ -942,7 +1012,13 @@ RVector RVector::getAverage(const RVector& v1, const RVector& v2) {
     return (v1+v2)/2.0;
 }
 
+/**
+ * \return The average (centroid) of the given vectors, or an invalid vector if the list is empty.
+ */
 RVector RVector::getAverage(const QList<RVector>& vectors) {
+    if (vectors.isEmpty()) {
+        return RVector::invalid;
+    }
     RVector sum = RVector::nullVector;
     for (int i=0; i<vectors.length(); i++) {
         sum+=vectors[i];
@@ -951,9 +1027,9 @@ RVector RVector::getAverage(const QList<RVector>& vectors) {
 }
 
 /**
- * \return Union based on fuzzy comparison.
+ * \return Elements of \c vectorsA that also appear in \c vectorsB (fuzzy intersection).
  */
-QList<RVector> RVector::getUnion(const QList<RVector>& vectorsA, const QList<RVector>& vectorsB, double tol) {
+QList<RVector> RVector::getIntersection(const QList<RVector>& vectorsA, const QList<RVector>& vectorsB, double tol) {
     QList<RVector> ret;
     for (int i=0; i<vectorsA.length(); i++) {
         if (RVector::containsFuzzy(vectorsB, vectorsA[i], tol)) {
@@ -963,6 +1039,10 @@ QList<RVector> RVector::getUnion(const QList<RVector>& vectorsA, const QList<RVe
     return ret;
 }
 
+/**
+ * \return A copy of \c vectors with duplicate entries (within \c tol) removed,
+ *         preserving the order of first occurrence.
+ */
 QList<RVector> RVector::getUnique(const QList<RVector>& vectors, double tol) {
     QList<RVector> ret;
     for (int i=0; i<vectors.length(); i++) {
@@ -1128,9 +1208,8 @@ RVector RVector::getMultipliedComponents(const RVector& v) const {
 }
 
 /**
- * \return The vector in the given vectors that is closest to this vector
- *      or an invalid vector if the given vector does not contain any
- *      (valid) vectors.
+ * \return The vector in \c list closest to this vector (3D distance),
+ *         with Z set to 0, or an invalid vector if the list contains no valid vectors.
  */
 RVector RVector::getClosest(const QList<RVector>& list) const {
     int index = getClosestIndex(list);
@@ -1140,6 +1219,10 @@ RVector RVector::getClosest(const QList<RVector>& list) const {
     return list[index].get2D();
 }
 
+/**
+ * \return The vector in \c list closest to this vector (2D distance, Z ignored),
+ *         or an invalid vector if the list contains no valid vectors.
+ */
 RVector RVector::getClosest2D(const QList<RVector>& list) const {
     int index = getClosestIndex2D(list);
     if (index==-1) {

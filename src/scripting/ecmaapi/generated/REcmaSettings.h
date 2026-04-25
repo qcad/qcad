@@ -181,6 +181,9 @@
         getStatusBarFont
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getByBlockColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getSelectionColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -373,6 +376,15 @@
         clearRecentFiles
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getThumbnailFilePath
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        addThumbnail
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeThumbnail
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -542,6 +554,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getOpenGLMessages
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        useQml
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

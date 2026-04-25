@@ -31,6 +31,7 @@ add_library(qcadcore SHARED
     RBlock.cpp RBlock.h
     RBlockProxy.h
     RBlockListener.h
+    RDxfServicesProxy.h
     RKeyListener.h
     RMainWindowProxy.h
     RBlockReferenceData.cpp RBlockReferenceData.h
@@ -135,7 +136,7 @@ add_library(qcadcore SHARED
     RSelectionChangedEvent.cpp RSelectionChangedEvent.h
     RSelectionListener.h
     RSettings.cpp RSettings.h
-    RShapesExporter.cpp RShapesExporter.h
+    RLinetypePatternExporter.cpp RLinetypePatternExporter.h
     RSingleApplication.cpp RSingleApplication.h
     RSingleton.cpp RSingleton.h
     RSnap.cpp RSnap.h
@@ -168,6 +169,7 @@ add_library(qcadcore SHARED
     RViewportEntity.cpp RViewportEntity.h
     RWheelEvent.cpp RWheelEvent.h
     RWidget.cpp RWidget.h
+    bridges/RSettingsBridge.cpp bridges/RSettingsBridge.h
     math/RArc.cpp math/RArc.h
     math/RArcProxy.h
     math/RBox.cpp math/RBox.h
@@ -201,6 +203,7 @@ add_library(qcadcore SHARED
 target_include_directories(qcadcore PUBLIC
     ../../src/3rdparty
     ../../src/core
+    ../../src/core/bridges
     ../../src/core/math
     ../../src/entity
     ../../src/grid

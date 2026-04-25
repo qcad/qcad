@@ -148,18 +148,18 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
     var storage = new RMemoryStorage();
     var spatialIndex = createSpatialIndex();
     var document = new RDocument(storage, spatialIndex, isOpen);
-    var documentInterface = new RDocumentInterface(document);
+    var di = new RDocumentInterface(document);
 
     if (isOpen) {
         //appWin.setProgressText(qsTr("Loading..."));
         var errorCode;
         if (isUrl(fileName)) {
-            errorCode = documentInterface.importUrl(new QUrl(fileName), nameFilter);
+            errorCode = di.importUrl(new QUrl(fileName), nameFilter);
             document.setFileName("");
             document.setModified(true);
         }
         else {
-            errorCode = documentInterface.importFile(fileName, nameFilter);
+            errorCode = di.importFile(fileName, nameFilter);
         }
         if (errorCode !== RDocumentInterface.IoErrorNoError) {
             var dialog = undefined;
@@ -212,9 +212,6 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
         if (document.getFileVersion().length!==0) {
             appWin.handleUserMessage(qsTr("Format:") + " " + document.getFileVersion());
         }
-
-        RSettings.removeRecentFile(fileName);
-        RSettings.addRecentFile(fileName);
     }
 
     if (!isOpen) {
@@ -224,7 +221,7 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
             var layer0 = document.queryLayer("0");
             layer0.setColor(new RColor("black"));
             var op = new RModifyObjectOperation(layer0, false);
-            documentInterface.applyOperation(op);
+            di.applyOperation(op);
             document.setModified(false);
         }
     }
@@ -241,7 +238,7 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
 
     var mdiChild = new RMdiChildQt();
     mdiChild.windowIcon = new QIcon(autoPath("scripts/qcad_icon.png"));
-    mdiChild.setDocumentInterface(documentInterface);
+    mdiChild.setDocumentInterface(di);
     var flags = makeQtWindowFlags(Qt.FramelessWindowHint);
     mdiChild.setWindowFlags(flags);
     mdiArea.addSubWindow(mdiChild);
@@ -254,12 +251,12 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
     // fix Qt bug in which Qt icon is shown at the top left if tab bar is off:
     mdiChild.showMaximized();
 
-    var viewports = ViewportWidget.getViewports(mdiChild, documentInterface);
+    var viewports = ViewportWidget.getViewports(mdiChild, di);
     mdiChild.viewports = viewports;
     ViewportWidget.initializeViewports(viewports, uiFile, graphicsSceneClass);
     NewFile.updateTitle(mdiChild);
 
-    NewFile.setupDefaultAction(documentInterface);
+    NewFile.setupDefaultAction(di);
 
     ViewportWidget.initEventHandler(viewports);
 
@@ -291,7 +288,7 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
         ViewportWidget.updateViewports(viewports);
     }
 
-    documentInterface.notifyBlockListeners(documentInterface);
+    di.notifyBlockListeners(di);
 
     var k, action;
     if (isOpen) {
@@ -328,7 +325,15 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
         mdiChild.setFocus();
 
         // in case the application does not have the focus, make sure the status of various buttons is still updated:
-        appWin.notifyViewFocusListeners(documentInterface.getLastKnownViewWithFocus());
+        appWin.notifyViewFocusListeners(di.getLastKnownViewWithFocus());
+    }
+
+    if (isOpen) {
+        // force image buffer update to make sure the thumbnail is up to date when added to recent files:
+        var view = di.getLastKnownViewWithFocus()
+        view.updateImage();
+        di.updateThumbnail();
+        RSettings.addRecentFile(fileName, di.getThumbnail());
     }
 
     return mdiChild;

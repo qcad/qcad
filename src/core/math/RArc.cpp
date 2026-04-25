@@ -40,6 +40,9 @@ RArc::RArc() :
     reversed(false) {
 }
 
+/**
+ * Creates an arc from center coordinates, radius, start/end angles (in rad) and direction.
+ */
 RArc::RArc(double cx, double cy, double radius, double startAngle,
          double endAngle, bool reversed) :
     center(cx, cy),
@@ -49,6 +52,9 @@ RArc::RArc(double cx, double cy, double radius, double startAngle,
     reversed(reversed) {
 }
 
+/**
+ * Creates an arc from a center point, radius, start/end angles (in rad) and direction.
+ */
 RArc::RArc(const RVector& center, double radius, double startAngle,
         double endAngle, bool reversed) :
     center(center),
@@ -58,26 +64,45 @@ RArc::RArc(const RVector& center, double radius, double startAngle,
     reversed(reversed) {
 }
 
+/**
+ * Sets the Z coordinate of the center point.
+ */
 void RArc::setZ(double z) {
     center.z = z;
 }
 
+/**
+ * \return List containing the center point (used for property-based transformations).
+ */
 QList<RVector> RArc::getVectorProperties() const {
     return QList<RVector>() << center;
 }
 
+/**
+ * \return List of scalar properties: radius, startAngle, endAngle.
+ */
 QList<double> RArc::getDoubleProperties() const {
     return QList<double>() << radius << startAngle << endAngle;
 }
 
+/**
+ * \return List of boolean properties: reversed.
+ */
 QList<bool> RArc::getBoolProperties() const {
     return QList<bool>() << reversed;
 }
 
+/**
+ * \return True if the center is valid and the radius is positive.
+ */
 bool RArc::isValid() const {
     return center.isValid() && radius>0.0;
 }
 
+/**
+ * \return True if the start and end angles are equal within \c tolerance,
+ *         indicating that this arc spans a full circle.
+ */
 bool RArc::isFullCircle(double tolerance) const {
     return fabs(RMath::getAngleDifference180(
                     RMath::getNormalizedAngle(startAngle),
@@ -138,7 +163,7 @@ RArc RArc::createFrom2PBulge(const RVector& startPoint,
     // alpha can't be 0.0 at this point
     arc.radius = fabs(dist / sin(alpha / 2.0));
 
-    double wu = fabs(RMath::pow(arc.radius, 2.0) - RMath::pow(dist, 2.0));
+    double wu = fabs(arc.radius * arc.radius - dist * dist);
     double h = sqrt(wu);
     double angle = startPoint.getAngleTo(endPoint);
 
@@ -160,6 +185,10 @@ RArc RArc::createFrom2PBulge(const RVector& startPoint,
     return arc;
 }
 
+/**
+ * Creates an arc tangent to a given direction at \c startPoint, passing near \c pos.
+ * Delegates to the arc proxy if available.
+ */
 RArc RArc::createTangential(const RVector& startPoint, const RVector& pos,
                             double direction, double radius, double sweep) {
 
@@ -248,6 +277,10 @@ QList<RArc> RArc::createBiarc(const RVector& startPoint, double startDirection,
     return QList<RArc>() << arc1 << arc2;
 }
 
+/**
+ * \return Tangent direction at the start point (in rad): perpendicular to the radius,
+ *         pointing in the direction of travel.
+ */
 double RArc::getDirection1() const{
     if (!reversed) {
         return RMath::getNormalizedAngle(startAngle+M_PI/2.0);
@@ -257,6 +290,9 @@ double RArc::getDirection1() const{
     }
 }
 
+/**
+ * \return Tangent direction at the end point (in rad), pointing away from the arc.
+ */
 double RArc::getDirection2() const{
     if (!reversed) {
         return RMath::getNormalizedAngle(endAngle-M_PI/2.0);
@@ -266,6 +302,10 @@ double RArc::getDirection2() const{
     }
 }
 
+/**
+ * \return Which side of the arc the given point is on.
+ *         A point inside the circle is on the left for CCW arcs, right for CW arcs.
+ */
 RS::Side RArc::getSideOfPoint(const RVector& point) const {
     if (reversed) {
         if (center.getDistanceTo(point) < radius) {
@@ -285,6 +325,13 @@ RS::Side RArc::getSideOfPoint(const RVector& point) const {
     }
 }
 
+/**
+ * Moves the start point of the arc, optionally keeping the radius.
+ * If keepRadius is true and the arc is not a full circle, the arc is reconstructed
+ * from the new start point and the current end point with the same bulge.
+ * If keepRadius is false, the arc is reconstructed from the new start point,
+ * the current middle point and end point.
+ */
 void RArc::moveStartPoint(const RVector& pos, bool keepRadius) {
     if (!keepRadius) {
         RArc a = RArc::createFrom3Points(pos, getMiddlePoint(), getEndPoint());
@@ -306,6 +353,13 @@ void RArc::moveStartPoint(const RVector& pos, bool keepRadius) {
     }
 }
 
+/**
+ * Moves the end point of the arc, optionally keeping the radius.
+ * If keepRadius is true and the arc is not a full circle, the arc is reconstructed
+ * from the current start point and the new end point with the same bulge.
+ * If keepRadius is false, the arc is reconstructed from the current start point,
+ * the current middle point and the new end point.
+ */
 void RArc::moveEndPoint(const RVector& pos, bool keepRadius) {
     if (!keepRadius) {
         RArc a = RArc::createFrom3Points(pos, getMiddlePoint(), getStartPoint());
@@ -327,10 +381,18 @@ void RArc::moveEndPoint(const RVector& pos, bool keepRadius) {
     }
 }
 
+/**
+ * Moves the midpoint of the arc to \c pos by reconstructing from current start/end
+ * and the new middle point.
+ */
 void RArc::moveMiddlePoint(const RVector& pos) {
     *this = RArc::createFrom3Points(getStartPoint(), pos, getEndPoint());
 }
 
+/**
+ * \return Bulge value (tan(sweep/4)), negative for clockwise arcs.
+ *         Used in DXF/DWG polyline vertex encoding.
+ */
 double RArc::getBulge() const {
     //qDebug() << "sweep: " << getSweep();
     double bulge = tan(fabs(getSweep()) / 4.0);
@@ -340,18 +402,22 @@ double RArc::getBulge() const {
     return bulge;
 }
 
+/** \return Arc length (angle length * radius). */
 double RArc::getLength() const {
     return fabs(getAngleLength(false)) * radius;
 }
 
+/** \return Diameter (2 * radius). */
 double RArc::getDiameter() const {
     return 2*radius;
 }
 
+/** Sets the radius from a diameter value. */
 void RArc::setDiameter(double d) {
     radius = d/2.0;
 }
 
+/** Sets the arc length by adjusting the end angle (keeping start angle and radius). */
 void RArc::setLength(double l) {
     double sweep = l / radius;
     if (sweep>2*M_PI) {
@@ -364,10 +430,12 @@ void RArc::setLength(double l) {
     endAngle = startAngle + sweep;
 }
 
+/** \return Area of the circular sector (pie slice) defined by this arc. */
 double RArc::getArea() const {
     return (radius*radius*getAngleLength(false)) / 2.0;
 }
 
+/** Sets the arc sweep angle by adjusting the end angle to match the given sector area. */
 void RArc::setArea(double a) {
     double sweep = (a * 2.0) / (radius*radius);
     if (reversed) {
@@ -379,27 +447,19 @@ void RArc::setArea(double a) {
 }
 
 /**
- * \return Area limited by arc line and arc chord (line between start and end point).
- * \author Robert S.
+ * \return Area of the circular segment bounded by the arc and its chord
+ *         (the region between the arc and the straight line connecting start and end point).
+ *
+ *         Derivation: segment = sector − isosceles_triangle(center, p1, p2)
+ *           sector area  = r²θ/2
+ *           triangle area = r²sin(θ)/2
+ *           → segment     = r²(θ − sin θ)/2
+ *
+ *         This formula is correct for all arc angles (minor, major, full circle).
  */
 double RArc::getChordArea() const {
-    double sectorArea = 0.0;
-    double angleLength = getAngleLength(false);
-    double sweep = getSweep();
-    if (sweep < M_PI) {
-        sectorArea = ((radius * radius) * (angleLength - sin(angleLength))) / 2.0;
-    }
-    else if (sweep == M_PI) {
-        sectorArea = 0.5 * (M_PI * radius * radius);
-    }
-    else {
-        double remainAngle = (M_PI * 2) - sweep;
-        double remainSliceArea = (radius * radius * remainAngle) / 2.0;
-        double remainSectorArea = (radius * radius * (remainAngle - sin(remainAngle))) / 2.0;
-        sectorArea = getArea() + (remainSliceArea - remainSectorArea);
-    }
-
-    return sectorArea;
+    double theta = getAngleLength(false);
+    return 0.5 * radius * radius * (theta - sin(theta));
 }
 
 /**
@@ -416,12 +476,12 @@ double RArc::getAngleLength(bool allowForZeroLength) const {
 
     // full circle or zero length arc:
     if (!allowForZeroLength) {
-        if (ret < RS::PointTolerance) {
+        if (ret < 1.0e-16) {
             ret = 2 * M_PI;
         }
     }
     else {
-        if (ret > 2 * M_PI - RS::PointTolerance) {
+        if (ret > 2 * M_PI - 1.0e-16) {
             ret = 0.0;
         }
     }
@@ -458,43 +518,53 @@ double RArc::getSweep() const {
     return ret;
 }
 
+/** Sets the sweep angle (end = start + s); sets reversed if s < 0. */
 void RArc::setSweep(double s) {
     endAngle = startAngle + s;
     reversed = (s<0.0);
 }
 
+/** \return Center point of the arc. */
 RVector RArc::getCenter() const{
     return center;
 }
 
+/** Sets the center point of the arc. */
 void RArc::setCenter(const RVector& vector) {
     center = vector;
 }
 
+/** \return Radius of the arc. */
 double RArc::getRadius() const{
     return radius;
 }
 
+/** Sets the radius of the arc. */
 void RArc::setRadius(double r) {
     radius = r;
 }
 
+/** \return Start angle in radians (normalized to [0, 2π)). */
 double RArc::getStartAngle() const {
     return startAngle;
 }
 
+/** Sets the start angle, normalizing it to [0, 2π). */
 void RArc::setStartAngle(double a) {
     startAngle = RMath::getNormalizedAngle(a);
 }
 
+/** \return End angle in radians (normalized to [0, 2π)). */
 double RArc::getEndAngle() const {
     return endAngle;
 }
 
+/** Sets the end angle, normalizing it to [0, 2π). */
 void RArc::setEndAngle(double a) {
     endAngle = RMath::getNormalizedAngle(a);
 }
 
+/** \return Point at the midpoint of the arc (halfway along the sweep). */
 RVector RArc::getMiddlePoint() const {
     double a;
     a = startAngle + getSweep()/2.0;
@@ -503,18 +573,25 @@ RVector RArc::getMiddlePoint() const {
     return v;
 }
 
+/** \return Start point of the arc. */
 RVector RArc::getStartPoint() const {
     return getPointAtAngle(startAngle);
 }
 
+/** \return End point of the arc. */
 RVector RArc::getEndPoint() const {
     return getPointAtAngle(endAngle);
 }
 
+/** \return Point on the arc at the given angle \c a (in radians). */
 RVector RArc::getPointAtAngle(double a) const {
     return RVector(center.x + cos(a) * radius, center.y + sin(a) * radius, center.z);
 }
 
+/**
+ * \return Tangent direction angle at the point on the arc at the given arc-length
+ *         distance from the start or end. Returns RNANDOUBLE if no such point exists.
+ */
 double RArc::getAngleAt(double distance, RS::From from) const {
     QList<RVector> points = getPointsWithDistanceToEnd(distance, from);
     if (points.length()!=1) {
@@ -523,25 +600,34 @@ double RArc::getAngleAt(double distance, RS::From from) const {
     return center.getAngleTo(points[0]) + (reversed ? -M_PI/2 : M_PI/2);
 }
 
+/** \return True if the arc is clockwise (reversed). */
 bool RArc::isReversed() const {
     return reversed;
 }
 
+/** Sets the arc direction: true = clockwise, false = counter-clockwise. */
 void RArc::setReversed(bool r) {
     reversed = r;
 }
 
+/**
+ * \return Axis-aligned bounding box of this arc.
+ *         Checks which of the four quadrant extremes (0°, 90°, 180°, 270°) lie
+ *         within the arc and expands the box accordingly.
+ */
 RBox RArc::getBoundingBox() const {
     if (!isValid()) {
         return RBox();
     }
 
-    double minX = qMin(getStartPoint().x, getEndPoint().x);
-    double minY = qMin(getStartPoint().y, getEndPoint().y);
-    double maxX = qMax(getStartPoint().x, getEndPoint().x);
-    double maxY = qMax(getStartPoint().y, getEndPoint().y);
+    RVector sp = getStartPoint();
+    RVector ep = getEndPoint();
+    double minX = qMin(sp.x, ep.x);
+    double minY = qMin(sp.y, ep.y);
+    double maxX = qMax(sp.x, ep.x);
+    double maxY = qMax(sp.y, ep.y);
 
-    if (getStartPoint().getDistanceTo(getEndPoint()) < 1.0e-6 && getRadius() > 1.0e5) {
+    if (sp.getDistanceTo(ep) < 1.0e-6 && radius > 1.0e5) {
         return RBox(RVector(minX, minY), RVector(maxX, maxY));
     }
 
@@ -595,6 +681,7 @@ RBox RArc::getBoundingBox() const {
     return ret;
 }
 
+/** \return List containing the start and end points of the arc. */
 QList<RVector> RArc::getEndPoints() const {
     QList<RVector> ret;
     ret.append(getStartPoint());
@@ -602,18 +689,24 @@ QList<RVector> RArc::getEndPoints() const {
     return ret;
 }
 
+/** \return List containing the midpoint of the arc. */
 QList<RVector> RArc::getMiddlePoints() const {
     QList<RVector> ret;
     ret.append(getMiddlePoint());
     return ret;
 }
 
+/** \return List containing the center point of the arc. */
 QList<RVector> RArc::getCenterPoints() const {
     QList<RVector> ret;
     ret.append(getCenter());
     return ret;
 }
 
+/**
+ * \return The quadrant extremes (0°, 90°, 180°, 270° points on the circle)
+ *         that lie within the arc. Used as snappable reference points.
+ */
 QList<RVector> RArc::getArcReferencePoints() const {
     QList<RVector> ret;
 
@@ -632,6 +725,10 @@ QList<RVector> RArc::getArcReferencePoints() const {
     return ret;
 }
 
+/**
+ * \return Point(s) on the arc at arc-length \c distance from the start and/or end,
+ *         controlled by the \c from bitmask (RS::FromStart, RS::FromEnd, RS::FromAny).
+ */
 QList<RVector> RArc::getPointsWithDistanceToEnd(double distance, int from) const {
     QList<RVector> ret;
 
@@ -667,6 +764,10 @@ QList<RVector> RArc::getPointsWithDistanceToEnd(double distance, int from) const
     return ret;
 }
 
+/**
+ * \return Dense set of points sampling the arc. Combines vertices from both
+ *         the inscribed and circumscribed polyline approximations.
+ */
 QList<RVector> RArc::getPointCloud(double segmentLength) const {
     QList<RVector> ret;
     RPolyline pl = approximateWithLines(segmentLength);
@@ -676,6 +777,11 @@ QList<RVector> RArc::getPointCloud(double segmentLength) const {
     return ret;
 }
 
+/**
+ * \return Vector from the nearest point on the arc to \c point, or RVector::invalid
+ *         if \c limited is true and the projection falls outside the arc span.
+ *         Note: \c strictRange is not implemented.
+ */
 RVector RArc::getVectorTo(const RVector& point, bool limited, double strictRange) const {
     Q_UNUSED(strictRange)
 
@@ -688,14 +794,19 @@ RVector RArc::getVectorTo(const RVector& point, bool limited, double strictRange
     return RVector::createPolar(v.getMagnitude() - radius, v.getAngle());
 }
 
+/**
+ * Moves the arc by \c offset. Returns false if the offset is invalid or negligibly small.
+ * Uses squared magnitude to avoid a sqrt call; tolerance is squared accordingly.
+ */
 bool RArc::move(const RVector& offset) {
-    if (!offset.isValid() || offset.getMagnitude() < RS::PointTolerance) {
+    if (!offset.isValid() || offset.getSquaredMagnitude() < RS::PointTolerance * RS::PointTolerance) {
         return false;
     }
     center += offset;
     return true;
 }
 
+/** Rotates the arc around \c c by \c rotation radians. Skips angle update for full circles. */
 bool RArc::rotate(double rotation, const RVector& c) {
     if (fabs(rotation) < RS::AngleTolerance) {
         return false;
@@ -712,6 +823,11 @@ bool RArc::rotate(double rotation, const RVector& c) {
     return true;
 }
 
+/**
+ * Scales the arc by \c scaleFactors relative to \c c.
+ * Negative scale factors are decomposed into a mirror plus a positive scale.
+ * Only uniform XY scaling is supported for the radius (scaleFactors.x is used).
+ */
 bool RArc::scale(const RVector& scaleFactors, const RVector& c) {
     // negative scaling: mirroring and scaling
     if (scaleFactors.x < 0.0) {
@@ -722,14 +838,15 @@ bool RArc::scale(const RVector& scaleFactors, const RVector& c) {
     }
 
     center.scale(scaleFactors, c);
-    radius *= scaleFactors.x;
-    if (radius < 0.0) {
-        radius *= -1.0;
-    }
+    radius = fabs(radius * scaleFactors.x);
 
     return true;
 }
 
+/**
+ * Mirrors the arc about \c axis. Reverses the arc direction and reflects
+ * the start/end angles. Full circles only need their center mirrored.
+ */
 bool RArc::mirror(const RLine& axis) {
     center.mirror(axis);
 
@@ -751,14 +868,17 @@ bool RArc::mirror(const RLine& axis) {
     return true;
 }
 
+/** Reverses the arc direction by swapping start/end angles and toggling the reversed flag. */
 bool RArc::reverse() {
-    double a = startAngle;
-    startAngle = endAngle;
-    endAngle = a;
+    RMath::swap(startAngle, endAngle);
     reversed = !reversed;
     return true;
 }
 
+/**
+ * Stretches the arc by moving endpoint(s) inside \c area by \c offset.
+ * If both endpoints are inside, the whole arc is moved.
+ */
 bool RArc::stretch(const RPolyline& area, const RVector& offset) {
     bool ret = false;
 
@@ -782,6 +902,8 @@ bool RArc::stretch(const RPolyline& area, const RVector& offset) {
  * \todo Not working as expected, fix or disable
  */
 QSharedPointer<RShape> RArc::getTransformed(const QTransform& transform) const {
+    // TODO: return transformed polyline with line segments
+
     RVector ct = center.getTransformed2D(transform);
     RVector sp = getStartPoint();
     RVector spt = sp.getTransformed2D(transform);
@@ -805,6 +927,10 @@ QSharedPointer<RShape> RArc::getTransformed(const QTransform& transform) const {
     return QSharedPointer<RShape>(ret);
 }
 
+/**
+ * \return Which end of the arc is closer to \c clickPoint relative to \c trimPoint.
+ *         Used to decide which end to trim when the user clicks near a trim point.
+ */
 RS::Ending RArc::getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
     double angleToTrimPoint = center.getAngleTo(trimPoint);
     double angleToClickPoint = center.getAngleTo(clickPoint);
@@ -824,6 +950,7 @@ RS::Ending RArc::getTrimEnd(const RVector& trimPoint, const RVector& clickPoint)
     }
 }
 
+/** Trims the start of the arc to the angle corresponding to \c trimPoint. */
 bool RArc::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint, bool extend) {
     Q_UNUSED(clickPoint)
     Q_UNUSED(extend)
@@ -831,6 +958,7 @@ bool RArc::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint, b
     return true;
 }
 
+/** Trims the end of the arc to the angle corresponding to \c trimPoint. */
 bool RArc::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint, bool extend) {
     Q_UNUSED(clickPoint)
     Q_UNUSED(extend)
@@ -838,6 +966,10 @@ bool RArc::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint, boo
     return true;
 }
 
+/**
+ * \return Arc-length distance from the start point to the projection of \c p
+ *         onto the arc's circle (i.e. the point at the angle from center to \c p).
+ */
 double RArc::getDistanceFromStart(const RVector& p) const {
     double a1 = getStartAngle();
     double ap = center.getAngleTo(p);
@@ -984,11 +1116,19 @@ RPolyline RArc::approximateWithLinesTan(double segmentLength, double angle) cons
     return polyline;
 }
 
+/**
+ * \return The tangent lines from the external \c point to this arc's circle.
+ *         Delegates to RCircle::getTangents.
+ */
 QList<RLine> RArc::getTangents(const RVector& point) const {
     RCircle circle(center, radius);
     return circle.getTangents(point);
 }
 
+/**
+ * Splits this arc at the given \c points (sorted by angle from start).
+ * Reversed arcs are temporarily flipped, split, then the result list is reversed.
+ */
 QList<QSharedPointer<RShape> > RArc::splitAt(const QList<RVector>& points) const {
     if (points.length()==0) {
         return RShape::splitAt(points);
@@ -1036,6 +1176,10 @@ QList<QSharedPointer<RShape> > RArc::splitAt(const QList<RVector>& points) const
     return ret;
 }
 
+/**
+ * \return This arc split at the quadrant angles (0°, 90°, 180°, 270°) that
+ *         lie within the arc span. Useful for bounding-box calculations.
+ */
 QList<RArc> RArc::splitAtQuadrantLines() const {
     QVector<double> angles;
     angles.append(0.0);
@@ -1055,11 +1199,14 @@ QList<RArc> RArc::splitAtQuadrantLines() const {
     QList<RArc> ret;
     for (int i=0; i<segments.length(); i++) {
         QSharedPointer<RArc> seg = segments[i].dynamicCast<RArc>();
-        ret.append(*seg);
+        if (!seg.isNull()) {
+            ret.append(*seg);
+        }
     }
     return ret;
 }
 
+/** Prints arc properties to \c dbg for debugging. */
 void RArc::print(QDebug dbg) const {
     dbg.nospace() << "RArc(";
     RShape::print(dbg);

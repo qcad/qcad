@@ -21,6 +21,7 @@
 #include <QDir>
 #include <QFileInfo>
 #include <QFont>
+#include <QImageWriter>
 #include <QPalette>
 #include <QPrinterInfo>
 #include <QSettings>
@@ -40,6 +41,7 @@
 #include "RMath.h"
 #include "RS.h"
 #include "RSettings.h"
+#include "RSettingsBridge.h"
 #include "RUnit.h"
 #include "RVersion.h"
 
@@ -57,6 +59,7 @@ QFont* RSettings::rulerFont = NULL;
 QFont* RSettings::snapLabelFont = NULL;
 QFont* RSettings::infoLabelFont = NULL;
 QFont* RSettings::statusBarFont = NULL;
+RColor* RSettings::byBlockColor = NULL;
 RColor* RSettings::selectionColor = NULL;
 RColor* RSettings::referencePointColor = NULL;
 RColor* RSettings::startReferencePointColor = NULL;
@@ -722,15 +725,22 @@ void RSettings::initRecentFiles() {
  * Adds a recent file to the list of recent files. 
  * The newest file is always at the end of the list.
  */
-void RSettings::addRecentFile(const QString& fileName) {
+void RSettings::addRecentFile(const QString& fileName, const QImage& thumbnail) {
     initRecentFiles();
     QFileInfo fi(fileName);
     QString absFileName = fi.absoluteFilePath();
+
+    // remove file if it already exists in the list of recent files to move it to the end of the list:
     if (recentFiles.contains(absFileName)) {
-        recentFiles.removeAll(absFileName);
+        removeRecentFile(absFileName);
+        //recentFiles.removeAll(absFileName);
+        removeThumbnail(absFileName);
     }
-    recentFiles.append(fi.absoluteFilePath());
+
+    recentFiles.append(absFileName);
+    addThumbnail(absFileName, thumbnail);
     shortenRecentFiles();
+    setValue("RecentFiles/Files", recentFiles);
 }
 
 /**
@@ -749,9 +759,8 @@ void RSettings::shortenRecentFiles() {
     initRecentFiles();
     int historySize = getValue("RecentFiles/RecentFilesSize", 10).toInt();
     while (recentFiles.length() > historySize) {
-        recentFiles.removeFirst();
+        removeRecentFile(recentFiles.first());
     }
-    setValue("RecentFiles/Files", recentFiles);
 }
 
 /**
@@ -759,7 +768,9 @@ void RSettings::shortenRecentFiles() {
  */
 void RSettings::removeRecentFile(const QString& fileName) {
     initRecentFiles();
-    recentFiles.removeAll(QFileInfo(fileName).absoluteFilePath());
+    QString absFilePath = QFileInfo(fileName).absoluteFilePath();
+    recentFiles.removeAll(absFilePath);
+    removeThumbnail(absFilePath);
     setValue("RecentFiles/Files", recentFiles);
 }
 
@@ -767,9 +778,35 @@ void RSettings::removeRecentFile(const QString& fileName) {
  * Clears the list of recent files.
  */
 void RSettings::clearRecentFiles() {
-    recentFiles.clear();
+    //recentFiles.clear();
+    while (!recentFiles.isEmpty()) {
+        removeRecentFile(recentFiles.first());
+    }
     setValue("RecentFiles/Files", recentFiles);
 }
+
+
+QString RSettings::getThumbnailFilePath(const QString& fileName) {
+    QString thumbnailFileName = RMath::getMd5Hash(fileName) + ".png";
+    QString cachePath = RSettings::getCacheLocation();
+    return cachePath + QDir::separator() + thumbnailFileName;
+}
+
+void RSettings::addThumbnail(const QString& fileName, const QImage& thumbnail) {
+    QString thumbnailFilePath = getThumbnailFilePath(fileName);
+    // create cache dir if it does not exist yet:
+    QFileInfo(thumbnailFilePath).dir().mkpath(".");
+    QImageWriter iw(thumbnailFilePath);
+    if (!iw.write(thumbnail)) {
+        qWarning() << "RSettings::addThumbnail: error:" << iw.errorString() << " file: " << thumbnailFilePath;
+    }
+}
+
+void RSettings::removeThumbnail(const QString& fileName) {
+    QString thumbnailFilePath = getThumbnailFilePath(fileName);
+    QFile::remove(thumbnailFilePath);
+}
+
 
 void RSettings::setRulerFont(const QFont& font) {
     setValue("GraphicsViewFonts/Ruler", font);
@@ -825,6 +862,13 @@ QFont RSettings::getStatusBarFont() {
         statusBarFont = new QFont(getValue("StatusBar/Font", font).value<QFont>());
     }
     return *statusBarFont;
+}
+
+RColor RSettings::getByBlockColor() {
+    if (byBlockColor==NULL) {
+        byBlockColor = new RColor(getColor("GraphicsViewColors/ByBlockColor", RColor(255,255,255)));
+    }
+    return *byBlockColor;
 }
 
 RColor RSettings::getSelectionColor() {
@@ -1256,6 +1300,14 @@ void RSettings::appendOpenGLMessage(const QString& msg) {
 
 QStringList RSettings::getOpenGLMessages() {
     return openGLMessages;
+}
+
+bool RSettings::useQml() {
+#if QT_VERSION >= 0x060000
+    return R_QCAD_VERSION_MAJOR>=4;
+#else
+    return false;
+#endif
 }
 
 /**
@@ -1883,6 +1935,8 @@ void RSettings::setValue(const QString& key, const QVariant& value, bool overwri
             getQSettings()->setValue(key, value);
         }
     }
+
+    RSettingsBridge::notifyChange();
 }
 
 /**
@@ -2004,6 +2058,10 @@ void RSettings::resetCache() {
     if (statusBarFont!=NULL) {
         delete statusBarFont;
         statusBarFont = NULL;
+    }
+    if (byBlockColor!=NULL) {
+        delete byBlockColor;
+        byBlockColor = NULL;
     }
     if (selectionColor!=NULL) {
         delete selectionColor;

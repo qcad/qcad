@@ -219,7 +219,7 @@
         <translation>Vertimai</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+17"/>
         <source>Templates</source>
         <translation>Šablonai</translation>
     </message>
@@ -3233,7 +3233,7 @@ Ar norite jį atkurti?</translation>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+88"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
@@ -4203,18 +4203,18 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation>Atšaukti</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation>Atlikta</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+127"/>
+        <location line="+129"/>
         <source>Active Tool:</source>
         <translation>Aktyvus įrankis:</translation>
     </message>
@@ -4234,12 +4234,12 @@ jau yra sąraše.</translation>
         <translation>Pagrindiniai įrankiai</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+22"/>
         <source>CAD Tools</source>
         <translation>CAD įrankiai</translation>
     </message>
     <message>
-        <location line="+578"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation>Neteisinga padėtis</translation>
     </message>
@@ -5767,12 +5767,17 @@ jau yra sąraše.</translation>
         <translation>Išryškinkite (ir pakelkite) vaizdus, esančius diapazone</translation>
     </message>
     <message>
-        <location line="+38"/>
-        <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <location line="+7"/>
+        <source>Highlight (and raise) hatches and solid fills within range</source>
+        <translation>Išryškinkite (ir pakelkite) šrafavimą ir kietas užpildas diapazone</translation>
     </message>
     <message>
-        <location line="-102"/>
+        <location line="+38"/>
+        <source>Escape clears selection</source>
+        <translation>Escape išvalo pasirinkimą</translation>
+    </message>
+    <message>
+        <location line="-109"/>
         <source>Highlight entity within range</source>
         <translation>Išryškinkite objektą, esantį diapazone</translation>
     </message>
@@ -5947,7 +5952,7 @@ jau yra sąraše.</translation>
         <translation>Taško ilgis linijų raštuose:</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+95"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+102"/>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+47"/>
         <source>Persistent selection</source>
         <translation>Nuolatinė atranka</translation>
@@ -6030,6 +6035,11 @@ jau yra sąraše.</translation>
         <location line="+12"/>
         <source>Background:</source>
         <translation>Pagrindinės aplinkybės:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Display color of color by block:</source>
+        <translation>Bloko spalvos rodoma spalva:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6480,11 +6490,16 @@ jau yra sąraše.</translation>
     <name>ImportFile</name>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
+        <source>File type not supported %1</source>
+        <translation>Failo tipas %1 nepalaikomas</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Error while importing file %1</source>
         <translation>Klaida importuojant failą %1</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+36"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Importo filtrų nerasta. Nutraukiama...</translation>
     </message>
@@ -9319,7 +9334,7 @@ jau yra sąraše.</translation>
         <translation>Formatas:</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+149"/>
         <source>Untitled %1</source>
         <translation>Be pavadinimo %1</translation>
     </message>
@@ -11537,7 +11552,7 @@ jau yra sąraše.</translation>
         <translation>Užpildykite</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location filename="../scripts/Draw/Shape/Shape2.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Spindulys:</translation>
     </message>
@@ -11545,7 +11560,7 @@ jau yra sąraše.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1427"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Bent du taškai yra vienodi.</translation>
@@ -12536,12 +12551,12 @@ jau yra sąraše.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+250"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
         <source>Default value:</source>
         <translation>Numatytoji reikšmė:</translation>
     </message>
     <message>
-        <location line="+274"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>Panaikinti</translation>
     </message>
@@ -12702,30 +12717,33 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <location line="+268"/>
+        <location line="+274"/>
         <source>Bold</source>
         <translation>Drąsiai</translation>
     </message>
     <message>
-        <location line="-261"/>
-        <location line="+274"/>
+        <location line="-267"/>
+        <location line="+280"/>
         <source>Italic</source>
         <translation>Kursyvu</translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="-266"/>
         <source>Text fits on one line and has no formatting</source>
         <translation>Tekstas telpa į vieną eilutę ir nėra formatuojamas</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Simple text
-(one line, no formatting)</source>
-        <translation>Paprastas tekstas
-(viena eilutė, be formatavimo)</translation>
+        <source>Simple text</source>
+        <translation>Paprastas tekstas</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+7"/>
+        <source>(one line, no formatting)</source>
+        <translation>(viena eilutė, be formatavimo)</translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Rich Text</source>
         <translation>Turtingas tekstas</translation>
     </message>
@@ -14272,6 +14290,7 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Arc Dimension</source>
         <translation>Lanko matmuo</translation>
     </message>
@@ -14457,6 +14476,7 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+0"/>
         <source>Text based</source>
         <translation>Tekstu paremtas</translation>
     </message>
