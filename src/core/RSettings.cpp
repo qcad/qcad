@@ -1341,35 +1341,87 @@ QString RSettings::getCompilerVersion() {
     return QString("gcc %1.%2.%3").arg(__GNUC__).arg(__GNUC_MINOR__).arg(__GNUC_PATCHLEVEL__);
 #elif defined(Q_CC_MSVC)
 #   if _MSC_VER==1310
-        return "MSVC++ 7.1 (2003)";
+    return "MSVC++ 7.1 (2003)";
 #   elif _MSC_VER==1400
-        return "MSVC++ 8.0 (2005)";
+    return "MSVC++ 8.0 (2005)";
 #   elif _MSC_VER==1500
-        return "MSVC++ 9.0 (2008)";
+    return "MSVC++ 9.0 (2008)";
 #   elif _MSC_VER==1600
-        return "MSVC++ 10.0 (2010)";
+    return "MSVC++ 10.0 (2010)";
 #   elif _MSC_VER==1700
-        return "MSVC++ 11.0 (2012)";
+    return "MSVC++ 11.0 (2012)";
 #   elif _MSC_VER==1800
-        return "MSVC++ 12.0 (2013)";
+    return "MSVC++ 12.0 (2013)";
 #   elif _MSC_VER==1900
-        return "MSVC++ 14.0 (2015)";
+    return "MSVC++ 14.0 (2015)";
 #   elif _MSC_VER==1910
-        return "MSVC++ 14.10 (2017)";
+    return "MSVC++ 14.10 (2017)";
 #   elif _MSC_VER==1911
-        return "MSVC++ 14.11 (2017)";
+    return "MSVC++ 14.11 (2017)";
 #   elif _MSC_VER==1912
-        return "MSVC++ 14.12 (2017)";
+    return "MSVC++ 14.12 (2017)";
 #   elif _MSC_VER==1913
-        return "MSVC++ 14.13 (2017)";
+    return "MSVC++ 14.13 (2017)";
 #   elif _MSC_VER==1914
-        return "MSVC++ 14.14 (2017)";
+    return "MSVC++ 14.14 (2017)";
 #   elif _MSC_VER==1915
-        return "MSVC++ 14.15 (2017)";
+    return "MSVC++ 14.15 (2017)";
 #   elif _MSC_VER==1916
-        return "MSVC++ 14.16 (2017)";
+    return "MSVC++ 14.16 (2017)";
+#   elif _MSC_VER==1920
+    return "MSVC++ 14.20 (2019)";
+#   elif _MSC_VER==1921
+    return "MSVC++ 14.21 (2019)";
+#   elif _MSC_VER==1922
+    return "MSVC++ 14.22 (2019)";
+#   elif _MSC_VER==1923
+    return "MSVC++ 14.23 (2019)";
+#   elif _MSC_VER==1924
+    return "MSVC++ 14.24 (2019)";
+#   elif _MSC_VER==1925
+    return "MSVC++ 14.25 (2019)";
+#   elif _MSC_VER==1926
+    return "MSVC++ 14.26 (2019)";
+#   elif _MSC_VER==1927
+    return "MSVC++ 14.27 (2019)";
+#   elif _MSC_VER==1928
+    return "MSVC++ 14.28 (2019)";
 #   elif _MSC_VER==1929
-        return "MSVC++ 16.11 (2019)";
+    return "MSVC++ 14.29 (2019)";
+#   elif _MSC_VER==1930
+    return "MSVC++ 14.30 (2022)";
+#   elif _MSC_VER==1931
+    return "MSVC++ 14.31 (2022)";
+#   elif _MSC_VER==1932
+    return "MSVC++ 14.32 (2022)";
+#   elif _MSC_VER==1933
+    return "MSVC++ 14.33 (2022)";
+#   elif _MSC_VER==1934
+    return "MSVC++ 14.34 (2022)";
+#   elif _MSC_VER==1935
+    return "MSVC++ 14.35 (2022)";
+#   elif _MSC_VER==1936
+    return "MSVC++ 14.36 (2022)";
+#   elif _MSC_VER==1937
+    return "MSVC++ 14.37 (2022)";
+#   elif _MSC_VER==1938
+    return "MSVC++ 14.38 (2022)";
+#   elif _MSC_VER==1939
+    return "MSVC++ 14.39 (2022)";
+#   elif _MSC_VER==1940
+    return "MSVC++ 14.40 (2022)";
+#   elif _MSC_VER==1941
+    return "MSVC++ 14.41 (2022)";
+#   elif _MSC_VER==1942
+    return "MSVC++ 14.42 (2022)";
+#   elif _MSC_VER==1943
+    return "MSVC++ 14.43 (2022)";
+#   elif _MSC_VER==1944
+    return "MSVC++ 14.44 (2022)";
+#   elif _MSC_VER>1944
+    return "MSVC++ (newer than 14.44, 2022 or later)";
+#   else
+    return "MSVC++ (unknown version)";
 #   endif
 #endif
     return "Unknown";
