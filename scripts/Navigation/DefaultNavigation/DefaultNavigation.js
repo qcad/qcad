@@ -373,7 +373,6 @@ DefaultNavigation.prototype.tabletEvent = function(event) {
  * Pans the current view.
  */
 DefaultNavigation.prototype.panGestureEvent = function(gesture) {
-    qDebug("panGestureEvent");
     if (DefaultNavigation.panGesture===false) {
         return;
     }
@@ -409,7 +408,6 @@ DefaultNavigation.prototype.panGestureEvent = function(gesture) {
  * Zooms in / out.
  */
 DefaultNavigation.prototype.pinchGestureEvent = function(gesture) {
-    qDebug("pinchGestureEvent");
     if (isNull(this.view)) {
         return;
     }
