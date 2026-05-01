@@ -48,6 +48,8 @@ set( SOURCES
     src/winfonts/winfnt.c
 )
 
+set(CMAKE_POSITION_INDEPENDENT_CODE ON) # -fPIC
+
 add_library( opennurbs_public_freetype STATIC
     ${SOURCES}
 )
