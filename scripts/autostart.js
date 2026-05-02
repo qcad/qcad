@@ -529,8 +529,9 @@ function main() {
             if (screenIndex >= 0 && screenIndex < screens.length) {
                 var screen = screens[screenIndex];
                 var screenGeometry = screen.geometry();
-                var x = screenGeometry.x() + (screenGeometry.width() - pixmap.width()) / 2;
-                var y = screenGeometry.y() + (screenGeometry.height() - pixmap.height()) / 2;
+                var dpr = pixmap.devicePixelRatio();
+                var x = screenGeometry.x() + (screenGeometry.width() - pixmap.width()/dpr) / 2;
+                var y = screenGeometry.y() + (screenGeometry.height() - pixmap.height()/dpr) / 2;
                 splash.move(x, y);
             }
         }
