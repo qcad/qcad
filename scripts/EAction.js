@@ -364,6 +364,20 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
     this.settingsGroup = "";
 
     this.optionWidgetActions = [];
+
+
+    // find out settings group to use (for settings key):
+    for (var i = 0; i < this.uiFile.length; ++i) {
+        var uiFile = this.uiFile[i];
+
+        var baseName = new QFileInfo(uiFile).baseName();
+
+        // remember settings group used to restore / save settings of this tool:
+        if (this.settingsGroup==="" || baseName===this.getClassName()) {
+            this.settingsGroup = baseName;
+        }
+    }
+
     for (var i = 0; i < this.uiFile.length; ++i) {
         var uiFile = this.uiFile[i];
         var wOptions = this.createWidget(uiFile);
@@ -375,21 +389,16 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
         }
 
         // create new toolbar for additional tool options:
-        if (this.splitUiOptions === true && i != 0) {
-            EAction.getMainWindow().addToolBarBreak();
-            optionsToolBar = new QToolBar(EAction.getMainWindow());
-            optionsToolBar.objectName = wOptions.objectName;
-            EAction.getMainWindow().addToolBar(Qt.TopToolBarArea, optionsToolBar);
-            if (isNull(this.additionalOptionsToolBars)) {
-                this.additionalOptionsToolBars = [];
-            }
-            this.additionalOptionsToolBars.push(optionsToolBar);
-        }
-
-        // remember settings group used to restore / save settings of this tool:
-        if (this.settingsGroup==="" || wOptions.objectName===this.getClassName()) {
-            this.settingsGroup = wOptions.objectName;
-        }
+        // if (this.splitUiOptions === true && i != 0) {
+        //     EAction.getMainWindow().addToolBarBreak();
+        //     optionsToolBar = new QToolBar(EAction.getMainWindow());
+        //     optionsToolBar.objectName = wOptions.objectName;
+        //     EAction.getMainWindow().addToolBar(Qt.TopToolBarArea, optionsToolBar);
+        //     if (isNull(this.additionalOptionsToolBars)) {
+        //         this.additionalOptionsToolBars = [];
+        //     }
+        //     this.additionalOptionsToolBars.push(optionsToolBar);
+        // }
 
         // move widgets from UI file widget to options tool bar and keep track of them in this.optionWidgetActions for later removal:
         var movedWidgets = WidgetFactory.moveChildren(wOptions, optionsToolBar, this.settingsGroup);
@@ -414,6 +423,7 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
         }
 
         // restore previously stored state:
+        // we do this for every ui file, with potentially different settings groups
         if (restoreFromSettings===true) {
             // make sure auto focus widgets are not activated while restoring:
             optionsToolBar.setProperty("Restoring", true);
