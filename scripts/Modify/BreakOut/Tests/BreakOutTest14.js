@@ -18,10 +18,10 @@ BreakOutTest14.prototype.test00 = function() {
     TdbTest.clickOnWidget('MainWindow::CadToolBar::PolylineToolsPanel::BackButton');
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ShapeToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadToolBar::ShapeToolsPanel::ShapeRectanglePPButton');
-    this.setToolOption('Shape/CreatePolyline', 'true');
-    this.setToolOption('Shape/Fill', 'false');
-    this.setToolOption('Shape/RoundCorners', 'false');
-    this.setToolOption('Shape/Radius', '1');
+    this.setToolOption('ShapeRectanglePP/CreatePolyline', 'true');
+    this.setToolOption('ShapeRectanglePP/Fill', 'false');
+    this.setToolOption('ShapeRectanglePP/RoundCorners', 'false');
+    this.setToolOption('ShapeRectanglePP/Radius', '1');
     this.setToolOption('ShapeRectanglePP/Rotate', 'false');
     this.setToolOption('ShapeRectanglePP/Rotation', '0');
     this.updateToolOptions();

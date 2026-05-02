@@ -16,10 +16,10 @@ ShapeRectanglePPTest12.prototype.test00 = function() {
     this.setUp();
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ShapeToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadToolBar::ShapeToolsPanel::ShapeRectanglePPButton');
-    this.setToolOption('Shape/CreatePolyline', 'false');
-    this.setToolOption('Shape/Fill', 'true');
-    this.setToolOption('Shape/RoundCorners', 'false');
-    this.setToolOption('Shape/Radius', '1');
+    this.setToolOption('ShapeRectanglePP/CreatePolyline', 'false');
+    this.setToolOption('ShapeRectanglePP/Fill', 'true');
+    this.setToolOption('ShapeRectanglePP/RoundCorners', 'false');
+    this.setToolOption('ShapeRectanglePP/Radius', '1');
     this.setToolOption('ShapeRectanglePP/Rotate', 'true');
     this.setToolOption('ShapeRectanglePP/Rotation', '10');
     this.updateToolOptions();

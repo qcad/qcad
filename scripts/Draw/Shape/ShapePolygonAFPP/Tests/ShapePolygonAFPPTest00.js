@@ -16,8 +16,8 @@ ShapePolygonAFPPTest00.prototype.test00 = function() {
     this.setUp();
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ShapeToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadToolBar::ShapeToolsPanel::ShapePolygonAFPPButton');
-    this.setToolOption('Shape/CreatePolyline', 'false');
-    this.setToolOption('Shape/Fill', 'false');
+    this.setToolOption('ShapePolygonAFPP/CreatePolyline', 'false');
+    this.setToolOption('ShapePolygonAFPP/Fill', 'false');
     this.setToolOption('ShapePolygonAFPP/Corners', '3');
     this.setToolOption('ShapePolygonAFPP/CornerToCorner', 'false');
     this.updateToolOptions();
@@ -29,8 +29,8 @@ ShapePolygonAFPPTest00.prototype.test00 = function() {
     var p = new RVector(4.8, 25);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    this.setToolOption('Shape/CreatePolyline', 'false');
-    this.setToolOption('Shape/Fill', 'false');
+    this.setToolOption('ShapePolygonAFPP/CreatePolyline', 'false');
+    this.setToolOption('ShapePolygonAFPP/Fill', 'false');
     this.setToolOption('ShapePolygonAFPP/Corners', '4');
     this.setToolOption('ShapePolygonAFPP/CornerToCorner', 'false');
     this.updateToolOptions();
@@ -42,8 +42,8 @@ ShapePolygonAFPPTest00.prototype.test00 = function() {
     var p = new RVector(20.1, 24.8);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    this.setToolOption('Shape/CreatePolyline', 'false');
-    this.setToolOption('Shape/Fill', 'false');
+    this.setToolOption('ShapePolygonAFPP/CreatePolyline', 'false');
+    this.setToolOption('ShapePolygonAFPP/Fill', 'false');
     this.setToolOption('ShapePolygonAFPP/Corners', '4');
     this.setToolOption('ShapePolygonAFPP/CornerToCorner', 'true');
     this.updateToolOptions();
@@ -51,8 +51,8 @@ ShapePolygonAFPPTest00.prototype.test00 = function() {
     var p = new RVector(34.7, 14.9);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    this.setToolOption('Shape/CreatePolyline', 'true');
-    this.setToolOption('Shape/Fill', 'false');
+    this.setToolOption('ShapePolygonAFPP/CreatePolyline', 'true');
+    this.setToolOption('ShapePolygonAFPP/Fill', 'false');
     this.setToolOption('ShapePolygonAFPP/Corners', '4');
     this.setToolOption('ShapePolygonAFPP/CornerToCorner', 'true');
     this.updateToolOptions();

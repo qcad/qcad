@@ -16,9 +16,9 @@ ShapeRectangleSizeTest00.prototype.test00 = function() {
     this.setUp();
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ShapeToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadToolBar::ShapeToolsPanel::ShapeRectangleSizeButton');
-    this.setToolOption('Shape/CreatePolyline', 'false');
-    this.setToolOption('Shape/Fill', 'false');
-    this.setToolOption('Shape/Radius', '0');
+    this.setToolOption('ShapeRectangleSize/CreatePolyline', 'false');
+    this.setToolOption('ShapeRectangleSize/Fill', 'false');
+    this.setToolOption('ShapeRectangleSize/Radius', '0');
     this.setToolOption('ShapeRectangleSize/Width', '20');
     this.setToolOption('ShapeRectangleSize/Height', '10');
     this.setToolOption('ShapeRectangleSize/Angle', '30');
@@ -28,9 +28,9 @@ ShapeRectangleSizeTest00.prototype.test00 = function() {
     var p = new RVector(10, 20.3);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    this.setToolOption('Shape/CreatePolyline', 'true');
-    this.setToolOption('Shape/Fill', 'false');
-    this.setToolOption('Shape/Radius', '0');
+    this.setToolOption('ShapeRectangleSize/CreatePolyline', 'true');
+    this.setToolOption('ShapeRectangleSize/Fill', 'false');
+    this.setToolOption('ShapeRectangleSize/Radius', '0');
     this.setToolOption('ShapeRectangleSize/Width', '20');
     this.setToolOption('ShapeRectangleSize/Height', '10');
     this.setToolOption('ShapeRectangleSize/Angle', '30');

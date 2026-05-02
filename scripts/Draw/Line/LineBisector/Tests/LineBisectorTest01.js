@@ -34,10 +34,10 @@ LineBisectorTest01.prototype.test00 = function() {
     this.setUp();
     this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::ShapeToolsPanel::ShapeRectanglePPButton');
-    this.setToolOption('Shape/CreatePolyline', 'false');
-    this.setToolOption('Shape/Fill', 'false');
-    this.setToolOption('Shape/RoundCorners', 'false');
-    this.setToolOption('Shape/Radius', '1');
+    this.setToolOption('ShapeRectanglePP/CreatePolyline', 'false');
+    this.setToolOption('ShapeRectanglePP/Fill', 'false');
+    this.setToolOption('ShapeRectanglePP/RoundCorners', 'false');
+    this.setToolOption('ShapeRectanglePP/Radius', '1');
     this.updateToolOptions();
     this.zoomTo(-19.038000000000007, -20.226, 64.33799999999998, 41.55);
     var p = new RVector(0, 30);

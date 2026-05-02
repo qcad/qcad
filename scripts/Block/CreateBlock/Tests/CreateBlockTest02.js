@@ -16,10 +16,10 @@ CreateBlockTest02.prototype.test00 = function() {
     this.setUp();
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ShapeToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadToolBar::ShapeToolsPanel::ShapeRectanglePPButton');
-    this.setToolOption('Shape/CreatePolyline', 'false');
-    this.setToolOption('Shape/Fill', 'false');
-    this.setToolOption('Shape/RoundCorners', 'false');
-    this.setToolOption('Shape/Radius', '1');
+    this.setToolOption('ShapeRectanglePP/CreatePolyline', 'false');
+    this.setToolOption('ShapeRectanglePP/Fill', 'false');
+    this.setToolOption('ShapeRectanglePP/RoundCorners', 'false');
+    this.setToolOption('ShapeRectanglePP/Radius', '1');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(9.9, 29.9);
