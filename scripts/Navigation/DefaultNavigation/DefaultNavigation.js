@@ -227,7 +227,7 @@ DefaultNavigation.prototype.wheelEvent = function(event) {
 
     if (isFunction(event.delta)) {
         // Qt 5:
-        wheelDelta = event.delta();
+        wheelDelta = event.delta() * DefaultNavigation.mouseWheelScrollFactor;
     }
     else {
         // Qt 6 (scroll in both directions simultaniously):
@@ -258,8 +258,6 @@ DefaultNavigation.prototype.wheelEvent = function(event) {
         }
 
     }
-
-    wheelDelta *= DefaultNavigation.panSpeed;
 
     var performZoom = false;
     var horizontalScroll = 0.0;
