@@ -4198,18 +4198,18 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2133"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2132"/>
         <source>Done</source>
         <translation>完了</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+129"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>アクティブツール:</translation>
     </message>
@@ -6206,24 +6206,29 @@ is already in the list.</source>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+19"/>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+456"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>マウスホイール/2本指スワイプ:</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+7"/>
         <source>Enable pan gesture</source>
         <translation>パンゼスチャを有効にする</translation>
     </message>
     <message>
-        <location line="+289"/>
+        <location line="-193"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>拡大縮小の際にマウスホイールの向きを反転する</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-141"/>
         <source>Limit scrolling to vertical and horizontal</source>
         <translation>スクロールを縦と横に制限する</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Touch panning speed:</source>
+        <translation>タッチパンニング速度：</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6231,22 +6236,22 @@ is already in the list.</source>
         <translation>パンニングスレッショルド(px)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Panning speed:</source>
-        <translation>パンニング速度：</translation>
+        <location line="+327"/>
+        <source>Mouse wheel scroll factor:</source>
+        <translation>マウスホイールスクロール倍率：</translation>
     </message>
     <message>
-        <location line="-324"/>
+        <location line="-320"/>
         <source>Middle mouse button zoom factor:</source>
         <translation>マウス中ボタンによる拡大率</translation>
     </message>
     <message>
-        <location line="+296"/>
+        <location line="+199"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>マウスホイールズーム倍率:</translation>
     </message>
     <message>
-        <location line="-275"/>
+        <location line="-330"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>オーバーフローを防止するためズームやスクロールを制限</translation>
     </message>

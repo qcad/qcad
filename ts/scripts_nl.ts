@@ -4202,18 +4202,18 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2133"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2132"/>
         <source>Done</source>
         <translation>Klaar</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+129"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Actief gereedschap:</translation>
     </message>
@@ -6211,47 +6211,52 @@ is al in de lijst.</translation>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+19"/>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+456"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>Muiswiel / twee vingerbeweging:</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+7"/>
         <source>Enable pan gesture</source>
         <translation>Gebaar om te verplaatsen inschakelen</translation>
     </message>
     <message>
-        <location line="+289"/>
+        <location line="-193"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Muiswiel richting voor zoomen omkeren</translation>
     </message>
     <message>
-        <location line="-303"/>
+        <location line="-134"/>
+        <source>Touch panning speed:</source>
+        <translation>Snelheid pannen aanraken:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Middle mouse button zoom factor:</source>
         <translation>Middelste muisknop vergrotingsfactor:</translation>
     </message>
     <message>
-        <location line="+296"/>
+        <location line="+199"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Muiswiel vergrotingsfactor:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+121"/>
+        <source>Mouse wheel scroll factor:</source>
+        <translation>Muiswiel scrollfactor:</translation>
+    </message>
+    <message>
+        <location line="-341"/>
         <source>Limit scrolling to vertical and horizontal</source>
         <translation>Beperk scrollen tot verticaal en horizontaal</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Panning threshold (px):</source>
         <translation>Drempelwaarde voor panning (pixel):</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Panning speed:</source>
-        <translation>Snelheid pannen:</translation>
-    </message>
-    <message>
-        <location line="-303"/>
+        <location line="-124"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Zoomen en scrollen beperken om overflows te voorkomen</translation>
     </message>

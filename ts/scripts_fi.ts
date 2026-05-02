@@ -4202,18 +4202,18 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2133"/>
         <source>Cancel</source>
         <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2132"/>
         <source>Done</source>
         <translation>Valmis</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+129"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktiivinen työkalu:</translation>
     </message>
@@ -6211,47 +6211,52 @@ on jo luettelossa.</translation>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+19"/>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+456"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>Hiiren rulla/kahden sormen pyyhintä:</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+7"/>
         <source>Enable pan gesture</source>
         <translation>Ota panorointi käyttöön</translation>
     </message>
     <message>
-        <location line="+282"/>
+        <location line="-114"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Hiiren pyörän suurennus/pienennyskerroin:</translation>
     </message>
     <message>
-        <location line="-275"/>
+        <location line="-330"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Rajoita zoomaus ja vieritys estääksesi ylivuodon</translation>
     </message>
     <message>
-        <location line="+282"/>
+        <location line="+117"/>
+        <source>Touch panning speed:</source>
+        <translation>Kosketuspanoroinnin nopeus:</translation>
+    </message>
+    <message>
+        <location line="+134"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Käänteinen hiiren pyörimissuunta zoomausta varten</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+200"/>
+        <source>Mouse wheel scroll factor:</source>
+        <translation>Hiiren pyörän vierityskerroin:</translation>
+    </message>
+    <message>
+        <location line="-341"/>
         <source>Limit scrolling to vertical and horizontal</source>
         <translation>Rajoita vieritys pysty- ja vaakasuoraan</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Panning threshold (px):</source>
         <translation>Panoroinnin raja-arvo (px):</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Panning speed:</source>
-        <translation>Panorointinopeus:</translation>
-    </message>
-    <message>
-        <location line="-324"/>
         <source>Middle mouse button zoom factor:</source>
         <translation>Keskimmäisen hiiren painikkeen zoomauskerroin:</translation>
     </message>

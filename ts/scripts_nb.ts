@@ -4202,18 +4202,18 @@ er allerede i listen.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2133"/>
         <source>Cancel</source>
         <translation>Avbryt</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2132"/>
         <source>Done</source>
         <translation>Ferdig</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+129"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktivt verktøy:</translation>
     </message>
@@ -6211,29 +6211,34 @@ er allerede i listen.</translation>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+322"/>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+349"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Zoomfaktor på mushjulet:</translation>
     </message>
     <message>
-        <location line="-275"/>
+        <location line="-330"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Begrens zoom og bla for å forhindre overløp</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+444"/>
         <source>Enable pan gesture</source>
         <translation>Aktiver panorering</translation>
     </message>
     <message>
-        <location line="+289"/>
+        <location line="-193"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Snu retning på mushjulet for å zoome</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-141"/>
         <source>Limit scrolling to vertical and horizontal</source>
         <translation>Begrens rulling til vertikal og horisontal</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Touch panning speed:</source>
+        <translation>Panoreringshastighet med berøring:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6241,17 +6246,17 @@ er allerede i listen.</translation>
         <translation>Terskel for panorering (px):</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Panning speed:</source>
-        <translation>Panoreringshastighet:</translation>
+        <location line="+327"/>
+        <source>Mouse wheel scroll factor:</source>
+        <translation>Rullefaktor for mushjulet:</translation>
     </message>
     <message>
-        <location line="-331"/>
+        <location line="-14"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>Mushjul / sveip med to fingre:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-306"/>
         <source>Middle mouse button zoom factor:</source>
         <translation>Zoomfaktor for midtre museknapp:</translation>
     </message>

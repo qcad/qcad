@@ -4198,18 +4198,18 @@ már szerepel a listában.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2133"/>
         <source>Cancel</source>
         <translation>Mégse</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2132"/>
         <source>Done</source>
         <translation>Kész</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+129"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktív eszköz:</translation>
     </message>
@@ -6207,29 +6207,34 @@ már szerepel a listában.</translation>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+322"/>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+349"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Egérgörgő nagyítási tényezője:</translation>
     </message>
     <message>
-        <location line="-275"/>
+        <location line="-330"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Nagyítás és görgetés korlátozása a kilógásoknál</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+444"/>
         <source>Enable pan gesture</source>
         <translation>Pásztázási lehetőség engedélyezése</translation>
     </message>
     <message>
-        <location line="+289"/>
+        <location line="-193"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Egérgörgős nagyítás megfordítása</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-141"/>
         <source>Limit scrolling to vertical and horizontal</source>
         <translation>Görgetés korlátozása vízszintesre és függőlegesre</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Touch panning speed:</source>
+        <translation>Érintéses pásztázás sebessége:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6237,17 +6242,17 @@ már szerepel a listában.</translation>
         <translation>Pásztázás küszöbszintje (képpont):</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Panning speed:</source>
-        <translation>Pásztázás sebessége:</translation>
+        <location line="+327"/>
+        <source>Mouse wheel scroll factor:</source>
+        <translation>Egérgörgő görgetési tényezője:</translation>
     </message>
     <message>
-        <location line="-331"/>
+        <location line="-14"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>Egérgörgős v. kétujjas csúsztatás:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-306"/>
         <source>Middle mouse button zoom factor:</source>
         <translation>Középső egérgomb nagyítási tényezője:</translation>
     </message>

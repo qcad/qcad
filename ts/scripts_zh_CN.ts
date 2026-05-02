@@ -4198,18 +4198,18 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2133"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2132"/>
         <source>Done</source>
         <translation>完成</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+129"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>活动工具：</translation>
     </message>
@@ -6206,29 +6206,34 @@ is already in the list.</source>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+322"/>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+349"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>鼠标滚轮缩放系数：</translation>
     </message>
     <message>
-        <location line="-275"/>
+        <location line="-330"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>限制缩放和滚动以防止溢出</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+444"/>
         <source>Enable pan gesture</source>
         <translation>启用平移手势</translation>
     </message>
     <message>
-        <location line="+289"/>
+        <location line="-193"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>反转鼠标滚轮方向进行缩放</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-141"/>
         <source>Limit scrolling to vertical and horizontal</source>
         <translation>限制垂直和水平滚动</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Touch panning speed:</source>
+        <translation>触摸平移速度：</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6236,17 +6241,17 @@ is already in the list.</source>
         <translation>平移阈值（px）：</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Panning speed:</source>
-        <translation>平移速度：</translation>
+        <location line="+327"/>
+        <source>Mouse wheel scroll factor:</source>
+        <translation>鼠标滚轮滚动系数：</translation>
     </message>
     <message>
-        <location line="-331"/>
+        <location line="-14"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>鼠标滚轮/双指轻扫：</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-306"/>
         <source>Middle mouse button zoom factor:</source>
         <translation>鼠标中键缩放系数：</translation>
     </message>

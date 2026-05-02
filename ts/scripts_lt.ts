@@ -4203,18 +4203,18 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2133"/>
         <source>Cancel</source>
         <translation>Atšaukti</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2132"/>
         <source>Done</source>
         <translation>Atlikta</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+129"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktyvus įrankis:</translation>
     </message>
@@ -6213,29 +6213,34 @@ jau yra sąraše.</translation>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+322"/>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+349"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Pelės ratuko priartinimo koeficientas:</translation>
     </message>
     <message>
-        <location line="-275"/>
+        <location line="-330"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Apribokite priartinimą ir slinkimą, kad išvengtumėte perpildymo</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+444"/>
         <source>Enable pan gesture</source>
         <translation>Įjungti pasukimo gestą</translation>
     </message>
     <message>
-        <location line="+289"/>
+        <location line="-193"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Atvirkštinė pelės ratuko kryptis priartinimui</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-141"/>
         <source>Limit scrolling to vertical and horizontal</source>
         <translation>Apriboti slinkimą tik vertikaliai ir horizontaliai</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Touch panning speed:</source>
+        <translation>Lietimo panoramavimo greitis:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6243,17 +6248,17 @@ jau yra sąraše.</translation>
         <translation>Panoramavimo slenkstis (px):</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Panning speed:</source>
-        <translation>Panoramavimo greitis:</translation>
+        <location line="+327"/>
+        <source>Mouse wheel scroll factor:</source>
+        <translation>Pelės ratuko slinkties koeficientas:</translation>
     </message>
     <message>
-        <location line="-331"/>
+        <location line="-14"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>Pelės ratukas / perbraukimas dviem pirštais:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-306"/>
         <source>Middle mouse button zoom factor:</source>
         <translation>Vidurinio pelės mygtuko priartinimo koeficientas:</translation>
     </message>

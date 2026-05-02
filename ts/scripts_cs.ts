@@ -4204,18 +4204,18 @@ již v seznamu je.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2133"/>
         <source>Cancel</source>
         <translation>Storno</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2132"/>
         <source>Done</source>
         <translation>Hotovo</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+129"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktivní nástroj:</translation>
     </message>
@@ -6214,47 +6214,52 @@ již v seznamu je.</translation>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+47"/>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+19"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Omezit přiblížení a rolování, aby nedošlo k přetečení</translation>
     </message>
     <message>
-        <location line="-28"/>
+        <location line="+117"/>
+        <source>Touch panning speed:</source>
+        <translation>Rychlost panorámování dotykem:</translation>
+    </message>
+    <message>
+        <location line="+320"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>Kolečko myši / přejetí dvou prstů:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
+        <source>Mouse wheel scroll factor:</source>
+        <translation>Faktor posuvu kolečka myši:</translation>
+    </message>
+    <message>
+        <location line="-320"/>
         <source>Middle mouse button zoom factor:</source>
         <translation>Faktor přiblížení prostředního tlačítka myši:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+313"/>
         <source>Enable pan gesture</source>
         <translation>Povolit gesto posunu</translation>
     </message>
     <message>
-        <location line="+296"/>
+        <location line="-334"/>
         <source>Limit scrolling to vertical and horizontal</source>
         <translation>Omezit rolování na vertikální a horizontální</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Panning threshold (px):</source>
         <translation>Práh posunu (px):</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Panning speed:</source>
-        <translation>Rychlost panorámování:</translation>
-    </message>
-    <message>
-        <location line="-21"/>
+        <location line="+127"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Obrátit směr přibližování u kolečka myši</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+79"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Faktor přiblížení kolečka myši:</translation>
     </message>

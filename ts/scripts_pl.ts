@@ -4206,18 +4206,18 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2133"/>
         <source>Cancel</source>
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2132"/>
         <source>Done</source>
         <translation>Gotowe</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+129"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktywne narzędzie:</translation>
     </message>
@@ -6216,24 +6216,29 @@ jest już na liście.</translation>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+19"/>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+456"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>Kółko myszy / przesunięcie dwoma palcami:</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+7"/>
         <source>Enable pan gesture</source>
         <translation>Włącz gest przesuwania</translation>
     </message>
     <message>
-        <location line="+289"/>
+        <location line="-193"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Odwrócenie kierunku kółka myszy dla przybliżania</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-141"/>
         <source>Limit scrolling to vertical and horizontal</source>
         <translation>Ograniczenie przewijania do pionowego i poziomego</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Touch panning speed:</source>
+        <translation>Prędkość panoramowania dotykiem:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6241,22 +6246,22 @@ jest już na liście.</translation>
         <translation>Próg panoramowania (px):</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Panning speed:</source>
-        <translation>Prędkość panoramowania:</translation>
+        <location line="+327"/>
+        <source>Mouse wheel scroll factor:</source>
+        <translation>Współczynnik przewijania kółka myszy:</translation>
     </message>
     <message>
-        <location line="-324"/>
+        <location line="-320"/>
         <source>Middle mouse button zoom factor:</source>
         <translation>Współczynnik powiększenia środkowego przycisku myszy:</translation>
     </message>
     <message>
-        <location line="+296"/>
+        <location line="+199"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Współczynnik przybliżania kółka myszy:</translation>
     </message>
     <message>
-        <location line="-275"/>
+        <location line="-330"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Ograniczenie przybliżania i przewijania w celu zapobiegania przepełnienia</translation>
     </message>

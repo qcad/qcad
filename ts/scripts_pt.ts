@@ -4202,18 +4202,18 @@ já se encontra na lista.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2133"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2132"/>
         <source>Done</source>
         <translation>Concluído</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+129"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Ferramenta Ativa:</translation>
     </message>
@@ -6211,47 +6211,52 @@ já se encontra na lista.</translation>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+19"/>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+456"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>Roda do rato / dois dedos para deslizar:</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+7"/>
         <source>Enable pan gesture</source>
         <translation>Habilitar gesto de panela</translation>
     </message>
     <message>
-        <location line="+289"/>
+        <location line="-193"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Inverso sentido roda do mouse para zoom</translation>
     </message>
     <message>
-        <location line="-303"/>
+        <location line="-134"/>
+        <source>Touch panning speed:</source>
+        <translation>Velocidade de deslocação por toque:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Middle mouse button zoom factor:</source>
         <translation>Fator de zoom do botão do meio do mouse:</translation>
     </message>
     <message>
-        <location line="+296"/>
+        <location line="+199"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Roda do mouse fator de zoom:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+121"/>
+        <source>Mouse wheel scroll factor:</source>
+        <translation>Roda do mouse fator de rolagem:</translation>
+    </message>
+    <message>
+        <location line="-341"/>
         <source>Limit scrolling to vertical and horizontal</source>
         <translation>Limitar a deslocação vertical e horizontal</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Panning threshold (px):</source>
         <translation>Limar de panning:</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Panning speed:</source>
-        <translation>Velocidade de deslocação:</translation>
-    </message>
-    <message>
-        <location line="-303"/>
+        <location line="-124"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Limite o zoom e a rolagem para evitar excessos</translation>
     </message>

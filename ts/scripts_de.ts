@@ -4202,18 +4202,18 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2133"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2132"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+129"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
     </message>
@@ -6211,47 +6211,52 @@ ist bereits in der Liste.</translation>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+19"/>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+456"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>Mausrad / Zwei Finger Swipe:</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+7"/>
         <source>Enable pan gesture</source>
         <translation>Bewegung zum Verschieben der Ansicht aktivieren</translation>
     </message>
     <message>
-        <location line="+289"/>
+        <location line="-193"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Mausrad Richtung für Zoom umdrehen</translation>
     </message>
     <message>
-        <location line="-303"/>
+        <location line="-134"/>
+        <source>Touch panning speed:</source>
+        <translation>Geschwindigkeit beim Verschieben (Touch):</translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Middle mouse button zoom factor:</source>
         <translation>Mittlere Maustaste Zoomfaktor:</translation>
     </message>
     <message>
-        <location line="+296"/>
+        <location line="+199"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Mausrad Zoomfaktor:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+121"/>
+        <source>Mouse wheel scroll factor:</source>
+        <translation>Mausrad Scrollfaktor:</translation>
+    </message>
+    <message>
+        <location line="-341"/>
         <source>Limit scrolling to vertical and horizontal</source>
         <translation>Beschränkung des Bildlaufs auf vertikal und horizontal</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Panning threshold (px):</source>
         <translation>Grenzwert zum Verschieben der Ansicht (Pixel):</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Panning speed:</source>
-        <translation>Bewegungsgeschwindigkeit:</translation>
-    </message>
-    <message>
-        <location line="-303"/>
+        <location line="-124"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Zoom und pan begrenzen um Überläufe zu verhindern</translation>
     </message>

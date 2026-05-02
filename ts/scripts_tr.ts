@@ -4198,18 +4198,18 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2133"/>
         <source>Cancel</source>
         <translation>İptal</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2132"/>
         <source>Done</source>
         <translation>Bitti</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+129"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktif Araç:</translation>
     </message>
@@ -6206,47 +6206,52 @@ zaten listede.</translation>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+47"/>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+19"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Yakınlaştırmayı sınırlandırın ve taşmaları önlemek için kaydırın</translation>
     </message>
     <message>
-        <location line="-28"/>
+        <location line="+117"/>
+        <source>Touch panning speed:</source>
+        <translation>Dokunmatik kaydırma hızı:</translation>
+    </message>
+    <message>
+        <location line="+320"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>Fare tekerleği / iki parmak tıklama:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
+        <source>Mouse wheel scroll factor:</source>
+        <translation>Fare tekerleği kaydırma faktörü:</translation>
+    </message>
+    <message>
+        <location line="-320"/>
         <source>Middle mouse button zoom factor:</source>
         <translation>Orta fare düğmesi zoom faktörü:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+313"/>
         <source>Enable pan gesture</source>
         <translation>Pan hareketini etkinleştir</translation>
     </message>
     <message>
-        <location line="+296"/>
+        <location line="-334"/>
         <source>Limit scrolling to vertical and horizontal</source>
         <translation>Kaydırmayı dikey ve yatay olarak sınırlama</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Panning threshold (px):</source>
         <translation>Eşik eşiği (px):</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Panning speed:</source>
-        <translation>Kaydırma hızı:</translation>
-    </message>
-    <message>
-        <location line="-21"/>
+        <location line="+127"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Yakınlaştırma için fare tekerleği yönünü ters çevir</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+79"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Fare tekerleği yakınlaştırma faktörü:</translation>
     </message>

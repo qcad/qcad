@@ -4200,18 +4200,18 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2133"/>
         <source>Cancel</source>
         <translation>Ακύρωση</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2132"/>
         <source>Done</source>
         <translation>Έτοιμο</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+129"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Ενεργό εργαλείο:</translation>
     </message>
@@ -6209,29 +6209,34 @@ is already in the list.</source>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+322"/>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+349"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Συντελεστής ζουμ του τροχού του ποντικιού:</translation>
     </message>
     <message>
-        <location line="-275"/>
+        <location line="-330"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Περιορισμός του ζουμ και της κύλισης για την αποφυγή υπερχειλίσεων</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+444"/>
         <source>Enable pan gesture</source>
         <translation>Ενεργοποίηση της χειρονομίας pan</translation>
     </message>
     <message>
-        <location line="+289"/>
+        <location line="-193"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Αντιστροφή της κατεύθυνσης του τροχού του ποντικιού για ζουμ</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-141"/>
         <source>Limit scrolling to vertical and horizontal</source>
         <translation>Περιορισμός της κύλισης σε κάθετη και οριζόντια κύλιση</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Touch panning speed:</source>
+        <translation>Ταχύτητα περιστροφής με αφή:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6239,17 +6244,17 @@ is already in the list.</source>
         <translation>Κατώφλι σάρωσης (px):</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Panning speed:</source>
-        <translation>Ταχύτητα περιστροφής:</translation>
+        <location line="+327"/>
+        <source>Mouse wheel scroll factor:</source>
+        <translation>Συντελεστής κύλισης του τροχού του ποντικιού:</translation>
     </message>
     <message>
-        <location line="-331"/>
+        <location line="-14"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>Τροχός ποντικιού / σάρωση με δύο δάχτυλα:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-306"/>
         <source>Middle mouse button zoom factor:</source>
         <translation>Συντελεστής ζουμ του μεσαίου πλήκτρου του ποντικιού:</translation>
     </message>

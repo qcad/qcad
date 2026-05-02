@@ -4206,18 +4206,18 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2133"/>
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2132"/>
         <source>Done</source>
         <translation>Končano</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+129"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktivno orodje:</translation>
     </message>
@@ -6217,24 +6217,29 @@ je že na seznamu.</translation>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+19"/>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+456"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>Miškin kolešček / dvoprstno drsenje:</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+7"/>
         <source>Enable pan gesture</source>
         <translation>Omogoči geste pisala</translation>
     </message>
     <message>
-        <location line="+289"/>
+        <location line="-193"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Invertiraj smer miškinega koleščka za povečavo</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-141"/>
         <source>Limit scrolling to vertical and horizontal</source>
         <translation>Omejitev pomikanja na navpično in vodoravno</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Touch panning speed:</source>
+        <translation>Hitrost pomikanja na dotik:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6242,22 +6247,22 @@ je že na seznamu.</translation>
         <translation>Prag preokvirjanja (px):</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Panning speed:</source>
-        <translation>Hitrost pomikanja:</translation>
+        <location line="+327"/>
+        <source>Mouse wheel scroll factor:</source>
+        <translation>Faktor drsenja miškinega koleščka:</translation>
     </message>
     <message>
-        <location line="-324"/>
+        <location line="-320"/>
         <source>Middle mouse button zoom factor:</source>
         <translation>Količnik preodmičevanja s srednjim miškim gumbom:</translation>
     </message>
     <message>
-        <location line="+296"/>
+        <location line="+199"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Faktor povečave miškinega koleščka:</translation>
     </message>
     <message>
-        <location line="-275"/>
+        <location line="-330"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Preventivno omeji povečavo in drsenje</translation>
     </message>

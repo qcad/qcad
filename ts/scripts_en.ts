@@ -4202,18 +4202,18 @@ is already in the list.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2133"/>
         <source>Cancel</source>
         <translation>Cancel</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2132"/>
         <source>Done</source>
         <translation>Done</translation>
     </message>
     <message>
         <location line="+284"/>
-        <location line="+129"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Active Tool:</translation>
     </message>
@@ -6211,47 +6211,52 @@ is already in the list.</translation>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+47"/>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+19"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Limit zoom and scroll to prevent overflows</translation>
     </message>
     <message>
-        <location line="-28"/>
+        <location line="+117"/>
+        <source>Touch panning speed:</source>
+        <translation>Touch panning speed:</translation>
+    </message>
+    <message>
+        <location line="+320"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>Mouse wheel / two finger swipe:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
+        <source>Mouse wheel scroll factor:</source>
+        <translation>Mouse wheel scroll factor:</translation>
+    </message>
+    <message>
+        <location line="-320"/>
         <source>Middle mouse button zoom factor:</source>
         <translation>Middle mouse button zoom factor:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+313"/>
         <source>Enable pan gesture</source>
         <translation>Enable pan gesture</translation>
     </message>
     <message>
-        <location line="+296"/>
+        <location line="-334"/>
         <source>Limit scrolling to vertical and horizontal</source>
         <translation>Limit scrolling to vertical and horizontal</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Panning threshold (px):</source>
         <translation>Panning threshold (px):</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Panning speed:</source>
-        <translation>Panning speed:</translation>
-    </message>
-    <message>
-        <location line="-21"/>
+        <location line="+127"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Reverse mouse wheel direction for zoom</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+79"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Mouse wheel zoom factor:</translation>
     </message>
