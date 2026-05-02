@@ -28,7 +28,7 @@ function DimRotated(guiAction) {
     Dimension.call(this, guiAction);
 
     this.data = new RDimRotatedData();
-    this.setUiOptions(["../Dimension.ui", "DimRotated.ui"], false);
+    this.setUiOptions(["../Dimension.ui", "DimRotated.ui"]);
 }
 
 DimRotated.prototype = new Dimension();

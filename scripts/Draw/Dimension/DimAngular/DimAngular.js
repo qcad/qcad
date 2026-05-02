@@ -41,7 +41,7 @@ function DimAngular(guiAction) {
     this.secondEntity = undefined;
     this.secondShape = undefined;
     this.useMaxAngle = false;
-    this.setUiOptions(["../Dimension.ui", "DimAngular.ui"], false);
+    this.setUiOptions(["../Dimension.ui", "DimAngular.ui"]);
 }
 
 DimAngular.prototype = new Dimension();
