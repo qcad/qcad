@@ -517,7 +517,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             }
             continue;
         }
-        
+
         var key = WidgetFactory.getKeyString(group, c);
         var value = undefined;
         if (reset && !isNull(c.property("defaultValue")) && (typeof(c.property("SettingsGroup"))=="undefined" || c.property("SettingsGroup")===group)) {
@@ -1046,6 +1046,11 @@ WidgetFactory.resetState = function(widget, group) {
 WidgetFactory.processChildren = function(c) {
     if (isOfType(c, QSpinBox) ||
         isOfType(c, QDoubleSpinBox) ||
+        isOfType(c, QAction) ||
+        isOfType(c, QCheckBox) ||
+        isOfType(c, QRadioButton) ||
+        isOfType(c, QToolButton) ||
+        isOfType(c, QPushButton) ||
         isOfType(c, QComboBox) ||
         isOfType(c, QFontComboBox) ||
         isOfType(c, QPlainTextEdit) ||
