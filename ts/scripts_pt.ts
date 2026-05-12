@@ -9375,12 +9375,12 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
-        <translation>Offset (com Distância)</translation>
+        <translation>Afastamento (com Distância)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
-        <translation>Offset de linha, arco, círculo ou elipse</translation>
+        <translation>Afastamento de linha, arco, círculo ou elipse</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.js" line="+77"/>
@@ -9429,12 +9429,12 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
-        <translation>Offset (passando por Ponto)</translation>
+        <translation>Afastamento (passando por Ponto)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation>Offset de linha, arco, círculo ou elipse passando por um ponto</translation>
+        <translation>Afastamento de linha, arco, círculo ou elipse passando por um ponto</translation>
     </message>
 </context>
 <context>
@@ -9570,12 +9570,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+17"/>
         <source>Offset X:</source>
-        <translation>Offset X:</translation>
+        <translation>Afastamento X:</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Offset Y:</source>
-        <translation>Offset Y:</translation>
+        <translation>Afastamento Y:</translation>
     </message>
     <message>
         <location line="+28"/>
