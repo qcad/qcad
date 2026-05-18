@@ -38,6 +38,10 @@
 #  include <QDesktopServices>
 #endif
 
+#if QT_VERSION >= 0x060500
+#  include <QStyleHints>
+#endif
+
 #include "RMath.h"
 #include "RS.h"
 #include "RSettings.h"
