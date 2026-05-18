@@ -1208,7 +1208,12 @@ bool RSettings::isDarkMode() {
 #elif defined(Q_OS_WIN32)
 
 #if QT_VERSION >= 0x060500
-        QGuiApplication::styleHints()->colorScheme() == Qt::ColorScheme::Dark;
+        if (QGuiApplication::styleHints()->colorScheme() == Qt::ColorScheme::Dark) {
+            darkMode = 1;
+        }
+        else {
+            darkMode = 0;
+        }
 #else
         const QPalette defaultPalette;
         if (defaultPalette.color(QPalette::WindowText).lightness() > defaultPalette.color(QPalette::Window).lightness()) {
