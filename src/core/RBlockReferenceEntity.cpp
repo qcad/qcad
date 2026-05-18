@@ -299,23 +299,8 @@ QPair<QVariant, RPropertyAttributes> RBlockReferenceEntity::getProperty(
     } else if (propertyTypeId == PropertyReferencedBlock) {
         if (humanReadable) {
             RDocument* document = getData().getDocument();
-            if (document != NULL) {
-                RPropertyAttributes attr;
-                // TODO
-                if (!noAttributes) {
-                    QSet<QString> blockNames = document->getBlockNames();
-                    QStringList filtered;
-                    QSet<QString>::iterator it;
-                    for (it=blockNames.begin(); it!=blockNames.end(); it++) {
-                        if (!(*it).startsWith("*")) {
-                            filtered.append(*it);
-                        }
-                    }
-                    attr.setChoices(filtered);
-                }
-                return qMakePair(QVariant(document->getBlockName(
-                        getData().getReferencedBlockId())), attr);
-            }
+            RPropertyAttributes attr;
+            return qMakePair(QVariant(document->getBlockName(getData().getReferencedBlockId())), attr);
         } else {
             return qMakePair(QVariant(getData().getReferencedBlockId()),
                     RPropertyAttributes());

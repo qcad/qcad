@@ -968,6 +968,27 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
                     patternNames);
     }
 
+    // Block name: combo box with block names:
+    else if (propertyTypeId.getId()===RBlockReferenceEntity.PropertyReferencedBlock.getId()) {
+        var doc = EAction.getDocument();
+        if (!isNull(doc)) {
+            var blockNames = doc.getBlockNames();
+            var filtered = [];
+            for (var i=0; i<blockNames.length; i++) {
+                var blockName = blockNames[i];
+                if (!blockName.startsWith("*")) {
+                    filtered.push(blockName);
+                }
+            }
+            controls = this.initChoiceControls(
+                        objectName, propertyTypeId, onlyChanges, control,
+                        filtered);
+        }
+        else {
+            controls = this.initStringControls(objectName, propertyTypeId, onlyChanges, control);
+        }
+    }
+
     // Font: combo box with font names:
     else if (propertyTypeId.getId()===RTextEntity.PropertyFontName.getId()) {
 //        var fontNames = undefined;
