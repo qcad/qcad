@@ -578,7 +578,7 @@ void RPropertyEditor::updateFromDocumentNow(RDocument* document, bool onlyChange
             continue;
         }
 
-        // group title (e.g. "Center", "QCAD" for custom propertie, "" for group less):
+        // group title (e.g. "Center", "QCAD" for custom property, "" for group less):
         QString propertyGroupTitle = pid.getPropertyGroupTitle();
         // proerty title (e.g. "X", "myProp", "Text height", etc.):
         QString propertyTitle = pid.getPropertyTitle();
