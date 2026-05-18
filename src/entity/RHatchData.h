@@ -140,19 +140,13 @@ public:
         return scaleFactor;
     }
 
-    void setScale(double s) {
-        scaleFactor = s;
-        clearCustomPattern();
-    }
+    void setScale(double s);
 
     double getAngle() const {
         return angle;
     }
 
-    void setAngle(double a) {
-        angle = a;
-        clearCustomPattern();
-    }
+    void setAngle(double a);
 
     RVector getOriginPoint() const {
         return originPoint;
