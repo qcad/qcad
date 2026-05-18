@@ -1206,6 +1206,10 @@ bool RSettings::isDarkMode() {
 #if defined(Q_OS_MAC)
         darkMode = (isMacDarkMode() ? 1 : 0);
 #elif defined(Q_OS_WIN32)
+
+#if QT_VERSION >= 0x060500
+        QGuiApplication::styleHints()->colorScheme() == Qt::ColorScheme::Dark;
+#else
         const QPalette defaultPalette;
         if (defaultPalette.color(QPalette::WindowText).lightness() > defaultPalette.color(QPalette::Window).lightness()) {
             darkMode = 1;
@@ -1213,6 +1217,8 @@ bool RSettings::isDarkMode() {
         else {
             darkMode = 0;
         }
+#endif
+
 #endif
     }
     return darkMode==1;
@@ -1223,6 +1229,10 @@ bool RSettings::hasDarkGuiBackground() {
         // detect dark QCAD theme:
         if (qApp->styleSheet().contains("IconPostfix:inverse", Qt::CaseInsensitive)) {
             darkGuiBackground = 1;
+        }
+        // detect explicitly light QCAD theme:
+        else if (qApp->styleSheet().contains("IconPostfix:none", Qt::CaseInsensitive)) {
+            darkGuiBackground = 0;
         }
         else {
 #if defined(Q_OS_MAC)
