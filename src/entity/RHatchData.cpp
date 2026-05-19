@@ -568,6 +568,26 @@ double RHatchData::getArea() const {
     return ret;
 }
 
+void RHatchData::setScale(double s) {
+    if (hasCustomPattern()) {
+        double oldScale = scaleFactor;
+        double newScale = s;
+        double f = newScale / oldScale;
+        pattern.scale(f);
+    }
+    scaleFactor = s;
+}
+
+void RHatchData::setAngle(double a) {
+    if (hasCustomPattern()) {
+        double oldAngle = angle;
+        double newAngle = a;
+        double r = newAngle - oldAngle;
+        pattern.rotate(r);
+    }
+    angle = a;
+}
+
 void RHatchData::clearCustomPattern() {
     pattern.clear();
     update();

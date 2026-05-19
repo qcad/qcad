@@ -25,6 +25,7 @@
 
 #include <QApplication>
 #include <QPainter>
+#include <QStyleOption>
 
 /**
  * Constructor
@@ -197,19 +198,27 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
     }
 
     if (viewportChanged) {
-        // 20190515: bug with rulers displayed on top of each other:
-        //buffer.fill(Qt::transparent);
-        //qDebug() << "palette().color(QPalette::Window):" << palette().color(QPalette::Window);
-        //qDebug() << "QApp palette().color(QPalette::Window):" << QApplication::palette("QWidget").color(QPalette::Window);
-        //buffer.fill(palette().color(QPalette::Window));
-        buffer.fill(QApplication::palette("QWidget").color(QPalette::Window));
+
+        {
+            // clear background with effective background color from QSS style:
+            QStyleOption opt;
+            opt.initFrom(this);
+            QPainter wp(this);
+            style()->drawPrimitive(QStyle::PE_Widget, &opt, &wp, this);
+        }
+
+        buffer.fill(Qt::transparent);
 
         painter = new QPainter(&buffer);
+        // qDebug() << "active:" << painter->isActive() << "device:" << painter->device();
+
         painter->setPen(Qt::black);
         painter->setFont(getFont());
 
         RGrid* grid = view->getGrid();
         if (grid == NULL) {
+            delete painter;
+            painter = NULL;
             return;
         }
 

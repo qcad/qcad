@@ -119,16 +119,31 @@ bool RHatchEntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& v
     ret = ret || RObject::setMember(data.transparency, value, PropertyTransparency == propertyTypeId);
 
     ret = ret || RObject::setMember(data.patternName, value, PropertyPatternName == propertyTypeId);
-    ret = ret || RObject::setMember(data.scaleFactor, value, PropertyScaleFactor == propertyTypeId);
-    ret = ret || RObject::setMember(data.angle, value, PropertyAngle == propertyTypeId);
 
     ret = ret || RObject::setMember(data.originPoint.x, value, PropertyOriginX == propertyTypeId);
     ret = ret || RObject::setMember(data.originPoint.y, value, PropertyOriginY == propertyTypeId);
 
     if (data.hasCustomPattern()) {
-        // user adjusted property: drop custom pattern
-        data.pattern.clear();
+        if (PropertyScaleFactor == propertyTypeId) {
+            data.setScale(value.toDouble());
+            ret = true;
+        }
+        else if (PropertyAngle == propertyTypeId) {
+            data.setAngle(value.toDouble());
+            ret = true;
+        }
+
+        else if (PropertySolid == propertyTypeId ||
+            PropertyPatternName == propertyTypeId) {
+
+            // user adjusted properties that affect the pattern: drop custom pattern:
+            data.pattern.clear();
+            ret = true;
+        }
     }
+
+    ret = ret || RObject::setMember(data.scaleFactor, value, PropertyScaleFactor == propertyTypeId);
+    ret = ret || RObject::setMember(data.angle, value, PropertyAngle == propertyTypeId);
 
     ret = ret || setBoundaryVector(RObject::X, value, PropertyVertexNX == propertyTypeId);
     ret = ret || setBoundaryVector(RObject::Y, value, PropertyVertexNY == propertyTypeId);
