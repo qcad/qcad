@@ -198,20 +198,27 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
     }
 
     if (viewportChanged) {
+
+        {
+            // clear background with effective background color from QSS style:
+            QStyleOption opt;
+            opt.initFrom(this);
+            QPainter wp(this);
+            style()->drawPrimitive(QStyle::PE_Widget, &opt, &wp, this);
+        }
+
         buffer.fill(Qt::transparent);
 
         painter = new QPainter(&buffer);
-
-        // clear background with effective background color from QSS style:
-        QStyleOption opt;
-        opt.initFrom(this);
-        style()->drawPrimitive(QStyle::PE_Widget, &opt, painter, this);
+        // qDebug() << "active:" << painter->isActive() << "device:" << painter->device();
 
         painter->setPen(Qt::black);
         painter->setFont(getFont());
 
         RGrid* grid = view->getGrid();
         if (grid == NULL) {
+            delete painter;
+            painter = NULL;
             return;
         }
 
