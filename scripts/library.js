@@ -2721,7 +2721,13 @@ function initFontComboBox(comboBox) {
 
 function activateFont(fontComboBox, fontName) {
     var index = fontComboBox.findText(fontName, Qt.MatchFixedString);
-    fontComboBox.setCurrentIndex(index);
+    if (index>0) {
+        fontComboBox.setCurrentIndex(index);
+    }
+    else {
+        // font not found: use unknown font anyway:
+        fontComboBox.currentText = fontName;
+    }
 }
 
 function setMainWindow(w) {

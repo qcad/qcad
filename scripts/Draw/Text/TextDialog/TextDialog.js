@@ -345,6 +345,10 @@ TextDialog.prototype.show =  function(textDataIn) {
         if (mainFontIndex>0) {
             comboMainFont.currentIndex = mainFontIndex;
         }
+        else {
+            // font not found: use unknown font anyway:
+            comboMainFont.currentText = mainFontName;
+        }
 
         this.sourceEdit.setPlainText(RSettings.getStringValue("TextDialog/Source", ""));
         this.updateRichText(true);
