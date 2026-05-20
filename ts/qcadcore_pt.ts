@@ -46,7 +46,7 @@
     <message>
         <location line="+3"/>
         <source>Microinch</source>
-        <translation>Polegada Milimesimal</translation>
+        <translation>Polegada milimesimal</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -101,7 +101,7 @@
     <message>
         <location line="+3"/>
         <source>Lightyear</source>
-        <translation>Ano-Luz</translation>
+        <translation>Ano-luz</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -114,7 +114,7 @@
     <message>
         <location filename="../src/core/RColor.cpp" line="+340"/>
         <source>By Layer</source>
-        <translation>Pela Camada</translation>
+        <translation>Pela camada</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -159,32 +159,32 @@
     <message>
         <location line="+1"/>
         <source>Dark Red</source>
-        <translation>Vermelho Escuro</translation>
+        <translation>Vermelho escuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Green</source>
-        <translation>Verde Escuro</translation>
+        <translation>Verde escuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Blue</source>
-        <translation>Azul Escuro</translation>
+        <translation>Azul escuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation>Ciano Escuro</translation>
+        <translation>Ciano escuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation>Magenta Escuro</translation>
+        <translation>Magenta escuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Yellow</source>
-        <translation>Amarelo Escuro</translation>
+        <translation>Amarelo escuro</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -204,7 +204,7 @@
     <message>
         <location line="+1"/>
         <source>Light Gray</source>
-        <translation>Cinza Claro</translation>
+        <translation>Cinza claro</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -217,12 +217,12 @@
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+48"/>
         <source>Current Layer ID</source>
-        <translation>ID da Camada Atual</translation>
+        <translation>ID da camada atual</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation>Unidade de Desenho</translation>
+        <translation>Unidade de desenho</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -324,7 +324,7 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation>Propriedade da Referência</translation>
+        <translation>Propriedade da referência</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -357,12 +357,12 @@
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
-        <translation>Espaçamento de Coluna</translation>
+        <translation>Espaçamento de coluna</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
-        <translation>Espaçamento de Linha</translation>
+        <translation>Espaçamento de linha</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -389,7 +389,7 @@
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+104"/>
         <source>Linetype</source>
-        <translation>Tipo de Linha</translation>
+        <translation>Tipo de linha</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -400,7 +400,7 @@
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
-        <translation>Largura da Linha</translation>
+        <translation>Largura da linha</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -416,7 +416,7 @@
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation>Ordem do Desenho</translation>
+        <translation>Ordem do desenho</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -516,7 +516,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation>Posição do Texto</translation>
+        <translation>Posição do texto</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -526,7 +526,7 @@
     <message>
         <location line="+1"/>
         <source>Plain Text</source>
-        <translation>Texto Simples</translation>
+        <translation>Texto simples</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -536,7 +536,7 @@
     <message>
         <location line="+1"/>
         <source>Text Height</source>
-        <translation>Altura do Texto</translation>
+        <translation>Altura do texto</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -546,7 +546,7 @@
     <message>
         <location line="+1"/>
         <source>Text Angle</source>
-        <translation>Ângulo do Texto</translation>
+        <translation>Ângulo do texto</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -566,7 +566,7 @@
     <message>
         <location line="+1"/>
         <source>Line Spacing</source>
-        <translation>Espaçamento entre Linhas</translation>
+        <translation>Espaçamento entre linhas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -828,7 +828,7 @@
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Carrapato de Arquiteto</translation>
+        <translation>Carrapato de arquiteto</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -887,7 +887,7 @@
     <message>
         <location filename="../src/core/RLinetypePattern.cpp" line="+912"/>
         <source>By Layer</source>
-        <translation>Pela Camada</translation>
+        <translation>Pela camada</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -918,7 +918,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation>Traço-Ponto</translation>
+        <translation>Traço-ponto</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -958,7 +958,7 @@
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation>traço ISO</translation>
+        <translation>Traço ISO</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -968,17 +968,17 @@
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation>ISO Traço longo-ponto</translation>
+        <translation>ISO traço longo-ponto</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-dot</source>
-        <translation>ISO Traço longo-ponto duplo</translation>
+        <translation>ISO traço longo-ponto duplo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation>ISO Traço longo-ponto triplo</translation>
+        <translation>ISO traço longo-ponto triplo</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -988,12 +988,12 @@
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation>ISO Traço longo-traço curto</translation>
+        <translation>ISO traço longo-traço curto</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation>ISO Traço longo-traço curto duplo</translation>
+        <translation>ISO traço longo-traço curto duplo</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1023,22 +1023,22 @@
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
-        <translation>ISO Traço duplo-ponto triplo</translation>
+        <translation>ISO traço duplo-ponto triplo</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hot Water Supply</source>
-        <translation>Fornecimento de Água Quente</translation>
+        <translation>Fornecimento de água quente</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hot Water</source>
-        <translation>Água Quente</translation>
+        <translation>Água quente</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gas Line</source>
-        <translation>Linha de Gás</translation>
+        <translation>Linha de gás</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1048,7 +1048,7 @@
     <message>
         <location line="+1"/>
         <source>Zig Zag</source>
-        <translation>Zigue Zague</translation>
+        <translation>Zigue zague</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1058,12 +1058,12 @@
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation>Linha de Cerca 1</translation>
+        <translation>Linha de cerca 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 2</source>
-        <translation>Linha de Cerca 2</translation>
+        <translation>Linha de cerca 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1093,7 +1093,7 @@
     <message>
         <location line="+1"/>
         <source>Drainage Reversed</source>
-        <translation>Drenagem Reversa</translation>
+        <translation>Drenagem reversa</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1108,12 +1108,12 @@
     <message>
         <location line="+1"/>
         <source>Low Voltage</source>
-        <translation>Baixa Tensão</translation>
+        <translation>Baixa tensão</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>High Voltage</source>
-        <translation>Alta Tensão</translation>
+        <translation>Alta tensão</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1136,7 +1136,7 @@
     <message>
         <location filename="../src/core/RLineweight.cpp" line="+37"/>
         <source>By Layer</source>
-        <translation>Pela Camada</translation>
+        <translation>Pela camada</translation>
     </message>
     <message>
         <location line="+1"/>

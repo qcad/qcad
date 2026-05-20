@@ -231,13 +231,13 @@
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-9"/>
         <source>Start Angle</source>
-        <translation>Ângulo de Início</translation>
+        <translation>Ângulo de início</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>End Angle</source>
-        <translation>Ângulo Final</translation>
+        <translation>Ângulo final</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -281,7 +281,7 @@
     <message>
         <location line="+1"/>
         <source>Sweep Angle</source>
-        <translation>Ângulo de Varredura</translation>
+        <translation>Ângulo de varredura</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -316,49 +316,49 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 1</source>
-        <translation>Ponto de Extensão 1</translation>
+        <translation>Ponto de extensão 1</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 2</source>
-        <translation>Ponto de Extensão 2</translation>
+        <translation>Ponto de extensão 2</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngular2LEntity.cpp" line="-14"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 Start</source>
-        <translation>Início da Linha 1</translation>
+        <translation>Início da linha 1</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 End</source>
-        <translation>Final da Linha 1</translation>
+        <translation>Final da linha 1</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 Start</source>
-        <translation>Início da Linha 2</translation>
+        <translation>Início da linha 2</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 End</source>
-        <translation>Final da Linha 2</translation>
+        <translation>Final da linha 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
-        <translation>Arco de Dimensionamento</translation>
+        <translation>Arco de dimensionamento</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>
@@ -368,14 +368,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation>Ponto de Corda</translation>
+        <translation>Ponto de corda</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation>Ponto de Corda Distante</translation>
+        <translation>Ponto de corda distante</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
@@ -396,14 +396,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Defining Point</source>
-        <translation>Definindo o Ponto</translation>
+        <translation>Definindo o ponto</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>Ponto Final Condutor</translation>
+        <translation>Ponto final condutor</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
@@ -424,19 +424,19 @@
     <message>
         <location line="-1"/>
         <source>Upper Limit</source>
-        <translation>Limite Superior</translation>
+        <translation>Limite superior</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lower Limit</source>
-        <translation>Limite Inferior</translation>
+        <translation>Limite inferior</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Definition Point</source>
-        <translation>Ponto de Definição</translation>
+        <translation>Ponto de definição</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -466,7 +466,7 @@
     <message>
         <location line="+8"/>
         <source>Auto Label</source>
-        <translation>Rótulo Automático</translation>
+        <translation>Rótulo automático</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -476,26 +476,26 @@
     <message>
         <location line="+1"/>
         <source>Auto Label Position</source>
-        <translation>Posição do Rótulo Automático</translation>
+        <translation>Posição do rótulo automático</translation>
     </message>
     <message>
         <location line="-25"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation>Posição do Texto</translation>
+        <translation>Posição do texto</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Measured Value</source>
-        <translation>Valor Medido</translation>
+        <translation>Valor medido</translation>
     </message>
     <message>
         <location filename="../src/entity/REllipseEntity.cpp" line="-17"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation>Ponto Maior</translation>
+        <translation>Ponto maior</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -505,12 +505,12 @@
     <message>
         <location line="+1"/>
         <source>Start Parameter</source>
-        <translation>Parâmetro Inicial</translation>
+        <translation>Parâmetro inicial</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Parameter</source>
-        <translation>Parâmetro Final</translation>
+        <translation>Parâmetro final</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -520,7 +520,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Point</source>
-        <translation>Ponto Inicial</translation>
+        <translation>Ponto inicial</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -530,7 +530,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>End Point</source>
-        <translation>Ponto Final</translation>
+        <translation>Ponto final</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-10"/>
@@ -641,12 +641,12 @@
     <message>
         <location line="+2"/>
         <source>Width Factor</source>
-        <translation>Fator de Largura</translation>
+        <translation>Fator de largura</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height Factor</source>
-        <translation>Fator de Altura</translation>
+        <translation>Fator de altura</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -681,7 +681,7 @@
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
-        <translation>Padrão para Polilinha</translation>
+        <translation>Padrão para polilinha</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -697,12 +697,12 @@
     <message>
         <location line="+3"/>
         <source>Start Width</source>
-        <translation>Largura Inicial</translation>
+        <translation>Largura inicial</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Width</source>
-        <translation>Largura Final</translation>
+        <translation>Largura final</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -802,7 +802,7 @@
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
         <source>Closed Periodic</source>
-        <translation>Fechado Periódico</translation>
+        <translation>Fechado periódico</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -814,19 +814,19 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Control Point</source>
-        <translation>Ponto de Controle</translation>
+        <translation>Ponto de controle</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation>Ponto de Ajuste</translation>
+        <translation>Ponto de ajuste</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Knot Vector</source>
-        <translation>Vetor de Nó</translation>
+        <translation>Vetor de nó</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -843,7 +843,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Tangent</source>
-        <translation>Tangente Inicial</translation>
+        <translation>Tangente inicial</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -855,7 +855,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>End Tangent</source>
-        <translation>Tangente Final</translation>
+        <translation>Tangente final</translation>
     </message>
     <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
@@ -905,7 +905,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Second Point</source>
-        <translation>Segundo Ponto</translation>
+        <translation>Segundo ponto</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -915,13 +915,13 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction Vector</source>
-        <translation>Vetor de Direção</translation>
+        <translation>Vetor de direção</translation>
     </message>
     <message>
         <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
-        <translation>Ângulo Fixo</translation>
+        <translation>Ângulo fixo</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="-3"/>
