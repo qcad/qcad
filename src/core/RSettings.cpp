@@ -2126,6 +2126,7 @@ void RSettings::resetCache() {
         delete statusBarFont;
         statusBarFont = NULL;
     }
+
     if (byBlockColor!=NULL) {
         delete byBlockColor;
         byBlockColor = NULL;
@@ -2138,6 +2139,14 @@ void RSettings::resetCache() {
         delete referencePointColor;
         referencePointColor = NULL;
     }
+    if (startReferencePointColor!=NULL) {
+        delete startReferencePointColor;
+        startReferencePointColor = NULL;
+    }
+    if (endReferencePointColor!=NULL) {
+        delete endReferencePointColor;
+        endReferencePointColor = NULL;
+    }
     if (secondaryReferencePointColor!=NULL) {
         delete secondaryReferencePointColor;
         secondaryReferencePointColor = NULL;
@@ -2146,6 +2155,27 @@ void RSettings::resetCache() {
         delete tertiaryReferencePointColor;
         tertiaryReferencePointColor = NULL;
     }
+    if (crossHairColor!=NULL) {
+        delete crossHairColor;
+        crossHairColor = NULL;
+    }
+    if (crossHairColorInactive!=NULL) {
+        delete crossHairColorInactive;
+        crossHairColorInactive = NULL;
+    }
+    if (gridColor!=NULL) {
+        delete gridColor;
+        gridColor = NULL;
+    }
+    if (metaGridColor!=NULL) {
+        delete metaGridColor;
+        metaGridColor = NULL;
+    }
+    if (originColor!=NULL) {
+        delete originColor;
+        originColor = NULL;
+    }
+
     snapRange = -1;
     zeroWeightWeight = -1;
     showCrosshair = -1;
