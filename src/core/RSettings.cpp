@@ -1230,47 +1230,55 @@ bool RSettings::isDarkMode() {
 }
 
 bool RSettings::hasDarkGuiBackground() {
-    if (darkGuiBackground==-1) {
-        // detect dark QCAD theme:
-        if (qApp->styleSheet().contains("IconPostfix:inverse", Qt::CaseInsensitive)) {
-            darkGuiBackground = 1;
-        }
-        // detect explicitly light QCAD theme:
-        else if (qApp->styleSheet().contains("IconPostfix:none", Qt::CaseInsensitive)) {
-            darkGuiBackground = 0;
-        }
-        else {
-#if defined(Q_OS_MAC)
-            // detect macOS dark mode:
-            if (isMacDarkMode()) {
-                darkGuiBackground = 1;
-            }
-            else {
-                darkGuiBackground = 0;
-            }
-            // TODO: support Windows Dark Theme:
-//#elif Q_OS_WINDOWS
-//            QSettings settings("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize",QSettings::NativeFormat);
-//            if (settings.value("AppsUseLightTheme")==0){
-//                darkGuiBackground = 1;
-//            }
-//            else {
-//                darkGuiBackground = 0;
-//            }
-#elif defined(Q_OS_WIN32)
-            // detect Windows dark mode:
-            if (isDarkMode()) {
-                darkGuiBackground = 1;
-            }
-            else {
-                darkGuiBackground = 0;
-            }
-#else
-            darkGuiBackground = 0;
-#endif
-        }
+    if (darkGuiBackground!=-1) {
+        // cached value:
+        return darkGuiBackground==1;
     }
-    return darkGuiBackground==1;
+
+    // detect dark QCAD theme:
+    if (qApp->styleSheet().contains("IconPostfix:inverse", Qt::CaseInsensitive)) {
+        darkGuiBackground = 1;
+        return true;
+    }
+    // detect explicitly light QCAD theme:
+    if (qApp->styleSheet().contains("IconPostfix:none", Qt::CaseInsensitive)) {
+        darkGuiBackground = 0;
+        return false;
+    }
+
+#if defined(Q_OS_MAC)
+    // detect macOS dark mode:
+    if (isMacDarkMode()) {
+        darkGuiBackground = 1;
+        return true;
+    }
+    else {
+        darkGuiBackground = 0;
+        return false;
+    }
+#elif defined(Q_OS_WIN32)
+    // detect Windows dark mode:
+    if (isDarkMode()) {
+        darkGuiBackground = 1;
+        return true;
+    }
+    else {
+        darkGuiBackground = 0;
+        return false;
+    }
+#else
+    // Linux (e.g. KDE with Breeze Dark theme):
+    // detect dark palette:
+    const QPalette defaultPalette;
+    if (defaultPalette.color(QPalette::WindowText).lightness() > defaultPalette.color(QPalette::Window).lightness()) {
+        darkGuiBackground = 1;
+        return true;
+    }
+    else {
+        darkGuiBackground = 0;
+        return false;
+    }
+#endif
 }
 
 /**
