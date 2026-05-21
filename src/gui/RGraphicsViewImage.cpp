@@ -633,7 +633,7 @@ void RGraphicsViewImage::paintGridPoint(const RVector& ucsPosition) {
 
     RGraphicsViewWorker* worker = workers.last();
 
-    if (RSettings::getHighResolutionGraphicsView()) {
+    if (RSettings::getHighResolutionGraphicsView() && RSettings::getDevicePixelRatio()>1.9) {
         double d = mapDistanceFromView(1);
         // make grid points more visible on high res displays:
         worker->drawPoint(QPointF(ucsPosition.x, ucsPosition.y));
