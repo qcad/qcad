@@ -765,8 +765,8 @@ TextDialog.prototype.fixHtml = function(html) {
                         .arg(font.italic() ? "italic" : "normal")
                         .arg(qcol.name());
 
-                // brighter background of text area in macOS dark mode:
-                if (RSettings.hasDarkGuiBackground() && RS.getSystemId()==="osx") {
+                // brighter background of text area in macOS/Window/Linux dark mode:
+                if (RSettings.hasDarkGuiBackground()) {
                     bodyStyle += "background-color:#dddddd;";
                 }
 
