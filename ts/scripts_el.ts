@@ -45,7 +45,7 @@
     <message>
         <location line="+2"/>
         <source>Compiler:</source>
-        <translation>Συγγραφέας:</translation>
+        <translation>Μεταγλωττιστής:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -55,17 +55,17 @@
     <message>
         <location line="+5"/>
         <source>%1 is an application for computer-aided design (CAD).</source>
-        <translation>το %1 είναι μια εφαρμογή για σχεδιασμό με τη βοήθεια υπολογιστή (CAD).</translation>
+        <translation>Το %1 είναι μια εφαρμογή για σχεδιασμό με τη βοήθεια υπολογιστή (CAD).</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 is based on QCAD, a free (open source) software.</source>
-        <translation>το %1 βασίζεται στο QCAD, ένα ελεύθερο λογισμικό (ανοικτού κώδικα).</translation>
+        <translation>Το %1 βασίζεται στο QCAD, ένα ελεύθερο λογισμικό (ανοικτού κώδικα).</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 is free (open source) software.</source>
-        <translation>το %1 είναι ελεύθερο λογισμικό (ανοικτού κώδικα).</translation>
+        <translation>Το %1 είναι ελεύθερο λογισμικό (ανοικτού κώδικα).</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -178,7 +178,7 @@
     <message>
         <location line="+7"/>
         <source>No script add-ons found.</source>
-        <translation>Δεν βρέθηκαν πρόσθετα δέσμης ενεργειών.</translation>
+        <translation>Δεν βρέθηκαν πρόσθετα σεναρίων.</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -206,7 +206,7 @@
     <message>
         <location line="+65"/>
         <source>Hatch Patterns</source>
-        <translation>Μοτίβα καταπακτής</translation>
+        <translation>Μοτίβα διαγράμμισης</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -226,7 +226,7 @@
     <message>
         <location line="+6"/>
         <source>Icons</source>
-        <translation>Εικόνες</translation>
+        <translation>Εικονίδια</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -314,7 +314,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+1"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation>Οι προτιμήσεις του τρέχοντος σχεδίου μπορούν να αλλάξουν στην επιλογή&lt;br/&gt;&lt;i&gt;Edit gt; Drawing Preferences&lt;/i&gt;.</translation>
+        <translation>Οι προτιμήσεις του τρέχοντος σχεδίου μπορούν να αλλάξουν στην επιλογή&lt;br/&gt;&lt;i&gt;Επεξεργασία &amp;gt; Προτιμήσεις σχεδίασης&lt;/i&gt;.</translation>
     </message>
 </context>
 <context>
@@ -440,7 +440,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+22"/>
         <source>&amp;Arc</source>
-        <translation>Arc</translation>
+        <translation>Τόξο</translation>
     </message>
 </context>
 <context>
@@ -856,7 +856,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation>Διαμετρικά συνδεδεμένο</translation>
+        <translation>Εφαπτομενικά συνδεδεμένο</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -903,7 +903,7 @@ Do you wish to recover it/them?</source>
     <message>
         <location line="+5"/>
         <source>Recover Files?</source>
-        <translation>Ανάκτηση αρχείων</translation>
+        <translation>Ανάκτηση αρχείων;</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -913,7 +913,7 @@ Do you wish to recover it/them?</source>
     <message>
         <location line="+47"/>
         <source>Recover File?</source>
-        <translation>Ανάκτηση αρχείου?</translation>
+        <translation>Ανάκτηση αρχείου;</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -957,7 +957,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+54"/>
         <source>min</source>
-        <translation>ελάχ</translation>
+        <translation>λεπ</translation>
     </message>
 </context>
 <context>
@@ -1023,7 +1023,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/AutoTrim/AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation>Auto Trim</translation>
+        <translation>Αυτόματη κοπή</translation>
     </message>
 </context>
 <context>
@@ -1066,7 +1066,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
-        <translation>Οι δύο οντότητες δεν μπορούν να λοξοδρομηθούν.</translation>
+        <translation>Οι δύο οντότητες δεν μπορούν να λοξοτμηθούν.</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -1096,7 +1096,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
-        <translation>Ραφή / λοξότμηση</translation>
+        <translation>Φάλτσο / Λοξότμηση</translation>
     </message>
 </context>
 <context>
@@ -1154,7 +1154,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Background</source>
-        <translation>Ιστορικό</translation>
+        <translation>Φόντο</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1221,7 +1221,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation>Προσθέστε επιπλέον περιθώριο για να αντισταθμίσετε το βάρος γραμμής</translation>
+        <translation>Προσθέστε επιπλέον περιθώριο για να αντισταθμίσετε το πάχος γραμμής</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
@@ -1322,7 +1322,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js" line="+80"/>
         <source>&amp;Fix Block Names</source>
-        <translation>Ονόματα μπλοκ Fix</translation>
+        <translation>Διόρθωση ονομάτων μπλοκ</translation>
     </message>
 </context>
 <context>
@@ -1452,7 +1452,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation>Διάσπαση Gap</translation>
+        <translation>Διάσπαση με διάκενο</translation>
     </message>
 </context>
 <context>
@@ -1475,7 +1475,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation>Δεύτερο σημείο break point</translation>
+        <translation>Δεύτερο σημείο σπασίματος</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1490,7 +1490,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation>Break out Εγχειρίδιο</translation>
+        <translation>Χειροκίνητη διάσπαση</translation>
     </message>
 </context>
 <context>
@@ -1539,12 +1539,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+401"/>
         <source>Expand all</source>
-        <translation>Επεκτείνετε όλα</translation>
+        <translation>Ανάπτυξη όλων</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Collapse all</source>
-        <translation>Collapse all</translation>
+        <translation>Σύμπτυξη όλων</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1622,7 +1622,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesInit.js" line="+6"/>
         <source>Check for &amp;Updates...</source>
-        <translation>Ελέγξτε για ενημερώσεις...</translation>
+        <translation>Έλεγχος για ενημερώσεις...</translation>
     </message>
 </context>
 <context>
@@ -1658,7 +1658,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2P/Circle2PInit.js" line="+2"/>
         <source>&amp;2 Points</source>
-        <translation>2 πόντοι</translation>
+        <translation>2 Σημεία</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1855,7 +1855,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3T/Circle3TInit.js" line="+2"/>
         <source>3 T&amp;angents</source>
-        <translation>3 Tangents</translation>
+        <translation>3 Εφαπτόμενες</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2018,7 +2018,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2PInit.js" line="+2"/>
         <source>&amp;Tangent and 2 Points</source>
-        <translation>Tangent και 2 σημεία</translation>
+        <translation>Εφαπτόμενη και 2 σημεία</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2062,7 +2062,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Window/CloseAll/CloseAllInit.js" line="+2"/>
         <source>&amp;Close All</source>
-        <translation>Κλείστε όλα</translation>
+        <translation>Κλείσιμο όλων</translation>
     </message>
 </context>
 <context>
@@ -2070,7 +2070,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation>Κλείσιμο κλήρωσης...</translation>
+        <translation>Κλείσιμο σχεδίου...</translation>
     </message>
 </context>
 <context>
@@ -2078,7 +2078,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/CloseFile/CloseFileInit.js" line="+2"/>
         <source>&amp;Close</source>
-        <translation>Κλείστε το</translation>
+        <translation>Κλείσιμο</translation>
     </message>
 </context>
 <context>
@@ -2378,7 +2378,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.ui" line="+17"/>
         <source>Start:</source>
-        <translation>Ξεκινήστε:</translation>
+        <translation>Έναρξη:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -2485,7 +2485,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/Cut/CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
-        <translation>Κόψτε το</translation>
+        <translation>Αποκοπή</translation>
     </message>
 </context>
 <context>
@@ -2521,7 +2521,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation>Σημείο επιλογής στόχου</translation>
+        <translation>Σημείο-στόχος της επιλογής</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2536,7 +2536,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+24"/>
         <source>Move Selection</source>
-        <translation>Επιλογή μετακίνησης</translation>
+        <translation>Μετακίνηση επιλογής</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -2598,7 +2598,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/DeselectBlockReferences/DeselectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Deselect Block References</source>
-        <translation>Αποεπιλέξτε τις αναφορές μπλοκ</translation>
+        <translation>Αποεπιλογή αναφορών μπλοκ</translation>
     </message>
 </context>
 <context>
@@ -2813,7 +2813,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Τελικό σημείο του ηγέτη</translation>
+        <translation>Τελικό σημείο γραμμής οδήγησης</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
@@ -2823,7 +2823,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Draw ordinate dimension</source>
-        <translation>Σχεδιάστε τη διάσταση ordinate</translation>
+        <translation>Σχεδιάστε διάσταση τεταγμένης</translation>
     </message>
 </context>
 <context>
@@ -3472,12 +3472,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation>Κλήρωση Fms Lanes</translation>
+        <translation>Σχεδίαση λωρίδων FMS</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation>Κλήρωση λωρίδων FMS (πλευρές)</translation>
+        <translation>Σχεδίαση λωρίδων FMS (νευρώσεις)</translation>
     </message>
 </context>
 <context>
@@ -3656,7 +3656,7 @@ is already in the list.</source>
         <location line="+25"/>
         <location line="+23"/>
         <source>Odd field count.</source>
-        <translation>Μοναδικός αριθμός πεδίων.</translation>
+        <translation>Μονός αριθμός πεδίων.</translation>
     </message>
     <message>
         <location line="-655"/>
@@ -3808,7 +3808,7 @@ is already in the list.</source>
     <message>
         <location line="-168"/>
         <source>Arc Invalid.</source>
-        <translation>Arc Άκυρο.</translation>
+        <translation>Μη έγκυρο τόξο.</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -3923,7 +3923,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid.</source>
-        <translation>Horz. ευθυγράμμιση Άκυρο.</translation>
+        <translation>Οριζ. ευθυγράμμιση Άκυρη.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3963,7 +3963,7 @@ is already in the list.</source>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Εισαγωγές που απορρίφθηκαν: %1 από %2 γραμμές κειμένου</translation>
+        <translation>Επεξεργασμένες καταχωρήσεις: %1 από %2 γραμμές κειμένου</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3973,7 +3973,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Nothing casted.</source>
-        <translation>Τίποτα δεν ρίχτηκε.</translation>
+        <translation>Καμία καταχώρηση δεν επεξεργάστηκε.</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -4013,17 +4013,17 @@ is already in the list.</source>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation>Δεν είναι σωστό Lineweight, αγνοείται. Γραμμή κειμένου: %1%2 Βάρος: %3</translation>
+        <translation>Δεν είναι σωστό πάχος γραμμής, αγνοείται. Γραμμή κειμένου: %1%2 Βάρος: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
-        <translation>Δεν είναι σωστό Linetype, αγνοείται. Γραμμή κειμένου: %1%2 Τύπος: %3</translation>
+        <translation>Δεν είναι σωστός τύπος γραμμής, αγνοείται. Γραμμή κειμένου: %1%2 Τύπος: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation>Δεν είναι σωστή κλίμακα Linetype, αγνοείται. Γραμμή κειμένου: %1%2 Κλίμακα: %3</translation>
+        <translation>Δεν είναι σωστή κλίμακα τύπου γραμμής, αγνοείται. Γραμμή κειμένου: %1%2 Κλίμακα: %3</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4048,7 +4048,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation>Δεν είναι σωστό Lineweight. Γραμμή κειμένου: %1%2 Βάρος: %3</translation>
+        <translation>Δεν είναι σωστό πάχος γραμμής. Γραμμή κειμένου: %1%2 Βάρος: %3</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4086,7 +4086,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
-        <translation>Σειρά κλήρωσης</translation>
+        <translation>Σειρά σχεδίασης</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -4429,12 +4429,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation>Επιλέξτε καταπακτή</translation>
+        <translation>Επιλέξτε διαγράμμιση</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation>Επεξεργασία καταπακτής</translation>
+        <translation>Επεξεργασία διαγράμμισης</translation>
     </message>
 </context>
 <context>
@@ -4960,7 +4960,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui" line="+14"/>
         <source>Enter Size</source>
-        <translation>Εισάγετε το μέγεθος</translation>
+        <translation>Εισαγωγή μεγέθους</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -5009,7 +5009,7 @@ is already in the list.</source>
         <location line="+3"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
-        <translation>Τρεις βαθμοί ισοπαλίας</translation>
+        <translation>Σχεδιάστε τρία σημεία</translation>
     </message>
 </context>
 <context>
@@ -5272,7 +5272,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Flip Painters</source>
-        <translation>Flip ζωγράφοι</translation>
+        <translation>Αναστροφή ζωγράφων</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -5287,7 +5287,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Cast on sub-layer</translation>
+        <translation>Εκτύπωση σε υπο-στρώμα</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5537,7 +5537,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Verbose *</source>
-        <translation>Verbose _tmp_el assistant_ar.qm assistant_bg.qm assistant_cs.qm assistant_da.qm assistant_de.qm assistant_en.qm assistant_es.qm assistant_fr.qm assistant_hr.qm assistant_hu.qm assistant_ja.qm assistant_ko.qm assistant_nl.qm assistant_pl.qm assistant_pt_BR.qm assistant_ru.qm assistant_sk.qm assistant_sl.qm assistant_tr.qm assistant_uk.qm assistant_zh_CN.qm assistant_zh_TW.qm designer_ar.qm designer_bg.qm designer_cs.qm designer_da.qm designer_de.qm designer_en.qm designer_es.qm designer_fr.qm designer_hr.qm designer_hu.qm designer_ja.qm designer_ko.qm designer_nl.qm designer_pl.qm designer_ru.qm designer_sk.qm designer_sl.qm designer_tr.qm designer_uk.qm designer_zh_CN.qm designer_zh_TW.qm linguist_ar.qm linguist_bg.qm linguist_cs.qm linguist_da.qm linguist_de.qm linguist_en.qm linguist_es.qm linguist_fr.qm linguist_hr.qm linguist_hu.qm linguist_it.qm linguist_ja.qm linguist_ko.qm linguist_nl.qm linguist_pl.qm linguist_ru.qm linguist_sk.qm linguist_sl.qm linguist_sv.qm linguist_tr.qm linguist_uk.qm linguist_zh_CN.qm linguist_zh_TW.qm qcadcore_bg.qm qcadcore_bg.ts qcadcore_cs.qm qcadcore_cs.ts qcadcore_da.qm qcadcore_da.ts qcadcore_de.qm qcadcore_de.ts qcadcore_el.qm qcadcore_el.ts qcadcore_en.qm qcadcore_en.ts qcadcore_es.qm qcadcore_es.ts qcadcore_et.qm qcadcore_et.ts qcadcore_fi.qm qcadcore_fi.ts qcadcore_fr.qm qcadcore_fr.ts qcadcore_hr.qm qcadcore_hr.ts qcadcore_hu.qm qcadcore_hu.ts qcadcore_id.qm qcadcore_id.ts qcadcore_it.qm qcadcore_it.ts qcadcore_ja.qm qcadcore_ja.ts qcadcore_ko.qm qcadcore_ko.ts qcadcore_lt.qm qcadcore_lt.ts qcadcore_lv.qm qcadcore_lv.ts qcadcore_nb.qm qcadcore_nb.ts qcadcore_nl.qm qcadcore_nl.ts qcadcore_pl.qm qcadcore_pl.ts qcadcore_pt.qm qcadcore_pt.ts qcadcore_ro.qm qcadcore_ro.ts qcadcore_ru.qm qcadcore_ru.ts qcadcore_sk.qm qcadcore_sk.ts qcadcore_sl.qm qcadcore_sl.ts qcadcore_sv.qm qcadcore_sv.ts qcadcore_th.qm qcadcore_th.ts qcadcore_tr.qm qcadcore_tr.ts qcadcore_uk.qm qcadcore_uk.ts qcadcore_zh_CN.qm qcadcore_zh_CN.ts qcadcore_zh_TW.qm qcadcore_zh_TW.ts qcadentity_bg.qm qcadentity_bg.ts qcadentity_cs.qm qcadentity_cs.ts qcadentity_da.qm qcadentity_da.ts qcadentity_de.qm qcadentity_de.ts qcadentity_el.qm qcadentity_el.ts qcadentity_en.qm qcadentity_en.ts qcadentity_es.qm qcadentity_es.ts qcadentity_et.qm qcadentity_et.ts qcadentity_fi.qm qcadentity_fi.ts qcadentity_fr.qm qcadentity_fr.ts qcadentity_hr.qm qcadentity_hr.ts qcadentity_hu.qm qcadentity_hu.ts qcadentity_id.qm qcadentity_id.ts qcadentity_it.qm qcadentity_it.ts qcadentity_ja.qm qcadentity_ja.ts qcadentity_ko.qm qcadentity_ko.ts qcadentity_lt.qm qcadentity_lt.ts qcadentity_lv.qm qcadentity_lv.ts qcadentity_nb.qm qcadentity_nb.ts qcadentity_nl.qm qcadentity_nl.ts qcadentity_pl.qm qcadentity_pl.ts qcadentity_pt.qm qcadentity_pt.ts qcadentity_ro.qm qcadentity_ro.ts qcadentity_ru.qm qcadentity_ru.ts qcadentity_sk.qm qcadentity_sk.ts qcadentity_sl.qm qcadentity_sl.ts qcadentity_sv.qm qcadentity_sv.ts qcadentity_th.qm qcadentity_th.ts qcadentity_tr.qm qcadentity_tr.ts qcadentity_uk.qm qcadentity_uk.ts qcadentity_zh_CN.qm qcadentity_zh_CN.ts qcadentity_zh_TW.qm qcadentity_zh_TW.ts qcadgui_bg.qm qcadgui_bg.ts qcadgui_cs.qm qcadgui_cs.ts qcadgui_da.qm qcadgui_da.ts qcadgui_de.qm qcadgui_de.ts qcadgui_el.qm qcadgui_el.ts qcadgui_en.qm qcadgui_en.ts qcadgui_es.qm qcadgui_es.ts qcadgui_et.qm qcadgui_et.ts qcadgui_fi.qm qcadgui_fi.ts qcadgui_fr.qm qcadgui_fr.ts qcadgui_hr.qm qcadgui_hr.ts qcadgui_hu.qm qcadgui_hu.ts qcadgui_id.qm qcadgui_id.ts qcadgui_it.qm qcadgui_it.ts qcadgui_ja.qm qcadgui_ja.ts qcadgui_ko.qm qcadgui_ko.ts qcadgui_lt.qm qcadgui_lt.ts qcadgui_lv.qm qcadgui_lv.ts qcadgui_nb.qm qcadgui_nb.ts qcadgui_nl.qm qcadgui_nl.ts qcadgui_pl.qm qcadgui_pl.ts qcadgui_pt.qm qcadgui_pt.ts qcadgui_ro.qm qcadgui_ro.ts qcadgui_ru.qm qcadgui_ru.ts qcadgui_sk.qm qcadgui_sk.ts qcadgui_sl.qm qcadgui_sl.ts qcadgui_sv.qm qcadgui_sv.ts qcadgui_th.qm qcadgui_th.ts qcadgui_tr.qm qcadgui_tr.ts qcadgui_uk.qm qcadgui_uk.ts qcadgui_zh_CN.qm qcadgui_zh_CN.ts qcadgui_zh_TW.qm qcadgui_zh_TW.ts qmlviewer_ar.qm qmlviewer_bg.qm qmlviewer_cs.qm qmlviewer_da.qm qmlviewer_en.qm qmlviewer_es.qm qmlviewer_fi.qm qmlviewer_fr.qm qmlviewer_he.qm qmlviewer_hu.qm qmlviewer_ja.qm qmlviewer_ko.qm qmlviewer_pl.qm qmlviewer_ru.qm qmlviewer_sk.qm qmlviewer_uk.qm qt_ar.qm qt_bg.qm qt_ca.qm qt_cs.qm qt_da.qm qt_de.qm qt_en.qm qt_es.qm qt_fa.qm qt_fi.qm qt_fr.qm qt_gd.qm qt_gl.qm qt_he.qm qt_help_ar.qm qt_help_bg.qm qt_help_ca.qm qt_help_cs.qm qt_help_da.qm qt_help_de.qm qt_help_en.qm qt_help_es.qm qt_help_fr.qm qt_help_gl.qm qt_help_hr.qm qt_help_hu.qm qt_help_it.qm qt_help_ja.qm qt_help_ko.qm qt_help_nl.qm qt_help_nn.qm qt_help_pl.qm qt_help_pt_BR.qm qt_help_ru.qm qt_help_sk.qm qt_help_sl.qm qt_help_tr.qm qt_help_uk.qm qt_help_zh_CN.qm qt_help_zh_TW.qm qt_hr.qm qt_hu.qm qt_it.qm qt_ja.qm qt_ko.qm qt_lt.qm qt_lv.qm qt_nl.qm qt_nn.qm qt_pl.qm qt_pt.qm qt_pt_BR.qm qt_pt_PT.qm qt_ru.qm qt_sk.qm qt_sl.qm qt_sv.qm qt_tr.qm qt_uk.qm qt_zh_CN.qm qt_zh_TW.qm qtbase_ar.qm qtbase_bg.qm qtbase_ca.qm qtbase_cs.qm qtbase_da.qm qtbase_de.qm qtbase_en.qm qtbase_es.qm qtbase_fa.qm qtbase_fi.qm qtbase_fr.qm qtbase_gd.qm qtbase_he.qm qtbase_hr.qm qtbase_hu.qm qtbase_it.qm qtbase_ja.qm qtbase_ko.qm qtbase_lv.qm qtbase_nl.qm qtbase_nl.ts qtbase_nn.qm qtbase_pl.qm qtbase_pt.qm qtbase_pt.ts qtbase_pt_BR.qm qtbase_ru.qm qtbase_sk.qm qtbase_tr.qm qtbase_uk.qm qtbase_zh_CN.qm qtbase_zh_CN.ts qtbase_zh_TW.qm qtconfig_hu.qm qtconfig_ja.qm qtconfig_ko.qm qtconfig_pl.qm qtconfig_ru.qm qtconfig_sk.qm qtconfig_sl.qm qtconfig_uk.qm qtconfig_zh_CN.qm qtconfig_zh_TW.qm qtconnectivity_bg.qm qtconnectivity_da.qm qtconnectivity_de.qm qtconnectivity_en.qm qtconnectivity_es.qm qtconnectivity_ko.qm qtconnectivity_pl.qm qtconnectivity_ru.qm qtconnectivity_uk.qm qtdeclarative_bg.qm qtdeclarative_da.qm qtdeclarative_de.qm qtdeclarative_en.qm qtdeclarative_es.qm qtdeclarative_fi.qm qtdeclarative_fr.qm qtdeclarative_ja.qm qtdeclarative_ko.qm qtdeclarative_lv.qm qtdeclarative_pl.qm qtdeclarative_ru.qm qtdeclarative_sk.qm qtdeclarative_uk.qm qtlocation_bg.qm qtlocation_da.qm qtlocation_de.qm qtlocation_en.qm qtlocation_es.qm qtlocation_fr.qm qtlocation_ko.qm qtlocation_pl.qm qtlocation_ru.qm qtlocation_uk.qm qtmultimedia_ar.qm qtmultimedia_bg.qm qtmultimedia_ca.qm qtmultimedia_cs.qm qtmultimedia_da.qm qtmultimedia_de.qm qtmultimedia_en.qm qtmultimedia_es.qm qtmultimedia_fi.qm qtmultimedia_fr.qm qtmultimedia_hu.qm qtmultimedia_it.qm qtmultimedia_ja.qm qtmultimedia_ko.qm qtmultimedia_pl.qm qtmultimedia_ru.qm qtmultimedia_sk.qm qtmultimedia_uk.qm qtquick1_bg.qm qtquick1_ca.qm qtquick1_cs.qm qtquick1_da.qm qtquick1_de.qm qtquick1_en.qm qtquick1_es.qm qtquick1_fi.qm qtquick1_fr.qm qtquick1_he.qm qtquick1_hu.qm qtquick1_it.qm qtquick1_ja.qm qtquick1_ko.qm qtquick1_pl.qm qtquick1_ru.qm qtquick1_sk.qm qtquick1_uk.qm qtquickcontrols2_ar.qm qtquickcontrols2_bg.qm qtquickcontrols2_en.qm qtquickcontrols2_ko.qm qtquickcontrols2_uk.qm qtquickcontrols_bg.qm qtquickcontrols_de.qm qtquickcontrols_en.qm qtquickcontrols_fi.qm qtquickcontrols_fr.qm qtquickcontrols_ja.qm qtquickcontrols_ru.qm qtquickcontrols_uk.qm qtscript_ar.qm qtscript_bg.qm qtscript_ca.qm qtscript_cs.qm qtscript_da.qm qtscript_de.qm qtscript_en.qm qtscript_es.qm qtscript_fi.qm qtscript_fr.qm qtscript_he.qm qtscript_hu.qm qtscript_it.qm qtscript_ja.qm qtscript_ko.qm qtscript_lv.qm qtscript_pl.qm qtscript_ru.qm qtscript_sk.qm qtscript_uk.qm qtserialport_de.qm qtserialport_en.qm qtserialport_es.qm qtserialport_ja.qm qtserialport_ko.qm qtserialport_pl.qm qtserialport_ru.qm qtserialport_uk.qm qtwebengine_de.qm qtwebengine_en.qm qtwebengine_es.qm qtwebengine_ko.qm qtwebengine_pl.qm qtwebengine_ru.qm qtwebengine_uk.qm qtwebsockets_de.qm qtwebsockets_en.qm qtwebsockets_es.qm qtwebsockets_fr.qm qtwebsockets_ja.qm qtwebsockets_ko.qm qtwebsockets_pl.qm qtwebsockets_ru.qm qtwebsockets_uk.qm qtxmlpatterns_bg.qm qtxmlpatterns_ca.qm qtxmlpatterns_cs.qm qtxmlpatterns_da.qm qtxmlpatterns_de.qm qtxmlpatterns_en.qm qtxmlpatterns_es.qm qtxmlpatterns_fr.qm qtxmlpatterns_hu.qm qtxmlpatterns_it.qm qtxmlpatterns_ja.qm qtxmlpatterns_ko.qm qtxmlpatterns_pl.qm qtxmlpatterns_ru.qm qtxmlpatterns_sk.qm qtxmlpatterns_uk.qm scripts.pro scripts_bg.qm scripts_bg.ts scripts_cs.qm scripts_cs.ts scripts_da.qm scripts_da.ts scripts_de.qm scripts_de.ts scripts_el.qm scripts_el.ts scripts_en.qm scripts_en.ts scripts_es.qm scripts_es.ts scripts_et.qm scripts_et.ts scripts_fi.qm scripts_fi.ts scripts_fr.qm scripts_fr.ts scripts_hr.qm scripts_hr.ts scripts_hu.qm scripts_hu.ts scripts_id.qm scripts_id.ts scripts_it.qm scripts_it.ts scripts_ja.qm scripts_ja.ts scripts_ko.qm scripts_ko.ts scripts_lt.qm scripts_lt.ts scripts_lv.qm scripts_lv.ts scripts_nb.qm scripts_nb.ts scripts_nl.qm scripts_nl.ts scripts_pl.qm scripts_pl.ts scripts_pt.qm scripts_pt.ts scripts_ro.qm scripts_ro.ts scripts_ru.qm scripts_ru.ts scripts_sk.qm scripts_sk.ts scripts_sl.qm scripts_sl.ts scripts_sv.qm scripts_sv.ts scripts_th.qm scripts_th.ts scripts_tr.qm scripts_tr.ts scripts_uk.qm scripts_uk.ts scripts_zh_CN.qm scripts_zh_CN.ts scripts_zh_TW.qm scripts_zh_TW.ts</translation>
+        <translation>Λεπτομερές *</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5547,7 +5547,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Delete Base Entities *</source>
-        <translation>Διαγραφή βασικών οντοτήτων _tmp_el assistant_ar.qm assistant_bg.qm assistant_cs.qm assistant_da.qm assistant_de.qm assistant_en.qm assistant_es.qm assistant_fr.qm assistant_hr.qm assistant_hu.qm assistant_ja.qm assistant_ko.qm assistant_nl.qm assistant_pl.qm assistant_pt_BR.qm assistant_ru.qm assistant_sk.qm assistant_sl.qm assistant_tr.qm assistant_uk.qm assistant_zh_CN.qm assistant_zh_TW.qm designer_ar.qm designer_bg.qm designer_cs.qm designer_da.qm designer_de.qm designer_en.qm designer_es.qm designer_fr.qm designer_hr.qm designer_hu.qm designer_ja.qm designer_ko.qm designer_nl.qm designer_pl.qm designer_ru.qm designer_sk.qm designer_sl.qm designer_tr.qm designer_uk.qm designer_zh_CN.qm designer_zh_TW.qm linguist_ar.qm linguist_bg.qm linguist_cs.qm linguist_da.qm linguist_de.qm linguist_en.qm linguist_es.qm linguist_fr.qm linguist_hr.qm linguist_hu.qm linguist_it.qm linguist_ja.qm linguist_ko.qm linguist_nl.qm linguist_pl.qm linguist_ru.qm linguist_sk.qm linguist_sl.qm linguist_sv.qm linguist_tr.qm linguist_uk.qm linguist_zh_CN.qm linguist_zh_TW.qm qcadcore_bg.qm qcadcore_bg.ts qcadcore_cs.qm qcadcore_cs.ts qcadcore_da.qm qcadcore_da.ts qcadcore_de.qm qcadcore_de.ts qcadcore_el.qm qcadcore_el.ts qcadcore_en.qm qcadcore_en.ts qcadcore_es.qm qcadcore_es.ts qcadcore_et.qm qcadcore_et.ts qcadcore_fi.qm qcadcore_fi.ts qcadcore_fr.qm qcadcore_fr.ts qcadcore_hr.qm qcadcore_hr.ts qcadcore_hu.qm qcadcore_hu.ts qcadcore_id.qm qcadcore_id.ts qcadcore_it.qm qcadcore_it.ts qcadcore_ja.qm qcadcore_ja.ts qcadcore_ko.qm qcadcore_ko.ts qcadcore_lt.qm qcadcore_lt.ts qcadcore_lv.qm qcadcore_lv.ts qcadcore_nb.qm qcadcore_nb.ts qcadcore_nl.qm qcadcore_nl.ts qcadcore_pl.qm qcadcore_pl.ts qcadcore_pt.qm qcadcore_pt.ts qcadcore_ro.qm qcadcore_ro.ts qcadcore_ru.qm qcadcore_ru.ts qcadcore_sk.qm qcadcore_sk.ts qcadcore_sl.qm qcadcore_sl.ts qcadcore_sv.qm qcadcore_sv.ts qcadcore_th.qm qcadcore_th.ts qcadcore_tr.qm qcadcore_tr.ts qcadcore_uk.qm qcadcore_uk.ts qcadcore_zh_CN.qm qcadcore_zh_CN.ts qcadcore_zh_TW.qm qcadcore_zh_TW.ts qcadentity_bg.qm qcadentity_bg.ts qcadentity_cs.qm qcadentity_cs.ts qcadentity_da.qm qcadentity_da.ts qcadentity_de.qm qcadentity_de.ts qcadentity_el.qm qcadentity_el.ts qcadentity_en.qm qcadentity_en.ts qcadentity_es.qm qcadentity_es.ts qcadentity_et.qm qcadentity_et.ts qcadentity_fi.qm qcadentity_fi.ts qcadentity_fr.qm qcadentity_fr.ts qcadentity_hr.qm qcadentity_hr.ts qcadentity_hu.qm qcadentity_hu.ts qcadentity_id.qm qcadentity_id.ts qcadentity_it.qm qcadentity_it.ts qcadentity_ja.qm qcadentity_ja.ts qcadentity_ko.qm qcadentity_ko.ts qcadentity_lt.qm qcadentity_lt.ts qcadentity_lv.qm qcadentity_lv.ts qcadentity_nb.qm qcadentity_nb.ts qcadentity_nl.qm qcadentity_nl.ts qcadentity_pl.qm qcadentity_pl.ts qcadentity_pt.qm qcadentity_pt.ts qcadentity_ro.qm qcadentity_ro.ts qcadentity_ru.qm qcadentity_ru.ts qcadentity_sk.qm qcadentity_sk.ts qcadentity_sl.qm qcadentity_sl.ts qcadentity_sv.qm qcadentity_sv.ts qcadentity_th.qm qcadentity_th.ts qcadentity_tr.qm qcadentity_tr.ts qcadentity_uk.qm qcadentity_uk.ts qcadentity_zh_CN.qm qcadentity_zh_CN.ts qcadentity_zh_TW.qm qcadentity_zh_TW.ts qcadgui_bg.qm qcadgui_bg.ts qcadgui_cs.qm qcadgui_cs.ts qcadgui_da.qm qcadgui_da.ts qcadgui_de.qm qcadgui_de.ts qcadgui_el.qm qcadgui_el.ts qcadgui_en.qm qcadgui_en.ts qcadgui_es.qm qcadgui_es.ts qcadgui_et.qm qcadgui_et.ts qcadgui_fi.qm qcadgui_fi.ts qcadgui_fr.qm qcadgui_fr.ts qcadgui_hr.qm qcadgui_hr.ts qcadgui_hu.qm qcadgui_hu.ts qcadgui_id.qm qcadgui_id.ts qcadgui_it.qm qcadgui_it.ts qcadgui_ja.qm qcadgui_ja.ts qcadgui_ko.qm qcadgui_ko.ts qcadgui_lt.qm qcadgui_lt.ts qcadgui_lv.qm qcadgui_lv.ts qcadgui_nb.qm qcadgui_nb.ts qcadgui_nl.qm qcadgui_nl.ts qcadgui_pl.qm qcadgui_pl.ts qcadgui_pt.qm qcadgui_pt.ts qcadgui_ro.qm qcadgui_ro.ts qcadgui_ru.qm qcadgui_ru.ts qcadgui_sk.qm qcadgui_sk.ts qcadgui_sl.qm qcadgui_sl.ts qcadgui_sv.qm qcadgui_sv.ts qcadgui_th.qm qcadgui_th.ts qcadgui_tr.qm qcadgui_tr.ts qcadgui_uk.qm qcadgui_uk.ts qcadgui_zh_CN.qm qcadgui_zh_CN.ts qcadgui_zh_TW.qm qcadgui_zh_TW.ts qmlviewer_ar.qm qmlviewer_bg.qm qmlviewer_cs.qm qmlviewer_da.qm qmlviewer_en.qm qmlviewer_es.qm qmlviewer_fi.qm qmlviewer_fr.qm qmlviewer_he.qm qmlviewer_hu.qm qmlviewer_ja.qm qmlviewer_ko.qm qmlviewer_pl.qm qmlviewer_ru.qm qmlviewer_sk.qm qmlviewer_uk.qm qt_ar.qm qt_bg.qm qt_ca.qm qt_cs.qm qt_da.qm qt_de.qm qt_en.qm qt_es.qm qt_fa.qm qt_fi.qm qt_fr.qm qt_gd.qm qt_gl.qm qt_he.qm qt_help_ar.qm qt_help_bg.qm qt_help_ca.qm qt_help_cs.qm qt_help_da.qm qt_help_de.qm qt_help_en.qm qt_help_es.qm qt_help_fr.qm qt_help_gl.qm qt_help_hr.qm qt_help_hu.qm qt_help_it.qm qt_help_ja.qm qt_help_ko.qm qt_help_nl.qm qt_help_nn.qm qt_help_pl.qm qt_help_pt_BR.qm qt_help_ru.qm qt_help_sk.qm qt_help_sl.qm qt_help_tr.qm qt_help_uk.qm qt_help_zh_CN.qm qt_help_zh_TW.qm qt_hr.qm qt_hu.qm qt_it.qm qt_ja.qm qt_ko.qm qt_lt.qm qt_lv.qm qt_nl.qm qt_nn.qm qt_pl.qm qt_pt.qm qt_pt_BR.qm qt_pt_PT.qm qt_ru.qm qt_sk.qm qt_sl.qm qt_sv.qm qt_tr.qm qt_uk.qm qt_zh_CN.qm qt_zh_TW.qm qtbase_ar.qm qtbase_bg.qm qtbase_ca.qm qtbase_cs.qm qtbase_da.qm qtbase_de.qm qtbase_en.qm qtbase_es.qm qtbase_fa.qm qtbase_fi.qm qtbase_fr.qm qtbase_gd.qm qtbase_he.qm qtbase_hr.qm qtbase_hu.qm qtbase_it.qm qtbase_ja.qm qtbase_ko.qm qtbase_lv.qm qtbase_nl.qm qtbase_nl.ts qtbase_nn.qm qtbase_pl.qm qtbase_pt.qm qtbase_pt.ts qtbase_pt_BR.qm qtbase_ru.qm qtbase_sk.qm qtbase_tr.qm qtbase_uk.qm qtbase_zh_CN.qm qtbase_zh_CN.ts qtbase_zh_TW.qm qtconfig_hu.qm qtconfig_ja.qm qtconfig_ko.qm qtconfig_pl.qm qtconfig_ru.qm qtconfig_sk.qm qtconfig_sl.qm qtconfig_uk.qm qtconfig_zh_CN.qm qtconfig_zh_TW.qm qtconnectivity_bg.qm qtconnectivity_da.qm qtconnectivity_de.qm qtconnectivity_en.qm qtconnectivity_es.qm qtconnectivity_ko.qm qtconnectivity_pl.qm qtconnectivity_ru.qm qtconnectivity_uk.qm qtdeclarative_bg.qm qtdeclarative_da.qm qtdeclarative_de.qm qtdeclarative_en.qm qtdeclarative_es.qm qtdeclarative_fi.qm qtdeclarative_fr.qm qtdeclarative_ja.qm qtdeclarative_ko.qm qtdeclarative_lv.qm qtdeclarative_pl.qm qtdeclarative_ru.qm qtdeclarative_sk.qm qtdeclarative_uk.qm qtlocation_bg.qm qtlocation_da.qm qtlocation_de.qm qtlocation_en.qm qtlocation_es.qm qtlocation_fr.qm qtlocation_ko.qm qtlocation_pl.qm qtlocation_ru.qm qtlocation_uk.qm qtmultimedia_ar.qm qtmultimedia_bg.qm qtmultimedia_ca.qm qtmultimedia_cs.qm qtmultimedia_da.qm qtmultimedia_de.qm qtmultimedia_en.qm qtmultimedia_es.qm qtmultimedia_fi.qm qtmultimedia_fr.qm qtmultimedia_hu.qm qtmultimedia_it.qm qtmultimedia_ja.qm qtmultimedia_ko.qm qtmultimedia_pl.qm qtmultimedia_ru.qm qtmultimedia_sk.qm qtmultimedia_uk.qm qtquick1_bg.qm qtquick1_ca.qm qtquick1_cs.qm qtquick1_da.qm qtquick1_de.qm qtquick1_en.qm qtquick1_es.qm qtquick1_fi.qm qtquick1_fr.qm qtquick1_he.qm qtquick1_hu.qm qtquick1_it.qm qtquick1_ja.qm qtquick1_ko.qm qtquick1_pl.qm qtquick1_ru.qm qtquick1_sk.qm qtquick1_uk.qm qtquickcontrols2_ar.qm qtquickcontrols2_bg.qm qtquickcontrols2_en.qm qtquickcontrols2_ko.qm qtquickcontrols2_uk.qm qtquickcontrols_bg.qm qtquickcontrols_de.qm qtquickcontrols_en.qm qtquickcontrols_fi.qm qtquickcontrols_fr.qm qtquickcontrols_ja.qm qtquickcontrols_ru.qm qtquickcontrols_uk.qm qtscript_ar.qm qtscript_bg.qm qtscript_ca.qm qtscript_cs.qm qtscript_da.qm qtscript_de.qm qtscript_en.qm qtscript_es.qm qtscript_fi.qm qtscript_fr.qm qtscript_he.qm qtscript_hu.qm qtscript_it.qm qtscript_ja.qm qtscript_ko.qm qtscript_lv.qm qtscript_pl.qm qtscript_ru.qm qtscript_sk.qm qtscript_uk.qm qtserialport_de.qm qtserialport_en.qm qtserialport_es.qm qtserialport_ja.qm qtserialport_ko.qm qtserialport_pl.qm qtserialport_ru.qm qtserialport_uk.qm qtwebengine_de.qm qtwebengine_en.qm qtwebengine_es.qm qtwebengine_ko.qm qtwebengine_pl.qm qtwebengine_ru.qm qtwebengine_uk.qm qtwebsockets_de.qm qtwebsockets_en.qm qtwebsockets_es.qm qtwebsockets_fr.qm qtwebsockets_ja.qm qtwebsockets_ko.qm qtwebsockets_pl.qm qtwebsockets_ru.qm qtwebsockets_uk.qm qtxmlpatterns_bg.qm qtxmlpatterns_ca.qm qtxmlpatterns_cs.qm qtxmlpatterns_da.qm qtxmlpatterns_de.qm qtxmlpatterns_en.qm qtxmlpatterns_es.qm qtxmlpatterns_fr.qm qtxmlpatterns_hu.qm qtxmlpatterns_it.qm qtxmlpatterns_ja.qm qtxmlpatterns_ko.qm qtxmlpatterns_pl.qm qtxmlpatterns_ru.qm qtxmlpatterns_sk.qm qtxmlpatterns_uk.qm scripts.pro scripts_bg.qm scripts_bg.ts scripts_cs.qm scripts_cs.ts scripts_da.qm scripts_da.ts scripts_de.qm scripts_de.ts scripts_el.qm scripts_el.ts scripts_en.qm scripts_en.ts scripts_es.qm scripts_es.ts scripts_et.qm scripts_et.ts scripts_fi.qm scripts_fi.ts scripts_fr.qm scripts_fr.ts scripts_hr.qm scripts_hr.ts scripts_hu.qm scripts_hu.ts scripts_id.qm scripts_id.ts scripts_it.qm scripts_it.ts scripts_ja.qm scripts_ja.ts scripts_ko.qm scripts_ko.ts scripts_lt.qm scripts_lt.ts scripts_lv.qm scripts_lv.ts scripts_nb.qm scripts_nb.ts scripts_nl.qm scripts_nl.ts scripts_pl.qm scripts_pl.ts scripts_pt.qm scripts_pt.ts scripts_ro.qm scripts_ro.ts scripts_ru.qm scripts_ru.ts scripts_sk.qm scripts_sk.ts scripts_sl.qm scripts_sl.ts scripts_sv.qm scripts_sv.ts scripts_th.qm scripts_th.ts scripts_tr.qm scripts_tr.ts scripts_uk.qm scripts_uk.ts scripts_zh_CN.qm scripts_zh_CN.ts scripts_zh_TW.qm scripts_zh_TW.ts</translation>
+        <translation>Διαγραφή βασικών οντοτήτων *</translation>
     </message>
 </context>
 <context>
@@ -5571,7 +5571,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/FlipVertical/FlipVerticalInit.js" line="+2"/>
         <source>Flip Verti&amp;cal</source>
-        <translation>Flip κάθετα</translation>
+        <translation>Αναστροφή κάθετα</translation>
     </message>
 </context>
 <context>
@@ -5656,7 +5656,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation>Τέσσερα: Equal</translation>
+        <translation>Τέσσερα: Ίσα</translation>
     </message>
 </context>
 <context>
@@ -5700,7 +5700,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation>Κάντε διπλό κλικ για να επεξεργαστείτε την καταπακτή</translation>
+        <translation>Κάντε διπλό κλικ για να επεξεργαστείτε τη διαγράμμιση</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5965,7 +5965,7 @@ is already in the list.</source>
     <message>
         <location line="+45"/>
         <source>Timeout for hatch rendering:</source>
-        <translation>Χρονικό όριο για την απόδοση της καταπακτής:</translation>
+        <translation>Χρονικό όριο για την απόδοση της διαγράμμισης:</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -6318,12 +6318,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation>Εργαλεία καταπακτής</translation>
+        <translation>Εργαλεία διαγράμμισης</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Hatch</source>
-        <translation>Καταπακτή</translation>
+        <translation>Διαγράμμιση</translation>
     </message>
 </context>
 <context>
@@ -6346,7 +6346,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Μοτίβο καταπακτής</translation>
+        <translation>Μοτίβο διαγράμμισης</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6389,12 +6389,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>Hatch από την επιλογή</translation>
+        <translation>Διαγράμμιση από την επιλογή</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation>Δημιουργία καφασωτού ή στερεού γεμίσματος από επιλεγμένο όριο</translation>
+        <translation>Δημιουργία διαγράμμισης ή συμπαγούς γεμίσματος από επιλεγμένο όριο</translation>
     </message>
 </context>
 <context>
@@ -6522,7 +6522,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation>Ως Block:</translation>
+        <translation>Ως μπλοκ:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6895,7 +6895,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation>Καθυστερημένη περιοχή:</translation>
+        <translation>Περιοχή με διαγράμμιση:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6905,7 +6905,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation>Διαφορετική περιοχή με διαγράμμιση:</translation>
+        <translation>Διαφορική περιοχή με διαγράμμιση:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -6953,7 +6953,7 @@ is already in the list.</source>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Μη επεξεργασμένο σχήμα από βρόχο καταπακτής.</translation>
+        <translation>Μη επεξεργασμένο σχήμα από βρόχο διαγράμμισης.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7818,12 +7818,12 @@ is already in the list.</source>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation>Γραφείο</translation>
+        <translation>Cabinet</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cavalier</source>
-        <translation>Καβαλιέρε</translation>
+        <translation>Cavalier</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
@@ -8178,12 +8178,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>Αρχηγός</translation>
+        <translation>Γραμμή οδήγησης</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Σχεδιάστε τον αρχηγό (ακολουθία γραμμών με βέλος)</translation>
+        <translation>Σχεδιάστε γραμμή οδήγησης (ακολουθία γραμμών με βέλος)</translation>
     </message>
 </context>
 <context>
@@ -8196,7 +8196,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>Αρχηγός από επιλεγμένο κείμενο</translation>
+        <translation>Γραμμή οδήγησης από επιλεγμένο κείμενο</translation>
     </message>
 </context>
 <context>
@@ -8469,7 +8469,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation>Draw Box Joint δάχτυλα, αυλακώσεις και Tennons</translation>
+        <translation>Σχεδιάστε δάχτυλα, αυλακώσεις και τένονες Box Joint</translation>
     </message>
 </context>
 <context>
@@ -8497,7 +8497,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Dovetail Gradient:</source>
-        <translation>Κλίση Dovetail:</translation>
+        <translation>Κλίση χελιδονοουράς:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8795,7 +8795,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2Init.js" line="+2"/>
         <source>Tan&amp;gent (Two Circles)</source>
-        <translation>Tangent (Δύο κύκλοι)</translation>
+        <translation>Εφαπτόμενη (Δύο κύκλοι)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9064,7 +9064,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Misc Draw</source>
-        <translation>Διάφορα Κλήρωση</translation>
+        <translation>Διάφορη σχεδίαση</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -9347,7 +9347,7 @@ is already in the list.</source>
     <message>
         <location line="+63"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
-        <translation>Θέλετε να αποθηκεύσετε τις αλλαγές που κάνατε στο έγγραφο &quot;%1&quot;</translation>
+        <translation>Θέλετε να αποθηκεύσετε τις αλλαγές που κάνατε στο&lt;br&gt;έγγραφο &apos;%1&apos;;</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9357,7 +9357,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/NewFile/NewFileInit.js" line="+2"/>
         <source>&amp;New</source>
-        <translation>Νέα</translation>
+        <translation>Νέο</translation>
     </message>
 </context>
 <context>
@@ -9445,7 +9445,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Open Drawing</source>
-        <translation>Ανοιχτό σχέδιο</translation>
+        <translation>Άνοιγμα σχεδίου</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9455,7 +9455,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFileInit.js" line="+2"/>
         <source>&amp;Open</source>
-        <translation>Ανοίξτε το</translation>
+        <translation>Άνοιγμα</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -9538,12 +9538,12 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Top:</source>
-        <translation>Κορυφή:</translation>
+        <translation>Πάνω:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation>Σωστά:</translation>
+        <translation>Δεξιά:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9568,12 +9568,12 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Offset X:</source>
-        <translation>Offset X:</translation>
+        <translation>Μετατόπιση X:</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Offset Y:</source>
-        <translation>Offset Y:</translation>
+        <translation>Μετατόπιση Y:</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -9850,12 +9850,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Pick the second break point</source>
-        <translation>Διαλέξτε το δεύτερο σημείο break point</translation>
+        <translation>Διαλέξτε το δεύτερο σημείο σπασίματος</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation>Break Out Segment</translation>
+        <translation>Τμήμα διάσπασης</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
@@ -10143,7 +10143,7 @@ is already in the list.</source>
     <message>
         <location line="+20"/>
         <source>Print Crop Marks</source>
-        <translation>Εκτύπωση Σημάδια καλλιέργειας</translation>
+        <translation>Εκτύπωση σημαδιών περικοπής</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -10204,7 +10204,7 @@ is already in the list.</source>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Μέγιστη πολυπλοκότητα για τον αυτόματο υπολογισμό του μήκους της καταπακτής:</translation>
+        <translation>Μέγιστη πολυπλοκότητα για τον αυτόματο υπολογισμό του μήκους της διαγράμμισης:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10372,7 +10372,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
         <source>&amp;Quit</source>
-        <translation>Σταματήστε το</translation>
+        <translation>Έξοδος</translation>
     </message>
 </context>
 <context>
@@ -10413,7 +10413,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation>Ανοίξτε Πρόσφατα</translation>
+        <translation>Άνοιγμα Πρόσφατων</translation>
     </message>
 </context>
 <context>
@@ -10533,7 +10533,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/RestrictOff/RestrictOffInit.js" line="+2"/>
         <source>Restrictions &amp;Off</source>
-        <translation>Περιορισμοί Off</translation>
+        <translation>Απενεργοποίηση περιορισμών</translation>
     </message>
 </context>
 <context>
@@ -10557,7 +10557,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation>Αντίστροφη</translation>
+        <translation>Αντιστροφή</translation>
     </message>
 </context>
 <context>
@@ -10666,7 +10666,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation>Περιστροφή δύο επιλογών</translation>
+        <translation>Επιλογές διπλής περιστροφής</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10777,7 +10777,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation>Στρογγυλό</translation>
+        <translation>Στρογγυλοποίηση</translation>
     </message>
 </context>
 <context>
@@ -11178,7 +11178,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/SelectBlockReferences/SelectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Select Block References</source>
-        <translation>Επιλέξτε Block References</translation>
+        <translation>Επιλογή αναφορών μπλοκ</translation>
     </message>
 </context>
 <context>
@@ -11823,7 +11823,7 @@ is already in the list.</source>
     <message>
         <location line="+25"/>
         <source>&amp;Snap</source>
-        <translation>Snap</translation>
+        <translation>Πιάσιμο</translation>
     </message>
 </context>
 <context>
@@ -11841,7 +11841,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAutoInit.js" line="+2"/>
         <source>&amp;Auto</source>
-        <translation>Auto</translation>
+        <translation>Αυτόματο</translation>
     </message>
 </context>
 <context>
@@ -11862,7 +11862,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Enter</source>
-        <translation>Εισάγετε το</translation>
+        <translation>Εισαγωγή</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
@@ -12117,7 +12117,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapTangential/SnapTangentialInit.js" line="+2"/>
         <source>&amp;Tangential</source>
-        <translation>Tangential</translation>
+        <translation>Εφαπτομενικό</translation>
     </message>
 </context>
 <context>
@@ -12293,7 +12293,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
-        <translation>Stretch</translation>
+        <translation>Έκταση</translation>
     </message>
 </context>
 <context>
@@ -12347,7 +12347,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>
         <source>Resolution:</source>
-        <translation>Ψήφισμα:</translation>
+        <translation>Ανάλυση:</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -12433,17 +12433,17 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Use reduced selection of fonts:</source>
-        <translation>Χρησιμοποιήστε μειωμένη επιλογή γραμματοσειρών:</translation>
+        <translation>Χρήση περιορισμένης επιλογής γραμματοσειρών:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Uncheck all</source>
-        <translation>Αποεπιλέξτε όλα</translation>
+        <translation>Αποεπιλογή όλων</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Check all</source>
-        <translation>Ελέγξτε όλα</translation>
+        <translation>Επιλογή όλων</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-17"/>
@@ -12516,7 +12516,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>Κείμενο ευθυγραμμισμένο Leader</translation>
+        <translation>Κείμενο με ευθυγραμμισμένη γραμμή οδήγησης</translation>
     </message>
 </context>
 <context>
@@ -12564,7 +12564,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation>Κόψτε το</translation>
+        <translation>Αποκοπή</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12599,7 +12599,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>&amp;Superscript</source>
-        <translation>Superscript</translation>
+        <translation>Εκθέτης</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -12746,7 +12746,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Cut</source>
-        <translation>Κόψτε το</translation>
+        <translation>Αποκοπή</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13274,7 +13274,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/TrimBoth/TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
-        <translation>Trim Και τα δύο</translation>
+        <translation>Κοπή και των δύο</translation>
     </message>
 </context>
 <context>
@@ -13553,7 +13553,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation>Απόσταση πλέγματος &lt; Meta Grid Spacing</translation>
+        <translation>Απόσταση πλέγματος &lt; Απόσταση μετα-πλέγματος</translation>
     </message>
 </context>
 <context>
@@ -13902,7 +13902,7 @@ is already in the list.</source>
     <message>
         <location line="-12"/>
         <source>Decimal Degrees</source>
-        <translation>Δεκαδικοί βαθμοί</translation>
+        <translation>Δεκαδικές μοίρες</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13912,12 +13912,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Gradians</source>
-        <translation>Gradians</translation>
+        <translation>Γκράντια</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Radians</source>
-        <translation>Ακτίνες</translation>
+        <translation>Ακτίνια</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13934,7 +13934,7 @@ is already in the list.</source>
         <location line="-3"/>
         <location line="+4"/>
         <source>Counterclockwise</source>
-        <translation>Με τη φορά των δεικτών του ρολογιού</translation>
+        <translation>Αριστερόστροφα</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -14277,12 +14277,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Points)</source>
-        <translation>Γωνιακές διαστάσεις (3 βαθμοί)</translation>
+        <translation>Γωνιακές διαστάσεις (3 σημεία)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Points)</source>
-        <translation>Γωνιακή διάσταση (3 πόντοι)</translation>
+        <translation>Γωνιακή διάσταση (3 σημεία)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14303,12 +14303,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation>Διαστάσεις σε σειρά</translation>
+        <translation>Διαστάσεις τεταγμένης</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ordinate Dimension</source>
-        <translation>Διάσταση Ordinate</translation>
+        <translation>Διάσταση τεταγμένης</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14363,12 +14363,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation>Ηγέτες</translation>
+        <translation>Γραμμές οδήγησης</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Αρχηγός</translation>
+        <translation>Γραμμή οδήγησης</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14569,7 +14569,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation>Θέα 1</translation>
+        <translation>Παράθυρο προβολής 1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -14625,22 +14625,22 @@ is already in the list.</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Meta Grid Spacing</source>
-        <translation>Meta Grid Spacing</translation>
+        <translation>Απόσταση μετα-πλέγματος</translation>
     </message>
     <message>
         <location line="-390"/>
         <source>Viewport 2</source>
-        <translation>Θέα 2</translation>
+        <translation>Παράθυρο προβολής 2</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 3</source>
-        <translation>Προβολή 3</translation>
+        <translation>Παράθυρο προβολής 3</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 4</source>
-        <translation>Προβολή 4</translation>
+        <translation>Παράθυρο προβολής 4</translation>
     </message>
 </context>
 <context>

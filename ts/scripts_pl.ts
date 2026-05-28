@@ -10198,7 +10198,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1715"/>
         <source>*VARIES*</source>
-        <translation>*VARIES*</translation>
+        <translation>*RÓŻNE*</translation>
     </message>
     <message>
         <location line="-1483"/>
