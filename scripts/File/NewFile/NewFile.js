@@ -163,12 +163,15 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
         silent = false;
     }
 
-    // check if file is already open:
-    var mdiChild = NewFile.activateMdiChild(fileName);
-    if (!isNull(mdiChild)) {
-        // file is already open and was activated
-        // return existing MDI child:
-        return mdiChild;
+    // don't prevent File > New if there is already an unnamed file:
+    if (!isNull(fileName) && fileName.length>0) {
+        // check if file is already open:
+        var mdiChild = NewFile.activateMdiChild(fileName);
+        if (!isNull(mdiChild)) {
+            // file is already open and was activated
+            // return existing MDI child:
+            return mdiChild;
+        }
     }
 
     if (isOpen && !isUrl(fileName)) {
