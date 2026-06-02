@@ -270,24 +270,32 @@ void RGuiAction::setIcon(const QString& iconFile) {
     // look up theme specific icon:
     QFileInfo fi(iconFile);
     QString iconFileName = fi.fileName();
+    QString iconBaseName = fi.baseName();
+
     QString themePath = RSettings::getThemePath();
-    QString themeIconFile = iconFile;
+    QString themeIconFile = "";
+    QStringList themeIconFiles;
+    themeIconFiles.append(themePath + "/icons/" + iconFileName);
+    themeIconFiles.append(":/" + themePath + "/icons/" + iconFileName);
+    themeIconFiles.append(themePath + "/icons/" + iconBaseName + ".png");
+    themeIconFiles.append(":/" + themePath + "/icons/" + iconBaseName + ".png");
+
     if (!themePath.isEmpty()) {
-        // look up svg in theme:
-        themeIconFile = themePath + "/icons/" + iconFileName;
-        if (!QFileInfo(themeIconFile).exists()) {
-            // no SVG found, look up PNG:
-            QString iconBaseName = fi.baseName();
-            themeIconFile = themePath + "/icons/" + iconBaseName + ".png";
-            if (!QFileInfo(themeIconFile).exists()) {
-                // no PNG found, use default icon:
-                themeIconFile = iconFile;
+        for (int i=0; i<themeIconFiles.length(); i++) {
+            if (QFileInfo(themeIconFiles[i]).exists()) {
+                themeIconFile = themeIconFiles[i];
+                break;
             }
         }
     }
 
     if (themeIconFile.isEmpty()) {
-        // no icon set and no theme icon found:
+        // no theme icon found, use default icon:
+        themeIconFile = iconFile;
+    }
+
+    if (themeIconFile.isEmpty()) {
+        // no default icon set and no theme icon found:
         QAction::setIcon(QIcon());
     }
     else {
