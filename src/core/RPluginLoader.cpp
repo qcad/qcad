@@ -146,7 +146,7 @@ void RPluginLoader::loadPlugins(bool init) {
         baseName = baseName.replace("_debug", "");
         baseName = baseName.replace("lib", "");
         if (baseName.startsWith("qcad") && baseName.endsWith("style")) {
-            // plugin is a theme / style:
+            // plugin is a theme / style (e.g. qcaddarkstyle):
             QString styleName = baseName.mid(4, baseName.length()-4-5);
             if (theme.toLower()!=styleName.toLower()) {
                 // only load style plugin if name matched theme:
@@ -177,8 +177,14 @@ void RPluginLoader::loadPlugins(bool init) {
                 QStringList keys = jObj.keys();
                 for (int i=0; i<keys.length(); i++) {
                     QString key = keys[i];
+                    QString value = jObj.value(key).toString();
                     //qDebug() << "JSON value: " << key << ":" << jObj.value(key);
-                    info.set(key, jObj.value(key).toString());
+                    info.set(key, value);
+
+                    if (key=="Theme") {
+                        // theme override:
+                        RSettings::setValue("Theme/ThemeName", value);
+                    }
                 }
             }
             else {
