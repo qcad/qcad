@@ -1731,7 +1731,7 @@ REntity::Id RDocumentInterface::getClosestEntity(RInputEvent& event) {
  * \param selectedOnly Only return selected entities.
  */
 REntity::Id RDocumentInterface::getClosestEntity(const RVector& position,
-        double range, double strictRange, bool includeLockedLayers, bool selectedOnly) {
+        double range, double strictRange, bool includeLockedLayers, bool selectedOnly, bool snappable) {
 
     RGraphicsView* view = getLastKnownViewWithFocus();
     bool draft = false;
@@ -1742,7 +1742,7 @@ REntity::Id RDocumentInterface::getClosestEntity(const RVector& position,
         }
     }
 
-    return document.queryClosestXY(position, range, draft, strictRange, includeLockedLayers, selectedOnly);
+    return document.queryClosestXY(position, range, draft, strictRange, includeLockedLayers, selectedOnly, snappable);
 }
 
 /**

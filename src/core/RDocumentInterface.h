@@ -266,7 +266,8 @@ public:
     RObject::Id getClosestEntity(const RVector& position,
         double range, double strictRange = RMAXDOUBLE,
         bool includeLockedLayers = true,
-        bool selectedOnly = false);
+        bool selectedOnly = false,
+        bool snappable = false);
     void highlightEntity(RObject::Id entityId);
     void highlightReferencePoint(const RRefPoint& position);
     int selectEntities(const QSet<RObject::Id>& entityIds, bool add = false);

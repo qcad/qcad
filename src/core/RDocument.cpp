@@ -1697,7 +1697,8 @@ REntity::Id RDocument::queryClosestXY(
     bool draft,
     double strictRange,
     bool includeLockedLayers,
-    bool selectedOnly) {
+    bool selectedOnly,
+    bool snappable) {
 
     RVector rangeV(
         range,
@@ -1714,7 +1715,9 @@ REntity::Id RDocument::queryClosestXY(
             ),
             true, includeLockedLayers,
             RBlock::INVALID_ID, RDEFAULT_QLIST_RS_ENTITYTYPE,
-            selectedOnly
+            selectedOnly,
+            RObject::INVALID_ID,
+            snappable
         );
 
     if (candidates.isEmpty()) {
@@ -1982,9 +1985,9 @@ QSet<REntity::Id> RDocument::queryIntersectedShapesXYFast(const RBox& box, bool 
  */
 QSet<REntity::Id> RDocument::queryIntersectedEntitiesXY(
         const RBox& box, bool checkBoundingBoxOnly, bool includeLockedLayers, RBlock::Id blockId,
-        const QList<RS::EntityType>& filter, bool selectedOnly, RLayer::Id layerId) const {
+        const QList<RS::EntityType>& filter, bool selectedOnly, RLayer::Id layerId, bool snappable) const {
 
-    return RS::toSet<REntity::Id>(queryIntersectedEntitiesXYWithIndex(box, checkBoundingBoxOnly, includeLockedLayers, blockId, filter, selectedOnly, layerId).keys());
+    return RS::toSet<REntity::Id>(queryIntersectedEntitiesXYWithIndex(box, checkBoundingBoxOnly, includeLockedLayers, blockId, filter, selectedOnly, layerId, snappable).keys());
 }
 
 /**
@@ -2002,7 +2005,7 @@ QSet<REntity::Id> RDocument::queryIntersectedEntitiesXY(
  */
 QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedEntitiesXYWithIndex(
         const RBox& box, bool checkBoundingBoxOnly, bool includeLockedLayers, RBlock::Id blockId,
-        const QList<RS::EntityType>& filter, bool selectedOnly, RLayer::Id layerId) const {
+        const QList<RS::EntityType>& filter, bool selectedOnly, RLayer::Id layerId, bool snappable) const {
 
     bool onlyVisible = false;
 
@@ -2018,7 +2021,7 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedEntitiesXYWithIndex(
 
     // box contains bounding box of this document:
     // return all visible entities:
-    if (usingCurrentBlock && boxExpanded.contains(getBoundingBox())) {
+    if (usingCurrentBlock && boxExpanded.contains(getBoundingBox()) && !snappable) {
         QSet<REntity::Id> ids;
         if (onlyVisible) {
             //RDebug::startTimer(70);
@@ -2039,7 +2042,7 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedEntitiesXYWithIndex(
         return ret;
     }
 
-    return queryIntersectedShapesXY(box, checkBoundingBoxOnly, includeLockedLayers, blockId, filter, selectedOnly, layerId);
+    return queryIntersectedShapesXY(box, checkBoundingBoxOnly, includeLockedLayers, blockId, filter, selectedOnly, layerId, snappable);
 }
 
 /**
@@ -2058,7 +2061,7 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedEntitiesXYWithIndex(
  */
 QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         const RBox& box, bool checkBoundingBoxOnly, bool includeLockedLayers, RBlock::Id blockId,
-        const QList<RS::EntityType>& filter, bool selectedOnly, RLayer::Id layerId) const {
+        const QList<RS::EntityType>& filter, bool selectedOnly, RLayer::Id layerId, bool snappable) const {
 
     bool onlyVisible = false;
 
@@ -2081,6 +2084,13 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         QSet<REntity::Id> ids = queryInfiniteEntities();
         QSet<REntity::Id>::iterator it;
         for (it=ids.begin(); it!=ids.end(); it++) {
+            if (snappable) {
+                QSharedPointer<REntity> entity = queryEntityDirect(*it);
+                if (!isLayerSnappable(entity->getLayerId())) {
+                    continue;
+                }
+            }
+
             infinites.insert(*it, QSet<int>());
         }
     }
@@ -2166,6 +2176,13 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
 
         if (selectedOnly) {
             if (!entity->isSelected() && !entity->isSelectedWorkingSet()) {
+                continue;
+            }
+        }
+
+        // layer must be snappable:
+        if (snappable) {
+            if (!isLayerSnappable(entity->getLayerId())) {
                 continue;
             }
         }
