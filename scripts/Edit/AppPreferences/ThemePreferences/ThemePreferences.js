@@ -27,10 +27,12 @@ function ThemePreferences(guiAction) {
 ThemePreferences.prototype = new EAction();
 
 ThemePreferences.getPreferencesCategory = function() {
-    if (RS.getSystemId()!=="osx") {
-        return [qsTr("General"), qsTr("Theme")];
+    // no themes under macOS:
+    if (RS.getSystemId()==="osx") {
+        return undefined;
     }
-    return undefined;
+
+    return [qsTr("General"), qsTr("Theme")];
 };
 
 ThemePreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {

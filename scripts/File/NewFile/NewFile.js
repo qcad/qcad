@@ -110,6 +110,41 @@ NewFile.prototype.beginEvent = function() {
 };
 
 /**
+ * Checks if the given file is already open and activates the MDI child if it is.
+ * \param fileName File name of file to check.
+ * \return Activated MDI child or undefined if file is not open.
+ */
+NewFile.activateMdiChild = function(fileName) {
+    var appWin = EAction.getMainWindow();
+    var mdiArea = appWin.centralWidget();
+
+    var canonicalFileName = new QFileInfo(fileName).canonicalFilePath();
+
+    var mdiChildren = mdiArea.subWindowList();
+    for (var i=0; i<mdiChildren.length; i++) {
+        var mdiChild = mdiChildren[i];
+
+        if (isNull(mdiChild) || isDeleted(mdiChild)) {
+            continue;
+        }
+
+        var doc = mdiChild.getDocument();
+        if (isNull(doc)) {
+            continue;
+        }
+
+        var canonicalDocFileName = new QFileInfo(doc.getFileName()).canonicalFilePath();
+
+        if (canonicalDocFileName===canonicalFileName) {
+            mdiArea.setActiveSubWindow(mdiChild);
+            return mdiChild;
+        }
+    }
+
+    return undefined;
+};
+
+/**
  * Creates a new MDI child based on the given UI file and adds it to the
  * MDI area.
  *
@@ -126,6 +161,17 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
     }
     if (isNull(silent)) {
         silent = false;
+    }
+
+    // don't prevent File > New if there is already an unnamed file:
+    if (!isNull(fileName) && fileName.length>0) {
+        // check if file is already open:
+        var mdiChild = NewFile.activateMdiChild(fileName);
+        if (!isNull(mdiChild)) {
+            // file is already open and was activated
+            // return existing MDI child:
+            return mdiChild;
+        }
     }
 
     if (isOpen && !isUrl(fileName)) {

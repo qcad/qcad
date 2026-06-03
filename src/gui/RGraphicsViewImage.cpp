@@ -633,12 +633,16 @@ void RGraphicsViewImage::paintGridPoint(const RVector& ucsPosition) {
 
     RGraphicsViewWorker* worker = workers.last();
 
-    bool a = worker->getAntialiasing();
-    worker->setAntialiasing(false);
-
-    worker->drawPoint(QPointF(ucsPosition.x, ucsPosition.y));
-
-    worker->setAntialiasing(a);
+    if (RSettings::getHighResolutionGraphicsView() && RSettings::getDevicePixelRatio()>1.9) {
+        double d = mapDistanceFromView(1);
+        // make grid points more visible on high res displays:
+        worker->drawPoint(QPointF(ucsPosition.x, ucsPosition.y));
+        worker->drawPoint(QPointF(ucsPosition.x+d, ucsPosition.y));
+        worker->drawPoint(QPointF(ucsPosition.x-d, ucsPosition.y));
+    }
+    else {
+        worker->drawPoint(QPointF(ucsPosition.x, ucsPosition.y));
+    }
 }
 
 void RGraphicsViewImage::paintMetaGrid(RGraphicsViewWorker* worker, const QRect& rect) {

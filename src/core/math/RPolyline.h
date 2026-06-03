@@ -148,6 +148,8 @@ public:
     RPolyline convertArcToLineSegments(int segments) const;
     RPolyline convertArcToLineSegmentsLength(double segmentLength) const;
 
+    RPolyline splitMajorArcs() const;
+
     virtual bool contains(const RVector& point, bool borderIsInside=false, double tolerance=RS::PointTolerance) const;
     bool containsShape(const RShape& shape) const;
 

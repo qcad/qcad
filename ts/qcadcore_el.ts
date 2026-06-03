@@ -317,7 +317,7 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation>Ιδιοκτησία Αναφοράς</translation>
+        <translation>Ανήκει σε Αναφορά</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -445,7 +445,7 @@
     <message>
         <location line="+1"/>
         <source>Text horizontal</source>
-        <translation>Οριζόντιο κείμενο</translation>
+        <translation>Οριζόντια θέση κειμένου</translation>
     </message>
     <message>
         <location line="+1"/>

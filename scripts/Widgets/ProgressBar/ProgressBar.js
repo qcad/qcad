@@ -80,7 +80,7 @@ ProgressBar.progress = function(value) {
             ProgressBar.progressDialog.objectName = "ProgressDialog";
             ProgressBar.progressDialog.windowModality = Qt.ApplicationModal;
             ProgressBar.progressDialog.minimumDuration = 500;
-            ProgressBar.progressDialog.setCancelButton(0);
+            ProgressBar.progressDialog.setCancelButton(undefined);
         }
         ProgressBar.progressDialog.value = value;
         // don't process events if modal dialog does not block user from doing something:

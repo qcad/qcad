@@ -2721,7 +2721,13 @@ function initFontComboBox(comboBox) {
 
 function activateFont(fontComboBox, fontName) {
     var index = fontComboBox.findText(fontName, Qt.MatchFixedString);
-    fontComboBox.setCurrentIndex(index);
+    if (index>0) {
+        fontComboBox.setCurrentIndex(index);
+    }
+    else {
+        // font not found: use unknown font anyway:
+        fontComboBox.currentText = fontName;
+    }
 }
 
 function setMainWindow(w) {
@@ -3198,6 +3204,11 @@ function setUtf8Codec(ts) {
 
 
 function readTextFile(fileName) {
+    if (!isString(fileName)) {
+        qWarning("fileName not a string: " + fileName);
+        return false;
+    }
+
     var file = new QFile(fileName);
     var flags = makeQIODeviceOpenMode(QIODevice.ReadOnly, QIODevice.Text);
     if (file.open(flags)) {
@@ -3212,6 +3223,15 @@ function readTextFile(fileName) {
 }
 
 function writeTextFile(fileName, str) {
+    if (!isString(fileName)) {
+        qWarning("fileName not a string: " + fileName);
+        return false;
+    }
+    if (!isString(str)) {
+        qWarning("str not a string: " + str);
+        return false;
+    }
+
     var file = new QFile(fileName);
     var flags = makeQIODeviceOpenMode(QIODevice.WriteOnly, QIODevice.Text);
     if (file.open(flags)) {

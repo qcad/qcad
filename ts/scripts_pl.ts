@@ -6205,7 +6205,7 @@ jest już na liście.</translation>
     <message>
         <location line="+19"/>
         <source>Snap label font:</source>
-        <translation>Czcionka etykiety Snap:</translation>
+        <translation>Czcionka etykiety przyciągania:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -10198,7 +10198,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1715"/>
         <source>*VARIES*</source>
-        <translation>*VARIES*</translation>
+        <translation>*RÓŻNE*</translation>
     </message>
     <message>
         <location line="-1483"/>
@@ -11830,12 +11830,12 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation>Snap Tools</translation>
+        <translation>Narzędzia przyciągania</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>&amp;Snap</source>
-        <translation>Snap</translation>
+        <translation>Przyciąganie</translation>
     </message>
 </context>
 <context>
@@ -11965,7 +11965,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Snap Distance:</translation>
+        <translation>Odległość przyciągania:</translation>
     </message>
 </context>
 <context>
@@ -11993,7 +11993,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Snap Distance:</translation>
+        <translation>Odległość przyciągania:</translation>
     </message>
     <message>
         <location line="+75"/>

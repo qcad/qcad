@@ -41,7 +41,7 @@
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation>Na Entidade</translation>
+        <translation>Na entidade</translation>
     </message>
     <message>
         <location line="+3"/>

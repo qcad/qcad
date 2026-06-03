@@ -100,12 +100,7 @@ TextDialog.prototype.setMode = function(mode) {
 };
 
 TextDialog.prototype.getTextDocument = function() {
-    if (RSettings.getQtVersion() >= 0x050000) {
-        return this.textEdit.document;
-    }
-    else {
-        return this.textEdit.document();
-    }
+    return this.textEdit.document;
 };
 
 TextDialog.prototype.getSourceDocument = function() {
@@ -344,6 +339,10 @@ TextDialog.prototype.show =  function(textDataIn) {
         var mainFontIndex = comboMainFont.findText(mainFontName);
         if (mainFontIndex>0) {
             comboMainFont.currentIndex = mainFontIndex;
+        }
+        else {
+            // font not found: use unknown font anyway:
+            comboMainFont.currentText = mainFontName;
         }
 
         this.sourceEdit.setPlainText(RSettings.getStringValue("TextDialog/Source", ""));
@@ -710,9 +709,10 @@ TextDialog.prototype.fixHtml = function(html) {
     var font = this.getMainFont();
 
     //html = html.replace(/>[ ]*</, "><");
-    var htmlNbsp = "";
+    var startIndex = html.indexOf("<body");
+    var htmlNbsp = html.substr(0, startIndex);
     var cdata = false;
-    for (var i=0; i<html.length; i++) {
+    for (var i=startIndex; i<html.length; i++) {
         if (html[i]==='<') {
             cdata = false;
         }
@@ -761,8 +761,8 @@ TextDialog.prototype.fixHtml = function(html) {
                         .arg(font.italic() ? "italic" : "normal")
                         .arg(qcol.name());
 
-                // brighter background of text area in macOS dark mode:
-                if (RSettings.hasDarkGuiBackground() && RS.getSystemId()==="osx") {
+                // brighter background of text area in macOS/Window/Linux dark mode:
+                if (RSettings.hasDarkGuiBackground()) {
                     bodyStyle += "background-color:#dddddd;";
                 }
 
@@ -1071,10 +1071,7 @@ TextDialog.prototype.updateRichText = function(force) {
         var source = this.getSourceDocument().toPlainText();
         source = source.replace("\n", "\\P");
         var richText = RTextBasedData.toRichText(source, this.getMainFont(), this.fontHeightFactor);
-        //richText = richText.replace("<html>", "<html xmlns='http://www.w3.org/1999/xhtml' xml:space='preserve'>");
         //qDebug("richText: \n\n", richText, "\n\n");
-
-        // TODO: preserve tabs (img with arrow?)
 
         this.textEdit.setHtml(richText);
         //qDebug("HTML from text edit: \n\n", this.textEdit.html, "\n\n");
