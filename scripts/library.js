@@ -3152,7 +3152,9 @@ function autoIconPath(path) {
 function applyTheme() {
     var systemId = RS.getSystemId();
     var theme = RSettings.getValue("Theme/ThemeName", undefined);
-    if (systemId!=="osx" && !isNull(theme)) {
+
+    // only allow Modern theme on macOS:
+    if (!isNull(theme) && (systemId!=="osx" || theme==="Modern")) {
         var path = "themes/" + theme + "/";
 
         qApp.styleSheet = "";
