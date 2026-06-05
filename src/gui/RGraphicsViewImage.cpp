@@ -411,6 +411,22 @@ void RGraphicsViewImage::updateImage() {
         }
         //gbPainter.end();
     }
+
+    // paint reference points of current snap function:
+    RSnap* snap = di->getSnap();
+    if (snap!=NULL) {
+        QList<RRefPoint> snapReferencePoints = snap->getSnapReferencePoints();
+        for (int i=0; i<snapReferencePoints.length(); i++) {
+            RRefPoint p = snapReferencePoints[i];
+            RRefPoint pm = mapToView(p);
+            pm.setFlags(p.getFlags());
+            //QPainter gbPainter(&graphicsBufferWithPreview);
+            paintReferencePoint(decorationWorker, pm, false);
+            //gbPainter.end();
+        }
+    }
+
+
     // highlighting of closest reference point:
     if (scene->getHighlightedReferencePoint().isValid()) {
         RRefPoint p = scene->getHighlightedReferencePoint();
@@ -498,6 +514,9 @@ void RGraphicsViewImage::paintReferencePoint(RGraphicsViewWorker* worker, const 
     else if (pos.isTertiary()) {
         color = RSettings::getTertiaryReferencePointColor();
     }
+    else if (pos.isFromSnap()) {
+        color = RSettings::getSnapReferencePointColor();
+    }
     else {
         color = RSettings::getReferencePointColor();
     }
@@ -516,16 +535,15 @@ void RGraphicsViewImage::paintReferencePoint(RGraphicsViewWorker* worker, const 
         worker->drawLine(QLineF(pos.x, pos.y-size/2, pos.x, pos.y+size/2));
     }
     else {
+        // center or arrow:
+        // round:
         if (pos.isCenter() || pos.isArrow()) {
-            // center or arrow:
-            // round:
             worker->setBrush(color);
             worker->drawEllipse(QRectF(pos.x - size/2, pos.y - size/2, size, size));
         }
+        // other:
+        // rectangle:
         else {
-            // other:
-            // rectangle:
-            //??
             worker->setBrush(color);
             worker->fillRect(QRectF(pos.x - size/2, pos.y - size/2, size, size), color);
         }

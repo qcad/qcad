@@ -66,6 +66,7 @@ RColor* RSettings::startReferencePointColor = NULL;
 RColor* RSettings::endReferencePointColor = NULL;
 RColor* RSettings::secondaryReferencePointColor = NULL;
 RColor* RSettings::tertiaryReferencePointColor = NULL;
+RColor* RSettings::snapReferencePointColor = NULL;
 RColor* RSettings::crossHairColor = NULL;
 RColor* RSettings::crossHairColorInactive = NULL;
 RColor* RSettings::gridColor = NULL;
@@ -912,6 +913,13 @@ RColor RSettings::getTertiaryReferencePointColor() {
         tertiaryReferencePointColor = new RColor(getColor("GraphicsViewColors/TertiaryReferencePointColor", RColor(0,64,172)));
     }
     return *tertiaryReferencePointColor;
+}
+
+RColor RSettings::getSnapReferencePointColor() {
+    if (snapReferencePointColor==NULL) {
+        snapReferencePointColor = new RColor(getColor("GraphicsViewColors/SnapReferencePointColor", RColor(0,200,172)));
+    }
+    return *snapReferencePointColor;
 }
 
 RColor RSettings::getCrossHairColor() {

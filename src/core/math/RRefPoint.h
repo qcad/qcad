@@ -32,7 +32,8 @@ public:
         Bottom    = 0x400,        /**< Reference point is at the bottom of the bounding box */
         Left      = 0x800,        /**< Reference point is at the left of the bounding box */
         HMiddle   = 0x1000,       /**< Reference point is at the horizontal middle of the bounding box */
-        Right     = 0x2000        /**< Reference point is at the right of the bounding box */
+        Right     = 0x2000,       /**< Reference point is at the right of the bounding box */
+        FromSnap  = 0x4000        /**< Reference point originates from snap tool, not from entity */
     };
     Q_DECLARE_FLAGS(Flags, Flag)
 
@@ -69,6 +70,13 @@ public:
     }
     void setTertiary(bool on) {
         setFlag(RRefPoint::Tertiary, on);
+    }
+
+    bool isFromSnap() const {
+        return getFlag(RRefPoint::FromSnap);
+    }
+    void setFromSnap(bool on) {
+        setFlag(RRefPoint::FromSnap, on);
     }
 
     bool isIgnore() const {

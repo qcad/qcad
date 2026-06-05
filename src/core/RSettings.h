@@ -135,6 +135,7 @@ public:
     static RColor getEndReferencePointColor();
     static RColor getSecondaryReferencePointColor();
     static RColor getTertiaryReferencePointColor();
+    static RColor getSnapReferencePointColor();
     static RColor getCrossHairColor();
     static RColor getCrossHairColorInactive();
     static RColor getGridColor();
@@ -347,6 +348,7 @@ private:
     static RColor* endReferencePointColor;
     static RColor* secondaryReferencePointColor;
     static RColor* tertiaryReferencePointColor;
+    static RColor* snapReferencePointColor;
     static RColor* crossHairColor;
     static RColor* crossHairColorInactive;
     static RColor* gridColor;
