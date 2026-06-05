@@ -38,6 +38,7 @@ add_library(qcadsnap SHARED
     RSnapOnEntity.cpp RSnapOnEntity.h
     RSnapPerpendicular.cpp RSnapPerpendicular.h
     RSnapReference.cpp RSnapReference.h
+    RSnapSelection.cpp RSnapSelection.h
     RSnapTangential.cpp RSnapTangential.h
     ${RC}
 )
