@@ -1599,10 +1599,10 @@
     <file alias="scripts/Snap/SnapReference/SnapReference.js">../../scripts/Snap/SnapReference/SnapReference.js</file>
     <file alias="scripts/Snap/SnapReference/SnapReference.svg">../../scripts/Snap/SnapReference/SnapReference.svg</file>
     <file alias="scripts/Snap/SnapReference/SnapReferenceInit.js">../../scripts/Snap/SnapReference/SnapReferenceInit.js</file>
-    <file alias="scripts/Snap/SnapSelectionCenter/SnapSelectionCenter-inverse.svg">../../scripts/Snap/SnapSelectionCenter/SnapSelectionCenter-inverse.svg</file>
-    <file alias="scripts/Snap/SnapSelectionCenter/SnapSelectionCenter.js">../../scripts/Snap/SnapSelectionCenter/SnapSelectionCenter.js</file>
-    <file alias="scripts/Snap/SnapSelectionCenter/SnapSelectionCenter.svg">../../scripts/Snap/SnapSelectionCenter/SnapSelectionCenter.svg</file>
-    <file alias="scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js">../../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js</file>
+    <file alias="scripts/Snap/SnapSelection/SnapSelection-inverse.svg">../../scripts/Snap/SnapSelection/SnapSelection-inverse.svg</file>
+    <file alias="scripts/Snap/SnapSelection/SnapSelection.js">../../scripts/Snap/SnapSelection/SnapSelection.js</file>
+    <file alias="scripts/Snap/SnapSelection/SnapSelection.svg">../../scripts/Snap/SnapSelection/SnapSelection.svg</file>
+    <file alias="scripts/Snap/SnapSelection/SnapSelectionInit.js">../../scripts/Snap/SnapSelection/SnapSelectionInit.js</file>
     <file alias="scripts/Snap/SnapTangential/SnapTangential-inverse.svg">../../scripts/Snap/SnapTangential/SnapTangential-inverse.svg</file>
     <file alias="scripts/Snap/SnapTangential/SnapTangential.js">../../scripts/Snap/SnapTangential/SnapTangential.js</file>
     <file alias="scripts/Snap/SnapTangential/SnapTangential.svg">../../scripts/Snap/SnapTangential/SnapTangential.svg</file>
