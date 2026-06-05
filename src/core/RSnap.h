@@ -25,6 +25,7 @@
 #include "RMath.h"
 #include "RObject.h"
 #include "RVector.h"
+#include "RRefPoint.h"
 
 class RGraphicsView;
 class RMouseEvent;
@@ -61,7 +62,16 @@ public:
         Perpendicular = 11,
         Tangential = 12,
         Coordinate = 13,
-        CoordinatePolar = 14
+        CoordinatePolar = 14,
+        TopLeft = 15,
+        TopMiddle = 16,
+        TopRight = 17,
+        MiddleLeft = 18,
+        MiddleMiddle = 19,
+        MiddleRight = 20,
+        BottomLeft = 21,
+        BottomMiddle = 22,
+        BottomRight = 23
     };
 
 public:
@@ -94,6 +104,10 @@ public:
     }
     virtual void finishEvent() {
         hideUiOptions();
+    }
+
+    virtual QList<RRefPoint> getSnapReferencePoints() const {
+        return QList<RRefPoint>();
     }
 
     /**
