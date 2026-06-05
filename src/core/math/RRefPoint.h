@@ -26,7 +26,13 @@ public:
         Start     = 0x010,        /**< Reference point is a start point */
         End       = 0x020,        /**< Reference point is a start point */
         Arrow     = 0x040,        /**< Reference point is a dimension arrow */
-        Selected  = 0x080         /**< Reference point is selected */
+        Selected  = 0x080,        /**< Reference point is selected */
+        Top       = 0x100,        /**< Reference point is at the top of the bounding box */
+        VMiddle   = 0x200,        /**< Reference point is at the vertical middle of the bounding box */
+        Bottom    = 0x400,        /**< Reference point is at the bottom of the bounding box */
+        Left      = 0x800,        /**< Reference point is at the left of the bounding box */
+        HMiddle   = 0x1000,       /**< Reference point is at the horizontal middle of the bounding box */
+        Right     = 0x2000        /**< Reference point is at the right of the bounding box */
     };
     Q_DECLARE_FLAGS(Flags, Flag)
 
