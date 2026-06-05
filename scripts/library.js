@@ -3208,7 +3208,7 @@ function setUtf8Codec(ts) {
 function readTextFile(fileName) {
     if (!isString(fileName)) {
         qWarning("fileName not a string: " + fileName);
-        return false;
+        return undefined;
     }
 
     var file = new QFile(fileName);
