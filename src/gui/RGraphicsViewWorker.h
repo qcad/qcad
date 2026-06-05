@@ -149,6 +149,8 @@ public:
     virtual void drawRect(const QRectF& rectangle) = 0;
     virtual void fillRect(const QRectF& rectangle, const QBrush& brush) = 0;
 
+    virtual void drawPolygon(const QPolygonF& polygon) = 0;
+
 
 signals:
     void finished();

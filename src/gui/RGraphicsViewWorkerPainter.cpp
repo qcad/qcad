@@ -354,3 +354,10 @@ void RGraphicsViewWorkerPainter::fillRect(const QRectF& rectangle, const QBrush&
     }
     painter->fillRect(rectangle, brush);
 }
+
+void RGraphicsViewWorkerPainter::drawPolygon(const QPolygonF& polygon) {
+    if (painter==NULL) {
+        return;
+    }
+    painter->drawPolygon(polygon);
+}
