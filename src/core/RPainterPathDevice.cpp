@@ -18,7 +18,9 @@
  */
 #include "RPainterPathDevice.h"
 
-RPainterPathDevice::RPainterPathDevice() : QPaintDevice() {
+RPainterPathDevice::RPainterPathDevice()
+    : QPaintDevice(), size(100,100), dpi(96) {
+
     engine = new RPainterPathEngine();
 }
 
@@ -39,17 +41,17 @@ int RPainterPathDevice::metric(PaintDeviceMetric metric) const {
     case QPaintDevice::PdmDepth:
         return 32;
     case QPaintDevice::PdmWidth:
-        return 640;
+        return size.width();
     case QPaintDevice::PdmHeight:
-        return 480;
+        return size.height();
     case QPaintDevice::PdmDpiX:
         return 72;
     case QPaintDevice::PdmDpiY:
         return 72;
     case QPaintDevice::PdmHeightMM:
-        return 480;
+        return round(size.width() * 25.4 / dpi);
     case QPaintDevice::PdmWidthMM:
-        return 640;
+        return round(size.height() * 25.4 / dpi);
     case QPaintDevice::PdmNumColors:
         return 0xffffffff;
     case QPaintDevice::PdmPhysicalDpiX:

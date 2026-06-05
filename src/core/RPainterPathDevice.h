@@ -43,6 +43,14 @@ public:
     virtual ~RPainterPathDevice();
     QList<RPainterPath> getPainterPaths();
 
+    void setSize(const QSize& v) {
+        size = v;
+    }
+
+    void setDpi(double v) {
+        dpi = v;
+    }
+
 protected:
     QPaintEngine* paintEngine() const;
 
@@ -50,6 +58,8 @@ protected:
 
 private:
     RPainterPathEngine* engine;
+    QSize size;
+    double dpi;
 };
 
 Q_DECLARE_METATYPE(RPainterPathDevice*)
