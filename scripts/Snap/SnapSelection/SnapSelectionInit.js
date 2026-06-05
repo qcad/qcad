@@ -1,12 +1,11 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("SnapSelectionCenter", "Center of &Selection"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("SnapSelection", "&Selection Reference Points"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
-    action.setScriptFile(basePath + "/SnapSelectionCenter.js");
+    action.setScriptFile(basePath + "/SnapSelection.js");
     action.setDefaultShortcut(new QKeySequence("s,k"));
     action.setDefaultCommands(["snapselectioncenter", "sk"]);
-    //action.setGroup("snaps");
+    action.setGroup("snaps");
     action.setNoState(true);
-    action.setOverride();
     action.setGroupSortOrder(15560);
     action.setSortOrder(100);
     action.setWidgetNames(["SnapMenu", "SnapToolBar", "SnapToolsPanel", "SnapMatrixPanel"]);
