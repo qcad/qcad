@@ -909,6 +909,8 @@ public:
      */
     static QString convert(const QByteArray& str, const QString& codecName);
 
+    static QString getImageFilePath(const QString& docFileName, const QString& importedFileName, const QByteArray& imageData);
+
     static int getMetaType(const QVariant& v) {
 #if QT_VERSION >= 0x060000
         return v.metaType().id();
