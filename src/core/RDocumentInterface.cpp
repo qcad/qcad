@@ -2534,6 +2534,7 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
                     deselectEntities(ids);
                 }
 
+                // binding: block had an XRef path before but not anymore (binding is removed):
                 bool binding = !oldXRefFileName.isEmpty() && newXRefFileName.isEmpty();
 
                 // block is XRef or was XRef (binding):
