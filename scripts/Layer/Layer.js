@@ -263,13 +263,14 @@ Layer.lockUnlock = function(lock, di, showProgress) {
 
     var operation = new RModifyObjectsOperation();
     operation.setTransactionType(RTransaction.LayerLockStatusChange);
-    var layers = di.getDocument().queryAllLayers();
+    var doc = di.getDocument();
+    var layers = doc.queryAllLayers();
     for (var l = 0; l < layers.length; ++l) {
         if (showProgress===true) {
             EAction.setProgress(50/layers.length*l);
         }
 
-        var layer = di.getDocument().queryLayer(layers[l]);
+        var layer = doc.queryLayer(layers[l]);
         layer.setLocked(lock);
         operation.addObject(layer);
     }
