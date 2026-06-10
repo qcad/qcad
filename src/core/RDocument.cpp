@@ -2024,10 +2024,7 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedEntitiesXYWithIndex(
     if (usingCurrentBlock && boxExpanded.contains(getBoundingBox()) && !snappable) {
         QSet<REntity::Id> ids;
         if (onlyVisible) {
-            //RDebug::startTimer(70);
             ids = queryAllVisibleEntities();
-            //RDebug::stopTimer(70, "queryAllVisibleEntities");
-            //qDebug() << "all visible ids:" << ids;
         }
         else {
             ids = queryAllEntities(false, false);
