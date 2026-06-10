@@ -215,6 +215,8 @@ HatchFromSelection.createHatchData = function(doc, entityIds, ignoreOpenLoops) {
 HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
     var i;
 
+    var entityData = entity.getData();
+
     // handle closed polyline loops:
     if (HatchFromSelection.isClosedPolyline(entity)) {
         if (entity.getLength()<RS.PointTolerance) {
@@ -243,16 +245,19 @@ HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candida
     if (HatchFromSelection.isClosedCurve(entity)) {
         hatchData.newLoop();
         if (RSettings.getQtVersion() >= 0x060000) {
-            hatchData.addBoundary(entity.getData().castToShape().clone());
+            hatchData.addBoundary(entityData.castToShape().clone());
         }
         else {
-            hatchData.addBoundary(entity.getData().castToShape());
+            hatchData.addBoundary(entityData.castToShape());
         }
         docOrBlockRef.traversed[entity.getId()] = true;
         return true;
     }
 
     var document = EAction.getDocument();
+    if (isNull(document)) {
+        document = hatchData.getDocument();
+    }
 
     // handle block reference:
     if (isBlockReferenceEntity(entity)) {
@@ -280,7 +285,11 @@ HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candida
         return ret;
     }
 
-    var shape = entity.getData().castToShape();
+    if (!isFunction(entityData.castToShape)) {
+        return false;
+    }
+
+    var shape = entityData.castToShape();
     if (isNull(shape)) {
         return false;
     }
