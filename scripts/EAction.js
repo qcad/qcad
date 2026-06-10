@@ -270,9 +270,9 @@ EAction.prototype.resumeEvent = function() {
         this.setState(this.state);
     }
 
+    var di = this.getDocumentInterface();
     if (!this.optOutRelativeZeroResume) {
         // restore relative zero position when returning from another command:
-        var di = this.getDocumentInterface();
         if (!isNull(di) && isValidVector(this.relativeZeroPos)) {
             if (EAction.noRelativeZeroResume===true) {
                 EAction.noRelativeZeroResume = false;
@@ -283,6 +283,9 @@ EAction.prototype.resumeEvent = function() {
         }
         this.relativeZeroPos = undefined;
     }
+
+    // 20260506: revert to auto zoom to make sure specialized snap visuals (reference points) are updated correctly:
+    di.setSnap(new RSnapAuto());
 };
 
 /**
