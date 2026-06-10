@@ -161,7 +161,8 @@ bool RDimStyle::setProperty(RPropertyTypeId propertyTypeId, const QVariant& valu
     bool ret = false;
 
     for (int i=0; i<propertyVariables.length(); i++) {
-        if (propertyTypeId==propertyVariables[i].first) {
+        QPair<RPropertyTypeId, RS::KnownVariable> p = propertyVariables[i];
+        if (propertyTypeId==p.first) {
             setVariant(propertyVariables[i].second, value);
             ret = true;
         }
