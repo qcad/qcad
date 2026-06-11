@@ -2070,7 +2070,6 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
     if (blockId==RBlock::INVALID_ID) {
         blockId = getCurrentBlockId();
         onlyVisible = true;
-        //qDebug() << "onlyVisible:" << onlyVisible;
     }
 
     bool usingCurrentBlock = (blockId == getCurrentBlockId());
