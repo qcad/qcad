@@ -267,32 +267,7 @@ void RGuiAction::setIcon(const QString& iconFile) {
     // used to update icons on theme or dark mode change:
     this->iconFile = iconFile;
 
-    // look up theme specific icon:
-    QFileInfo fi(iconFile);
-    QString iconFileName = fi.fileName();
-    QString iconBaseName = fi.baseName();
-
-    QString themePath = RSettings::getThemePath();
-    QString themeIconFile = "";
-    QStringList themeIconFiles;
-    themeIconFiles.append(themePath + "/icons/" + iconFileName);
-    themeIconFiles.append(":/" + themePath + "/icons/" + iconFileName);
-    themeIconFiles.append(themePath + "/icons/" + iconBaseName + ".png");
-    themeIconFiles.append(":/" + themePath + "/icons/" + iconBaseName + ".png");
-
-    if (!themePath.isEmpty()) {
-        for (int i=0; i<themeIconFiles.length(); i++) {
-            if (QFileInfo(themeIconFiles[i]).exists()) {
-                themeIconFile = themeIconFiles[i];
-                break;
-            }
-        }
-    }
-
-    if (themeIconFile.isEmpty()) {
-        // no theme icon found, use default icon:
-        themeIconFile = iconFile;
-    }
+    QString themeIconFile = RGuiAction::getIconPath(iconFile);
 
     if (themeIconFile.isEmpty()) {
         // no default icon set and no theme icon found:
@@ -300,15 +275,6 @@ void RGuiAction::setIcon(const QString& iconFile) {
     }
     else {
         QString fileName = themeIconFile;
-
-        // change fileName to dark mode icon if available (-inverse postfix):
-        if (RSettings::hasDarkGuiBackground()) {
-            QFileInfo fi(themeIconFile);
-            QString iconFileDark = fi.absolutePath() + QDir::separator() + fi.baseName() + "-inverse." + fi.suffix();
-            if (QFileInfo(iconFileDark).exists()) {
-                fileName = iconFileDark;
-            }
-        }
 
         // fileName can be the an original icon file or an icon file of the theme
         // either with or without -inverse postfix:
@@ -1318,5 +1284,53 @@ void RGuiAction::init() {
         if (w!=NULL) {
             addToWidget(this, w);
         }
+    }
+}
+
+QString RGuiAction::getIconPath(const QString& iconFile) {
+    // look up theme specific icon:
+    QFileInfo fi(iconFile);
+    QString iconFileName = fi.fileName();
+    QString iconBaseName = fi.baseName();
+
+    QString themePath = RSettings::getThemePath();
+    QString themeIconFile = "";
+    QStringList themeIconFiles;
+    themeIconFiles.append(themePath + "/icons/" + iconFileName);
+    themeIconFiles.append(":/" + themePath + "/icons/" + iconFileName);
+    themeIconFiles.append(themePath + "/icons/" + iconBaseName + ".png");
+    themeIconFiles.append(":/" + themePath + "/icons/" + iconBaseName + ".png");
+
+    if (!themePath.isEmpty()) {
+        for (int i=0; i<themeIconFiles.length(); i++) {
+            if (QFileInfo(themeIconFiles[i]).exists()) {
+                themeIconFile = themeIconFiles[i];
+                break;
+            }
+        }
+    }
+
+    if (themeIconFile.isEmpty()) {
+        // no theme icon found, use default icon:
+        themeIconFile = iconFile;
+    }
+
+    if (themeIconFile.isEmpty()) {
+        // no default icon set and no theme icon found:
+        return themeIconFile;
+    }
+    else {
+        QString fileName = themeIconFile;
+
+        // change fileName to dark mode icon if available (-inverse postfix):
+        if (RSettings::hasDarkGuiBackground()) {
+            QFileInfo fi(themeIconFile);
+            QString iconFileDark = fi.absolutePath() + QDir::separator() + fi.baseName() + "-inverse." + fi.suffix();
+            if (QFileInfo(iconFileDark).exists()) {
+                fileName = iconFileDark;
+            }
+        }
+
+        return fileName;
     }
 }

@@ -3103,50 +3103,7 @@ function neutralPath(path) {
  * icon can be found.
  */
 function autoIconPath(path) {
-    // set theme specific icon:
-    var themePath = RSettings.getThemePath();
-    var themeIconFile = undefined;
-    if (themePath.length>0) {
-        var fi = new QFileInfo(path);
-        var iconFileName = fi.fileName();
-        themeIconFile = themePath + "/icons/" + iconFileName;
-        if (!new QFileInfo(themeIconFile).exists()) {
-            // no SVG found, look up PNG:
-            var iconBaseName = fi.baseName();
-            themeIconFile = themePath + "/icons/" + iconBaseName + ".png";
-            if (!new QFileInfo(themeIconFile).exists()) {
-                // no PNG found, use default icon:
-                themeIconFile = undefined;
-            }
-        }
-    }
-
-    if (!isNull(themeIconFile)) {
-        // got icon from theme:
-        return themeIconFile;
-    }
-
-    // no theme icon, try dark mode icon:
-    var darkModeIconFile = undefined;
-    if (RSettings.hasDarkGuiBackground()) {
-        darkModeIconFile = path.replace(/\.svg$/, "-inverse.svg");
-        darkModeIconFile = darkModeIconFile.replace(/\.png$/, "-inverse.png");
-        if (!new QFileInfo(darkModeIconFile).exists()) {
-            darkModeIconFile = undefined;
-        }
-    }
-
-    if (!isNull(darkModeIconFile)) {
-        // got dark mode icon:
-        return darkModeIconFile;
-    }
-
-    if (!new QFileInfo(path).exists()) {
-        // given icon does not exist (for icons based on object names, e.g. in options toolbar):
-        return "";
-    }
-
-    return path;
+    return RGuiAction.getIconPath(path);
 }
 
 function applyTheme() {

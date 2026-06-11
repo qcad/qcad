@@ -366,6 +366,8 @@ public:
     void setWidgetNames(const QStringList& widgetNames);
     QStringList getWidgetNames() const;
 
+    static QString getIconPath(const QString& iconFile);
+
 public slots:
     /**
      * Called when the action is triggered (e.g. a button is pressed or a menu chosen).
