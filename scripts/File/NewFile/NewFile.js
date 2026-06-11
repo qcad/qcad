@@ -176,8 +176,9 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
 
     if (isOpen && !isUrl(fileName)) {
         if (!isNull(AutoSave) && !new QFileInfo(fileName).baseName().startsWith("~")) {
-            if (!AutoSave.recover(fileName)) {
-                // canceled file recovering:
+            fileName = AutoSave.recover(fileName);
+            if (fileName.length===0) {
+                // canceled file recovering or error while trying to recover:
                 return undefined;
             }
         }
