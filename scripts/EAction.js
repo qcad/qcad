@@ -2107,7 +2107,16 @@ EAction.getEntityIdsUnderCursor = function(di, event, range, selectable, snappab
     range = view.mapDistanceFromView(range);
 
     var doc = di.getDocument();
-    return doc.queryIntersectedEntitiesXY(new RBox(event.getModelPosition(), range), false, !selectable, RObject.INVALID_ID, snappable);
+    return doc.queryIntersectedEntitiesXY(
+                new RBox(event.getModelPosition(), range),
+                false,                  // checkBoundingBoxOnly
+                !selectable,            // includeLockedLayers
+                RObject.INVALID_ID,     // blockId
+                [],                     // filter
+                false,                  // selectedOnly
+                RObject.INVALID_ID,     // layerId
+                snappable               // snappable
+            );
 };
 
 /**
