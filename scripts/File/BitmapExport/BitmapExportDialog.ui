@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>356</width>
-    <height>637</height>
+    <width>560</width>
+    <height>380</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,359 +18,393 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
-    <widget class="QGroupBox" name="Size">
-     <property name="title">
-      <string>Size</string>
-     </property>
-     <layout class="QFormLayout" name="formLayout">
-      <item row="0" column="0" colspan="2">
-       <widget class="QRadioButton" name="SizeRadio">
-        <property name="text">
-         <string>Specify width and height:</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label">
-        <property name="text">
-         <string>Width:</string>
-        </property>
-        <property name="buddy">
-         <cstring>Width</cstring>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="RMathLineEdit" name="Width">
-        <property name="text">
-         <string notr="true">640</string>
-        </property>
-        <property name="angle" stdset="0">
-         <bool>false</bool>
-        </property>
-        <property name="defaultUnit" stdset="0">
-         <number>0</number>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="label_2">
-        <property name="text">
-         <string>Height:</string>
-        </property>
-        <property name="buddy">
-         <cstring>Height</cstring>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="RMathLineEdit" name="Height">
-        <property name="text">
-         <string notr="true">480</string>
-        </property>
-        <property name="angle" stdset="0">
-         <bool>false</bool>
-        </property>
-        <property name="defaultUnit" stdset="0">
-         <number>0</number>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0" colspan="2">
-       <widget class="QRadioButton" name="ResolutionRadio">
-        <property name="text">
-         <string>Specify resolution:</string>
-        </property>
-        <property name="checked">
-         <bool>false</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="0">
-       <widget class="QLabel" name="label_3">
-        <property name="text">
-         <string>Pixels per drawing unit:</string>
-        </property>
-        <property name="buddy">
-         <cstring>Resolution</cstring>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="1">
-       <widget class="QComboBox" name="Resolution">
-        <property name="editable">
-         <bool>true</bool>
-        </property>
-        <item>
-         <property name="text">
-          <string notr="true">1</string>
+    <layout class="QHBoxLayout" name="columnsLayout">
+     <item>
+      <layout class="QVBoxLayout" name="leftColumnLayout">
+       <item>
+        <widget class="QGroupBox" name="Size">
+         <property name="title">
+          <string>Size</string>
          </property>
-        </item>
-        <item>
-         <property name="text">
-          <string notr="true">2</string>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0" colspan="2">
+           <widget class="QRadioButton" name="SizeRadio">
+            <property name="text">
+             <string>Specify width and height:</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Width:</string>
+            </property>
+            <property name="buddy">
+             <cstring>Width</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="RMathLineEdit" name="Width">
+            <property name="text">
+             <string notr="true">640</string>
+            </property>
+            <property name="angle" stdset="0">
+             <bool>false</bool>
+            </property>
+            <property name="defaultUnit" stdset="0">
+             <number>0</number>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Height:</string>
+            </property>
+            <property name="buddy">
+             <cstring>Height</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="RMathLineEdit" name="Height">
+            <property name="text">
+             <string notr="true">480</string>
+            </property>
+            <property name="angle" stdset="0">
+             <bool>false</bool>
+            </property>
+            <property name="defaultUnit" stdset="0">
+             <number>0</number>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="2">
+           <widget class="QRadioButton" name="ResolutionRadio">
+            <property name="text">
+             <string>Specify resolution:</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Pixels per drawing unit:</string>
+            </property>
+            <property name="buddy">
+             <cstring>Resolution</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QComboBox" name="Resolution">
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+            <item>
+             <property name="text">
+              <string notr="true">1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">4</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">5</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">10</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">20</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">25</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">50</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">100</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="MarginGroup">
+         <property name="title">
+          <string>Margin</string>
          </property>
-        </item>
-        <item>
-         <property name="text">
-          <string notr="true">3</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string notr="true">4</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string notr="true">5</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string notr="true">10</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string notr="true">20</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string notr="true">25</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string notr="true">50</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string notr="true">100</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item row="5" column="0" colspan="2">
-       <widget class="QCheckBox" name="Selection">
-        <property name="text">
-         <string>Export bounding box of selection</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
-    <widget class="QGroupBox" name="Background">
-     <property name="title">
-      <string>Background</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QRadioButton" name="WhiteBackground">
-        <property name="text">
-         <string>White</string>
-        </property>
-        <property name="checked">
-         <bool>false</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="BlackBackground">
-        <property name="text">
-         <string>Black</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="TransparentBackground">
-        <property name="text">
-         <string>Transparent</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
-    <widget class="QGroupBox" name="Color">
-     <property name="title">
-      <string comment="Title of group box">Color</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QCheckBox" name="ColorCorrection">
-        <property name="text">
-         <string>Prevent white on white / black on black export</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="ColorMonochrome">
-        <property name="text">
-         <string>Monochrome</string>
-        </property>
-        <property name="checked">
-         <bool>false</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="ColorGrayscale">
-        <property name="text">
-         <string>Grayscale</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="ColorFull">
-        <property name="text">
-         <string comment="Radio button choice">Color</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
-    <widget class="QGroupBox" name="AntiAliasingGroup">
-     <property name="title">
-      <string>Anti-aliasing</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QCheckBox" name="AntiAliasing">
-        <property name="text">
-         <string>Use anti-aliasing</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
-    <widget class="QGroupBox" name="MarginGroup">
-     <property name="title">
-      <string>Margin</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QLabel" name="label_4">
-          <property name="text">
-           <string>Margin:</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QComboBox" name="Margin">
-          <property name="editable">
-           <bool>true</bool>
-          </property>
-          <property name="currentIndex">
-           <number>6</number>
-          </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <property name="text">
-            <string notr="true">0</string>
-           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>Margin:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="Margin">
+              <property name="editable">
+               <bool>true</bool>
+              </property>
+              <property name="currentIndex">
+               <number>6</number>
+              </property>
+              <item>
+               <property name="text">
+                <string notr="true">0</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">1</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">2</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">3</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">4</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">5</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">10</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">15</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">20</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>px</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
           <item>
-           <property name="text">
-            <string notr="true">1</string>
-           </property>
+           <widget class="QCheckBox" name="WeightMargin">
+            <property name="text">
+             <string>Add extra margin to compensate for line weight</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="leftSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>0</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="rightColumnLayout">
+       <item>
+        <widget class="QGroupBox" name="Background">
+         <property name="title">
+          <string>Background</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QRadioButton" name="WhiteBackground">
+            <property name="text">
+             <string>White</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
           </item>
           <item>
-           <property name="text">
-            <string notr="true">2</string>
-           </property>
+           <widget class="QRadioButton" name="BlackBackground">
+            <property name="text">
+             <string>Black</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
           </item>
           <item>
-           <property name="text">
-            <string notr="true">3</string>
-           </property>
+           <widget class="QRadioButton" name="TransparentBackground">
+            <property name="text">
+             <string>Transparent</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="Color">
+         <property name="title">
+          <string comment="Title of group box">Color</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QCheckBox" name="ColorCorrection">
+            <property name="text">
+             <string>Prevent white on white / black on black export</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
           </item>
           <item>
-           <property name="text">
-            <string notr="true">4</string>
-           </property>
+           <widget class="QRadioButton" name="ColorMonochrome">
+            <property name="text">
+             <string>Monochrome</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
           </item>
           <item>
-           <property name="text">
-            <string notr="true">5</string>
-           </property>
+           <widget class="QRadioButton" name="ColorGrayscale">
+            <property name="text">
+             <string>Grayscale</string>
+            </property>
+           </widget>
           </item>
           <item>
-           <property name="text">
-            <string notr="true">10</string>
-           </property>
+           <widget class="QRadioButton" name="ColorFull">
+            <property name="text">
+             <string comment="Radio button choice">Color</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
           </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="AntiAliasingGroup">
+         <property name="title">
+          <string>Anti-aliasing</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
           <item>
-           <property name="text">
-            <string notr="true">15</string>
-           </property>
+           <widget class="QCheckBox" name="AntiAliasing">
+            <property name="text">
+             <string>Use anti-aliasing</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
           </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="SelectionGroup">
+         <property name="title">
+          <string>Selection</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
           <item>
-           <property name="text">
-            <string notr="true">20</string>
-           </property>
+           <widget class="QCheckBox" name="Selection">
+            <property name="text">
+             <string>Export bounding box of selection</string>
+            </property>
+           </widget>
           </item>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_5">
-          <property name="text">
-           <string>px</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="WeightMargin">
-        <property name="text">
-         <string>Add extra margin to compensate for line weight</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Orientation::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>40</height>
-      </size>
-     </property>
-    </spacer>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="rightSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>0</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
    </item>
    <item>
     <widget class="QDialogButtonBox" name="buttonBox">
