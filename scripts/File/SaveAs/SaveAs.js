@@ -111,11 +111,13 @@ SaveAs.prototype.beginEvent = function() {
 
         if (suffix.length!==0 && !defaultNameFilter.containsIgnoreCase(suffix)) {
             // preselect first name filter that matches current extension:
+            var found = false;
             for (i=0; i<filterStrings.length; ++i) {
                 // for DXF, DWG:
                 if (suffix==="dxf" || suffix==="dwg") {
                     if (filterStrings[i].contains("R27") && filterStrings[i].contains("*." + suffix)) {
                         fileDialog.selectNameFilter(filterStrings[i]);
+                        found = true;
                         break;
                     }
                 }
@@ -123,9 +125,15 @@ SaveAs.prototype.beginEvent = function() {
                     // for CXF, etc.:
                     if (filterStrings[i].contains("*." + suffix)) {
                         fileDialog.selectNameFilter(filterStrings[i]);
+                        found = true;
                         break;
                     }
                 }
+            }
+            if (!found) {
+                // no filter to save file (e.g. SVG, PDF):
+                fileName = fileInfo.absolutePath() + QDir.separator + fileInfo.completeBaseName();
+                fileInfo = new QFileInfo(fileName);
             }
         }
         else {
