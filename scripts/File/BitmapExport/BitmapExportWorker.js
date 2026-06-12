@@ -134,17 +134,23 @@ function exportBitmap(doc, scene, fileName, properties, view) {
 
     view.resizeImage(properties["width"], properties["height"]);
 
+    // remember the box we zoom to, so we can re-center on it below when a
+    // fixed resolution is used:
+    var zoomBox;
     if (properties["window"]) {
-        view.zoomTo(properties["window"], properties["margin"]);
+        zoomBox = properties["window"];
+        view.zoomTo(zoomBox, properties["margin"]);
     }
     else if (properties["zoomAll"]) {
-        var bbz = doc.getBoundingBox(false, true);
-        view.zoomTo(bbz, properties["margin"]);
+        zoomBox = doc.getBoundingBox(false, true);
+        view.zoomTo(zoomBox, properties["margin"]);
     }
     else if (typeof(properties["entityIds"])!=="undefined") {
+        zoomBox = doc.getEntitiesBox(properties["entityIds"]);
         view.zoomToEntities(properties["entityIds"], properties["margin"]);
     }
     else {
+        zoomBox = doc.getBoundingBox(true, true);
         view.autoZoom(properties["margin"], true, properties["noWeightMargin"]);
     }
 
@@ -152,6 +158,14 @@ function exportBitmap(doc, scene, fileName, properties, view) {
     // auto zoom might be slightly off, due to rounding canvas to pixels:
     if (properties["resolution"]) {
         view.setFactor(properties["resolution"]);
+        // setFactor() changes the zoom factor but keeps the offset that
+        // zoomTo() computed for its own (margin adjusted) factor. That leaves
+        // the drawing off-center, putting the whole margin on one side and
+        // pushing the opposite side out of the image. Re-center on the
+        // exported box so the margin is distributed evenly on all sides:
+        if (!isNull(zoomBox) && zoomBox.isValid()) {
+            view.centerToBox(zoomBox);
+        }
     }
 
     view.clear();
