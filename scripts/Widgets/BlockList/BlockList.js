@@ -621,28 +621,48 @@ BlockList.initStyle = function(upd) {
     }
 
     BlockList.iconVisible = [
-        new QIcon(autoIconPath(BlockList.includeBasePath + "/Visible0.svg")),
-        new QIcon(autoIconPath(BlockList.includeBasePath + "/Visible1.svg"))
+        new QIcon(autoIconPath(BlockList.includeBasePath + "/BlockVisible0.svg")),
+        new QIcon(autoIconPath(BlockList.includeBasePath + "/BlockVisible1.svg"))
     ];
 
     BlockList.iconEdit = [
-        new QIcon(autoIconPath(BlockList.includeBasePath + "/Edit0.svg")),
-        new QIcon(autoIconPath(BlockList.includeBasePath + "/Edit1.svg")),
-        new QIcon(autoIconPath(BlockList.includeBasePath + "/Edit2.svg"))
+        new QIcon(autoIconPath(BlockList.includeBasePath + "/BlockEdit0.svg")),
+        new QIcon(autoIconPath(BlockList.includeBasePath + "/BlockEdit1.svg"))
     ];
 
     BlockList.iconXRef = [
-        new QIcon(autoIconPath(BlockList.includeBasePath + "/XRef0.svg")),
-        new QIcon(autoIconPath(BlockList.includeBasePath + "/XRef1.svg"))
+        new QIcon(autoIconPath(BlockList.includeBasePath + "/BlockXRef0.svg")),
+        new QIcon(autoIconPath(BlockList.includeBasePath + "/BlockXRef1.svg"))
     ];
 
     BlockList.iconFromXRef = [
-        new QIcon(autoIconPath(BlockList.includeBasePath + "/FromXRef0.svg")),
-        new QIcon(autoIconPath(BlockList.includeBasePath + "/FromXRef1.svg"))
+        new QIcon(autoIconPath(BlockList.includeBasePath + "/BlockFromXRef0.svg")),
+        new QIcon(autoIconPath(BlockList.includeBasePath + "/BlockFromXRef1.svg"))
     ];
 
+    //var pal = RMainWindowQt.getMainWindow().palette;
+    //var highlightingIsDark = pal.color(QPalette.Active, QPalette.Highlight).lightness()<128;
+    var appWin = EAction.getMainWindow();
+    var blockList = appWin.findChild("BlockList");
+    var highlightingIsDark = RSettings.getSelectionColor(blockList).lightness()<128;
+    var backgroundIsDark = RSettings.hasDarkGuiBackground();
+    var useAlternativeIcons = backgroundIsDark && !highlightingIsDark || !backgroundIsDark && highlightingIsDark;
+
+    // use inverse icons for selected items:
+    // in dark mode, if the highlight color is also dark, the normal icons are already good for selected items:
+    if (useAlternativeIcons) {
+        BlockList.iconVisible[0].addFile(autoIconPath(BlockList.includeBasePath + "/BlockVisible0.svg", true), new QSize(), QIcon.Selected);
+        BlockList.iconVisible[1].addFile(autoIconPath(BlockList.includeBasePath + "/BlockVisible1.svg", true), new QSize(), QIcon.Selected);
+        BlockList.iconEdit[0].addFile(autoIconPath(BlockList.includeBasePath + "/BlockEdit0.svg", true), new QSize(), QIcon.Selected);
+        BlockList.iconEdit[1].addFile(autoIconPath(BlockList.includeBasePath + "/BlockEdit1.svg", true), new QSize(), QIcon.Selected);
+        BlockList.iconXRef[0].addFile(autoIconPath(BlockList.includeBasePath + "/BlockXRef0.svg", true), new QSize(), QIcon.Selected);
+        BlockList.iconXRef[1].addFile(autoIconPath(BlockList.includeBasePath + "/BlockXRef1.svg", true), new QSize(), QIcon.Selected);
+        BlockList.iconFromXRef[0].addFile(autoIconPath(BlockList.includeBasePath + "/BlockFromXRef0.svg", true), new QSize(), QIcon.Selected);
+        BlockList.iconFromXRef[1].addFile(autoIconPath(BlockList.includeBasePath + "/BlockFromXRef1.svg", true), new QSize(), QIcon.Selected);
+    }
+
+
     if (upd) {
-        var appWin = EAction.getMainWindow();
         appWin.notifyBlockListeners(EAction.getDocumentInterface());
     }
 };
