@@ -3102,8 +3102,12 @@ function neutralPath(path) {
  * mapped icon path for a dark theme (-inverse) or the same path or undefined if no such
  * icon can be found.
  */
-function autoIconPath(path) {
-    return RGuiAction.getIconPath(path);
+function autoIconPath(path, inverse) {
+    if (isNull(inverse)) {
+        inverse = false;
+    }
+
+    return RGuiAction.getIconPath(path, inverse);
 }
 
 function applyTheme() {
