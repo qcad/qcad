@@ -2382,6 +2382,10 @@ void RGraphicsViewImage::paintImage(RGraphicsViewWorker* worker, const RImageDat
         scale.x = image.getUVector().getMagnitude();
         scale.y = image.getVVector().getMagnitude();
 
+        if (!RMath::isNormal(scale.x) || !RMath::isNormal(scale.y)) {
+            return;
+        }
+
         if (RMath::getAngleDifference180(image.getUVector().getAngle(), image.getVVector().getAngle()) < 0.0) {
             scale.y *= -1;
         }
