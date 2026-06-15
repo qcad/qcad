@@ -1287,7 +1287,7 @@ void RGuiAction::init() {
     }
 }
 
-QString RGuiAction::getIconPath(const QString& iconFile) {
+QString RGuiAction::getIconPath(const QString& iconFile, bool inverse) {
     // look up theme specific icon:
     QFileInfo fi(iconFile);
     QString iconFileName = fi.fileName();
@@ -1317,13 +1317,13 @@ QString RGuiAction::getIconPath(const QString& iconFile) {
 
     if (themeIconFile.isEmpty()) {
         // no default icon set and no theme icon found:
-        return themeIconFile;
+        return "";
     }
     else {
         QString fileName = themeIconFile;
 
         // change fileName to dark mode icon if available (-inverse postfix):
-        if (RSettings::hasDarkGuiBackground()) {
+        if ((RSettings::hasDarkGuiBackground() && !inverse) || (!RSettings::hasDarkGuiBackground() && inverse)) {
             QFileInfo fi(themeIconFile);
             QString iconFileDark = fi.absolutePath() + QDir::separator() + fi.baseName() + "-inverse." + fi.suffix();
             if (QFileInfo(iconFileDark).exists()) {
@@ -1331,6 +1331,11 @@ QString RGuiAction::getIconPath(const QString& iconFile) {
             }
         }
 
-        return fileName;
+        if (QFileInfo(fileName).exists()) {
+            return fileName;
+        }
+        else {
+            return "";
+        }
     }
 }

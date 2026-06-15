@@ -366,7 +366,7 @@ public:
     void setWidgetNames(const QStringList& widgetNames);
     QStringList getWidgetNames() const;
 
-    static QString getIconPath(const QString& iconFile);
+    static QString getIconPath(const QString& iconFile, bool inverse = false);
 
 public slots:
     /**
