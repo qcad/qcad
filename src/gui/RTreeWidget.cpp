@@ -132,3 +132,9 @@ void RTreeWidget::mouseMoveEvent(QMouseEvent* e) {
 void RTreeWidget::resizeEvent(QResizeEvent* event) {
     QTreeWidget::resizeEvent(event);
 }
+
+void RTreeWidget::initViewItemOption(QStyleOptionViewItem *option) const {
+    QTreeWidget::initViewItemOption(option);
+    // always treat widget as active to keep item selection color and contrast with icons consistent:
+    option->state |= QStyle::State_Active;
+}
