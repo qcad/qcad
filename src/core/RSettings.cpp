@@ -28,7 +28,10 @@
 #include <QString>
 #include <QStringList>
 #include <QSysInfo>
+#include <QStyle>
+#include <QStyleOptionViewItem>
 #include <QTranslator>
+#include <QPainter>
 #include <QDebug>
 
 #if QT_VERSION >= 0x050000
@@ -2127,6 +2130,27 @@ bool RSettings::getAllowMouseMoveInterruptions() {
         allowMouseMoveInterruptions = getValue("GraphicsView/AllowMouseMoveInterruptions", QVariant(true)).toBool();
     }
     return (bool)allowMouseMoveInterruptions;
+}
+
+QColor RSettings::getSelectionColor(const QWidget* w) {
+    if (w==NULL) {
+        return QColor();
+    }
+
+    QStyleOptionViewItem opt;
+    opt.initFrom(w);
+    opt.state |= QStyle::State_Selected | QStyle::State_Active
+                 | QStyle::State_Enabled;
+    opt.showDecorationSelected = true;          // fill the whole rect
+    opt.rect = QRect(0, 0, 8, 8);
+
+    QImage img(8, 8, QImage::Format_ARGB32_Premultiplied);
+    img.fill(Qt::transparent);
+    {
+        QPainter p(&img);
+        w->style()->drawPrimitive(QStyle::PE_PanelItemViewItem, &opt, &p, w);
+    }
+    return img.pixelColor(4, 4);                // un-premultiplied QColor
 }
 
 void RSettings::resetCache() {

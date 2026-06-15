@@ -60,6 +60,7 @@
 
 class QFont;
 class QSettings;
+class QWidget;
 
 /**
  * \ingroup core
@@ -326,6 +327,8 @@ public:
     static QStringList getOpenGLMessages();
 
     static bool useQml();
+
+    static QColor getSelectionColor(const QWidget* w);
 
 private:
     static bool isInitialized();
