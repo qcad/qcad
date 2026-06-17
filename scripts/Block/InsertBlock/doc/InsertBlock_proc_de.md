@@ -1,0 +1,11 @@
+1. Aktivieren Sie den Block den Sie einfügen wollen in der Blockliste.
+2. Klicken Sie die Einfügen Schaltfläche oder wählen Sie 'Block einfügen'
+ vom Blockmenü.
+3. Geben Sie den Rotationswinkel und den Skalierungsfaktor für die
+ Blockreferenz in der Optionenwerkzeugleiste ein.
+4. Geben Sie die Position des eingefügten Blocks an, indem Sie auf eine
+ Koordinate klicken oder eine Koordinate in der Konsole eingeben.
+5. Um ein ganzes Array von Blöcken zu erstellen, klicken Sie auf die Array-Schaltfläche in der Optionenwerkzeugleiste:  
+![](ArrayOfBlocks.png)  
+Geben Sie die Spalten, Zeilen, den Spaltenabstand und den Zeilenabstand im angezeigten Dialog ein.
+ Diese Eigenschaften können auch später mit dem Eigenschafteneditor bearbeitet werden.

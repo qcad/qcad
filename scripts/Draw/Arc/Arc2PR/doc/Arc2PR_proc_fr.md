@@ -1,0 +1,7 @@
+1. Tapez le rayon de l'arc dans la barre d'outils des options et choisissez
+ le sens de l'arc (sens horaire ou anti-horaire) et la solution (arc plus
+ grand ou plus petit).
+2. Spécifiez le point de départ de l'arc.
+3. Spécifiez le point final de l'arc. Si le point final est trop éloigné du
+ point de départ d'une solution, la solution la plus proche est dessinée (un
+ demi-cercle avec le rayon et la direction donnés).

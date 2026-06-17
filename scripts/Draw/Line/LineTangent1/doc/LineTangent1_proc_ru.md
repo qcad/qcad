@@ -1,0 +1,5 @@
+1. Use the mouse to specify the location of the start point of the line or
+ enter a coordinate in the command line.
+2. Click the entity to which you want to create the tangent. Usually, two
+ tangents are possible. When moving the mouse around, you can see a preview of
+ the tangent that will be created.

@@ -1,0 +1,2 @@
+Sočano pokrajša ali podaljša dve črti, loka, eliptična loka tako,
+da se končata v njunem presečišču.

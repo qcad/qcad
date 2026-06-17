@@ -1,0 +1,2 @@
+Ændrer den rækkefølge, i hvilken enhederne vises. Brug dette værktøj til at
+sende enheder, der skjuler andre enheder, i baggrunden.

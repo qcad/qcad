@@ -1,0 +1,4 @@
+1. Introducir el radio en X (radio mayor), el radio en Y (radio menor) y el
+ ángulo de elipse en la barra de herramientas de opciones.
+2. Defina el centro de la elipse con el ratón o introduzca una coordenada en
+ la línea de comandos.

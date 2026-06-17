@@ -1,0 +1,5 @@
+1. Introduzca el radio en la barra de herramientas de opciones.
+2. Especifique la entidad tangencial.
+3. Especifique el punto en el arco.
+4. Elija la solución deseada haciendo clic cerca de ella con el botón
+ izquierdo del ratón.

@@ -1,0 +1,2 @@
+Desenha um círculo com um determinado raio que é tangente a duas
+entidades.

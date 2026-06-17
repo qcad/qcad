@@ -1,0 +1,5 @@
+Dette værktøj skifter mellem låst status for det aktuelle lag. Du kan også
+skifte låst status for lag ved at klikke på låseikonet ved siden af lagnavnet
+på laglisten.
+
+Enheder på låste lag kan ikke vælges, slettes eller ændres.

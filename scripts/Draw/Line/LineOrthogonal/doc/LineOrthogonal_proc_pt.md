@@ -1,0 +1,6 @@
+1. Escolher o
+[tipo de linha](../../doc/Line_pt.html#type) desejada na barra de
+ferramentas de opções.
+2. Clicar na entidade de base existente.
+3. Colocar a linha com o rato ou introduzir uma coordenada na linha de
+comando.

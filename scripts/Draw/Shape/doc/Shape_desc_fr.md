@@ -1,0 +1,14 @@
+#### Options de formes communes
+
+*Polyligne*
+
+Les outils de forme peuvent créer soit des lignes et des arcs libres, soit une polyligne fermée. Cochez "Créer une polyligne" pour créer une seule entité
+ polyligne par forme construite.
+
+*Remplissage*
+
+Cochez la case "Remplir" pour créer un remplissage solide en plus des limites de la forme.
+
+*Rayon*
+
+Cochez la case "Rayon" pour arrondir tous les coins de la forme avec le rayon donné.

@@ -1,0 +1,2 @@
+Met deze tool kunt u parallellen maken van bestaande lijnen (of
+concentrische bogen en cirkels).

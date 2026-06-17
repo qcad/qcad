@@ -1,0 +1,2 @@
+Dette værktøj skjuler alle lag undtagen det valgte (aktive) lag på
+laglisten.

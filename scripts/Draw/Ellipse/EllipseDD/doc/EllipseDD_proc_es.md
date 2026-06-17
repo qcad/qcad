@@ -1,0 +1,4 @@
+1. Introduzca el diámetro en X (diámetro mayor), el diámetro en Y (diámetro
+ menor) y el ángulo de elipse en la barra de herramientas de opciones.
+2. Defina el centro de la elipse con el ratón o introduzca una coordenada en
+ la línea de comandos.

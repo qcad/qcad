@@ -1,0 +1,2 @@
+Avec cet outil, vous pouvez créer des parallèles à des lignes existantes ou
+des arcs et des cercles concentriques.

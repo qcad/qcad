@@ -1,0 +1,6 @@
+Pripne se na eno od devetih referenčnih točk omejevalnega okvirja okoli
+trenutnega izbora: štiri vogale, središčne točke štirih robov ali središče.
+Uporabi se točka, ki je najbližja kazalcu miške.  
+To orodje za pripenjanje je uporabno za premikanje, kopiranje ali drugačno
+poravnavo izbora glede na mrežo ali druge entitete, na primer za postavitev
+središča ali vogala izbora na določen položaj.

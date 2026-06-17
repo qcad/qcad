@@ -1,0 +1,4 @@
+Cet outil permet de basculer la visibilité du calque courant. Vous pouvez
+également basculer entre les couches en cliquant sur l'icône de l'œil à côté du
+nom de la couche dans la liste des couches. Une icône en œil noir signifie que
+le calque est visible, une icône grise que le calque est caché.

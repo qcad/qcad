@@ -1,0 +1,7 @@
+1. Voer de afstand in de opties werkbalk in.
+2. Verplaats de cursor naar de eenheid waarlangs de afstand moet worden
+ gemeten.
+3. Wanneer de gewenste positie / preview wordt getoond, klikt u met de
+ linkermuisknop op de knop om de coördinaten in te stellen.
+
+![](SnapDistanceFigure.png)

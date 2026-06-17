@@ -1,0 +1,1 @@
+S tem orodjem lahko konstruirate kroge, ki so kocentrični obstoječemu krogu. Pri tem bo podana razdalja.

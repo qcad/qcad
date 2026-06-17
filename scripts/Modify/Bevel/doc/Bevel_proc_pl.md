@@ -1,0 +1,8 @@
+1. Wprowadzić geometrię stożka na pasku narzędzi opcji. "Odległość 1" to
+ odległość, jaką linia ukośna będzie miała od (wyimaginowanego) przecięcia się
+ dwóch krawędzi (10 w pokazanym przykładzie). "Odległość 2" jest tą samą
+ odległością ` dla drugiej krawędzi (20 w pokazanym przykładzie).
+2. Sprawdź "Przycinanie", jeśli chcesz przycinać jednostki automatycznie.
+ Jeśli opcja _ jest wyłączona, oba elementy pozostaną nienaruszone.
+3. Wybierz pierwszy element krawędzi (linię lub łuk).
+4. Wybierz drugą jednostkę.

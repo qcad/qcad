@@ -1,0 +1,2 @@
+Det här verktyget kan användas för att antingen förlänga eller förkorta
+linjer eller bågar med ett visst belopp.

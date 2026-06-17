@@ -1,0 +1,2 @@
+- Utilice el ratón para especificar la ubicación del punto o introduzca una
+ coordenada en la línea de comandos.

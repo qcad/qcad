@@ -1,0 +1,2 @@
+Det här kommandot används för att rita enskilda punkter. Punkterna
+representeras visuellt av ett litet kryss.

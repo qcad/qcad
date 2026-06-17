@@ -1,0 +1,14 @@
+#### Common Shape Options
+
+*Polyline*
+
+Shape tools can either create loose lines and arcs or a closed polyline.
+ Tick "Create Polyline" to create a single polyline entity per constructed shape.
+
+*Fill*
+
+Tick the "Fill" check box to create a solid fill in addition to the boundary of the shape.
+
+*Radius*
+
+Tick the "Radius" check box to round all corners of the shape with the given radius.

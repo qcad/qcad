@@ -1,0 +1,4 @@
+1. Selezionare le entità che si desidera esplodere.
+2. Avviare questo strumento per esplodere le entità selezionate.
+3. Ripetere il passo 2 per suddividere ulteriormente le entità selezionate,
+ se lo si desidera.

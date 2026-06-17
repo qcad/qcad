@@ -1,0 +1,3 @@
+1. Pierwszy punkt ustawić za pomocą myszy lub wprowadzić współrzędne w
+ wierszu poleceń !
+2. Ustawić drugi punkt.

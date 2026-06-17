@@ -1,0 +1,2 @@
+Använd det här kommandot för att skriva ut den ritningsdel som för
+närvarande visas i grafikvyn.

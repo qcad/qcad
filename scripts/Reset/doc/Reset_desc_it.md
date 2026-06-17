@@ -1,0 +1,3 @@
+Questo strumento termina tutti gli strumenti attivi e riporta QCAD allo
+stato di inattività in cui è possibile utilizzare il cursore del mouse per
+selezionare entità, trascinare e rilasciare entità, ecc.

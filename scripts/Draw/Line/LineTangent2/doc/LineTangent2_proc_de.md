@@ -1,0 +1,7 @@
+1. Wählen Sie den gewünschten
+[Linientyp](../../doc/Line_de.html#type) in der
+Optionenwerkzeugleiste.
+2. Wählen Sie den ersten Kreis oder Kreisbogen.
+3. Wählen Sie den zweiten Kreis oder Kreisbogen. In der Regel sind vier
+Tangenten möglich. Wenn Sie die Maus bewegen können Sie jeweils die Vorschau
+der Tangente sehen, die konstruiert würde, wenn Sie klicken.

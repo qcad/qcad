@@ -1,0 +1,4 @@
+1. Masukkan radius busur pada bilah alat opsi.
+2. Klik entitas dasar yang dekat dengan ujung di mana busur harus
+ dihubungkan.
+3. Tentukan titik akhir busur.

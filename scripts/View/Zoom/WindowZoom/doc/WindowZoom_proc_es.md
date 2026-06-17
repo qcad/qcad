@@ -1,0 +1,8 @@
+1. Especifique la primera esquina del área que desea ver. Presione el
+ botón izquierdo del ratón en esa esquina y manténgalo presionado.
+2. Arrastre el ratón hasta la segunda esquina del área.
+3. Suelte el botón del ratón en la segunda esquina.
+
+Nota: También puede especificar la primera y la segunda esquina con un
+ solo clic del ratón en lugar de arrastrar el ratón con el botón del ratón
+ pulsado.

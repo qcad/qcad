@@ -1,0 +1,6 @@
+Con esta herramienta se pueden dibujar líneas a mano alzada. Por lo general,
+esta herramienta sólo se utiliza con moderación, ya que los dibujos técnicos
+requieren una precisión absoluta. Sin embargo, en algunas ocasiones esta
+herramienta puede resultar útil, por ejemplo para bordes rotos como los que se
+muestran aquí:  
+![](LineFreehandFigure.png)

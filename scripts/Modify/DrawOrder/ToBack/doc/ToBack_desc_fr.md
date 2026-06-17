@@ -1,0 +1,2 @@
+Modifie l'ordre dans lequel les entités sont affichées. Utilisez cet outil
+pour envoyer des entités qui cachent d'autres entités en arrière-plan.

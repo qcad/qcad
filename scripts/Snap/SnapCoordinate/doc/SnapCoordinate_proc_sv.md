@@ -1,0 +1,8 @@
+1. Starta det här verktyget när du måste ange en punkt och vill göra det
+ genom att ange ett par koordinater (x/y).
+2. Ange koordinaterna i verktygsfältet för alternativ och välj om de är
+ absoluta koordinater eller relativa (relativa till den relativa
+ nollpunkten).
+3. Klicka på knappen OK eller tryck på Enter för att bekräfta inmatningen
+ och ställa in koordinaterna  
+![](Tick.png)

@@ -1,0 +1,2 @@
+Questo strumento fornisce le coordinate polari relative dei punti
+selezionati nel disegno.

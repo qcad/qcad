@@ -1,0 +1,5 @@
+1. Wanneer u een positie opgeeft, start u dit functie.
+2. Klik op een positie in de tekening om de X-coördinaat op die positie te
+ vergrendelen.
+3. Klik op een positie in de tekening om de Y-coördinaat op die positie te
+ vergrendelen.

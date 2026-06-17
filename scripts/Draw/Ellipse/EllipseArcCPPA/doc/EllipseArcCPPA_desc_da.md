@@ -1,0 +1,2 @@
+Tegner ellipsebuer med et givet centrum, stor- og lille akse samt start- og
+slutvinkler.

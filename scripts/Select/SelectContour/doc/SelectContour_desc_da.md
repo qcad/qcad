@@ -1,0 +1,2 @@
+Vælger eller fravælger enheder, der er forbundet med hinanden og danner en
+kontur (lukket eller åben).

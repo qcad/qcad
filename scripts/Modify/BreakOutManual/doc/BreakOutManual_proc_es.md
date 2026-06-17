@@ -1,0 +1,6 @@
+1. Seleccione la entidad que desea separar.
+2. Haga clic en el primer punto en el que se va a dividir la entidad.
+3. Si el punto no se encuentra en la entidad, se asume que el punto de
+ separación es el punto más cercano de la entidad.
+4. Haga clic en el segundo punto en el que se dividirá la entidad.
+5. De lo contrario, la entidad sólo está separada en los puntos dados.

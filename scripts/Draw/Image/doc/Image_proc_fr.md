@@ -1,0 +1,6 @@
+1. Choisissez le fichier image que vous voulez insérer.
+2. Saisissez la hauteur ou la largeur souhaitée pour l'image en unités de
+ dessin dans la barre d'outils des options.
+3. Tapez un angle de rotation dans la barre d'outils des options.
+4. Spécifiez le point d'insertion de l'image. C'est le coin inférieur gauche
+ de l'image.

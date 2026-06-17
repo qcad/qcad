@@ -1,0 +1,5 @@
+1. Indtast radius i værktøjslinjen for indstillinger.
+2. Angiv den tangentielle enhed.
+3. Angiv punktet på buen.
+4. Vælg den ønskede løsning ved at klikke tæt på den med venstre
+ museknap.

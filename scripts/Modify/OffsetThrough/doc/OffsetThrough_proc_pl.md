@@ -1,0 +1,4 @@
+1. Na pasku narzędzi opcji wprowadź liczbę utworzonych jednostek.
+2. Kliknąć jednostkę podstawową.
+3. Kliknąć pozycję, przez którą przebiega pierwszy łuk równoległy lub
+ koncentryczny albo Ø okrąg.

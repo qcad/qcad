@@ -1,0 +1,2 @@
+- Scegliere l'entità da cui scaturire uno spazio.
+- Fare clic sul centro dello spazio sull'entità.

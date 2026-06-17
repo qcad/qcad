@@ -1,0 +1,5 @@
+Erstellt eine ausgerichtete Bemaßung. Ausgerichtete Bemaßungen beschriften
+normalerweise die Länge einer existierenden Linie oder Kante. Die
+Bemaßungslinie ist immer parallel zur Verbindungslinie der beiden gewählten
+Punkte 1. und 2.:  
+![](DimAlignedFigure.png)

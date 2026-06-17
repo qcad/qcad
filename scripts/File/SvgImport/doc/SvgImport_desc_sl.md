@@ -1,0 +1,3 @@
+To orodje uvozi SVG datoteko v trenutno risbo.
+Upoštevajte, da je podprto zelo omejeno število SVG značk ter argumentov.
+Zamisel je ta, da se uvozi, kar se da veliko same geometrije.

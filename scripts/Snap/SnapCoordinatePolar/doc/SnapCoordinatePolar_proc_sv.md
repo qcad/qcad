@@ -1,0 +1,8 @@
+1. Starta det här verktyget när du måste ange en punkt och vill göra det
+ genom att ange en polarkoordinat.
+2. Ange polarkoordinaten (radie och vinkel) i verktygsfältet för alternativ
+ och välj om det är en absolut koordinat eller en relativ koordinat (relativt
+ till den relativa nollpunkten).
+3. Klicka på knappen OK eller tryck på Enter för att bekräfta inmatningen
+ och ställa in koordinaten  
+![](Tick.png)

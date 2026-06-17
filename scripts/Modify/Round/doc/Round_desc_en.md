@@ -1,0 +1,2 @@
+Rounds the corner of a contour. Optionally, the edge entities of the corner
+can be trimmed automatically to fit the new shape.

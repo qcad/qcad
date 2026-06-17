@@ -1,0 +1,1 @@
+Questo strumento consente di visualizzare tutti i riferimenti dei blocchi nel disegno.

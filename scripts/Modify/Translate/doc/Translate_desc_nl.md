@@ -1,0 +1,1 @@
+Verplaatst of kopieert objecten.

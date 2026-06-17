@@ -1,0 +1,8 @@
+1. Selektieren Sie die Objekte, die projektiert werden sollen.
+2. Starten Sie das Werkzeug.
+3. Wählen Sie die Projektionsart und die Ansichtsrichtung in der
+ Optionenwerkzeugleiste.
+4. Setzen Sie den Referenzpunkt für die Projektion. Dies ist der Punkt, der
+ verwendet wird um die Projektion im nächsten Schritt zu positionieren.
+5. Bestimmen Sie die Position wo die Projektion erstellt werden soll mit der
+ Maus oder indem Sie eine Koordinate in die Kommandozeile eingeben.

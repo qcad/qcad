@@ -1,0 +1,2 @@
+Cet outil désélectionne toutes les références de blocs du bloc actuellement
+sélectionné dans la liste des blocs.

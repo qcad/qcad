@@ -1,0 +1,2 @@
+Rysuje łuk od jego punktu środkowego, punktu na linii łuku, kąta
+początkowego i końcowego.

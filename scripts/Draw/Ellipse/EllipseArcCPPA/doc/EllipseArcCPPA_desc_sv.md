@@ -1,0 +1,2 @@
+Ritar ellipsbågar med ett givet centrum, större och mindre axel samt start-
+och slutvinklar.

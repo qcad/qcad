@@ -1,0 +1,2 @@
+Narzędzie to mierzy dokładną odległość pomiędzy dwoma punktami podaną przez
+użytkownika.

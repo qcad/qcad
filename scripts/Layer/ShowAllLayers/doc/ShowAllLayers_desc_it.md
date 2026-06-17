@@ -1,0 +1,3 @@
+Questo strumento può essere utilizzato per mostrare comodamente tutti i
+livelli contemporaneamente. Questo può essere utile quando si lavora con un
+disegno con molti livelli.

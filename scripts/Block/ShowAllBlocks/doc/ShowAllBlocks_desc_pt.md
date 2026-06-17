@@ -1,0 +1,2 @@
+Esta ferramenta garante que todas as referências de blocos no desenho são
+mostradas.

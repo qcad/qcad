@@ -1,0 +1,3 @@
+Draws spline curves from control points. Non-uniform rational B-Splines
+(NURBS) with homogeneous weighting factors are the only splines that are
+supported.

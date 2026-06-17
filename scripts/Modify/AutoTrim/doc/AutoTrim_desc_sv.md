@@ -1,0 +1,2 @@
+Trimmar eller förlänger en enhet på båda sidor till nästa begränsande
+enhet.

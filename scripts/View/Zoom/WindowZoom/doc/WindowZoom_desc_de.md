@@ -1,0 +1,2 @@
+Mit diesem Werkzeug können Sie einen rechteckigen Bereich wählen, den Sie
+vergrößert anzeigen möchten.

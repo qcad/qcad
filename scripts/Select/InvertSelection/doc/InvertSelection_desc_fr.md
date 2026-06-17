@@ -1,0 +1,2 @@
+Sélectionne toutes les entités qui ne sont pas actuellement sélectionnées et
+désélectionne toutes les entités sélectionnées.

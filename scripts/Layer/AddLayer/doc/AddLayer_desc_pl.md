@@ -1,0 +1,3 @@
+Polecenie to tworzy nową warstwę. Zostanie wyświetlone okno dialogowe
+warstwy, w którym można określić nazwę nowej warstwy i dostosować jej
+atrybuty.

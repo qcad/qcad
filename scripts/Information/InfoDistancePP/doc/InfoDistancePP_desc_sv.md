@@ -1,0 +1,2 @@
+Det här verktyget mäter det exakta avståndet mellan två punkter som
+användaren anger.

@@ -1,0 +1,1 @@
+Detta verktyg mäter den yta som täcks av en polygon och dess omkrets.

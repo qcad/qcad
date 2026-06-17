@@ -1,0 +1,5 @@
+1. Especifique la entidad.
+2. Utilice el ratón para especificar la ubicación del punto o introduzca una
+ coordenada en la línea de comandos.
+3. La distancia medida se imprime en la pantalla y en la línea de
+ comandos.

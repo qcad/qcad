@@ -1,0 +1,3 @@
+Det här verktyget återställer etikettpositionen för alla markerade
+dimensionsenheter och placerar deras etikett tillbaka till den automatiskt
+beräknade positionen.

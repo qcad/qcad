@@ -1,0 +1,3 @@
+Med detta verktyg ritas en ordinatadimension. Ordinatdimensioner anger X-
+eller Y-ordinaten för en funktion i ritningen i förhållande till en
+ursprungspunkt.

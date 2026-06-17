@@ -1,0 +1,1 @@
+Dessine des arcs à partir d'un centre, d'un rayon et d'un angle donnés.

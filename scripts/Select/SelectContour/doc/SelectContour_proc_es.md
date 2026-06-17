@@ -1,0 +1,11 @@
+1. Seleccione el
+[modo de selección](../../doc/Select_es.html#mode) en la barra de
+herramientas de opciones.
+2. Utilice el ratón para seleccionar una entidad del contorno que desee
+seleccionar. La herramienta entonces busca desde los puntos finales de la
+entidad seleccionada en ambas direcciones entidades que estén conectadas
+directa o indirectamente a esta entidad. Todas las entidades conectadas se
+seleccionan o deseleccionan en función del modo de selección elegido.
+
+Alternativamente, puede hacer doble clic en y entidad para seleccionarla y
+todas las entidades conectadas.

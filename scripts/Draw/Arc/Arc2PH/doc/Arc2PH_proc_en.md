@@ -1,0 +1,4 @@
+1. Type the arc height into the options tool bar and choose the arc
+ direction (clockwise or counter-clockwise).
+2. Specify the start point of the arc.
+3. Specify the end point of the arc.

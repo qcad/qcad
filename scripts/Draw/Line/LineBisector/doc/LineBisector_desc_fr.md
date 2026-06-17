@@ -1,0 +1,2 @@
+Utilisez cet outil pour créer des bissectrices d'angle entre deux entités de
+ligne.

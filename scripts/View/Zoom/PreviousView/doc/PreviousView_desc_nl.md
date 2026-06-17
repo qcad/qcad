@@ -1,0 +1,3 @@
+Toont de laatst gebruikte weergave. Gebruik dit om terug te schakelen naar
+de vorige weergave, bijvoorbeeld na het uitvoeren van een automatische zoom of
+na het inzoomen met de vensterzoom.

@@ -1,0 +1,2 @@
+Dieses Werkzeug kann zum Entsperren aller Layer auf einmal
+verwendet werden.

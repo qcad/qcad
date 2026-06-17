@@ -1,0 +1,4 @@
+1. Coloque o rato no ponto inicial da linha de mão livre, prima o botão
+ esquerdo do rato e mantenha-o baixo.
+2. Agora mova o rato de um lado para o outro para desenhar a linha. No ponto
+ final da linha de mão livre, solte o botão do rato.

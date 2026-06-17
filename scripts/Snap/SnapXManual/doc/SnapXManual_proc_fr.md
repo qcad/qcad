@@ -1,0 +1,5 @@
+1. Lorsque vous spécifiez une position, démarrez cet outil.
+2. Cliquez sur une position dans le dessin pour verrouiller la coordonnée X
+ à cette position.
+3. Cliquez sur une position dans le dessin pour verrouiller la coordonnée Y
+ à cette position.

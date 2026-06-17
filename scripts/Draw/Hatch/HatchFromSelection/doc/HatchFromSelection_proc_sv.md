@@ -1,0 +1,15 @@
+1. Förbered de enheter som omger det skrafferade området så att de bildar en
+ sluten kontur. Konturen måste vara sluten på ett sådant sätt att en enhet är
+ ansluten till nästa enhet, vilket visas till höger i detta exempel:  
+![](HatchFromSelectionBoundary.png)
+2. Välj den eller de konturer som du vill fylla ut. Observera att öar inom
+ konturerna blir skrafferade om de inte är markerade:  
+![](HatchFromSelectionIslands.png)
+3. Starta skrafferingsverktyget.
+4. En dialogruta för skrafferingsalternativen visas. Välj ett
+ skraffermönster, skalfaktor och en rotationsvinkel för skraffermönstret. Om
+ du vill fylla objektet med en enfärgad färg i stället för ett mönster
+ markerar du kryssrutan "Solid Fill".
+5. Klicka på "OK" för att fortsätta med skrafferingen. Beroende på konturens
+ komplexitet och skalfaktorn för det valda mönstret kan det ta ett tag att
+ skapa skrafferingen.

@@ -1,0 +1,4 @@
+Erstellt eine rotierte (lineare) Bemaßung. Rotierte Bemaßungen werden oft verwendet um
+horizontale oder vertikale Maße zu bezeichnen. Sie können aber auch Abstände
+in beliebigen anderen Winkeln bemaßen. Abbildung 39 zeigt die horizontale
+Version einer linearen Bemaßung.

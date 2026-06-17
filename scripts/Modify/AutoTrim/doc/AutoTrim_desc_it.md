@@ -1,0 +1,2 @@
+Rifinisce o estende un'entità da entrambi i lati alle entità limitatrici
+successive.

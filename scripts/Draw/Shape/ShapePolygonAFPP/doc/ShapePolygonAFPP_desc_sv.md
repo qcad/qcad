@@ -1,0 +1,1 @@
+Skapar polygoner från två motsatta hörn eller sidor.

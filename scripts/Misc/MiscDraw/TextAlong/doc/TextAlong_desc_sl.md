@@ -1,0 +1,1 @@
+Use this tool to draw text along a line, arc or circle.

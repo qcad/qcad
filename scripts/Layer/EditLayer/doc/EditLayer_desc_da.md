@@ -1,0 +1,4 @@
+Denne kommando viser lagdialogboksen for det aktuelle lag. Det er den samme
+dialog, som også bruges til at oprette nye lag. Brug den til at ændre lagnavnet
+eller dets attributter.  
+Navnet på lag "0" kan aldrig ændres.

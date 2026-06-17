@@ -1,0 +1,2 @@
+Använd det här verktyget för att skapa rektangulära former från två
+diagonalt motsatta hörn.

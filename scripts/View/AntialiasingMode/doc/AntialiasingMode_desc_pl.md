@@ -1,0 +1,2 @@
+Przełącza antyaliasing dla bieżącego rysunku. Dzięki funkcji antyaliasingu,
+pochylone linie, łuki i teksty są wyświetlane płynniej.

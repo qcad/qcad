@@ -1,0 +1,6 @@
+Cet outil permet de basculer l'état verrouillé du calque courant. Vous
+pouvez également basculer l'état verrouillé des calques en cliquant sur l'icône
+de verrouillage à côté du nom du calque dans la liste des calques.
+
+Les entités sur les calques verrouillés ne peuvent pas être sélectionnées,
+supprimées ou modifiées.

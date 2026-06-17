@@ -1,0 +1,2 @@
+Zaznacza lub odznacza wszystkie jednostki na tej samej warstwie co wybrana
+jednostka.

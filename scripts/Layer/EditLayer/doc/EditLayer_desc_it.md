@@ -1,0 +1,5 @@
+Questo comando mostra la finestra di dialogo del livello corrente. Questa è
+la stessa finestra di dialogo che viene usata anche per creare nuovi livelli.
+Utilizzare questa opzione per modificare il nome del livello o i suoi
+attributi.  
+Il nome del livello "0" non può mai essere cambiato.

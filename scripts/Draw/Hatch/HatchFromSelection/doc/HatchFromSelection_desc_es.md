@@ -1,0 +1,2 @@
+Esta herramienta llena un área rodeada por entidades existentes con un
+patrón de sombreado o un color sólido.

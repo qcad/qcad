@@ -1,0 +1,6 @@
+- Kliknąć dowolną jednostkę referencyjną bloku, która odnosi się do
+ bloku, do którego chcesz  edytować.
+
+Blok jest otwierany do edycji. Aby powrócić do rysunku głównego (zwanego
+ Model_Przestrzeń), edytuj blok "*Model_Przestrzeń" lub uruchom narzędzie
+ "Edytuj główny `Rysowanie" w menu "Blokada".

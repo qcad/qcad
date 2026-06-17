@@ -1,0 +1,2 @@
+Questa funzione deseleziona tutti i riferimenti di blocco relativi al blocco
+correntemente selezionato nella lista.

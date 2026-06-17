@@ -1,0 +1,2 @@
+Fästs på den vinkelräta punkten på en linje, båge, cirkel eller ellips.
+Detta gäller endast när du ritar linjer.

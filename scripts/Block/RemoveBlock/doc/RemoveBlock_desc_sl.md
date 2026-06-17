@@ -1,0 +1,1 @@
+Odstranite aktivni blok. Blok ter vse njegove blokovne reference bodo izbrisane.

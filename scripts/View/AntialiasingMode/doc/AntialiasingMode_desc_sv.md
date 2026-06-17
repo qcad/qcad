@@ -1,0 +1,2 @@
+Aktiverar anti-aliasing för den aktuella ritningen. Med antialiasing visas
+snedställda linjer, bågar och texter jämnare.

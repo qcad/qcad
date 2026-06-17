@@ -1,0 +1,2 @@
+- Kies het object waarvan u een gat wilt uit breken.
+- Klik op het midden van het gat op het object.

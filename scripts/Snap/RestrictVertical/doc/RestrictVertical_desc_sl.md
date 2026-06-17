@@ -1,0 +1,1 @@
+Gibanje risalnega križa omeji na isto X-Pozicijo, kot jo ima relativna izhodiščna točka.

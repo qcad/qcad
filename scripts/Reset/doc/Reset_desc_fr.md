@@ -1,0 +1,3 @@
+Cet outil met fin à tous les outils actifs et retourne QCAD à son état de
+repos dans lequel vous pouvez utiliser le curseur de la souris pour
+sélectionner des entités, glisser-déposer des entités, etc.

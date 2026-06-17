@@ -1,0 +1,1 @@
+- Klicken Sie die neue Position des relativen Nullpunkts.

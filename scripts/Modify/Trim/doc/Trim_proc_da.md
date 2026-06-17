@@ -1,0 +1,11 @@
+1. Vælg den begrænsende enhed, som du ønsker at beskære eller udvide en
+ eller flere andre enheder.
+2. Vælg de enheder, som du vil beskære til den begrænsende enhed. Ofte er
+ der to muligheder for den enhed, der skal beskæres. I eksemplet nedenfor
+ ønsker du måske, at den øverste del af linjen skal forblive i tegningen, og
+ at den nederste del skal beskæres væk. I så fald skal du klikke på
+ trimmenheden ved den øverste del. Klik altid på den del af entiteten, som du
+ ønsker at beholde  
+![](TrimFigure.png)
+3. Højreklik to gange, eller tryk to gange på Escape for at afslutte
+ værktøjet.

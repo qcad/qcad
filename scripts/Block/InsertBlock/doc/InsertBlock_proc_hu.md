@@ -1,0 +1,11 @@
+1. Válassza ki a beszúrni kívánt blokkot a blokk listából.
+2. Kattintson a Beszúrás gombra, vagy válassza a menüből a „Blokk beszúrása"
+ lehetőséget.
+3. Adja meg a forgatási szöget és a méretarányt a blokkreferenciahoz a
+ beállítások eszköztáron.
+4. Adja meg a beszúrt blokk helyzetét egy koordinátára kattintva vagy egy
+ koordináta megadásával a konzolban.
+5. Teljes blokktömb létrehozásához kattintson a tömb gombra a beállítások eszköztáron:  
+![](ArrayOfBlocks.png)  
+Adja meg az oszlopokat, sorokat, oszloptávolságot és sortávolságot a megjelenő párbeszédpanelen.
+ Ezeket a tulajdonságokat később a tulajdonságszerkesztővel is szerkesztheti.

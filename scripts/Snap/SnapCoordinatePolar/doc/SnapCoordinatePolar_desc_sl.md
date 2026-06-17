@@ -1,0 +1,1 @@
+Določi eno točko od katere bo vnesena absolutna ali relativna polarna koordinata.

@@ -1,0 +1,1 @@
+Ujame točko, pravokotno na črto, lok, krog ali elipso. To velja samo pri risanju črt.

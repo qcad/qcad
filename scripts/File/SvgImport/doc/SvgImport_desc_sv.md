@@ -1,0 +1,4 @@
+Det här verktyget importerar en SVG-fil till den aktuella ritningen.
+Observera att endast en mycket begränsad uppsättning SVG-taggar och argument
+stöds. Tanken är att importera så mycket som möjligt av den råa geometrin i
+SVG-filen.

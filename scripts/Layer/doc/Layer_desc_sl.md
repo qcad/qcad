@@ -1,0 +1,2 @@
+Orodja v meniju plast, se lahko uporabijo za ustvarjanje, spreminjanje ali brisanje plasti.
+Nekatera orodja so tudi na voljo kot gumbi nad seznamu plasti.

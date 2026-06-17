@@ -1,0 +1,1 @@
+Draws an arc using the start point, end point and the radius.

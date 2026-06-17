@@ -1,0 +1,3 @@
+Za pomocą myszy ustawić punkt docelowy zaimportowanego rysunku lub
+wprowadzić współrzędne w wierszu poleceń. Punkt docelowy odpowiada
+bezwzględnemu punktowi zero zaimportowanego rysunku.

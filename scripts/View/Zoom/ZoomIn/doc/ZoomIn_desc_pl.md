@@ -1,0 +1,2 @@
+Narzędzie to zwiększa aktualny współczynnik oglądalności. Ten sam efekt
+można również osiągnąć obracając kółkiem myszy z dala od użytkownika.

@@ -1,0 +1,1 @@
+Dette værktøj fjerner markeringen af alle enheder på det aktuelle lag.

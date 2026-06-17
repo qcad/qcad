@@ -1,0 +1,2 @@
+Dit functie kan worden gebruikt om lijnen of bogen met een bepaalde
+hoeveelheid te verlengen of te verkorten.

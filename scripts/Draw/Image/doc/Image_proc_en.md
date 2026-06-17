@@ -1,0 +1,6 @@
+1. Choose the image file which you want to insert.
+2. Enter the desired height or width for the image in drawing units in the
+ options tool bar.
+3. Type a rotation angle in the options tool bar.
+4. Specify the insertion point of the image. That is the left bottom corner
+ of the image.

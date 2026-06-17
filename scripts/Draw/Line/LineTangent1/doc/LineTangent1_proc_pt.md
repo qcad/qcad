@@ -1,0 +1,8 @@
+1. Escolher o
+[tipo de linha](../../doc/Line_pt.html#type) desejada na barra de
+ferramentas de opções.
+2. Utilizar o rato para especificar a localização do ponto de partida da linha
+ou introduzir uma coordenada na linha de comando.
+3. Clicar na entidade para a qual se pretende criar a tangente. Normalmente,
+são possíveis duas tangentes. Ao mover o rato, pode ver uma pré-visualização da
+tangente que será criada.

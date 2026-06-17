@@ -1,0 +1,8 @@
+1. Escolher o
+[tipo de linha](../../doc/Line_pt.html#type) desejada na barra de
+ferramentas de opções.
+2. Introduza o número de entidades a criar na barra de ferramentas de
+opções.
+3. Clicar na entidade de base.
+4. Clicar na posição pela qual corre o primeiro arco ou círculo paralelo ou
+concêntrico.

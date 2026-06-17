@@ -1,0 +1,3 @@
+1. Brug markeringsværktøjerne til at forberede et valg af de enheder, du vil
+ duplikere.
+2. Vælg duplikeringsværktøjet.

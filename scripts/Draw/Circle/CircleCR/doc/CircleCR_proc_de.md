@@ -1,0 +1,3 @@
+1. Geben Sie den Radius in der Optionenwerkzeugleiste ein.
+2. Bestimmen Sie das Zentrum des Kreises mit der Maus oder geben Sie eine
+ Koordinate in die Kommandozeile ein.

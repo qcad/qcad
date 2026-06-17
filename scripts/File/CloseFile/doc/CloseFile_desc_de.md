@@ -1,0 +1,2 @@
+Schließt die aktuelle Zeichnung. Vor dem Schließen haben Sie nochmals die
+Möglichkeit, die Zeichnung zu speichern.

@@ -1,0 +1,6 @@
+- Klicka på en blockreferensenhet som refererar till det block som du
+ vill redigera.
+
+Blocket öppnas för redigering. Om du vill återgå till huvudritningen
+ (kallad "*Model_Space") redigerar du blocket "*Model_Space" eller startar
+ verktyget "Edit Main Drawing" i menyn "Block".

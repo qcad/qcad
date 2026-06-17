@@ -1,0 +1,6 @@
+Esta herramienta cambia el estado de bloqueo de la capa actual. También
+puede cambiar el estado de bloqueo de las capas haciendo clic en el icono de
+bloqueo situado junto al nombre de la capa en la lista de capas.
+
+Las entidades en capas bloqueadas no pueden seleccionarse, eliminarse o
+modificarse.

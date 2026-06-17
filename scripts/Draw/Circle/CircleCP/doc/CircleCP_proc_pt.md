@@ -1,0 +1,5 @@
+1. Defina o centro do círculo utilizando o mouse ou entrando com as
+ coordenadas na linha de comando.
+2. Defina o raio clicando sobre um ponto do círculo ou entrando com as
+ coordenadas na linha de comando. Você pode também entrar diretamente com o
+ raio na linha de comando.

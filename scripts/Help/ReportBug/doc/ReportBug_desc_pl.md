@@ -1,0 +1,2 @@
+To menu służy do zgłaszania błędów (problemów) związanych z QCAD
+(online).

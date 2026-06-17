@@ -1,0 +1,2 @@
+Nabídka úprav obsahuje nástroje pro základní úpravy, jako je
+kopírování/vkládání a mazání

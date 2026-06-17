@@ -1,0 +1,1 @@
+Schakelt de zichtbaarheid van het raster van de huidige tekening.

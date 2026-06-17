@@ -1,0 +1,5 @@
+1. Ställ in cirkelns centrum med musen eller ange en koordinat på
+ kommandoraden.
+2. Ange radien genom att klicka på en punkt på cirkellinjen eller genom att
+ ange en koordinat på kommandoraden. Du kan också ange radien på
+ kommandoraden.

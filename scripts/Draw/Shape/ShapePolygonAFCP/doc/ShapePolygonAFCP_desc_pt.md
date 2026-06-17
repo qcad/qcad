@@ -1,0 +1,1 @@
+Cria polígonos com o centro e o ponto médio de um lado.

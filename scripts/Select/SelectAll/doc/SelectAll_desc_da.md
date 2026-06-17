@@ -1,0 +1,1 @@
+Vælger alle enheder på alle synlige, ulåste lag.

@@ -1,0 +1,2 @@
+Clique no ícone do olho na lista de blocos para alternar a visibilidade de
+um bloco. As referências dos blocos invisíveis não são exibidas.

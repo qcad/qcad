@@ -1,0 +1,3 @@
+1. Escolha um círculo ou um arco.
+2. Defina a posição da cota radial com o mouse ou entrando com as
+ coordenadas ou um valor de ângulo na linha de comando.

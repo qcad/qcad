@@ -1,0 +1,1 @@
+Affiche le portail Internet de QCAD (en ligne).

@@ -1,0 +1,6 @@
+- Click any block reference entity that references the block you want to
+ edit.
+
+The block is opened for editing. To return to the main drawing (called
+ "*Model_Space"), edit block "*Model_Space" or start the tool "Edit Main
+ Drawing" in menu "Block".

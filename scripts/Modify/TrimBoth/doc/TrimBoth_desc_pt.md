@@ -1,0 +1,2 @@
+Apara ou estende duas linhas, arcos ou elipses até ao seu ponto de
+intersecção comum.

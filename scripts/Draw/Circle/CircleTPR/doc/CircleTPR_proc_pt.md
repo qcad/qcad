@@ -1,0 +1,5 @@
+1. Introduzir o raio na barra de ferramentas de opções.
+2. Especificar a entidade tangencial.
+3. Especificar o ponto sobre o arco.
+4. Escolher a solução desejada clicando perto da mesma com o botão esquerdo
+ do rato.

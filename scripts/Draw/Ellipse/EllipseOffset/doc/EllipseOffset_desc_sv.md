@@ -1,0 +1,2 @@
+Med det här verktyget kan du skapa en eller flera parallella kurvor med ett
+visst avstånd till en befintlig ellips.

@@ -1,0 +1,1 @@
+Skalar enheter med en given faktor mot ett givet centrum.

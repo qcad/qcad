@@ -1,0 +1,3 @@
+Biseautage d'un coin façonné par deux entités. En option, les entités de
+bord du coin peuvent être rognées automatiquement pour s'adapter à la nouvelle
+forme.

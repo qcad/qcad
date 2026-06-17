@@ -1,0 +1,1 @@
+Met dit functie kunt u een reeks van een of meer rechte lijnen tekenen.

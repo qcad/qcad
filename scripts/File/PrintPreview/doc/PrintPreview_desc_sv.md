@@ -1,0 +1,14 @@
+Utskriftsförhandsgranskningen visar hur ritningen kommer att se ut i
+utskriften. Använd kombinationsrutan i verktygsfältet för alternativ för att
+justera skalfaktorn för din ritning. Det här alternativet skalar eller ändrar
+inte ritningens enheter på något annat sätt, utan ställer bara in den
+skalfaktor som tillämpas för att anpassa ritningen till pappret.  
+Knapparna till höger om kombinationsrutan för skala kan användas för att
+automatiskt anpassa ritningen till det valda pappret eller för att automatiskt
+lägga till sidor, så att hela ritningen kan skrivas ut på flera sidor.  
+När du har valt verktyget "Flytta pappersposition" kan du flytta runt
+pappret fritt genom att dra det med den vänstra musknappen. Klicka på höger
+musknapp eller tryck på escape-tangenten för att avsluta verktyget.  
+I verktygsfältet Alternativ finns några andra verktyg för att snabbt
+ändra några vanliga ritningsinställningar som också är tillgängliga i
+dialogrutan för ritningsinställningar.

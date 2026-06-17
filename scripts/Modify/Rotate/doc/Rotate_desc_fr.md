@@ -1,0 +1,1 @@
+Fait pivoter les entités d'un angle donné autour d'un centre donné.

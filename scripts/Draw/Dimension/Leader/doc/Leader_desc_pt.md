@@ -1,0 +1,5 @@
+Os líderes são setas que normalmente apontam de uma entidade de texto para
+outra entidade, como se mostra abaixo. No exemplo, a entidade de texto "N7"
+está a descrever uma propriedade de superfície ao apontar para ela com um
+líder.  
+![](LeaderFigure.png)

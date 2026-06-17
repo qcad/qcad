@@ -1,0 +1,2 @@
+Taglia o estende due linee, archi o ellissi fino al loro punto di
+intersezione comune.

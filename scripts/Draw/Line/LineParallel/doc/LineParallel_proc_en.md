@@ -1,0 +1,9 @@
+1. Choose the desired
+[line type](../../doc/Line_en.html#type) in the options
+toolbar.
+2. Enter the distance of the concentric or parallel entity from the original
+entity in the options tool bar shown at the top.
+3. Enter the number of parallel or concentric entities to create in the
+options tool bar.
+4. Click the base entity. The parallel or concentric entities are created on
+that side on which the mouse cursor is located while selecting the entity.

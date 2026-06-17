@@ -1,0 +1,1 @@
+Rysuje okrąg z dwóch punktów na linii okręgu i promień.

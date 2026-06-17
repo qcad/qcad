@@ -1,0 +1,8 @@
+1. Vælg den ønskede
+[linjetype](../../doc/Line_da.html#type) i værktøjslinjen for
+indstillinger.
+2. Indtast antallet af enheder, der skal oprettes, i værktøjslinjen med
+indstillinger.
+3. Klik på basisenheden.
+4. Klik på den position, som den første parallelle eller koncentriske bue
+eller cirkel løber igennem.

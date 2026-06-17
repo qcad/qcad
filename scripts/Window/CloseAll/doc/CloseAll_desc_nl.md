@@ -1,0 +1,1 @@
+Deze functie sluit alle open tekeningen af.

@@ -1,0 +1,5 @@
+1. Click the first arc or circle entity to which you want to create the
+ tangent.
+2. Click the second arc or circle entity to which you want to create the
+ tangent. Usually, four tangents are possible. When moving the mouse around,
+ you can see a preview of the tangent that will be created.

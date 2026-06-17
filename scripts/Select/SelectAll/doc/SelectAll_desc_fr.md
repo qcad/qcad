@@ -1,0 +1,2 @@
+Sélectionne toutes les entités sur tous les calques visibles et
+déverrouillés.

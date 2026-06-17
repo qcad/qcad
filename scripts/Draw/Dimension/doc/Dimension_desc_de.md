@@ -1,0 +1,8 @@
+Bemaßungen werden verwendet um zusätzliche Angaben zum Beispiel zur Größe
+von Elementen einer Zeichnung hinzuzufügen.  
+Bemaßungen bestehen in der Regel aus einer Beschriftung und einigen
+Linien und Pfeilen welche die genaue Position der angegebenen Größe
+verdeutlichen. Die Beschriftung kann von Toleranzangaben oder Symbolen
+begleitet sein. Die Optionenwerkzeugleiste, die beim Zeichnen von Bemaßungen
+angezeigt wird unterstützt Sie bei der Definition der Beschriftung und der
+Toleranzen.

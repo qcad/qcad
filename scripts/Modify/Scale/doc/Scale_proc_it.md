@@ -1,0 +1,17 @@
+1. Selezionare le entità che si desidera scalare.
+2. Avviare questo strumento.
+3. Impostare con il mouse il centro della scala o inserire una coordinata
+ nella riga di comando .
+4. Viene visualizzata la finestra di dialogo della scala in cui è possibile
+ immettere il fattore di scala.  
+Se si desidera eseguire la scala con due fattori diversi in direzione X
+ e Y, deselezionare il pulsante per la scala proporzionale:  
+![](KeepProportionsOn.png)  
+Se si desidera scalare la selezione con il mouse, selezionare con il
+ tasto  
+![](ByMouse.png)cursore del mouse il fattore
+ di scala desiderato
+5. Fare clic su "OK".
+6. Se in precedenza si è scelto di scalare la selezione con il mouse, è ora
+ necessario specificare un punto di riferimento e un punto di destinazione per
+ l'operazione di scalatura.

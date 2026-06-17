@@ -1,0 +1,4 @@
+1. Valige soovitud ühise [kuju valikud](../../doc/Shape_et.html) tööriistaribalt.
+2. Sisestage valikute tööriistaribal ristküliku suurus.
+3. Valige võrdluspunkt, mida soovite kasutada ristküliku positsioneerimiseks.
+4. Määrake ristküliku asukoht hiirega või sisestades käsureale koordinaadi.

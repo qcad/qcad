@@ -1,0 +1,1 @@
+Use this tool for creating angle bisectors between two line entities.

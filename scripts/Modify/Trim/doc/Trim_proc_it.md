@@ -1,0 +1,10 @@
+1. Scegliere l'entità limitante a cui si desidera tagliare o estendere una o
+ più entità.
+2. Scegliere le entità che si desidera tagliare all'entità limitante. Spesso
+ ci sono due possibilità di tagliare l'entità. Nell'esempio seguente, si
+ potrebbe desiderare che la parte superiore della linea rimanga nel disegno e
+ che la parte inferiore venga tagliata via. In questo caso si dovrebbe
+ cliccare sull'entità di taglio nella parte superiore. Fare sempre clic su
+ quella parte dell'entità che si desidera conservare.
+3. Cliccare due volte con il tasto destro del mouse o premere due volte
+ Escape per terminare lo strumento.

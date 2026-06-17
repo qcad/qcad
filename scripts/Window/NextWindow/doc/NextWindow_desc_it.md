@@ -1,0 +1,1 @@
+Questo strumento attiva la prossima finestra / scheda di disegno aperta.

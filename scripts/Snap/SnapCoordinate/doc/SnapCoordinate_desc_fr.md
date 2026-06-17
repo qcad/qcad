@@ -1,0 +1,2 @@
+Définit un point en introduisant une coordonnée cartésienne absolue ou
+relative.

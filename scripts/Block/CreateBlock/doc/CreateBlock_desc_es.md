@@ -1,0 +1,1 @@
+Crea un bloque nuevo a partir de entidades existentes.

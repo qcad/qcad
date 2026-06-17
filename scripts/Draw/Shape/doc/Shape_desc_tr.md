@@ -1,0 +1,14 @@
+#### Yaygın Şekil Seçenekleri
+
+*Çoklu Çizgi*
+
+Şekil araçları gevşek çizgiler ve yaylar ya da kapalı bir çoklu çizgi oluşturabilir. Oluşturulan şekil başına tek bir çoklu çizgi varlığı oluşturmak için
+ "Çoklu Çizgi Oluştur" seçeneğini işaretleyin.
+
+*Doldur*
+
+Şeklin sınırına ek olarak katı bir dolgu oluşturmak için "Dolgu" onay kutusunu işaretleyin.
+
+*Yarıçap*
+
+Şeklin tüm köşelerini verilen yarıçapla yuvarlamak için "Yarıçap" onay kutusunu işaretleyin.

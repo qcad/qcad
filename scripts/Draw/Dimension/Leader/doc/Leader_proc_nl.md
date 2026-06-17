@@ -1,0 +1,5 @@
+1. Bepaal de positie waar de verwijslijn naartoe wijst of of voer een
+ coördinaat in in de commandoregel.
+2. Bepaal de positie van de volgende punt van de verwijslijn.
+3. Bepaal de posities van de volgende punten van de verwijslijn en klik met
+ de rechtermuisknop of druk op de escapetoets om te eindigen.

@@ -1,0 +1,10 @@
+1. Kies het beperkende object waartoe u één of meer andere objecten wilt
+ inkorten of uitbreiden.
+2. Kies de objecten die u wilt trimmen naar de beperkende object. Vaak zijn
+ er twee mogelijkheden om het object te trimmen. In het voorbeeld hieronder
+ wilt u misschien dat het bovenste deel van de lijn op de tekening blijft
+ staan en dat het onderste deel wordt weggeknipt. In dat geval moet u op het
+ trim object in het bovenste gedeelte klikken. Klik altijd op het deel van het
+ object dat u wilt behouden.
+3. Klik tweemaal met de rechtermuisknop of druk tweemaal op Escape om de
+ functie te beëindigen.

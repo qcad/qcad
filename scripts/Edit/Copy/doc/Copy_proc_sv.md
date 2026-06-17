@@ -1,0 +1,17 @@
+1. Använd urvalsverktygen för att göra ett urval av de enheter som du vill
+ kopiera till klippbordet.
+2. Välj kopieringsverktyget.
+
+Standardkopieringsverktyget i QCAD fungerar som kopieringsverktyget i
+ andra program. Det låter dig inte välja en referenspunkt för ditt urval utan
+ beräknar istället referenspunkten automatiskt i mitten av urvalet. Detta är
+ inte alltid önskvärt eftersom du sannolikt vill placera de klistrade
+ enheterna på en exakt definierad position. För detta erbjuder QCAD ett
+ alternativt, mer CAD-specifikt kopieringsverktyg: [Kopiera med referens](../../CopyWithReference/doc/CopyWithReference_sv.html).
+
+Urvalet finns nu i QCAD:s interna klippbräda och kan klistras in i samma
+ eller en annan ritning som öppnas med samma körda instans av QCAD. Observera
+ att om du avslutar QCAD-programmet går innehållet i klippbordet förlorat.
+ QCAD:s klippbräda kan endast nås av QCAD självt. Du kan inte utbyta
+ ritningsenheter med andra program genom att kopiera och klistra in. Använd
+ export- och importfunktionerna i QCAD för detta.

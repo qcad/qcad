@@ -1,0 +1,1 @@
+To orodje izmeri natančno razdaljo med dvema točkama, ki ju izbere uporabnik.

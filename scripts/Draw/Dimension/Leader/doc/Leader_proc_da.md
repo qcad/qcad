@@ -1,0 +1,5 @@
+1. Indstil den placering, som lederen peger på, eller indtast et koordinat i
+ kommandolinjen.
+2. Indstil placeringen af den næste kant af føringslinjen.
+3. Indstil de andre kanter af lederlinjen, og klik på den højre museknap
+ eller tryk på Escape-tasten for at afslutte.

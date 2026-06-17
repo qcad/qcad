@@ -1,0 +1,17 @@
+1. Wybierz podmioty, które chcesz przenieść lub skopiować.
+2. Uruchom to narzędzie.
+3. Ustawić punkt odniesienia za pomocą myszy lub wprowadzić współrzędne w
+ wierszu poleceń ║.
+4. Ustawić punkt docelowy. Aby przesunąć wybrane elementy o określoną ilość,
+ wprowadź współrzędną względną. Na przykład, aby przesunąć go o 50 jednostek
+ rysunkowych w prawo, wpisz @50,0 w wierszu poleceń.
+5. Zostanie wyświetlone okno dialogowe ruchu.  
+Aby przenieść elementy, wybierz "Usuń oryginał", aby skopiować je
+ wybierz "Zachowaj oryginał". Możesz również utworzyć dowolną liczbę kopii
+ jednocześnie, wybierając opcję "Kilka kopii" i wpisując liczbę kopii w
+ wierszu tekstowym → poniżej. Zauważ, że "9" utworzy 9 kopii i zachowa
+ oryginał - tak więc na końcu będzie 10 instancji wybranych jednostek.  
+Nowe elementy są umieszczone na tej samej warstwie co oryginały i mają
+ te same atrybuty. Aby zamiast tego użyć bieżącej warstwy i bieżących
+ atrybutów, zaznacz opcję "Użyj bieżącej warstwy i atrybutów".
+6. Kliknij "OK", aby przenieść lub skopiować elementy.

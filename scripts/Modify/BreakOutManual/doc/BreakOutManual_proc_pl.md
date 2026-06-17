@@ -1,0 +1,8 @@
+1. Wybierz podmiot, który chcesz rozbić.
+2. Kliknij pierwszy punkt, w którym ma zostać podzielona jednostka.
+3. Jeżeli punkt ten nie leży na jednostce, przyjmuje się, że punkt
+ oddzielenia jest najbliższym punktem jednostki.
+4. Kliknij drugi punkt, na który ma zostać podzielona jednostka.
+5. Segment pomiędzy dwoma punktami jest usuwany, jeśli opcja "Usuń segment"
+ na pasku narzędzi opcji jest aktywna. W przeciwnym razie jednostka jest tylko
+  oddzielana w danych punktach.

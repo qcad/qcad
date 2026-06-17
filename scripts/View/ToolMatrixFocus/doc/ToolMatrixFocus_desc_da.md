@@ -1,0 +1,2 @@
+Denne kommando aktiverer filterfeltet (søgefeltet) i værktøjsmatrixen for
+input.

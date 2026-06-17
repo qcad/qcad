@@ -1,0 +1,2 @@
+Skapa tangenter från en koordinat till en befintlig båge, cirkel eller
+ellips med det här verktyget.

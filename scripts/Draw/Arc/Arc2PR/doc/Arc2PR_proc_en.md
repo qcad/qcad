@@ -1,0 +1,7 @@
+1. Type the arc radius into the options tool bar and choose the arc
+ direction (clockwise or counter-clockwise) and the solution (larger arc or
+ smaller arc).
+2. Specify the start point of the arc.
+3. Specify the end point of the arc. If the end point is too far away from
+ the start point for a solution, the closest solution is drawn (a half circle
+ with the given radius and direction).

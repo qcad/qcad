@@ -1,0 +1,1 @@
+Questo strumento misura l'angolo tra due linee date.

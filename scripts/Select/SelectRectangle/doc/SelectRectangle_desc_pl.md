@@ -1,0 +1,2 @@
+Zaznacza wszystkie elementy, które znajdują się w obrębie danego
+prostokątnego obszaru.

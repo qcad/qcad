@@ -1,0 +1,1 @@
+Tegner en cirkel med to diametralt modsatrettede punkter.

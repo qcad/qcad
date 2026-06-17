@@ -1,0 +1,1 @@
+Označi ali odznači vse objekte, ki se nahajajo znotraj pravokotnika.

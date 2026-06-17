@@ -1,0 +1,1 @@
+Afbryder et hul fra en linje, bue eller cirkel.

@@ -1,0 +1,4 @@
+Elija la entidad que desea dividir haciendo clic en el segmento que desea
+recortar. El segmento se elimina automáticamente si la casilla "Eliminar
+segmento" está marcada. Si no, la entidad sólo se corta en las intersecciones
+sin quitar el segmento.

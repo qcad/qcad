@@ -1,0 +1,2 @@
+Selecciona todas as entidades que não estão actualmente seleccionadas e
+anula a selecção de todas as entidades seleccionadas.

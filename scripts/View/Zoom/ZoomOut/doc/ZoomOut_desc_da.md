@@ -1,0 +1,2 @@
+Dette værktøj reducerer den aktuelle visningsfaktor. Den samme effekt kan
+også opnås ved at dreje musehjulet mod dig.

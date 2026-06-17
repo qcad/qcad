@@ -1,0 +1,2 @@
+Esta herramienta se puede utilizar para bloquear convenientemente todas las
+capas a la vez.

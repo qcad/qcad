@@ -1,0 +1,2 @@
+Deze functie zoomt in op de huidige selectie en zorgt ervoor dat alle
+geselecteerde objecten zichtbaar zijn.

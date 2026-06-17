@@ -1,0 +1,2 @@
+Cet outil diminue le facteur d'affichage actuel. Le même effet peut être
+obtenu en tournant la molette de la souris vers vous.

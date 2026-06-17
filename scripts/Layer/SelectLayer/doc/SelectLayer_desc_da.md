@@ -1,0 +1,3 @@
+Dette værktøj tilføjer alle enheder på det aktuelle lag til markeringen. Kun
+enheder på den aktuelle blok kan vælges, enheder på andre blokke vælges
+ikke.

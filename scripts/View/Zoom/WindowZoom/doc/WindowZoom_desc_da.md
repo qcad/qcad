@@ -1,0 +1,2 @@
+Dette værktøj er en hurtig måde at zoome ind på et bestemt område af
+tegningen på.

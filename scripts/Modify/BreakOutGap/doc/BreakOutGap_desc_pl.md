@@ -1,0 +1,1 @@
+Wybija się szczelina od linii, łuku lub okręgu.

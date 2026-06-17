@@ -1,0 +1,4 @@
+1. Kies de eerste lijn.
+2. Kies de tweede lijn.
+3. Stel de positie van de hoekboog in met de muis of door Æ een coördinaat
+ in de opdrachtregel in te voeren.

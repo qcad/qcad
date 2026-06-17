@@ -1,0 +1,2 @@
+Det här verktyget ger ut de absoluta polära koordinaterna för valda punkter
+i ritningen.

@@ -1,0 +1,4 @@
+1. Wprowadź promień łuku na pasku narzędzi opcji.
+2. Kliknij jednostkę bazową w pobliżu końca, z którym ma zostać połączony
+ łuk.
+3. Określ punkt końcowy łuku.

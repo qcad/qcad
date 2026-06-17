@@ -1,0 +1,2 @@
+Con esta herramienta se pueden crear círculos concéntricos que pasan por un
+punto determinado.

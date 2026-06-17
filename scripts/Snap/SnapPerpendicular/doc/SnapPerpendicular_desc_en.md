@@ -1,0 +1,2 @@
+Snaps to the perpendicular point on a line, arc, circle or ellipse. This
+only applies when drawing lines.

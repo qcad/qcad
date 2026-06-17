@@ -1,0 +1,2 @@
+Utilize esta ferramenta para criar formas rectangulares com um determinado
+tamanho.

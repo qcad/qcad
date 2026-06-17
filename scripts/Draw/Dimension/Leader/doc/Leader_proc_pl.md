@@ -1,0 +1,5 @@
+1. Ustawić miejsce, gdzie lider wskazuje lub wprowadza współrzędne w wierszu
+ poleceń ▲.
+2. Ustawić lokalizację następnej krawędzi linii odniesienia.
+3. Ustaw pozostałe krawędzie linii leader i kliknij prawym przyciskiem myszy
+ lub naciśnij klawisz Escape, aby zakończyć.

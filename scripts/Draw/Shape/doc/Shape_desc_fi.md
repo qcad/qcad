@@ -1,0 +1,14 @@
+#### Yleiset muotovaihtoehdot
+
+*Polyline*
+
+Muotoilutyökaluilla voidaan luoda joko irtonaisia viivoja ja kaaria tai suljettu moniviiva. Rastittamalla "Create Polyline" (Luo moniviiva) voit luoda
+ yhden moniviivayksikön kutakin rakennettua muotoa kohti.
+
+*Fill*
+
+Rastita "Fill" (Täytä) -valintaruutu, jos haluat luoda muodon rajojen lisäksi kiinteän täytteen.
+
+*Radius*
+
+Rastita "Radius"-valintaruutu, jos haluat pyöristää muodon kaikki kulmat annetulla säteellä.

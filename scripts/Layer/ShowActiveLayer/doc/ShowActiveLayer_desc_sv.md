@@ -1,0 +1,2 @@
+Det här verktyget döljer alla lager utom det valda (aktiva) lagret i
+lagerlistan.

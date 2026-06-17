@@ -1,0 +1,2 @@
+Questo strumento attiva la precedente finestra di disegno aperto /
+scheda.

@@ -1,0 +1,2 @@
+Exclui o bloco ativo. O bloco e todas as suas inserções serão
+destruídas.

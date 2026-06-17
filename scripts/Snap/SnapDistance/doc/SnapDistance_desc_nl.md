@@ -1,0 +1,2 @@
+Snapt naar punten met een bepaalde afstand tot het eindpunt van lijnen of
+bogen.

@@ -1,0 +1,4 @@
+Los líderes son flechas que normalmente apuntan de una entidad de texto a
+otra entidad como se muestra a continuación. En el ejemplo, la entidad de texto
+"N7" describe una propiedad de superficie señalándola con un líder.  
+![](LeaderFigure.png)

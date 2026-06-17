@@ -1,0 +1,2 @@
+Esta herramienta produce las coordenadas polares absolutas de los puntos
+seleccionados en el dibujo.

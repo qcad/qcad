@@ -1,0 +1,2 @@
+Utilizzare questo strumento per creare forme rettangolari da due angoli
+diagonalmente opposti.

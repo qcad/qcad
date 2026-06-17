@@ -1,0 +1,4 @@
+1. Sisestage kaare raadius tööriistaribal.
+2. Klõpsake baasobjektil selle otsa lähedal, millega kaar peaks olema
+ ühendatud.
+3. Määrake kaare lõpp-punkt.

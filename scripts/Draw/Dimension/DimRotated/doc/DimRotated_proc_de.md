@@ -1,0 +1,6 @@
+1. Geben Sie den Winkel der Bemaßungslinie in der Optionenwerkzeugleiste
+ ein.
+2. Bestimmen Sie den Endpunkt der ersten Hilfslinie mit der Maus oder geben
+ Sie eine Koordinate in die Kommandozeile ein.
+3. Bestimmen Sie den Endpunkt der zweiten Hilfslinie.
+4. Bestimmen Sie die Position der Bemaßungslinie.

@@ -1,0 +1,3 @@
+Questo comando attiva la linea di comando per l'immissione, ad esempio per
+inserire una coordinata quando si specifica un punto. Questo di solito viene
+fatto premendo il tasto Spazio.

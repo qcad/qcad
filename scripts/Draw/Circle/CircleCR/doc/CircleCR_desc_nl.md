@@ -1,0 +1,2 @@
+Met dit gereedschap kunt u cirkels maken met een bepaald middelpunt en een
+bepaalde straal.

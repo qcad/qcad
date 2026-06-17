@@ -1,0 +1,2 @@
+Trims or extends two lines, arcs or ellipses to their common intersection
+point.

@@ -1,0 +1,2 @@
+Cet outil peut être utilisé pour éditer les entités de hachures
+existantes.

@@ -1,0 +1,2 @@
+Utilisez cet outil pour créer des entités de texte à une ou plusieurs
+lignes.

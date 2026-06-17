@@ -1,0 +1,1 @@
+Desenha um arco usando o ponto inicial, o ponto final e o raio.

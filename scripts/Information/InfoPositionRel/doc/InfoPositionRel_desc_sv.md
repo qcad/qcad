@@ -1,0 +1,2 @@
+Det här verktyget ger ut de relativa kartesiska koordinaterna för valda
+punkter i ritningen.

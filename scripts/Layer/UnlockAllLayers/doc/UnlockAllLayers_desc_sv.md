@@ -1,0 +1,2 @@
+Det här verktyget kan användas för att enkelt låsa upp alla lager på en
+gång.

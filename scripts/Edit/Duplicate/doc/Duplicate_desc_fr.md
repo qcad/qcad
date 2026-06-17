@@ -1,0 +1,2 @@
+Cet outil duplique les entités sélectionnées et sélectionne la copie
+créée.

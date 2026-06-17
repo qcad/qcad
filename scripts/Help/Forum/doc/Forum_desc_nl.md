@@ -1,0 +1,2 @@
+Toont het QCAD gebruikersforum waar gebruikers kennis delen, vragen stellen
+en beantwoorden, enz.

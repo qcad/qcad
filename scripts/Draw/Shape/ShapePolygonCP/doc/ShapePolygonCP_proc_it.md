@@ -1,0 +1,6 @@
+1. Scegliere le [opzioni di forma](../../doc/Shape_it.html) comune desiderate nella barra degli strumenti delle opzioni.
+2. Immettere il grado del poligono (numero di bordi / angoli) nella barra
+ degli strumenti delle opzioni I numeri validi vanno da 3 a 99.
+3. Impostare il centro del poligono con il mouse o inserire una coordinata
+ nella riga di comando.
+4. Impostare il primo angolo del poligono.

@@ -1,0 +1,6 @@
+Lo strumento di aggancia automatico scatta al punto di intersezione, punto
+finale, punto intermedio, punto medio, punto perpendicolare, punto di
+riferimento, punto della griglia o punto di un'entità in quell'ordine di
+priorità.  
+I tipi di punti di riferimento che lo strumento di aggancia automatico scatta
+possono essere configurati in *Modifica > Preferenze applicazione > Snap > Auto snap*

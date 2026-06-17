@@ -1,0 +1,3 @@
+1. Ange radien i verktygsfältet.
+2. Ställ in cirkelns centrum med musen eller ange en koordinat på
+ kommandoraden.

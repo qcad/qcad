@@ -1,0 +1,4 @@
+Ustvari rotirano (linearno) kotiranje.
+Rotirana kotiranja, se pogosto uporabljajo za kotiranje vodoravnih ali navpičnih mer.
+Lahko pa tudi izmerite razmake iz poljubnih drugih kotov.
+Skica 39 prikazuje vodoravno verzijo linearnega kotiranja.

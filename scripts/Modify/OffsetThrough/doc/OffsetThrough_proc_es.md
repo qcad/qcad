@@ -1,0 +1,5 @@
+1. Introduzca el número de entidades a crear en la barra de herramientas de
+ opciones.
+2. Haga clic en la entidad base.
+3. Haga clic en la posición por la que pasa el primer arco paralelo o
+ concéntrico o círculo.

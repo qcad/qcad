@@ -1,0 +1,2 @@
+Selecciona todas las entidades en todas las capas visibles y
+desbloqueadas.

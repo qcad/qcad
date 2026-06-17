@@ -1,0 +1,1 @@
+Narzędzie to ukrywa wszystkie odnośniki do bloków na rysunku.

@@ -1,0 +1,2 @@
+Fängt Punkte auf Linien und Bögen mit einem bestimmten Abstand zum nächsten
+Endpunkt.

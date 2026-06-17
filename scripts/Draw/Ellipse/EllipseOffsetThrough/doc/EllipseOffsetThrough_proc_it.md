@@ -1,0 +1,5 @@
+1. Immettere il numero di curve parallele da creare nella barra degli
+ strumenti delle opzioni.
+2. Fare clic sull'ellisse di base.
+3. Fare clic sulla posizione in cui dovrebbe passare la prima curva
+ parallela.

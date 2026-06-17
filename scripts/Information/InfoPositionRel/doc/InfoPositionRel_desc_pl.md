@@ -1,0 +1,2 @@
+Narzędzie to wyprowadza względne, kartezjańskie współrzędne wybranych
+punktów na rysunku.

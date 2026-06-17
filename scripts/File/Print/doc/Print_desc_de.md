@@ -1,0 +1,6 @@
+Benutzen Sie dieses Kommando um eine Zeichnung aus der Druckvorschau heraus
+zu drucken. Schalten Sie immer erst die Druckvorschau ein um sicher zu gehen,
+dass die Zeichnung an der gewünschten Position und mit der gewünschten
+Skalierung gedruckt wird.  
+Der Druckdialog wird angezeigt bevor etwas gedruckt wird. In diesem
+Dialog können Sie den Drucker wählen und dessen Einstellungen ändern.

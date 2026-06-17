@@ -1,0 +1,8 @@
+1. Introduzca la distancia de la entidad concéntrica o paralela de la
+ entidad original en la barra de herramientas de opciones que se muestra en la
+ parte superior.
+2. Introduzca el número de entidades paralelas o concéntricas que desea
+ crear en la barra de herramientas de las opciones.
+3. Haga clic en la entidad base. Las entidades paralelas o concéntricas se
+ crean en el lado en el que se encuentra el cursor del ratón al seleccionar la
+ entidad.

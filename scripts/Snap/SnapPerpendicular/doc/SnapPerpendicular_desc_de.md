@@ -1,0 +1,2 @@
+Fängt den lotrechten Punkt zu Linien, Bögen, Kreisen und Ellipsen. Dies gilt
+nur beim Zeichnen von Linien.

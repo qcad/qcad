@@ -1,0 +1,2 @@
+To orodje konča vsa aktivna orodja ter se vrne na izhodiščno stanje QCAD-a.
+V tem lahko uporabite miškin kazalec za označevanje objektov, premikanje objektov s pomočjo "Drag and Drop" itd.

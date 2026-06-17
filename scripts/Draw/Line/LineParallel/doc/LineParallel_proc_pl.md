@@ -1,0 +1,10 @@
+1. Wybierz żądany
+[typ linii](../../doc/Line_pl.html#type) na pasku narzędzi
+opcji.
+2. Wprowadź odległość koncentrycznego lub równoległego elementu od elementu
+oryginalnego na pasku narzędzi opcji u góry ekranu.
+3. Na pasku narzędzi opcji wprowadź liczbę jednostek równoległych lub
+współśrodkowych, które chcesz utworzyć.
+4. Kliknąć jednostkę podstawową. Równoległe lub koncentryczne elementy są
+tworzone po tej stronie, po której znajduje się kursor myszy podczas wybierania
+elementu.

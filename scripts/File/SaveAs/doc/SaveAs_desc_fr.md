@@ -1,0 +1,3 @@
+Enregistre le dessin en cours sous la forme d'un nouveau fichier. La boîte
+de dialogue qui s'affiche vous permet également de choisir le format et la
+version de format que vous voulez utiliser pour enregistrer le fichier.

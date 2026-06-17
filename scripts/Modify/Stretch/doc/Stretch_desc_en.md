@@ -1,0 +1,6 @@
+This tool stretches contours and dimension entities. This can also be
+described as moving all endpoints within a given rectangular or polygonal area.
+
+If there is a selection of entities, this tool only affects the selected
+entities. Otherwise, this tool operates on all entities in the given area.  
+![](StretchFigure.png)

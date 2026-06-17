@@ -1,0 +1,1 @@
+Dette værktøj sørger for, at alle blokreferencer i tegningen vises.

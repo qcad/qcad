@@ -1,0 +1,5 @@
+1. Ange antalet koncentriska cirklar som ska skapas i verktygsfältet för
+ alternativ.
+2. Klicka på bascirkeln.
+3. Klicka på den plats som den första koncentriska cirkeln ska gå
+ igenom.

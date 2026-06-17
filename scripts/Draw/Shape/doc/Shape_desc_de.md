@@ -1,0 +1,14 @@
+#### Allgemeine Formoptionen
+
+*Polylinie*
+
+Formwerkzeuge können entweder lose Linien und Bögen oder eine geschlossene Polylinie erstellen. Aktivieren Sie "Polylinie konstruieren", um eine einzelne
+ Polylinie pro konstruierter Form zu erstellen.
+
+*Füllen*
+
+Aktivieren Sie das Kontrollkästchen "Füllung", um zusätzlich zur Begrenzung der Form eine feste Füllung zu erstellen.
+
+*Radius*
+
+Aktivieren Sie das Kontrollkästchen "Radius", um alle Ecken der Form mit dem angegebenen Radius abzurunden.

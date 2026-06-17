@@ -1,0 +1,2 @@
+To orodje spremeni vrstni red v katerem so prikazani objekti.
+Uporabite to orodje za premik objektov, ki prekrivajo druge objekte, v ozadje.

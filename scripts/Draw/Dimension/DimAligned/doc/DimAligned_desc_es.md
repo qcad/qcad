@@ -1,0 +1,4 @@
+Crea cotas alineadas. Las cotas alineadas suelen medir la longitud de una
+determinada línea existente. La línea de la cota es siempre paralela a la línea
+a medir entre los dos puntos finales de las líneas de extensión.  
+![](DimAlignedFigure.png)

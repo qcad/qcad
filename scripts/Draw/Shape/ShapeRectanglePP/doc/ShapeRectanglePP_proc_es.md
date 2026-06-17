@@ -1,0 +1,8 @@
+1. Elija las [opciones de forma](../../doc/Shape_es.html) común deseadas en la barra de herramientas de opciones.
+2. Especifique la primera esquina del rectángulo.
+3. Mueva el ratón a la segunda esquina y haga clic para especificar la
+ segunda esquina del rectángulo. También puede introducir la coordenada de la
+ segunda esquina en la línea de comandos. Por ejemplo, para crear un
+ rectángulo con un ancho de 50 y un alto de 25, introduzca la coordenada
+ relativa de la segunda esquina como se indica a continuación:  
+@50,25

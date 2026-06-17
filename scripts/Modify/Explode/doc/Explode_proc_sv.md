@@ -1,0 +1,5 @@
+1. Välj de enheter som du vill spränga.
+2. Starta det här verktyget för att spränga de valda enheterna.
+3. Upprepa steg 2 för att ytterligare dela upp de valda enheterna om så
+ önskas. Om en enhet inte kan delas upp ytterligare förblir den
+ oförändrad.

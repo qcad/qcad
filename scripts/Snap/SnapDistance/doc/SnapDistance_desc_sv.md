@@ -1,0 +1,2 @@
+Fästs på punkter med ett givet avstånd till slutpunkten för linjer eller
+bågar.

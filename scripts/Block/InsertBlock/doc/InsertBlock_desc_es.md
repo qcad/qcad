@@ -1,0 +1,3 @@
+Esta herramienta inserta el bloque activo en el dibujo. En el dibujo se
+crean referencias de uno o varios bloques para representar el bloque
+activo.

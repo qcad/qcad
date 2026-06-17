@@ -1,0 +1,5 @@
+1. Gebruik de selectie functie om een selectie van objecten voor te bereiden
+ die u naar het klembord wilt kopiëren.
+2. Start kopiëren met referentie.
+3. Geef het referentiepunt op dat u later wilt gebruiken bij het plakken van
+ de selectie.

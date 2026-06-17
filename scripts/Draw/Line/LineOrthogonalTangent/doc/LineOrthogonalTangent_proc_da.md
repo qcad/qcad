@@ -1,0 +1,7 @@
+1. Vælg den ønskede
+[linjetype](../../doc/Line_da.html#type) i værktøjslinjen for
+indstillinger.
+2. Klik på den linjeenhed, som den nye linje skal være ortogonal til.
+3. Klik på den bue-, cirkel- eller ellipseenhed, som linjen skal være en
+tangent til. Der er to mulige løsninger. Når du bevæger musen rundt, kan du se
+en forhåndsvisning af den tangent, der vil blive oprettet.

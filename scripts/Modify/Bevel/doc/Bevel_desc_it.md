@@ -1,0 +1,3 @@
+Smussa un angolo modellato da due entità. Opzionalmente, le entità dei bordi
+dell'angolo possono essere tagliate automaticamente per adattarsi alla nuova
+forma.

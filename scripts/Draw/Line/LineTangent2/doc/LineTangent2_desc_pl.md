@@ -1,0 +1,2 @@
+Za pomocą tego narzędzia można tworzyć styczne między istniejącymi
+elementami łuku lub okręgu.

@@ -1,0 +1,1 @@
+Escala entidades por un factor dado hacia un centro dado.

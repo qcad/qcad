@@ -1,0 +1,4 @@
+1. Ange antalet koncentriska bågar som ska skapas i verktygsfältet för
+ alternativ.
+2. Klicka på basbågen.
+3. Klicka på den plats som den första koncentriska bågen ska gå igenom.

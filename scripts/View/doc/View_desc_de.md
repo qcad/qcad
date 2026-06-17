@@ -1,0 +1,2 @@
+Das Menü Ansicht enthält alle Werkzeuge zum Zoomen, Verschieben und Einstellen
+der Anzeige.

@@ -1,0 +1,1 @@
+Izriše krog, ki je tangencialen na dva objekta ter teče skozi eno točko.

@@ -1,0 +1,2 @@
+Konstruiert einen Kreis mit gegebenem Zentrum und einem Punkt auf der
+Kreislinie.

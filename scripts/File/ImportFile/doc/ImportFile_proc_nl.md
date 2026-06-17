@@ -1,0 +1,3 @@
+Bepaal met de muis de doelpunt voor de geïmporteerde tekening of voer een
+coördinaat in de opdrachtregel in. De referentiepunt komt overeen met het
+absolute nulpunt van de geïmporteerde tekening.

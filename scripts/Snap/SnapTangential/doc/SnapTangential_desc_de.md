@@ -1,0 +1,4 @@
+Fängt den Berührpunkt zu Bögen, Kreisen und Ellipsen. Dies gilt nur beim
+Zeichnen von Linien. Der Fangpunkt ist der Tangentenpunkt einer imaginären
+Linie vom relativen Nullpunkt, tangential zum angeklickten Bogen oder
+Kreis.

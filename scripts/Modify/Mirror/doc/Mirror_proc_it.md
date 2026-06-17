@@ -1,0 +1,12 @@
+1. Selezionare le entità che si desidera mirrorizzare.
+2. Avviare questo strumento.
+3. Specificare un primo punto sull'asse dello specchio con il mouse o
+ inserire una coordinata nella riga di comando.
+4. Specificare un secondo punto sull'asse dello specchio.
+5. Viene visualizzata la finestra di dialogo speculare.  
+Per riflettere le entità senza conservarne le originali, scegliere
+ "Elimina originale", per copiarle scegliere "Mantieni originale".  
+Le nuove entità sono posizionate sullo stesso livello degli originali e
+ hanno gli stessi attributi. Per utilizzare invece il livello e gli attributi
+ correnti, selezionare "Usa livello e attributi correnti".
+6. Fare clic su "OK" per riflettere le entità.

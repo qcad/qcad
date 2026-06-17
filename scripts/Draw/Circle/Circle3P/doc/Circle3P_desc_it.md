@@ -1,0 +1,2 @@
+Se conoscete tre punti qualunque di una circonferenza, potete utilizzare
+questo strumento per costruire una circonferenza completa.

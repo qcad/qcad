@@ -1,0 +1,7 @@
+Esta herramienta le permite dibujar polilíneas. Una polilínea es una línea
+continua formada por uno o más segmentos de línea o arco conectados.  
+Tenga en cuenta que casi siempre es más conveniente utilizar las
+herramientas de línea regular y arco para dibujar una nueva polilínea. Los
+segmentos de línea y de arco ligeramente conectados se pueden convertir en una
+entidad de polilínea utilizando la herramienta "Create Polyline from Segments"
+(Crear polilínea a partir de segmentos).

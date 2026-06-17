@@ -1,0 +1,2 @@
+Visningsmenuen indeholder alle værktøjer til at zoome, panorere og justere
+visningen

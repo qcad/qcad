@@ -1,0 +1,2 @@
+Runder hjørnet af en kontur. Eventuelt kan hjørnets kantelementer automatisk
+beskæres, så de passer til den nye form.

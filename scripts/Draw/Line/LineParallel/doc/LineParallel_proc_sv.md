@@ -1,0 +1,9 @@
+1. Välj önskad
+[linjetyp](../../doc/Line_sv.html#type) i verktygsfältet för
+alternativ.
+2. Ange avståndet mellan den koncentriska eller parallella enheten och den
+ursprungliga enheten i verktygsfältet för alternativ som visas överst.
+3. Ange antalet parallella eller koncentriska enheter som ska skapas i
+verktygsfältet för alternativ.
+4. Klicka på basenheten. De parallella eller koncentriska enheterna skapas på
+den sida som muspekaren befinner sig på när du väljer enheten.

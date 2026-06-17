@@ -1,0 +1,3 @@
+1. Inserire il valore del raggio nella barra delle opzioni.
+2. Definire la posizione del centro della circonferenza attraverso il mouse
+ oppure specificandone le coordinate nella linea di comando.

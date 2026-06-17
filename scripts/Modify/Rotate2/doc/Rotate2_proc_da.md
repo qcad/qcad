@@ -1,0 +1,19 @@
+1. Vælg de enheder, du vil rotere og modrotere.
+2. Start dette værktøj.
+3. Indstil centrum for hovedrotationen med musen, eller indtast en
+ koordinat på kommandolinjen.
+4. Indstil centrum for rotationen for de enkelte objekter. Dette andet
+ centrum for rotationen roteres sammen med entiteterne omkring det første
+ centrum.
+5. Dialogboksen Rotate two vises, hvor du kan indtaste rotationsvinklen og
+ modrotationsvinklen.  
+For at slette de originale entiteter skal du markere "Delete
+ Original", for at kopiere dem skal du vælge "Keep Original". Du kan også
+ oprette et vilkårligt antal kopier ved at vælge "Multiple Copies".  
+De nye entiteter placeres på samme lag som originalerne og har de
+ samme attributter. Hvis du i stedet vil bruge det aktuelle lag og de
+ aktuelle attributter, skal du markere "Use current layer and attributes"
+ (Brug det aktuelle lag og de aktuelle attributter).
+6. Klik på "OK" for at rotere entiteterne.
+
+![](Rotate2Figure.png)

@@ -1,0 +1,4 @@
+ Met dit commando wordt een nieuw leeg blok aangemaakt. Het blok dialoogvenster
+wordt getoond waar u een naam voor het nieuwe blok kunt specificeren. Als u een
+blok van bestaande entiteiten wilt maken, gebruikt u in plaats daarvan de
+commando [Blok maken](../../../CreateBlock/doc/CreateBlock_nl.html)

@@ -1,0 +1,3 @@
+Narzędzia w menu Warstwy mogą być używane do dodawania, modyfikowania i
+usuwania warstw. Niektóre narzędzia są również dostępne jako przyciski narzędzi
+na górze listy warstw.

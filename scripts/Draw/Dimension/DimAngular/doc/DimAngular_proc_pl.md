@@ -1,0 +1,4 @@
+1. Wybierz pierwszy wiersz.
+2. Wybierz drugą jednostkę wiersza.
+3. Położenie kątowego łuku wymiarowego ustawia się za pomocą myszy lub przez
+ wprowadzenie współrzędnej w wierszu poleceń.

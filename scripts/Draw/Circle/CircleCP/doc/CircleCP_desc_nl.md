@@ -1,0 +1,2 @@
+Tekent een cirkel met een gegeven middelpunt en een punt op de
+cirkellijn.

@@ -1,0 +1,2 @@
+Creëer raaklijnen van een coördinaat naar een bestaande boog, cirkel of
+ellips object met dit functie.

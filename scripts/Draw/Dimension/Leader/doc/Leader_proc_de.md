@@ -1,0 +1,6 @@
+1. Bestimmen Sie die Position, wo die Führung hinzeigen soll mit der Maus
+ oder geben Sie eine Koordinate in die Kommandozeile ein.
+2. Bestimmen Sie die erste Ecke der Führung.
+3. Bestimmen Sie die restlichen Ecken und drücken Sie Enter oder klicken Sie
+ die rechte Maustaste oder drücken Sie die Escape Taste wenn die ganze
+ Führungslinie beendet ist.

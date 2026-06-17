@@ -1,0 +1,2 @@
+Choisissez cet outil lorsque vous êtes en train d'éditer un bloc et que vous
+souhaitez revenir au dessin principal (bloc "*Model_space").

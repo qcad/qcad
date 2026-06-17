@@ -1,0 +1,2 @@
+Cet outil peut être utilisé pour verrouiller toutes les couches en même
+temps.

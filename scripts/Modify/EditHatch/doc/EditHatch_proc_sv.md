@@ -1,0 +1,6 @@
+1. Klicka på den skraffenhet som du vill redigera.
+2. Dialogrutan för skraffering visas där du kan justera skrafferingen och
+ dess attribut.
+
+Observera att du istället för att använda det här verktyget kan du också
+ dubbelklicka på den skrafferingsenhet som du vill redigera.

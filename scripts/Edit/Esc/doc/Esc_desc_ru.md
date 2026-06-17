@@ -1,0 +1,2 @@
+The escape key can be used to terminate the current tool and return to the
+idle state of QCAD.

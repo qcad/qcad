@@ -1,0 +1,2 @@
+O menu de edição contém ferramentas para edição básica tais como
+copiar/colar e apagar

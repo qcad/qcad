@@ -1,0 +1,4 @@
+Opretter tilpassede dimensioner. Justerede dimensioner måler normalt længden
+af en eksisterende linje. Dimensionslinjen er altid parallel med linjen mellem
+de to valgte punkter 1. og 2.  
+![](DimAlignedFigure.png)

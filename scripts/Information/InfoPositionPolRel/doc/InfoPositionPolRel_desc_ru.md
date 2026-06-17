@@ -1,0 +1,2 @@
+This tool outputs the relative, polar coordinates of chosen points in
+the drawing.

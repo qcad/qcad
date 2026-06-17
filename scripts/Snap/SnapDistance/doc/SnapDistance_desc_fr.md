@@ -1,0 +1,2 @@
+S'enclenche sur des points situés à une distance donnée du point final de
+lignes ou d'arcs.

@@ -1,0 +1,2 @@
+Utilisez cet outil pour créer des lignes avec un angle donné. La ligne est
+généralement coupée à la longueur désirée après sa création.

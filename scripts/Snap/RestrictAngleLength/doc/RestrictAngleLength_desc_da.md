@@ -1,0 +1,2 @@
+Begrænser markørens bevægelse med vinkel og afstand i forhold til det
+relative nulpunkt.

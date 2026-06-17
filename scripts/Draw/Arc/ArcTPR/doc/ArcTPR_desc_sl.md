@@ -1,0 +1,2 @@
+Nariše lok z danim polmerom, ki se dotika entitete in poteka skozi
+točko.

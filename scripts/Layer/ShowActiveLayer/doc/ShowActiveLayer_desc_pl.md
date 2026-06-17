@@ -1,0 +1,2 @@
+Narzędzie to ukrywa wszystkie warstwy z wyjątkiem warstwy zaznaczonej
+(aktywnej) na liście warstw.

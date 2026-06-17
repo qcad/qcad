@@ -1,0 +1,2 @@
+Esta ferramenta preenche uma área rodeada por entidades existentes com um
+padrão de escotilha ou uma cor sólida.

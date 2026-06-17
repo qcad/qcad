@@ -1,0 +1,1 @@
+Označi ali odznači vse objekte na isti plasti kot izbran objekt.

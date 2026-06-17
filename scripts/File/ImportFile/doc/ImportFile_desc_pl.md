@@ -1,0 +1,10 @@
+Polecenie importu wstawia rysunek z pliku na dysku do bieżącego rysunku.  
+Wszystkie warstwy zaimportowanego rysunku są dodawane do listy warstw
+bieżącego rysunku. Istniejące warstwy o tej samej nazwie można w razie potrzeby
+nadpisać (opcja "nadpisz warstwy" na pasku narzędzi opcji).  
+Odnośniki bloków zaimportowanego rysunku zostaną wstawione wraz z
+definicjami bloków, do których się odnoszą. Bloki na bieżącym rysunku można w
+razie potrzeby nadpisać (opcja "nadpisz bloki" na pasku narzędzi opcji).  
+Na pasku narzędzi opcji znajdują się również narzędzia do skalowania,
+obracania lub obracania zaimportowanego rysunku podczas jego
+pozycjonowania.

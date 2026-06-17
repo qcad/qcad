@@ -1,0 +1,2 @@
+Det här verktyget ökar den nuvarande visningsfaktorn. Samma effekt kan också
+uppnås genom att vrida mushjulet bort från dig.

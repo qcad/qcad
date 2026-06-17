@@ -1,0 +1,2 @@
+Esta ferramenta oferece uma forma rápida de ampliar uma determinada área do
+desenho.

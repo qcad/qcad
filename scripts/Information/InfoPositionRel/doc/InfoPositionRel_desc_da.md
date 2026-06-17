@@ -1,0 +1,2 @@
+Dette værktøj udsender de relative kartesiske koordinater for udvalgte
+punkter i tegningen.

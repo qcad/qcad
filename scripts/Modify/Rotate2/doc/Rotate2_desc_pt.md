@@ -1,0 +1,3 @@
+Entidades rotativas e contra-rotatórias. Esta ferramenta pode ser útil para
+rodar entidades em torno de um centro, mantendo a orientação original das
+próprias entidades.

@@ -1,0 +1,5 @@
+1. Introduzir o ângulo da dimensão na barra de ferramentas de opções.
+2. Definir o primeiro ponto final da linha de extensão com o rato ou
+ introduzir uma coordenada na linha de comando.
+3. Definir o segundo ponto final da linha de extensão.
+4. Definir a posição da linha de dimensão.

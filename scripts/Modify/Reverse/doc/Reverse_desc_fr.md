@@ -1,0 +1,3 @@
+Cet outil inverse la direction de toutes les lignes, arcs et arcs
+elliptiques sélectionnés. Ceci est surtout utile pour les dessins qui sont en
+préparation pour un traitement ultérieur (p.ex. FAO).

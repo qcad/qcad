@@ -1,0 +1,4 @@
+1. Stel met de muis het eerste punt op de cirkellijn in of voer in de
+ opdrachtregel een -coördinaat in.
+2. Stel het tweede punt op de cirkellijn in.
+3. Stel het derde punt in.

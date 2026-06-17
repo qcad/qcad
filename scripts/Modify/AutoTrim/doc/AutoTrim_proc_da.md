@@ -1,0 +1,3 @@
+- Vælg den enhed, du vil beskære eller forlænge, ved at klikke på det
+ segment, du vil beholde. Enheden beskæres eller forlænges automatisk, så de
+ to endepunkter flugter med de næste to enheder.

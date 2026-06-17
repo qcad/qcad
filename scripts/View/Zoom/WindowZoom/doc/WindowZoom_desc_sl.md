@@ -1,0 +1,1 @@
+S tem orodjem lahko izberete pravokotno območje, ki ga želite prikazat povečano.

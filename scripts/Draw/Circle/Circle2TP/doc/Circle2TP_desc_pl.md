@@ -1,0 +1,2 @@
+Rysuje okrąg, który jest styczny do dwóch bytów i przechodzi przez
+punkt.

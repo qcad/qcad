@@ -1,0 +1,3 @@
+Affiche la dernière vue utilisée. Utilisez-le pour revenir à la vue
+précédente, par exemple après avoir effectué un zoom automatique ou après un
+zoom avant avec le zoom de la fenêtre.

@@ -1,0 +1,2 @@
+S'enclenche sur le point perpendiculaire d'une ligne, d'un arc, d'un cercle
+ou d'une ellipse. Ceci ne s'applique qu'au tracé des lignes.

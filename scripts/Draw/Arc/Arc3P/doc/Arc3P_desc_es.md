@@ -1,0 +1,2 @@
+Si conoce los puntos inicial, final y otro punto cualquiera del arco, puede
+utilizar esta herramienta para dibujarlo.

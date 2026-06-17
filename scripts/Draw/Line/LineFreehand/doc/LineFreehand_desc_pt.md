@@ -1,0 +1,5 @@
+Com esta ferramenta é possível desenhar linhas à mão livre. Esta ferramenta
+é normalmente utilizada apenas com parcimónia, uma vez que os desenhos técnicos
+requerem precisão absoluta. No entanto, em algumas ocasiões, esta ferramenta
+pode ser útil, por exemplo, para arestas partidas, como aqui se mostra:  
+![](LineFreehandFigure.png)

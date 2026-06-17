@@ -1,0 +1,2 @@
+Brug dette værktøj til at oprette vinkelhalveringslinjer mellem to
+linjeenheder.

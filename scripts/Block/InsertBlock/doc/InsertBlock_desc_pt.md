@@ -1,0 +1,2 @@
+Esta ferramenta insere o bloco ativo no desenho. No desenho, são criadas uma
+ou várias referências de bloco para representar o bloco ativo.

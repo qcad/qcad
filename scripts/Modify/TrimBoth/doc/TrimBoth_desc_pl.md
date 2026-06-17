@@ -1,0 +1,2 @@
+Przycina lub przedłuża dwie linie, łuki lub elipsy do ich wspólnego punktu
+przecięcia.

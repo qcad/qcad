@@ -1,0 +1,1 @@
+Podaljša ali pokrajša črto, lok ali eliptični lok do nekega objekta.

@@ -1,0 +1,4 @@
+Dit commando toont het lagen dialoogvenster voor de huidige laag. Dit is
+hetzelfde dialoogvenster dat ook wordt gebruikt om nieuwe lagen te maken.
+Gebruik dit om de naam van de laag of de attributen ervan te wijzigen.  
+De naam van laag "0" kan nooit gewijzigd worden.

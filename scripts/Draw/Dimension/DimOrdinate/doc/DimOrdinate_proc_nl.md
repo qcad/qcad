@@ -1,0 +1,11 @@
+1. Specificeer de locatie van de functie met de muis of door een -coördinaat
+ in te voeren.
+2. Specificeer de locatie van het tekstlabel en het eindpunt van de leider.
+ Als de sensor zich dichter bij de verticaal bevindt, wordt het X-nulpunt
+ aangegeven; als de sensor zich dichter bij de horizontaal bevindt, wordt het
+ Y-nulpunt aangegeven.
+3. De oorsprong van de ordinaatafmeting ligt op het absolute nulpunt. Om de
+ oorsprong met de muis te verplaatsen, selecteert u de ordinaat dimensie
+ entiteit en beweegt u de oorsprong met de muis (slepen en neerzetten).
+ Gebruik de eigenschap-editor om een coördinaat voor de -oorsprong op te
+ geven.

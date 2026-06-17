@@ -1,0 +1,1 @@
+- Haga clic en la nueva ubicación del punto cero relativo.

@@ -1,0 +1,9 @@
+1. Spécifiez le premier coin de la zone que vous souhaitez visualiser.
+ Appuyez sur le bouton gauche de la souris dans ce coin et maintenez-le
+ enfoncé.
+2. Faites glisser la souris sur le deuxième coin de la zone.
+3. Lâchez le bouton de la souris dans le deuxième coin.
+
+Remarque : Vous pouvez également spécifier le premier et le deuxième coin
+ de chaque côté en un seul clic de souris au lieu de faire glisser la souris
+ avec le bouton de la souris enfoncé.

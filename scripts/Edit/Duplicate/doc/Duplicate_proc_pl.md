@@ -1,0 +1,3 @@
+1. Użyj narzędzi wyboru, aby przygotować wybór jednostek, które chcesz
+ skopiować.
+2. Wybierz narzędzie do powielania.

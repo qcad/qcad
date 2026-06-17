@@ -1,0 +1,2 @@
+Gebruik dit functie om rechthoekige vormen met een bepaalde grootte te
+maken.

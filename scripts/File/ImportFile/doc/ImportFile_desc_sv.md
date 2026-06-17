@@ -1,0 +1,12 @@
+Med kommandot importera infogas en ritning från en fil på disk i den
+aktuella ritningen.  
+Alla lager som används av den importerade ritningen läggs till i
+lagerlistan för den aktuella ritningen. Befintliga lager med samma namn kan
+skrivas över om så önskas (alternativet "overwrite layers" i verktygsfältet för
+alternativ).  
+Blockreferenser i den importerade ritningen infogas tillsammans med de
+blockdefinitioner de hänvisar till. Blocken i den aktuella ritningen kan
+skrivas över om så önskas (alternativet "overwrite blocks" i verktygsfältet för
+alternativ).  
+I verktygsfältet för alternativ finns också några verktyg för att skala,
+rotera eller vända den importerade ritningen medan den positioneras.

@@ -1,0 +1,3 @@
+1. Indstil det første punkt med musen eller indtast et koordinat i
+ kommandolinjen.
+2. Indstil det andet punkt.

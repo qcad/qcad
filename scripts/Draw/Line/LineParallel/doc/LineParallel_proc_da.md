@@ -1,0 +1,9 @@
+1. Vælg den ønskede
+[linjetype](../../doc/Line_da.html#type) i værktøjslinjen for
+indstillinger.
+2. Indtast afstanden mellem den koncentriske eller parallelle enhed og den
+oprindelige enhed i værktøjslinjen for indstillinger øverst på siden.
+3. Indtast antallet af parallelle eller koncentriske enheder, der skal
+oprettes, i værktøjslinjen med indstillinger.
+4. Klik på basisenheden. De parallelle eller koncentriske enheder oprettes på
+den side, hvor musemarkøren er placeret, mens du vælger enheden.

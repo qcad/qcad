@@ -1,0 +1,2 @@
+Il menu File contiene tutti gli strumenti per aprire, salvare, importare,
+esportare e stampare i file

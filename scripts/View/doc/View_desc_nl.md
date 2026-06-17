@@ -1,0 +1,2 @@
+Het weergavemenu bevat alle hulpmiddelen om in te zoomen, te pannen en de
+weergave aan te passen

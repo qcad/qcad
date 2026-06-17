@@ -1,0 +1,6 @@
+1. Klik op de arcering die u wilt bewerken.
+2. Het dialoogvenster voor de arcering wordt weergegeven waarin u de arcering en
+ de attributen kunt aanpassen.
+
+Merk op dat u in plaats van deze functie te gebruiken, ook kunt dubbelklikken
+ op de arcering die u wilt bewerken.

@@ -1,0 +1,1 @@
+To orodje poveča pogled na trenutni izbor. Vsi izbrani objekti tako postanejo dobro vidni.

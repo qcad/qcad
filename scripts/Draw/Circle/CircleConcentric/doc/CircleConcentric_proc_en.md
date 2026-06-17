@@ -1,0 +1,6 @@
+1. Enter the distance of the concentric circle from the original base circle
+ in the options toolbar.
+2. Enter the number of concentric circles to create in the options
+ toolbar.
+3. Click the base circle. The concentric circle(s) are created on that side
+ on which the mouse cursor is located while clicking the base circle.

@@ -1,0 +1,1 @@
+Konstrukcija elipse s podanim sredščem, glavno osjo ter stransko osjo.

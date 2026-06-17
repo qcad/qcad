@@ -1,0 +1,1 @@
+Konstruira krog s podanim središčem ter eno točko na krožnici.

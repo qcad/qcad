@@ -1,0 +1,3 @@
+Crea dimensiones giratorias (lineales). Las dimensiones lineales se utilizan
+generalmente para medir distancias verticales u horizontales, pero también
+pueden medir distancias con cualquier otro ángulo.

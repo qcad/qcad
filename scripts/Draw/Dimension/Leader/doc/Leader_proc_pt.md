@@ -1,0 +1,5 @@
+1. Definir o local para onde o líder aponta ou introduzir uma coordenada na
+ linha de comando.
+2. Definir a localização da próxima extremidade da linha de comando.
+3. Definir as outras arestas da linha líder e clicar no botão direito do
+ rato ou premir a tecla Escape para terminar.

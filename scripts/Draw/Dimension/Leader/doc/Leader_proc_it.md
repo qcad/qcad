@@ -1,0 +1,5 @@
+1. Impostare la posizione in cui il leader punta o immettere una coordinata
+ nella riga di comando.
+2. Impostare la posizione del bordo successivo della linea direttrice.
+3. Impostare gli altri bordi della linea direttrice e fare clic con il tasto
+ destro del mouse o premere il tasto Fuga per terminare.

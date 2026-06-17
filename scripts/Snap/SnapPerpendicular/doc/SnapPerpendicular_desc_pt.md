@@ -1,0 +1,2 @@
+Passa para o ponto perpendicular numa linha, arco, circunferência ou elipse.
+Isto só se aplica ao desenhar linhas.

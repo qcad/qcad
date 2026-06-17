@@ -1,0 +1,2 @@
+Benutzen Sie dieses Menü, um einen Fehlerreport (Bug Report) für QCAD zu
+übermitteln (online).

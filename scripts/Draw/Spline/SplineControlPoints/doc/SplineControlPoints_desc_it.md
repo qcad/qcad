@@ -1,0 +1,3 @@
+Disegna le curve delle scanalature dai punti di controllo. Le scanalature B
+razionali non uniformi (NURBS) con fattori di ponderazione omogenei sono le
+uniche scanalature supportate.

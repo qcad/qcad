@@ -1,0 +1,2 @@
+- Use the mouse to specify the location of the point or enter a coordinate
+ in the command line.

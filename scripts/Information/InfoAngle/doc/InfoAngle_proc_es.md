@@ -1,0 +1,4 @@
+1. Especifique la primera línea.
+2. Especifique la segunda línea.
+3. El ángulo medido (en grados) se imprime en la pantalla y en la línea de
+ comandos.

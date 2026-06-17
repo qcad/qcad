@@ -1,0 +1,3 @@
+Désélectionne toutes les entités. Utilisez cet outil pour vous assurer
+qu'aucune entité n'est sélectionnée. Vous pouvez également cliquer dans une
+zone vide de votre dessin.

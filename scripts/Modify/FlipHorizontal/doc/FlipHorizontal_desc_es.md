@@ -1,0 +1,1 @@
+Esta función invierte (refleja) la selección actual horizontalmente.

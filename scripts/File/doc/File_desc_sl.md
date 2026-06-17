@@ -1,0 +1,2 @@
+V meniju datoteke so vsa orodja za odpiranje, shranjevanje, uvoz, izvoz in
+tiskanje datotek

@@ -1,0 +1,2 @@
+Esta ferramenta pode ser utilizada para desbloquear convenientemente todas
+as camadas ao mesmo tempo.

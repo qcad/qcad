@@ -1,0 +1,6 @@
+1. Sélectionnez l'entité que vous voulez démanteler.
+2. Cliquez sur le premier point où l'entité doit être divisée.
+3. Si le point ne se trouve pas sur l'entité, le point de séparation est
+ supposé être le point le plus proche de l'entité.
+4. Cliquez sur le deuxième point auquel l'entité doit être divisée.
+5. Sinon, l'entité n'est séparée qu'aux points donnés.

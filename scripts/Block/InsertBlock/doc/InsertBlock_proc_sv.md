@@ -1,0 +1,10 @@
+1. Välj det block som du vill infoga från listan över block.
+2. Klicka på knappen Infoga eller välj Infoga block från menyn.
+3. Ange rotationsvinkeln och skalfaktorn för blockreferensen i
+ verktygsfältet för alternativ.
+4. Ange positionen för det infogade blocket genom att klicka på en koordinat
+ eller ange en koordinat i konsolen.
+5. För att skapa en hel array av block, klicka på array-knappen i alternativverktygsfältet:  
+![](ArrayOfBlocks.png)  
+Ange kolumner, rader, kolumnavstånd och radavstånd i dialogrutan som visas.
+ Dessa egenskaper kan också redigeras senare med egenskapsredigeraren.

@@ -1,0 +1,2 @@
+Utilisez cet outil pour créer une ligne orthogonale à une autre ligne et
+tangente à un arc, un cercle ou une ellipse existante.

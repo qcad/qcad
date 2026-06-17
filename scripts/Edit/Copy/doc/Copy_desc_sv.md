@@ -1,0 +1,2 @@
+QCAD erbjuder en uppsättning verktyg för att kopiera objekt från en ritning
+till en annan, på samma sätt som andra program.

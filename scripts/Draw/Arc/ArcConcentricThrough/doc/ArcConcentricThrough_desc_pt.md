@@ -1,0 +1,2 @@
+Com esta ferramenta é possível criar arcos concêntricos que passam por um
+ponto especificado.

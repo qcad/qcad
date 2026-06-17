@@ -1,0 +1,8 @@
+1. Välj den enhet som du vill dela upp.
+2. Klicka på den första punkten där enheten ska delas.
+3. Om punkten inte ligger på entiteten, antas delningspunkten vara den
+ närmaste punkten på entiteten.
+4. Klicka på den andra punkten där enheten ska delas.
+5. Segmentet mellan de två punkterna tas bort om alternativet "Remove
+ Segment" i verktygsfältet för alternativ är aktivt. I annat fall separeras
+ enheten endast vid de angivna punkterna.

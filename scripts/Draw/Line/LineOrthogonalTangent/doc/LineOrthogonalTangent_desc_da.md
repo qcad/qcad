@@ -1,0 +1,2 @@
+Brug dette værktøj til at oprette en linje, der er ortogonal til en anden
+linje og tangent til en eksisterende bue, cirkel eller ellipse.

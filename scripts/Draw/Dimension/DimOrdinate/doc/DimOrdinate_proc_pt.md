@@ -1,0 +1,10 @@
+1. Especificar a localização da característica com o rato ou introduzindo
+ uma coordenada.
+2. Especificar a localização da etiqueta do texto e o ponto final do líder.
+ Se o líder estiver mais próximo de ser vertical, o ponto de referência X é
+ indicado, se estiver mais próximo de ser horizontal, o ponto de referência Y
+ é indicado.
+3. A origem da dimensão do ordenado está no ponto zero absoluto. Para mover
+ a origem com o rato, seleccionar a entidade da dimensão de ordenada e mover a
+ origem com o rato (arrastar e largar). Para especificar uma coordenada para a
+ origem, utilizar o editor de propriedades.

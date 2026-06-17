@@ -1,0 +1,2 @@
+Cet outil peut être utilisé pour allonger ou raccourcir les lignes ou les
+arcs d'une quantité donnée.

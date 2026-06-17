@@ -1,0 +1,2 @@
+Dit functie verbergt alle lagen behalve de geselecteerde (actieve) laag in
+de lagenlijst.

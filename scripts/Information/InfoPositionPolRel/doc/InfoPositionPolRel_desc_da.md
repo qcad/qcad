@@ -1,0 +1,2 @@
+Dette værktøj udsender de relative polære koordinater for udvalgte punkter i
+tegningen.

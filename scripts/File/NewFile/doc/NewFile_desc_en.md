@@ -1,0 +1,6 @@
+ Create new, empty drawings using this command. New drawings are completely
+empty (no entities, only one default layer, no blocks). As a frequent user of
+QCAD, you might instead want to create drawing templates with the layers and
+blocks you use the most and probably a drawing border. Once you have such a
+template you can load that instead of starting a new drawing from scratch.  
+Please refer also to the command [New from Template](../../../Pro/File/NewFromTemplate/doc/NewFromTemplate_en.html) to learn how to use drawing templates.

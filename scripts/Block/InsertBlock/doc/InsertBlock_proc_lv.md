@@ -1,0 +1,10 @@
+1. Izvēlieties bloku, kuru vēlaties ievietot, no bloku saraksta.
+2. Noklikšķiniet uz pogas Ievietot vai izvēlnē izvēlieties „Ievietot bloku".
+3. Ievadiet rotācijas leņķi un mēroga koeficientu bloka atsaucei opciju
+ rīkjoslā.
+4. Norādiet ievietotā bloka pozīciju, noklikšķinot uz koordinātas vai
+ ievadot koordinātu konsolē.
+5. Lai izveidotu veselu bloku masīvu, noklikšķiniet uz masīva pogas opciju rīkjoslā:  
+![](ArrayOfBlocks.png)  
+Ievadiet kolonnas, rindas, kolonnu atstarpi un rindu atstarpi parādītajā dialoglodziņā.
+ Šīs īpašības var arī vēlāk rediģēt, izmantojot īpašību redaktoru.

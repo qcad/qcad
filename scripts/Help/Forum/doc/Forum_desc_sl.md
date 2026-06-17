@@ -1,0 +1,1 @@
+Prikaže uporabniški forum QCAD-a. Tukaj lahko uporabniki izmenjujejo informacije o QCAD-u.

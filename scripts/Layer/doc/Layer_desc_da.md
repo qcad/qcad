@@ -1,0 +1,3 @@
+Værktøjerne i menuen Lag kan bruges til at tilføje, ændre og slette lag.
+Nogle af værktøjerne er også tilgængelige som værktøjsknapper øverst på
+laglisten.

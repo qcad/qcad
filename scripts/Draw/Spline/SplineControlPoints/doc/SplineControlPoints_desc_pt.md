@@ -1,0 +1,3 @@
+Arrasta as curvas estriadas dos pontos de controlo. Estrias não uniformes
+racionais B-Splines (NURBS) com factores de ponderação homogéneos são as únicas
+estrias que são suportadas.

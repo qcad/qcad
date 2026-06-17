@@ -1,0 +1,2 @@
+El menú Archivo contiene todas las herramientas para abrir, guardar,
+importar, exportar e imprimir archivos

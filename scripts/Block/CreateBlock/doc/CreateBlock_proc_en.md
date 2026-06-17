@@ -1,0 +1,8 @@
+1. Select the entities you want to use for the new block.
+2. Specify the reference point of the block.
+3. Enter a name for the new block in the dialog that is shown and click
+ OK.
+
+The block is now added to the block list and instances of it can be
+ inserted into the drawing. The entities you have selected in the first step
+ are removed and replaced by a block reference of the newly created block.

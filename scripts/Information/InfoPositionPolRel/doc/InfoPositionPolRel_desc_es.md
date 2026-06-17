@@ -1,0 +1,2 @@
+Esta herramienta muestra las coordenadas polares relativas de los puntos
+seleccionados en el dibujo.

@@ -1,0 +1,11 @@
+1. Wählen Sie den gewünschten
+[Linientyp](../../doc/Line_de.html#type) in der
+Optionenwerkzeugleiste.
+2. Geben Sie die Länge der Winkelhalbierenden in der Optionenwerkzeugleiste
+ein. Im zweiten Eingabefeld geben Sie die Anzahl der winkelteilenden Linien
+ein. Für eine Winkelhalbierende ist das '1', aber es können auch mehrere
+winkelteilende Linien erstellt werden wie hier gezeigt:
+
+![](LineBisectorFigure.png)
+3. Wählen Sie die erste Linie (Schenkel) des Winkels.
+4. Wählen Sie die zweite Linie (Schenkel).

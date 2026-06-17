@@ -1,0 +1,5 @@
+1. Wprowadź kąt nachylenia wymiaru na pasku narzędzi opcji.
+2. Pierwszy punkt końcowy linii rozszerzającej ustawić myszką lub wprowadzić
+ współrzędne ° w linii poleceń.
+3. Ustawić drugi punkt końcowy linii przedłużającej.
+4. Ustawić położenie linii wymiarowej.

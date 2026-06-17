@@ -1,0 +1,2 @@
+Selecteert of deselecteert objecten die met elkaar verbonden zijn en een
+contour vormen (gesloten of open).

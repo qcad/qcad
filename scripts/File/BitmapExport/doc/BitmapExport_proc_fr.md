@@ -1,0 +1,6 @@
+Une boîte de dialogue pour la sélection du fichier de sortie est présentée.
+Une fois le nom du fichier spécifié, une deuxième boîte de dialogue vous
+demande la taille du bitmap et la couleur de fond préférée.  
+Notez que l'exportation vers des bitmaps de très grande taille peut
+prendre beaucoup de temps, selon votre matériel. La taille maximale pour les
+bitmaps est la largeur x hauteur ≤ 2'147'483'647.

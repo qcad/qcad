@@ -1,0 +1,7 @@
+1. Digitare il raggio d'arco nella barra degli strumenti delle opzioni e
+ scegliere l'arco direzione (in senso orario o antiorario) e la soluzione
+ (arco maggiore o minore).
+2. Specificare il punto di inizio dell'arco.
+3. Specificare il punto finale dell'arco. Se il punto finale è troppo
+ lontano dal punto di partenza di una soluzione, viene tracciata la soluzione
+ più vicina (un semicerchio con il raggio e la direzione dati).

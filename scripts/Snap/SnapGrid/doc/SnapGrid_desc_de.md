@@ -1,0 +1,1 @@
+Fängt Rasterpunkte.

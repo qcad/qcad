@@ -1,0 +1,4 @@
+1. Ange antalet parallella kurvor som ska skapas i verktygsfältet för
+ alternativ.
+2. Klicka på basellipsen.
+3. Klicka på den plats som den första parallella kurvan ska gå igenom.

@@ -1,0 +1,8 @@
+1. Vælg de enheder, du vil bruge til den nye blok.
+2. Angiv blokens referencepunkt.
+3. Indtast et navn til den nye blok i den dialogboks, der vises, og klik
+ på OK.
+
+Blokken er nu tilføjet til bloklisten, og der kan indsættes instanser af
+ den i tegningen. De entiteter, du har valgt i det første trin, fjernes og
+ erstattes af en blokreference til den nyoprettede blok.

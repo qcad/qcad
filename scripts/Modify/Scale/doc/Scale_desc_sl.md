@@ -1,0 +1,1 @@
+Razmerje (poveča ali pomanjša) objekte za določen faktor.

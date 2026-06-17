@@ -1,0 +1,2 @@
+Gebruik deze tool om een lijn te maken die loodrecht staat op een andere
+lijn en die een bestaande boog, cirkel of ellips raakt.

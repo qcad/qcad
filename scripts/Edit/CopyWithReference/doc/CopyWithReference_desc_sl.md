@@ -1,0 +1,2 @@
+Kopira trenutno izbrano v odložišče QCAD-a.
+Z tem orodjem lahko določite točko prijema, ki se bo uporabila pri kasnejšem leplenju objektov.

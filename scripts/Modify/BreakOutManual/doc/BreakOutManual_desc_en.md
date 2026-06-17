@@ -1,0 +1,2 @@
+Divides objects by cutting out a segment in between two user defined
+points.

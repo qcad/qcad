@@ -1,0 +1,4 @@
+1. Enter the number of concentric arcs to create in the options
+ tool bar.
+2. Click the base arc.
+3. Click the location through which the first concentric arc should go.

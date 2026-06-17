@@ -1,0 +1,4 @@
+1. Navedite entiteto.
+2. Z miško določite lokacijo točke ali vnesite koordinato v ukazno
+ vrstico.
+3. Izmerjena razdalja se izpiše na zaslonu in v ukazni vrstici.

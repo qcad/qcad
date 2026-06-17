@@ -1,0 +1,2 @@
+Skalerer tegningsvisningen, så alle enheder, der er på synlige lag, passer
+på skærmen.

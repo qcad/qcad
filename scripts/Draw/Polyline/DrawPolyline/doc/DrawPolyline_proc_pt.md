@@ -1,0 +1,10 @@
+1. Especificar o ponto de partida do primeiro segmento da polilinha. Pode
+ utilizar o rato ou introduzir uma coordenada na consola.
+2. Especificar o ponto final do primeiro segmento de polilinha.
+3. Especifique os pontos finais dos segmentos adicionais da
+ polilinha.
+
+Se a polilinha contiver segmentos de arco, pode assinalar a caixa de
+ verificação "Arco" e introduzir o raio do arco na barra de ferramentas de
+ opções ao definir o ponto final de um segmento de arco. O arco ligar-se-á
+ suavemente (tangencial) ao último segmento.

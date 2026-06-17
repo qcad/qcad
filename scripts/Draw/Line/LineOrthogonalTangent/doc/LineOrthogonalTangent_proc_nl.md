@@ -1,0 +1,6 @@
+1. Kies het gewenste
+[lijntype](../../doc/Line_nl.html#type) in de opties werkbalk.
+2. Klik op de lijn waaraan de nieuwe lijn orthogonaal moet zijn.
+3. Klik op de boog, cirkel of ellips waarvan de lijn een raaklijn moet zijn.
+Er zijn twee mogelijke oplossingen. Wanneer u de muis beweegt, ziet u een
+voorbeeld van de raaklijn die zal worden gemaakt.

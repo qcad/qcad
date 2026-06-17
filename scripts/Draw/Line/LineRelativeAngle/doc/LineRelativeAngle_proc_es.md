@@ -1,0 +1,7 @@
+1. Seleccione el
+[tipo de línea](../../doc/Line_es.html#type) deseado en la barra de
+herramientas de opciones.
+2. Introduzca el ángulo relativo en la barra de herramientas de opciones.
+3. Haga clic en la entidad base existente.
+4. Coloque la línea con el ratón o introduzca una coordenada en la línea de
+comandos.

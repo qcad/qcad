@@ -1,0 +1,4 @@
+Cet outil reprend la dernière modification du dessin. QCAD peut reprendre
+plus d'une commande. Par exemple, si vous venez de créer une ligne et un cercle
+et que vous voulez annuler les deux, utilisez deux fois la commande
+annuler.

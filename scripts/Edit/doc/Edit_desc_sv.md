@@ -1,0 +1,2 @@
+Redigeringsmenyn innehåller verktyg för grundläggande redigering, t.ex.
+kopiera/klistra in och radera

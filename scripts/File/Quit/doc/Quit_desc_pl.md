@@ -1,0 +1,2 @@
+Wyjście z aplikacji i zamknięcie głównego okna aplikacji. Jeśli w otwartych
+rysunkach występują niezapisane zmiany, można je zapisać przed zamknięciem.

@@ -1,0 +1,3 @@
+Kopierer det aktuelle valg til udklipsholderen i QCAD. Med dette værktøj kan
+du angive et referencepunkt, som bruges til at placere markeringen, når du
+indsætter den i en tegning.

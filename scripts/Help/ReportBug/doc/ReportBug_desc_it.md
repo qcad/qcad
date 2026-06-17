@@ -1,0 +1,2 @@
+Utilizzare questo menu per inviare una segnalazione di bug (problema) su
+QCAD (online).

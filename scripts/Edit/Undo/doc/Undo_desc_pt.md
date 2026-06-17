@@ -1,0 +1,3 @@
+Esta ferramenta retoma a última alteração do desenho. O QCAD pode retomar
+mais do que um comando. Por exemplo, se tiver acabado de criar uma linha e um
+círculo e quiser desfazer ambos, use o comando desfazer duas vezes.

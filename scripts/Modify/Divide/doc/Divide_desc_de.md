@@ -1,0 +1,1 @@
+Teilt ein Objekt auf in zwei separate Objekte.

@@ -1,0 +1,3 @@
+Rysuje krzywe splajnu z punktów kontrolnych. Jedynymi wspieranymi klinami są
+niejednorodne, racjonalne linie B (NURBS) o jednorodnym współczynniku
+wagowym.

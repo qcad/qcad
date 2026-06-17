@@ -1,0 +1,1 @@
+This tool can be used to conveniently unlock all layers at once.

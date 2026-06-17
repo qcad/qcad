@@ -1,0 +1,1 @@
+Nariše lok z začetno in končno točko ter dolžino loka.

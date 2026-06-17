@@ -1,0 +1,2 @@
+Narzędzie to wypełnia obszar otoczony istniejącymi elementami wzorem
+kreskowania lub kolorem jednolitym.

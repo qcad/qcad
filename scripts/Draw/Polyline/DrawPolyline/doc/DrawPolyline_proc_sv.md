@@ -1,0 +1,9 @@
+1. Ange startpunkten för det första polylinesegmentet. Du kan använda
+ musen eller ange en koordinat i konsolen.
+2. Ange slutpunkten för det första polylinjesegmentet.
+3. Ange ändpunkterna för ytterligare polylinjesegment.
+
+Om polylinjen innehåller bågsegment kan du kryssa i kryssrutan "Arc" och
+ ange bågradien i verktygsfältet för alternativ när du anger slutpunkten för
+ ett bågsegment. Bågen kommer att ansluta jämnt (tangentiellt) till det sista
+ segmentet.

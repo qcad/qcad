@@ -1,0 +1,1 @@
+Razdeli objekte tako, da izbriše segment, ki se nahaja med dvema izbranima točkama.

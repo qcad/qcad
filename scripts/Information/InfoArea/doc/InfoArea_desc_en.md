@@ -1,0 +1,1 @@
+This tool measures the area covered by a polygon and its circumference.

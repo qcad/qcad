@@ -1,0 +1,3 @@
+Esta ferramenta adiciona todas as entidades da camada actual à selecção.
+Apenas entidades no bloco actual podem ser seleccionadas, entidades em outros
+blocos não são seleccionadas.

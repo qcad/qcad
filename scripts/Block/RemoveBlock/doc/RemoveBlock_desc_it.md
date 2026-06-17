@@ -1,0 +1,2 @@
+Cancella il blocco attivo. Il blocco e tutti gli inserimenti saranno
+cancellati.

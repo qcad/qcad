@@ -1,0 +1,2 @@
+Recorta o extiende dos líneas, arcos o elipses hasta su punto de
+intersección común.

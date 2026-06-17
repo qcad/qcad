@@ -1,0 +1,3 @@
+Esta herramienta termina todas las herramientas activas y devuelve el QCAD a
+su estado de reposo en el que puede utilizar el cursor del ratón para
+seleccionar entidades, arrastrar y soltar entidades, etc.

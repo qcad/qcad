@@ -1,0 +1,2 @@
+Este comando ativa o campo de filtro (busca) da matriz de ferramentas para
+entrada.

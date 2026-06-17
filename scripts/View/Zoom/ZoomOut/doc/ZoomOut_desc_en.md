@@ -1,0 +1,2 @@
+This tool decreases the current viewing factor. The same effect can also be
+achieved by turning the mouse wheel toward you.

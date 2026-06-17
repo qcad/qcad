@@ -1,0 +1,3 @@
+1. Z orodji za izbiro pripravite izbor entitet, ki jih želite
+ podvojiti.
+2. Izberite orodje za podvajanje.

@@ -1,0 +1,4 @@
+1. Umieść myszkę w punkcie początkowym linii odręcznej, naciśnij lewy
+ przycisk myszy i przytrzymaj ją.
+2. Teraz przesuń myszką dookoła, aby narysować linię. Na końcu linii
+ odręcznej zwolnij przycisk myszy.

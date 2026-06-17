@@ -1,0 +1,11 @@
+1. Bepaal met de muis het centrum van de ellips of voer een coördinaat in de
+ opdrachtregel in.
+2. Definieer de hoofdas door op het eindpunt van de as te klikken.
+ U kunt ook een coördinaat invoeren in de opdrachtregel
+ of een hoek en een grote straal invoeren in het formaat @50<30 waarbij 50
+ de grote straal en 30 de ellipshoek is.
+3. Definieer het eindpunt van de nevenas, dat ook een punt op de ellips is,
+ of voer de lengte van de nevenas in.
+4. Stel de starthoek in met de muis of door een coördinaat of de
+ hoek in de opdrachtregel in te voeren.
+5. Stel de eindhoek op dezelfde manier in als de starthoek.

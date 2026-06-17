@@ -1,0 +1,2 @@
+Utilizzare questo strumento per creare forme rettangolari con una data
+dimensione.

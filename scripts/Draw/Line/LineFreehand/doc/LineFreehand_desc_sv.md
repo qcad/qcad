@@ -1,0 +1,5 @@
+Med det här verktyget kan du rita linjer på frihand. Det här verktyget
+används vanligtvis sparsamt eftersom tekniska ritningar kräver absolut
+noggrannhet. Vid vissa tillfällen kan detta verktyg dock vara till nytta, till
+exempel för brutna kanter som här  
+![](LineFreehandFigure.png)

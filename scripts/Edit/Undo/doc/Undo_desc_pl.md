@@ -1,0 +1,3 @@
+Narzędzie to przejmuje z powrotem ostatnią zmianę rysunku. QCAD może przyjąć
+z powrotem więcej niż jedno polecenie. Na przykład, jeśli właśnie utworzyłeś
+linię i okrąg i chcesz je cofnąć, użyj polecenia cofnij dwukrotnie.

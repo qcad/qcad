@@ -1,0 +1,14 @@
+#### Bežné možnosti tvaru
+
+*Polyline*
+
+Tvarové nástroje môžu vytvárať buď voľné čiary a oblúky, alebo uzavretú polylniu. Začiarknutím položky "Create Polyline" (Vytvoriť polylniu) vytvoríte
+ jednu polylinijnú entitu na skonštruovaný tvar.
+
+*Vyplniť*
+
+Začiarknite políčko "Fill" (Výplň), ak chcete okrem hranice tvaru vytvoriť aj pevnú výplň.
+
+*Polomer*
+
+Začiarknite políčko "Polomer", ak chcete zaobliť všetky rohy tvaru s daným polomerom.

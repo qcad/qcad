@@ -1,0 +1,3 @@
+Renames the active block. The same dialog is presented as for creating new
+blocks. Block references are automatically updated to reference the renamed
+block.

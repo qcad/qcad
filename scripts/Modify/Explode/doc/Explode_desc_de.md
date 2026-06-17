@@ -1,0 +1,8 @@
+Bricht Blockreferenzen, Polylinien, Texte, Bemaßungen und Schraffuren in
+einfachere Objekte auf. Bemaßungen werden aufgebrochen in Linien, Pfeile und
+den Text. Texte werden in Polylinien (oder Linien, Kreisbögen und Splines)
+aufgebrochen. Splines werden in Polylinien mit tangential anschließenden
+Bogensegmenten konvertiert. Ellipsen werden in Polylinien mit
+Kreisbogensegmenten konvertiert. Polylinien werden in lose Segments
+aufgebrochen. Schraffuren werden in Linien aufgebrochen. Füllungen werden
+umgewandelt in die Kontur des Umrisses.

@@ -1,0 +1,3 @@
+Este comando añade un nuevo bloque vacío. Aparece un cuadro de diálogo donde
+se puede especificar el nombre para el nuevo bloque. Si desea
+crear un bloque de las entidades existentes, utilice la opción [crear bloques](../../../CreateBlock/doc/CreateBlock_es.html).

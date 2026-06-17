@@ -1,0 +1,2 @@
+Tekent ellipsen met opgegeven grote en kleine diameter (breedte /
+hoogte).

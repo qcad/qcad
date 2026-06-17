@@ -1,0 +1,7 @@
+1. Escriba el radio del arco en la barra de herramientas de opciones y elija
+ la dirección del arco (en sentido horario o antihorario) y la solución (arco
+ mayor o arco menor).
+2. Especifique el punto de inicio del arco.
+3. Especifique el punto final del arco. Si el punto final está demasiado
+ lejos del punto de inicio de una solución, se traza la solución más cercana
+ (un semicírculo con el radio y la dirección dados).

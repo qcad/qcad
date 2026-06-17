@@ -1,0 +1,1 @@
+Przyciski do punktów siatki.

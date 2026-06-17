@@ -1,0 +1,2 @@
+Esta herramienta exporta el dibujo actual como un archivo de mapa de
+bits.

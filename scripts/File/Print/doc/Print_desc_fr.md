@@ -1,0 +1,6 @@
+Utilisez cette commande pour imprimer un dessin. Assurez-vous de toujours
+passer à l'aperçu avant impression avant l'impression pour vérifier si
+l'échelle et la position du dessin sont configurées comme vous le souhaitez.  
+Une boîte de dialogue de configuration s'affiche avant l'impression.
+Utilisez cette boîte de dialogue pour choisir l'imprimante et régler les
+paramètres spécifiques à l'imprimante.

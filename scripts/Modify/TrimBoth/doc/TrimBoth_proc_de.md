@@ -1,0 +1,5 @@
+1. Wählen Sie das erste Objekt, das zu einer Ecke getrimmt werden soll.
+2. Wählen Sie das zweite Objekt, das zu einer Ecke getrimmt werden soll.  
+![](TrimBothFigure.png)
+3. Klicken Sie die rechte Maustaste oder drücken Sie zweimal Escape um das
+ Werkzeug zu beenden.

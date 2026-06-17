@@ -1,0 +1,1 @@
+This tool exports the current drawing as a bitmap file.

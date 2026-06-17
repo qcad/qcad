@@ -1,0 +1,2 @@
+Questo strumento può essere utilizzato per allungare o accorciare linee o
+archi di una determinata quantità.

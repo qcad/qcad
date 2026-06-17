@@ -1,0 +1,2 @@
+Met dit hulpmiddel kunt u cirkels maken met een bepaald middelpunt en een
+bepaalde diameter.

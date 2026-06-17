@@ -1,0 +1,2 @@
+Defines a point by entering an absolute or relative Cartesian
+coordinate.

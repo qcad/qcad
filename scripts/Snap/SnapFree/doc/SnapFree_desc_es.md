@@ -1,0 +1,3 @@
+Permite el posicionamiento libre con el ratón. Tenga en cuenta que esta casi
+nunca es la forma recomendada de establecer coordenadas en un sistema CAD,
+excepto para dibujar líneas a mano alzada.

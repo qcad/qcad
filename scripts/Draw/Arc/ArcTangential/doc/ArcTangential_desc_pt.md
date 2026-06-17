@@ -1,0 +1,2 @@
+Desenha um arco que se liga tangencialmente a um arco ou linha
+existente.

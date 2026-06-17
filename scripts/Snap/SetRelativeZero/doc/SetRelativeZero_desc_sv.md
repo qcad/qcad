@@ -1,0 +1,1 @@
+Här kan du ställa in en ny plats för den relativa nollpunkten.

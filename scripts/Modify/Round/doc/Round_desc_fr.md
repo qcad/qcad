@@ -1,0 +1,2 @@
+Arrondit le coin d'un contour. En option, les entités de bord du coin
+peuvent être rognées automatiquement pour s'adapter à la nouvelle forme.

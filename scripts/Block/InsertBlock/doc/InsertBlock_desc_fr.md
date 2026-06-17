@@ -1,0 +1,2 @@
+Cet outil insère le bloc actif dans le dessin. Une ou plusieurs références
+de bloc sont créées dans le dessin pour représenter le bloc actif.

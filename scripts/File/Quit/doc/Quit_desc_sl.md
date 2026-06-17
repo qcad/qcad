@@ -1,0 +1,2 @@
+Zapre aplikacijo ter zapre glavno okno aplikacije.
+V kolikor so v odprtih risbah neshranjene spremebe, lahko le pravočasno shranite.

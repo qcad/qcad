@@ -1,0 +1,1 @@
+Esta ferramenta mostra / oculta o widget de lista de camadas.

@@ -1,0 +1,3 @@
+Kopiuje aktualny wybór do schowka QCAD. Narzędzie to umożliwia określenie
+punktu odniesienia używanego do pozycjonowania zaznaczenia podczas wklejania go
+do rysunku.

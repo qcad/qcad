@@ -1,0 +1,2 @@
+Cet outil peut être utilisé pour déverrouiller toutes les couches en une
+seule fois.

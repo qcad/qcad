@@ -1,0 +1,2 @@
+Delar objekt genom att skära ut ett segment mellan två användardefinierade
+punkter.

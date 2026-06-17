@@ -1,0 +1,8 @@
+1. Inserire la distanza del cerchio concentrico dal cerchio di riferimento
+ nella barra delle opzioni strumento in alto, oppure digitare la distanza
+ nella linea di comando.
+2. Inserire nella barra delle opzioni strumento il numero di cerchi
+ concentrici da disegnare.
+3. Fare click sulla circonferenza di riferimento. I cerchi concentrici
+ vengono disegnati dalla parte dalla quale si trova il cursore del mouse al
+ momento della selezione della circonferenza di riferimento.

@@ -1,0 +1,1 @@
+Označi ali odznači objekte, ki se stikajo ter tako tvorijo neprekinjeno pot (odprto ali zaprto).

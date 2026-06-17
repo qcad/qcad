@@ -1,0 +1,3 @@
+1. Choose a circle or arc entity.
+2. Set the position of the diametric dimension line using the mouse or by
+ entering a coordinate or an angle in the command line.

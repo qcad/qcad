@@ -1,0 +1,2 @@
+Esta ferramenta diminui o fator de visualização da corrente. O mesmo efeito
+também pode ser alcançado girando a roda do mouse em sua direção.

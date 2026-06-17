@@ -1,0 +1,2 @@
+Detta kommando aktiverar filterfältet (sökfältet) i verktygsmatrisen för
+inmatning.

@@ -1,0 +1,8 @@
+1. Indtast geometrien for facetten i værktøjslinjen for indstillinger.
+ "Distance 1" er den afstand, som facadelinjen skal have fra det (imaginære)
+ skæringspunkt mellem de to kanter (10 i det viste eksempel). "Distance 2" er
+ den samme afstand for den anden kant (20 i det viste eksempel).
+2. Marker "Trim", hvis du ønsker at trimme enhederne automatisk. Hvis
+ indstillingen er deaktiveret, forbliver de to entiteter urørte.
+3. Vælg den første kantentitet (en linje eller en bue).
+4. Vælg den anden enhed.

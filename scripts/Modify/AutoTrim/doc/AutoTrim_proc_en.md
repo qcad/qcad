@@ -1,0 +1,3 @@
+- Choose the entity you want to trim or extend by clicking the segment you
+ want to keep. The entity is automatically trimmed or extended, so that the
+ two end points align with the next two entities.

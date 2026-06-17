@@ -1,0 +1,5 @@
+1. Set the center of the circle using the mouse or enter a coordinate in the
+ command line.
+2. Define the radius by clicking a point on the circle line or by entering a
+ coordinate into the command line. You may also enter the radius in the
+ command line.

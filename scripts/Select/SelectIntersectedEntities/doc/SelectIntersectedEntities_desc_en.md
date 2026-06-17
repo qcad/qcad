@@ -1,0 +1,1 @@
+Selects or deselects all entities that are intersected by a line.

@@ -1,0 +1,14 @@
+#### Opsi Bentuk Umum
+
+*Garis Poligon*
+
+Alat bantu bentuk dapat membuat garis dan busur yang longgar atau polyline tertutup. Centang "Buat Polyline" untuk membuat satu entitas polyline per
+ bentuk yang dibuat.
+
+*Mengisi*
+
+Centang kotak centang "Fill" untuk membuat isian padat sebagai tambahan pada batas bentuk.
+
+*Radius*
+
+Centang kotak centang "Radius" untuk membulatkan semua sudut bentuk dengan radius tertentu.

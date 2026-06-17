@@ -1,0 +1,2 @@
+Zaznacza lub odznacza jednostki, które są ze sobą połączone i tworzy kontur
+(zamknięty lub otwarty).

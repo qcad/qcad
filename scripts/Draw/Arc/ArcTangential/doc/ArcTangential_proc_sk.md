@@ -1,0 +1,4 @@
+1. Zadajte polomer oblúka na paneli s možnosťami.
+2. Kliknite na základnú entitu v blízkosti konca, kde má byť oblúk
+ pripojený.
+3. Zadajte koncový bod oblúka.

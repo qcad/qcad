@@ -1,0 +1,1 @@
+Schaal objecten met een bepaalde factor naar een bepaald centrum toe.

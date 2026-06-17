@@ -1,0 +1,1 @@
+Fästs på rutnätspunkter.

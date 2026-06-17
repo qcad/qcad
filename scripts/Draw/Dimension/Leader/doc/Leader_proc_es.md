@@ -1,0 +1,5 @@
+1. Defina la ubicación donde el líder señala o introduce una coordenada en
+ la línea de comandos.
+2. Configure la ubicación del siguiente borde de la línea de líder.
+3. Fije los otros bordes de la línea de líder y haga clic con el botón
+ derecho del ratón o presione la tecla Escape para terminar.

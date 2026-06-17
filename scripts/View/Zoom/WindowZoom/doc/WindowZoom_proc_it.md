@@ -1,0 +1,8 @@
+1. Specificare il primo angolo dell'area che si desidera visualizzare.
+ Premere il tasto sinistro del mouse in quell'angolo e tenerlo premuto.
+2. Trascinare il mouse sul secondo angolo dell'area.
+3. Lascia andare il pulsante del mouse alla seconda curva.
+
+Nota: In alternativa, è possibile specificare il primo e il secondo angolo
+ con un solo clic del mouse invece di trascinare il mouse con il tasto del
+ mouse premuto.

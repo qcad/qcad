@@ -1,0 +1,3 @@
+1. Använd urvalsverktygen för att göra ett urval av de enheter som du vill
+ duplicera.
+2. Välj dupliceringsverktyget.

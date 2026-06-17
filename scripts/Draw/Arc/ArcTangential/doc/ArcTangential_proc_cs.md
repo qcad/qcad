@@ -1,0 +1,4 @@
+1. Zadejte poloměr oblouku na panelu nástrojů možností.
+2. Klikněte na základní entitu v blízkosti konce, kde má být oblouk
+ připojen.
+3. Zadejte koncový bod oblouku.

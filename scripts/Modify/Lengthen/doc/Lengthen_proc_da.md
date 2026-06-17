@@ -1,0 +1,9 @@
+1. Indtast den afstand, du ønsker at forlænge en enhed med, i
+ værktøjslinjen for indstillinger. En positiv værdi forlænger enheden, mens
+ en negativ værdi forkorter den. F.eks. vil en værdi på "5" forlænge den
+ valgte enhed med 5 enheder.
+2. Vælg den enhed, der skal forlænges eller forkortes, et sted tæt på den
+ ende, du ønsker at ændre.
+3. Højreklik eller tryk på Escape-tasten for at afslutte værktøjet.
+
+![](LengthenFigure.png)

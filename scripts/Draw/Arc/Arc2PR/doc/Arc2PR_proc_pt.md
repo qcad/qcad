@@ -1,0 +1,7 @@
+1. Digitar o raio do arco na barra de ferramentas de opções e escolher a
+ direcção do arco (sentido horário ou anti-horário) e a solução (arco maior ou
+ arco menor).
+2. Especificar o ponto de início do arco.
+3. Especificar o ponto final do arco. Se o ponto final estiver demasiado
+ afastado do ponto inicial para uma solução, a solução mais próxima é
+ desenhada (meio círculo com o raio e direcção dados).

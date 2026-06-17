@@ -1,0 +1,2 @@
+Con questo strumento potete disegnare archi con centro, raggio e angolo
+sotteso noti.

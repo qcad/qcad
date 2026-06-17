@@ -1,0 +1,4 @@
+1. Indtast antallet af parallelle kurver, der skal oprettes, i
+ værktøjslinjen med indstillinger.
+2. Klik på basisellipsen.
+3. Klik på det sted, som den første parallelkurve skal gå igennem.

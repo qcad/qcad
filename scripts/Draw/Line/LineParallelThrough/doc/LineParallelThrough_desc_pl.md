@@ -1,0 +1,3 @@
+Za pomocą tego narzędzia można tworzyć podobieństwa do istniejących linii
+lub koncentrycznych łuków i okręgów. Łuk lub okrąg równoległy lub koncentryczny
+przechodzi przez dany punkt.

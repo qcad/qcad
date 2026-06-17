@@ -1,0 +1,4 @@
+- Elija la entidad que desea recortar o ampliar haciendo clic en el
+ segmento que desea conservar. La entidad es automáticamente recortada o
+ extendida, de manera que los dos puntos finales se alinean con las dos
+ entidades siguientes.

@@ -1,0 +1,2 @@
+O menu de visualização contém todas as ferramentas para fazer zoom,
+panorâmico e ajustar o visor

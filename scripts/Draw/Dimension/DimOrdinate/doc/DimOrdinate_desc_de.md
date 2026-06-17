@@ -1,0 +1,3 @@
+Dieses Werkzeug zeichnet Koordinatenbemaßungen. Koordinatenbemaßungen
+geben den Abstand eines Objektes in der Zeichnung von einem Bezugspunkt
+an.

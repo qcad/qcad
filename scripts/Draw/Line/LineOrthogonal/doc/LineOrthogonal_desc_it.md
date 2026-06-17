@@ -1,0 +1,2 @@
+Questo strumento consente di creare linee ortogonali a un'entità base
+esistente. L'entità di base può essere una retta, un arco o un cerchio.

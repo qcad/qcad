@@ -1,0 +1,5 @@
+1. Wprowadź liczbę współśrodkowych okręgów do utworzenia w opcjach paska
+ narzędzi !
+2. Kliknij okrąg bazowy.
+3. Kliknij lokalizację, przez którą powinien przejść pierwszy koncentryczny
+ okrąg.

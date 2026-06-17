@@ -1,0 +1,2 @@
+Dessine des arcs elliptiques avec un centre donné, un axe majeur et mineur
+et des angles de début et de fin.

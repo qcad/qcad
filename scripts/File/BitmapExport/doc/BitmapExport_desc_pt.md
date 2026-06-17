@@ -1,0 +1,1 @@
+Esta ferramenta exporta o desenho actual como um ficheiro de bitmap.

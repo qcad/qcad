@@ -1,0 +1,4 @@
+1. Posizionare il primo estremo della prima linea di misura attraverso il
+ mouse oppure inserendo le coordinate dalla linea di comando.
+2. Posizionare il primo estremo della seconda linea di misura.
+3. Scegliere la posizione della linea di quota.

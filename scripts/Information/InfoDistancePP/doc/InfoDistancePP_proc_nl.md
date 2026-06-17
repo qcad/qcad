@@ -1,0 +1,5 @@
+1. Gebruik de muis om de locatie van het eerste punt op te geven of voer een
+ coördinaat in de opdrachtregel in.
+2. Geef de tweede punt op.
+3. De gemeten afstand wordt afgedrukt op het scherm en in de
+ opdrachtregel.

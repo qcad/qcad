@@ -1,0 +1,2 @@
+With this tool you can create curves that are parallel to an ellipse and go
+through a specified point.

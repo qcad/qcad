@@ -1,0 +1,1 @@
+Tekent een cirkel die drie entiteiten raakt.

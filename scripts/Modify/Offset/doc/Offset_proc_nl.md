@@ -1,0 +1,7 @@
+1. Voer de afstand van de concentrische of parallelle objecten tot het
+ oorspronkelijke object in de optieswerkbalk in.
+2. Voer in de opties werkbalk het aantal parallelle of concentrische
+ objecten in dat u wilt maken.
+3. Klik op het basisobject. De parallelle of concentrische objecten worden
+ bij het selecteren van de objecten aan de zijde waar de muiscursor zich
+ bevindt gemaakt.

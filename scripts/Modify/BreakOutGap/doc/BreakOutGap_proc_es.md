@@ -1,0 +1,2 @@
+- Escoge la entidad de la que quieres sacar un hueco.
+- Haga clic en el centro del hueco en la entidad.

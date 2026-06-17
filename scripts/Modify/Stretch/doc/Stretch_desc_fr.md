@@ -1,0 +1,7 @@
+Cet outil étire les contours et les entités dimensionnelles. Cela peut
+également être décrit comme le déplacement de tous les points d'extrémité à
+l'intérieur d'une zone rectangulaire ou polygonale donnée.  
+S'il y a une sélection d'entités, cet outil n'affecte que les entités
+sélectionnées. Sinon, cet outil opère sur toutes les entités de la zone donnée.
+
+![](StretchFigure.png)

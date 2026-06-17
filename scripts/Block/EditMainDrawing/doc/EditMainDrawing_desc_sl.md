@@ -1,0 +1,1 @@
+Uporabite to orodje, če pravkar urejate blok, ter se želite vrnit na glavno risbo.(Blok "*Model_Space").

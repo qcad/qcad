@@ -1,0 +1,2 @@
+Utilice este comando para imprimir la parte de dibujo que se muestra
+actualmente en la vista de gráficos.

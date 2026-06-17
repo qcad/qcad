@@ -1,0 +1,2 @@
+Recorta o extiende una entidad en ambos lados a las siguientes entidades
+limitantes.

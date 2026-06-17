@@ -1,0 +1,2 @@
+Brug denne menu til at indsende en fejlrapport (problem) om QCAD
+(online).

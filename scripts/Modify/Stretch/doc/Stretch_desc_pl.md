@@ -1,0 +1,6 @@
+Narzędzie to rozciąga kontury i elementy wymiarowe. Można to również opisać
+jako przesuwanie wszystkich punktów końcowych w obrębie danego prostokątnego
+lub wielokąta.  
+Jeśli zaznaczone są encje, narzędzie to działa tylko na zaznaczone encje.
+W przeciwnym razie narzędzie to działa na wszystkie encje w danym obszarze.  
+![](StretchFigure.png)

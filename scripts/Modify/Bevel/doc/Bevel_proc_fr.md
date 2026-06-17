@@ -1,0 +1,7 @@
+1. Entrer la géométrie du biseau dans la barre d'outils des options.
+ "Distance 1" est la distance que la ligne de biseau aura par rapport à
+ l'intersection (imaginaire) des deux bords (10 dans l'exemple montré).
+2. Cochez "Découper" si vous voulez découper les entités
+ automatiquement.
+3. Choisissez la première entité de bord (une ligne ou un arc).
+4. Choisissez la deuxième entité.

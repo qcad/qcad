@@ -1,0 +1,1 @@
+Konstruktion einer Ellipse mit gegebenem Zentrum, Hauptachse und Nebenachse.

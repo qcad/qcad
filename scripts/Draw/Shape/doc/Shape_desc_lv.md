@@ -1,0 +1,14 @@
+#### Bieži sastopamās formas opcijas
+
+*Polinērija*
+
+Ar formas rīkiem var izveidot vai nu brīvas līnijas un lokus, vai slēgtu daudzlīniju. Atzīmējiet "Izveidot polilīniju", lai izveidotu vienu polilīnijas
+ vienību katrai konstruētajai formai.
+
+*Aizpildīt*
+
+Atzīmējiet izvēles rūtiņu "Fill" (Aizpildīt), lai papildus formas robežai izveidotu vienlaidu aizpildījumu.
+
+*Rādiuss*
+
+Atzīmējiet izvēles rūtiņu "Rādiuss", lai noapaļotu visus formas stūrus ar norādīto rādiusu.

@@ -1,0 +1,3 @@
+1. Wybierz okrąg lub jednostkę łuku.
+2. Położenie promieniowego wiersza wymiarowego ustawia się za pomocą myszy
+ lub przez wprowadzenie współrzędnej lub kąta w wierszu poleceń.

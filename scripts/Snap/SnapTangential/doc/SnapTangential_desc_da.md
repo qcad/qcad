@@ -1,0 +1,3 @@
+Fastgør til tangeringspunktet på en bue, cirkel eller ellipse. Dette gælder
+kun, når du tegner linjer. Snappunktet er tangentpunktet på en imaginær linje
+fra det relative nulpunkt, tangentielt til den klikkede bue eller cirkel.

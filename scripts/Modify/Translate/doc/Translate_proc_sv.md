@@ -1,0 +1,19 @@
+1. Välj de enheter som du vill flytta eller kopiera.
+2. Starta det här verktyget.
+3. Ange referenspunkten med musen eller ange en koordinat på
+ kommandoraden.
+4. Ange målpunkten. Om du vill flytta de valda entiteterna med ett visst
+ belopp anger du en relativ koordinat. Om du till exempel vill flytta den med
+ 50 ritningsenheter till höger anger du @50,0 på kommandoraden.
+5. Dialogrutan för flyttning visas.  
+För att flytta enheterna väljer du "Delete Original", för att kopiera
+ dem väljer du "Keep Original". Du kan också skapa ett visst antal kopior på
+ en gång genom att välja "Multiple Copies" (flera kopior) och ange antalet
+ kopior på textraden nedan. Observera att "9" kommer att skapa 9 kopior och
+ behålla originalet - så det kommer att finnas 10 exemplar av de valda
+ enheterna i slutändan.  
+De nya enheterna placeras på samma lager som originalen och har samma
+ attribut. Om du vill använda det aktuella lagret och de aktuella attributen i
+ stället kryssar du i "Use current layer and attributes" (använd aktuellt
+ lager och aktuella attribut).
+6. Klicka på "OK" för att flytta eller kopiera enheterna.

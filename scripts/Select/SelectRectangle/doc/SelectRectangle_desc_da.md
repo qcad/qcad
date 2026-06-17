@@ -1,0 +1,2 @@
+Vælger alle enheder, der befinder sig inden for et givet rektangulært
+område.

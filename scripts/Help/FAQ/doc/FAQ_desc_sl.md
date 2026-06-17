@@ -1,0 +1,1 @@
+Prikaže najpogosteje zastavljena vprašanja ter odgovore o QCAD-u v privzetem brskalniku(online).

@@ -1,0 +1,2 @@
+Selecciona o deselecciona entidades que están conectadas entre sí y forman
+un contorno (cerrado o abierto).

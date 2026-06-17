@@ -1,0 +1,14 @@
+#### Közös alakú lehetőségek
+
+*Polivonal*
+
+Az alakzati eszközökkel vagy laza vonalakat és íveket, vagy zárt polivonalat hozhat létre. A "Polivonal létrehozása" jelölőnégyzet bejelölésével
+ konstruált alakzatonként egyetlen polivonal egységet hozhat létre.
+
+*Kitöltés*
+
+Jelölje be a "Kitöltés" jelölőnégyzetet, ha az alakzat határán kívül egy tömör kitöltést is létre kíván hozni.
+
+*Radius*
+
+Jelölje be a "Radius" jelölőnégyzetet az alakzat összes sarkának a megadott sugárral történő lekerekítéséhez.

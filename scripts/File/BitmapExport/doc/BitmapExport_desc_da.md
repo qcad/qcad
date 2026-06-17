@@ -1,0 +1,1 @@
+Dette værktøj eksporterer den aktuelle tegning som en bitmap-fil.

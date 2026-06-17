@@ -1,0 +1,2 @@
+Dzieli obiekty przez wycięcie odcinka pomiędzy dwa punkty zdefiniowane przez
+użytkownika.

@@ -1,0 +1,5 @@
+1. Ange områdets första punkt.
+2. Ange de andra punkterna som definierar området och högerklicka när du är
+ klar.
+3. Det uppmätta området skrivs ut på skärmen och i kommandoraden. Omkretsen
+ skrivs också ut på kommandoraden.

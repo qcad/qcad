@@ -1,0 +1,6 @@
+1. Выберите нужные [параметры](../../doc/Shape_ru.html) общей формы на панели инструментов.
+2. Enter the degree of the polygon (number of edges / corners) in the
+ options tool bar. Valid numbers range from 3 to 99.
+3. Set the center of the polygon using the mouse or enter a coordinate in
+ the command line.
+4. Set the first corner of the polygon.

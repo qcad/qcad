@@ -1,0 +1,2 @@
+Välj det här verktyget när du redigerar ett block och vill återgå till
+huvudritningen (block "*Model_Space").

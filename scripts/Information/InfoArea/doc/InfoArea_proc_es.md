@@ -1,0 +1,5 @@
+1. Especifique el primer punto del área.
+2. Especifique los otros puntos que definen el área y haga clic con el botón
+ derecho del ratón cuando haya terminado.
+3. El área medida se imprime en la pantalla y en la línea de comandos.
+ También se imprime la circunferencia en la línea de comandos.

@@ -1,0 +1,3 @@
+Zapisuje bieżący rysunek jako nowy plik. Wyświetlone okno dialogowe pozwala
+również wybrać format i wersję formatu, której chcesz użyć do zapisania
+pliku.

@@ -1,0 +1,1 @@
+Visar den aktuella versionen och annan information om QCAD.

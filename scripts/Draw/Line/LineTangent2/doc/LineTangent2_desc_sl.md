@@ -1,0 +1,1 @@
+Konstruira tangento iz enega kroga oziroma loka na drugi krog oz lok.

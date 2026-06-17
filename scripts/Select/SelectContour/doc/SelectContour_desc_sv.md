@@ -1,0 +1,2 @@
+Markera eller avmarkera enheter som är anslutna till varandra och som bildar
+en kontur (sluten eller öppen).

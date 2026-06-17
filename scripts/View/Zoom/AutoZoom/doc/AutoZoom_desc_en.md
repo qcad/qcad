@@ -1,0 +1,2 @@
+Scales the drawing view so that all entities that are on visible layers fit
+on the screen.

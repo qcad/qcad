@@ -1,0 +1,2 @@
+Esta ferramenta aproxima a seleção atual, garantindo que todas as entidades
+selecionadas estejam visíveis.

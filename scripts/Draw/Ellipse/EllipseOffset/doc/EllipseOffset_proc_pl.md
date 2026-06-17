@@ -1,0 +1,8 @@
+1. Odległość równoległych krzywych od oryginalnej elipsy bazowej  Wprowadź
+ odległość równoległych krzywych od oryginalnej elipsy bazowej na pasku
+ narzędzi opcji.
+2. Wprowadzić liczbę równoległych krzywych do utworzenia w opcjach na pasku
+ narzędzi !
+3. Kliknij elipsę podstawową. Kursor(y) koncentryczny(e) są tworzone po tej
+ stronie, po której znajduje się kursor myszy podczas klikania elipsy
+ bazowej.

@@ -1,0 +1,2 @@
+Utilizzare questo strumento per disegnare il testo lungo una retta, un arco
+o un cerchio.

@@ -1,0 +1,3 @@
+In het dialoogvenster met tekenvoorkeuren kunt u voorkeuren wijzigen die van
+invloed zijn op verschillende aspecten van de huidige tekening. Deze voorkeuren
+worden opgeslagen in uw tekening.

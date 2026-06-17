@@ -1,0 +1,4 @@
+1. Ange diametern i X (större diameter), diametern i Y (mindre diameter) och
+ ellipsvinkeln i verktygsfältet för alternativ.
+2. Ställ in ellipsens centrum med hjälp av musen eller ange en koordinat på
+ kommandoraden.

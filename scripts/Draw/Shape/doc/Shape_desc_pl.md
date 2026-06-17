@@ -1,0 +1,14 @@
+#### Typowe opcje kształtów
+
+*Polilinia*
+
+Narzędzia kształtów mogą tworzyć luźne linie i łuki lub zamkniętą polilinię. Zaznacz opcję "Utwórz polilinię", aby utworzyć pojedynczą polilinię na
+ skonstruowany kształt.
+
+*Wypełnienie*
+
+Zaznacz pole wyboru "Wypełnienie", aby utworzyć pełne wypełnienie oprócz granicy kształtu.
+
+*Promień*
+
+Zaznacz pole wyboru "Promień", aby zaokrąglić wszystkie narożniki kształtu o podanym promieniu.

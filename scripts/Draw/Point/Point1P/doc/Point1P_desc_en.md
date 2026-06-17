@@ -1,0 +1,2 @@
+This command is used to draw single points. Points are visually represented
+by a small cross.

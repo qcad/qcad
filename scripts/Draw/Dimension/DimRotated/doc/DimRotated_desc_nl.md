@@ -1,0 +1,3 @@
+Creëert gedraaide (lineaire) afmetingen. Lineaire afmetingen worden meestal
+gebruikt om verticale of horizontale afstanden te meten, maar kunnen ook
+afstanden met elke andere hoek meten.

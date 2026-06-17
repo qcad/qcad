@@ -1,0 +1,3 @@
+Cette commande active la ligne de commande pour la saisie, par exemple pour
+entrer une coordonnée lors de la spécification d'un point. Cela se fait
+généralement en appuyant sur la touche Espace.

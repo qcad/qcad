@@ -1,0 +1,2 @@
+Cet outil permet d'activer la fenêtre de dessin / onglet précédente
+ouverte.

@@ -1,0 +1,3 @@
+1. Désignez le premier point avec la souris ou entrez des coordonnées dans
+ la ligne de commande.
+2. Désignez le second point.

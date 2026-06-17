@@ -1,0 +1,3 @@
+Cet outil dessine une dimension en ordonnée. Les dimensions ordonnées
+indiquent l'ordonnées X ou Y d'un élément du dessin, par rapport à un point
+d'origine.

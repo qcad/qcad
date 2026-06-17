@@ -1,0 +1,3 @@
+1. Costruisce una circonferenza noti i punti agli estremi di un
+ diametro.
+2. Posizionare il secondo punto.

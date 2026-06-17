@@ -1,0 +1,1 @@
+Rysuje elipsy o danej średnicy głównej i mniejszej (szerokość/wysokość).

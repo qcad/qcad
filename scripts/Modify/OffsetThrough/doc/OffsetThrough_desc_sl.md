@@ -1,0 +1,2 @@
+Z tem orodjem lahko ustvarite vzporednice obstoječim črtam ali kocentrične kroge in krožne loke.
+Vzporednica ali kocentrični krog oz lok se giblje skozi podano točko.

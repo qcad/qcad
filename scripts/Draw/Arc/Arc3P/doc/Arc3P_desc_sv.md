@@ -1,0 +1,2 @@
+Om du känner till startpunkten, slutpunkten och en punkt däremellan på
+båglinjen kan du använda det här verktyget för att rita en båge.

@@ -1,0 +1,2 @@
+Gebruik deze functie om het tekeninggedeelte af te drukken dat momenteel in
+de grafische weergave wordt weergegeven.

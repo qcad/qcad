@@ -1,0 +1,6 @@
+1. Klik op het tekstobject dat u wilt bewerken.
+2. Het tekstvenster wordt weergegeven waarin u de tekst en de bijbehorende
+ attributen kunt aanpassen.
+
+Merk op dat u in plaats van deze functie te gebruiken, ook kunt dubbelklikken
+ op de tekst die u wilt bewerken.

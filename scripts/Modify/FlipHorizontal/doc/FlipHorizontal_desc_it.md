@@ -1,0 +1,2 @@
+Questa funzione capovolge (specchi) la selezione corrente
+orizzontalmente.

@@ -1,0 +1,2 @@
+Med dette værktøj kan du oprette koncentriske cirkler, der går gennem et
+bestemt punkt.

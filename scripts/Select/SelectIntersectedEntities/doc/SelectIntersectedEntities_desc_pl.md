@@ -1,0 +1,1 @@
+Zaznacza lub odznacza wszystkie jednostki, które są przecięte linią.

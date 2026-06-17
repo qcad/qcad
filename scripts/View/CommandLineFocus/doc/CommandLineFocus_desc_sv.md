@@ -1,0 +1,3 @@
+Detta kommando aktiverar kommandoraden för inmatning, till exempel för att
+ange en koordinat när du anger en punkt. Detta görs vanligtvis genom att trycka
+på mellanslagstangenten.

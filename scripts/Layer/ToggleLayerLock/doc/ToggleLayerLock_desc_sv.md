@@ -1,0 +1,5 @@
+Med det här verktyget växlar du mellan det aktuella lagrets låsta status. Du
+kan också ändra den låsta statusen för lager genom att klicka på låsikonen
+bredvid lagrets namn i lagerlistan.
+
+Enheter i låsta lager kan inte väljas, tas bort eller ändras.

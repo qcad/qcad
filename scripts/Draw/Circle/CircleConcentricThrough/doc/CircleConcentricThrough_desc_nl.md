@@ -1,0 +1,2 @@
+Met dit gereedschap kunt u concentrische cirkels maken die door een bepaald
+punt gaan.

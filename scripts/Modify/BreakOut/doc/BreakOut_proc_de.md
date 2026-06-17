@@ -1,0 +1,4 @@
+- Wählen Sie das Objekt, das Sie teilen möchten indem Sie auf das
+ herauszuschneidende Segment klicken. Das Segment wird entfernt oder optional
+ nur geschnitten wenn die Option "Segment entfernen" in der
+ Optionenwerkzeugleiste nicht gewählt ist.

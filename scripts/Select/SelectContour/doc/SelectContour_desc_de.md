@@ -1,0 +1,2 @@
+Selektiert oder deselektiert Objekte, die miteinander verbunden sind und so
+eine Kontur formen (geschlossen oder offen).

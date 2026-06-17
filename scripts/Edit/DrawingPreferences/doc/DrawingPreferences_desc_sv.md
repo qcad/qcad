@@ -1,0 +1,3 @@
+I dialogrutan för ritningsinställningar kan du ändra inställningar som
+påverkar olika aspekter av den aktuella ritningen. Dessa inställningar lagras i
+ritningen.

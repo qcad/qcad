@@ -1,0 +1,2 @@
+Affiche les questions fréquemment posées sur QCAD dans un navigateur (en
+ligne).

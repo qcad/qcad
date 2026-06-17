@@ -1,0 +1,2 @@
+This tool can be used to conveniently hide (freeze) all layers at once. This
+can be useful while working with a drawing with many layers.

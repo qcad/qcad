@@ -1,0 +1,1 @@
+Roterer enheder med en given vinkel omkring et givet centrum.

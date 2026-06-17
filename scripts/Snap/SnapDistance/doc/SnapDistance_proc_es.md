@@ -1,0 +1,7 @@
+1. Introduzca la distancia en la barra de herramientas de opciones.
+2. Mueva el cursor a la entidad a lo largo de la cual se debe medir la
+ distancia.
+3. Cuando se muestra la posición deseada / vista previa, haga clic con el
+ botón izquierdo del ratón para establecer la coordenada.
+
+![](SnapDistanceFigure.png)

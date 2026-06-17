@@ -1,0 +1,15 @@
+Podgląd wydruku pokazuje, jak będzie wyglądał rysunek na wydruku. Użyj pola
+wyboru na pasku narzędzi opcji, aby dostosować współczynnik skali rysunku.
+Opcja ta nie służy do skalowania lub modyfikowania w inny sposób elementów
+rysunku, a jedynie do ustawiania współczynnika skali, który jest stosowany do
+dopasowania rysunku na papierze.  
+Przyciski po prawej stronie pola wyboru skali mogą być używane do
+automatycznego dopasowania rysunku na wybranym papierze lub do automatycznego
+dodawania stron, dzięki czemu cały rysunek może być wydrukowany na wielu
+stronach.  
+Po wybraniu narzędzia "Przesuń położenie papieru" można swobodnie
+przesuwać papier, przeciągając go lewym przyciskiem myszy. Kliknij prawym
+przyciskiem myszy lub naciśnij klawisz escape, aby zakończyć narzędzie.  
+Pasek narzędzi opcji oferuje inne narzędzia do szybkiej zmiany niektórych
+wspólnych preferencji rysunkowych, które są również dostępne w oknie dialogowym
+preferencji rysowania.

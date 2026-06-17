@@ -1,0 +1,2 @@
+Restricts the cursor movement by angle and distance in relation to the
+relative zero point.

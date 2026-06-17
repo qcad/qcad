@@ -1,0 +1,1 @@
+Podaljša ali pokrajša objete na obeh straneh avtomatično do naslednjega mejitvenega objekta.

@@ -1,0 +1,8 @@
+1. Wybierz podmioty, które chcesz zaprojektować.
+2. Uruchom to narzędzie.
+3. Wybierz typ projekcji i kierunek wyświetlania projekcji w pasku
+ narzędziowym opcji.
+4. Ustawić punkt odniesienia dla projekcji. Jest to punkt, którego będziesz
+ używał, aby ustawić projekcję w następnym kroku.
+5. Przesuń kursor myszy do pozycji, w której chcesz utworzyć projekcję i
+ kliknij, aby ustawić pozycję.

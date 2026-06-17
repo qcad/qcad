@@ -1,0 +1,1 @@
+Premakne ali kopira objekte.

@@ -1,0 +1,4 @@
+Izbere referenčne točke.
+ Referenčne točke so modre pike, ki se prikažejo ko je nek objekt izbran.
+To je še posebaj uporabno pri lovljenju točk krogov ter lokov, za npr risanje srednjic.  
+![](SnapReferenceFigure.png)

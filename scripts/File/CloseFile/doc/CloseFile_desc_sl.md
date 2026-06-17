@@ -1,0 +1,1 @@
+Zapre trenutno risbo. Pred zapiranjem imate še enkrat priložnost risbo shranit.

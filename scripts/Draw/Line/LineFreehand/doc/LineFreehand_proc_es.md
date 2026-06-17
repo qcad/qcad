@@ -1,0 +1,3 @@
+1. Coloque el ratón en el punto de inicio de la línea libre, pulse el botón
+ izquierdo del ratón y manténgalo pulsado.
+2. Ahora mueva el ratón para dibujar la línea.

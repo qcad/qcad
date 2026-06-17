@@ -1,0 +1,7 @@
+Dieses Werkzeug streckt Konturen und Bemaßungselemente. Dies kann auch als
+Verschiebung aller Endpunkte in einem rechteckigen oder polygonalen Bereich
+beschrieben werden.  
+Wenn eine Auswahl von Objekten vorhanden ist, betrifft dieses Werkzeug
+nur die ausgewählten Objekte. Andernfalls bearbeitet dieses Werkzeug alle
+Objekte im angegebenen Bereich.  
+![](StretchFigure.png)

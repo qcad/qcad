@@ -1,0 +1,2 @@
+Arkivmenyn innehåller alla verktyg för att öppna, spara, importera,
+exportera och skriva ut filer

@@ -1,0 +1,9 @@
+Predogled tiskanja prikaže, kako bi izgledala risba na po tiskanju.
+Uporabite spustni seznam za spremembo povečave risbe.
+ Vaša risba po tem ne bo spremenjena le drugače prikazana.  
+Gumbi desno od povečave so namenjeni samodejni povečavi ter postavitvi risbe
+ ali dodajanju strani za tiskanje risbe željene velikosti na več listov hkrati.  
+Če izberete gumb "Premakni pozicijo papirja", lahko premikate pozicijo papirja z levim miškinim gumbom(drag and
+drop). Pritisnite desni miškin gumb ali ubežnico (Esc) za končanje orodja.  
+Vrstica nastavitev ponuja med drugim orodja za hitro spremembo nastavitev risbe.
+Te nastavitve pa lahko tudi spremenite pod "Nastavitve risbe".

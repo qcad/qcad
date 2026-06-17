@@ -1,0 +1,2 @@
+Le menu fichier contient tous les outils permettant d'ouvrir, d'enregistrer,
+d'importer, d'exporter et d'imprimer des fichiers

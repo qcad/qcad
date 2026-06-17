@@ -1,0 +1,2 @@
+Selecciona ou desmarca entidades que estão ligadas umas às outras e formam
+um contorno (fechado ou aberto).

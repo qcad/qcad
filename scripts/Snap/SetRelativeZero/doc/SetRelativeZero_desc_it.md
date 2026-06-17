@@ -1,0 +1,1 @@
+Consente di impostare una nuova posizione per il punto zero relativo.

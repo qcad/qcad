@@ -1,0 +1,3 @@
+This tool adds all entities on the current layer to the selection. Only
+entities on the current block can be selected, entities on other blocks are not
+selected.

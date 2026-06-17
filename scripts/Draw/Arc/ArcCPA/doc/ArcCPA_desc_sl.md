@@ -1,0 +1,1 @@
+Izriše krožni lok z podanim središčem, točko na krožnici ter začetni - končni kot.

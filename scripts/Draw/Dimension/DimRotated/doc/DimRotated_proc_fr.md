@@ -1,0 +1,6 @@
+1. Saisissez l'angle de la dimension dans la barre d'outils des
+ options.
+2. Définissez le premier point d'arrivée de la ligne d'extension avec la
+ souris ou entrez une coordonnée dans la ligne de commande.
+3. Définissez le deuxième point d'extrémité de la ligne d'extension.
+4. Définir la position de la ligne de cote.

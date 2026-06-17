@@ -1,0 +1,4 @@
+1. Posizionare il primo punto attraverso il mouse oppure specificare le
+ coordinate nella linea di comando.
+2. Posizionare il secondo punto.
+3. Posizionare il terzo punto.

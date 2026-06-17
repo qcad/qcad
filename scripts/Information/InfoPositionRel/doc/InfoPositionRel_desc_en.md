@@ -1,0 +1,2 @@
+This tool outputs the relative, Cartesian coordinates of chosen points in
+the drawing.

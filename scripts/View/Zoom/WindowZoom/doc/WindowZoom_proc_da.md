@@ -1,0 +1,8 @@
+1. Angiv det første hjørne af det område, du vil have vist. Tryk på
+ venstre museknap ved det pågældende hjørne og hold den nede.
+2. Træk musen til det andet hjørne af området.
+3. Slip museknappen ved det andet hjørne.
+
+Bemærk: Alternativt kan du angive det første og det andet hjørne hver især
+ med et enkelt museklik i stedet for at trække musen rundt med museknappen
+ trykket ned.

@@ -1,0 +1,1 @@
+- Klik på den nye placering af det relative nulpunkt.

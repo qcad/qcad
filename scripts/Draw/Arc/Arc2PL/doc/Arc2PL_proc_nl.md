@@ -1,0 +1,5 @@
+1. Typ de booglengte in de opties-gereedschapsbalk en kies de boog -
+ richting (met de klok mee of tegen de klok in).
+2. Bepaal het beginpunt van de boog.
+3. Bepaal het eindpunt van de boog. Als het eindpunt te ver van het
+ startpunt voor een oplossing ligt, wordt er niets getekend.

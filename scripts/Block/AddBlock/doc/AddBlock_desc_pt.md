@@ -1,0 +1,3 @@
+Este comando cria um novo bloco vazio. Uma caixa de diálogo é exibida, onde
+você pode especificar o nome do novo bloco. Se você quer criar um
+bloco à partir de entidades existentes, utilize o comando [cria um bloco](../../../CreateBlock/doc/CreateBlock_pt.html).

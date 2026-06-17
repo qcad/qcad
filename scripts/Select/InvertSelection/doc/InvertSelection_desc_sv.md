@@ -1,0 +1,2 @@
+Väljer alla enheter som inte är markerade för tillfället och tar bort alla
+markerade enheter.

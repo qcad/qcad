@@ -1,0 +1,1 @@
+To orodje se lahko uporabi za urejanje besedil na risbi.

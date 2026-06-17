@@ -1,0 +1,1 @@
+Tekent een cirkel die twee entiteiten raakt en door een punt gaat.

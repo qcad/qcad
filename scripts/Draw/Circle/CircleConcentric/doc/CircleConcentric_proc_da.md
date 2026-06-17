@@ -1,0 +1,6 @@
+1. Indtast afstanden mellem den koncentriske cirkel og den oprindelige
+ basiscirkel i værktøjslinjen Indstillinger.
+2. Indtast antallet af koncentriske cirkler, der skal oprettes, i
+ værktøjslinjen med indstillinger.
+3. Klik på grundcirklen. De(n) koncentriske cirkel(r) oprettes på den side,
+ hvor musemarkøren er placeret, mens du klikker på grundcirklen.

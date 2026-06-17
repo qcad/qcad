@@ -1,0 +1,2 @@
+O QCAD oferece um conjunto de ferramentas para copiar entidades de um
+desenho para outro, semelhantes a outras aplicações.

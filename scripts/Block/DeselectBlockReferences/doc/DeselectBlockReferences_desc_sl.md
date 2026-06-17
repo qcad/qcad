@@ -1,0 +1,1 @@
+To orodje odznači vse blokovne reference bloka, ki je trenutno označen v seznamu blokov.

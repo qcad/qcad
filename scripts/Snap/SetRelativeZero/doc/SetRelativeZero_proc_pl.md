@@ -1,0 +1,1 @@
+- Kliknąć nową lokalizację względnego punktu zerowego.

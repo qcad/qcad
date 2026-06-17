@@ -1,0 +1,2 @@
+Deze functie vult een gebied omringd door bestaande objecten met een
+luikpatroon of een effen kleur.

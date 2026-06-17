@@ -1,0 +1,3 @@
+1. Wählen Sie einen Kreis oder einen Kreisbogen.
+2. Bestimmen Sie die Position der radialen Bemaßung mit der Maus oder indem
+ Sie eine Koordinate oder einen Winkel in die Kommandozeile eingeben.

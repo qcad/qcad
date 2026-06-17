@@ -1,0 +1,3 @@
+1. Establezca el primer punto con el ratón o introduzca una coordenada en la
+ línea de comandos.
+2. Establezca el segundo y tercer punto.

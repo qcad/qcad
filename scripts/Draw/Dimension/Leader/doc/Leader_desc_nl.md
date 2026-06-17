@@ -1,0 +1,4 @@
+Verwijslijnen zijn pijlen die gewoonlijk wijzen van een tekst naar een positie in
+de tekening, zoals hieronder weergegeven. In het voorbeeld beschrijft de tekst
+"N7" een oppervlakte-eigenschap door er met een verwijslijn naar te verwijzen.  
+![](LeaderFigure.png)

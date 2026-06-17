@@ -1,0 +1,10 @@
+1. Välj
+[urvalsläge](../../doc/Select_sv.html#mode) i verktygsfältet för
+alternativ.
+2. Använd musen för att välja en enhet i den kontur du vill välja. Verktyget
+söker sedan från den valda enhetens ändpunkter i båda riktningarna efter
+enheter som är direkt eller indirekt anslutna till denna enhet. Alla anslutna
+enheter markeras eller avmarkeras beroende på det valda markeringsläget.
+
+Istället för att använda det här verktyget kan du helt enkelt dubbelklicka
+på en enhet för att välja den och alla anslutna enheter.

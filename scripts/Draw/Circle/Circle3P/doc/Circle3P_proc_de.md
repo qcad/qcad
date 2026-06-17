@@ -1,0 +1,4 @@
+1. Bestimmen Sie den ersten Punkt mit der Maus oder geben Sie eine
+ Koordinate in die Kommandozeile ein.
+2. Bestimmen Sie den zweiten Punkt.
+3. Bestimmen Sie den dritten Punkt.

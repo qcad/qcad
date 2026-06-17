@@ -1,0 +1,2 @@
+Divide gli oggetti ritagliando un segmento tra due punti definiti
+dall'utente.

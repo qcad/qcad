@@ -1,0 +1,2 @@
+Begränsar markören vertikalt till samma X-position som den relativa
+nollpunkten.

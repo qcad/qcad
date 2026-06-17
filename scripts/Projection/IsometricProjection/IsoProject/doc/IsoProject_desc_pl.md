@@ -1,0 +1,2 @@
+Narzędzie to tworzy rzuty izometryczne (i inne typy rzutów) bieżącego wyboru
+w rysunku.

@@ -221,6 +221,10 @@ RBlockListQt.prototype.filter = function(block) {
 };
 
 RBlockListQt.prototype.updateCurrentBlock = function(documentInterface) {
+    if (BlockList.iconVisible.length===0) {
+        BlockList.initStyle();
+    }
+
     var doc = documentInterface.getDocument();
 
     // find item which was representing the current block before:
@@ -250,6 +254,10 @@ RBlockListQt.prototype.updateCurrentBlock = function(documentInterface) {
 RBlockListQt.prototype.updateXRef = function() {
     if (isNull(this.di)) {
         return;
+    }
+
+    if (BlockList.iconVisible.length===0) {
+        BlockList.initStyle();
     }
 
     var doc = this.di.getDocument();
@@ -387,6 +395,10 @@ RBlockListQt.prototype.createBlockItem = function(block) {
 };
 
 RBlockListQt.prototype.updateItemIcons = function(item, block) {
+    if (BlockList.iconVisible.length===0) {
+        BlockList.initStyle();
+    }
+
     item.setIcon(BlockList.colVisible, BlockList.iconVisible[Number(!block.isFrozen())]);
 
     var doc = this.di.getDocument();
@@ -644,7 +656,7 @@ BlockList.initStyle = function(upd) {
     //var highlightingIsDark = pal.color(QPalette.Active, QPalette.Highlight).lightness()<128;
     var appWin = EAction.getMainWindow();
     var blockList = appWin.findChild("BlockList");
-    var highlightingIsDark = RSettings.getSelectionColor(blockList).lightness()<128;
+    var highlightingIsDark = RSettings.getWidgetSelectionColor(blockList).lightness()<128;
     var backgroundIsDark = RSettings.hasDarkGuiBackground();
     var useAlternativeIcons = backgroundIsDark && !highlightingIsDark || !backgroundIsDark && highlightingIsDark;
 
@@ -666,8 +678,6 @@ BlockList.initStyle = function(upd) {
         appWin.notifyBlockListeners(EAction.getDocumentInterface());
     }
 };
-
-BlockList.initStyle(false);
 
 BlockList.getPreferencesCategory = function() {
     return [ qsTr("Widgets"), qsTr("Block List") ];
@@ -801,4 +811,6 @@ BlockList.init = function(basePath) {
     var pl = new RPaletteListenerAdapter();
     appWin.addPaletteListener(pl);
     pl.paletteChanged.connect(BlockList.initStyle);
+
+    BlockList.initStyle(false);
 };

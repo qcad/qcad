@@ -1,0 +1,4 @@
+1. Tapez la hauteur de l'arc dans la barre d'outils des options et
+ choisissez le sens de l'arc (sens horaire ou anti-horaire).
+2. Spécifiez le point de départ de l'arc.
+3. Spécifiez le point final de l'arc.

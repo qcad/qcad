@@ -1,0 +1,2 @@
+Redigeringsmenuen indeholder værktøjer til grundlæggende redigering, f.eks.
+kopiering/indsætning og sletning

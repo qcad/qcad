@@ -1,0 +1,3 @@
+Narzędzie to importuje plik SVG do bieżącego rysunku. Zauważ, że obsługiwany
+jest tylko bardzo ograniczony zestaw znaczników i argumentów SVG. Ideą jest
+zaimportowanie jak największej ilości surowej geometrii w pliku SVG.

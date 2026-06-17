@@ -1,0 +1,5 @@
+Za pomocą tego narzędzia można rysować linie odręczne. Narzędzie to jest
+zwykle używane oszczędnie, ponieważ rysunki techniczne wymagają absolutnej
+dokładności. Jednak w niektórych przypadkach narzędzie to może się przydać, na
+przykład przy zerwanych krawędziach, jak to pokazano tutaj:  
+![](LineFreehandFigure.png)

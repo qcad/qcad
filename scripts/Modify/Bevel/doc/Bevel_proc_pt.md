@@ -1,0 +1,8 @@
+1. Introduzir a geometria do bisel na barra de ferramentas de opções.
+ "Distância 1" é a distância que a linha do chanfro terá da intersecção
+ (imaginária) das duas arestas (10 no exemplo mostrado). "Distância 2" é a
+ mesma distância para a segunda aresta (20 no exemplo mostrado).
+2. Verifique "Trim" se quiser aparar as entidades automaticamente. Se a
+ opção estiver desactivada, as duas entidades permanecerão intocadas.
+3. Escolha a primeira entidade de borda (uma linha ou um arco).
+4. Escolher a segunda entidade.

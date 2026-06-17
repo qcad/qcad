@@ -1,0 +1,4 @@
+Esta herramienta importa un archivo SVG al dibujo actual. Tenga en cuenta
+que sólo se admite un conjunto muy limitado de etiquetas y argumentos SVG. La
+idea es importar la mayor parte posible de la geometría bruta en el archivo
+SVG.

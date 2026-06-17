@@ -1,0 +1,9 @@
+1. Punkt początkowy pierwszego odcinka polilinii. Można użyć myszki lub
+ wprowadzić współrzędne w konsoli.
+2. Określić punkt końcowy pierwszego odcinka polilinii.
+3. Określić punkty końcowe dodatkowych odcinków polilinii.
+
+Jeśli polilinia zawiera odcinki łuku, można zaznaczyć pole wyboru "Łuk" i
+ wprowadzić promień łuku na pasku narzędzi opcji podczas ustawiania punktu
+ końcowego odcinka łuku. Łuk będzie łączył się płynnie (stycznie) z ostatnim
+ odcinkiem.

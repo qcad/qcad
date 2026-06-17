@@ -1,0 +1,2 @@
+Questo strumento può essere usato per modificare entità di tratteggio
+esistenti.

@@ -1,0 +1,3 @@
+1. Verwenden Sie die Auswahlwerkzeuge, um die Objekte, die Sie duplizieren
+ möchten auszuwählen.
+2. Starten Sie das Duplizierwerkzeug.

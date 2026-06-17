@@ -1,0 +1,2 @@
+Esta ferramenta permite-lhe criar linhas ortogonais para uma entidade de
+base existente. A entidade de base pode ser uma linha, arco ou círculo.

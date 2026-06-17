@@ -1,0 +1,3 @@
+1. Välj en cirkel eller en båge.
+2. Ställ in positionen för den diametrala måttlinjen med hjälp av musen
+ eller genom att ange en koordinat eller en vinkel på kommandoraden.

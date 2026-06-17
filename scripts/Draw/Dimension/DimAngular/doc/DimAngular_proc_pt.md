@@ -1,0 +1,4 @@
+1. Escolha a primeira linha.
+2. Escola a segunda linha.
+3. Defina a posição da cota radial com o mouse ou entrando com as
+ coordenadas na linha de comando.

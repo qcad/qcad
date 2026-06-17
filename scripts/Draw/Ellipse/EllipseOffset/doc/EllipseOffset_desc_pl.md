@@ -1,0 +1,2 @@
+Za pomocą tego narzędzia można utworzyć jedną lub wiele równoległych
+krzywych dla danej odległości od istniejącej elipsy.

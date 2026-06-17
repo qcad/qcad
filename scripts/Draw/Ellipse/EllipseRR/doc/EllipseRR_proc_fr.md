@@ -1,0 +1,4 @@
+1. Entrez le rayon en X (rayon majeur), le rayon en Y (rayon mineur) et
+ l'angle d'ellipse dans la barre d'outils des options.
+2. Définissez le centre de l'ellipse à l'aide de la souris ou entrez une
+ coordonnée dans la ligne de commande.

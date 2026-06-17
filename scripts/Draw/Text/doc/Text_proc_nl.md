@@ -1,0 +1,29 @@
+1. Na het starten van het functie wordt de tekstdialoog weergegeven, waarin
+ u het lettertype kunt kiezen en de tekst kunt invoeren die u wilt maken.
+2. Kies de naam van het lettertype, de hoogte van de tekst en de initiële
+ tekstattributen in het linkerbovengedeelte van het dialoogvenster.
+ CAD-lettertypen die bestaan uit lijnen en bogen staan bovenaan de lijst met
+ lettertypen, TrueType-lettertypen staan hieronder. Voer in het veld "Hoogte"
+ de hoogte van de tekst in in de eenheid van uw tekening. Om de normale
+ regelafstand te kiezen, voert u een factor "1" voor de regelafstand in. De
+ ingevoerde waarde is een factor ten opzichte van de standaardwaarde (1).
+3. Voer de rotatiehoek voor de tekst in. Normale horizontale teksten hebben
+ een hoek van 0 graden en teksten die van rechts leesbaar zijn 90 graden.
+4. Kies de uitlijning van de tekst.
+5. Schakel het selectievakje "Eenvoudige tekst" in om een tekst met één
+ regel en zonder opmaak te maken.
+6. Voer de tekst die u wilt maken in het grote tekstvak in. U kunt de
+ verschillende hulpmiddelen boven het tekstvak gebruiken om de ingevoerde
+ tekst verder te formatteren of om teksten van het klembord te plakken.
+ Gebruik de knop rechts om snel symbolen in te voegen of om een Unicode-teken
+ te kiezen ("Anderen..."). Houd er rekening mee dat het lettertype dat u hebt
+ gekozen mogelijk niet de tekens bevat die u hebt ingevoegd. In dat geval
+ worden de tekens niet weergegeven in de tekening.
+7. Klik op "OK" om de tekstdialoog af te sluiten.
+8. Gebruik de muis om de locatie van de tekst te specificeren of voer een
+ coördinaat in de opdrachtregel in.
+9. Vaak moeten gebruikers een aantal gelijkaardige teksten maken. Om die
+ reden eindigt het tekstfunctie niet na het maken van de eerste
+ tekstobject.
+10. Klik met de rechtermuisknop of druk op Escape om het tekstfunctie te
+ stoppen.

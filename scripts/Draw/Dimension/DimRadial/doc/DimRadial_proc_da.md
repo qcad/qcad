@@ -1,0 +1,3 @@
+1. Vælg en cirkel- eller buenhed.
+2. Indstil positionen for den radiale dimensionslinje ved hjælp af musen
+ eller ved at indtaste et koordinat eller en vinkel på kommandolinjen.

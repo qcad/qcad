@@ -1,0 +1,3 @@
+Guarda o desenho actual como um novo ficheiro. O diálogo que é mostrado
+também lhe permite escolher o formato e a versão de formato que pretende
+utilizar para guardar o ficheiro.

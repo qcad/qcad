@@ -1,0 +1,1 @@
+Slår av alla snapinskränkningar.

@@ -1,0 +1,3 @@
+Cria dimensões rodadas (lineares). As dimensões lineares são normalmente
+usadas para medir distâncias verticais ou horizontais, mas também podem medir
+distâncias com qualquer outro ângulo.

@@ -1,0 +1,7 @@
+1. Ange det första hörnet av det område som du vill visa. Tryck på vänster
+ musknapp vid det hörnet och håll den nedtryckt.
+2. Dra musen till områdets andra hörn.
+3. Släpp musknappen vid det andra hörnet.
+
+Anmärkning: Alternativt kan du ange det första och det andra hörnet med
+ ett enda musklick i stället för att dra musen med intryckt musknapp.

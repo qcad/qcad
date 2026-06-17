@@ -1,0 +1,1 @@
+Selects all entities that are within a given rectangular area.

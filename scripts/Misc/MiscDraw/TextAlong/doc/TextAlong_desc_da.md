@@ -1,0 +1,1 @@
+Brug dette værktøj til at tegne tekst langs en linje, bue eller cirkel.

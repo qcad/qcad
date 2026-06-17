@@ -1,0 +1,8 @@
+1. Specificeer de eerste hoek van het gebied dat u wilt bekijken. Druk op
+ de linker muisknop op die hoek en houd deze ingedrukt.
+2. Sleep de muis naar de tweede hoek van het gebied.
+3. Laat de muisknop in de tweede hoek los.
+
+Opmerking: Als alternatief kunt u de eerste en tweede hoek elk met een
+ enkele muisklik opgeven in plaats van de muis te verslepen met ingedrukte
+ muisknop.

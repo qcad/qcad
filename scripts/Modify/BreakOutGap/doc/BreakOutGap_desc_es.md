@@ -1,0 +1,1 @@
+Rompe un hueco de una línea, arco o círculo.

@@ -1,0 +1,1 @@
+To orodje podvoji izbrane entitete in izbere ustvarjeno kopijo.

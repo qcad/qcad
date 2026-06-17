@@ -1,0 +1,15 @@
+1. Préparer les entités qui entourent la zone d'éclosion pour qu'elles
+ forment un contour fermé. Le contour doit être fermé de telle sorte qu'une
+ entité soit connectée à la suivante, comme illustré à droite dans cet exemple  
+![](HatchFromSelectionBoundary.png)
+2. Sélectionner le(s) contour(s) à remplir. Notez que les îles à l'intérieur
+ des contours seront hachurées si elles ne sont pas sélectionnées :  
+![](HatchFromSelectionIslands.png)
+3. Lancez l'outil de hachure.
+4. Une boîte de dialogue pour les options de hachures s'affiche. Choisissez
+ un motif de hachure, un facteur d'échelle et un angle de rotation pour le
+ motif de hachure. Si vous voulez remplir l'objet avec une couleur solide au
+ lieu d'un motif, cochez la case "Remplissage solide".
+5. Cliquez sur'OK' pour procéder à l'hachure. En fonction de la complexité
+ du contour et du facteur d'échelle du motif choisi, la création de
+ la hachure peut prendre un certain temps.

@@ -1,0 +1,1 @@
+Snaps to grid points.

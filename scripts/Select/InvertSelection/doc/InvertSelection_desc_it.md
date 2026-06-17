@@ -1,0 +1,2 @@
+Seleziona tutte le entità che non sono attualmente selezionate e deseleziona
+tutte le entità selezionate.

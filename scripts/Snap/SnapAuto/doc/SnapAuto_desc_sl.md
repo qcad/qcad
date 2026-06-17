@@ -1,0 +1,1 @@
+Samodejno orodje ujame točko po sledečem zaporedju: naslednje presečišče, končna točka, srednja točka, pravokotna točka, referenčna točka, mrežna točka ali točka na objektu.

@@ -1,0 +1,5 @@
+Fastgør til midterpunkter på linjer og buer og til punktentiteter. Bemærk,
+ at midten af en bue er midt på midten af buelinjen på buen og ikke på dens
+ centrum.
+
+![](SnapMiddleFigure.png)

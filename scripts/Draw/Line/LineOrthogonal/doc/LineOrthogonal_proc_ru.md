@@ -1,0 +1,3 @@
+1. Click the existing base entity.
+2. Place the line with the mouse or enter a coordinate in the command
+ line.

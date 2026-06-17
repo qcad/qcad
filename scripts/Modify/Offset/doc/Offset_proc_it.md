@@ -1,0 +1,7 @@
+1. Inserire la distanza dell'entità concentrica o parallela dall'entità
+ originale nella barra degli strumenti delle opzioni mostrata in alto.
+2. Immettere il numero di entità parallele o concentriche da creare nella
+ barra degli strumenti delle opzioni
+3. Fare clic sull'entità base. Le entità parallele o concentriche vengono
+ create sul lato su cui si trova il cursore del mouse mentre si seleziona
+ l'entità .

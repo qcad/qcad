@@ -1,0 +1,2 @@
+To orodje napiše koordinatne mere.
+Koordinatne mere, podajajo oddaljenost nekega objekta od neke izhodišne točke.

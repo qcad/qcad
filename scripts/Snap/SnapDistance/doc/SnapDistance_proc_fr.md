@@ -1,0 +1,7 @@
+1. Entrez la distance dans la barre d'outils des options.
+2. Déplacez le curseur sur l'entité sur laquelle la distance doit être
+ mesurée.
+3. Lorsque la position / prévisualisation souhaitée est affichée, cliquez
+ sur le bouton gauche de la souris pour définir les coordonnées.
+
+![](SnapDistanceFigure.png)

@@ -1,0 +1,2 @@
+Selecciona ou desmarca todas as entidades na mesma camada que uma entidade
+escolhida.

@@ -1,0 +1,5 @@
+1. Voer de hoek van de afmeting in de opties-werkbalk in.
+2. Stel het eerste eindpunt van de verlenglijn in met de muis of voer een
+ -coördinaat in de opdrachtregel.
+3. Stel het tweede eindpunt van de verlenglijn in.
+4. Stel de positie van de maatstreep in.

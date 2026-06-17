@@ -1,0 +1,2 @@
+Dit functie zorgt ervoor dat alle blokreferenties in de tekening worden
+getoond.

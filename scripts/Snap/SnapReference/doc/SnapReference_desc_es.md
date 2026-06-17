@@ -1,0 +1,6 @@
+Se ajusta a los puntos de referencia. Los puntos de referencia son los
+ puntos azules que se muestran cuando se selecciona una entidad. Esto es
+ particularmente útil para ajustarse a los puntos de referencia de los
+ círculos y arcos, por ejemplo cuando se dibujan líneas centrales.
+
+![](SnapReferenceFigure.png)

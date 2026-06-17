@@ -1,0 +1,3 @@
+Esta herramienta añade a la selección todas las entidades de la capa actual.
+Sólo se pueden seleccionar entidades del bloque actual, no se seleccionan las
+entidades de otros bloques.

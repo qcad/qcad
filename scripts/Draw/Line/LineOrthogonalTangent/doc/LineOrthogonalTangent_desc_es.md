@@ -1,0 +1,2 @@
+Utilice esta herramienta para crear una línea que sea ortogonal a otra línea
+y tangente a una entidad de arco, círculo o elipse existente.

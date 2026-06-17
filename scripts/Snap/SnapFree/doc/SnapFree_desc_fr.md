@@ -1,0 +1,3 @@
+Permet un positionnement libre à l'aide de la souris. Notez que ce n'est
+presque jamais la façon recommandée de régler les coordonnées dans un système
+de CAO, sauf pour dessiner des lignes à main levée.

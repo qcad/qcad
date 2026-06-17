@@ -1,0 +1,5 @@
+1. Introduzca el radio del arco en la barra de herramientas de
+ opciones.
+2. Haga clic en la entidad base cercana al extremo donde debe conectarse el
+ arco.
+3. Especifique el punto final del arco.

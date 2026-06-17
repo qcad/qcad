@@ -1,0 +1,1 @@
+Creates polygons with the center and one corner given.

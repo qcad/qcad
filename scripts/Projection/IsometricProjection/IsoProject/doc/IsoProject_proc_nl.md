@@ -1,0 +1,8 @@
+1. Selecteer de objecten die u wilt projecteren.
+2. Start deze functie.
+3. Kies een projectie type en een kijkrichting voor de projectie in de opties
+ werkbalk.
+4. Stel de referentiepunt voor de projectie in. Dit is de punt dat u zult
+ gebruiken om de projectie in de volgende stap te positioneren.
+5. Beweeg de muiscursor naar de positie waar u de projectie wilt maken en
+ klik op om de positie in te stellen.

@@ -1,0 +1,19 @@
+1. Użyj narzędzi wyboru, aby przygotować wybrane elementy, które chcesz
+ skopiować do schowka.
+2. Wybierz narzędzie kopiowania.
+
+Standardowe narzędzie do kopiowania w programie QCAD działa jak narzędzie
+ do kopiowania w innych aplikacjach. Nie pozwala on na wybranie punktu
+ referencyjnego, ale zamiast tego automatycznie oblicza punkt referencyjny w
+ środku zaznaczenia. Nie zawsze jest to pożądane, ponieważ najprawdopodobniej
+ chcesz umieścić wklejone elementy w dokładnie określonym miejscu. W tym celu
+ QCAD oferuje alternatywne, bardziej specyficzne dla CAD narzędzie do
+ kopiowania: [Skopiuj z odnośnikiem](../../CopyWithReference/doc/CopyWithReference_pl.html).
+
+Zaznaczenie znajduje się teraz w schowku wewnętrznym programu QCAD i można
+ je wkleić do tego samego lub innego rysunku, który jest otwierany z tą samą
+ instancją uruchomieniową programu QCAD. Zauważ, że po zamknięciu aplikacji
+ QCAD zawartość schowka zostanie utracona. Dostęp do schowka QCAD ma tylko sam
+ QCAD. Nie można wymieniać elementów rysunku z innymi aplikacjami poprzez
+ kopiowanie i wklejanie. W tym celu należy skorzystać z funkcji eksportu i
+ importu programu QCAD.

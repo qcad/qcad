@@ -1,0 +1,4 @@
+1. Wählen Sie die erste Linie.
+2. Wählen Sie die zweite Linie.
+3. Bestimmen Sie die Position des Bemaßungsbogens mit der Maus oder geben
+ Sie eine Koordinate in die Kommandozeile ein.

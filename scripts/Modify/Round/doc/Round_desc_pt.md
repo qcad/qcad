@@ -1,0 +1,2 @@
+Arredonda o canto de um contorno. Opcionalmente, as entidades do canto podem
+ser aparadas automaticamente para se adaptarem à nova forma.

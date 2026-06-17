@@ -1,0 +1,2 @@
+Con questo strumento è possibile creare tangenti da un'entità ad arco o
+cerchio esistente a un'altra.

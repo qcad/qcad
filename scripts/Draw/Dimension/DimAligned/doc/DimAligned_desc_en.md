@@ -1,0 +1,4 @@
+Creates aligned dimensions. Aligned dimensions usually measure the length of
+an existing line. The dimension line is always parallel to the line between the
+two chosen points 1. and 2.:  
+![](DimAlignedFigure.png)

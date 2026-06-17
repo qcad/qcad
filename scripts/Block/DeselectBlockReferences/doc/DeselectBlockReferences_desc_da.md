@@ -1,0 +1,2 @@
+Dette værktøj fjerner markeringen af alle blokreferencer for den blok, der i
+øjeblikket er markeret på bloklisten.

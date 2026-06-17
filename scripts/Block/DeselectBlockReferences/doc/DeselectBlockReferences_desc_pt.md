@@ -1,0 +1,2 @@
+Esta ferramenta anula a seleção de todas as referências de bloco do bloco
+que se encontra selecionado na lista de blocos.

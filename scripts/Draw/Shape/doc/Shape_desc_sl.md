@@ -1,0 +1,14 @@
+#### Pogoste možnosti oblike
+
+*Polinija*
+
+Orodja za oblikovanje lahko ustvarijo proste črte in loke ali zaprto polilinijo. Označite možnost "Create Polyline" (Ustvari polivinjo), da ustvarite eno
+ enoto polivinje na izdelano obliko.
+
+*Izpolnite*
+
+Označite potrditveno polje "Fill" (Izpolniti), če želite poleg meje oblike ustvariti tudi polnilo.
+
+*Radius*
+
+Označite potrditveno polje "Radius", če želite zaokrožiti vse vogale oblike z danim polmerom.

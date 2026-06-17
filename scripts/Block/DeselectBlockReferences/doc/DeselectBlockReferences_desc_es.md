@@ -1,0 +1,2 @@
+Esta herramienta deselecciona todas las referencias de bloque del bloque que
+se encuentra seleccionado en la lista de bloques.

@@ -1,0 +1,2 @@
+Muestra el foro de usuarios de QCAD donde los usuarios comparten
+conocimientos, hacen y responden preguntas, etc.

@@ -1,0 +1,2 @@
+Utilice esta herramienta para crear formas rectangulares a partir de dos
+esquinas opuestas diagonalmente.

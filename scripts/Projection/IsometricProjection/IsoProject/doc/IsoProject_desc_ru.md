@@ -1,0 +1,2 @@
+This tool creates an isometric projection of the current selection in the
+drawing.

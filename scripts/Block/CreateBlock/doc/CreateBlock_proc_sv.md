@@ -1,0 +1,8 @@
+1. Välj de enheter som du vill använda för det nya blocket.
+2. Ange blockets referenspunkt.
+3. Ange ett namn för det nya blocket i dialogrutan som visas och klicka på
+ OK.
+
+Blocket läggs nu till i blocklistan och instanser av det kan infogas i
+ ritningen. De instanser som du valde i det första steget tas bort och ersätts
+ av en blockreferens för det nyskapade blocket.

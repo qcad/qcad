@@ -336,6 +336,29 @@ Scale.prototype.transformArc = function(shape, sv) {
  * Callback function for Transform.getOperation.
  */
 Scale.prototype.transform = function(entity, k, op, preview, flags) {
+
+    // experimental:
+    // keep shape of arcs, circles, ellipses and block references if they have the "KeepShape" property set:
+    // if (isArcEntity(entity) || isCircleEntity(entity) || isEllipseEntity(entity) || isBlockReferenceEntity(entity)) {
+    //     if (entity.hasCustomProperty("QCAD", "KeepShape")) {
+    //         var refPoint;
+
+    //         if (isBlockReferenceEntity(entity)) {
+    //             refPoint = entity.getPosition();
+    //         }
+    //         else {
+    //             refPoint = entity.getCenter();
+    //         }
+
+    //         var targetPoint = refPoint.getScaled(new RVector(Math.pow(this.factorX, k), Math.pow(this.factorY, k)), this.focusPoint);
+
+    //         entity.move(targetPoint.operator_subtract(refPoint));
+    //         op.addObject(entity, flags);
+    //         return;
+    //     }
+    // }
+
+
     // uniform scaling (supported by all entities):
     if (isNull(this.factorY) || RMath.fuzzyCompare(this.factorX, this.factorY)) {
         entity.scale(Math.pow(this.factorX, k), this.focusPoint);

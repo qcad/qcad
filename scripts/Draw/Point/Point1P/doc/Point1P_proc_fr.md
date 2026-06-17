@@ -1,0 +1,2 @@
+- Utilisez la souris pour spécifier l'emplacement du point ou entrez une
+ coordonnée dans la ligne de commande.

@@ -1,0 +1,2 @@
+Med dette værktøj kan du oprette cirkler med et givet centrum og en given
+radius.

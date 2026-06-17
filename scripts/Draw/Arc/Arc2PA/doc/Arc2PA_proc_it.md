@@ -1,0 +1,4 @@
+1. Digitare l'angolo compreso nella barra delle opzioni e scegliere la
+ direzione dell'arco (oraria o antioraria).
+2. Specificare il punto di partenza dell'arco.
+3. Specificare il punto finale dell'arco.

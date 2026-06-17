@@ -1,0 +1,6 @@
+Diese Funktion schaltet den aktuellen Layer in den gesperrten oder
+entsperrten Zustand. Dieser Zustand eines Layers kann auch mit einem Klick auf
+das Schlosssymbol beim jeweiligen Layer geändert werden.
+
+Objekte auf gesperrten Layern können nicht ausgewählt, gelöscht oder
+geändert werden.

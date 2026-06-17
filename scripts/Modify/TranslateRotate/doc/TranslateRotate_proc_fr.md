@@ -1,0 +1,22 @@
+1. Sélectionnez les entités que vous voulez déplacer ou copier.
+2. Lancez cet outil.
+3. Entrer l'angle de rotation dans la barre d'outils des options
+4. Définir le point de référence à l'aide de la souris ou entrer une
+ coordonnée dans la ligne de commande.
+5. Définir le point cible.  
+Dans la figure ci-dessous, les deux points de référence sont
+ étiquetés. L'angle de rotation dans l'exemple est de 15 degrés et le nombre
+ de copies est de quatre. Il en résulte un angle de rotation total de 60
+ degrés.
+6. La boîte de dialogue Déplacer et faire pivoter s'affiche.  
+Pour déplacer les entités, choisissez "Supprimer l'original", pour
+ les copier choisissez "Conserver l'original". Vous pouvez également créer
+ n'importe quel nombre de copies à la fois en choisissant "Copies multiples"
+ et en entrant le nombre de copies dans la ligne de texte ci-dessous.  
+Les nouvelles entités sont placées sur le même calque que les
+ originaux et ont les mêmes attributs. Pour utiliser le calque courant et
+ les attributs courants, cochez "Utiliser le calque courant et les
+ attributs".
+7. Cliquez sur "OK" pour déplacer et faire pivoter les entités.
+
+![](TranslateRotateFigure.png)

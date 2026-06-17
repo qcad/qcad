@@ -1,0 +1,4 @@
+1. Använd musen för att ange platsen för den första punkten eller ange en
+ koordinat på kommandoraden.
+2. Ange den andra punkten.
+3. Det uppmätta avståndet skrivs ut på skärmen och på kommandoraden.

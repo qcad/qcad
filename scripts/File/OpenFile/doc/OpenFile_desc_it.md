@@ -1,0 +1,4 @@
+Usare questo comando per aprire un file di disegno. Il file viene caricato e
+mostrato in una nuova finestra all'interno della finestra dell'applicazione
+QCAD. È possibile passare da un disegno caricato all'altro utilizzando il menu
+"Windows" o le schede nella parte superiore dell'area di disegno.

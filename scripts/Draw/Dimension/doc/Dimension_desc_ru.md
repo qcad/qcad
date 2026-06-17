@@ -1,0 +1,6 @@
+Dimensions are used to add measurements to a drawing.  
+Dimensions typically consist of a text label and some lines and arrows to
+indicate the precise location of the measurement. The text label may be
+accompanied by tolerance indications or symbols. The options tool bar that is
+shown while a dimension is being created supports you to define the dimension
+label contents and its tolerances.

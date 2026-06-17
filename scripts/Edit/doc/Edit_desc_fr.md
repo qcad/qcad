@@ -1,0 +1,2 @@
+Le menu d'édition contient des outils d'édition de base tels que le
+copier/coller et la suppression

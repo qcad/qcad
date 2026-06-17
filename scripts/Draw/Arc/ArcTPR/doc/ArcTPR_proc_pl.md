@@ -1,0 +1,5 @@
+1. Wprowadź promień na pasku narzędzi opcji.
+2. Określić jednostkę styczną.
+3. Określ punkt na łuku.
+4. Wybierz żądane rozwiązanie klikając lewym przyciskiem myszy blisko
+ niego.

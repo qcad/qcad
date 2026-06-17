@@ -1,0 +1,4 @@
+Scatta al punto di tangenza su un arco, cerchio o ellisse. Questo vale solo
+per il disegno di linee. Il punto di scatto è il punto tangente di una linea
+immaginaria dal punto zero relativo, tangenziale all'arco o cerchio
+cliccato.

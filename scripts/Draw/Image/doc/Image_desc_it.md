@@ -1,0 +1,11 @@
+ Inserisce un'immagine raster (bitmap) nel disegno.  
+Si noti che il file di disegno che viene creato durante il salvataggio
+del disegno, contiene solo riferimenti alle immagini inserite. Si consiglia di
+conservare il file immagine e il file di disegno nella stessa cartella, in modo
+che QCAD possa trovare nuovamente l'immagine quando il file di disegno viene
+caricato in un secondo momento.  
+Per le immagini PNG sono supportati sfondi trasparenti.  
+Si noti che le bitmap di grandi dimensioni possono causare una
+visualizzazione molto lenta del disegno.  
+Di solito si desidera che le immagini siano sullo sfondo di altre entità.
+Fare riferimento allo strumento ['Modifica' - 'Invia indietro'](../../../Modify/ToBack/doc/ToBack_it.html) per imparare a fare questo

@@ -1,0 +1,8 @@
+1. Especifique o primeiro canto da área que pretende visualizar. Pressione
+ o botão esquerdo do mouse naquele canto e mantenha-o abaixado.
+2. Arraste o mouse para o segundo canto da área.
+3. Solte o botão do mouse no segundo canto.
+
+Nota: Alternativamente, você pode especificar o primeiro e o segundo
+ cantos de cada ç com um único clique do mouse em vez de arrastar o mouse com
+ o botão ç do mouse pressionado.

@@ -1,0 +1,4 @@
+1. Skriv den inkluderade vinkeln i verktygsfältet för alternativ och välj
+ bågriktning (med eller moturs).
+2. Ange bågens startpunkt.
+3. Ange bågens slutpunkt.

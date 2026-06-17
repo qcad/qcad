@@ -1,0 +1,2 @@
+Deze functie dupliceert de geselecteerde objecten en selecteert de gemaakte
+kopie.

@@ -1,0 +1,3 @@
+Indstil målpunktet for den importerede tegning med musen, eller indtast et
+koordinat på kommandolinjen. Målpunktet svarer til det absolutte nulpunkt for
+den importerede tegning.

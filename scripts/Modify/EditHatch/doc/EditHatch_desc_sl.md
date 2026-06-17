@@ -1,0 +1,1 @@
+To orodje lahko uporabite za urejanje obstoječih entitet šrafiranja.

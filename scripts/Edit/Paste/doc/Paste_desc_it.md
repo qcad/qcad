@@ -1,0 +1,14 @@
+Il comando Incolla inserisce le entità precedentemente copiate negli
+appunti. L'incolla è particolarmente utile per trasferire entità da un disegno
+all'altro.  
+Tutti i livelli utilizzati dal contenuto degli appunti vengono incollati
+nell'elenco dei livelli del disegno corrente. I layer esistenti con lo stesso
+nome possono essere sovrascritti se si desidera (opzione "Sovrascrivi layer"
+nella barra degli strumenti delle opzioni).  
+I riferimenti ai blocchi presenti negli appunti vengono incollati insieme
+alle definizioni dei blocchi a cui si riferiscono. I blocchi nel disegno
+corrente possono essere sovrascritti se si desidera (opzione "Sovrascrivi
+blocchi" nella barra degli strumenti delle opzioni).  
+La barra degli strumenti delle opzioni offre anche alcuni strumenti per
+scalare, ruotare o capovolgere il contenuto degli appunti durante
+l'incollatura.

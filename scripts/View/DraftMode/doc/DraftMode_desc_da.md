@@ -1,0 +1,4 @@
+Skifter mellem kladdetilstand for den aktuelle tegning. I skitsetilstand
+vises alle linjer med en bredde på 1 pixel. Store tekster er forenklet. Brug
+kladdetilstanden, hvis din tegning bliver meget stor, og det tager lang tid at
+tegne den igen.

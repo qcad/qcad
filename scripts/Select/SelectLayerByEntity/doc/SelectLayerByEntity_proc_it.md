@@ -1,0 +1,7 @@
+1. Selezionare la
+[modalità di selezione](../../doc/Select_it.html#mode) nella barra
+degli strumenti delle opzioni.
+2. Utilizzare il mouse per selezionare un'entità sul livello che si desidera
+(de-)selezionare. Tutte le entità che si trovano sullo stesso livello
+dell'entità selezionata vengono selezionate o deselezionate a seconda della
+modalità di selezione.

@@ -1,0 +1,4 @@
+Choisissez l'entité que vous voulez diviser en cliquant sur le segment que
+vous voulez découper. Le segment est supprimé automatiquement si la case à
+cocher "Supprimer le segment" est cochée. Sinon, l'entité n'est coupée qu'aux
+intersections sans enlever le segment.

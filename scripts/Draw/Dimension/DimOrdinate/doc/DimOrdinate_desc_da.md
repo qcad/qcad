@@ -1,0 +1,3 @@
+Dette værktøj tegner en ordinatedimension. Ordinatdimensioner angiver X-
+eller Y-koordinaten for et element på tegningen i forhold til et
+oprindelsespunkt.

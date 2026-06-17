@@ -1,0 +1,2 @@
+Vklopi / izklopi skicirni način. V skicirnem načinu so vse črte prikazane tanko neprekinjeno. Šrafure niso prikazane ter velika besedila so le nakazana kot pravokotniki.
+Skicirni način uporabite za optimalnejši prikaz ter urejanje kompleksnih risb.

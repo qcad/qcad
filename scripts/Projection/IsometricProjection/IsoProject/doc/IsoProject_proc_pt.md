@@ -1,0 +1,8 @@
+1. Seleccione as entidades que pretende projectar.
+2. Lançar esta ferramenta.
+3. Escolher um tipo de projecção e uma direcção de visualização para a
+ projecção na barra de ferramentas de opções.
+4. Defina o ponto de referência para a projecção. Este é o ponto que irá
+ utilizar para posicionar a projecção no passo seguinte.
+5. Mova o cursor do rato para a posição onde pretende criar a projecção e
+ clique para definir a posição.

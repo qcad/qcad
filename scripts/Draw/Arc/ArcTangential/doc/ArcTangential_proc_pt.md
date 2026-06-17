@@ -1,0 +1,4 @@
+1. Introduzir o raio do arco na barra de ferramentas das opções.
+2. Clique na entidade base perto da extremidade onde o arco deve ser
+ ligado.
+3. Especifique o ponto final do arco.

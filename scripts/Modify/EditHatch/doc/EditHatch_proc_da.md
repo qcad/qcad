@@ -1,0 +1,6 @@
+1. Klik på den skraveringsenhed, du vil redigere.
+2. Skraveringsdialogen vises, hvor du kan justere skraveringen og dens
+ attributter.
+
+Bemærk, at du i stedet for at bruge dette værktøj også kan dobbeltklikke
+ på den skraveringsenhed, som du vil redigere.

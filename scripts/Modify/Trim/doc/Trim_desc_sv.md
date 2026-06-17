@@ -1,0 +1,1 @@
+Trimmar eller förlänger en linje, båge eller ellips till en annan enhet.

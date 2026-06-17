@@ -1,0 +1,4 @@
+Utilice este comando para abrir un archivo de dibujo. El archivo se carga y
+se muestra en una nueva ventana dentro de la ventana de la aplicación QCAD.
+Puede cambiar entre los diferentes dibujos cargados utilizando el menú
+"Ventanas" o las pestañas de la parte superior del área de dibujo.

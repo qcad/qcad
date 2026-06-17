@@ -1,0 +1,13 @@
+Med kommandot "Klistra in" infogas de enheter som tidigare kopierades till
+klippbordet. Klistra in är särskilt användbart för att överföra enheter från en
+ritning till en annan.  
+Alla lager som används av innehållet i urklippets arkiv klistras in i
+lagerlistan i den aktuella ritningen. Befintliga lager med samma namn kan
+skrivas över om så önskas (alternativet "overwrite layers" i verktygsfältet för
+alternativ).  
+Blockreferenser som finns i klippbordet klistras in tillsammans med de
+blockdefinitioner de hänvisar till. Blocken i den aktuella ritningen kan
+skrivas över om så önskas (alternativet "overwrite blocks" i verktygsfältet för
+alternativ).  
+I verktygsfältet för alternativ finns också några verktyg för att skala,
+rotera eller vända innehållet i urklippets klippbräda när du klistrar in.

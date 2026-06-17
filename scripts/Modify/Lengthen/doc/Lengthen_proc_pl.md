@@ -1,0 +1,8 @@
+1. Wartość dodatnia wydłuża jednostkę, natomiast wartość ujemna - skraca.
+ Np. wartość "5" wydłuży wybraną jednostkę o 5 jednostek.
+2. Wybierz jednostkę, którą chcesz wydłużyć lub skrócić gdzieś blisko
+ końca, który chcesz zmodyfikować.
+3. Kliknij prawym przyciskiem myszy lub naciśnij przycisk Escape, aby
+ zakończyć działanie narzędzia.
+
+![](LengthenFigure.png)

@@ -1,0 +1,2 @@
+Tekent spline curven van controlepunten. Alleen niet-uniforme rationele
+B-Splines (NURBS) met homogene wegingsfactoren worden ondersteund.

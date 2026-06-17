@@ -1,0 +1,6 @@
+1. Voer in de opties-werkbalk de afstand van de concentrische cirkel tot de
+ oorspronkelijke basiscirkel in.
+2. Voer het aantal concentrische cirkels in om in de optiebalk te maken.
+3. Klik op de basis cirkel. De concentrische cirkel(s) wordt (worden)
+ gemaakt aan de zijde waarop de muiscursor zich bevindt terwijl u op de
+ basiscirkel klikt.

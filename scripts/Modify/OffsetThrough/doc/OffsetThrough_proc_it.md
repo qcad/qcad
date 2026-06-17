@@ -1,0 +1,5 @@
+1. Immettere il numero di entità da creare nella barra degli strumenti delle
+ opzioni.
+2. Fare clic sull'entità base.
+3. Fare clic sulla posizione in cui scorre il primo arco parallelo o
+ concentrico o il cerchio .

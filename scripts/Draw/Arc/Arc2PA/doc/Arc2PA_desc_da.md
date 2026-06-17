@@ -1,0 +1,2 @@
+Tegner en bue ved hjælp af startpunktet, slutpunktet og den medfølgende
+vinkel.

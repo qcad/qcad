@@ -1,0 +1,2 @@
+Det här kommandot skapar ett nytt lager. Dialogrutan för lager visas där du
+kan ange namnet på det nya lagret och justera dess attribut.

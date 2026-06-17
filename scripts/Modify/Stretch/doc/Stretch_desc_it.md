@@ -1,0 +1,7 @@
+Questo strumento consente di allungare i contorni e le entità dimensionali.
+Questo può anche essere descritto come lo spostamento di tutti gli endpoint
+all'interno di una data area rettangolare o poligonale.  
+Se c'è una selezione di entità, questo strumento agisce solo sulle entità
+selezionate. Altrimenti, questo strumento agisce su tutte le entità nell'area
+data.  
+![](StretchFigure.png)

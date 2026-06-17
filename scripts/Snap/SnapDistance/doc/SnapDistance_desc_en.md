@@ -1,0 +1,1 @@
+Snaps to points with a given distance to the end point of lines or arcs.

@@ -1,0 +1,2 @@
+Traça um arco com um determinado raio, tangencial a uma entidade e através
+de um ponto.

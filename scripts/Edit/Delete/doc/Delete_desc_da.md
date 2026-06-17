@@ -1,0 +1,1 @@
+Dette værktøj sletter de enheder, der er valgt i øjeblikket.

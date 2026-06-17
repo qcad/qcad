@@ -1,0 +1,4 @@
+1. Specify the first line.
+2. Specify the second line.
+3. The measured angle (in degrees) is printed on screen and in the command
+ line.

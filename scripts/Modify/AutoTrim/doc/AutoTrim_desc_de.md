@@ -1,0 +1,1 @@
+Trimmt oder verlängert Objekte automatisch auf beiden Seiten zum nächsten begrenzenden Objekt.

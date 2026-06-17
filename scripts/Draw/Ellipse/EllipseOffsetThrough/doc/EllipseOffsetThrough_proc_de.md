@@ -1,0 +1,6 @@
+1. Geben Sie die Anzahl der zu erstellenden parallelen Kurven in der
+ Optionenwerkzeugleiste ein.
+2. Klicken Sie die Ellipse, zu der die parallelen Kurven konstruiert werden
+ sollen.
+3. Klicken Sie den Punkt, durch den die erste parallele Kurve gehen
+ soll.

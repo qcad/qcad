@@ -1,0 +1,1 @@
+Tworzy wielokąty z podanym środkiem i jednym narożnikiem.

@@ -1,0 +1,4 @@
+1. Choose the entity you want to divide.
+2. Set the dividing point using the mouse. The dividing point is usually the
+ intersection point with another entity. Choose the intersection snap mode to
+ automatically snap to intersections.

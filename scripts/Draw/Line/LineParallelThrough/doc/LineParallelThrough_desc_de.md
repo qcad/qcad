@@ -1,0 +1,3 @@
+Mit diesem Werkzeug können Sie Parallelen zu existierenden Linien oder
+konzentrische Kreise und Kreisbogen konstruieren. Die Parallele oder der
+konzentrische Kreis oder Bogen geht durch einen angegebenen Punkt.

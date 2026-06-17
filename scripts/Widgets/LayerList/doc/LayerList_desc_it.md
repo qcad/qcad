@@ -1,0 +1,1 @@
+Questo strumento mostra / nasconde il widget della lista dei livelli.

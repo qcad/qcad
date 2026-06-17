@@ -1,0 +1,1 @@
+Mostra as perguntas mais frequentes sobre o QCAD num browser (online).

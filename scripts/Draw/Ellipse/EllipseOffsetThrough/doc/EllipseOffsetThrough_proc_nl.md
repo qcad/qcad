@@ -1,0 +1,5 @@
+1. Voer het aantal parallelle curven in dat u wilt maken in de opties
+ werkbalk.
+2. Klik op de basis ellips.
+3. Klik op de plaats waar de eerste parallelle curve doorheen moet
+ gaan.

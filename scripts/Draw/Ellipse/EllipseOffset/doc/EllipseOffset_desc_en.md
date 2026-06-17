@@ -1,0 +1,2 @@
+With this tool you can create one or multiple parallel curves with a given
+distance to an existing ellipse.

@@ -1,0 +1,3 @@
+Haga clic en el icono del ojo en la lista de bloques para cambiar la
+visibilidad de un bloque. No se muestran las referencias de los bloques
+invisibles.

@@ -1,0 +1,3 @@
+Cette commande crée un nouveau calque. La boîte de dialogue du calque
+s'affiche où vous pouvez spécifier le nom du nouveau calque et ajuster ses
+attributs.

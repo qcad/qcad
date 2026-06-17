@@ -1,0 +1,2 @@
+Desenha arcos de elipse com um determinado centro, eixo maior e menor e
+ângulos de início e fim.

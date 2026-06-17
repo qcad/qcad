@@ -1,0 +1,5 @@
+Med dette værktøj kan du tegne linjer i frihånd. Dette værktøj bruges
+normalt kun sparsomt, da tekniske tegninger kræver absolut nøjagtighed. Ved
+nogle lejligheder kan dette værktøj dog være praktisk, f.eks. ved brudte kanter
+som vist her  
+![](LineFreehandFigure.png)

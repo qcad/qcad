@@ -1,0 +1,3 @@
+Trenutno plast, lahko z tem orodjem izbrišete.
+Prosimo upoštevajte, da bodo z izbrisom plasti, tudi izbrisani vsi objekti, ki se nahajajo na tej plasti.  
+Plast '0' ni mogoče nikoli izbrisat.

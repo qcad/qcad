@@ -1,0 +1,4 @@
+1. Choisissez la première ligne.
+2. Choisissez la seconde ligne.
+3. Désignez la position de la cote radiale avec la souris ou en entrant des
+ coordonnées par la ligne de commande.

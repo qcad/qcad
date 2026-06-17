@@ -1,0 +1,2 @@
+Beperkt de cursor verticaal tot dezelfde X positie als het relatieve
+nulpunt.

@@ -1,0 +1,1 @@
+Rysuje łuk przy użyciu punktu początkowego, punktu końcowego i wysokości łuku.

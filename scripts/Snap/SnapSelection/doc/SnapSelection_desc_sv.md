@@ -1,0 +1,7 @@
+Fästs vid en av nio referenspunkter i den avgränsande boxen runt det
+aktuella urvalet: de fyra hörnen, mittpunkterna på de fyra kanterna eller
+mitten. Den punkt som ligger närmast muspekaren används.  
+Detta fästverktyg är användbart för att flytta, kopiera eller på annat sätt
+justera ett urval i förhållande till rutnätet eller andra enheter, till
+exempel för att placera mitten eller ett hörn av urvalet på en viss
+position.

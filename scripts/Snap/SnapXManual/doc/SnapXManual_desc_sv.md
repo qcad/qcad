@@ -1,0 +1,6 @@
+Detta snapsverktyg kan användas för att extrahera en koordinat (t.ex. X)
+från platsen för en befintlig enhet och den andra koordinaten (t.ex. Y) från
+platsen för ett annat objekt.  
+Detta kan t.ex. användas för att lokalisera centrum av en rektangel.  
+Detta koncept kallas också "kombinera koordinater", "punktfiltrering"
+eller "koordinatfiltrering".

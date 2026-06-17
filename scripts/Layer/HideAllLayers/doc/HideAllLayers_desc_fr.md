@@ -1,0 +1,2 @@
+Cet outil peut être utilisé pour masquer toutes les couches à la fois. Cela
+peut être utile lorsque vous travaillez avec un dessin à plusieurs calques.

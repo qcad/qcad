@@ -1,0 +1,3 @@
+1. Entre com o raio na barra de opções.
+2. Selecione o centro do círculo utilizando o mouse ou entrando com as
+ coordenadas na linha de comando.

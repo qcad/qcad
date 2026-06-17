@@ -1,0 +1,19 @@
+1. Utilice las herramientas de selección para preparar una selección de
+ entidades que desee copiar al portapapeles.
+2. Seleccione la herramienta de copia.
+
+La herramienta de copia estándar de QCAD actúa como la herramienta de
+ copia de otras aplicaciones. No le permite elegir un punto de referencia para
+ su selección, sino que calcula automáticamente el punto de referencia en el
+ centro de la selección. Esto no siempre es deseable, ya que lo más probable
+ es que desee colocar las entidades pegadas en una posición definida con
+ precisión. Para ello, QCAD ofrece una herramienta de copia alternativa, más
+ específica para CAD: [Copiar con modelo](../../CopyWithReference/doc/CopyWithReference_es.html).
+
+La selección se encuentra ahora en el portapapeles interno de QCAD y se
+ puede pegar en el mismo dibujo o en otro diferente que se abra con la misma
+ instancia en ejecución de QCAD. Tenga en cuenta que si sale de la aplicación
+ QCAD, se perderá el contenido del portapapeles. El portapapeles de QCAD sólo
+ puede ser accedido por el propio QCAD. No puede intercambiar entidades de
+ dibujo con otras aplicaciones mediante copiar y pegar. Por favor, utilice la
+ funcionalidad de exportación e importación de QCAD para ello.

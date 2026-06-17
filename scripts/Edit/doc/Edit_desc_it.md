@@ -1,0 +1,2 @@
+Il menu Modifica contiene strumenti per la modifica di base, come il
+copia/incolla e la cancellazione

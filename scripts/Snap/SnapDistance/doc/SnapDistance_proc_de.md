@@ -1,0 +1,7 @@
+1. Geben Sie den Abstand in die Optionenwerkzeugleiste ein.
+2. Bewegen Sie den Cursor auf das Objekt, an dem der Abstand gemessen
+ werden soll.
+3. Wenn die gewünschte Position / Vorschau angezeigt wird, klicken Sie mit
+ der linken Maustaste, um die Koordinate festzulegen.
+
+![](SnapDistanceFigure.png)

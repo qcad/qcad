@@ -1,0 +1,10 @@
+1. Sélectionnez les entités que vous voulez utiliser pour le bloc.
+2. Précisez le point de référence du bloc en utilisant la souris ou en
+ entrant des coordonnées dans la ligne de commande.
+3. Entrez un nom pour le nouveau bloc dans la boîte de dialogue qui
+ s'affiche et cliquez sur OK.
+
+Le bloc est maintenant ajouté dans la liste de blocs et peut être inséré
+dans votre plan. Les entités que vous avez sélectionnées au point 1 sont
+supprimées et remplacées par une insertion du bloc. Si vous ne voulez pas de
+cette insertion, utilisez Annuler pour la supprimer.
