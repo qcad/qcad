@@ -2,7 +2,7 @@
  the command line.
 2. Define the major axis by clicking the endpoint of the axis, which is a
  point on the ellipse. You can also enter a coordinate into the command line
- or enter an angle and major radius in the format @50<30 where 50 is the
+ or enter an angle and major radius in the format @50&lt;30 where 50 is the
  major radius and 30 is the ellipse angle.
 3. Define the endpoint of the minor axis which is also a point on the
  ellipse or enter the length of the minor axis.

@@ -11,13 +11,13 @@ Relative coordinates are entered in the format "@x,y":
 
 @10,6
 
-Absolute polar coordinates are entered in the format "distance<angle":
+Absolute polar coordinates are entered in the format "distance&lt;angle":
 
-10<30
+10&lt;30
 
-Relative polar coordinates are entered in the format "@distance<angle":
+Relative polar coordinates are entered in the format "@distance&lt;angle":
 
-@10<45
+@10&lt;45
 
 When entering coordinates or values, [mathematical expressions](#expr) may be used to calculate a coordinate based on known values. For example the
 coordinate 10,5 may also be entered as:
@@ -42,7 +42,7 @@ Variables may be used to store values:
 
 Mathematical constants available are:
 
-PI, LN2, LN10, LOG2E, LOG10E, SQRT1_2, SQRT2
+PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2
 
 Mathematical functions available are:
 
