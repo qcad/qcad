@@ -1,4 +1,0 @@
-Crée des cotations alignées. Les cotations alignées mesurent habituellement
-la longueur d'une ligne existante. La ligne de cote est toujours parallèle à la
-ligne délimitée par les lignes d'extension.  
-![](DimAlignedFigure.png)

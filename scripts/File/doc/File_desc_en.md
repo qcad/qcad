@@ -1,1 +1,0 @@
- The file menu contains all tools to open, save, import, export and print files.

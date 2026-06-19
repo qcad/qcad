@@ -1,5 +1,0 @@
-Fastgøres til referencepunkter. Referencepunkter er de blå punkter, der
- vises, når en enhed er valgt. Dette er især nyttigt for at fastgøre til
- referencepunkter for cirkler og buer, f.eks. når du tegner centerlinjer.
-
-![](SnapReferenceFigure.png)

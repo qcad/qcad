@@ -1,4 +1,0 @@
-Cria cotações alinhadas. As cotações alinhadas medem geralmente a largura de
-uma linha existente. A linha de cota é sempre paralela à linha delimitada pelas
-linhas de extensão.  
-![](DimAlignedFigure.png)

@@ -1,0 +1,30 @@
+import SelectionModeReplace from './SelectionModeReplace.png';
+import SelectionModeAdd from './SelectionModeAdd.png';
+import SelectionModeRemove from './SelectionModeRemove.png';
+import SelectionModeIntersect from './SelectionModeIntersect.png';
+
+
+
+*「クロスセレクション」*
+
+いくつかの選択ツールはクロスセレクションモードで使用することができます。  
+このモードで、選択された範囲の完全に内側のエンティティだけでなく、このエリアに一部のみ含まれるエンティテ ィも選択できます。  
+この選択は「クロスセレクション」として知られています。
+
+*「選択モード」*
+
+いくつかの選択手段は、オプション・ツール・バー中の選択モードを選ぶことを可能にします。  
+利用可能な選択モードは次のとおりです:
+
+- 選択置き換え:  
+  <Image src={SelectionModeReplace} alt="SelectionModeReplace" width={40} height={40} />  
+現選択内容をアクティブな選択ツールによってなされた新しい選択に置き換えます。(デフォルト)
+- 追加選択:  
+  <Image src={SelectionModeAdd} alt="SelectionModeAdd" width={40} height={40} />  
+選択を現選択内容に加えます。
+- 選択除外:  
+  <Image src={SelectionModeRemove} alt="SelectionModeRemove" width={40} height={40} />  
+現選択内容から選択を取り除きます(引き算をする)。
+- 交差部分:  
+  <Image src={SelectionModeIntersect} alt="SelectionModeIntersect" width={40} height={40} />  
+既に選択されており、選択ツールの基準と一致するエンティティだけが選択されます。

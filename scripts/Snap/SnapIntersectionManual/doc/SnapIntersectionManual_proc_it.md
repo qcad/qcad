@@ -1,8 +1,0 @@
-1. Dopo aver attivato questo strumento di scatto, fare clic sulla prima
- delle due entità che si intersecano.
-2. Fare clic sulla seconda delle due entità che si intersecano. Se sono
- possibili due punti di intersezione, assicurarsi di fare clic sulla seconda
- entità da qualche parte più vicina al punto di intersezione a cui si
- desidera scattare.
-
-![](SnapIntersectionManualFigure.png)

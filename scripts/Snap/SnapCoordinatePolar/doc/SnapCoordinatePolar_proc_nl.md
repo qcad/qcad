@@ -1,8 +1,0 @@
-1. Start dit functie wanneer u een punt moet specificeren en u dit wilt
- doen door een polaire coördinaat in te voeren.
-2. Voer de polaire coördinaat (straal en hoek) in de opties werkbalk in en kies
- of het een absolute coördinaat of een relatieve coördinaat is (ten opzichte
- van het relatieve nulpunt).
-3. Klik op de knop OK of druk op Enter om de invoer te bevestigen en de
- coördinaat in te stellen:  
-![](Tick.png)

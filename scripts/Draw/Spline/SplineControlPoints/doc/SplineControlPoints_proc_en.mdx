@@ -1,0 +1,23 @@
+import SplineControlPoints01 from './SplineControlPoints01.png';
+import SplineControlPoints02 from './SplineControlPoints02.png';
+
+1. Choose the degree of the spline in the options tool bar. Supported
+ degrees are 2 (quadratic b-spline) and 3 (cubic b-spline). The higher the
+ degree, the 'smoother' the curve becomes.  
+Note that a quadratic b-spline requires by definition at least 3
+ control points while a cubic b-spline has at least 4 control points.
+2. Check the 'Closed' check box in the options tool bar if you want to
+ create a closed spline. Closed splines are continuous closed loops.
+3. Specify the control points. After defining the third (for quadratic
+ b-splines) or fourth (for cubic b-splines) control point, a preview will be
+ shown. You can remove the last control point again by clicking the 'Undo'
+ button in the options tool bar.
+4. Hit escape or click the right mouse button after setting the last point
+ to confirm the spline shape.
+5. You can now create another spline or right-click again to terminate the
+ tool.
+
+Example for two open splines (quadratic and cubic):  
+<Image src={SplineControlPoints01} alt="SplineControlPoints01" width={120} height={83} />  
+Example for two closed, periodic splines (quadratic and cubic):  
+<Image src={SplineControlPoints02} alt="SplineControlPoints02" width={122} height={83} />

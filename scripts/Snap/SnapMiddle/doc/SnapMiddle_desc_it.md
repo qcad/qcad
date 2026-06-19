@@ -1,5 +1,0 @@
-Snaps ai punti mediani di linee e archi e alle entità punto. Si noti che
- il centro di un arco è al centro della linea dell'arco sull'arco, non al suo
- centro.
-
-![](SnapMiddleFigure.png)

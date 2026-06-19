@@ -1,9 +1,0 @@
-1. Un valore positivo allunga l'entità, mentre un valore negativo lo
- accorcia. Per esempio, un valore di "5" allungherà l'entità scelta di 5
- unità.
-2. Scegliere l'entità da allungare o accorciare in prossimità
- dell'estremità da modificare.
-3. Fare clic con il pulsante destro del mouse o premere il tasto Escape
- per terminare lo strumento.
-
-![](LengthenFigure.png)

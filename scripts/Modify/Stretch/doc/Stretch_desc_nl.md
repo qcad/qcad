@@ -1,7 +1,0 @@
-Deze functie rekt contouren en dimensionale objecten uit. Dit kan ook worden
-omschreven als het verplaatsen van alle eindpunten binnen een gegeven
-rechthoekig of veelhoekig gebied.  
-Indien er een selectie van objecten is, werkt dit werktuig alleen op de
-geselecteerde objecten. Anders werkt dit gereedschap op alle objecten in het
-gegeven gebied.  
-![](StretchFigure.png)

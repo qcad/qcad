@@ -1,0 +1,36 @@
+import SelectionModeReplace from './SelectionModeReplace.png';
+import SelectionModeAdd from './SelectionModeAdd.png';
+import SelectionModeRemove from './SelectionModeRemove.png';
+import SelectionModeIntersect from './SelectionModeIntersect.png';
+
+
+
+*Kreuzende Selektion*
+
+Einige Selektionswerkzeuge können Objekte selektieren, die in einem
+ Bereich liegen. Wird dabei die Option "Kreuzende Selektion" verwendet, werden
+ nicht nur Objekte selektiert, die komplett innerhalb des Bereichs liegen,
+ sondern auch Objekte, die nur teilweise im Bereich sind und die Umrandung des
+ Bereichs "kreuzen".
+
+*Selektonsmodus*
+
+Einige Selektionswerkzeuge unterstützen verschiedene Selektionsmodi, die
+ in der Optionenwerkzeugleiste gewählt werden können:
+
+- Selektion ersetzen:  
+  <Image src={SelectionModeReplace} alt="SelectionModeReplace" width={40} height={40} />  
+Ersetzt die aktuelle Selektion mit der neuen Selektion, die mit dem
+ Werkzeug gemacht wird.
+- Zur Selektion hinzufügen:  
+  <Image src={SelectionModeAdd} alt="SelectionModeAdd" width={40} height={40} />  
+Fügt die Selektion des Werkzeugs zur bestehenden Selektion
+ hinzu.
+- Von Selektion entfernen:  
+  <Image src={SelectionModeRemove} alt="SelectionModeRemove" width={40} height={40} />  
+Entfernt die Selektion des Werkzeugs von der aktuellen
+ Selektion.
+- Schnittmenge:  
+  <Image src={SelectionModeIntersect} alt="SelectionModeIntersect" width={40} height={40} />  
+Nur Objekte, die schon selektiert waren und auch Teil der Selektion
+ des Werkzeugs sind werden selektiert.

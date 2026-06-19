@@ -1,6 +1,0 @@
-Passa aos pontos de referência. Os pontos de referência são os pontos
- azuis que são mostrados quando uma entidade é selecionada. Isto é
- particularmente útil para encaixar em pontos de referência de círculos e
- arcos, por exemplo, ao desenhar o centro de linhas.
-
-![](SnapReferenceFigure.png)

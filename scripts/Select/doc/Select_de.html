@@ -19,44 +19,19 @@
 </p>
 </div>
 <h3>Beschreibung</h3>
-<div>
-  <a name="cross"> </a>
-  <p>
-    <i>Kreuzende Selektion</i>
-  </p>
-  <p>Einige Selektionswerkzeuge können Objekte selektieren, die in einem
-  Bereich liegen. Wird dabei die Option "Kreuzende Selektion" verwendet, werden
-  nicht nur Objekte selektiert, die komplett innerhalb des Bereichs liegen,
-  sondern auch Objekte, die nur teilweise im Bereich sind und die Umrandung des
-  Bereichs "kreuzen".</p>
-  <a name="mode"> </a>
-  <p>
-    <i>Selektonsmodus</i>
-  </p>
-  <p>Einige Selektionswerkzeuge unterstützen verschiedene Selektionsmodi, die
-  in der Optionenwerkzeugleiste gewählt werden können: 
-  <ul>
-    <li>Selektion ersetzen: 
-    <br />
-    <img src="SelectionModeReplace.png" width="40" height="40" />
-    <br />Ersetzt die aktuelle Selektion mit der neuen Selektion, die mit dem
-    Werkzeug gemacht wird.</li>
-    <li>Zur Selektion hinzufügen: 
-    <br />
-    <img src="SelectionModeAdd.png" width="40" height="40" />
-    <br />Fügt die Selektion des Werkzeugs zur bestehenden Selektion
-    hinzu.</li>
-    <li>Von Selektion entfernen: 
-    <br />
-    <img src="SelectionModeRemove.png" width="40" height="40" />
-    <br />Entfernt die Selektion des Werkzeugs von der aktuellen
-    Selektion.</li>
-    <li>Schnittmenge: 
-    <br />
-    <img src="SelectionModeIntersect.png" width="40" height="40" />
-    <br />Nur Objekte, die schon selektiert waren und auch Teil der Selektion
-    des Werkzeugs sind werden selektiert.</li>
-  </ul></p>
-</div>
-</body>
+<p>import SelectionModeReplace from './SelectionModeReplace.png'; import SelectionModeAdd from './SelectionModeAdd.png'; import SelectionModeRemove from './SelectionModeRemove.png'; import SelectionModeIntersect from './SelectionModeIntersect.png';</p>
+<p><em>Kreuzende Selektion</em></p>
+<p>Einige Selektionswerkzeuge können Objekte selektieren, die in einem Bereich liegen. Wird dabei die Option "Kreuzende Selektion" verwendet, werden nicht nur Objekte selektiert, die komplett innerhalb des Bereichs liegen, sondern auch Objekte, die nur teilweise im Bereich sind und die Umrandung des Bereichs "kreuzen".</p>
+<p><em>Selektonsmodus</em></p>
+<p>Einige Selektionswerkzeuge unterstützen verschiedene Selektionsmodi, die in der Optionenwerkzeugleiste gewählt werden können:</p>
+<ul>
+<li>Selektion ersetzen:</li>
+<p><Image src={SelectionModeReplace} alt="SelectionModeReplace" width={40} height={40} /> Ersetzt die aktuelle Selektion mit der neuen Selektion, die mit dem Werkzeug gemacht wird.</p>
+<li>Zur Selektion hinzufügen:</li>
+<p><Image src={SelectionModeAdd} alt="SelectionModeAdd" width={40} height={40} /> Fügt die Selektion des Werkzeugs zur bestehenden Selektion hinzu.</p>
+<li>Von Selektion entfernen:</li>
+<p><Image src={SelectionModeRemove} alt="SelectionModeRemove" width={40} height={40} /> Entfernt die Selektion des Werkzeugs von der aktuellen Selektion.</p>
+<li>Schnittmenge:</li>
+<p><Image src={SelectionModeIntersect} alt="SelectionModeIntersect" width={40} height={40} /> Nur Objekte, die schon selektiert waren und auch Teil der Selektion des Werkzeugs sind werden selektiert.</p>
+</ul></body>
 </html>

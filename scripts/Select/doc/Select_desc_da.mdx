@@ -1,0 +1,34 @@
+import SelectionModeReplace from './SelectionModeReplace.png';
+import SelectionModeAdd from './SelectionModeAdd.png';
+import SelectionModeRemove from './SelectionModeRemove.png';
+import SelectionModeIntersect from './SelectionModeIntersect.png';
+
+
+
+*Krydsmarkering*
+
+Nogle markeringsværktøjer kan bruges i krydsmarkeringstilstand. I denne
+ tilstand vælges ikke kun enheder, der er helt inden for et givet område, men
+ også enheder, der kun er delvist inden for området. Denne udvælgelse er også
+ kendt som "krydsudvælgelse".
+
+*Valgtilstand*
+
+Nogle markeringsværktøjer giver dig mulighed for at vælge en
+ markeringstilstand i værktøjslinjen med indstillinger. De tilgængelige
+ markeringstilstande er følgende:
+
+- Udskift udvælgelse:  
+  <Image src={SelectionModeReplace} alt="SelectionModeReplace" width={40} height={40} />  
+Udskifter den aktuelle udvælgelse med den nye udvælgelse, der er
+ foretaget af det aktive udvælgelsesværktøj (standard).
+- Tilføj til udvælgelse:  
+  <Image src={SelectionModeAdd} alt="SelectionModeAdd" width={40} height={40} />  
+Tilføjer udvælgelsen til den aktuelle udvælgelse.
+- Fjern fra udvælgelse:  
+  <Image src={SelectionModeRemove} alt="SelectionModeRemove" width={40} height={40} />  
+Fjerner (trækker) udvælgelsen fra den aktuelle udvælgelse.
+- Intersect:  
+  <Image src={SelectionModeIntersect} alt="SelectionModeIntersect" width={40} height={40} />  
+Kun enheder, der allerede var markeret, og som svarer til kriterierne
+ for markeringsværktøjet, markeres.

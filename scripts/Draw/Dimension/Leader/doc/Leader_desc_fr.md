@@ -1,4 +1,0 @@
-Les leaders sont des flèches qui pointent généralement d'une entité texte
-vers une autre entité comme indiqué ci-dessous. Dans l'exemple, l'entité texte
-"N7" décrit une propriété de surface en pointant vers elle avec un leader.  
-![](LeaderFigure.png)

@@ -1,7 +1,0 @@
-1. När du har aktiverat det här snapsverktyget anger du den första av de
- två punkter som definierar mittpunkten. Till exempel ett hörn av en
- rektangel.
-2. Klicka på den andra av de två punkterna, till exempel det diagonalt
- motsatta hörnet av rektangeln.
-
-![](SnapMiddleManualFigure.png)

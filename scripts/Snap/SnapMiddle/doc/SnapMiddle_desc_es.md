@@ -1,5 +1,0 @@
-Se ajusta a los puntos centrales de líneas y arcos y a las entidades de
- puntos. Tenga en cuenta que el centro de un arco está en el centro de la
- línea de arco en el arco, no en su centro.
-
-![](SnapMiddleFigure.png)

@@ -1,8 +1,0 @@
-1. Inicie esta herramienta cuando tenga que especificar un punto y quiera
- hacerlo introduciendo un par de coordenadas (x/y).
-2. Introduzca las coordenadas en la barra de herramientas de opciones y
- elija si se trata de coordenadas absolutas o de coordenadas relativas
- (relativas al punto cero relativo).
-3. Haga clic en el botón OK o pulse Intro para confirmar la entrada y
- establecer las coordenadas:  
-![](Tick.png)

@@ -1,4 +1,0 @@
-Lidery to strzałki, które zwykle wskazują z jednostki tekstowej do innej
-jednostki, jak pokazano poniżej. W przykładzie jednostka tekstowa "N7" opisuje
-właściwość powierzchni poprzez wskazanie jej liderem.  
-![](LeaderFigure.png)

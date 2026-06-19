@@ -1,8 +1,0 @@
-1. Start dette værktøj, når du skal angive et punkt og ønsker at gøre det
- ved at indtaste en polarkoordinat.
-2. Indtast polarkoordinaten (radius og vinkel) i værktøjslinjen for
- indstillinger, og vælg, om det er en absolut koordinat eller en relativ
- koordinat (relativ til det relative nulpunkt).
-3. Klik på OK-knappen eller tryk på Enter for at bekræfte indtastningen og
- indstille koordinaten  
-![](Tick.png)

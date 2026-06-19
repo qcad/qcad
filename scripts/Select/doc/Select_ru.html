@@ -20,41 +20,19 @@
 </p>
 </div>
 <h3>Описание</h3>
-<div>
-  <a name="cross"> </a>
-  <p>
-    <i>Cross Selection</i>
-  </p>
-  <p>Some selection tools can be used in cross selection mode. In this mode,
-  not only entities that are completely inside a given area are selected but
-  also entities that are only partly inside the area. This selection is also
-  known as 'cross selection'.</p>
-  <a name="mode"> </a>
-  <p>
-    <i>Selection Mode</i>
-  </p>
-  <p>Some selection tools allow you to choose a selection mode in the options
-  tool bar. The selection modes that are available are: 
-  <ul>
-    <li>Replace selection: 
-    <br />
-    <img src="SelectionModeReplace.png" width="40" height="40" />
-    <br />Replaces the current selection with the new selection made by the
-    active selection tool (default).</li>
-    <li>Add to selection: 
-    <br />
-    <img src="SelectionModeAdd.png" width="40" height="40" />
-    <br />Adds the selection to the current selection.</li>
-    <li>Remove from selection: 
-    <br />
-    <img src="SelectionModeRemove.png" width="40" height="40" />
-    <br />Removes (subtracts) the selection from the current selection.</li>
-    <li>Intersect: 
-    <br />
-    <img src="SelectionModeIntersect.png" width="40" height="40" />
-    <br />Only entities that were already selected and that match the criteria
-    of the selection tool are selected.</li>
-  </ul></p>
-</div>
-</body>
+<p>import SelectionModeReplace from './SelectionModeReplace.png'; import SelectionModeAdd from './SelectionModeAdd.png'; import SelectionModeRemove from './SelectionModeRemove.png'; import SelectionModeIntersect from './SelectionModeIntersect.png';</p>
+<p><em>Cross Selection</em></p>
+<p>Some selection tools can be used in cross selection mode. In this mode, not only entities that are completely inside a given area are selected but also entities that are only partly inside the area. This selection is also known as 'cross selection'.</p>
+<p><em>Selection Mode</em></p>
+<p>Some selection tools allow you to choose a selection mode in the options tool bar. The selection modes that are available are:</p>
+<ul>
+<li>Replace selection:</li>
+<p><Image src={SelectionModeReplace} alt="SelectionModeReplace" width={40} height={40} /> Replaces the current selection with the new selection made by the active selection tool (default).</p>
+<li>Add to selection:</li>
+<p><Image src={SelectionModeAdd} alt="SelectionModeAdd" width={40} height={40} /> Adds the selection to the current selection.</p>
+<li>Remove from selection:</li>
+<p><Image src={SelectionModeRemove} alt="SelectionModeRemove" width={40} height={40} /> Removes (subtracts) the selection from the current selection.</p>
+<li>Intersect:</li>
+<p><Image src={SelectionModeIntersect} alt="SelectionModeIntersect" width={40} height={40} /> Only entities that were already selected and that match the criteria of the selection tool are selected.</p>
+</ul></body>
 </html>

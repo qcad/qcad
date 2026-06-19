@@ -1,7 +1,0 @@
-Esta herramienta estira contornos y entidades de dimensión. Esto también
-puede describirse como el desplazamiento de todos los puntos finales dentro de
-un área rectangular o poligonal determinada.  
-Si hay una selección de entidades, esta herramienta sólo afecta a las
-entidades seleccionadas. En caso contrario, esta herramienta actúa sobre todas
-las entidades del área determinada.  
-![](StretchFigure.png)

@@ -1,7 +1,0 @@
-1. Enter the radius of the rounding in the options tool bar (e.g. 5).
-2. Check 'Trim' if you want to trim the entities automatically. If the
- option is disabled, the two corner entities will remain untouched.
-3. Choose the first edge entity (a line or arc).
-4. Choose the second entity.
-
-![](RoundFigure.png)

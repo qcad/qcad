@@ -1,5 +1,0 @@
-With this tool you can draw freehand lines. This tool is usually used only
-sparingly since technical drawings require absolute accuracy. However, on some
-occasions this tool might come in handy, for example for broken edges like
-shown here:  
-![](LineFreehandFigure.png)

@@ -1,3 +1,0 @@
-Ujame sredinske točke od črt, lokov ter krogov.
-Upoštevaje, da sredinska točka krožnice leži na sredini loka krožnice.  
-![](SnapMiddleFigure.png)

@@ -1,6 +1,0 @@
-Snaps to reference points. Reference points are the blue points that are
- shown when an entity is selected. This is particularly useful to snap to
- reference points of circles and arcs, for example when drawing center
- lines.
-
-![](SnapReferenceFigure.png)

@@ -1,8 +1,0 @@
-1. Start dette værktøj, når du skal angive et punkt og ønsker at gøre det
- ved at indtaste et par koordinater (x/y).
-2. Indtast koordinaterne i værktøjslinjen for indstillinger og vælg, om det
- er absolutte koordinater eller relative koordinater (relative til det
- relative nulpunkt).
-3. Klik på OK-knappen eller tryk på Enter for at bekræfte indtastningen og
- indstille koordinaterne  
-![](Tick.png)

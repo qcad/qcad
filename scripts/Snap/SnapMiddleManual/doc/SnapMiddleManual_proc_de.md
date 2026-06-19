@@ -1,7 +1,0 @@
-1. Nach der Aktivierung dieses Werkzeugs geben Sie den ersten der beiden
- Punkte an, die den Mittelpunkt definieren. Zum Beispiel eine Ecke eines
- Rechtecks.
-2. Klicken Sie den zweiten der beiden Punkte an, z.B. die diagonal
- gegenüberliegende Ecke des Rechtecks.
-
-![](SnapMiddleManualFigure.png)

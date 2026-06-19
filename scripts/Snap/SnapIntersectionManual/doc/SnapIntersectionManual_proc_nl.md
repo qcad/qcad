@@ -1,7 +1,0 @@
-1. Na het activeren van deze snap functie, klikt u op het eerste van de
- twee kruisende objecten.
-2. Klik op het tweede van de twee kruisende objecten. Als er twee
- snijpunten mogelijk zijn, zorg er dan voor dat u het tweede object ergens
- dichter bij het snijpunt waar u naartoe wilt klikt.
-
-![](SnapIntersectionManualFigure.png)

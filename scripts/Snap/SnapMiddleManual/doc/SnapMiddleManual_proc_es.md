@@ -1,7 +1,0 @@
-1. Después de activar esta herramienta de ajuste, especifique el primero
- de los dos puntos que definen el punto medio. Por ejemplo, una esquina de
- un rectángulo.
-2. Haga clic en el segundo de los dos puntos, por ejemplo, la esquina
- diagonalmente opuesta del rectángulo.
-
-![](SnapMiddleManualFigure.png)

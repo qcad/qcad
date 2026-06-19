@@ -1,4 +1,0 @@
-Tworzy wyrównane wymiary. Wyrównane wymiary zwykle mierzą długość
-istniejącej linii. Linia wymiaru jest zawsze równoległa do linii pomiędzy dwoma
-wybranymi punktami 1. i 2..  
-![](DimAlignedFigure.png)

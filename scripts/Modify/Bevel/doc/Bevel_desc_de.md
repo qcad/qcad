@@ -1,4 +1,0 @@
-Schrägt eine Ecke einer Kontur ab. Optional können die beteiligten Objekte
-so getrimmt werden, dass sie zusammen mit der Abschrägung einen geschlossenen
-Konturzug bilden.  
-![](BevelFigure.png)

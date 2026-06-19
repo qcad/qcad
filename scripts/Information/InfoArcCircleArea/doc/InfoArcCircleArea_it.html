@@ -23,97 +23,34 @@
 </p>
 </div>
 <h3>Descrizione</h3>
-<div xml:space="preserve">
- 
-<p>Autore: Robert S.</p> 
-<p>Questo comando calcola l'area di archi, cerchi, ellissi e archi ellittici, e
-opzionalmente aggiunge le informazioni al livello corrente di un disegno. Se si
-seleziona un altro tipo di entità, nella riga di comando viene visualizzato un
-avviso.</p> 
-<p>Per gli archi, ci sono due opzioni per il calcolo delle aree, vale a dire
-Segmento o Settore. L'area di un segmento (o di una fetta) è l'area delimitata
-dall'arco e da due linee tracciate dal punto iniziale e finale dell'arco al
-centro dello stesso. L'area di un settore è l'area delimitata dall'arco e da un
-accordo tracciato dal punto iniziale a quello finale dell'arco.</p> 
-<p>
-<img alt="Segment or Sector" src="ArcCircle01.png" /> 
-<br /> Figura 1: un segmento (fetta) e un settore.</p> 
-<p>
-  <b>Opzioni</b>
-</p> 
-<p>Questo comando ha le opzioni standard 
-<i>"Aggiungi misura al disegno</i>" e 
-<i>"Altezza testo</i>".</p> 
-<p>
-<img alt="Standard options" src="ArcCircle02a.png" /> 
-<br /> Figura 2: Opzioni delle informazioni standard</p> 
-<p>Che sia spento o meno, quando si fa clic su un arco, un cerchio, un'ellisse
-o un arco ellittico, l'informazione viene visualizzata nel widget a riga di
-comando.</p> 
-<p>
-<img alt="Info is displayed in command line widget" src="ArcCircle03.png" /> 
-<br /> Figura 3: Informazioni visualizzate nella riga di comando</p> 
-<p>(Nota: ogni volta che si avvia un comando info, la casella di controllo 
-<i>"Aggiungi misurazione al disegno</i>" è sempre deselezionata. È necessario
-ricordarsi di accenderlo se si desidera che le informazioni siano aggiunte al
-disegno).</p> 
-<p>Aggiunge inoltre le seguenti opzioni.</p> 
-<p>
-<img alt="Options toolbar" src="ArcCircle02.png" /> 
-<br /> Figura 4: Opzioni aggiunte</p> 
-<p>
-  <b>Modo operativo:</b>
-</p> 
-<p>La modalità si applica solo agli archi elettrici.</p> 
-<p>
-<img alt="Sector" src="InfoSector.png" height="24" width="24" /> 
-<br /> 
-<i>Settore:</i> Questa modalità restituisce l'area del settore. Questa funzione
-è utile se utilizzata insieme al comando 
-<i>"Area poligonale</i>".</p> 
-<p>
-<img alt="Segment" src="InfoSlice.png" height="24" width="24" /> 
-<i>Segmento:</i> Questo modo restituisce l'area del segmento.</p> 
-<p>
-  <b>Aggiungi:</b>
-</p> 
-<p>
-<i>Entità:</i> Consente di selezionare se si desidera aggiungere una copia
-dell'entità misurata al livello corrente del disegno.</p> 
-<p>
-<i>Accordo:</i> Consente di selezionare se si desidera aggiungere al disegno
-l'accordo (settore) o le linee di raggio (segmento).</p> 
-<p>
-<i>Lunghezza:</i> Per impostazione predefinita, l'area viene sempre stampata
-sul disegno. Questa opzione consente di selezionare se si desidera aggiungere
-informazioni aggiuntive al disegno.</p> 
-<p>Per i cerchi e le ellissi piene l'informazione supplementare è la
-circonferenza. Utilizza il punto centrale come angolo in basso a sinistra per
-il testo aggiunto.</p> 
-<p>
-  <img alt="Extra info for circles and ellipses" src="ArcCircle04.png" />
-</p> 
-<p>Per gli archi circolari, le informazioni aggiuntive sono la lunghezza
-dell'arco e la lunghezza della corda (nel modo settore) o il raggio (nel modo
-segmento).</p> 
-<p>Per le ellissi le informazioni aggiuntive sono la lunghezza dell'arco e la
-lunghezza dell'accordo (in modalità settore), o la distanza tra il punto
-centrale e il punto iniziale dell'arco, seguita dalla distanza tra il punto
-centrale e il punto finale dell'arco (in modalità segmento).</p> 
-<p>L'angolo in basso a sinistra per il testo aggiunto è il punto finale
-dell'arco.</p> 
-<p>
-  <img alt="Extra info for arcs" src="ArcCircle06.png" />
-</p> 
-<p>
-  <img alt="Extra info for arcs" src="ArcCircle05.png" />
-</p> 
-<p>
-  <img alt="Extra info for arcs" src="ArcCircle08.png" />
-</p> 
-<p>
-  <img alt="Extra info for arcs" src="ArcCircle07.png" />
-</p> 
-</div>
-</body>
+<p>import ArcCircle01 from './ArcCircle01.png'; import ArcCircle02a from './ArcCircle02a.png'; import ArcCircle03 from './ArcCircle03.png'; import ArcCircle02 from './ArcCircle02.png'; import InfoSector from './InfoSector.png'; import InfoSlice from './InfoSlice.png'; import ArcCircle04 from './ArcCircle04.png'; import ArcCircle06 from './ArcCircle06.png'; import ArcCircle05 from './ArcCircle05.png'; import ArcCircle08 from './ArcCircle08.png'; import ArcCircle07 from './ArcCircle07.png';</p>
+<p>Autore: Robert S.</p>
+<p>Questo comando calcola l'area di archi, cerchi, ellissi e archi ellittici, e opzionalmente aggiunge le informazioni al livello corrente di un disegno. Se si seleziona un altro tipo di entità, nella riga di comando viene visualizzato un avviso.</p>
+<p>Per gli archi, ci sono due opzioni per il calcolo delle aree, vale a dire Segmento o Settore. L'area di un segmento (o di una fetta) è l'area delimitata dall'arco e da due linee tracciate dal punto iniziale e finale dell'arco al centro dello stesso. L'area di un settore è l'area delimitata dall'arco e da un accordo tracciato dal punto iniziale a quello finale dell'arco.</p>
+<p><Image src={ArcCircle01} alt="ArcCircle01" width={285} height={149} /> Figura 1: un segmento (fetta) e un settore.</p>
+<p><strong>Opzioni</strong></p>
+<p>Questo comando ha le opzioni standard <em>"Aggiungi misura al disegno</em>" e <em>"Altezza testo</em>".</p>
+<p><Image src={ArcCircle02a} alt="ArcCircle02a" width={200} height={19} /> Figura 2: Opzioni delle informazioni standard</p>
+<p>Che sia spento o meno, quando si fa clic su un arco, un cerchio, un'ellisse o un arco ellittico, l'informazione viene visualizzata nel widget a riga di comando.</p>
+<p><Image src={ArcCircle03} alt="ArcCircle03" width={238} height={29} /> Figura 3: Informazioni visualizzate nella riga di comando</p>
+<p>(Nota: ogni volta che si avvia un comando info, la casella di controllo <em>"Aggiungi misurazione al disegno</em>" è sempre deselezionata. È necessario ricordarsi di accenderlo se si desidera che le informazioni siano aggiunte al disegno).</p>
+<p>Aggiunge inoltre le seguenti opzioni.</p>
+<p><Image src={ArcCircle02} alt="ArcCircle02" width={213} height={25} /> Figura 4: Opzioni aggiunte</p>
+<p><strong>Modo operativo:</strong></p>
+<p>La modalità si applica solo agli archi elettrici.</p>
+<p><Image src={InfoSector} alt="InfoSector" width={40} height={40} /> <em>Settore:</em> Questa modalità restituisce l'area del settore. Questa funzione è utile se utilizzata insieme al comando <em>"Area poligonale</em>".</p>
+<p><Image src={InfoSlice} alt="InfoSlice" width={40} height={40} /> <em>Segmento:</em> Questo modo restituisce l'area del segmento.</p>
+<p><strong>Aggiungi:</strong></p>
+<p><em>Entità:</em> Consente di selezionare se si desidera aggiungere una copia dell'entità misurata al livello corrente del disegno.</p>
+<p><em>Accordo:</em> Consente di selezionare se si desidera aggiungere al disegno l'accordo (settore) o le linee di raggio (segmento).</p>
+<p><em>Lunghezza:</em> Per impostazione predefinita, l'area viene sempre stampata sul disegno. Questa opzione consente di selezionare se si desidera aggiungere informazioni aggiuntive al disegno.</p>
+<p>Per i cerchi e le ellissi piene l'informazione supplementare è la circonferenza. Utilizza il punto centrale come angolo in basso a sinistra per il testo aggiunto.</p>
+<p><Image src={ArcCircle04} alt="ArcCircle04" width={364} height={136} /></p>
+<p>Per gli archi circolari, le informazioni aggiuntive sono la lunghezza dell'arco e la lunghezza della corda (nel modo settore) o il raggio (nel modo segmento).</p>
+<p>Per le ellissi le informazioni aggiuntive sono la lunghezza dell'arco e la lunghezza dell'accordo (in modalità settore), o la distanza tra il punto centrale e il punto iniziale dell'arco, seguita dalla distanza tra il punto centrale e il punto finale dell'arco (in modalità segmento).</p>
+<p>L'angolo in basso a sinistra per il testo aggiunto è il punto finale dell'arco.</p>
+<p><Image src={ArcCircle06} alt="ArcCircle06" width={332} height={75} /></p>
+<p><Image src={ArcCircle05} alt="ArcCircle05" width={378} height={111} /></p>
+<p><Image src={ArcCircle08} alt="ArcCircle08" width={328} height={90} /></p>
+<p><Image src={ArcCircle07} alt="ArcCircle07" width={418} height={105} /></p></body>
 </html>

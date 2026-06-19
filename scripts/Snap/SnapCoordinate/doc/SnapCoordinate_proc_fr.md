@@ -1,8 +1,0 @@
-1. Lancez cet outil lorsque vous devez spécifier un point et que vous voulez
- le faire en entrant une paire de coordonnées (x/y).
-2. Entrez les coordonnées dans la barre d'outils des options et choisissez
- si elles sont des coordonnées absolues ou des coordonnées relatives (par
- rapport au point zéro relatif).
-3. Cliquez sur le bouton OK ou appuyez sur Entrée pour confirmer l'entrée et
- définir les coordonnées :  
-![](Tick.png)
