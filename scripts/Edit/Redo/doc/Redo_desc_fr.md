@@ -1,1 +1,1 @@
-Rétablir annule les effets de l' [Action Annuler](../../Undo/doc/Undo_fr.html)précédente.
+Rétablir annule les effets de l' [Action Annuler](/fr/manual/scripts/Edit/Undo/doc/Undo)précédente.

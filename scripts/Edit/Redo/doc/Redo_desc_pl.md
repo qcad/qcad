@@ -1,1 +1,1 @@
-Redo powraca do efektów poprzedniego [cofnięcia działania.](../../Undo/doc/Undo_pl.html)
+Redo powraca do efektów poprzedniego [cofnięcia działania.](/pl/manual/scripts/Edit/Undo/doc/Undo)

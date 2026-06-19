@@ -1,5 +1,5 @@
 1. Kies in de opties werkbalk de
-[selectiemodus](../../doc/Select_nl.html#mode).
+[selectiemodus](/nl/manual/scripts/Select/doc/Select#mode).
 2. Gebruik de muis om één object te kiezen van de contour die u wilt
 selecteren. De tool zoekt vervolgens vanuit de eindpunten van het geselecteerde
 object in beide richtingen naar objecten die direct of indirect met deze object

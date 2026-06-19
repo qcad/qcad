@@ -1,5 +1,5 @@
 1. Escolher o
-[tipo de linha](../../doc/Line_pt.html#type) desejada na barra de
+[tipo de linha](/pt/manual/scripts/Draw/Line/doc/Line#type) desejada na barra de
 ferramentas de opções.
 2. Introduzir a distância da entidade concêntrica ou paralela à entidade
 original na barra de ferramentas de opções mostrada na parte superior.

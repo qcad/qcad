@@ -1,4 +1,4 @@
-1. Wählen Sie in der Optionenwerkzeugleiste die gewünschten allgemeinen [Formoptionen](../../doc/Shape_de.html).
+1. Wählen Sie in der Optionenwerkzeugleiste die gewünschten allgemeinen [Formoptionen](/de/manual/scripts/Draw/Shape/doc/Shape).
 2. Geben Sie den Grad des Polygons (Anzahl Ecken / Kanten) in der
  Optionenwerkzeugleiste ein. Gültige Zahlen sind 3 bis 99.
 3. Bestimmen Sie das Zentrum des Polygons mit der Maus oder geben Sie eine

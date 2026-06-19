@@ -1,5 +1,5 @@
 1. Choose the desired
-[line type](../../doc/Line_en.html#type) in the options
+[line type](/en/manual/scripts/Draw/Line/doc/Line#type) in the options
 toolbar.
 2. Enter the angle and length of the line in the options tool bar.
 3. In the options tool bar, choose the reference point on the line which you

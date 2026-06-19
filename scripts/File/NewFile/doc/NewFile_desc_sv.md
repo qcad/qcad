@@ -3,4 +3,4 @@
 kanske du istället vill skapa ritningsmallar med de lager och block som du
 använder mest och förmodligen en ritningsgräns. När du har en sådan mall kan du
 ladda den istället för att starta en ny ritning från början.  
-Se även kommandot [New from Template](../../../Pro/File/NewFromTemplate/doc/NewFromTemplate_sv.html) för att lära dig hur du använder ritningsmallar
+Se även kommandot [New from Template](/sv/manual/scripts/Pro/File/NewFromTemplate/doc/NewFromTemplate) för att lära dig hur du använder ritningsmallar

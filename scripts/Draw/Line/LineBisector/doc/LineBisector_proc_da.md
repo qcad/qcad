@@ -1,5 +1,5 @@
 1. Vælg den ønskede
-[linjetype](../../doc/Line_da.html#type) i værktøjslinjen for
+[linjetype](/da/manual/scripts/Draw/Line/doc/Line#type) i værktøjslinjen for
 indstillinger.
 2. Indtast længden af bisektoren/bisektorer i værktøjslinjen for
 indstillinger, startende fra skæringspunktet mellem de to linjer. Vælg i det

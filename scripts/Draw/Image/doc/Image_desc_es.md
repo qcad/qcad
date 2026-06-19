@@ -8,4 +8,4 @@ Se admiten fondos transparentes para imágenes PNG.
 Tenga en cuenta que los mapas de bits grandes pueden hacer que la
 visualización del dibujo sea muy lenta.  
 Normalmente querrá que las imágenes estén en el fondo de otras entidades.
-Por favor refiérase a la herramienta' [Modificar' -'Enviar al reverso'](../../../Modify/ToBack/doc/ToBack_es.html) para aprender a hacer esto
+Por favor refiérase a la herramienta' [Modificar' -'Enviar al reverso'](/es/manual/scripts/Modify/ToBack/doc/ToBack) para aprender a hacer esto

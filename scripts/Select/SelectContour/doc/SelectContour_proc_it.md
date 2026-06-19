@@ -1,5 +1,5 @@
 1. Selezionare la
-[modalità di selezione](../../doc/Select_it.html#mode) nella barra
+[modalità di selezione](/it/manual/scripts/Select/doc/Select#mode) nella barra
 degli strumenti delle opzioni.
 2. Utilizzare il mouse per selezionare un'entità del contorno che si desidera
 selezionare. Lo strumento cerca quindi dagli endpoint dell'entità selezionata,

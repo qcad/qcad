@@ -8,7 +8,7 @@ A ferramenta de cópia padrão do QCAD actua como a ferramenta de cópia de
  centro da selecção. Isto nem sempre é desejável, pois é muito provável que
  queira colocar as entidades coladas numa posição definida com precisão. Para
  isso, o QCAD oferece e, em alternativa, uma ferramenta de cópia mais
- específica de CAD: [Cópia com Referência](../../CopyWithReference/doc/CopyWithReference_pt.html).
+ específica de CAD: [Cópia com Referência](/pt/manual/scripts/Edit/CopyWithReference/doc/CopyWithReference).
 
 A selecção está agora na prancheta interna do QCAD e pode ser colada no
  mesmo ou num desenho diferente que é aberto com a mesma instância em execução

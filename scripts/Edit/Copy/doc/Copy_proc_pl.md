@@ -8,7 +8,7 @@ Standardowe narzędzie do kopiowania w programie QCAD działa jak narzędzie
  środku zaznaczenia. Nie zawsze jest to pożądane, ponieważ najprawdopodobniej
  chcesz umieścić wklejone elementy w dokładnie określonym miejscu. W tym celu
  QCAD oferuje alternatywne, bardziej specyficzne dla CAD narzędzie do
- kopiowania: [Skopiuj z odnośnikiem](../../CopyWithReference/doc/CopyWithReference_pl.html).
+ kopiowania: [Skopiuj z odnośnikiem](/pl/manual/scripts/Edit/CopyWithReference/doc/CopyWithReference).
 
 Zaznaczenie znajduje się teraz w schowku wewnętrznym programu QCAD i można
  je wkleić do tego samego lub innego rysunku, który jest otwierany z tą samą

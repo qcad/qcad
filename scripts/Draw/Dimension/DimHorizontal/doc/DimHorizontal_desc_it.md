@@ -1,3 +1,3 @@
 Questi strumenti sono stati inseriti per comodità di utilizzo e operano in
-modo simile allo strumento [quote lineari](../../DimRotated/doc/DimRotated_it.html). L'unica
+modo simile allo strumento [quote lineari](/it/manual/scripts/Draw/Dimension/DimRotated/doc/DimRotated). L'unica
 differenza consiste nel non dover impostare alcun angolo.

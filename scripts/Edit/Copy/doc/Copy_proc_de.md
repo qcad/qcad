@@ -7,7 +7,7 @@ Die Kopierfunktion von QCAD funktioniert wie die Kopierfunktion von
  Mittelpunkt der Auswahl verwendet. Dies ist nicht immer wünschenswert, da Sie
  meistens die eingefügten Objekte an einer genau definierten Position
  platzieren wollen. Hierfür bietet QCAD eine alternative, CAD-spezifische
- Funktion an: [Kopieren mit Referenz](../../CopyWithReference/doc/CopyWithReference_de.html).
+ Funktion an: [Kopieren mit Referenz](/de/manual/scripts/Edit/CopyWithReference/doc/CopyWithReference).
 
 Die Auswahl ist nun auf der QCAD-internen Zwischenablage und kann in die
  gleiche oder eine andere Zeichnung eingefügt werden. Die Zeichnung in die

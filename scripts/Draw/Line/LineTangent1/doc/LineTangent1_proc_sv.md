@@ -1,5 +1,5 @@
 1. Välj önskad
-[linjetyp](../../doc/Line_sv.html#type) i verktygsfältet för
+[linjetyp](/sv/manual/scripts/Draw/Line/doc/Line#type) i verktygsfältet för
 alternativ.
 2. Använd musen för att ange platsen för linjens startpunkt eller ange en
 koordinat på kommandoraden.

@@ -1,5 +1,5 @@
 1. Choisissez le
-[type de ligne](../../doc/Line_fr.html#type) désiré dans la barre
+[type de ligne](/fr/manual/scripts/Draw/Line/doc/Line#type) désiré dans la barre
 d'outils des options.
 2. Entrez le nombre d'entités à créer dans la barre d'outils des options.
 3. Cliquez sur l'entité de base.

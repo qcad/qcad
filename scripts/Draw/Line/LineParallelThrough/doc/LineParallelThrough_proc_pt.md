@@ -1,5 +1,5 @@
 1. Escolher o
-[tipo de linha](../../doc/Line_pt.html#type) desejada na barra de
+[tipo de linha](/pt/manual/scripts/Draw/Line/doc/Line#type) desejada na barra de
 ferramentas de opções.
 2. Introduza o número de entidades a criar na barra de ferramentas de
 opções.

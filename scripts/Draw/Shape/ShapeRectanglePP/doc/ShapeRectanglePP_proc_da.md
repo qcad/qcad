@@ -1,4 +1,4 @@
-1. Vælj de ønskede fælles [formindstillinger](../../doc/Shape_da.html) i værktøjslinjen Indstillinger.
+1. Vælj de ønskede fælles [formindstillinger](/da/manual/scripts/Draw/Shape/doc/Shape) i værktøjslinjen Indstillinger.
 2. Angiv det første hjørne af rektanglet.
 3. Flyt musen til det andet hjørne, og klik for at angive rektanglets andet
  hjørne. Alternativt kan du indtaste koordinaten for det andet hjørne i

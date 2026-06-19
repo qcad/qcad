@@ -1,5 +1,5 @@
 1. Vælg den ønskede
-[linjetype](../../doc/Line_da.html#type) i værktøjslinjen for
+[linjetype](/da/manual/scripts/Draw/Line/doc/Line#type) i værktøjslinjen for
 indstillinger.
 2. Indtast den relative vinkel i værktøjslinjen for indstillinger.
 3. Klik på den eksisterende basisenhed.

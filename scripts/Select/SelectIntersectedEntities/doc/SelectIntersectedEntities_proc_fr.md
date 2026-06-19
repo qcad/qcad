@@ -1,5 +1,5 @@
 1. Sélectionnez le
-[mode de sélection](../../doc/Select_fr.html#mode) dans la barre
+[mode de sélection](/fr/manual/scripts/Select/doc/Select#mode) dans la barre
 d'outils des options.
 2. Cliquez sur le point de départ de la ligne d'intersection.
 3. Cliquez sur le point final de la ligne d'intersection.

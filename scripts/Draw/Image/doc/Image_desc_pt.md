@@ -8,4 +8,4 @@ Os fundos transparentes são suportados para imagens PNG.
 Note-se que os bitmaps grandes podem fazer com que a exibição do desenho
 se torne muito lenta.  
 Normalmente, deseja-se que as imagens fiquem no fundo de outras
-entidades. Consulte a ferramenta ' [Modificar' - 'Enviar para trás'](../../../Modify/ToBack/doc/ToBack_pt.html) para saber como fazer isto
+entidades. Consulte a ferramenta ' [Modificar' - 'Enviar para trás'](/pt/manual/scripts/Modify/ToBack/doc/ToBack) para saber como fazer isto

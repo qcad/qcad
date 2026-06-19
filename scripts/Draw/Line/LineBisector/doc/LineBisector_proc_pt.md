@@ -1,5 +1,5 @@
 1. Escolher o
-[tipo de linha](../../doc/Line_pt.html#type) desejada na barra de
+[tipo de linha](/pt/manual/scripts/Draw/Line/doc/Line#type) desejada na barra de
 ferramentas de opções.
 2. Na barra de ferramentas de opções introduzir o comprimento da(s)
 bissectriz(es), a partir do ponto de intersecção das duas linhas. Na segunda

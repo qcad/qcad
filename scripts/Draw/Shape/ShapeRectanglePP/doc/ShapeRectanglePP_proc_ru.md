@@ -1,4 +1,4 @@
-1. Выберите нужные [параметры](../../doc/Shape_ru.html) общей формы на панели инструментов.
+1. Выберите нужные [параметры](/ru/manual/scripts/Draw/Shape/doc/Shape) общей формы на панели инструментов.
 2. Specify the first corner of the rectangle.
 3. Move the mouse to the second corner and click to specify the second
  corner of the rectangle. Alternatively you can enter the coordinate of the

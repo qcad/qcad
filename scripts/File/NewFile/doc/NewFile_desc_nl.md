@@ -4,4 +4,4 @@ frequente gebruiker van QCAD kunt u in plaats daarvan tekensjablonen maken met
 de lagen en blokken die u het meest gebruikt en een tekenrand.
 Als u zo een sjabloon hebt, kunt u die laden in plaats van een nieuwe tekening
 vanuit het niets te starten.  
-Zie ook de functie [Nieuw van Sjabloon](../../../Pro/File/NewFromTemplate/doc/NewFromTemplate_nl.html) om te leren hoe tekensjablonen te gebruiken.
+Zie ook de functie [Nieuw van Sjabloon](/nl/manual/scripts/Pro/File/NewFromTemplate/doc/NewFromTemplate) om te leren hoe tekensjablonen te gebruiken.

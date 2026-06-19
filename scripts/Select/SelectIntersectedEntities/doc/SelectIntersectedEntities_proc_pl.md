@@ -1,5 +1,5 @@
 1. Wybierz
-[tryb wyboru](../../doc/Select_pl.html#mode) na pasku narzędziowym
+[tryb wyboru](/pl/manual/scripts/Select/doc/Select#mode) na pasku narzędziowym
 opcji.
 2. Kliknij punkt początkowy linii przecięcia.
 3. Kliknij punkt końcowy linii przecięcia.

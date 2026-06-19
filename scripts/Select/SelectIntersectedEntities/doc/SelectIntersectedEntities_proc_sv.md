@@ -1,5 +1,5 @@
 1. Välj
-[urvalsläge](../../doc/Select_sv.html#mode) i verktygsfältet för
+[urvalsläge](/sv/manual/scripts/Select/doc/Select#mode) i verktygsfältet för
 alternativ.
 2. Klicka på skärningslinjens startpunkt.
 3. Klicka på skärningslinjens slutpunkt.

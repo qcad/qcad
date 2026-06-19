@@ -8,7 +8,7 @@ L'outil de copie standard de QCAD agit comme l'outil de copie d'autres
  de la sélection. Ce n'est pas toujours souhaitable car vous voulez
  probablement placer les entités collées à une position définie avec
  précision. Pour cela, QCAD propose des outils de copie alternatifs, plus
- spécifiques à la CAO : [Copier avec référence](../../CopyWithReference/doc/CopyWithReference_fr.html).
+ spécifiques à la CAO : [Copier avec référence](/fr/manual/scripts/Edit/CopyWithReference/doc/CopyWithReference).
 
 La sélection est maintenant dans le presse-papiers interne de QCAD et peut
  être collée dans le même dessin ou dans un dessin différent qui est ouvert

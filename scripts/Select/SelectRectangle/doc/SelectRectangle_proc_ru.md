@@ -1,8 +1,8 @@
 1. Choose the
-[selection mode](../../doc/Select_ru.html#mode) in the options tool
+[selection mode](/ru/manual/scripts/Select/doc/Select#mode) in the options tool
 bar.
 2. Tick the check box for
-[cross selection](../../doc/Select_ru.html#cross) to also select
+[cross selection](/ru/manual/scripts/Select/doc/Select#cross) to also select
 entities that intersect the given rectangle.
 3. Use the mouse to draw the selection rectangle.
 All matching entities are selected or deselected depending on the selection

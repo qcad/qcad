@@ -6,4 +6,4 @@ Transparente Pixel werden für das PNG Format unterstützt.
 Beachten Sie, dass große Bilder das Anzeigen der Zeichnung stark
 verlangsamen können.  
 Normalerweise ist es wünschenswert, dass Bilder hinter anderen Objekten
-dargestellt werden. Bitte beachten Sie dazu das ['Modifizieren' - 'In den Hintergrund'](../../../Modify/ToBack/doc/ToBack_de.html) Werkzeug.
+dargestellt werden. Bitte beachten Sie dazu das ['Modifizieren' - 'In den Hintergrund'](/de/manual/scripts/Modify/ToBack/doc/ToBack) Werkzeug.

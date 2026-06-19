@@ -1,5 +1,5 @@
 1. Vælg
-[markeringstilstand](../../doc/Select_da.html#mode) i værktøjslinjen
+[markeringstilstand](/da/manual/scripts/Select/doc/Select#mode) i værktøjslinjen
 Indstillinger.
 2. Brug musen til at vælge en enhed i den kontur, du vil vælge. Værktøjet
 søger derefter fra endepunkterne for den valgte enhed i begge retninger efter

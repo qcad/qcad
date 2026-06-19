@@ -1,5 +1,5 @@
 1. Wählen Sie den
-[Selektionsmodus](../../doc/Select_de.html#mode) in der
+[Selektionsmodus](/de/manual/scripts/Select/doc/Select#mode) in der
 Optionenwerkzeugleiste.
 2. Benutzen Sie die Maus um ein Objekt der Kontur, die Sie selektieren wollen,
 anzuklicken. Das Werkzeug sucht dann automatisch alle an das Objekt

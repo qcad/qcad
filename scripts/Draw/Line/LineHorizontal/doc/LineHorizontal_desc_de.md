@@ -1,1 +1,1 @@
-Konstruiert horizontale Linien. Dieses Werkzeug verhält sich wie das [Werkzeug für Linien mit einem beliebigen Winkel](../../LineAngle/doc/LineAngle_de.html), mit dem Unterschied, dass der Winkel vorgegeben ist.
+Konstruiert horizontale Linien. Dieses Werkzeug verhält sich wie das [Werkzeug für Linien mit einem beliebigen Winkel](/de/manual/scripts/Draw/Line/LineAngle/doc/LineAngle), mit dem Unterschied, dass der Winkel vorgegeben ist.

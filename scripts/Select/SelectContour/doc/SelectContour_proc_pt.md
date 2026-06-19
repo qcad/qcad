@@ -1,5 +1,5 @@
 1. Escolher o
-[modo de selecção](../../doc/Select_pt.html#mode) na barra de
+[modo de selecção](/pt/manual/scripts/Select/doc/Select#mode) na barra de
 ferramentas de opções.
 2. Utilize o rato para escolher uma entidade do contorno que deseja
 seleccionar. A ferramenta procura então, a partir dos pontos finais da entidade

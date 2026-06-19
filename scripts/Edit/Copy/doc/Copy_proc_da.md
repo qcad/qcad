@@ -8,7 +8,7 @@ Standard kopieringsværktøjet i QCAD fungerer som kopieringsværktøjet i
  midten af udvælgelsen. Dette er ikke altid ønskeligt, da du højst sandsynligt
  ønsker at placere de indsatte enheder på en præcist defineret position. Til
  dette formål tilbyder QCAD et alternativt, mere CAD-specifikt
- kopieringsværktøj: [Kopier med reference](../../CopyWithReference/doc/CopyWithReference_da.html).
+ kopieringsværktøj: [Kopier med reference](/da/manual/scripts/Edit/CopyWithReference/doc/CopyWithReference).
 
 Udvælgelsen er nu på QCAD's interne udklipsholder og kan indsættes i den
  samme eller en anden tegning, som er åbnet med den samme kørende instans af

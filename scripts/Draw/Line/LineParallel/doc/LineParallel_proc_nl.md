@@ -1,5 +1,5 @@
 1. Kies het gewenste
-[lijntype](../../doc/Line_nl.html#type) in de opties werkbalk.
+[lijntype](/nl/manual/scripts/Draw/Line/doc/Line#type) in de opties werkbalk.
 2. Voer de afstand van de concentrische of parallelle object tot de
 oorspronkelijke object in de opties werkbalk in.
 3. Voer het aantal parallelle of concentrische objecten in dat u wilt maken in

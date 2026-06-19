@@ -1,5 +1,5 @@
 1. Escolher o
-[tipo de linha](../../doc/Line_pt.html#type) desejada na barra de
+[tipo de linha](/pt/manual/scripts/Draw/Line/doc/Line#type) desejada na barra de
 ferramentas de opções.
 2. Utilizar o rato para especificar a localização do ponto de partida da linha
 ou introduzir uma coordenada na linha de comando.

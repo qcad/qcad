@@ -1,4 +1,4 @@
-Por favor, consulte también el manual de la [función texto](../../../../scripts/Draw/Text/doc/Text_es.html).
+Por favor, consulte también el manual de la [función texto](/es/manual/scripts/scripts/Draw/Text/doc/Text).
 
 Después de cerrar el cuadro de diálogo de texto, elija la entidad a lo largo
 de la cual se debe alinear el texto. Ajuste las opciones en la barra de

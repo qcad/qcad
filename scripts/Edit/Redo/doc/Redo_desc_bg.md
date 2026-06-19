@@ -1,1 +1,1 @@
-Redo (Повторно) връща ефекта от предишното [действие Undo (Отмяна)](../../Undo/doc/Undo_bg.html).
+Redo (Повторно) връща ефекта от предишното [действие Undo (Отмяна)](/bg/manual/scripts/Edit/Undo/doc/Undo).

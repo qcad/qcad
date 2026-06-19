@@ -1,5 +1,5 @@
 1. Wybierz
-[tryb wyboru](../../doc/Select_pl.html#mode) na pasku narzędziowym
+[tryb wyboru](/pl/manual/scripts/Select/doc/Select#mode) na pasku narzędziowym
 opcji.
 2. Użyj myszki, aby wybrać jeden element konturu, który chcesz wybrać.
 Narzędzie wyszukuje następnie w punktach końcowych wybranej jednostki w obu

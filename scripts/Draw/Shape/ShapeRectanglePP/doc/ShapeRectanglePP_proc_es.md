@@ -1,4 +1,4 @@
-1. Elija las [opciones de forma](../../doc/Shape_es.html) común deseadas en la barra de herramientas de opciones.
+1. Elija las [opciones de forma](/es/manual/scripts/Draw/Shape/doc/Shape) común deseadas en la barra de herramientas de opciones.
 2. Especifique la primera esquina del rectángulo.
 3. Mueva el ratón a la segunda esquina y haga clic para especificar la
  segunda esquina del rectángulo. También puede introducir la coordenada de la

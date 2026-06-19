@@ -1,4 +1,4 @@
-1. Wybierz żądane [opcje](../../doc/Shape_pl.html) wspólnego kształtu na pasku narzędzi opcji.
+1. Wybierz żądane [opcje](/pl/manual/scripts/Draw/Shape/doc/Shape) wspólnego kształtu na pasku narzędzi opcji.
 2. Wprowadź stopień wielokąta (liczbę krawędzi / narożników) na pasku
  narzędzi Opcje. Poprawne numery mieszczą się w zakresie od 3 do 99.
 3. Wybierz opcję Narożnik do narożnika, aby zdefiniować wielokąt z dwoma

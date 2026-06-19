@@ -1,5 +1,5 @@
 1. Scegliere il
-[tipo di riga](../../doc/Line_it.html#type) desiderato nella barra
+[tipo di riga](/it/manual/scripts/Draw/Line/doc/Line#type) desiderato nella barra
 degli strumenti delle opzioni.
 2. Immettere il numero di entità da creare nella barra degli strumenti delle
 opzioni.

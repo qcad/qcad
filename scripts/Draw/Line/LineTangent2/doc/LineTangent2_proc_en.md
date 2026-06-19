@@ -1,5 +1,5 @@
 1. Choose the desired
-[line type](../../doc/Line_en.html#type) in the options
+[line type](/en/manual/scripts/Draw/Line/doc/Line#type) in the options
 toolbar.
 2. Click the first arc or circle entity to which you want to create the
 tangent.

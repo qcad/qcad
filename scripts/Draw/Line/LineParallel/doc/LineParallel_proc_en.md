@@ -1,5 +1,5 @@
 1. Choose the desired
-[line type](../../doc/Line_en.html#type) in the options
+[line type](/en/manual/scripts/Draw/Line/doc/Line#type) in the options
 toolbar.
 2. Enter the distance of the concentric or parallel entity from the original
 entity in the options tool bar shown at the top.

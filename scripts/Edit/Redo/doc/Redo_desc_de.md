@@ -1,3 +1,3 @@
-Das Wiederherstellen Kommando ist das Gegenstück von [Rückgängig](../../Undo/doc/Undo_de.html). Es stellt
+Das Wiederherstellen Kommando ist das Gegenstück von [Rückgängig](/de/manual/scripts/Edit/Undo/doc/Undo). Es stellt
 Bearbeitungsschritte, die zuvor mit Rückgängig zurückgenommen wurden wieder
 her.

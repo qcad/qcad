@@ -1,5 +1,5 @@
 1. Välj
-[urvalsläge](../../doc/Select_sv.html#mode) i verktygsfältet för
+[urvalsläge](/sv/manual/scripts/Select/doc/Select#mode) i verktygsfältet för
 alternativ.
 2. Använd musen för att välja en enhet i den kontur du vill välja. Verktyget
 söker sedan från den valda enhetens ändpunkter i båda riktningarna efter

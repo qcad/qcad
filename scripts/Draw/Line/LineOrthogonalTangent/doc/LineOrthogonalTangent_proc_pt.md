@@ -1,5 +1,5 @@
 1. Escolher o
-[tipo de linha](../../doc/Line_pt.html#type) desejada na barra de
+[tipo de linha](/pt/manual/scripts/Draw/Line/doc/Line#type) desejada na barra de
 ferramentas de opções.
 2. Clique na entidade da linha para a qual a nova linha deve ser
 ortogonal.

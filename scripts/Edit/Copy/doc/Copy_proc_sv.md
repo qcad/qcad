@@ -7,7 +7,7 @@ Standardkopieringsverktyget i QCAD fungerar som kopieringsverktyget i
  beräknar istället referenspunkten automatiskt i mitten av urvalet. Detta är
  inte alltid önskvärt eftersom du sannolikt vill placera de klistrade
  enheterna på en exakt definierad position. För detta erbjuder QCAD ett
- alternativt, mer CAD-specifikt kopieringsverktyg: [Kopiera med referens](../../CopyWithReference/doc/CopyWithReference_sv.html).
+ alternativt, mer CAD-specifikt kopieringsverktyg: [Kopiera med referens](/sv/manual/scripts/Edit/CopyWithReference/doc/CopyWithReference).
 
 Urvalet finns nu i QCAD:s interna klippbräda och kan klistras in i samma
  eller en annan ritning som öppnas med samma körda instans av QCAD. Observera

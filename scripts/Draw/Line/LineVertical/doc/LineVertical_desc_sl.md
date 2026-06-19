@@ -1,2 +1,2 @@
-Konstruira navpične črte. To orodje se obnaša kot orodje [za črte z poljubnim kotom](../../LineAngle/doc/LineAngle_sl.html),
+Konstruira navpične črte. To orodje se obnaša kot orodje [za črte z poljubnim kotom](/sl/manual/scripts/Draw/Line/LineAngle/doc/LineAngle),
  z razliko, da je kot prednastavljen.

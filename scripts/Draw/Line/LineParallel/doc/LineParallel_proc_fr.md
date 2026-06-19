@@ -1,5 +1,5 @@
 1. Choisissez le
-[type de ligne](../../doc/Line_fr.html#type) désiré dans la barre
+[type de ligne](/fr/manual/scripts/Draw/Line/doc/Line#type) désiré dans la barre
 d'outils des options.
 2. Entrez la distance de l'entité concentrique ou parallèle par rapport à
 l'entité d'origine dans la barre d'outils d'options affichée en haut.

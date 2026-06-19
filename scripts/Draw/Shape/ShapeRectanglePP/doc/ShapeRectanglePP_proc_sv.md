@@ -1,4 +1,4 @@
-1. Välj önskat [alternativ](../../doc/Shape_sv.html) för den gemensamma formen i verktygsfältet för alternativ.
+1. Välj önskat [alternativ](/sv/manual/scripts/Draw/Shape/doc/Shape) för den gemensamma formen i verktygsfältet för alternativ.
 2. Ange rektangelns första hörn.
 3. Flytta musen till det andra hörnet och klicka för att ange rektangelns
  andra hörn. Alternativt kan du ange koordinaten för det andra hörnet i

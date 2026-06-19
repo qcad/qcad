@@ -1,5 +1,5 @@
 1. Escolher o
-[tipo de linha](../../doc/Line_pt.html) desejada na barra de
+[tipo de linha](/pt/manual/scripts/Draw/Line/doc/Line) desejada na barra de
 ferramentas de opções.
 2. Especificar o ponto de partida do primeiro segmento de linha. Pode utilizar
 o rato ou introduzir uma coordenada na consola.

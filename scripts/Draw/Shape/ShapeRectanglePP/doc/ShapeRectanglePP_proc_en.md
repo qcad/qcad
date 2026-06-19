@@ -1,4 +1,4 @@
-1. Choose the desired common [shape options](../../doc/Shape_en.html) in the options toolbar.
+1. Choose the desired common [shape options](/en/manual/scripts/Draw/Shape/doc/Shape) in the options toolbar.
 2. Specify the first corner of the rectangle.
 3. Move the mouse to the second corner and click to specify the second
  corner of the rectangle. Alternatively you can enter the coordinate of the

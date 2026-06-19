@@ -1,5 +1,5 @@
 1. Kies het gewenste
-[lijntype](../../doc/Line_nl.html#type) in de opties werkbalk.
+[lijntype](/nl/manual/scripts/Draw/Line/doc/Line#type) in de opties werkbalk.
 2. Gebruik de muis om de locatie van het startpunt van de lijn te specificeren
 of voer een coördinaat in de opdrachtregel.
 3. Klik op het object waaraan u de raaklijn wilt maken. Meestal zijn twee

@@ -1,3 +1,3 @@
  Lorsqu'il est activé, ce commutateur verrouille la position du point zéro
 relatif. Cela signifie qu'il ne se déplace pas automatiquement, mais vous
-pouvez toujours le déplacer manuellement à l'aide de l'outil pour [régler la position du point zéro relatif](../../SetRelativeZero/doc/SetRelativeZero_fr.html)
+pouvez toujours le déplacer manuellement à l'aide de l'outil pour [régler la position du point zéro relatif](/fr/manual/scripts/Snap/SetRelativeZero/doc/SetRelativeZero)

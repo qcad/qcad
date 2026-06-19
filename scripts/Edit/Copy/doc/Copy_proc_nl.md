@@ -8,7 +8,7 @@ De standaard kopieerfunctie van QCAD werkt als de kopieerfunctie van
  referentiepunt in het midden van de selectie. Dit is niet altijd wenselijk
  omdat u de geplakte objecten waarschijnlijk op een nauwkeurig gedefinieerde
  positie wilt plaatsen. Hiervoor biedt QCAD en alternatieve, meer
- CAD-specifieke kopieertool: [Kopieer met Referentie](../../CopyWithReference/doc/CopyWithReference_nl.html).
+ CAD-specifieke kopieertool: [Kopieer met Referentie](/nl/manual/scripts/Edit/CopyWithReference/doc/CopyWithReference).
 
 De selectie staat nu op het interne klembord van de QCAD en kan in
  dezelfde of een andere tekening worden geplakt die met dezelfde lopende

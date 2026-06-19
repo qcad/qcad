@@ -1,5 +1,5 @@
 1. Välj önskad
-[linjetyp](../../doc/Line_sv.html#type) i verktygsfältet för
+[linjetyp](/sv/manual/scripts/Draw/Line/doc/Line#type) i verktygsfältet för
 alternativ.
 2. Ange avståndet mellan den koncentriska eller parallella enheten och den
 ursprungliga enheten i verktygsfältet för alternativ som visas överst.

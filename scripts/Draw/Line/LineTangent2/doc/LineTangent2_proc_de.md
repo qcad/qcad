@@ -1,5 +1,5 @@
 1. Wählen Sie den gewünschten
-[Linientyp](../../doc/Line_de.html#type) in der
+[Linientyp](/de/manual/scripts/Draw/Line/doc/Line#type) in der
 Optionenwerkzeugleiste.
 2. Wählen Sie den ersten Kreis oder Kreisbogen.
 3. Wählen Sie den zweiten Kreis oder Kreisbogen. In der Regel sind vier

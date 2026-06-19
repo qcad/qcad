@@ -1,5 +1,5 @@
 1. Scegliere il
-[tipo di riga](../../doc/Line_it.html#type) desiderato nella barra
+[tipo di riga](/it/manual/scripts/Draw/Line/doc/Line#type) desiderato nella barra
 degli strumenti delle opzioni.
 2. Con il mouse è possibile specificare la posizione del punto di partenza
 della riga o inserire una coordinata nella riga di comando.

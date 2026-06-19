@@ -1,4 +1,4 @@
-1. Choose the desired common [shape options](../../doc/Shape_en.html) in the options toolbar.
+1. Choose the desired common [shape options](/en/manual/scripts/Draw/Shape/doc/Shape) in the options toolbar.
 2. Enter the size of the rectangle in the options tool bar.
 3. Choose the reference point you want to use to position the
  rectangle.

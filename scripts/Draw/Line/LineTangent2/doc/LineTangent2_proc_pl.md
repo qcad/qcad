@@ -1,5 +1,5 @@
 1. Wybierz żądany
-[typ linii](../../doc/Line_pl.html#type) na pasku narzędzi
+[typ linii](/pl/manual/scripts/Draw/Line/doc/Line#type) na pasku narzędzi
 opcji.
 2. Kliknij pierwszy łuk lub okrąg, do którego chcesz utworzyć styczną.
 3. Kliknij drugi łuk lub okrąg, do którego chcesz utworzyć styczną. Zazwyczaj

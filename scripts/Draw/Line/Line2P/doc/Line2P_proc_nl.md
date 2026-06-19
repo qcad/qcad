@@ -1,5 +1,5 @@
 1. Kies de gewenste
-[lijntype](../../doc/Line_nl.html#type) in de opties werkbalk.
+[lijntype](/nl/manual/scripts/Draw/Line/doc/Line#type) in de opties werkbalk.
 2. Bepaal het beginpunt van het eerste lijnsegment. U kunt de muis gebruiken
 of
 een coördinaat in de console invoeren.

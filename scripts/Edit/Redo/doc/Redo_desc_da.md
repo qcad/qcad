@@ -1,1 +1,1 @@
-Redo tilbagefører virkningerne af den tidligere [fortrydelseshandling](../../Undo/doc/Undo_da.html).
+Redo tilbagefører virkningerne af den tidligere [fortrydelseshandling](/da/manual/scripts/Edit/Undo/doc/Undo).

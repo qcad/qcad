@@ -1,5 +1,5 @@
 1. Wählen Sie den gewünschten
-[Linientyp](../../doc/Line_de.html#type) in der
+[Linientyp](/de/manual/scripts/Draw/Line/doc/Line#type) in der
 Optionenwerkzeugleiste.
 2. Wählen Sie die Linie zu welcher die neue Linie orthogonal sein soll.
 3. Wählen Sie den Bogen, Kreis oder die Ellipse zu welcher die Linie

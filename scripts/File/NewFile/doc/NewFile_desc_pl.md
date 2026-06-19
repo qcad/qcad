@@ -5,4 +5,4 @@ rysunków z warstwami i blokami, których używasz najczęściej i prawdopodobni
 jako ramki rysunków. Gdy masz już taki szablon, możesz go załadować zamiast
 rozpoczynać nowy rysunek od zera.  
 Aby dowiedzieć się, jak korzystać z szablonów rysunków, zapoznaj się
-również z poleceniem [Nowy z szablonu](../../../Pro/File/NewFromTemplate/doc/NewFromTemplate_pl.html).
+również z poleceniem [Nowy z szablonu](/pl/manual/scripts/Pro/File/NewFromTemplate/doc/NewFromTemplate).

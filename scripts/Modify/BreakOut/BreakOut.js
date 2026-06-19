@@ -208,7 +208,21 @@ BreakOut.breakOut = function(op, entity, pos, extend, removeSegment) {
     }
 
     var otherShapes = ShapeAlgorithms.getIntersectingShapes(doc, entity.getId(), shape, extend);
+
+    qDebug("otherShapes: " + otherShapes);
+
     var newSegments = ShapeAlgorithms.autoSplit(shape, otherShapes, pos, extend);
+
+    qDebug("newSegments: " + newSegments);
+
+    for (var i=0; i<newSegments.length; i++) {
+        if (isNull(newSegments[i])) {
+            continue;
+        }
+
+        qDebug("\n\n");
+        newSegments[i].dump();
+    }
 
     if (isNull(newSegments)) {
         return false;

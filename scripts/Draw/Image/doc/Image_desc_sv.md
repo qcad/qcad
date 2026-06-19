@@ -7,4 +7,4 @@ Transparenta bakgrunder stöds för PNG-bilder.
 Observera att stora bitmappar kan göra att ritningsvisningen blir mycket
 långsam.  
 Vanligtvis vill du att bilder ska vara i bakgrunden till andra enheter.
-Se verktyget " [Modify" - "Send to back"](../../../Modify/ToBack/doc/ToBack_sv.html) för att lära dig hur du gör detta
+Se verktyget " [Modify" - "Send to back"](/sv/manual/scripts/Modify/ToBack/doc/ToBack) för att lära dig hur du gör detta

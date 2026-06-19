@@ -1,4 +1,4 @@
-1. Choisissez les [options de forme](../../doc/Shape_fr.html) commune souhaitées dans la barre d'outils des options.
+1. Choisissez les [options de forme](/fr/manual/scripts/Draw/Shape/doc/Shape) commune souhaitées dans la barre d'outils des options.
 2. Entrez le degré du polygone (nombre de bords / coins) dans la barre
  d'outils des options. Les numéros valides vont de 3 à 99.
 3. Choisissez l'option Coin à coin pour définir le polygone avec deux coins

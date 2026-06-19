@@ -7,4 +7,4 @@ Transparente baggrunde understøttes for PNG-billeder.
 Bemærk, at store bitmaps kan medføre, at tegningsvisningen bliver meget
 langsom.  
 Normalt vil du ønske, at billeder skal være i baggrunden af andre
-entiteter. Se venligst værktøjet " [Modify" - "Send to back"](../../../Modify/ToBack/doc/ToBack_da.html) for at lære, hvordan du gør dette
+entiteter. Se venligst værktøjet " [Modify" - "Send to back"](/da/manual/scripts/Modify/ToBack/doc/ToBack) for at lære, hvordan du gør dette

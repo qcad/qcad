@@ -4,4 +4,4 @@ blocco). Come utente frequente di QCAD, è possibile creare modelli di disegno
 con i livelli e i blocchi utilizzati più spesso e probabilmente con un bordo di
 disegno. Una volta che si dispone di un modello di questo tipo è possibile
 caricare che invece di iniziare un nuovo disegno da zero.  
-Fare riferimento anche al comando [Nuovo da Modello](../../../Pro/File/NewFromTemplate/doc/NewFromTemplate_it.html) per imparare ad usare i modelli di disegno.
+Fare riferimento anche al comando [Nuovo da Modello](/it/manual/scripts/Pro/File/NewFromTemplate/doc/NewFromTemplate) per imparare ad usare i modelli di disegno.

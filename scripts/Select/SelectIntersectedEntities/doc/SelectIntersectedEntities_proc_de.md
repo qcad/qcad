@@ -1,5 +1,5 @@
 1. Wählen Sie den
-[Selektionsmodus](../../doc/Select_de.html#mode) in der
+[Selektionsmodus](/de/manual/scripts/Select/doc/Select#mode) in der
 Optionenwerkzeugleiste.
 2. Bestimmen Sie den Startpunkt der Linie mit der Maus oder indem Sie eine
 Koordinate eingeben.

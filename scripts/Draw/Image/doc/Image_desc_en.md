@@ -7,4 +7,4 @@ Transparent backgrounds are supported for PNG images.
 Note that large bitmaps can cause the drawing display to become very
 slow.  
 Usually you will want images to be in the background of other entities.
-Please refer to the ['Modify' - 'Send to back'](../../../Modify/ToBack/doc/ToBack_en.html) tool to learn how to do this.
+Please refer to the ['Modify' - 'Send to back'](/en/manual/scripts/Modify/ToBack/doc/ToBack) tool to learn how to do this.

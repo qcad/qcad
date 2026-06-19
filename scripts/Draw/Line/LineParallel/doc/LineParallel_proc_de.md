@@ -1,5 +1,5 @@
 1. Wählen Sie den gewünschten
-[Linientyp](../../doc/Line_de.html#type) in der
+[Linientyp](/de/manual/scripts/Draw/Line/doc/Line#type) in der
 Optionenwerkzeugleiste.
 2. Geben Sie den Abstand der Parallelen vom ursprünglichen Objekt in der
 Optionenwerkzeugleiste oder in der Kommandozeile ein.

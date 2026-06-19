@@ -1,2 +1,2 @@
- Dieses Werkzeug funktioniert analog zum Werkzeug [X/Y von Positionen](../../SnapXManual/doc/SnapXManual_de.html) aber
+ Dieses Werkzeug funktioniert analog zum Werkzeug [X/Y von Positionen](/de/manual/scripts/Snap/SnapXManual/doc/SnapXManual) aber
 mit umgekehrter Reihenfolge der Eingaben.

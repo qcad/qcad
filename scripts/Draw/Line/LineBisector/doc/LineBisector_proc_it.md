@@ -1,5 +1,5 @@
 1. Scegliere il
-[tipo di riga](../../doc/Line_it.html#type) desiderato nella barra
+[tipo di riga](/it/manual/scripts/Draw/Line/doc/Line#type) desiderato nella barra
 degli strumenti delle opzioni.
 2. Nella barra degli strumenti delle opzioni immettere la lunghezza
 dell'bisettro (o degli bisettori), partendo dal punto di intersezione delle due

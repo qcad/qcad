@@ -8,7 +8,7 @@ La herramienta de copia estándar de QCAD actúa como la herramienta de
  centro de la selección. Esto no siempre es deseable, ya que lo más probable
  es que desee colocar las entidades pegadas en una posición definida con
  precisión. Para ello, QCAD ofrece una herramienta de copia alternativa, más
- específica para CAD: [Copiar con modelo](../../CopyWithReference/doc/CopyWithReference_es.html).
+ específica para CAD: [Copiar con modelo](/es/manual/scripts/Edit/CopyWithReference/doc/CopyWithReference).
 
 La selección se encuentra ahora en el portapapeles interno de QCAD y se
  puede pegar en el mismo dibujo o en otro diferente que se abra con la misma

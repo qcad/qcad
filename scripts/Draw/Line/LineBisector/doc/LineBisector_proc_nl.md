@@ -1,5 +1,5 @@
 1. Kies het gewenste
-[lijntype](../../doc/Line_nl.html#type) in de opties werkbalk.
+[lijntype](/nl/manual/scripts/Draw/Line/doc/Line#type) in de opties werkbalk.
 2. Voer in de opties werkbalk de lengte van de bissectrice(s) in, vertrekkend
 van het snijpunt van de twee lijnen. Selecteer in het tweede tekstvak het
 aantal deellijnen dat u wilt maken. De standaardwaarde is "1", maar u kunt ook

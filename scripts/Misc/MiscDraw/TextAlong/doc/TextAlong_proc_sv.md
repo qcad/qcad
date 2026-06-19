@@ -1,4 +1,4 @@
-Se även manualen för [textfunktionen](../../../../scripts/Draw/Text/doc/Text_sv.html).
+Se även manualen för [textfunktionen](/sv/manual/scripts/scripts/Draw/Text/doc/Text).
 
 När du har stängt dialogrutan för text väljer du den enhet längs vilken
 texten ska anpassas. Justera alternativen i verktygsfältet för alternativ om så

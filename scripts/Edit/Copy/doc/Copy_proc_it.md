@@ -8,7 +8,7 @@ Lo strumento di copia standard di QCAD funziona come lo strumento di copia
  della selezione. Questo non è sempre auspicabile, perché è molto probabile
  che si vogliano collocare le entità incollate in una posizione definita con
  precisione. Per questo QCAD offre uno strumento di copia alternativo, più
- specifico per il CAD: [Copia con riferimento.](../../CopyWithReference/doc/CopyWithReference_it.html)
+ specifico per il CAD: [Copia con riferimento.](/it/manual/scripts/Edit/CopyWithReference/doc/CopyWithReference)
 
 La selezione si trova ora negli Appunti interni di QCAD e può essere
  incollata nello stesso disegno o in un disegno diverso aperto con la stessa

@@ -1,5 +1,5 @@
 1. Choisissez le
-[type de ligne](../../doc/Line_fr.html#type) désiré dans la barre
+[type de ligne](/fr/manual/scripts/Draw/Line/doc/Line#type) désiré dans la barre
 d'outils des options.
 2. Dans la barre d'outils, entrez la longueur de la ou des bissectrice(s), à
 partir du point d'intersection des deux lignes. Dans la deuxième zone de texte,

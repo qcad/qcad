@@ -1,5 +1,5 @@
 1. Sélectionnez le
-[mode de sélection](../../doc/Select_fr.html#mode) dans la barre
+[mode de sélection](/fr/manual/scripts/Select/doc/Select#mode) dans la barre
 d'outils des options.
 2. Utilisez la souris pour sélectionner une entité du contour que vous
 souhaitez sélectionner. L'outil recherche ensuite à partir des points

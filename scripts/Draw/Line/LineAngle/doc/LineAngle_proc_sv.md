@@ -1,5 +1,5 @@
 1. Välj önskad
-[linjetyp](../../doc/Line_sv.html#type) i verktygsfältet för
+[linjetyp](/sv/manual/scripts/Draw/Line/doc/Line#type) i verktygsfältet för
 alternativ.
 2. Ange linjens vinkel och längd i verktygsfältet för alternativ.
 3. Välj den referenspunkt på linjen som du vill använda för att positionera

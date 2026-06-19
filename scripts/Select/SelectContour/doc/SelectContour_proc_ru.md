@@ -1,5 +1,5 @@
 1. Choose the
-[selection mode](../../doc/Select_ru.html#mode) in the options tool
+[selection mode](/ru/manual/scripts/Select/doc/Select#mode) in the options tool
  bar.
 2. Use the mouse to pick one entity of the contour you want to select. The
  tool then searches from the endpoints of the selected entity in both

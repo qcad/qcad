@@ -1,5 +1,5 @@
 1. Choose the
-[selection mode](../../doc/Select_ru.html#mode) in the options tool
+[selection mode](/ru/manual/scripts/Select/doc/Select#mode) in the options tool
 bar.
 2. Click the start point of the intersection line.
 3. Click the end point of the intersection line.

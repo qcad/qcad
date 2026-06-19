@@ -1,5 +1,5 @@
 1. Wybierz żądany
-[typ wiersza](../../doc/Line_pl.html#type) na pasku narzędzi
+[typ wiersza](/pl/manual/scripts/Draw/Line/doc/Line#type) na pasku narzędzi
 opcji.
 2. Określić punkt początkowy pierwszego odcinka linii. Można użyć myszy lub
 wprowadzić współrzędne w konsoli.

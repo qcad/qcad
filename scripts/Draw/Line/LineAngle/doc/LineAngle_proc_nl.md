@@ -1,5 +1,5 @@
 1. Kies het gewenste
-[lijntype](../../doc/Line_nl.html#type) in de opties werkbalk.
+[lijntype](/nl/manual/scripts/Draw/Line/doc/Line#type) in de opties werkbalk.
 2. Voer de hoek en lengte van de lijn in de opties werkbalk in.
 3. Kies in de opties werkbalk het referentiepunt op de lijn, dat u voor de
 positionering van de lijn wilt gebruiken. "Start" betekent dat het beginpunt van

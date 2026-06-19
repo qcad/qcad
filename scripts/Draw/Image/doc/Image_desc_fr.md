@@ -6,4 +6,4 @@ QCAD puisse retrouver l'image lors du chargement ultérieur du fichier dessin.
 Les fonds transparents sont pris en charge pour les images PNG.  
 Notez que les grands bitmaps peuvent ralentir l'affichage du dessin.  
 Habituellement, vous voudrez que les images soient à l'arrière-plan des
-autres entités. Veuillez vous référer à l'outil " [Modifier " - " Envoyer à l'arrière "](../../../Modify/ToBack/doc/ToBack_fr.html) pour savoir comment procéder
+autres entités. Veuillez vous référer à l'outil " [Modifier " - " Envoyer à l'arrière "](/fr/manual/scripts/Modify/ToBack/doc/ToBack) pour savoir comment procéder

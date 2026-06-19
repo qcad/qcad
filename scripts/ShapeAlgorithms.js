@@ -654,39 +654,38 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
         rest2.trimStartPoint(cutDist2);
 
         segment = shape.clone();
-        //var l1 = segment.getLength();
         segment.setStartAngle(segment.getCenter().getAngleTo(cutPos1));
-        //segment.trimStartPoint(cutDist1);
-        //var l2 = segment.getLength();
-        //segment.trimEndPoint(cutDist2 - (l1-l2));
         segment.setEndAngle(segment.getCenter().getAngleTo(cutPos2));
 
         if (!extend) {
             var angleLength1 = rest1.getAngleLength(true);
             var angleLength2 = rest2.getAngleLength(true);
 
-            // rest1 is the same as the segment:
-            var same1 = RMath.fuzzyAngleCompare(rest1.getStartAngle(), segment.getStartAngle()) &&
-                    RMath.fuzzyAngleCompare(rest1.getEndAngle(), segment.getEndAngle()) &&
-                    rest1.isReversed()===segment.isReversed();
-
-            // catch common errors:
-            if (angleLength1+angleLength2 > shape.getAngleLength() || same1) {
-                rest1.trimEndPoint(cutDist2);
-                rest2.trimStartPoint(cutDist1);
-
-                segment.trimStartPoint(cutDist2);
-                segment.trimEndPoint(cutDist1);
-
-                angleLength1 = rest1.getAngleLength(true);
-                angleLength2 = rest2.getAngleLength(true);
-            }
-            if (angleLength1<1.0e-5) {
+            if (angleLength1<1.0e-5 || angleLength1>2*Math.PI-1.0e-5) {
                 rest1 = undefined;
             }
 
-            if (angleLength2<1.0e-5) {
+            if (angleLength2<1.0e-5 || angleLength2>2*Math.PI-1.0e-5) {
                 rest2 = undefined;
+            }
+
+            if (!isNull(rest1) && !isNull(rest2)) {
+                // rest1 is the same as the segment:
+                var same1 = RMath.fuzzyAngleCompare(rest1.getStartAngle(), segment.getStartAngle()) &&
+                        RMath.fuzzyAngleCompare(rest1.getEndAngle(), segment.getEndAngle()) &&
+                        rest1.isReversed()===segment.isReversed();
+
+                // catch common errors:
+                if (angleLength1+angleLength2 > shape.getAngleLength() || same1) {
+                    rest1.trimEndPoint(cutDist2);
+                    rest2.trimStartPoint(cutDist1);
+
+                    segment.trimStartPoint(cutDist2);
+                    segment.trimEndPoint(cutDist1);
+
+                    angleLength1 = rest1.getAngleLength(true);
+                    angleLength2 = rest2.getAngleLength(true);
+                }
             }
         }
     }
