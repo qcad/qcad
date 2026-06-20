@@ -1357,6 +1357,7 @@
     <file alias="scripts/Modify/Rotate2/Rotate2Dialog.svg">../../scripts/Modify/Rotate2/Rotate2Dialog.svg</file>
     <file alias="scripts/Modify/Rotate2/Rotate2Dialog.ui">../../scripts/Modify/Rotate2/Rotate2Dialog.ui</file>
     <file alias="scripts/Modify/Rotate2/Rotate2Init.js">../../scripts/Modify/Rotate2/Rotate2Init.js</file>
+    <file alias="scripts/Modify/Round/PreferencesPage.ui">../../scripts/Modify/Round/PreferencesPage.ui</file>
     <file alias="scripts/Modify/Round/Round-inverse.svg">../../scripts/Modify/Round/Round-inverse.svg</file>
     <file alias="scripts/Modify/Round/Round.js">../../scripts/Modify/Round/Round.js</file>
     <file alias="scripts/Modify/Round/Round.svg">../../scripts/Modify/Round/Round.svg</file>
