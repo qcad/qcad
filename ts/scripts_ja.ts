@@ -6805,7 +6805,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleAreaInit.js" line="+2"/>
         <source>Arc/Circle/Ellipse Area</source>
-        <translation>弧・円・楕円面積:</translation>
+        <translation>弧・円・楕円面積</translation>
     </message>
 </context>
 <context>
