@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Kommandolinje</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/nb/index.php?page=scripts/Widgets/CommandLine/doc/CommandLine">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<p style="font-style: italic;">Dette er en automatisk oversettelse.</p>
+<div class="nobreak">
+<h2>Kommandolinje</h2>
+<p class="toolinfo">
+<b>Verktøylinje/ikon:</b>
+<br /><img src="../doc/CommandLine.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Meny:</b> <font face="courier new">Utsikt &gt; Kommandolinje</font>
+<br /><b>Snarvei:</b> <font face="courier new">G, M</font>
+<br /><b>Kommandoer:</b> <font face="courier new">gm</font>
+</p>
+</div>
+<h3>Beskrivelse</h3>
+<p>Kommandolinjen i QCAD lar deg starte kommandoer, skrive inn koordinater eller skrive inn verdier som avstander eller radier.</p>
+<h3>Skrive inn koordinater</h3>
+<p>Absolutte koordinater skrives inn i formatet «x,y»:</p>
+<p>40,5</p>
+<p>Relative koordinater skrives inn i formatet «@x,y»:</p>
+<p>@10,6</p>
+<p>Absolutte polare koordinater skrives inn i formatet «avstand&lt;vinkel»:</p>
+<p>10&lt;30</p>
+<p>Relative polare koordinater skrives inn i formatet «@avstand&lt;vinkel»:</p>
+<p>@10&lt;45</p>
+<p>Når du skriver inn koordinater eller verdier, kan <a href="#expr">matematiske uttrykk</a> brukes til å beregne en koordinat basert på kjente verdier. For eksempel kan koordinaten 10,5 også skrives inn som:</p>
+<p>5+5,30/6</p>
+<h3>Kalkulator</h3>
+<p>Kommandolinjen kan også brukes som en kalkulator. For å gjøre dette, skriv inn et <a href="#expr">matematisk uttrykk</a> foran et likhetstegn:</p>
+<p>=3+4 7</p>
+<p>Variabler kan brukes til å lagre verdier:</p>
+<p>=a=5+6 11 =a/2 5.5</p>
+<h3>Matematiske uttrykk</h3>
+<p>Tilgjengelige matematiske konstanter er:</p>
+<p>PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2</p>
+<p>Tilgjengelige matematiske funksjoner er:</p>
+<p>abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt, trunc</p>
+<p>De fleste av disse konstantene og funksjonene er standard ECMAScript-funksjoner (JavaScript) og dokumentert på nettet. I standard ECMAScript er disse funksjonene en del av Math-klassen, så funksjonen <em>abs</em> måtte vært skrevet som <em>Math.abs</em>. I QCAD-kommandolinjen kan du utelate <em>Math.</em>-delen for enkelhets skyld. Trigonometriske funksjoner (sin, cos, tan, asin, acos, atan, atan2) godtar eller returnerer vinkler i grader. Hvis du foretrekker radianversjonene av disse funksjonene, bruk de opprinnelige <em>Math.</em>-funksjonene i stedet.</p>
+<p>Funksjonene <em>rad2deg</em> og <em>deg2rad</em> kan brukes til å konvertere vinkler mellom radianer og grader.</p></body>
+</html>

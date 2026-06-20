@@ -1,0 +1,33 @@
+import SelectionModeReplace from './SelectionModeReplace.png';
+import SelectionModeAdd from './SelectionModeAdd.png';
+import SelectionModeRemove from './SelectionModeRemove.png';
+import SelectionModeIntersect from './SelectionModeIntersect.png';
+
+
+
+*Kryssutvalg*
+
+Noen utvalgsverktøy kan brukes i kryssutvalgsmodus. I denne modusen
+ velges ikke bare objekter som er helt inne i et gitt område, men
+ også objekter som bare er delvis inne i området. Dette utvalget er også
+ kjent som «kryssutvalg».
+
+*Utvalgsmodus*
+
+Noen utvalgsverktøy lar deg velge en utvalgsmodus i verktøylinjen for
+ alternativer. Utvalgsmodusene som er tilgjengelige, er:
+
+- Erstatt utvalg:  
+  <Image src={SelectionModeReplace} alt="SelectionModeReplace" width={40} height={40} />  
+Erstatter det gjeldende utvalget med det nye utvalget som gjøres av det
+ aktive utvalgsverktøyet (standard).
+- Legg til i utvalg:  
+  <Image src={SelectionModeAdd} alt="SelectionModeAdd" width={40} height={40} />  
+Legger utvalget til det gjeldende utvalget.
+- Fjern fra utvalg:  
+  <Image src={SelectionModeRemove} alt="SelectionModeRemove" width={40} height={40} />  
+Fjerner (trekker fra) utvalget fra det gjeldende utvalget.
+- Snitt:  
+  <Image src={SelectionModeIntersect} alt="SelectionModeIntersect" width={40} height={40} />  
+Bare objekter som allerede var valgt og som samsvarer med kriteriene
+ til utvalgsverktøyet, velges.
