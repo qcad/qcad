@@ -23,6 +23,8 @@
 #include "gui_global.h"
 
 #include <QTreeWidget>
+#include <QStyledItemDelegate>
+
 
 /**
  * Tree widget with some additional functionality for icons.
@@ -36,6 +38,8 @@ class QCADGUI_EXPORT RTreeWidget: public QTreeWidget {
     Q_OBJECT
 
 public:
+    using QTreeWidget::QTreeWidget;
+
     RTreeWidget(QWidget* parent=0);
     virtual ~RTreeWidget();
 
@@ -57,6 +61,8 @@ protected:
     virtual void mouseReleaseEvent(QMouseEvent* e);
     virtual void mouseMoveEvent(QMouseEvent* e);
     virtual void resizeEvent(QResizeEvent* event);
+
+    void initViewItemOption(QStyleOptionViewItem* option) const;
 
 signals:
     void itemColumnClicked(QTreeWidgetItem* item, int column);
