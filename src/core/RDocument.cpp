@@ -2430,7 +2430,19 @@ QSet<REntity::Id> RDocument::queryConnectedEntities(REntity::Id entityId, double
             for (it=candidates.begin(); it!=candidates.end() /*&& found<=10*/; ++it) {
                 REntity::Id candidateId = *it;
                 QSharedPointer<REntity> candidate = queryEntityDirect(candidateId);
-                QList<RVector> eps = candidate->getEndPoints();
+                QList<RVector> eps;
+                if (candidate->getType()==RS::EntityPolyline) {
+                    // polyline: only count as connected if a true end point connects:
+                    RShape* s = candidate->castToShape();
+                    RPolyline* pl = dynamic_cast<RPolyline*>(s);
+                    if (pl!=NULL) {
+                        eps.append(pl->getStartPoint());
+                        eps.append(pl->getEndPoint());
+                    }
+                }
+                else {
+                    eps = candidate->getEndPoints();
+                }
                 for (int k=0; k<eps.length(); ++k) {
                     RVector ep = eps[k];
                     if (ep.getDistanceTo(cp) <= tolerance) {
@@ -2449,7 +2461,19 @@ QSet<REntity::Id> RDocument::queryConnectedEntities(REntity::Id entityId, double
                 ret.insert(cEntityId);
 
                 QSharedPointer<REntity> cEntity = queryEntityDirect(cEntityId);
-                QList<RVector> eps = cEntity->getEndPoints();
+                QList<RVector> eps;
+                if (cEntity->getType()==RS::EntityPolyline) {
+                    // polyline: only count as connected if a true end point connects:
+                    RShape* s = cEntity->castToShape();
+                    RPolyline* pl = dynamic_cast<RPolyline*>(s);
+                    if (pl!=NULL) {
+                        eps.append(pl->getStartPoint());
+                        eps.append(pl->getEndPoint());
+                    }
+                }
+                else {
+                    eps = cEntity->getEndPoints();
+                }
                 for (int ck=0; ck<eps.length(); ck++) {
                     RVector ep = eps[ck];
                     if (connectedPoint.equalsFuzzy(ep)) {
