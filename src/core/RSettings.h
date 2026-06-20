@@ -328,7 +328,7 @@ public:
 
     static bool useQml();
 
-    static QColor getSelectionColor(const QWidget* w);
+    static QColor getWidgetSelectionColor(const QWidget* w);
 
 private:
     static bool isInitialized();

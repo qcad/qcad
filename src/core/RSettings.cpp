@@ -2132,7 +2132,7 @@ bool RSettings::getAllowMouseMoveInterruptions() {
     return (bool)allowMouseMoveInterruptions;
 }
 
-QColor RSettings::getSelectionColor(const QWidget* w) {
+QColor RSettings::getWidgetSelectionColor(const QWidget* w) {
     if (w==NULL) {
         return QColor();
     }
