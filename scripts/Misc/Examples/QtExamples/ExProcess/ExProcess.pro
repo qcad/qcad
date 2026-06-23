@@ -1,2 +1,0 @@
-NAME = $${TARGET} 
-SOURCES = $${TARGET}.js

@@ -1,1 +1,0 @@
-../../qcaddev/scripts/autostart9.js
