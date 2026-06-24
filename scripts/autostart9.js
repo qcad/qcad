@@ -1,1 +1,1 @@
-../qcaddev/scripts/autostart9.js
+../../qcaddev/scripts/autostart9.js
