@@ -828,7 +828,7 @@ preferanseendringene skal tre i kraft.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>Tangens, punkt, radius</translation>
+        <translation>Tangent, punkt, radius</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1752,7 +1752,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
         <source>2 Tan&amp;gents and Point</source>
-        <translation>2 Tangens og punkt</translation>
+        <translation>2 Tangent og punkt</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1790,7 +1790,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
         <source>2 &amp;Tangents and Radius</source>
-        <translation>2 Tangens og radius</translation>
+        <translation>2 Tangent og radius</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2020,7 +2020,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2PInit.js" line="+2"/>
         <source>&amp;Tangent and 2 Points</source>
-        <translation>Tangens og 2 punkter</translation>
+        <translation>Tangent og 2 punkter</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2043,7 +2043,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>Tangens, punkt, radius</translation>
+        <translation>Tangent, punkt, radius</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2815,7 +2815,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Sluttpunkt for leder</translation>
+        <translation>Sluttpunkt for henvisning</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
@@ -3296,12 +3296,12 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Draw/Draw.js" line="+61"/>
         <source>Draw</source>
-        <translation>Uavgjort</translation>
+        <translation>Tegn</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>Uavgjort</translation>
+        <translation>Tegn</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -3406,7 +3406,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/DrawExamples.js" line="+51"/>
         <source>&amp;Draw</source>
-        <translation>Uavgjort</translation>
+        <translation>Tegn</translation>
     </message>
 </context>
 <context>
@@ -3980,7 +3980,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+43"/>
         <source>Draw from CSV</source>
-        <translation>Trekk fra CSV</translation>
+        <translation>Tegn fra CSV</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4075,7 +4075,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation>Trekk fra CSV</translation>
+        <translation>Tegn fra CSV</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4088,12 +4088,12 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
-        <translation>Trekningsrekkefølge</translation>
+        <translation>Tegnerekkefølge</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation>Trekningsrekkefølge</translation>
+        <translation>Tegnerekkefølge</translation>
     </message>
 </context>
 <context>
@@ -5011,7 +5011,7 @@ er allerede i listen.</translation>
         <location line="+3"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
-        <translation>Trekk tre poeng</translation>
+        <translation>Tegn tre punkter</translation>
     </message>
 </context>
 <context>
@@ -7855,7 +7855,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation>Rett tilbake</translation>
+        <translation>Høyre bak</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8180,12 +8180,12 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>Leder</translation>
+        <translation>Henvisning</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Tegn leder (linjesekvens med pil)</translation>
+        <translation>Tegn henvisning (linjesekvens med pil)</translation>
     </message>
 </context>
 <context>
@@ -8193,12 +8193,12 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Leader ble opprettet med suksess</translation>
+        <translation>Henvisning ble opprettet med suksess</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>Leder fra utvalgt tekst</translation>
+        <translation>Henvisning fra utvalgt tekst</translation>
     </message>
 </context>
 <context>
@@ -8211,12 +8211,12 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation>Beløp:</translation>
+        <translation>Mengde:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation>Beløp som skal forlenges eller forkortes (negativt)</translation>
+        <translation>Mengde som skal forlenges eller forkortes (negativt)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
@@ -8471,7 +8471,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation>Trekkboks felles fingre, spor og tennoner</translation>
+        <translation>Tegn boksskjøt-fingre, spor og tapper</translation>
     </message>
 </context>
 <context>
@@ -8749,7 +8749,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1.js" line="+65"/>
         <source>Choose start point of tangent</source>
-        <translation>Velg startpunkt for tangens</translation>
+        <translation>Velg startpunkt for tangent</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -8764,17 +8764,17 @@ er allerede i listen.</translation>
     <message>
         <location line="+25"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
-        <translation>Kan ikke trekke tangens fra punkt inne i sirkel til sirkel</translation>
+        <translation>Kan ikke tegne tangent fra punkt inne i sirkel til sirkel</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1Init.js" line="+2"/>
         <source>&amp;Tangent (Point, Circle)</source>
-        <translation>Tangens (punkt, sirkel)</translation>
+        <translation>Tangent (punkt, sirkel)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
-        <translation>Tegn tangens (punkt, sirkel)</translation>
+        <translation>Tegn tangent (punkt, sirkel)</translation>
     </message>
 </context>
 <context>
@@ -8797,12 +8797,12 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2Init.js" line="+2"/>
         <source>Tan&amp;gent (Two Circles)</source>
-        <translation>Tangens (to sirkler)</translation>
+        <translation>Tangent (to sirkler)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
-        <translation>Tegn tangens (sirkel, sirkel)</translation>
+        <translation>Tegn tangent (sirkel, sirkel)</translation>
     </message>
 </context>
 <context>
@@ -9066,12 +9066,12 @@ er allerede i listen.</translation>
     <message>
         <location line="+21"/>
         <source>Misc Draw</source>
-        <translation>Diverse Trekning</translation>
+        <translation>Diverse tegning</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>Uavgjort</translation>
+        <translation>Tegn</translation>
     </message>
 </context>
 <context>
@@ -10291,7 +10291,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+1"/>
         <source>Show all properties</source>
-        <translation>Vis alle eiendommer</translation>
+        <translation>Vis alle egenskaper</translation>
     </message>
     <message>
         <location line="+140"/>
@@ -12513,12 +12513,12 @@ er allerede i listen.</translation>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Leader ble opprettet med suksess</translation>
+        <translation>Henvisning ble opprettet med suksess</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>Tekstjustert leder</translation>
+        <translation>Tekstjustert henvisning</translation>
     </message>
 </context>
 <context>
@@ -12896,7 +12896,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/TextPreferences.js" line="+30"/>
         <source>Draw</source>
-        <translation>Uavgjort</translation>
+        <translation>Tegn</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13514,12 +13514,12 @@ er allerede i listen.</translation>
     <message>
         <location line="+27"/>
         <source>View</source>
-        <translation>Utsikt</translation>
+        <translation>Vis</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;View</source>
-        <translation>Utsikt</translation>
+        <translation>Vis</translation>
     </message>
 </context>
 <context>
@@ -13573,7 +13573,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+2"/>
         <source>Layout</source>
-        <translation>Utforming</translation>
+        <translation>Oppsett</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14124,7 +14124,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+0"/>
         <source>Layout</source>
-        <translation>Utforming</translation>
+        <translation>Oppsett</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14144,7 +14144,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation>Utsikt</translation>
+        <translation>Vis</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14370,7 +14370,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Leder</translation>
+        <translation>Henvisning</translation>
     </message>
     <message>
         <location line="+2"/>

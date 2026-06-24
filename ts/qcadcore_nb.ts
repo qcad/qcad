@@ -312,7 +312,7 @@
     <message>
         <location line="+1"/>
         <source>Layout</source>
-        <translation>Utforming</translation>
+        <translation>Oppsett</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -559,7 +559,7 @@
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation>Trekningsrekkefølge</translation>
+        <translation>Tegnerekkefølge</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1118,7 +1118,7 @@
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation>Luftstrøm</translation>
+        <translation>Luftledning</translation>
     </message>
     <message>
         <location line="+2"/>
