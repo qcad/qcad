@@ -23,34 +23,34 @@
 </p>
 </div>
 <h3>Description</h3>
-<p>import ArcCircle01 from './ArcCircle01.png'; import ArcCircle02a from './ArcCircle02a.png'; import ArcCircle03 from './ArcCircle03.png'; import ArcCircle02 from './ArcCircle02.png'; import InfoSector from './InfoSector.png'; import InfoSlice from './InfoSlice.png'; import ArcCircle04 from './ArcCircle04.png'; import ArcCircle06 from './ArcCircle06.png'; import ArcCircle05 from './ArcCircle05.png'; import ArcCircle08 from './ArcCircle08.png'; import ArcCircle07 from './ArcCircle07.png';</p>
+<p>          </p>
 <p>Auteur : Robert S.</p>
 <p>Cette commande calcule la surface des arcs, cercles, ellipses et arcs elliptiques, et ajoute éventuellement l'information au calque courant d'un dessin. Si vous sélectionnez un autre type d'entité, un avertissement est affiché dans la ligne de commande.</p>
 <p>Pour les arcs, il y a deux options pour calculer les surfaces, à savoir Segment ou Secteur. La zone d'un segment (ou tranche) est la zone délimitée par l'arc et deux lignes tracées depuis le point de départ et le point final de l'arc jusqu'au centre de l'arc. La zone d'un secteur est la zone délimitée par l'arc et une corde dessinée depuis le point de départ de l'arc jusqu'au point final.</p>
-<p><Image src={ArcCircle01} alt="ArcCircle01" width={285} height={149} /> Figure 1 : un segment (tranche) et un secteur.</p>
+<p><img src="ArcCircle01.png" alt="ArcCircle01" width="285" height="149" /><br/> Figure 1 : un segment (tranche) et un secteur.</p>
 <p><strong>Options</strong></p>
 <p>Cette commande possède les options standard <em>"Ajouter une mesure au dessin</em>" et " <em>Hauteur du texte</em>".</p>
-<p><Image src={ArcCircle02a} alt="ArcCircle02a" width={200} height={19} /> Figure 2 : Options d'information standard</p>
+<p><img src="ArcCircle02a.png" alt="ArcCircle02a" width="200" height="19" /><br/> Figure 2 : Options d'information standard</p>
 <p>Que cette fonction soit désactivée ou non, lorsque vous cliquez sur un arc, un cercle, une ellipse ou un arc elliptique, l'information est affichée dans le widget de la ligne de commande.</p>
-<p><Image src={ArcCircle03} alt="ArcCircle03" width={238} height={29} /> Figure 3 : Informations affichées en ligne de commande</p>
+<p><img src="ArcCircle03.png" alt="ArcCircle03" width="238" height="29" /><br/> Figure 3 : Informations affichées en ligne de commande</p>
 <p>(Note : chaque fois que vous lancez une commande info, la case à cocher <em>"Ajouter une mesure au dessin</em>" est toujours décochée. Vous devez vous rappeler de l'activer si vous voulez que les informations soient ajoutées au dessin).</p>
 <p>Il ajoute également les options suivantes.</p>
-<p><Image src={ArcCircle02} alt="ArcCircle02" width={213} height={25} /> Figure 4 : Options ajoutées</p>
+<p><img src="ArcCircle02.png" alt="ArcCircle02" width="213" height="25" /><br/> Figure 4 : Options ajoutées</p>
 <p><strong>Mode :</strong></p>
 <p>Le mode ne s'applique qu'aux arcs.</p>
-<p><Image src={InfoSector} alt="InfoSector" width={40} height={40} /> <em>Secteur :</em> Ce mode retourne la surface du secteur. Ceci est utile lorsqu'il est utilisé en conjonction avec la commande <em>"Polygonal Area</em>".</p>
-<p><Image src={InfoSlice} alt="InfoSlice" width={40} height={40} /> <em>Segment :</em> Ce mode retourne la zone du segment.</p>
+<p><img src="InfoSector.png" alt="InfoSector" width="40" height="40" /><br/> <em>Secteur :</em> Ce mode retourne la surface du secteur. Ceci est utile lorsqu'il est utilisé en conjonction avec la commande <em>"Polygonal Area</em>".</p>
+<p><img src="InfoSlice.png" alt="InfoSlice" width="40" height="40" /><br/> <em>Segment :</em> Ce mode retourne la zone du segment.</p>
 <p><strong>Ajouter :</strong></p>
 <p><em>Entité :</em> Ceci sélectionne si vous voulez ajouter une copie de l'entité mesurée au calque courant du dessin.</p>
 <p><em>Chord :</em> Ceci sélectionne si vous voulez que l'accord (secteur), ou les lignes de rayon (segment), soient ajoutés au dessin.</p>
 <p><em>Longueur :</em> Par défaut, la zone est toujours imprimée sur le dessin. Cette option sélectionne si vous voulez que des informations supplémentaires soient ajoutées au dessin.</p>
 <p>Pour les cercles et les ellipses complètes, l'information supplémentaire est la circonférence. Ceci utilise le point central comme coin inférieur gauche pour le texte ajouté.</p>
-<p><Image src={ArcCircle04} alt="ArcCircle04" width={364} height={136} /></p>
+<p><img src="ArcCircle04.png" alt="ArcCircle04" width="364" height="136" /><br/></p>
 <p>Pour les arcs circulaires, l'information supplémentaire est la longueur de l'arc et la longueur de l'accord (en mode secteur), ou le rayon (en mode segment).</p>
 <p>Pour les ellipses, l'information supplémentaire est la longueur de l'arc et la longueur de l'accord (en mode secteur), ou la distance entre le point central et le point de départ de l'arc, suivie de la distance entre le point central et le point final de l'arc (en mode segment).</p>
 <p>Le coin inférieur gauche pour le texte ajouté est le point final de l'arc.</p>
-<p><Image src={ArcCircle06} alt="ArcCircle06" width={332} height={75} /></p>
-<p><Image src={ArcCircle05} alt="ArcCircle05" width={378} height={111} /></p>
-<p><Image src={ArcCircle08} alt="ArcCircle08" width={328} height={90} /></p>
-<p><Image src={ArcCircle07} alt="ArcCircle07" width={418} height={105} /></p></body>
+<p><img src="ArcCircle06.png" alt="ArcCircle06" width="332" height="75" /><br/></p>
+<p><img src="ArcCircle05.png" alt="ArcCircle05" width="378" height="111" /><br/></p>
+<p><img src="ArcCircle08.png" alt="ArcCircle08" width="328" height="90" /><br/></p>
+<p><img src="ArcCircle07.png" alt="ArcCircle07" width="418" height="105" /><br/></p></body>
 </html>
