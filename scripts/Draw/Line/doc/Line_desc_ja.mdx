@@ -1,0 +1,23 @@
+import TypeAuto from './TypeAuto.png';
+import TypeSegment from './TypeSegment.png';
+import TypeXLine from './TypeXLine.png';
+import TypeRay from './TypeRay.png';
+
+線は、2 点によって定義される直線のオブジェクトです。線ツールには、始点から終点まで、既存のオブジェクトに平行に、円または円弧に正接させて、または別の線に直交させてなど、線を作成するさまざまな方法があります。
+
+*線の種類*
+
+ほとんどの線ツールでは、オプションツールバーで作成する線の種類を選択できます。利用可能な線の種類は次のとおりです。
+
+- 自動:
+  <Image src={TypeAuto} alt="TypeAuto" width={40} height={40} />
+  選択した別の線と同じ種類の線を自動的に作成します。これは平行線ツールに適用されます。
+- 線分:
+  <Image src={TypeSegment} alt="TypeSegment" width={40} height={40} />
+  始点から終点までの線分を作成します。
+- 無限線:
+  <Image src={TypeXLine} alt="TypeXLine" width={40} height={40} />
+  指定した 2 点を通る無限線を作成します。これは X 線または構築線と呼ばれることもあります。
+- 放射線:
+  <Image src={TypeRay} alt="TypeRay" width={40} height={40} />
+  指定した始点から別の点を通って無限の長さで放射線を作成します。
