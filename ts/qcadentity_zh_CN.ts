@@ -587,7 +587,7 @@
         <translation>角度</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+224"/>
         <source>Yes</source>
         <translation>是</translation>
     </message>
@@ -597,7 +597,7 @@
         <translation>否</translation>
     </message>
     <message>
-        <location line="-208"/>
+        <location line="-223"/>
         <source>Scale</source>
         <translation>比例</translation>
     </message>

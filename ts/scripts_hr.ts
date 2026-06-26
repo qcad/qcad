@@ -270,7 +270,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
         <source>Application Preferences</source>
         <translation>Postavke aplikacije</translation>
     </message>
@@ -280,7 +280,7 @@
         <translation>Postavke crteža</translation>
     </message>
     <message>
-        <location line="+326"/>
+        <location line="+328"/>
         <source>Apply preferences</source>
         <translation>Primijeni postavke</translation>
     </message>
@@ -927,19 +927,19 @@ Do you wish to recover it?</source>
 Želite li je vratiti?</translation>
     </message>
     <message>
-        <location line="+25"/>
-        <location line="+11"/>
-        <location line="+5"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+7"/>
         <source>Cannot rename file:</source>
         <translation>Nije moguće preimenovati datoteku:</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-25"/>
         <source>Moved autosave backup file to:</source>
         <translation>Sigurnosna kopija automatskog spremanja premještena u:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+28"/>
         <source>Moved original file to:</source>
         <translation>Izvorna datoteka premještena u:</translation>
     </message>
@@ -1136,12 +1136,12 @@ Do you wish to recover it?</source>
         <translation>Izvoz bitmape</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Size</source>
         <translation>Veličina</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Width:</source>
         <translation>Širina:</translation>
     </message>
@@ -1151,22 +1151,37 @@ Do you wish to recover it?</source>
         <translation>Visina:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+33"/>
         <source>Pixels per drawing unit:</source>
         <translation>Pikseli po jedinici crteža:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+280"/>
+        <source>Selection</source>
+        <translation>Odabir</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Export bounding box of selection</source>
         <translation>Izvezi ograničavajući okvir odabira</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-107"/>
         <source>Background</source>
         <translation>Pozadina</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="-245"/>
+        <source>Specify width and height:</source>
+        <translation>Odredite širinu i visinu:</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Specify resolution:</source>
+        <translation>Odredite rezoluciju:</translation>
+    </message>
+    <message>
+        <location line="+195"/>
         <source>White</source>
         <translation>Bijela</translation>
     </message>
@@ -1188,6 +1203,11 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+6"/>
+        <source>Prevent white on white / black on black export</source>
+        <translation>Spriječi izvoz bijelo na bijelom / crno na crnom</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Monochrome</source>
         <translation>Jednobojno</translation>
     </message>
@@ -1213,7 +1233,7 @@ Do you wish to recover it?</source>
         <translation>Koristi anti-aliasing</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-197"/>
         <source>Margin</source>
         <translation>Margina</translation>
     </message>
@@ -1236,7 +1256,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Nevažeća veličina slike (širina x visina mora biti manja od %1)</translation>
     </message>
@@ -1333,7 +1353,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
         <source>Widgets</source>
         <translation>Dodatci</translation>
     </message>
@@ -4207,18 +4227,18 @@ večpostoji na popisu.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2133"/>
+        <location line="+2167"/>
         <source>Cancel</source>
         <translation>Odustani</translation>
     </message>
     <message>
-        <location line="-2132"/>
+        <location line="-2166"/>
         <source>Done</source>
         <translation>Završeno</translation>
     </message>
     <message>
-        <location line="+284"/>
-        <location line="+133"/>
+        <location line="+287"/>
+        <location line="+143"/>
         <source>Active Tool:</source>
         <translation>Aktivni alat:</translation>
     </message>
@@ -4258,7 +4278,7 @@ večpostoji na popisu.</translation>
         <translation>Entity is on a locked layer.</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+254"/>
         <source>Length:</source>
         <translation>Duljina:</translation>
     </message>
@@ -6149,6 +6169,11 @@ večpostoji na popisu.</translation>
         <location line="+47"/>
         <source>Tertiary reference points:</source>
         <translation>Tertiary reference points:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Snap reference points:</source>
+        <translation>Referentne točke hvatanja:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8823,6 +8848,16 @@ večpostoji na popisu.</translation>
         <source>Draw vertical line</source>
         <translation>Draw vertical line</translation>
     </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineVertical/LineVertical.ui" line="+17"/>
+        <source>Length:</source>
+        <translation>Duljina:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Reference Point:</source>
+        <translation>Referentna Točka:</translation>
+    </message>
 </context>
 <context>
     <name>LinetypeMode</name>
@@ -9293,7 +9328,7 @@ večpostoji na popisu.</translation>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
         <translation>Opening drawing:</translation>
     </message>
@@ -10252,7 +10287,7 @@ večpostoji na popisu.</translation>
         <translation>Show all properties</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+161"/>
         <source>Auto</source>
         <translation>Automatski</translation>
     </message>
@@ -10939,7 +10974,7 @@ večpostoji na popisu.</translation>
         <translation>Nema export filters have been found. aborting...</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+92"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>
@@ -11081,6 +11116,11 @@ večpostoji na popisu.</translation>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
         <translation>Definiraj faktor pomoću pokazivača miša</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
+        <source>Allow rounding of imaginary corner</source>
+        <translation>Dopusti zaobljavanje zamišljenog kuta</translation>
     </message>
 </context>
 <context>
@@ -11569,7 +11609,7 @@ večpostoji na popisu.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1443"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>At least two points are identical.</translation>
@@ -12118,11 +12158,11 @@ večpostoji na popisu.</translation>
     </message>
 </context>
 <context>
-    <name>SnapSelectionCenter</name>
+    <name>SnapSelection</name>
     <message>
-        <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
-        <source>Center of &amp;Selection</source>
-        <translation>Center of &amp;Selection</translation>
+        <location filename="../scripts/Snap/SnapSelection/SnapSelectionInit.js" line="+2"/>
+        <source>&amp;Selection Reference Points</source>
+        <translation>&amp;Referentne točke odabira</translation>
     </message>
 </context>
 <context>
@@ -12560,12 +12600,12 @@ večpostoji na popisu.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+251"/>
         <source>Default value:</source>
         <translation>Default value:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+275"/>
         <source>&amp;Undo</source>
         <translation>&amp;Poništi</translation>
     </message>
@@ -12625,12 +12665,12 @@ večpostoji na popisu.</translation>
         <translation>&amp;Posebni znakovi...</translation>
     </message>
     <message>
-        <location line="+348"/>
+        <location line="+349"/>
         <source>Others...</source>
         <translation>Others...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+136"/>
         <source>Degree</source>
         <translation>Degree</translation>
     </message>
@@ -12926,7 +12966,7 @@ večpostoji na popisu.</translation>
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
         <translation>Opće</translation>
     </message>
@@ -13626,7 +13666,7 @@ večpostoji na popisu.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1168"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
         <source>Restore defaults</source>
         <translation>Restore defaults</translation>
     </message>

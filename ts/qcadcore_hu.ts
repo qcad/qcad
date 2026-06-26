@@ -730,7 +730,7 @@
         <translation>Max. kiterjedés</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+931"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Körkörös (rekurzív) blokkreferencia észlelve:</translation>
     </message>

@@ -587,7 +587,7 @@
         <translation>Uhol</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+224"/>
         <source>Yes</source>
         <translation>Áno</translation>
     </message>
@@ -597,7 +597,7 @@
         <translation>Nie</translation>
     </message>
     <message>
-        <location line="-208"/>
+        <location line="-223"/>
         <source>Scale</source>
         <translation>Mierka</translation>
     </message>

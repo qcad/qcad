@@ -270,7 +270,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
         <source>Application Preferences</source>
         <translation>应用程序首选项</translation>
     </message>
@@ -280,7 +280,7 @@
         <translation>绘图首选项</translation>
     </message>
     <message>
-        <location line="+326"/>
+        <location line="+328"/>
         <source>Apply preferences</source>
         <translation>应用首选项</translation>
     </message>
@@ -923,19 +923,19 @@ Do you wish to recover it?</source>
 你想恢复它吗？</translation>
     </message>
     <message>
-        <location line="+25"/>
-        <location line="+11"/>
-        <location line="+5"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+7"/>
         <source>Cannot rename file:</source>
         <translation>无法重命名文件：</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-25"/>
         <source>Moved autosave backup file to:</source>
         <translation>将自动保存备份文件移动到：</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+28"/>
         <source>Moved original file to:</source>
         <translation>将原始文件移动到：</translation>
     </message>
@@ -1132,12 +1132,12 @@ Do you wish to recover it?</source>
         <translation>位图导出</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Size</source>
         <translation>尺寸</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Width:</source>
         <translation>宽度：</translation>
     </message>
@@ -1147,22 +1147,37 @@ Do you wish to recover it?</source>
         <translation>高度：</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+33"/>
         <source>Pixels per drawing unit:</source>
         <translation>每个绘图单位的像素：</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+280"/>
+        <source>Selection</source>
+        <translation>选择</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Export bounding box of selection</source>
         <translation>导出选区的边界盒</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-107"/>
         <source>Background</source>
         <translation>背景</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="-245"/>
+        <source>Specify width and height:</source>
+        <translation>指定宽度和高度：</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Specify resolution:</source>
+        <translation>指定分辨率：</translation>
+    </message>
+    <message>
+        <location line="+195"/>
         <source>White</source>
         <translation>白色</translation>
     </message>
@@ -1184,6 +1199,11 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+6"/>
+        <source>Prevent white on white / black on black export</source>
+        <translation>防止白底白字/黑底黑字导出</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Monochrome</source>
         <translation>单色</translation>
     </message>
@@ -1209,7 +1229,7 @@ Do you wish to recover it?</source>
         <translation>使用抗锯齿</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-197"/>
         <source>Margin</source>
         <translation>边距</translation>
     </message>
@@ -1232,7 +1252,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>无效的图像大小（宽度x高度必须小于%1）。</translation>
     </message>
@@ -1328,7 +1348,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
         <source>Widgets</source>
         <translation>小工具</translation>
     </message>
@@ -4198,18 +4218,18 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2133"/>
+        <location line="+2167"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location line="-2132"/>
+        <location line="-2166"/>
         <source>Done</source>
         <translation>完成</translation>
     </message>
     <message>
-        <location line="+284"/>
-        <location line="+133"/>
+        <location line="+287"/>
+        <location line="+143"/>
         <source>Active Tool:</source>
         <translation>活动工具：</translation>
     </message>
@@ -4249,7 +4269,7 @@ is already in the list.</source>
         <translation>实体在一个锁定的层上。</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+254"/>
         <source>Length:</source>
         <translation>长度：</translation>
     </message>
@@ -6138,6 +6158,11 @@ is already in the list.</source>
         <location line="+47"/>
         <source>Tertiary reference points:</source>
         <translation>三级参考点：</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Snap reference points:</source>
+        <translation>捕捉参考点：</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8812,6 +8837,16 @@ is already in the list.</source>
         <source>Draw vertical line</source>
         <translation>绘制垂直线</translation>
     </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineVertical/LineVertical.ui" line="+17"/>
+        <source>Length:</source>
+        <translation>长度：</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Reference Point:</source>
+        <translation>参考点：</translation>
+    </message>
 </context>
 <context>
     <name>LinetypeMode</name>
@@ -9282,7 +9317,7 @@ is already in the list.</source>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
         <translation>打开绘图：</translation>
     </message>
@@ -10237,7 +10272,7 @@ is already in the list.</source>
         <translation>显示所有属性</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+161"/>
         <source>Auto</source>
         <translation>自动</translation>
     </message>
@@ -10924,7 +10959,7 @@ is already in the list.</source>
         <translation>没有找到导出筛选器。正在中止…</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+92"/>
         <source>Format:</source>
         <translation>格式：</translation>
     </message>
@@ -11066,6 +11101,11 @@ is already in the list.</source>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
         <translation>使用鼠标光标定义因子</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
+        <source>Allow rounding of imaginary corner</source>
+        <translation>允许对虚拟角进行圆角</translation>
     </message>
 </context>
 <context>
@@ -11548,7 +11588,7 @@ is already in the list.</source>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1443"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>至少有两点是相同的。</translation>
@@ -12097,11 +12137,11 @@ is already in the list.</source>
     </message>
 </context>
 <context>
-    <name>SnapSelectionCenter</name>
+    <name>SnapSelection</name>
     <message>
-        <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
-        <source>Center of &amp;Selection</source>
-        <translation>选择中心</translation>
+        <location filename="../scripts/Snap/SnapSelection/SnapSelectionInit.js" line="+2"/>
+        <source>&amp;Selection Reference Points</source>
+        <translation>选择参考点(&amp;S)</translation>
     </message>
 </context>
 <context>
@@ -12539,12 +12579,12 @@ is already in the list.</source>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+251"/>
         <source>Default value:</source>
         <translation>默认值：</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+275"/>
         <source>&amp;Undo</source>
         <translation>撤销(&amp;U)</translation>
     </message>
@@ -12604,12 +12644,12 @@ is already in the list.</source>
         <translation>特殊字符(&amp;S)...</translation>
     </message>
     <message>
-        <location line="+348"/>
+        <location line="+349"/>
         <source>Others...</source>
         <translation>其他...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+136"/>
         <source>Degree</source>
         <translation>度</translation>
     </message>
@@ -12905,7 +12945,7 @@ is already in the list.</source>
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
         <translation>一般</translation>
     </message>
@@ -13605,7 +13645,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1168"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
         <source>Restore defaults</source>
         <translation>恢复默认值</translation>
     </message>

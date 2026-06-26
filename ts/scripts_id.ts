@@ -270,7 +270,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
         <source>Application Preferences</source>
         <translation>Preferensi Aplikasi</translation>
     </message>
@@ -280,7 +280,7 @@
         <translation>Preferensi Menggambar</translation>
     </message>
     <message>
-        <location line="+326"/>
+        <location line="+328"/>
         <source>Apply preferences</source>
         <translation>Menerapkan preferensi</translation>
     </message>
@@ -923,19 +923,19 @@ Do you wish to recover it?</source>
 Apakah Anda ingin memulihkannya?</translation>
     </message>
     <message>
-        <location line="+25"/>
-        <location line="+11"/>
-        <location line="+5"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+7"/>
         <source>Cannot rename file:</source>
         <translation>Tidak dapat mengganti nama file:</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-25"/>
         <source>Moved autosave backup file to:</source>
         <translation>Memindahkan file cadangan yang disimpan secara otomatis ke:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+28"/>
         <source>Moved original file to:</source>
         <translation>Memindahkan file asli ke:</translation>
     </message>
@@ -1127,12 +1127,12 @@ Apakah Anda ingin memulihkannya?</translation>
         <translation>Ekspor Bitmap</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Size</source>
         <translation>Ukuran</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Width:</source>
         <translation>Lebar:</translation>
     </message>
@@ -1142,22 +1142,37 @@ Apakah Anda ingin memulihkannya?</translation>
         <translation>Tinggi:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+33"/>
         <source>Pixels per drawing unit:</source>
         <translation>Piksel per unit gambar:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+280"/>
+        <source>Selection</source>
+        <translation>Seleksi</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Export bounding box of selection</source>
         <translation>Ekspor kotak pembatas pilihan</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-107"/>
         <source>Background</source>
         <translation>Latar Belakang</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="-245"/>
+        <source>Specify width and height:</source>
+        <translation>Tentukan lebar dan tinggi:</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Specify resolution:</source>
+        <translation>Tentukan resolusi:</translation>
+    </message>
+    <message>
+        <location line="+195"/>
         <source>White</source>
         <translation>Putih</translation>
     </message>
@@ -1179,6 +1194,11 @@ Apakah Anda ingin memulihkannya?</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Prevent white on white / black on black export</source>
+        <translation>Mencegah ekspor putih pada putih / hitam pada hitam</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Monochrome</source>
         <translation>Monokrom</translation>
     </message>
@@ -1204,7 +1224,7 @@ Apakah Anda ingin memulihkannya?</translation>
         <translation>Gunakan anti-aliasing</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-197"/>
         <source>Margin</source>
         <translation>Margin</translation>
     </message>
@@ -1232,7 +1252,7 @@ Apakah Anda ingin memulihkannya?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Ukuran gambar tidak valid (lebar x tinggi harus kurang dari %1)</translation>
     </message>
@@ -1328,7 +1348,7 @@ Apakah Anda ingin memulihkannya?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
         <source>Widgets</source>
         <translation>Widget</translation>
     </message>
@@ -4198,18 +4218,18 @@ sudah ada dalam daftar.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2133"/>
+        <location line="+2167"/>
         <source>Cancel</source>
         <translation>Batal</translation>
     </message>
     <message>
-        <location line="-2132"/>
+        <location line="-2166"/>
         <source>Done</source>
         <translation>Selesai</translation>
     </message>
     <message>
-        <location line="+284"/>
-        <location line="+133"/>
+        <location line="+287"/>
+        <location line="+143"/>
         <source>Active Tool:</source>
         <translation>Alat Aktif:</translation>
     </message>
@@ -4249,7 +4269,7 @@ sudah ada dalam daftar.</translation>
         <translation>Entitas berada pada lapisan terkunci.</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+254"/>
         <source>Length:</source>
         <translation>Panjang:</translation>
     </message>
@@ -6138,6 +6158,11 @@ sudah ada dalam daftar.</translation>
         <location line="+47"/>
         <source>Tertiary reference points:</source>
         <translation>Titik referensi tersier:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Snap reference points:</source>
+        <translation>Titik referensi jepret:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8812,6 +8837,16 @@ sudah ada dalam daftar.</translation>
         <source>Draw vertical line</source>
         <translation>Menggambar garis vertikal</translation>
     </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineVertical/LineVertical.ui" line="+17"/>
+        <source>Length:</source>
+        <translation>Panjang:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Reference Point:</source>
+        <translation>Titik Referensi:</translation>
+    </message>
 </context>
 <context>
     <name>LinetypeMode</name>
@@ -9282,7 +9317,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
         <translation>Gambar pembuka:</translation>
     </message>
@@ -10287,7 +10322,7 @@ sudah ada dalam daftar.</translation>
         <translation>Tampilkan semua properti</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+161"/>
         <source>Auto</source>
         <translation>Otomatis</translation>
     </message>
@@ -10974,7 +11009,7 @@ sudah ada dalam daftar.</translation>
         <translation>Tidak ada filter ekspor yang ditemukan. Membatalkan...</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+92"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>
@@ -11066,6 +11101,11 @@ sudah ada dalam daftar.</translation>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
         <translation>Skala</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
+        <source>Allow rounding of imaginary corner</source>
+        <translation>Izinkan pembulatan sudut imajiner</translation>
     </message>
 </context>
 <context>
@@ -11548,7 +11588,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1443"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Paling tidak, ada dua poin yang identik.</translation>
@@ -12097,11 +12137,11 @@ sudah ada dalam daftar.</translation>
     </message>
 </context>
 <context>
-    <name>SnapSelectionCenter</name>
+    <name>SnapSelection</name>
     <message>
-        <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
-        <source>Center of &amp;Selection</source>
-        <translation>Pusat Seleksi</translation>
+        <location filename="../scripts/Snap/SnapSelection/SnapSelectionInit.js" line="+2"/>
+        <source>&amp;Selection Reference Points</source>
+        <translation>&amp;Titik referensi seleksi</translation>
     </message>
 </context>
 <context>
@@ -12539,12 +12579,12 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+251"/>
         <source>Default value:</source>
         <translation>Nilai default:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+275"/>
         <source>&amp;Undo</source>
         <translation>Membatalkan</translation>
     </message>
@@ -12604,12 +12644,12 @@ sudah ada dalam daftar.</translation>
         <translation>Karakter Khusus...</translation>
     </message>
     <message>
-        <location line="+348"/>
+        <location line="+349"/>
         <source>Others...</source>
         <translation>Lainnya...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+136"/>
         <source>Degree</source>
         <translation>Derajat</translation>
     </message>
@@ -12905,7 +12945,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
         <translation>Umum</translation>
     </message>
@@ -13605,7 +13645,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1168"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
         <source>Restore defaults</source>
         <translation>Memulihkan default</translation>
     </message>

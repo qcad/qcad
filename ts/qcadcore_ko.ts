@@ -325,7 +325,7 @@
         <translation>외부 참조</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+931"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>순환(재귀적) 블록 참조가 감지되었습니다:</translation>
     </message>

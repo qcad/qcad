@@ -576,7 +576,7 @@
         <translation>角度</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+224"/>
         <source>Yes</source>
         <translation>はい</translation>
     </message>
@@ -586,7 +586,7 @@
         <translation>いいえ</translation>
     </message>
     <message>
-        <location line="-208"/>
+        <location line="-223"/>
         <source>Scale</source>
         <translation>スケール</translation>
     </message>

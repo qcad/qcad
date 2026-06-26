@@ -587,7 +587,7 @@
         <translation>Kulma</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+224"/>
         <source>Yes</source>
         <translation>Kyllä</translation>
     </message>
@@ -597,7 +597,7 @@
         <translation>Ei</translation>
     </message>
     <message>
-        <location line="-208"/>
+        <location line="-223"/>
         <source>Scale</source>
         <translation>Mittakaava</translation>
     </message>

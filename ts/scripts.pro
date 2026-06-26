@@ -6,6 +6,7 @@ SOURCES = \
 ../scripts/AddOn.js \
 ../scripts/Apollonius.js \
 ../scripts/autostart.js \
+../scripts/autostart9.js \
 ../scripts/Block/AddBlock/AddBlock.js \
 ../scripts/Block/AddBlock/AddBlockInit.js \
 ../scripts/Block/AddBlock/Tests/AddBlockTest00.js \
@@ -772,6 +773,7 @@ SOURCES = \
 ../scripts/Modify/BreakOut/Tests/BreakOutTest15.js \
 ../scripts/Modify/BreakOut/Tests/BreakOutTest16.js \
 ../scripts/Modify/BreakOut/Tests/BreakOutTest17.js \
+../scripts/Modify/BreakOut/Tests/BreakOutTest18.js \
 ../scripts/Modify/BreakOutGap/BreakOutGap.js \
 ../scripts/Modify/BreakOutGap/BreakOutGapInit.js \
 ../scripts/Modify/BreakOutGap/Tests/BreakOutGapTest01.js \
@@ -1003,8 +1005,8 @@ SOURCES = \
 ../scripts/Snap/SnapPerpendicular/SnapPerpendicularInit.js \
 ../scripts/Snap/SnapReference/SnapReference.js \
 ../scripts/Snap/SnapReference/SnapReferenceInit.js \
-../scripts/Snap/SnapSelectionCenter/SnapSelectionCenter.js \
-../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js \
+../scripts/Snap/SnapSelection/SnapSelection.js \
+../scripts/Snap/SnapSelection/SnapSelectionInit.js \
 ../scripts/Snap/SnapTangential/SnapTangential.js \
 ../scripts/Snap/SnapTangential/SnapTangentialInit.js \
 ../scripts/Snap/SnapXManual/SnapXManual.js \
@@ -1128,6 +1130,7 @@ SOURCES = \
 ../scripts/Draw/Line/LineParallel/LineParallel.ui \
 ../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui \
 ../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.ui \
+../scripts/Draw/Line/LineVertical/LineVertical.ui \
 ../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.ui \
 ../scripts/Draw/Shape/Shape.ui \
 ../scripts/Draw/Shape/Shape2.ui \
@@ -1222,6 +1225,7 @@ SOURCES = \
 ../scripts/Modify/Rotate/RotateDialog.ui \
 ../scripts/Modify/Rotate2/Rotate2.ui \
 ../scripts/Modify/Rotate2/Rotate2Dialog.ui \
+../scripts/Modify/Round/PreferencesPage.ui \
 ../scripts/Modify/Round/Round.ui \
 ../scripts/Modify/Scale/PreferencesPage.ui \
 ../scripts/Modify/Scale/Scale.ui \

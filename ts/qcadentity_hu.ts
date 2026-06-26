@@ -595,7 +595,7 @@
         <translation>Szög</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+224"/>
         <source>Yes</source>
         <translation>Igen</translation>
     </message>
@@ -605,7 +605,7 @@
         <translation>Nem</translation>
     </message>
     <message>
-        <location line="-208"/>
+        <location line="-223"/>
         <source>Scale</source>
         <translation>Lépték</translation>
     </message>

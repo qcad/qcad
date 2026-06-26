@@ -270,7 +270,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
         <source>Application Preferences</source>
         <translation>Preferințele aplicației</translation>
     </message>
@@ -280,7 +280,7 @@
         <translation>Preferințe de desenare</translation>
     </message>
     <message>
-        <location line="+326"/>
+        <location line="+328"/>
         <source>Apply preferences</source>
         <translation>Aplicați preferințele</translation>
     </message>
@@ -927,19 +927,19 @@ Do you wish to recover it?</source>
 Doriți să îl recuperați?</translation>
     </message>
     <message>
-        <location line="+25"/>
-        <location line="+11"/>
-        <location line="+5"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+7"/>
         <source>Cannot rename file:</source>
         <translation>Nu se poate redenumi fișierul:</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-25"/>
         <source>Moved autosave backup file to:</source>
         <translation>A mutat fișierul de salvare automată la:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+28"/>
         <source>Moved original file to:</source>
         <translation>A mutat fișierul original la:</translation>
     </message>
@@ -1131,12 +1131,12 @@ Doriți să îl recuperați?</translation>
         <translation>Exportul bitmap</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Size</source>
         <translation>Dimensiune</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Width:</source>
         <translation>Lățime:</translation>
     </message>
@@ -1146,22 +1146,37 @@ Doriți să îl recuperați?</translation>
         <translation>Înălțime:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+33"/>
         <source>Pixels per drawing unit:</source>
         <translation>Pixeli pe unitate de desen:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+280"/>
+        <source>Selection</source>
+        <translation>Selecție</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Export bounding box of selection</source>
         <translation>Exportați caseta de delimitare a selecției</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-107"/>
         <source>Background</source>
         <translation>Fond</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="-245"/>
+        <source>Specify width and height:</source>
+        <translation>Specificați lățimea și înălțimea:</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Specify resolution:</source>
+        <translation>Specificați rezoluția:</translation>
+    </message>
+    <message>
+        <location line="+195"/>
         <source>White</source>
         <translation>Alb</translation>
     </message>
@@ -1183,6 +1198,11 @@ Doriți să îl recuperați?</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Prevent white on white / black on black export</source>
+        <translation>Împiedicați exportul alb pe alb / negru pe negru</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Monochrome</source>
         <translation>Monocromie</translation>
     </message>
@@ -1208,7 +1228,7 @@ Doriți să îl recuperați?</translation>
         <translation>Utilizați anti-aliasing</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-197"/>
         <source>Margin</source>
         <translation>Marjă</translation>
     </message>
@@ -1236,7 +1256,7 @@ Doriți să îl recuperați?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Dimensiunea nevalabilă a imaginii (lățimea x înălțimea trebuie să fie mai mică decât %1)</translation>
     </message>
@@ -1332,7 +1352,7 @@ Doriți să îl recuperați?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
         <source>Widgets</source>
         <translation>Widgeturi</translation>
     </message>
@@ -4206,18 +4226,18 @@ este deja în listă.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2133"/>
+        <location line="+2167"/>
         <source>Cancel</source>
         <translation>Anulează</translation>
     </message>
     <message>
-        <location line="-2132"/>
+        <location line="-2166"/>
         <source>Done</source>
         <translation>Realizat</translation>
     </message>
     <message>
-        <location line="+284"/>
-        <location line="+133"/>
+        <location line="+287"/>
+        <location line="+143"/>
         <source>Active Tool:</source>
         <translation>Instrument activ:</translation>
     </message>
@@ -4257,7 +4277,7 @@ este deja în listă.</translation>
         <translation>Entitatea se află pe un strat blocat.</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+254"/>
         <source>Length:</source>
         <translation>Lungime:</translation>
     </message>
@@ -6148,6 +6168,11 @@ este deja în listă.</translation>
         <location line="+47"/>
         <source>Tertiary reference points:</source>
         <translation>Puncte de referință terțiare:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Snap reference points:</source>
+        <translation>Puncte de referință de ancorare:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8822,6 +8847,16 @@ este deja în listă.</translation>
         <source>Draw vertical line</source>
         <translation>Trage o linie verticală</translation>
     </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineVertical/LineVertical.ui" line="+17"/>
+        <source>Length:</source>
+        <translation>Lungime:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Reference Point:</source>
+        <translation>Punct de referință:</translation>
+    </message>
 </context>
 <context>
     <name>LinetypeMode</name>
@@ -9292,7 +9327,7 @@ este deja în listă.</translation>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
         <translation>Desene de deschidere:</translation>
     </message>
@@ -10301,7 +10336,7 @@ este deja în listă.</translation>
         <translation>Arată toate proprietățile</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+161"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -10988,7 +11023,7 @@ este deja în listă.</translation>
         <translation>Nu au fost găsite filtre de export. Anulare...</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+92"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>
@@ -11080,6 +11115,11 @@ este deja în listă.</translation>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
         <translation>Scară</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
+        <source>Allow rounding of imaginary corner</source>
+        <translation>Permite rotunjirea colțului imaginar</translation>
     </message>
 </context>
 <context>
@@ -11568,7 +11608,7 @@ este deja în listă.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1443"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Cel puțin două puncte sunt identice.</translation>
@@ -12117,11 +12157,11 @@ este deja în listă.</translation>
     </message>
 </context>
 <context>
-    <name>SnapSelectionCenter</name>
+    <name>SnapSelection</name>
     <message>
-        <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
-        <source>Center of &amp;Selection</source>
-        <translation>Centrul de selecție</translation>
+        <location filename="../scripts/Snap/SnapSelection/SnapSelectionInit.js" line="+2"/>
+        <source>&amp;Selection Reference Points</source>
+        <translation>&amp;Puncte de referință ale selecției</translation>
     </message>
 </context>
 <context>
@@ -12559,12 +12599,12 @@ este deja în listă.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+251"/>
         <source>Default value:</source>
         <translation>Valoarea implicită:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+275"/>
         <source>&amp;Undo</source>
         <translation>Desfaceți</translation>
     </message>
@@ -12624,12 +12664,12 @@ este deja în listă.</translation>
         <translation>Caractere speciale...</translation>
     </message>
     <message>
-        <location line="+348"/>
+        <location line="+349"/>
         <source>Others...</source>
         <translation>Alții...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+136"/>
         <source>Degree</source>
         <translation>Gradul</translation>
     </message>
@@ -12925,7 +12965,7 @@ este deja în listă.</translation>
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
         <translation>General</translation>
     </message>
@@ -13625,7 +13665,7 @@ este deja în listă.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1168"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
         <source>Restore defaults</source>
         <translation>Restabilirea valorilor implicite</translation>
     </message>

@@ -721,7 +721,7 @@
         <translation>ID vrstvy</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+931"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Detekováno kruhové (rekurzivní) odkazování bloku</translation>
     </message>

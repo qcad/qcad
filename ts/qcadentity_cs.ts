@@ -619,7 +619,7 @@
         <translation>Vrchol</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+216"/>
         <source>Yes</source>
         <translation>Ano</translation>
     </message>

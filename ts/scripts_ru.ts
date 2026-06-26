@@ -270,7 +270,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
         <source>Application Preferences</source>
         <translation>Предпочтения программы</translation>
     </message>
@@ -280,7 +280,7 @@
         <translation>Предпочтения чертежа</translation>
     </message>
     <message>
-        <location line="+326"/>
+        <location line="+328"/>
         <source>Apply preferences</source>
         <translation>Применить предпочтения</translation>
     </message>
@@ -927,19 +927,19 @@ Do you wish to recover it?</source>
         <translation>Восстановить файл?</translation>
     </message>
     <message>
-        <location line="+26"/>
-        <location line="+11"/>
-        <location line="+5"/>
+        <location line="+25"/>
+        <location line="+21"/>
+        <location line="+7"/>
         <source>Cannot rename file:</source>
         <translation>Не удаётся переименовать файл:</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-25"/>
         <source>Moved autosave backup file to:</source>
         <translation>Файл автосохранения перемещён в:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+28"/>
         <source>Moved original file to:</source>
         <translation>Оригинальный файл перемещён в:</translation>
     </message>
@@ -1131,12 +1131,12 @@ Do you wish to recover it?</source>
         <translation>Экспорт растрового изображения</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Size</source>
         <translation>Размер</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Width:</source>
         <translation>Ширина:</translation>
     </message>
@@ -1146,28 +1146,48 @@ Do you wish to recover it?</source>
         <translation>Высота:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+33"/>
         <source>Pixels per drawing unit:</source>
         <translation>Пикселей на единицу измерения чертежа:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+280"/>
+        <source>Selection</source>
+        <translation>Выделение</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Export bounding box of selection</source>
         <translation>Экспорт ограничительной рамки выделения</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="-81"/>
         <source>Transparent</source>
         <translation>С прозрачностью</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-271"/>
+        <source>Specify width and height:</source>
+        <translation>Укажите ширину и высоту:</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Specify resolution:</source>
+        <translation>Укажите разрешение:</translation>
+    </message>
+    <message>
+        <location line="+225"/>
         <source>Color</source>
         <comment>Title of group box</comment>
         <translation>Цвет</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Prevent white on white / black on black export</source>
+        <translation>Предотвратить белый на белом / чёрный на чёрном при экспорте</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Monochrome</source>
         <translation>Монохромный</translation>
     </message>
@@ -1193,7 +1213,7 @@ Do you wish to recover it?</source>
         <translation>Использовать сглаживание</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-197"/>
         <source>Margin</source>
         <translation>Поле</translation>
     </message>
@@ -1213,7 +1233,7 @@ Do you wish to recover it?</source>
         <translation>Добавить дополнительное поле для компенсации веса линии</translation>
     </message>
     <message>
-        <location line="-170"/>
+        <location line="+30"/>
         <source>Background</source>
         <translation>Фон</translation>
     </message>
@@ -1236,7 +1256,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Неверный размер изображения (ширина х высота должно быть меньше, чем %1)</translation>
     </message>
@@ -1332,7 +1352,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
         <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -4206,18 +4226,18 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2133"/>
+        <location line="+2167"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location line="-2132"/>
+        <location line="-2166"/>
         <source>Done</source>
         <translation>Готово</translation>
     </message>
     <message>
-        <location line="+284"/>
-        <location line="+133"/>
+        <location line="+287"/>
+        <location line="+143"/>
         <source>Active Tool:</source>
         <translation>Активный инструмент:</translation>
     </message>
@@ -4257,7 +4277,7 @@ is already in the list.</source>
         <translation>Объект находится на заблокированном слое.</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+254"/>
         <source>Length:</source>
         <translation>Длина:</translation>
     </message>
@@ -6140,6 +6160,11 @@ is already in the list.</source>
         <translation>Третичные точки привязки:</translation>
     </message>
     <message>
+        <location line="+27"/>
+        <source>Snap reference points:</source>
+        <translation>Точки привязки:</translation>
+    </message>
+    <message>
         <location line="+30"/>
         <source>Snap Tools</source>
         <translation>Инструменты прилипания</translation>
@@ -6185,7 +6210,7 @@ is already in the list.</source>
         <translation>Граница рамки масштаба:</translation>
     </message>
     <message>
-        <location line="-712"/>
+        <location line="-739"/>
         <source>Origin:</source>
         <translation>Начало координат:</translation>
     </message>
@@ -8822,6 +8847,16 @@ is already in the list.</source>
         <source>Draw vertical line</source>
         <translation>Начертить вертикальную линию</translation>
     </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineVertical/LineVertical.ui" line="+17"/>
+        <source>Length:</source>
+        <translation>Длина:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Reference Point:</source>
+        <translation>Точка привязки:</translation>
+    </message>
 </context>
 <context>
     <name>LinetypeMode</name>
@@ -9292,7 +9327,7 @@ is already in the list.</source>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
         <translation>Открытие чертежа:</translation>
     </message>
@@ -10196,12 +10231,12 @@ is already in the list.</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1715"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1736"/>
         <source>*VARIES*</source>
         <translation>*ВАРЬИРОВАНИЕ*</translation>
     </message>
     <message>
-        <location line="-1483"/>
+        <location line="-1504"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10256,7 +10291,7 @@ is already in the list.</source>
         <translation>Показать все свойства</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+161"/>
         <source>Auto</source>
         <translation>Автоматический</translation>
     </message>
@@ -10988,7 +11023,7 @@ is already in the list.</source>
         <translation>Фильтры для экспорта не найдены. Прервано...</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+92"/>
         <source>Format:</source>
         <translation>Формат:</translation>
     </message>
@@ -11080,6 +11115,11 @@ is already in the list.</source>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
         <translation>Определить коэффициент с помощью курсора мыши</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
+        <source>Allow rounding of imaginary corner</source>
+        <translation>Разрешить скругление воображаемого угла</translation>
     </message>
 </context>
 <context>
@@ -11568,7 +11608,7 @@ is already in the list.</source>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1443"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>По крайней мере две точки идентичны.</translation>
@@ -12117,11 +12157,11 @@ is already in the list.</source>
     </message>
 </context>
 <context>
-    <name>SnapSelectionCenter</name>
+    <name>SnapSelection</name>
     <message>
-        <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
-        <source>Center of &amp;Selection</source>
-        <translation>Центр в&amp;ыделения</translation>
+        <location filename="../scripts/Snap/SnapSelection/SnapSelectionInit.js" line="+2"/>
+        <source>&amp;Selection Reference Points</source>
+        <translation>&amp;Опорные точки выделения</translation>
     </message>
 </context>
 <context>
@@ -12559,12 +12599,12 @@ is already in the list.</source>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+251"/>
         <source>Default value:</source>
         <translation>Значение по умолчанию:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+275"/>
         <source>&amp;Undo</source>
         <translation>&amp;Отменить</translation>
     </message>
@@ -12624,12 +12664,12 @@ is already in the list.</source>
         <translation>&amp;Специальные символы...</translation>
     </message>
     <message>
-        <location line="+348"/>
+        <location line="+349"/>
         <source>Others...</source>
         <translation>Другие...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+136"/>
         <source>Degree</source>
         <translation>Градусы</translation>
     </message>
@@ -12925,7 +12965,7 @@ is already in the list.</source>
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
         <translation>Основное</translation>
     </message>
@@ -13625,7 +13665,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1168"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
         <source>Restore defaults</source>
         <translation>Восстановить умолчания</translation>
     </message>

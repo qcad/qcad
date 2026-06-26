@@ -676,7 +676,7 @@
         <translation>Κορυφή</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+216"/>
         <source>Yes</source>
         <translation>Ναι</translation>
     </message>

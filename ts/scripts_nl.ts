@@ -270,7 +270,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
         <source>Application Preferences</source>
         <translation>Toepassingsvoorkeuren</translation>
     </message>
@@ -280,7 +280,7 @@
         <translation>Tekeningsvoorkeuren</translation>
     </message>
     <message>
-        <location line="+326"/>
+        <location line="+328"/>
         <source>Apply preferences</source>
         <translation>Voorkeuren toepassen</translation>
     </message>
@@ -925,19 +925,19 @@ Wilt u deze herstellen?</translation>
         <translation>Bestand herstellen?</translation>
     </message>
     <message>
-        <location line="+26"/>
-        <location line="+11"/>
-        <location line="+5"/>
+        <location line="+25"/>
+        <location line="+21"/>
+        <location line="+7"/>
         <source>Cannot rename file:</source>
         <translation>Kan naam van het bestand niet veranderen:</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-25"/>
         <source>Moved autosave backup file to:</source>
         <translation>Auto-opslaan bestand hernoemd naar:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+28"/>
         <source>Moved original file to:</source>
         <translation>Originele bestand hernoemd naar:</translation>
     </message>
@@ -1129,12 +1129,12 @@ Wilt u deze herstellen?</translation>
         <translation>Bitmap export</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Size</source>
         <translation>Grootte</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Width:</source>
         <translation>Breedte:</translation>
     </message>
@@ -1144,28 +1144,48 @@ Wilt u deze herstellen?</translation>
         <translation>Hoogte:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+33"/>
         <source>Pixels per drawing unit:</source>
         <translation>Pixels per tekeningseenheid:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+280"/>
+        <source>Selection</source>
+        <translation>Selectie</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Export bounding box of selection</source>
         <translation>Exporteer de begrenzingsbox van de selectie</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="-81"/>
         <source>Transparent</source>
         <translation>Transparant</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-271"/>
+        <source>Specify width and height:</source>
+        <translation>Geef breedte en hoogte op:</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Specify resolution:</source>
+        <translation>Geef resolutie op:</translation>
+    </message>
+    <message>
+        <location line="+225"/>
         <source>Color</source>
         <comment>Title of group box</comment>
         <translation>Kleur</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Prevent white on white / black on black export</source>
+        <translation>Voorkom wit op wit / zwart op zwart export</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Monochrome</source>
         <translation>Monochroom</translation>
     </message>
@@ -1191,7 +1211,7 @@ Wilt u deze herstellen?</translation>
         <translation>Antialiasing gebruiken</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-197"/>
         <source>Margin</source>
         <translation>Rand</translation>
     </message>
@@ -1211,7 +1231,7 @@ Wilt u deze herstellen?</translation>
         <translation>Voeg extra afstand toe voor lijndikte</translation>
     </message>
     <message>
-        <location line="-170"/>
+        <location line="+30"/>
         <source>Background</source>
         <translation>Achtergrond</translation>
     </message>
@@ -1234,7 +1254,7 @@ Wilt u deze herstellen?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Ongeldige beeldformaat (breedte x hoogte moet kleiner zijn dan %1)</translation>
     </message>
@@ -1330,7 +1350,7 @@ Wilt u deze herstellen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
         <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -4202,18 +4222,18 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2133"/>
+        <location line="+2167"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-2132"/>
+        <location line="-2166"/>
         <source>Done</source>
         <translation>Klaar</translation>
     </message>
     <message>
-        <location line="+284"/>
-        <location line="+133"/>
+        <location line="+287"/>
+        <location line="+143"/>
         <source>Active Tool:</source>
         <translation>Actief gereedschap:</translation>
     </message>
@@ -4253,7 +4273,7 @@ is al in de lijst.</translation>
         <translation>Object is op een vergrendelde laag.</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+254"/>
         <source>Length:</source>
         <translation>Lengte:</translation>
     </message>
@@ -6135,6 +6155,11 @@ is al in de lijst.</translation>
         <translation>Tertiaire referentiepunten:</translation>
     </message>
     <message>
+        <location line="+27"/>
+        <source>Snap reference points:</source>
+        <translation>Vang-referentiepunten:</translation>
+    </message>
+    <message>
         <location line="+30"/>
         <source>Snap Tools</source>
         <translation>Vangfuncties</translation>
@@ -6180,7 +6205,7 @@ is al in de lijst.</translation>
         <translation>Zoomvensterrand:</translation>
     </message>
     <message>
-        <location line="-712"/>
+        <location line="-739"/>
         <source>Origin:</source>
         <translation>Oorsprong:</translation>
     </message>
@@ -8817,6 +8842,16 @@ is al in de lijst.</translation>
         <source>Draw vertical line</source>
         <translation>Verticale lijn tekenen</translation>
     </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineVertical/LineVertical.ui" line="+17"/>
+        <source>Length:</source>
+        <translation>Lengte:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Reference Point:</source>
+        <translation>Referentiepunt:</translation>
+    </message>
 </context>
 <context>
     <name>LinetypeMode</name>
@@ -9287,7 +9322,7 @@ is al in de lijst.</translation>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
         <translation>Tekening openen:</translation>
     </message>
@@ -10189,12 +10224,12 @@ is al in de lijst.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1715"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1736"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1483"/>
+        <location line="-1504"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10249,7 +10284,7 @@ is al in de lijst.</translation>
         <translation>Toon alle eigenschappen</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+161"/>
         <source>Auto</source>
         <translation>auto</translation>
     </message>
@@ -10981,7 +11016,7 @@ is al in de lijst.</translation>
         <translation>Geen export filters zijn gevonden. Afgebroken...</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+92"/>
         <source>Format:</source>
         <translation>Formaat:</translation>
     </message>
@@ -11073,6 +11108,11 @@ is al in de lijst.</translation>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
         <translation>Definieer de factor met behulp van de muiscursor</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
+        <source>Allow rounding of imaginary corner</source>
+        <translation>Afronden van denkbeeldige hoek toestaan</translation>
     </message>
 </context>
 <context>
@@ -11558,7 +11598,7 @@ is al in de lijst.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1443"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Ten minste twee punten zijn identiek.</translation>
@@ -12107,11 +12147,11 @@ is al in de lijst.</translation>
     </message>
 </context>
 <context>
-    <name>SnapSelectionCenter</name>
+    <name>SnapSelection</name>
     <message>
-        <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
-        <source>Center of &amp;Selection</source>
-        <translation>Centrum van &amp;selectie</translation>
+        <location filename="../scripts/Snap/SnapSelection/SnapSelectionInit.js" line="+2"/>
+        <source>&amp;Selection Reference Points</source>
+        <translation>&amp;Selectie referentiepunten</translation>
     </message>
 </context>
 <context>
@@ -12549,12 +12589,12 @@ is al in de lijst.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+251"/>
         <source>Default value:</source>
         <translation>Standaardwaarde:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+275"/>
         <source>&amp;Undo</source>
         <translation>&amp;Herstel</translation>
     </message>
@@ -12614,12 +12654,12 @@ is al in de lijst.</translation>
         <translation>&amp;Speciale tekens...</translation>
     </message>
     <message>
-        <location line="+348"/>
+        <location line="+349"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+136"/>
         <source>Degree</source>
         <translation>Graad</translation>
     </message>
@@ -12915,7 +12955,7 @@ is al in de lijst.</translation>
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
         <translation>Algemeen</translation>
     </message>
@@ -13615,7 +13655,7 @@ is al in de lijst.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1168"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
         <source>Restore defaults</source>
         <translation>Standaardinstellingen herstellen</translation>
     </message>

@@ -270,7 +270,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
         <source>Application Preferences</source>
         <translation>Aplikační předvolby</translation>
     </message>
@@ -280,7 +280,7 @@
         <translation>Předvolby kreslení</translation>
     </message>
     <message>
-        <location line="+326"/>
+        <location line="+328"/>
         <source>Apply preferences</source>
         <translation>Použít předvolby</translation>
     </message>
@@ -925,19 +925,19 @@ Přejete si ho obnovit?</translation>
         <translation>Obnovit soubor?</translation>
     </message>
     <message>
-        <location line="+26"/>
-        <location line="+11"/>
-        <location line="+5"/>
+        <location line="+25"/>
+        <location line="+21"/>
+        <location line="+7"/>
         <source>Cannot rename file:</source>
         <translation>Nelze přejmenovat soubor:</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-25"/>
         <source>Moved autosave backup file to:</source>
         <translation>Přesunut automaticky ukládaný záložní soubor na:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+28"/>
         <source>Moved original file to:</source>
         <translation>Přesunut originální soubor na:</translation>
     </message>
@@ -1129,12 +1129,12 @@ Přejete si ho obnovit?</translation>
         <translation>Export Bitmapy</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Size</source>
         <translation>Velikost</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Width:</source>
         <translation>Šířka:</translation>
     </message>
@@ -1144,28 +1144,48 @@ Přejete si ho obnovit?</translation>
         <translation>Výška:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+33"/>
         <source>Pixels per drawing unit:</source>
         <translation>Pixelů na jednotku výkresu:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+280"/>
+        <source>Selection</source>
+        <translation>Výběr</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Export bounding box of selection</source>
         <translation>Exportovat ohraničující rámeček výběru</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="-81"/>
         <source>Transparent</source>
         <translation>Průhledné</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-271"/>
+        <source>Specify width and height:</source>
+        <translation>Zadejte šířku a výšku:</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Specify resolution:</source>
+        <translation>Zadejte rozlišení:</translation>
+    </message>
+    <message>
+        <location line="+225"/>
         <source>Color</source>
         <comment>Title of group box</comment>
         <translation>Barva</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Prevent white on white / black on black export</source>
+        <translation>Zabránit bílé barvě na bílém / černé barvě na černém při exportu</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Monochrome</source>
         <translation>Černobílá</translation>
     </message>
@@ -1191,7 +1211,7 @@ Přejete si ho obnovit?</translation>
         <translation>Použít vyhlazování</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-197"/>
         <source>Margin</source>
         <translation>Okraj</translation>
     </message>
@@ -1211,7 +1231,7 @@ Přejete si ho obnovit?</translation>
         <translation>Přidat okraj navíc pro kompenzaci tloušťky čáry</translation>
     </message>
     <message>
-        <location line="-170"/>
+        <location line="+30"/>
         <source>Background</source>
         <translation>Pozadí</translation>
     </message>
@@ -1234,7 +1254,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Vadná velikost obrázku (šířka x výška musí být menší než %1)</translation>
     </message>
@@ -1330,7 +1350,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
         <source>Widgets</source>
         <translation>Widgety</translation>
     </message>
@@ -4204,18 +4224,18 @@ již v seznamu je.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2133"/>
+        <location line="+2167"/>
         <source>Cancel</source>
         <translation>Storno</translation>
     </message>
     <message>
-        <location line="-2132"/>
+        <location line="-2166"/>
         <source>Done</source>
         <translation>Hotovo</translation>
     </message>
     <message>
-        <location line="+284"/>
-        <location line="+133"/>
+        <location line="+287"/>
+        <location line="+143"/>
         <source>Active Tool:</source>
         <translation>Aktivní nástroj:</translation>
     </message>
@@ -4255,7 +4275,7 @@ již v seznamu je.</translation>
         <translation>Prvek je na uzamčené vrstvě.</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+254"/>
         <source>Length:</source>
         <translation>Délka:</translation>
     </message>
@@ -6146,6 +6166,11 @@ již v seznamu je.</translation>
         <location line="+47"/>
         <source>Tertiary reference points:</source>
         <translation>Terciární referenční body:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Snap reference points:</source>
+        <translation>Referenční body přichycení:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8820,6 +8845,16 @@ již v seznamu je.</translation>
         <source>Draw vertical line</source>
         <translation>Nakreslit svislou čáru</translation>
     </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineVertical/LineVertical.ui" line="+17"/>
+        <source>Length:</source>
+        <translation>Délka:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Reference Point:</source>
+        <translation>Referenční bod:</translation>
+    </message>
 </context>
 <context>
     <name>LinetypeMode</name>
@@ -9290,7 +9325,7 @@ již v seznamu je.</translation>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
         <translation>Otevírání výkresu:</translation>
     </message>
@@ -10299,7 +10334,7 @@ již v seznamu je.</translation>
         <translation>Zobrazit všechny vlastnosti</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+161"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -10986,7 +11021,7 @@ již v seznamu je.</translation>
         <translation>Nebyly nalezeny žádné filtry pro export. Přerušení...</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+92"/>
         <source>Format:</source>
         <translation>Formát:</translation>
     </message>
@@ -11078,6 +11113,11 @@ již v seznamu je.</translation>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
         <translation>Definujte faktor pomocí kurzoru myši</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
+        <source>Allow rounding of imaginary corner</source>
+        <translation>Povolit zaoblení imaginárního rohu</translation>
     </message>
 </context>
 <context>
@@ -11566,7 +11606,7 @@ již v seznamu je.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1443"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Alespoň 2 body jsou identické.</translation>
@@ -12115,11 +12155,11 @@ již v seznamu je.</translation>
     </message>
 </context>
 <context>
-    <name>SnapSelectionCenter</name>
+    <name>SnapSelection</name>
     <message>
-        <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
-        <source>Center of &amp;Selection</source>
-        <translation>Střed &amp;výběru</translation>
+        <location filename="../scripts/Snap/SnapSelection/SnapSelectionInit.js" line="+2"/>
+        <source>&amp;Selection Reference Points</source>
+        <translation>&amp;Referenční body výběru</translation>
     </message>
 </context>
 <context>
@@ -12557,12 +12597,12 @@ již v seznamu je.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+251"/>
         <source>Default value:</source>
         <translation>Výchozí hodnota:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+275"/>
         <source>&amp;Undo</source>
         <translation>&amp;Zpět</translation>
     </message>
@@ -12622,12 +12662,12 @@ již v seznamu je.</translation>
         <translation>&amp;Speciální znaky...</translation>
     </message>
     <message>
-        <location line="+348"/>
+        <location line="+349"/>
         <source>Others...</source>
         <translation>Další...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+136"/>
         <source>Degree</source>
         <translation>Stupeň</translation>
     </message>
@@ -12923,7 +12963,7 @@ již v seznamu je.</translation>
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
         <translation>Všeobecné</translation>
     </message>
@@ -13623,7 +13663,7 @@ již v seznamu je.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1168"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
         <source>Restore defaults</source>
         <translation>Obnovit výchozí nastavení</translation>
     </message>

@@ -270,7 +270,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
         <source>Application Preferences</source>
         <translation>Nastavitve aplikacije</translation>
     </message>
@@ -280,7 +280,7 @@
         <translation>Nastavitve risbe</translation>
     </message>
     <message>
-        <location line="+326"/>
+        <location line="+328"/>
         <source>Apply preferences</source>
         <translation>Uveljavi nastavitve</translation>
     </message>
@@ -925,19 +925,19 @@ Ali jo želite obnoviti?</translation>
         <translation>Obnovim datoteko?</translation>
     </message>
     <message>
-        <location line="+26"/>
-        <location line="+11"/>
-        <location line="+5"/>
+        <location line="+25"/>
+        <location line="+21"/>
+        <location line="+7"/>
         <source>Cannot rename file:</source>
         <translation>Ni mogoče preimenovat:</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-25"/>
         <source>Moved autosave backup file to:</source>
         <translation>Premaknjena samodejna kopija v:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+28"/>
         <source>Moved original file to:</source>
         <translation>Premaknjena izvorna datoteka v:</translation>
     </message>
@@ -1129,12 +1129,12 @@ Ali jo želite obnoviti?</translation>
         <translation>Izvoz bitne slike</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Size</source>
         <translation>Velikost</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Width:</source>
         <translation>Širina:</translation>
     </message>
@@ -1144,28 +1144,48 @@ Ali jo želite obnoviti?</translation>
         <translation>Višina:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+33"/>
         <source>Pixels per drawing unit:</source>
         <translation>Pikslov na mersko enoto risanja:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+280"/>
+        <source>Selection</source>
+        <translation>Izbor</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Export bounding box of selection</source>
         <translation>Izvozi kletko izbora</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="-81"/>
         <source>Transparent</source>
         <translation>Prozorno</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-271"/>
+        <source>Specify width and height:</source>
+        <translation>Določite širino in višino:</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Specify resolution:</source>
+        <translation>Določite resolucijo:</translation>
+    </message>
+    <message>
+        <location line="+225"/>
         <source>Color</source>
         <comment>Title of group box</comment>
         <translation>Barva</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Prevent white on white / black on black export</source>
+        <translation>Prepreči izvoz belo na belem / črno na črnem</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Monochrome</source>
         <translation>Črno/Belo</translation>
     </message>
@@ -1191,7 +1211,7 @@ Ali jo želite obnoviti?</translation>
         <translation>Uporabi glajenje robov</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-197"/>
         <source>Margin</source>
         <translation>Rob</translation>
     </message>
@@ -1211,7 +1231,7 @@ Ali jo želite obnoviti?</translation>
         <translation>Dodaj dodatne robove za kompenzacijo debelin črt</translation>
     </message>
     <message>
-        <location line="-170"/>
+        <location line="+30"/>
         <source>Background</source>
         <translation>Ozadje</translation>
     </message>
@@ -1234,7 +1254,7 @@ Ali jo želite obnoviti?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Neveljavna velikost slike (širina * višina mora biti manj kot %1)</translation>
     </message>
@@ -1330,7 +1350,7 @@ Ali jo želite obnoviti?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
         <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -4206,18 +4226,18 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2133"/>
+        <location line="+2167"/>
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location line="-2132"/>
+        <location line="-2166"/>
         <source>Done</source>
         <translation>Končano</translation>
     </message>
     <message>
-        <location line="+284"/>
-        <location line="+133"/>
+        <location line="+287"/>
+        <location line="+143"/>
         <source>Active Tool:</source>
         <translation>Aktivno orodje:</translation>
     </message>
@@ -4257,7 +4277,7 @@ je že na seznamu.</translation>
         <translation>Entiteta je na zaklenjeni plasti.</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+254"/>
         <source>Length:</source>
         <translation>Dolžina:</translation>
     </message>
@@ -6141,6 +6161,11 @@ je že na seznamu.</translation>
         <translation>Tretjestopenjske sklicne točke:</translation>
     </message>
     <message>
+        <location line="+27"/>
+        <source>Snap reference points:</source>
+        <translation>Sklicne točke pripenjanja:</translation>
+    </message>
+    <message>
         <location line="+30"/>
         <source>Snap Tools</source>
         <translation>Orodja lepljenja</translation>
@@ -6186,7 +6211,7 @@ je že na seznamu.</translation>
         <translation>Okvir povečave:</translation>
     </message>
     <message>
-        <location line="-712"/>
+        <location line="-739"/>
         <source>Origin:</source>
         <translation>Izhodišče:</translation>
     </message>
@@ -8823,6 +8848,16 @@ je že na seznamu.</translation>
         <source>Draw vertical line</source>
         <translation>Nariši navpično črto</translation>
     </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineVertical/LineVertical.ui" line="+17"/>
+        <source>Length:</source>
+        <translation>Dolžina:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Reference Point:</source>
+        <translation>Referenčna točka:</translation>
+    </message>
 </context>
 <context>
     <name>LinetypeMode</name>
@@ -9293,7 +9328,7 @@ je že na seznamu.</translation>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
         <translation>Odpiram risbo:</translation>
     </message>
@@ -10199,12 +10234,12 @@ je že na seznamu.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1715"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1736"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1483"/>
+        <location line="-1504"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10259,7 +10294,7 @@ je že na seznamu.</translation>
         <translation>Prikaži vse lasnosti</translation>
     </message>
     <message>
-        <location line="+818"/>
+        <location line="+839"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -10991,7 +11026,7 @@ je že na seznamu.</translation>
         <translation>Ni bil najden noben filter. Prekinjam...</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+92"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>
@@ -11083,6 +11118,11 @@ je že na seznamu.</translation>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
         <translation>Uporabi kazalec miške za določitev faktorja</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
+        <source>Allow rounding of imaginary corner</source>
+        <translation>Dovoli zaokroževanje namišljenega kota</translation>
     </message>
 </context>
 <context>
@@ -11574,7 +11614,7 @@ je že na seznamu.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1443"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vsaj dve točki sta identični.</translation>
@@ -12123,11 +12163,11 @@ je že na seznamu.</translation>
     </message>
 </context>
 <context>
-    <name>SnapSelectionCenter</name>
+    <name>SnapSelection</name>
     <message>
-        <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
-        <source>Center of &amp;Selection</source>
-        <translation>&amp;Središče izbora</translation>
+        <location filename="../scripts/Snap/SnapSelection/SnapSelectionInit.js" line="+2"/>
+        <source>&amp;Selection Reference Points</source>
+        <translation>&amp;Sklicne točke izbora</translation>
     </message>
 </context>
 <context>
@@ -12565,12 +12605,12 @@ je že na seznamu.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+251"/>
         <source>Default value:</source>
         <translation>Privzeta vrednost:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+275"/>
         <source>&amp;Undo</source>
         <translation>Ra&amp;zveljavi</translation>
     </message>
@@ -12630,12 +12670,12 @@ je že na seznamu.</translation>
         <translation>Posebni &amp;znaki...</translation>
     </message>
     <message>
-        <location line="+348"/>
+        <location line="+349"/>
         <source>Others...</source>
         <translation>Drugo...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+136"/>
         <source>Degree</source>
         <translation>Stopinje</translation>
     </message>
@@ -12931,7 +12971,7 @@ je že na seznamu.</translation>
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
         <translation>Splošno</translation>
     </message>
@@ -13631,7 +13671,7 @@ je že na seznamu.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1168"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
         <source>Restore defaults</source>
         <translation>Obnovi privzeto</translation>
     </message>

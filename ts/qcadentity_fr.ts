@@ -381,7 +381,7 @@
         <translation>Angle</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+224"/>
         <source>Yes</source>
         <translation>Oui</translation>
     </message>
@@ -391,7 +391,7 @@
         <translation>Non</translation>
     </message>
     <message>
-        <location line="-208"/>
+        <location line="-223"/>
         <source>Scale</source>
         <translation>Échelle</translation>
     </message>

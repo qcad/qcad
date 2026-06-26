@@ -270,7 +270,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
         <source>Application Preferences</source>
         <translation>Uygulama Tercihleri</translation>
     </message>
@@ -280,7 +280,7 @@
         <translation>Çizim Tercihleri</translation>
     </message>
     <message>
-        <location line="+326"/>
+        <location line="+328"/>
         <source>Apply preferences</source>
         <translation>Tercihleri uygula</translation>
     </message>
@@ -923,19 +923,19 @@ Kurtarmak ister misiniz?</translation>
         <translation>Dosya Kurtarılsın mı? </translation>
     </message>
     <message>
-        <location line="+26"/>
-        <location line="+11"/>
-        <location line="+5"/>
+        <location line="+25"/>
+        <location line="+21"/>
+        <location line="+7"/>
         <source>Cannot rename file:</source>
         <translation>Dosya yeniden adlandırılamıyor:</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-25"/>
         <source>Moved autosave backup file to:</source>
         <translation>Otomatik kaydetme yedek dosyasını şu konuma taşıdı:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+28"/>
         <source>Moved original file to:</source>
         <translation>Orijinal dosya taşındı:</translation>
     </message>
@@ -1127,12 +1127,12 @@ Kurtarmak ister misiniz?</translation>
         <translation>Bitmap Dışa Aktar </translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Size</source>
         <translation>Boyut</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Width:</source>
         <translation>En:</translation>
     </message>
@@ -1142,22 +1142,37 @@ Kurtarmak ister misiniz?</translation>
         <translation>Boy:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+33"/>
         <source>Pixels per drawing unit:</source>
         <translation>Çizim birimi başına piksel:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+280"/>
+        <source>Selection</source>
+        <translation>Seçim</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Export bounding box of selection</source>
         <translation>Seçimin sınırlayıcı kutusunu dışa aktar</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-107"/>
         <source>Background</source>
         <translation>Arkaplan</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="-245"/>
+        <source>Specify width and height:</source>
+        <translation>En ve yüksekliği belirtin:</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Specify resolution:</source>
+        <translation>Çözünürlüğü belirtin:</translation>
+    </message>
+    <message>
+        <location line="+195"/>
         <source>White</source>
         <translation>Beyaz</translation>
     </message>
@@ -1179,6 +1194,11 @@ Kurtarmak ister misiniz?</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Prevent white on white / black on black export</source>
+        <translation>Beyaz üzerine beyaz / siyah üzerine siyah dışa aktarmayı önleyin</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Monochrome</source>
         <translation>Tek renkli</translation>
     </message>
@@ -1204,7 +1224,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>Kenar yumuşatma kullan</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-197"/>
         <source>Margin</source>
         <translation>Kenar</translation>
     </message>
@@ -1232,7 +1252,7 @@ Kurtarmak ister misiniz?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Geçersiz resim boyutu (genişlik x yükseklik %1&apos;den az olmalıdır)</translation>
     </message>
@@ -1328,7 +1348,7 @@ Kurtarmak ister misiniz?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
         <source>Widgets</source>
         <translation>Widgetler</translation>
     </message>
@@ -4198,18 +4218,18 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2133"/>
+        <location line="+2167"/>
         <source>Cancel</source>
         <translation>İptal</translation>
     </message>
     <message>
-        <location line="-2132"/>
+        <location line="-2166"/>
         <source>Done</source>
         <translation>Bitti</translation>
     </message>
     <message>
-        <location line="+284"/>
-        <location line="+133"/>
+        <location line="+287"/>
+        <location line="+143"/>
         <source>Active Tool:</source>
         <translation>Aktif Araç:</translation>
     </message>
@@ -4249,7 +4269,7 @@ zaten listede.</translation>
         <translation>Varlık kilitli bir katmanda.</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+254"/>
         <source>Length:</source>
         <translation>Uzunluk:</translation>
     </message>
@@ -6138,6 +6158,11 @@ zaten listede.</translation>
         <location line="+47"/>
         <source>Tertiary reference points:</source>
         <translation>Üçüncül referans noktaları:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Snap reference points:</source>
+        <translation>Yakalama referans noktaları:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8812,6 +8837,16 @@ zaten listede.</translation>
         <source>Draw vertical line</source>
         <translation>Dikey çizgi çiz</translation>
     </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineVertical/LineVertical.ui" line="+17"/>
+        <source>Length:</source>
+        <translation>Uzunluk:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Reference Point:</source>
+        <translation>Referans Noktası:</translation>
+    </message>
 </context>
 <context>
     <name>LinetypeMode</name>
@@ -9282,7 +9317,7 @@ zaten listede.</translation>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
         <translation>Çizim açılıyor:</translation>
     </message>
@@ -10287,7 +10322,7 @@ zaten listede.</translation>
         <translation>Tüm özellikleri göster</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+161"/>
         <source>Auto</source>
         <translation>Oto</translation>
     </message>
@@ -10974,7 +11009,7 @@ zaten listede.</translation>
         <translation>Hiçbir dışa  alma filtresi bulunamadı. Durduruluyor ...</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+92"/>
         <source>Format:</source>
         <translation>Biçim:</translation>
     </message>
@@ -11066,6 +11101,11 @@ zaten listede.</translation>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
         <translation>Fare imlecini kullanarak faktör tanımlama</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
+        <source>Allow rounding of imaginary corner</source>
+        <translation>Sanal köşenin yuvarlanmasına izin ver</translation>
     </message>
 </context>
 <context>
@@ -11548,7 +11588,7 @@ zaten listede.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1443"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>En az iki nokta aynıdır.</translation>
@@ -12097,11 +12137,11 @@ zaten listede.</translation>
     </message>
 </context>
 <context>
-    <name>SnapSelectionCenter</name>
+    <name>SnapSelection</name>
     <message>
-        <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
-        <source>Center of &amp;Selection</source>
-        <translation>Seçim Merkezi</translation>
+        <location filename="../scripts/Snap/SnapSelection/SnapSelectionInit.js" line="+2"/>
+        <source>&amp;Selection Reference Points</source>
+        <translation>&amp;Seçim referans noktaları</translation>
     </message>
 </context>
 <context>
@@ -12539,12 +12579,12 @@ zaten listede.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+251"/>
         <source>Default value:</source>
         <translation>Varsayılan değer:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+275"/>
         <source>&amp;Undo</source>
         <translation>&amp;Geri al</translation>
     </message>
@@ -12604,12 +12644,12 @@ zaten listede.</translation>
         <translation>Özel Karakterler...</translation>
     </message>
     <message>
-        <location line="+348"/>
+        <location line="+349"/>
         <source>Others...</source>
         <translation>Diğerleri.</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+136"/>
         <source>Degree</source>
         <translation>Derece</translation>
     </message>
@@ -12905,7 +12945,7 @@ zaten listede.</translation>
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
         <translation>Genel</translation>
     </message>
@@ -13605,7 +13645,7 @@ zaten listede.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1168"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
         <source>Restore defaults</source>
         <translation>Varsayılanları geri yükle</translation>
     </message>

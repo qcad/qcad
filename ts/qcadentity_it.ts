@@ -381,7 +381,7 @@
         <translation>Angolo</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+224"/>
         <source>Yes</source>
         <translation>Si</translation>
     </message>
@@ -391,7 +391,7 @@
         <translation>No</translation>
     </message>
     <message>
-        <location line="-208"/>
+        <location line="-223"/>
         <source>Scale</source>
         <translation>Scala</translation>
     </message>

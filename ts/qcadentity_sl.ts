@@ -587,7 +587,7 @@
         <translation>Kot</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+224"/>
         <source>Yes</source>
         <translation>Da</translation>
     </message>
@@ -597,7 +597,7 @@
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="-208"/>
+        <location line="-223"/>
         <source>Scale</source>
         <translation>Merilo</translation>
     </message>

@@ -576,7 +576,7 @@
         <translation>Ângulo</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+224"/>
         <source>Yes</source>
         <translation>Sim</translation>
     </message>
@@ -586,7 +586,7 @@
         <translation>Não</translation>
     </message>
     <message>
-        <location line="-208"/>
+        <location line="-223"/>
         <source>Scale</source>
         <translation>Escala</translation>
     </message>

@@ -587,7 +587,7 @@
         <translation>Угол</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+224"/>
         <source>Yes</source>
         <translation>Да</translation>
     </message>
@@ -597,7 +597,7 @@
         <translation>Нет</translation>
     </message>
     <message>
-        <location line="-208"/>
+        <location line="-223"/>
         <source>Scale</source>
         <translation>Масштаб</translation>
     </message>

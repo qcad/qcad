@@ -676,7 +676,7 @@
         <translation>버텍스</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+216"/>
         <source>Yes</source>
         <translation>예</translation>
     </message>
