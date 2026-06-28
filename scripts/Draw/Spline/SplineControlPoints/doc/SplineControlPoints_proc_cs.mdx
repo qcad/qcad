@@ -1,0 +1,23 @@
+import SplineControlPoints01 from './SplineControlPoints01.png';
+import SplineControlPoints02 from './SplineControlPoints02.png';
+
+1. Vyberte stupeň křivky v panelu možností. Podporované stupně
+   jsou 2 (kvadratický b-spline) a 3 (kubický b-spline). Čím vyšší je
+   stupeň, tím „hladší” je křivka.  
+   Mějte na paměti, že kvadratický b-spline z definice vyžaduje alespoň 3
+   řídicí body, zatímco kubický b-spline má alespoň 4 řídicí body.
+2. Zaškrtněte políčko „Uzavřená” v panelu možností, pokud chcete
+   vytvořit uzavřenou křivku. Uzavřené křivky jsou spojité uzavřené smyčky.
+3. Určete řídicí body. Po definování třetího (pro kvadratické
+   b-spliny) nebo čtvrtého (pro kubické b-spliny) řídicího bodu se zobrazí
+   náhled. Poslední řídicí bod můžete znovu odstranit kliknutím na tlačítko
+   „Zpět” v panelu možností.
+4. Po nastavení posledního bodu stiskněte Escape nebo klikněte pravým tlačítkem myši
+   pro potvrzení tvaru křivky.
+5. Nyní můžete vytvořit další křivku nebo znovu kliknout pravým tlačítkem pro ukončení
+   nástroje.
+
+Příklad pro dvě otevřené křivky (kvadratickou a kubickou):  
+<Image src={SplineControlPoints01} alt="SplineControlPoints01" width={120} height={83} />  
+Příklad pro dvě uzavřené, periodické křivky (kvadratickou a kubickou):  
+<Image src={SplineControlPoints02} alt="SplineControlPoints02" width={122} height={83} />
