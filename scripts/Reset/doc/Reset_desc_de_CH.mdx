@@ -1,0 +1,3 @@
+Dieses Werkzeug beendet alle aktiven Werkzeuge und kehrt zum Ausgangszustand
+von QCAD zurück. In diesem können Sie den Mauszeiger verwenden um Objekte zu
+wählen, Objekte per "Drag and Drop" verschieben, usw.

@@ -1,0 +1,2 @@
+Das Menü Bearbeiten enthält Werkzeuge für die grundlegende Bearbeitung wie
+Kopieren/Einfügen und Löschen.

@@ -1,0 +1,1 @@
+Dieses Werkzeug kann benutzt werden um Texte in der Zeichnung zu bearbeiten.

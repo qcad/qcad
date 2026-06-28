@@ -1,0 +1,2 @@
+Schränkt die Mauszeigerbewegung ein in Bezug auf Winkel und Entfernung zum
+relativen Nullpunkt ein.

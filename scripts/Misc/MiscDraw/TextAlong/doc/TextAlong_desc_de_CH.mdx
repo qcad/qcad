@@ -1,0 +1,2 @@
+Verwenden Sie dieses Werkzeug, um Text entlang einer Linie, eines Bogens
+oder eines Kreises zu zeichnen.

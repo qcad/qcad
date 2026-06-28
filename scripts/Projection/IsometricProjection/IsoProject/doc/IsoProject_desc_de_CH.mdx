@@ -1,0 +1,2 @@
+Dieses Werkzeug erstellt eine isometrische (und andere) Projektion der
+aktuellen Auswahl in der Zeichnung.

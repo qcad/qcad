@@ -1,0 +1,3 @@
+Das Auto-Fang-Werkzeug fängt den nächsten Schnittpunkt, Endpunkt,
+Mittelpunkt, lotrechten Punkt, Referenzpunkt, Rasterpunkt oder Punkt auf einem
+Objekt in dieser Reihenfolge.

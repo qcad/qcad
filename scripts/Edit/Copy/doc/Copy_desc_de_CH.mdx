@@ -1,0 +1,2 @@
+QCAD stellt ähnliche Werkzeuge zur Verfügung um Zeichnungsobjekte von einer
+Zeichnung in eine andere zu kopieren wie andere Applikationen.

@@ -1,0 +1,2 @@
+Fadenkreuz auf gleicher X oder Y Position wie der relative Nullpunkt
+einschränken.

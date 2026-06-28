@@ -1,0 +1,2 @@
+Konstruiert Linien mit bekanntem Winkel. Die Linie muss in der Regel nach der
+Konstruktion noch auf die richtige Länge getrimmt werden.

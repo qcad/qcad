@@ -1,0 +1,2 @@
+Deselektiert alle Objekte. Benutzen Sie dieses Werkzeug um sicherzustellen,
+dass keine Objekte mehr selektiert sind.

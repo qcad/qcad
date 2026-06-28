@@ -1,0 +1,2 @@
+Dieses Werkzeug blendet alle Layer aus mit Ausnahme des im Moment in der
+Layerliste ausgewählten Layers.

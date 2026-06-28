@@ -1,0 +1,2 @@
+Bricht einen Zwischenraum aus einer Linie, einem Bogen oder einem Kreis
+heraus.

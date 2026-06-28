@@ -1,0 +1,2 @@
+Dieses Werkzeug kann zum Sperren aller Layer auf einmal verwendet
+werden.

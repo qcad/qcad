@@ -1,0 +1,2 @@
+Konstruiert eine Linie, die orthogonal zu einer anderen Linie ist und
+tangential zu einem Bogen, Kreis oder einer Ellipse.

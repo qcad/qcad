@@ -1,0 +1,1 @@
+Exportiert die aktuelle Zeichnung in eine Bilddatei (Bitmap).

@@ -1,0 +1,2 @@
+Bestimmt einen Punkt indem die absolute oder relative kartesische Koordinate
+eingegeben wird.

@@ -1,0 +1,2 @@
+Dieses Kommando erstellt einen neuen Layer. Der Layerdialog wird angezeigt
+um den Namen des neuen Layers festzulegen und seine Attribute anzupassen.

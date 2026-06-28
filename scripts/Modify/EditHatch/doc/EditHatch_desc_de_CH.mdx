@@ -1,0 +1,1 @@
+Dieses Werkzeug kann benutzt werden um Schraffuren in der Zeichnung zu bearbeiten.
