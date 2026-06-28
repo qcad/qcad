@@ -1,0 +1,33 @@
+import SelectionModeReplace from './SelectionModeReplace.png';
+import SelectionModeAdd from './SelectionModeAdd.png';
+import SelectionModeRemove from './SelectionModeRemove.png';
+import SelectionModeIntersect from './SelectionModeIntersect.png';
+
+
+
+### Keresztkijelölés
+
+Néhány kijelölő eszköz használható keresztkijelölési módban. Ebben a módban
+ nemcsak a megadott területen teljesen belül lévő elemek kerülnek kijelölésre, hanem
+ a területen csak részben belül lévő elemek is. Ezt a kijelölést
+ „keresztkijelölésnek” is nevezik.
+
+### Kijelölési mód
+
+Néhány kijelölő eszköz lehetővé teszi egy kijelölési mód kiválasztását a felső
+ eszköztárban. A rendelkezésre álló kijelölési módok a következők:
+
+- Kijelölés cseréje:  
+  <Image src={SelectionModeReplace} alt="SelectionModeReplace" width={40} height={40} />  
+  Lecseréli az aktuális kijelölést az aktív kijelölő eszközzel készített új
+  kijelöléssel (alapértelmezett).
+- Hozzáadás a kijelöléshez:  
+  <Image src={SelectionModeAdd} alt="SelectionModeAdd" width={40} height={40} />  
+  Hozzáadja a kijelölést az aktuális kijelöléshez.
+- Eltávolítás a kijelölésből:  
+  <Image src={SelectionModeRemove} alt="SelectionModeRemove" width={40} height={40} />  
+  Eltávolítja (kivonja) a kijelölést az aktuális kijelölésből.
+- Metszet:  
+  <Image src={SelectionModeIntersect} alt="SelectionModeIntersect" width={40} height={40} />  
+  Csak azok az elemek kerülnek kijelölésre, amelyek már ki voltak jelölve, és megfelelnek a
+  kijelölő eszköz feltételeinek.

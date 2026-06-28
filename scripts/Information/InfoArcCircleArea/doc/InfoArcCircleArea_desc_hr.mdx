@@ -1,0 +1,94 @@
+import ArcCircle01 from './ArcCircle01.png';
+import ArcCircle02a from './ArcCircle02a.png';
+import ArcCircle03 from './ArcCircle03.png';
+import ArcCircle02 from './ArcCircle02.png';
+import InfoSector from './InfoSector.png';
+import InfoSlice from './InfoSlice.png';
+import ArcCircle04 from './ArcCircle04.png';
+import ArcCircle06 from './ArcCircle06.png';
+import ArcCircle05 from './ArcCircle05.png';
+import ArcCircle08 from './ArcCircle08.png';
+import ArcCircle07 from './ArcCircle07.png';
+
+Autor: Robert S.
+
+Ova naredba izračunava površinu lukova, krugova, elipsa i eliptičnih
+lukova te opcionalno dodaje informaciju na trenutačni sloj crteža.
+Ako odaberete bilo koju drugu vrstu entiteta, prikazuje se upozorenje u naredbenoj
+liniji.
+
+Za lukove postoje dvije opcije za izračun površina, naime Segment ili
+Isječak. Površina segmenta (ili kriške) jest površina omeđena lukom i dvjema
+linijama povučenima od početne i završne točke luka do središta luka. Površina
+isječka jest površina omeđena lukom i tetivom povučenom od
+početne točke luka do završne točke.
+
+<Image src={ArcCircle01} alt="ArcCircle01" width={285} height={149} />  
+Slika 1: segment (kriška) i isječak.
+
+**Opcije**
+
+Ova naredba ima standardne opcije „*Dodaj mjeru u crtež*” i
+„*Visina teksta*”.
+
+<Image src={ArcCircle02a} alt="ArcCircle02a" width={200} height={19} />  
+Slika 2: Standardne Info opcije
+
+Bilo da je ovo isključeno ili ne, kada kliknete luk, krug, elipsu ili
+ eliptični luk, informacija se prikazuje u widgetu naredbene linije.
+
+<Image src={ArcCircle03} alt="ArcCircle03" width={238} height={29} />  
+Slika 3: Informacija prikazana u naredbenoj liniji
+
+(Napomena: Svaki put kada pokrenete info naredbu, potvrdni okvir „*Dodaj mjeru u crtež*”
+uvijek je neoznačen. Morate ga ne zaboraviti uključiti ako želite da se informacija
+doda u crtež.)
+
+Također dodaje sljedeće opcije.
+
+<Image src={ArcCircle02} alt="ArcCircle02" width={213} height={25} />  
+Slika 4: Dodane opcije
+
+**Način:**
+
+Način se odnosi samo na lukove.
+
+<Image src={InfoSector} alt="InfoSector" width={40} height={40} />  
+*Isječak:* Ovaj način vraća površinu isječka. To je korisno kada se
+upotrebljava u kombinaciji s naredbom „*Površina mnogokuta*”.
+
+<Image src={InfoSlice} alt="InfoSlice" width={40} height={40} /> *Segment:* Ovaj način vraća površinu segmenta.
+
+**Dodaj:**
+
+*Entitet:* Time se odabire želite li dodati kopiju izmjerenog
+entiteta na trenutačni sloj crteža.
+
+*Tetiva:* Time se odabire želite li dodati tetivu (isječak) ili linije polumjera
+(segment) u crtež.
+
+*Duljina:* Prema zadanim postavkama površina se uvijek ispisuje na crtežu. Tom se
+opcijom odabire želite li dodati dodatne informacije u crtež.
+
+Za krugove i pune elipse dodatna informacija jest opseg.
+Time se kao donji lijevi kut za dodani tekst upotrebljava središnja točka.
+
+<Image src={ArcCircle04} alt="ArcCircle04" width={364} height={136} />
+
+Za kružne lukove dodatna informacija jest duljina luka i duljina tetive
+(u načinu isječka) ili polumjer (u načinu segmenta).
+
+Za elipse dodatna informacija jest duljina luka i duljina tetive (u načinu
+isječka) ili udaljenost od središnje točke do početne točke luka, nakon koje
+slijedi udaljenost od središnje točke do završne točke luka (u načinu
+segmenta).
+
+Donji lijevi kut za dodani tekst jest završna točka luka.
+
+<Image src={ArcCircle06} alt="ArcCircle06" width={332} height={75} />
+
+<Image src={ArcCircle05} alt="ArcCircle05" width={378} height={111} />
+
+<Image src={ArcCircle08} alt="ArcCircle08" width={328} height={90} />
+
+<Image src={ArcCircle07} alt="ArcCircle07" width={418} height={105} />

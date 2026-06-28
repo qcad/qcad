@@ -1,0 +1,23 @@
+import SplineControlPoints01 from './SplineControlPoints01.png';
+import SplineControlPoints02 from './SplineControlPoints02.png';
+
+1. Válassza ki a spline fokát a felső eszköztárban. A támogatott fokok a
+   2 (másodfokú b-spline) és a 3 (harmadfokú b-spline). Minél magasabb a
+   fok, annál „simább” lesz a görbe.  
+   Ne feledje, hogy egy másodfokú b-spline definíció szerint legalább 3
+   kontrollpontot igényel, míg egy harmadfokú b-spline legalább 4 kontrollpontot.
+2. Jelölje be a „Zárt” jelölőnégyzetet a felső eszköztárban, ha zárt spline-t
+   szeretne létrehozni. A zárt spline-ok folytonos zárt hurkok.
+3. Adja meg a kontrollpontokat. A harmadik (másodfokú b-spline-ok esetén) vagy a
+   negyedik (harmadfokú b-spline-ok esetén) kontrollpont meghatározása után megjelenik egy
+   előnézet. Az utolsó kontrollpontot a felső eszköztár „Visszavonás”
+   gombjára kattintva ismét eltávolíthatja.
+4. Az utolsó pont beállítása után nyomja meg az Escape billentyűt, vagy kattintson a jobb
+   egérgombbal a spline alakjának megerősítéséhez.
+5. Most létrehozhat egy másik spline-t, vagy ismét jobb gombbal kattintva
+   befejezheti az eszközt.
+
+Példa két nyitott spline-ra (másodfokú és harmadfokú):  
+<Image src={SplineControlPoints01} alt="SplineControlPoints01" width={120} height={83} />  
+Példa két zárt, periodikus spline-ra (másodfokú és harmadfokú):  
+<Image src={SplineControlPoints02} alt="SplineControlPoints02" width={122} height={83} />

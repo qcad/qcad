@@ -1,0 +1,61 @@
+A QCAD parancssora lehetővé teszi parancsok indítását, koordináták megadását vagy
+olyan értékek megadását, mint a távolságok vagy sugarak.
+
+### Koordináták megadása
+
+Az abszolút koordinátákat „x,y” formátumban kell megadni:
+
+40,5
+
+A relatív koordinátákat „@x,y” formátumban kell megadni:
+
+@10,6
+
+Az abszolút poláris koordinátákat „távolság&lt;szög” formátumban kell megadni:
+
+10&lt;30
+
+A relatív poláris koordinátákat „@távolság&lt;szög” formátumban kell megadni:
+
+@10&lt;45
+
+Koordináták vagy értékek megadásakor [matematikai kifejezések](#expr) használhatók egy koordinátának ismert értékek alapján való kiszámításához. Például a
+10,5 koordináta a következőképpen is megadható:
+
+5+5,30/6
+
+### Számológép
+
+A parancssor számológépként is használható. Ehhez adjon meg egy [matematikai kifejezést](#expr) egyenlőségjellel megelőzve:
+
+=3+4  
+7
+
+Változók használhatók értékek tárolására:
+
+=a=5+6  
+11  
+=a/2  
+5.5  
+
+### Matematikai kifejezések
+
+A rendelkezésre álló matematikai konstansok:
+
+PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2
+
+A rendelkezésre álló matematikai függvények:
+
+abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad,
+sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh,
+acosh, asinh, atanh, expm1, hypot, cbrt, trunc
+
+E konstansok és függvények többsége szabványos ECMAScript (JavaScript) függvény, és
+online dokumentált. A szabványos ECMAScript-ben ezek a függvények a Math osztály részei, így az
+*abs* függvényt *Math.abs* formában kellene írni. A QCAD parancssorában a kényelem
+érdekében elhagyhatja a *Math.* részt. A trigonometrikus függvények (sin, cos, tan, asin, acos, atan, atan2)
+fokban fogadnak vagy adnak vissza szögeket. Ha e függvények radián verzióit részesíti előnyben,
+helyette az eredeti *Math.* függvényeket használja.
+
+A *rad2deg* és *deg2rad* függvények szögek radián és fok közötti átváltására
+használhatók.
