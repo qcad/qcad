@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Příkazový řádek</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/cs/index.php?page=scripts/Widgets/CommandLine/doc/CommandLine">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<p style="font-style: italic;">Jedná se o automatický překlad.</p>
+<div class="nobreak">
+<h2>Příkazový řádek</h2>
+<p class="toolinfo">
+<b>Panel nástrojů / Ikona:</b>
+<br /><img src="../doc/CommandLine.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Nabídka:</b> <font face="courier new">Zobrazit &gt; Příkazový řádek</font>
+<br /><b>Zkratka:</b> <font face="courier new">G, M</font>
+<br /><b>Příkazy:</b> <font face="courier new">gm</font>
+</p>
+</div>
+<h3>Popis</h3>
+<p>Příkazový řádek QCADu umožňuje spouštět příkazy, zadávat souřadnice nebo zadávat hodnoty, jako jsou vzdálenosti nebo poloměry.</p>
+<h3>Zadávání souřadnic</h3>
+<p>Absolutní souřadnice se zadávají ve formátu „x,y”:</p>
+<p>40,5</p>
+<p>Relativní souřadnice se zadávají ve formátu „@x,y”:</p>
+<p>@10,6</p>
+<p>Absolutní polární souřadnice se zadávají ve formátu „vzdálenost&lt;úhel”:</p>
+<p>10&lt;30</p>
+<p>Relativní polární souřadnice se zadávají ve formátu „@vzdálenost&lt;úhel”:</p>
+<p>@10&lt;45</p>
+<p>Při zadávání souřadnic nebo hodnot lze použít <a href="#expr">matematické výrazy</a> k výpočtu souřadnice na základě známých hodnot. Například souřadnici 10,5 lze zadat také jako:</p>
+<p>5+5,30/6</p>
+<h3>Kalkulačka</h3>
+<p>Příkazový řádek lze také použít jako kalkulačku. Chcete-li to provést, zadejte <a href="#expr">matematický výraz</a>, kterému předchází znak rovná se:</p>
+<p>=3+4 7</p>
+<p>K ukládání hodnot lze použít proměnné:</p>
+<p>=a=5+6 11 =a/2 5.5</p>
+<h3>Matematické výrazy</h3>
+<p>Dostupné matematické konstanty jsou:</p>
+<p>PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2</p>
+<p>Dostupné matematické funkce jsou:</p>
+<p>abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt, trunc</p>
+<p>Většina těchto konstant a funkcí jsou standardní funkce ECMAScript (JavaScript) a jsou dokumentovány online. Ve standardním ECMAScriptu jsou tyto funkce součástí třídy Math, takže funkce <em>abs</em> by se musela napsat jako <em>Math.abs</em>. V příkazovém řádku QCADu můžete pro pohodlí vynechat část <em>Math.</em>. Goniometrické funkce (sin, cos, tan, asin, acos, atan, atan2) přijímají nebo vracejí úhly ve stupních. Pokud preferujete radiánové verze těchto funkcí, použijte místo toho původní funkce <em>Math.</em>.</p>
+<p>Funkce <em>rad2deg</em> a <em>deg2rad</em> lze použít k převodu úhlů mezi radiány a stupni.</p></body>
+</html>

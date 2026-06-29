@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Parancssor</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/hu/index.php?page=scripts/Widgets/CommandLine/doc/CommandLine">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<p style="font-style: italic;">Ez egy automatikus fordítás.</p>
+<div class="nobreak">
+<h2>Parancssor</h2>
+<p class="toolinfo">
+<b>Eszköztár / ikon:</b>
+<br /><img src="../doc/CommandLine.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Menü:</b> <font face="courier new">Nézet &gt; Parancssor</font>
+<br /><b>Rövidítés:</b> <font face="courier new">G, M</font>
+<br /><b>Parancsok:</b> <font face="courier new">gm</font>
+</p>
+</div>
+<h3>Leírás</h3>
+<p>A QCAD parancssora lehetővé teszi parancsok indítását, koordináták megadását vagy olyan értékek megadását, mint a távolságok vagy sugarak.</p>
+<h3>Koordináták megadása</h3>
+<p>Az abszolút koordinátákat „x,y” formátumban kell megadni:</p>
+<p>40,5</p>
+<p>A relatív koordinátákat „@x,y” formátumban kell megadni:</p>
+<p>@10,6</p>
+<p>Az abszolút poláris koordinátákat „távolság&lt;szög” formátumban kell megadni:</p>
+<p>10&lt;30</p>
+<p>A relatív poláris koordinátákat „@távolság&lt;szög” formátumban kell megadni:</p>
+<p>@10&lt;45</p>
+<p>Koordináták vagy értékek megadásakor <a href="#expr">matematikai kifejezések</a> használhatók egy koordinátának ismert értékek alapján való kiszámításához. Például a 10,5 koordináta a következőképpen is megadható:</p>
+<p>5+5,30/6</p>
+<h3>Számológép</h3>
+<p>A parancssor számológépként is használható. Ehhez adjon meg egy <a href="#expr">matematikai kifejezést</a> egyenlőségjellel megelőzve:</p>
+<p>=3+4 7</p>
+<p>Változók használhatók értékek tárolására:</p>
+<p>=a=5+6 11 =a/2 5.5</p>
+<h3>Matematikai kifejezések</h3>
+<p>A rendelkezésre álló matematikai konstansok:</p>
+<p>PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2</p>
+<p>A rendelkezésre álló matematikai függvények:</p>
+<p>abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt, trunc</p>
+<p>E konstansok és függvények többsége szabványos ECMAScript (JavaScript) függvény, és online dokumentált. A szabványos ECMAScript-ben ezek a függvények a Math osztály részei, így az <em>abs</em> függvényt <em>Math.abs</em> formában kellene írni. A QCAD parancssorában a kényelem érdekében elhagyhatja a <em>Math.</em> részt. A trigonometrikus függvények (sin, cos, tan, asin, acos, atan, atan2) fokban fogadnak vagy adnak vissza szögeket. Ha e függvények radián verzióit részesíti előnyben, helyette az eredeti <em>Math.</em> függvényeket használja.</p>
+<p>A <em>rad2deg</em> és <em>deg2rad</em> függvények szögek radián és fok közötti átváltására használhatók.</p></body>
+</html>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>명령줄</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/ko/index.php?page=scripts/Widgets/CommandLine/doc/CommandLine">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<p style="font-style: italic;">이것은 자동 번역입니다.</p>
+<div class="nobreak">
+<h2>명령줄</h2>
+<p class="toolinfo">
+<b>도구 모음 / 아이콘:</b>
+<br /><img src="../doc/CommandLine.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>메뉴:</b> <font face="courier new">보기 &gt; 명령줄</font>
+<br /><b>바로 가기:</b> <font face="courier new">G, M</font>
+<br /><b>명령:</b> <font face="courier new">gm</font>
+</p>
+</div>
+<h3>설명</h3>
+<p>QCAD의 명령줄을 사용하면 명령을 시작하고, 좌표를 입력하거나, 거리나 반지름과 같은 값을 입력할 수 있습니다.</p>
+<h3>좌표 입력</h3>
+<p>절대 좌표는 „x,y” 형식으로 입력합니다:</p>
+<p>40,5</p>
+<p>상대 좌표는 „@x,y” 형식으로 입력합니다:</p>
+<p>@10,6</p>
+<p>절대 극 좌표는 „거리&lt;각도” 형식으로 입력합니다:</p>
+<p>10&lt;30</p>
+<p>상대 극 좌표는 „@거리&lt;각도” 형식으로 입력합니다:</p>
+<p>@10&lt;45</p>
+<p>좌표나 값을 입력할 때 알려진 값을 기반으로 좌표를 계산하는 데 <a href="#expr">수학 식</a>을 사용할 수 있습니다. 예를 들어 좌표 10,5는 다음과 같이 입력할 수도 있습니다:</p>
+<p>5+5,30/6</p>
+<h3>계산기</h3>
+<p>명령줄은 계산기로도 사용할 수 있습니다. 그렇게 하려면 등호가 앞에 오는 <a href="#expr">수학 식</a>을 입력합니다:</p>
+<p>=3+4 7</p>
+<p>변수를 사용하여 값을 저장할 수 있습니다:</p>
+<p>=a=5+6 11 =a/2 5.5</p>
+<h3>수학 식</h3>
+<p>사용할 수 있는 수학 상수는 다음과 같습니다:</p>
+<p>PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2</p>
+<p>사용할 수 있는 수학 함수는 다음과 같습니다:</p>
+<p>abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt, trunc</p>
+<p>이러한 상수와 함수의 대부분은 표준 ECMAScript(JavaScript) 함수이며 온라인에 문서화되어 있습니다. 표준 ECMAScript에서 이러한 함수는 Math 클래스의 일부이므로 함수 <em>abs</em>는 <em>Math.abs</em>로 작성해야 합니다. QCAD 명령줄에서는 편의를 위해 <em>Math.</em> 부분을 생략할 수 있습니다. 삼각 함수(sin, cos, tan, asin, acos, atan, atan2)는 각도를 도 단위로 받거나 반환합니다. 이러한 함수의 라디안 버전을 선호하는 경우 대신 원래의 <em>Math.</em> 함수를 사용하십시오.</p>
+<p><em>rad2deg</em> 및 <em>deg2rad</em> 함수를 사용하여 라디안과 도 사이에서 각도를 변환할 수 있습니다.</p></body>
+</html>

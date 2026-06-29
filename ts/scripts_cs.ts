@@ -2400,7 +2400,7 @@ Přejete si ho obnovit?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.ui" line="+17"/>
         <source>Start:</source>
-        <translation>Start:</translation>
+        <translation>Počátek:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -12003,7 +12003,7 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Snap Distance:</translation>
+        <translation>Vzdálenost přichycení:</translation>
     </message>
 </context>
 <context>
@@ -12021,7 +12021,7 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Snap Distance:</translation>
+        <translation>Vzdálenost přichycení:</translation>
     </message>
     <message>
         <location line="+75"/>

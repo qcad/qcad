@@ -896,9 +896,12 @@ nuostatos pakeitimai įsigaliotų.</translation>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Rasta %n automatinio išsaugojimo atsarginė kopija nepavadintam piešiniui.
+Ar norite ją atkurti?</numerusform>
+            <numerusform>Rastos %n automatinio išsaugojimo atsarginės kopijos nepavadintiems piešiniams.
+Ar norite jas atkurti?</numerusform>
+            <numerusform>Rasta %n automatinio išsaugojimo atsarginių kopijų nepavadintiems piešiniams.
+Ar norite jas atkurti?</numerusform>
         </translation>
     </message>
     <message>
@@ -2881,9 +2884,9 @@ Ar norite jį atkurti?</translation>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n matmens etiketės padėtis buvo atstatyta.</numerusform>
+            <numerusform>%n matmenų etiketės padėtis buvo atstatyta.</numerusform>
+            <numerusform>%n matmenų etiketės padėtis buvo atstatyta.</numerusform>
         </translation>
     </message>
     <message>
@@ -4203,9 +4206,9 @@ jau yra sąraše.</translation>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n subjektas dubliuotas</numerusform>
+            <numerusform>%n subjektai dubliuoti</numerusform>
+            <numerusform>%n subjektų dubliuota</numerusform>
         </translation>
     </message>
     <message>
@@ -5041,9 +5044,9 @@ jau yra sąraše.</translation>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Operacija paveikė %n objektą.</numerusform>
+            <numerusform>Operacija paveikė %n objektus.</numerusform>
+            <numerusform>Operacija paveikė %n objektų.</numerusform>
         </translation>
     </message>
     <message>
@@ -9418,18 +9421,18 @@ jau yra sąraše.</translation>
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Spindulys nukrito žemiau 0.0 po %n koncentrinio apskritimo.</numerusform>
+            <numerusform>Spindulys nukrito žemiau 0.0 po %n koncentrinių apskritimų.</numerusform>
+            <numerusform>Spindulys nukrito žemiau 0.0 po %n koncentrinių apskritimų.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Spindulys nukrito žemiau 0.0 po %n koncentrinio lanko.</numerusform>
+            <numerusform>Spindulys nukrito žemiau 0.0 po %n koncentrinių lankų.</numerusform>
+            <numerusform>Spindulys nukrito žemiau 0.0 po %n koncentrinių lankų.</numerusform>
         </translation>
     </message>
     <message>
@@ -11520,18 +11523,18 @@ jau yra sąraše.</translation>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n subjektas sluoksnyje &quot;%1&quot;</numerusform>
+            <numerusform>%n subjektai sluoksnyje &quot;%1&quot;</numerusform>
+            <numerusform>%n subjektų sluoksnyje &quot;%1&quot;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n subjektas</numerusform>
+            <numerusform>%n subjektai</numerusform>
+            <numerusform>%n subjektų</numerusform>
         </translation>
     </message>
     <message>
@@ -11543,9 +11546,9 @@ jau yra sąraše.</translation>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n sluoksnis</numerusform>
+            <numerusform>%n sluoksniai</numerusform>
+            <numerusform>%n sluoksnių</numerusform>
         </translation>
     </message>
     <message>

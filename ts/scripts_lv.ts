@@ -896,9 +896,12 @@ lai stātos spēkā preferenču izmaiņas.</translation>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Atrasta %n automātiskās saglabāšanas dublējuma datne nenosauktam zīmējumam.
+Vai vēlaties to atjaunot?</numerusform>
+            <numerusform>Atrastas %n automātiskās saglabāšanas dublējuma datnes nenosauktiem zīmējumiem.
+Vai vēlaties tās atjaunot?</numerusform>
+            <numerusform>Atrasts %n automātiskās saglabāšanas dublējuma datņu nenosauktiem zīmējumiem.
+Vai vēlaties tās atjaunot?</numerusform>
         </translation>
     </message>
     <message>
@@ -2881,9 +2884,9 @@ Vai vēlaties to atjaunot?</translation>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n izmēra etiķetes pozīcija tika atiestatīta.</numerusform>
+            <numerusform>%n izmēru etiķešu pozīcijas tika atiestatītas.</numerusform>
+            <numerusform>%n izmēru etiķešu pozīcijas tika atiestatītas.</numerusform>
         </translation>
     </message>
     <message>
@@ -4203,9 +4206,9 @@ jau ir sarakstā.</translation>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n subjekts dublēts</numerusform>
+            <numerusform>%n subjekti dublēti</numerusform>
+            <numerusform>%n subjektu dublēts</numerusform>
         </translation>
     </message>
     <message>
@@ -5041,9 +5044,9 @@ jau ir sarakstā.</translation>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Transakcija ietekmēja %n objektu.</numerusform>
+            <numerusform>Transakcija ietekmēja %n objektus.</numerusform>
+            <numerusform>Transakcija ietekmēja %n objektu.</numerusform>
         </translation>
     </message>
     <message>
@@ -9418,18 +9421,18 @@ jau ir sarakstā.</translation>
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Rādiuss noslīdēja zem 0.0 pēc %n koncentriskā apļa.</numerusform>
+            <numerusform>Rādiuss noslīdēja zem 0.0 pēc %n koncentriskiem apļiem.</numerusform>
+            <numerusform>Rādiuss noslīdēja zem 0.0 pēc %n koncentriskiem apļiem.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Rādiuss noslīdēja zem 0.0 pēc %n koncentriskā loka.</numerusform>
+            <numerusform>Rādiuss noslīdēja zem 0.0 pēc %n koncentriskiem lokiem.</numerusform>
+            <numerusform>Rādiuss noslīdēja zem 0.0 pēc %n koncentriskiem lokiem.</numerusform>
         </translation>
     </message>
     <message>
@@ -11520,18 +11523,18 @@ jau ir sarakstā.</translation>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n subjekts slānī &quot;%1&quot;</numerusform>
+            <numerusform>%n subjekti slānī &quot;%1&quot;</numerusform>
+            <numerusform>%n subjektu slānī &quot;%1&quot;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n subjekts</numerusform>
+            <numerusform>%n subjekti</numerusform>
+            <numerusform>%n subjektu</numerusform>
         </translation>
     </message>
     <message>
@@ -11543,9 +11546,9 @@ jau ir sarakstā.</translation>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n slānis</numerusform>
+            <numerusform>%n slāņi</numerusform>
+            <numerusform>%n slāņu</numerusform>
         </translation>
     </message>
     <message>

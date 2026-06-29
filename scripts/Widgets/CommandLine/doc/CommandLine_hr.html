@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Naredbeni redak</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/hr/index.php?page=scripts/Widgets/CommandLine/doc/CommandLine">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<p style="font-style: italic;">This is an automatic translation.</p>
+<div class="nobreak">
+<h2>Naredbeni redak</h2>
+<p class="toolinfo">
+<b>Toolbar / Icon:</b>
+<br /><img src="../doc/CommandLine.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Menu:</b> <font face="courier new">Prikaz &gt; Naredbeni redak</font>
+<br /><b>Shortcut:</b> <font face="courier new">G, M</font>
+<br /><b>Commands:</b> <font face="courier new">gm</font>
+</p>
+</div>
+<h3>Description</h3>
+<p>Naredbena linija QCAD-a omogućuje pokretanje naredbi, unos koordinata ili unos vrijednosti poput udaljenosti ili polumjera.</p>
+<h3>Unos koordinata</h3>
+<p>Apsolutne koordinate unose se u formatu „x,y”:</p>
+<p>40,5</p>
+<p>Relativne koordinate unose se u formatu „@x,y”:</p>
+<p>@10,6</p>
+<p>Apsolutne polarne koordinate unose se u formatu „udaljenost&lt;kut”:</p>
+<p>10&lt;30</p>
+<p>Relativne polarne koordinate unose se u formatu „@udaljenost&lt;kut”:</p>
+<p>@10&lt;45</p>
+<p>Prilikom unosa koordinata ili vrijednosti mogu se upotrijebiti <a href="#expr">matematički izrazi</a> za izračun koordinate na temelju poznatih vrijednosti. Na primjer koordinata 10,5 može se unijeti i kao:</p>
+<p>5+5,30/6</p>
+<h3>Kalkulator</h3>
+<p>Naredbena linija može se upotrijebiti i kao kalkulator. Za to unesite <a href="#expr">matematički izraz</a> ispred kojeg stoji znak jednakosti:</p>
+<p>=3+4 7</p>
+<p>Varijable se mogu upotrijebiti za pohranu vrijednosti:</p>
+<p>=a=5+6 11 =a/2 5.5</p>
+<h3>Matematički izrazi</h3>
+<p>Dostupne matematičke konstante su:</p>
+<p>PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2</p>
+<p>Dostupne matematičke funkcije su:</p>
+<p>abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt, trunc</p>
+<p>Većina ovih konstanti i funkcija standardne su ECMAScript (JavaScript) funkcije i dokumentirane su na mreži. U standardnom ECMAScriptu ove su funkcije dio klase Math, pa bi se funkcija <em>abs</em> morala napisati kao <em>Math.abs</em>. U naredbenoj liniji QCAD-a radi praktičnosti možete izostaviti dio <em>Math.</em>. Trigonometrijske funkcije (sin, cos, tan, asin, acos, atan, atan2) primaju ili vraćaju kutove u stupnjevima. Ako preferirate radijanske verzije ovih funkcija, umjesto toga upotrijebite izvorne <em>Math.</em> funkcije.</p>
+<p>Funkcije <em>rad2deg</em> i <em>deg2rad</em> mogu se upotrijebiti za pretvorbu kutova između radijana i stupnjeva.</p></body>
+</html>

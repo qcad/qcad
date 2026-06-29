@@ -896,8 +896,10 @@ the preference changes to take effect.</source>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Βρέθηκε %n αντίγραφο ασφαλείας αυτόματης αποθήκευσης για ανώνυμο σχέδιο.
+Θέλετε να το ανακτήσετε;</numerusform>
+            <numerusform>Βρέθηκαν %n αντίγραφα ασφαλείας αυτόματης αποθήκευσης για ανώνυμα σχέδια.
+Θέλετε να τα ανακτήσετε;</numerusform>
         </translation>
     </message>
     <message>
@@ -2880,8 +2882,8 @@ Do you wish to recover it?</source>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Η θέση της ετικέτας %n διάστασης επαναφέρθηκε.</numerusform>
+            <numerusform>Η θέση της ετικέτας %n διαστάσεων επαναφέρθηκε.</numerusform>
         </translation>
     </message>
     <message>
@@ -4201,8 +4203,8 @@ is already in the list.</source>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n οντότητα αντιγράφηκε</numerusform>
+            <numerusform>%n οντότητες αντιγράφηκαν</numerusform>
         </translation>
     </message>
     <message>
@@ -5038,8 +5040,8 @@ is already in the list.</source>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Η συναλλαγή επηρέασε %n αντικείμενο.</numerusform>
+            <numerusform>Η συναλλαγή επηρέασε %n αντικείμενα.</numerusform>
         </translation>
     </message>
     <message>
@@ -9414,16 +9416,16 @@ is already in the list.</source>
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Η ακτίνα έπεσε κάτω από 0.0 μετά από %n ομόκεντρο κύκλο.</numerusform>
+            <numerusform>Η ακτίνα έπεσε κάτω από 0.0 μετά από %n ομόκεντρους κύκλους.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Η ακτίνα έπεσε κάτω από 0.0 μετά από %n ομόκεντρο τόξο.</numerusform>
+            <numerusform>Η ακτίνα έπεσε κάτω από 0.0 μετά από %n ομόκεντρα τόξα.</numerusform>
         </translation>
     </message>
     <message>
@@ -11514,16 +11516,16 @@ is already in the list.</source>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n οντότητα στο στρώμα &quot;%1&quot;</numerusform>
+            <numerusform>%n οντότητες στο στρώμα &quot;%1&quot;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n οντότητα</numerusform>
+            <numerusform>%n οντότητες</numerusform>
         </translation>
     </message>
     <message>
@@ -11535,8 +11537,8 @@ is already in the list.</source>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n στρώμα</numerusform>
+            <numerusform>%n στρώματα</numerusform>
         </translation>
     </message>
     <message>

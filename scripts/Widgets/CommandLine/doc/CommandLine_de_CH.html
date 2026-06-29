@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Kommandozeile</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/de_CH/index.php?page=scripts/Widgets/CommandLine/doc/CommandLine_de_CH.html">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<p style="font-style: italic;">Dies ist eine automatische Übersetzung.</p>
+<div class="nobreak">
+<h2>Kommandozeile</h2>
+<p class="toolinfo">
+<b>Werkzeugleiste / Icon:</b>
+<br /><img src="../doc/CommandLine.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Menü:</b> <font face="courier new">Ansicht &gt; Kommandozeile</font>
+<br /><b>Tastenkürzel:</b> <font face="courier new">G, M</font>
+<br /><b>Befehle:</b> <font face="courier new">gm</font>
+</p>
+</div>
+<h3>Beschreibung</h3>
+<p>Über die Kommandozeile von QCAD können Befehle gestartet werden und Koordinaten oder Werte wie Abstände oder Radien eingegeben werden.</p>
+<h3>Koordinateneingabe</h3>
+<p>Absolute Koordinaten werden im Format "x,y" eingegeben:</p>
+<p>40,5</p>
+<p>Relative Koordinaten werden im Format "@x,y" eingegeben:</p>
+<p>@10,6</p>
+<p>Absolute polare Koordinaten werden im Format "Abstand&lt;Winkel" eingegeben:</p>
+<p>10&lt;30</p>
+<p>Relative polare Koordinaten werden im Format "@Abstand&lt;Winkel" eingegeben:</p>
+<p>@10&lt;45</p>
+<p>Bei jeder Eingabe von Koordinaten oder anderen Werten können <a href="#expr">mathematische Ausdrücke</a> verwendet werden um Berechnungen durchzuführen. So kann zum Beispiel die Koordinate 10,5 eingegeben werden als:</p>
+<p>5+5,30/6</p>
+<h3>Rechner</h3>
+<p>Die Kommandozeile kann ausserdem als Rechner benutzt werden. Dazu wird der Eingabe eines <a href="#expr">mathematischen Ausdruckes</a> ein Gleichheitszeichen vorangestellt:</p>
+<p>=3+4 7</p>
+<p>Werte können in Variablen abgelegt werden:</p>
+<p>=a=5+6 11 =a/2 5.5</p>
+<h3>Mathematische Ausdrücke</h3>
+<p>Mathematische Konstanten:</p>
+<p>PI, LN2, LN10, LOG2E, LOG10E, SQRT1_2, SQRT2</p>
+<p>Mathematische Funktionen:</p>
+<p>abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt, trunc</p>
+<p>Die meisten dieser Konstanten und Funktionen sind Teil des ECMAScript (JavaScript) Standards und Online dokumentiert. Im ECMAScript Standard sind diese Funktionen der Klasse <em>Math</em> angegliedert. Die Funktion abs müsste also als <em>Math.abs</em> ausgeschrieben werden. Die QCAD Kommandozeile akzeptiert aber auch die kürzere Schreibweise <em>abs</em>. Trigonometrische Funktionen (sin, cos, tan, asin, acos, atan, atan2) erwarten oder liefern Winkel in Grad. Wenn stattdessen die Radiant basierten Funktionen verwendet werden sollen, können die originalen Funktionen in der <em>Math</em> Klasse verwendet werden.</p>
+<p>Die Funktionen <em>rad2deg</em> und <em>deg2rad</em> können zur Konvertierung von Winkeln zwischen Radiant und Graden verwendet werden.</p></body>
+</html>

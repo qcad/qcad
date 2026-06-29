@@ -1,0 +1,31 @@
+import SelectionModeReplace from './SelectionModeReplace.png';
+import SelectionModeAdd from './SelectionModeAdd.png';
+import SelectionModeRemove from './SelectionModeRemove.png';
+import SelectionModeIntersect from './SelectionModeIntersect.png';
+
+
+
+### 교차 선택
+
+일부 선택 도구는 교차 선택 모드에서 사용할 수 있습니다. 이 모드에서는
+ 주어진 영역에 완전히 들어 있는 개체뿐만 아니라 영역에 일부만 들어 있는
+ 개체도 선택됩니다. 이 선택은 „교차 선택”이라고도
+ 합니다.
+
+### 선택 모드
+
+일부 선택 도구를 사용하면 옵션 도구 모음에서 선택 모드를 선택할 수
+ 있습니다. 사용할 수 있는 선택 모드는 다음과 같습니다:
+
+- 선택 바꾸기:  
+  <Image src={SelectionModeReplace} alt="SelectionModeReplace" width={40} height={40} />  
+  활성 선택 도구로 만든 새 선택으로 현재 선택을 바꿉니다(기본값).
+- 선택에 추가:  
+  <Image src={SelectionModeAdd} alt="SelectionModeAdd" width={40} height={40} />  
+  현재 선택에 선택을 추가합니다.
+- 선택에서 제거:  
+  <Image src={SelectionModeRemove} alt="SelectionModeRemove" width={40} height={40} />  
+  현재 선택에서 선택을 제거(뺄셈)합니다.
+- 교차:  
+  <Image src={SelectionModeIntersect} alt="SelectionModeIntersect" width={40} height={40} />  
+  이미 선택되어 있고 선택 도구의 기준에 일치하는 개체만 선택됩니다.
