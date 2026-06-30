@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RPainterPathDevice.h"
+#include "RMath.h"
 
 RPainterPathDevice::RPainterPathDevice()
     : QPaintDevice(), size(100,100), dpi(96) {
@@ -49,9 +50,9 @@ int RPainterPathDevice::metric(PaintDeviceMetric metric) const {
     case QPaintDevice::PdmDpiY:
         return 72;
     case QPaintDevice::PdmHeightMM:
-        return round(size.width() * 25.4 / dpi);
+        return RMath::mround(size.width() * 25.4 / dpi);
     case QPaintDevice::PdmWidthMM:
-        return round(size.height() * 25.4 / dpi);
+        return RMath::mround(size.height() * 25.4 / dpi);
     case QPaintDevice::PdmNumColors:
         return 0xffffffff;
     case QPaintDevice::PdmPhysicalDpiX:
