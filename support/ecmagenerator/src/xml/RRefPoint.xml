@@ -16,6 +16,13 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="End" />
       <value name="Arrow" />
       <value name="Selected" />
+      <value name="Top" />
+      <value name="VMiddle" />
+      <value name="Bottom" />
+      <value name="Left" />
+      <value name="HMiddle" />
+      <value name="Right" />
+      <value name="FromSnap" />
     </enum>
     <constructor>
       <variant />
@@ -82,6 +89,19 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="setTertiary" cppName="setTertiary"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isFromSnap" cppName="isFromSnap"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setFromSnap" cppName="setFromSnap"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

@@ -76,6 +76,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setTertiary, "setTertiary");
             
+            REcmaHelper::registerFunction(&engine, proto, isFromSnap, "isFromSnap");
+            
+            REcmaHelper::registerFunction(&engine, proto, setFromSnap, "setFromSnap");
+            
             REcmaHelper::registerFunction(&engine, proto, isIgnore, "isIgnore");
             
             REcmaHelper::registerFunction(&engine, proto, setIgnore, "setIgnore");
@@ -175,6 +179,41 @@
 
     ctor.setProperty("Selected",
     QScriptValue(RRefPoint::Selected),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Top",
+    QScriptValue(RRefPoint::Top),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("VMiddle",
+    QScriptValue(RRefPoint::VMiddle),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Bottom",
+    QScriptValue(RRefPoint::Bottom),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Left",
+    QScriptValue(RRefPoint::Left),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("HMiddle",
+    QScriptValue(RRefPoint::HMiddle),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Right",
+    QScriptValue(RRefPoint::Right),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("FromSnap",
+    QScriptValue(RRefPoint::FromSnap),
     QScriptValue::ReadOnly);
 
 
@@ -964,6 +1003,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaRefPoint::setTertiary", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRefPoint::isFromSnap
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRefPoint::isFromSnap", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRefPoint::isFromSnap";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRefPoint* self = 
+                        getSelf("isFromSnap", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isFromSnap();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRefPoint.isFromSnap().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRefPoint::isFromSnap", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRefPoint::setFromSnap
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRefPoint::setFromSnap", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRefPoint::setFromSnap";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRefPoint* self = 
+                        getSelf("setFromSnap", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setFromSnap(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRefPoint.setFromSnap().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRefPoint::setFromSnap", context, engine);
             return result;
         }
          QScriptValue

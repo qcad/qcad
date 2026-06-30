@@ -84,5 +84,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="event" isConst="false" />
       </variant>
     </method>
+    <method name="initViewItemOption" cppName="initViewItemOption"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QStyleOptionViewItem *"
+        typeName="QStyleOptionViewItem *" name="option"
+        isConst="false" />
+      </variant>
+    </method>
   </class>
 </unit>

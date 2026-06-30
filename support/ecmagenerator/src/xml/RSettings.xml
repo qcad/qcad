@@ -3,6 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="QFont" />
   <class_decl name="QSettings" />
+  <class_decl name="QWidget" />
   <class name="RSettings"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
@@ -369,6 +370,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="getTertiaryReferencePointColor"
     cppName="getTertiaryReferencePointColor" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false" />
+    </method>
+    <method name="getSnapReferencePointColor"
+    cppName="getSnapReferencePointColor" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RColor" isPureVirtual="false" />
     </method>
@@ -1082,6 +1088,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="useQml" cppName="useQml" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getWidgetSelectionColor"
+    cppName="getWidgetSelectionColor" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QColor" isPureVirtual="false">
+        <arg type="QWidget *" typeName="QWidget *" name="w"
+        isConst="true" />
+      </variant>
     </method>
   </class>
 </unit>

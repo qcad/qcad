@@ -202,6 +202,9 @@
         getTertiaryReferencePointColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSnapReferencePointColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getCrossHairColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -557,6 +560,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         useQml
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getWidgetSelectionColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

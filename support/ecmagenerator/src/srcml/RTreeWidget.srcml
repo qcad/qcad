@@ -24,6 +24,8 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTreeWidget&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStyledItemDelegate&gt;</cpp:file></cpp:include>
+
 
 <comment type="block">/**
  * Tree widget with some additional functionality for icons.
@@ -37,6 +39,8 @@
     <macro><name>Q_OBJECT</name></macro>
 
 </private><public>public:
+    <using>using <name><name>QTreeWidget</name>::<name>QTreeWidget</name></name>;</using>
+
     <constructor_decl><name>RTreeWidget</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>parent</name>=<init><expr>0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~RTreeWidget</name><parameter_list>()</parameter_list>;</destructor_decl>
 
@@ -58,6 +62,8 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>mouseReleaseEvent</name><parameter_list>(<param><decl><type><name>QMouseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>mouseMoveEvent</name><parameter_list>(<param><decl><type><name>QMouseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>resizeEvent</name><parameter_list>(<param><decl><type><name>QResizeEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>initViewItemOption</name><parameter_list>(<param><decl><type><name>QStyleOptionViewItem</name>*</type> <name>option</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
 <label><name>signals</name>:</label>
     <function_decl><type><name>void</name></type> <name>itemColumnClicked</name><parameter_list>(<param><decl><type><name>QTreeWidgetItem</name>*</type> <name>item</name></decl></param>, <param><decl><type><name>int</name></type> <name>column</name></decl></param>)</parameter_list>;</function_decl>

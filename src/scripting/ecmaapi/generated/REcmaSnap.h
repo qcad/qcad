@@ -61,6 +61,9 @@
         finishEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSnapReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getEntityIds
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

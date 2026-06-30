@@ -113,6 +113,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getAvailableGeometry, "getAvailableGeometry");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getImageFilePath, "getImageFilePath");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getMetaType, "getMetaType");
             
 
@@ -4094,6 +4096,93 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaS::getAvailableGeometry", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::getImageFilePath
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::getImageFilePath", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::getImageFilePath";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: QByteArray */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+                    // argument is reference
+                    QByteArray*
+                    ap2 =
+                    qscriptvalue_cast<
+                    QByteArray*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if( ap2 == NULL ){
+
+                           return REcmaHelper::throwError("RS: Argument 2 is not of type QByteArray* or QSharedPointer<QByteArray>.",
+                               context);
+                    }
+                    QByteArray& a2 = *ap2;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RS::
+       getImageFilePath(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.getImageFilePath().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::getImageFilePath", context, engine);
             return result;
         }
          QScriptValue

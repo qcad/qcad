@@ -371,6 +371,9 @@
         ;static  QScriptValue
         getWidgetNames
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getIconPath
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
