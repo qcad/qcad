@@ -6,194 +6,194 @@
     <message>
         <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Giới thiệu %1</translation>
     </message>
     <message>
         <location line="+53"/>
         <location line="+142"/>
         <source>Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Phiên bản:</translation>
     </message>
     <message>
         <location line="-138"/>
         <location line="+155"/>
         <location line="+11"/>
         <source>Internet:</source>
-        <translation type="unfinished"></translation>
+        <translation>Internet:</translation>
     </message>
     <message>
         <location line="-164"/>
         <source>Build Date:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngày dựng:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Revision:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bản sửa đổi:</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+136"/>
         <source>Qt Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Phiên bản Qt:</translation>
     </message>
     <message>
         <location line="-132"/>
         <source>Architecture:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiến trúc:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Compiler:</source>
-        <translation type="unfinished"></translation>
+        <translation>Trình biên dịch:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>License Key:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khóa giấy phép:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>%1 is an application for computer-aided design (CAD).</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 là một ứng dụng thiết kế có sự hỗ trợ của máy tính (CAD).</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 is based on QCAD, a free (open source) software.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 dựa trên QCAD, một phần mềm miễn phí (mã nguồn mở).</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 is free (open source) software.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 là phần mềm miễn phí (mã nguồn mở).</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
-        <translation type="unfinished"></translation>
+        <translation>Điều này có nghĩa là mọi người đều có thể &lt;a href=&apos;%1&apos;&gt;tham gia&lt;/a&gt;!</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Các công cụ, tính năng và định dạng tệp bổ sung bao gồm DWG có trong &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; hoặc &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin và tiện ích kịch bản tuân theo giấy phép tương ứng của chúng (xem thẻ &quot;Plugins&quot;).</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mọi tên thương hiệu hoặc sản phẩm đều là nhãn hiệu hoặc nhãn hiệu đã đăng ký của chủ sở hữu tương ứng.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
-        <translation type="unfinished"></translation>
+        <translation>Một phần của phần mềm này © %1 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt được phân phối cùng QCAD theo &lt;a href=&apos;%1&apos;&gt;giấy phép mã nguồn mở LGPL&lt;/a&gt; vốn trao cho bạn nhiều quyền với tư cách người dùng, bao gồm quyền biên dịch lại các thư viện Qt cho nền tảng của bạn. Để làm điều đó, hãy làm theo &lt;a href=&apos;%2&apos;&gt;tài liệu được hiển thị trên trang web của Qt&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
-        <translation type="unfinished"></translation>
+        <translation>Chương trình được cung cấp NGUYÊN TRẠNG mà KHÔNG CÓ BẤT KỲ BẢO HÀNH NÀO, BAO GỒM BẢO HÀNH VỀ THIẾT KẾ, KHẢ NĂNG THƯƠNG MẠI VÀ SỰ PHÙ HỢP CHO MỘT MỤC ĐÍCH CỤ THỂ.</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>No plugins found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không tìm thấy plugin nào.</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>No information available</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có thông tin</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+451"/>
         <source>Plugin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin:</translation>
     </message>
     <message>
         <location line="-426"/>
         <source>ID:</source>
-        <translation type="unfinished"></translation>
+        <translation>ID:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Description:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mô tả:</translation>
     </message>
     <message>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>Không rõ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>License:</source>
-        <translation type="unfinished"></translation>
+        <translation>Giấy phép:</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Active</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang hoạt động</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inactive (restart)</source>
-        <translation type="unfinished"></translation>
+        <translation>Không hoạt động (khởi động lại)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Trial Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Phiên bản dùng thử:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>File:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Error:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lỗi:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Script Add-Ons</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiện ích kịch bản</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>No script add-ons found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không tìm thấy tiện ích kịch bản nào.</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Ghi công</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Giấy phép</translation>
     </message>
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Giới thiệu...</translation>
     </message>
 </context>
 <context>
@@ -201,37 +201,37 @@
     <message>
         <location filename="../scripts/Help/About/AboutCredits.js" line="+4"/>
         <source>Programming</source>
-        <translation type="unfinished"></translation>
+        <translation>Lập trình</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Hatch Patterns</source>
-        <translation type="unfinished"></translation>
+        <translation>Mẫu mặt cắt</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Themes</source>
-        <translation type="unfinished"></translation>
+        <translation>Chủ đề</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Bản dịch</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Templates</source>
-        <translation type="unfinished"></translation>
+        <translation>Mẫu</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Biểu tượng</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Testing, Feedback and Minor Fixes</source>
-        <translation type="unfinished"></translation>
+        <translation>Thử nghiệm, phản hồi và sửa lỗi nhỏ</translation>
     </message>
 </context>
 <context>
@@ -239,32 +239,32 @@
     <message>
         <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Giới thiệu</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Ghi công</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Scripts</source>
-        <translation type="unfinished"></translation>
+        <translation>Kịch bản</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation>Hệ thống</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Giấy phép</translation>
     </message>
 </context>
 <context>
@@ -272,48 +272,49 @@
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
         <source>Application Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Tùy chọn ứng dụng</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Tùy chọn bản vẽ</translation>
     </message>
     <message>
         <location line="+328"/>
         <source>Apply preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Áp dụng tùy chọn</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Restart required</source>
-        <translation type="unfinished"></translation>
+        <translation>Cần khởi động lại</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vui lòng khởi động lại QCAD để
+các thay đổi tùy chọn có hiệu lực.</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Defaults for</source>
-        <translation type="unfinished"></translation>
+        <translation>Mặc định cho</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>These are default preferences for new drawings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đây là các tùy chọn mặc định cho bản vẽ mới.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Changes will affect new drawings but NOT the current drawing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Các thay đổi sẽ ảnh hưởng đến bản vẽ mới chứ KHÔNG ảnh hưởng đến bản vẽ hiện tại.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Có thể thay đổi tùy chọn của bản vẽ hiện tại tại&lt;br/&gt;&lt;i&gt;Chỉnh sửa &amp;gt; Tùy chọn bản vẽ&lt;/i&gt;.</translation>
     </message>
 </context>
 <context>
@@ -321,12 +322,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Block/AddBlock/AddBlockInit.js" line="+2"/>
         <source>&amp;Add Empty Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Thêm khối rỗng</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Add new empty block</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm khối rỗng mới</translation>
     </message>
 </context>
 <context>
@@ -334,34 +335,34 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/AddCentroidDialog.ui" line="+14"/>
         <source>Add  point mass 2D Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm trọng tâm khối điểm 2D</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí Y:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+7"/>
         <location line="+49"/>
         <source>0.00</source>
-        <translation type="unfinished"></translation>
+        <translation>0.00</translation>
     </message>
     <message>
         <location line="-42"/>
         <source>Position X:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí X:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Point mass:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khối điểm:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Đặt lại về &apos;Chưa xác định&apos;</translation>
     </message>
 </context>
 <context>
@@ -369,17 +370,17 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm thuộc tính tùy chỉnh</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tên:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Giá trị:</translation>
     </message>
 </context>
 <context>
@@ -387,17 +388,17 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Lớp</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm lớp</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayerInit.js" line="+2"/>
         <source>&amp;Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Thêm lớp</translation>
     </message>
 </context>
 <context>
@@ -405,7 +406,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/View/AntialiasingMode/AntialiasingMode.js" line="+74"/>
         <source>&amp;Anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Khử răng cưa</translation>
     </message>
 </context>
 <context>
@@ -413,12 +414,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Apollonius.js" line="+2623"/>
         <source>Invalid radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính không hợp lệ</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có giải pháp</translation>
     </message>
 </context>
 <context>
@@ -426,7 +427,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/AppPreferences.js" line="+65"/>
         <source>Application &amp;Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tùy chọn ứng dụng</translation>
     </message>
 </context>
 <context>
@@ -434,12 +435,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc.js" line="+71"/>
         <source>Arc Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ cung</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cung tròn</translation>
     </message>
 </context>
 <context>
@@ -447,52 +448,52 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PA.js" line="+65"/>
         <source>Start point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm đầu</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm cuối</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Invalid angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc không hợp lệ</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished"></translation>
+        <translation>Hai điểm trùng nhau</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PA.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hướng:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngược chiều kim đồng hồ (dương)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo chiều kim đồng hồ (âm)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PAInit.js" line="+2"/>
         <source>&amp;2 Points and Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;2 điểm và góc</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ cung từ 2 điểm và góc</translation>
     </message>
 </context>
 <context>
@@ -500,52 +501,52 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PH.js" line="+65"/>
         <source>Start point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm đầu</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm cuối</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Invalid height</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều cao không hợp lệ</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>The two points are identical</source>
-        <translation type="unfinished"></translation>
+        <translation>Hai điểm trùng nhau</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PH.ui" line="+17"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều cao:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hướng:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngược chiều kim đồng hồ (dương)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo chiều kim đồng hồ (âm)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
         <source>2 Points and &amp;Height</source>
-        <translation type="unfinished"></translation>
+        <translation>2 điểm và &amp;chiều cao</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ cung từ 2 điểm và chiều cao</translation>
     </message>
 </context>
 <context>
@@ -553,57 +554,57 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PL.js" line="+65"/>
         <source>Start point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm đầu</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm cuối</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Invalid length</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài không hợp lệ</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished"></translation>
+        <translation>Hai điểm trùng nhau</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>The distance between the two points must be less than the arc length</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách giữa hai điểm phải nhỏ hơn chiều dài cung</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PL.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hướng:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngược chiều kim đồng hồ (dương)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo chiều kim đồng hồ (âm)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
         <source>&amp;2 Points and Length</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;2 điểm và chiều dài</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ cung từ 2 điểm và chiều dài</translation>
     </message>
 </context>
 <context>
@@ -611,67 +612,67 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PR.js" line="+67"/>
         <source>Start point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm đầu</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm cuối</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Invalid radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính không hợp lệ</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished"></translation>
+        <translation>Hai điểm trùng nhau</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hướng:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngược chiều kim đồng hồ (dương)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo chiều kim đồng hồ (âm)</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Solution:</source>
-        <translation type="unfinished"></translation>
+        <translation>Giải pháp:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Shorter Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Cung ngắn hơn</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Longer Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Cung dài hơn</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;2 điểm và bán kính</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ cung từ 2 điểm và bán kính</translation>
     </message>
 </context>
 <context>
@@ -679,27 +680,27 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc3P/Arc3P.js" line="+62"/>
         <source>Start point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm đầu</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Point on arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm trên cung</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm cuối</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc3P/Arc3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;3 điểm</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw arc from 3 points</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ cung từ 3 điểm</translation>
     </message>
 </context>
 <context>
@@ -707,52 +708,52 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+80"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Tâm</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Point on arc or radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm trên cung hoặc bán kính</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point on arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm trên cung</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Start angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc đầu</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc cuối</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.ui" line="+17"/>
         <source>Direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hướng:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Counter Clockwise (positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngược chiều kim đồng hồ (dương)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo chiều kim đồng hồ (âm)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
         <source>&amp;Center, Point, Angles</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tâm, điểm, góc</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ cung từ tâm, điểm trên cung và các góc</translation>
     </message>
 </context>
 <context>
@@ -760,22 +761,22 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentric.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đồng tâm (với khoảng cách)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw concentric arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ cung đồng tâm</translation>
     </message>
 </context>
 <context>
@@ -783,17 +784,17 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Đồng tâm (&amp;qua điểm)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw concentric arc through point</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ cung đồng tâm qua điểm</translation>
     </message>
 </context>
 <context>
@@ -801,38 +802,38 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPR.js" line="+79"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đường, cung, đường tròn hoặc elip</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Point on arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm trên cung</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn giải pháp</translation>
     </message>
     <message>
         <location line="+128"/>
         <location line="+73"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có giải pháp</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tiếp tuyến, điểm, bán kính</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ cung tiếp tuyến với đối tượng, qua điểm với bán kính</translation>
     </message>
 </context>
 <context>
@@ -840,27 +841,27 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+66"/>
         <source>Choose base line or base arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đường cơ sở hoặc cung cơ sở</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Choose end point of arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn điểm cuối của cung</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nối tiếp tuyến</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ cung tiếp tuyến với đối tượng cơ sở</translation>
     </message>
 </context>
 <context>
@@ -868,93 +869,95 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/File/AutoSave/AutoSave.js" line="+35"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Autosave</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động lưu</translation>
     </message>
     <message>
         <location line="+100"/>
         <source>Autosaving to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang tự động lưu vào:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Autosave failed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động lưu thất bại:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Autosave complete.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã tự động lưu xong.</translation>
     </message>
     <message numerus="yes">
         <location line="+19"/>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Đã tìm thấy %n tệp sao lưu tự động cho bản vẽ chưa đặt tên.
+Bạn có muốn khôi phục không?</numerusform>
         </translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Recover Files?</source>
-        <translation type="unfinished"></translation>
+        <translation>Khôi phục các tệp?</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Recovered</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã khôi phục</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Recover File?</source>
-        <translation type="unfinished"></translation>
+        <translation>Khôi phục tệp?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Tồn tại tệp sao lưu tự động cho &quot;%1&quot;.
+Bạn có muốn khôi phục không?</translation>
     </message>
     <message>
         <location line="+24"/>
         <location line="+21"/>
         <location line="+7"/>
         <source>Cannot rename file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể đổi tên tệp:</translation>
     </message>
     <message>
         <location line="-25"/>
         <source>Moved autosave backup file to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã chuyển tệp sao lưu tự động đến:</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Moved original file to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã chuyển tệp gốc đến:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Cannot remove file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể xóa tệp:</translation>
     </message>
     <message>
         <location filename="../scripts/File/AutoSave/PreferencesPage.ui" line="+17"/>
         <source>Enable Autosave</source>
-        <translation type="unfinished"></translation>
+        <translation>Bật tự động lưu</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Autosave Interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng thời gian tự động lưu:</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>min</source>
-        <translation type="unfinished"></translation>
+        <translation>min</translation>
     </message>
 </context>
 <context>
@@ -962,57 +965,57 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Snap/SnapAuto/PreferencesPage.ui" line="+17"/>
         <source>Auto Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động bắt điểm</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Intersections</source>
-        <translation type="unfinished"></translation>
+        <translation>Giao điểm</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>End points</source>
-        <translation type="unfinished"></translation>
+        <translation>Các điểm cuối</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Middle points</source>
-        <translation type="unfinished"></translation>
+        <translation>Các trung điểm</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Center points</source>
-        <translation type="unfinished"></translation>
+        <translation>Các điểm tâm</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Perpendicular</source>
-        <translation type="unfinished"></translation>
+        <translation>Vuông góc</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiếp tuyến</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Reference points</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Grid points</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm lưới</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Các điểm trên đối tượng</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Free positioning</source>
-        <translation type="unfinished"></translation>
+        <translation>Định vị tự do</translation>
     </message>
 </context>
 <context>
@@ -1020,7 +1023,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/AutoTrim/AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động &amp;cắt xén</translation>
     </message>
 </context>
 <context>
@@ -1028,7 +1031,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/View/Zoom/AutoZoom/AutoZoomInit.js" line="+2"/>
         <source>&amp;Auto Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Thu phóng tự động</translation>
     </message>
 </context>
 <context>
@@ -1036,13 +1039,13 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2Pdf.js" line="+30"/>
         <source>Export to PDF</source>
-        <translation type="unfinished"></translation>
+        <translation>Xuất sang PDF</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
         <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Batch2Pdf các khối bố cục hiển thị</translation>
     </message>
 </context>
 <context>
@@ -1050,12 +1053,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Khung nhìn đồ họa</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Hành vi</translation>
     </message>
 </context>
 <context>
@@ -1063,37 +1066,37 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể vát hai đối tượng.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể cắt xén đối tượng thứ nhất.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể cắt xén đối tượng thứ hai.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="unfinished"></translation>
+        <translation>Cắt xén</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Length 1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài 1:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Length 2:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài 2:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vát góc / Vát mép</translation>
     </message>
 </context>
 <context>
@@ -1101,149 +1104,149 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExport.js" line="+78"/>
         <source>Error while generating bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Lỗi khi tạo tệp ảnh bitmap &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã xuất tệp ảnh bitmap ra &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Export as Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation>Xuất dưới dạng ảnh bitmap</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportDialog.ui" line="+14"/>
         <source>Bitmap Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Xuất ảnh bitmap</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích cỡ</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Specify width and height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ định chiều rộng và chiều cao:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Width:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều rộng:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều cao:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Specify resolution:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ định độ phân giải:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Pixels per drawing unit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm ảnh trên mỗi đơn vị bản vẽ:</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Margin</source>
-        <translation type="unfinished"></translation>
+        <translation>Lề</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Margin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lề:</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>px</source>
-        <translation type="unfinished"></translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm lề phụ để bù cho bề rộng nét</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Nền</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>White</source>
-        <translation type="unfinished"></translation>
+        <translation>Trắng</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Black</source>
-        <translation type="unfinished"></translation>
+        <translation>Đen</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Transparent</source>
-        <translation type="unfinished"></translation>
+        <translation>Trong suốt</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Color</source>
         <comment>Title of group box</comment>
-        <translation type="unfinished"></translation>
+        <translation>Màu</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Prevent white on white / black on black export</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngăn xuất trắng trên trắng / đen trên đen</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Monochrome</source>
-        <translation type="unfinished"></translation>
+        <translation>Đơn sắc</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Grayscale</source>
-        <translation type="unfinished"></translation>
+        <translation>Thang xám</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Color</source>
         <comment>Radio button choice</comment>
-        <translation type="unfinished"></translation>
+        <translation>Màu</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>Khử răng cưa</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng khử răng cưa</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Vùng chọn</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Export bounding box of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Xuất khung bao của vùng chọn</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xuất ảnh bitmap...</translation>
     </message>
 </context>
 <context>
@@ -1251,7 +1254,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
         <source>Invalid image size (width x height must be less than %1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Cỡ ảnh không hợp lệ (rộng x cao phải nhỏ hơn %1)</translation>
     </message>
 </context>
 <context>
@@ -1259,27 +1262,27 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/Block.js" line="+68"/>
         <source>Block Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ khối</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Khối</translation>
     </message>
     <message>
         <location line="+82"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể sửa khối khi đang sửa một khối tại chỗ</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Cannot edit external reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể sửa tham chiếu ngoài</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cannot edit block from external reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể sửa khối từ tham chiếu ngoài</translation>
     </message>
 </context>
 <context>
@@ -1288,42 +1291,42 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Block/BlockDialog.js" line="+79"/>
         <source>block</source>
         <comment>default block name prefix</comment>
-        <translation type="unfinished"></translation>
+        <translation>khối</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Leading or trailing spaces.</source>
-        <translation type="unfinished"></translation>
+        <translation>Có khoảng trắng ở đầu hoặc cuối.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block name is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tên khối trống.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block name is invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tên khối không hợp lệ.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation type="unfinished"></translation>
+        <translation>Khối &quot;%1&quot; đã tồn tại&lt;br&gt;và sẽ bị ghi đè.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Khối đã tồn tại.</translation>
     </message>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block</source>
-        <translation type="unfinished"></translation>
+        <translation>Khối</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Block name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tên khối:</translation>
     </message>
 </context>
 <context>
@@ -1331,7 +1334,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/BlockExamples.js" line="+51"/>
         <source>&amp;Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Khối</translation>
     </message>
 </context>
 <context>
@@ -1339,7 +1342,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js" line="+80"/>
         <source>&amp;Fix Block Names</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sửa tên khối</translation>
     </message>
 </context>
 <context>
@@ -1347,24 +1350,24 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widget</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
-        <translation type="unfinished"></translation>
+        <translation>Danh sách khối</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+19"/>
         <source>Hide internal blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Ẩn các khối nội bộ</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Enable alternating row colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Bật màu hàng xen kẽ</translation>
     </message>
 </context>
 <context>
@@ -1372,22 +1375,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js" line="+47"/>
         <source>Block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khối:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation type="unfinished"></translation>
+        <translation>ID tham chiếu khối:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Block attribute:</source>
-        <translation type="unfinished"></translation>
+        <translation>Thuộc tính khối:</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>&amp;List Block Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Liệt kê thuộc tính khối</translation>
     </message>
 </context>
 <context>
@@ -1395,17 +1398,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
-        <translation type="unfinished"></translation>
+        <translation>Xuất danh sách khối (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>CSV</source>
-        <translation type="unfinished"></translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xuất danh sách khối</translation>
     </message>
 </context>
 <context>
@@ -1413,17 +1416,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
         <source>Export Block References List (CSV)</source>
-        <translation type="unfinished"></translation>
+        <translation>Xuất danh sách tham chiếu khối (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>CSV</source>
-        <translation type="unfinished"></translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xuất danh sách tham chiếu khối</translation>
     </message>
 </context>
 <context>
@@ -1431,22 +1434,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+59"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đoạn đường, cung, đường tròn, elip, spline hoặc đa tuyến</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đoạn đường, cung, đường tròn hoặc elip</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Gỡ đoạn</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ngắt đoạn</translation>
     </message>
 </context>
 <context>
@@ -1454,22 +1457,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.js" line="+54"/>
         <source>Choose line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đường, cung hoặc đường tròn</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Specify point</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ định điểm</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng hở:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ngắt khoảng hở</translation>
     </message>
 </context>
 <context>
@@ -1477,37 +1480,37 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.js" line="+79"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đường, cung, đường tròn, elip, spline hoặc đa tuyến để ngắt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đường, cung, đường tròn hoặc elip để ngắt</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>First break point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm ngắt thứ nhất</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm ngắt thứ hai</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Click the part of the circle or ellipse to remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhấp vào phần của đường tròn hoặc elip cần xóa</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Gỡ đoạn</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ngắt thủ công</translation>
     </message>
 </context>
 <context>
@@ -1515,7 +1518,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Help/BrowseUserManual/BrowseUserManualInit.js" line="+2"/>
         <source>Browse User Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>Duyệt sổ tay người dùng</translation>
     </message>
 </context>
 <context>
@@ -1523,32 +1526,32 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widget</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>CAD Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Thanh công cụ CAD</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cỡ biểu tượng:</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>Pixel</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm ảnh</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation type="unfinished"></translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Columns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số cột:</translation>
     </message>
 </context>
 <context>
@@ -1556,53 +1559,53 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+401"/>
         <source>Expand all</source>
-        <translation type="unfinished"></translation>
+        <translation>Mở rộng tất cả</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Collapse all</source>
-        <translation type="unfinished"></translation>
+        <translation>Thu gọn tất cả</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>List View</source>
-        <translation type="unfinished"></translation>
+        <translation>Xem dạng danh sách</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Icon View</source>
-        <translation type="unfinished"></translation>
+        <translation>Xem dạng biểu tượng</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widget</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+53"/>
         <source>Tool Matrix</source>
-        <translation type="unfinished"></translation>
+        <translation>Ma trận công cụ</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cỡ biểu tượng:</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Pixel</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm ảnh</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation type="unfinished"></translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>List view</source>
-        <translation type="unfinished"></translation>
+        <translation>Xem dạng danh sách</translation>
     </message>
 </context>
 <context>
@@ -1610,7 +1613,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/ChangeFontToArial/ChangeFontToArial.js" line="+65"/>
         <source>Set Font to Arial</source>
-        <translation type="unfinished"></translation>
+        <translation>Đặt phông thành Arial</translation>
     </message>
 </context>
 <context>
@@ -1619,27 +1622,27 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+68"/>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang kiểm tra cập nhật...</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Version information not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không tìm thấy thông tin phiên bản.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>No connection to server or file not found. Please try again later.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có kết nối đến máy chủ hoặc không tìm thấy tệp. Vui lòng thử lại sau.</translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+53"/>
         <source>Automatically check for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động kiểm tra cập nhật</translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesInit.js" line="+6"/>
         <source>Check for &amp;Updates...</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiểm tra &amp;cập nhật...</translation>
     </message>
 </context>
 <context>
@@ -1647,12 +1650,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle.js" line="+71"/>
         <source>Circle Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ đường tròn</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đường tròn</translation>
     </message>
 </context>
 <context>
@@ -1660,27 +1663,27 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2P/Circle2P.js" line="+58"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ nhất</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ hai</translation>
     </message>
     <message>
         <location line="+83"/>
         <source>The two points are identical</source>
-        <translation type="unfinished"></translation>
+        <translation>Hai điểm trùng nhau</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2P/Circle2PInit.js" line="+2"/>
         <source>&amp;2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;2 điểm</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường tròn từ 2 điểm đối tâm</translation>
     </message>
 </context>
 <context>
@@ -1688,52 +1691,52 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.js" line="+65"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ nhất</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ hai</translation>
     </message>
     <message>
         <location line="+107"/>
         <source>Invalid radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính không hợp lệ</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished"></translation>
+        <translation>Hai điểm trùng nhau</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Solution:</source>
-        <translation type="unfinished"></translation>
+        <translation>Giải pháp:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Center Left of Line P1 - P2</source>
-        <translation type="unfinished"></translation>
+        <translation>Tâm bên trái đường P1 - P2</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
-        <translation type="unfinished"></translation>
+        <translation>Tâm bên phải đường P1 - P2</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;2 điểm và bán kính</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường tròn từ 2 điểm và bán kính</translation>
     </message>
 </context>
 <context>
@@ -1741,38 +1744,38 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TP.js" line="+76"/>
         <source>First line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường, cung hoặc đường tròn thứ nhất</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường, cung hoặc đường tròn thứ hai</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Point on circle line</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm trên đường tròn</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn giải pháp</translation>
     </message>
     <message>
         <location line="+144"/>
         <location line="+59"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có giải pháp</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
         <source>2 Tan&amp;gents and Point</source>
-        <translation type="unfinished"></translation>
+        <translation>2 &amp;tiếp tuyến và điểm</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường tròn tiếp tuyến với hai đối tượng, qua điểm</translation>
     </message>
 </context>
 <context>
@@ -1780,37 +1783,37 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.js" line="+77"/>
         <source>First line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường, cung hoặc đường tròn thứ nhất</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường, cung hoặc đường tròn thứ hai</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn giải pháp</translation>
     </message>
     <message>
         <location line="+103"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có giải pháp</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
         <source>2 &amp;Tangents and Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>2 &amp;tiếp tuyến và bán kính</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường tròn tiếp tuyến với hai đối tượng với bán kính cho trước</translation>
     </message>
 </context>
 <context>
@@ -1818,27 +1821,27 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3P/Circle3P.js" line="+63"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ nhất</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ hai</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Third point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ ba</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3P/Circle3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;3 điểm</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle from 3 points</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường tròn từ 3 điểm</translation>
     </message>
 </context>
 <context>
@@ -1846,38 +1849,38 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3T/Circle3T.js" line="+84"/>
         <source>First line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường, cung hoặc đường tròn thứ nhất</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Second line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường, cung hoặc đường tròn thứ hai</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Third line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường, cung hoặc đường tròn thứ ba</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn giải pháp</translation>
     </message>
     <message>
         <location line="+126"/>
         <location line="+63"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có giải pháp</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3T/Circle3TInit.js" line="+2"/>
         <source>3 T&amp;angents</source>
-        <translation type="unfinished"></translation>
+        <translation>3 &amp;tiếp tuyến</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường tròn tiếp tuyến với ba đối tượng</translation>
     </message>
 </context>
 <context>
@@ -1886,28 +1889,28 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCD.ui" line="+17"/>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDDialog.ui" line="+89"/>
         <source>Diameter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường kính:</translation>
     </message>
     <message>
         <location line="+36"/>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDDialog.ui" line="-60"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDInit.js" line="+2"/>
         <source>Center, &amp;Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Tâm, &amp;đường kính</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw circle from center and diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường tròn từ tâm và đường kính</translation>
     </message>
 </context>
 <context>
@@ -1915,22 +1918,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCP/CircleCP.js" line="+56"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Tâm</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Point on circle or radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm trên đường tròn hoặc bán kính</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCP/CircleCPInit.js" line="+2"/>
         <source>&amp;Center, Point</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tâm, điểm</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường tròn từ tâm và điểm trên đường tròn</translation>
     </message>
 </context>
 <context>
@@ -1939,28 +1942,28 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCR.ui" line="+17"/>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="+89"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính:</translation>
     </message>
     <message>
         <location line="+36"/>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="-60"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRInit.js" line="+2"/>
         <source>Center, &amp;Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Tâm, &amp;bán kính</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw circle from center and radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường tròn từ tâm và bán kính</translation>
     </message>
 </context>
 <context>
@@ -1968,22 +1971,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentric.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đồng tâm (với khoảng cách)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw concentric circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường tròn đồng tâm</translation>
     </message>
 </context>
 <context>
@@ -1991,17 +1994,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Đồng tâm (&amp;qua điểm)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw concentric circle through point</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường tròn đồng tâm qua điểm</translation>
     </message>
 </context>
 <context>
@@ -2009,38 +2012,38 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2P.js" line="+75"/>
         <source>Line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường, cung hoặc đường tròn</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>First point on circle line</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ nhất trên đường tròn</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second point on circle line</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ hai trên đường tròn</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn giải pháp</translation>
     </message>
     <message>
         <location line="+138"/>
         <location line="+55"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có giải pháp</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2PInit.js" line="+2"/>
         <source>&amp;Tangent and 2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tiếp tuyến và 2 điểm</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường tròn qua hai điểm và tiếp tuyến với một đối tượng</translation>
     </message>
 </context>
 <context>
@@ -2048,22 +2051,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.js" line="+39"/>
         <source>Point on circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm trên đường tròn</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tiếp tuyến, điểm, bán kính</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường tròn tiếp tuyến với đối tượng, qua điểm với bán kính</translation>
     </message>
 </context>
 <context>
@@ -2071,7 +2074,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu</translation>
     </message>
 </context>
 <context>
@@ -2079,7 +2082,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Window/CloseAll/CloseAllInit.js" line="+2"/>
         <source>&amp;Close All</source>
-        <translation type="unfinished"></translation>
+        <translation>Đóng &amp;tất cả</translation>
     </message>
 </context>
 <context>
@@ -2087,7 +2090,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang đóng bản vẽ...</translation>
     </message>
 </context>
 <context>
@@ -2095,7 +2098,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/CloseFile/CloseFileInit.js" line="+2"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đóng</translation>
     </message>
 </context>
 <context>
@@ -2103,12 +2106,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Khung nhìn đồ họa</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Màu</translation>
     </message>
 </context>
 <context>
@@ -2116,47 +2119,47 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/ColorSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Mặc định cho bản vẽ mới</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Printing - Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>In ấn - Màu</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation type="unfinished"></translation>
+        <translation>In ấn</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Màu</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/PreferencesPage.ui" line="+19"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Màu nền:</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Color Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Chế độ màu</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Full color</source>
-        <translation type="unfinished"></translation>
+        <translation>Đầy đủ màu</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Grayscale</source>
-        <translation type="unfinished"></translation>
+        <translation>Thang xám</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Black / white</source>
-        <translation type="unfinished"></translation>
+        <translation>Đen / trắng</translation>
     </message>
 </context>
 <context>
@@ -2164,104 +2167,104 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.js" line="+30"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widget</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+113"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Dòng lệnh</translation>
     </message>
     <message>
         <location line="-20"/>
         <source>&amp;Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dòng lệnh</translation>
     </message>
     <message>
         <location line="+199"/>
         <source>Invalid value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Giá trị không hợp lệ:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Invalid coordinate or distance &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tọa độ hoặc khoảng cách không hợp lệ &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Lệnh không xác định hoặc tọa độ/giá trị không hợp lệ: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Numbers may be entered as: &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Có thể nhập số dưới dạng: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinates may be entered as: &quot;%1&quot; (absolute) or &quot;%2&quot; (relative) or &quot;%3&quot; (polar) or &quot;%4&quot; (relative polar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Có thể nhập tọa độ dưới dạng: &quot;%1&quot; (tuyệt đối) hoặc &quot;%2&quot; (tương đối) hoặc &quot;%3&quot; (cực) hoặc &quot;%4&quot; (cực tương đối)</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>You may change the number / coordinate format in the application preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bạn có thể thay đổi định dạng số / tọa độ trong tùy chọn ứng dụng.</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation type="unfinished"></translation>
+        <translation>Giao dịch thất bại. Vui lòng kiểm tra vòng lặp khối và các lớp hoặc khối bị khóa hoặc vô hình.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Cảnh báo</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Thông tin</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Expression</source>
-        <translation type="unfinished"></translation>
+        <translation>Biểu thức</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Tọa độ</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Command</source>
-        <translation type="unfinished"></translation>
+        <translation>Lệnh</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Command:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lệnh:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>: </source>
-        <translation type="unfinished"></translation>
+        <translation>: </translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước lịch sử:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Show warnings as dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện cảnh báo dưới dạng hộp thoại</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Show information as dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện thông tin dưới dạng hộp thoại</translation>
     </message>
 </context>
 <context>
@@ -2269,7 +2272,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/Examples/CommandLineExamples/CommandLineExamples.js" line="+50"/>
         <source>&amp;Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dòng lệnh</translation>
     </message>
 </context>
 <context>
@@ -2277,7 +2280,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/View/CommandLineFocus/CommandLineFocusInit.js" line="+2"/>
         <source>&amp;Focus on Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chuyển tiêu điểm sang dòng lệnh</translation>
     </message>
 </context>
 <context>
@@ -2285,7 +2288,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/CommandLineTools/CommandLineTools.js" line="+50"/>
         <source>&amp;Command Line Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Công cụ dòng lệnh</translation>
     </message>
 </context>
 <context>
@@ -2293,42 +2296,42 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.js" line="+86"/>
         <source>Nothing to be done.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có gì để làm.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unit &quot;%1&quot; selected. Nothing to be done</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã chọn đơn vị &quot;%1&quot;. Không có gì để làm</translation>
     </message>
     <message>
         <location line="+144"/>
         <source>Converted drawing from %1 to %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã chuyển bản vẽ từ %1 sang %2</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.ui" line="+20"/>
         <source>From:</source>
-        <translation type="unfinished"></translation>
+        <translation>Từ:</translation>
     </message>
     <message>
         <location line="+56"/>
         <source>To:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đến:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Convert:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chuyển đổi:</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
         <source>Convert Drawing &amp;Unit</source>
-        <translation type="unfinished"></translation>
+        <translation>Chuyển đổi &amp;đơn vị bản vẽ</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
-        <translation type="unfinished"></translation>
+        <translation>Chuyển bản vẽ sang đơn vị bản vẽ khác</translation>
     </message>
 </context>
 <context>
@@ -2336,37 +2339,37 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widget</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Coordinate Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiển thị tọa độ</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui" line="+72"/>
         <source>Absolute Cartesian Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Tọa độ Descartes tuyệt đối</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Absolute Polar Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Tọa độ cực tuyệt đối</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Cartesian Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Tọa độ Descartes tương đối</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Polar Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Tọa độ cực tương đối</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/PreferencesPage.ui" line="+17"/>
         <source>Forced update every N mouse moves:</source>
-        <translation type="unfinished"></translation>
+        <translation>Buộc cập nhật mỗi N lần di chuột:</translation>
     </message>
 </context>
 <context>
@@ -2374,7 +2377,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/Copy/CopyInit.js" line="+2"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sao chép</translation>
     </message>
 </context>
 <context>
@@ -2382,7 +2385,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/CopyWithReference/CopyWithReferenceInit.js" line="+2"/>
         <source>&amp;Copy with Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sao chép với điểm tham chiếu</translation>
     </message>
 </context>
 <context>
@@ -2390,42 +2393,42 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.ui" line="+17"/>
         <source>Start:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bắt đầu:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Increment:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bước:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Number Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Định dạng số:</translation>
     </message>
     <message>
         <location line="+89"/>
         <source>Prefix:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiền tố:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Suffix:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hậu tố:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/CounterInit.js" line="+2"/>
         <source>&amp;Counter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bộ đếm</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Auto increment number</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động tăng số</translation>
     </message>
 </context>
 <context>
@@ -2433,12 +2436,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/CreateBlock/CreateBlock.js" line="+51"/>
         <source>Reference Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu</translation>
     </message>
     <message>
         <location filename="../scripts/Block/CreateBlock/CreateBlockInit.js" line="+2"/>
         <source>&amp;Create Block from Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tạo khối từ vùng chọn</translation>
     </message>
 </context>
 <context>
@@ -2446,17 +2449,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/Cross.js" line="+56"/>
         <source>Select arc, circle, ellipse or elliptical arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn cung, đường tròn, elip hoặc cung elip</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/CrossInit.js" line="+2"/>
         <source>Centerline Cross</source>
-        <translation type="unfinished"></translation>
+        <translation>Chữ thập đường tâm</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ chữ thập đường tâm trong cung, đường tròn hoặc elip</translation>
     </message>
 </context>
 <context>
@@ -2464,37 +2467,37 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/Cross.ui" line="+17"/>
         <source>X:</source>
-        <translation type="unfinished"></translation>
+        <translation>X:</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Y:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chế độ:</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Extension</source>
-        <translation type="unfinished"></translation>
+        <translation>Phần mở rộng</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Total length</source>
-        <translation type="unfinished"></translation>
+        <translation>Tổng chiều dài</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Percent</source>
-        <translation type="unfinished"></translation>
+        <translation>Phần trăm</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
 </context>
 <context>
@@ -2502,7 +2505,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/Cut/CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cắt</translation>
     </message>
 </context>
 <context>
@@ -2510,7 +2513,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/CutWithReference/CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cắt với điểm tham chiếu</translation>
     </message>
 </context>
 <context>
@@ -2518,52 +2521,52 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đối tượng hoặc vùng</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Di chuyển đối tượng hoặc điểm tham chiếu</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc thứ hai</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm đích của điểm tham chiếu</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm đích của vùng chọn</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Move entity to desired location</source>
-        <translation type="unfinished"></translation>
+        <translation>Di chuyển đối tượng đến vị trí mong muốn</translation>
     </message>
     <message>
         <location line="+409"/>
         <source>Move Reference Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Di chuyển điểm tham chiếu</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Di chuyển vùng chọn</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Di chuyển đối tượng</translation>
     </message>
     <message>
         <location line="+127"/>
         <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang sửa khối &quot;%1&quot;&lt;br&gt;Chọn &lt;i&gt;Khối &gt; Quay lại bản vẽ chính&lt;/i&gt; khi hoàn tất</translation>
     </message>
 </context>
 <context>
@@ -2571,22 +2574,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Navigation/DefaultNavigation/DefaultNavigation.js" line="+47"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Khung nhìn đồ họa</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Navigation</source>
-        <translation type="unfinished"></translation>
+        <translation>Điều hướng</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Zoom (Wheel Mouse)</source>
-        <translation type="unfinished"></translation>
+        <translation>Thu phóng (chuột có con lăn)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
-        <translation type="unfinished"></translation>
+        <translation>Cuộn (Trackpad, chuột cảm ứng đa điểm)</translation>
     </message>
 </context>
 <context>
@@ -2594,7 +2597,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/Delete/DeleteInit.js" line="+2"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xóa</translation>
     </message>
 </context>
 <context>
@@ -2602,12 +2605,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Select/DeselectAll/DeselectAllInit.js" line="+2"/>
         <source>&amp;Deselect All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bỏ chọn tất cả</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Deselect all entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Bỏ chọn tất cả đối tượng</translation>
     </message>
 </context>
 <context>
@@ -2615,7 +2618,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/DeselectBlockReferences/DeselectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Deselect Block References</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bỏ chọn tham chiếu khối</translation>
     </message>
 </context>
 <context>
@@ -2623,7 +2626,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bỏ chọn đối tượng của lớp</translation>
     </message>
 </context>
 <context>
@@ -2631,7 +2634,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/DevDebug/DevDebug.js" line="+45"/>
         <source>&amp;Debug Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chế độ gỡ lỗi</translation>
     </message>
 </context>
 <context>
@@ -2639,88 +2642,88 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="unfinished"></translation>
+        <translation>Bảng ký tự</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Hộp thoại</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Arcs and Circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Cung và đường tròn</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into line segments (fixed length)</source>
-        <translation type="unfinished"></translation>
+        <translation>thành các đoạn thẳng (chiều dài cố định)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>into line segments (fixed angle)</source>
-        <translation type="unfinished"></translation>
+        <translation>thành các đoạn thẳng (góc cố định)</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Ellipses</source>
-        <translation type="unfinished"></translation>
+        <translation>Elip</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into polyline with arc segments</source>
-        <translation type="unfinished"></translation>
+        <translation>thành đa tuyến với các đoạn cung</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+16"/>
         <source>into polyline with line segments</source>
-        <translation type="unfinished"></translation>
+        <translation>thành đa tuyến với các đoạn thẳng</translation>
     </message>
     <message>
         <location line="-8"/>
         <source>Splines</source>
-        <translation type="unfinished"></translation>
+        <translation>Spline</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into lines, solids and texts</source>
-        <translation type="unfinished"></translation>
+        <translation>thành các đường thẳng, đối tượng đặc và văn bản</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation type="unfinished"></translation>
+        <translation>Mặt cắt</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into lines</source>
-        <translation type="unfinished"></translation>
+        <translation>thành các đường thẳng</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Khối</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into entities</source>
-        <translation type="unfinished"></translation>
+        <translation>thành các đối tượng</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/Dialog.ui" line="+94"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Hủy</translation>
     </message>
 </context>
 <context>
@@ -2728,27 +2731,27 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAligned.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Gốc đường gióng thứ nhất</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Gốc đường gióng thứ hai</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí đường kích thước</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAlignedInit.js" line="+2"/>
         <source>&amp;Aligned</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Song song</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw aligned dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ kích thước song song</translation>
     </message>
 </context>
 <context>
@@ -2756,32 +2759,32 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.js" line="+80"/>
         <source>Arc or first of two lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Cung hoặc đường thứ nhất trong hai đường</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Second line</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường thứ hai</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Dimension arc location</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí cung kích thước</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng góc tối đa</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2"/>
         <source>&amp;Angular</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Góc</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw angular dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ kích thước góc</translation>
     </message>
 </context>
 <context>
@@ -2789,22 +2792,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametric.js" line="+57"/>
         <source>Choose arc or circle entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đối tượng cung hoặc đường tròn</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí hoặc góc đường kích thước</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametricInit.js" line="+2"/>
         <source>&amp;Diametric</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đường kính</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw diametric dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ kích thước đường kính</translation>
     </message>
 </context>
 <context>
@@ -2812,12 +2815,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimHorizontal/DimHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ngang</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw horizontal dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ kích thước ngang</translation>
     </message>
 </context>
 <context>
@@ -2825,22 +2828,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí đặc trưng</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm cuối của đường dẫn</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
         <source>&amp;Ordinate (X/Y)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tọa độ (X/Y)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw ordinate dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ kích thước tọa độ</translation>
     </message>
 </context>
 <context>
@@ -2848,22 +2851,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRadial/DimRadial.js" line="+57"/>
         <source>Choose arc or circle entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đối tượng cung hoặc đường tròn</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí hoặc góc đường kích thước</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRadial/DimRadialInit.js" line="+2"/>
         <source>&amp;Radial</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bán kính</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw radial dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ kích thước bán kính</translation>
     </message>
 </context>
 <context>
@@ -2871,19 +2874,19 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Chưa chọn đối tượng kích thước nào có vị trí nhãn tùy chỉnh.</translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Đã đặt lại vị trí nhãn của %n kích thước.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegenInit.js" line="+2"/>
         <source>&amp;Reset Label Position</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đặt lại vị trí nhãn</translation>
     </message>
 </context>
 <context>
@@ -2891,32 +2894,32 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Gốc đường gióng thứ nhất</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Gốc đường gióng thứ hai</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí đường kích thước</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xoay (tuyến tính)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ kích thước thẳng ở một góc cố định</translation>
     </message>
 </context>
 <context>
@@ -2924,12 +2927,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimVertical/DimVerticalInit.js" line="+2"/>
         <source>&amp;Vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dọc</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw vertical dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ kích thước dọc</translation>
     </message>
 </context>
 <context>
@@ -2937,102 +2940,102 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/Dimension.js" line="+60"/>
         <source>No prefix</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có tiền tố</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric screw</source>
-        <translation type="unfinished"></translation>
+        <translation>Vít hệ mét</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường kính</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Cung tròn</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus/Minus</source>
-        <translation type="unfinished"></translation>
+        <translation>Cộng/Trừ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>Gần bằng</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>Bằng tiệm cận</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation type="unfinished"></translation>
+        <translation>Hình vuông</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished"></translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="+122"/>
         <source>Dimension Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ kích thước</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>D&amp;imension</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kích thước</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Dimension.ui" line="+29"/>
         <source>Label:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhãn:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Prefix</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiền tố</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Enter fixed label or leave empty for automatic label</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhập nhãn cố định hoặc để trống cho nhãn tự động</translation>
     </message>
     <message>
         <location line="+61"/>
         <source>Upper tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>Dung sai trên</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Lower tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>Dung sai dưới</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ bản vẽ</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động</translation>
     </message>
 </context>
 <context>
@@ -3040,17 +3043,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ kích thước</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ cho các kích thước mới không phải là 1:1. Nhãn kích thước sẽ hiển thị các giá trị khác với giá trị đo được trong bản vẽ. Bạn có thể chỉnh hệ số tỷ lệ trong thanh tùy chọn ở phía trên.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this warning again</source>
-        <translation type="unfinished"></translation>
+        <translation>Không hiển thị cảnh báo này nữa</translation>
     </message>
 </context>
 <context>
@@ -3058,190 +3061,190 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Mặc định cho bản vẽ mới</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Dimension Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Thiết lập kích thước</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước</translation>
     </message>
     <message>
         <location line="+112"/>
         <source>point</source>
-        <translation type="unfinished"></translation>
+        <translation>điểm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>comma</source>
-        <translation type="unfinished"></translation>
+        <translation>dấu phẩy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation type="unfinished"></translation>
+        <translation>khoảng trắng</translation>
     </message>
     <message>
         <location line="+309"/>
         <source>Unit / Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Đơn vị / Định dạng</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đơn vị bản vẽ phải là &quot;Inch&quot; để hiển thị nhãn kích thước ở định dạng &quot;Architectural&quot; hoặc &quot;Engineering&quot;. Định dạng đã đổi thành &quot;Decimal&quot;.</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
         <source>Dimension Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiểu kích thước</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Horizontal text labels</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhãn văn bản nằm ngang</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Text above dimension line</source>
-        <translation type="unfinished"></translation>
+        <translation>Văn bản trên đường kích thước</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Sizes</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích cỡ</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Keep proportions</source>
-        <translation type="unfinished"></translation>
+        <translation>Giữ tỷ lệ</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Dimension line gap:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khe hở đường kích thước:</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Arrow size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cỡ mũi tên:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Extension line extension:</source>
-        <translation type="unfinished"></translation>
+        <translation>Phần kéo dài đường gióng:</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>Text height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều cao văn bản:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Extension line offset:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng lùi đường gióng:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dimension line increment:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bước đường kích thước:</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Size scale factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hệ số tỷ lệ kích cỡ:</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Arrow Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiểu mũi tên</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Mũi tên</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation type="unfinished"></translation>
+        <translation>Vạch kiến trúc</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Label</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhãn</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Label font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Phông nhãn:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Label color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Màu nhãn:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Number Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Định dạng số</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Decimal separator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dấu phân cách thập phân:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Label Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Định dạng nhãn</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Linear Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước thẳng</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Định dạng:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>P&amp;recision:</source>
-        <translation type="unfinished"></translation>
+        <translation>Độ chính &amp;xác:</translation>
     </message>
     <message>
         <location line="+32"/>
         <location line="+60"/>
         <source>Show trailing zeros</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện các số 0 ở cuối</translation>
     </message>
     <message>
         <location line="-50"/>
         <source>Angular Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước góc</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>F&amp;ormat:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đị&amp;nh dạng:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Pre&amp;cision:</source>
-        <translation type="unfinished"></translation>
+        <translation>Độ chính &amp;xác:</translation>
     </message>
     <message>
         <location line="+32"/>
         <location line="+19"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Xem trước</translation>
     </message>
 </context>
 <context>
@@ -3251,12 +3254,14 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Thư mục
+&quot;%1&quot;
+đã có trong danh sách.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Folder not added</source>
-        <translation type="unfinished"></translation>
+        <translation>Chưa thêm thư mục</translation>
     </message>
 </context>
 <context>
@@ -3264,7 +3269,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiển thị &amp;khoảng cách/góc</translation>
     </message>
 </context>
 <context>
@@ -3272,27 +3277,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Divide/Divide.js" line="+68"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đường, cung, đường tròn, elip, spline hoặc đa tuyến</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đường, cung, đường tròn hoặc elip</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Specify point</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ định điểm</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Specify second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ định điểm thứ hai</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Divide/DivideInit.js" line="+2"/>
         <source>&amp;Divide</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chia</translation>
     </message>
 </context>
 <context>
@@ -3300,7 +3305,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/DraftMode/DraftMode.js" line="+86"/>
         <source>&amp;Draft Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chế độ phác thảo</translation>
     </message>
 </context>
 <context>
@@ -3308,17 +3313,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Draw.js" line="+61"/>
         <source>Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vẽ</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ vẽ</translation>
     </message>
 </context>
 <context>
@@ -3326,12 +3331,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+73"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc thứ nhất</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc thứ hai</translation>
     </message>
 </context>
 <context>
@@ -3339,52 +3344,52 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/DrawBasedOnRectangleSize.js" line="+46"/>
         <source>Top Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Trên trái</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Trên</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Trên phải</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Trái</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Giữa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Phải</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Dưới trái</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Dưới</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Dưới phải</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí</translation>
     </message>
 </context>
 <context>
@@ -3392,17 +3397,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/DrawBasedOnThreeCircles.js" line="+72"/>
         <source>First arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Cung hoặc đường tròn thứ nhất</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Cung hoặc đường tròn thứ hai</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Third arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Cung hoặc đường tròn thứ ba</translation>
     </message>
 </context>
 <context>
@@ -3410,7 +3415,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js" line="+71"/>
         <source>Draw &amp;Bounding Box</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ &amp;khung bao</translation>
     </message>
 </context>
 <context>
@@ -3418,7 +3423,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/DrawExamples.js" line="+51"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vẽ</translation>
     </message>
 </context>
 <context>
@@ -3426,72 +3431,72 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js" line="+74"/>
         <source>First vertex</source>
-        <translation type="unfinished"></translation>
+        <translation>Đỉnh thứ nhất</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Next vertex</source>
-        <translation type="unfinished"></translation>
+        <translation>Đỉnh tiếp theo</translation>
     </message>
     <message>
         <location line="+525"/>
         <source>close</source>
-        <translation type="unfinished"></translation>
+        <translation>đóng</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>undo</source>
-        <translation type="unfinished"></translation>
+        <translation>hoàn tác</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>redo</source>
-        <translation type="unfinished"></translation>
+        <translation>làm lại</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>arc</source>
-        <translation type="unfinished"></translation>
+        <translation>cung</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Đóng đa tuyến</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoàn tác đoạn trước</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Làm lại đoạn</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cung với bán kính:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation type="unfinished"></translation>
+        <translation>Quét</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Giới hạn chiều dài hoặc góc</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ &amp;làn FMS</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ làn FMS (gân)</translation>
     </message>
 </context>
 <context>
@@ -3499,124 +3504,124 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+142"/>
         <source>No import file selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Chưa chọn tệp để nhập.</translation>
     </message>
     <message>
         <location line="+3"/>
         <location line="+15"/>
         <location line="+1275"/>
         <source>Command ended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lệnh đã kết thúc.</translation>
     </message>
     <message>
         <location line="-1278"/>
         <source>No file opened.</source>
-        <translation type="unfinished"></translation>
+        <translation>Chưa mở tệp nào.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>DrawFromCSV script (v3.03) by CVH</source>
-        <translation type="unfinished"></translation>
+        <translation>Kịch bản DrawFromCSV (v3.03) bởi CVH</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation type="unfinished"></translation>
+        <translation>Đổ CSV</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Reading from file: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang đọc từ tệp: %1</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Switched to comma/dot CSV style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã chuyển sang kiểu CSV dấu phẩy/dấu chấm.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/dot CSV style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã chuyển sang kiểu CSV dấu chấm phẩy/dấu chấm.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/comma CSV style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã chuyển sang kiểu CSV dấu chấm phẩy/dấu phẩy.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Unsupported or invalid CSV style, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiểu CSV không được hỗ trợ hoặc không hợp lệ, đã bỏ qua. Dòng văn bản: %1</translation>
     </message>
     <message>
         <location line="+82"/>
         <source>Setting new relative origin failed, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Đặt gốc tương đối mới thất bại, đã bỏ qua. Dòng văn bản: %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Setting new rounding radius failed, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Đặt bán kính bo tròn mới thất bại, đã bỏ qua. Dòng văn bản: %1</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Rounding polylines requires QCAD Professional, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Bo tròn đa tuyến yêu cầu QCAD Professional, đã bỏ qua. Dòng văn bản: %1</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Can not switch to non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể chuyển sang lớp không tồn tại, đã bỏ qua. Dòng văn bản: %1%2 Lớp: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct set active &apos;Layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Công tắc đặt &apos;Layer&apos; hoạt động không đúng, đã bỏ qua. Dòng văn bản: %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Công tắc &apos;New layer&apos; không đúng, đã bỏ qua. Dòng văn bản: %1</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể ẩn lớp không tồn tại, đã bỏ qua. Dòng văn bản: %1%2 Lớp: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;HideLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Công tắc &apos;HideLayer&apos; không đúng, đã bỏ qua. Dòng văn bản: %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể đóng băng lớp không tồn tại, đã bỏ qua. Dòng văn bản: %1%2 Lớp: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;FreezeLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Công tắc &apos;FreezeLayer&apos; không đúng, đã bỏ qua. Dòng văn bản: %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not lock non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể khóa lớp không tồn tại, đã bỏ qua. Dòng văn bản: %1%2 Lớp: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;LockLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Công tắc &apos;LockLayer&apos; không đúng, đã bỏ qua. Dòng văn bản: %1</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Can not allow non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể cho phép lớp không tồn tại, đã bỏ qua. Dòng văn bản: %1%2 Lớp: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;AllowLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Công tắc &apos;AllowLayer&apos; không đúng, đã bỏ qua. Dòng văn bản: %1</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -3641,7 +3646,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+135"/>
         <source>Low field count.</source>
-        <translation type="unfinished"></translation>
+        <translation>Số trường ít.</translation>
     </message>
     <message>
         <location line="-656"/>
@@ -3670,7 +3675,7 @@ is already in the list.</source>
         <location line="+25"/>
         <location line="+23"/>
         <source>Odd field count.</source>
-        <translation type="unfinished"></translation>
+        <translation>Số trường lẻ.</translation>
     </message>
     <message>
         <location line="-655"/>
@@ -3682,7 +3687,7 @@ is already in the list.</source>
         <location line="+188"/>
         <location line="+168"/>
         <source>Rv Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rv không hợp lệ.</translation>
     </message>
     <message>
         <location line="-640"/>
@@ -3698,7 +3703,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+62"/>
         <source>Rv1 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rv1 không hợp lệ.</translation>
     </message>
     <message>
         <location line="-503"/>
@@ -3716,7 +3721,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+35"/>
         <source>Rv2 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rv2 không hợp lệ.</translation>
     </message>
     <message>
         <location line="-510"/>
@@ -3729,7 +3734,7 @@ is already in the list.</source>
         <location line="+49"/>
         <location line="+67"/>
         <source>Equal positions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Các vị trí bằng nhau.</translation>
     </message>
     <message>
         <location line="-265"/>
@@ -3742,7 +3747,7 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+33"/>
         <source>Radius Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính không hợp lệ.</translation>
     </message>
     <message>
         <location line="-298"/>
@@ -3752,22 +3757,22 @@ is already in the list.</source>
         <location line="+35"/>
         <location line="+150"/>
         <source>Angle Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc không hợp lệ.</translation>
     </message>
     <message>
         <location line="-527"/>
         <source>Angle1 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc 1 không hợp lệ.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angle2 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc 2 không hợp lệ.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Equal angles.</source>
-        <translation type="unfinished"></translation>
+        <translation>Các góc bằng nhau.</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -3777,7 +3782,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí 1-2 bằng nhau.</translation>
     </message>
     <message>
         <location line="-286"/>
@@ -3789,7 +3794,7 @@ is already in the list.</source>
         <location line="+32"/>
         <location line="+35"/>
         <source>Rv3 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rv3 không hợp lệ.</translation>
     </message>
     <message>
         <location line="-354"/>
@@ -3799,7 +3804,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-3.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí 1-3 bằng nhau.</translation>
     </message>
     <message>
         <location line="-287"/>
@@ -3809,7 +3814,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 2-3.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí 2-3 bằng nhau.</translation>
     </message>
     <message>
         <location line="-284"/>
@@ -3817,28 +3822,28 @@ is already in the list.</source>
         <location line="+168"/>
         <location line="+2"/>
         <source>Near co-linear positions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Các vị trí gần thẳng hàng.</translation>
     </message>
     <message>
         <location line="-168"/>
         <source>Arc Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cung không hợp lệ.</translation>
     </message>
     <message>
         <location line="+46"/>
         <location line="+47"/>
         <source>Center Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tâm không hợp lệ.</translation>
     </message>
     <message>
         <location line="-21"/>
         <source>Radius too small.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính quá nhỏ.</translation>
     </message>
     <message>
         <location line="+98"/>
         <source>Circle Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường tròn không hợp lệ.</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -3846,45 +3851,45 @@ is already in the list.</source>
         <location line="+30"/>
         <location line="+35"/>
         <source>Rv4 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rv4 không hợp lệ.</translation>
     </message>
     <message>
         <location line="-97"/>
         <location line="+33"/>
         <source>Equal positions 1-4.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí 1-4 bằng nhau.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 2-4.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí 2-4 bằng nhau.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 3-4.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí 3-4 bằng nhau.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Size Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích cỡ không hợp lệ.</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Size in X Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích cỡ theo X không hợp lệ.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size in Y Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích cỡ theo Y không hợp lệ.</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Polygon: less than 5 references.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đa giác: ít hơn 5 tham chiếu.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3892,207 +3897,207 @@ is already in the list.</source>
         <location line="+26"/>
         <location line="+28"/>
         <source>Rv%1 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rv%1 không hợp lệ.</translation>
     </message>
     <message>
         <location line="-61"/>
         <source>Polyline, less than 2 references.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đa tuyến, ít hơn 2 tham chiếu.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Bulge%1 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Độ cong %1 không hợp lệ.</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Unsupported QCAD Professional feature.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tính năng QCAD Professional không được hỗ trợ.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>3th degree fit point Spline, less than 3 references.</source>
-        <translation type="unfinished"></translation>
+        <translation>Spline điểm khớp bậc 3, ít hơn 3 tham chiếu.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>3th degree control point Spline, less than 4 references.</source>
-        <translation type="unfinished"></translation>
+        <translation>Spline điểm điều khiển bậc 3, ít hơn 4 tham chiếu.</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Height Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều cao không hợp lệ.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Width Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều rộng không hợp lệ.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Căn dọc không hợp lệ.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Căn ngang không hợp lệ.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing direction Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hướng vẽ không hợp lệ.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing style Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiểu khoảng cách dòng không hợp lệ.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách dòng không hợp lệ.</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Unsupported method. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Phương pháp không được hỗ trợ. Dòng văn bản: %1</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Error with first optional list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lỗi với danh sách tùy chọn thứ nhất.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Error with second optional list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lỗi với danh sách tùy chọn thứ hai.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Not a correct entry, ignored. Text line: %1 &gt; %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Mục không đúng, đã bỏ qua. Dòng văn bản: %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Số mục đã đổ: %1 trên %2 dòng văn bản</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Importing CSV complete. Command ended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã nhập CSV xong. Lệnh đã kết thúc.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Nothing casted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có gì được đổ.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Draw from CSV</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ từ CSV</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>CSV</source>
-        <translation type="unfinished"></translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tất cả tệp</translation>
     </message>
     <message>
         <location line="+182"/>
         <source>Attributes empty. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Thuộc tính trống. Dòng văn bản: %1</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Tên lớp không đúng, đã bỏ qua. Dòng văn bản: %1%2 Tên: %3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Layer doesn&apos;t exist, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Lớp không tồn tại, đã bỏ qua. Dòng văn bản: %1%2 Lớp: %3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Not a correct color, ignored. Text line: %1%2 Color: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Màu không đúng, đã bỏ qua. Dòng văn bản: %1%2 Màu: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Bề rộng nét không đúng, đã bỏ qua. Dòng văn bản: %1%2 Bề rộng: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiểu nét không đúng, đã bỏ qua. Dòng văn bản: %1%2 Loại: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ kiểu nét không đúng, đã bỏ qua. Dòng văn bản: %1%2 Tỷ lệ: %3</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Unsupported attribute, ignored. Text line: %1 &gt; %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Thuộc tính không được hỗ trợ, đã bỏ qua. Dòng văn bản: %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Tên lớp không đúng. Dòng văn bản: %1%2 Tên: %3</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Lớp cha không tồn tại. Dòng văn bản: %1%2 Lớp: %3</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Not a correct color. Text line: %1%2 Color: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Màu không đúng. Dòng văn bản: %1%2 Màu: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Bề rộng nét không đúng. Dòng văn bản: %1%2 Bề rộng: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiểu nét không đúng. Dòng văn bản: %1%2 Loại: %3</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Add/Update layer ignored.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã bỏ qua thêm/cập nhật lớp.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Updated layer: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã cập nhật lớp: %1</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Added new layer: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã thêm lớp mới: %1</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vẽ từ CSV</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ các đối tượng dựa trên các mục văn bản trong một tệp CSV</translation>
     </message>
 </context>
 <context>
@@ -4100,12 +4105,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Thứ tự vẽ</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation type="unfinished"></translation>
+        <translation>Thứ tự vẽ</translation>
     </message>
 </context>
 <context>
@@ -4113,72 +4118,72 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+78"/>
         <source>First vertex</source>
-        <translation type="unfinished"></translation>
+        <translation>Đỉnh thứ nhất</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next vertex</source>
-        <translation type="unfinished"></translation>
+        <translation>Đỉnh tiếp theo</translation>
     </message>
     <message>
         <location line="+469"/>
         <source>close</source>
-        <translation type="unfinished"></translation>
+        <translation>đóng</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>undo</source>
-        <translation type="unfinished"></translation>
+        <translation>hoàn tác</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>redo</source>
-        <translation type="unfinished"></translation>
+        <translation>làm lại</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>arc</source>
-        <translation type="unfinished"></translation>
+        <translation>cung</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Đóng đa tuyến</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoàn tác đoạn trước</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Làm lại đoạn</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cung với bán kính:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation type="unfinished"></translation>
+        <translation>Quét:</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Giới hạn chiều dài hoặc góc</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vẽ đa tuyến</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đa tuyến với các đoạn thẳng và cung</translation>
     </message>
 </context>
 <context>
@@ -4186,7 +4191,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tùy chọn bản vẽ</translation>
     </message>
 </context>
 <context>
@@ -4194,14 +4199,14 @@ is already in the list.</source>
     <message numerus="yes">
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Đã nhân bản %n đối tượng</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nhân bản</translation>
     </message>
 </context>
 <context>
@@ -4209,154 +4214,154 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/EAction.js" line="+64"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Quay lại</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+2167"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Hủy</translation>
     </message>
     <message>
         <location line="-2166"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Xong</translation>
     </message>
     <message>
         <location line="+287"/>
         <location line="+143"/>
         <source>Active Tool:</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ đang dùng:</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Không</translation>
     </message>
     <message>
         <location line="+668"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Tùy chọn</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Main Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ chính</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CAD Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ CAD</translation>
     </message>
     <message>
         <location line="+577"/>
         <source>Invalid position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí không hợp lệ</translation>
     </message>
     <message>
         <location line="+175"/>
         <source>Entity is not in working set.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không nằm trong tập làm việc.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity is on a locked layer.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng nằm trên một lớp bị khóa.</translation>
     </message>
     <message>
         <location line="+254"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài:</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Entity is not a block reference.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là tham chiếu khối.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là đường hoặc cung.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là đường, cung hoặc đa tuyến.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là đường.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là cung.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là cung hoặc đường tròn.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là đường, cung hoặc đường tròn.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là đường, cung, spline, cung elip hoặc đa tuyến.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là cung, đường tròn hoặc elip.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là đường, cung, đường tròn hoặc elip.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là đường, cung, đường tròn, elip hoặc đa tuyến.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là đường, cung, đường tròn, elip hoặc spline.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là đường, cung, đường tròn, spline hoặc đa tuyến.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là đường, cung, đường tròn, elip, spline hoặc đa tuyến.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là đường tròn, elip, spline hoặc đa tuyến.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là đa tuyến.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a closed polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là đa tuyến kín.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là spline có điểm khớp.</translation>
     </message>
 </context>
 <context>
@@ -4364,33 +4369,33 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
         <source>Show ECMAScript Shell</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện ECMAScript Shell</translation>
     </message>
     <message>
         <location line="+55"/>
         <source>&amp;Script Shell</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Shell kịch bản</translation>
     </message>
     <message>
         <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
-        <translation type="unfinished"></translation>
+        <translation>Shell kịch bản</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShellDialog.ui" line="+20"/>
         <source>ECMAScript Shell</source>
-        <translation type="unfinished"></translation>
+        <translation>ECMAScript Shell</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &quot;safe&quot; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bạn sắp bật ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Thông qua ECMAScript Shell, bạn có thể &lt;span style=&quot; color:#ff0000;&quot;&gt;chỉnh sửa bản vẽ&lt;/span&gt; nhưng cũng có thể &lt;span style=&quot; color:#ff0000;&quot;&gt;xóa tệp&lt;/span&gt; hoặc &lt;span style=&quot; color:#ff0000;&quot;&gt;làm treo ứng dụng&lt;/span&gt;, điều này có thể dẫn đến &lt;span style=&quot; color:#ff0000;&quot;&gt;mất dữ liệu&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Đối với lập trình viên thiếu kinh nghiệm, nên giới hạn việc sử dụng ECMAScript shell trong phạm vi &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; vốn được xem là &quot;an toàn&quot; để sử dụng.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
-        <translation type="unfinished"></translation>
+        <translation>Không hiển thị hộp thoại này nữa</translation>
     </message>
 </context>
 <context>
@@ -4398,12 +4403,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Edit.js" line="+65"/>
         <source>Edit Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ chỉnh sửa</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chỉnh sửa</translation>
     </message>
 </context>
 <context>
@@ -4411,12 +4416,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/EditBlock/EditBlockInit.js" line="+2"/>
         <source>&amp;Edit Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sửa khối</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit contents of selected block</source>
-        <translation type="unfinished"></translation>
+        <translation>Sửa nội dung của khối đã chọn</translation>
     </message>
 </context>
 <context>
@@ -4424,17 +4429,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReference.js" line="+55"/>
         <source>Choose block reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn tham chiếu khối</translation>
     </message>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sửa khối từ tham chiếu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit block based on chosen block reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Sửa khối dựa trên tham chiếu khối đã chọn</translation>
     </message>
 </context>
 <context>
@@ -4442,12 +4447,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn mặt cắt</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Sửa &amp;mặt cắt</translation>
     </message>
 </context>
 <context>
@@ -4455,7 +4460,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/EditLayer/EditLayerInit.js" line="+2"/>
         <source>&amp;Edit Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sửa lớp</translation>
     </message>
 </context>
 <context>
@@ -4463,7 +4468,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/EditMainDrawing/EditMainDrawingInit.js" line="+2"/>
         <source>&amp;Return to Main Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Quay lại bản vẽ chính</translation>
     </message>
 </context>
 <context>
@@ -4471,17 +4476,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/EditText/EditText.js" line="+61"/>
         <source>Choose text</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn văn bản</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditText/EditTextInit.js" line="+2"/>
         <source>Edit Te&amp;xt</source>
-        <translation type="unfinished"></translation>
+        <translation>Sửa văn &amp;bản</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Edit text</source>
-        <translation type="unfinished"></translation>
+        <translation>Sửa văn bản</translation>
     </message>
 </context>
 <context>
@@ -4489,12 +4494,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+89"/>
         <source>Ellipse Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ elip</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Elip</translation>
     </message>
 </context>
 <context>
@@ -4502,97 +4507,97 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.js" line="+74"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Tâm</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Major point of ellipse or major radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm trục lớn của elip hoặc bán trục lớn</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Major point of ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm trục lớn của elip</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Minor point of ellipse or minor radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm trục nhỏ của elip hoặc bán trục nhỏ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Minor point of ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm trục nhỏ của elip</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Rotation angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc xoay</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Start parameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Tham số đầu</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End parameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Tham số cuối</translation>
     </message>
     <message>
         <location line="+249"/>
         <source>Invalid major radius.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính trục lớn không hợp lệ.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Major radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán trục lớn:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Minor radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán trục nhỏ:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Start angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc đầu:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc cuối:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.ui" line="+17"/>
         <source>Direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hướng:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Counter Clockwise (positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngược chiều kim đồng hồ (dương)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo chiều kim đồng hồ (âm)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js" line="+2"/>
         <source>&amp;Ellipse Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cung elip</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ cung elip từ tâm, điểm trục lớn, tỷ số và các góc</translation>
     </message>
 </context>
 <context>
@@ -4600,12 +4605,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseCPP/EllipseCPPInit.js" line="+2"/>
         <source>&amp;Ellipse (Center, Point, Ratio)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Elip (tâm, điểm, tỷ số)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ elip đầy đủ từ tâm, điểm trục lớn và tỷ số</translation>
     </message>
 </context>
 <context>
@@ -4614,34 +4619,34 @@ is already in the list.</source>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDD.ui" line="+17"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="+19"/>
         <source>X Diameter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường kính X:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="+80"/>
         <source>Y Diameter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường kính Y:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="-23"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js" line="+2"/>
         <source>Ellipse with &amp;Diameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Elip với &amp;đường kính</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ elip với vị trí và các đường kính</translation>
     </message>
 </context>
 <context>
@@ -4649,22 +4654,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
         <source>&amp;Parallel Curve (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đường cong song song (với khoảng cách)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường cong song song với elip</translation>
     </message>
 </context>
 <context>
@@ -4672,17 +4677,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
         <source>Parallel Curve (&amp;through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường cong song song (&amp;qua điểm)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường cong song song với elip qua điểm</translation>
     </message>
 </context>
 <context>
@@ -4691,34 +4696,34 @@ is already in the list.</source>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRR.ui" line="+17"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="+129"/>
         <source>X Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính X:</translation>
     </message>
     <message>
         <location line="+23"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-10"/>
         <source>Y Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính Y:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-90"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRInit.js" line="+2"/>
         <source>Ellipse with &amp;Radii</source>
-        <translation type="unfinished"></translation>
+        <translation>Elip với &amp;bán kính</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ elip với vị trí và các bán kính</translation>
     </message>
 </context>
 <context>
@@ -4726,7 +4731,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Thoát</translation>
     </message>
 </context>
 <context>
@@ -4734,7 +4739,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/ExAddBlock/ExAddBlock.js" line="+85"/>
         <source>&amp;Create Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tạo khối</translation>
     </message>
 </context>
 <context>
@@ -4742,12 +4747,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExAddLayer/ExAddLayer.js" line="+44"/>
         <source>Added layer &quot;MyLayer&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã thêm lớp &quot;MyLayer&quot;</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm lớp</translation>
     </message>
 </context>
 <context>
@@ -4755,7 +4760,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xuất CSV</translation>
     </message>
 </context>
 <context>
@@ -4763,17 +4768,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js" line="+59"/>
         <source>Deleted line with ID %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã xóa đường có ID %1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>You can use &lt;i&gt;Edit &gt; Undo&lt;/i&gt; to restore the line entity.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bạn có thể dùng &lt;i&gt;Chỉnh sửa &gt; Hoàn tác&lt;/i&gt; để khôi phục đối tượng đường.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Add and Delete Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm và xóa đường</translation>
     </message>
 </context>
 <context>
@@ -4781,7 +4786,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExDirListing/ExDirListing.js" line="+66"/>
         <source>&amp;Directory Listing</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Liệt kê thư mục</translation>
     </message>
 </context>
 <context>
@@ -4789,7 +4794,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawColors/ExDrawColors.js" line="+66"/>
         <source>Draw &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ &amp;màu</translation>
     </message>
 </context>
 <context>
@@ -4797,7 +4802,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js" line="+85"/>
         <source>Draw &amp;Fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ &amp;phông</translation>
     </message>
 </context>
 <context>
@@ -4805,17 +4810,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js" line="+48"/>
         <source>Clockwise polyline:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đa tuyến theo chiều kim đồng hồ:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Counterclockwise polyline:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đa tuyến ngược chiều kim đồng hồ:</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&amp;Output Polyline Vertices</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xuất đỉnh đa tuyến</translation>
     </message>
 </context>
 <context>
@@ -4823,12 +4828,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ExLayerCustomProperty.js" line="+43"/>
         <source>Added custom property &quot;MyCustomProperty&quot; to layer &quot;0&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã thêm thuộc tính tùy chỉnh &quot;MyCustomProperty&quot; vào lớp &quot;0&quot;.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Add Custom Property to a Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm thuộc tính tùy chỉnh cho một lớp</translation>
     </message>
 </context>
 <context>
@@ -4836,22 +4841,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove.js" line="+56"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc thứ nhất</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc thứ hai</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mộng đuôi én</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ một mối ghép đuôi én</translation>
     </message>
 </context>
 <context>
@@ -4859,7 +4864,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExMainWindow/ExMainWindow.js" line="+50"/>
         <source>&amp;Main Window</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cửa sổ chính</translation>
     </message>
 </context>
 <context>
@@ -4867,7 +4872,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+48"/>
         <source>&amp;Mandelbrot Example</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ví dụ Mandelbrot</translation>
     </message>
 </context>
 <context>
@@ -4875,7 +4880,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js" line="+73"/>
         <source>&amp;Spiral</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xoắn ốc</translation>
     </message>
 </context>
 <context>
@@ -4883,12 +4888,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
         <source>Hello World.</source>
-        <translation type="unfinished"></translation>
+        <translation>Chào thế giới.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Minimal Example</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ví dụ tối giản</translation>
     </message>
 </context>
 <context>
@@ -4896,12 +4901,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.js" line="+51"/>
         <source>&amp;Minimal Example 2</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ví dụ tối giản 2</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính:</translation>
     </message>
 </context>
 <context>
@@ -4909,7 +4914,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chạy tiến trình</translation>
     </message>
 </context>
 <context>
@@ -4917,22 +4922,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ExRegisterFileExporter.js" line="+37"/>
         <source>Example Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp ví dụ %1</translation>
     </message>
     <message>
         <location line="+84"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Thông tin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Registered a file exporter for file type &quot;.example&quot;. Use File &gt; Save As to see the filter in action.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã đăng ký một bộ xuất tệp cho loại tệp &quot;.example&quot;. Dùng Tệp &gt; Lưu thành để xem bộ lọc hoạt động.</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>&amp;Register File Exporter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đăng ký bộ xuất tệp</translation>
     </message>
 </context>
 <context>
@@ -4940,27 +4945,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ExRegisterFileImporter.js" line="+37"/>
         <source>Example Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp ví dụ %1</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Read from file: &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Đọc từ tệp: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Thông tin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Registered a file importer for file type &quot;.example&quot;. Use File &gt; Open to see the filter in action.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã đăng ký một bộ nhập tệp cho loại tệp &quot;.example&quot;. Dùng Tệp &gt; Mở để xem bộ lọc hoạt động.</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>&amp;Register File Importer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đăng ký bộ nhập tệp</translation>
     </message>
 </context>
 <context>
@@ -4968,27 +4973,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.js" line="+60"/>
         <source>&amp;Resize Window</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đổi cỡ cửa sổ</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui" line="+14"/>
         <source>Enter Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhập kích thước</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích cỡ:</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>1280x720 (720p) 16:9</source>
-        <translation type="unfinished"></translation>
+        <translation>1280x720 (720p) 16:9</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
-        <translation type="unfinished"></translation>
+        <translation>1920x1080 (1080p, Full HD) 16:9</translation>
     </message>
 </context>
 <context>
@@ -4996,12 +5001,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExText/ExText.js" line="+69"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Văn bản</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw text</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ văn bản</translation>
     </message>
 </context>
 <context>
@@ -5010,19 +5015,19 @@ is already in the list.</source>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js" line="+58"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+58"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí</translation>
     </message>
     <message>
         <location line="+46"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+46"/>
         <source>Three Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Ba điểm</translation>
     </message>
     <message>
         <location line="+3"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ ba điểm</translation>
     </message>
 </context>
 <context>
@@ -5030,14 +5035,14 @@ is already in the list.</source>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Giao dịch đã ảnh hưởng đến %n đối tượng.</numerusform>
         </translation>
     </message>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bộ lắng nghe giao dịch</translation>
     </message>
 </context>
 <context>
@@ -5045,7 +5050,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/ExWidget.js" line="+28"/>
         <source>&amp;Widget</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Widget</translation>
     </message>
 </context>
 <context>
@@ -5053,17 +5058,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExport.js" line="+39"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tất cả tệp</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Export XML</source>
-        <translation type="unfinished"></translation>
+        <translation>Xuất XML</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExportInit.js" line="+2"/>
         <source>&amp;Export XML</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xuất XML</translation>
     </message>
 </context>
 <context>
@@ -5071,17 +5076,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImport.js" line="+73"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tất cả tệp</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Import XML</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhập XML</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImportInit.js" line="+2"/>
         <source>&amp;Import XML</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nhập XML</translation>
     </message>
 </context>
 <context>
@@ -5089,7 +5094,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/Examples.js" line="+55"/>
         <source>Script &amp;Examples</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ví dụ kịch bản</translation>
     </message>
 </context>
 <context>
@@ -5097,57 +5102,57 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Explode/Explode.js" line="+30"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiệu chỉnh</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation type="unfinished"></translation>
+        <translation>Phá vỡ</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Phá vỡ</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+19"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation type="unfinished"></translation>
+        <translation>Phá vỡ spline thành đa tuyến với các đoạn thẳng</translation>
     </message>
     <message>
         <location line="+104"/>
         <source>Spline segments:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số đoạn spline:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Ellipse segments (per full ellipse):</source>
-        <translation type="unfinished"></translation>
+        <translation>Số đoạn elip (trên mỗi elip đầy đủ):</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Spline approximation tolerance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dung sai xấp xỉ spline:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Convert splines from texts to arcs or lines if appropriate</source>
-        <translation type="unfinished"></translation>
+        <translation>Chuyển spline từ văn bản thành cung hoặc đường thẳng khi phù hợp</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Explode circles into polylines with two half circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Phá vỡ đường tròn thành đa tuyến với hai nửa đường tròn</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Phá vỡ văn bản nhiều dòng thành nhiều khối văn bản đơn giản</translation>
     </message>
     <message>
         <location line="+80"/>
         <source>Explode text glyphs to polylines</source>
-        <translation type="unfinished"></translation>
+        <translation>Phá vỡ glyph văn bản thành đa tuyến</translation>
     </message>
 </context>
 <context>
@@ -5155,7 +5160,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/FAQ/FAQInit.js" line="+2"/>
         <source>FA&amp;Qs (online)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;FAQ (trực tuyến)</translation>
     </message>
 </context>
 <context>
@@ -5163,33 +5168,33 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/File.js" line="+65"/>
         <source>File Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ tệp</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tệp</translation>
     </message>
     <message>
         <location line="+106"/>
         <location line="+76"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Định dạng:</translation>
     </message>
     <message>
         <location line="-39"/>
         <source>Overwrite File?</source>
-        <translation type="unfinished"></translation>
+        <translation>Ghi đè tệp?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp &quot;%1&quot; đã tồn tại. Bạn có muốn ghi đè không?</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tất cả tệp</translation>
     </message>
 </context>
 <context>
@@ -5198,52 +5203,52 @@ is already in the list.</source>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
         <location line="+244"/>
         <source>%1 First Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Khởi động %1 lần đầu</translation>
     </message>
     <message>
         <location line="-5"/>
         <source>Black</source>
-        <translation type="unfinished"></translation>
+        <translation>Đen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation type="unfinished"></translation>
+        <translation>Trắng</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngôn ngữ:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Welcome to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Chào mừng đến với %1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vui lòng chọn các thiết lập dùng cho bản vẽ mới. Tất cả các thiết lập này có thể thay đổi sau trong Hộp thoại Tùy chọn.</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Unit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đơn vị:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default Paper Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cỡ giấy mặc định:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dấu thập phân:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Background Color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Màu nền:</translation>
     </message>
 </context>
 <context>
@@ -5251,17 +5256,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1115"/>
         <source>Add Active SubLayer</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm lớp con đang hoạt động</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>FP added layer:</source>
-        <translation type="unfinished"></translation>
+        <translation>FP đã thêm lớp:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đè lên vùng chọn mô phỏng con dấu lăn</translation>
     </message>
 </context>
 <context>
@@ -5269,297 +5274,297 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Tùy chọn cọ</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation type="unfinished"></translation>
+        <translation>Tùy chọn đổ cọ</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Mirror painters over baseline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lấy đối xứng cọ qua đường cơ sở.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip Painters</source>
-        <translation type="unfinished"></translation>
+        <translation>Lật cọ</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Group all castings to one operation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gộp tất cả phép đổ vào một thao tác.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cast in group</source>
-        <translation type="unfinished"></translation>
+        <translation>Đổ vào nhóm</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Đổ trên lớp con</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bắt đầu bằng cách đổ một đỉnh bắt đầu trên các hình hở.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Begin Apex</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm đỉnh bắt đầu</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kết thúc bằng cách đổ một đỉnh kết thúc trên các hình hở.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add End Apex</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm đỉnh kết thúc</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm các điểm chèn vào giữa, ví dụ vòng đệm, nút. (Chưa triển khai)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Insertions</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm các điểm chèn</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã đặt cọ</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of painters.</source>
-        <translation type="unfinished"></translation>
+        <translation>Xem trước cọ.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn bộ cọ.</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation type="unfinished"></translation>
+        <translation>CurtainRope</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation type="unfinished"></translation>
+        <translation>OrthogonalBar</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation>OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation type="unfinished"></translation>
+        <translation>SinusoidWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation>SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>3PhaseWaveGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation>3PhaseWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation type="unfinished"></translation>
+        <translation>TriangleWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation type="unfinished"></translation>
+        <translation>SawtoothWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation type="unfinished"></translation>
+        <translation>SqaureWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation type="unfinished"></translation>
+        <translation>SteppedWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation type="unfinished"></translation>
+        <translation>SqauredShape</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation type="unfinished"></translation>
+        <translation>SqauredShapeFlexing</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>AllPainterDataTypes</source>
-        <translation type="unfinished"></translation>
+        <translation>AllPainterDataTypes</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Insertion type</source>
-        <translation type="unfinished"></translation>
+        <translation>Loại chèn</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of insertion.</source>
-        <translation type="unfinished"></translation>
+        <translation>Xem trước phép chèn.</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn phép chèn hoặc nhập vùng trống. (Chưa triển khai)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;Nhập cỡ khoảng cách&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Curtain Rope Knot</source>
-        <translation type="unfinished"></translation>
+        <translation>Nút dây rèm</translation>
     </message>
     <message>
         <location line="+262"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Phiên bản</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>FlexPainter Beta 0.42e © CVH 2020 </source>
-        <translation type="unfinished"></translation>
+        <translation>FlexPainter Beta 0.42e © CVH 2020 </translation>
     </message>
     <message>
         <location line="+272"/>
         <source>Document Units.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đơn vị tài liệu.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>#Undefined#</source>
-        <translation type="unfinished"></translation>
+        <translation>#Chưa xác định#</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Enter painter width. (+0)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhập bề rộng cọ. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Width : </source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều rộng : </translation>
     </message>
     <message>
         <location line="+16"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation type="unfinished"></translation>
+        <translation>Tùy chọn cọ lặp lại</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhập bước cọ chính. (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Stepsize :</source>
-        <translation type="unfinished"></translation>
+        <translation>Bước :</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Enter main painter length. (+)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhập chiều dài cọ chính. (+)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Length :</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài :</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Keep painters proportional.</source>
-        <translation type="unfinished"></translation>
+        <translation>Giữ cọ theo tỷ lệ.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn phần trăm của bước.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Closed Forms shifting % :</source>
-        <translation type="unfinished"></translation>
+        <translation>Dịch chuyển hình kín % :</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation type="unfinished"></translation>
+        <translation>Tùy chọn co giãn cho hình hở</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation type="unfinished"></translation>
+        <translation>Điều chỉnh tỷ lệ f 1.00-0.90 để vừa toàn bộ biểu mẫu.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Dynamically scale to fit</source>
-        <translation type="unfinished"></translation>
+        <translation>Co giãn động cho vừa</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation type="unfinished"></translation>
+        <translation>Căn theo điểm đầu</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Centered</source>
-        <translation type="unfinished"></translation>
+        <translation>Căn giữa</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation type="unfinished"></translation>
+        <translation>Căn theo điểm cuối</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Verbose info. (persistent on)</source>
-        <translation type="unfinished"></translation>
+        <translation>Thông tin chi tiết. (bật cố định)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Verbose *</source>
-        <translation type="unfinished"></translation>
+        <translation>Chi tiết *</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã xóa các đối tượng cơ sở bị vẽ đè. (tắt cố định)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Delete Base Entities *</source>
-        <translation type="unfinished"></translation>
+        <translation>Xóa đối tượng cơ sở *</translation>
     </message>
 </context>
 <context>
@@ -5567,7 +5572,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
         <source>&amp;FlexPainter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -5575,7 +5580,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js" line="+2"/>
         <source>Flip Hori&amp;zontal</source>
-        <translation type="unfinished"></translation>
+        <translation>Lật &amp;ngang</translation>
     </message>
 </context>
 <context>
@@ -5583,7 +5588,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/FlipVertical/FlipVerticalInit.js" line="+2"/>
         <source>Flip Verti&amp;cal</source>
-        <translation type="unfinished"></translation>
+        <translation>Lật &amp;dọc</translation>
     </message>
 </context>
 <context>
@@ -5591,22 +5596,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js" line="+39"/>
         <source>Flush Undo History</source>
-        <translation type="unfinished"></translation>
+        <translation>Xóa lịch sử hoàn tác</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation type="unfinished"></translation>
+        <translation>Bạn có chắc muốn xóa lịch sử giao dịch hoàn tác / làm lại?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This cannot be undone.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể hoàn tác điều này.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flush &amp;Undo History</source>
-        <translation type="unfinished"></translation>
+        <translation>Xóa lịch sử &amp;hoàn tác</translation>
     </message>
 </context>
 <context>
@@ -5614,12 +5619,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/FontPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Khung nhìn đồ họa</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>Phông</translation>
     </message>
 </context>
 <context>
@@ -5627,32 +5632,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui" line="+14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Biểu mẫu</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Cube size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cỡ khối lập phương:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ mép dán</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ba: Phải</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/21_ThreeLeft.ui" line="+14"/>
         <source>Three: Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ba: Trái</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/22_ThreeAbove.ui" line="+14"/>
         <source>Three: Above</source>
-        <translation type="unfinished"></translation>
+        <translation>Ba: Phía trên</translation>
     </message>
 </context>
 <context>
@@ -5660,7 +5665,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/Forum/ForumInit.js" line="+2"/>
         <source>&amp;Forum</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Diễn đàn</translation>
     </message>
 </context>
 <context>
@@ -5668,7 +5673,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation type="unfinished"></translation>
+        <translation>Bốn: Bằng nhau</translation>
     </message>
 </context>
 <context>
@@ -5676,7 +5681,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Bốn: Trái</translation>
     </message>
 </context>
 <context>
@@ -5684,7 +5689,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Bốn: Phải</translation>
     </message>
 </context>
 <context>
@@ -5692,344 +5697,344 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+32"/>
         <source>Right-Click</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhấp chuột phải</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Right-click to deselect entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhấp chuột phải để bỏ chọn đối tượng</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Double-Click</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhấp đúp</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Double-click to edit text</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhấp đúp để sửa văn bản</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhấp đúp để sửa mặt cắt</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhấp đúp vào tham chiếu khối để mở khối</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation type="unfinished"></translation>
+        <translation>Sửa tham chiếu khối tại chỗ</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Double-click to select contour</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhấp đúp để chọn đường viền</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Tolerance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dung sai:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Right double-click to reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhấp đúp chuột phải để đặt lại</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Khối</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Select block references together with attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn tham chiếu khối cùng với thuộc tính</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Hide attributes when block references are hidden</source>
-        <translation type="unfinished"></translation>
+        <translation>Ẩn thuộc tính khi tham chiếu khối bị ẩn</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cursor Range</source>
-        <translation type="unfinished"></translation>
+        <translation>Phạm vi con trỏ</translation>
     </message>
     <message>
         <location line="+55"/>
         <source>Cursor range for picking entities:</source>
-        <translation type="unfinished"></translation>
+        <translation>Phạm vi con trỏ để chọn đối tượng:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Highlight entity within range</source>
-        <translation type="unfinished"></translation>
+        <translation>Làm nổi bật đối tượng trong phạm vi</translation>
     </message>
     <message>
         <location line="+57"/>
         <source>Cursor range for snap:</source>
-        <translation type="unfinished"></translation>
+        <translation>Phạm vi con trỏ để bắt điểm:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-        <translation type="unfinished"></translation>
+        <translation>Làm nổi bật (và nâng lên) hình ảnh trong phạm vi</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) hatches and solid fills within range</source>
-        <translation type="unfinished"></translation>
+        <translation>Làm nổi bật (và nâng lên) mặt cắt và tô đặc trong phạm vi</translation>
     </message>
     <message>
         <location line="+25"/>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+1317"/>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Vùng chọn</translation>
     </message>
     <message>
         <location line="+6"/>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+6"/>
         <source>Persistent selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Vùng chọn cố định</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Escape clears selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Phím Escape xóa vùng chọn</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/PreferencesPage.ui" line="+34"/>
         <source>Automatically scale grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động co giãn lưới</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Automatically scale meta grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động co giãn lưới meta</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Solid grid lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường lưới liền nét</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Minimal grid spacing (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách lưới tối thiểu (px):</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1291"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Gốc tọa độ</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện trục gốc lớn</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Rulers and Scrollbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Thước và thanh cuộn</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show rulers</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện thước</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show scrollbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện thanh cuộn</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Con trỏ</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show crosshairs</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện vạch chữ thập</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show large crosshairs</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện vạch chữ thập lớn</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>This can be used if cursors are not visible on external monitors</source>
-        <translation type="unfinished"></translation>
+        <translation>Có thể dùng nếu con trỏ không hiển thị trên màn hình ngoài</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use system cursors</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng con trỏ hệ thống</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Auto Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Thu phóng tự động</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Margin (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>Lề (px):</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Auto zoom on load</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động thu phóng khi tải</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Color Adjustment</source>
-        <translation type="unfinished"></translation>
+        <translation>Điều chỉnh màu</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Color lightness threshold:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngưỡng độ sáng màu:</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Prevent white on white / black on black display</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngăn hiển thị trắng trên trắng / đen trên đen</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Disable for printing</source>
-        <translation type="unfinished"></translation>
+        <translation>Tắt khi in</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Linetypes and Lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiểu nét và bề rộng nét</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bề rộng nét mặc định:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Automatically use screen based linetypes in model view</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động dùng kiểu nét theo màn hình trong khung nhìn mô hình</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động chuyển sang kiểu nét theo màn hình trong khung nhìn mô hình</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation type="unfinished"></translation>
+        <translation>Co giãn mẫu kiểu nét theo bề rộng nét</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ mẫu cho bề rộng nét 0.00mm:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Apply line weight to points</source>
-        <translation type="unfinished"></translation>
+        <translation>Áp dụng bề rộng nét cho điểm</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Display and Performance</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiển thị và hiệu năng</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Anti-aliasing on by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Bật khử răng cưa theo mặc định</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Use full resolution for Retina / high resolution display</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng độ phân giải đầy đủ cho màn hình Retina / độ phân giải cao</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-        <translation type="unfinished"></translation>
+        <translation>Luôn vẽ đa tuyến có bề rộng tùy chỉnh rộng ít nhất 1 điểm ảnh</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Number of threads:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số luồng:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>auto</source>
-        <translation type="unfinished"></translation>
+        <translation>tự động</translation>
     </message>
     <message>
         <location line="+98"/>
         <source>Number of preview entities:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số đối tượng xem trước:</translation>
     </message>
     <message>
         <location line="+61"/>
         <source>Display arcs as lines below this angle (degrees):</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiển thị cung dưới dạng đường thẳng dưới góc này (độ):</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
-        <translation type="unfinished"></translation>
+        <translation>Bước góc tối thiểu để vẽ cung (độ):</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Display entities with more than N dashes as continuous:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiển thị các đối tượng có hơn N gạch dưới dạng liền nét:</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Timeout for hatch rendering:</source>
-        <translation type="unfinished"></translation>
+        <translation>Thời gian chờ vẽ mặt cắt:</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Maximum selected entities with reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số đối tượng đã chọn tối đa có điểm tham chiếu:</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Maximum selected entities with displayed reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số đối tượng đã chọn tối đa có hiển thị điểm tham chiếu:</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Reference point size (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>Cỡ điểm tham chiếu (px):</translation>
     </message>
     <message>
         <location line="+77"/>
         <source>Text height threshold (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngưỡng chiều cao văn bản (px):</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Maximum complexity for solid fills at high quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>Độ phức tạp tối đa cho tô đặc ở chất lượng cao:</translation>
     </message>
     <message>
         <location line="+60"/>
         <source>Allocation limit for bitmaps (MB):</source>
-        <translation type="unfinished"></translation>
+        <translation>Giới hạn cấp phát cho ảnh bitmap (MB):</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài nét chấm trong mẫu đường:</translation>
     </message>
 </context>
 <context>
@@ -6037,172 +6042,172 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Khung nhìn đồ họa</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nền:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Display color of color by block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Màu hiển thị của màu theo khối:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Con trỏ</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vạch chữ thập:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vạch chữ thập không hoạt động:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Gốc tọa độ</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Origin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Gốc tọa độ:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Relative zero:</source>
-        <translation type="unfinished"></translation>
+        <translation>Gốc tương đối:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Lưới</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lưới:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Meta grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lưới meta:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Vùng chọn</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Primary selection color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Màu vùng chọn chính:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use secondary selection color</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng màu vùng chọn phụ</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Secondary selection color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Màu vùng chọn phụ:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Primary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu chính:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Secondary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu phụ:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection box border:</source>
-        <translation type="unfinished"></translation>
+        <translation>Viền khung chọn:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tô khung chọn:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tô khung chọn cắt qua:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Các điểm đầu:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Các điểm cuối:</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Tertiary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu cấp ba:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Snap reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu bắt điểm:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Snap Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ bắt điểm</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Snap label:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhãn bắt điểm:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Info Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ thông tin</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Measurements and labels:</source>
-        <translation type="unfinished"></translation>
+        <translation>Phép đo và nhãn:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ vẽ</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Auxiliary shapes:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hình phụ trợ:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hệ số làm mờ tập làm việc:</translation>
     </message>
     <message>
         <location line="+75"/>
         <source>Zoom Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ thu phóng</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Zoom box border:</source>
-        <translation type="unfinished"></translation>
+        <translation>Viền khung thu phóng:</translation>
     </message>
 </context>
 <context>
@@ -6210,17 +6215,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Phông thước:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Snap label font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Phông nhãn bắt điểm:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Info label font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Phông nhãn thông tin:</translation>
     </message>
 </context>
 <context>
@@ -6228,52 +6233,52 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+19"/>
         <source>Limit zoom and scroll to prevent overflows</source>
-        <translation type="unfinished"></translation>
+        <translation>Giới hạn thu phóng và cuộn để tránh tràn</translation>
     </message>
     <message>
         <location line="+110"/>
         <source>Limit scrolling to vertical and horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>Giới hạn cuộn theo chiều dọc và ngang</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Touch panning speed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tốc độ lia cảm ứng:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Panning threshold (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngưỡng lia (px):</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Middle mouse button zoom factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hệ số thu phóng của nút chuột giữa:</translation>
     </message>
     <message>
         <location line="+120"/>
         <source>Reverse mouse wheel direction for zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Đảo chiều con lăn chuột để thu phóng</translation>
     </message>
     <message>
         <location line="+79"/>
         <source>Mouse wheel zoom factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hệ số thu phóng con lăn chuột:</translation>
     </message>
     <message>
         <location line="+107"/>
         <source>Mouse wheel / two finger swipe:</source>
-        <translation type="unfinished"></translation>
+        <translation>Con lăn chuột / vuốt hai ngón:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Enable pan gesture</source>
-        <translation type="unfinished"></translation>
+        <translation>Bật cử chỉ lia</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Mouse wheel scroll factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hệ số cuộn con lăn chuột:</translation>
     </message>
 </context>
 <context>
@@ -6281,12 +6286,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Khung nhìn đồ họa</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Giao diện</translation>
     </message>
 </context>
 <context>
@@ -6294,12 +6299,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/GridPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Khung nhìn đồ họa</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Lưới</translation>
     </message>
 </context>
 <context>
@@ -6307,18 +6312,18 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/GridSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Mặc định cho bản vẽ mới</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Lưới</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Chung</translation>
     </message>
     <message>
         <location line="+84"/>
@@ -6327,7 +6332,7 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+1"/>
         <source>auto</source>
-        <translation type="unfinished"></translation>
+        <translation>tự động</translation>
     </message>
 </context>
 <context>
@@ -6335,12 +6340,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ mặt cắt</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mặt cắt</translation>
     </message>
 </context>
 <context>
@@ -6348,42 +6353,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Mặt cắt</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Loại</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Solid Fill</source>
-        <translation type="unfinished"></translation>
+        <translation>Tô đặc</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>Mẫu mặt cắt</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Xem trước</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>Mẫu</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ:</translation>
     </message>
 </context>
 <context>
@@ -6391,27 +6396,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelection.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Chưa chọn ranh giới.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vòng không khép kín tại điểm %1/%2.</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mỗi đối tượng ranh giới phải là đường, cung, đường tròn, cung elip, elip, đa tuyến hoặc spline. Đã tìm thấy:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mặt cắt từ vùng chọn</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation type="unfinished"></translation>
+        <translation>Tạo mặt cắt hoặc tô đặc từ ranh giới đã chọn</translation>
     </message>
 </context>
 <context>
@@ -6419,7 +6424,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/Help.js" line="+60"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Trợ giúp</translation>
     </message>
 </context>
 <context>
@@ -6427,7 +6432,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/HideAllBlocks/HideAllBlocksInit.js" line="+2"/>
         <source>&amp;Hide All Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ẩn tất cả khối</translation>
     </message>
 </context>
 <context>
@@ -6435,7 +6440,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/HideAllLayers/HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ẩn tất cả lớp</translation>
     </message>
 </context>
 <context>
@@ -6443,7 +6448,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/IOExamples.js" line="+51"/>
         <source>&amp;Import/Export</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nhập/Xuất</translation>
     </message>
 </context>
 <context>
@@ -6451,57 +6456,57 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Image/Image.js" line="+179"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>All Image Files (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tất cả tệp ảnh (%1)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tất cả tệp</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Import Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhập ảnh bitmap</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Định dạng:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/Image.ui" line="+17"/>
         <source>Width:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều rộng:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Keep proportions</source>
-        <translation type="unfinished"></translation>
+        <translation>Giữ tỷ lệ</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều cao:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
         <source>&amp;Insert Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chèn ảnh bitmap</translation>
     </message>
 </context>
 <context>
@@ -6509,102 +6514,102 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+75"/>
         <source>File type not supported %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Loại tệp không được hỗ trợ %1</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Error while importing file %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Lỗi khi nhập tệp %1</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Không tìm thấy bộ lọc nhập nào. Đang hủy bỏ...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tất cả tệp</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Import Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhập bản vẽ</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Định dạng:</translation>
     </message>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dưới dạng khối:</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Rotation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc xoay:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Xoay các đối tượng đã dán&lt;br&gt;theo góc này</translation>
     </message>
     <message>
         <location line="+110"/>
         <source>Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Co giãn các đối tượng đã dán&lt;br&gt;với hệ số này</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Lật các đối tượng đã dán&lt;br&gt;theo chiều ngang</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Lật các đối tượng đã dán&lt;br&gt;theo chiều dọc</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Dán tất cả đối tượng&lt;br&gt;vào lớp hiện hành&lt;br&gt;thay vì lớp gốc</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Sang lớp hiện hành</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Ghi đè các lớp hiện có&lt;br&gt;trong bản vẽ bằng&lt;br&gt;các lớp từ bảng tạm</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Ghi đè lớp</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Ghi đè các khối hiện có&lt;br&gt;trong bản vẽ bằng&lt;br&gt;các khối từ bảng tạm</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Ghi đè khối</translation>
     </message>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFileInit.js" line="+2"/>
         <source>&amp;Import</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nhập</translation>
     </message>
 </context>
 <context>
@@ -6612,17 +6617,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/ImportPoints/ImportPoints.js" line="+39"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tất cả tệp</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhập điểm</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>&amp;Import Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nhập điểm</translation>
     </message>
 </context>
 <context>
@@ -6630,37 +6635,37 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroid.js" line="+78"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ định vị trí</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>2D point mass Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation>Trọng tâm khối điểm 2D</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Undefined</source>
-        <translation type="unfinished"></translation>
+        <translation>Chưa xác định</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19"/>
         <source>Add &amp;custom 2D centroid</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm &amp;trọng tâm 2D tùy chỉnh</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
-        <translation type="unfinished"></translation>
+        <translation>Tạo một điểm đánh dấu trọng tâm 2D có thể tùy chỉnh</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new point mass 2D Centroid marker customizable by dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Tạo một điểm đánh dấu trọng tâm khối điểm 2D mới, có thể tùy chỉnh qua hộp thoại</translation>
     </message>
 </context>
 <context>
@@ -6668,22 +6673,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngle.js" line="+67"/>
         <source>Specify first line</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ định đường thứ nhất</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second line</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ định đường thứ hai</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngleInit.js" line="+2"/>
         <source>&amp;Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Góc</translation>
     </message>
 </context>
 <context>
@@ -6691,7 +6696,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+70"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn cung, đường tròn, elip hoặc cung elip</translation>
     </message>
     <message>
         <location line="+236"/>
@@ -6701,24 +6706,24 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+22"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Diện tích</translation>
     </message>
     <message>
         <location line="-108"/>
         <location line="+66"/>
         <source>Circumference</source>
-        <translation type="unfinished"></translation>
+        <translation>Chu vi</translation>
     </message>
     <message>
         <location line="-59"/>
         <source>Circle area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Diện tích đường tròn:</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+67"/>
         <source>circumference:</source>
-        <translation type="unfinished"></translation>
+        <translation>chu vi:</translation>
     </message>
     <message>
         <location line="-54"/>
@@ -6727,20 +6732,20 @@ is already in the list.</source>
         <location line="+22"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+122"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài</translation>
     </message>
     <message>
         <location line="-88"/>
         <location line="+67"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
-        <translation type="unfinished"></translation>
+        <translation>Dây cung</translation>
     </message>
     <message>
         <location line="-60"/>
         <location line="+24"/>
         <source>Ellipse arc area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Diện tích cung elip:</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -6748,84 +6753,84 @@ is already in the list.</source>
         <location line="+43"/>
         <location line="+22"/>
         <source>arc length:</source>
-        <translation type="unfinished"></translation>
+        <translation>chiều dài cung:</translation>
     </message>
     <message>
         <location line="-88"/>
         <location line="+67"/>
         <source>chord:</source>
-        <translation type="unfinished"></translation>
+        <translation>dây cung:</translation>
     </message>
     <message>
         <location line="-52"/>
         <source>Distance</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>khoảng cách:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Ellipse area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Diện tích elip:</translation>
     </message>
     <message>
         <location line="+22"/>
         <location line="+22"/>
         <source>Arc area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Diện tích cung:</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>bán kính:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-89"/>
         <source>Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chế độ:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Calculate Area of Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Tính diện tích hình viên phân</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Calculate Area of Sector</source>
-        <translation type="unfinished"></translation>
+        <translation>Tính diện tích hình quạt</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Add:</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Add entities to drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm đối tượng vào bản vẽ</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Add lengths/circumference to drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm chiều dài/chu vi vào bản vẽ</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleAreaInit.js" line="+2"/>
         <source>Arc/Circle/Ellipse Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Diện tích cung/đường tròn/elip</translation>
     </message>
 </context>
 <context>
@@ -6833,32 +6838,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+70"/>
         <source>Set next polygon corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Đặt góc đa giác tiếp theo</translation>
     </message>
     <message>
         <location line="+125"/>
         <source>Polygon area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Diện tích đa giác:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>circumference:</source>
-        <translation type="unfinished"></translation>
+        <translation>chu vi:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.ui" line="+17"/>
         <source>Calculate length and close tool.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tính chiều dài và đóng công cụ.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Close Tool.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đóng công cụ.</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Diện tích đa &amp;giác</translation>
     </message>
 </context>
 <context>
@@ -6866,131 +6871,131 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js" line="+123"/>
         <source>No selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có vùng chọn.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vui lòng tạo một vùng chọn trước. Lệnh đã kết thúc.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Multiple entities in selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhiều đối tượng trong vùng chọn.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Not implemented. Command terminated.</source>
-        <translation type="unfinished"></translation>
+        <translation>Chưa triển khai. Lệnh đã kết thúc.</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+2"/>
         <source>Area 2D Centroid script (v0.32) by CVH</source>
-        <translation type="unfinished"></translation>
+        <translation>Kịch bản trọng tâm diện tích 2D (v0.32) bởi CVH</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Arc sector mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Chế độ hình quạt cung</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Enclosed area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Diện tích bao kín:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Centroid markers circle in selection. No results.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường tròn đánh dấu trọng tâm trong vùng chọn. Không có kết quả.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Approximated enclosed area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Diện tích bao kín xấp xỉ:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Diện tích mặt cắt:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Total hatched area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tổng diện tích mặt cắt:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Diện tích mặt cắt vi phân:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Unsupported entity type. No results.</source>
-        <translation type="unfinished"></translation>
+        <translation>Loại đối tượng không được hỗ trợ. Không có kết quả.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>No results.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có kết quả.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>2D area Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation>Trọng tâm diện tích 2D</translation>
     </message>
     <message>
         <location line="+40"/>
         <location line="+6"/>
         <source>(Incl. approximations)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Bao gồm xấp xỉ)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Approximated centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Trọng tâm xấp xỉ:</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Trọng tâm:</translation>
     </message>
     <message>
         <location line="+207"/>
         <location line="+578"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation type="unfinished"></translation>
+        <translation>Gặp đa tuyến không được hỗ trợ với bề rộng tùy chỉnh</translation>
     </message>
     <message>
         <location line="-488"/>
         <location line="+596"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation type="unfinished"></translation>
+        <translation>Gặp đa giác không được hỗ trợ với bề rộng tùy chỉnh</translation>
     </message>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hình chưa được xử lý từ vòng mặt cắt.</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Self-intersecting shape near (%1). No Results.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hình tự giao gần (%1). Không có kết quả.</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Trọng tâm diện tích</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Tạo trọng tâm diện tích 2D cho một đối tượng đã chọn</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Tạo một điểm đánh dấu trọng tâm 2D mật độ diện tích đều mới và các nhãn giá trị cho một đối tượng đã chọn</translation>
     </message>
 </context>
 <context>
@@ -6998,32 +7003,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
         <source>Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Tham chiếu</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Hướng</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Phương vị:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Azimuth:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc phương vị:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Phương vị / Góc phương vị</translation>
     </message>
 </context>
 <context>
@@ -7031,52 +7036,52 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+52"/>
         <source>2D Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation>Trọng tâm 2D</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point mass</source>
-        <translation type="unfinished"></translation>
+        <translation>Khối điểm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Diện tích</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Wire</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Density</source>
-        <translation type="unfinished"></translation>
+        <translation>Mật độ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Weighted</source>
-        <translation type="unfinished"></translation>
+        <translation>Có trọng số</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>X position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí X</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Y position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí Y</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Undefined</source>
-        <translation type="unfinished"></translation>
+        <translation>Chưa xác định</translation>
     </message>
     <message>
         <location line="+428"/>
         <source>2D &amp;Centroids</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Trọng tâm 2D</translation>
     </message>
 </context>
 <context>
@@ -7084,12 +7089,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+192"/>
         <source>2D Centroids transaction listener active.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bộ lắng nghe giao dịch trọng tâm 2D đang hoạt động.</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Deactivated/removed the 2D Centroids transaction listener.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã hủy kích hoạt/gỡ bỏ bộ lắng nghe giao dịch trọng tâm 2D.</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -7097,22 +7102,22 @@ is already in the list.</source>
         <location line="+40"/>
         <location line="+5"/>
         <source>Syntax error: &apos;%1&apos; parse error</source>
-        <translation type="unfinished"></translation>
+        <translation>Lỗi cú pháp: lỗi phân tích &apos;%1&apos;</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
         <source>Centroid &amp;Listener</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bộ lắng nghe trọng tâm</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation type="unfinished"></translation>
+        <translation>(Bỏ) kích hoạt bộ lắng nghe giao dịch cho trọng tâm 2D</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(De-)Activate a transaction listener for binding changes applied to 2D Centroid markers</source>
-        <translation type="unfinished"></translation>
+        <translation>(Bỏ) kích hoạt bộ lắng nghe giao dịch cho các thay đổi liên kết áp dụng cho điểm đánh dấu trọng tâm 2D</translation>
     </message>
 </context>
 <context>
@@ -7120,22 +7125,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEE.js" line="+62"/>
         <source>Specify first entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ định đối tượng thứ nhất</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ định đối tượng thứ hai</translation>
     </message>
     <message>
         <location line="+95"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEEInit.js" line="+2"/>
         <source>Distance &amp;Entity to Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách &amp;đối tượng đến đối tượng</translation>
     </message>
 </context>
 <context>
@@ -7143,22 +7148,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEP.js" line="+59"/>
         <source>Specify entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ định đối tượng</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Specify point</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ định điểm</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách &amp;đối tượng đến điểm</translation>
     </message>
 </context>
 <context>
@@ -7166,37 +7171,37 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePP.js" line="+59"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ nhất</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ hai</translation>
     </message>
     <message>
         <location line="+53"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Delta X:</source>
-        <translation type="unfinished"></translation>
+        <translation>Delta X:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Delta Y:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách &amp;điểm đến điểm</translation>
     </message>
 </context>
 <context>
@@ -7204,12 +7209,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoPosition/InfoPosition.js" line="+55"/>
         <source>Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoPosition/InfoPositionInit.js" line="+2"/>
         <source>&amp;Position</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vị trí</translation>
     </message>
 </context>
 <context>
@@ -7217,7 +7222,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoPositionPol/InfoPositionPolInit.js" line="+2"/>
         <source>&amp;Polar Position</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vị trí cực</translation>
     </message>
 </context>
 <context>
@@ -7225,7 +7230,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoPositionPolRel/InfoPositionPolRelInit.js" line="+2"/>
         <source>Relative P&amp;olar Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí &amp;cực tương đối</translation>
     </message>
 </context>
 <context>
@@ -7233,7 +7238,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoPositionRel/InfoPositionRelInit.js" line="+2"/>
         <source>&amp;Relative Position</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vị trí tương đối</translation>
     </message>
 </context>
 <context>
@@ -7241,131 +7246,131 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js" line="+105"/>
         <source>No selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có vùng chọn.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vui lòng tạo một vùng chọn trước. Lệnh đã kết thúc.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>2D Centroids weighted sum script (v0.24) by CVH.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kịch bản tổng trọng số trọng tâm 2D (v0.24) bởi CVH.</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Encountered a missing coordinate value.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gặp giá trị tọa độ bị thiếu.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Encountered an invalid coordinate value.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gặp giá trị tọa độ không hợp lệ.</translation>
     </message>
     <message>
         <location line="+8"/>
         <location line="+11"/>
         <location line="+10"/>
         <source>Encountered a missing &apos;%1&apos; value.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gặp giá trị &apos;%1&apos; bị thiếu.</translation>
     </message>
     <message>
         <location line="-16"/>
         <location line="+11"/>
         <location line="+17"/>
         <source>Encountered an invalid &apos;%1&apos; value.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gặp giá trị &apos;%1&apos; không hợp lệ.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Encountered an unknown marker type.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gặp loại điểm đánh dấu không xác định.</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>No result.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có kết quả.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>No 2D Centroid markers found in the selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không tìm thấy điểm đánh dấu trọng tâm 2D trong vùng chọn.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Single marker selected, point mass = %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã chọn một điểm đánh dấu, khối điểm = %1</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Density is undefined</source>
-        <translation type="unfinished"></translation>
+        <translation>Mật độ chưa xác định</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Results in a division by zero.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cho kết quả là phép chia cho 0.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Results in a NaN value.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cho kết quả là giá trị NaN.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Combined 2D Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation>Trọng tâm 2D kết hợp</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Combined uniform point mass (%1):</source>
-        <translation type="unfinished"></translation>
+        <translation>Khối điểm đều kết hợp (%1):</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combined point mass (%1):</source>
-        <translation type="unfinished"></translation>
+        <translation>Khối điểm kết hợp (%1):</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>All densities are undefined</source>
-        <translation type="unfinished"></translation>
+        <translation>Mọi mật độ đều chưa xác định</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Some densities are undefined</source>
-        <translation type="unfinished"></translation>
+        <translation>Một số mật độ chưa xác định</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>area (Informational):</source>
-        <translation type="unfinished"></translation>
+        <translation>diện tích (thông tin):</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>wire length (Informational):</source>
-        <translation type="unfinished"></translation>
+        <translation>chiều dài đường (thông tin):</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Combined centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Trọng tâm kết hợp:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
         <source>&amp;Sum 2D Centroids weighted</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tổng trọng số trọng tâm 2D</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
-        <translation type="unfinished"></translation>
+        <translation>Kết hợp các điểm đánh dấu trọng tâm 2D đã chọn theo trọng số</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combines selected 2D Centroid markers, summing all properties weighted</source>
-        <translation type="unfinished"></translation>
+        <translation>Kết hợp các điểm đánh dấu trọng tâm 2D đã chọn, tính tổng mọi thuộc tính theo trọng số</translation>
     </message>
 </context>
 <context>
@@ -7373,99 +7378,99 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js" line="+121"/>
         <source>No selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có vùng chọn.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vui lòng tạo một vùng chọn trước. Lệnh đã kết thúc.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Wire 2D Centroid script (v0.32) by CVH</source>
-        <translation type="unfinished"></translation>
+        <translation>Kịch bản trọng tâm đường 2D (v0.32) bởi CVH</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài:</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>2D Centroid markers circle in selection. No results.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường tròn đánh dấu trọng tâm 2D trong vùng chọn. Không có kết quả.</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+7"/>
         <source>Approximated length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài xấp xỉ:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Unsupported entity type. No results.</source>
-        <translation type="unfinished"></translation>
+        <translation>Loại đối tượng không được hỗ trợ. Không có kết quả.</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>No results.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có kết quả.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Results in a division by zero.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cho kết quả là phép chia cho 0.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>2D wire Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation>Trọng tâm đường 2D</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Total length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tổng chiều dài:</translation>
     </message>
     <message>
         <location line="+4"/>
         <location line="+6"/>
         <source>(Incl. approximations)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Bao gồm xấp xỉ)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Approximated centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Trọng tâm xấp xỉ:</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Trọng tâm:</translation>
     </message>
     <message>
         <location line="+125"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation type="unfinished"></translation>
+        <translation>Gặp đa tuyến không được hỗ trợ với bề rộng tùy chỉnh</translation>
     </message>
     <message>
         <location line="+105"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation type="unfinished"></translation>
+        <translation>Gặp đa giác không được hỗ trợ với bề rộng tùy chỉnh</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+19"/>
         <source>&amp;Wire Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Trọng tâm đường</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Tạo trọng tâm đường 2D cho một vùng chọn</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Tạo một điểm đánh dấu trọng tâm 2D mật độ dài đều mới và các nhãn giá trị cho một tập đối tượng đã chọn</translation>
     </message>
 </context>
 <context>
@@ -7473,22 +7478,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ thông tin</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Info</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Thông tin</translation>
     </message>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm phép đo vào bản vẽ</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều cao văn bản:</translation>
     </message>
 </context>
 <context>
@@ -7496,47 +7501,47 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dấu thập phân:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Cartesian coordinate separator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dấu phân cách tọa độ Descartes:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Polar coordinate separator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dấu phân cách tọa độ cực:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative coordinate prefix:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiền tố tọa độ tương đối:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Examples</source>
-        <translation type="unfinished"></translation>
+        <translation>Ví dụ</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Absolute Cartesian coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tọa độ Descartes tuyệt đối:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Absolute polar coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tọa độ cực tuyệt đối:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative Cartesian coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tọa độ Descartes tương đối:</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative polar coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tọa độ cực tương đối:</translation>
     </message>
 </context>
 <context>
@@ -7544,18 +7549,18 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Chung</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Coordinate Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Định dạng tọa độ</translation>
     </message>
     <message>
         <location line="+16"/>
         <location line="+33"/>
         <source>Comma</source>
-        <translation type="unfinished"></translation>
+        <translation>Dấu phẩy</translation>
     </message>
     <message>
         <location line="-33"/>
@@ -7563,42 +7568,42 @@ is already in the list.</source>
         <location line="+5"/>
         <location line="+21"/>
         <source>(Default)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Mặc định)</translation>
     </message>
     <message>
         <location line="-31"/>
         <source>Semicolon</source>
-        <translation type="unfinished"></translation>
+        <translation>Dấu chấm phẩy</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Less Than</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhỏ hơn</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation type="unfinished"></translation>
+        <translation>Tại</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Percentage</source>
-        <translation type="unfinished"></translation>
+        <translation>Phần trăm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dollar</source>
-        <translation type="unfinished"></translation>
+        <translation>Đô la</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hash</source>
-        <translation type="unfinished"></translation>
+        <translation>Dấu thăng</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Dot</source>
-        <translation type="unfinished"></translation>
+        <translation>Nét chấm</translation>
     </message>
 </context>
 <context>
@@ -7606,88 +7611,88 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlock.js" line="+117"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlock.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc xoay:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Xoay khối&lt;br&gt;theo góc này</translation>
     </message>
     <message>
         <location line="+110"/>
         <source>Scale X:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ X:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Co giãn khối theo X&lt;br&gt;với hệ số này</translation>
     </message>
     <message>
         <location line="+68"/>
         <source>Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Y:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Co giãn khối theo Y&lt;br&gt;với hệ số này</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Keep Proportions</source>
-        <translation type="unfinished"></translation>
+        <translation>Giữ tỷ lệ</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Lật khối&lt;br&gt;theo chiều ngang</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Lật khối&lt;br&gt;theo chiều dọc</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Single Block</source>
-        <translation type="unfinished"></translation>
+        <translation>Khối đơn</translation>
     </message>
     <message>
         <location line="+17"/>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+14"/>
         <source>Array of Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Mảng khối</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+8"/>
         <source>Columns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số cột:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Rows:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số hàng:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Column Spacing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách cột:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Row Spacing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách hàng:</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chèn khối</translation>
     </message>
 </context>
 <context>
@@ -7695,72 +7700,72 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+106"/>
         <source>Cannot import file from URL: </source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể nhập tệp từ URL: </translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Adjusted invalid block name to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã điều chỉnh tên khối không hợp lệ thành &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+83"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc xoay:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Xoay các đối tượng đã dán&lt;br&gt;theo góc này</translation>
     </message>
     <message>
         <location line="+110"/>
         <source>Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Co giãn các đối tượng đã dán&lt;br&gt;với hệ số này</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Lật các đối tượng đã dán&lt;br&gt;theo chiều ngang</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Lật các đối tượng đã dán&lt;br&gt;theo chiều dọc</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Ghi đè các lớp hiện có&lt;br&gt;trong bản vẽ bằng&lt;br&gt;các lớp từ bảng tạm</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Ghi đè lớp</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Ghi đè các khối hiện có&lt;br&gt;trong bản vẽ bằng&lt;br&gt;các khối từ bảng tạm</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Ghi đè khối</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItemInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chèn khối</translation>
     </message>
 </context>
 <context>
@@ -7768,32 +7773,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
         <source>Cannot read file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể đọc tệp:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No constructor found in file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Không tìm thấy hàm khởi tạo trong tệp:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;init&apos; function found in file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Không tìm thấy hàm &apos;init&apos; trong tệp:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;generate&apos; function found in file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Không tìm thấy hàm &apos;generate&apos; trong tệp:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;generatePreview&apos; function found in file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Không tìm thấy hàm &apos;generatePreview&apos; trong tệp:</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
-        <translation type="unfinished"></translation>
+        <translation>Chèn &amp;kịch bản</translation>
     </message>
 </context>
 <context>
@@ -7801,12 +7806,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/InvertSelection/InvertSelectionInit.js" line="+2"/>
         <source>&amp;Invert Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đảo vùng chọn</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Invert the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Đảo vùng chọn hiện tại</translation>
     </message>
 </context>
 <context>
@@ -7814,83 +7819,83 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.js" line="+50"/>
         <source>Isometric</source>
-        <translation type="unfinished"></translation>
+        <translation>Đẳng cự</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Isometric True Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ thực đẳng cự</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Planometric</source>
-        <translation type="unfinished"></translation>
+        <translation>Planometric</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimetric</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimetric</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation type="unfinished"></translation>
+        <translation>Cabinet</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cavalier</source>
-        <translation type="unfinished"></translation>
+        <translation>Cavalier</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Trên</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Dưới</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Trái</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation type="unfinished"></translation>
+        <translation>Trái sau</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Phải</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation type="unfinished"></translation>
+        <translation>Phải sau</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
-        <translation type="unfinished"></translation>
+        <translation>Xoay vùng chọn ngược chiều kim đồng hồ trước khi chiếu</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
-        <translation type="unfinished"></translation>
+        <translation>Xoay vùng chọn theo chiều kim đồng hồ trước khi chiếu</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished"></translation>
+        <translation>Phương pháp:</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
         <source>&amp;Isometric Projection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Phép chiếu đẳng cự</translation>
     </message>
 </context>
 <context>
@@ -7898,7 +7903,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridLeft/IsometricGridLeft.js" line="+35"/>
         <source>&amp;Left Projection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Phép chiếu trái</translation>
     </message>
 </context>
 <context>
@@ -7906,7 +7911,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridOff/IsometricGridOff.js" line="+35"/>
         <source>Isometric Grid &amp;Off</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tắt lưới đẳng cự</translation>
     </message>
 </context>
 <context>
@@ -7914,7 +7919,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridRight/IsometricGridRight.js" line="+35"/>
         <source>&amp;Right Projection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Phép chiếu phải</translation>
     </message>
 </context>
 <context>
@@ -7922,7 +7927,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridTop/IsometricGridTop.js" line="+143"/>
         <source>&amp;Top Projection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Phép chiếu trên</translation>
     </message>
 </context>
 <context>
@@ -7930,7 +7935,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsometricProjection.js" line="+49"/>
         <source>&amp;Isometric Projection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Phép chiếu đẳng cự</translation>
     </message>
 </context>
 <context>
@@ -7938,7 +7943,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricView.js" line="+44"/>
         <source>&amp;Isometric View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Khung nhìn đẳng cự</translation>
     </message>
 </context>
 <context>
@@ -7946,12 +7951,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
-        <translation type="unfinished"></translation>
+        <translation>Thời gian chờ phím tắt:</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Enable keyboard navigation in list widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Bật điều hướng bàn phím trong widget danh sách</translation>
     </message>
 </context>
 <context>
@@ -7959,12 +7964,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/KeyboardPreferences.js" line="+24"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Chung</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Bàn phím</translation>
     </message>
 </context>
 <context>
@@ -7972,7 +7977,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of user interface:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngôn ngữ giao diện người dùng:</translation>
     </message>
 </context>
 <context>
@@ -7980,12 +7985,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+62"/>
         <source>Language Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Thiết lập ngôn ngữ</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngôn ngữ</translation>
     </message>
 </context>
 <context>
@@ -7993,62 +7998,62 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+26"/>
         <source>Default color for layer 0:</source>
-        <translation type="unfinished"></translation>
+        <translation>Màu mặc định cho lớp 0:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Default lineweight for new layers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bề rộng nét mặc định cho lớp mới:</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Default color for new layers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Màu mặc định cho lớp mới:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bề rộng nét mặc định cho lớp 0:</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+99"/>
         <source>Layer Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ lớp</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lớp</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Showing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang hiện tất cả lớp</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hiding all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang ẩn tất cả lớp</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Thawing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang rã đông tất cả lớp</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Freezing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang đóng băng tất cả lớp</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Locking all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang khóa tất cả lớp</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unlocking all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang mở khóa tất cả lớp</translation>
     </message>
 </context>
 <context>
@@ -8056,32 +8061,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/LayerCompatibility.js" line="+30"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Lớp</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Compatibility</source>
-        <translation type="unfinished"></translation>
+        <translation>Tương thích</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/PreferencesPage.ui" line="+17"/>
         <source>Layer 0</source>
-        <translation type="unfinished"></translation>
+        <translation>Lớp 0</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Layer 0 behaves like a regular layer (QCAD)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lớp 0 hoạt động như một lớp thông thường (QCAD)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Layer 0 behaves differently (best compatibility)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lớp 0 hoạt động khác biệt (tương thích tốt nhất)</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation type="unfinished"></translation>
+        <translation>Các đối tượng trong khối trên lớp 0 nhận thuộc tính và khả năng hiển thị của tham chiếu khối.</translation>
     </message>
 </context>
 <context>
@@ -8090,52 +8095,52 @@ is already in the list.</source>
         <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
         <source>layer</source>
         <comment>default layer name prefix</comment>
-        <translation type="unfinished"></translation>
+        <translation>lớp</translation>
     </message>
     <message>
         <location line="+158"/>
         <source>Leading or trailing spaces.</source>
-        <translation type="unfinished"></translation>
+        <translation>Có khoảng trắng ở đầu hoặc cuối.</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Layer name is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tên lớp trống.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Layer already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lớp đã tồn tại.</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Lớp</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Layer name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tên lớp:</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Thuộc tính</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Màu:</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bề rộng nét:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiểu nét:</translation>
     </message>
 </context>
 <context>
@@ -8143,7 +8148,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/LayerExamples.js" line="+50"/>
         <source>&amp;Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lớp</translation>
     </message>
 </context>
 <context>
@@ -8151,23 +8156,23 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+200"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widget</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+109"/>
         <source>Layer List</source>
-        <translation type="unfinished"></translation>
+        <translation>Danh sách lớp</translation>
     </message>
     <message>
         <location line="-54"/>
         <source>&amp;Layer List</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Danh sách lớp</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/LayerList/PreferencesPage.ui" line="+19"/>
         <source>Enable alternating row colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Bật màu hàng xen kẽ</translation>
     </message>
 </context>
 <context>
@@ -8175,32 +8180,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+62"/>
         <source>Arrow position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí mũi tên</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next vertex</source>
-        <translation type="unfinished"></translation>
+        <translation>Đỉnh tiếp theo</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoàn tác đoạn cuối</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Arrow head</source>
-        <translation type="unfinished"></translation>
+        <translation>Đầu mũi tên</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đường dẫn</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường dẫn (chuỗi đường có mũi tên)</translation>
     </message>
 </context>
 <context>
@@ -8208,12 +8213,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã tạo đường dẫn thành công</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đường dẫn từ văn bản đã chọn</translation>
     </message>
 </context>
 <context>
@@ -8221,22 +8226,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.js" line="+60"/>
         <source>Choose line or arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đường hoặc cung</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lượng:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lượng kéo dài hoặc rút ngắn (số âm)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kéo dài / Rút ngắn</translation>
     </message>
 </context>
 <context>
@@ -8244,32 +8249,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/Line.js" line="+83"/>
         <source>Line Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ đường thẳng</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đường thẳng</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation type="unfinished"></translation>
+        <translation>Cùng loại đối tượng với bản gốc</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Line Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Đoạn thẳng</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Infinite Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường vô hạn</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation type="unfinished"></translation>
+        <translation>Tia</translation>
     </message>
 </context>
 <context>
@@ -8277,57 +8282,57 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+76"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ nhất</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tiếp theo</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
-        <translation type="unfinished"></translation>
+        <translation>Đóng chuỗi</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoàn tác đoạn trước</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Làm lại đoạn</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng chiều dài cố định cho đường</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng góc cố định cho đường</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
         <source>Line from &amp;2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường từ &amp;2 điểm</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ một đường đơn hoặc chuỗi các đường</translation>
     </message>
 </context>
 <context>
@@ -8335,62 +8340,62 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.js" line="+41"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Bắt đầu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Giữa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm cuối</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ định vị trí</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài đường</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Line angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc đường</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2"/>
         <source>Line from &amp;Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường từ &amp;góc</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường ở một góc tuyệt đối cho trước</translation>
     </message>
 </context>
 <context>
@@ -8398,37 +8403,37 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisector.js" line="+67"/>
         <source>First line</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường thứ nhất</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Second line</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường thứ hai</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>Lines don&apos;t intersect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Các đường không cắt nhau.</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisector.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
         <source>Angle &amp;Bisector</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường &amp;phân giác</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường phân giác, chia ba, ...</translation>
     </message>
 </context>
 <context>
@@ -8436,57 +8441,57 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js" line="+63"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ nhất</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ hai</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
         <source>Depth:</source>
-        <translation type="unfinished"></translation>
+        <translation>Độ sâu:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Finger Width:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều rộng ngón:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Finger/Slot Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ ngón/rãnh:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiểu:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Finger first</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngón trước</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Slot first</source>
-        <translation type="unfinished"></translation>
+        <translation>Rãnh trước</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Tenons</source>
-        <translation type="unfinished"></translation>
+        <translation>Mộng</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mộng hộp từ 2 điểm</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ ngón, rãnh và mộng của mối ghép hộp</translation>
     </message>
 </context>
 <context>
@@ -8494,42 +8499,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ nhất</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ hai</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+17"/>
         <source>Number of Dovetails:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số mộng đuôi én:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều cao đuôi én:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail Gradient:</source>
-        <translation type="unfinished"></translation>
+        <translation>Độ dốc đuôi én:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ đuôi én/chốt:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mộng đuôi én từ 2 điểm</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ một mối ghép đuôi én</translation>
     </message>
 </context>
 <context>
@@ -8537,22 +8542,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehand.js" line="+55"/>
         <source>Press to start drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhấn để bắt đầu vẽ</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Release to stop drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Thả ra để dừng vẽ</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehandInit.js" line="+2"/>
         <source>&amp;Freehand Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đường vẽ tay</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw freehand line</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường tự do</translation>
     </message>
 </context>
 <context>
@@ -8560,22 +8565,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đường ngang</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw horizontal line</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường ngang</translation>
     </message>
 </context>
 <context>
@@ -8583,22 +8588,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonal.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js" line="+2"/>
         <source>&amp;Orthogonal</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Trực giao</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường vuông góc với đối tượng cơ sở</translation>
     </message>
 </context>
 <context>
@@ -8606,27 +8611,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangent.js" line="+71"/>
         <source>Choose line</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đường</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose circle, arc or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đường tròn, cung hoặc elip</translation>
     </message>
     <message>
         <location line="+141"/>
         <source>No tangent possible</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể tạo tiếp tuyến</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangentInit.js" line="+2"/>
         <source>Orthogonal / Tange&amp;nt</source>
-        <translation type="unfinished"></translation>
+        <translation>Trực giao / Tiếp tuyế&amp;n</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường vuông góc với đường và tiếp tuyến với đường tròn, cung hoặc elip</translation>
     </message>
 </context>
 <context>
@@ -8634,22 +8639,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallelInit.js" line="+2"/>
         <source>Para&amp;llel (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Song song (với khoảng cách)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ song song với đường hiện có hoặc cung, đường tròn đồng tâm</translation>
     </message>
 </context>
 <context>
@@ -8657,17 +8662,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2"/>
         <source>Par&amp;allel (through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Song song (qua điểm)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường song song hoặc cung/đường tròn đồng tâm qua một điểm cho trước</translation>
     </message>
 </context>
 <context>
@@ -8675,27 +8680,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.js" line="+68"/>
         <source>First arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Cung hoặc đường tròn thứ nhất</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Cung hoặc đường tròn thứ hai</translation>
     </message>
     <message>
         <location line="+106"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có giải pháp</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Trục đẳng phương của 2 đường tròn</translation>
     </message>
 </context>
 <context>
@@ -8703,52 +8708,52 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+42"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Bắt đầu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Giữa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm cuối</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Choose base line, arc, circle, ellipse or polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đường cơ sở, cung, đường tròn, elip hoặc đa tuyến</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Set position</source>
-        <translation type="unfinished"></translation>
+        <translation>Đặt vị trí</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.ui" line="+17"/>
         <source>Relative Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc tương đối:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2"/>
         <source>R&amp;elative Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc &amp;tương đối</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường với góc tương đối so với đối tượng cơ sở</translation>
     </message>
 </context>
 <context>
@@ -8756,7 +8761,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineSimilarityAxes/LineSimilarityAxesInit.js" line="+2"/>
         <source>Similarity Axes of 3 Circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Trục đồng dạng của 3 đường tròn</translation>
     </message>
 </context>
 <context>
@@ -8764,32 +8769,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1.js" line="+65"/>
         <source>Choose start point of tangent</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn điểm đầu của tiếp tuyến</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Choose circle, arc or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đường tròn, cung hoặc elip</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>No tangent possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể tạo tiếp tuyến.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể vẽ tiếp tuyến từ điểm bên trong đường tròn đến đường tròn</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1Init.js" line="+2"/>
         <source>&amp;Tangent (Point, Circle)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tiếp tuyến (điểm, đường tròn)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ tiếp tuyến (điểm, đường tròn)</translation>
     </message>
 </context>
 <context>
@@ -8797,27 +8802,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2.js" line="+71"/>
         <source>Choose first circle or arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đường tròn hoặc cung thứ nhất</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose second circle or arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đường tròn hoặc cung thứ hai</translation>
     </message>
     <message>
         <location line="+142"/>
         <source>No tangent possible</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể tạo tiếp tuyến</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2Init.js" line="+2"/>
         <source>Tan&amp;gent (Two Circles)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiếp tuyế&amp;n (hai đường tròn)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ tiếp tuyến (đường tròn, đường tròn)</translation>
     </message>
 </context>
 <context>
@@ -8825,22 +8830,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineVertical/LineVertical.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều dài:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineVertical/LineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đường dọc</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw vertical line</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường dọc</translation>
     </message>
 </context>
 <context>
@@ -8848,7 +8853,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/LinetypeMode/LinetypeMode.js" line="+86"/>
         <source>Screen-based Line&amp;types</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiểu &amp;nét theo màn hình</translation>
     </message>
 </context>
 <context>
@@ -8856,28 +8861,28 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/LinetypeSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Mặc định cho bản vẽ mới</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiểu nét</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Chung</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global linetype scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ kiểu nét toàn cục:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Scale of linetypes matches the scale of each viewport</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ kiểu nét khớp với tỷ lệ của từng khung nhìn</translation>
     </message>
 </context>
 <context>
@@ -8885,7 +8890,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ListenerExamples.js" line="+50"/>
         <source>&amp;Listeners</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bộ lắng nghe</translation>
     </message>
 </context>
 <context>
@@ -8893,7 +8898,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/LockAllLayers/LockAllLayersInit.js" line="+2"/>
         <source>&amp;Lock All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Khóa tất cả lớp</translation>
     </message>
 </context>
 <context>
@@ -8901,7 +8906,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/LockRelativeZero/LockRelativeZeroInit.js" line="+2"/>
         <source>&amp;Lock Relative Zero</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Khóa gốc tương đối</translation>
     </message>
 </context>
 <context>
@@ -8909,7 +8914,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/MathExamples.js" line="+51"/>
         <source>&amp;Mathematics</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Toán học</translation>
     </message>
 </context>
 <context>
@@ -8917,7 +8922,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/NewFile/MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
-        <translation type="unfinished"></translation>
+        <translation>Chưa đặt tên</translation>
     </message>
 </context>
 <context>
@@ -8925,17 +8930,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/MenuBar/MenuBar.js" line="+24"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widget</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Menu Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Thanh trình đơn</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/MenuBar/PreferencesPage.ui" line="+17"/>
         <source>Use native menu bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng thanh trình đơn gốc của hệ điều hành</translation>
     </message>
 </context>
 <context>
@@ -8943,12 +8948,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MenusAndToolBars.js" line="+32"/>
         <source>MenusAndToolBars() is running...</source>
-        <translation type="unfinished"></translation>
+        <translation>MenusAndToolBars() đang chạy...</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Menus and Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Trình đơn và thanh công cụ</translation>
     </message>
 </context>
 <context>
@@ -8956,42 +8961,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.js" line="+44"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiệu chỉnh</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối xứng</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>First point of symmetry axis</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ nhất của trục đối xứng</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point of symmetry axis</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ hai của trục đối xứng</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Sao chép</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng lớp và thuộc tính hiện hành</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đối xứng</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng hộp thoại cho tùy chọn công cụ</translation>
     </message>
 </context>
 <context>
@@ -8999,27 +9004,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Tùy chọn đối xứng</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation>Số bản sao</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xóa bản gốc</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Giữ bản gốc</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng lớp hiện hành và &amp;thuộc tính</translation>
     </message>
 </context>
 <context>
@@ -9027,17 +9032,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Misc.js" line="+60"/>
         <source>Misc Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ khác</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Khác</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Khác</translation>
     </message>
 </context>
 <context>
@@ -9045,17 +9050,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/MiscBlock.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Khác</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ khối khác</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>&amp;Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Khối</translation>
     </message>
 </context>
 <context>
@@ -9063,17 +9068,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/MiscDevelopment.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Khác</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Development Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ phát triển khác</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>De&amp;velopment</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Phát triển</translation>
     </message>
 </context>
 <context>
@@ -9081,22 +9086,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/MiscDraw.js" line="+52"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Khác</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ vẽ khác</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Misc Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ khác</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vẽ</translation>
     </message>
 </context>
 <context>
@@ -9104,17 +9109,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MiscIO.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Khác</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Import / Export Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ nhập / xuất khác</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>&amp;Import/Export</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nhập/Xuất</translation>
     </message>
 </context>
 <context>
@@ -9122,17 +9127,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+41"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Khác</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Misc Information Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ thông tin khác</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Information</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Thông tin</translation>
     </message>
 </context>
 <context>
@@ -9140,17 +9145,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/MiscModify.js" line="+44"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Khác</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Misc Modification Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ hiệu chỉnh khác</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hiệu chỉnh</translation>
     </message>
 </context>
 <context>
@@ -9158,17 +9163,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/MiscSelect.js" line="+52"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Khác</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Selection Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ chọn khác</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Select</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chọn</translation>
     </message>
 </context>
 <context>
@@ -9176,12 +9181,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Modify.js" line="+99"/>
         <source>Modification Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ hiệu chỉnh</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hiệu chỉnh</translation>
     </message>
 </context>
 <context>
@@ -9189,22 +9194,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/ModifyCorner.js" line="+86"/>
         <source>Choose corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn góc</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Choose first entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đối tượng thứ nhất</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đối tượng thứ hai</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation type="unfinished"></translation>
+        <translation>Đặt điểm</translation>
     </message>
 </context>
 <context>
@@ -9212,7 +9217,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ModifyExamples.js" line="+49"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hiệu chỉnh</translation>
     </message>
 </context>
 <context>
@@ -9220,22 +9225,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhập MOL</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>MOL Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp MOL</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tất cả tệp</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
         <source>Leetro MOL Import...</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhập Leetro MOL...</translation>
     </message>
 </context>
 <context>
@@ -9243,12 +9248,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImporter.js" line="+161"/>
         <source>Importing Leetro MOL file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang nhập tệp Leetro MOL...</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation>Hủy bỏ</translation>
     </message>
 </context>
 <context>
@@ -9256,7 +9261,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/MouseDisplay/MouseDisplay.ui" line="+32"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Biểu mẫu</translation>
     </message>
 </context>
 <context>
@@ -9264,23 +9269,23 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
         <source>Enter Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhập vị trí</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position X:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí X:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+14"/>
         <source>0.00</source>
-        <translation type="unfinished"></translation>
+        <translation>0.00</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Position Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí Y:</translation>
     </message>
 </context>
 <context>
@@ -9288,7 +9293,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js" line="+53"/>
         <source>My Scripts</source>
-        <translation type="unfinished"></translation>
+        <translation>Kịch bản của tôi</translation>
     </message>
 </context>
 <context>
@@ -9296,17 +9301,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="unfinished"></translation>
+        <translation>Bảng ký tự</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>MyLineEdit</source>
-        <translation type="unfinished"></translation>
+        <translation>MyLineEdit</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>MyButton</source>
-        <translation type="unfinished"></translation>
+        <translation>MyButton</translation>
     </message>
 </context>
 <context>
@@ -9314,77 +9319,77 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang mở bản vẽ:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Import Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Lỗi nhập</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Cannot open file</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể mở tệp</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No suitable Importer found. Please check file format and extension.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không tìm thấy bộ nhập phù hợp. Vui lòng kiểm tra định dạng và phần mở rộng tệp.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>File not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không tìm thấy tệp.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Please check your access rights, the file format and file extension.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vui lòng kiểm tra quyền truy cập, định dạng và phần mở rộng tệp của bạn.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Import failed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhập thất bại.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>File is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp trống.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Drawing loaded successfully:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã tải bản vẽ thành công:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Định dạng:</translation>
     </message>
     <message>
         <location line="+149"/>
         <source>Untitled %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Chưa đặt tên %1</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>read-only</source>
-        <translation type="unfinished"></translation>
+        <translation>chỉ đọc</translation>
     </message>
     <message>
         <location line="+63"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
-        <translation type="unfinished"></translation>
+        <translation>Bạn có muốn lưu các thay đổi đã thực hiện trong&lt;br&gt;tài liệu &apos;%1&apos; không?</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Your changes will be lost if you don&apos;t save them.</source>
-        <translation type="unfinished"></translation>
+        <translation>Các thay đổi của bạn sẽ bị mất nếu bạn không lưu chúng.</translation>
     </message>
     <message>
         <location filename="../scripts/File/NewFile/NewFileInit.js" line="+2"/>
         <source>&amp;New</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mới</translation>
     </message>
 </context>
 <context>
@@ -9392,7 +9397,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Window/NextWindow/NextWindowInit.js" line="+2"/>
         <source>&amp;Next</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tiếp</translation>
     </message>
 </context>
 <context>
@@ -9400,41 +9405,41 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.js" line="+77"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đường, cung, đường tròn hoặc elip</translation>
     </message>
     <message numerus="yes">
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Bán kính giảm xuống dưới 0.0 sau %n đường tròn đồng tâm.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Bán kính giảm xuống dưới 0.0 sau %n cung đồng tâm.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation>Offset (với khoảng cách)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Offset đường, cung, đường tròn hoặc elip</translation>
     </message>
 </context>
 <context>
@@ -9442,22 +9447,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ định điểm</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Offset (qua điểm)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation type="unfinished"></translation>
+        <translation>Offset đường, cung, đường tròn hoặc elip qua điểm</translation>
     </message>
 </context>
 <context>
@@ -9465,27 +9470,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFile.js" line="+47"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Không tìm thấy bộ lọc nhập nào. Đang hủy bỏ...</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Open Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Mở bản vẽ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tất cả tệp</translation>
     </message>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFileInit.js" line="+2"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mở</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Open an existing drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Mở một bản vẽ hiện có</translation>
     </message>
 </context>
 <context>
@@ -9493,132 +9498,132 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Mặc định cho bản vẽ mới</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Printing - Page</source>
-        <translation type="unfinished"></translation>
+        <translation>In ấn - Trang</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation type="unfinished"></translation>
+        <translation>In ấn</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Page</source>
-        <translation type="unfinished"></translation>
+        <translation>Trang</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Tùy chỉnh</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
         <source>Paper</source>
-        <translation type="unfinished"></translation>
+        <translation>Giấy</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Paper size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cỡ giấy:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Paper width:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều rộng giấy:</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Paper height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều cao giấy:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Page Orientation</source>
-        <translation type="unfinished"></translation>
+        <translation>Hướng trang</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Portrait</source>
-        <translation type="unfinished"></translation>
+        <translation>Nằm dọc</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Landscape</source>
-        <translation type="unfinished"></translation>
+        <translation>Nằm ngang</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Margins</source>
-        <translation type="unfinished"></translation>
+        <translation>Lề</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Left:</source>
-        <translation type="unfinished"></translation>
+        <translation>Trái:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Top:</source>
-        <translation type="unfinished"></translation>
+        <translation>Trên:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation type="unfinished"></translation>
+        <translation>Phải:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Bottom:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dưới:</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Set to Printer Margins</source>
-        <translation type="unfinished"></translation>
+        <translation>Đặt theo lề máy in</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Scale and Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ và vị trí</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tỷ lệ:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Offset X:</source>
-        <translation type="unfinished"></translation>
+        <translation>Offset X:</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Offset Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Offset Y:</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Zero-Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm gốc</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Miscellaneous</source>
-        <translation type="unfinished"></translation>
+        <translation>Khác</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show paper borders</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện viền giấy</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Point size (mm):</source>
-        <translation type="unfinished"></translation>
+        <translation>Cỡ điểm (mm):</translation>
     </message>
 </context>
 <context>
@@ -9626,7 +9631,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/PanZoom/PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lia và thu phóng</translation>
     </message>
 </context>
 <context>
@@ -9634,77 +9639,77 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.js" line="+52"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉnh sửa</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Dán</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc xoay:</translation>
     </message>
     <message>
         <location line="+129"/>
         <source>Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ:</translation>
     </message>
     <message>
         <location line="+91"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Lật các đối tượng đã dán&lt;br&gt;theo chiều ngang</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Lật các đối tượng đã dán&lt;br&gt;theo chiều dọc</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Dán tất cả đối tượng&lt;br&gt;vào lớp hiện hành&lt;br&gt;thay vì lớp gốc</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Sang lớp hiện hành</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Ghi đè các lớp hiện có&lt;br&gt;trong bản vẽ bằng&lt;br&gt;các lớp từ bảng tạm</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Ghi đè lớp</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Ghi đè các khối hiện có&lt;br&gt;trong bản vẽ bằng&lt;br&gt;các khối từ bảng tạm</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Ghi đè khối</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dán</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
         <source>Reset to defaults every time tool is used</source>
-        <translation type="unfinished"></translation>
+        <translation>Đặt lại về mặc định mỗi khi dùng công cụ</translation>
     </message>
 </context>
 <context>
@@ -9712,12 +9717,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/PdfExport/PdfExportInit.js" line="+2"/>
         <source>P&amp;DF Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Xuất P&amp;DF</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
-        <translation type="unfinished"></translation>
+        <translation>Xuất bản vẽ hiện tại dưới dạng PDF</translation>
     </message>
 </context>
 <context>
@@ -9725,12 +9730,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/PenToolBar/PenToolBar.js" line="+26"/>
         <source>Pen</source>
-        <translation type="unfinished"></translation>
+        <translation>Bút</translation>
     </message>
     <message>
         <location line="+73"/>
         <source>Reset to Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Đặt lại về mặc định</translation>
     </message>
 </context>
 <context>
@@ -9738,7 +9743,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.js" line="+74"/>
         <source>&amp;Persistent Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Widget cố định</translation>
     </message>
 </context>
 <context>
@@ -9746,12 +9751,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Point/Point.js" line="+71"/>
         <source>Point Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ điểm</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Point</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Điểm</translation>
     </message>
 </context>
 <context>
@@ -9759,17 +9764,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1P.js" line="+51"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1PInit.js" line="+2"/>
         <source>Single &amp;Point</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Điểm đơn</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw single point</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ một điểm đơn</translation>
     </message>
 </context>
 <context>
@@ -9777,28 +9782,28 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PointDisplaySettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Mặc định cho bản vẽ mới</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Point Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiển thị điểm</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Chung</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chế độ:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Size (pixel):</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích cỡ (điểm ảnh):</translation>
     </message>
 </context>
 <context>
@@ -9806,17 +9811,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPole.js" line="+67"/>
         <source>Arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Cung hoặc đường tròn</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường thẳng</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2"/>
         <source>Pole of Line and Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Cực của đường và đường tròn</translation>
     </message>
 </context>
 <context>
@@ -9824,12 +9829,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenter.js" line="+45"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có giải pháp</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Tâm đẳng phương của ba đường tròn</translation>
     </message>
 </context>
 <context>
@@ -9837,12 +9842,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
         <source>Polyline Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ đa tuyến</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đa tuyến</translation>
     </message>
 </context>
 <context>
@@ -9850,114 +9855,114 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đường, cung, đường tròn, elip, spline hoặc đa tuyến để ngắt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đường, cung, đường tròn hoặc elip để ngắt</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Pick the first point</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn điểm thứ nhất</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the first break point</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn điểm ngắt thứ nhất</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Pick the second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn điểm thứ hai</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the second break point</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn điểm ngắt thứ hai</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngắt đoạn</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Gỡ đoạn ngắt dòng</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Remove the line segment between the break symbol</source>
-        <translation type="unfinished"></translation>
+        <translation>Gỡ đoạn thẳng giữa ký hiệu ngắt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Remove Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Gỡ đoạn</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Inherit entity properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Kế thừa thuộc tính đối tượng</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit all properties from the chosen entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Kế thừa mọi thuộc tính từ đối tượng đã chọn</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit</source>
-        <translation type="unfinished"></translation>
+        <translation>Kế thừa</translation>
     </message>
     <message>
         <location line="+17"/>
         <location line="+16"/>
         <source>Peak ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ đỉnh</translation>
     </message>
     <message>
         <location line="-13"/>
         <location line="+16"/>
         <source>The ratio of the peak height to the break width</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ giữa chiều cao đỉnh và chiều rộng ngắt</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Peak Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ đỉnh:</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>First/Last segment inclined</source>
-        <translation type="unfinished"></translation>
+        <translation>Đoạn đầu/cuối nghiêng</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are inclined</source>
-        <translation type="unfinished"></translation>
+        <translation>Đoạn đầu và cuối của ký hiệu ngắt bị nghiêng</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>First/Last segment vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>Đoạn đầu/cuối thẳng đứng</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>Đoạn đầu và cuối của ký hiệu ngắt thẳng đứng</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
         <source>&amp;Polyline break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ký hiệu ngắt đa tuyến từ 2 điểm</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ ký hiệu ngắt đa tuyến từ 2 điểm</translation>
     </message>
 </context>
 <context>
@@ -9967,27 +9972,27 @@ is already in the list.</source>
         <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Tùy chọn</translation>
     </message>
     <message>
         <location line="-79"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Bộ lọc</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Expand Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>Mở rộng cây</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>Thu gọn cây</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Restore to Default Values</source>
-        <translation type="unfinished"></translation>
+        <translation>Khôi phục về giá trị mặc định</translation>
     </message>
 </context>
 <context>
@@ -9995,7 +10000,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/PreviousView/PreviousViewInit.js" line="+2"/>
         <source>&amp;Previous View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Khung nhìn trước</translation>
     </message>
 </context>
 <context>
@@ -10003,7 +10008,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Window/PreviousWindow/PreviousWindowInit.js" line="+2"/>
         <source>&amp;Previous</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Trước</translation>
     </message>
 </context>
 <context>
@@ -10011,12 +10016,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/Print/PrintInit.js" line="+2"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;In</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Print current drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>In bản vẽ hiện tại</translation>
     </message>
 </context>
 <context>
@@ -10024,12 +10029,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/PrintCurrentView/PrintCurrentViewInit.js" line="+2"/>
         <source>Print &amp;Current View</source>
-        <translation type="unfinished"></translation>
+        <translation>In &amp;khung nhìn hiện tại</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Print current view</source>
-        <translation type="unfinished"></translation>
+        <translation>In khung nhìn hiện tại</translation>
     </message>
 </context>
 <context>
@@ -10037,153 +10042,153 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+96"/>
         <source>Auto Paper Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Cỡ giấy tự động</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
-        <translation type="unfinished"></translation>
+        <translation>Cỡ giấy được đặt thành cỡ tùy chỉnh (%1x%2mm). Bạn có muốn đổi sang cỡ giấy mặc định của máy in (%3) không?</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Auto fit</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động vừa khít</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Auto fit drawing to paper?</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động khít bản vẽ vào giấy?</translation>
     </message>
     <message>
         <location line="+211"/>
         <source>Drag to move paper</source>
-        <translation type="unfinished"></translation>
+        <translation>Kéo để di chuyển giấy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Xong</translation>
     </message>
     <message>
         <location line="+203"/>
         <location line="+3"/>
         <source>Page Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Thiết lập trang</translation>
     </message>
     <message>
         <location line="+277"/>
         <source>Export to PDF</source>
-        <translation type="unfinished"></translation>
+        <translation>Xuất sang PDF</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Exporting to %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang xuất sang %1...</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Export complete: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã xuất xong: %1</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Export failed (cannot open file for writing): %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Xuất thất bại (không thể mở tệp để ghi): %1</translation>
     </message>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.ui" line="+17"/>
         <source>Close Print Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Đóng xem trước in</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Print...</source>
-        <translation type="unfinished"></translation>
+        <translation>In...</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Export as PDF...</source>
-        <translation type="unfinished"></translation>
+        <translation>Xuất dưới dạng PDF...</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Drawing Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ bản vẽ</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Move Paper Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Di chuyển vị trí giấy</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động khít bản vẽ vào trang</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Auto Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động căn giữa</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Portrait</source>
-        <translation type="unfinished"></translation>
+        <translation>Nằm dọc</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Landscape</source>
-        <translation type="unfinished"></translation>
+        <translation>Nằm ngang</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Auto zoom to page</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động thu phóng đến trang</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Full Color Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Chế độ đầy đủ màu</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Grayscale Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Chế độ thang xám</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Black / White Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Chế độ đen / trắng</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Show Paper Borders</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện viền giấy</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Print Crop Marks</source>
-        <translation type="unfinished"></translation>
+        <translation>In dấu xén</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Show More Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện thêm tùy chọn</translation>
     </message>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreviewInit.js" line="+2"/>
         <source>Print Pre&amp;view</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xem trước in</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
-        <translation type="unfinished"></translation>
+        <translation>Xem trước cách bản vẽ hiện tại sẽ được in</translation>
     </message>
 </context>
 <context>
@@ -10191,22 +10196,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ phép chiếu</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Projection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Phép chiếu</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm đích</translation>
     </message>
 </context>
 <context>
@@ -10214,174 +10219,174 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Độ phức tạp tối đa cho phép tính chiều dài mặt cắt tự động:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Display Z coordinates</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiển thị tọa độ Z</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Allow adding custom properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Cho phép thêm thuộc tính tùy chỉnh</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Update delay [ms]:</source>
-        <translation type="unfinished"></translation>
+        <translation>Độ trễ cập nhật [ms]:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Decimals / precision for displayed property values:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số thập phân / độ chính xác cho giá trị thuộc tính hiển thị:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Display properties of current block and current layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiển thị thuộc tính của khối hiện hành và lớp hiện hành</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
-        <translation type="unfinished"></translation>
+        <translation>Luôn hiển thị mọi thuộc tính (có thể làm chậm việc chọn đối tượng)</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Always format property values as decimal numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Luôn định dạng giá trị thuộc tính dưới dạng số thập phân</translation>
     </message>
     <message>
         <location line="+75"/>
         <source>Display advanced dimension style overrides</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiển thị ghi đè kiểu kích thước nâng cao</translation>
     </message>
     <message>
         <location line="+53"/>
         <source>Only update when nothing changes during update delay</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ cập nhật khi không có gì thay đổi trong thời gian trễ cập nhật</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+232"/>
         <source>:</source>
-        <translation type="unfinished"></translation>
+        <translation>:</translation>
     </message>
     <message>
         <location line="+189"/>
         <source>No Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có vùng chọn</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Specific Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Thuộc tính riêng</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Dependent Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng phụ thuộc</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Tùy chỉnh</translation>
     </message>
     <message>
         <location line="+204"/>
         <source>Index</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ mục</translation>
     </message>
     <message>
         <location line="+79"/>
         <source>Remove this property from selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Gỡ thuộc tính này khỏi các đối tượng đã chọn</translation>
     </message>
     <message>
         <location line="+68"/>
         <source>All</source>
-        <translation type="unfinished"></translation>
+        <translation>Tất cả</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Add custom property to selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm thuộc tính tùy chỉnh cho các đối tượng đã chọn</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Show</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show all properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện tất cả thuộc tính</translation>
     </message>
     <message>
         <location line="+161"/>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động</translation>
     </message>
     <message>
         <location line="+201"/>
         <source>Use auto measurement</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng đo tự động</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Có</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Không</translation>
     </message>
     <message>
         <location line="+430"/>
         <source>*VARIES*</source>
-        <translation type="unfinished"></translation>
+        <translation>*KHÁC NHAU*</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widget</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Trình sửa thuộc tính</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vùng chọn:</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>General Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Thuộc tính chung</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Màu:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Handle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Handle:</translation>
     </message>
     <message>
         <location line="+94"/>
         <source>Linetype Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ kiểu nét:</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Protected:</source>
-        <translation type="unfinished"></translation>
+        <translation>Được bảo vệ:</translation>
     </message>
 </context>
 <context>
@@ -10389,7 +10394,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/QtExamples.js" line="+50"/>
         <source>&amp;Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Qt</translation>
     </message>
 </context>
 <context>
@@ -10397,7 +10402,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Thoát</translation>
     </message>
 </context>
 <context>
@@ -10405,12 +10410,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeDialog.ui" line="+14"/>
         <source>Readme</source>
-        <translation type="unfinished"></translation>
+        <translation>Đọc tôi (Readme)</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Don&apos;t show this dialog at startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Không hiển thị hộp thoại này khi khởi động</translation>
     </message>
 </context>
 <context>
@@ -10418,27 +10423,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/RecentFiles/PreferencesPage.ui" line="+17"/>
         <source>Recent files history size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước lịch sử tệp gần đây:</translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFiles.js" line="+35"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp gần đây</translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xóa danh sách</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation type="unfinished"></translation>
+        <translation>Mở &amp;gần đây</translation>
     </message>
 </context>
 <context>
@@ -10446,7 +10451,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Redo/RedoInit.js" line="+2"/>
         <source>&amp;Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Làm lại</translation>
     </message>
 </context>
 <context>
@@ -10454,7 +10459,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/ReloadLinetypes/ReloadLinetypes.js" line="+48"/>
         <source>Reload Linetype Definitions</source>
-        <translation type="unfinished"></translation>
+        <translation>Tải lại định nghĩa kiểu nét</translation>
     </message>
 </context>
 <context>
@@ -10462,12 +10467,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/RemoveBlock/RemoveBlockInit.js" line="+2"/>
         <source>&amp;Remove Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Gỡ khối</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delete selected block</source>
-        <translation type="unfinished"></translation>
+        <translation>Xóa khối đã chọn</translation>
     </message>
 </context>
 <context>
@@ -10475,7 +10480,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/RemoveLayer/RemoveLayerInit.js" line="+2"/>
         <source>&amp;Delete Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xóa lớp</translation>
     </message>
 </context>
 <context>
@@ -10483,7 +10488,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/RenameBlock/RenameBlockInit.js" line="+2"/>
         <source>Re&amp;name Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đổi tên khối</translation>
     </message>
 </context>
 <context>
@@ -10491,7 +10496,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/ReportBug/ReportBugInit.js" line="+2"/>
         <source>Report &amp;Bug</source>
-        <translation type="unfinished"></translation>
+        <translation>Báo &amp;lỗi</translation>
     </message>
 </context>
 <context>
@@ -10499,7 +10504,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/ReportTranslationError/ReportTranslationErrorInit.js" line="+3"/>
         <source>Report &amp;Translation Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Báo lỗi &amp;bản dịch</translation>
     </message>
 </context>
 <context>
@@ -10507,12 +10512,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Reset/ResetInit.js" line="+5"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Đặt lại</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Reset / Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đặt lại / Nghỉ</translation>
     </message>
 </context>
 <context>
@@ -10520,29 +10525,29 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách:</translation>
     </message>
     <message>
         <location line="+23"/>
         <location line="+66"/>
         <source>Base:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chân:</translation>
     </message>
     <message>
         <location line="-40"/>
         <location line="+66"/>
         <source>Multiples</source>
-        <translation type="unfinished"></translation>
+        <translation>Bội số</translation>
     </message>
     <message>
         <location line="-52"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLengthInit.js" line="+2"/>
         <source>Restrict &amp;Angle or Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Giới hạn &amp;góc hoặc chiều dài</translation>
     </message>
 </context>
 <context>
@@ -10550,7 +10555,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/RestrictHorizontal/RestrictHorizontalInit.js" line="+2"/>
         <source>Restrict &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Giới hạn theo &amp;chiều ngang</translation>
     </message>
 </context>
 <context>
@@ -10558,7 +10563,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/RestrictOff/RestrictOffInit.js" line="+2"/>
         <source>Restrictions &amp;Off</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tắt giới hạn</translation>
     </message>
 </context>
 <context>
@@ -10566,7 +10571,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/RestrictOrthogonal/RestrictOrthogonalInit.js" line="+2"/>
         <source>Restrict &amp;Orthogonally</source>
-        <translation type="unfinished"></translation>
+        <translation>Giới hạn &amp;trực giao</translation>
     </message>
 </context>
 <context>
@@ -10574,7 +10579,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/RestrictVertical/RestrictVerticalInit.js" line="+2"/>
         <source>Restrict &amp;Vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Giới hạn theo &amp;chiều dọc</translation>
     </message>
 </context>
 <context>
@@ -10582,7 +10587,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đảo chiều</translation>
     </message>
 </context>
 <context>
@@ -10590,67 +10595,67 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng hộp thoại cho tùy chọn công cụ</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.js" line="+47"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiệu chỉnh</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotate</source>
-        <translation type="unfinished"></translation>
+        <translation>Xoay</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Center point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tâm</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Target point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm đích</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc xoay không hợp lệ</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Sao chép</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số bản sao:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng lớp và thuộc tính hiện hành</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Define angle using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Xác định góc bằng con trỏ chuột</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xoay</translation>
     </message>
 </context>
 <context>
@@ -10658,32 +10663,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.js" line="+67"/>
         <source>Center of primary rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Tâm xoay chính</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Center of secondary rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Tâm xoay phụ</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc chính:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Secondary Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc phụ:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số bản sao:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation type="unfinished"></translation>
+        <translation>Xoay &amp;hai</translation>
     </message>
 </context>
 <context>
@@ -10691,42 +10696,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Tùy chọn xoay hai</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation>Số bản sao</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xóa bản gốc</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Giữ bản gốc</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nhiều bản sao</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>Angle &amp;a:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc &amp;a:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Angle &amp;b:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc &amp;b:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng lớp hiện hành và &amp;thuộc tính</translation>
     </message>
 </context>
 <context>
@@ -10734,42 +10739,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateDialog.ui" line="+14"/>
         <source>Rotate Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Tùy chọn xoay</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation>Số bản sao</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xóa bản gốc</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Giữ bản gốc</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nhiều bản sao</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>&amp;Angle (a):</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Góc (a):</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Define angle using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Xác định góc bằng con trỏ chuột</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng lớp hiện hành và &amp;thuộc tính</translation>
     </message>
 </context>
 <context>
@@ -10777,32 +10782,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Round/Round.js" line="+60"/>
         <source>The two entities cannot be rounded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể bo tròn hai đối tượng.</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể cắt xén đối tượng thứ nhất.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể cắt xén đối tượng thứ hai.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="unfinished"></translation>
+        <translation>Cắt xén</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bo tròn</translation>
     </message>
 </context>
 <context>
@@ -10810,47 +10815,47 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScript.js" line="+60"/>
         <source>Open Script File</source>
-        <translation type="unfinished"></translation>
+        <translation>Mở tệp kịch bản</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tất cả tệp</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>ECMAScript Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp ECMAScript</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Run Script</source>
-        <translation type="unfinished"></translation>
+        <translation>Chạy kịch bản</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20"/>
         <source>Running Script</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang chạy kịch bản</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to run the following script(s):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;This script could potentially modify your drawings, modify or delete your files or access your network connection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;It is strongly recommended to only run scripts from trusted sources.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bạn sắp chạy (các) kịch bản sau:&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;Kịch bản này có thể chỉnh sửa bản vẽ, sửa đổi hoặc xóa tệp của bạn, hoặc truy cập kết nối mạng của bạn.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;Đặc biệt khuyến cáo chỉ chạy kịch bản từ nguồn đáng tin cậy.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
-        <translation type="unfinished"></translation>
+        <translation>Không hiển thị hộp thoại này nữa</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js" line="+2"/>
         <source>R&amp;un Script</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chạy kịch bản</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Open and run a script file</source>
-        <translation type="unfinished"></translation>
+        <translation>Mở và chạy một tệp kịch bản</translation>
     </message>
 </context>
 <context>
@@ -10858,82 +10863,82 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/Save/Save.js" line="+99"/>
         <source>Overwrite File?</source>
-        <translation type="unfinished"></translation>
+        <translation>Ghi đè tệp?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp &quot;%1&quot; đã tồn tại. Bạn có muốn ghi đè không?</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>File Format Version Not Recommended</source>
-        <translation type="unfinished"></translation>
+        <translation>Không nên dùng phiên bản định dạng tệp này</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Phiên bản định dạng tệp bạn đang dùng không được khuyến nghị: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Custom properties will not be saved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Thuộc tính tùy chỉnh sẽ không được lưu.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All black entities and layers will be saved as white.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tất cả đối tượng và lớp màu đen sẽ được lưu thành màu trắng.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All custom colors will be adjusted to the nearest fixed color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mọi màu tùy chỉnh sẽ được điều chỉnh về màu cố định gần nhất.</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Proceed?</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiếp tục?</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Saving...</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang lưu...</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Saving to file format version &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang lưu sang phiên bản định dạng tệp &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Black entities and layers are saved as white.</source>
-        <translation type="unfinished"></translation>
+        <translation>Các đối tượng và lớp màu đen được lưu thành màu trắng.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Custom colors are adjusted to the nearest fixed color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Các màu tùy chỉnh được điều chỉnh về màu cố định gần nhất.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>File %1 has not been saved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp %1 chưa được lưu.</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Saved file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp đã lưu:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Định dạng:</translation>
     </message>
     <message>
         <location filename="../scripts/File/Save/SaveInit.js" line="+2"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lưu</translation>
     </message>
 </context>
 <context>
@@ -10941,77 +10946,77 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/SaveAs/PreferencesPage.ui" line="+17"/>
         <source>File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Hộp thoại tệp</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng hộp thoại tệp của hệ thống</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Opening</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang mở</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
-        <translation type="unfinished"></translation>
+        <translation>Cho phép mở tệp kích thước bằng 0 (ví dụ tệp trực tuyến chưa đồng bộ vào đĩa)</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
-        <translation type="unfinished"></translation>
+        <translation>Giải mã chuỗi trong DXF/DWG dưới dạng UTF-8 (thử nghiệm)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Saving</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang lưu</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Định dạng mặc định:</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện cảnh báo khi lưu sang định dạng tệp không hỗ trợ màu 24 bit</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Store &quot;last saved by&quot; file information as:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lưu thông tin tệp &quot;lưu lần cuối bởi&quot; thành:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>(empty for username)</source>
-        <translation type="unfinished"></translation>
+        <translation>(để trống nếu là tên người dùng)</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAs.js" line="+38"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Open/Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Mở/Lưu</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Không tìm thấy bộ lọc xuất nào. Đang hủy bỏ...</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Định dạng:</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAsInit.js" line="+2"/>
         <source>Save &amp;As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Lưu &amp;thành...</translation>
     </message>
 </context>
 <context>
@@ -11019,88 +11024,88 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
         <source>Allow rounding of imaginary corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Cho phép bo góc ảo</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng hộp thoại cho tùy chọn công cụ</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiệu chỉnh</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỷ lệ</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Focus point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tiêu</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Target point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm đích</translation>
     </message>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Hệ số tỷ lệ không hợp lệ</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Sao chép</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số bản sao:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng lớp và thuộc tính hiện hành</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hệ số x:</translation>
     </message>
     <message>
         <location line="+10"/>
         <location line="+17"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation>1</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Factor y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hệ số y:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Proportional</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo tỷ lệ</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Xác định hệ số bằng con trỏ chuột</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tỷ lệ</translation>
     </message>
 </context>
 <context>
@@ -11108,52 +11113,52 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Tùy chọn tỷ lệ</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation>Số bản sao</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xóa bản gốc</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Giữ bản gốc</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nhiều bản sao</translation>
     </message>
     <message>
         <location line="+115"/>
         <source>Factor x:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hệ số x:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Proportional</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo tỷ lệ</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Factor y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hệ số y:</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Xác định hệ số bằng con trỏ chuột</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng lớp hiện hành và &amp;thuộc tính</translation>
     </message>
 </context>
 <context>
@@ -11161,7 +11166,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/PreferencesPage.ui" line="+17"/>
         <source>Rescan scripts folder on startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Quét lại thư mục kịch bản khi khởi động</translation>
     </message>
 </context>
 <context>
@@ -11169,7 +11174,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js" line="+24"/>
         <source>Scripting</source>
-        <translation type="unfinished"></translation>
+        <translation>Lập trình kịch bản</translation>
     </message>
 </context>
 <context>
@@ -11177,17 +11182,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/Select.js" line="+216"/>
         <source>Selection Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ chọn</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Selection Tools Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Bảng công cụ chọn</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Select</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chọn</translation>
     </message>
 </context>
 <context>
@@ -11195,12 +11200,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectAll/SelectAllInit.js" line="+2"/>
         <source>Select &amp;All</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn &amp;tất cả</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Select all visible entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn tất cả các đối tượng hiển thị</translation>
     </message>
 </context>
 <context>
@@ -11208,7 +11213,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/SelectBlockReferences/SelectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Select Block References</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chọn tham chiếu khối</translation>
     </message>
 </context>
 <context>
@@ -11216,17 +11221,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColor.js" line="+64"/>
         <source>Select one or more objects only of the desired color</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ chọn một hoặc nhiều đối tượng của màu mong muốn</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Selected all visible entities of color %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã chọn tất cả các đối tượng hiển thị của màu %1</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js" line="+2"/>
         <source>By Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo màu</translation>
     </message>
 </context>
 <context>
@@ -11234,7 +11239,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn tất cả các đối tượng của một màu</translation>
     </message>
 </context>
 <context>
@@ -11242,17 +11247,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js" line="+58"/>
         <source>Object selected:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng đã chọn:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Object is not a drawing entity:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không phải là đối tượng bản vẽ:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo handle</translation>
     </message>
 </context>
 <context>
@@ -11260,12 +11265,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn theo handle</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation type="unfinished"></translation>
+        <translation>Handle (hex):</translation>
     </message>
 </context>
 <context>
@@ -11273,52 +11278,52 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+54"/>
         <source>Choose entity of contour</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đối tượng của đường viền</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chế độ:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Thay thế vùng chọn hiện tại</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm vào vùng chọn hiện tại</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Trừ khỏi vùng chọn hiện tại</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Giao với vùng chọn hiện tại</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Tolerance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dung sai:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Same Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Cùng lớp</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation type="unfinished"></translation>
+        <translation>(Bỏ) chọn &amp;đường viền</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select connected entities</source>
-        <translation type="unfinished"></translation>
+        <translation>(Bỏ) chọn các đối tượng được nối</translation>
     </message>
 </context>
 <context>
@@ -11326,47 +11331,47 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.js" line="+90"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ nhất</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ hai</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chế độ:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Thay thế vùng chọn hiện tại</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm vào vùng chọn hiện tại</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Trừ khỏi vùng chọn hiện tại</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Giao với vùng chọn hiện tại</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>(Bỏ) chọn đối tượng bị &amp;cắt qua</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
-        <translation type="unfinished"></translation>
+        <translation>(Bỏ) chọn tất cả đối tượng bị một đường cắt qua</translation>
     </message>
 </context>
 <context>
@@ -11374,17 +11379,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã thêm %1 đối tượng vào vùng chọn.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã bỏ %1 đối tượng khỏi vùng chọn.</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chọn đối tượng của lớp</translation>
     </message>
 </context>
 <context>
@@ -11392,42 +11397,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đối tượng trên lớp</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chế độ:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Thay thế vùng chọn hiện tại</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm vào vùng chọn hiện tại</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Trừ khỏi vùng chọn hiện tại</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Giao với vùng chọn hiện tại</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation type="unfinished"></translation>
+        <translation>(Bỏ) chọn &amp;lớp</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation type="unfinished"></translation>
+        <translation>(Bỏ) chọn tất cả đối tượng trên cùng một lớp</translation>
     </message>
 </context>
 <context>
@@ -11435,52 +11440,52 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+74"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc thứ nhất</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc thứ hai</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chế độ:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Thay thế vùng chọn hiện tại</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm vào vùng chọn hiện tại</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Trừ khỏi vùng chọn hiện tại</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Giao với vùng chọn hiện tại</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Cross Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn cắt qua</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation type="unfinished"></translation>
+        <translation>(Bỏ) chọn &amp;vùng chữ nhật</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>(Bỏ) chọn tất cả đối tượng bên trong một hình chữ nhật</translation>
     </message>
 </context>
 <context>
@@ -11488,54 +11493,55 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.js" line="+58"/>
         <source>No entities selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Chưa chọn đối tượng nào.</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 %2 trên lớp &quot;%3&quot;</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 %2 on %3 Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 %2 trên %3 lớp</translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n đối tượng trên lớp &quot;%1&quot;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n đối tượng</numerusform>
         </translation>
     </message>
     <message>
         <location line="+0"/>
         <source>on</source>
-        <translation type="unfinished"></translation>
+        <translation>bật</translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
         <source>%n Layers</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n lớp</numerusform>
         </translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>Các đối tượng đã chọn:
+%1.</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Biểu mẫu</translation>
     </message>
 </context>
 <context>
@@ -11543,12 +11549,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZero.js" line="+50"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZeroInit.js" line="+2"/>
         <source>Set &amp;Relative Zero</source>
-        <translation type="unfinished"></translation>
+        <translation>Đặt &amp;gốc tương đối</translation>
     </message>
 </context>
 <context>
@@ -11556,27 +11562,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.js" line="+78"/>
         <source>Shape Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ hình</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Shape</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hình</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
         <source>Create Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Tạo đa tuyến</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Fill</source>
-        <translation type="unfinished"></translation>
+        <translation>Tô</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/Shape2.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính:</translation>
     </message>
 </context>
 <context>
@@ -11585,27 +11591,27 @@ is already in the list.</source>
         <location filename="../scripts/ShapeAlgorithms.js" line="+1443"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
-        <translation type="unfinished"></translation>
+        <translation>Có ít nhất hai điểm trùng nhau.</translation>
     </message>
     <message>
         <location line="-22"/>
         <source>No circle possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể tạo đường tròn.</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>No arc possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể tạo cung.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Invalid number of segments: %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>Số đoạn không hợp lệ: %1.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Trục lớn / trục nhỏ của elip không hợp lệ: %1 / %2.</translation>
     </message>
 </context>
 <context>
@@ -11613,27 +11619,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.js" line="+61"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Tâm</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Middle of Side</source>
-        <translation type="unfinished"></translation>
+        <translation>Trung điểm cạnh</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số góc:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
-        <translation type="unfinished"></translation>
+        <translation>Đa &amp;giác (tâm, cạnh)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đa giác đều từ tâm và trung điểm của cạnh</translation>
     </message>
 </context>
 <context>
@@ -11641,42 +11647,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+61"/>
         <source>First side</source>
-        <translation type="unfinished"></translation>
+        <translation>Cạnh thứ nhất</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>First Corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc thứ nhất</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second side</source>
-        <translation type="unfinished"></translation>
+        <translation>Cạnh thứ hai</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Second Corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc thứ hai</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số góc:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Corner to Corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc đến góc</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
-        <translation type="unfinished"></translation>
+        <translation>Đa &amp;giác (cạnh, cạnh)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đa giác đều từ trung điểm của hai cạnh đối diện hoặc hai góc đối diện</translation>
     </message>
 </context>
 <context>
@@ -11684,27 +11690,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+61"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Tâm</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Corner point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm góc</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số góc:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
-        <translation type="unfinished"></translation>
+        <translation>Đa &amp;giác (tâm, góc)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đa giác đều từ tâm và điểm góc</translation>
     </message>
 </context>
 <context>
@@ -11712,27 +11718,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+60"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc thứ nhất</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Corner point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm góc</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số góc:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (2 Points of Side)</source>
-        <translation type="unfinished"></translation>
+        <translation>Đa &amp;giác (2 điểm của cạnh)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đa giác đều từ các điểm cuối của một cạnh</translation>
     </message>
 </context>
 <context>
@@ -11740,17 +11746,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hình chữ nhật</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw rectangle from two corners</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ hình chữ nhật từ hai góc</translation>
     </message>
 </context>
 <context>
@@ -11759,39 +11765,39 @@ is already in the list.</source>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
         <source>Width:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều rộng:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều cao:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="-10"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101"/>
         <source>Create Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Tạo đa tuyến</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Hình chữ nhật với &amp;kích thước</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw rectangle with position and size</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ hình chữ nhật với vị trí và kích thước</translation>
     </message>
 </context>
 <context>
@@ -11799,7 +11805,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/ShowActiveLayer/ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ hiện &amp;mục đang hoạt động</translation>
     </message>
 </context>
 <context>
@@ -11807,7 +11813,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/ShowAllBlocks/ShowAllBlocksInit.js" line="+2"/>
         <source>&amp;Show All Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hiện tất cả khối</translation>
     </message>
 </context>
 <context>
@@ -11815,7 +11821,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/ShowAllLayers/ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hiện tất cả lớp</translation>
     </message>
 </context>
 <context>
@@ -11823,12 +11829,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadme.js" line="+46"/>
         <source>File &quot;%1&quot; doesn&apos;t exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp &quot;%1&quot; không tồn tại.</translation>
     </message>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện &amp;Readme</translation>
     </message>
 </context>
 <context>
@@ -11836,7 +11842,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation type="unfinished"></translation>
+        <translation>Đơn</translation>
     </message>
 </context>
 <context>
@@ -11844,12 +11850,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ bắt điểm</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>&amp;Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bắt điểm</translation>
     </message>
 </context>
 <context>
@@ -11857,17 +11863,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>Bắt điểm</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động bắt điểm</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAutoInit.js" line="+2"/>
         <source>&amp;Auto</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tự động</translation>
     </message>
 </context>
 <context>
@@ -11875,7 +11881,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapCenter/SnapCenterInit.js" line="+2"/>
         <source>&amp;Center</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tâm</translation>
     </message>
 </context>
 <context>
@@ -11883,47 +11889,47 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+88"/>
         <source>Set coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Đặt tọa độ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Enter</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhập</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
         <source>x:</source>
-        <translation type="unfinished"></translation>
+        <translation>x:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>X Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Tọa độ X</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>y:</source>
-        <translation type="unfinished"></translation>
+        <translation>y:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Y Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Tọa độ Y</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Đánh dấu cho tọa độ tương đối</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished"></translation>
+        <translation>Tương đối</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
         <source>&amp;Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tọa độ</translation>
     </message>
 </context>
 <context>
@@ -11931,42 +11937,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
         <source>r:</source>
-        <translation type="unfinished"></translation>
+        <translation>r:</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Radius (Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation>Bán kính (khoảng cách)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>&lt;:</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Đánh dấu cho tọa độ tương đối</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished"></translation>
+        <translation>Tương đối</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
         <source>&amp;Polar Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tọa độ cực</translation>
     </message>
 </context>
 <context>
@@ -11974,12 +11980,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách bắt điểm:</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistanceInit.js" line="+2"/>
         <source>&amp;Distance</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Khoảng cách</translation>
     </message>
 </context>
 <context>
@@ -11987,42 +11993,42 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.js" line="+36"/>
         <source>Specify first point to measure distance from</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ định điểm thứ nhất để đo khoảng cách từ đó</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm thứ hai</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách bắt điểm:</translation>
     </message>
     <message>
         <location line="+75"/>
         <source>Distance</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Percentage</source>
-        <translation type="unfinished"></translation>
+        <translation>Phần trăm</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Fraction</source>
-        <translation type="unfinished"></translation>
+        <translation>Phân số</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Khoảng cách thủ công</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Snap distance between 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách bắt điểm giữa 2 điểm</translation>
     </message>
 </context>
 <context>
@@ -12030,7 +12036,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapEnd/SnapEndInit.js" line="+2"/>
         <source>&amp;End</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Điểm cuối</translation>
     </message>
 </context>
 <context>
@@ -12038,7 +12044,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tự do</translation>
     </message>
 </context>
 <context>
@@ -12046,7 +12052,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapGrid/SnapGridInit.js" line="+2"/>
         <source>&amp;Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lưới</translation>
     </message>
 </context>
 <context>
@@ -12054,7 +12060,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersection/SnapIntersectionInit.js" line="+2"/>
         <source>&amp;Intersection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Giao điểm</translation>
     </message>
 </context>
 <context>
@@ -12062,32 +12068,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17"/>
         <source>Terminate manual intersection tool after one use</source>
-        <translation type="unfinished"></translation>
+        <translation>Kết thúc công cụ giao điểm thủ công sau một lần dùng</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>Bắt điểm</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>Giao điểm thủ công</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>First entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng thứ nhất</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng thứ hai</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Giao điểm thủ công</translation>
     </message>
 </context>
 <context>
@@ -12095,7 +12101,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapMiddle/SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Trung điểm</translation>
     </message>
 </context>
 <context>
@@ -12103,7 +12109,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Trung điểm thủ công</translation>
     </message>
 </context>
 <context>
@@ -12111,7 +12117,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapOnEntity/SnapOnEntityInit.js" line="+2"/>
         <source>&amp;On Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Trên đối tượng</translation>
     </message>
 </context>
 <context>
@@ -12119,7 +12125,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapPerpendicular/SnapPerpendicularInit.js" line="+2"/>
         <source>&amp;Perpendicular</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vuông góc</translation>
     </message>
 </context>
 <context>
@@ -12127,7 +12133,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapReference/SnapReferenceInit.js" line="+2"/>
         <source>&amp;Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tham chiếu</translation>
     </message>
 </context>
 <context>
@@ -12135,7 +12141,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapSelection/SnapSelectionInit.js" line="+2"/>
         <source>&amp;Selection Reference Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Điểm tham chiếu vùng chọn</translation>
     </message>
 </context>
 <context>
@@ -12143,7 +12149,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapTangential/SnapTangentialInit.js" line="+2"/>
         <source>&amp;Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tiếp tuyến</translation>
     </message>
 </context>
 <context>
@@ -12151,7 +12157,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapXManual/SnapXManualInit.js" line="+2"/>
         <source>&amp;X/Y from Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;X/Y từ điểm</translation>
     </message>
 </context>
 <context>
@@ -12159,7 +12165,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapYManual/SnapYManualInit.js" line="+2"/>
         <source>&amp;Y/X from Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Y/X từ điểm</translation>
     </message>
 </context>
 <context>
@@ -12167,12 +12173,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Spline/Spline.js" line="+72"/>
         <source>Spline Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ spline</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Spline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Spline</translation>
     </message>
 </context>
 <context>
@@ -12180,47 +12186,47 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.js" line="+60"/>
         <source>First control point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm điều khiển thứ nhất</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Next control point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm điều khiển tiếp theo</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
         <source>Undo Last Control Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoàn tác điểm điều khiển cuối</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Degree:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bậc:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose Spline Degree</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn bậc spline</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Tick for Closed Spline</source>
-        <translation type="unfinished"></translation>
+        <translation>Đánh dấu cho spline kín</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Closed</source>
-        <translation type="unfinished"></translation>
+        <translation>Khép kín</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Spline (điểm điều khiển)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw spline from control points</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ spline từ các điểm điều khiển</translation>
     </message>
 </context>
 <context>
@@ -12228,7 +12234,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/SplineToLine/SplineToLine.js" line="+71"/>
         <source>Convert Straight Splines to Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Chuyển spline thẳng thành đường thẳng</translation>
     </message>
 </context>
 <context>
@@ -12236,52 +12242,52 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47"/>
         <source>Status bar font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Phông thanh trạng thái:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Status Bar Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widget thanh trạng thái</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinate display</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiển thị tọa độ</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Mouse display</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiển thị chuột</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selection display</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiển thị vùng chọn</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Progress display</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiển thị tiến độ</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Show status tips</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện gợi ý trạng thái</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/StatusBar/StatusBar.js" line="+32"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widget</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Status Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Thanh trạng thái</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Status Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Thanh trạng thái</translation>
     </message>
 </context>
 <context>
@@ -12289,37 +12295,37 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Stretch/Stretch.js" line="+59"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc thứ nhất</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc thứ hai</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm đích</translation>
     </message>
     <message>
         <location line="+141"/>
         <source>No selected entities in given range</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có đối tượng đã chọn trong phạm vi cho trước</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No entities in given range</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có đối tượng trong phạm vi cho trước</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kéo giãn</translation>
     </message>
 </context>
 <context>
@@ -12327,73 +12333,73 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/SvgImport/PreferencesPage.ui" line="+17"/>
         <source>Splines</source>
-        <translation type="unfinished"></translation>
+        <translation>Spline</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
-        <translation type="unfinished"></translation>
+        <translation>Tự động chuyển spline thành đường thẳng / cung khi phù hợp</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Lớp</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import groups as layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhập các nhóm dưới dạng lớp</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường dẫn</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import path lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhập bề rộng nét đường dẫn</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp</translation>
     </message>
     <message>
         <location line="+0"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhập SVG</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Import SVG</source>
-        <translation type="unfinished"></translation>
+        <translation>Nhập SVG</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>SVG Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp SVG</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tất cả tệp</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>
         <source>Resolution:</source>
-        <translation type="unfinished"></translation>
+        <translation>Độ phân giải:</translation>
     </message>
     <message>
         <location line="+57"/>
         <source>Pixels / Inch</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm ảnh / Inch</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nhập SVG...</translation>
     </message>
 </context>
 <context>
@@ -12401,7 +12407,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp SVG %1</translation>
     </message>
 </context>
 <context>
@@ -12409,17 +12415,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/TabBar/PreferencesPage.ui" line="+17"/>
         <source>Show tab bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện thanh thẻ</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/TabBar/TabBar.js" line="+24"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widget</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Tab Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Thanh thẻ</translation>
     </message>
 </context>
 <context>
@@ -12427,109 +12433,109 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Text/Text.js" line="+89"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Văn bản:</translation>
     </message>
     <message>
         <location line="+33"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+33"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều cao:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextInit.js" line="+2"/>
         <source>&amp;Text</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Văn bản</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw text</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ văn bản</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
         <source>Font size in text dialog preview:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cỡ phông trong xem trước hộp thoại văn bản:</translation>
     </message>
     <message>
         <location line="+99"/>
         <source>Show font preview in font controls</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện xem trước phông trong điều khiển phông</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Use reduced selection of fonts:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng tập phông rút gọn:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Uncheck all</source>
-        <translation type="unfinished"></translation>
+        <translation>Bỏ chọn tất cả</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Check all</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn tất cả</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-17"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Văn bản</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Text height</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều cao văn bản</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Letter spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách chữ cái</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hướng:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Counter Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngược chiều kim đồng hồ</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo chiều kim đồng hồ</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Fit text to line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Khít văn bản theo đường, cung hoặc đường tròn</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Fit</source>
-        <translation type="unfinished"></translation>
+        <translation>Vừa khít</translation>
     </message>
 </context>
 <context>
@@ -12537,22 +12543,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.js" line="+41"/>
         <source>Arrow position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí mũi tên</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Choose text</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn văn bản</translation>
     </message>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã tạo đường dẫn thành công</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đường dẫn căn theo văn bản</translation>
     </message>
 </context>
 <context>
@@ -12561,23 +12567,23 @@ is already in the list.</source>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.js" line="+99"/>
         <location line="+1"/>
         <source>Select Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đối tượng</translation>
     </message>
     <message>
         <location line="+6"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Vị trí</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js" line="+2"/>
         <source>&amp;Text Along Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Văn bản dọc theo đối tượng</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw text along an entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ văn bản dọc theo một đối tượng</translation>
     </message>
 </context>
 <context>
@@ -12585,344 +12591,344 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+251"/>
         <source>Default value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Giá trị mặc định:</translation>
     </message>
     <message>
         <location line="+275"/>
         <source>&amp;Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hoàn tác</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Làm lại</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>Cắ&amp;t</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sao chép</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dán</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đậm</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nghiêng</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Gạch chân</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Subscript</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chỉ số dưới</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Superscript</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chỉ số trên</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Color...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Màu...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Special Characters...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ký tự đặc biệt...</translation>
     </message>
     <message>
         <location line="+349"/>
         <source>Others...</source>
-        <translation type="unfinished"></translation>
+        <translation>Khác...</translation>
     </message>
     <message>
         <location line="+136"/>
         <source>Degree</source>
-        <translation type="unfinished"></translation>
+        <translation>Bậc</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus-Minus</source>
-        <translation type="unfinished"></translation>
+        <translation>Cộng trừ</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường kính</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal</source>
-        <translation type="unfinished"></translation>
+        <translation>Gần bằng</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Multiplication</source>
-        <translation type="unfinished"></translation>
+        <translation>Phép nhân</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation type="unfinished"></translation>
+        <translation>Phép chia</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished"></translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pi</source>
-        <translation type="unfinished"></translation>
+        <translation>Pi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Đơn vị</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Not equal</source>
-        <translation type="unfinished"></translation>
+        <translation>Không bằng</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation type="unfinished"></translation>
+        <translation>Ôm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Omega</source>
-        <translation type="unfinished"></translation>
+        <translation>Omega</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Squared</source>
-        <translation type="unfinished"></translation>
+        <translation>Bình phương</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation type="unfinished"></translation>
+        <translation>Lập phương</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng trắng không ngắt</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Văn bản</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Main Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Phông chính</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều cao:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Text Height in Drawing Units</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiều cao văn bản theo đơn vị bản vẽ</translation>
     </message>
     <message>
         <location line="+18"/>
         <location line="+274"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Đậm</translation>
     </message>
     <message>
         <location line="-267"/>
         <location line="+280"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Nghiêng</translation>
     </message>
     <message>
         <location line="-266"/>
         <source>Text fits on one line and has no formatting</source>
-        <translation type="unfinished"></translation>
+        <translation>Văn bản vừa trên một dòng và không có định dạng</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Simple text</source>
-        <translation type="unfinished"></translation>
+        <translation>Văn bản đơn giản</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>(một dòng, không định dạng)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Rich Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Văn bản định dạng</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>Cắt</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Sao chép</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Dán</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Ctrl+B</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+B</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Ctrl+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+I</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Insert Symbol...</source>
-        <translation type="unfinished"></translation>
+        <translation>Chèn ký hiệu...</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Nguồn</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Attribute Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Chi tiết thuộc tính</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Tag:</source>
-        <translation type="unfinished"></translation>
+        <translation>Thẻ:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lời nhắc:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Giá trị:</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Text Geometry</source>
-        <translation type="unfinished"></translation>
+        <translation>Hình học văn bản</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Line spacing factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hệ số khoảng cách dòng:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Line Spacing Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Hệ số khoảng cách dòng</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Rotation Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc xoay</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Alignment</source>
-        <translation type="unfinished"></translation>
+        <translation>Căn chỉnh</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Top Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Trên trái</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Top Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Trên - giữa</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Middle Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Giữa - phải</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Top Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Trên phải</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Middle Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Giữa - giữa</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Middle Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Giữa - trái</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Chân trái</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Chân giữa</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Chân phải</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Bottom Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Dưới trái</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Bottom Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Dưới giữa</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Bottom Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Dưới phải</translation>
     </message>
 </context>
 <context>
@@ -12930,12 +12936,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/TextPreferences.js" line="+30"/>
         <source>Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Văn bản</translation>
     </message>
 </context>
 <context>
@@ -12943,7 +12949,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
         <source>User interface theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chủ đề giao diện người dùng:</translation>
     </message>
 </context>
 <context>
@@ -12951,12 +12957,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Chung</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Chủ đề</translation>
     </message>
 </context>
 <context>
@@ -12964,7 +12970,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation type="unfinished"></translation>
+        <translation>Ba: Phía dưới</translation>
     </message>
 </context>
 <context>
@@ -12972,7 +12978,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>Ba: Ngang</translation>
     </message>
 </context>
 <context>
@@ -12980,7 +12986,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>Ba: Dọc</translation>
     </message>
 </context>
 <context>
@@ -12988,7 +12994,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToBack/ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation type="unfinished"></translation>
+        <translation>Đưa xuống &amp;dưới cùng</translation>
     </message>
 </context>
 <context>
@@ -12996,7 +13002,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToFront/ToFrontInit.js" line="+2"/>
         <source>Bring to &amp;Front</source>
-        <translation type="unfinished"></translation>
+        <translation>Đưa lên &amp;trước</translation>
     </message>
 </context>
 <context>
@@ -13004,7 +13010,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/ToggleBlockVisibility/ToggleBlockVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bật/tắt hiển thị</translation>
     </message>
 </context>
 <context>
@@ -13012,7 +13018,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/ToggleGrid/ToggleGrid.js" line="+90"/>
         <source>&amp;Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lưới</translation>
     </message>
 </context>
 <context>
@@ -13020,7 +13026,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/ToggleLayerLock/ToggleLayerLockInit.js" line="+2"/>
         <source>&amp;Toggle Lock Status</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bật/tắt trạng thái khóa</translation>
     </message>
 </context>
 <context>
@@ -13028,7 +13034,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/ToggleLayerVisibility/ToggleLayerVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bật/tắt hiển thị</translation>
     </message>
 </context>
 <context>
@@ -13036,17 +13042,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cỡ biểu tượng:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Pixel</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm ảnh</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation type="unfinished"></translation>
+        <translation>px</translation>
     </message>
 </context>
 <context>
@@ -13054,12 +13060,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+85"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widget</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Thanh công cụ</translation>
     </message>
 </context>
 <context>
@@ -13067,12 +13073,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/ToolBarPreferences.js" line="+30"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widget</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Thanh công cụ</translation>
     </message>
 </context>
 <context>
@@ -13080,7 +13086,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/ToolMatrixFocus/ToolMatrixFocusInit.js" line="+2"/>
         <source>&amp;Focus on Tool Matrix</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chuyển tiêu điểm sang ma trận công cụ</translation>
     </message>
 </context>
 <context>
@@ -13088,7 +13094,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.ui" line="+40"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Bộ lọc</translation>
     </message>
 </context>
 <context>
@@ -13096,7 +13102,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Transform.js" line="+47"/>
         <source>This tool requires a selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ này yêu cầu một vùng chọn</translation>
     </message>
 </context>
 <context>
@@ -13104,52 +13110,52 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Translate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng hộp thoại cho tùy chọn công cụ</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.js" line="+44"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiệu chỉnh</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Di chuyển/Sao chép</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm tham chiếu</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm đích</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Sao chép</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số bản sao:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng lớp và thuộc tính hiện hành</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>
         <source>&amp;Move / Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Di chuyển / Sao chép</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
-        <translation type="unfinished"></translation>
+        <translation>Di chuyển hoặc sao chép đối tượng một hoặc nhiều lần</translation>
     </message>
 </context>
 <context>
@@ -13157,32 +13163,32 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateDialog.ui" line="+14"/>
         <source>Move / Copy Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Tùy chọn di chuyển / sao chép</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation>Số bản sao</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xóa bản gốc</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Giữ bản gốc</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nhiều bản sao</translation>
     </message>
     <message>
         <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng lớp hiện hành và &amp;thuộc tính</translation>
     </message>
 </context>
 <context>
@@ -13190,43 +13196,43 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng hộp thoại cho tùy chọn công cụ</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiệu chỉnh</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation type="unfinished"></translation>
+        <translation>Di chuyển/Xoay</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
         <source>M&amp;ove and Rotate</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Di chuyển và xoay</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Sao chép</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation>Số bản sao:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng lớp và thuộc tính hiện hành</translation>
     </message>
 </context>
 <context>
@@ -13234,37 +13240,37 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateDialog.ui" line="+14"/>
         <source>Move and Rotate Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Tùy chọn di chuyển và xoay</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation>Số bản sao</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xóa bản gốc</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Giữ bản gốc</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nhiều bản sao</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>&amp;Angle (a):</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Góc (a):</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Dùng lớp hiện hành và &amp;thuộc tính</translation>
     </message>
 </context>
 <context>
@@ -13272,37 +13278,37 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Trim/Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đối tượng giới hạn</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose entity to trim</source>
-        <translation type="unfinished"></translation>
+        <translation>Chọn đối tượng để cắt xén</translation>
     </message>
     <message>
         <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hai đối tượng không cắt nhau, hoặc hiện chưa được hỗ trợ để cắt xén.</translation>
     </message>
     <message>
         <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể cắt xén đối tượng thứ nhất.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể cắt xén đối tượng.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể cắt xén đối tượng thứ hai.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cắt xén</translation>
     </message>
 </context>
 <context>
@@ -13310,7 +13316,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/TrimBoth/TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
-        <translation type="unfinished"></translation>
+        <translation>Cắt xén &amp;cả hai</translation>
     </message>
 </context>
 <context>
@@ -13318,7 +13324,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/Tutorials.js" line="+56"/>
         <source>Script &amp;Tutorials</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hướng dẫn kịch bản</translation>
     </message>
 </context>
 <context>
@@ -13326,7 +13332,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>Hai: Ngang</translation>
     </message>
 </context>
 <context>
@@ -13334,7 +13340,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>Hai: Dọc</translation>
     </message>
 </context>
 <context>
@@ -13342,22 +13348,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
-        <translation type="unfinished"></translation>
+        <translation>Các thiết lập này ảnh hưởng đến độ phân giải và tỷ lệ của giao diện người dùng QCAD. Có thể điều chỉnh các tùy chọn này nếu có vấn đề với giao diện người dùng của QCAD, chẳng hạn như biểu tượng hoặc nhãn văn bản quá lớn hoặc quá nhỏ.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto screen scale factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Hệ số tỷ lệ màn hình tự động</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Enable high DPI scaling</source>
-        <translation type="unfinished"></translation>
+        <translation>Bật co giãn DPI cao</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Scale factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hệ số tỷ lệ:</translation>
     </message>
 </context>
 <context>
@@ -13365,12 +13371,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/UiPreferences.js" line="+29"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Chung</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>User Interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Giao diện người dùng</translation>
     </message>
 </context>
 <context>
@@ -13378,7 +13384,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Undo/UndoInit.js" line="+2"/>
         <source>&amp;Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hoàn tác</translation>
     </message>
 </context>
 <context>
@@ -13386,148 +13392,148 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing unit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đơn vị bản vẽ:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paper unit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đơn vị giấy:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Measurement system (for line types and hatch patterns):</source>
-        <translation type="unfinished"></translation>
+        <translation>Hệ đo lường (cho kiểu nét và mẫu mặt cắt):</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Mặc định cho bản vẽ mới</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished"></translation>
+        <translation>Đơn vị bản vẽ</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Chung</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Không</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Inch</source>
-        <translation type="unfinished"></translation>
+        <translation>Inch</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foot</source>
-        <translation type="unfinished"></translation>
+        <translation>Foot</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mile</source>
-        <translation type="unfinished"></translation>
+        <translation>Dặm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Millimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>Milimét</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Centimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>Xentimét</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Meter</source>
-        <translation type="unfinished"></translation>
+        <translation>Mét</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Kilometer</source>
-        <translation type="unfinished"></translation>
+        <translation>Kilômét</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Microinch</source>
-        <translation type="unfinished"></translation>
+        <translation>Micrôinch</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mil</source>
-        <translation type="unfinished"></translation>
+        <translation>Mil</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Yard</source>
-        <translation type="unfinished"></translation>
+        <translation>Yard</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angstrom</source>
-        <translation type="unfinished"></translation>
+        <translation>Angstrom</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Nanometer</source>
-        <translation type="unfinished"></translation>
+        <translation>Nanômét</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Micron</source>
-        <translation type="unfinished"></translation>
+        <translation>Micrômét</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>Đêximét</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Đêcamét</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hectometer</source>
-        <translation type="unfinished"></translation>
+        <translation>Héctômét</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gigameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Gigamét</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Astro</source>
-        <translation type="unfinished"></translation>
+        <translation>Thiên văn</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lightyear</source>
-        <translation type="unfinished"></translation>
+        <translation>Năm ánh sáng</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Parsec</source>
-        <translation type="unfinished"></translation>
+        <translation>Parsec</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Imperial</source>
-        <translation type="unfinished"></translation>
+        <translation>Hệ Anh</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation>Hệ mét</translation>
     </message>
 </context>
 <context>
@@ -13535,7 +13541,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/UnlockAllLayers/UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mở khóa tất cả lớp</translation>
     </message>
 </context>
 <context>
@@ -13543,17 +13549,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
         <source>View Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ khung nhìn</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Xem</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xem</translation>
     </message>
 </context>
 <context>
@@ -13561,17 +13567,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/ViewToolBars/ViewToolBarsPostInit.js" line="+6"/>
         <source>&amp;Toolbars and Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Thanh công cụ và widget</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widget</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Thanh công cụ</translation>
     </message>
 </context>
 <context>
@@ -13579,17 +13585,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
-        <translation type="unfinished"></translation>
+        <translation>Khung nhìn</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Xem trước</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách lưới &lt; khoảng cách lưới meta</translation>
     </message>
 </context>
 <context>
@@ -13597,22 +13603,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/ViewportSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Mặc định cho bản vẽ mới</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layout - Viewports</source>
-        <translation type="unfinished"></translation>
+        <translation>Bố cục - Khung nhìn</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Bố cục</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewports</source>
-        <translation type="unfinished"></translation>
+        <translation>Khung nhìn</translation>
     </message>
 </context>
 <context>
@@ -13620,22 +13626,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
-        <translation type="unfinished"></translation>
+        <translation>Dữ liệu được thả không được hỗ trợ</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể nhập tệp vào bản vẽ hiện có:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Importing file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang nhập tệp:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Importing URL: </source>
-        <translation type="unfinished"></translation>
+        <translation>Đang nhập URL: </translation>
     </message>
 </context>
 <context>
@@ -13643,7 +13649,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/Website/WebsiteInit.js" line="+2"/>
         <source>Visit &amp;Website</source>
-        <translation type="unfinished"></translation>
+        <translation>Truy cập &amp;trang web</translation>
     </message>
 </context>
 <context>
@@ -13651,250 +13657,250 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/WidgetFactory.js" line="+1180"/>
         <source>Restore defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Khôi phục mặc định</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Insert Symbol</source>
-        <translation type="unfinished"></translation>
+        <translation>Chèn ký hiệu</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Degrees</source>
-        <translation type="unfinished"></translation>
+        <translation>Độ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus/Minus</source>
-        <translation type="unfinished"></translation>
+        <translation>Cộng/Trừ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường kính</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation type="unfinished"></translation>
+        <translation>Phép chia</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost Equal</source>
-        <translation type="unfinished"></translation>
+        <translation>Gần bằng</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Góc</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Cung tròn</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Asymptotically Equal</source>
-        <translation type="unfinished"></translation>
+        <translation>Bằng tiệm cận</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Center Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường tâm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished"></translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Electrical Phase</source>
-        <translation type="unfinished"></translation>
+        <translation>Pha điện</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Đơn vị</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Multiplication</source>
-        <translation type="unfinished"></translation>
+        <translation>Phép nhân</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Not Equal</source>
-        <translation type="unfinished"></translation>
+        <translation>Không bằng</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation type="unfinished"></translation>
+        <translation>Ôm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Omega</source>
-        <translation type="unfinished"></translation>
+        <translation>Omega</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>omega</source>
-        <translation type="unfinished"></translation>
+        <translation>omega</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Phi</source>
-        <translation type="unfinished"></translation>
+        <translation>Phi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>phi</source>
-        <translation type="unfinished"></translation>
+        <translation>phi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alt phi</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt phi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pi</source>
-        <translation type="unfinished"></translation>
+        <translation>Pi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Property Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường ranh giới</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ số dưới 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square Root</source>
-        <translation type="unfinished"></translation>
+        <translation>Căn bậc hai</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation type="unfinished"></translation>
+        <translation>Hình vuông</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Squared</source>
-        <translation type="unfinished"></translation>
+        <translation>Bình phương</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation type="unfinished"></translation>
+        <translation>Lập phương</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Stacked text</source>
-        <translation type="unfinished"></translation>
+        <translation>Văn bản xếp chồng</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Measured value</source>
-        <translation type="unfinished"></translation>
+        <translation>Giá trị đo được</translation>
     </message>
     <message>
         <location line="+171"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Trái</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Tâm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Phải</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Aligned</source>
-        <translation type="unfinished"></translation>
+        <translation>Song song</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Giữa</translation>
     </message>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation type="unfinished"></translation>
+        <translation>Vừa khít</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Trên</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Base</source>
-        <translation type="unfinished"></translation>
+        <translation>Cơ sở</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Dưới</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Scientific</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoa học</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal</source>
-        <translation type="unfinished"></translation>
+        <translation>Thập phân</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Engineering</source>
-        <translation type="unfinished"></translation>
+        <translation>Kỹ thuật</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectural</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiến trúc</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fractional</source>
-        <translation type="unfinished"></translation>
+        <translation>Phân số</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Centered</source>
-        <translation type="unfinished"></translation>
+        <translation>Căn giữa</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+87"/>
         <source>Above</source>
-        <translation type="unfinished"></translation>
+        <translation>Phía trên</translation>
     </message>
     <message>
         <location line="-75"/>
         <location line="+38"/>
         <source>Show trailing zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện các số 0 ở cuối</translation>
     </message>
     <message>
         <location line="-37"/>
         <source>Include 0&apos;0&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Bao gồm 0&apos;0&quot;</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13905,82 +13911,82 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+2"/>
         <source>(unsupported)</source>
-        <translation type="unfinished"></translation>
+        <translation>(không hỗ trợ)</translation>
     </message>
     <message>
         <location line="-39"/>
         <source>Include 0&apos;, suppress 0&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Bao gồm 0&apos;, bỏ 0&quot;</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Include 0&quot;, suppress 0&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Bao gồm 0&quot;, bỏ 0&apos;</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+35"/>
         <source>Suppress leading zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation>Bỏ các số 0 ở đầu</translation>
     </message>
     <message>
         <location line="-34"/>
         <location line="+35"/>
         <source>Suppress trailing zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation>Bỏ các số 0 ở cuối</translation>
     </message>
     <message>
         <location line="-34"/>
         <location line="+35"/>
         <source>Suppress leading / trailing zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation>Bỏ các số 0 ở đầu / cuối</translation>
     </message>
     <message>
         <location line="-12"/>
         <source>Decimal Degrees</source>
-        <translation type="unfinished"></translation>
+        <translation>Độ thập phân</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Deg/min/sec</source>
-        <translation type="unfinished"></translation>
+        <translation>Độ/phút/giây</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gradians</source>
-        <translation type="unfinished"></translation>
+        <translation>Grad</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Radians</source>
-        <translation type="unfinished"></translation>
+        <translation>Radian</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Surveyor&apos;s units</source>
-        <translation type="unfinished"></translation>
+        <translation>Đơn vị trắc địa</translation>
     </message>
     <message>
         <location line="+29"/>
         <location line="+4"/>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo chiều kim đồng hồ</translation>
     </message>
     <message>
         <location line="-3"/>
         <location line="+4"/>
         <source>Counterclockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Ngược chiều kim đồng hồ</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Preceding</source>
-        <translation type="unfinished"></translation>
+        <translation>Đứng trước</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Không</translation>
     </message>
 </context>
 <context>
@@ -13988,7 +13994,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/Widgets.js" line="+56"/>
         <source>&amp;Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Widget</translation>
     </message>
 </context>
 <context>
@@ -13996,12 +14002,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Window/Window.js" line="+122"/>
         <source>&amp;Window</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cửa sổ</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Window Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ cửa sổ</translation>
     </message>
 </context>
 <context>
@@ -14009,7 +14015,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/WindowZoom/WindowZoomInit.js" line="+2"/>
         <source>&amp;Window Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Thu phóng theo cửa sổ</translation>
     </message>
 </context>
 <context>
@@ -14017,12 +14023,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Construction Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đường dựng hình ngang</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw horizontal construction line</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường dựng hình ngang</translation>
     </message>
 </context>
 <context>
@@ -14030,12 +14036,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Construction Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đường dựng hình dọc</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw vertical construction line</source>
-        <translation type="unfinished"></translation>
+        <translation>Vẽ đường dựng hình dọc</translation>
     </message>
 </context>
 <context>
@@ -14043,17 +14049,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/Zoom.js" line="+51"/>
         <source>Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Thu phóng</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Zoom Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Công cụ thu phóng</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Thu phóng</translation>
     </message>
 </context>
 <context>
@@ -14061,7 +14067,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomIn/ZoomInInit.js" line="+2"/>
         <source>Zoom &amp;In</source>
-        <translation type="unfinished"></translation>
+        <translation>Phóng &amp;to</translation>
     </message>
 </context>
 <context>
@@ -14069,7 +14075,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomOut/ZoomOutInit.js" line="+2"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished"></translation>
+        <translation>Thu &amp;nhỏ</translation>
     </message>
 </context>
 <context>
@@ -14077,12 +14083,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelection.js" line="+31"/>
         <source>No selection found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không tìm thấy vùng chọn.</translation>
     </message>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelectionInit.js" line="+2"/>
         <source>Zoom to &amp;Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Thu phóng đến &amp;vùng chọn</translation>
     </message>
 </context>
 <context>
@@ -14090,22 +14096,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/autostart.js" line="+237"/>
         <source>Loading add-on translations...</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang nạp bản dịch tiện ích bổ sung...</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Loading add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang nạp tiện ích bổ sung...</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Initializing add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang khởi tạo tiện ích bổ sung...</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Initializing add-ons:</source>
-        <translation type="unfinished"></translation>
+        <translation>Đang khởi tạo tiện ích bổ sung:</translation>
     </message>
 </context>
 <context>
@@ -14113,491 +14119,491 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/library.js" line="+1304"/>
         <source>Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Object</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không xác định</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Object</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không xác định</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Khối</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block</source>
-        <translation type="unfinished"></translation>
+        <translation>Khối</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Lớp</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Lớp</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layouts</source>
-        <translation type="unfinished"></translation>
+        <translation>Bố cục</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Bố cục</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Linetypes</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiểu nét</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiểu nét</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Views</source>
-        <translation type="unfinished"></translation>
+        <translation>Khung nhìn</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Xem</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Dimension Styles</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiểu kích thước</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiểu kích thước</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>3dFaces</source>
-        <translation type="unfinished"></translation>
+        <translation>3dFaces</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>3dFace</source>
-        <translation type="unfinished"></translation>
+        <translation>3dFace</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References</source>
-        <translation type="unfinished"></translation>
+        <translation>Tham chiếu khối</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Tham chiếu khối</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Tham chiếu khối và thuộc tính</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Tham chiếu khối và thuộc tính</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arcs</source>
-        <translation type="unfinished"></translation>
+        <translation>Cung tròn</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Cung tròn</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Thuộc tính</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute</source>
-        <translation type="unfinished"></translation>
+        <translation>Thuộc tính</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attribute Definitions</source>
-        <translation type="unfinished"></translation>
+        <translation>Định nghĩa thuộc tính</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute Definition</source>
-        <translation type="unfinished"></translation>
+        <translation>Định nghĩa thuộc tính</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường tròn</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường tròn</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Aligned Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước song song</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Aligned Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước song song</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước góc</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước góc</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Lines)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước góc (2 đường)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Lines)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước góc (2 đường)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Points)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước góc (3 điểm)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Points)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước góc (3 điểm)</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+0"/>
         <source>Arc Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước cung</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Diametric Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước đường kính</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Diametric Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước đường kính</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước tọa độ</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ordinate Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước tọa độ</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước xoay</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước xoay</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Radial Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước bán kính</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Radial Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích thước bán kính</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ellipses</source>
-        <translation type="unfinished"></translation>
+        <translation>Elip</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Elip</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation type="unfinished"></translation>
+        <translation>Mặt cắt</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Mặt cắt</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Images</source>
-        <translation type="unfinished"></translation>
+        <translation>Hình ảnh</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Hình ảnh</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường dẫn</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường dẫn</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Tolerances</source>
-        <translation type="unfinished"></translation>
+        <translation>Dung sai</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>Dung sai</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường thẳng</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường thẳng</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Infinite Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường vô hạn</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Infinite Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Đường vô hạn</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rays</source>
-        <translation type="unfinished"></translation>
+        <translation>Tia</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation type="unfinished"></translation>
+        <translation>Tia</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Điểm</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Polylines</source>
-        <translation type="unfinished"></translation>
+        <translation>Đa tuyến</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Đa tuyến</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng đặc</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Solid</source>
-        <translation type="unfinished"></translation>
+        <translation>Đặc</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation type="unfinished"></translation>
+        <translation>Dò</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation type="unfinished"></translation>
+        <translation>Dò</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation type="unfinished"></translation>
+        <translation>Mặt</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation type="unfinished"></translation>
+        <translation>Mặt</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Splines</source>
-        <translation type="unfinished"></translation>
+        <translation>Spline</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Spline</source>
-        <translation type="unfinished"></translation>
+        <translation>Spline</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+0"/>
         <source>Text based</source>
-        <translation type="unfinished"></translation>
+        <translation>Dựa trên văn bản</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Texts</source>
-        <translation type="unfinished"></translation>
+        <translation>Văn bản</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Văn bản</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation type="unfinished"></translation>
+        <translation>Khung nhìn</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation type="unfinished"></translation>
+        <translation>Khung nhìn</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished"></translation>
+        <translation>Wipeout</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished"></translation>
+        <translation>Wipeout</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished"></translation>
+        <translation>Tham chiếu ngoài</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Tham chiếu ngoài</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+9"/>
         <source>Unknown Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không xác định</translation>
     </message>
     <message>
         <location line="-9"/>
         <location line="+9"/>
         <source>Unknown Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Đối tượng không xác định</translation>
     </message>
     <message>
         <location line="+106"/>
         <source>All CAD Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tất cả tệp CAD</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DXF Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp DXF</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>SVG Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp SVG</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DXF Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Bản vẽ DXF</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DWG Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Bản vẽ DWG</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>PDF File</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp PDF</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>PDF/A-1B File</source>
-        <translation type="unfinished"></translation>
+        <translation>Tệp PDF/A-1B</translation>
     </message>
 </context>
 <context>
@@ -14605,7 +14611,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Khung nhìn 1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -14613,7 +14619,7 @@ is already in the list.</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Display Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiển thị lưới</translation>
     </message>
     <message>
         <location line="-446"/>
@@ -14621,7 +14627,7 @@ is already in the list.</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Isometric Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Lưới đẳng cự</translation>
     </message>
     <message>
         <location line="-449"/>
@@ -14629,7 +14635,7 @@ is already in the list.</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Grid Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách lưới</translation>
     </message>
     <message>
         <location line="-450"/>
@@ -14641,7 +14647,7 @@ is already in the list.</source>
         <location line="+116"/>
         <location line="+30"/>
         <source>Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Y:</translation>
     </message>
     <message>
         <location line="-512"/>
@@ -14653,7 +14659,7 @@ is already in the list.</source>
         <location line="+62"/>
         <location line="+63"/>
         <source>X:</source>
-        <translation type="unfinished"></translation>
+        <translation>X:</translation>
     </message>
     <message>
         <location line="-462"/>
@@ -14661,22 +14667,22 @@ is already in the list.</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Meta Grid Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Khoảng cách lưới meta</translation>
     </message>
     <message>
         <location line="-390"/>
         <source>Viewport 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Khung nhìn 2</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Khung nhìn 3</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 4</source>
-        <translation type="unfinished"></translation>
+        <translation>Khung nhìn 4</translation>
     </message>
 </context>
 <context>
@@ -14688,22 +14694,22 @@ is already in the list.</source>
         <location line="+66"/>
         <location line="+124"/>
         <source>ID does not refer to an entity:</source>
-        <translation type="unfinished"></translation>
+        <translation>ID không tham chiếu đến một đối tượng:</translation>
     </message>
     <message>
         <location line="-42"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể cắt xén đối tượng thứ nhất.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể cắt xén đối tượng.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể cắt xén đối tượng thứ hai.</translation>
     </message>
 </context>
 </TS>
