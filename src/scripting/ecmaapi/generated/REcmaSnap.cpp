@@ -61,6 +61,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, finishEvent, "finishEvent");
             
+            REcmaHelper::registerFunction(&engine, proto, getSnapReferencePoints, "getSnapReferencePoints");
+            
             REcmaHelper::registerFunction(&engine, proto, getEntityIds, "getEntityIds");
             
             REcmaHelper::registerFunction(&engine, proto, getStatus, "getStatus");
@@ -162,6 +164,51 @@
 
     ctor.setProperty("CoordinatePolar",
     QScriptValue(RSnap::CoordinatePolar),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("TopLeft",
+    QScriptValue(RSnap::TopLeft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("TopMiddle",
+    QScriptValue(RSnap::TopMiddle),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("TopRight",
+    QScriptValue(RSnap::TopRight),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("MiddleLeft",
+    QScriptValue(RSnap::MiddleLeft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("MiddleMiddle",
+    QScriptValue(RSnap::MiddleMiddle),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("MiddleRight",
+    QScriptValue(RSnap::MiddleRight),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("BottomLeft",
+    QScriptValue(RSnap::BottomLeft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("BottomMiddle",
+    QScriptValue(RSnap::BottomMiddle),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("BottomRight",
+    QScriptValue(RSnap::BottomRight),
     QScriptValue::ReadOnly);
 
 
@@ -648,6 +695,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSnap::finishEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnap::getSnapReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnap::getSnapReferencePoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnap::getSnapReferencePoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSnap* self = 
+                        getSelf("getSnapReferencePoints", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RRefPoint >'
+    QList < RRefPoint > cppResult =
+        
+               self->getSnapReferencePoints();
+        // return type: QList < RRefPoint >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnap.getSnapReferencePoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnap::getSnapReferencePoints", context, engine);
             return result;
         }
          QScriptValue

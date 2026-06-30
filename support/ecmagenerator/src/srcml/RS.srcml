@@ -910,6 +910,8 @@
      */</comment>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>convert</name><parameter_list>(<param><decl><type><name>const</name> <name>QByteArray</name>&amp;</type> <name>str</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>codecName</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>getImageFilePath</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>docFileName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>importedFileName</name></decl></param>, <param><decl><type><name>const</name> <name>QByteArray</name>&amp;</type> <name>imageData</name></decl></param>)</parameter_list>;</function_decl>
+
     <function><type><name>static</name> <name>int</name></type> <name>getMetaType</name><parameter_list>(<param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
 <cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
         <return>return <expr><name>v</name>.<call><name>metaType</name><argument_list>()</argument_list></call>.<call><name>id</name><argument_list>()</argument_list></call></expr>;</return>

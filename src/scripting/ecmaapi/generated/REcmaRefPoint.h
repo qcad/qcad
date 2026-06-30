@@ -66,6 +66,12 @@
         setTertiary
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isFromSnap
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setFromSnap
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isIgnore
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

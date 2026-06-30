@@ -387,5 +387,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="drawPolygon" cppName="drawPolygon"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="QPolygonF &amp;" typeName="QPolygonF"
+        name="polygon" isConst="true" />
+      </variant>
+    </method>
   </class>
 </unit>

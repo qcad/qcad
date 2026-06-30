@@ -139,6 +139,9 @@
         getSweep
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setSweep
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTrimEnd
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

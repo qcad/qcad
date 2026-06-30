@@ -44,6 +44,15 @@
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
     
     
     // Constructors:
@@ -81,6 +90,12 @@
     
     
       void finishEvent(
+                
+            );
+        
+    
+    
+      QList < RRefPoint > getSnapReferencePoints(
                 
             );
         

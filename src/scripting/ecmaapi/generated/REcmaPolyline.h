@@ -244,6 +244,9 @@
         convertArcToLineSegmentsLength
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        splitMajorArcs
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         contains
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

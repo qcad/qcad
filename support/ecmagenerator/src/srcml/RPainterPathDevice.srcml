@@ -44,6 +44,14 @@
     <destructor_decl><specifier>virtual</specifier> <name>~RPainterPathDevice</name><parameter_list>()</parameter_list>;</destructor_decl>
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPaths</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function><type><name>void</name></type> <name>setSize</name><parameter_list>(<param><decl><type><name>const</name> <name>QSize</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>size</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setDpi</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>dpi</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
 </public><protected>protected:
     <function_decl><type><name>QPaintEngine</name>*</type> <name>paintEngine</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
@@ -51,6 +59,8 @@
 
 </protected><private>private:
     <decl_stmt><decl><type><name>RPainterPathEngine</name>*</type> <name>engine</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QSize</name></type> <name>size</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>dpi</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RPainterPathDevice*</argument>)</argument_list></macro>

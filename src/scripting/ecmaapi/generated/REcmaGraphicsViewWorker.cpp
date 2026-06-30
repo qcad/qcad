@@ -171,6 +171,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, fillRect, "fillRect");
             
+            REcmaHelper::registerFunction(&engine, proto, drawPolygon, "drawPolygon");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RGraphicsViewWorker*>(), *proto);
 
@@ -3539,6 +3541,72 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewWorker::fillRect", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewWorker::drawPolygon
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewWorker::drawPolygon", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewWorker::drawPolygon";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewWorker* self = 
+                        getSelf("drawPolygon", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QPolygonF */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QPolygonF*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QPolygonF*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+
+                           return REcmaHelper::throwError("RGraphicsViewWorker: Argument 0 is not of type QPolygonF* or QSharedPointer<QPolygonF>.",
+                               context);
+                    }
+                    QPolygonF& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->drawPolygon(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewWorker.drawPolygon().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewWorker::drawPolygon", context, engine);
             return result;
         }
          QScriptValue REcmaGraphicsViewWorker::toString
