@@ -6152,7 +6152,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+27"/>
         <source>Snap reference points:</source>
-        <translation>Points de référence d'accrochage :</translation>
+        <translation>Points de référence d&apos;accrochage :</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -11112,7 +11112,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
         <source>Allow rounding of imaginary corner</source>
-        <translation>Autoriser l'arrondi d'un coin imaginaire</translation>
+        <translation>Autoriser l&apos;arrondi d&apos;un coin imaginaire</translation>
     </message>
 </context>
 <context>
@@ -12346,7 +12346,7 @@ est déjà dans la liste.</translation>
         <translation>Fichier</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+48"/>
         <source>Import SVG</source>
         <translation>Importer SVG</translation>
     </message>
@@ -12366,7 +12366,7 @@ est déjà dans la liste.</translation>
         <translation>&amp;Importer SVG...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/SvgImport/SvgImport.js" line="-45"/>
+        <location filename="../scripts/File/SvgImport/SvgImport.js" line="-49"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>Importer SVG</translation>
@@ -12400,6 +12400,16 @@ est déjà dans la liste.</translation>
         <location line="+6"/>
         <source>Import groups as layers</source>
         <translation>Importer des groupes en tant que calques</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import path lineweights</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

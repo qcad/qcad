@@ -12371,6 +12371,16 @@ jau ir sarakstā.</translation>
         <translation>Importēt grupas kā slāņus</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <source>Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import path lineweights</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
         <translation>Faili</translation>
@@ -12382,7 +12392,7 @@ jau ir sarakstā.</translation>
         <translation>SVG importēšana</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+48"/>
         <source>Import SVG</source>
         <translation>SVG importēšana</translation>
     </message>

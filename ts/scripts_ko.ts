@@ -12351,6 +12351,16 @@ is already in the list.</source>
         <translation>그룹을 레이어로 가져오기</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <source>Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import path lineweights</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
         <translation>파일</translation>
@@ -12362,7 +12372,7 @@ is already in the list.</source>
         <translation>SVG 가져오기</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+48"/>
         <source>Import SVG</source>
         <translation>SVG 가져오기</translation>
     </message>

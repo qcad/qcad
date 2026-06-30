@@ -12350,7 +12350,7 @@ finns redan i listan.</translation>
         <translation>Import av SVG</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+48"/>
         <source>Import SVG</source>
         <translation>Importera SVG</translation>
     </message>
@@ -12388,6 +12388,16 @@ finns redan i listan.</translation>
         <location line="+6"/>
         <source>Import groups as layers</source>
         <translation>Importera grupper som lager</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import path lineweights</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>

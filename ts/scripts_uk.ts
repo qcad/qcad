@@ -6172,7 +6172,7 @@ is already in the list.</source>
     <message>
         <location line="+27"/>
         <source>Snap reference points:</source>
-        <translation>Опорні точки прив'язки:</translation>
+        <translation>Опорні точки прив&apos;язки:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -12371,6 +12371,16 @@ is already in the list.</source>
         <translation>Імпорт груп як шарів</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <source>Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import path lineweights</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
         <translation>Файл</translation>
@@ -12382,7 +12392,7 @@ is already in the list.</source>
         <translation>Імпорт SVG</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+48"/>
         <source>Import SVG</source>
         <translation>Імпорт SVG</translation>
     </message>

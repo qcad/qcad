@@ -12342,7 +12342,7 @@ is already in the list.</source>
         <translation>SVG匯入</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+48"/>
         <source>Import SVG</source>
         <translation>匯入SVG</translation>
     </message>
@@ -12380,6 +12380,16 @@ is already in the list.</source>
         <location line="+6"/>
         <source>Import groups as layers</source>
         <translation>匯入群組為圖層</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import path lineweights</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>

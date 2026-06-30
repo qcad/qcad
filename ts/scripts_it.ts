@@ -12347,7 +12347,7 @@ is already in the list.</source>
         <translation>File</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+48"/>
         <source>Import SVG</source>
         <translation>Importa SVG</translation>
     </message>
@@ -12367,7 +12367,7 @@ is already in the list.</source>
         <translation>Importa &amp;SVG...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/SvgImport/SvgImport.js" line="-45"/>
+        <location filename="../scripts/File/SvgImport/SvgImport.js" line="-49"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>Importa SVG</translation>
@@ -12401,6 +12401,16 @@ is already in the list.</source>
         <location line="+6"/>
         <source>Import groups as layers</source>
         <translation>Importazione di gruppi come livelli</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import path lineweights</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

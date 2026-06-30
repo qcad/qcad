@@ -12362,7 +12362,7 @@ jau yra sąraše.</translation>
         <translation>SVG importas</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+48"/>
         <source>Import SVG</source>
         <translation>SVG importavimas</translation>
     </message>
@@ -12400,6 +12400,16 @@ jau yra sąraše.</translation>
         <location line="+6"/>
         <source>Import groups as layers</source>
         <translation>Importuoti grupes kaip sluoksnius</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import path lineweights</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>

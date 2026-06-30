@@ -12361,6 +12361,16 @@ on juba loendis.</translation>
         <translation>Importida rühmi kihtidena</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <source>Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import path lineweights</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
         <translation>Faili</translation>
@@ -12372,7 +12382,7 @@ on juba loendis.</translation>
         <translation>SVG importimine</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+48"/>
         <source>Import SVG</source>
         <translation>Impordi SVG</translation>
     </message>

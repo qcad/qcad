@@ -12343,7 +12343,7 @@ már szerepel a listában.</translation>
         <translation>SVG importálás</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+48"/>
         <source>Import SVG</source>
         <translation>SVG importálása</translation>
     </message>
@@ -12381,6 +12381,16 @@ már szerepel a listában.</translation>
         <location line="+6"/>
         <source>Import groups as layers</source>
         <translation>Csoportok importálása rétegekként</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import path lineweights</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>
