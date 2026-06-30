@@ -133,8 +133,10 @@ void RTreeWidget::resizeEvent(QResizeEvent* event) {
     QTreeWidget::resizeEvent(event);
 }
 
+#if QT_VERSION >= 0x060000
 void RTreeWidget::initViewItemOption(QStyleOptionViewItem *option) const {
     QTreeWidget::initViewItemOption(option);
     // always treat widget as active to keep item selection color and contrast with icons consistent:
     option->state |= QStyle::State_Active;
 }
+#endif

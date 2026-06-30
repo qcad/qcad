@@ -62,7 +62,9 @@ protected:
     virtual void mouseMoveEvent(QMouseEvent* e);
     virtual void resizeEvent(QResizeEvent* event);
 
+#if QT_VERSION >= 0x060000
     void initViewItemOption(QStyleOptionViewItem* option) const;
+#endif
 
 signals:
     void itemColumnClicked(QTreeWidgetItem* item, int column);
