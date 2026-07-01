@@ -2200,11 +2200,7 @@ void RGraphicsViewImage::applyColorCorrection(QPen& pen) {
     }
 
     if (colCorr) {
-        if (pen.color().lightness() <= colorThreshold && bgColorLightness <= colorThreshold) {
-            pen.setColor(Qt::white);
-        } else if (pen.color().lightness() >= 255-colorThreshold && bgColorLightness >= 255-colorThreshold) {
-            pen.setColor(Qt::black);
-        }
+        pen.setColor(getCorrectedColor(pen.color()));
     }
 }
 
@@ -2219,12 +2215,22 @@ void RGraphicsViewImage::applyColorCorrection(QBrush& brush) {
     }
 
     if (colCorr) {
-        if (brush.color().lightness() <= colorThreshold && bgColorLightness <= colorThreshold) {
-            brush.setColor(Qt::white);
-        } else if (brush.color().lightness() >= 255-colorThreshold && bgColorLightness >= 255-colorThreshold) {
-            brush.setColor(Qt::black);
-        }
+        brush.setColor(getCorrectedColor(brush.color()));
     }
+}
+
+QColor RGraphicsViewImage::getCorrectedColor(const QColor& col) {
+    QColor ret = col;
+    if (col.lightness() <= colorThreshold && bgColorLightness <= colorThreshold) {
+        ret.setRed(255);
+        ret.setGreen(255);
+        ret.setBlue(255);
+    } else if (col.lightness() >= 255-colorThreshold && bgColorLightness >= 255-colorThreshold) {
+        ret.setRed(0);
+        ret.setGreen(0);
+        ret.setBlue(0);
+    }
+    return ret;
 }
 
 void RGraphicsViewImage::applyColorMode(QPen& pen) {

@@ -391,6 +391,7 @@ protected:
     QList<RPainterPath> getTextLayoutsPainterPaths(const RTextBasedData& text, const QList<RTextLayout>& textLayouts);
     void applyMinimumLineweight(QPen& pen);
     void applyColorCorrection(QPen& pen);
+    QColor getCorrectedColor(const QColor& col);
     void applyColorCorrection(QBrush& brush);
     void applyColorMode(QPen& pen);
     void applyColorMode(QBrush& brush);
