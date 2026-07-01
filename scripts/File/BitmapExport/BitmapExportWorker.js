@@ -219,9 +219,7 @@ function exportBitmap(doc, scene, fileName, properties, view) {
     } else {
         ret = [true, ""];
     }
-    if (RSettings.getQtVersion() < 0x060000) {
-        destr(iw);
-    }
+    destr(iw);
 
     return ret;
 }
