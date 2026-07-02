@@ -5264,7 +5264,12 @@ is already in the list.</source>
         <translation>FP가 레이어를 추가했습니다:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>롤러 스탬프를 모방한 선택 항목 위에 페인트 칠하기</translation>
     </message>
@@ -5565,14 +5570,6 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Delete Base Entities *</source>
         <translation>기본 엔터티 삭제 *</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>플렉스페인터</translation>
     </message>
 </context>
 <context>
@@ -11233,13 +11230,10 @@ is already in the list.</source>
         <source>By Color</source>
         <translation>색상별</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>색상의 모든 개체 선택</translation>
+        <translation>한 색상의 모든 객체 선택</translation>
     </message>
 </context>
 <context>
@@ -12353,12 +12347,12 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>경로</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import path lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>경로 선 두께 가져오기</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
@@ -12403,7 +12397,7 @@ is already in the list.</source>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>

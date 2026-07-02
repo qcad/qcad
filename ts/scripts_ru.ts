@@ -5274,7 +5274,12 @@ is already in the list.</source>
         <translation>Добавленный слой FP:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Запечатывает выделение, имитируя роликовый штамп</translation>
     </message>
@@ -5575,14 +5580,6 @@ is already in the list.</source>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
         <translation>Удалить базовые объекты *</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -11247,13 +11244,10 @@ is already in the list.</source>
         <source>By Color</source>
         <translation>По цвету</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>Выделить все объекты цвета</translation>
+        <translation>Выбрать все объекты одного цвета</translation>
     </message>
 </context>
 <context>
@@ -12414,16 +12408,16 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Контуры</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import path lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>Импортировать толщины линий контуров</translation>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>

@@ -5269,7 +5269,12 @@ er allerede på listen.</translation>
         <translation>FP tilføjede et lag:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Overmaler udvælgelsen ved at efterligne et rullemærke</translation>
     </message>
@@ -5570,14 +5575,6 @@ er allerede på listen.</translation>
         <location line="+7"/>
         <source>Align with End</source>
         <translation>Juster med enden</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -11240,13 +11237,10 @@ er allerede på listen.</translation>
         <source>By Color</source>
         <translation>Efter farve</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>Vælg alle objekter af en farve</translation>
+        <translation>Vælg alle objekter med en farve</translation>
     </message>
 </context>
 <context>
@@ -12363,12 +12357,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+13"/>
         <source>Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Stier</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import path lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>Importér stiers linjevægte</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
@@ -12413,7 +12407,7 @@ er allerede på listen.</translation>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>

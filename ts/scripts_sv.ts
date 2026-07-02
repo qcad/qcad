@@ -5267,7 +5267,12 @@ finns redan i listan.</translation>
         <translation>FP lade till ett lager:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Målar över urvalet och efterliknar en rullstämpel</translation>
     </message>
@@ -5568,14 +5573,6 @@ finns redan i listan.</translation>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
         <translation>Ta bort basenheter *</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -11238,13 +11235,10 @@ finns redan i listan.</translation>
         <source>By Color</source>
         <translation>Med färg</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>Markera alla objekt av en färg</translation>
+        <translation>Markera alla objekt med en färg</translation>
     </message>
 </context>
 <context>
@@ -12392,12 +12386,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+13"/>
         <source>Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Banor</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import path lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>Importera banornas linjetjocklekar</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>
@@ -12411,7 +12405,7 @@ finns redan i listan.</translation>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>

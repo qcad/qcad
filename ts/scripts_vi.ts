@@ -5264,7 +5264,12 @@ is already in the list.</source>
         <translation>FP đã thêm lớp:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Vẽ đè lên vùng chọn mô phỏng con dấu lăn</translation>
     </message>
@@ -5565,14 +5570,6 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Delete Base Entities *</source>
         <translation>Xóa đối tượng cơ sở *</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -11233,13 +11230,10 @@ is already in the list.</source>
         <source>By Color</source>
         <translation>Theo màu</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>Chọn tất cả các đối tượng của một màu</translation>
+        <translation>Chọn tất cả đối tượng của một màu</translation>
     </message>
 </context>
 <context>
@@ -12403,7 +12397,7 @@ is already in the list.</source>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>

@@ -5272,7 +5272,12 @@ již v seznamu je.</translation>
         <translation>FP přidaná vrstva:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Barvy na výběr napodobující razítko válečku</translation>
     </message>
@@ -5573,14 +5578,6 @@ již v seznamu je.</translation>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
         <translation>Odstranění základních entit _tmp_cs qcadentity_cs.ts qcadgui_cs.ts scripts_cs.ts</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -11245,13 +11242,10 @@ již v seznamu je.</translation>
         <source>By Color</source>
         <translation>Podle barvy</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>Vyberte všechny objekty barvy</translation>
+        <translation>Vybrat všechny objekty určité barvy</translation>
     </message>
 </context>
 <context>
@@ -12412,16 +12406,16 @@ již v seznamu je.</translation>
     <message>
         <location line="+13"/>
         <source>Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Cesty</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import path lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>Importovat tloušťky čar cest</translation>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>

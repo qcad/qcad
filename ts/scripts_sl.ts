@@ -5275,7 +5275,12 @@ je že na seznamu.</translation>
         <translation>FP dodana plast:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Barve na izbiro, ki posnemajo žig z valjčkom</translation>
     </message>
@@ -5576,14 +5581,6 @@ je že na seznamu.</translation>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
         <translation>Izbriši izhodiščne predmete *</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>&amp;Vzorčni valjar</translation>
     </message>
 </context>
 <context>
@@ -11250,13 +11247,10 @@ je že na seznamu.</translation>
         <source>By Color</source>
         <translation>Izbor po barvi</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>Izberi vse objetke določene barve</translation>
+        <translation>Izberi vse predmete ene barve</translation>
     </message>
 </context>
 <context>
@@ -12420,20 +12414,20 @@ je že na seznamu.</translation>
     <message>
         <location line="+13"/>
         <source>Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Poti</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import path lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>Uvozi debeline črt poti</translation>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation>SVG Datoteke %1</translation>
+        <translation>Datoteke SVG %1</translation>
     </message>
 </context>
 <context>

@@ -5269,7 +5269,12 @@ on jo luettelossa.</translation>
         <translation>FP lisäsi kerroksen:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Maalaa valinnan yli jäljittelemällä telaleimaa</translation>
     </message>
@@ -5570,14 +5575,6 @@ on jo luettelossa.</translation>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
         <translation>Poista peruskokonaisuudet *</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -11240,13 +11237,10 @@ on jo luettelossa.</translation>
         <source>By Color</source>
         <translation>Värin mukaan</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>Valitse kaikki värin kohteet</translation>
+        <translation>Valitse kaikki tietyn värin kohteet</translation>
     </message>
 </context>
 <context>
@@ -12404,16 +12398,16 @@ on jo luettelossa.</translation>
     <message>
         <location line="+13"/>
         <source>Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Polut</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import path lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>Tuo polkujen viivanpaksuudet</translation>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>

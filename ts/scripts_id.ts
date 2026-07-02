@@ -5264,7 +5264,12 @@ sudah ada dalam daftar.</translation>
         <translation>FP menambahkan lapisan:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Cat di atas pilihan meniru stempel rol</translation>
     </message>
@@ -5565,14 +5570,6 @@ sudah ada dalam daftar.</translation>
         <location line="+3"/>
         <source>Delete Base Entities *</source>
         <translation>Hapus Entitas Dasar *</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -11233,13 +11230,10 @@ sudah ada dalam daftar.</translation>
         <source>By Color</source>
         <translation>Berdasarkan Warna</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>Pilih semua objek dengan warna tertentu</translation>
+        <translation>Pilih semua objek dengan satu warna</translation>
     </message>
 </context>
 <context>
@@ -12353,12 +12347,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+13"/>
         <source>Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Jalur</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import path lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>Impor berat garis jalur</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
@@ -12403,11 +12397,11 @@ sudah ada dalam daftar.</translation>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation>File SVG % 1</translation>
+        <translation>File SVG %1</translation>
     </message>
 </context>
 <context>

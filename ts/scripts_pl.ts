@@ -5274,7 +5274,12 @@ jest już na liście.</translation>
         <translation>Warstwa dodana przez FP:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Zamalowuje zaznaczenie naśladując stempel rolkowy</translation>
     </message>
@@ -5575,14 +5580,6 @@ jest już na liście.</translation>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
         <translation>Usuń bazowe encje _tmp_pl qcadcore_pl.ts qcadentity_pl.ts qcadgui_pl.ts scripts_pl.ts</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -11247,13 +11244,10 @@ jest już na liście.</translation>
         <source>By Color</source>
         <translation>Przez kolor</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>Zaznacz wszystkie obiekty w danym kolorze</translation>
+        <translation>Zaznacz wszystkie obiekty jednego koloru</translation>
     </message>
 </context>
 <context>
@@ -12414,16 +12408,16 @@ jest już na liście.</translation>
     <message>
         <location line="+13"/>
         <source>Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Ścieżki</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import path lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>Importuj szerokości linii ścieżek</translation>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>

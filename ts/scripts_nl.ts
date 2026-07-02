@@ -5269,7 +5269,12 @@ is al in de lijst.</translation>
         <translation>FP toegevoegde laag:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Verven over de selectie, nabootsen van een rolstempel</translation>
     </message>
@@ -5570,14 +5575,6 @@ is al in de lijst.</translation>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
         <translation>Basisobjecten verwijderen *</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -11240,13 +11237,10 @@ is al in de lijst.</translation>
         <source>By Color</source>
         <translation>Op kleur</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>Selecteer alle objecten van een kleur</translation>
+        <translation>Alle objecten van een kleur selecteren</translation>
     </message>
 </context>
 <context>
@@ -12404,16 +12398,16 @@ is al in de lijst.</translation>
     <message>
         <location line="+13"/>
         <source>Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Paden</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import path lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijndiktes van paden importeren</translation>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>

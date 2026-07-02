@@ -5265,7 +5265,12 @@ már szerepel a listában.</translation>
         <translation>FP hozzáadott réteg:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Festi át a kiválasztást egy hengeres bélyegzőt utánozva</translation>
     </message>
@@ -5566,14 +5571,6 @@ már szerepel a listában.</translation>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
         <translation>null</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -11234,13 +11231,10 @@ már szerepel a listában.</translation>
         <source>By Color</source>
         <translation>Szín szerint</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>Egy adott színű elemek kijelölése</translation>
+        <translation>Egy szín összes objektumának kijelölése</translation>
     </message>
 </context>
 <context>
@@ -12385,12 +12379,12 @@ már szerepel a listában.</translation>
     <message>
         <location line="+13"/>
         <source>Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Útvonalak</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import path lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>Útvonalak vonalvastagságainak importálása</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>
@@ -12404,7 +12398,7 @@ már szerepel a listában.</translation>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>

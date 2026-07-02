@@ -5269,7 +5269,12 @@ er allerede i listen.</translation>
         <translation>FP lagt til lag:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Maling over valg som etterligner et rullestempel</translation>
     </message>
@@ -5570,14 +5575,6 @@ er allerede i listen.</translation>
         <location line="+3"/>
         <source>Delete Base Entities *</source>
         <translation>Slett basisenheter *</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -11240,13 +11237,10 @@ er allerede i listen.</translation>
         <source>By Color</source>
         <translation>Etter farge</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>Velg alle objekter av en farge</translation>
+        <translation>Velg alle objekter med en farge</translation>
     </message>
 </context>
 <context>
@@ -12363,12 +12357,12 @@ er allerede i listen.</translation>
     <message>
         <location line="+13"/>
         <source>Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Baner</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import path lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>Importer linjebredder for baner</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
@@ -12413,7 +12407,7 @@ er allerede i listen.</translation>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>

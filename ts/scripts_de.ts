@@ -5269,7 +5269,12 @@ ist bereits in der Liste.</translation>
         <translation>FP hat Layer hinzugefügt:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Malt über Auswahl, einen Rollstempel nachahmend</translation>
     </message>
@@ -5570,14 +5575,6 @@ ist bereits in der Liste.</translation>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
         <translation>Basisobjekte löschen *</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -11240,9 +11237,6 @@ ist bereits in der Liste.</translation>
         <source>By Color</source>
         <translation>Nach Farbe</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
@@ -12404,20 +12398,20 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+13"/>
         <source>Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Pfade</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import path lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>Linienbreiten der Pfade importieren</translation>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation>SVG Dateien %1</translation>
+        <translation>SVG-Dateien %1</translation>
     </message>
 </context>
 <context>

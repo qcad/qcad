@@ -5269,7 +5269,12 @@ já se encontra na lista.</translation>
         <translation>Camada adicional de FP:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Tintas sobre a seleção, imitando um carimbo de rolo</translation>
     </message>
@@ -5570,14 +5575,6 @@ já se encontra na lista.</translation>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
         <translation>Apagar entidades Base *</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -11240,13 +11237,10 @@ já se encontra na lista.</translation>
         <source>By Color</source>
         <translation>Por cor</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>Selecione todos os objetos de uma cor</translation>
+        <translation>Selecionar todos os objetos de uma cor</translation>
     </message>
 </context>
 <context>
@@ -12404,16 +12398,16 @@ já se encontra na lista.</translation>
     <message>
         <location line="+13"/>
         <source>Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Caminhos</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import path lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>Importar larguras de linha dos caminhos</translation>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>

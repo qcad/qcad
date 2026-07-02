@@ -5264,7 +5264,12 @@ is already in the list.</source>
         <translation>FPはレイヤーを追加しました</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>ローラースタンプを模倣して選択部分を塗り潰す</translation>
     </message>
@@ -5565,14 +5570,6 @@ is already in the list.</source>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
         <translation>ベースエンティティの削除 _tmp_ja qcadcore_ja.ts qcadentity_ja.ts qcadgui_ja.ts scripts_ja.ts</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -11233,13 +11230,10 @@ is already in the list.</source>
         <source>By Color</source>
         <translation>カラー別</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>ある色のオブジェクトをすべて選択する</translation>
+        <translation>ある色のすべてのオブジェクトを選択</translation>
     </message>
 </context>
 <context>
@@ -12394,16 +12388,16 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>パス</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Import path lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>パスの線の太さをインポート</translation>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
