@@ -2536,6 +2536,7 @@
     <file alias="scripts/Tools/ExTool/ExTool.js">../../scripts/Tools/ExTool/ExTool.js</file>
     <file alias="scripts/Tools/MergeDrawings/MergeDrawings.js">../../scripts/Tools/MergeDrawings/MergeDrawings.js</file>
     <file alias="scripts/Tools/MergeDrawings/MergeDrawingsInit.js">../../scripts/Tools/MergeDrawings/MergeDrawingsInit.js</file>
+    <file alias="scripts/Tools/Tools.js">../../scripts/Tools/Tools.js</file>
     <file alias="scripts/View/AntialiasingMode/AntialiasingMode-inverse.svg">../../scripts/View/AntialiasingMode/AntialiasingMode-inverse.svg</file>
     <file alias="scripts/View/AntialiasingMode/AntialiasingMode.js">../../scripts/View/AntialiasingMode/AntialiasingMode.js</file>
     <file alias="scripts/View/AntialiasingMode/AntialiasingMode.svg">../../scripts/View/AntialiasingMode/AntialiasingMode.svg</file>
