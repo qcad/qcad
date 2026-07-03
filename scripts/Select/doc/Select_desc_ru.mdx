@@ -5,29 +5,29 @@ import SelectionModeIntersect from './SelectionModeIntersect.png';
 
 
 
-### Cross Selection {#cross}
+### Перекрёстное выделение {#cross}
 
-Some selection tools can be used in cross selection mode. In this mode,
- not only entities that are completely inside a given area are selected but
- also entities that are only partly inside the area. This selection is also
- known as 'cross selection'.
+Некоторые инструменты выделения можно использовать в режиме перекрёстного
+выделения. В этом режиме выделяются не только объекты, полностью находящиеся
+внутри заданной области, но и объекты, лишь частично находящиеся внутри области.
+Это выделение также известно как «перекрёстное выделение».
 
-### Selection Mode {#mode}
+### Режим выделения {#mode}
 
-Some selection tools allow you to choose a selection mode in the options
- tool bar. The selection modes that are available are:
+Некоторые инструменты выделения позволяют выбрать режим выделения на панели
+опций. Доступны следующие режимы выделения:
 
-- Replace selection:  
+- Заменить выделение:  
   <Image src={SelectionModeReplace} alt="SelectionModeReplace" width={40} height={40} />  
-  Replaces the current selection with the new selection made by the
-  active selection tool (default).
-- Add to selection:  
+  Заменяет текущее выделение новым выделением, сделанным активным инструментом
+  выделения (по умолчанию).
+- Добавить к выделению:  
   <Image src={SelectionModeAdd} alt="SelectionModeAdd" width={40} height={40} />  
-  Adds the selection to the current selection.
-- Remove from selection:  
+  Добавляет выделение к текущему выделению.
+- Удалить из выделения:  
   <Image src={SelectionModeRemove} alt="SelectionModeRemove" width={40} height={40} />  
-  Removes (subtracts) the selection from the current selection.
-- Intersect:  
+  Удаляет (вычитает) выделение из текущего выделения.
+- Пересечь:  
   <Image src={SelectionModeIntersect} alt="SelectionModeIntersect" width={40} height={40} />  
-  Only entities that were already selected and that match the criteria
-  of the selection tool are selected.
+  Выделяются только объекты, которые уже были выделены и соответствуют критериям
+  инструмента выделения.
