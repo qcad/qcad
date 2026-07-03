@@ -1,17 +1,18 @@
-1. Use the selection tools to prepare a selection of entities you want to
-   copy to the clipboard.
-2. Choose the copy tool.
+1. С помощью инструментов выделения подготовьте набор объектов, которые хотите
+   скопировать в буфер обмена.
+2. Выберите инструмент копирования.
 
-The standard copy tool of QCAD acts like the copy tool of other
-applications. It does not allow you to choose a reference point for your
-selection but instead computes the reference point automatically at the center
-of the selection. This is not always desirable as you most likely want to place
-the pasted entities at a precisely defined position. For this, QCAD offers and
-alternative, more CAD specific copy tool: [Copy with Reference](/ru/manual/scripts/Edit/CopyWithReference/doc/CopyWithReference).
+Стандартный инструмент копирования QCAD работает как инструмент копирования в
+других приложениях. Он не позволяет выбрать базовую точку для вашего выделения,
+а вместо этого автоматически вычисляет базовую точку в центре выделения. Это не
+всегда желательно, поскольку вы, скорее всего, захотите разместить вставленные
+объекты в точно заданном положении. Для этого QCAD предлагает альтернативный,
+более специфичный для CAD инструмент копирования: [Копировать с базовой
+точкой](/ru/manual/scripts/Edit/CopyWithReference/doc/CopyWithReference).
 
-The selection is now on the QCAD internal clipboard and can be pasted into
-the same or a different drawing that is opened with the same running instance
-of QCAD. Note that if you quit the QCAD application, the contents of the
-clipboard is lost. The QCAD clipboard can only be accessed by QCAD itself. You
-cannot exchange drawing entities with other applications through copy and
-paste. Please use the export and import functionality of QCAD for this.
+Теперь выделение находится во внутреннем буфере обмена QCAD и может быть
+вставлено в тот же или другой чертёж, открытый в том же запущенном экземпляре
+QCAD. Обратите внимание, что при выходе из приложения QCAD содержимое буфера
+обмена теряется. Доступ к буферу обмена QCAD может получить только сам QCAD. Вы
+не можете обмениваться объектами чертежа с другими приложениями через
+копирование и вставку. Для этого используйте функции экспорта и импорта QCAD.
