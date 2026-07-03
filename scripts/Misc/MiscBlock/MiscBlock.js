@@ -44,6 +44,7 @@ MiscBlock.getMenu = function() {
         MiscBlock.getTitle(),
         "MiscBlockMenu"
     );
+    menu.setProperty("scriptFile", MiscBlock.includeBasePath + "/MiscBlock.js");
     return menu;
 };
 

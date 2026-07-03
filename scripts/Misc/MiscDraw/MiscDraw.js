@@ -45,6 +45,7 @@ MiscDraw.getMenu = function() {
         MiscDraw.getTitle(),
         "MiscDrawMenu"
     );
+    menu.setProperty("scriptFile", MiscDraw.includeBasePath + "/MiscDraw.js");
     return menu;
 };
 

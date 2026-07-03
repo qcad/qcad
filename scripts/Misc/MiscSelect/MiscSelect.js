@@ -45,6 +45,7 @@ MiscSelect.getMenu = function() {
         MiscSelect.getTitle(),
         "MiscSelectMenu"
     );
+    menu.setProperty("scriptFile", MiscSelect.includeBasePath + "/MiscSelect.js");
     return menu;
 };
 
