@@ -138,7 +138,7 @@
     <message>
         <location line="+7"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
-        <translation>Todos los nombres de incendio o de productos son marcas comerciales o marcas comerciales registradas de sus respectivos propietarios.</translation>
+        <translation>Todos los nombres de marca o de productos son marcas comerciales o marcas comerciales registradas de sus respectivos propietarios.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -299,7 +299,7 @@ para aplicar los cambios.</translation>
     <message>
         <location line="+86"/>
         <source>Defaults for</source>
-        <translation>Unidad en</translation>
+        <translation>Valores predeterminados para</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1007,7 +1007,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Grid points</source>
-        <translation>Rejilla</translation>
+        <translation>Puntos de rejilla</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2121,7 +2121,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/ColorSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation>Unidad en dibujos nuevos</translation>
+        <translation>Valores predeterminados para dibujos nuevos</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2201,7 +2201,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation>Tratando de aprovechar o modificar las entidades de una capa bloqueada.</translation>
+        <translation>La transacción falló. Verifique las recursiones de bloques y las capas o bloques bloqueados o invisibles.</translation>
     </message>
     <message>
         <location line="-417"/>
@@ -2216,7 +2216,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+16"/>
         <source>Invalid coordinate or distance &quot;%1&quot;.</source>
-        <translation>Inválida coordinar o distancia &quot;%1&quot;.</translation>
+        <translation>Coordenada o distancia inválida &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+120"/>
@@ -3075,7 +3075,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="-2"/>
         <source>Defaults for New Drawings</source>
-        <translation>Unidad en dibujos nuevos</translation>
+        <translation>Valores predeterminados para dibujos nuevos</translation>
     </message>
     <message>
         <location line="+114"/>
@@ -3807,7 +3807,7 @@ ya está en la lista.</translation>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-3.</source>
-        <translation>Iguala las posiciones 1-3.</translation>
+        <translation>Posiciones iguales 1-3.</translation>
     </message>
     <message>
         <location line="-287"/>
@@ -3860,7 +3860,7 @@ ya está en la lista.</translation>
         <location line="-97"/>
         <location line="+33"/>
         <source>Equal positions 1-4.</source>
-        <translation>Iguala las posiciones 1-4.</translation>
+        <translation>Posiciones iguales 1-4.</translation>
     </message>
     <message>
         <location line="-32"/>
@@ -4551,7 +4551,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+249"/>
         <source>Invalid major radius.</source>
-        <translation>Inválida radio mayor.</translation>
+        <translation>Radio mayor inválido.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5117,7 +5117,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>Expota</translation>
+        <translation>Explotar</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+244"/>
@@ -5489,7 +5489,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation>Información verdosa. (persistente)</translation>
+        <translation>Información verbosa. (persistente)</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5769,7 +5769,7 @@ ya está en la lista.</translation>
     <message>
         <location line="-314"/>
         <source>Right-Click</source>
-        <translation>Botão direito do mouse</translation>
+        <translation>Clic derecho</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5985,7 +5985,7 @@ ya está en la lista.</translation>
     <message>
         <location line="-400"/>
         <source>Linetypes and Lineweights</source>
-        <translation>Tipos de línea y luces de línea</translation>
+        <translation>Tipos de línea y grosores de línea</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6325,7 +6325,7 @@ ya está en la lista.</translation>
     <message>
         <location line="-2"/>
         <source>Defaults for New Drawings</source>
-        <translation>Unidad en dibujos nuevos</translation>
+        <translation>Valores predeterminados para dibujos nuevos</translation>
     </message>
     <message>
         <location line="+86"/>
@@ -6977,7 +6977,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Forma no manipulada del bucle de la escotilla.</translation>
+        <translation>Forma no manipulada del bucle de sombreado.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7628,7 +7628,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+22"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
-        <translation>Girar bloque de&lt;br&gt;este punto de vista</translation>
+        <translation>Girar bloque&lt;br&gt;por este ángulo</translation>
     </message>
     <message>
         <location line="+110"/>
@@ -8863,7 +8863,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/LinetypeSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation>Unidad en dibujos nuevos</translation>
+        <translation>Valores predeterminados para dibujos nuevos</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -9612,7 +9612,7 @@ ya está en la lista.</translation>
     <message>
         <location line="-2"/>
         <source>Defaults for New Drawings</source>
-        <translation>Unidad en dibujos nuevos</translation>
+        <translation>Valores predeterminados para dibujos nuevos</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9786,7 +9786,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PointDisplaySettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation>Unidad en dibujos nuevos</translation>
+        <translation>Valores predeterminados para dibujos nuevos</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9838,7 +9838,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Centro de poder de tres círculos</translation>
+        <translation>Centro radical de tres círculos</translation>
     </message>
 </context>
 <context>
@@ -10360,7 +10360,7 @@ ya está en la lista.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Complejidad máxima para el cálculo automático de la longitud de la escotilla:</translation>
+        <translation>Complejidad máxima para el cálculo automático de la longitud del sombreado:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10927,7 +10927,7 @@ ya está en la lista.</translation>
     <message>
         <location line="-34"/>
         <source>Saving...</source>
-        <translation>Ahorro...</translation>
+        <translation>Guardando...</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -13357,7 +13357,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+17"/>
         <source>Auto screen scale factor</source>
-        <translation>Factor de escala:</translation>
+        <translation>Factor de escala automático de pantalla</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -13407,7 +13407,7 @@ ya está en la lista.</translation>
     <message>
         <location line="-2"/>
         <source>Defaults for New Drawings</source>
-        <translation>Unidad en dibujos nuevos</translation>
+        <translation>Valores predeterminados para dibujos nuevos</translation>
     </message>
     <message>
         <location line="+73"/>
@@ -13482,7 +13482,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+1"/>
         <source>Decimeter</source>
-        <translation>Desímetro</translation>
+        <translation>Decímetro</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13607,7 +13607,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/ViewportSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation>Unidad en dibujos nuevos</translation>
+        <translation>Valores predeterminados para dibujos nuevos</translation>
     </message>
     <message>
         <location line="+0"/>
