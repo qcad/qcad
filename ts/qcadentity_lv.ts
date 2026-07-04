@@ -369,7 +369,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation>Akordpunkts</translation>
+        <translation>Hordas punkts</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -425,7 +425,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>Leader beigu punkts</translation>
+        <translation>Norādes līnijas beigu punkts</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>

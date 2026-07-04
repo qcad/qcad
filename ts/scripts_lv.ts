@@ -206,7 +206,7 @@
     <message>
         <location line="+65"/>
         <source>Hatch Patterns</source>
-        <translation>Lūkas modeļi</translation>
+        <translation>Šrafējuma modeļi</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1019,7 +1019,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+7"/>
         <source>Free positioning</source>
-        <translation>Bezmaksas pozicionēšana</translation>
+        <translation>Brīva pozicionēšana</translation>
     </message>
 </context>
 <context>
@@ -1085,7 +1085,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
         <source>Trim</source>
-        <translation>Trim</translation>
+        <translation>Apgriezt</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -1209,7 +1209,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+10"/>
         <source>Grayscale</source>
-        <translation>Sarkanās krāsas</translation>
+        <translation>Pelēktoņu</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2158,7 +2158,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+20"/>
         <source>Grayscale</source>
-        <translation>Sarkanās krāsas</translation>
+        <translation>Pelēktoņu</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2238,7 +2238,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+3"/>
         <source>Coordinate</source>
-        <translation>Saskaņot</translation>
+        <translation>Koordināta</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2702,7 +2702,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation>Lūkas</translation>
+        <translation>Šrafējumi</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2837,7 +2837,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Vadītāja galapunkts</translation>
+        <translation>Norādes līnijas galapunkts</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
@@ -4455,12 +4455,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation>Izvēlieties lūku</translation>
+        <translation>Izvēlieties šrafējumu</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation>Rediģēt lūkas</translation>
+        <translation>Rediģēt šrafējumu</translation>
     </message>
 </context>
 <context>
@@ -4739,7 +4739,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>Aizbēgt</translation>
+        <translation>Atcelt</translation>
     </message>
 </context>
 <context>
@@ -5035,7 +5035,7 @@ jau ir sarakstā.</translation>
         <location line="+3"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
-        <translation>Atvelciet trīs punktus</translation>
+        <translation>Zīmēt trīs punktus</translation>
     </message>
 </context>
 <context>
@@ -5117,17 +5117,17 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>Eksplodēt</translation>
+        <translation>Sadalīt</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation>Eksplodēt</translation>
+        <translation>Sadalīt</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+19"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation>Eksplodēt spline uz daudzlīnijām ar līniju segmentiem</translation>
+        <translation>Sadalīt spline uz daudzlīnijām ar līniju segmentiem</translation>
     </message>
     <message>
         <location line="+104"/>
@@ -5152,7 +5152,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+10"/>
         <source>Explode circles into polylines with two half circles</source>
-        <translation>Eksplodēt apļus daudzlīnijās ar diviem pusapļiem</translation>
+        <translation>Sadalīt apļus daudzlīnijās ar diviem pusapļiem</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5724,7 +5724,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation>Divreiz noklikšķiniet, lai rediģētu lūkas</translation>
+        <translation>Divreiz noklikšķiniet, lai rediģētu šrafējumu</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6347,12 +6347,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation>Lūkas rīki</translation>
+        <translation>Šrafējuma rīki</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Hatch</source>
-        <translation>Lūka</translation>
+        <translation>Šrafējums</translation>
     </message>
 </context>
 <context>
@@ -6360,7 +6360,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation>Lūka</translation>
+        <translation>Šrafējums</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6375,7 +6375,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Lūkas modelis</translation>
+        <translation>Šrafējuma modelis</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6418,7 +6418,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>Lūkas no atlases</translation>
+        <translation>Šrafējums no atlases</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -6746,7 +6746,7 @@ jau ir sarakstā.</translation>
         <location line="+67"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
-        <translation>Akords</translation>
+        <translation>Horda</translation>
     </message>
     <message>
         <location line="-60"/>
@@ -6766,7 +6766,7 @@ jau ir sarakstā.</translation>
         <location line="-88"/>
         <location line="+67"/>
         <source>chord:</source>
-        <translation>akords:</translation>
+        <translation>horda:</translation>
     </message>
     <message>
         <location line="-52"/>
@@ -7025,7 +7025,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>Gultnis:</translation>
+        <translation>Virziens:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7035,7 +7035,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation>Pamatne / azimuts</translation>
+        <translation>Virziens / azimuts</translation>
     </message>
 </context>
 <context>
@@ -7847,7 +7847,7 @@ jau ir sarakstā.</translation>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation>Ministru kabinets</translation>
+        <translation>Kabinets</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7926,7 +7926,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridRight/IsometricGridRight.js" line="+35"/>
         <source>&amp;Right Projection</source>
-        <translation>Pareizā projekcija</translation>
+        <translation>Labā projekcija</translation>
     </message>
 </context>
 <context>
@@ -8207,12 +8207,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>Leader</translation>
+        <translation>Norādes līnija</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Zīmēt līderi (līniju secība ar bultiņu)</translation>
+        <translation>Zīmēt norādes līniju (līniju secība ar bultiņu)</translation>
     </message>
 </context>
 <context>
@@ -8220,12 +8220,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Līderis tika veiksmīgi izveidots</translation>
+        <translation>Norādes līnija tika veiksmīgi izveidota</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>Vadītājs no izvēlētā teksta</translation>
+        <translation>Norādes līnija no izvēlētā teksta</translation>
     </message>
 </context>
 <context>
@@ -8281,7 +8281,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Stars</translation>
     </message>
 </context>
 <context>
@@ -9655,7 +9655,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+0"/>
         <source>Paste</source>
-        <translation>Paste</translation>
+        <translation>Ielīmēt</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -9715,7 +9715,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation>Paste</translation>
+        <translation>Ielīmēt</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
@@ -9832,7 +9832,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2"/>
         <source>Pole of Line and Circle</source>
-        <translation>Līnijas un apļa polis</translation>
+        <translation>Līnijas un apļa pols</translation>
     </message>
 </context>
 <context>
@@ -9845,7 +9845,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Trīs apļu jaudas centrs</translation>
+        <translation>Trīs apļu radikālais centrs</translation>
     </message>
 </context>
 <context>
@@ -9998,7 +9998,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation>Koku sabrukšana</translation>
+        <translation>Sakļaut koku</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -10144,7 +10144,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+11"/>
         <source>Auto Center</source>
-        <translation>Auto centrs</translation>
+        <translation>Automātiskā centrēšana</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10367,7 +10367,7 @@ jau ir sarakstā.</translation>
         <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
-        <translation>Īpašuma redaktors</translation>
+        <translation>Īpašību redaktors</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
@@ -10449,7 +10449,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
-        <translation>Skaidrs saraksts</translation>
+        <translation>Notīrīt sarakstu</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10808,7 +10808,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation>Trim</translation>
+        <translation>Apgriezt</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -10914,7 +10914,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+16"/>
         <source>Saving...</source>
-        <translation>Ietaupot...</translation>
+        <translation>Saglabāšana...</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10982,7 +10982,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+10"/>
         <source>Saving</source>
-        <translation>Glābšana</translation>
+        <translation>Saglabāšana</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -11943,7 +11943,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
         <source>&amp;Coordinate</source>
-        <translation>Saskaņot</translation>
+        <translation>Koordināta</translation>
     </message>
 </context>
 <context>
@@ -12058,7 +12058,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>Bezmaksas</translation>
+        <translation>Brīvs</translation>
     </message>
 </context>
 <context>
@@ -12567,12 +12567,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Līderis tika veiksmīgi izveidots</translation>
+        <translation>Norādes līnija tika veiksmīgi izveidota</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>Teksta izlīdzināts līderis</translation>
+        <translation>Ar tekstu izlīdzināta norādes līnija</translation>
     </message>
 </context>
 <context>
@@ -12630,12 +12630,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation>Paste</translation>
+        <translation>Ielīmēt</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Bold</source>
-        <translation>Bold</translation>
+        <translation>Treknraksts</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -12700,7 +12700,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Nodaļa</translation>
+        <translation>Dalīšana</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12771,7 +12771,7 @@ jau ir sarakstā.</translation>
         <location line="+18"/>
         <location line="+274"/>
         <source>Bold</source>
-        <translation>Bold</translation>
+        <translation>Treknraksts</translation>
     </message>
     <message>
         <location line="-267"/>
@@ -12812,7 +12812,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+10"/>
         <source>Paste</source>
-        <translation>Paste</translation>
+        <translation>Ielīmēt</translation>
     </message>
     <message>
         <location line="+170"/>
@@ -13322,7 +13322,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation>Trim</translation>
+        <translation>Apgriezt</translation>
     </message>
 </context>
 <context>
@@ -13696,7 +13696,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Nodaļa</translation>
+        <translation>Dalīšana</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14399,12 +14399,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation>Lūkas</translation>
+        <translation>Šrafējumi</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation>Lūka</translation>
+        <translation>Šrafējums</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14419,12 +14419,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation>Līderi</translation>
+        <translation>Norādes līnijas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Leader</translation>
+        <translation>Norādes līnija</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14464,7 +14464,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Stars</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14509,12 +14509,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation>Sejas</translation>
+        <translation>Skaldnes</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation>Sejas</translation>
+        <translation>Skaldne</translation>
     </message>
     <message>
         <location line="+2"/>
