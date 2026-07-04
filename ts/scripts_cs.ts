@@ -5572,12 +5572,12 @@ již v seznamu je.</translation>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation>Verbose _tmp_cs qcadentity_cs.ts qcadgui_cs.ts scripts_cs.ts</translation>
+        <translation>Verbose *</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
-        <translation>Odstranění základních entit _tmp_cs qcadentity_cs.ts qcadgui_cs.ts scripts_cs.ts</translation>
+        <translation>Odstranění základních entit *</translation>
     </message>
 </context>
 <context>

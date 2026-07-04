@@ -5574,12 +5574,12 @@ už existuje v zozname.</translation>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation>Verbose _tmp_cs _tmp_hr _tmp_hu _tmp_lt _tmp_sk _tmp_sl qcadcore_cs.ts qcadcore_hr.ts qcadcore_hu.ts qcadcore_lt.ts qcadcore_pl.ts qcadcore_ru.ts qcadcore_sk.ts qcadcore_sl.ts qcadentity_cs.ts qcadentity_hr.ts qcadentity_hu.ts qcadentity_lt.ts qcadentity_pl.ts qcadentity_ru.qcadentity_sk.ts qcadentity_sl.ts qcadgui_cs.ts qcadgui_hr.ts qcadgui_hu.ts qcadgui_lt.ts qcadgui_pl.ts qcadgui_ru.ts qcadgui_sk.ts qcadgui_sl.ts scripts_cs.ts scripts_hr.ts scripts_hu.ts scripts_lt.ts scripts_pl.ts scripts_ru.ts scripts_sk.ts scripts_sl.ts</translation>
+        <translation>Verbose *</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
-        <translation>Odstránenie základných entít _tmp_cs _tmp_hr _tmp_hu _tmp_lt _tmp_sk _tmp_sl qcadcore_cs.ts qcadcore_hr.ts qcadcore_hu.ts qcadcore_lt.ts qcadcore_pl.ts qcadcore_ru.ts qcadcore_sk.ts qcadcore_sl.ts qcadentity_cs.ts qcadentity_hr.ts qcadentity_hu.ts qcadentity_lt.ts qcadentity_pl.ts qcadentity_ru.ts qcadentity_sk.ts qcadentity_sl.ts qcadgui_cs.ts qcadgui_hr.ts qcadgui_hu.ts qcadgui_lt.ts qcadgui_pl.ts qcadgui_ru.ts qcadgui_sk.ts qcadgui_sl.ts scripts_cs.ts scripts_hr.ts scripts_hu.ts scripts_lt.ts scripts_pl.ts scripts_ru.ts scripts_sk.ts scripts_sl.ts</translation>
+        <translation>Odstránenie základných entít *</translation>
     </message>
 </context>
 <context>

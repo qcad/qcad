@@ -5564,12 +5564,12 @@ is already in the list.</source>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation>Verbose _tmp_ja qcadcore_ja.ts qcadentity_ja.ts qcadgui_ja.ts scripts_ja.ts</translation>
+        <translation>Verbose *</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
-        <translation>ベースエンティティの削除 _tmp_ja qcadcore_ja.ts qcadentity_ja.ts qcadgui_ja.ts scripts_ja.ts</translation>
+        <translation>ベースエンティティの削除 *</translation>
     </message>
 </context>
 <context>
