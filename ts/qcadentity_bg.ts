@@ -369,7 +369,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation>Точка на акорда</translation>
+        <translation>Точка на хордата</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -425,7 +425,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>Крайна точка на водача</translation>
+        <translation>Крайна точка на изнесения надпис</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>

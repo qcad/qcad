@@ -439,7 +439,7 @@
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation>Trækningsrækkefølge</translation>
+        <translation>Tegnerækkefølge</translation>
     </message>
     <message>
         <location line="+2"/>

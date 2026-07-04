@@ -319,7 +319,7 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation>Принадлежит справочнику</translation>
+        <translation>Принадлежит привязке</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -711,14 +711,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation>Минимальные степени</translation>
+        <translation>Минимальные границы</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation>Максимальные степени</translation>
+        <translation>Максимальные границы</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+931"/>

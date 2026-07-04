@@ -4082,7 +4082,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+46"/>
         <source>Draw from CSV</source>
-        <translation>Črpanje iz CSV</translation>
+        <translation>Risanje iz CSV</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4097,7 +4097,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation>Črpanje iz CSV</translation>
+        <translation>Risanje iz CSV</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5986,7 +5986,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+20"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-        <translation>Poliedri s širino po meri so vedno široki vsaj 1 piksel</translation>
+        <translation>Lomljenke s širino po meri so vedno široke vsaj 1 piksel</translation>
     </message>
     <message>
         <location line="+339"/>
@@ -7026,7 +7026,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>Ležišče:</translation>
+        <translation>Smerni kot:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7036,7 +7036,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation>Ložišče / azimut</translation>
+        <translation>Smerni kot / azimut</translation>
     </message>
 </context>
 <context>
@@ -7887,7 +7887,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+1"/>
         <source>Planometric</source>
-        <translation>Dimetrično</translation>
+        <translation>Planometrično</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8221,12 +8221,12 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Vodja je bil ustvarjen uspešno</translation>
+        <translation>Vodilo je bilo uspešno ustvarjeno</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>Voditelj iz izbranega besedila</translation>
+        <translation>Vodilo iz izbranega besedila</translation>
     </message>
 </context>
 <context>
@@ -8494,7 +8494,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation>Škatlast&amp; spoj iz dveh točk</translation>
+        <translation>&amp;Škatlasti spoj iz dveh točk</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10370,7 +10370,7 @@ je že na seznamu.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Največja zapletenost za samodejni izračun dolžine lopute:</translation>
+        <translation>Največja zapletenost za samodejni izračun dolžine šrafure:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -12573,12 +12573,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Vodja je bil ustvarjen uspešno</translation>
+        <translation>Vodilo je bilo uspešno ustvarjeno</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>Usklajeno besedilo Leader</translation>
+        <translation>Vodilo poravnano z besedilom</translation>
     </message>
 </context>
 <context>
@@ -14425,12 +14425,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation>Nosilke</translation>
+        <translation>Vodila</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Nosilka</translation>
+        <translation>Vodilo</translation>
     </message>
     <message>
         <location line="+2"/>

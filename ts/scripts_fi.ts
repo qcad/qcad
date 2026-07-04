@@ -3226,7 +3226,7 @@ Haluatko palauttaa sen?</translation>
         <location line="+32"/>
         <location line="+60"/>
         <source>Show trailing zeros</source>
-        <translation>Näytä etunollat</translation>
+        <translation>Näytä perässä olevat nollat</translation>
     </message>
     <message>
         <location line="-50"/>
@@ -3985,7 +3985,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Valetut merkinnät: %1 %2 tekstirivistä %2 tekstiriviä</translation>
+        <translation>Valetut merkinnät: %1 / %2 tekstiriviä</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5739,7 +5739,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+15"/>
         <source>Tolerance:</source>
-        <translation>Suvaitsevaisuus:</translation>
+        <translation>Toleranssi:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5960,7 +5960,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="-11"/>
         <source>Number of threads:</source>
-        <translation>Kierteiden määrä:</translation>
+        <translation>Säikeiden määrä:</translation>
     </message>
     <message>
         <location line="-207"/>
@@ -6909,7 +6909,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation>Luukutettu alue:</translation>
+        <translation>Kuvioitu alue:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7020,7 +7020,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>Laakeri:</translation>
+        <translation>Suuntima:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7892,12 +7892,12 @@ on jo luettelossa.</translation>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation>Kaappi</translation>
+        <translation>Kabinetti</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cavalier</source>
-        <translation>Omavalinta</translation>
+        <translation>Kavaljeeri</translation>
     </message>
 </context>
 <context>
@@ -8697,7 +8697,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
-        <translation>Jyrkkä 2 ympyrän akseli</translation>
+        <translation>2 ympyrän potenssiakseli</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
@@ -9825,7 +9825,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2"/>
         <source>Pole of Line and Circle</source>
-        <translation>Rivin ja ympyrän napa</translation>
+        <translation>Viivan ja ympyrän napa</translation>
     </message>
 </context>
 <context>
@@ -9838,7 +9838,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Kolmen ympyrän tehokeskus</translation>
+        <translation>Kolmen ympyrän potenssikeskus</translation>
     </message>
 </context>
 <context>
@@ -12562,7 +12562,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>&amp;Tekstin mukainen johtaja</translation>
+        <translation>&amp;Tekstin mukainen perusviiva</translation>
     </message>
 </context>
 <context>
@@ -13457,7 +13457,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+1"/>
         <source>Mil</source>
-        <translation>Maili</translation>
+        <translation>Mil</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13736,7 +13736,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="-10"/>
         <source>Degrees</source>
-        <translation>Tutkinnot</translation>
+        <translation>Astetta</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -14424,7 +14424,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+0"/>
         <source>Tolerance</source>
-        <translation>Suvaitsevaisuus</translation>
+        <translation>Toleranssi</translation>
     </message>
     <message>
         <location line="+2"/>

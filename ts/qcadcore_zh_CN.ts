@@ -464,7 +464,7 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation>处理</translation>
+        <translation>句柄</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -620,7 +620,7 @@
     <message>
         <location line="+2"/>
         <source>Overall</source>
-        <translation>顶层</translation>
+        <translation>总体</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1098,7 +1098,7 @@
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation>通信线</translation>
+        <translation>通信</translation>
     </message>
     <message>
         <location line="+1"/>

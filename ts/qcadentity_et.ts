@@ -425,7 +425,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>Leader lõpp-punkt</translation>
+        <translation>Viitejoone lõpp-punkt</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>

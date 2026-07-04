@@ -154,7 +154,7 @@
     <message>
         <location line="+2"/>
         <source>Orange</source>
-        <translation>炎色</translation>
+        <translation>オレンジ</translation>
     </message>
     <message>
         <location line="+1"/>

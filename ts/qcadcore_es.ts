@@ -76,7 +76,7 @@
     <message>
         <location line="+3"/>
         <source>Decimeter</source>
-        <translation>Desímetro</translation>
+        <translation>Decímetro</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -174,7 +174,7 @@
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation>Ciánico oscuro</translation>
+        <translation>Cian oscuro</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -788,7 +788,7 @@
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation>Tamaño de la garrapata</translation>
+        <translation>Tamaño de marca</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -828,7 +828,7 @@
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Garrapata de la arquitectura</translation>
+        <translation>Marca arquitectónica</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -904,7 +904,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Border</source>
-        <translation>Morse G</translation>
+        <translation>Borde</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -932,7 +932,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation>Morse D</translation>
+        <translation>Dividir</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -953,7 +953,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation>Vals</translation>
+        <translation>Fantasma</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1123,7 +1123,7 @@
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation>Inmaculado</translation>
+        <translation>Impuro</translation>
     </message>
     <message>
         <location line="+1"/>

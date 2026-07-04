@@ -3272,7 +3272,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation>Απόσταση/γωνία οθόνης</translation>
+        <translation>Εμφάνιση απόστασης/γωνίας</translation>
     </message>
 </context>
 <context>
@@ -3484,7 +3484,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation>Σκούπισμα</translation>
+        <translation>Σάρωση</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -4161,7 +4161,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation>Σκούπισμα:</translation>
+        <translation>Σάρωση:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -4735,7 +4735,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>Απόδραση</translation>
+        <translation>Ακύρωση</translation>
     </message>
 </context>
 <context>
@@ -5112,17 +5112,17 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>Έκρηξη</translation>
+        <translation>Διάσπαση</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation>Έκρηξη</translation>
+        <translation>Διάσπαση</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+19"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation>Εξελκύστε splines σε πολυγραμμές με τμήματα γραμμής</translation>
+        <translation>Διάσπαση splines σε πολυγραμμές με τμήματα γραμμής</translation>
     </message>
     <message>
         <location line="+104"/>
@@ -5147,17 +5147,17 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Explode circles into polylines with two half circles</source>
-        <translation>Εκρήξεις κύκλων σε πολυγραμμές με δύο μισούς κύκλους</translation>
+        <translation>Διάσπαση κύκλων σε πολυγραμμές με δύο μισούς κύκλους</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation>Ανασυνθέστε κείμενα πολλών γραμμών σε πολλαπλά απλά μπλοκ κειμένου</translation>
+        <translation>Διάσπαση κειμένων πολλών γραμμών σε πολλαπλά απλά μπλοκ κειμένου</translation>
     </message>
     <message>
         <location line="+80"/>
         <source>Explode text glyphs to polylines</source>
-        <translation>Εκρηκτική μετατροπή γλυφών κειμένου σε πολυγραμμές</translation>
+        <translation>Διάσπαση γλυφών κειμένου σε πολυγραμμές</translation>
     </message>
 </context>
 <context>
@@ -5649,7 +5649,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
-        <translation>Τρία: Σωστό</translation>
+        <translation>Τρία: Δεξιά</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/21_ThreeLeft.ui" line="+14"/>
@@ -5774,7 +5774,7 @@ is already in the list.</source>
     <message>
         <location line="+64"/>
         <source>Cursor range for snap:</source>
-        <translation>Εύρος κέρσορα για το συμπληρωματικό πρόγραμμα:</translation>
+        <translation>Εύρος κέρσορα για το πιάσιμο:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7030,7 +7030,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation>Ρουλεμάν / Αζιμούθιο</translation>
+        <translation>Διόπτευση / Αζιμούθιο</translation>
     </message>
 </context>
 <context>
@@ -7462,7 +7462,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+19"/>
         <source>&amp;Wire Centroid</source>
-        <translation>Εγκέφαλος σύρματος</translation>
+        <translation>Κεντροειδές σύρματος</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -8791,7 +8791,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1Init.js" line="+2"/>
         <source>&amp;Tangent (Point, Circle)</source>
-        <translation>Εγκάρσια (σημείο, κύκλος)</translation>
+        <translation>Εφαπτομένη (σημείο, κύκλος)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9635,7 +9635,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/PanZoom/PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation>Παν Ζουμ Ζουμ</translation>
+        <translation>Παν Ζουμ</translation>
     </message>
 </context>
 <context>
@@ -9838,7 +9838,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Κέντρο ισχύος τριών κύκλων</translation>
+        <translation>Ριζικό κέντρο τριών κύκλων</translation>
     </message>
 </context>
 <context>
@@ -9919,7 +9919,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Inherit</source>
-        <translation>Κληρονόμος</translation>
+        <translation>Κληρονόμηση</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -9991,7 +9991,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation>Κατάρρευση δέντρου</translation>
+        <translation>Σύμπτυξη δέντρου</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -10907,7 +10907,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Saving...</source>
-        <translation>Εξοικονόμηση...</translation>
+        <translation>Αποθήκευση...</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12027,7 +12027,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation>Εγχειρίδιο απόστασης</translation>
+        <translation>Χειροκίνητη απόσταση</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12048,7 +12048,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>Δωρεάν</translation>
+        <translation>Ελεύθερο</translation>
     </message>
 </context>
 <context>
@@ -12082,7 +12082,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation>Εγχειρίδιο διασταύρωσης</translation>
+        <translation>Χειροκίνητη διασταύρωση</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12097,7 +12097,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation>Εγχειρίδιο διασταύρωσης</translation>
+        <translation>Χειροκίνητη διασταύρωση</translation>
     </message>
 </context>
 <context>
@@ -12113,7 +12113,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation>Μέσο Εγχειρίδιο</translation>
+        <translation>Χειροκίνητο μέσο</translation>
     </message>
 </context>
 <context>
@@ -12205,7 +12205,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Degree:</source>
-        <translation>Πτυχίο:</translation>
+        <translation>Βαθμός:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12625,7 +12625,7 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>&amp;Bold</source>
-        <translation>Τολμηρό</translation>
+        <translation>Έντονο</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -13406,7 +13406,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Measurement system (for line types and hatch patterns):</source>
-        <translation>Σύστημα μέτρησης (για τύπους γραμμών και μοτίβα κατακόρυφων):</translation>
+        <translation>Σύστημα μέτρησης (για τύπους γραμμών και μοτίβα διαγράμμισης):</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
@@ -14499,12 +14499,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation>Πρόσωπα</translation>
+        <translation>Έδρες</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation>Πρόσωπο</translation>
+        <translation>Έδρα</translation>
     </message>
     <message>
         <location line="+2"/>

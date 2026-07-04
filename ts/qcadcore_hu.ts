@@ -946,7 +946,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation>Kétpontvonal</translation>
+        <translation>Felosztás</translation>
     </message>
     <message>
         <location line="+2"/>

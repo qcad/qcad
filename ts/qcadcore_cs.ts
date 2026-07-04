@@ -1118,7 +1118,7 @@
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation>Režijní napájení</translation>
+        <translation>Nadzemní vedení</translation>
     </message>
     <message>
         <location line="+2"/>

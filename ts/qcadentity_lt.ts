@@ -385,7 +385,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation>Akordo taškas</translation>
+        <translation>Stygos taškas</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -860,7 +860,7 @@
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation>Studijų laipsnis</translation>
+        <translation>Laipsnis</translation>
     </message>
     <message>
         <location line="+2"/>

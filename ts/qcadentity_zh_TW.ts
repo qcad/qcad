@@ -517,7 +517,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation>主要點</translation>
+        <translation>長軸點</translation>
     </message>
     <message>
         <location line="+1"/>

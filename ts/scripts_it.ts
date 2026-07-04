@@ -1007,7 +1007,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location line="+10"/>
         <source>Grid points</source>
-        <translation>Griglia</translation>
+        <translation>Punti griglia</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1068,7 +1068,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
-        <translation>Le due entità non può essere cimare.</translation>
+        <translation>Le due entità non possono essere smussate.</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -1161,7 +1161,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location line="+6"/>
         <source>Export bounding box of selection</source>
-        <translation>Exporte a área retangular em torno da seleção</translation>
+        <translation>Esporta il rettangolo di delimitazione della selezione</translation>
     </message>
     <message>
         <location line="-81"/>
@@ -2201,7 +2201,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation>Cercando di disegnare o modificare le entità su un livello bloccato.</translation>
+        <translation>Transazione non riuscita. Controllare le ricorsioni di blocco e i livelli o blocchi bloccati o invisibili.</translation>
     </message>
     <message>
         <location line="-417"/>
@@ -2256,7 +2256,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History size:</source>
-        <translation>Taglia della storia:</translation>
+        <translation>Dimensione della cronologia:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -2644,7 +2644,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Mappa del personaggio</translation>
+        <translation>Mappa caratteri</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
@@ -2685,7 +2685,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location line="-8"/>
         <source>Splines</source>
-        <translation>Spine</translation>
+        <translation>Spline</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -2882,8 +2882,8 @@ Vuoi recuperarlo?</translation>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
-            <numerusform>Posizione dell&apos;etichetta di %1 dimensione è stato azzerato.</numerusform>
-            <numerusform>Posizione dell&apos;etichetta di %1 dimensiones è stato azzerato.</numerusform>
+            <numerusform>Posizione dell&apos;etichetta di %n dimensione è stata azzerata.</numerusform>
+            <numerusform>Posizione dell&apos;etichetta di %n dimensioni è stata azzerata.</numerusform>
         </translation>
     </message>
     <message>
@@ -4394,7 +4394,7 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &quot;safe&quot; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Siete in procinto di abilitare la shell ECMAScript.&lt;/p&gt;&lt;p&gt;Nella shell ECMAScript è possibile &lt;span style=&quot; colore:#ff0000;&quot;&gt;modificare i disegni&lt;/span&gt; ma anche &lt;span style=&quot; colore:#ff0000;&quot;&gt;cancellare i file&lt;/span&gt; o &lt;span style=&quot; colore:#ff0000;&quot;&gt;incidere l&apos;applicazione&lt;/span&gt; che può portare a &lt;span style=&quot; colore:#ff0000;&quot;&gt;perdita di dati&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Per i programmatori inesperti, si raccomanda di limitare l&apos;uso della shell ECMAScript a &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; testo-decorazione: sottolineare; colore:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; che è considerato &quot;sicuro&quot; da usare.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Siete in procinto di abilitare la shell ECMAScript.&lt;/p&gt;&lt;p&gt;Nella shell ECMAScript è possibile &lt;span style=&quot; color:#ff0000;&quot;&gt;modificare i disegni&lt;/span&gt; ma anche &lt;span style=&quot; color:#ff0000;&quot;&gt;cancellare i file&lt;/span&gt; o &lt;span style=&quot; color:#ff0000;&quot;&gt;incidere l&apos;applicazione&lt;/span&gt; che può portare a &lt;span style=&quot; color:#ff0000;&quot;&gt;perdita di dati&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Per i programmatori inesperti, si raccomanda di limitare l&apos;uso della shell ECMAScript a &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; che è considerato &quot;sicuro&quot; da usare.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4490,7 +4490,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Edit text</source>
-        <translation>Raccorda di un valore</translation>
+        <translation>Modifica testo</translation>
     </message>
 </context>
 <context>
@@ -5569,7 +5569,7 @@ is already in the list.</source>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation>Verbosio *</translation>
+        <translation>Verboso *</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5603,7 +5603,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation>Sei sicuro di voler risciacquare la cronologia delle transazioni di annullamento/ripetizione?</translation>
+        <translation>Sei sicuro di voler svuotare la cronologia delle transazioni di annullamento/ripetizione?</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6275,7 +6275,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Panning threshold (px):</source>
-        <translation>Soglia della pentola:</translation>
+        <translation>Soglia di panoramica:</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -6977,7 +6977,7 @@ is already in the list.</source>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Forma non gestita dal ciclo del portello.</translation>
+        <translation>Forma non gestita dal ciclo di tratteggio.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7091,7 +7091,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+192"/>
         <source>2D Centroids transaction listener active.</source>
-        <translation>L&apos;ascoltatore della transazione dei centriidi 2D è attivo.</translation>
+        <translation>L&apos;ascoltatore della transazione dei centroidi 2D è attivo.</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -7114,7 +7114,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation>(De-)Attivare un ascoltatore di transazioni per i centriidi 2D</translation>
+        <translation>(De-)Attivare un ascoltatore di transazioni per i centroidi 2D</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7258,7 +7258,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>2D Centroids weighted sum script (v0.24) by CVH.</source>
-        <translation>Script di somma ponderata dei centriidi 2D (v0.24) di CVH.</translation>
+        <translation>Script di somma ponderata dei centroidi 2D (v0.24) di CVH.</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -7362,7 +7362,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
         <source>&amp;Sum 2D Centroids weighted</source>
-        <translation>Somma dei centriidi 2D ponderati</translation>
+        <translation>Somma dei centroidi 2D ponderati</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7411,7 +7411,7 @@ is already in the list.</source>
     <message>
         <location line="-71"/>
         <source>Wire 2D Centroid script (v0.32) by CVH</source>
-        <translation>Scrittura Wire 2D Centroid (v0.32) di CVH</translation>
+        <translation>Script Wire 2D Centroid (v0.32) di CVH</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -8040,7 +8040,7 @@ is already in the list.</source>
     <message>
         <location line="+51"/>
         <source>Thawing all layers</source>
-        <translation>Scongiurare tutti i livelli</translation>
+        <translation>Scongelare tutti i livelli</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8220,7 +8220,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Linea che consente è stato creato con successo</translation>
+        <translation>Direttrice creata con successo</translation>
     </message>
 </context>
 <context>
@@ -9057,7 +9057,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation>Strumenti muscolari per blocchi</translation>
+        <translation>Strumenti vari per blocchi</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -9134,7 +9134,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Misc Information Tools</source>
-        <translation>Strumenti di informazione distorsiva</translation>
+        <translation>Strumenti di informazione vari</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -9303,7 +9303,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Mappa del personaggio</translation>
+        <translation>Mappa caratteri</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9838,7 +9838,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>&quot;Power center&quot; di tre cerchi</translation>
+        <translation>Centro radicale di tre cerchi</translation>
     </message>
 </context>
 <context>
@@ -12558,12 +12558,12 @@ is already in the list.</source>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Linea che consente è stato creato con successo</translation>
+        <translation>Direttrice creata con successo</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>&amp;Linea che consente allineato al testo</translation>
+        <translation>&amp;Direttrice allineata al testo</translation>
     </message>
 </context>
 <context>
@@ -13358,12 +13358,12 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Auto screen scale factor</source>
-        <translation>Fattore di scala:</translation>
+        <translation>Fattore di scala automatico dello schermo</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Enable high DPI scaling</source>
-        <translation>Abilita splash screen</translation>
+        <translation>Abilita ridimensionamento ad alto DPI</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -14080,7 +14080,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomOut/ZoomOutInit.js" line="+2"/>
         <source>Zoom &amp;Out</source>
-        <translation>Zoom &amp;ll&apos;esterno</translation>
+        <translation>Zoom a&amp;ll&apos;esterno</translation>
     </message>
 </context>
 <context>

@@ -5290,27 +5290,27 @@ már szerepel a listában.</translation>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Flip festők</translation>
+        <translation>Festők tükrözése</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>Csoportos szereposztás</translation>
+        <translation>Csoportos létrehozás</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Cast on sub-layer</translation>
+        <translation>Létrehozás alrétegen</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Begin Apex</source>
-        <translation>Add Begin Apex hozzáadása</translation>
+        <translation>Kezdő csúcs hozzáadása</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add End Apex</source>
-        <translation>Add End Apex hozzáadása</translation>
+        <translation>Záró csúcs hozzáadása</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5495,7 +5495,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation>&amp;lt</translation>
+        <translation>&lt;Térköz mérete&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5550,7 +5550,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation>Igazodjon a begin</translation>
+        <translation>Igazodjon a kezdethez</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5570,7 +5570,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
-        <translation>null</translation>
+        <translation>Alapelemek törlése *</translation>
     </message>
 </context>
 <context>
@@ -5640,7 +5640,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation>Döntetlen ragasztó öl</translation>
+        <translation>Ragasztófül rajzolása</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
@@ -7838,7 +7838,7 @@ már szerepel a listában.</translation>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation>Szekrény</translation>
+        <translation>Kabinet</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8203,7 +8203,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+14"/>
         <source>Arrow head</source>
-        <translation>Nyíl rajzolása</translation>
+        <translation>Nyílhegy</translation>
     </message>
 </context>
 <context>
@@ -9819,7 +9819,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2"/>
         <source>Pole of Line and Circle</source>
-        <translation>Oszlop vonalból és körből</translation>
+        <translation>Vonal és kör pólusa</translation>
     </message>
 </context>
 <context>
@@ -12023,7 +12023,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+5"/>
         <source>Fraction</source>
-        <translation>Osztó</translation>
+        <translation>Tört</translation>
     </message>
 </context>
 <context>
@@ -12721,7 +12721,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Négyzet</translation>
+        <translation>Köb</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13793,12 +13793,12 @@ már szerepel a listában.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Négyzet</translation>
+        <translation>Köb</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Stacked text</source>
-        <translation>Felső index</translation>
+        <translation>Halmozott szöveg</translation>
     </message>
     <message>
         <location line="+5"/>

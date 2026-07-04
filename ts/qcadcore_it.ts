@@ -174,7 +174,7 @@
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation>Scuro ciano</translation>
+        <translation>Ciano scuro</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -653,7 +653,7 @@
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation>Nascosto</translation>
+        <translation>Congelato</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -828,7 +828,7 @@
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Spunta l&apos;architettura</translation>
+        <translation>Contrassegno architettonico</translation>
     </message>
     <message>
         <location line="+1"/>

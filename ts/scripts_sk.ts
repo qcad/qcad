@@ -3178,7 +3178,7 @@ Prajete si ho obnoviť?</translation>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>Architektonický kliešť</translation>
+        <translation>Architektonická značka</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -3497,12 +3497,12 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation>Remíza Fms Lanes</translation>
+        <translation>Nakresliť Fms pruhy</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation>Ťahanie FMS dráh (rebrá)</translation>
+        <translation>Nakresliť FMS dráhy (rebrá)</translation>
     </message>
 </context>
 <context>
@@ -4083,7 +4083,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+46"/>
         <source>Draw from CSV</source>
-        <translation>Čerpanie z CSV</translation>
+        <translation>Kreslenie z CSV</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4098,7 +4098,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation>Čerpanie z CSV</translation>
+        <translation>Kreslenie z CSV</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4164,7 +4164,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation>Zametanie:</translation>
+        <translation>Rozvinutie:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -4672,7 +4672,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
         <source>&amp;Parallel Curve (with Distance)</source>
-        <translation>&amp;Paralelná elipsa (so Vzdialenosťou)</translation>
+        <translation>&amp;Paralelná krivka (so Vzdialenosťou)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4690,7 +4690,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
         <source>Parallel Curve (&amp;through Point)</source>
-        <translation>Paralelná elipsa (&amp;s pomocou Bodu)</translation>
+        <translation>Paralelná krivka (&amp;s pomocou Bodu)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5494,7 +5494,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation>Verbálne informácie. (trvalé zapnutie)</translation>
+        <translation>Podrobné informácie. (trvalé zapnutie)</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5574,12 +5574,12 @@ už existuje v zozname.</translation>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation>Verbose _tmp_cs _tmp_hr _tmp_hu _tmp_lt _tmp_sk _tmp_sl qcadcore_cs.ts qcadcore_hr.ts qcadcore_hu.ts qcadcore_lt.ts qcadcore_pl.ts qcadcore_ru.ts qcadcore_sk.ts qcadcore_sl.ts qcadentity_cs.ts qcadentity_hr.ts qcadentity_hu.ts qcadentity_lt.ts qcadentity_pl.ts qcadentity_ru.qcadentity_sk.ts qcadentity_sl.ts qcadgui_cs.ts qcadgui_hr.ts qcadgui_hu.ts qcadgui_lt.ts qcadgui_pl.ts qcadgui_ru.ts qcadgui_sk.ts qcadgui_sl.ts scripts_cs.ts scripts_hr.ts scripts_hu.ts scripts_lt.ts scripts_pl.ts scripts_ru.ts scripts_sk.ts scripts_sl.ts</translation>
+        <translation>Verbose *</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
-        <translation>Odstránenie základných entít _tmp_cs _tmp_hr _tmp_hu _tmp_lt _tmp_sk _tmp_sl qcadcore_cs.ts qcadcore_hr.ts qcadcore_hu.ts qcadcore_lt.ts qcadcore_pl.ts qcadcore_ru.ts qcadcore_sk.ts qcadcore_sl.ts qcadentity_cs.ts qcadentity_hr.ts qcadentity_hu.ts qcadentity_lt.ts qcadentity_pl.ts qcadentity_ru.ts qcadentity_sk.ts qcadentity_sl.ts qcadgui_cs.ts qcadgui_hr.ts qcadgui_hu.ts qcadgui_lt.ts qcadgui_pl.ts qcadgui_ru.ts qcadgui_sk.ts qcadgui_sl.ts scripts_cs.ts scripts_hr.ts scripts_hu.ts scripts_lt.ts scripts_pl.ts scripts_ru.ts scripts_sk.ts scripts_sl.ts</translation>
+        <translation>Odstránenie základných entít *</translation>
     </message>
 </context>
 <context>
@@ -5639,17 +5639,17 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
-        <translation>Tri: Veľký vpravo</translation>
+        <translation>Tri: Vpravo</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/21_ThreeLeft.ui" line="+14"/>
         <source>Three: Left</source>
-        <translation>Tri: Veľký vľavo</translation>
+        <translation>Tri: Vľavo</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/22_ThreeAbove.ui" line="+14"/>
         <source>Three: Above</source>
-        <translation>Tri: Veľký hore</translation>
+        <translation>Tri: Hore</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui" line="+14"/>
@@ -5688,7 +5688,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation>Štyri: Veľký vľavo</translation>
+        <translation>Štyri: Vľavo</translation>
     </message>
 </context>
 <context>
@@ -5696,7 +5696,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation>Štyri: Veľký vpravo</translation>
+        <translation>Štyri: Vpravo</translation>
     </message>
 </context>
 <context>
@@ -6015,7 +6015,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation>Predvolená váha riadkov:</translation>
+        <translation>Predvolená hrúbka čiary:</translation>
     </message>
     <message>
         <location line="+522"/>
@@ -6365,7 +6365,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+8"/>
         <source>Type</source>
-        <translation>Možnosť</translation>
+        <translation>Typ</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6934,7 +6934,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="-89"/>
         <source>Multiple entities in selection.</source>
-        <translation>Viacero subjektov vo výbere.</translation>
+        <translation>Viacero prvkov vo výbere.</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -7025,7 +7025,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>Ložisko:</translation>
+        <translation>Smerník:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7035,7 +7035,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation>Ložisko / azimut</translation>
+        <translation>Smerník / azimut</translation>
     </message>
 </context>
 <context>
@@ -7902,7 +7902,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+1"/>
         <source>Cavalier</source>
-        <translation>Jazdec</translation>
+        <translation>Kavalierská</translation>
     </message>
 </context>
 <context>
@@ -8220,12 +8220,12 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Vedúci bol úspešne vytvorený</translation>
+        <translation>Odkazová čiara bola úspešne vytvorená</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>Vedúci z vybraného textu</translation>
+        <translation>Odkazová čiara z vybraného textu</translation>
     </message>
 </context>
 <context>
@@ -9845,7 +9845,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Vrcholový bod troch kružníc</translation>
+        <translation>Potenčný stred troch kružníc</translation>
     </message>
 </context>
 <context>
@@ -10245,7 +10245,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Maximálna zložitosť automatického výpočtu dĺžky poklopu:</translation>
+        <translation>Maximálna zložitosť automatického výpočtu dĺžky šrafovania:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10967,7 +10967,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+13"/>
         <source>Opening</source>
-        <translation>Otvorenie stránky</translation>
+        <translation>Otvorenie</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -11908,7 +11908,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+1"/>
         <source>Enter</source>
-        <translation>Vstúpte na stránku</translation>
+        <translation>Enter</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
@@ -12524,7 +12524,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+3"/>
         <source>0</source>
-        <translation>Rozostup medzi písmenami</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -12567,12 +12567,12 @@ už existuje v zozname.</translation>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Vedúci bol úspešne vytvorený</translation>
+        <translation>Odkazová čiara bola úspešne vytvorená</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>Zarovnanie textu Leader</translation>
+        <translation>Odkazová čiara zarovnaná s textom</translation>
     </message>
 </context>
 <context>
@@ -12837,7 +12837,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation>Názov výzvy:</translation>
+        <translation>Výzva:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -12984,7 +12984,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation>Tri: Veľký dole</translation>
+        <translation>Tri: Dole</translation>
     </message>
 </context>
 <context>
@@ -13221,7 +13221,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-        <translation>Úprava stránky</translation>
+        <translation>Úprava</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14550,7 +14550,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation>Rez</translation>
+        <translation>Pohľad</translation>
     </message>
     <message>
         <location line="+2"/>

@@ -582,7 +582,7 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation>Ručka</translation>
+        <translation>Identifikator</translation>
     </message>
     <message>
         <location line="+1"/>

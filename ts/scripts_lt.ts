@@ -2402,7 +2402,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/CounterInit.js" line="+2"/>
         <source>&amp;Counter</source>
-        <translation>Metras</translation>
+        <translation>Skaitiklis</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2702,7 +2702,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation>Liukai</translation>
+        <translation>Brūkšniavimai</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2837,7 +2837,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Lyderio galinis taškas</translation>
+        <translation>Nuorodos linijos galinis taškas</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
@@ -3275,7 +3275,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation>Ekrano atstumas / kampas</translation>
+        <translation>Rodyti atstumą / kampą</translation>
     </message>
 </context>
 <context>
@@ -3497,7 +3497,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation>Lygiosios Fms juostos</translation>
+        <translation>Brėžti Fms juostas</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4455,12 +4455,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation>Pasirinkite liuką</translation>
+        <translation>Pasirinkite brūkšniavimą</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation>Redaguoti liuką</translation>
+        <translation>Redaguoti brūkšniavimą</translation>
     </message>
 </context>
 <context>
@@ -4739,7 +4739,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>Pabėgimas</translation>
+        <translation>Atšaukti</translation>
     </message>
 </context>
 <context>
@@ -5035,7 +5035,7 @@ jau yra sąraše.</translation>
         <location line="+3"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
-        <translation>Lygiosios trys taškai</translation>
+        <translation>Nubrėžti tris taškus</translation>
     </message>
 </context>
 <context>
@@ -5117,12 +5117,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>Sprogti</translation>
+        <translation>Išskaidyti</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation>Sprogti</translation>
+        <translation>Išskaidyti</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+137"/>
@@ -5147,12 +5147,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+10"/>
         <source>Explode circles into polylines with two half circles</source>
-        <translation>Sprogdinti apskritimus į daugiakampes su dviem pusapskritimiais</translation>
+        <translation>Išskaidyti apskritimus į daugiakampes su dviem pusapskritimiais</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Explode text glyphs to polylines</source>
-        <translation>Sprogdinti teksto glifus į polilinijas</translation>
+        <translation>Išskaidyti teksto glifus į polilinijas</translation>
     </message>
     <message>
         <location line="-80"/>
@@ -5574,12 +5574,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation>Verbose _tmp_hr _tmp_hu _tmp_lt qcadcore_cs.ts qcadcore_hr.ts qcadcore_hu.ts qcadcore_hu.ts qcadcore_lt.ts qcadcore_pl.ts qcadcore_ru.ts qcadcore_sk.ts qcadcore_sl.ts qcadentity_cs.ts qcadentity_hr.ts qcadentity_hu.ts qcadentity_lt.ts qcadentity_pl.ts qcadentity_ru.ts qcadentity_sk.ts qcadentity_sl.ts qcadgui_cs.ts qcadgui_hr.ts qcadgui_hu.ts qcadgui_lt.ts qcadgui_pl.ts qcadgui_ru.ts qcadgui_sk.ts qcadgui_sl.ts scripts_cs.ts scripts_hr.ts scripts_hu.ts scripts_lt.ts scripts_pl.ts scripts_ru.ts scripts_sk.ts scripts_sl.ts</translation>
+        <translation>Verbose *</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
-        <translation>Ištrinti bazinius objektus _tmp_hr _tmp_hu _tmp_lt qcadcore_cs.ts qcadcore_hr.ts qcadcore_hu.ts qcadcore_lt.ts qcadcore_pl.ts qcadcore_ru.ts qcadcore_sk.ts qcadcore_sl.ts qcadentity_cs.ts qcadentity_hr.ts qcadentity_hu.ts qcadentity_lt.ts qcadentity_pl.ts qcadentity_ru.ts qcadentity_sk.ts qcadentity_sl.ts qcadgui_cs.ts qcadgui_hr.ts qcadgui_hu.ts qcadgui_lt.ts qcadgui_pl.ts qcadgui_ru.ts qcadgui_sk.ts qcadgui_sl.ts scripts_cs.ts scripts_hr.ts scripts_hu.ts scripts_lt.ts scripts_pl.ts scripts_ru.ts scripts_sk.ts scripts_sl.ts</translation>
+        <translation>Ištrinti bazinius objektus *</translation>
     </message>
 </context>
 <context>
@@ -5724,7 +5724,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation>Dukart spustelėkite, kad redaguotumėte liuką</translation>
+        <translation>Dukart spustelėkite, kad redaguotumėte brūkšniavimą</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6347,12 +6347,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation>Liuko įrankiai</translation>
+        <translation>Brūkšniavimo įrankiai</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Hatch</source>
-        <translation>Liukas</translation>
+        <translation>Brūkšniavimas</translation>
     </message>
 </context>
 <context>
@@ -6360,7 +6360,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation>Liukas</translation>
+        <translation>Brūkšniavimas</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6375,7 +6375,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Liuko modelis</translation>
+        <translation>Brūkšniavimo modelis</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6418,7 +6418,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>Liukas iš atrankos</translation>
+        <translation>Brūkšniavimas iš atrankos</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -6746,7 +6746,7 @@ jau yra sąraše.</translation>
         <location line="+67"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
-        <translation>Akordas</translation>
+        <translation>Styga</translation>
     </message>
     <message>
         <location line="-60"/>
@@ -6766,7 +6766,7 @@ jau yra sąraše.</translation>
         <location line="-88"/>
         <location line="+67"/>
         <source>chord:</source>
-        <translation>akordas:</translation>
+        <translation>styga:</translation>
     </message>
     <message>
         <location line="-52"/>
@@ -7025,7 +7025,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>Guolis:</translation>
+        <translation>Kryptis:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7035,7 +7035,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation>Guolis / azimutas</translation>
+        <translation>Kryptis / azimutas</translation>
     </message>
 </context>
 <context>
@@ -8197,12 +8197,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>Lyderis</translation>
+        <translation>Nuorodos linija</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Piešti lyderį (linijų seka su rodykle)</translation>
+        <translation>Brėžti nuorodos liniją (linijų seka su rodykle)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
@@ -8220,12 +8220,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Lyderis buvo sukurtas sėkmingai</translation>
+        <translation>Nuorodos linija sukurta sėkmingai</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>Lyderis iš pasirinkto teksto</translation>
+        <translation>Nuorodos linija iš pasirinkto teksto</translation>
     </message>
 </context>
 <context>
@@ -8281,7 +8281,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Spindulys</translation>
     </message>
 </context>
 <context>
@@ -9655,7 +9655,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+0"/>
         <source>Paste</source>
-        <translation>Pasta</translation>
+        <translation>Įklijuoti</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -9665,7 +9665,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation>Pasta</translation>
+        <translation>Įklijuoti</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
@@ -9832,7 +9832,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2"/>
         <source>Pole of Line and Circle</source>
-        <translation>Linijos ir apskritimo stulpas</translation>
+        <translation>Linijos ir apskritimo polius</translation>
     </message>
 </context>
 <context>
@@ -9845,7 +9845,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Trijų apskritimų galios centras</translation>
+        <translation>Trijų apskritimų radikalusis centras</translation>
     </message>
 </context>
 <context>
@@ -9998,7 +9998,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation>Žlugimo medis</translation>
+        <translation>Suskleisti medį</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -10154,7 +10154,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+11"/>
         <source>Auto Center</source>
-        <translation>Automobilių centras</translation>
+        <translation>Automatinis centravimas</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10317,7 +10317,7 @@ jau yra sąraše.</translation>
         <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
-        <translation>Turto redaktorius</translation>
+        <translation>Savybių redaktorius</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+24"/>
@@ -10337,7 +10337,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Didžiausias automatinio liuko ilgio apskaičiavimo sudėtingumas:</translation>
+        <translation>Didžiausias automatinio brūkšniavimo ilgio apskaičiavimo sudėtingumas:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10914,7 +10914,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+16"/>
         <source>Saving...</source>
-        <translation>Taupymas...</translation>
+        <translation>Įrašymas...</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11007,7 +11007,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+10"/>
         <source>Saving</source>
-        <translation>Taupymas</translation>
+        <translation>Įrašymas</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -11534,7 +11534,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+0"/>
         <source>on</source>
-        <translation>svetainėje</translation>
+        <translation>įjungta</translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
@@ -12058,7 +12058,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>Nemokamai</translation>
+        <translation>Laisvas</translation>
     </message>
 </context>
 <context>
@@ -12567,12 +12567,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Lyderis buvo sukurtas sėkmingai</translation>
+        <translation>Nuorodos linija sukurta sėkmingai</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>Tekstas suderintas su &quot;Leader</translation>
+        <translation>Su tekstu suderinta nuorodos linija</translation>
     </message>
 </context>
 <context>
@@ -12630,12 +12630,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation>Pasta</translation>
+        <translation>Įklijuoti</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Bold</source>
-        <translation>Drąsiai</translation>
+        <translation>Paryškinta</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -12675,7 +12675,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+136"/>
         <source>Degree</source>
-        <translation>Studijų laipsnis</translation>
+        <translation>Laipsnis</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12700,7 +12700,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Skyrius</translation>
+        <translation>Dalyba</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12740,7 +12740,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Kubeliais pjaustytas</translation>
+        <translation>Kubu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12771,7 +12771,7 @@ jau yra sąraše.</translation>
         <location line="+18"/>
         <location line="+274"/>
         <source>Bold</source>
-        <translation>Drąsiai</translation>
+        <translation>Paryškinta</translation>
     </message>
     <message>
         <location line="-267"/>
@@ -12812,7 +12812,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+10"/>
         <source>Paste</source>
-        <translation>Pasta</translation>
+        <translation>Įklijuoti</translation>
     </message>
     <message>
         <location line="+170"/>
@@ -13330,7 +13330,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Modify/TrimBoth/TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
-        <translation>Trim abu</translation>
+        <translation>Apkirpti abu</translation>
     </message>
 </context>
 <context>
@@ -13731,7 +13731,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="-13"/>
         <source>Division</source>
-        <translation>Skyrius</translation>
+        <translation>Dalyba</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -13811,7 +13811,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Kubeliais pjaustytas</translation>
+        <translation>Kubu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14399,12 +14399,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation>Liukai</translation>
+        <translation>Brūkšniavimai</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation>Liukas</translation>
+        <translation>Brūkšniavimas</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14419,12 +14419,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation>Lyderiai</translation>
+        <translation>Nuorodos linijos</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Lyderis</translation>
+        <translation>Nuorodos linija</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14464,7 +14464,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Spindulys</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14509,12 +14509,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation>Veidai</translation>
+        <translation>Paviršiai</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation>Veidas</translation>
+        <translation>Paviršius</translation>
     </message>
     <message>
         <location line="+2"/>

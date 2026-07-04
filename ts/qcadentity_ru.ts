@@ -464,12 +464,12 @@
     <message>
         <location line="+3"/>
         <source>Flip First Arrow</source>
-        <translation>Кувыркающаяся первая стрелка</translation>
+        <translation>Отразить первую стрелку</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation>Кувыркающаяся вторая стрелка</translation>
+        <translation>Отразить вторую стрелку</translation>
     </message>
     <message>
         <location line="+2"/>

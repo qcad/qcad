@@ -352,7 +352,7 @@ aby wprowadzić zmiany preferencji.</translation>
     <message>
         <location line="-42"/>
         <source>Position X:</source>
-        <translation>Stanowisko X:</translation>
+        <translation>Pozycja X:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -2094,7 +2094,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation>Losowanie końcowe...</translation>
+        <translation>Zamykanie rysunku...</translation>
     </message>
 </context>
 <context>
@@ -2248,7 +2248,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location line="+12"/>
         <source>Command:</source>
-        <translation>Rozkaz:</translation>
+        <translation>Polecenie:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2646,7 +2646,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Mapa postaci</translation>
+        <translation>Mapa znaków</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
@@ -2837,7 +2837,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Punkt końcowy lidera</translation>
+        <translation>Punkt końcowy odnośnika</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
@@ -3178,7 +3178,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>Kleszcze architektoniczne</translation>
+        <translation>Kreska architektoniczna</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -4111,12 +4111,12 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
-        <translation>Kolejność losowania</translation>
+        <translation>Kolejność rysowania</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation>Kolejność losowania</translation>
+        <translation>Kolejność rysowania</translation>
     </message>
 </context>
 <context>
@@ -5494,7 +5494,7 @@ jest już na liście.</translation>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation>Informacja zwrotna. (persistent on)</translation>
+        <translation>Szczegółowe informacje. (persistent on)</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5574,12 +5574,12 @@ jest już na liście.</translation>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation>Verbose _tmp_pl qcadcore_pl.ts qcadentity_pl.ts qcadgui_pl.ts scripts_pl.ts</translation>
+        <translation>Verbose *</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
-        <translation>Usuń bazowe encje _tmp_pl qcadcore_pl.ts qcadentity_pl.ts qcadgui_pl.ts scripts_pl.ts</translation>
+        <translation>Usuń bazowe encje *</translation>
     </message>
 </context>
 <context>
@@ -7025,7 +7025,7 @@ jest już na liście.</translation>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>Łożyskowanie:</translation>
+        <translation>Namiar:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7088,7 +7088,7 @@ jest już na liście.</translation>
     <message>
         <location line="-1"/>
         <source>Density</source>
-        <translation>Gęstość zaludnienia</translation>
+        <translation>Gęstość</translation>
     </message>
 </context>
 <context>
@@ -7590,7 +7590,7 @@ jest już na liście.</translation>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation>Na stronie</translation>
+        <translation>@</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8197,12 +8197,12 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>Lider</translation>
+        <translation>Odnośnik</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Narysuj lidera (sekwencja linii ze strzałką)</translation>
+        <translation>Narysuj odnośnik (sekwencja linii ze strzałką)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
@@ -8220,12 +8220,12 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Lider został utworzony pomyślnie</translation>
+        <translation>Odnośnik został utworzony pomyślnie</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>Lider z wybranego tekstu</translation>
+        <translation>Odnośnik z wybranego tekstu</translation>
     </message>
 </context>
 <context>
@@ -8702,7 +8702,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
-        <translation>Oś radialna 2 okręgów</translation>
+        <translation>Oś potęgowa 2 okręgów</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
@@ -9232,7 +9232,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
-        <translation>Przywóz MOL</translation>
+        <translation>Import MOL</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9281,7 +9281,7 @@ jest już na liście.</translation>
     <message>
         <location line="+6"/>
         <source>Position X:</source>
-        <translation>Stanowisko X:</translation>
+        <translation>Pozycja X:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -9308,7 +9308,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Mapa postaci</translation>
+        <translation>Mapa znaków</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9539,12 +9539,12 @@ jest już na liście.</translation>
     <message>
         <location line="+6"/>
         <source>Portrait</source>
-        <translation>Portret</translation>
+        <translation>Pionowa</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Landscape</source>
-        <translation>Krajobraz</translation>
+        <translation>Pozioma</translation>
     </message>
     <message>
         <location line="-113"/>
@@ -9584,7 +9584,7 @@ jest już na liście.</translation>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation>Racja:</translation>
+        <translation>Prawo:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9715,7 +9715,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation>Pasta</translation>
+        <translation>Wklej</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
@@ -9845,7 +9845,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Centrum mocy trzech okręgów</translation>
+        <translation>Środek potęgowy trzech okręgów</translation>
     </message>
 </context>
 <context>
@@ -9998,7 +9998,7 @@ jest już na liście.</translation>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation>Zawalić drzewo</translation>
+        <translation>Zwiń drzewo</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -10154,12 +10154,12 @@ jest już na liście.</translation>
     <message>
         <location line="+18"/>
         <source>Portrait</source>
-        <translation>Portret</translation>
+        <translation>Pionowa</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Landscape</source>
-        <translation>Krajobraz</translation>
+        <translation>Pozioma</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -10184,7 +10184,7 @@ jest już na liście.</translation>
     <message>
         <location line="+20"/>
         <source>Print Crop Marks</source>
-        <translation>Drukuj Znaki upraw</translation>
+        <translation>Drukuj znaczniki przycięcia</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -10280,7 +10280,7 @@ jest już na liście.</translation>
     <message>
         <location line="+1"/>
         <source>Show all properties</source>
-        <translation>Pokaż wszystkie nieruchomości</translation>
+        <translation>Pokaż wszystkie właściwości</translation>
     </message>
     <message>
         <location line="+839"/>
@@ -10934,7 +10934,7 @@ jest już na liście.</translation>
     <message>
         <location line="-34"/>
         <source>Saving...</source>
-        <translation>Oszczędzanie...</translation>
+        <translation>Zapisywanie...</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -11543,7 +11543,7 @@ jest już na liście.</translation>
     <message>
         <location line="+0"/>
         <source>on</source>
-        <translation>na stronie</translation>
+        <translation>włączona</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -11908,7 +11908,7 @@ jest już na liście.</translation>
     <message>
         <location line="+1"/>
         <source>Enter</source>
-        <translation>Wejdź na stronę</translation>
+        <translation>Enter</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
@@ -11933,7 +11933,7 @@ jest już na liście.</translation>
     <message>
         <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
-        <translation>Kleszcze dla współrzędnych względnych</translation>
+        <translation>Zaznacz dla współrzędnych względnych</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11976,7 +11976,7 @@ jest już na liście.</translation>
     <message>
         <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
-        <translation>Kleszcze dla współrzędnych względnych</translation>
+        <translation>Zaznacz dla współrzędnych względnych</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12074,7 +12074,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersection/SnapIntersectionInit.js" line="+2"/>
         <source>&amp;Intersection</source>
-        <translation>Skrzyżowanie</translation>
+        <translation>Przecięcie</translation>
     </message>
 </context>
 <context>
@@ -12082,7 +12082,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation>Instrukcja obsługi skrzyżowań</translation>
+        <translation>Przecięcie ręczne</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
@@ -12187,7 +12187,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Draw/Spline/Spline.js" line="+72"/>
         <source>Spline Tools</source>
-        <translation>Narzędzia do klinów</translation>
+        <translation>Narzędzia splajnów</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -12215,7 +12215,7 @@ jest już na liście.</translation>
     <message>
         <location line="+21"/>
         <source>Degree:</source>
-        <translation>Stopień naukowy:</translation>
+        <translation>Stopień:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12225,7 +12225,7 @@ jest już na liście.</translation>
     <message>
         <location line="+70"/>
         <source>Tick for Closed Spline</source>
-        <translation>Kleszcze dla zamkniętych splotów</translation>
+        <translation>Zaznacz dla zamkniętego splajnu</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12567,12 +12567,12 @@ jest już na liście.</translation>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Lider został utworzony pomyślnie</translation>
+        <translation>Odnośnik został utworzony pomyślnie</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>Tekst wyrównany Lider</translation>
+        <translation>Odnośnik wyrównany do tekstu</translation>
     </message>
 </context>
 <context>
@@ -12630,7 +12630,7 @@ jest już na liście.</translation>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation>Pasta</translation>
+        <translation>Wklej</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -12675,7 +12675,7 @@ jest już na liście.</translation>
     <message>
         <location line="+136"/>
         <source>Degree</source>
-        <translation>Stopień naukowy</translation>
+        <translation>Stopień</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12700,7 +12700,7 @@ jest już na liście.</translation>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Dział</translation>
+        <translation>Dzielenie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12787,7 +12787,7 @@ jest już na liście.</translation>
     <message>
         <location line="+30"/>
         <source>Rich Text</source>
-        <translation>Bogaty tekst</translation>
+        <translation>Tekst sformatowany</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -12802,7 +12802,7 @@ jest już na liście.</translation>
     <message>
         <location line="+10"/>
         <source>Paste</source>
-        <translation>Pasta</translation>
+        <translation>Wklej</translation>
     </message>
     <message>
         <location line="+170"/>
@@ -12837,7 +12837,7 @@ jest już na liście.</translation>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation>Etykieta:</translation>
+        <translation>Podpowiedź:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -12922,7 +12922,7 @@ jest już na liście.</translation>
     <message>
         <location line="-145"/>
         <source>Middle Left</source>
-        <translation>Środek lewicy</translation>
+        <translation>Środek lewej strony</translation>
     </message>
     <message>
         <location line="-29"/>
@@ -13452,7 +13452,7 @@ jest już na liście.</translation>
     <message>
         <location line="+1"/>
         <source>Meter</source>
-        <translation>Miernik</translation>
+        <translation>Metr</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13599,7 +13599,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
-        <translation>Portale widokowe</translation>
+        <translation>Rzutnie</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -13632,7 +13632,7 @@ jest już na liście.</translation>
     <message>
         <location line="+0"/>
         <source>Viewports</source>
-        <translation>Portale widokowe</translation>
+        <translation>Rzutnie</translation>
     </message>
 </context>
 <context>
@@ -13731,7 +13731,7 @@ jest już na liście.</translation>
     <message>
         <location line="-13"/>
         <source>Division</source>
-        <translation>Dział</translation>
+        <translation>Dzielenie</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -13746,7 +13746,7 @@ jest już na liście.</translation>
     <message>
         <location line="-10"/>
         <source>Degrees</source>
-        <translation>Stopnie naukowe</translation>
+        <translation>Stopnie</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -14223,7 +14223,7 @@ jest już na liście.</translation>
     <message>
         <location line="+2"/>
         <source>3dFaces</source>
-        <translation>twarze 3d</translation>
+        <translation>3dFaces</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14253,7 +14253,7 @@ jest już na liście.</translation>
     <message>
         <location line="+2"/>
         <source>Arcs</source>
-        <translation>Arki</translation>
+        <translation>Łuki</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14419,12 +14419,12 @@ jest już na liście.</translation>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation>Liderzy</translation>
+        <translation>Odnośniki</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Lider</translation>
+        <translation>Odnośnik</translation>
     </message>
     <message>
         <location line="+2"/>

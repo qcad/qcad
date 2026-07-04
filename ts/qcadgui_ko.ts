@@ -66,7 +66,7 @@
     <message>
         <location line="+3"/>
         <source>Intersection</source>
-        <translation>교차로</translation>
+        <translation>교차점</translation>
     </message>
     <message>
         <location line="+3"/>

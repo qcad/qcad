@@ -2090,7 +2090,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation>Avslutande dragning...</translation>
+        <translation>Stänger ritning...</translation>
     </message>
 </context>
 <context>
@@ -2398,7 +2398,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/CounterInit.js" line="+2"/>
         <source>&amp;Counter</source>
-        <translation>Mottagningen</translation>
+        <translation>Räknare</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2698,7 +2698,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation>Luckor</translation>
+        <translation>Skrafferingar</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2708,7 +2708,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+8"/>
         <source>Blocks</source>
-        <translation>Blocker</translation>
+        <translation>Block</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3173,7 +3173,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>Arkitektonisk fästing</translation>
+        <translation>Arkitektonisk markering</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -3482,7 +3482,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation>Sopa</translation>
+        <translation>Svep</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -3492,12 +3492,12 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation>Dragning Fms Lanes</translation>
+        <translation>Rita Fms-banor</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation>Dragning av FMS-banor (ribbor)</translation>
+        <translation>Rita FMS-banor (ribbor)</translation>
     </message>
 </context>
 <context>
@@ -3768,7 +3768,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+2"/>
         <source>Angle2 Invalid.</source>
-        <translation>Angle2 ogiltig.</translation>
+        <translation>Vinkel2 ogiltig.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4078,7 +4078,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+46"/>
         <source>Draw from CSV</source>
-        <translation>Dra från CSV</translation>
+        <translation>Rita från CSV</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4093,7 +4093,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation>Dra från CSV</translation>
+        <translation>&amp;Rita från CSV</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4106,12 +4106,12 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
-        <translation>Dragningsordning</translation>
+        <translation>&amp;Ritordning</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation>Dragningsordning</translation>
+        <translation>Ritordning</translation>
     </message>
 </context>
 <context>
@@ -4159,7 +4159,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation>Sopa:</translation>
+        <translation>Svep:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -4449,12 +4449,12 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation>Välj lucka</translation>
+        <translation>Välj skraffering</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation>Redigera luckan</translation>
+        <translation>Redigera skraffering</translation>
     </message>
 </context>
 <context>
@@ -5029,7 +5029,7 @@ finns redan i listan.</translation>
         <location line="+3"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
-        <translation>Dra tre poäng</translation>
+        <translation>Rita tre punkter</translation>
     </message>
 </context>
 <context>
@@ -5487,7 +5487,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation>Förbluffande information. (ihållande på)</translation>
+        <translation>Utförlig information. (ihållande på)</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5647,7 +5647,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
-        <translation>Tre: Rätt</translation>
+        <translation>Tre: Höger</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/21_ThreeLeft.ui" line="+14"/>
@@ -5689,7 +5689,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation>Fyra: Rätt</translation>
+        <translation>Fyra: Höger</translation>
     </message>
 </context>
 <context>
@@ -5747,7 +5747,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+10"/>
         <source>Blocks</source>
-        <translation>Blocker</translation>
+        <translation>Block</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6340,12 +6340,12 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation>Verktyg för luckor</translation>
+        <translation>Skrafferingsverktyg</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Hatch</source>
-        <translation>&amp;Lucka</translation>
+        <translation>&amp;Skraffering</translation>
     </message>
 </context>
 <context>
@@ -6353,7 +6353,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation>Lucka</translation>
+        <translation>Skraffering</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6975,7 +6975,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Obehandlad form från luckans slinga.</translation>
+        <translation>Obehandlad form från skrafferingens slinga.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7880,7 +7880,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation>Rätt tillbaka</translation>
+        <translation>Höger bak</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -9096,7 +9096,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+21"/>
         <source>Misc Draw</source>
-        <translation>Diverse dragning</translation>
+        <translation>Diverse ritning</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -9293,7 +9293,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js" line="+53"/>
         <source>My Scripts</source>
-        <translation>Mina manuskript</translation>
+        <translation>Mina skript</translation>
     </message>
 </context>
 <context>
@@ -9301,7 +9301,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Karta över karaktärer</translation>
+        <translation>Teckenkarta</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9790,7 +9790,7 @@ finns redan i listan.</translation>
         <location line="+0"/>
         <location line="+2"/>
         <source>Point Display</source>
-        <translation>Visning av poäng</translation>
+        <translation>Punktvisning</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10271,7 +10271,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+1"/>
         <source>Show all properties</source>
-        <translation>Visa alla fastigheter</translation>
+        <translation>Visa alla egenskaper</translation>
     </message>
     <message>
         <location line="+161"/>
@@ -10328,7 +10328,7 @@ finns redan i listan.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Maximal komplexitet för automatisk beräkning av lucklängd:</translation>
+        <translation>Maximal komplexitet för automatisk beräkning av skrafferingslängd:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -12213,7 +12213,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+21"/>
         <source>Degree:</source>
-        <translation>Examen:</translation>
+        <translation>Grad:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12728,7 +12728,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Tärnad</translation>
+        <translation>Kubik</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13440,7 +13440,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+1"/>
         <source>Meter</source>
-        <translation>Mätare</translation>
+        <translation>Meter</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13460,7 +13460,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+1"/>
         <source>Yard</source>
-        <translation>Gården</translation>
+        <translation>Yard</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13587,7 +13587,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
-        <translation>Visaportar</translation>
+        <translation>Vyportar</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -13620,7 +13620,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+0"/>
         <source>Viewports</source>
-        <translation>Visaportar</translation>
+        <translation>Vyportar</translation>
     </message>
 </context>
 <context>
@@ -13719,7 +13719,7 @@ finns redan i listan.</translation>
     <message>
         <location line="-13"/>
         <source>Division</source>
-        <translation>Huvudgrupp</translation>
+        <translation>Division</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -13799,7 +13799,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Tärnad</translation>
+        <translation>Kubik</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14141,7 +14141,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+2"/>
         <source>Blocks</source>
-        <translation>Blocker</translation>
+        <translation>Block</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14181,7 +14181,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+2"/>
         <source>Views</source>
-        <translation>Utsikter</translation>
+        <translation>Vyer</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14321,12 +14321,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Points)</source>
-        <translation>Vinkelmått (3 poäng)</translation>
+        <translation>Vinkelmått (3 punkter)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Points)</source>
-        <translation>Vinkeldimension (3 poäng)</translation>
+        <translation>Vinkeldimension (3 punkter)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14347,7 +14347,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation>Ordinarie dimensioner</translation>
+        <translation>Ordinatdimensioner</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14387,12 +14387,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation>Luckor</translation>
+        <translation>Skrafferingar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation>Lucka</translation>
+        <translation>Skraffering</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14457,7 +14457,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+2"/>
         <source>Points</source>
-        <translation>Poäng</translation>
+        <translation>Punkter</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14497,12 +14497,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation>Ansikten</translation>
+        <translation>Ytor</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation>Ansikte</translation>
+        <translation>Yta</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14533,12 +14533,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation>Visaportar</translation>
+        <translation>Vyportar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation>Visaport</translation>
+        <translation>Vyport</translation>
     </message>
     <message>
         <location line="+2"/>

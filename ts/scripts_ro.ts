@@ -206,7 +206,7 @@
     <message>
         <location line="+65"/>
         <source>Hatch Patterns</source>
-        <translation>Modele de trapă</translation>
+        <translation>Modele de hașură</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1100,7 +1100,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
-        <translation>Șanfrenare / Ciocan</translation>
+        <translation>Șanfrenare / Teșire</translation>
     </message>
 </context>
 <context>
@@ -1499,7 +1499,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation>A doua minge de break</translation>
+        <translation>Al doilea punct de întrerupere</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2094,7 +2094,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation>Închiderea tragerii la sorți...</translation>
+        <translation>Închiderea desenului...</translation>
     </message>
 </context>
 <context>
@@ -2702,7 +2702,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation>Trapele</translation>
+        <translation>Hașuri</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2837,7 +2837,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Punctul final al liderului</translation>
+        <translation>Punctul final al liniei de indicație</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
@@ -4455,12 +4455,12 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation>Alegeți trapa</translation>
+        <translation>Alegeți hașura</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation>Editare Hatch</translation>
+        <translation>Editare hașură</translation>
     </message>
 </context>
 <context>
@@ -4739,7 +4739,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>Evadare</translation>
+        <translation>Anulare</translation>
     </message>
 </context>
 <context>
@@ -5569,7 +5569,7 @@ este deja în listă.</translation>
     <message>
         <location line="+3"/>
         <source>Verbose *</source>
-        <translation>Verbose _tmp_bg _tmp_cs _tmp_da _tmp_de _tmp_es _tmp_et _tmp_fi _tmp_fr _tmp_hu _tmp_id _tmp_it _tmp_ja _tmp_ko _tmp_lt tmp_lv _tmp_nb _tmp_nl _tmp_pl _tmp_pt _tmp_ro _tmp_ru _tmp_sk _tmp_sl _tmp_sv _tmp_tr _tmp_uk _tmp_zh_TW assistant_ar.qm assistant_bg.qm assistant_cs.qm assistant_da.qm asistent_de.qm asistent_en.qm asistent_es.qm asistent_fr.qm asistent_hr.qm asistent_hu.qm asistent_ja.qm asistent_ko.qm asistent_nl.qm asistent_pl.qm asistent_pt_BR.qm asistent_ru.qm asistent_sk.qm asistent_sl.qm asistent_tr.qm asistent_uk.qm asistent_zh_CN.qm asistent_zh_TW.qm designer_ar.qm designer_bg.qm designer_cs.qm designer_da.qm designer_de.qm designer_en.qm designer_es.qm designer_fr.qm designer_hr.qm designer_hu.qm designer_ja.qm designer_ko.qm designer_nl.qm designer_pl.qm designer_ru.qm designer_sk.qm designer_sl.qm designer_tr.qm designer_uk.qm designer_zh_CN.qm designer_zh_TW.qm linguist_ar.qm linguist_bg.qm linguist_cs.qm linguist_da.qm linguist_de.qm linguist_en.qm linguist_es.qm linguist_es.qm linguist_fr.qm linguist_hr.qm linguist_hu.qm linguist_it.qm linguist_ja.qm linguist_ko.qm linguist_nl.qm linguist_pl.qm linguist_ru.qm linguist_sk.qm linguist_sl.qm linguist_sv.qm linguist_tr.qm linguist_uk.qm linguist_zh_CN.qm linguist_zh_TW.qm qcadcore_bg.qm qcadcore_bg.ts qcadcore_cs.qm qcadcore_cs.ts qcadcore_da.qm qcadcore_da.ts qcadcore_de.qm qcadcore_de.ts qcadcore_el.qm qcadcore_el.ts qcadcore_en.qm qcadcore_en.ts qcadcore_en.ts qcadcore_es.qm qcadcore_es.ts qcadcore_et.qm qcadcore_et.ts qcadcore_fi.qm qcadcore_fi.ts qcadcore_fr.qm qcadcore_fr.ts qcadcore_hr.qm qcadcore_hr.ts qcadcore_hu.qm qcadcore_hu.ts qcadcore_id.qm qcadcore_id.ts qcadcore_it.qm qcadcore_it.ts qcadcore_ja.qm qcadcore_ja.ts qcadcore_ko.qm qcadcore_ko.ts qcadcore_lt.qm qcadcore_lt.ts qcadcore_lv.qm qcadcore_lv.ts qcadcore_nb.qm qcadcore_nb.ts qcadcore_nl.qm qcadcore_nl.ts qcadcore_nl.ts qcadcore_pl.qm qcadcore_pl.ts qcadcore_pt.qm qcadcore_pt.ts qcadcore_ro.qm qcadcore_ro.ts qcadcore_ru.qm qcadcore_ru.ts qcadcore_sk.qm qcadcore_sk.ts qcadcore_sl.qm qcadcore_sl.ts qcadcore_sv.qm qcadcore_sv.ts qcadcore_th.qm qcadcore_th.ts qcadcore_tr.qm qcadcore_tr.ts qcadcore_uk.qm qcadcore_uk.ts qcadcore_zh_CN.qm qcadcore_zh_CN.ts qcadcore_zh_TW.qm qcadcore_zh_TW.ts qcadentity_bg.qm qcadentity_bg.ts qcadentity_cs.qm qcadentity_cs.ts qcadentity_da.qm qcadentity_da.ts qcadentity_de.qm qcadentity_de.ts qcadentity_el.qm qcadentity_el.ts qcadentity_en.qm qcadentity_en.ts qcadentity_es.qm qcadentity_es.qm qcadentity_es.ts qcadentity_et.qm qcadentity_et.ts qcadentity_fi.qm qcadentity_fi.ts qcadentity_fr.qm qcadentity_fr.ts qcadentity_hr.qm qcadentity_hr.ts qcadentity_hu.qm qcadentity_hu.ts qcadentity_id.qm qcadentity_id.ts qcadentity_it.qm qcadentity_it.ts qcadentity_ja.qm qcadentity_ja.ts qcadentity_ko.qm qcadentity_ko.ts qcadentity_lt.qm qcadentity_lt.ts qcadentity_lv.qm qcadentity_lv.ts qcadentity_nb.qm qcadentity_nb.ts qcadentity_nl.qm qcadentity_nl.qm qcadentity_nll.ts qcadentity_pl.qm qcadentity_pl.ts qcadentity_pt.qm qcadentity_pt.ts qcadentity_ro.qm qcadentity_ro.ts qcadentity_ru.qm qcadentity_ru.qm qcadentity_ru.ts qcadentity_sk.qm qcadentity_sk.ts qcadentity_sl.qm qcadentity_sl.ts qcadentity_sv.qm qcadentity_sv.ts qcadentity_th.qm qcadentity_th.ts qcadentity_tr.ts qcadentity_th.ts qcadentity_tr.qm qcadentity_tr.ts qcadentity_uk.qm qcadentity_uk.ts qcadentity_zh_CN.qm qcadentity_zh_CN.ts qcadentity_zh_TW.qm qcadentity_zh_TW.ts qcadgui_bg.qm qcadgui_bg.ts qcadgui_cs.qm qcadgui_cs.ts qcadgui_da.qm qcadgui_da.ts qcadgui_de.qm qcadgui_de.ts qcadgui_el.qm qcadgui_el.qm qcadgui_el.ts qcadgui_el.ts qcadgui_en.qm qcadgui_en.qm qcadgui_en.ts qcadgui_es.qm qcadgui_es.ts qcadgui_et.qm qcadgui_et.ts qcadgui_fi.qm qcadgui_fi.ts qcadgui_fr.qm qcadgui_fr.ts qcadgui_hr.qm qcadgui_hr.ts qcadgui_hu.qm qcadgui_hu.ts qcadgui_id.qm qcadgui_id.ts qcadgui_it.qm qcadgui_it.ts qcadgui_ja.qm qcadgui_ja.ts qcadgui_ko.qm qcadgui_ko.ts qcadgui_lt.qm qcadgui_lt.ts qcadgui_lv.qm qcadgui_lv.ts qcadgui_nb.qm qcadgui_nb.ts qcadgui_nl.qm qcadgui_nl.ts qcadgui_nl.ts qcadgui_pl.qm qcadgui_pl.ts qcadgui_pt.qm qcadgui_pt.ts qcadgui_ro.qm qcadgui_ro.ts qcadgui_ru.qm qcadgui_ru.ts qcadgui_sk.qm qcadgui_sk.ts qcadgui_sl.qm qcadgui_sl.ts qcadgui_sl.ts qcadgui_sv.qm qcadgui_sv.ts qcadgui_th.qm qcadgui_th.ts qcadgui_tr.qm qcadgui_tr.ts qcadgui_uk.qm qcadgui_uk.ts qcadgui_zh_CN.qm qcadgui_zh_CN.ts qcadgui_zh_CN.ts qcadgui_zh_TW.qm qcadgui_zh_zh_TW.ts qmlviewer_ar.qm qmlviewer_bg.qm qmlviewer_cs.qm qmlviewer_da.qm qmlviewer_en.qm qmlviewer_es.qm qmlviewer_es.qm qmlviewer_fi.qm qmlviewer_fr.qm qmlviewer_he.qm qmlviewer_hu.qm qmlviewer_ja.qm qmlviewer_ko.qm qmlviewer_pl.qm qmlviewer_ru.qm qmlviewer_sk.qm qmlviewer_uk.qm qmlviewer_ar.qm qt_bg.qm qt_ca.qm qt_cs.qm qt_da.qm qt_de.qm qt_en.qm qt_es.qm qt_fa.qm qt_fi.qm qt_fr.qm qt_gd.qm qt_gl.qm qt_he.qm qt_help_ar.qm qt_help_ar.qm qt_help_bg.qm qt_help_ca.qm qt_help_cs.qm qt_help_da.qm qt_help_de.qm qt_help_en.qm qt_help_es.qm qt_help_fr.qm qt_help_gl.qm qt_help_hr.qm qt_help_hu.qm qt_help_it.qm qt_help_ja.qm qt_help_ko.qm qt_help_nl.qm qt_help_nn.qm qt_help_pl.qm qt_help_pt_BR.qm qt_help_ru.qm qt_help_sk.qm qt_help_sl.qm qt_help_tr.qm qt_help_uk.qm qt_help_zh_CN.qm qt_help_zh_TW.qm qt_hr.qm qt_hu.qm qt_it.qm qt_ja.qm qt_ko.qm qt_lt.qm qt_lv.qm qt_nl.qm qt_nn.qm qt_pl.qm qt_pt.qm qt_pt_BR.qm qt_pt_PT.qm qt_ru.qm qt_sk.qm qt_sl.qm qt_sv.qm qt_tr.qm qt_uk.qm qt_zh_CN.qm qt_zh_TW.qm qtbase_ar.qm qtbase_bg.qm qtbase_ca.qm qtbase_cs.qm qtbase_da.qm qtbase_de.qm qtbase_en.qm qtbase_es.qm qtbase_fa.qm qtbase_fi.qm qtbase_fr.qm qtbase_gd.qm qtbase_he.qm qtbase_hr.qm qtbase_hu.qm qtbase_it.qm qtbase_ja.qm qtbase_ko.qm qtbase_lv.qm qtbase_nl.qm qtbase_nl.ts qtbase_nn.qm qtbase_pl.qm qtbase_pt.qm qtbase_pt.ts qtbase_pt_BR.qm qtbase_ru.qm qtbase_sk.qm qtbase_tr.qm qtbase_uk.qm qtbase_zh_CN.qm qtbase_zh_CN.ts qtbase_zh_TW.qm qtconfig_hu.qm qtconfig_ja.qm qtconfig_ko.qm qtconfig_pl.qm qtconfig_ru.qm qtconfig_sk.qm qtconfig_sl.qm qtconfig_uk.qm qtconfig_zh_CN.qm qtconfig_zh_TW.qm qtconfig_zh_WT.qm qtconnectivity_bg.qm qtconnectivity_da.qm qtconnectivity_de.qm qtconnectivity_en.qm qtconnectivity_es.qm qtconnectivity_ko.qm qtconnectivity_pl.qm qtconnectivity_ru.qm qtconnectivity_uk.qm qtdeclarative_bg.qm qtdeclarative_da.qm qtdeclarative_de.qm qtdeclarative_en.qm qtdeclarative_es.qm qtdeclarative_fi.qm qtdeclarative_f.qm qtdeclarative_fr.qm qtdeclarative_ja.qm qtdeclarative_ko.qm qtdeclarative_lv.qm qtdeclarative_pl.qm qtdeclarative_ru.qm qtdeclarative_sk.qm qtdeclarative_uk.qm qtlocation_bg.qm qtlocation_da.qm qtlocation_de.qm qtlocation_en.qm qtlocation_es.qm qtlocation_fr.qm qtlocation_ko.qm qtlocation_pl.qm qtlocation_ru.qm qtlocation_uk.qm qtmultimedia_ar.qm qtmultimedia_bg.qm qtmultimedia_ca.qm qtmultimedia_cs.qm qtmultimedia_da.qm qtmultimedia_de.qm qtmultimedia_de.qm qtmultimedia_en.qm qtmultimedia_es.qm qtmultimedia_fi.qm qtmultimedia_fr.qm qtmultimedia_hu.qm qtmultimedia_it.qm qtmultimedia_ja.qm qtmultimedia_ko.qm qtmultimedia_pl.qm qtmultimedia_ru.qm qtmultimedia_sk.qm qtmultimedia_uk.qm qtquick1_bg.qm qtquick1_ca.qm qtquick1_cs.qm qtquick1_da.qm qtquick1_de.qm qtquick1_en.qm qtquick1_es.qm qtquick1_fi.qm qtquick1_fr.qm qtquick1_he.qm qtquick1_hu.qm qtquick1_it.qm qtquick1_ja.qm qtquick1_ko.qm qtquick1_pl.qm qtquick1_ru.qm qtquick1_sk.qm qtquick1_uk.qm qtquickcontrols2_ar.qm qtquickcontrols2_bg.qm qtquickcontrols2_en.qm qtquickcontrols2_en.qm qtquickcontrols2_ko.qm qtquickcontrols2_uk.qm qtquickcontrols_bg.qm qtquickcontrols_de.qm qtquickcontrols_en.qm qtquickcontrols_fi.qm qtquickcontrols_fr.qm qtquickcontrols_ja.qm qtquickcontrols_ru.qm qtquickcontrols_uk.qm qtscript_ar.qm qtscript_bg.qm qtscript_ca.qm qtscript_cs.qm qtscript_da.qm qtscript_de.qm qtscript_en.qm qtscript_en.qm qtscript_es.qm qtscript_fi.qm qtscript_fr.qm qtscript_he.qm qtscript_hu.qm qtscript_it.qm qtscript_ja.qm qtscript_ko.qm qtscript_lv.qm qtscript_pl.qm qtscript_ru.qm qtscript_sk.qm qtscript_uk.qm qtserialport_de.qm qtserialport_en.qm qtserialport_es.qm qtserialport_ja.qm qtserialport_ja.qm qtserialport_ko.qm qtserialport_pl.qm qtserialport_ru.qm qtserialport_uk.qm qtwebengine_de.qm qtwebengine_en.qm qtwebengine_es.qm qtwebengine_ko.qm qtwebengine_pl.qm qtwebengine_ru.qm qtwebengine_uk.qm qtwebsockets_de.qm qtwebsockets_en.qm qtwebsockets_es.qm qtwebsockets_fr.qm qtwebsockets_ja.qm qtwebsockets_ko.qm qtwebsockets_pl.qm qtwebsockets_ru.qm qtwebsockets_uk.qm qtxmlpatterns_bg.qm qtxmlpatterns_ca.qm qtxmlpatterns_cs.qm qtxmlpatterns_ca.qm qtxmlpatterns_cs.qm qtxmlpatterns_da.qm qtxmlpatterns_de.qm qtxmlpatterns_en.qm qtxmlpatterns_es.qm qtxmlpatterns_fr.qm qtxmlpatterns_hu.qm qtxmlpatterns_it.qm qtxmlpatterns_ja.qm qtxmlpatterns_ko.qm qtxmlpatterns_pl.qm qtxmlpatterns_ru.qm qtxmlpatterns_sk.qm qtxmlpatterns_uk.qm scripts.pro scripts_bg.qm scripts_bg.ts scripts_cs.qm scripts_cs.ts scripts_da.qm scripts_da.ts scripts_de.qm scripts_de.ts scripts_el.qm scripts_el.ts scripts_en.qm scripts_en.qm scripts_en.ts scripts_es.qm scripts_es.ts scripts_et.qm scripts_et.ts scripts_fi.qm scripts_fi.ts scripts_fr.qm scripts_fr.ts scripts_hr.qm scripts_hr.ts scripts_hu.qm scripts_hu.ts scripts_id.qm scripts_id.ts scripts_it.qm scripts_it.ts scripts_ja.qm scripts_ja.ts scripts_ko.qm scripts_ko.ts scripts_lt.qm scripts_lt.ts scripts_lv.qm scripts_lv.ts scripts_nb.qm scripts_nb.ts scripts_nl.qm scripts_nl.ts scripts_pl.qm scripts_pl.ts scripts_pt.qm scripts_pt.ts scripts_ro.qm scripts_ro.ts scripts_ru.qm scripts_ru.ts scripts_sk.qm scripts_sk.ts scripts_sl.qm scripts_sl.ts scripts_sv.qm scripts_sv.ts scripts_th.qm scripts_th.ts scripts_tr.qm scripts_tr.ts scripts_uk.qm scripts_uk.ts scripts_zh_CN.qm scripts_zh_CN.ts scripts_zh_TW.qm scripts_zh_TW.ts scripts_zh_TW.ts</translation>
+        <translation>Verbose *</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5579,7 +5579,7 @@ este deja în listă.</translation>
     <message>
         <location line="+3"/>
         <source>Delete Base Entities *</source>
-        <translation>Eliminarea entităților de bază _tmp_bg _tmp_cs _tmp_da _tmp_de _tmp_es _tmp_et _tmp_fi _tmp_fr _tmp_hu _tmp_id _tmp_it _tmp_ja _tmp_ko tmp_lt _tmp_lv _tmp_nb _tmp_nl _tmp_pl _tmp_pt _tmp_ro _tmp_ru _tmp_sk _tmp_sl _tmp_sv _tmp_tr _tmp_uk _tmp_zh_TW asistent_ar.qm assistant_bg.qm assistant_cs.qm asistent_da.qm asistent_de.qm asistent_en.qm asistent_es.qm asistent_fr.qm asistent_hr.qm asistent_hu.qm asistent_ja.qm asistent_ko.qm asistent_nl.qm asistent_pl.qm asistent_pt_BR.qm asistent_ru.qm asistent_sk.qm asistent_sl.qm asistent_tr.qm asistent_uk.qm asistent_zh_CN.qm assistant_zh_zh_TW.qm designer_ar.qm designer_bg.qm designer_cs.qm designer_da.qm designer_de.qm designer_en.qm designer_es.qm designer_fr.qm designer_hr.qm designer_hu.qm designer_ja.qm designer_ko.qm designer_nl.qm designer_pl.qm designer_ru.qm designer_sk.qm designer_sl.qm designer_tr.qm designer_uk.qm designer_zh_CN.qm designer_zh_TW.qm linguist_ar.qm linguist_bg.qm linguist_cs.qm linguist_da.qm linguist_de.qm linguist_en.qm linguist_es.qm linguist_es.qm linguist_fr.qm linguist_hr.qm linguist_hu.qm linguist_it.qm linguist_ja.qm linguist_ko.qm linguist_nl.qm linguist_pl.qm linguist_ru.qm linguist_sk.qm linguist_sl.qm linguist_sv.qm linguist_tr.qm linguist_uk.qm linguist_zh_CN.qm linguist_zh_TW.qm qcadcore_bg.qm qcadcore_bg.ts qcadcore_cs.qm qcadcore_cs.ts qcadcore_da.qm qcadcore_da.ts qcadcore_de.qm qcadcore_de.ts qcadcore_el.qm qcadcore_el.ts qcadcore_en.qm qcadcore_en.ts qcadcore_en.ts qcadcore_es.qm qcadcore_es.ts qcadcore_et.qm qcadcore_et.ts qcadcore_fi.qm qcadcore_fi.ts qcadcore_fr.qm qcadcore_fr.ts qcadcore_hr.qm qcadcore_hr.ts qcadcore_hu.qm qcadcore_hu.ts qcadcore_id.qm qcadcore_id.ts qcadcore_it.qm qcadcore_it.ts qcadcore_ja.qm qcadcore_ja.ts qcadcore_ko.qm qcadcore_ko.ts qcadcore_lt.qm qcadcore_lt.ts qcadcore_lv.qm qcadcore_lv.ts qcadcore_nb.qm qcadcore_nb.ts qcadcore_nl.qm qcadcore_nl.ts qcadcore_nl.ts qcadcore_pl.qm qcadcore_pl.ts qcadcore_pt.qm qcadcore_pt.ts qcadcore_ro.qm qcadcore_ro.ts qcadcore_ru.qm qcadcore_ru.ts qcadcore_sk.qm qcadcore_sk.ts qcadcore_sl.qm qcadcore_sl.ts qcadcore_sv.qm qcadcore_sv.ts qcadcore_th.qm qcadcore_th.ts qcadcore_tr.qm qcadcore_tr.ts qcadcore_uk.qm qcadcore_uk.ts qcadcore_zh_CN.qm qcadcore_zh_CN.ts qcadcore_zh_TW.qm qcadcore_zh_TW.ts qcadentity_bg.qm qcadentity_bg.ts qcadentity_cs.qm qcadentity_cs.ts qcadentity_da.qm qcadentity_da.ts qcadentity_de.qm qcadentity_de.ts qcadentity_el.qm qcadentity_el.ts qcadentity_en.qm qcadentity_en.ts qcadentity_es.qm qcadentity_es.qm qcadentity_es.ts qcadentity_et.qm qcadentity_et.ts qcadentity_fi.qm qcadentity_fi.ts qcadentity_fr.qm qcadentity_fr.ts qcadentity_hr.qm qcadentity_hr.ts qcadentity_hu.qm qcadentity_hu.ts qcadentity_id.qm qcadentity_id.ts qcadentity_it.qm qcadentity_it.ts qcadentity_ja.qm qcadentity_ja.ts qcadentity_ko.qm qcadentity_ko.ts qcadentity_lt.qm qcadentity_lt.ts qcadentity_lv.qm qcadentity_lv.ts qcadentity_nb.qm qcadentity_nb.ts qcadentity_nl.qm qcadentity_nl.qm qcadentity_nll.ts qcadentity_pl.qm qcadentity_pl.ts qcadentity_pt.qm qcadentity_pt.ts qcadentity_ro.qm qcadentity_ro.ts qcadentity_ru.qm qcadentity_ru.qm qcadentity_ru.ts qcadentity_sk.qm qcadentity_sk.ts qcadentity_sl.qm qcadentity_sl.ts qcadentity_sv.qm qcadentity_sv.ts qcadentity_th.qm qcadentity_th.ts qcadentity_tr.ts qcadentity_th.ts qcadentity_tr.qm qcadentity_tr.ts qcadentity_uk.qm qcadentity_uk.ts qcadentity_zh_CN.qm qcadentity_zh_CN.ts qcadentity_zh_TW.qm qcadentity_zh_TW.ts qcadgui_bg.qm qcadgui_bg.ts qcadgui_cs.qm qcadgui_cs.ts qcadgui_da.qm qcadgui_da.ts qcadgui_de.qm qcadgui_de.ts qcadgui_el.qm qcadgui_el.qm qcadgui_el.ts qcadgui_el.ts qcadgui_en.qm qcadgui_en.qm qcadgui_en.ts qcadgui_es.qm qcadgui_es.ts qcadgui_et.qm qcadgui_et.ts qcadgui_fi.qm qcadgui_fi.ts qcadgui_fr.qm qcadgui_fr.ts qcadgui_hr.qm qcadgui_hr.ts qcadgui_hu.qm qcadgui_hu.ts qcadgui_id.qm qcadgui_id.ts qcadgui_it.qm qcadgui_it.ts qcadgui_ja.qm qcadgui_ja.ts qcadgui_ko.qm qcadgui_ko.ts qcadgui_lt.qm qcadgui_lt.ts qcadgui_lv.qm qcadgui_lv.ts qcadgui_nb.qm qcadgui_nb.ts qcadgui_nl.qm qcadgui_nl.ts qcadgui_nl.ts qcadgui_pl.qm qcadgui_pl.ts qcadgui_pt.qm qcadgui_pt.ts qcadgui_ro.qm qcadgui_ro.ts qcadgui_ru.qm qcadgui_ru.ts qcadgui_sk.qm qcadgui_sk.ts qcadgui_sl.qm qcadgui_sl.ts qcadgui_sl.ts qcadgui_sv.qm qcadgui_sv.ts qcadgui_th.qm qcadgui_th.ts qcadgui_tr.qm qcadgui_tr.ts qcadgui_uk.qm qcadgui_uk.ts qcadgui_zh_CN.qm qcadgui_zh_CN.ts qcadgui_zh_CN.ts qcadgui_zh_TW.qm qcadgui_zh_zh_TW.ts qmlviewer_ar.qm qmlviewer_bg.qm qmlviewer_cs.qm qmlviewer_da.qm qmlviewer_en.qm qmlviewer_es.qm qmlviewer_es.qm qmlviewer_fi.qm qmlviewer_fr.qm qmlviewer_he.qm qmlviewer_hu.qm qmlviewer_ja.qm qmlviewer_ko.qm qmlviewer_pl.qm qmlviewer_ru.qm qmlviewer_sk.qm qmlviewer_uk.qm qmlviewer_ar.qm qt_bg.qm qt_ca.qm qt_cs.qm qt_da.qm qt_de.qm qt_en.qm qt_es.qm qt_fa.qm qt_fi.qm qt_fr.qm qt_gd.qm qt_gl.qm qt_he.qm qt_help_ar.qm qt_help_ar.qm qt_help_bg.qm qt_help_ca.qm qt_help_cs.qm qt_help_da.qm qt_help_de.qm qt_help_en.qm qt_help_es.qm qt_help_fr.qm qt_help_gl.qm qt_help_hr.qm qt_help_hu.qm qt_help_it.qm qt_help_ja.qm qt_help_ko.qm qt_help_nl.qm qt_help_nn.qm qt_help_pl.qm qt_help_pt_BR.qm qt_help_ru.qm qt_help_sk.qm qt_help_sl.qm qt_help_tr.qm qt_help_uk.qm qt_help_zh_CN.qm qt_help_zh_TW.qm qt_hr.qm qt_hu.qm qt_it.qm qt_ja.qm qt_ko.qm qt_lt.qm qt_lv.qm qt_nl.qm qt_nn.qm qt_pl.qm qt_pt.qm qt_pt_BR.qm qt_pt_PT.qm qt_ru.qm qt_sk.qm qt_sl.qm qt_sv.qm qt_tr.qm qt_uk.qm qt_zh_CN.qm qt_zh_TW.qm qtbase_ar.qm qtbase_bg.qm qtbase_ca.qm qtbase_cs.qm qtbase_da.qm qtbase_de.qm qtbase_en.qm qtbase_es.qm qtbase_fa.qm qtbase_fi.qm qtbase_fr.qm qtbase_gd.qm qtbase_he.qm qtbase_hr.qm qtbase_hu.qm qtbase_it.qm qtbase_ja.qm qtbase_ko.qm qtbase_lv.qm qtbase_nl.qm qtbase_nl.ts qtbase_nn.qm qtbase_pl.qm qtbase_pt.qm qtbase_pt.ts qtbase_pt_BR.qm qtbase_ru.qm qtbase_sk.qm qtbase_tr.qm qtbase_uk.qm qtbase_zh_CN.qm qtbase_zh_CN.ts qtbase_zh_TW.qm qtconfig_hu.qm qtconfig_ja.qm qtconfig_ko.qm qtconfig_pl.qm qtconfig_ru.qm qtconfig_sk.qm qtconfig_sl.qm qtconfig_uk.qm qtconfig_zh_CN.qm qtconfig_zh_TW.qm qtconfig_zh_WT.qm qtconnectivity_bg.qm qtconnectivity_da.qm qtconnectivity_de.qm qtconnectivity_en.qm qtconnectivity_es.qm qtconnectivity_ko.qm qtconnectivity_pl.qm qtconnectivity_ru.qm qtconnectivity_uk.qm qtdeclarative_bg.qm qtdeclarative_da.qm qtdeclarative_de.qm qtdeclarative_en.qm qtdeclarative_es.qm qtdeclarative_fi.qm qtdeclarative_f.qm qtdeclarative_fr.qm qtdeclarative_ja.qm qtdeclarative_ko.qm qtdeclarative_lv.qm qtdeclarative_pl.qm qtdeclarative_ru.qm qtdeclarative_sk.qm qtdeclarative_uk.qm qtlocation_bg.qm qtlocation_da.qm qtlocation_de.qm qtlocation_en.qm qtlocation_es.qm qtlocation_fr.qm qtlocation_ko.qm qtlocation_pl.qm qtlocation_ru.qm qtlocation_uk.qm qtmultimedia_ar.qm qtmultimedia_bg.qm qtmultimedia_ca.qm qtmultimedia_cs.qm qtmultimedia_da.qm qtmultimedia_de.qm qtmultimedia_de.qm qtmultimedia_en.qm qtmultimedia_es.qm qtmultimedia_fi.qm qtmultimedia_fr.qm qtmultimedia_hu.qm qtmultimedia_it.qm qtmultimedia_ja.qm qtmultimedia_ko.qm qtmultimedia_pl.qm qtmultimedia_ru.qm qtmultimedia_sk.qm qtmultimedia_uk.qm qtquick1_bg.qm qtquick1_ca.qm qtquick1_cs.qm qtquick1_da.qm qtquick1_de.qm qtquick1_en.qm qtquick1_es.qm qtquick1_fi.qm qtquick1_fr.qm qtquick1_he.qm qtquick1_hu.qm qtquick1_it.qm qtquick1_ja.qm qtquick1_ko.qm qtquick1_pl.qm qtquick1_ru.qm qtquick1_sk.qm qtquick1_uk.qm qtquickcontrols2_ar.qm qtquickcontrols2_bg.qm qtquickcontrols2_en.qm qtquickcontrols2_en.qm qtquickcontrols2_ko.qm qtquickcontrols2_uk.qm qtquickcontrols_bg.qm qtquickcontrols_de.qm qtquickcontrols_en.qm qtquickcontrols_fi.qm qtquickcontrols_fr.qm qtquickcontrols_ja.qm qtquickcontrols_ru.qm qtquickcontrols_uk.qm qtscript_ar.qm qtscript_bg.qm qtscript_ca.qm qtscript_cs.qm qtscript_da.qm qtscript_de.qm qtscript_en.qm qtscript_en.qm qtscript_es.qm qtscript_fi.qm qtscript_fr.qm qtscript_he.qm qtscript_hu.qm qtscript_it.qm qtscript_ja.qm qtscript_ko.qm qtscript_lv.qm qtscript_pl.qm qtscript_ru.qm qtscript_sk.qm qtscript_uk.qm qtserialport_de.qm qtserialport_en.qm qtserialport_es.qm qtserialport_ja.qm qtserialport_ja.qm qtserialport_ko.qm qtserialport_pl.qm qtserialport_ru.qm qtserialport_uk.qm qtwebengine_de.qm qtwebengine_en.qm qtwebengine_es.qm qtwebengine_ko.qm qtwebengine_pl.qm qtwebengine_ru.qm qtwebengine_uk.qm qtwebsockets_de.qm qtwebsockets_en.qm qtwebsockets_es.qm qtwebsockets_fr.qm qtwebsockets_ja.qm qtwebsockets_ko.qm qtwebsockets_pl.qm qtwebsockets_ru.qm qtwebsockets_uk.qm qtxmlpatterns_bg.qm qtxmlpatterns_ca.qm qtxmlpatterns_cs.qm qtxmlpatterns_ca.qm qtxmlpatterns_cs.qm qtxmlpatterns_da.qm qtxmlpatterns_de.qm qtxmlpatterns_en.qm qtxmlpatterns_es.qm qtxmlpatterns_fr.qm qtxmlpatterns_hu.qm qtxmlpatterns_it.qm qtxmlpatterns_ja.qm qtxmlpatterns_ko.qm qtxmlpatterns_pl.qm qtxmlpatterns_ru.qm qtxmlpatterns_sk.qm qtxmlpatterns_uk.qm scripts.pro scripts_bg.qm scripts_bg.ts scripts_cs.qm scripts_cs.ts scripts_da.qm scripts_da.ts scripts_de.qm scripts_de.ts scripts_el.qm scripts_el.ts scripts_en.qm scripts_en.qm scripts_en.ts scripts_es.qm scripts_es.ts scripts_et.qm scripts_et.ts scripts_fi.qm scripts_fi.ts scripts_fr.qm scripts_fr.ts scripts_hr.qm scripts_hr.ts scripts_hu.qm scripts_hu.ts scripts_id.qm scripts_id.ts scripts_it.qm scripts_it.ts scripts_ja.qm scripts_ja.ts scripts_ko.qm scripts_ko.ts scripts_lt.qm scripts_lt.ts scripts_lv.qm scripts_lv.ts scripts_nb.qm scripts_nb.ts scripts_nl.qm scripts_nl.ts scripts_pl.qm scripts_pl.ts scripts_pt.qm scripts_pt.ts scripts_ro.qm scripts_ro.ts scripts_ru.qm scripts_ru.ts scripts_sk.qm scripts_sk.ts scripts_sl.qm scripts_sl.ts scripts_sv.qm scripts_sv.ts scripts_th.qm scripts_th.ts scripts_tr.qm scripts_tr.ts scripts_uk.qm scripts_uk.ts scripts_zh_CN.qm scripts_zh_CN.ts scripts_zh_TW.qm scripts_zh_TW.ts scripts_zh_TW.ts</translation>
+        <translation>Eliminarea entităților de bază *</translation>
     </message>
 </context>
 <context>
@@ -5724,7 +5724,7 @@ este deja în listă.</translation>
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation>Faceți dublu clic pentru a edita trapa</translation>
+        <translation>Faceți dublu clic pentru a edita hașura</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6347,7 +6347,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation>Unelte de trapă</translation>
+        <translation>Unelte de hașură</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -6375,7 +6375,7 @@ este deja în listă.</translation>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Modelul Hatch</translation>
+        <translation>Model de hașură</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6418,7 +6418,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>Trapa din selecție</translation>
+        <translation>Hașură din selecție</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -6746,7 +6746,7 @@ este deja în listă.</translation>
         <location line="+67"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
-        <translation>Acorduri</translation>
+        <translation>Coardă</translation>
     </message>
     <message>
         <location line="-60"/>
@@ -6766,7 +6766,7 @@ este deja în listă.</translation>
         <location line="-88"/>
         <location line="+67"/>
         <source>chord:</source>
-        <translation>acord:</translation>
+        <translation>coardă:</translation>
     </message>
     <message>
         <location line="-52"/>
@@ -6982,7 +6982,7 @@ este deja în listă.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Formă netransmisă din bucla de trapă.</translation>
+        <translation>Formă netransmisă din bucla de hașură.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7025,7 +7025,7 @@ este deja în listă.</translation>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>Rulmentul:</translation>
+        <translation>Orientare:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8207,12 +8207,12 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>Lider</translation>
+        <translation>Linie de indicație</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Desenați liderul (secvență de linii cu săgeată)</translation>
+        <translation>Desenați o linie de indicație (secvență de linii cu săgeată)</translation>
     </message>
 </context>
 <context>
@@ -8220,12 +8220,12 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Liderul a fost creat cu succes</translation>
+        <translation>Linia de indicație a fost creată cu succes</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>Lider din textul selectat</translation>
+        <translation>Linie de indicație din textul selectat</translation>
     </message>
 </context>
 <context>
@@ -9103,7 +9103,7 @@ este deja în listă.</translation>
     <message>
         <location line="+21"/>
         <source>Misc Draw</source>
-        <translation>Diverse Tragere la sorți</translation>
+        <translation>Desen divers</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -9655,7 +9655,7 @@ este deja în listă.</translation>
     <message>
         <location line="+0"/>
         <source>Paste</source>
-        <translation>Paste</translation>
+        <translation>Lipire</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -9715,7 +9715,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation>Paste</translation>
+        <translation>&amp;Lipire</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
@@ -9845,7 +9845,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Centrul de putere al celor trei cercuri</translation>
+        <translation>Centrul radical al celor trei cercuri</translation>
     </message>
 </context>
 <context>
@@ -9998,7 +9998,7 @@ este deja în listă.</translation>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation>Copac de colaps</translation>
+        <translation>Restrânge arborele</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -10413,7 +10413,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
         <source>&amp;Quit</source>
-        <translation>Renunță la</translation>
+        <translation>Ieșire</translation>
     </message>
 </context>
 <context>
@@ -10449,7 +10449,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
-        <translation>Listă clară</translation>
+        <translation>Golește lista</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10914,7 +10914,7 @@ este deja în listă.</translation>
     <message>
         <location line="+16"/>
         <source>Saving...</source>
-        <translation>Economisirea...</translation>
+        <translation>Salvarea...</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11615,7 +11615,7 @@ este deja în listă.</translation>
     <message>
         <location line="+29"/>
         <source>No arc possible.</source>
-        <translation>Nu este posibil niciun arc electric.</translation>
+        <translation>Nu este posibil niciun arc.</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -12567,12 +12567,12 @@ este deja în listă.</translation>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Liderul a fost creat cu succes</translation>
+        <translation>Linia de indicație a fost creată cu succes</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>Text aliniat Leader</translation>
+        <translation>Linie de indicație aliniată la text</translation>
     </message>
 </context>
 <context>
@@ -12630,7 +12630,7 @@ este deja în listă.</translation>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation>Paste</translation>
+        <translation>&amp;Lipire</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -12700,7 +12700,7 @@ este deja în listă.</translation>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Divizia</translation>
+        <translation>Împărțire</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12740,7 +12740,7 @@ este deja în listă.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Cubulețe</translation>
+        <translation>La cub</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12812,7 +12812,7 @@ este deja în listă.</translation>
     <message>
         <location line="+10"/>
         <source>Paste</source>
-        <translation>Paste</translation>
+        <translation>Lipire</translation>
     </message>
     <message>
         <location line="+170"/>
@@ -13696,7 +13696,7 @@ este deja în listă.</translation>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Divizia</translation>
+        <translation>Împărțire</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13791,7 +13791,7 @@ este deja în listă.</translation>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation>Abecedar 2</translation>
+        <translation>Subscript 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13811,7 +13811,7 @@ este deja în listă.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Cubulețe</translation>
+        <translation>La cub</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14399,7 +14399,7 @@ este deja în listă.</translation>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation>Trapele</translation>
+        <translation>Hașuri</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14419,12 +14419,12 @@ este deja în listă.</translation>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation>Lideri</translation>
+        <translation>Linii de indicație</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Lider</translation>
+        <translation>Linie de indicație</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14607,7 +14607,7 @@ este deja în listă.</translation>
     <message>
         <location line="+1"/>
         <source>DWG Drawing</source>
-        <translation>DWG Desen DWG</translation>
+        <translation>Desen DWG</translation>
     </message>
     <message>
         <location line="+1"/>

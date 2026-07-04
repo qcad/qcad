@@ -308,7 +308,7 @@
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation>Připomínka</translation>
+        <translation>Výzva</translation>
     </message>
     <message>
         <location line="-3"/>

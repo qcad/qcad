@@ -1262,12 +1262,12 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Block/Block.js" line="+68"/>
         <source>Block Tools</source>
-        <translation>Alat Blokir</translation>
+        <translation>Alat Blok</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Block</source>
-        <translation>Blokir</translation>
+        <translation>Blok</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1316,12 +1316,12 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+5"/>
         <source>Block already exists.</source>
-        <translation>Blokir sudah ada.</translation>
+        <translation>Blok sudah ada.</translation>
     </message>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block</source>
-        <translation>Blokir</translation>
+        <translation>Blok</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1334,7 +1334,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/BlockExamples.js" line="+51"/>
         <source>&amp;Block</source>
-        <translation>Blokir</translation>
+        <translation>Blok</translation>
     </message>
 </context>
 <context>
@@ -1357,7 +1357,7 @@ Apakah Anda ingin memulihkannya?</translation>
         <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
-        <translation>Daftar Blokir</translation>
+        <translation>Daftar Blok</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+19"/>
@@ -1385,7 +1385,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+11"/>
         <source>Block attribute:</source>
-        <translation>Atribut blokir:</translation>
+        <translation>Atribut blok:</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -1408,7 +1408,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation>Daftar Blokir Ekspor</translation>
+        <translation>Daftar Blok Ekspor</translation>
     </message>
 </context>
 <context>
@@ -2090,7 +2090,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation>Gambar Penutup...</translation>
+        <translation>Menutup Gambar...</translation>
     </message>
 </context>
 <context>
@@ -2698,7 +2698,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation>Menetas</translation>
+        <translation>Arsir</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2833,7 +2833,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Titik akhir pemimpin</translation>
+        <translation>Titik akhir garis petunjuk</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
@@ -4447,12 +4447,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation>Pilih menetas</translation>
+        <translation>Pilih arsir</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation>Edit Menetas</translation>
+        <translation>Edit Arsir</translation>
     </message>
 </context>
 <context>
@@ -4731,7 +4731,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>Melarikan diri</translation>
+        <translation>Batal</translation>
     </message>
 </context>
 <context>
@@ -5107,17 +5107,17 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>Meledak</translation>
+        <translation>Uraikan</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation>Meledak</translation>
+        <translation>Uraikan</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+19"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation>Meledakkan spline menjadi poligon dengan segmen garis</translation>
+        <translation>Uraikan spline menjadi poligon dengan segmen garis</translation>
     </message>
     <message>
         <location line="+104"/>
@@ -5142,17 +5142,17 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+10"/>
         <source>Explode circles into polylines with two half circles</source>
-        <translation>Meledakkan lingkaran menjadi poligon dengan dua setengah lingkaran</translation>
+        <translation>Uraikan lingkaran menjadi poligon dengan dua setengah lingkaran</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation>Meledakkan teks multiline menjadi beberapa blok teks sederhana</translation>
+        <translation>Uraikan teks multiline menjadi beberapa blok teks sederhana</translation>
     </message>
     <message>
         <location line="+80"/>
         <source>Explode text glyphs to polylines</source>
-        <translation>Meledakkan mesin terbang teks menjadi poligon</translation>
+        <translation>Uraikan glif teks menjadi poligon</translation>
     </message>
 </context>
 <context>
@@ -6342,7 +6342,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Hatch</source>
-        <translation>Menetas</translation>
+        <translation>Arsir</translation>
     </message>
 </context>
 <context>
@@ -6350,7 +6350,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation>Menetas</translation>
+        <translation>Arsir</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6408,7 +6408,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>Menetas dari Seleksi</translation>
+        <translation>Arsir dari Seleksi</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -6736,7 +6736,7 @@ sudah ada dalam daftar.</translation>
         <location line="+67"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
-        <translation>Chord</translation>
+        <translation>Tali busur</translation>
     </message>
     <message>
         <location line="-60"/>
@@ -6756,7 +6756,7 @@ sudah ada dalam daftar.</translation>
         <location line="-88"/>
         <location line="+67"/>
         <source>chord:</source>
-        <translation>chord:</translation>
+        <translation>tali busur:</translation>
     </message>
     <message>
         <location line="-52"/>
@@ -6914,7 +6914,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation>Area menetas:</translation>
+        <translation>Area arsir:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7015,7 +7015,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>Bantalan:</translation>
+        <translation>Arah:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7025,7 +7025,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation>Bantalan / Azimuth</translation>
+        <translation>Arah / Azimuth</translation>
     </message>
 </context>
 <context>
@@ -8197,12 +8197,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>Pemimpin</translation>
+        <translation>Garis petunjuk</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Gambar pemimpin (urutan garis dengan panah)</translation>
+        <translation>Gambar garis petunjuk (urutan garis dengan panah)</translation>
     </message>
 </context>
 <context>
@@ -8210,12 +8210,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Pemimpin berhasil diciptakan</translation>
+        <translation>Garis petunjuk berhasil dibuat</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>Pemimpin dari Teks yang Dipilih</translation>
+        <translation>Garis petunjuk dari Teks yang Dipilih</translation>
     </message>
 </context>
 <context>
@@ -8271,7 +8271,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Sinar</translation>
     </message>
 </context>
 <context>
@@ -9052,12 +9052,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation>Alat Blokir Lainnya</translation>
+        <translation>Alat Blok Lainnya</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>&amp;Block</source>
-        <translation>Blokir</translation>
+        <translation>Blok</translation>
     </message>
 </context>
 <context>
@@ -9831,7 +9831,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Pusat Kekuatan Tiga Lingkaran</translation>
+        <translation>Pusat Radikal Tiga Lingkaran</translation>
     </message>
 </context>
 <context>
@@ -9984,7 +9984,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation>Pohon runtuh</translation>
+        <translation>Ciutkan pohon</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -10464,7 +10464,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Block/RemoveBlock/RemoveBlockInit.js" line="+2"/>
         <source>&amp;Remove Block</source>
-        <translation>Hapus Blokir</translation>
+        <translation>Hapus Blok</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10968,7 +10968,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+10"/>
         <source>Saving</source>
-        <translation>Menabung</translation>
+        <translation>Menyimpan</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -11210,7 +11210,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Block/SelectBlockReferences/SelectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Select Block References</source>
-        <translation>Pilih Referensi Blokir</translation>
+        <translation>Pilih Referensi Blok</translation>
     </message>
 </context>
 <context>
@@ -12038,7 +12038,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>Gratis</translation>
+        <translation>Bebas</translation>
     </message>
 </context>
 <context>
@@ -12547,12 +12547,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Pemimpin berhasil diciptakan</translation>
+        <translation>Garis petunjuk berhasil dibuat</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>Pemimpin yang Disejajarkan dengan Teks</translation>
+        <translation>Garis petunjuk yang Disejajarkan dengan Teks</translation>
     </message>
 </context>
 <context>
@@ -12680,7 +12680,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Divisi</translation>
+        <translation>Pembagian</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12720,7 +12720,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Dadu</translation>
+        <translation>Pangkat tiga</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13676,7 +13676,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Divisi</translation>
+        <translation>Pembagian</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13791,7 +13791,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Dadu</translation>
+        <translation>Pangkat tiga</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14138,7 +14138,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+0"/>
         <source>Block</source>
-        <translation>Blokir</translation>
+        <translation>Blok</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14379,12 +14379,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation>Menetas</translation>
+        <translation>Arsir</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation>Menetas</translation>
+        <translation>Arsir</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14399,12 +14399,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation>Pemimpin</translation>
+        <translation>Garis petunjuk</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Pemimpin</translation>
+        <translation>Garis petunjuk</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14444,7 +14444,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Sinar</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14489,12 +14489,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation>Wajah</translation>
+        <translation>Bidang</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation>Wajah</translation>
+        <translation>Bidang</translation>
     </message>
     <message>
         <location line="+2"/>

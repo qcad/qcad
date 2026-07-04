@@ -708,7 +708,7 @@
     <message>
         <location line="+2"/>
         <source>Ordinate</source>
-        <translation>Ordinal</translation>
+        <translation>Ordenada</translation>
     </message>
     <message>
         <location line="+1"/>

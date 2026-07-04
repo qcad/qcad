@@ -276,7 +276,7 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
         <source>Total Length</source>
-        <translation>Totaale lengte</translation>
+        <translation>Totale lengte</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -297,7 +297,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Total Area</source>
-        <translation>Totaale oppervlakte</translation>
+        <translation>Totale oppervlakte</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+95"/>
@@ -718,7 +718,7 @@
     <message>
         <location line="+2"/>
         <source>Global Width</source>
-        <translation>Algeheele breedte</translation>
+        <translation>Algehele breedte</translation>
     </message>
     <message>
         <location line="+2"/>

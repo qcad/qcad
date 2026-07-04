@@ -31,7 +31,7 @@
     <message>
         <location line="+3"/>
         <source>Centimeter</source>
-        <translation>Centrymetr</translation>
+        <translation>Centymetr</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -324,7 +324,7 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation>Posiadane przez Reference</translation>
+        <translation>Posiadane przez odniesienie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -416,7 +416,7 @@
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation>Kolejność losowania</translation>
+        <translation>Kolejność rysowania</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -602,7 +602,7 @@
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation>Na stronie</translation>
+        <translation>Włączona</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -788,7 +788,7 @@
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation>Rozmiar kleszcza</translation>
+        <translation>Rozmiar znacznika</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1156,7 +1156,7 @@
     <message>
         <location line="+1"/>
         <source>0.05mm</source>
-        <translation>0.00mm</translation>
+        <translation>0.05mm</translation>
     </message>
     <message>
         <location line="+1"/>

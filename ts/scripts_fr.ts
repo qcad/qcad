@@ -138,7 +138,7 @@
     <message>
         <location line="+7"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
-        <translation>Tous les noms d&apos;incendie ou de produits sont des marques commerciales ou des marques déposées de leurs détenteurs respectifs.</translation>
+        <translation>Tous les noms de marque ou de produits sont des marques commerciales ou des marques déposées de leurs détenteurs respectifs.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -309,7 +309,7 @@ pour appliquer les modifications.</translation>
     <message>
         <location line="+2"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation>Préférences du dessin courant peuvent être modifiés sous&lt;br/&gt;&lt;i&gt;Édition &amp;gt; Préférences de dessign&lt;/i&gt;.</translation>
+        <translation>Préférences du dessin courant peuvent être modifiées sous&lt;br/&gt;&lt;i&gt;Édition &amp;gt; Préférences de dessin&lt;/i&gt;.</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2201,7 +2201,7 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation>Essayant de tirer ou de modifier des entités sur un calque verrouillé.</translation>
+        <translation>La transaction a échoué. Veuillez vérifier les récursions de blocs ainsi que les calques ou blocs verrouillés ou invisibles.</translation>
     </message>
     <message>
         <location line="-417"/>
@@ -2216,7 +2216,7 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location line="+16"/>
         <source>Invalid coordinate or distance &quot;%1&quot;.</source>
-        <translation>Invalid coordonner ou distance &quot;%1&quot;.</translation>
+        <translation>Coordonnée ou distance invalide &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+120"/>
@@ -3785,7 +3785,7 @@ est déjà dans la liste.</translation>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-2.</source>
-        <translation>Égalité des chances 1-2.</translation>
+        <translation>Positions égales 1-2.</translation>
     </message>
     <message>
         <location line="-286"/>
@@ -3807,7 +3807,7 @@ est déjà dans la liste.</translation>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-3.</source>
-        <translation>Égalité des chances 1-3.</translation>
+        <translation>Positions égales 1-3.</translation>
     </message>
     <message>
         <location line="-287"/>
@@ -3817,7 +3817,7 @@ est déjà dans la liste.</translation>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 2-3.</source>
-        <translation>Égalité des chances 2-3.</translation>
+        <translation>Positions égales 2-3.</translation>
     </message>
     <message>
         <location line="-284"/>
@@ -3860,19 +3860,19 @@ est déjà dans la liste.</translation>
         <location line="-97"/>
         <location line="+33"/>
         <source>Equal positions 1-4.</source>
-        <translation>Égalité des chances 1-4.</translation>
+        <translation>Positions égales 1-4.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 2-4.</source>
-        <translation>Égalité des chances 2-4.</translation>
+        <translation>Positions égales 2-4.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 3-4.</source>
-        <translation>Égalité des chances 3-4.</translation>
+        <translation>Positions égales 3-4.</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -4551,7 +4551,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+249"/>
         <source>Invalid major radius.</source>
-        <translation>Invalid rayon majeur.</translation>
+        <translation>Rayon majeur invalide.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6642,7 +6642,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation>Précisez le poste</translation>
+        <translation>Spécifiez la position</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -6977,7 +6977,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Forme non manipulée de la boucle d&apos;éclosion.</translation>
+        <translation>Forme non gérée de la boucle de hachure.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -13362,7 +13362,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+13"/>
         <source>Enable high DPI scaling</source>
-        <translation>Activer Splash Screen</translation>
+        <translation>Activer la mise à l'échelle haute résolution (DPI)</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -13612,12 +13612,12 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+0"/>
         <source>Layout - Viewports</source>
-        <translation>Mise - Fenêtres de présentation</translation>
+        <translation>Mise en page - Fenêtres de présentation</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layout</source>
-        <translation>Mise</translation>
+        <translation>Mise en page</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13786,7 +13786,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation>Abécédaire 2</translation>
+        <translation>Indice 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14263,7 +14263,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+2"/>
         <source>Attribute Definitions</source>
-        <translation>Aéfinitions d&apos;attributs</translation>
+        <translation>Définitions d&apos;attributs</translation>
     </message>
     <message>
         <location line="+0"/>
