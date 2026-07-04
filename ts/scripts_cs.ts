@@ -183,7 +183,7 @@
     <message>
         <location line="+45"/>
         <source>Credits</source>
-        <translation>Titulky</translation>
+        <translation>Poděkování</translation>
     </message>
     <message>
         <location line="+170"/>
@@ -244,7 +244,7 @@
     <message>
         <location line="+67"/>
         <source>Credits</source>
-        <translation>Titulky</translation>
+        <translation>Poděkování</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -3176,7 +3176,7 @@ Přejete si ho obnovit?</translation>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>Architektonické klíště</translation>
+        <translation>Architektonická značka</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -3500,7 +3500,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation>Losování jízdních pruhů FMS (žebra)</translation>
+        <translation>Nakreslit jízdní pruhy FMS (žebra)</translation>
     </message>
 </context>
 <context>
@@ -4081,7 +4081,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+46"/>
         <source>Draw from CSV</source>
-        <translation>Čerpání z CSV</translation>
+        <translation>Kreslení z CSV</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -5115,12 +5115,12 @@ již v seznamu je.</translation>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>Roztrhat</translation>
+        <translation>Rozložit</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation>&amp;Roztrhat</translation>
+        <translation>&amp;Rozložit</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+130"/>
@@ -5686,7 +5686,7 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation>Čtyři: Velký vlevo</translation>
+        <translation>Čtyři: Vlevo</translation>
     </message>
 </context>
 <context>
@@ -5694,7 +5694,7 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation>Čtyři: Velký vpravo</translation>
+        <translation>Čtyři: Vpravo</translation>
     </message>
 </context>
 <context>
@@ -6013,7 +6013,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation>Výchozí váha řádku:</translation>
+        <translation>Výchozí tloušťka čáry:</translation>
     </message>
     <message>
         <location line="+522"/>
@@ -6932,7 +6932,7 @@ již v seznamu je.</translation>
     <message>
         <location line="-89"/>
         <source>Multiple entities in selection.</source>
-        <translation>Více subjektů ve výběru.</translation>
+        <translation>Více prvků ve výběru.</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -7023,7 +7023,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>Ložisko:</translation>
+        <translation>Směrník:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7033,7 +7033,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation>Ložisko / azimut</translation>
+        <translation>Směrník / azimut</translation>
     </message>
 </context>
 <context>
@@ -8218,12 +8218,12 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Leader byl úspěšně vytvořen</translation>
+        <translation>Odkazová čára byla úspěšně vytvořena</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>Leader z vybraného textu</translation>
+        <translation>Odkazová čára z vybraného textu</translation>
     </message>
 </context>
 <context>
@@ -9843,7 +9843,7 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Těžiště tří kružnic</translation>
+        <translation>Potenční střed tří kružnic</translation>
     </message>
 </context>
 <context>
@@ -10061,7 +10061,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+40"/>
         <source>Auto fit</source>
-        <translation>Automatická montáž</translation>
+        <translation>Automatické přizpůsobení</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10243,7 +10243,7 @@ již v seznamu je.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Maximální složitost automatického výpočtu délky poklopu:</translation>
+        <translation>Maximální složitost automatického výpočtu délky šrafování:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -11906,7 +11906,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+1"/>
         <source>Enter</source>
-        <translation>Vstupte na</translation>
+        <translation>Enter</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
@@ -12565,12 +12565,12 @@ již v seznamu je.</translation>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Leader byl úspěšně vytvořen</translation>
+        <translation>Odkazová čára byla úspěšně vytvořena</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>Zarovnaný text Leader</translation>
+        <translation>Odkazová čára zarovnaná s textem</translation>
     </message>
 </context>
 <context>
@@ -12835,7 +12835,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation>Připomínka:</translation>
+        <translation>Výzva:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -14422,7 +14422,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Odkazová kóta</translation>
+        <translation>Odkazová čára</translation>
     </message>
     <message>
         <location line="+2"/>
