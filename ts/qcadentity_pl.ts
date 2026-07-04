@@ -403,7 +403,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>Punkt końcowy lidera</translation>
+        <translation>Punkt końcowy odnośnika</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
@@ -458,7 +458,7 @@
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation>Przerzuć drugą strzałę</translation>
+        <translation>Przerzuć drugą strzałkę</translation>
     </message>
     <message>
         <location line="+2"/>
