@@ -828,7 +828,7 @@
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Architecte tique</translation>
+        <translation>Graduation architecturale</translation>
     </message>
     <message>
         <location line="+1"/>
