@@ -521,7 +521,7 @@
     <message>
         <location line="+1"/>
         <source>Block</source>
-        <translation>Blokir</translation>
+        <translation>Blok</translation>
     </message>
     <message>
         <location line="+1"/>
