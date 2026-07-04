@@ -450,7 +450,7 @@
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation>Dimensiunea căpușei</translation>
+        <translation>Dimensiunea marcajului</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -636,7 +636,7 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation>Prăbușit</translation>
+        <translation>Restrâns</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -925,7 +925,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dashed</source>
-        <translation>Traforat</translation>
+        <translation>Întrerupt</translation>
     </message>
     <message>
         <location line="+2"/>

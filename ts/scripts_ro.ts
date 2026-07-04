@@ -206,7 +206,7 @@
     <message>
         <location line="+65"/>
         <source>Hatch Patterns</source>
-        <translation>Modele de trapă</translation>
+        <translation>Modele de hașură</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1100,7 +1100,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
-        <translation>Șanfrenare / Ciocan</translation>
+        <translation>Șanfrenare / Teșire</translation>
     </message>
 </context>
 <context>
@@ -1499,7 +1499,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation>A doua minge de break</translation>
+        <translation>Al doilea punct de întrerupere</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2094,7 +2094,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation>Închiderea tragerii la sorți...</translation>
+        <translation>Închiderea desenului...</translation>
     </message>
 </context>
 <context>
@@ -2702,7 +2702,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation>Trapele</translation>
+        <translation>Hașuri</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2837,7 +2837,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Punctul final al liderului</translation>
+        <translation>Punctul final al liniei de indicație</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
@@ -4455,12 +4455,12 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation>Alegeți trapa</translation>
+        <translation>Alegeți hașura</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation>Editare Hatch</translation>
+        <translation>Editare hașură</translation>
     </message>
 </context>
 <context>
@@ -4739,7 +4739,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>Evadare</translation>
+        <translation>Anulare</translation>
     </message>
 </context>
 <context>
@@ -5724,7 +5724,7 @@ este deja în listă.</translation>
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation>Faceți dublu clic pentru a edita trapa</translation>
+        <translation>Faceți dublu clic pentru a edita hașura</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6347,7 +6347,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation>Unelte de trapă</translation>
+        <translation>Unelte de hașură</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -6375,7 +6375,7 @@ este deja în listă.</translation>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Modelul Hatch</translation>
+        <translation>Model de hașură</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6418,7 +6418,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>Trapa din selecție</translation>
+        <translation>Hașură din selecție</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -6746,7 +6746,7 @@ este deja în listă.</translation>
         <location line="+67"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
-        <translation>Acorduri</translation>
+        <translation>Coardă</translation>
     </message>
     <message>
         <location line="-60"/>
@@ -6766,7 +6766,7 @@ este deja în listă.</translation>
         <location line="-88"/>
         <location line="+67"/>
         <source>chord:</source>
-        <translation>acord:</translation>
+        <translation>coardă:</translation>
     </message>
     <message>
         <location line="-52"/>
@@ -6982,7 +6982,7 @@ este deja în listă.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Formă netransmisă din bucla de trapă.</translation>
+        <translation>Formă netransmisă din bucla de hașură.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7025,7 +7025,7 @@ este deja în listă.</translation>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>Rulmentul:</translation>
+        <translation>Orientare:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8207,12 +8207,12 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>Lider</translation>
+        <translation>Linie de indicație</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Desenați liderul (secvență de linii cu săgeată)</translation>
+        <translation>Desenați o linie de indicație (secvență de linii cu săgeată)</translation>
     </message>
 </context>
 <context>
@@ -8220,12 +8220,12 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Liderul a fost creat cu succes</translation>
+        <translation>Linia de indicație a fost creată cu succes</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>Lider din textul selectat</translation>
+        <translation>Linie de indicație din textul selectat</translation>
     </message>
 </context>
 <context>
@@ -9103,7 +9103,7 @@ este deja în listă.</translation>
     <message>
         <location line="+21"/>
         <source>Misc Draw</source>
-        <translation>Diverse Tragere la sorți</translation>
+        <translation>Desen divers</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -9655,7 +9655,7 @@ este deja în listă.</translation>
     <message>
         <location line="+0"/>
         <source>Paste</source>
-        <translation>Paste</translation>
+        <translation>Lipire</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -9715,7 +9715,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation>Paste</translation>
+        <translation>&amp;Lipire</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
@@ -9845,7 +9845,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Centrul de putere al celor trei cercuri</translation>
+        <translation>Centrul radical al celor trei cercuri</translation>
     </message>
 </context>
 <context>
@@ -9998,7 +9998,7 @@ este deja în listă.</translation>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation>Copac de colaps</translation>
+        <translation>Restrânge arborele</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -10413,7 +10413,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
         <source>&amp;Quit</source>
-        <translation>Renunță la</translation>
+        <translation>Ieșire</translation>
     </message>
 </context>
 <context>
@@ -10449,7 +10449,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
-        <translation>Listă clară</translation>
+        <translation>Golește lista</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10914,7 +10914,7 @@ este deja în listă.</translation>
     <message>
         <location line="+16"/>
         <source>Saving...</source>
-        <translation>Economisirea...</translation>
+        <translation>Salvarea...</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11615,7 +11615,7 @@ este deja în listă.</translation>
     <message>
         <location line="+29"/>
         <source>No arc possible.</source>
-        <translation>Nu este posibil niciun arc electric.</translation>
+        <translation>Nu este posibil niciun arc.</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -12567,12 +12567,12 @@ este deja în listă.</translation>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Liderul a fost creat cu succes</translation>
+        <translation>Linia de indicație a fost creată cu succes</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>Text aliniat Leader</translation>
+        <translation>Linie de indicație aliniată la text</translation>
     </message>
 </context>
 <context>
@@ -12630,7 +12630,7 @@ este deja în listă.</translation>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation>Paste</translation>
+        <translation>&amp;Lipire</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -12700,7 +12700,7 @@ este deja în listă.</translation>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Divizia</translation>
+        <translation>Împărțire</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12740,7 +12740,7 @@ este deja în listă.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Cubulețe</translation>
+        <translation>La cub</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12812,7 +12812,7 @@ este deja în listă.</translation>
     <message>
         <location line="+10"/>
         <source>Paste</source>
-        <translation>Paste</translation>
+        <translation>Lipire</translation>
     </message>
     <message>
         <location line="+170"/>
@@ -13696,7 +13696,7 @@ este deja în listă.</translation>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Divizia</translation>
+        <translation>Împărțire</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13791,7 +13791,7 @@ este deja în listă.</translation>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation>Abecedar 2</translation>
+        <translation>Subscript 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13811,7 +13811,7 @@ este deja în listă.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Cubulețe</translation>
+        <translation>La cub</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14399,7 +14399,7 @@ este deja în listă.</translation>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation>Trapele</translation>
+        <translation>Hașuri</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14419,12 +14419,12 @@ este deja în listă.</translation>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation>Lideri</translation>
+        <translation>Linii de indicație</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Lider</translation>
+        <translation>Linie de indicație</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14607,7 +14607,7 @@ este deja în listă.</translation>
     <message>
         <location line="+1"/>
         <source>DWG Drawing</source>
-        <translation>DWG Desen DWG</translation>
+        <translation>Desen DWG</translation>
     </message>
     <message>
         <location line="+1"/>
