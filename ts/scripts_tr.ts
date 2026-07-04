@@ -1485,7 +1485,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation>&amp;Kılavuzdan Çık</translation>
+        <translation>Manuel Kopma</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.js" line="+79"/>
@@ -2693,7 +2693,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation>Kapaklar</translation>
+        <translation>Taramalar</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2833,7 +2833,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Liderliğin son noktası</translation>
+        <translation>Kılavuz çizginin son noktası</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
@@ -4105,12 +4105,12 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
-        <translation>Çekiliş Sırası</translation>
+        <translation>&amp;Çizim Sırası</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation>Çekiliş Sırası</translation>
+        <translation>Çizim Sırası</translation>
     </message>
 </context>
 <context>
@@ -4447,12 +4447,12 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation>Kapak seçin</translation>
+        <translation>Tarama seçin</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation>Hatch&apos;i Düzenle</translation>
+        <translation>Taramayı Düzenle</translation>
     </message>
 </context>
 <context>
@@ -5107,12 +5107,12 @@ zaten listede.</translation>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>Patlamak</translation>
+        <translation>Patlat</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation>Patlamak</translation>
+        <translation>Patlat</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+137"/>
@@ -5714,7 +5714,7 @@ zaten listede.</translation>
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation>Kapağı düzenlemek için çift tıklayın</translation>
+        <translation>Taramayı düzenlemek için çift tıklayın</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5769,7 +5769,7 @@ zaten listede.</translation>
     <message>
         <location line="+64"/>
         <source>Cursor range for snap:</source>
-        <translation>Çıtçıt için imleç aralığı:</translation>
+        <translation>Yakalama için imleç aralığı:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -5975,7 +5975,7 @@ zaten listede.</translation>
     <message>
         <location line="+45"/>
         <source>Timeout for hatch rendering:</source>
-        <translation>Kapak oluşturma için zaman aşımı:</translation>
+        <translation>Tarama oluşturma için zaman aşımı:</translation>
     </message>
     <message>
         <location line="-361"/>
@@ -6164,12 +6164,12 @@ zaten listede.</translation>
     <message>
         <location line="+30"/>
         <source>Snap Tools</source>
-        <translation>Çıtçıtlı Araçlar</translation>
+        <translation>Yakalama Araçları</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Snap label:</source>
-        <translation>Çıtçıtlı etiket:</translation>
+        <translation>Yakalama etiketi:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6337,12 +6337,12 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation>Kapak Araçları</translation>
+        <translation>Tarama Araçları</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Hatch</source>
-        <translation>&amp;Kapak</translation>
+        <translation>&amp;Tarama</translation>
     </message>
 </context>
 <context>
@@ -6350,12 +6350,12 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation>Kapak</translation>
+        <translation>Tarama</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Type</source>
-        <translation>Yazı</translation>
+        <translation>Tip</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6365,7 +6365,7 @@ zaten listede.</translation>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Kapak Kalıbı</translation>
+        <translation>Tarama Kalıbı</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6408,12 +6408,12 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>&amp;Seçimden Kapak</translation>
+        <translation>&amp;Seçimden Tarama</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation>Seçilen sınırdan kapak veya katı dolgu oluştur</translation>
+        <translation>Seçilen sınırdan tarama veya katı dolgu oluştur</translation>
     </message>
 </context>
 <context>
@@ -6736,7 +6736,7 @@ zaten listede.</translation>
         <location line="+67"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
-        <translation>Ton</translation>
+        <translation>Kiriş</translation>
     </message>
     <message>
         <location line="-60"/>
@@ -6756,7 +6756,7 @@ zaten listede.</translation>
         <location line="-88"/>
         <location line="+67"/>
         <source>chord:</source>
-        <translation>ton:</translation>
+        <translation>kiriş:</translation>
     </message>
     <message>
         <location line="-52"/>
@@ -6972,7 +6972,7 @@ zaten listede.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Kapak döngüsünden işlenmemiş şekil.</translation>
+        <translation>Tarama döngüsünden işlenmemiş şekil.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7015,7 +7015,7 @@ zaten listede.</translation>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>Rulman:</translation>
+        <translation>Kerteriz:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7211,7 +7211,7 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Information/InfoPosition/InfoPositionInit.js" line="+2"/>
         <source>&amp;Position</source>
-        <translation>&amp;Yön</translation>
+        <translation>&amp;Konum</translation>
     </message>
 </context>
 <context>
@@ -8197,12 +8197,12 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>&amp;Lider</translation>
+        <translation>&amp;Kılavuz Çizgi</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Lider çiz (ok ile satır dizisi)</translation>
+        <translation>Kılavuz çizgi çiz (ok ile çizgi dizisi)</translation>
     </message>
 </context>
 <context>
@@ -8210,12 +8210,12 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Lider başarıyla oluşturuldu</translation>
+        <translation>Kılavuz çizgi başarıyla oluşturuldu</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>Seçilmiş Metinlerden Lider</translation>
+        <translation>Seçilmiş Metinlerden Kılavuz Çizgi</translation>
     </message>
 </context>
 <context>
@@ -8271,7 +8271,7 @@ zaten listede.</translation>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Işın</translation>
     </message>
 </context>
 <context>
@@ -9831,7 +9831,7 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Üç Dairenin Güç Merkezi</translation>
+        <translation>Üç Dairenin Radikal Merkezi</translation>
     </message>
 </context>
 <context>
@@ -10231,7 +10231,7 @@ zaten listede.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Otomatik kapak uzunluğu hesaplaması için maksimum karmaşıklık:</translation>
+        <translation>Otomatik tarama uzunluğu hesaplaması için maksimum karmaşıklık:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10353,7 +10353,7 @@ zaten listede.</translation>
         <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
-        <translation>Emlak Editörü</translation>
+        <translation>Özellik Düzenleyicisi</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
@@ -11543,7 +11543,7 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZero.js" line="+50"/>
         <source>Position</source>
-        <translation>Yön</translation>
+        <translation>Konum</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZeroInit.js" line="+2"/>
@@ -11844,12 +11844,12 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation>Çıtçıtlı Araçlar</translation>
+        <translation>Yakalama Araçları</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>&amp;Snap</source>
-        <translation>Çıtçıt</translation>
+        <translation>Yakalama</translation>
     </message>
 </context>
 <context>
@@ -11857,7 +11857,7 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation>Ek</translation>
+        <translation>Yakalama</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -11979,7 +11979,7 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Çekim mesafesi:</translation>
+        <translation>Yakalama mesafesi:</translation>
     </message>
 </context>
 <context>
@@ -11997,7 +11997,7 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Çekim mesafesi:</translation>
+        <translation>Yakalama mesafesi:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12017,7 +12017,7 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation>Mesafe Kılavuzu</translation>
+        <translation>Manuel Mesafe</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12038,7 +12038,7 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>Ücretsiz</translation>
+        <translation>Serbest</translation>
     </message>
 </context>
 <context>
@@ -12062,12 +12062,12 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation>Ek</translation>
+        <translation>Yakalama</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation>Kesişim El Kitabı</translation>
+        <translation>Manuel Kesişim</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12082,7 +12082,7 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation>Kesişim &amp;El Kitabı</translation>
+        <translation>Manuel Kesişim</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17"/>
@@ -12103,7 +12103,7 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation>&amp;Orta El Kitabı</translation>
+        <translation>Manuel Orta</translation>
     </message>
 </context>
 <context>
@@ -12547,12 +12547,12 @@ zaten listede.</translation>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Lider başarıyla oluşturuldu</translation>
+        <translation>Kılavuz çizgi başarıyla oluşturuldu</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>Metin Hizalamalı Lider</translation>
+        <translation>Metin Hizalamalı Kılavuz Çizgi</translation>
     </message>
 </context>
 <context>
@@ -13310,7 +13310,7 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Modify/TrimBoth/TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
-        <translation>Her İkisini de Döşeyin</translation>
+        <translation>Her İkisini de Kırp</translation>
     </message>
 </context>
 <context>
@@ -14118,7 +14118,7 @@ zaten listede.</translation>
     <message>
         <location line="+0"/>
         <source>Object</source>
-        <translation>Nesneler </translation>
+        <translation>Nesne</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14379,12 +14379,12 @@ zaten listede.</translation>
     <message>
         <location line="+2"/>
         <source>Hatch</source>
-        <translation>Kapak</translation>
+        <translation>Tarama</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatches</source>
-        <translation>Kapaklar</translation>
+        <translation>Taramalar</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14399,12 +14399,12 @@ zaten listede.</translation>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation>Liderler</translation>
+        <translation>Kılavuz Çizgiler</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Lider</translation>
+        <translation>Kılavuz Çizgi</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14444,7 +14444,7 @@ zaten listede.</translation>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Işın</translation>
     </message>
     <message>
         <location line="+2"/>
