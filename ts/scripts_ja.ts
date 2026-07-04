@@ -2321,7 +2321,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.ui" line="+20"/>
         <source>From:</source>
-        <translation>現在の値:</translation>
+        <translation>開始:</translation>
     </message>
     <message>
         <location line="+56"/>
@@ -2477,7 +2477,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+36"/>
         <source>Mode:</source>
-        <translation>モードだ：</translation>
+        <translation>モード:</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -2828,7 +2828,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation>メイン位置</translation>
+        <translation>フィーチャの位置</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3172,7 +3172,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>建築用ダニ</translation>
+        <translation>建築目盛り</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -3734,7 +3734,7 @@ is already in the list.</source>
         <location line="+49"/>
         <location line="+67"/>
         <source>Equal positions.</source>
-        <translation>イコールポジション。</translation>
+        <translation>等しい位置。</translation>
     </message>
     <message>
         <location line="-265"/>
@@ -3772,7 +3772,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Equal angles.</source>
-        <translation>イコールアングル。</translation>
+        <translation>等しい角度。</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -4105,7 +4105,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
-        <translation>ドローオーダー</translation>
+        <translation>描画順序</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -4205,7 +4205,7 @@ is already in the list.</source>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation>
-            <numerusform>%n 個のエンティティ/iesが重複している</numerusform>
+            <numerusform>%n 個のエンティティを複製しました</numerusform>
         </translation>
     </message>
 </context>
@@ -5027,7 +5027,7 @@ is already in the list.</source>
         <location line="+3"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
-        <translation>ドロー3ポイント</translation>
+        <translation>3点を描画</translation>
     </message>
 </context>
 <context>
@@ -5549,7 +5549,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation>アライン・トゥ・ビート</translation>
+        <translation>始点に揃える</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5598,7 +5598,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation>取り消し/やり直しの取引履歴をフラッシュするのは、本当に必要ですか？</translation>
+        <translation>取り消し/やり直しの履歴を消去してもよろしいですか？</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5985,7 +5985,7 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation>デフォルトのlineweight</translation>
+        <translation>デフォルトの線幅:</translation>
     </message>
     <message>
         <location line="+124"/>
@@ -7015,7 +7015,7 @@ is already in the list.</source>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>ベアリング</translation>
+        <translation>方位:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7856,7 +7856,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation>方法だ：</translation>
+        <translation>方法:</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -8215,7 +8215,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>テキストを選択したときのリーダー</translation>
+        <translation>選択テキストからの引出線</translation>
     </message>
 </context>
 <context>
@@ -8309,7 +8309,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Length:</source>
-        <translation>長さだ：</translation>
+        <translation>長さ:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8319,7 +8319,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Angle:</source>
-        <translation>アングルだ：</translation>
+        <translation>角度:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -8377,7 +8377,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Length:</source>
-        <translation>長さだ：</translation>
+        <translation>長さ:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8387,7 +8387,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Angle:</source>
-        <translation>アングルだ：</translation>
+        <translation>角度:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -8572,7 +8572,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17"/>
         <source>Length:</source>
-        <translation>長さだ：</translation>
+        <translation>長さ:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8646,7 +8646,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Distance:</source>
-        <translation>距離だ：</translation>
+        <translation>距離:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -8837,7 +8837,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineVertical/LineVertical.ui" line="+17"/>
         <source>Length:</source>
-        <translation>長さです。</translation>
+        <translation>長さ:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -9431,7 +9431,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
         <source>Distance:</source>
-        <translation>距離だ：</translation>
+        <translation>距離:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9560,7 +9560,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Left:</source>
-        <translation>左だ：</translation>
+        <translation>左:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9575,7 +9575,7 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Bottom:</source>
-        <translation>一番下だ：</translation>
+        <translation>下:</translation>
     </message>
     <message>
         <location line="+86"/>
@@ -9831,7 +9831,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>3つの輪のパワーセンター</translation>
+        <translation>3つの円の根心</translation>
     </message>
 </context>
 <context>
@@ -10333,7 +10333,7 @@ is already in the list.</source>
     <message>
         <location line="-146"/>
         <source>Handle:</source>
-        <translation>扱い:</translation>
+        <translation>ハンドル:</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+24"/>
@@ -10953,7 +10953,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Opening</source>
-        <translation>オープニング</translation>
+        <translation>開いています</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -11264,7 +11264,7 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation>ハンドル（六角）</translation>
+        <translation>ハンドル(16進):</translation>
     </message>
 </context>
 <context>
@@ -11750,7 +11750,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Angle:</source>
-        <translation>アングルだ：</translation>
+        <translation>角度:</translation>
     </message>
 </context>
 <context>
@@ -12200,7 +12200,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Choose Spline Degree</source>
-        <translation>スプライン角度を指定</translation>
+        <translation>スプライン次数を指定</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -12552,7 +12552,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>テキストアラインリーダー</translation>
+        <translation>テキスト位置合わせ引出線</translation>
     </message>
 </context>
 <context>
@@ -13898,7 +13898,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Gradians</source>
-        <translation>グラディエーター</translation>
+        <translation>グラジアン</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13937,7 +13937,7 @@ is already in the list.</source>
         <location line="-86"/>
         <location line="+87"/>
         <source>Above</source>
-        <translation>上記</translation>
+        <translation>上</translation>
     </message>
     <message>
         <location line="-74"/>
