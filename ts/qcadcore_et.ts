@@ -774,7 +774,7 @@
     <message>
         <location line="+1"/>
         <source>Bold</source>
-        <translation>Bold</translation>
+        <translation>Paks</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -820,7 +820,7 @@
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation>Veebilehel</translation>
+        <translation>Sees</translation>
     </message>
     <message>
         <location line="+1"/>

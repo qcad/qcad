@@ -206,7 +206,7 @@
     <message>
         <location line="+65"/>
         <source>Hatch Patterns</source>
-        <translation>Luugi mustrid</translation>
+        <translation>Viirutuse mustrid</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1083,7 +1083,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
         <source>Trim</source>
-        <translation>Trim</translation>
+        <translation>Kärbi</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -1207,7 +1207,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+10"/>
         <source>Grayscale</source>
-        <translation>Hallikaala</translation>
+        <translation>Halliskaala</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1566,7 +1566,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+4"/>
         <source>Collapse all</source>
-        <translation>Kokkupõrge kõik</translation>
+        <translation>Ahenda kõik</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2092,7 +2092,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation>Lõppjoonistus...</translation>
+        <translation>Joonise sulgemine...</translation>
     </message>
 </context>
 <context>
@@ -2156,7 +2156,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+20"/>
         <source>Grayscale</source>
-        <translation>Hallikaala</translation>
+        <translation>Halliskaala</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2700,7 +2700,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation>Luugid</translation>
+        <translation>Viirutused</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2835,7 +2835,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Juhi lõpp-punkt</translation>
+        <translation>Viitejoone lõpp-punkt</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
@@ -4451,7 +4451,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation>Vali luuk</translation>
+        <translation>Vali viirutus</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
@@ -4735,7 +4735,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>&amp;amp;Põgenemine</translation>
+        <translation>&amp;amp;Katkesta</translation>
     </message>
 </context>
 <context>
@@ -5719,7 +5719,7 @@ on juba loendis.</translation>
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation>Topeltklõpsake luugi redigeerimiseks</translation>
+        <translation>Topeltklõpsake viirutuse redigeerimiseks</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6342,12 +6342,12 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation>Luugi tööriistad</translation>
+        <translation>Viirutuse tööriistad</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Hatch</source>
-        <translation>&amp;amp;Luuk</translation>
+        <translation>&amp;amp;Viirutus</translation>
     </message>
 </context>
 <context>
@@ -6355,7 +6355,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation>Luuk</translation>
+        <translation>Viirutus</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6370,7 +6370,7 @@ on juba loendis.</translation>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Luugi muster</translation>
+        <translation>Viirutuse muster</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6413,12 +6413,12 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>&amp;amp;Luuk valikust</translation>
+        <translation>&amp;amp;Viirutus valikust</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation>Loo luuk või tahke täitmine valitud piirilt</translation>
+        <translation>Loo viirutus või tahke täitmine valitud piirilt</translation>
     </message>
 </context>
 <context>
@@ -6741,7 +6741,7 @@ on juba loendis.</translation>
         <location line="+67"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
-        <translation>Akord</translation>
+        <translation>Kõõl</translation>
     </message>
     <message>
         <location line="-60"/>
@@ -6761,7 +6761,7 @@ on juba loendis.</translation>
         <location line="-88"/>
         <location line="+67"/>
         <source>chord:</source>
-        <translation>akord:</translation>
+        <translation>kõõl:</translation>
     </message>
     <message>
         <location line="-52"/>
@@ -7020,7 +7020,7 @@ on juba loendis.</translation>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>Laager:</translation>
+        <translation>Suund:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7030,7 +7030,7 @@ on juba loendis.</translation>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation>&amp;amp;Laager / asimuut</translation>
+        <translation>&amp;amp;Suund / asimuut</translation>
     </message>
 </context>
 <context>
@@ -7921,7 +7921,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridRight/IsometricGridRight.js" line="+35"/>
         <source>&amp;Right Projection</source>
-        <translation>&amp;amp;Õige projektsioon</translation>
+        <translation>&amp;amp;Parempoolne projektsioon</translation>
     </message>
 </context>
 <context>
@@ -8202,12 +8202,12 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>&amp;amp;Juht</translation>
+        <translation>&amp;amp;Viitejoon</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Joonistage juht (joonejada koos noolega)</translation>
+        <translation>Joonistage viitejoon (joonejada koos noolega)</translation>
     </message>
 </context>
 <context>
@@ -8215,12 +8215,12 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Leader loodi edukalt</translation>
+        <translation>Viitejoon loodi edukalt</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>&amp;amp;Juhendaja valitud tekstist</translation>
+        <translation>&amp;amp;Viitejoon valitud tekstist</translation>
     </message>
 </context>
 <context>
@@ -8276,7 +8276,7 @@ on juba loendis.</translation>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Kiir</translation>
     </message>
 </context>
 <context>
@@ -9708,7 +9708,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation>&amp;amp;Paste</translation>
+        <translation>&amp;amp;Kleebi</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
@@ -9838,7 +9838,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Kolme ringi võimsuskeskus</translation>
+        <translation>Kolme ringi radikaalne keskus</translation>
     </message>
 </context>
 <context>
@@ -9991,7 +9991,7 @@ on juba loendis.</translation>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation>Kokkupõrge puu</translation>
+        <translation>Ahenda puu</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -10137,7 +10137,7 @@ on juba loendis.</translation>
     <message>
         <location line="+11"/>
         <source>Auto Center</source>
-        <translation>Autokeskus</translation>
+        <translation>Automaatne tsentreerimine</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10238,7 +10238,7 @@ on juba loendis.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Automaatse luugi pikkuse arvutamise maksimaalne keerukus:</translation>
+        <translation>Automaatse viirutuse pikkuse arvutamise maksimaalne keerukus:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10360,7 +10360,7 @@ on juba loendis.</translation>
         <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
-        <translation>Kinnisvara toimetaja</translation>
+        <translation>Omaduste redaktor</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
@@ -10442,7 +10442,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
-        <translation>&amp;amp;Tühi nimekiri</translation>
+        <translation>&amp;amp;Tühjenda nimekiri</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10801,7 +10801,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation>Trim</translation>
+        <translation>Kärbi</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -10907,7 +10907,7 @@ on juba loendis.</translation>
     <message>
         <location line="+16"/>
         <source>Saving...</source>
-        <translation>Säästmine...</translation>
+        <translation>Salvestamine...</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10975,7 +10975,7 @@ on juba loendis.</translation>
     <message>
         <location line="+10"/>
         <source>Saving</source>
-        <translation>Säästmine</translation>
+        <translation>Salvestamine</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -12048,7 +12048,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>&amp;amp;Tasuta</translation>
+        <translation>&amp;amp;Vaba</translation>
     </message>
 </context>
 <context>
@@ -12557,12 +12557,12 @@ on juba loendis.</translation>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Leader loodi edukalt</translation>
+        <translation>Viitejoon loodi edukalt</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>&amp;amp;Tekstiga joondatud juht</translation>
+        <translation>&amp;amp;Tekstiga joondatud viitejoon</translation>
     </message>
 </context>
 <context>
@@ -12620,12 +12620,12 @@ on juba loendis.</translation>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation>&amp;amp;Paste</translation>
+        <translation>&amp;amp;Kleebi</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Bold</source>
-        <translation>&amp;amp;Bold</translation>
+        <translation>&amp;amp;Paks</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -12645,7 +12645,7 @@ on juba loendis.</translation>
     <message>
         <location line="+6"/>
         <source>&amp;Superscript</source>
-        <translation>&amp;amp;Ülesseadmine</translation>
+        <translation>&amp;amp;Ülaindeks</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -12690,7 +12690,7 @@ on juba loendis.</translation>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Osakond</translation>
+        <translation>Jagamine</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12730,7 +12730,7 @@ on juba loendis.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Kuubikutega</translation>
+        <translation>Kuubis</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12761,7 +12761,7 @@ on juba loendis.</translation>
         <location line="+18"/>
         <location line="+274"/>
         <source>Bold</source>
-        <translation>Bold</translation>
+        <translation>Paks</translation>
     </message>
     <message>
         <location line="-267"/>
@@ -13312,7 +13312,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation>&amp;amp;Trim</translation>
+        <translation>&amp;amp;Kärbi</translation>
     </message>
 </context>
 <context>
@@ -13406,7 +13406,7 @@ on juba loendis.</translation>
     <message>
         <location line="+10"/>
         <source>Measurement system (for line types and hatch patterns):</source>
-        <translation>Mõõtmissüsteem (joonetüüpide ja luukide mustrite puhul):</translation>
+        <translation>Mõõtmissüsteem (joonetüüpide ja viirutuse mustrite puhul):</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
@@ -13686,7 +13686,7 @@ on juba loendis.</translation>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Osakond</translation>
+        <translation>Jagamine</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13801,7 +13801,7 @@ on juba loendis.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Kuubikutega</translation>
+        <translation>Kuubis</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14389,12 +14389,12 @@ on juba loendis.</translation>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation>Luugid</translation>
+        <translation>Viirutused</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation>Luuk</translation>
+        <translation>Viirutus</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14409,12 +14409,12 @@ on juba loendis.</translation>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation>Juhid</translation>
+        <translation>Viitejooned</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Juht</translation>
+        <translation>Viitejoon</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14454,7 +14454,7 @@ on juba loendis.</translation>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Kiir</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14499,12 +14499,12 @@ on juba loendis.</translation>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation>Faces</translation>
+        <translation>Tahud</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation>Nägu</translation>
+        <translation>Tahk</translation>
     </message>
     <message>
         <location line="+2"/>
