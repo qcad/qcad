@@ -2199,7 +2199,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation>ロックされたまたは不可視な画層のエンティティを描画、修正しようとしています。</translation>
+        <translation>トランザクションが失敗しました。ブロックの再帰、およびロックされているか非表示のレイヤーまたはブロックを確認してください。</translation>
     </message>
     <message>
         <location line="-417"/>
