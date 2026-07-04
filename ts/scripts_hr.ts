@@ -3754,7 +3754,7 @@ večpostoji na popisu.</translation>
         <location line="+22"/>
         <location line="+33"/>
         <source>Radius Invalid.</source>
-        <translation>Radijus nevažeći.</translation>
+        <translation>Polumjer nevažeći.</translation>
     </message>
     <message>
         <location line="-298"/>
@@ -3850,7 +3850,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+98"/>
         <source>Circle Invalid.</source>
-        <translation>Circle nevažeći.</translation>
+        <translation>Kružnica nevažeća.</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -3934,7 +3934,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+28"/>
         <source>Height Invalid.</source>
-        <translation>Height nevažeći.</translation>
+        <translation>Visina nevažeća.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3949,22 +3949,22 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid.</source>
-        <translation>Horz. alignment nevažeći.</translation>
+        <translation>Vodoravno poravnanje nevažeće.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing direction Invalid.</source>
-        <translation>Drawing direction nevažeći.</translation>
+        <translation>Smjer crtanja nevažeći.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing style Invalid.</source>
-        <translation>Line spacing style nevažeći.</translation>
+        <translation>Stil razmaka redaka nevažeći.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing Invalid.</source>
-        <translation>Line spacing nevažeći.</translation>
+        <translation>Razmak redaka nevažeći.</translation>
     </message>
     <message>
         <location line="+37"/>
@@ -7298,12 +7298,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+33"/>
         <source>No result.</source>
-        <translation>Nema result.</translation>
+        <translation>Nema rezultata.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>No 2D Centroid markers found in the selection.</source>
-        <translation>Nema 2d centroid markers found in the selection.</translation>
+        <translation>Nema 2D centroidnih oznaka u odabiru.</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7708,7 +7708,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+106"/>
         <source>Cannot import file from URL: </source>
-        <translation>Ne mogu import file from URL: </translation>
+        <translation>Ne mogu uvesti datoteku iz URL-a: </translation>
     </message>
     <message>
         <location line="+29"/>
@@ -7791,22 +7791,22 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+5"/>
         <source>No constructor found in file:</source>
-        <translation>Nema constructor found in file:</translation>
+        <translation>Nije pronađen konstruktor u datoteci:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;init&apos; function found in file:</source>
-        <translation>Nema &apos;init&apos; function found in file:</translation>
+        <translation>Nije pronađena funkcija &apos;init&apos; u datoteci:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;generate&apos; function found in file:</source>
-        <translation>Nema &apos;generate&apos; function found in file:</translation>
+        <translation>Nije pronađena funkcija &apos;generate&apos; u datoteci:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;generatePreview&apos; function found in file:</source>
-        <translation>Nema &apos;generatepreview&apos; function found in file:</translation>
+        <translation>Nije pronađena funkcija &apos;generatePreview&apos; u datoteci:</translation>
     </message>
 </context>
 <context>
@@ -8787,12 +8787,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+85"/>
         <source>No tangent possible.</source>
-        <translation>Nema tangent possible.</translation>
+        <translation>Tangenta nije moguća.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
-        <translation>Ne mogu draw tangent from point inside circle to circle</translation>
+        <translation>Ne mogu nacrtati tangentu iz točke unutar kruga do kruga</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1Init.js" line="+2"/>
@@ -9337,7 +9337,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+6"/>
         <source>Cannot open file</source>
-        <translation>Ne mogu open file</translation>
+        <translation>Ne mogu otvoriti datoteku</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10236,7 +10236,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+189"/>
         <source>No Selection</source>
-        <translation>Nema selection</translation>
+        <translation>Nema odabira</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -10388,7 +10388,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+10"/>
         <source>Handle:</source>
-        <translation>Ručka:</translation>
+        <translation>Identifikator:</translation>
     </message>
     <message>
         <location line="+94"/>
@@ -10968,7 +10968,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
-        <translation>Nema export filters have been found. aborting...</translation>
+        <translation>Nisu pronađeni filtri izvoza. Prekid...</translation>
     </message>
     <message>
         <location line="+92"/>
@@ -11502,7 +11502,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.js" line="+58"/>
         <source>No entities selected.</source>
-        <translation>Nema entities selected.</translation>
+        <translation>Nema odabranih entiteta.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -11611,12 +11611,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="-22"/>
         <source>No circle possible.</source>
-        <translation>Nema circle possible.</translation>
+        <translation>Krug nije moguć.</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>No arc possible.</source>
-        <translation>Nema arc possible.</translation>
+        <translation>Luk nije moguć.</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -12330,12 +12330,12 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+141"/>
         <source>No selected entities in given range</source>
-        <translation>Nema selected entities in given range</translation>
+        <translation>Nema odabranih entiteta u zadanom rasponu</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No entities in given range</source>
-        <translation>Nema entities in given range</translation>
+        <translation>Nema entiteta u zadanom rasponu</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
@@ -13646,7 +13646,7 @@ večpostoji na popisu.</translation>
     <message>
         <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
-        <translation>Ne mogu import file into existing drawing:</translation>
+        <translation>Ne mogu uvesti datoteku u postojeći crtež:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -14098,7 +14098,7 @@ večpostoji na popisu.</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelection.js" line="+31"/>
         <source>No selection found.</source>
-        <translation>Nema selection found.</translation>
+        <translation>Nije pronađen odabir.</translation>
     </message>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelectionInit.js" line="+2"/>
