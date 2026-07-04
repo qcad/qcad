@@ -532,7 +532,7 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation>控制點</translation>
+        <translation>識別碼</translation>
     </message>
     <message>
         <location line="+1"/>
