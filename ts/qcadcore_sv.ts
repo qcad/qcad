@@ -838,7 +838,7 @@
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation>Pilkorset</translation>
+        <translation>Pilblock</translation>
     </message>
     <message>
         <location line="+1"/>

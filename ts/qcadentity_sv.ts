@@ -652,7 +652,7 @@
     <message>
         <location line="+2"/>
         <source>Width Factor</source>
-        <translation>Tjockleksfaktor</translation>
+        <translation>Breddfaktor</translation>
     </message>
     <message>
         <location line="+1"/>
