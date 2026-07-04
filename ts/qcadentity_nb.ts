@@ -517,7 +517,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation>Hovedpoeng</translation>
+        <translation>Hovedpunkt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -614,7 +614,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation>Svingete</translation>
+        <translation>Vikling</translation>
     </message>
     <message>
         <location line="+1"/>

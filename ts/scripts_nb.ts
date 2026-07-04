@@ -206,7 +206,7 @@
     <message>
         <location line="+65"/>
         <source>Hatch Patterns</source>
-        <translation>Lukkemønstre</translation>
+        <translation>Skraveringsmønstre</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -599,7 +599,7 @@ preferanseendringene skal tre i kraft.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
         <source>&amp;2 Points and Length</source>
-        <translation>2 Poeng og lengde</translation>
+        <translation>2 Punkter og lengde</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -695,7 +695,7 @@ preferanseendringene skal tre i kraft.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc3P/Arc3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation>3 poeng</translation>
+        <translation>3 punkter</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1012,7 +1012,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation>Poeng på entitet</translation>
+        <translation>Punkter på entitet</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1264,7 +1264,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/Block.js" line="+68"/>
         <source>Block Tools</source>
-        <translation>Blokkeringsverktøy</translation>
+        <translation>Blokkverktøy</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -1318,7 +1318,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Block already exists.</source>
-        <translation>Blokkering finnes allerede.</translation>
+        <translation>Blokk finnes allerede.</translation>
     </message>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
@@ -1344,7 +1344,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js" line="+80"/>
         <source>&amp;Fix Block Names</source>
-        <translation>Fikse blokkeringsnavn</translation>
+        <translation>Fiks blokknavn</translation>
     </message>
 </context>
 <context>
@@ -1359,7 +1359,7 @@ Do you wish to recover it?</source>
         <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
-        <translation>Blokkeringsliste</translation>
+        <translation>Blokkliste</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+19"/>
@@ -1377,7 +1377,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js" line="+47"/>
         <source>Block:</source>
-        <translation>Blokkering:</translation>
+        <translation>Blokk:</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1400,7 +1400,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
-        <translation>Blokkeringsliste for eksport (CSV)</translation>
+        <translation>Eksporter blokkliste (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1410,7 +1410,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation>Blokkeringsliste for eksport</translation>
+        <translation>Eksporter blokkliste</translation>
     </message>
 </context>
 <context>
@@ -1680,7 +1680,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2P/Circle2PInit.js" line="+2"/>
         <source>&amp;2 Points</source>
-        <translation>2 poeng</translation>
+        <translation>2 punkter</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1838,7 +1838,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3P/Circle3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation>3 poeng</translation>
+        <translation>3 punkter</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2620,7 +2620,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/DeselectBlockReferences/DeselectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Deselect Block References</source>
-        <translation>Opphev blokkering av referanser</translation>
+        <translation>Fjern valg av blokkreferanser</translation>
     </message>
 </context>
 <context>
@@ -2644,7 +2644,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Karakterkart</translation>
+        <translation>Tegnkart</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
@@ -2700,7 +2700,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation>Luker</translation>
+        <translation>Skraveringer</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2983,7 +2983,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation>Firkantet</translation>
+        <translation>Kvadrat</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3080,7 +3080,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+112"/>
         <source>point</source>
-        <translation>poeng</translation>
+        <translation>punkt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3765,12 +3765,12 @@ er allerede i listen.</translation>
     <message>
         <location line="-527"/>
         <source>Angle1 Invalid.</source>
-        <translation>Angle1 Ugyldig.</translation>
+        <translation>Vinkel1 Ugyldig.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angle2 Invalid.</source>
-        <translation>Angle2 Ugyldig.</translation>
+        <translation>Vinkel2 Ugyldig.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3846,7 +3846,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+98"/>
         <source>Circle Invalid.</source>
-        <translation>Sett ring rundt Ugyldig.</translation>
+        <translation>Sirkel ugyldig.</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -4451,12 +4451,12 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation>Velg luke</translation>
+        <translation>Velg skravering</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation>Rediger luke</translation>
+        <translation>Rediger skravering</translation>
     </message>
 </context>
 <context>
@@ -4735,7 +4735,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>Unnslippe</translation>
+        <translation>Escape</translation>
     </message>
 </context>
 <context>
@@ -5719,7 +5719,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation>Dobbeltklikk for å redigere luke</translation>
+        <translation>Dobbeltklikk for å redigere skravering</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5984,7 +5984,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+45"/>
         <source>Timeout for hatch rendering:</source>
-        <translation>Timeout for lukegjengivelse:</translation>
+        <translation>Timeout for skraveringsgjengivelse:</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -6342,12 +6342,12 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation>Lukeverktøy</translation>
+        <translation>Skraveringsverktøy</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Hatch</source>
-        <translation>Luke</translation>
+        <translation>Skravering</translation>
     </message>
 </context>
 <context>
@@ -6355,7 +6355,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation>Luke</translation>
+        <translation>Skravering</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6370,7 +6370,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Luke mønster</translation>
+        <translation>Skraveringsmønster</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6413,7 +6413,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>Luke fra utvalg</translation>
+        <translation>Skravering fra utvalg</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -6960,7 +6960,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+0"/>
         <source>Centroid:</source>
-        <translation>Sentrum:</translation>
+        <translation>Sentroide:</translation>
     </message>
     <message>
         <location line="+207"/>
@@ -6977,7 +6977,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Uhåndtert form fra luke sløyfe.</translation>
+        <translation>Uhåndtert form fra skraveringssløyfe.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7211,7 +7211,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Information/InfoPosition/InfoPosition.js" line="+55"/>
         <source>Point</source>
-        <translation>Poeng</translation>
+        <translation>Punkt</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoPosition/InfoPositionInit.js" line="+2"/>
@@ -7447,7 +7447,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+0"/>
         <source>Centroid:</source>
-        <translation>Sentrum:</translation>
+        <translation>Sentroide:</translation>
     </message>
     <message>
         <location line="+125"/>
@@ -7921,7 +7921,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridRight/IsometricGridRight.js" line="+35"/>
         <source>&amp;Right Projection</source>
-        <translation>Riktig projeksjon</translation>
+        <translation>Høyre projeksjon</translation>
     </message>
 </context>
 <context>
@@ -8483,7 +8483,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+5"/>
         <source>Tenons</source>
-        <translation>Tenger</translation>
+        <translation>Tapper</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
@@ -9057,7 +9057,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation>Diverse blokkeringsverktøy</translation>
+        <translation>Diverse blokkverktøy</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -9303,7 +9303,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Karakterkart</translation>
+        <translation>Tegnkart</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9577,7 +9577,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation>Det stemmer:</translation>
+        <translation>Høyre:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9755,12 +9755,12 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Draw/Point/Point.js" line="+71"/>
         <source>Point Tools</source>
-        <translation>Poengverktøy</translation>
+        <translation>Punktverktøy</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Point</source>
-        <translation>Poeng</translation>
+        <translation>Punkt</translation>
     </message>
 </context>
 <context>
@@ -10238,7 +10238,7 @@ er allerede i listen.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Maksimal kompleksitet for automatisk beregning av lukelengde:</translation>
+        <translation>Maksimal kompleksitet for automatisk beregning av skraveringslengde:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10471,7 +10471,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Block/RemoveBlock/RemoveBlockInit.js" line="+2"/>
         <source>&amp;Remove Block</source>
-        <translation>Fjern blokkering</translation>
+        <translation>Fjern blokk</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10907,7 +10907,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+16"/>
         <source>Saving...</source>
-        <translation>Sparer...</translation>
+        <translation>Lagrer...</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10975,7 +10975,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+10"/>
         <source>Saving</source>
-        <translation>Sparing</translation>
+        <translation>Lagrer</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -12169,7 +12169,7 @@ er allerede i listen.</translation>
     <message>
         <location filename="../scripts/Snap/SnapYManual/SnapYManualInit.js" line="+2"/>
         <source>&amp;Y/X from Points</source>
-        <translation>Y/X fra poeng</translation>
+        <translation>Y/X fra punkter</translation>
     </message>
 </context>
 <context>
@@ -12640,7 +12640,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+9"/>
         <source>&amp;Subscript</source>
-        <translation>Abonnement</translation>
+        <translation>Senket skrift</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12730,7 +12730,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>I terninger</translation>
+        <translation>Kubikk</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13406,7 +13406,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+10"/>
         <source>Measurement system (for line types and hatch patterns):</source>
-        <translation>Målesystem (for linjetyper og lukkemønstre):</translation>
+        <translation>Målesystem (for linjetyper og skraveringsmønstre):</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
@@ -13781,7 +13781,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation>Abonnement 2</translation>
+        <translation>Senket skrift 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13791,7 +13791,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation>Firkantet</translation>
+        <translation>Kvadrat</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13801,7 +13801,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>I terninger</translation>
+        <translation>Kubikk</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14323,12 +14323,12 @@ er allerede i listen.</translation>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Points)</source>
-        <translation>Vinkeldimensjoner (3 poeng)</translation>
+        <translation>Vinkeldimensjoner (3 punkter)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Points)</source>
-        <translation>Vinkeldimensjon (3 poeng)</translation>
+        <translation>Vinkeldimensjon (3 punkter)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14389,12 +14389,12 @@ er allerede i listen.</translation>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation>Luker</translation>
+        <translation>Skraveringer</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation>Luke</translation>
+        <translation>Skravering</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14459,12 +14459,12 @@ er allerede i listen.</translation>
     <message>
         <location line="+2"/>
         <source>Points</source>
-        <translation>Poeng</translation>
+        <translation>Punkter</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Point</source>
-        <translation>Poeng</translation>
+        <translation>Punkt</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14499,12 +14499,12 @@ er allerede i listen.</translation>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation>Ansikter</translation>
+        <translation>Flater</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation>Ansikt</translation>
+        <translation>Flate</translation>
     </message>
     <message>
         <location line="+2"/>
