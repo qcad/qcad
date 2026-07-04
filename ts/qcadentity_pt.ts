@@ -403,7 +403,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>Ponto final condutor</translation>
+        <translation>Ponto final da linha de chamada</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
@@ -671,7 +671,7 @@
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation>Chaveta</translation>
+        <translation>Spline</translation>
     </message>
     <message>
         <location line="+1"/>
