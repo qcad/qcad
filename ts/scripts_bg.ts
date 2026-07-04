@@ -45,7 +45,7 @@
     <message>
         <location line="+2"/>
         <source>Compiler:</source>
-        <translation>Съставител:</translation>
+        <translation>Компилатор:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -972,7 +972,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Intersections</source>
-        <translation>Кръстовища</translation>
+        <translation>Пресичания</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1025,7 +1025,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/AutoTrim/AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation>Автоматична облицовка</translation>
+        <translation>Автоматично подрязване</translation>
     </message>
 </context>
 <context>
@@ -2092,7 +2092,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation>Закриване на рисуването...</translation>
+        <translation>Затваряне на чертежа...</translation>
     </message>
 </context>
 <context>
@@ -2644,7 +2644,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Карта на характера</translation>
+        <translation>Карта на знаците</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
@@ -2700,7 +2700,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation>Люкове</translation>
+        <translation>Щриховки</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2835,7 +2835,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Крайна точка на водача</translation>
+        <translation>Крайна точка на изнесения надпис</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
@@ -3175,7 +3175,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>Архитектурен кърлеж</translation>
+        <translation>Архитектурна отметка</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -4000,7 +4000,7 @@ is already in the list.</source>
     <message>
         <location line="+43"/>
         <source>Draw from CSV</source>
-        <translation>Черпене от CSV</translation>
+        <translation>Чертане от CSV</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4095,7 +4095,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation>Черпене от CSV</translation>
+        <translation>Чертане от CSV</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4108,12 +4108,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
-        <translation>Ред за изтегляне</translation>
+        <translation>Ред на чертане</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation>Ред за изтегляне</translation>
+        <translation>Ред на чертане</translation>
     </message>
 </context>
 <context>
@@ -4181,7 +4181,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
-        <translation>Draw Polyline</translation>
+        <translation>Начертай полилиния</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4451,12 +4451,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation>Изберете люк</translation>
+        <translation>Изберете щриховка</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation>Редактиране на люка</translation>
+        <translation>Редактиране на щриховка</translation>
     </message>
 </context>
 <context>
@@ -4596,7 +4596,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js" line="+2"/>
         <source>&amp;Ellipse Arc</source>
-        <translation>Елипса Arc</translation>
+        <translation>Дъга на елипса</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5031,7 +5031,7 @@ is already in the list.</source>
         <location line="+3"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
-        <translation>Равенство три точки</translation>
+        <translation>Начертайте три точки</translation>
     </message>
 </context>
 <context>
@@ -5598,7 +5598,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js" line="+39"/>
         <source>Flush Undo History</source>
-        <translation>Измиване на историята на отмяната</translation>
+        <translation>Изчистване на историята на отмяната</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5613,7 +5613,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Flush &amp;Undo History</source>
-        <translation>Измиване на историята на отмяната</translation>
+        <translation>Изчистване на историята на отмяната</translation>
     </message>
 </context>
 <context>
@@ -5719,7 +5719,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation>Двойно щракване, за да редактирате люка</translation>
+        <translation>Двойно щракване, за да редактирате щриховка</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6342,7 +6342,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation>Инструменти за люк</translation>
+        <translation>Инструменти за щриховка</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -6370,7 +6370,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Модел на люка</translation>
+        <translation>Шаблон на щриховка</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6413,12 +6413,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>Излюпване от селекция</translation>
+        <translation>Щриховка от селекция</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation>Създаване на шлейф или плътно запълване от избрана граница</translation>
+        <translation>Създаване на щриховка или плътно запълване от избрана граница</translation>
     </message>
 </context>
 <context>
@@ -6450,7 +6450,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/IOExamples.js" line="+51"/>
         <source>&amp;Import/Export</source>
-        <translation>Внос/износ</translation>
+        <translation>Импортиране/Експортиране</translation>
     </message>
 </context>
 <context>
@@ -6611,7 +6611,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFileInit.js" line="+2"/>
         <source>&amp;Import</source>
-        <translation>Внос</translation>
+        <translation>Импортиране</translation>
     </message>
 </context>
 <context>
@@ -6624,12 +6624,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation>Точки за внос</translation>
+        <translation>Импортиране на точки</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>&amp;Import Points</source>
-        <translation>Точки за внос</translation>
+        <translation>Импортиране на точки</translation>
     </message>
 </context>
 <context>
@@ -6741,7 +6741,7 @@ is already in the list.</source>
         <location line="+67"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
-        <translation>Акорди</translation>
+        <translation>Хорда</translation>
     </message>
     <message>
         <location line="-60"/>
@@ -6761,7 +6761,7 @@ is already in the list.</source>
         <location line="-88"/>
         <location line="+67"/>
         <source>chord:</source>
-        <translation>акорд:</translation>
+        <translation>хорда:</translation>
     </message>
     <message>
         <location line="-52"/>
@@ -6919,7 +6919,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation>Оцветена зона:</translation>
+        <translation>Защрихована зона:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7020,7 +7020,7 @@ is already in the list.</source>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>Носене:</translation>
+        <translation>Пеленг:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7030,7 +7030,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation>Носене / азимут</translation>
+        <translation>Пеленг / азимут</translation>
     </message>
 </context>
 <context>
@@ -8202,12 +8202,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>Лидер</translation>
+        <translation>Изнесен надпис</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Начертайте лидер (последователност от линии със стрелка)</translation>
+        <translation>Начертайте изнесен надпис (последователност от линии със стрелка)</translation>
     </message>
 </context>
 <context>
@@ -8215,12 +8215,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Лидерът е създаден успешно</translation>
+        <translation>Изнесеният надпис е създаден успешно</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>Лидер от избран текст</translation>
+        <translation>Изнесен надпис от избран текст</translation>
     </message>
 </context>
 <context>
@@ -8276,7 +8276,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation>Рей</translation>
+        <translation>Лъч</translation>
     </message>
 </context>
 <context>
@@ -9121,7 +9121,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>&amp;Import/Export</source>
-        <translation>Внос/износ</translation>
+        <translation>Импортиране/Експортиране</translation>
     </message>
 </context>
 <context>
@@ -9227,7 +9227,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
-        <translation>Внос на MOL</translation>
+        <translation>Импортиране на MOL</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9303,7 +9303,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Карта на характера</translation>
+        <translation>Карта на знаците</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9321,7 +9321,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
-        <translation>Рисунка на откриването:</translation>
+        <translation>Отваряне на чертеж:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -9479,7 +9479,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Open Drawing</source>
-        <translation>Отворено чертане</translation>
+        <translation>Отваряне на чертеж</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9648,7 +9648,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Paste</source>
-        <translation>Паста</translation>
+        <translation>Постави</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -9708,7 +9708,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation>Паста</translation>
+        <translation>Постави</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
@@ -9838,7 +9838,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Силов център на три кръга</translation>
+        <translation>Радикален център на три кръга</translation>
     </message>
 </context>
 <context>
@@ -9991,7 +9991,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation>Дърво за срутване</translation>
+        <translation>Свиване на дървото</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -10056,7 +10056,7 @@ is already in the list.</source>
     <message>
         <location line="+40"/>
         <source>Auto fit</source>
-        <translation>Автоматичен монтаж</translation>
+        <translation>Автоматично напасване</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10177,7 +10177,7 @@ is already in the list.</source>
     <message>
         <location line="+20"/>
         <source>Print Crop Marks</source>
-        <translation>Отпечатване на маркировките на културите</translation>
+        <translation>Отпечатване на маркери за изрязване</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -10238,7 +10238,7 @@ is already in the list.</source>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Максимална сложност за автоматично изчисляване на дължината на люка:</translation>
+        <translation>Максимална сложност за автоматично изчисляване на дължината на щриховката:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10380,7 +10380,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Handle:</source>
-        <translation>Дръжка:</translation>
+        <translation>Идентификатор:</translation>
     </message>
     <message>
         <location line="+94"/>
@@ -10960,7 +10960,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Opening</source>
-        <translation>Откриване на</translation>
+        <translation>Отваряне</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -11271,7 +11271,7 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation>Дръжка (шестостенна):</translation>
+        <translation>Идентификатор (шестнадесетичен):</translation>
     </message>
 </context>
 <context>
@@ -12082,7 +12082,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation>Ръководство за кръстовища</translation>
+        <translation>Ръчно пресичане</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12097,7 +12097,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation>Ръководство за кръстовища</translation>
+        <translation>Ръчно пресичане</translation>
     </message>
 </context>
 <context>
@@ -12557,12 +12557,12 @@ is already in the list.</source>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Лидерът е създаден успешно</translation>
+        <translation>Изнесеният надпис е създаден успешно</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>Текст, подравнен с Лидер</translation>
+        <translation>Текст, подравнен с изнесен надпис</translation>
     </message>
 </context>
 <context>
@@ -12620,7 +12620,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation>Паста</translation>
+        <translation>Постави</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -12690,7 +12690,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Отдел</translation>
+        <translation>Деление</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12802,7 +12802,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Paste</source>
-        <translation>Паста</translation>
+        <translation>Постави</translation>
     </message>
     <message>
         <location line="+170"/>
@@ -13686,7 +13686,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Отдел</translation>
+        <translation>Деление</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14389,7 +14389,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation>Люкове</translation>
+        <translation>Щриховки</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14409,12 +14409,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation>Лидери</translation>
+        <translation>Изнесени надписи</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Лидер</translation>
+        <translation>Изнесен надпис</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14454,7 +14454,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation>Рей</translation>
+        <translation>Лъч</translation>
     </message>
     <message>
         <location line="+2"/>
