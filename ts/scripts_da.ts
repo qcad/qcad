@@ -1012,7 +1012,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation>Point på enhed</translation>
+        <translation>Punkter på enhed</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2092,7 +2092,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation>Afsluttende lodtrækning...</translation>
+        <translation>Lukker tegning...</translation>
     </message>
 </context>
 <context>
@@ -2644,7 +2644,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Karakterkort</translation>
+        <translation>Tegntabel</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
@@ -2983,7 +2983,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation>Firkantet</translation>
+        <translation>Kvadrat</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3484,7 +3484,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation>Feje</translation>
+        <translation>Sweep</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -3499,7 +3499,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation>Træk FMS baner (ribber)</translation>
+        <translation>Tegn FMS baner (ribber)</translation>
     </message>
 </context>
 <context>
@@ -3770,7 +3770,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+2"/>
         <source>Angle2 Invalid.</source>
-        <translation>Angle2 Ugyldig.</translation>
+        <translation>Vinkel2 Ugyldig.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4080,7 +4080,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+46"/>
         <source>Draw from CSV</source>
-        <translation>Træk fra CSV</translation>
+        <translation>Tegn fra CSV</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4108,12 +4108,12 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
-        <translation>&amp;Træk ordre</translation>
+        <translation>&amp;Tegnerækkefølge</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation>Trækningsrækkefølge</translation>
+        <translation>Tegnerækkefølge</translation>
     </message>
 </context>
 <context>
@@ -4735,7 +4735,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>&amp;Flygtninge</translation>
+        <translation>&amp;Escape</translation>
     </message>
 </context>
 <context>
@@ -5031,7 +5031,7 @@ er allerede på listen.</translation>
         <location line="+3"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
-        <translation>Tre uafgjorte point</translation>
+        <translation>Tegn tre punkter</translation>
     </message>
 </context>
 <context>
@@ -5649,7 +5649,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
-        <translation>Tre: Ret</translation>
+        <translation>Tre: Højre</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/21_ThreeLeft.ui" line="+14"/>
@@ -5691,7 +5691,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation>Fire: Ret</translation>
+        <translation>Fire: Højre</translation>
     </message>
 </context>
 <context>
@@ -6977,7 +6977,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Ubehandlet form fra lukkeløkke.</translation>
+        <translation>Ubehandlet form fra skraveringsløkke.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7114,7 +7114,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation>(De-)aktiverer en transaktionslytter for 2D-centrifuger</translation>
+        <translation>(De-)aktiverer en transaktionslytter for 2D-centroider</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9098,7 +9098,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+21"/>
         <source>Misc Draw</source>
-        <translation>Diverse trækninger</translation>
+        <translation>Diverse tegninger</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -9303,7 +9303,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Karakterkort</translation>
+        <translation>Tegntabel</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9792,7 +9792,7 @@ er allerede på listen.</translation>
         <location line="+0"/>
         <location line="+2"/>
         <source>Point Display</source>
-        <translation>Visning af point</translation>
+        <translation>Punktvisning</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10238,7 +10238,7 @@ er allerede på listen.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Maksimal kompleksitet for automatisk beregning af lugelængde:</translation>
+        <translation>Maksimal kompleksitet for automatisk beregning af skraveringslængde:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10907,7 +10907,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+16"/>
         <source>Saving...</source>
-        <translation>Opsparing...</translation>
+        <translation>Gemmer...</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10942,7 +10942,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/File/Save/SaveInit.js" line="+2"/>
         <source>&amp;Save</source>
-        <translation>&amp;Spar</translation>
+        <translation>&amp;Gem</translation>
     </message>
 </context>
 <context>
@@ -11737,7 +11737,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (2 Points of Side)</source>
-        <translation>Polygo&amp;n (2 sidegevinster)</translation>
+        <translation>Polygo&amp;n (2 sidepunkter)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12630,7 +12630,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+9"/>
         <source>&amp;Italic</source>
-        <translation>&amp;Italiensk</translation>
+        <translation>&amp;Kursiv</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -12665,7 +12665,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+136"/>
         <source>Degree</source>
-        <translation>Uddannelse</translation>
+        <translation>Grad</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12690,7 +12690,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Afdeling</translation>
+        <translation>Division</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13442,7 +13442,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+1"/>
         <source>Meter</source>
-        <translation>Måler</translation>
+        <translation>Meter</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13721,12 +13721,12 @@ er allerede på listen.</translation>
     <message>
         <location line="-13"/>
         <source>Division</source>
-        <translation>Afdeling</translation>
+        <translation>Division</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Square</source>
-        <translation>Firkantet</translation>
+        <translation>Kvadrat</translation>
     </message>
     <message>
         <location line="-18"/>
@@ -14459,7 +14459,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+2"/>
         <source>Points</source>
-        <translation>Point</translation>
+        <translation>Punkter</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14499,12 +14499,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation>Ansigter</translation>
+        <translation>Flader</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation>Ansigt</translation>
+        <translation>Flade</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14540,7 +14540,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation>Visionsvindue</translation>
+        <translation>Visningsvindue</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14615,7 +14615,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation>Visionsvindue 1</translation>
+        <translation>Visningsvindue 1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -14676,17 +14676,17 @@ er allerede på listen.</translation>
     <message>
         <location line="-390"/>
         <source>Viewport 2</source>
-        <translation>Visionsvindue 2</translation>
+        <translation>Visningsvindue 2</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 3</source>
-        <translation>Visionsvindue 3</translation>
+        <translation>Visningsvindue 3</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 4</source>
-        <translation>Visionsvindue 4</translation>
+        <translation>Visningsvindue 4</translation>
     </message>
 </context>
 <context>

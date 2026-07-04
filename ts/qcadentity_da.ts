@@ -281,7 +281,7 @@
     <message>
         <location line="+1"/>
         <source>Sweep Angle</source>
-        <translation>Fejevinkel</translation>
+        <translation>Sweep-vinkel</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -619,7 +619,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation>Snoede sig</translation>
+        <translation>Snoning</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -865,7 +865,7 @@
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation>Uddannelse</translation>
+        <translation>Grad</translation>
     </message>
     <message>
         <location line="+2"/>
