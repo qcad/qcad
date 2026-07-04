@@ -4959,7 +4959,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+36"/>
         <source>Registered a file importer for file type &quot;.example&quot;. Use File &gt; Open to see the filter in action.</source>
-        <translation>Datei Exporter für Dateityp &quot;.example&quot; registriert. Verwenden Sie Datei &gt; Öffnen um den Filter in Aktion zu sehen.</translation>
+        <translation>Datei Importer für Dateityp &quot;.example&quot; registriert. Verwenden Sie Datei &gt; Öffnen um den Filter in Aktion zu sehen.</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -12892,7 +12892,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="-30"/>
         <source>Text fits on one line and has no formatting</source>
-        <translation>Test passt auf eine Zeile und hat keine Formatierungen</translation>
+        <translation>Text passt auf eine Zeile und hat keine Formatierungen</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13362,7 +13362,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+13"/>
         <source>Enable high DPI scaling</source>
-        <translation>Startbild anzeigen</translation>
+        <translation>Hoch-DPI-Skalierung aktivieren</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -14429,7 +14429,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+2"/>
         <source>Lines</source>
-        <translation>Linen</translation>
+        <translation>Linien</translation>
     </message>
     <message>
         <location line="+0"/>

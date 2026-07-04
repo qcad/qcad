@@ -3985,7 +3985,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Valetut merkinnät: %1 %2 tekstirivistä %2 tekstiriviä</translation>
+        <translation>Valetut merkinnät: %1 / %2 tekstiriviä</translation>
     </message>
     <message>
         <location line="+5"/>

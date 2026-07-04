@@ -5203,7 +5203,7 @@ zaten listede.</translation>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
         <location line="+244"/>
         <source>%1 First Start</source>
-        <translation>1 İlk Başlangıç</translation>
+        <translation>%1 İlk Başlangıç</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -11223,7 +11223,7 @@ zaten listede.</translation>
     <message>
         <location line="+16"/>
         <source>Selected all visible entities of color %1</source>
-        <translation>1 rengindeki tüm görünür varlıkları seçti</translation>
+        <translation>%1 rengindeki tüm görünür varlıkları seçti</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js" line="+2"/>
@@ -11378,7 +11378,7 @@ zaten listede.</translation>
     <message>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
-        <translation>1 varlık seçimden kaldırıldı.</translation>
+        <translation>%1 varlık seçimden kaldırıldı.</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
@@ -11497,7 +11497,7 @@ zaten listede.</translation>
     <message>
         <location line="+3"/>
         <source>%1 %2 on %3 Layers</source>
-        <translation>3 Katmanda %1 %2</translation>
+        <translation>%3 Katmanda %1 %2</translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>

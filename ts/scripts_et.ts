@@ -3985,7 +3985,7 @@ on juba loendis.</translation>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation>Valatud kirjed: %1 %2 tekstirealt %1 tekstireale</translation>
+        <translation>Valatud kirjed: %1 / %2 tekstirida</translation>
     </message>
     <message>
         <location line="+2"/>

@@ -13362,7 +13362,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+13"/>
         <source>Enable high DPI scaling</source>
-        <translation>Splash Screen toonen</translation>
+        <translation>Hoge DPI-schaling inschakelen</translation>
     </message>
     <message>
         <location line="+12"/>

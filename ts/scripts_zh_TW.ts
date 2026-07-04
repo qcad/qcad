@@ -60,7 +60,7 @@
     <message>
         <location line="+4"/>
         <source>%1 is based on QCAD, a free (open source) software.</source>
-        <translation>％1是基於QCAD，一個免費（開放原始碼）軟體。</translation>
+        <translation>%1是基於QCAD，一個免費（開放原始碼）軟體。</translation>
     </message>
     <message>
         <location line="+3"/>

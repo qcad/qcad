@@ -13362,7 +13362,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+13"/>
         <source>Enable high DPI scaling</source>
-        <translation>Habilitar a tela de início</translation>
+        <translation>Ativar escalonamento de DPI elevado</translation>
     </message>
     <message>
         <location line="+12"/>

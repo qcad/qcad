@@ -13363,7 +13363,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Enable high DPI scaling</source>
-        <translation>Abilita splash screen</translation>
+        <translation>Abilita ridimensionamento ad alto DPI</translation>
     </message>
     <message>
         <location line="+12"/>
