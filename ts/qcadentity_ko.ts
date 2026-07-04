@@ -406,12 +406,12 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-11"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation>원산지</translation>
+        <translation>원점</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate</source>
-        <translation>안수</translation>
+        <translation>세로좌표</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -425,7 +425,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>리더 엔드 포인트</translation>
+        <translation>지시선 끝점</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+172"/>
@@ -872,7 +872,7 @@
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation>학위</translation>
+        <translation>도</translation>
     </message>
     <message>
         <location line="+2"/>

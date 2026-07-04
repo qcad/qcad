@@ -970,7 +970,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Intersections</source>
-        <translation>교차로</translation>
+        <translation>교차점</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1262,7 +1262,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/Block.js" line="+68"/>
         <source>Block Tools</source>
-        <translation>차단 도구</translation>
+        <translation>블록 도구</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -1357,7 +1357,7 @@ Do you wish to recover it?</source>
         <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
-        <translation>차단 목록</translation>
+        <translation>블록 목록</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+19"/>
@@ -1375,7 +1375,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js" line="+47"/>
         <source>Block:</source>
-        <translation>차단:</translation>
+        <translation>블록:</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1398,7 +1398,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
-        <translation>차단 목록 내보내기(CSV)</translation>
+        <translation>블록 목록 내보내기(CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1408,7 +1408,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation>차단 목록 내보내기</translation>
+        <translation>블록 목록 내보내기</translation>
     </message>
 </context>
 <context>
@@ -1655,7 +1655,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+22"/>
         <source>&amp;Circle</source>
-        <translation>서클</translation>
+        <translation>원</translation>
     </message>
 </context>
 <context>
@@ -2090,7 +2090,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation>마감 도면...</translation>
+        <translation>도면 닫는 중...</translation>
     </message>
 </context>
 <context>
@@ -2642,7 +2642,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>캐릭터 맵</translation>
+        <translation>문자표</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
@@ -2833,12 +2833,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>리더의 엔드포인트</translation>
+        <translation>지시선의 끝점</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
         <source>&amp;Ordinate (X/Y)</source>
-        <translation>정사각형(X/Y)</translation>
+        <translation>세로좌표(X/Y)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3172,7 +3172,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>건축 진드기</translation>
+        <translation>건축 눈금</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -4731,7 +4731,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>탈출</translation>
+        <translation>취소</translation>
     </message>
 </context>
 <context>
@@ -5107,12 +5107,12 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>폭발</translation>
+        <translation>분해</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation>폭발</translation>
+        <translation>분해</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+19"/>
@@ -5814,7 +5814,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation>원산지</translation>
+        <translation>원점</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6069,12 +6069,12 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation>원산지</translation>
+        <translation>원점</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Origin:</source>
-        <translation>출처:</translation>
+        <translation>원점:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6736,7 +6736,7 @@ is already in the list.</source>
         <location line="+67"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
-        <translation>화음</translation>
+        <translation>현</translation>
     </message>
     <message>
         <location line="-60"/>
@@ -6756,7 +6756,7 @@ is already in the list.</source>
         <location line="-88"/>
         <location line="+67"/>
         <source>chord:</source>
-        <translation>화음:</translation>
+        <translation>현:</translation>
     </message>
     <message>
         <location line="-52"/>
@@ -6914,7 +6914,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation>부화 영역:</translation>
+        <translation>해치 영역:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7015,7 +7015,7 @@ is already in the list.</source>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>베어링:</translation>
+        <translation>방위:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7831,7 +7831,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Dimetric</source>
-        <translation>치수</translation>
+        <translation>이등각투영</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8197,12 +8197,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>리더</translation>
+        <translation>지시선</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>리더 그리기(화살표가 있는 선 시퀀스)</translation>
+        <translation>지시선 그리기(화살표가 있는 선 시퀀스)</translation>
     </message>
 </context>
 <context>
@@ -8210,12 +8210,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>리더가 성공적으로 생성되었습니다</translation>
+        <translation>지시선이 성공적으로 생성되었습니다</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>선택한 텍스트의 리더</translation>
+        <translation>선택한 텍스트의 지시선</translation>
     </message>
 </context>
 <context>
@@ -8271,7 +8271,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation>레이</translation>
+        <translation>반직선</translation>
     </message>
 </context>
 <context>
@@ -8697,7 +8697,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
-        <translation>2개의 원의 반지름 축</translation>
+        <translation>2개의 원의 근축</translation>
     </message>
 </context>
 <context>
@@ -8887,7 +8887,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ListenerExamples.js" line="+50"/>
         <source>&amp;Listeners</source>
-        <translation>청취자</translation>
+        <translation>리스너</translation>
     </message>
 </context>
 <context>
@@ -8963,7 +8963,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation>거울</translation>
+        <translation>대칭</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -8988,7 +8988,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation>거울</translation>
+        <translation>대칭</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
@@ -9298,7 +9298,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>캐릭터 맵</translation>
+        <translation>문자표</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9316,7 +9316,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
-        <translation>오프닝 드로잉:</translation>
+        <translation>도면 여는 중:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -9525,12 +9525,12 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Portrait</source>
-        <translation>인물 사진</translation>
+        <translation>세로</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Landscape</source>
-        <translation>랜드스케이프</translation>
+        <translation>가로</translation>
     </message>
     <message>
         <location line="-113"/>
@@ -9590,7 +9590,7 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>&amp;Scale:</source>
-        <translation>규모:</translation>
+        <translation>축척:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -9831,7 +9831,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>세 개의 원의 동력 중심</translation>
+        <translation>세 원의 라디칼 중심</translation>
     </message>
 </context>
 <context>
@@ -10135,12 +10135,12 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Portrait</source>
-        <translation>인물 사진</translation>
+        <translation>세로</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Landscape</source>
-        <translation>랜드스케이프</translation>
+        <translation>가로</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10953,7 +10953,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Opening</source>
-        <translation>오프닝</translation>
+        <translation>여는 중</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -11097,7 +11097,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation>규모</translation>
+        <translation>축척</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
@@ -12054,7 +12054,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersection/SnapIntersectionInit.js" line="+2"/>
         <source>&amp;Intersection</source>
-        <translation>교차로</translation>
+        <translation>교차점</translation>
     </message>
 </context>
 <context>
@@ -12072,7 +12072,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation>교차로 매뉴얼</translation>
+        <translation>교차점 (수동)</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12087,7 +12087,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation>교차로 매뉴얼</translation>
+        <translation>교차점 (수동)</translation>
     </message>
 </context>
 <context>
@@ -12195,12 +12195,12 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Degree:</source>
-        <translation>학위:</translation>
+        <translation>도:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose Spline Degree</source>
-        <translation>스플라인 각도 선택</translation>
+        <translation>스플라인 차수 선택</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -12547,12 +12547,12 @@ is already in the list.</source>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>리더가 성공적으로 생성되었습니다</translation>
+        <translation>지시선이 성공적으로 생성되었습니다</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>텍스트 정렬 리더</translation>
+        <translation>텍스트 정렬 지시선</translation>
     </message>
 </context>
 <context>
@@ -12630,7 +12630,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>&amp;Subscript</source>
-        <translation>구독</translation>
+        <translation>아래 첨자</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12655,7 +12655,7 @@ is already in the list.</source>
     <message>
         <location line="+136"/>
         <source>Degree</source>
-        <translation>학위</translation>
+        <translation>도</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12680,7 +12680,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>부서</translation>
+        <translation>나눗셈</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13661,7 +13661,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Degrees</source>
-        <translation>학위</translation>
+        <translation>도</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13676,7 +13676,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>부서</translation>
+        <translation>나눗셈</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13726,7 +13726,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Not Equal</source>
-        <translation>평등하지 않음</translation>
+        <translation>동일하지 않음</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13948,7 +13948,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Gradians</source>
-        <translation>졸업생</translation>
+        <translation>그라디안</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14263,12 +14263,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Circles</source>
-        <translation>서클</translation>
+        <translation>원</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Circle</source>
-        <translation>서클</translation>
+        <translation>원</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14339,12 +14339,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation>정규 치수</translation>
+        <translation>세로좌표 치수</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ordinate Dimension</source>
-        <translation>정렬 차원</translation>
+        <translation>세로좌표 치수</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14399,12 +14399,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation>리더</translation>
+        <translation>지시선</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>리더</translation>
+        <translation>지시선</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14439,12 +14439,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Rays</source>
-        <translation>광선</translation>
+        <translation>반직선</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation>레이</translation>
+        <translation>반직선</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14489,12 +14489,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation>얼굴</translation>
+        <translation>면</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation>얼굴</translation>
+        <translation>면</translation>
     </message>
     <message>
         <location line="+2"/>

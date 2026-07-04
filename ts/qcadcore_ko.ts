@@ -260,7 +260,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation>원산지</translation>
+        <translation>원점</translation>
     </message>
     <message>
         <location line="-2"/>
