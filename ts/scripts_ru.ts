@@ -2832,7 +2832,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation>Будущее положение</translation>
+        <translation>Положение элемента</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -4164,7 +4164,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation>Подметать:</translation>
+        <translation>Развёртка:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -5603,12 +5603,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js" line="+39"/>
         <source>Flush Undo History</source>
-        <translation>Промыть историю действий</translation>
+        <translation>Очистить историю действий</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation>Вы уверены, что хотите промыть историю транзакций отмены/возврата?</translation>
+        <translation>Вы уверены, что хотите очистить историю транзакций отмены/возврата?</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5618,7 +5618,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Flush &amp;Undo History</source>
-        <translation>&amp;Промыть историю действий отмены</translation>
+        <translation>&amp;Очистить историю действий отмены</translation>
     </message>
 </context>
 <context>
@@ -7025,7 +7025,7 @@ is already in the list.</source>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>Подшипник:</translation>
+        <translation>Пеленг:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7897,7 +7897,7 @@ is already in the list.</source>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation>Корпус</translation>
+        <translation>Кабинетная</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8238,12 +8238,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation>Сумма:</translation>
+        <translation>Величина:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation>Сумма для удлинения или укорачивания (отрицательная)</translation>
+        <translation>Величина для удлинения или укорачивания (отрицательная)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
@@ -9584,7 +9584,7 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation>Верно:</translation>
+        <translation>Справа:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9845,7 +9845,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Энергоцентр трёх окружностей</translation>
+        <translation>Радикальный центр трёх окружностей</translation>
     </message>
 </context>
 <context>
@@ -10367,7 +10367,7 @@ is already in the list.</source>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Максимальная сложность для автоматического расчета длины люка:</translation>
+        <translation>Максимальная сложность для автоматического расчета длины штриховки:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -13746,7 +13746,7 @@ is already in the list.</source>
     <message>
         <location line="-10"/>
         <source>Degrees</source>
-        <translation>Степени</translation>
+        <translation>Градусы</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -13796,7 +13796,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation>Абонемент 2</translation>
+        <translation>Нижний индекс 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14333,12 +14333,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Points)</source>
-        <translation>Угловые размеры (3 балла)</translation>
+        <translation>Угловые размеры (3 точки)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Points)</source>
-        <translation>Угловое измерение (3 балла)</translation>
+        <translation>Угловое измерение (3 точки)</translation>
     </message>
     <message>
         <location line="+2"/>
