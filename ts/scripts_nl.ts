@@ -896,9 +896,9 @@ de wijzigingen door te voeren.</translation>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation>
-            <numerusform>Een automatisch opgeslagen bestand voor een naamloos tekening werd gevonden.
+            <numerusform>Een automatisch opgeslagen bestand voor een naamloze tekening werd gevonden.
 Wilt u de tekening herstellen?</numerusform>
-            <numerusform>%n automatisch opgeslagen bestanden voor naamloose tekeningen worden gevonden.
+            <numerusform>%n automatisch opgeslagen bestanden voor naamloze tekeningen worden gevonden.
 Wilt u deze herstellen?</numerusform>
         </translation>
     </message>
@@ -2196,7 +2196,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location line="+19"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
-        <translation>Onbekende opdracht of ongeldige coördinaaten of waarde: &quot;%1&quot;</translation>
+        <translation>Onbekende opdracht of ongeldige coördinaten of waarde: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2346,7 +2346,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location line="+21"/>
         <source>Absolute Polar Coordinate</source>
-        <translation>Absolute polaire coördinaaten</translation>
+        <translation>Absolute polaire coördinaten</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -2356,7 +2356,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location line="+21"/>
         <source>Relative Polar Coordinate</source>
-        <translation>Relatieve polaire coördinaaten</translation>
+        <translation>Relatieve polaire coördinaten</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
@@ -2366,7 +2366,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location line="+0"/>
         <source>Coordinate Display</source>
-        <translation>Coördinaatenweergave</translation>
+        <translation>Coördinatenweergave</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/PreferencesPage.ui" line="+17"/>
@@ -2669,7 +2669,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location line="+11"/>
         <source>Ellipses</source>
-        <translation>Ovaalen</translation>
+        <translation>Ellipsen</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -4394,7 +4394,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &quot;safe&quot; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;U staat op het punt de ECMAScript Shell in te schakelen.&lt;/p&gt;&lt;p&gt;Door de ECMAScript Shell kunt u &lt;span stijl=&quot; kleur:#ff0000;&quot;&gt; uw tekeningen wijzigen&lt;/span&gt; maar ook &lt;span stijl=&quot; kleur:#ff0000;&quot;&gt;bestanden verwijderen&lt;/span&gt; of &lt;span style=&quot; kleur: #ff0000;&quot;&gt;de toepassing crashen&lt;/span&gt; wat kan leiden tot &lt;span style=&quot; kleur: #ff0000;&quot;&gt;gegevensverlies&lt;/span&gt;.&lt;/p&gt;&lt;p&gt; Voor onervaren programmeurs wordt aanbevolen het gebruik van de ECMAScript Shell te beperken tot de &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group_ecma__simple.html&quot;&gt;&lt;span style=&quot; tekstdecoratie: onderstrepen; kleur:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; die als &quot;veilig&quot; wordt beschouwd om te gebruiken.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;U staat op het punt de ECMAScript Shell in te schakelen.&lt;/p&gt;&lt;p&gt;Door de ECMAScript Shell kunt u &lt;span style=&quot; color:#ff0000;&quot;&gt; uw tekeningen wijzigen&lt;/span&gt; maar ook &lt;span style=&quot; color:#ff0000;&quot;&gt;bestanden verwijderen&lt;/span&gt; of &lt;span style=&quot; color:#ff0000;&quot;&gt;de toepassing crashen&lt;/span&gt; wat kan leiden tot &lt;span style=&quot; color:#ff0000;&quot;&gt;gegevensverlies&lt;/span&gt;.&lt;/p&gt;&lt;p&gt; Voor onervaren programmeurs wordt aanbevolen het gebruik van de ECMAScript Shell te beperken tot de &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; die als &quot;veilig&quot; wordt beschouwd om te gebruiken.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4722,12 +4722,12 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRInit.js" line="+2"/>
         <source>Ellipse with &amp;Radii</source>
-        <translation>Ellips met &amp;straalen</translation>
+        <translation>Ellips met &amp;stralen</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
-        <translation>Ellips met positie en straalen</translation>
+        <translation>Ellips met positie en stralen</translation>
     </message>
 </context>
 <context>
@@ -5228,7 +5228,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+1"/>
         <source>Welcome to %1</source>
-        <translation>Welcom bij %1</translation>
+        <translation>Welkom bij %1</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5824,7 +5824,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation>Groote oorsprong assen tonen</translation>
+        <translation>Grote oorsprong assen tonen</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -6015,7 +6015,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+72"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
-        <translation>Minimale hoek voor weergave van bogens (graden):</translation>
+        <translation>Minimale hoek voor weergave van bogen (graden):</translation>
     </message>
     <message>
         <location line="+130"/>
@@ -6977,7 +6977,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Onbehandelde vorm van luiklus.</translation>
+        <translation>Onbehandelde vorm van arceringslus.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -8030,32 +8030,32 @@ is al in de lijst.</translation>
     <message>
         <location line="+43"/>
         <source>Showing all layers</source>
-        <translation>Alle laagen tonen</translation>
+        <translation>Alle lagen tonen</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hiding all layers</source>
-        <translation>Alle laagen verbergen</translation>
+        <translation>Alle lagen verbergen</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Thawing all layers</source>
-        <translation>Alle laagen ontdooien</translation>
+        <translation>Alle lagen ontdooien</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Freezing all layers</source>
-        <translation>Alle laagen bevriezen</translation>
+        <translation>Alle lagen bevriezen</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Locking all layers</source>
-        <translation>Alle laagen vergrendelen</translation>
+        <translation>Alle lagen vergrendelen</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unlocking all layers</source>
-        <translation>Alle laagen ontgrendelen</translation>
+        <translation>Alle lagen ontgrendelen</translation>
     </message>
 </context>
 <context>
@@ -9134,7 +9134,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+10"/>
         <source>Misc Information Tools</source>
-        <translation>Hulpmiddelen voor schijfinformatie</translation>
+        <translation>Diverse informatiegereedschappen</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -9432,7 +9432,7 @@ is al in de lijst.</translation>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation>
             <numerusform>Radius gedaald tot onder 0 na een concentrische boog.</numerusform>
-            <numerusform>Radius gedaald tot onder 0 na %n concentrische boogen.</numerusform>
+            <numerusform>Radius gedaald tot onder 0 na %n concentrische bogen.</numerusform>
         </translation>
     </message>
     <message>
@@ -9838,7 +9838,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Power centrum van drie cirkels</translation>
+        <translation>Machtcentrum van drie cirkels</translation>
     </message>
 </context>
 <context>
@@ -10137,7 +10137,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+11"/>
         <source>Auto Center</source>
-        <translation>Centreeren</translation>
+        <translation>Centreren</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10320,7 +10320,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+31"/>
         <source>General Properties</source>
-        <translation>Algemeene eigenschappen</translation>
+        <translation>Algemene eigenschappen</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -11504,7 +11504,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+3"/>
         <source>%1 %2 on %3 Layers</source>
-        <translation>%1 %2 op %3 laagen</translation>
+        <translation>%1 %2 op %3 lagen</translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
@@ -11532,7 +11532,7 @@ is al in de lijst.</translation>
         <source>%n Layers</source>
         <translation>
             <numerusform>een laag</numerusform>
-            <numerusform>%n laagen</numerusform>
+            <numerusform>%n lagen</numerusform>
         </translation>
     </message>
     <message>
@@ -12256,7 +12256,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+6"/>
         <source>Coordinate display</source>
-        <translation>Coördinaatenweergave</translation>
+        <translation>Coördinatenweergave</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12388,7 +12388,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+13"/>
         <source>Layers</source>
-        <translation>Laagen</translation>
+        <translation>Lagen</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -13357,7 +13357,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+17"/>
         <source>Auto screen scale factor</source>
-        <translation>Schaalfactor voor grootte:</translation>
+        <translation>Automatische schermschaalfactor:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -13766,7 +13766,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+2"/>
         <source>Identity</source>
-        <translation>Idobject</translation>
+        <translation>Identiteit</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -13918,7 +13918,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+1"/>
         <source>Surveyor&apos;s units</source>
-        <translation>Te meten eenheid</translation>
+        <translation>Landmeterseenheden</translation>
     </message>
     <message>
         <location line="-28"/>
@@ -14153,7 +14153,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+2"/>
         <source>Layers</source>
-        <translation>Laagen</translation>
+        <translation>Lagen</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14484,7 +14484,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+0"/>
         <source>Solid</source>
-        <translation>Vaste licham</translation>
+        <translation>Vast lichaam</translation>
     </message>
     <message>
         <location line="+2"/>
