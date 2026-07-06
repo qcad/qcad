@@ -1,0 +1,25 @@
+import TypeAuto from './TypeAuto.png';
+import TypeSegment from './TypeSegment.png';
+import TypeXLine from './TypeXLine.png';
+import TypeRay from './TypeRay.png';
+
+
+
+Čiary sú priame entity definované dvomi bodmi. Nástroje pre čiaru ponúkajú rôzne spôsoby konštrukcie čiary, napríklad z počiatočného bodu do koncového bodu, rovnobežne s existujúcou entitou, dotyčnicovo ku kružniciam alebo oblúkom alebo kolmo na inú čiaru.
+
+### Typy čiar {#type}
+
+Väčšina nástrojov pre čiaru vám umožňuje vybrať typ čiary, ktorý sa má vytvoriť, na paneli s možnosťami. Dostupné typy čiar sú:
+
+- Auto:
+  <Image src={TypeAuto} alt="TypeAuto" width={40} height={40} />
+  Automaticky vytvorí čiaru rovnakého typu ako vybraná iná čiara. Toto platí pre nástroj rovnobežnej čiary.
+- Line Segment:
+  <Image src={TypeSegment} alt="TypeSegment" width={40} height={40} />
+  Vytvára segmenty čiar z počiatočného bodu do koncového bodu.
+- Infinite Line:
+  <Image src={TypeXLine} alt="TypeXLine" width={40} height={40} />
+  Vytvára nekonečné čiary, ktoré prechádzajú dvomi danými bodmi. Tie sa niekedy nazývajú X-čiary alebo konštrukčné čiary.
+- Rays:
+  <Image src={TypeRay} alt="TypeRay" width={40} height={40} />
+  Vytvára lúče z daného počiatočného bodu cez ďalší bod s nekonečnou dĺžkou.

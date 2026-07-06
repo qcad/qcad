@@ -1,0 +1,92 @@
+import ArcCircle01 from './ArcCircle01.png';
+import ArcCircle02a from './ArcCircle02a.png';
+import ArcCircle03 from './ArcCircle03.png';
+import ArcCircle02 from './ArcCircle02.png';
+import InfoSector from './InfoSector.png';
+import InfoSlice from './InfoSlice.png';
+import ArcCircle04 from './ArcCircle04.png';
+import ArcCircle06 from './ArcCircle06.png';
+import ArcCircle05 from './ArcCircle05.png';
+import ArcCircle08 from './ArcCircle08.png';
+import ArcCircle07 from './ArcCircle07.png';
+
+Autor: Robert S.
+
+See käsk arvutab kaarte, ringide, ellipsite ja ellipskaarte pindala ning
+lisab soovi korral teabe joonise praegusele kihile. Kui valite mõne muu
+objektitüübi, kuvatakse käsureal hoiatus.
+
+Kaarte puhul on pindala arvutamiseks kaks võimalust, nimelt Segment või
+Sector. Segmendi (või lõigu) pindala on ala, mida piiravad kaar ja kaks joont,
+mis on tõmmatud kaare algus- ja lõpp-punktist kaare keskpunkti. Sektori pindala
+on ala, mida piiravad kaar ja kõõl, mis on tõmmatud kaare alguspunktist
+lõpp-punkti.
+
+<Image src={ArcCircle01} alt="ArcCircle01" width={285} height={149} />  
+Joonis 1: segment (lõik) ja sektor.
+
+**Valikud**
+
+Sellel käsul on standardsed valikud "*Add measurement to drawing*" ja
+"*Text Height*".
+
+<Image src={ArcCircle02a} alt="ArcCircle02a" width={200} height={19} />  
+Joonis 2: Standardsed Info valikud
+
+Olenemata sellest, kas see on välja lülitatud või mitte, kuvatakse teave
+ käsurea vidinas, kui klõpsate kaarel, ringil, ellipsil või ellipskaarel.
+
+<Image src={ArcCircle03} alt="ArcCircle03" width={238} height={29} />  
+Joonis 3: Käsureal kuvatud teave
+
+(Märkus: Iga kord, kui käivitate info-käsu, on märkeruut "*Add measurement to drawing*"
+alati märkimata. Peate meeles pidama selle sisselülitamise, kui soovite teabe
+joonisele lisada.)
+
+Samuti lisab see järgmised valikud.
+
+<Image src={ArcCircle02} alt="ArcCircle02" width={213} height={25} />  
+Joonis 4: Lisatud valikud
+
+**Režiim:**
+
+Režiim kehtib ainult kaarte kohta.
+
+<Image src={InfoSector} alt="InfoSector" width={40} height={40} />  
+*Sector:* See režiim tagastab sektori pindala. See on kasulik, kui seda
+kasutada koos käsuga "*Polygonal Area*".
+
+<Image src={InfoSlice} alt="InfoSlice" width={40} height={40} /> *Segment:* See režiim tagastab segmendi pindala.
+
+**Lisa:**
+
+*Entity:* See valib, kas soovite lisada mõõdetud objekti koopia joonise
+praegusele kihile.
+
+*Chord:* See valib, kas soovite lisada joonisele kõõlu (sektor) või
+raadiusjooned (segment).
+
+*Length:* Vaikimisi trükitakse pindala alati joonisele. See valik valib, kas
+soovite lisada joonisele lisateavet.
+
+Ringide ja täisellipsite puhul on lisateabeks ümbermõõt. Lisatud teksti
+vasaku alanurgana kasutatakse keskpunkti.
+
+<Image src={ArcCircle04} alt="ArcCircle04" width={364} height={136} />
+
+Ringikaarte puhul on lisateabeks kaare pikkus ja kõõlu pikkus (sektori
+režiimis) või raadius (segmendi režiimis).
+
+Ellipsite puhul on lisateabeks kaare pikkus ja kõõlu pikkus (sektori
+režiimis) või kaugus keskpunktist kaare alguspunktini, millele järgneb kaugus
+keskpunktist kaare lõpp-punktini (segmendi režiimis).
+
+Lisatud teksti vasak alanurk on kaare lõpp-punkt.
+
+<Image src={ArcCircle06} alt="ArcCircle06" width={332} height={75} />
+
+<Image src={ArcCircle05} alt="ArcCircle05" width={378} height={111} />
+
+<Image src={ArcCircle08} alt="ArcCircle08" width={328} height={90} />
+
+<Image src={ArcCircle07} alt="ArcCircle07" width={418} height={105} />

@@ -1,0 +1,53 @@
+QCAD komandų eilutė leidžia paleisti komandas, įvesti koordinates ar įvesti reikšmes, tokias kaip atstumai ar spinduliai.
+
+### Koordinačių įvedimas
+
+Absoliučios koordinatės įvedamos formatu „x,y":
+
+40,5
+
+Santykinės koordinatės įvedamos formatu „@x,y":
+
+@10,6
+
+Absoliučios polinės koordinatės įvedamos formatu „atstumas&lt;kampas":
+
+10&lt;30
+
+Santykinės polinės koordinatės įvedamos formatu „@atstumas&lt;kampas":
+
+@10&lt;45
+
+Įvedant koordinates ar reikšmes, galima naudoti [matematines išraiškas](#expr) koordinatei apskaičiuoti pagal žinomas reikšmes. Pavyzdžiui, koordinatę 10,5 taip pat galima įvesti kaip:
+
+5+5,30/6
+
+### Skaičiuotuvas
+
+Komandų eilutę taip pat galima naudoti kaip skaičiuotuvą. Norėdami tai padaryti, įveskite [matematinę išraišką](#expr) prieš ją įrašydami lygybės ženklą:
+
+=3+4  
+7
+
+Kintamuosius galima naudoti reikšmėms saugoti:
+
+=a=5+6  
+11  
+=a/2  
+5.5  
+
+### Matematinės išraiškos
+
+Galimos matematinės konstantos:
+
+PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2
+
+Galimos matematinės funkcijos:
+
+abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad,
+sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh,
+acosh, asinh, atanh, expm1, hypot, cbrt, trunc
+
+Dauguma šių konstantų ir funkcijų yra standartinės ECMAScript (JavaScript) funkcijos ir dokumentuotos internete. Standartiniame ECMAScript šios funkcijos yra Math klasės dalis, todėl funkcija *abs* turėtų būti rašoma kaip *Math.abs*. QCAD komandų eilutėje galite praleisti *Math.* dalį patogumui. Trigonometrinės funkcijos (sin, cos, tan, asin, acos, atan, atan2) priima ar grąžina kampus laipsniais. Jei pageidaujate radianinių šių funkcijų versijų, vietoj to naudokite originalias *Math.* funkcijas.
+
+Funkcijas *rad2deg* ir *deg2rad* galima naudoti kampams konvertuoti tarp radianų ir laipsnių.

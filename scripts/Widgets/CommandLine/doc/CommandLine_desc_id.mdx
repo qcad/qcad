@@ -1,0 +1,53 @@
+Baris perintah QCAD memungkinkan Anda memulai perintah, memasukkan koordinat, atau memasukkan nilai seperti jarak atau radius.
+
+### Memasukkan Koordinat
+
+Koordinat absolut dimasukkan dalam format "x,y":
+
+40,5
+
+Koordinat relatif dimasukkan dalam format "@x,y":
+
+@10,6
+
+Koordinat polar absolut dimasukkan dalam format "jarak&lt;sudut":
+
+10&lt;30
+
+Koordinat polar relatif dimasukkan dalam format "@jarak&lt;sudut":
+
+@10&lt;45
+
+Saat memasukkan koordinat atau nilai, [ekspresi matematis](#expr) dapat digunakan untuk menghitung koordinat berdasarkan nilai yang diketahui. Misalnya koordinat 10,5 juga dapat dimasukkan sebagai:
+
+5+5,30/6
+
+### Kalkulator
+
+Baris perintah juga dapat digunakan sebagai kalkulator. Untuk melakukannya, masukkan [ekspresi matematis](#expr) yang didahului oleh tanda sama dengan:
+
+=3+4  
+7
+
+Variabel dapat digunakan untuk menyimpan nilai:
+
+=a=5+6  
+11  
+=a/2  
+5.5  
+
+### Ekspresi Matematis
+
+Konstanta matematis yang tersedia adalah:
+
+PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2
+
+Fungsi matematis yang tersedia adalah:
+
+abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad,
+sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh,
+acosh, asinh, atanh, expm1, hypot, cbrt, trunc
+
+Sebagian besar konstanta dan fungsi ini adalah fungsi ECMAScript (JavaScript) standar dan didokumentasikan secara daring. Dalam ECMAScript standar, fungsi-fungsi ini merupakan bagian dari kelas Math sehingga fungsi *abs* harus ditulis sebagai *Math.abs*. Pada baris perintah QCAD, Anda dapat menghilangkan bagian *Math.* untuk kemudahan. Fungsi trigonometri (sin, cos, tan, asin, acos, atan, atan2) menerima atau mengembalikan sudut dalam derajat. Jika Anda lebih memilih versi radian dari fungsi-fungsi ini, gunakan fungsi *Math.* asli sebagai gantinya.
+
+Fungsi *rad2deg* dan *deg2rad* dapat digunakan untuk mengonversi sudut antara radian dan derajat.

@@ -1,0 +1,17 @@
+import HatchFromSelectionBoundary from './HatchFromSelectionBoundary.png';
+import HatchFromSelectionIslands from './HatchFromSelectionIslands.png';
+
+1. Valmistele viivoitettavaa aluetta ympäröivät kohteet niin, että ne
+   muodostavat suljetun ääriviivan. Ääriviivan on oltava suljettu siten, että yksi
+   kohde on yhteydessä seuraavaan, kuten tämän esimerkin oikealla puolella on esitetty:  
+   <Image src={HatchFromSelectionBoundary} alt="HatchFromSelectionBoundary" width={260} height={152} />
+2. Valitse ääriviiva(t), jonka haluat täyttää. Huomaa, että ääriviivojen
+   sisällä olevat saarekkeet viivoitetaan, jos niitä ei ole valittu:  
+   <Image src={HatchFromSelectionIslands} alt="HatchFromSelectionIslands" width={210} height={90} />
+3. Käynnistä viivoitustyökalu.
+4. Näytetään viivoituksen asetusten valintaikkuna. Valitse viivoituskuvio,
+   mittakaavakerroin ja viivoituskuvion kiertokulma. Jos haluat täyttää kohteen
+   kuvion sijasta yhtenäisellä värillä, valitse valintaruutu "Solid Fill".
+5. Napsauta 'OK' jatkaaksesi viivoitusta. Ääriviivan monimutkaisuudesta ja
+   valitun kuvion mittakaavakertoimesta riippuen viivoituksen luominen voi kestää
+   hetken.

@@ -1,0 +1,22 @@
+import SplineControlPoints01 from './SplineControlPoints01.png';
+import SplineControlPoints02 from './SplineControlPoints02.png';
+
+1. Pilih derajat spline pada bilah alat opsi. Derajat yang didukung
+   adalah 2 (b-spline kuadratik) dan 3 (b-spline kubik). Semakin tinggi
+   derajatnya, semakin 'mulus' kurva menjadi.  
+   Perhatikan bahwa b-spline kuadratik secara definisi memerlukan setidaknya 3
+   titik kontrol sementara b-spline kubik memiliki setidaknya 4 titik kontrol.
+2. Centang kotak centang 'Closed' pada bilah alat opsi jika Anda ingin
+   membuat spline tertutup. Spline tertutup adalah loop tertutup kontinu.
+3. Tentukan titik kontrol. Setelah mendefinisikan titik kontrol ketiga (untuk
+   b-spline kuadratik) atau keempat (untuk b-spline kubik), pratinjau akan
+   ditampilkan. Anda dapat menghapus titik kontrol terakhir lagi dengan mengklik
+   tombol 'Undo' pada bilah alat opsi.
+4. Tekan escape atau klik tombol kanan mouse setelah mengatur titik terakhir
+   untuk mengonfirmasi bentuk spline.
+5. Anda sekarang dapat membuat spline lain atau klik kanan lagi untuk
+   mengakhiri alat.
+   Contoh untuk dua spline terbuka (kuadratik dan kubik):  
+   <Image src={SplineControlPoints01} alt="SplineControlPoints01" width={240} height={166} />  
+   Contoh untuk dua spline tertutup, periodik (kuadratik dan kubik):  
+   <Image src={SplineControlPoints02} alt="SplineControlPoints02" width={288} height={166} />

@@ -1,0 +1,25 @@
+import TypeAuto from './TypeAuto.png';
+import TypeSegment from './TypeSegment.png';
+import TypeXLine from './TypeXLine.png';
+import TypeRay from './TypeRay.png';
+
+
+
+Viivat ovat suoria kohteita, jotka määritellään kahdella pisteellä. Viivatyökalut tarjoavat useita tapoja viivan muodostamiseen, esimerkiksi aloituspisteestä päätepisteeseen, yhdensuuntaisesti olemassa olevaan kohteeseen, tangentiaalisesti ympyröihin tai kaariin tai kohtisuoraan toiseen viivaan.
+
+### Viivatyypit {#type}
+
+Useimmat viivatyökalut mahdollistavat luotavan viivan tyypin valinnan asetustyökalurivillä. Saatavilla olevat viivatyypit ovat:
+
+- Auto:
+  <Image src={TypeAuto} alt="TypeAuto" width={40} height={40} />
+  Luo automaattisesti samantyyppisen viivan kuin valittu toinen viiva. Tämä koskee yhdensuuntaisen viivan työkalua.
+- Line Segment:
+  <Image src={TypeSegment} alt="TypeSegment" width={40} height={40} />
+  Luo viivasegmenttejä aloituspisteestä päätepisteeseen.
+- Infinite Line:
+  <Image src={TypeXLine} alt="TypeXLine" width={40} height={40} />
+  Luo äärettömiä viivoja, jotka kulkevat kahden annetun pisteen kautta. Näitä kutsutaan joskus X-viivoiksi tai apuviivoiksi.
+- Rays:
+  <Image src={TypeRay} alt="TypeRay" width={40} height={40} />
+  Luo puolisuoria annetusta aloituspisteestä toisen pisteen kautta äärettömällä pituudella.

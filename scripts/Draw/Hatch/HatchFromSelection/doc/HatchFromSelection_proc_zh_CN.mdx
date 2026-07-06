@@ -1,0 +1,10 @@
+import HatchFromSelectionBoundary from './HatchFromSelectionBoundary.png';
+import HatchFromSelectionIslands from './HatchFromSelectionIslands.png';
+
+1. 准备包围填充区域的实体，使它们形成一个封闭轮廓。轮廓必须以一个实体与下一个实体相连接的方式封闭，如此示例右侧所示：  
+   <Image src={HatchFromSelectionBoundary} alt="HatchFromSelectionBoundary" width={260} height={152} />
+2. 选择要填充的轮廓。请注意，轮廓内部的岛如果未被选中，也将被填充：  
+   <Image src={HatchFromSelectionIslands} alt="HatchFromSelectionIslands" width={210} height={90} />
+3. 启动填充工具。
+4. 将显示填充选项对话框。为填充图案选择填充图案、缩放比例和旋转角度。如果您想用纯色而不是图案填充对象，请选中"Solid Fill"复选框。
+5. 单击"OK"继续填充。根据轮廓的复杂程度和所选图案的缩放比例，创建填充可能需要一些时间。

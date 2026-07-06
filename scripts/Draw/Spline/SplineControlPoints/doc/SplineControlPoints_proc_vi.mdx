@@ -1,0 +1,13 @@
+import SplineControlPoints01 from './SplineControlPoints01.png';
+import SplineControlPoints02 from './SplineControlPoints02.png';
+
+1. Chọn bậc của spline trong thanh công cụ tùy chọn. Các bậc được hỗ trợ là 2 (b-spline bậc hai) và 3 (b-spline bậc ba). Bậc càng cao, đường cong càng „mượt".  
+   Lưu ý rằng một b-spline bậc hai theo định nghĩa cần ít nhất 3 điểm điều khiển trong khi một b-spline bậc ba có ít nhất 4 điểm điều khiển.
+2. Đánh dấu ô „Closed" trong thanh công cụ tùy chọn nếu bạn muốn tạo một spline kín. Các spline kín là các vòng kín liên tục.
+3. Chỉ định các điểm điều khiển. Sau khi xác định điểm điều khiển thứ ba (cho b-spline bậc hai) hoặc thứ tư (cho b-spline bậc ba), một bản xem trước sẽ được hiển thị. Bạn có thể xóa điểm điều khiển cuối cùng lần nữa bằng cách nhấp nút „Undo" trong thanh công cụ tùy chọn.
+4. Nhấn Escape hoặc nhấp nút chuột phải sau khi đặt điểm cuối cùng để xác nhận hình dạng spline.
+5. Bây giờ bạn có thể tạo một spline khác hoặc nhấp chuột phải lần nữa để kết thúc công cụ.
+   Ví dụ cho hai spline mở (bậc hai và bậc ba):  
+   <Image src={SplineControlPoints01} alt="SplineControlPoints01" width={240} height={166} />  
+   Ví dụ cho hai spline kín, tuần hoàn (bậc hai và bậc ba):  
+   <Image src={SplineControlPoints02} alt="SplineControlPoints02" width={288} height={166} />

@@ -1,0 +1,25 @@
+import TypeAuto from './TypeAuto.png';
+import TypeSegment from './TypeSegment.png';
+import TypeXLine from './TypeXLine.png';
+import TypeRay from './TypeRay.png';
+
+
+
+Linijos yra tiesios esybės, apibrėžtos dviem taškais. Linijos įrankiai siūlo įvairius būdus linijai konstruoti, pavyzdžiui, nuo pradžios taško iki galinio taško, lygiagrečiai esamai esybei, liestiniškai apskritimams ar lankams arba statmenai kitai linijai.
+
+### Linijų tipai {#type}
+
+Dauguma linijos įrankių leidžia parinkčių įrankių juostoje pasirinkti kuriamos linijos tipą. Galimi linijų tipai:
+
+- Auto:
+  <Image src={TypeAuto} alt="TypeAuto" width={40} height={40} />
+  Automatiškai sukuria tokio pat tipo liniją kaip pasirinkta kita linija. Tai taikoma lygiagrečios linijos įrankiui.
+- Line Segment:
+  <Image src={TypeSegment} alt="TypeSegment" width={40} height={40} />
+  Sukuria linijos segmentus nuo pradžios taško iki galinio taško.
+- Infinite Line:
+  <Image src={TypeXLine} alt="TypeXLine" width={40} height={40} />
+  Sukuria begalines linijas, einančias per du nurodytus taškus. Jos kartais vadinamos X linijomis arba konstrukcinėmis linijomis.
+- Rays:
+  <Image src={TypeRay} alt="TypeRay" width={40} height={40} />
+  Sukuria spindulius nuo nurodyto pradžios taško per kitą tašką su begaliniu ilgiu.

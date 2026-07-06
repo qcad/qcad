@@ -1,0 +1,53 @@
+QCADin komentorivi mahdollistaa komentojen käynnistämisen, koordinaattien syöttämisen tai arvojen, kuten etäisyyksien tai säteiden, syöttämisen.
+
+### Koordinaattien syöttäminen
+
+Absoluuttiset koordinaatit syötetään muodossa "x,y":
+
+40,5
+
+Suhteelliset koordinaatit syötetään muodossa "@x,y":
+
+@10,6
+
+Absoluuttiset napakoordinaatit syötetään muodossa "etäisyys&lt;kulma":
+
+10&lt;30
+
+Suhteelliset napakoordinaatit syötetään muodossa "@etäisyys&lt;kulma":
+
+@10&lt;45
+
+Koordinaatteja tai arvoja syötettäessä voidaan käyttää [matemaattisia lausekkeita](#expr) koordinaatin laskemiseen tunnettujen arvojen perusteella. Esimerkiksi koordinaatti 10,5 voidaan syöttää myös näin:
+
+5+5,30/6
+
+### Laskin
+
+Komentoriviä voidaan käyttää myös laskimena. Tehdäksesi tämän syötä [matemaattinen lauseke](#expr), jota edeltää yhtäläisyysmerkki:
+
+=3+4  
+7
+
+Muuttujia voidaan käyttää arvojen tallentamiseen:
+
+=a=5+6  
+11  
+=a/2  
+5.5  
+
+### Matemaattiset lausekkeet
+
+Saatavilla olevat matemaattiset vakiot ovat:
+
+PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2
+
+Saatavilla olevat matemaattiset funktiot ovat:
+
+abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad,
+sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh,
+acosh, asinh, atanh, expm1, hypot, cbrt, trunc
+
+Useimmat näistä vakioista ja funktioista ovat standardeja ECMAScript (JavaScript) -funktioita ja dokumentoitu verkossa. Standardissa ECMAScriptissä nämä funktiot kuuluvat Math-luokkaan, joten funktio *abs* pitäisi kirjoittaa muodossa *Math.abs*. QCADin komentorivillä voit mukavuuden vuoksi jättää *Math.*-osan pois. Trigonometriset funktiot (sin, cos, tan, asin, acos, atan, atan2) ottavat vastaan tai palauttavat kulmia asteina. Jos suosit näiden funktioiden radiaaniversioita, käytä sen sijaan alkuperäisiä *Math.*-funktioita.
+
+Funktioita *rad2deg* ja *deg2rad* voidaan käyttää kulmien muuntamiseen radiaanien ja asteiden välillä.

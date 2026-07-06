@@ -1,0 +1,53 @@
+QCAD'in komut satırı, komutları başlatmanıza, koordinatlar girmenize veya mesafeler ya da yarıçaplar gibi değerler girmenize olanak tanır.
+
+### Koordinat Girme
+
+Mutlak koordinatlar „x,y" biçiminde girilir:
+
+40,5
+
+Göreli koordinatlar „@x,y" biçiminde girilir:
+
+@10,6
+
+Mutlak kutupsal koordinatlar „mesafe&lt;açı" biçiminde girilir:
+
+10&lt;30
+
+Göreli kutupsal koordinatlar „@mesafe&lt;açı" biçiminde girilir:
+
+@10&lt;45
+
+Koordinatlar veya değerler girerken, bilinen değerlere dayalı olarak bir koordinat hesaplamak için [matematiksel ifadeler](#expr) kullanılabilir. Örneğin 10,5 koordinatı şu şekilde de girilebilir:
+
+5+5,30/6
+
+### Hesap Makinesi
+
+Komut satırı bir hesap makinesi olarak da kullanılabilir. Bunu yapmak için, bir eşittir işaretiyle başlayan bir [matematiksel ifade](#expr) girin:
+
+=3+4  
+7
+
+Değerleri depolamak için değişkenler kullanılabilir:
+
+=a=5+6  
+11  
+=a/2  
+5.5  
+
+### Matematiksel İfadeler
+
+Kullanılabilir matematiksel sabitler:
+
+PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2
+
+Kullanılabilir matematiksel fonksiyonlar:
+
+abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad,
+sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh,
+acosh, asinh, atanh, expm1, hypot, cbrt, trunc
+
+Bu sabitlerin ve fonksiyonların çoğu standart ECMAScript (JavaScript) fonksiyonlarıdır ve çevrimiçi olarak belgelenmiştir. Standart ECMAScript'te, bu fonksiyonlar Math sınıfının bir parçasıdır, bu nedenle *abs* fonksiyonu *Math.abs* olarak yazılmalıdır. QCAD komut satırında, kolaylık için *Math.* kısmını atlayabilirsiniz. Trigonometrik fonksiyonlar (sin, cos, tan, asin, acos, atan, atan2) açıları derece cinsinden kabul eder veya döndürür. Bu fonksiyonların radyan versiyonlarını tercih ediyorsanız, bunun yerine orijinal *Math.* fonksiyonlarını kullanın.
+
+*rad2deg* ve *deg2rad* fonksiyonları, açıları radyan ve derece arasında dönüştürmek için kullanılabilir.
