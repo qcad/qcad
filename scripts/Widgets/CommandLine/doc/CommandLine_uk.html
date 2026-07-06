@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Командний рядок</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/uk/index.php?page=scripts/Widgets/CommandLine/doc/CommandLine">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>Командний рядок</h2>
+<p class="toolinfo">
+<b>Панель інструментів / Піктограма:</b>
+<br /><img src="../doc/CommandLine.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Меню:</b> <font face="courier new">Вид &gt; Командний рядок</font>
+<br /><b>Шорткод:</b> <font face="courier new">G, M</font>
+<br /><b>Команди:</b> <font face="courier new">gm</font>
+</p>
+</div>
+<h3>Опис</h3>
+<p>Командний рядок QCAD дозволяє запускати команди, вводити координати або вводити значення, наприклад відстані чи радіуси.</p>
+<h3>Введення координат</h3>
+<p>Абсолютні координати вводяться у форматі „x,y":</p>
+<p>40,5</p>
+<p>Відносні координати вводяться у форматі „@x,y":</p>
+<p>@10,6</p>
+<p>Абсолютні полярні координати вводяться у форматі „distance&lt;angle":</p>
+<p>10&lt;30</p>
+<p>Відносні полярні координати вводяться у форматі „@distance&lt;angle":</p>
+<p>@10&lt;45</p>
+<p>Під час введення координат або значень <a href="#expr">математичні вирази</a> можна використовувати для обчислення координати на основі відомих значень. Наприклад, координату 10,5 також можна ввести як:</p>
+<p>5+5,30/6</p>
+<h3>Калькулятор</h3>
+<p>Командний рядок також можна використовувати як калькулятор. Для цього введіть <a href="#expr">математичний вираз</a>, якому передує знак рівності:</p>
+<p>=3+4 7</p>
+<p>Змінні можна використовувати для зберігання значень:</p>
+<p>=a=5+6 11 =a/2 5.5</p>
+<h3>Математичні вирази</h3>
+<p>Доступні математичні константи:</p>
+<p>PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2</p>
+<p>Доступні математичні функції:</p>
+<p>abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt, trunc</p>
+<p>Більшість цих констант і функцій — це стандартні функції ECMAScript (JavaScript), задокументовані онлайн. У стандартному ECMAScript ці функції є частиною класу Math, тому функцію <em>abs</em> довелося б записувати як <em>Math.abs</em>. У командному рядку QCAD ви можете для зручності опустити частину <em>Math.</em>. Тригонометричні функції (sin, cos, tan, asin, acos, atan, atan2) приймають або повертають кути в градусах. Якщо ви віддаєте перевагу радіанним версіям цих функцій, використовуйте натомість оригінальні функції <em>Math.</em>.</p>
+<p>Функції <em>rad2deg</em> і <em>deg2rad</em> можна використовувати для перетворення кутів між радіанами та градусами.</p></body>
+</html>

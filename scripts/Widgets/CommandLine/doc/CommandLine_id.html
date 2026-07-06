@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Baris Perintah</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/id/index.php?page=scripts/Widgets/CommandLine/doc/CommandLine">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>Baris Perintah</h2>
+<p class="toolinfo">
+<b>Bilah Alat / Ikon:</b>
+<br /><img src="../doc/CommandLine.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Menu:</b> <font face="courier new">Melihat &gt; Baris Perintah</font>
+<br /><b>Pintasan:</b> <font face="courier new">G, M</font>
+<br /><b>Perintah:</b> <font face="courier new">gm</font>
+</p>
+</div>
+<h3>Deskripsi</h3>
+<p>Baris perintah QCAD memungkinkan Anda memulai perintah, memasukkan koordinat, atau memasukkan nilai seperti jarak atau radius.</p>
+<h3>Memasukkan Koordinat</h3>
+<p>Koordinat absolut dimasukkan dalam format "x,y":</p>
+<p>40,5</p>
+<p>Koordinat relatif dimasukkan dalam format "@x,y":</p>
+<p>@10,6</p>
+<p>Koordinat polar absolut dimasukkan dalam format "jarak&lt;sudut":</p>
+<p>10&lt;30</p>
+<p>Koordinat polar relatif dimasukkan dalam format "@jarak&lt;sudut":</p>
+<p>@10&lt;45</p>
+<p>Saat memasukkan koordinat atau nilai, <a href="#expr">ekspresi matematis</a> dapat digunakan untuk menghitung koordinat berdasarkan nilai yang diketahui. Misalnya koordinat 10,5 juga dapat dimasukkan sebagai:</p>
+<p>5+5,30/6</p>
+<h3>Kalkulator</h3>
+<p>Baris perintah juga dapat digunakan sebagai kalkulator. Untuk melakukannya, masukkan <a href="#expr">ekspresi matematis</a> yang didahului oleh tanda sama dengan:</p>
+<p>=3+4 7</p>
+<p>Variabel dapat digunakan untuk menyimpan nilai:</p>
+<p>=a=5+6 11 =a/2 5.5</p>
+<h3>Ekspresi Matematis</h3>
+<p>Konstanta matematis yang tersedia adalah:</p>
+<p>PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2</p>
+<p>Fungsi matematis yang tersedia adalah:</p>
+<p>abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt, trunc</p>
+<p>Sebagian besar konstanta dan fungsi ini adalah fungsi ECMAScript (JavaScript) standar dan didokumentasikan secara daring. Dalam ECMAScript standar, fungsi-fungsi ini merupakan bagian dari kelas Math sehingga fungsi <em>abs</em> harus ditulis sebagai <em>Math.abs</em>. Pada baris perintah QCAD, Anda dapat menghilangkan bagian <em>Math.</em> untuk kemudahan. Fungsi trigonometri (sin, cos, tan, asin, acos, atan, atan2) menerima atau mengembalikan sudut dalam derajat. Jika Anda lebih memilih versi radian dari fungsi-fungsi ini, gunakan fungsi <em>Math.</em> asli sebagai gantinya.</p>
+<p>Fungsi <em>rad2deg</em> dan <em>deg2rad</em> dapat digunakan untuk mengonversi sudut antara radian dan derajat.</p></body>
+</html>

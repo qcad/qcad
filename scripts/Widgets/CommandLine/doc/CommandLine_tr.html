@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Komut Satırı</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/tr/index.php?page=scripts/Widgets/CommandLine/doc/CommandLine">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>Komut Satırı</h2>
+<p class="toolinfo">
+<b>Araç Çubuğu / Simge:</b>
+<br /><img src="../doc/CommandLine.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Menü:</b> <font face="courier new">Görünüm &gt; Komut Satırı</font>
+<br /><b>Kısayol:</b> <font face="courier new">G, M</font>
+<br /><b>Komutlar:</b> <font face="courier new">gm</font>
+</p>
+</div>
+<h3>Açıklama</h3>
+<p>QCAD'in komut satırı, komutları başlatmanıza, koordinatlar girmenize veya mesafeler ya da yarıçaplar gibi değerler girmenize olanak tanır.</p>
+<h3>Koordinat Girme</h3>
+<p>Mutlak koordinatlar „x,y" biçiminde girilir:</p>
+<p>40,5</p>
+<p>Göreli koordinatlar „@x,y" biçiminde girilir:</p>
+<p>@10,6</p>
+<p>Mutlak kutupsal koordinatlar „mesafe&lt;açı" biçiminde girilir:</p>
+<p>10&lt;30</p>
+<p>Göreli kutupsal koordinatlar „@mesafe&lt;açı" biçiminde girilir:</p>
+<p>@10&lt;45</p>
+<p>Koordinatlar veya değerler girerken, bilinen değerlere dayalı olarak bir koordinat hesaplamak için <a href="#expr">matematiksel ifadeler</a> kullanılabilir. Örneğin 10,5 koordinatı şu şekilde de girilebilir:</p>
+<p>5+5,30/6</p>
+<h3>Hesap Makinesi</h3>
+<p>Komut satırı bir hesap makinesi olarak da kullanılabilir. Bunu yapmak için, bir eşittir işaretiyle başlayan bir <a href="#expr">matematiksel ifade</a> girin:</p>
+<p>=3+4 7</p>
+<p>Değerleri depolamak için değişkenler kullanılabilir:</p>
+<p>=a=5+6 11 =a/2 5.5</p>
+<h3>Matematiksel İfadeler</h3>
+<p>Kullanılabilir matematiksel sabitler:</p>
+<p>PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2</p>
+<p>Kullanılabilir matematiksel fonksiyonlar:</p>
+<p>abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt, trunc</p>
+<p>Bu sabitlerin ve fonksiyonların çoğu standart ECMAScript (JavaScript) fonksiyonlarıdır ve çevrimiçi olarak belgelenmiştir. Standart ECMAScript'te, bu fonksiyonlar Math sınıfının bir parçasıdır, bu nedenle <em>abs</em> fonksiyonu <em>Math.abs</em> olarak yazılmalıdır. QCAD komut satırında, kolaylık için <em>Math.</em> kısmını atlayabilirsiniz. Trigonometrik fonksiyonlar (sin, cos, tan, asin, acos, atan, atan2) açıları derece cinsinden kabul eder veya döndürür. Bu fonksiyonların radyan versiyonlarını tercih ediyorsanız, bunun yerine orijinal <em>Math.</em> fonksiyonlarını kullanın.</p>
+<p><em>rad2deg</em> ve <em>deg2rad</em> fonksiyonları, açıları radyan ve derece arasında dönüştürmek için kullanılabilir.</p></body>
+</html>

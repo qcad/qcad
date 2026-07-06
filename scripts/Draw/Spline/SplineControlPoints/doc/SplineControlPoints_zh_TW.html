@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>花鍵 (控制點)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/zh_TW/index.php?page=scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints_zh_TW.html">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>花鍵 (控制點)</h2>
+<p class="toolinfo">
+<b>工具列 / 圖示:</b>
+<br /><img src="../../doc/Spline.png" width="40" height="40" />
+&#160;&#160;&#160;
+<img src="../doc/SplineControlPoints.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>菜单:</b> <font face="courier new">繪製 &gt; 花鍵 &gt; 花鍵 (控制點)</font>
+<br /><b>捷徑:</b> <font face="courier new">S, P</font>
+<br /><b>命令:</b> <font face="courier new">spline | sp</font>
+</p>
+</div>
+<h3>說明</h3>
+<p>從控制點繪製雲形線曲線。僅支援具有均勻權重因子的非均勻有理 B 雲形線 (NURBS)。</p><h3>使用方式</h3>
+<p> </p>
+<ol>
+<li>在選項工具列中選擇雲形線的階數。支援的階數為 2（二次 b 雲形線）和 3（三次 b 雲形線）。階數越高，曲線越「平滑」。 請注意，根據定義，二次 b 雲形線至少需要 3 個控制點，而三次 b 雲形線至少有 4 個控制點。</li>
+<li>如果要建立封閉雲形線，請在選項工具列中勾選「Closed」核取方塊。封閉雲形線是連續的閉環。</li>
+<li>指定控制點。定義第三個（對於二次 b 雲形線）或第四個（對於三次 b 雲形線）控制點後，將顯示預覽。您可以再次按一下選項工具列中的「Undo」按鈕來移除最後一個控制點。</li>
+<li>設定最後一個點後，按 Escape 或按一下滑鼠右鍵以確認雲形線形狀。</li>
+<li>現在您可以建立另一個雲形線，或再次右鍵以終止工具。 兩個開放雲形線（二次和三次）的範例：<br/><img src="SplineControlPoints01.png" alt="SplineControlPoints01" width="240" height="166" /><br/> 兩個封閉、週期性雲形線（二次和三次）的範例：<br/><img src="SplineControlPoints02.png" alt="SplineControlPoints02" width="288" height="166" /><br/></li>
+</ol></body>
+</html>

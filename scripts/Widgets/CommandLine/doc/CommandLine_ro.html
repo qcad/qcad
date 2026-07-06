@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Linia de comandă</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/ro/index.php?page=scripts/Widgets/CommandLine/doc/CommandLine">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>Linia de comandă</h2>
+<p class="toolinfo">
+<b>Bară de instrumente / Pictogramă:</b>
+<br /><img src="../doc/CommandLine.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Meniu:</b> <font face="courier new">Vezi &gt; Linia de comandă</font>
+<br /><b>Scurtătură:</b> <font face="courier new">G, M</font>
+<br /><b>Comenzi:</b> <font face="courier new">gm</font>
+</p>
+</div>
+<h3>Descriere</h3>
+<p>Linia de comandă a QCAD vă permite să porniți comenzi, să introduceți coordonate sau să introduceți valori cum ar fi distanțe sau raze.</p>
+<h3>Introducerea coordonatelor</h3>
+<p>Coordonatele absolute se introduc în formatul „x,y":</p>
+<p>40,5</p>
+<p>Coordonatele relative se introduc în formatul „@x,y":</p>
+<p>@10,6</p>
+<p>Coordonatele polare absolute se introduc în formatul „distanță&lt;unghi":</p>
+<p>10&lt;30</p>
+<p>Coordonatele polare relative se introduc în formatul „@distanță&lt;unghi":</p>
+<p>@10&lt;45</p>
+<p>La introducerea coordonatelor sau valorilor, se pot utiliza <a href="#expr">expresii matematice</a> pentru a calcula o coordonată pe baza valorilor cunoscute. De exemplu, coordonata 10,5 poate fi introdusă și ca:</p>
+<p>5+5,30/6</p>
+<h3>Calculator</h3>
+<p>Linia de comandă poate fi utilizată și ca calculator. Pentru a face acest lucru, introduceți o <a href="#expr">expresie matematică</a> precedată de un semn egal:</p>
+<p>=3+4 7</p>
+<p>Variabilele pot fi utilizate pentru a stoca valori:</p>
+<p>=a=5+6 11 =a/2 5.5</p>
+<h3>Expresii matematice</h3>
+<p>Constantele matematice disponibile sunt:</p>
+<p>PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2</p>
+<p>Funcțiile matematice disponibile sunt:</p>
+<p>abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt, trunc</p>
+<p>Majoritatea acestor constante și funcții sunt funcții ECMAScript (JavaScript) standard și documentate online. În ECMAScript standard, aceste funcții fac parte din clasa Math, astfel încât funcția <em>abs</em> ar trebui scrisă ca <em>Math.abs</em>. În linia de comandă QCAD, puteți omite partea <em>Math.</em> pentru comoditate. Funcțiile trigonometrice (sin, cos, tan, asin, acos, atan, atan2) acceptă sau returnează unghiuri în grade. Dacă preferați versiunile în radiani ale acestor funcții, utilizați în schimb funcțiile <em>Math.</em> originale.</p>
+<p>Funcțiile <em>rad2deg</em> și <em>deg2rad</em> pot fi utilizate pentru a converti unghiuri între radiani și grade.</p></body>
+</html>

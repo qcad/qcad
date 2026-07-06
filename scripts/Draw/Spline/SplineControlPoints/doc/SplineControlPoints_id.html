@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Spline (Titik Kontrol)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/id/index.php?page=scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>Spline (Titik Kontrol)</h2>
+<p class="toolinfo">
+<b>Bilah Alat / Ikon:</b>
+<br /><img src="../../doc/Spline.png" width="40" height="40" />
+&#160;&#160;&#160;
+<img src="../doc/SplineControlPoints.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Menu:</b> <font face="courier new">Menggambar &gt; Spline &gt; Spline (Titik Kontrol)</font>
+<br /><b>Pintasan:</b> <font face="courier new">S, P</font>
+<br /><b>Perintah:</b> <font face="courier new">spline | sp</font>
+</p>
+</div>
+<h3>Deskripsi</h3>
+<p>Menggambar kurva spline dari titik kontrol. B-Spline rasional non-seragam (NURBS) dengan faktor pembobotan homogen adalah satu-satunya spline yang didukung.</p><h3>Penggunaan</h3>
+<p> </p>
+<ol>
+<li>Pilih derajat spline pada bilah alat opsi. Derajat yang didukung adalah 2 (b-spline kuadratik) dan 3 (b-spline kubik). Semakin tinggi derajatnya, semakin 'mulus' kurva menjadi. Perhatikan bahwa b-spline kuadratik secara definisi memerlukan setidaknya 3 titik kontrol sementara b-spline kubik memiliki setidaknya 4 titik kontrol.</li>
+<li>Centang kotak centang 'Closed' pada bilah alat opsi jika Anda ingin membuat spline tertutup. Spline tertutup adalah loop tertutup kontinu.</li>
+<li>Tentukan titik kontrol. Setelah mendefinisikan titik kontrol ketiga (untuk b-spline kuadratik) atau keempat (untuk b-spline kubik), pratinjau akan ditampilkan. Anda dapat menghapus titik kontrol terakhir lagi dengan mengklik tombol 'Undo' pada bilah alat opsi.</li>
+<li>Tekan escape atau klik tombol kanan mouse setelah mengatur titik terakhir untuk mengonfirmasi bentuk spline.</li>
+<li>Anda sekarang dapat membuat spline lain atau klik kanan lagi untuk mengakhiri alat. Contoh untuk dua spline terbuka (kuadratik dan kubik):<br/><img src="SplineControlPoints01.png" alt="SplineControlPoints01" width="240" height="166" /><br/> Contoh untuk dua spline tertutup, periodik (kuadratik dan kubik):<br/><img src="SplineControlPoints02.png" alt="SplineControlPoints02" width="288" height="166" /><br/></li>
+</ol></body>
+</html>

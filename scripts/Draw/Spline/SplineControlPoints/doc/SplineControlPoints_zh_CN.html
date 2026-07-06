@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>样条 (控制点)(S)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/zh_CN/index.php?page=scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints_zh_CN.html">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>样条 (控制点)(S)</h2>
+<p class="toolinfo">
+<b>工具栏/图标:</b>
+<br /><img src="../../doc/Spline.png" width="40" height="40" />
+&#160;&#160;&#160;
+<img src="../doc/SplineControlPoints.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>菜单:</b> <font face="courier new">绘制(D) &gt; 样条(S) &gt; 样条 (控制点)(S)</font>
+<br /><b>快捷方式:</b> <font face="courier new">S, P</font>
+<br /><b>命令:</b> <font face="courier new">spline | sp</font>
+</p>
+</div>
+<h3>说明</h3>
+<p>从控制点绘制样条曲线。仅支持具有均匀权重因子的非均匀有理 B 样条 (NURBS)。</p><h3>使用方法</h3>
+<p> </p>
+<ol>
+<li>在选项工具栏中选择样条的阶数。支持的阶数为 2（二次 b 样条）和 3（三次 b 样条）。阶数越高，曲线越"平滑"。 请注意，根据定义，二次 b 样条至少需要 3 个控制点，而三次 b 样条至少有 4 个控制点。</li>
+<li>如果要创建封闭样条，请在选项工具栏中选中"Closed"复选框。封闭样条是连续的闭环。</li>
+<li>指定控制点。定义第三个（对于二次 b 样条）或第四个（对于三次 b 样条）控制点后，将显示预览。您可以再次单击选项工具栏中的"Undo"按钮来移除最后一个控制点。</li>
+<li>设置最后一个点后，按 Escape 或单击鼠标右键以确认样条形状。</li>
+<li>现在您可以创建另一个样条，或再次右击以终止工具。 两个开放样条（二次和三次）的示例：<br/><img src="SplineControlPoints01.png" alt="SplineControlPoints01" width="240" height="166" /><br/> 两个封闭、周期性样条（二次和三次）的示例：<br/><img src="SplineControlPoints02.png" alt="SplineControlPoints02" width="288" height="166" /><br/></li>
+</ol></body>
+</html>

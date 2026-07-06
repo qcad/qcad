@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Obsah Oblúka/Kruhu/Elipsy</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/sk/index.php?page=scripts/Information/InfoArcCircleArea/doc/InfoArcCircleArea">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>Obsah Oblúka/Kruhu/Elipsy</h2>
+<p class="toolinfo">
+<b>Panel s nástrojmi / ikona:</b>
+<br /><img src="../../doc/Information.png" width="40" height="40" />
+&#160;&#160;&#160;
+<img src="../doc/InfoArcCircleArea.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Ponuka:</b> <font face="courier new">Info &gt; Obsah Oblúka/Kruhu/Elipsy</font>
+<br /><b>Skratka:</b> <font face="courier new">I, C</font>
+<br /><b>Príkazy:</b> <font face="courier new">acearea | ic</font>
+</p>
+</div>
+<h3>Popis</h3>
+<p>          </p>
+<p>Autor: Robert S.</p>
+<p>Tento príkaz vypočíta plochu oblúkov, kružníc, elíps a eliptických oblúkov a voliteľne pridá informáciu do aktuálnej vrstvy výkresu. Ak vyberiete akýkoľvek iný typ entity, v príkazovom riadku sa zobrazí upozornenie.</p>
+<p>Pre oblúky existujú dve možnosti výpočtu plôch, konkrétne Segment alebo Sector. Plocha segmentu (alebo výseku) je plocha ohraničená oblúkom a dvomi čiarami nakreslenými od počiatočného bodu a koncového bodu oblúka k stredu oblúka. Plocha výseku je plocha ohraničená oblúkom a tetivou nakreslenou od počiatočného bodu oblúka ku koncovému bodu.</p>
+<p><img src="ArcCircle01.png" alt="ArcCircle01" width="285" height="149" /><br/> Obrázok 1: segment (výsek) a sektor.</p>
+<p><strong>Možnosti</strong></p>
+<p>Tento príkaz má štandardné možnosti „<em>Add measurement to drawing</em>" a „<em>Text Height</em>".</p>
+<p><img src="ArcCircle02a.png" alt="ArcCircle02a" width="200" height="19" /><br/> Obrázok 2: Štandardné možnosti Info</p>
+<p>Bez ohľadu na to, či je toto vypnuté alebo nie, keď kliknete na oblúk, kružnicu, elipsu alebo eliptický oblúk, informácia sa zobrazí vo widgete príkazového riadka.</p>
+<p><img src="ArcCircle03.png" alt="ArcCircle03" width="238" height="29" /><br/> Obrázok 3: Info zobrazené v príkazovom riadku</p>
+<p>(Poznámka: Vždy, keď spustíte príkaz info, políčko „<em>Add measurement to drawing</em>" je vždy nezačiarknuté. Musíte si pamätať, že ho treba zapnúť, ak chcete info pridať do výkresu).</p>
+<p>Tiež pridáva nasledujúce možnosti.</p>
+<p><img src="ArcCircle02.png" alt="ArcCircle02" width="213" height="25" /><br/> Obrázok 4: Pridané možnosti</p>
+<p><strong>Mode:</strong></p>
+<p>Režim sa vzťahuje iba na oblúky.</p>
+<p><img src="InfoSector.png" alt="InfoSector" width="40" height="40" /><br/> <em>Sector:</em> Tento režim vráti plochu výseku. Je to užitočné pri použití v spojení s príkazom „<em>Polygonal Area</em>".</p>
+<p><img src="InfoSlice.png" alt="InfoSlice" width="40" height="40" /><br/> <em>Segment:</em> Tento režim vráti plochu segmentu.</p>
+<p><strong>Add:</strong></p>
+<p><em>Entity:</em> Toto vyberá, či chcete pridať kópiu nameranej entity do aktuálnej vrstvy výkresu.</p>
+<p><em>Chord:</em> Toto vyberá, či chcete do výkresu pridať tetivu (výsek) alebo polomerové čiary (segment).</p>
+<p><em>Length:</em> Predvolene sa plocha vždy vypíše na výkrese. Táto možnosť vyberá, či chcete do výkresu pridať ďalšie informácie.</p>
+<p>Pre kružnice a celé elipsy je ďalšou informáciou obvod. Toto používa stredový bod ako ľavý dolný roh pre pridaný text.</p>
+<p><img src="ArcCircle04.png" alt="ArcCircle04" width="364" height="136" /><br/></p>
+<p>Pre kruhové oblúky je ďalšou informáciou dĺžka oblúka a dĺžka tetivy (v režime sektor) alebo polomer (v režime segment).</p>
+<p>Pre elipsy je ďalšou informáciou dĺžka oblúka a dĺžka tetivy (v režime sektor) alebo vzdialenosť od stredového bodu k počiatočnému bodu oblúka, nasledovaná vzdialenosťou od stredového bodu ku koncovému bodu oblúka (v režime segment).</p>
+<p>Ľavý dolný roh pre pridaný text je koncový bod oblúka.</p>
+<p><img src="ArcCircle06.png" alt="ArcCircle06" width="332" height="75" /><br/></p>
+<p><img src="ArcCircle05.png" alt="ArcCircle05" width="378" height="111" /><br/></p>
+<p><img src="ArcCircle08.png" alt="ArcCircle08" width="328" height="90" /><br/></p>
+<p><img src="ArcCircle07.png" alt="ArcCircle07" width="418" height="105" /><br/></p></body>
+</html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>amp;Käsurea</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/et/index.php?page=scripts/Widgets/CommandLine/doc/CommandLine">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>amp;Käsurea</h2>
+<p class="toolinfo">
+<b>Tööriistariba / ikoon:</b>
+<br /><img src="../doc/CommandLine.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Menüü:</b> <font face="courier new">amp;Vaata &gt; amp;Käsurea</font>
+<br /><b>Otsetee:</b> <font face="courier new">G, M</font>
+<br /><b>Käsklused:</b> <font face="courier new">gm</font>
+</p>
+</div>
+<h3>Kirjeldus</h3>
+<p>QCADi käsurida võimaldab käivitada käske, sisestada koordinaate või sisestada väärtusi, näiteks kauguseid või raadiusi.</p>
+<h3>Koordinaatide sisestamine</h3>
+<p>Absoluutsed koordinaadid sisestatakse vormingus "x,y":</p>
+<p>40,5</p>
+<p>Suhtelised koordinaadid sisestatakse vormingus "@x,y":</p>
+<p>@10,6</p>
+<p>Absoluutsed polaarkoordinaadid sisestatakse vormingus "kaugus&lt;nurk":</p>
+<p>10&lt;30</p>
+<p>Suhtelised polaarkoordinaadid sisestatakse vormingus "@kaugus&lt;nurk":</p>
+<p>@10&lt;45</p>
+<p>Koordinaatide või väärtuste sisestamisel saab kasutada <a href="#expr">matemaatilisi avaldisi</a>, et arvutada koordinaat teadaolevate väärtuste põhjal. Näiteks koordinaadi 10,5 võib sisestada ka järgmiselt:</p>
+<p>5+5,30/6</p>
+<h3>Kalkulaator</h3>
+<p>Käsurida saab kasutada ka kalkulaatorina. Selleks sisestage <a href="#expr">matemaatiline avaldis</a>, millele eelneb võrdusmärk:</p>
+<p>=3+4 7</p>
+<p>Väärtuste salvestamiseks saab kasutada muutujaid:</p>
+<p>=a=5+6 11 =a/2 5.5</p>
+<h3>Matemaatilised avaldised</h3>
+<p>Saadaolevad matemaatilised konstandid on:</p>
+<p>PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2</p>
+<p>Saadaolevad matemaatilised funktsioonid on:</p>
+<p>abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt, trunc</p>
+<p>Enamik neist konstantidest ja funktsioonidest on standardsed ECMAScripti (JavaScript) funktsioonid ja dokumenteeritud veebis. Standardses ECMAScriptis kuuluvad need funktsioonid klassi Math, seega tuleks funktsioon <em>abs</em> kirjutada kujul <em>Math.abs</em>. QCADi käsureal saate mugavuse huvides <em>Math.</em> osa ära jätta. Trigonomeetrilised funktsioonid (sin, cos, tan, asin, acos, atan, atan2) võtavad vastu või tagastavad nurki kraadides. Kui eelistate nende funktsioonide radiaaniversioone, kasutage selle asemel algseid <em>Math.</em> funktsioone.</p>
+<p>Funktsioone <em>rad2deg</em> ja <em>deg2rad</em> saab kasutada nurkade teisendamiseks radiaanide ja kraadide vahel.</p></body>
+</html>
