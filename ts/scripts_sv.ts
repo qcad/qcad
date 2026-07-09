@@ -14412,7 +14412,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Leader</translation>
+        <translation>Ledare</translation>
     </message>
     <message>
         <location line="+2"/>
