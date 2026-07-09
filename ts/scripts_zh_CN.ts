@@ -13821,7 +13821,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Aligned</source>
-        <translation>统一</translation>
+        <translation>对齐</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14459,12 +14459,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Polylines</source>
-        <translation>多边形</translation>
+        <translation>多段线</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Polyline</source>
-        <translation>多边形</translation>
+        <translation>多段线</translation>
     </message>
     <message>
         <location line="+2"/>

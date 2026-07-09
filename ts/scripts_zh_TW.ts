@@ -2746,7 +2746,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAlignedInit.js" line="+2"/>
         <source>&amp;Aligned</source>
-        <translation>統一的</translation>
+        <translation>對齊</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13821,7 +13821,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Aligned</source>
-        <translation>統一的</translation>
+        <translation>對齊</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14123,12 +14123,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation>不明物體</translation>
+        <translation>未知物件</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Object</source>
-        <translation>不明物體</translation>
+        <translation>未知物件</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14173,7 +14173,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Views</source>
-        <translation>觀點</translation>
+        <translation>檢視</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14414,7 +14414,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Tolerance</source>
-        <translation>容忍</translation>
+        <translation>公差</translation>
     </message>
     <message>
         <location line="+2"/>
