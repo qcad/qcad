@@ -8276,7 +8276,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Stråle</translation>
     </message>
 </context>
 <context>
@@ -14454,7 +14454,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Stråle</translation>
     </message>
     <message>
         <location line="+2"/>

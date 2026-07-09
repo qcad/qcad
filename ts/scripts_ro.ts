@@ -8281,7 +8281,7 @@ este deja în listă.</translation>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Rază</translation>
     </message>
 </context>
 <context>
@@ -14464,7 +14464,7 @@ este deja în listă.</translation>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Rază</translation>
     </message>
     <message>
         <location line="+2"/>
