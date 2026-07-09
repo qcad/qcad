@@ -7518,7 +7518,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Examples</source>
-        <translation>例項</translation>
+        <translation>範例</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -7867,7 +7867,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation>左後衛</translation>
+        <translation>左後方</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8415,7 +8415,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
         <source>Angle &amp;Bisector</source>
-        <translation>角度二分儀</translation>
+        <translation>角平分線</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9075,7 +9075,7 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>De&amp;velopment</source>
-        <translation>發展</translation>
+        <translation>開發</translation>
     </message>
 </context>
 <context>
@@ -9093,7 +9093,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Misc Draw</source>
-        <translation>雜項抽獎</translation>
+        <translation>雜項繪圖</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -9222,7 +9222,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
-        <translation>進口MOL</translation>
+        <translation>匯入MOL</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9237,7 +9237,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
         <source>Leetro MOL Import...</source>
-        <translation>Leetro MOL進口...</translation>
+        <translation>Leetro MOL匯入...</translation>
     </message>
 </context>
 <context>
@@ -9321,7 +9321,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Import Error</source>
-        <translation>進口錯誤</translation>
+        <translation>匯入錯誤</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9472,7 +9472,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Open Drawing</source>
-        <translation>開放式繪圖</translation>
+        <translation>開啟繪圖</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9515,7 +9515,7 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Custom</source>
-        <translation>習俗</translation>
+        <translation>自訂</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116"/>
@@ -9555,7 +9555,7 @@ is already in the list.</source>
     <message>
         <location line="+66"/>
         <source>Margins</source>
-        <translation>邊界</translation>
+        <translation>邊距</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10140,7 +10140,7 @@ is already in the list.</source>
     <message>
         <location line="+11"/>
         <source>Auto Center</source>
-        <translation>汽車中心</translation>
+        <translation>自動置中</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10236,7 +10236,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Custom</source>
-        <translation>習俗</translation>
+        <translation>自訂</translation>
     </message>
     <message>
         <location line="+204"/>
@@ -10266,7 +10266,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Show all properties</source>
-        <translation>顯示所有房產</translation>
+        <translation>顯示所有屬性</translation>
     </message>
     <message>
         <location line="+161"/>
