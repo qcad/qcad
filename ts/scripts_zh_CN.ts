@@ -14535,12 +14535,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation>歼灭战</translation>
+        <translation>区域覆盖</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation>歼灭战</translation>
+        <translation>区域覆盖</translation>
     </message>
     <message>
         <location line="+2"/>
