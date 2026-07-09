@@ -1236,7 +1236,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Margin:</source>
-        <translation>保證金：</translation>
+        <translation>邊距：</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -1246,7 +1246,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation>增加額外的保證金以補償線重</translation>
+        <translation>增加額外的邊距以補償線重</translation>
     </message>
 </context>
 <context>
@@ -5734,7 +5734,7 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>Tolerance:</source>
-        <translation>容忍：</translation>
+        <translation>公差：</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6521,7 +6521,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation>沒有發現進口過濾器。終止...</translation>
+        <translation>沒有發現匯入過濾器。終止...</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -8020,7 +8020,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Freezing all layers</source>
-        <translation>凍結所有層數</translation>
+        <translation>凍結所有圖層</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -9111,7 +9111,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Misc Import / Export Tools</source>
-        <translation>雜項進口/出口工具</translation>
+        <translation>雜項匯入/匯出工具</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -9467,7 +9467,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFile.js" line="+47"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation>沒有發現進口過濾器。終止...</translation>
+        <translation>沒有發現匯入過濾器。終止...</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -9482,7 +9482,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFileInit.js" line="+2"/>
         <source>&amp;Open</source>
-        <translation>開放式</translation>
+        <translation>開啟(&amp;O)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -10085,7 +10085,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Export complete: %1</source>
-        <translation>出口完成: %1</translation>
+        <translation>匯出完成: %1</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10435,7 +10435,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation>開放式 最近</translation>
+        <translation>開啟最近(&amp;R)</translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/PreferencesPage.ui" line="+17"/>
@@ -10953,7 +10953,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
-        <translation>沒有發現出口過濾器。終止...</translation>
+        <translation>沒有發現匯出過濾器。終止...</translation>
     </message>
     <message>
         <location line="+92"/>
@@ -11312,7 +11312,7 @@ is already in the list.</source>
     <message>
         <location line="+27"/>
         <source>Tolerance:</source>
-        <translation>容忍：</translation>
+        <translation>公差：</translation>
     </message>
     <message>
         <location line="+30"/>
