@@ -2505,7 +2505,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/Cut/CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
-        <translation>削減</translation>
+        <translation>剪下</translation>
     </message>
 </context>
 <context>
@@ -3917,12 +3917,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>3th degree fit point Spline, less than 3 references.</source>
-        <translation>3度擬合點花鍵，少於3個參考點。</translation>
+        <translation>3度擬合點樣條，少於3個參考點。</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>3th degree control point Spline, less than 4 references.</source>
-        <translation>3度控制點花鍵，少於4個參考。</translation>
+        <translation>3度控制點樣條，少於4個參考。</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -4331,7 +4331,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation>實體不是線、弧、圓、橢圓或花鍵。</translation>
+        <translation>實體不是線、弧、圓、橢圓或樣條。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4361,7 +4361,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation>實體不是一個有擬合點的花鍵。</translation>
+        <translation>實體不是一個有擬合點的樣條。</translation>
     </message>
 </context>
 <context>
@@ -5117,7 +5117,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+137"/>
         <source>Spline approximation tolerance:</source>
-        <translation>花鍵近似的容忍度：</translation>
+        <translation>樣條近似的容差：</translation>
     </message>
     <message>
         <location line="-118"/>
@@ -5132,7 +5132,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Convert splines from texts to arcs or lines if appropriate</source>
-        <translation>如果合適的話，將花鍵從文字轉換為弧線或直線</translation>
+        <translation>如果合適的話，將樣條從文字轉換為弧線或直線</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5152,7 +5152,7 @@ is already in the list.</source>
     <message>
         <location line="-41"/>
         <source>Spline segments:</source>
-        <translation>花鍵段：</translation>
+        <translation>樣條段：</translation>
     </message>
 </context>
 <context>
@@ -10509,7 +10509,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Reset/ResetInit.js" line="+5"/>
         <source>Reset</source>
-        <translation>復位</translation>
+        <translation>重置</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -10900,7 +10900,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Saving...</source>
-        <translation>拯救...</translation>
+        <translation>儲存中...</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10963,7 +10963,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAsInit.js" line="+2"/>
         <source>Save &amp;As...</source>
-        <translation>Save As...</translation>
+        <translation>另存新檔(&amp;A)...</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/PreferencesPage.ui" line="+17"/>
@@ -10993,7 +10993,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Saving</source>
-        <translation>節約</translation>
+        <translation>儲存中</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -11836,7 +11836,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation>單人</translation>
+        <translation>單一</translation>
     </message>
 </context>
 <context>
@@ -12167,12 +12167,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Spline/Spline.js" line="+72"/>
         <source>Spline Tools</source>
-        <translation>花鍵工具</translation>
+        <translation>樣條工具</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Spline</source>
-        <translation>花鍵</translation>
+        <translation>樣條</translation>
     </message>
 </context>
 <context>
@@ -12190,12 +12190,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
-        <translation>花鍵 (控制點)</translation>
+        <translation>樣條 (控制點)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw spline from control points</source>
-        <translation>從控制點繪製花鍵</translation>
+        <translation>從控制點繪製樣條</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
@@ -12210,12 +12210,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Choose Spline Degree</source>
-        <translation>選擇花鍵度</translation>
+        <translation>選擇樣條度</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Tick for Closed Spline</source>
-        <translation>為封閉式花鍵打勾</translation>
+        <translation>為封閉式樣條打勾</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12228,7 +12228,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/SplineToLine/SplineToLine.js" line="+71"/>
         <source>Convert Straight Splines to Lines</source>
-        <translation>將直線花鍵轉換為線</translation>
+        <translation>將直線樣條轉換為線</translation>
     </message>
 </context>
 <context>
@@ -12363,7 +12363,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
-        <translation>如果合適的話，自動將花鍵轉換為直線/弧線</translation>
+        <translation>如果合適的話，自動將樣條轉換為直線/弧線</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12494,7 +12494,7 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Spacing</source>
-        <translation>株距</translation>
+        <translation>間距</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12600,7 +12600,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation>削減</translation>
+        <translation>剪下</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12615,7 +12615,7 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>&amp;Bold</source>
-        <translation>膽大心細</translation>
+        <translation>粗體</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -12695,7 +12695,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Identity</source>
-        <translation>身份</translation>
+        <translation>恆等</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12751,7 +12751,7 @@ is already in the list.</source>
         <location line="+18"/>
         <location line="+274"/>
         <source>Bold</source>
-        <translation>膽大心細</translation>
+        <translation>粗體</translation>
     </message>
     <message>
         <location line="-267"/>
@@ -12782,7 +12782,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Cut</source>
-        <translation>削減</translation>
+        <translation>剪下</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12862,7 +12862,7 @@ is already in the list.</source>
     <message>
         <location line="+25"/>
         <source>Alignment</source>
-        <translation>統一口徑</translation>
+        <translation>對齊</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -13412,7 +13412,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Foot</source>
-        <translation>腳</translation>
+        <translation>英尺</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13432,7 +13432,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Meter</source>
-        <translation>儀表</translation>
+        <translation>公尺</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13452,7 +13452,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Yard</source>
-        <translation>院子</translation>
+        <translation>碼</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13477,7 +13477,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Decameter</source>
-        <translation>十引數</translation>
+        <translation>十米</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13492,7 +13492,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Astro</source>
-        <translation>宇宙飛船</translation>
+        <translation>天文單位</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13756,7 +13756,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Identity</source>
-        <translation>身份</translation>
+        <translation>恆等</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -14504,7 +14504,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Spline</source>
-        <translation>花鍵</translation>
+        <translation>樣條</translation>
     </message>
     <message>
         <location line="+2"/>

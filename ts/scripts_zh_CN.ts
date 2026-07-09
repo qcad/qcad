@@ -11836,7 +11836,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation>单人</translation>
+        <translation>单一</translation>
     </message>
 </context>
 <context>
@@ -12494,7 +12494,7 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Spacing</source>
-        <translation>株距</translation>
+        <translation>间距</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12695,7 +12695,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Identity</source>
-        <translation>身份</translation>
+        <translation>恒等</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12751,7 +12751,7 @@ is already in the list.</source>
         <location line="+18"/>
         <location line="+274"/>
         <source>Bold</source>
-        <translation>胆大心细</translation>
+        <translation>粗体</translation>
     </message>
     <message>
         <location line="-267"/>
@@ -12862,7 +12862,7 @@ is already in the list.</source>
     <message>
         <location line="+25"/>
         <source>Alignment</source>
-        <translation>统一口径</translation>
+        <translation>对齐</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -13412,7 +13412,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Foot</source>
-        <translation>脚</translation>
+        <translation>英尺</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13452,7 +13452,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Yard</source>
-        <translation>院子</translation>
+        <translation>码</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13492,7 +13492,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Astro</source>
-        <translation>宇宙飞船</translation>
+        <translation>天文单位</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13756,7 +13756,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Identity</source>
-        <translation>身份</translation>
+        <translation>恒等</translation>
     </message>
     <message>
         <location line="+4"/>
