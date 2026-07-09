@@ -1490,12 +1490,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>First break point</source>
-        <translation>第一个突破点</translation>
+        <translation>第一个断点</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation>第二个破发点</translation>
+        <translation>第二个断点</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3349,7 +3349,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation>返回顶部</translation>
+        <translation>顶部</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4110,7 +4110,7 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation>抽签顺序</translation>
+        <translation>绘制顺序</translation>
     </message>
 </context>
 <context>
@@ -6329,7 +6329,7 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+1"/>
         <source>auto</source>
-        <translation>汽车</translation>
+        <translation>自动</translation>
     </message>
 </context>
 <context>
@@ -6703,7 +6703,7 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+22"/>
         <source>Area</source>
-        <translation>地区</translation>
+        <translation>面积</translation>
     </message>
     <message>
         <location line="-108"/>
@@ -7043,7 +7043,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Area</source>
-        <translation>地区</translation>
+        <translation>面积</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13837,7 +13837,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation>返回顶部</translation>
+        <translation>顶部</translation>
     </message>
     <message>
         <location line="+2"/>
