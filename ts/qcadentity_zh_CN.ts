@@ -20,7 +20,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation>居中</translation>
+        <translation>中心</translation>
     </message>
     <message>
         <location line="-2"/>

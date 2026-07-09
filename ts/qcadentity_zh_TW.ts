@@ -289,7 +289,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <source>Area</source>
-        <translation>面銑</translation>
+        <translation>面積</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -557,7 +557,7 @@
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-7"/>
         <source>Solid</source>
-        <translation>黑框</translation>
+        <translation>實心</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -658,7 +658,7 @@
     <message>
         <location line="+2"/>
         <source>Width Factor</source>
-        <translation>width factor</translation>
+        <translation>寬度係數</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -884,7 +884,7 @@
     <message>
         <location line="+0"/>
         <source>Knot</source>
-        <translation>環結</translation>
+        <translation>節點</translation>
     </message>
     <message>
         <location line="+6"/>
