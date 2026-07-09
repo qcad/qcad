@@ -2985,7 +2985,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation>델타항공</translation>
+        <translation>델타</translation>
     </message>
     <message>
         <location line="+122"/>
@@ -3025,7 +3025,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>Scale</source>
-        <translation>규모</translation>
+        <translation>배율</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -3043,7 +3043,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation>차원 스케일</translation>
+        <translation>치수 스케일</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3072,7 +3072,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation>차원</translation>
+        <translation>치수</translation>
     </message>
     <message>
         <location line="+112"/>
@@ -7872,7 +7872,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation>바로 뒤로</translation>
+        <translation>오른쪽 뒤</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -9093,7 +9093,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Misc Draw</source>
-        <translation>기타 추첨</translation>
+        <translation>기타 그리기</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -9585,7 +9585,7 @@ is already in the list.</source>
     <message>
         <location line="+25"/>
         <source>Scale and Position</source>
-        <translation>규모 및 위치</translation>
+        <translation>배율 및 위치</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -11031,7 +11031,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Scale</source>
-        <translation>규모</translation>
+        <translation>배율</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -12685,7 +12685,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation>델타항공</translation>
+        <translation>델타</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13706,7 +13706,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation>델타항공</translation>
+        <translation>델타</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14278,7 +14278,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation>차원</translation>
+        <translation>치수</translation>
     </message>
     <message>
         <location line="+2"/>
