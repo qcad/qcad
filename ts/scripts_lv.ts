@@ -406,7 +406,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
     <message>
         <location filename="../scripts/View/AntialiasingMode/AntialiasingMode.js" line="+74"/>
         <source>&amp;Anti-aliasing</source>
-        <translation>Izlīdzināšanas novēršana</translation>
+        <translation>Izlīdzināšana</translation>
     </message>
 </context>
 <context>
@@ -1220,7 +1220,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+13"/>
         <source>Anti-aliasing</source>
-        <translation>Izlīdzināšanas novēršana</translation>
+        <translation>Izlīdzināšana</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1230,7 +1230,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="-197"/>
         <source>Margin</source>
-        <translation>Rezerve</translation>
+        <translation>Piemale</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -5824,7 +5824,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation>Izcelsme</translation>
+        <translation>Sākumpunkts</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6079,7 +6079,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation>Izcelsme</translation>
+        <translation>Sākumpunkts</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -7882,7 +7882,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation>Tiesības atpakaļ</translation>
+        <translation>Labā aizmugure</translation>
     </message>
     <message>
         <location line="+24"/>

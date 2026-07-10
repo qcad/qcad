@@ -5819,7 +5819,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation>Alkuperä</translation>
+        <translation>Origo</translation>
     </message>
     <message>
         <location line="+6"/>

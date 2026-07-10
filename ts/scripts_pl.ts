@@ -7851,7 +7851,7 @@ jest już na liście.</translation>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation>W prawo z powrotem</translation>
+        <translation>Prawy tylny</translation>
     </message>
     <message>
         <location line="+24"/>

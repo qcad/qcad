@@ -7870,7 +7870,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation>Vänsterback</translation>
+        <translation>Vänster bak</translation>
     </message>
     <message>
         <location line="+24"/>

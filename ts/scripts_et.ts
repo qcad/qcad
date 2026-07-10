@@ -5819,7 +5819,7 @@ on juba loendis.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation>Päritolu</translation>
+        <translation>Alguspunkt</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6074,7 +6074,7 @@ on juba loendis.</translation>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation>Päritolu</translation>
+        <translation>Alguspunkt</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -7867,7 +7867,7 @@ on juba loendis.</translation>
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation>Vasakpoolne tagaaja</translation>
+        <translation>Vasak taga</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -7877,7 +7877,7 @@ on juba loendis.</translation>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation>Õige tagasi</translation>
+        <translation>Parem taga</translation>
     </message>
     <message>
         <location line="+24"/>
