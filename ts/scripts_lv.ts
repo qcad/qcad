@@ -6719,7 +6719,7 @@ jau ir sarakstā.</translation>
         <location line="-108"/>
         <location line="+66"/>
         <source>Circumference</source>
-        <translation>Apjoms</translation>
+        <translation>Apkārtmērs</translation>
     </message>
     <message>
         <location line="-59"/>
@@ -7567,7 +7567,7 @@ jau ir sarakstā.</translation>
         <location line="+16"/>
         <location line="+33"/>
         <source>Comma</source>
-        <translation>K komats</translation>
+        <translation>Komats</translation>
     </message>
     <message>
         <location line="-33"/>
@@ -7580,7 +7580,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="-31"/>
         <source>Semicolon</source>
-        <translation>Puspunktiņš</translation>
+        <translation>Semikols</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -7600,7 +7600,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Dollar</source>
-        <translation>Dollar</translation>
+        <translation>Dolārs</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7610,7 +7610,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+18"/>
         <source>Dot</source>
-        <translation>Dot</translation>
+        <translation>Punkts</translation>
     </message>
 </context>
 <context>
@@ -9514,7 +9514,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+0"/>
         <source>Printing - Page</source>
-        <translation>Drukāšana - Page</translation>
+        <translation>Drukāšana - Lapa</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -9569,7 +9569,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+66"/>
         <source>Margins</source>
-        <translation>Maržas</translation>
+        <translation>Piemales</translation>
     </message>
     <message>
         <location line="+10"/>
