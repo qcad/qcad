@@ -957,7 +957,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+54"/>
         <source>min</source>
-        <translation>en az</translation>
+        <translation>dk</translation>
     </message>
 </context>
 <context>
@@ -3005,7 +3005,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+16"/>
         <source>Prefix</source>
-        <translation>Örnek</translation>
+        <translation>Önek</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -5027,7 +5027,7 @@ zaten listede.</translation>
         <location line="+3"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
-        <translation>Üç puan çizin</translation>
+        <translation>Üç nokta çizin</translation>
     </message>
 </context>
 <context>
@@ -6619,12 +6619,12 @@ zaten listede.</translation>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation>İthalat Noktaları</translation>
+        <translation>Noktaları İçe Aktar</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>&amp;Import Points</source>
-        <translation>İthalat Noktaları</translation>
+        <translation>Noktaları İçe Aktar</translation>
     </message>
 </context>
 <context>
@@ -6761,7 +6761,7 @@ zaten listede.</translation>
     <message>
         <location line="-52"/>
         <source>Distance</source>
-        <translation>Ara</translation>
+        <translation>Mesafe</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -9222,7 +9222,7 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
-        <translation>İthalat MOL</translation>
+        <translation>MOL İçe Aktar</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9237,7 +9237,7 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
         <source>Leetro MOL Import...</source>
-        <translation>Leetro MOL İthalat...</translation>
+        <translation>Leetro MOL İçe Aktar...</translation>
     </message>
 </context>
 <context>
@@ -9525,12 +9525,12 @@ zaten listede.</translation>
     <message>
         <location line="+6"/>
         <source>Portrait</source>
-        <translation>Portre</translation>
+        <translation>Dikey</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Landscape</source>
-        <translation>Manzara</translation>
+        <translation>Yatay</translation>
     </message>
     <message>
         <location line="-113"/>
@@ -10135,12 +10135,12 @@ zaten listede.</translation>
     <message>
         <location line="+18"/>
         <source>Portrait</source>
-        <translation>Portre</translation>
+        <translation>Dikey</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Landscape</source>
-        <translation>Manzara</translation>
+        <translation>Yatay</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -12002,7 +12002,7 @@ zaten listede.</translation>
     <message>
         <location line="+75"/>
         <source>Distance</source>
-        <translation>Ara</translation>
+        <translation>Mesafe</translation>
     </message>
     <message>
         <location line="+5"/>
