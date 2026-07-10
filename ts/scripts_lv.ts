@@ -3093,7 +3093,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation>telpa</translation>
+        <translation>atstarpe</translation>
     </message>
     <message>
         <location line="+309"/>
@@ -3173,7 +3173,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+12"/>
         <source>Arrow</source>
-        <translation>Arrow</translation>
+        <translation>Bulta</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3355,7 +3355,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation>Top</translation>
+        <translation>Augša</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3370,12 +3370,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Middle</translation>
+        <translation>Vidus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation>Tiesības</translation>
+        <translation>Labā</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7857,7 +7857,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
         <source>Top</source>
-        <translation>Top</translation>
+        <translation>Augša</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -7877,7 +7877,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+24"/>
         <source>Right</source>
-        <translation>Tiesības</translation>
+        <translation>Labā</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -8362,7 +8362,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Middle</translation>
+        <translation>Vidus</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8745,7 +8745,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Middle</translation>
+        <translation>Vidus</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12115,7 +12115,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddle/SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
-        <translation>Middle</translation>
+        <translation>Vidus</translation>
     </message>
 </context>
 <context>
@@ -13836,7 +13836,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation>Tiesības</translation>
+        <translation>Labā</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13847,7 +13847,7 @@ jau ir sarakstā.</translation>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation>Middle</translation>
+        <translation>Vidus</translation>
     </message>
     <message>
         <location line="-6"/>
@@ -13857,7 +13857,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation>Top</translation>
+        <translation>Augša</translation>
     </message>
     <message>
         <location line="+2"/>
