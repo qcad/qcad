@@ -12872,7 +12872,7 @@ on juba loendis.</translation>
     <message>
         <location line="+25"/>
         <source>Alignment</source>
-        <translation>Kohandamine</translation>
+        <translation>Joondus</translation>
     </message>
     <message>
         <location line="+41"/>

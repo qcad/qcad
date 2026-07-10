@@ -12872,7 +12872,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+25"/>
         <source>Alignment</source>
-        <translation>Tilpasning</translation>
+        <translation>Justering</translation>
     </message>
     <message>
         <location line="+41"/>
