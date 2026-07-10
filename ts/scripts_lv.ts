@@ -1014,7 +1014,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation>Punktu skaits vienībā</translation>
+        <translation>Punkti uz objekta</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1027,7 +1027,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Modify/AutoTrim/AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation>Automātiskā apdare</translation>
+        <translation>Automātiskā apgriešana</translation>
     </message>
 </context>
 <context>
@@ -1163,7 +1163,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="-107"/>
         <source>Background</source>
-        <translation>Pamatinformācija</translation>
+        <translation>Fons</translation>
     </message>
     <message>
         <location line="-245"/>
@@ -1178,12 +1178,12 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+195"/>
         <source>White</source>
-        <translation>White</translation>
+        <translation>Balts</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Black</source>
-        <translation>Black</translation>
+        <translation>Melns</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1225,7 +1225,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+6"/>
         <source>Use anti-aliasing</source>
-        <translation>Izmantojiet izlīdzināšanas novēršanu</translation>
+        <translation>Izmantojiet izlīdzināšanu</translation>
     </message>
     <message>
         <location line="-197"/>
@@ -1499,7 +1499,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation>Otrais breika punkts</translation>
+        <translation>Otrais pārtraukuma punkts</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -5218,12 +5218,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="-5"/>
         <source>Black</source>
-        <translation>Black</translation>
+        <translation>Melns</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation>White</translation>
+        <translation>Balts</translation>
     </message>
     <message>
         <location line="+6"/>
