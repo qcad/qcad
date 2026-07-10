@@ -7840,7 +7840,7 @@ finns redan i listan.</translation>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation>Skåp</translation>
+        <translation>Kabinett</translation>
     </message>
     <message>
         <location line="+1"/>
