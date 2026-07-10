@@ -4105,12 +4105,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
-        <translation>Menggambar Pesanan</translation>
+        <translation>Urutan Gambar</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation>Menggambar Pesanan</translation>
+        <translation>Urutan Gambar</translation>
     </message>
 </context>
 <context>
