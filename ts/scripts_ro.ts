@@ -1019,7 +1019,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location line="+7"/>
         <source>Free positioning</source>
-        <translation>Poziționare gratuită</translation>
+        <translation>Poziționare liberă</translation>
     </message>
 </context>
 <context>
@@ -3497,7 +3497,7 @@ este deja în listă.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation>Trage Fms Lanes</translation>
+        <translation>Desenați benzile &amp;Fms</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5035,7 +5035,7 @@ este deja în listă.</translation>
         <location line="+3"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
-        <translation>Trage trei puncte</translation>
+        <translation>Desenați trei puncte</translation>
     </message>
 </context>
 <context>
@@ -7872,7 +7872,7 @@ este deja în listă.</translation>
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation>Fundaș stânga</translation>
+        <translation>Spate stânga</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -7882,7 +7882,7 @@ este deja în listă.</translation>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation>Înapoi</translation>
+        <translation>Spate dreapta</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8842,7 +8842,7 @@ este deja în listă.</translation>
     <message>
         <location line="+3"/>
         <source>Draw vertical line</source>
-        <translation>Trage o linie verticală</translation>
+        <translation>Desenați o linie verticală</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineVertical/LineVertical.ui" line="+17"/>
