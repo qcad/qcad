@@ -3172,7 +3172,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>Mimari kene</translation>
+        <translation>Mimari işaret</translation>
     </message>
     <message>
         <location line="+23"/>

@@ -6741,7 +6741,7 @@ er allerede i listen.</translation>
         <location line="+67"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
-        <translation>Akkord</translation>
+        <translation>Korde</translation>
     </message>
     <message>
         <location line="-60"/>

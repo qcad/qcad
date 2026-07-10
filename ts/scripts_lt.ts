@@ -3178,7 +3178,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>Architektūrinė erkė</translation>
+        <translation>Architektūrinis brūkšnys</translation>
     </message>
     <message>
         <location line="+23"/>

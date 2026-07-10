@@ -6739,7 +6739,7 @@ finns redan i listan.</translation>
         <location line="+67"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
-        <translation>Chord</translation>
+        <translation>Korda</translation>
     </message>
     <message>
         <location line="-60"/>

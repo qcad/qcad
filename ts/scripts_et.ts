@@ -3175,7 +3175,7 @@ Kas soovite seda taastada?</translation>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>Arhitektuurne puuk</translation>
+        <translation>Arhitektuurne kriips</translation>
     </message>
     <message>
         <location line="+23"/>
