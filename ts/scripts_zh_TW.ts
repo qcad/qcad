@@ -2683,7 +2683,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="-8"/>
         <source>Splines</source>
-        <translation>樣條</translation>
+        <translation>雲形線</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -3917,12 +3917,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>3th degree fit point Spline, less than 3 references.</source>
-        <translation>3度擬合點樣條，少於3個參考點。</translation>
+        <translation>3度擬合點雲形線，少於3個參考點。</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>3th degree control point Spline, less than 4 references.</source>
-        <translation>3度控制點樣條，少於4個參考。</translation>
+        <translation>3度控制點雲形線，少於4個參考。</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -4311,7 +4311,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation>實體不是直線、弧線、樣條、橢圓弧或多線。</translation>
+        <translation>實體不是直線、弧線、雲形線、橢圓弧或多線。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4331,7 +4331,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation>實體不是線、弧、圓、橢圓或樣條。</translation>
+        <translation>實體不是線、弧、圓、橢圓或雲形線。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4361,7 +4361,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation>實體不是一個有擬合點的樣條。</translation>
+        <translation>實體不是一個有擬合點的雲形線。</translation>
     </message>
 </context>
 <context>
@@ -5117,7 +5117,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+137"/>
         <source>Spline approximation tolerance:</source>
-        <translation>樣條近似的容差：</translation>
+        <translation>雲形線近似的容差：</translation>
     </message>
     <message>
         <location line="-118"/>
@@ -5132,7 +5132,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Convert splines from texts to arcs or lines if appropriate</source>
-        <translation>如果合適的話，將樣條從文字轉換為弧線或直線</translation>
+        <translation>如果合適的話，將雲形線從文字轉換為弧線或直線</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5152,7 +5152,7 @@ is already in the list.</source>
     <message>
         <location line="-41"/>
         <source>Spline segments:</source>
-        <translation>樣條段：</translation>
+        <translation>雲形線段：</translation>
     </message>
 </context>
 <context>
@@ -12167,12 +12167,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Spline/Spline.js" line="+72"/>
         <source>Spline Tools</source>
-        <translation>樣條工具</translation>
+        <translation>雲形線工具</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Spline</source>
-        <translation>樣條</translation>
+        <translation>雲形線</translation>
     </message>
 </context>
 <context>
@@ -12190,12 +12190,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
-        <translation>樣條 (控制點)</translation>
+        <translation>雲形線 (控制點)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw spline from control points</source>
-        <translation>從控制點繪製樣條</translation>
+        <translation>從控制點繪製雲形線</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
@@ -12210,12 +12210,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Choose Spline Degree</source>
-        <translation>選擇樣條度</translation>
+        <translation>選擇雲形線度</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Tick for Closed Spline</source>
-        <translation>為封閉式樣條打勾</translation>
+        <translation>為封閉式雲形線打勾</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12228,7 +12228,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/SplineToLine/SplineToLine.js" line="+71"/>
         <source>Convert Straight Splines to Lines</source>
-        <translation>將直線樣條轉換為線</translation>
+        <translation>將直線雲形線轉換為線</translation>
     </message>
 </context>
 <context>
@@ -12358,12 +12358,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/SvgImport/PreferencesPage.ui" line="+17"/>
         <source>Splines</source>
-        <translation>樣條</translation>
+        <translation>雲形線</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
-        <translation>如果合適的話，自動將樣條轉換為直線/弧線</translation>
+        <translation>如果合適的話，自動將雲形線轉換為直線/弧線</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -14499,12 +14499,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Splines</source>
-        <translation>樣條</translation>
+        <translation>雲形線</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Spline</source>
-        <translation>樣條</translation>
+        <translation>雲形線</translation>
     </message>
     <message>
         <location line="+2"/>
