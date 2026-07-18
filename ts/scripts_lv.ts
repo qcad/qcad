@@ -406,7 +406,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
     <message>
         <location filename="../scripts/View/AntialiasingMode/AntialiasingMode.js" line="+74"/>
         <source>&amp;Anti-aliasing</source>
-        <translation>Izlīdzināšanas novēršana</translation>
+        <translation>Izlīdzināšana</translation>
     </message>
 </context>
 <context>
@@ -1014,7 +1014,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation>Punktu skaits vienībā</translation>
+        <translation>Punkti uz objekta</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1027,7 +1027,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Modify/AutoTrim/AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation>Automātiskā apdare</translation>
+        <translation>Automātiskā apgriešana</translation>
     </message>
 </context>
 <context>
@@ -1163,7 +1163,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="-107"/>
         <source>Background</source>
-        <translation>Pamatinformācija</translation>
+        <translation>Fons</translation>
     </message>
     <message>
         <location line="-245"/>
@@ -1178,12 +1178,12 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+195"/>
         <source>White</source>
-        <translation>White</translation>
+        <translation>Balts</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Black</source>
-        <translation>Black</translation>
+        <translation>Melns</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1220,17 +1220,17 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+13"/>
         <source>Anti-aliasing</source>
-        <translation>Izlīdzināšanas novēršana</translation>
+        <translation>Izlīdzināšana</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use anti-aliasing</source>
-        <translation>Izmantojiet izlīdzināšanas novēršanu</translation>
+        <translation>Izmantojiet izlīdzināšanu</translation>
     </message>
     <message>
         <location line="-197"/>
         <source>Margin</source>
-        <translation>Rezerve</translation>
+        <translation>Piemale</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1499,7 +1499,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation>Otrais breika punkts</translation>
+        <translation>Otrais pārtraukuma punkts</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3093,7 +3093,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation>telpa</translation>
+        <translation>atstarpe</translation>
     </message>
     <message>
         <location line="+309"/>
@@ -3173,7 +3173,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+12"/>
         <source>Arrow</source>
-        <translation>Arrow</translation>
+        <translation>Bulta</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3355,7 +3355,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation>Top</translation>
+        <translation>Augša</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3370,12 +3370,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Middle</translation>
+        <translation>Vidus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation>Tiesības</translation>
+        <translation>Labā</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5218,12 +5218,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="-5"/>
         <source>Black</source>
-        <translation>Black</translation>
+        <translation>Melns</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation>White</translation>
+        <translation>Balts</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5824,7 +5824,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation>Izcelsme</translation>
+        <translation>Sākumpunkts</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6079,7 +6079,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation>Izcelsme</translation>
+        <translation>Sākumpunkts</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -6719,7 +6719,7 @@ jau ir sarakstā.</translation>
         <location line="-108"/>
         <location line="+66"/>
         <source>Circumference</source>
-        <translation>Apjoms</translation>
+        <translation>Apkārtmērs</translation>
     </message>
     <message>
         <location line="-59"/>
@@ -7567,7 +7567,7 @@ jau ir sarakstā.</translation>
         <location line="+16"/>
         <location line="+33"/>
         <source>Comma</source>
-        <translation>K komats</translation>
+        <translation>Komats</translation>
     </message>
     <message>
         <location line="-33"/>
@@ -7580,7 +7580,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="-31"/>
         <source>Semicolon</source>
-        <translation>Puspunktiņš</translation>
+        <translation>Semikols</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -7600,7 +7600,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Dollar</source>
-        <translation>Dollar</translation>
+        <translation>Dolārs</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7610,7 +7610,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+18"/>
         <source>Dot</source>
-        <translation>Dot</translation>
+        <translation>Punkts</translation>
     </message>
 </context>
 <context>
@@ -7857,7 +7857,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
         <source>Top</source>
-        <translation>Top</translation>
+        <translation>Augša</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -7877,12 +7877,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+24"/>
         <source>Right</source>
-        <translation>Tiesības</translation>
+        <translation>Labā</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation>Tiesības atpakaļ</translation>
+        <translation>Labā aizmugure</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8362,7 +8362,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Middle</translation>
+        <translation>Vidus</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8745,7 +8745,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Middle</translation>
+        <translation>Vidus</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9514,7 +9514,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+0"/>
         <source>Printing - Page</source>
-        <translation>Drukāšana - Page</translation>
+        <translation>Drukāšana - Lapa</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -9569,7 +9569,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+66"/>
         <source>Margins</source>
-        <translation>Maržas</translation>
+        <translation>Piemales</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12115,7 +12115,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddle/SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
-        <translation>Middle</translation>
+        <translation>Vidus</translation>
     </message>
 </context>
 <context>
@@ -13836,7 +13836,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation>Tiesības</translation>
+        <translation>Labā</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13847,7 +13847,7 @@ jau ir sarakstā.</translation>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation>Middle</translation>
+        <translation>Vidus</translation>
     </message>
     <message>
         <location line="-6"/>
@@ -13857,7 +13857,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation>Top</translation>
+        <translation>Augša</translation>
     </message>
     <message>
         <location line="+2"/>

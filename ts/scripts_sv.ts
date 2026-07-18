@@ -6739,7 +6739,7 @@ finns redan i listan.</translation>
         <location line="+67"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
-        <translation>Chord</translation>
+        <translation>Korda</translation>
     </message>
     <message>
         <location line="-60"/>
@@ -7840,7 +7840,7 @@ finns redan i listan.</translation>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation>Skåp</translation>
+        <translation>Kabinett</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7870,7 +7870,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation>Vänsterback</translation>
+        <translation>Vänster bak</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -14412,7 +14412,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Leader</translation>
+        <translation>Ledare</translation>
     </message>
     <message>
         <location line="+2"/>

@@ -406,7 +406,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
     <message>
         <location filename="../scripts/View/AntialiasingMode/AntialiasingMode.js" line="+74"/>
         <source>&amp;Anti-aliasing</source>
-        <translation>Išlyginimo mažinimas</translation>
+        <translation>Kraštų glotninimas</translation>
     </message>
 </context>
 <context>
@@ -1019,7 +1019,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+7"/>
         <source>Free positioning</source>
-        <translation>Nemokamas pozicionavimas</translation>
+        <translation>Laisvas pozicionavimas</translation>
     </message>
 </context>
 <context>
@@ -1225,7 +1225,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+13"/>
         <source>Anti-aliasing</source>
-        <translation>Išlyginimo mažinimas</translation>
+        <translation>Kraštų glotninimas</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1235,7 +1235,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="-197"/>
         <source>Margin</source>
-        <translation>Marža</translation>
+        <translation>Paraštė</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3178,7 +3178,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>Architektūrinė erkė</translation>
+        <translation>Architektūrinis brūkšnys</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -5824,7 +5824,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation>Kilmė</translation>
+        <translation>Pradžia</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6079,7 +6079,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation>Kilmė</translation>
+        <translation>Pradžia</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -7580,7 +7580,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="-31"/>
         <source>Semicolon</source>
-        <translation>Pusjuodis</translation>
+        <translation>Kabliataškis</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -7877,7 +7877,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation>Kairysis gynėjas</translation>
+        <translation>Kairysis galinis</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -7887,7 +7887,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation>Dešinė atgal</translation>
+        <translation>Dešinysis galinis</translation>
     </message>
     <message>
         <location line="+24"/>

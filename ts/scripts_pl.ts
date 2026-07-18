@@ -1085,7 +1085,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
         <source>Trim</source>
-        <translation>Trim</translation>
+        <translation>Przytnij</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -5564,7 +5564,7 @@ jest już na liście.</translation>
     <message>
         <location line="+10"/>
         <source>Centered</source>
-        <translation>Centered</translation>
+        <translation>Wyśrodkowany</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7610,7 +7610,7 @@ jest już na liście.</translation>
     <message>
         <location line="+18"/>
         <source>Dot</source>
-        <translation>Dot</translation>
+        <translation>Kropka</translation>
     </message>
 </context>
 <context>
@@ -7826,7 +7826,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
         <source>Top</source>
-        <translation>Top</translation>
+        <translation>Góra</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -7851,7 +7851,7 @@ jest już na liście.</translation>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation>W prawo z powrotem</translation>
+        <translation>Prawy tylny</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8874,7 +8874,7 @@ jest już na liście.</translation>
         <location line="+0"/>
         <location line="+2"/>
         <source>Linetype</source>
-        <translation>Linetype</translation>
+        <translation>Rodzaj linii</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10808,7 +10808,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation>Trim</translation>
+        <translation>Przytnij</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -12640,7 +12640,7 @@ jest już na liście.</translation>
     <message>
         <location line="+9"/>
         <source>&amp;Italic</source>
-        <translation>Italic</translation>
+        <translation>Kursywa</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -12777,7 +12777,7 @@ jest już na liście.</translation>
         <location line="-267"/>
         <location line="+280"/>
         <source>Italic</source>
-        <translation>Italic</translation>
+        <translation>Kursywa</translation>
     </message>
     <message>
         <location line="-266"/>
@@ -13322,7 +13322,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation>Trim</translation>
+        <translation>Przytnij</translation>
     </message>
 </context>
 <context>
@@ -13877,7 +13877,7 @@ jest już na liście.</translation>
     <message>
         <location line="+1"/>
         <source>Decimal</source>
-        <translation>Decimal</translation>
+        <translation>Dziesiętny</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13897,7 +13897,7 @@ jest już na liście.</translation>
     <message>
         <location line="+5"/>
         <source>Centered</source>
-        <translation>Centered</translation>
+        <translation>Wyśrodkowany</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -14188,7 +14188,7 @@ jest już na liście.</translation>
     <message>
         <location line="+0"/>
         <source>Linetype</source>
-        <translation>Linetype</translation>
+        <translation>Rodzaj linii</translation>
     </message>
     <message>
         <location line="+2"/>

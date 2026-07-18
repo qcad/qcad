@@ -406,7 +406,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/View/AntialiasingMode/AntialiasingMode.js" line="+74"/>
         <source>&amp;Anti-aliasing</source>
-        <translation>Противодействие на изглаждането</translation>
+        <translation>Антиалайсинг</translation>
     </message>
 </context>
 <context>
@@ -1017,7 +1017,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Free positioning</source>
-        <translation>Безплатно позициониране</translation>
+        <translation>Свободно позициониране</translation>
     </message>
 </context>
 <context>
@@ -1218,7 +1218,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+13"/>
         <source>Anti-aliasing</source>
-        <translation>Противодействие на изглаждането</translation>
+        <translation>Антиалайсинг</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1228,7 +1228,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="-197"/>
         <source>Margin</source>
-        <translation>Марж</translation>
+        <translation>Поле</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2725,7 +2725,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Cancel</source>
-        <translation>Отмяна на</translation>
+        <translation>Отмяна</translation>
     </message>
 </context>
 <context>
@@ -3449,7 +3449,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>undo</source>
-        <translation>отмяна на</translation>
+        <translation>отмяна</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4136,7 +4136,7 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>undo</source>
-        <translation>отмяна на</translation>
+        <translation>отмяна</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4224,7 +4224,7 @@ is already in the list.</source>
         <location line="+1"/>
         <location line="+2167"/>
         <source>Cancel</source>
-        <translation>Отмяна на</translation>
+        <translation>Отмяна</translation>
     </message>
     <message>
         <location line="-2166"/>
@@ -4412,7 +4412,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>&amp;Edit</source>
-        <translation>Редактиране на</translation>
+        <translation>Редактиране</translation>
     </message>
 </context>
 <context>
@@ -5107,7 +5107,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Explode/Explode.js" line="+30"/>
         <source>Modify</source>
-        <translation>Промяна на</translation>
+        <translation>Промяна</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -5819,7 +5819,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation>Произход</translation>
+        <translation>Начало</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6074,7 +6074,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation>Произход</translation>
+        <translation>Начало</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -7575,7 +7575,7 @@ is already in the list.</source>
     <message>
         <location line="-31"/>
         <source>Semicolon</source>
-        <translation>Точка с точка и запетая</translation>
+        <translation>Точка и запетая</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -7867,7 +7867,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation>Ляв бек</translation>
+        <translation>Ляво отзад</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -7877,7 +7877,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation>Право назад</translation>
+        <translation>Дясно отзад</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8963,7 +8963,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.js" line="+44"/>
         <source>Modify</source>
-        <translation>Промяна на</translation>
+        <translation>Промяна</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9157,7 +9157,7 @@ is already in the list.</source>
     <message>
         <location line="+22"/>
         <source>&amp;Modify</source>
-        <translation>Промяна на</translation>
+        <translation>Промяна</translation>
     </message>
 </context>
 <context>
@@ -9188,7 +9188,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>&amp;Modify</source>
-        <translation>Промяна на</translation>
+        <translation>Промяна</translation>
     </message>
 </context>
 <context>
@@ -9219,7 +9219,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ModifyExamples.js" line="+49"/>
         <source>&amp;Modify</source>
-        <translation>Промяна на</translation>
+        <translation>Промяна</translation>
     </message>
 </context>
 <context>
@@ -9255,7 +9255,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Abort</source>
-        <translation>Прекратяване на</translation>
+        <translation>Прекратяване</translation>
     </message>
 </context>
 <context>
@@ -9562,7 +9562,7 @@ is already in the list.</source>
     <message>
         <location line="+66"/>
         <source>Margins</source>
-        <translation>Маржове</translation>
+        <translation>Полета</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9643,7 +9643,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.js" line="+52"/>
         <source>Edit</source>
-        <translation>Редактиране на</translation>
+        <translation>Редактиране</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10604,7 +10604,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.js" line="+47"/>
         <source>Modify</source>
-        <translation>Промяна на</translation>
+        <translation>Промяна</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -11033,7 +11033,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
         <source>Modify</source>
-        <translation>Промяна на</translation>
+        <translation>Промяна</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13119,7 +13119,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.js" line="+44"/>
         <source>Modify</source>
-        <translation>Промяна на</translation>
+        <translation>Промяна</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13211,7 +13211,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
         <source>Modify</source>
-        <translation>Промяна на</translation>
+        <translation>Промяна</translation>
     </message>
     <message>
         <location line="+0"/>

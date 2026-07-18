@@ -587,7 +587,7 @@
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation>置底</translation>
+        <translation>反向</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -663,7 +663,7 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation>分解</translation>
+        <translation>折叠</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -911,7 +911,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation>居中</translation>
+        <translation>中心线</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -953,7 +953,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation>阴影</translation>
+        <translation>假想线</translation>
     </message>
     <message>
         <location line="+2"/>

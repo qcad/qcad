@@ -1015,7 +1015,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+7"/>
         <source>Free positioning</source>
-        <translation>Pemosisian gratis</translation>
+        <translation>Pemosisian bebas</translation>
     </message>
 </context>
 <context>
@@ -4105,12 +4105,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
-        <translation>Menggambar Pesanan</translation>
+        <translation>Urutan Gambar</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation>Menggambar Pesanan</translation>
+        <translation>Urutan Gambar</translation>
     </message>
 </context>
 <context>
@@ -7862,7 +7862,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation>Bek kiri</translation>
+        <translation>Kiri belakang</translation>
     </message>
     <message>
         <location line="+24"/>

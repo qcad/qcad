@@ -46,12 +46,12 @@
     <message>
         <location line="+3"/>
         <source>Perpendicular</source>
-        <translation>正交</translation>
+        <translation>垂直</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Tangential</source>
-        <translation>正切</translation>
+        <translation>相切</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -61,7 +61,7 @@
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation>居中</translation>
+        <translation>中点</translation>
     </message>
     <message>
         <location line="+3"/>

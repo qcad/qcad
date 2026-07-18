@@ -2835,7 +2835,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Perusviivan päätepiste</translation>
+        <translation>Viiteviivan päätepiste</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
@@ -5819,7 +5819,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation>Alkuperä</translation>
+        <translation>Origo</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -8202,12 +8202,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>&amp;Perusviiva</translation>
+        <translation>&amp;Viiteviiva</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Piirrä perusviiva (viiva nuolella)</translation>
+        <translation>Piirrä viiteviiva (viiva nuolella)</translation>
     </message>
 </context>
 <context>
@@ -8215,12 +8215,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Leader luotiin onnistuneesti</translation>
+        <translation>Viiteviiva luotiin onnistuneesti</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>&amp;Leader valikoidusta tekstistä</translation>
+        <translation>&amp;Viiteviiva valikoidusta tekstistä</translation>
     </message>
 </context>
 <context>
@@ -12557,12 +12557,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Leader luotiin onnistuneesti</translation>
+        <translation>Viiteviiva luotiin onnistuneesti</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>&amp;Tekstin mukainen perusviiva</translation>
+        <translation>&amp;Tekstin mukainen viiteviiva</translation>
     </message>
 </context>
 <context>
@@ -14409,12 +14409,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation>Perusviivat</translation>
+        <translation>Viiteviivat</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Perusviiva</translation>
+        <translation>Viiteviiva</translation>
     </message>
     <message>
         <location line="+2"/>

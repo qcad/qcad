@@ -6741,7 +6741,7 @@ er allerede i listen.</translation>
         <location line="+67"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
-        <translation>Akkord</translation>
+        <translation>Korde</translation>
     </message>
     <message>
         <location line="-60"/>
@@ -8276,7 +8276,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Stråle</translation>
     </message>
 </context>
 <context>
@@ -12872,7 +12872,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+25"/>
         <source>Alignment</source>
-        <translation>Tilpasning</translation>
+        <translation>Justering</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -14454,7 +14454,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Stråle</translation>
     </message>
     <message>
         <location line="+2"/>

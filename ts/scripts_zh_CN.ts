@@ -1490,12 +1490,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>First break point</source>
-        <translation>第一个突破点</translation>
+        <translation>第一个断点</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation>第二个破发点</translation>
+        <translation>第二个断点</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3349,7 +3349,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation>返回顶部</translation>
+        <translation>顶部</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4110,7 +4110,7 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation>抽签顺序</translation>
+        <translation>绘制顺序</translation>
     </message>
 </context>
 <context>
@@ -6329,7 +6329,7 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+1"/>
         <source>auto</source>
-        <translation>汽车</translation>
+        <translation>自动</translation>
     </message>
 </context>
 <context>
@@ -6703,7 +6703,7 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+22"/>
         <source>Area</source>
-        <translation>地区</translation>
+        <translation>面积</translation>
     </message>
     <message>
         <location line="-108"/>
@@ -7043,7 +7043,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Area</source>
-        <translation>地区</translation>
+        <translation>面积</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -11836,7 +11836,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation>单人</translation>
+        <translation>单一</translation>
     </message>
 </context>
 <context>
@@ -12494,7 +12494,7 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Spacing</source>
-        <translation>株距</translation>
+        <translation>间距</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12695,7 +12695,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Identity</source>
-        <translation>身份</translation>
+        <translation>恒等</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12751,7 +12751,7 @@ is already in the list.</source>
         <location line="+18"/>
         <location line="+274"/>
         <source>Bold</source>
-        <translation>胆大心细</translation>
+        <translation>粗体</translation>
     </message>
     <message>
         <location line="-267"/>
@@ -12862,7 +12862,7 @@ is already in the list.</source>
     <message>
         <location line="+25"/>
         <source>Alignment</source>
-        <translation>统一口径</translation>
+        <translation>对齐</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -13412,7 +13412,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Foot</source>
-        <translation>脚</translation>
+        <translation>英尺</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13452,7 +13452,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Yard</source>
-        <translation>院子</translation>
+        <translation>码</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13492,7 +13492,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Astro</source>
-        <translation>宇宙飞船</translation>
+        <translation>天文单位</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13756,7 +13756,7 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Identity</source>
-        <translation>身份</translation>
+        <translation>恒等</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -13821,7 +13821,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Aligned</source>
-        <translation>统一</translation>
+        <translation>对齐</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13837,7 +13837,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation>返回顶部</translation>
+        <translation>顶部</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14459,12 +14459,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Polylines</source>
-        <translation>多边形</translation>
+        <translation>多段线</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Polyline</source>
-        <translation>多边形</translation>
+        <translation>多段线</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14535,12 +14535,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation>歼灭战</translation>
+        <translation>区域覆盖</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation>歼灭战</translation>
+        <translation>区域覆盖</translation>
     </message>
     <message>
         <location line="+2"/>

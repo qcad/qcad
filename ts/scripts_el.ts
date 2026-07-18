@@ -7867,7 +7867,7 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation>Αριστερό μπακ</translation>
+        <translation>Αριστερά πίσω</translation>
     </message>
     <message>
         <location line="+24"/>

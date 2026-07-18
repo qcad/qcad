@@ -1017,7 +1017,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>Free positioning</source>
-        <translation>Gratis positionering</translation>
+        <translation>Fri positionering</translation>
     </message>
 </context>
 <context>
@@ -6741,7 +6741,7 @@ er allerede på listen.</translation>
         <location line="+67"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
-        <translation>Akkord</translation>
+        <translation>Korde</translation>
     </message>
     <message>
         <location line="-60"/>
@@ -7867,7 +7867,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation>Venstre back</translation>
+        <translation>Venstre bag</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -7877,7 +7877,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation>Tilbage til højre</translation>
+        <translation>Højre bag</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8276,7 +8276,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Stråle</translation>
     </message>
 </context>
 <context>
@@ -14449,12 +14449,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+2"/>
         <source>Rays</source>
-        <translation>Rays</translation>
+        <translation>Stråler</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Stråle</translation>
     </message>
     <message>
         <location line="+2"/>

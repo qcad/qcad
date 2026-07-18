@@ -2667,7 +2667,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+11"/>
         <source>Ellipses</source>
-        <translation>弧</translation>
+        <translation>楕円</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3481,7 +3481,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation>曲線</translation>
+        <translation>スイープ</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -8261,7 +8261,7 @@ is already in the list.</source>
     <message>
         <location line="+23"/>
         <source>Line Segment</source>
-        <translation>行</translation>
+        <translation>線分</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -8372,7 +8372,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation>行の長さ</translation>
+        <translation>線の長さ</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9093,7 +9093,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Misc Draw</source>
-        <translation>Misc Draw</translation>
+        <translation>その他の描画</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -10266,7 +10266,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Show all properties</source>
-        <translation>すべての物件を表示する</translation>
+        <translation>すべてのプロパティを表示する</translation>
     </message>
     <message>
         <location line="+839"/>
@@ -11251,7 +11251,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation>ハンドルネームで</translation>
+        <translation>ハンドルで</translation>
     </message>
 </context>
 <context>
@@ -11259,7 +11259,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation>ハンドルネームで選ぶ</translation>
+        <translation>ハンドルで選ぶ</translation>
     </message>
     <message>
         <location line="+8"/>
