@@ -2525,6 +2525,18 @@ QList<QSharedPointer<RShape> > RShape::roundCorners(const QList<QSharedPointer<R
 }
 
 /**
+ * Traces the inner most (smallest) closed contour around the given position from
+ * the arrangement formed by the given shapes. Requires the shape proxy (QCAD
+ * Professional). \see RShapeProxy::getInnerMostContour
+ */
+QList<QSharedPointer<RShape> > RShape::getInnerMostContour(const RVector& position, const QList<QSharedPointer<RShape> >& shapes) {
+    if (RShape::hasProxy()) {
+        return RShape::getShapeProxy()->getInnerMostContour(position, shapes);
+    }
+    return QList<QSharedPointer<RShape> >();
+}
+
+/**
  * Rounds the given shape1 against shape2.
  *
  * \param shape1 First shape of corner.

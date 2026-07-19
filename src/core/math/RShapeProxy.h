@@ -25,6 +25,7 @@
 #include "RS.h"
 
 class RShape;
+class RVector;
 
 
 /**
@@ -38,6 +39,18 @@ public:
     virtual ~RShapeProxy() {}
 
     virtual QList<QSharedPointer<RShape> > roundAllCorners(const QList<QSharedPointer<RShape> >& shapes, double radius) = 0;
+
+    /**
+     * Traces the inner most (smallest) closed contour around the given position
+     * from the arrangement formed by the given shapes.
+     *
+     * \param position Point inside the region to trace (e.g. a click point).
+     * \param shapes Boundary shapes (lines, arcs, circles, ellipses, splines,
+     *      polylines) that may form contours. Polylines are exploded internally.
+     * \return The ordered shapes forming the traced contour (counter-clockwise),
+     *      or an empty list if no closed contour was found.
+     */
+    virtual QList<QSharedPointer<RShape> > getInnerMostContour(const RVector& position, const QList<QSharedPointer<RShape> >& shapes) = 0;
 };
 
 #endif
