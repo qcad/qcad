@@ -285,6 +285,9 @@ public:
         Q_UNUSED(on)
     }
 
+    virtual void forceAutoUpdate() {
+    }
+
     void dump() const {
         qDebug() << *this;
     }

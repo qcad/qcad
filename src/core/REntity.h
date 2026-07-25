@@ -661,6 +661,8 @@ public:
         getData().setAutoUpdatesBlocked(on);
     }
 
+    virtual void forceAutoUpdate() {}
+
     virtual QPair<QVariant, RPropertyAttributes> getProperty(
             RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false, bool showOnRequest = false);

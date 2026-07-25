@@ -413,8 +413,8 @@ public:
      * (mark the entity as dirty).
      */
     virtual void update() const {}
-    void setAutoUpdatesBlocked(bool on);
-    bool getAutoUpdatesBlocked() const;
+    virtual void setAutoUpdatesBlocked(bool on);
+    virtual bool getAutoUpdatesBlocked() const;
 
     static int getDefaultDrawOrder() {
         return RMININT;

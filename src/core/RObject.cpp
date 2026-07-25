@@ -606,12 +606,17 @@ void RObject::setCustomProperty(const QString& title, const QString& key, const 
 }
 
 void RObject::setCustomProperties(const RQMapQStringQString& properties) {
+    setAutoUpdatesBlocked(true);
     QStringList propertyNames = properties.keys();
     for (int i=0; i<propertyNames.length(); i++) {
         QString name = propertyNames[i];
         QString value = properties[name];
         setCustomProperty(RSettings::getAppId(), name, value);
     }
+    setAutoUpdatesBlocked(false);
+
+    // force single update for all property changes combined:
+    forceAutoUpdate();
 }
 
 /**
