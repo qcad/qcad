@@ -184,8 +184,13 @@ double REllipse::getAngleAtPoint(const RVector& pos) const {
     posNormalized.move(-getCenter());
     posNormalized.rotate(-getAngle());
 
+    // on the major axis the tangent is determined by the sign of x alone. y is
+    // zero there only up to rounding, so the sign of y must not be used to flip
+    // the tangent in that case (it would invert the direction randomly):
+    bool onMajorAxis = RMath::fuzzyCompare(posNormalized.y, 0.0);
+
     double angle;
-    if (RMath::fuzzyCompare(posNormalized.y, 0.0)) {
+    if (onMajorAxis) {
         if (posNormalized.x>0) {
             angle = M_PI/2;
         }
@@ -202,7 +207,7 @@ double REllipse::getAngleAtPoint(const RVector& pos) const {
         angle += M_PI;
     }
 
-    if (posNormalized.y<0) {
+    if (!onMajorAxis && posNormalized.y<0) {
         angle += M_PI;
     }
 
@@ -607,6 +612,34 @@ double REllipse::getSimpsonLength(double a1, double a2) const {
     return (df / 3.0) * sum;
 }
 
+/**
+ * \return Arc length distance from the start point of this ellipse (arc) to the
+ *      given point, measured along the ellipse in the direction of the shape.
+ *
+ * \param p Point (assumed to be on the shape).
+ */
+double REllipse::getDistanceFromStart(const RVector& p) const {
+    double ap = getParamTo(p);
+
+    double a1 = RMath::getNormalizedAngle(getStartParam());
+    double a2 = RMath::getNormalizedAngle(ap);
+
+    // p is the start point of the shape:
+    double d = RMath::getAngleDifference(a1, a2);
+    if (d<RS::AngleTolerance || d>2*M_PI-RS::AngleTolerance) {
+        return 0.0;
+    }
+
+    // length of the ellipse arc from the start param up to the param of p:
+    REllipse e = *this;
+    e.setEndParam(ap);
+    double ret = e.getLength();
+    if (RMath::isNaN(ret)) {
+        return RMAXDOUBLE;
+    }
+    return ret;
+}
+
 bool REllipse::contains(const RVector& p) const {
     RVector pt = p;
     pt.move(-center);
@@ -796,16 +829,39 @@ RVector REllipse::getVectorTo(const RVector& point, bool limited, double strictR
 
     RVector normalized = (point - center).get2D().rotate(-ang);
 
-    // special case: point in line with major axis:
-    if (fabs(normalized.getAngle()) < RS::AngleTolerance || fabs(normalized.getAngle()) > 2*M_PI-RS::AngleTolerance) {
-        ret = RVector(getMajorRadius(), 0.0);
+    // second candidate, used for points on the major axis where the two closest
+    // points on the ellipse are mirrored across that axis:
+    RVector retAlt = RVector::invalid;
+
+    // special case: point in line with major axis. The Newton iteration below
+    // cannot be used there (it divides by zero), so the closest point is
+    // determined directly:
+    if (fabs(normalized.getAngle()) < RS::AngleTolerance ||
+        fabs(normalized.getAngle()) > 2*M_PI-RS::AngleTolerance ||
+        fabs(normalized.getAngle()-M_PI) < RS::AngleTolerance) {
+
+        double dA = getMajorRadius();
+        double dB = getMinorRadius();
+        double dU = normalized.x;
+
+        // the end point of the major axis is the closest point on the ellipse
+        // only for points at or beyond its centre of curvature. Closer to the
+        // centre of the ellipse the two closest points lie off the major axis
+        // (for a point at the centre they are the end points of the minor axis):
+        double dLimit = (dA*dA - dB*dB) / dA;
+
+        if (fabs(dU) >= dLimit) {
+            ret = RVector(dU>=0.0 ? dA : -dA, 0.0);
+        }
+        else {
+            double dX = (dA*dA * dU) / (dA*dA - dB*dB);
+            double dY = dB * sqrt(qMax(1.0 - (dX*dX)/(dA*dA), 0.0));
+            ret = RVector(dX, dY);
+            retAlt = RVector(dX, -dY);
+        }
         //dDistance = ret.distanceTo(normalized);
     }
 
-    else if (fabs(normalized.getAngle()-M_PI) < RS::AngleTolerance) {
-        ret = RVector(-getMajorRadius(), 0.0);
-        //dDistance = ret.distanceTo(normalized);
-    }
     else {
         double dU = normalized.x;
         double dV = normalized.y;
@@ -896,6 +952,14 @@ RVector REllipse::getVectorTo(const RVector& point, bool limited, double strictR
             double a = center.getAngleTo(ret);
             if (!RMath::isAngleBetween(a, a1, a2, reversed)) {
                 ret = RVector::invalid;
+
+                // the mirrored closest point may still be on this ellipse arc:
+                if (retAlt.isValid()) {
+                    retAlt = (retAlt.rotate(ang) + center);
+                    if (RMath::isAngleBetween(center.getAngleTo(retAlt), a1, a2, reversed)) {
+                        ret = retAlt;
+                    }
+                }
             }
         }
     }
