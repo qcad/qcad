@@ -63,6 +63,8 @@ RGraphicsViewImage::RGraphicsViewImage(QObject* parent)
       alphaEnabled(false),
       showOnlyPlottable(false),
       editingWorkingSet(false),
+      orderedIdsVersion(-1),
+      orderedIdsValid(false),
       decorationWorker(NULL) {
 
     currentScale = 1.0;
@@ -1187,8 +1189,30 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
 
     //RDebug::startTimer(60);
     //mutexSi.lock();
-    QSet<RObject::Id> ids;
-    ids = document->queryIntersectedEntitiesXYFast(qb);
+    // querying the spatial index and ordering the result is expensive and
+    // depends only on the query box and on the drawables of the scene, so the
+    // result is reused while neither changes (e.g. when only the cursor, the
+    // preview or the selection changed):
+    bool orderedIdsUsable =
+        !isPrintingOrExporting() &&
+        orderedIdsValid &&
+        sceneQt!=NULL &&
+        orderedIdsVersion==sceneQt->getDrawablesVersion() &&
+        orderedIdsBox.equalsFuzzy(qb);
+
+    QList<RObject::Id> list;
+    if (orderedIdsUsable) {
+        list = orderedIds;
+    }
+    else {
+        QSet<RObject::Id> ids;
+        ids = document->queryIntersectedEntitiesXYFast(qb);
+        list = document->getStorage().orderBackToFront(ids);
+
+        orderedIds = list;
+        orderedIdsBox = qb;
+        orderedIdsValid = !isPrintingOrExporting();
+    }
     //qDebug() << "RGraphicsViewImage::paintEntities: ids: " << ids;
     //mutexSi.unlock();
     //RDebug::stopTimer(60, "spatial index");
@@ -1227,10 +1251,7 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
     }
     */
 
-    //RDebug::startTimer(60);
-    QList<RObject::Id> list = document->getStorage().orderBackToFront(ids);
-    //QList<RObject::Id> list = ids.toList();
-    //RDebug::stopTimer(60, "ordering");
+
 
     // about 30ms for 50000:
 //    RDebug::startTimer(60);
@@ -1311,6 +1332,13 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
         }
     }
     //RDebug::stopTimer(61, "regen");
+
+    // the loop above may have regenerated drawables: remember the version the
+    // cached list of entities is valid for only now, so that the next update
+    // can reuse it:
+    if (orderedIdsValid && sceneQt!=NULL) {
+        orderedIdsVersion = sceneQt->getDrawablesVersion();
+    }
 
     if (numThreads==1) {
         RGraphicsViewWorker* worker = workers[0];
