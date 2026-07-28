@@ -952,7 +952,7 @@ void RGraphicsSceneQt::deleteDrawables() {
 }
 
 QList<RGraphicsSceneDrawable> RGraphicsSceneQt::getDrawablesList(REntity::Id entityId) {
-    QMap<RObject::Id, QList<RGraphicsSceneDrawable> >::const_iterator it = drawables.constFind(entityId);
+    QHash<RObject::Id, QList<RGraphicsSceneDrawable> >::const_iterator it = drawables.constFind(entityId);
     if (it!=drawables.constEnd()) {
         return it.value();
     }
@@ -966,7 +966,7 @@ QList<RGraphicsSceneDrawable> RGraphicsSceneQt::getDrawablesList(REntity::Id ent
 QList<RGraphicsSceneDrawable>* RGraphicsSceneQt::getDrawables(REntity::Id entityId) {
     // one lookup instead of two: this is called for every entity of every
     // frame, contains() followed by operator[] walks the map twice:
-    QMap<RObject::Id, QList<RGraphicsSceneDrawable> >::iterator it = drawables.find(entityId);
+    QHash<RObject::Id, QList<RGraphicsSceneDrawable> >::iterator it = drawables.find(entityId);
     if (it!=drawables.end()) {
         return &it.value();
     }
@@ -991,7 +991,7 @@ RBox RGraphicsSceneQt::getClipRectangle(REntity::Id entityId, bool preview) cons
         }
     }
     else {
-        QMap<RObject::Id, RBox>::const_iterator it = clipRectangles.constFind(entityId);
+        QHash<RObject::Id, RBox>::const_iterator it = clipRectangles.constFind(entityId);
         if (it!=clipRectangles.constEnd()) {
             return it.value();
         }
@@ -1071,19 +1071,25 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
         }
     }
 
-    QMap<REntity::Id, QList<RGraphicsSceneDrawable> >* dwb;
+    // preview drawables are kept in a map (ordered keys), the drawables of
+    // the document in a hash (faster lookup):
     if (preview) {
-        dwb = &previewDrawables;
+        QMap<REntity::Id, QList<RGraphicsSceneDrawable> >::iterator it = previewDrawables.find(entityId);
+        if (it!=previewDrawables.end()) {
+            it.value().append(drawable);
+        }
+        else {
+            previewDrawables.insert(entityId, QList<RGraphicsSceneDrawable>() << drawable);
+        }
     }
     else {
-        dwb = &drawables;
-    }
-
-    if (dwb->contains(entityId)) {
-        (*dwb)[entityId].append(drawable);
-    }
-    else {
-        dwb->insert(entityId, QList<RGraphicsSceneDrawable>() << drawable);
+        QHash<REntity::Id, QList<RGraphicsSceneDrawable> >::iterator it = drawables.find(entityId);
+        if (it!=drawables.end()) {
+            it.value().append(drawable);
+        }
+        else {
+            drawables.insert(entityId, QList<RGraphicsSceneDrawable>() << drawable);
+        }
     }
 }
 

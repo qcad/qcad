@@ -23,6 +23,7 @@
 #include "gui_global.h"
 
 #include <QList>
+#include <QHash>
 #include <QMultiMap>
 
 #include "RGraphicsScene.h"
@@ -175,9 +176,12 @@ protected:
 
 private:
 
-    QMap<RObject::Id, QList<RGraphicsSceneDrawable> > drawables;
-    QMap<RObject::Id, RBox> clipRectangles;
+    // looked up by entity ID once per entity per frame, never iterated:
+    // a hash keeps those lookups constant time
+    QHash<RObject::Id, QList<RGraphicsSceneDrawable> > drawables;
+    QHash<RObject::Id, RBox> clipRectangles;
 
+    // getPreviewEntityIds() relies on keys() being ordered: keep these maps
     QMap<RObject::Id, QList<RGraphicsSceneDrawable> > previewDrawables;
     QMap<RObject::Id, RBox> previewClipRectangles;
 
