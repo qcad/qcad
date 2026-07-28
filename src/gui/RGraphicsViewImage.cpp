@@ -25,6 +25,7 @@
 #endif
 
 #include "RBlock.h"
+#include "RDebug.h"
 #include "RDocument.h"
 #include "RDocumentInterface.h"
 #include "RGraphicsScene.h"
@@ -220,7 +221,7 @@ void RGraphicsViewImage::updateImage() {
 
     if (graphicsBufferNeedsUpdate) {
         // TODO: check if buffer is not updated unnecessarily:
-        //RDebug::startTimer();
+        RDebug::startTimer();
 
         // update drawing scale from document setting:
         QString scaleString;
@@ -294,7 +295,7 @@ void RGraphicsViewImage::updateImage() {
         lastFactor = factor;
 
         //qDebug() << "updateImage: OK";
-        //RDebug::stopTimer("updateImage");
+        RDebug::stopTimer("updateImage");
 
         //RDebug::startTimer();
         if (!workers.isEmpty()) {
