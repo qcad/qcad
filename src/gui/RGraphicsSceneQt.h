@@ -90,6 +90,14 @@ public:
     
     virtual void unexportEntity(RObject::Id entityId);
 
+    /**
+     * \return A number which changes whenever the drawables of the document
+     * change. Used to invalidate caches which depend on them.
+     */
+    int getDrawablesVersion() const {
+        return drawablesVersion;
+    }
+
     virtual void exportPoint(const RPoint& point);
     virtual double exportLine(const RLine& line, double offset = RNANDOUBLE);
     virtual void exportArc(const RArc& arc, double offset = RNANDOUBLE);
@@ -178,6 +186,9 @@ private:
 
     // looked up by entity ID once per entity per frame, never iterated:
     // a hash keeps those lookups constant time
+    //! bumped whenever the drawables of the document change
+    int drawablesVersion;
+
     QHash<RObject::Id, QList<RGraphicsSceneDrawable> > drawables;
     QHash<RObject::Id, RBox> clipRectangles;
 
