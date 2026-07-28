@@ -485,6 +485,12 @@ protected:
     //! cached per update: constant while one update is rendered
     bool editingWorkingSet;
 
+    //! cached list of visible entities in draw order and what it is valid for
+    QList<RObject::Id> orderedIds;
+    RBox orderedIdsBox;
+    int orderedIdsVersion;
+    bool orderedIdsValid;
+
     QList<RGraphicsViewWorker*> workers;
     RGraphicsViewWorker* decorationWorker;
 };

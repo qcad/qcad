@@ -44,6 +44,7 @@
 
 RGraphicsSceneQt::RGraphicsSceneQt(RDocumentInterface& documentInterface) :
     RGraphicsScene(documentInterface),
+    drawablesVersion(0),
     decorating(false),
     screenBasedLinetypesOverride(false) {
 
@@ -940,12 +941,14 @@ void RGraphicsSceneQt::unexportEntity(REntity::Id entityId) {
     if (!exportToPreview) {
         drawables.remove(entityId);
         clipRectangles.remove(entityId);
+        drawablesVersion++;
     }
 }
 
 void RGraphicsSceneQt::deleteDrawables() {
     drawables.clear();
     clipRectangles.clear();
+    drawablesVersion++;
 
     previewDrawables.clear();
     previewClipRectangles.clear();
@@ -1090,6 +1093,7 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
         else {
             drawables.insert(entityId, QList<RGraphicsSceneDrawable>() << drawable);
         }
+        drawablesVersion++;
     }
 }
 
