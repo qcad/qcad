@@ -829,9 +829,10 @@ QList<RVector> REllipse::getPointCloud(double segmentLength) const {
  * Newton refinement of the parametric angle. Points in line with one of the two
  * axes and degenerate ellipses are handled separately.
  *
- * The iteration was contributed as a proof of concept by CVH, based on the
- * method of Carl Chatfield and a trigonometry free variant of it by
- * Adrian Stephens:
+ * The iteration was contributed as a proof of concept by CVH in the QCAD forum
+ * thread "REllipse.getVectorTo(p) exceptions (FS#2564)", based on the method of
+ * Carl Chatfield and a trigonometry free variant of it by Adrian Stephens:
+ * https://forum.qcad.org/t/rellipse-getvectorto-p-exceptions-fs-2564/9284
  * https://blog.chatfield.io/simple-method-for-distance-to-ellipse/
  * https://github.com/0xfaded/ellipse_demo/issues/1
  */
