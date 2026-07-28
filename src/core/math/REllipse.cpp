@@ -817,140 +817,223 @@ QList<RVector> REllipse::getPointCloud(double segmentLength) const {
     return pl.getPointCloud(segmentLength);
 }
 
+/**
+ * \return Vector from the closest point on this ellipse to the given point or
+ *      an invalid vector if there is no such point.
+ *
+ * \param limited True to only consider the ellipse arc from start to end
+ *      parameter, false to consider the full ellipse.
+ *
+ * The closest point is found with a fixed point iteration which exploits the
+ * evolute of the ellipse and needs no trigonometric functions, followed by a
+ * Newton refinement of the parametric angle. Points in line with one of the two
+ * axes and degenerate ellipses are handled separately.
+ *
+ * The iteration was contributed as a proof of concept by CVH in the QCAD forum
+ * thread "REllipse.getVectorTo(p) exceptions (FS#2564)", based on the method of
+ * Carl Chatfield and a trigonometry free variant of it by Adrian Stephens:
+ * https://forum.qcad.org/t/rellipse-getvectorto-p-exceptions-fs-2564/9284
+ * https://blog.chatfield.io/simple-method-for-distance-to-ellipse/
+ * https://github.com/0xfaded/ellipse_demo/issues/1
+ */
 RVector REllipse::getVectorTo(const RVector& point, bool limited, double strictRange) const {
     Q_UNUSED(strictRange)
 
-    RVector ret = RVector::invalid;
+    if (!point.isValid()) {
+        return RVector::invalid;
+    }
 
     double ang = getAngle();
-    //double dDistance = RMAXDOUBLE;
-    bool swap = false;
-    bool majorSwap = false;
+    double a = getMajorRadius();
+    double b = getMinorRadius();
 
+    // point in the coordinate system of the ellipse
+    // (centre at the origin, major axis along the X axis):
     RVector normalized = (point - center).get2D().rotate(-ang);
+
+    // ratios greater than one are handled by swapping the two axes and
+    // swapping the result back at the end:
+    bool axisSwap = false;
+    if (a < b) {
+        double dum = a;
+        a = b;
+        b = dum;
+        normalized = RVector(normalized.y, normalized.x);
+        axisSwap = true;
+    }
+
+    double u = normalized.x;
+    double v = normalized.y;
+
+    // closest point on the ellipse, in the coordinate system above:
+    RVector ret = RVector::invalid;
 
     // second candidate, used for points on the major axis where the two closest
     // points on the ellipse are mirrored across that axis:
     RVector retAlt = RVector::invalid;
 
-    // special case: point in line with major axis. The Newton iteration below
-    // cannot be used there (it divides by zero), so the closest point is
-    // determined directly:
-    if (fabs(normalized.getAngle()) < RS::AngleTolerance ||
-        fabs(normalized.getAngle()) > 2*M_PI-RS::AngleTolerance ||
-        fabs(normalized.getAngle()-M_PI) < RS::AngleTolerance) {
+    if (a < RS::PointTolerance) {
+        // ellipse without extent: the centre is the only point:
+        ret = RVector(0.0, 0.0);
+    }
 
-        double dA = getMajorRadius();
-        double dB = getMinorRadius();
-        double dU = normalized.x;
+    else if (b < a*1.0e-7) {
+        // ellipse collapsed into a line segment along the major axis. The
+        // iteration below cannot be evaluated accurately for such ratios and
+        // the segment is a closer approximation than what it would return:
+        ret = RVector(qBound(-a, u, a), 0.0);
+    }
 
+    else if (fabs(v) < a*RS::PointTolerance) {
+        // special case: point in line with the major axis (centre included).
+        //
         // the end point of the major axis is the closest point on the ellipse
         // only for points at or beyond its centre of curvature. Closer to the
         // centre of the ellipse the two closest points lie off the major axis
         // (for a point at the centre they are the end points of the minor axis):
-        double dLimit = (dA*dA - dB*dB) / dA;
+        double dLimit = (a*a - b*b) / a;
 
-        if (fabs(dU) >= dLimit) {
-            ret = RVector(dU>=0.0 ? dA : -dA, 0.0);
+        if (fabs(u) >= dLimit) {
+            ret = RVector(u>=0.0 ? a : -a, 0.0);
         }
         else {
-            double dX = (dA*dA * dU) / (dA*dA - dB*dB);
-            double dY = dB * sqrt(qMax(1.0 - (dX*dX)/(dA*dA), 0.0));
-            ret = RVector(dX, dY);
-            retAlt = RVector(dX, -dY);
+            double x = (a*a * u) / (a*a - b*b);
+            double y = b * sqrt(qMax(1.0 - (x*x)/(a*a), 0.0));
+            ret = RVector(x, y);
+            retAlt = RVector(x, -y);
         }
-        //dDistance = ret.distanceTo(normalized);
+    }
+
+    else if (fabs(u) < a*RS::PointTolerance) {
+        // special case: point in line with the minor axis (centre excluded
+        // above). The centre of curvature of an end point of the minor axis
+        // always lies beyond the centre of the ellipse, so the closer end
+        // point of the minor axis is the closest point on the ellipse:
+        ret = RVector(0.0, v>=0.0 ? b : -b);
     }
 
     else {
-        double dU = normalized.x;
-        double dV = normalized.y;
-        double dA = getMajorRadius();
-        double dB = getMinorRadius();
-        double dEpsilon = 1.0e-8;
-        // iteration maximum
-        int iMax = 32;
-        double rdX = 0.0;
-        double rdY = 0.0;
+        // general case: the fixed point iteration credited above, solved in the
+        // first quadrant for an ellipse scaled down by the major radius
+        // (major radius 1, minor radius rb):
+        double px = fabs(u) / a;
+        double py = fabs(v) / a;
+        double rb = b / a;
 
-        if (dA<dB) {
-            double dum = dA;
-            dA = dB;
-            dB = dum;
-            dum = dU;
-            dU = dV;
-            dV = dum;
-            majorSwap = true;
-        }
+        // the two factors of the evolute of the scaled down ellipse,
+        // (a*a - b*b)/a and (b*b - a*a)/b for a==1:
+        double ea = 1.0 - rb*rb;
+        double eb = rb - 1.0/rb;
 
-        if (dV<0.0) {
-            dV*=-1.0;
-            swap = true;
-        }
+        // parameter of the current approximation, as a (cos, sin) pair:
+        double tx = 0.7071067811865476;
+        double ty = 0.7071067811865476;
+        // current approximation of the closest point:
+        double nx = tx;
+        double ny = rb * ty;
 
-        // initial guess:
-        double dT = dB*(dV - dB);
+        for (int i=0; i<32; i++) {
+            double x = nx;
+            double y = ny;
 
-        // newton's method:
-        int i;
-        for (i = 0; i < iMax; i++) {
-            double dTpASqr = dT + dA*dA;
-            double dTpBSqr = dT + dB*dB;
-            double dInvTpASqr = 1.0/dTpASqr;
-            double dInvTpBSqr = 1.0/dTpBSqr;
-            double dXDivA = dA*dU*dInvTpASqr;
-            double dYDivB = dB*dV*dInvTpBSqr;
-            double dXDivASqr = dXDivA*dXDivA;
-            double dYDivBSqr = dYDivB*dYDivB;
-            double dF = dXDivASqr + dYDivBSqr - 1.0;
-            if (fabs(dF) < dEpsilon) {
-                // f(t0) is very close to zero:
-                rdX = dXDivA*dA;
-                rdY = dYDivB*dB;
+            // centre of curvature for the current parameter:
+            double ex = ea * tx*tx*tx;
+            double ey = eb * ty*ty*ty;
+
+            // vector from there to the current approximation
+            // (the radius of curvature) and to the given point:
+            double rx = x - ex;
+            double ry = y - ey;
+            double qx = px - ex;
+            double qy = py - ey;
+
+            double q = qx*qx + qy*qy;
+            if (q < RS::PointTolerance*RS::PointTolerance) {
+                // point coincides with the centre of curvature:
                 break;
             }
-            double dFDer = 2.0*(dXDivASqr*dInvTpASqr + dYDivBSqr*dInvTpBSqr);
 
-            double dRatio = dF/dFDer;
+            // scale the vector to the given point to the radius of curvature
+            // to get the next approximation:
+            double f = sqrt((rx*rx + ry*ry) / q);
+            tx = qBound(0.0, qx*f + ex, 1.0);
+            ty = qBound(0.0, (qy*f + ey) / rb, 1.0);
 
-            if ( fabs(dRatio) < dEpsilon ) {
-                // t1-t0 is very close to zero:
-                rdX = dXDivA*dA;
-                rdY = dYDivB*dB;
+            double t = sqrt(tx*tx + ty*ty);
+            if (t < RS::PointTolerance) {
                 break;
             }
-            dT += dRatio;
+            tx /= t;
+            ty /= t;
+
+            nx = tx;
+            ny = rb * ty;
+
+            if (fabs(nx-x) < 1.0e-10 && fabs(ny-y) < 1.0e-10) {
+                // close enough for the refinement below:
+                break;
+            }
         }
 
-        if (i == iMax) {
-            // failed to converge:
-            //dDistance = RMAXDOUBLE;
-            ret = RVector::invalid;
+        // refine the parametric angle t of the approximation with Newton's
+        // method on the derivative of the squared distance to the given point:
+        // h(t) = (b*b - a*a)/2 * sin(2t) + a*|u|*sin(t) - b*|v|*cos(t)
+        // (expanded below using sin(2t) = 2*sin(t)*cos(t) and
+        // cos(2t) = cos(t)^2 - sin(t)^2). This recovers full precision also for
+        // eccentric ellipses, for which the iteration above converges slowly:
+        double su = fabs(u);
+        double sv = fabs(v);
+        double bma = b*b - a*a;
+        double t = atan2(ty, tx);
+        for (int i=0; i<2; i++) {
+            double s = sin(t);
+            double c = cos(t);
+            double h = bma*s*c + a*su*s - b*sv*c;
+            double hd = bma*(c*c - s*s) + a*su*c + b*sv*s;
+            if (hd==0.0) {
+                break;
+            }
+            double dt = h/hd;
+            if (!RMath::isNormal(dt) || fabs(dt)>0.1) {
+                // implausible step, keep the result of the iteration above:
+                break;
+            }
+            t -= dt;
+            if (fabs(dt) < 1.0e-14) {
+                // converged:
+                break;
+            }
         }
-        else {
-            //double dDelta0 = rdX - dU;
-            //double dDelta1 = rdY - dV;
-            //dDistance = sqrt(dDelta0*dDelta0 + dDelta1*dDelta1);
-            ret = RVector(rdX, rdY);
+
+        ret = RVector(a*cos(t), b*sin(t));
+
+        // mirror the result back into the quadrant of the given point:
+        if (u < 0.0) {
+            ret.x = -ret.x;
+        }
+        if (v < 0.0) {
+            ret.y = -ret.y;
         }
     }
 
     if (ret.isValid()) {
-        if (swap) {
-            ret.y*=-1.0;
-        }
-        if (majorSwap) {
+        if (axisSwap) {
             double dum = ret.x;
             ret.x = ret.y;
             ret.y = dum;
+            if (retAlt.isValid()) {
+                dum = retAlt.x;
+                retAlt.x = retAlt.y;
+                retAlt.y = dum;
+            }
         }
         ret = (ret.rotate(ang) + center);
 
         if (limited) {
             double a1 = center.getAngleTo(getStartPoint());
             double a2 = center.getAngleTo(getEndPoint());
-            double a = center.getAngleTo(ret);
-            if (!RMath::isAngleBetween(a, a1, a2, reversed)) {
+            double aRet = center.getAngleTo(ret);
+            if (!RMath::isAngleBetween(aRet, a1, a2, reversed)) {
                 ret = RVector::invalid;
 
                 // the mirrored closest point may still be on this ellipse arc:
@@ -963,25 +1046,6 @@ RVector REllipse::getVectorTo(const RVector& point, bool limited, double strictR
             }
         }
     }
-
-    /*
-    if (dist!=NULL) {
-        if (ret.valid) {
-            *dist = dDistance;
-        } else {
-            *dist = RS_MAXDOUBLE;
-        }
-    }
-
-    if (entity!=NULL) {
-        if (ret.valid) {
-            *entity = this;
-        }
-        else {
-            *entity = NULL;
-        }
-    }
-    */
 
     return point - ret;
 }
