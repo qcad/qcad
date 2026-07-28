@@ -253,14 +253,7 @@ public:
     double getDistanceTo(const RVector& point) const;
 
     void addPoint(const RVector& position);
-    bool hasPoints();
-    /**
-     * Const overload. The non const one is kept as it is: it is part of the
-     * exported interface and referenced by the script bindings.
-     */
-    bool hasPoints() const {
-        return points.count()!=0;
-    }
+    bool hasPoints() const;
     void setPoints(const QList<RVector>& p);
     QList<RVector> getPoints() const;
 
