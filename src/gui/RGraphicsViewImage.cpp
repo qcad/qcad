@@ -1597,11 +1597,12 @@ void RGraphicsViewImage::paintEntityThread(RGraphicsViewWorker* worker, RObject:
     }
 
     // paint drawables (painter paths, texts, images):
-    QListIterator<RGraphicsSceneDrawable> i(*drawables);
-    while (i.hasNext()) {
-        RGraphicsSceneDrawable drawable = i.next();
-
-        paintDrawableThread(worker, drawable, clipRectangle, preview);
+    // note: the drawables are used in place and not copied: copying a drawable
+    // copies its painter path, its points and its original shapes, which is
+    // by far the most expensive part of iterating them
+    // (paintDrawableThread only reads from the drawable):
+    for (int k=0; k<drawables->length(); k++) {
+        paintDrawableThread(worker, (*drawables)[k], clipRectangle, preview);
     }
 }
 
