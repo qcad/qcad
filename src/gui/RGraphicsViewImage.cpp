@@ -1837,24 +1837,40 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
     }
 
     // painter path:
-    RPainterPath path = drawable.getPainterPath();
-    if (!path.isSane()) {
+    // the path of the drawable is only copied if it has to be transformed:
+    // copying a RPainterPath copies its elements, its points and its original
+    // shapes, and for most drawables neither a pixel unit scale nor an offset
+    // applies. Everything below only reads from the path.
+    const RPainterPath* pathPtr = &drawable.getPainterPath();
+    if (!pathPtr->isSane()) {
         return;
     }
 
-    if (drawable.getPixelUnit() || path.getPixelUnit()) {
-        // path is displayed in pixels, not drawing unit:
-        //RVector sp = path.getStartPoint();
-        RVector sp = path.getBoundingBox().getCenter();
-        path.move(-sp);
-        double dpr = getDevicePixelRatio();
-        double f = 1/factor*dpr;
-        path.scale(f,f);
-        path.move(sp);
+    RPainterPath transformedPath;
+    bool pixelUnit = drawable.getPixelUnit() || pathPtr->getPixelUnit();
+    RVector drawableOffset = drawable.getOffset();
+
+    if (pixelUnit || !drawableOffset.isZero() || !paintOffset.isZero()) {
+        transformedPath = *pathPtr;
+
+        if (pixelUnit) {
+            // path is displayed in pixels, not drawing unit:
+            RVector sp = transformedPath.getBoundingBox().getCenter();
+            transformedPath.move(-sp);
+            double dpr = getDevicePixelRatio();
+            double f = 1/factor*dpr;
+            transformedPath.scale(f,f);
+            transformedPath.move(sp);
+        }
+
+        transformedPath.move(drawableOffset);
+        transformedPath.move(paintOffset);
+
+        pathPtr = &transformedPath;
     }
 
-    path.move(drawable.getOffset());
-    path.move(paintOffset);
+    const RPainterPath& path = *pathPtr;
+
     RBox pathBB = path.getBoundingBox();
 
     // additional bounding box check for painter paths that are
