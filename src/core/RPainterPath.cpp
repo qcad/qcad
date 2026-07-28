@@ -606,7 +606,7 @@ void RPainterPath::addPoint(const RVector& position) {
 }
 
 
-bool RPainterPath::hasPoints() {
+bool RPainterPath::hasPoints() const {
     return points.count()!=0;
 }
 

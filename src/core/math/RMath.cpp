@@ -121,9 +121,7 @@ double RMath::pow(double x, double y) {
 /**
  * \return true if v is non NaN and not Inf.
  */
-bool RMath::isNormal(double v) {
-    return isSane(v);
-}
+
 
 /**
  * \return true if v is NaN.
@@ -152,9 +150,7 @@ bool RMath::isInf(double v) {
 #endif
 }
 
-bool RMath::isSane(double v) {
-    return !isNaN(v) && !isInf(v);
-}
+
 
 /**
  * Evaluates the given mathematical expression and returns the result.
