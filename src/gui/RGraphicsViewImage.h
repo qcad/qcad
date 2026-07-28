@@ -482,6 +482,9 @@ protected:
 
     bool showOnlyPlottable;
 
+    //! cached per update: constant while one update is rendered
+    bool editingWorkingSet;
+
     QList<RGraphicsViewWorker*> workers;
     RGraphicsViewWorker* decorationWorker;
 };

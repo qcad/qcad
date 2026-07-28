@@ -63,6 +63,7 @@ RGraphicsViewImage::RGraphicsViewImage(QObject* parent)
       drawingScale(1.0),
       alphaEnabled(false),
       showOnlyPlottable(false),
+      editingWorkingSet(false),
       decorationWorker(NULL) {
 
     currentScale = 1.0;
@@ -1168,6 +1169,10 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
     colorCorrectionDisableForPrinting = RSettings::getColorCorrectionDisableForPrinting();
     colorThreshold = RSettings::getColorThreshold();
 
+    // constant while this update is rendered: querying it per drawable is
+    // expensive (document variables lookup with string construction):
+    editingWorkingSet = document->isEditingWorkingSet();
+
     updateTextHeightThreshold();
 
     //qDebug() << "RGraphicsViewImage::paintEntities: colorCorrection: " << colorCorrection;
@@ -1587,8 +1592,7 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
 
     bool workingSet = true;
     if (!isPrintingOrExporting() && !preview) {
-        RDocument* doc = getDocument();
-        if (doc->isEditingWorkingSet()) {
+        if (editingWorkingSet) {
             if (!drawable.isWorkingSet()) {
                 // fade out entities not in working set:
                 workingSet = false;
