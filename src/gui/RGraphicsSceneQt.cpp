@@ -952,8 +952,9 @@ void RGraphicsSceneQt::deleteDrawables() {
 }
 
 QList<RGraphicsSceneDrawable> RGraphicsSceneQt::getDrawablesList(REntity::Id entityId) {
-    if (drawables.contains(entityId)) {
-        return drawables[entityId];
+    QMap<RObject::Id, QList<RGraphicsSceneDrawable> >::const_iterator it = drawables.constFind(entityId);
+    if (it!=drawables.constEnd()) {
+        return it.value();
     }
     return QList<RGraphicsSceneDrawable>();
 }
@@ -963,9 +964,11 @@ QList<RGraphicsSceneDrawable> RGraphicsSceneQt::getDrawablesList(REntity::Id ent
  * given ID.
  */
 QList<RGraphicsSceneDrawable>* RGraphicsSceneQt::getDrawables(REntity::Id entityId) {
-    // TODO: check should not be necessary:
-    if (drawables.contains(entityId)) {
-        return &drawables[entityId];
+    // one lookup instead of two: this is called for every entity of every
+    // frame, contains() followed by operator[] walks the map twice:
+    QMap<RObject::Id, QList<RGraphicsSceneDrawable> >::iterator it = drawables.find(entityId);
+    if (it!=drawables.end()) {
+        return &it.value();
     }
 
     return NULL;
@@ -982,13 +985,15 @@ bool RGraphicsSceneQt::hasClipRectangleFor(REntity::Id entityId, bool preview) c
 
 RBox RGraphicsSceneQt::getClipRectangle(REntity::Id entityId, bool preview) const {
     if (preview) {
-        if (previewClipRectangles.contains(entityId)) {
-            return previewClipRectangles.value(entityId);
+        QMap<RObject::Id, RBox>::const_iterator it = previewClipRectangles.constFind(entityId);
+        if (it!=previewClipRectangles.constEnd()) {
+            return it.value();
         }
     }
     else {
-        if (clipRectangles.contains(entityId)) {
-            return clipRectangles.value(entityId);
+        QMap<RObject::Id, RBox>::const_iterator it = clipRectangles.constFind(entityId);
+        if (it!=clipRectangles.constEnd()) {
+            return it.value();
         }
     }
 
@@ -1104,8 +1109,9 @@ QList<REntity::Id> RGraphicsSceneQt::getPreviewEntityIds() {
 }
 
 QList<RGraphicsSceneDrawable>* RGraphicsSceneQt::getPreviewDrawables(RObject::Id entityId) {
-    if (previewDrawables.contains(entityId)) {
-        return &previewDrawables[entityId];
+    QMap<RObject::Id, QList<RGraphicsSceneDrawable> >::iterator it = previewDrawables.find(entityId);
+    if (it!=previewDrawables.end()) {
+        return &it.value();
     }
     return NULL;
 }
