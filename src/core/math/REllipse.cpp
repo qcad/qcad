@@ -817,6 +817,24 @@ QList<RVector> REllipse::getPointCloud(double segmentLength) const {
     return pl.getPointCloud(segmentLength);
 }
 
+/**
+ * \return Vector from the closest point on this ellipse to the given point or
+ *      an invalid vector if there is no such point.
+ *
+ * \param limited True to only consider the ellipse arc from start to end
+ *      parameter, false to consider the full ellipse.
+ *
+ * The closest point is found with a fixed point iteration which exploits the
+ * evolute of the ellipse and needs no trigonometric functions, followed by a
+ * Newton refinement of the parametric angle. Points in line with one of the two
+ * axes and degenerate ellipses are handled separately.
+ *
+ * The iteration was contributed as a proof of concept by CVH, based on the
+ * method of Carl Chatfield and a trigonometry free variant of it by
+ * Adrian Stephens:
+ * https://blog.chatfield.io/simple-method-for-distance-to-ellipse/
+ * https://github.com/0xfaded/ellipse_demo/issues/1
+ */
 RVector REllipse::getVectorTo(const RVector& point, bool limited, double strictRange) const {
     Q_UNUSED(strictRange)
 
@@ -894,18 +912,9 @@ RVector REllipse::getVectorTo(const RVector& point, bool limited, double strictR
     }
 
     else {
-        // general case:
-        //
-        // fixed point iteration which exploits the evolute of the ellipse and
-        // needs no trigonometric functions, followed by a Newton refinement of
-        // the parametric angle. Contributed by CVH, based on the method of
-        // Carl Chatfield and a trigonometry free variant of it by
-        // Adrian Stephens:
-        // https://blog.chatfield.io/simple-method-for-distance-to-ellipse/
-        // https://github.com/0xfaded/ellipse_demo/issues/1
-
-        // solved in the first quadrant, for an ellipse scaled down by the major
-        // radius (major radius 1, minor radius rb):
+        // general case: the fixed point iteration credited above, solved in the
+        // first quadrant for an ellipse scaled down by the major radius
+        // (major radius 1, minor radius rb):
         double px = fabs(u) / a;
         double py = fabs(v) / a;
         double rb = b / a;
