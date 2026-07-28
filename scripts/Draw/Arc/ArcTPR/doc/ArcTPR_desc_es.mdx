@@ -1,0 +1,2 @@
+Dibuja un arco con un radio determinado, tangente a una entidad y que pasa
+por un punto.

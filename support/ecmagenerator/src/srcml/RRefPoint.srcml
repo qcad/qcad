@@ -27,7 +27,14 @@
         <expr><name>Start</name>     = 0x010</expr>,        <comment type="block">/**&lt; Reference point is a start point */</comment>
         <expr><name>End</name>       = 0x020</expr>,        <comment type="block">/**&lt; Reference point is a start point */</comment>
         <expr><name>Arrow</name>     = 0x040</expr>,        <comment type="block">/**&lt; Reference point is a dimension arrow */</comment>
-        <expr><name>Selected</name>  = 0x080</expr>         <comment type="block">/**&lt; Reference point is selected */</comment>
+        <expr><name>Selected</name>  = 0x080</expr>,        <comment type="block">/**&lt; Reference point is selected */</comment>
+        <expr><name>Top</name>       = 0x100</expr>,        <comment type="block">/**&lt; Reference point is at the top of the bounding box */</comment>
+        <expr><name>VMiddle</name>   = 0x200</expr>,        <comment type="block">/**&lt; Reference point is at the vertical middle of the bounding box */</comment>
+        <expr><name>Bottom</name>    = 0x400</expr>,        <comment type="block">/**&lt; Reference point is at the bottom of the bounding box */</comment>
+        <expr><name>Left</name>      = 0x800</expr>,        <comment type="block">/**&lt; Reference point is at the left of the bounding box */</comment>
+        <expr><name>HMiddle</name>   = 0x1000</expr>,       <comment type="block">/**&lt; Reference point is at the horizontal middle of the bounding box */</comment>
+        <expr><name>Right</name>     = 0x2000</expr>,       <comment type="block">/**&lt; Reference point is at the right of the bounding box */</comment>
+        <expr><name>FromSnap</name>  = 0x4000</expr>        <comment type="block">/**&lt; Reference point originates from snap tool, not from entity */</comment>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Flags</argument>, <argument>Flag</argument>)</argument_list></macro>
 
@@ -64,6 +71,13 @@
     }</block></function>
     <function><type><name>void</name></type> <name>setTertiary</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RRefPoint</name>::<name>Tertiary</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isFromSnap</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RRefPoint</name>::<name>FromSnap</name></name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setFromSnap</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RRefPoint</name>::<name>FromSnap</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isIgnore</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{

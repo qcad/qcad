@@ -154,7 +154,7 @@ ModifyCorner.prototype.escapeEvent = function() {
 ModifyCorner.prototype.pickEntity = function(event, preview) {
     var di = this.getDocumentInterface();
     var doc = this.getDocument();
-    var entityId = this.getEntityId(event, preview);
+    var entityId = this.getEntityId(event, preview, false, true);
     var entity = doc.queryEntity(entityId);
     var pos = event.getModelPosition();
     var op;
@@ -300,7 +300,14 @@ ModifyCorner.prototype.pickCorner = function(event) {
     var doc = this.getDocument();
 
     // get closest entity:
-    var entityId1 = di.getClosestEntity(event.getRInputEvent());
+    var entityId1;
+    if (isFunction(event.getRInputEvent)) {
+        entityId1 = di.getClosestEntity(event.getRInputEvent());
+    }
+    else {
+        entityId1 = di.getClosestEntity(event);
+    }
+
     if (entityId1===RObject.INVALID_ID) {
         return false;
     }

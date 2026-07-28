@@ -1,0 +1,5 @@
+Brug denne kommando til at udskrive en tegning. Sørg for altid at skifte til
+udskriftsoversigten, før du udskriver, for at kontrollere, om tegningens skala
+og position er indstillet som ønsket.  
+Der vises en opsætningsdialog, før der udskrives noget. Brug denne dialog
+til at vælge printer og justere printerspecifikke indstillinger.

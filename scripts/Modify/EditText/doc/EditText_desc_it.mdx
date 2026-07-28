@@ -1,0 +1,2 @@
+Questo strumento può essere utilizzato per modificare entità di testo
+esistenti.

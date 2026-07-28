@@ -39,6 +39,7 @@ HatchFromSelectionTest04.prototype.test00 = function() {
     this.importFile('scripts/Draw/Hatch/HatchFromSelection/Tests/data/contour.dxf');
     this.selectAll();
     this.dlgStart();
+    this.dlgAppendCode("var fillType = dialog.findChild('FillType'); if (!isNull(fillType)) { fillType.currentIndex = 0; }");
     this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Type', 'HatchPattern')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Pattern', 'ANSI33')");
@@ -47,7 +48,11 @@ HatchFromSelectionTest04.prototype.test00 = function() {
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();
     this.clickOnWidget('MainWindow::MainToolsPanel::HatchToolsPanelButton');
-    this.clickOnWidget('MainWindow::HatchToolsPanel::HatchFromSelectionButton');
+    var button = 'MainWindow::HatchToolsPanel::HatchFromSelectionProButton';
+    if (isNull(objectFromPath(button))) {
+        button = 'MainWindow::HatchToolsPanel::HatchFromSelectionButton';
+    }
+    this.clickOnWidget(button);
     this.verifyDrawing('HatchFromSelectionTest04_000.dxf');
     this.tearDown();
     qDebug('finished HatchFromSelectionTest04.test00()');

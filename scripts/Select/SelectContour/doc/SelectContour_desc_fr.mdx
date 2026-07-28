@@ -1,0 +1,2 @@
+Sélectionne ou désélectionne les entités qui sont reliées entre elles et
+forment un contour (fermé ou ouvert).

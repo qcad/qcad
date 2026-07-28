@@ -1,0 +1,2 @@
+Utilice este menú para enviar un informe de error (problema) sobre QCAD (en
+línea).

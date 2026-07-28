@@ -92,6 +92,7 @@
 #include <QPlainTextEdit>
 #include <QPoint>
 #include <QPointF>
+#include <QPolygonF>
 #include <QPrinter>
 #include <QPrintDialog>
 #include <QProcess>
@@ -246,6 +247,7 @@ Q_DECLARE_METATYPE(QPixmap*)
 Q_DECLARE_METATYPE(QPlainTextEdit*)
 Q_DECLARE_METATYPE(QPoint*)
 Q_DECLARE_METATYPE(QPointF*)
+Q_DECLARE_METATYPE(QPolygonF*)
 Q_DECLARE_METATYPE(QLineF*)
 #if !defined(Q_OS_IOS)
 Q_DECLARE_METATYPE(QPrinter*)

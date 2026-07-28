@@ -1,0 +1,1 @@
+This tool makes sure that all block references in the drawing are shown.

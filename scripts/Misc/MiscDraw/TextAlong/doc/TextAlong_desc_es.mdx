@@ -1,0 +1,2 @@
+Utilice esta herramienta para dibujar texto a lo largo de una línea, arco o
+círculo.

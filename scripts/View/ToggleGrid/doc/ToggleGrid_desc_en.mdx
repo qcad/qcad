@@ -1,0 +1,1 @@
+Toggles the grid visibility of the current drawing.

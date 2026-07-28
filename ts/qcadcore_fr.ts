@@ -721,7 +721,7 @@
         <translation>Max extents</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+931"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Une référence de bloc circulaire (récursive) a été détectée :</translation>
     </message>
@@ -828,7 +828,7 @@
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Architecte tique</translation>
+        <translation>Graduation architecturale</translation>
     </message>
     <message>
         <location line="+1"/>

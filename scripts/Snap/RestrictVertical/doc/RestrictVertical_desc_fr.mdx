@@ -1,0 +1,2 @@
+Limite le curseur verticalement à la même position X que le point zéro
+relatif.

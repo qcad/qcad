@@ -1,0 +1,2 @@
+Zeichnet einen Kreisbogen mit gegebenem Zentrum, Punkt auf Kreislinie und
+Start- und Endwinkel.

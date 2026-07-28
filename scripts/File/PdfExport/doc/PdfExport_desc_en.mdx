@@ -1,0 +1,7 @@
+This tool exports the current drawing to a PDF file. Exporting to PDF is
+very similar to printing a drawing. You will most likely have to adjust
+your drawing scale and drawing position as well as page settings before
+exporting a drawing to PDF.  
+For this reason, QCAD automatically switches to the print preview when
+this tool is used. If the print preview does not match your expectations,
+cancel the export, adjust the page settings and start the PDF export again.

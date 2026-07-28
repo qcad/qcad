@@ -1,0 +1,2 @@
+To orodje meri natančno razdaljo med entiteto in točko, ki jo določi
+uporabnik.

@@ -39,6 +39,7 @@ ColorPreferences.initPreferences = function(pageWidget, calledByPrefDialog, docu
                 [ "ReferencePointColor", "#0000ac" ],
                 [ "SecondaryReferencePointColor", "#0080ac" ],
                 [ "TertiaryReferencePointColor", "#0040ac" ],
+                [ "SnapReferencePointColor", "#0040c8" ],
                 [ "StartReferencePointColor", "#c00020" ],
                 [ "EndReferencePointColor", "#0000ac" ],
                 [ "SelectionBoxColor", "#800000" ],

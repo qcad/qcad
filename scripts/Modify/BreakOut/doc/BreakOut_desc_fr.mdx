@@ -1,0 +1,2 @@
+Divise les entités en coupant un segment qui est limité par des entités qui
+se croisent.

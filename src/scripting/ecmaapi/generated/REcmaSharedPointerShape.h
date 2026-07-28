@@ -351,6 +351,9 @@
         roundCorners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getInnerMostContour
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         roundShapes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

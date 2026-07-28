@@ -1,0 +1,2 @@
+Narzędzie to umożliwia wygodne ukrycie wszystkich warstw jednocześnie. Może
+to być przydatne podczas pracy z rysunkiem o wielu warstwach.

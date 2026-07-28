@@ -1,0 +1,2 @@
+Gebruik dit functie om lijnen met een bepaalde hoek te maken. De lijn wordt
+meestal op de gewenste lengte getrimd nadat u deze hebt gemaakt.

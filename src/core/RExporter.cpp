@@ -321,6 +321,22 @@ void RExporter::setBrush(const QBrush& brush) {
 }
 
 QBrush RExporter::getBrush(const RPainterPath& path) {
+    // gradient fills carry their own gradient brush which is used as is
+    // (unless the entity is selected):
+    Qt::BrushStyle brushStyle = path.getBrush().style();
+    if (brushStyle==Qt::LinearGradientPattern ||
+        brushStyle==Qt::RadialGradientPattern ||
+        brushStyle==Qt::ConicalGradientPattern) {
+
+        QSharedPointer<REntity> e = getEntity();
+        if (e!=NULL && (e->isSelected() || e->isSelectedWorkingSet())) {
+            QBrush brush = currentBrush;
+            brush.setColor(RSettings::getSelectionColor());
+            return brush;
+        }
+        return path.getBrush();
+    }
+
     if (path.isFixedBrushColor()) {
         // brush is fixed color (text color given):
         QBrush brush = currentBrush;

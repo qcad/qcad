@@ -1,0 +1,2 @@
+Med dette værktøj kan du oprette kurver, der er parallelle med en ellipse og
+går gennem et bestemt punkt.

@@ -1,0 +1,2 @@
+Filmen indeholder alle værktøjer til at åbne, gemme, importere, eksportere
+og udskrive filer

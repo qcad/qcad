@@ -339,7 +339,3 @@ linux-g++* {
     # this might or might not be needed under Linux:
     LIBS += -lX11
 }
-
-!win32 {
-    include( ../../shared_ts.pri )
-}

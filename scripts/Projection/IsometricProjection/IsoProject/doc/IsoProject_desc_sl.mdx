@@ -1,0 +1,1 @@
+To orodje ustvari izometrično projekcijo iz trenutno označenega na risbi.

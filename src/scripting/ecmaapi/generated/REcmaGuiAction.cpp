@@ -321,6 +321,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getWidgetNamesStatic, "getWidgetNamesStatic");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getIconPath, "getIconPath");
+            
 
     // static properties:
     
@@ -6402,6 +6404,101 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGuiAction::getWidgetNames", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::getIconPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::getIconPath", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getIconPath";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RGuiAction::
+       getIconPath(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RGuiAction::
+       getIconPath(a0
+        ,
+    a1);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getIconPath().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::getIconPath", context, engine);
             return result;
         }
          QScriptValue REcmaGuiAction::toString

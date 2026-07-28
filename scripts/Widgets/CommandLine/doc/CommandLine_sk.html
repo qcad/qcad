@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Príkazový riadok</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/sk/index.php?page=scripts/Widgets/CommandLine/doc/CommandLine">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>Príkazový riadok</h2>
+<p class="toolinfo">
+<b>Panel s nástrojmi / ikona:</b>
+<br /><img src="../doc/CommandLine.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Ponuka:</b> <font face="courier new">Zobraziť &gt; Príkazový riadok</font>
+<br /><b>Skratka:</b> <font face="courier new">G, M</font>
+<br /><b>Príkazy:</b> <font face="courier new">gm</font>
+</p>
+</div>
+<h3>Popis</h3>
+<p>Príkazový riadok QCAD vám umožňuje spúšťať príkazy, zadávať súradnice alebo zadávať hodnoty ako vzdialenosti alebo polomery.</p>
+<h3>Zadávanie súradníc</h3>
+<p>Absolútne súradnice sa zadávajú vo formáte „x,y":</p>
+<p>40,5</p>
+<p>Relatívne súradnice sa zadávajú vo formáte „@x,y":</p>
+<p>@10,6</p>
+<p>Absolútne polárne súradnice sa zadávajú vo formáte „vzdialenosť&lt;uhol":</p>
+<p>10&lt;30</p>
+<p>Relatívne polárne súradnice sa zadávajú vo formáte „@vzdialenosť&lt;uhol":</p>
+<p>@10&lt;45</p>
+<p>Pri zadávaní súradníc alebo hodnôt možno použiť <a href="#expr">matematické výrazy</a> na výpočet súradnice na základe známych hodnôt. Napríklad súradnicu 10,5 možno zadať aj ako:</p>
+<p>5+5,30/6</p>
+<h3>Kalkulačka</h3>
+<p>Príkazový riadok možno použiť aj ako kalkulačku. Na to zadajte <a href="#expr">matematický výraz</a>, pred ktorým je znak rovná sa:</p>
+<p>=3+4 7</p>
+<p>Premenné možno použiť na uloženie hodnôt:</p>
+<p>=a=5+6 11 =a/2 5.5</p>
+<h3>Matematické výrazy</h3>
+<p>Dostupné matematické konštanty sú:</p>
+<p>PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2</p>
+<p>Dostupné matematické funkcie sú:</p>
+<p>abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt, trunc</p>
+<p>Väčšina týchto konštánt a funkcií sú štandardné funkcie ECMAScript (JavaScript) a dokumentované online. V štandardnom ECMAScript sú tieto funkcie súčasťou triedy Math, takže funkcia <em>abs</em> by sa musela napísať ako <em>Math.abs</em>. V príkazovom riadku QCAD môžete časť <em>Math.</em> vynechať pre pohodlie. Trigonometrické funkcie (sin, cos, tan, asin, acos, atan, atan2) prijímajú alebo vracajú uhly v stupňoch. Ak preferujete radiánové verzie týchto funkcií, použite namiesto toho pôvodné funkcie <em>Math.</em>.</p>
+<p>Funkcie <em>rad2deg</em> a <em>deg2rad</em> možno použiť na prevod uhlov medzi radiánmi a stupňami.</p></body>
+</html>

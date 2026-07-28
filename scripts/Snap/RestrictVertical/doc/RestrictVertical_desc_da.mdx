@@ -1,0 +1,2 @@
+Begrænser markøren lodret til den samme X-position som det relative
+nulpunkt.

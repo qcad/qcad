@@ -1,0 +1,1 @@
+Disegna ellissi con un dato raggio maggiore e minore.

@@ -1,0 +1,1 @@
+Vklopi ali izklopi prikaz.

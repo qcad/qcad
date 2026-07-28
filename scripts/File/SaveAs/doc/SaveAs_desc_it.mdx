@@ -1,0 +1,3 @@
+Salva il disegno corrente come nuovo file. La finestra di dialogo che viene
+visualizzata consente anche di scegliere il formato e la versione di formato
+che si desidera utilizzare per salvare il file.

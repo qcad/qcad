@@ -1,0 +1,2 @@
+Esta herramienta oculta todas las capas excepto la capa seleccionada
+(activa) en la lista de capas.

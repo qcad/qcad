@@ -1,0 +1,2 @@
+Meni Podatki ponuja seznam orodij za merjenje razdalj, površin ter drugih informacij iz risbe.  
+Nekatera orodja lahko po želji rezultat dodajo kot objekt na samo risbo.

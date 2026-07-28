@@ -1,0 +1,3 @@
+Omdøber den aktive blok. Den samme dialogboks vises som ved oprettelse af
+nye blokke. Blokreferencerne opdateres automatisk til at referere til den
+omdøbte blok.

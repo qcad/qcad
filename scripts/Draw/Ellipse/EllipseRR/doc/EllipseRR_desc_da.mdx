@@ -1,0 +1,1 @@
+Tegner ellipser med en angivet stor og lille radius.

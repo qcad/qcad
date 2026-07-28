@@ -1,0 +1,2 @@
+Använd det här verktyget för att rita text längs en linje, båge eller
+cirkel.

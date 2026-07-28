@@ -1,0 +1,3 @@
+You can delete the currently selected layer from the layer list with this
+command. Please note that all entities on that layer will be deleted as well.  
+Layer "0" can never be deleted.

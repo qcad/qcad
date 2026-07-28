@@ -11,6 +11,8 @@
             
                 #include <QSettings>
             
+                #include <QWidget>
+            
             
         // includes for base ecma wrapper classes
          void REcmaSettings::initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -164,6 +166,8 @@
             REcmaHelper::registerFunction(&engine, &ctor, getSecondaryReferencePointColor, "getSecondaryReferencePointColor");
             
             REcmaHelper::registerFunction(&engine, &ctor, getTertiaryReferencePointColor, "getTertiaryReferencePointColor");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getSnapReferencePointColor, "getSnapReferencePointColor");
             
             REcmaHelper::registerFunction(&engine, &ctor, getCrossHairColor, "getCrossHairColor");
             
@@ -402,6 +406,8 @@
             REcmaHelper::registerFunction(&engine, &ctor, getOpenGLMessages, "getOpenGLMessages");
             
             REcmaHelper::registerFunction(&engine, &ctor, useQml, "useQml");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getWidgetSelectionColor, "getWidgetSelectionColor");
             
 
     // static properties:
@@ -3484,6 +3490,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getTertiaryReferencePointColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getSnapReferencePointColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getSnapReferencePointColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getSnapReferencePointColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        RSettings::
+       getSnapReferencePointColor();
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getSnapReferencePointColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getSnapReferencePointColor", context, engine);
             return result;
         }
          QScriptValue
@@ -8720,6 +8765,60 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::useQml", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getWidgetSelectionColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getWidgetSelectionColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getWidgetSelectionColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QWidget * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QWidget *
+            a0 =
+            qobject_cast<
+            QWidget *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QColor'
+    QColor cppResult =
+        RSettings::
+       getWidgetSelectionColor(a0);
+        // return type: QColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getWidgetSelectionColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getWidgetSelectionColor", context, engine);
             return result;
         }
          QScriptValue REcmaSettings::toString

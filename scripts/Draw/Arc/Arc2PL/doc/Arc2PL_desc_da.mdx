@@ -1,0 +1,1 @@
+Tegner en bue ved hjælp af startpunktet, slutpunktet og buelængden.

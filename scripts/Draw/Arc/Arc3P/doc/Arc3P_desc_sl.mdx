@@ -1,0 +1,2 @@
+Ko je znana izhodiščna točka ter točka na krožnem loku,
+ lahko uporabite to orodje za konstruiranje krožnega loka.

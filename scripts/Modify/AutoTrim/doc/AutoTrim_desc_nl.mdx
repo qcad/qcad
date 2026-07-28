@@ -1,0 +1,2 @@
+Verkort of verlengd een object aan beide zijden tot de volgende beperkende
+objecten.

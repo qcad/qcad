@@ -1,0 +1,2 @@
+Alterna o anti-aliasing para o desenho atual. Com anti-aliasing, linhas
+oblíquas, arcos e textos são exibidos mais suavemente.

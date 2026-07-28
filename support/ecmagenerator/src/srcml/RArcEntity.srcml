@@ -187,6 +187,10 @@
         <return>return <expr><name>data</name>.<call><name>getSweep</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setSweep</name><parameter_list>(<param><decl><type><name>double</name></type> <name>sweep</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>setSweep</name><argument_list>(<argument><expr><name>sweep</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name><name>RS</name>::<name>Ending</name></name></type> <name>getTrimEnd</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name></decl></param>)</parameter_list> <block>{
         <return>return <expr><name>data</name>.<call><name>getTrimEnd</name><argument_list>(<argument><expr><name>trimPoint</name></expr></argument>, <argument><expr><name>clickPoint</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>

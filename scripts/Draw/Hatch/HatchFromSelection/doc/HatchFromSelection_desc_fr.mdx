@@ -1,0 +1,2 @@
+Cet outil remplit une zone entourée d'entités existantes avec un motif de
+hachures ou une couleur unie.

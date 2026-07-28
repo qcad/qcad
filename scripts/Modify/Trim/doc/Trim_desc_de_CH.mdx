@@ -1,0 +1,2 @@
+Verkürzt oder verlängert eine Linie, einen Kreisbogen oder einen
+Ellipsenbogen bis zu einem anderen Objekt.

@@ -1,0 +1,8 @@
+Snapt naar een van de negen referentiepunten van de begrenzingsbox rond de
+huidige selectie: de vier hoeken, de middelpunten van de vier randen of het
+centrum. Het punt dat zich het dichtst bij de muiscursor bevindt, wordt
+gebruikt.  
+Dit vanggereedschap is nuttig om een selectie te verplaatsen, te kopiëren of
+anderszins uit te lijnen ten opzichte van het raster of andere objecten,
+bijvoorbeeld om het centrum of een hoek van de selectie op een specifieke
+positie te plaatsen.

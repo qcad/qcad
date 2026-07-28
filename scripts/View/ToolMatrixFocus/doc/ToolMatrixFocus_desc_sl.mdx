@@ -1,0 +1,1 @@
+Ta ukaz aktivira polje za filtriranje (iskanje) matrike orodja za vnos.

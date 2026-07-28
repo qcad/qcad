@@ -1,0 +1,2 @@
+Com esta ferramenta é possível criar curvas paralelas a uma elipse e passar
+por um ponto especificado.

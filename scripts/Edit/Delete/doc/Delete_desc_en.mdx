@@ -1,0 +1,1 @@
+This tool deletes the entities that are currently selected.

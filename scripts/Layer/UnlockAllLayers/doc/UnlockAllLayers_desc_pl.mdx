@@ -1,0 +1,2 @@
+Narzędzie to umożliwia wygodne odblokowanie wszystkich warstw
+jednocześnie.

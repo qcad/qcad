@@ -60,6 +60,7 @@
 
 class QFont;
 class QSettings;
+class QWidget;
 
 /**
  * \ingroup core
@@ -135,6 +136,7 @@ public:
     static RColor getEndReferencePointColor();
     static RColor getSecondaryReferencePointColor();
     static RColor getTertiaryReferencePointColor();
+    static RColor getSnapReferencePointColor();
     static RColor getCrossHairColor();
     static RColor getCrossHairColorInactive();
     static RColor getGridColor();
@@ -326,6 +328,8 @@ public:
 
     static bool useQml();
 
+    static QColor getWidgetSelectionColor(const QWidget* w);
+
 private:
     static bool isInitialized();
     static void shortenRecentFiles();
@@ -347,6 +351,7 @@ private:
     static RColor* endReferencePointColor;
     static RColor* secondaryReferencePointColor;
     static RColor* tertiaryReferencePointColor;
+    static RColor* snapReferencePointColor;
     static RColor* crossHairColor;
     static RColor* crossHairColorInactive;
     static RColor* gridColor;

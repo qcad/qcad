@@ -1,0 +1,13 @@
+import SplineControlPoints01 from './SplineControlPoints01.png';
+import SplineControlPoints02 from './SplineControlPoints02.png';
+
+1. 在选项工具栏中选择样条的阶数。支持的阶数为 2（二次 b 样条）和 3（三次 b 样条）。阶数越高，曲线越"平滑"。  
+   请注意，根据定义，二次 b 样条至少需要 3 个控制点，而三次 b 样条至少有 4 个控制点。
+2. 如果要创建封闭样条，请在选项工具栏中选中"Closed"复选框。封闭样条是连续的闭环。
+3. 指定控制点。定义第三个（对于二次 b 样条）或第四个（对于三次 b 样条）控制点后，将显示预览。您可以再次单击选项工具栏中的"Undo"按钮来移除最后一个控制点。
+4. 设置最后一个点后，按 Escape 或单击鼠标右键以确认样条形状。
+5. 现在您可以创建另一个样条，或再次右击以终止工具。
+   两个开放样条（二次和三次）的示例：  
+   <Image src={SplineControlPoints01} alt="SplineControlPoints01" width={240} height={166} />  
+   两个封闭、周期性样条（二次和三次）的示例：  
+   <Image src={SplineControlPoints02} alt="SplineControlPoints02" width={288} height={166} />

@@ -1,0 +1,2 @@
+Dieses Kommando konstruiert einzelne Punkte. Punkte werden in der Zeichnung
+als kleine Kreuze dargestellt.

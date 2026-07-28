@@ -1,0 +1,2 @@
+Met deze tool kunt u één of meerdere parallelle curven maken met een
+bepaalde afstand tot een bestaande ellips.

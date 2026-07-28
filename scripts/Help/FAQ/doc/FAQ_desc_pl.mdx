@@ -1,0 +1,2 @@
+Wyświetla najczęściej zadawane pytania dotyczące QCAD w przeglądarce
+(online).

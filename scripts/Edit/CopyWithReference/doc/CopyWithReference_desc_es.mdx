@@ -1,0 +1,3 @@
+Copia la selección actual al portapapeles de QCAD. Esta herramienta permite
+especificar un punto de referencia que se utiliza para posicionar la selección
+al pegarla en un dibujo.

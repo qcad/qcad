@@ -1,0 +1,3 @@
+Klik op het raakpunt van een boog, cirkel of ellips. Dit geldt alleen bij
+het tekenen van lijnen. Het vangpunt is het raakpunt van een denkbeeldige lijn
+aan het relatieve nulpunt, dat raakt aan de geklikte boog of cirkel.

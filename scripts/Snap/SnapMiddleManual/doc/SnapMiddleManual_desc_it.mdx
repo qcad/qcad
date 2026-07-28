@@ -1,0 +1,3 @@
+Questo strumento consente di scattare in un punto che si trova a metà strada
+tra due punti. Questo è più comunemente usato per agganciare al centro di un
+rettangolo o poligono scegliendo due angoli diagonalmente opposti.

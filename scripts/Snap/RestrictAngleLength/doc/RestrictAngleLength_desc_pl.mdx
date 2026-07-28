@@ -1,0 +1,2 @@
+Ogranicza ruch kursora o kąt i odległość w stosunku do względnego punktu
+zerowego.

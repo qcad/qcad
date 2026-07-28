@@ -1,0 +1,3 @@
+Sparar den aktuella ritningen som en ny fil. I dialogrutan som visas kan du
+också välja vilket format och vilken formatversion du vill använda för att
+spara filen.

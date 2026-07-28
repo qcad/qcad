@@ -1158,6 +1158,13 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
                 }
             }
 
+            // fix too small spin boxes, Qt 6, macOS:
+            if (RS.getSystemId()==="osx" && RSettings.getQtVersion() >= 0x060000) {
+                if (isOfType(w, QSpinBox) && isOfType(targetWidget, QToolBar)) {
+                    w.minimumHeight = targetWidget.height-16;
+                }
+            }
+
             if (isOfType(w, RMathLineEdit) || isOfType(w, RMathComboBox)) {
                 WidgetFactory.initLineEditInfoTools(w);
             }

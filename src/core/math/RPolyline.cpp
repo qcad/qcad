@@ -1015,6 +1015,30 @@ RPolyline RPolyline::convertArcToLineSegmentsLength(double segmentLength) const 
     return ret;
 }
 
+RPolyline RPolyline::splitMajorArcs() const {
+    RPolyline ret;
+
+    QList<QSharedPointer<RShape> > segs = getExploded();
+    for (int i=0; i<segs.length(); i++) {
+        QSharedPointer<RShape> seg = segs[i];
+        if (seg->getShapeType()==RShape::Arc) {
+            QSharedPointer<RArc> arc = seg.dynamicCast<RArc>();
+            if (fabs(arc->getSweep())>M_PI) {
+                double midAngle = arc->getStartAngle() + arc->getSweep()/2.0;
+                ret.appendShape(RArc(arc->getCenter(), arc->getRadius(),
+                    arc->getStartAngle(), midAngle, arc->isReversed()));
+                ret.appendShape(RArc(arc->getCenter(), arc->getRadius(),
+                    midAngle, arc->getEndAngle(), arc->isReversed()));
+                continue;
+            }
+        }
+        ret.appendShape(*seg);
+    }
+
+    ret.autoClose();
+    return ret;
+}
+
 /**
  * \return A QPainterPath object that represents this polyline.
  */

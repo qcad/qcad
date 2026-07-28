@@ -1,0 +1,1 @@
+Taglia o estende una linea, un arco o un'ellisse ad un'altra entità.

@@ -1,0 +1,2 @@
+Benutzen Sie diese Funktion, um die aktuelle Ansicht der Zeichnung zu
+drucken.

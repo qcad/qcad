@@ -1,0 +1,2 @@
+Zeigt die letzte benutzte Ansicht an. Benutzen Sie dies um nach einem Auto
+Zoom wieder zur letzten Ansicht zurückzukehren.

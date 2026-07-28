@@ -1,0 +1,2 @@
+Beperkt de cursor verticaal of horizontaal tot dezelfde X of Y positie als
+het relatieve nulpunt.

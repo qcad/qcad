@@ -1,0 +1,2 @@
+Ritar spline-kurvor från kontrollpunkter. Icke-uniforma rationella B-Splines
+(NURBS) med homogena viktningsfaktorer är de enda splines som stöds.

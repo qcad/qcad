@@ -1,0 +1,2 @@
+Za pomocą tego narzędzia można utworzyć jeden lub kilka koncentrycznych
+okręgów o określonej odległości od istniejącego okręgu.

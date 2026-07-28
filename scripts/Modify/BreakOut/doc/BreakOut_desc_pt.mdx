@@ -1,0 +1,2 @@
+Divide entidades cortando um segmento que é limitado pela intersecção de
+entidades.

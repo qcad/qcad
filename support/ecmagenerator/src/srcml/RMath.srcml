@@ -117,11 +117,23 @@
 
     <function_decl><type><name>static</name> <name>double</name></type> <name>pow</name><parameter_list>(<param><decl><type><name>double</name></type> <name>x</name></decl></param>, <param><decl><type><name>double</name></type> <name>y</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function_decl><type><name>static</name> <name>bool</name></type> <name>isNormal</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isNaN</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isInf</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function_decl><type><name>static</name> <name>bool</name></type> <name>isSane</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \return True if v is neither NaN nor Inf.
+     *
+     * Inline: this is called for every coordinate of every path of every
+     * frame. std::isfinite is exactly the condition of !isNaN(v) &amp;&amp; !isInf(v)
+     * for all platform variants of those two.
+     */</comment>
+    <function><type><name>static</name> <name>bool</name></type> <name>isSane</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><call><name><name>std</name>::<name>isfinite</name></name><argument_list>(<argument><expr><name>v</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>bool</name></type> <name>isNormal</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><call><name>isSane</name><argument_list>(<argument><expr><name>v</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
 
     <function_decl><type><name>static</name> <name>double</name></type> <name>eval</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>expression</name></decl></param>, <param><decl><type><name>bool</name>*</type> <name>ok</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getError</name><parameter_list>()</parameter_list>;</function_decl>

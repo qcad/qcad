@@ -1,0 +1,6 @@
+Se presenta un cuadro de diálogo para seleccionar el archivo de salida.
+Después de especificar el nombre del archivo, un segundo diálogo le pedirá el
+tamaño del mapa de bits y el color de fondo preferido.  
+Tenga en cuenta que la exportación a mapas de bits con un tamaño muy
+grande puede llevar mucho tiempo, dependiendo del hardware. El tamaño máximo de
+los mapas de bits es ancho x alto ≤ 2'147'483'647.

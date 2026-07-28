@@ -19,6 +19,7 @@ HatchFromSelectionTest05.prototype.test00 = function() {
     TdbTest.clickOnWidget('MainWindow::CadToolBar::SelectToolsPanel::SelectAllButton');
     TdbTest.clickOnWidget('MainWindow::CadToolBar::SelectToolsPanel::BackButton');
     this.dlgStart();
+    this.dlgAppendCode("var fillType = dialog.findChild('FillType'); if (!isNull(fillType)) { fillType.currentIndex = 0; }");
     this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Type', 'HatchPattern')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Pattern', 'ANSI31')");
@@ -27,7 +28,11 @@ HatchFromSelectionTest05.prototype.test00 = function() {
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();
     this.clickOnWidget('MainWindow::MainToolsPanel::HatchToolsPanelButton');
-    this.clickOnWidget('MainWindow::HatchToolsPanel::HatchFromSelectionButton');
+    var button = 'MainWindow::HatchToolsPanel::HatchFromSelectionProButton';
+    if (isNull(objectFromPath(button))) {
+        button = 'MainWindow::HatchToolsPanel::HatchFromSelectionButton';
+    }
+    this.clickOnWidget(button);
     this.setZoom(10.248366013071895, new RVector(-20.5077, -13.4356, 0, true));
     var p = new RVector(75.052934, 24.559311);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

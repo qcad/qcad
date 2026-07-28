@@ -1,0 +1,3 @@
+Desmarca todas las entidades. Utilice esta herramienta para asegurarse de
+que no hay entidades seleccionadas. Alternativamente, también puede hacer clic
+en un área vacía de su dibujo.

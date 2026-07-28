@@ -1,0 +1,1 @@
+Breekt een gat uit een lijn, boog of cirkel.

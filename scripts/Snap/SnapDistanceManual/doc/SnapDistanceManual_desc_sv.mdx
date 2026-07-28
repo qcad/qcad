@@ -1,0 +1,10 @@
+Med det här verktyget kan du fånga en punkt som ligger på den imaginära
+linjen mellan två punkter på ett givet avstånd från den första punkten.  
+Det här fångaverktyget begränsar inte det inmatade avståndet, procenten
+eller bråkdelen. Om du anger ett avstånd som är större än avståndet mellan de
+två punkterna, en procentsats som är större än 100 eller en bråkdel som är
+större än 1,0 kan du fånga till en punkt som ligger bortom den andra punkten.  
+Negativa värden kan anges för att fånga till punkter som ligger bortom
+den första punkten.  
+Bråkdelar kan anges som decimaltal (0,5, 0,7) eller som bråkdelar (1/7,
+3/11).

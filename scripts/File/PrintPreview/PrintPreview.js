@@ -544,10 +544,10 @@ PrintPreviewImpl.prototype.showUiOptions = function(resume) {
     var action = RGuiAction.getByScriptFile("scripts/Edit/DrawingPreferences/DrawingPreferences.js");
     //widgets["ShowMoreOptions"].setDefaultAction(action);
     if (isFunction(widgets["ShowMoreOptions"].setIcon)) {
-        widgets["ShowMoreOptions"].setIcon(new QIcon(autoPath("scripts/Edit/DrawingPreferences/DrawingPreferences.svg")));
+        widgets["ShowMoreOptions"].setIcon(new QIcon(autoIconPath("scripts/Edit/DrawingPreferences/DrawingPreferences.svg")));
     }
     else {
-        widgets["ShowMoreOptions"].icon = new QIcon(autoPath("scripts/Edit/DrawingPreferences/DrawingPreferences.svg"));
+        widgets["ShowMoreOptions"].icon = new QIcon(autoIconPath("scripts/Edit/DrawingPreferences/DrawingPreferences.svg"));
     }
     if (isFunction(widgets["ShowMoreOptions"].setToolTip)) {
         widgets["ShowMoreOptions"].setToolTip(qsTr("Page Settings"));

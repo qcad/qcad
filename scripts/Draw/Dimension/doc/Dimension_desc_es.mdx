@@ -1,0 +1,6 @@
+Las cotas se utilizan para añadir medidas a un dibujo.  
+Las cotas suelen consistir en una etiqueta de texto y algunas líneas y
+flechas para indicar la ubicación precisa de la medida. La etiqueta de texto
+puede ir acompañada de indicaciones o símbolos de tolerancia. La barra de
+herramientas de opciones que se muestra mientras se crea una cota le ayuda a
+definir el contenido de la etiqueta de cota y sus tolerancias.

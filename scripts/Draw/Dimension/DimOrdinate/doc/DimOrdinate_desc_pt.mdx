@@ -1,0 +1,3 @@
+Esta ferramenta desenha uma dimensão de ordenado. As dimensões ordenadas
+indicam a coordenada X ou a coordenada Y de um elemento do desenho,
+relativamente a um ponto de origem.

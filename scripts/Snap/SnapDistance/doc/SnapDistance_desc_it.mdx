@@ -1,0 +1,2 @@
+Scatta in punti con una determinata distanza dal punto finale di linee o
+archi.

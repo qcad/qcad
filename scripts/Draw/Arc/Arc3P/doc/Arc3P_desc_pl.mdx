@@ -1,0 +1,2 @@
+Jeśli znasz punkt początkowy, końcowy i pośredni na linii łuku, możesz użyć
+tego narzędzia do narysowania łuku.

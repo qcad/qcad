@@ -18,6 +18,7 @@
  */
 #include "RDimStyleData.h"
 #include "RSettings.h"
+#include "RObject.h"
 
 QMap<RS::KnownVariable, QVariant> RDimStyleData::mapDefaults;
 //QList<RDimStyleData::RDimXVar> RDimStyleData::propertyVariables;
@@ -59,7 +60,9 @@ void RDimStyleData::initDefaults() {
     mapDefaults[RS::DIMADEC] = 0;
     mapDefaults[RS::DIMAZIN] = 2;
 
-    mapDefaults[RS::DIMBLK] = "";
+    mapDefaults[RS::DIMBLK] = RObject::INVALID_HANDLE;
+    mapDefaults[RS::DIMBLK1] = RObject::INVALID_HANDLE;
+    mapDefaults[RS::DIMBLK2] = RObject::INVALID_HANDLE;
 }
 
 QVariant RDimStyleData::getVariantDefault(RS::KnownVariable key) {

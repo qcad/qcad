@@ -1,0 +1,25 @@
+import TypeAuto from './TypeAuto.png';
+import TypeSegment from './TypeSegment.png';
+import TypeXLine from './TypeXLine.png';
+import TypeRay from './TypeRay.png';
+
+
+
+Jooned on kahe punktiga määratud sirged objektid. Joonetööriistad pakuvad joone konstrueerimiseks mitmesuguseid viise, näiteks alguspunktist lõpp-punktini, paralleelselt olemasoleva objektiga, puutujana ringidele või kaartele või risti teise joonega.
+
+### Joonetüübid {#type}
+
+Enamik joonetööriistu võimaldab valida valikute tööriistaribal loodava joone tüübi. Saadaolevad joonetüübid on:
+
+- Auto:
+  <Image src={TypeAuto} alt="TypeAuto" width={40} height={40} />
+  Loob automaatselt sama tüüpi joone nagu valitud teine joon. See kehtib paralleeljoone tööriista puhul.
+- Line Segment:
+  <Image src={TypeSegment} alt="TypeSegment" width={40} height={40} />
+  Loob joonelõike alguspunktist lõpp-punktini.
+- Infinite Line:
+  <Image src={TypeXLine} alt="TypeXLine" width={40} height={40} />
+  Loob lõpmatuid jooni, mis läbivad kaht antud punkti. Neid nimetatakse vahel X-joonteks või konstruktsioonijoonteks.
+- Rays:
+  <Image src={TypeRay} alt="TypeRay" width={40} height={40} />
+  Loob kiiri antud alguspunktist läbi teise punkti lõpmatu pikkusega.

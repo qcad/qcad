@@ -1,0 +1,2 @@
+Det här verktyget tar bort alla blockreferenser för det block som för
+närvarande är markerat i blocklistan.

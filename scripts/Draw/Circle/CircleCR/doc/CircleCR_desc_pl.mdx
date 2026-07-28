@@ -1,0 +1,1 @@
+Narzędzie to umożliwia tworzenie okręgów o danym środku i promieniu.

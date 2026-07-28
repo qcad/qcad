@@ -1,0 +1,13 @@
+De plak functie voegt de objecten in, die eerder naar het klembord zijn
+gekopieerd. Plakken is vooral handig om objecten over te brengen van de ene
+tekening naar de andere.  
+Alle lagen, die door de inhoud van het klembord worden gebruikt, worden in
+de lagenlijst van de huidige tekening geplakt. Bestaande lagen met dezelfde
+naam kunnen desgewenst worden overschreven (optie "lagen overschrijven" in de
+opties werkbalk).  
+Blokreferenties, die op het klembord staan, worden geplakt samen met de
+blokdefinities, waarnaar ze verwijzen. Blokken in de actuele tekening kunnen
+desgewenst worden overschreven ("blokken overschrijven" optie in de opties
+werkbalk).  
+De opties werkbalk biedt ook een aantal functies om de inhoud van het
+klembord te schalen, roteren of omdraaien tijdens het plakken.

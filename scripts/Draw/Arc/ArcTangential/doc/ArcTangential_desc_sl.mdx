@@ -1,0 +1,1 @@
+Nariše lok, ki je tangencialeno sklenjen na obstoječi lok ali črto.

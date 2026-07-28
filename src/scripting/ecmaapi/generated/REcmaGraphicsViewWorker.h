@@ -194,6 +194,9 @@
         ;static  QScriptValue
         fillRect
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        drawPolygon
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

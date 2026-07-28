@@ -1,0 +1,2 @@
+Tworzenie stycznych ze współrzędnej do istniejącego łuku, okręgu lub elipsy
+za pomocą tego narzędzia.

@@ -4,7 +4,7 @@ function init(basePath) {
 
     if (RSettings.getQtVersion()>=0x060000) {
         if (RS.getSystemId()==="osx") {
-            action.setDefaultShortcut(new QKeySequence(new QKeyCombination(Qt.ShiftModifier|Qt.MetaModifier, Qt.Key_Space)));
+            action.setDefaultShortcut(new QKeySequence(new QKeyCombination(Qt.ShiftModifier|Qt.MetaModifier, Qt.Key_Period)));
         }
         else {
             action.setDefaultShortcut(new QKeySequence(new QKeyCombination(Qt.ShiftModifier|Qt.ControlModifier, Qt.Key_Space)));
@@ -12,7 +12,7 @@ function init(basePath) {
     }
     else {
         if (RS.getSystemId()==="osx") {
-            action.setDefaultShortcut(new QKeySequence(Qt.ShiftModifier + Qt.MetaModifier + Qt.Key_Space));
+            action.setDefaultShortcut(new QKeySequence(Qt.ShiftModifier + Qt.MetaModifier + Qt.Key_Period));
         }
         else {
             action.setDefaultShortcut(new QKeySequence(Qt.ShiftModifier + Qt.ControlModifier + Qt.Key_Space));

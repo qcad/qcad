@@ -1,0 +1,2 @@
+This tool measures the exact distance between two points given by the
+user.

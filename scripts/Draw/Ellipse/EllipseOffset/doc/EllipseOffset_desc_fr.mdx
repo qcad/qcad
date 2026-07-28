@@ -1,0 +1,2 @@
+Avec cet outil, vous pouvez créer une ou plusieurs courbes parallèles avec
+une distance donnée par rapport à une ellipse existante.

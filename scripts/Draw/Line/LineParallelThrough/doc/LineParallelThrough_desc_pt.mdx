@@ -1,0 +1,3 @@
+Com esta ferramenta pode criar paralelos a linhas ou arcos concêntricos e
+círculos existentes. O arco ou círculo paralelo ou concêntrico passa por um
+determinado ponto.

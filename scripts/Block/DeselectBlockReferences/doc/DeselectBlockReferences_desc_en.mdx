@@ -1,0 +1,2 @@
+This tool deselects all block references of the block that is currently
+selected in the block list.

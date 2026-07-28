@@ -1,0 +1,2 @@
+Dette værktøj måler det område, der dækkes af en polygon, og dens
+omkreds.

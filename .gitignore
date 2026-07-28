@@ -11,6 +11,7 @@
 *.dll
 *.dll.manifest
 *.disabled
+*.prl
 
 # Compiled Static libraries
 *.lai

@@ -1,0 +1,2 @@
+Det här verktyget fyller ett område som omges av befintliga enheter med ett
+skraffermönster eller en enfärgad färg.

@@ -1,0 +1,2 @@
+Narzędzie to umożliwia tworzenie linii prostopadłych do istniejącej
+jednostki bazowej. Jednostka bazowa może być prostą, łukiem lub okręgiem.

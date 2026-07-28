@@ -1,0 +1,2 @@
+Utilize esta ferramenta para criar formas rectangulares a partir de dois
+cantos diagonalmente opostos.

@@ -1,0 +1,3 @@
+Crée des dimensions rotatives (linéaires). Les dimensions linéaires sont
+généralement utilisées pour mesurer des distances verticales ou horizontales
+mais peuvent aussi mesurer des distances avec n'importe quel autre angle.

@@ -1,0 +1,2 @@
+Este comando é usado para desenhar pontos únicos. Os pontos são visualmente
+representados por uma pequena cruz.

@@ -186,6 +186,10 @@ public:
         return data.getSweep();
     }
 
+    void setSweep(double sweep) {
+        data.setSweep(sweep);
+    }
+
     RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
         return data.getTrimEnd(trimPoint, clickPoint);
     }

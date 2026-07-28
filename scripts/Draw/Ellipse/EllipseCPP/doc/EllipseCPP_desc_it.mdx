@@ -1,0 +1,1 @@
+Disegna ellissi con un dato centro, asse maggiore e asse minore.

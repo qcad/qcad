@@ -1,0 +1,2 @@
+Esta herramienta reduce el factor de visualización actual. El mismo efecto
+también se puede conseguir girando la rueda del ratón hacia usted.

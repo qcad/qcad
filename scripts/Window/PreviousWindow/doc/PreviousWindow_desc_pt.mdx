@@ -1,0 +1,1 @@
+Esta ferramenta ativa a janela de desenho / tabulação aberta anterior.

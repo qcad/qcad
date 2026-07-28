@@ -1,0 +1,1 @@
+Esta ferramenta deselecciona todas as entidades da camada actual.

@@ -1,0 +1,2 @@
+Za pomocą tego narzędzia można tworzyć krzywe równoległe do elipsy i
+przechodzić przez określony punkt.

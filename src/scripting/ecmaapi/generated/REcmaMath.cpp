@@ -69,13 +69,13 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, pow, "pow");
             
-            REcmaHelper::registerFunction(&engine, &ctor, isNormal, "isNormal");
-            
             REcmaHelper::registerFunction(&engine, &ctor, isNaN, "isNaN");
             
             REcmaHelper::registerFunction(&engine, &ctor, isInf, "isInf");
             
             REcmaHelper::registerFunction(&engine, &ctor, isSane, "isSane");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isNormal, "isNormal");
             
             REcmaHelper::registerFunction(&engine, &ctor, eval, "eval");
             
@@ -457,56 +457,6 @@
             return result;
         }
          QScriptValue
-        REcmaMath::isNormal
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaMath::isNormal", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaMath::isNormal";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: double */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    double
-                    a0 =
-                    (double)
-                    
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        RMath::
-       isNormal(a0);
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RMath.isNormal().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaMath::isNormal", context, engine);
-            return result;
-        }
-         QScriptValue
         REcmaMath::isNaN
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -654,6 +604,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMath::isSane", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMath::isNormal
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMath::isNormal", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMath::isNormal";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RMath::
+       isNormal(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMath.isNormal().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMath::isNormal", context, engine);
             return result;
         }
          QScriptValue

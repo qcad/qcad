@@ -1,0 +1,25 @@
+import TypeAuto from './TypeAuto.png';
+import TypeSegment from './TypeSegment.png';
+import TypeXLine from './TypeXLine.png';
+import TypeRay from './TypeRay.png';
+
+
+
+Garis adalah entitas lurus yang didefinisikan oleh dua titik. Alat garis menawarkan berbagai cara untuk membangun garis, misalnya dari titik awal ke titik akhir, sejajar dengan entitas yang sudah ada, secara tangensial terhadap lingkaran atau busur, atau tegak lurus terhadap garis lain.
+
+### Tipe Garis {#type}
+
+Sebagian besar alat garis memungkinkan Anda memilih tipe garis yang akan dibuat pada bilah alat opsi. Tipe garis yang tersedia adalah:
+
+- Auto:
+  <Image src={TypeAuto} alt="TypeAuto" width={40} height={40} />
+  Secara otomatis membuat garis dengan tipe yang sama dengan garis lain yang dipilih. Ini berlaku untuk alat garis paralel.
+- Line Segment:
+  <Image src={TypeSegment} alt="TypeSegment" width={40} height={40} />
+  Membuat segmen garis dari titik awal ke titik akhir.
+- Infinite Line:
+  <Image src={TypeXLine} alt="TypeXLine" width={40} height={40} />
+  Membuat garis takterhingga yang melewati dua titik tertentu. Ini kadang-kadang disebut garis-X atau garis konstruksi.
+- Rays:
+  <Image src={TypeRay} alt="TypeRay" width={40} height={40} />
+  Membuat sinar dari titik awal tertentu, melalui titik lain dengan panjang takterhingga.

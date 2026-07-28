@@ -1,0 +1,2 @@
+Tworzy wymiary kątowe między dwiema liniami odniesienia, jak pokazano
+tutaj:

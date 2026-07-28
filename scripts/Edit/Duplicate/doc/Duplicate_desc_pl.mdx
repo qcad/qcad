@@ -1,0 +1,1 @@
+Narzędzie to powiela wybrane podmioty i zaznacza utworzoną kopię.

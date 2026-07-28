@@ -95,6 +95,8 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawRect</name><parameter_list>(<param><decl><type><name>const</name> <name>QRectF</name>&amp;</type> <name>rectangle</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>fillRect</name><parameter_list>(<param><decl><type><name>const</name> <name>QRectF</name>&amp;</type> <name>rectangle</name></decl></param>, <param><decl><type><name>const</name> <name>QBrush</name>&amp;</type> <name>brush</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawPolygon</name><parameter_list>(<param><decl><type><name>const</name> <name>QPolygonF</name>&amp;</type> <name>polygon</name></decl></param>)</parameter_list>;</function_decl>
+
 </public><protected>protected:
     <decl_stmt><decl><type><name>QPainter</name>*</type> <name>painter</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QImage</name></type> <name>image</name></decl>;</decl_stmt>

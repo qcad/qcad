@@ -1,0 +1,2 @@
+Använd det här verktyget för att skapa linjer med en given vinkel. Linjen
+trimmas vanligtvis till önskad längd efter att den skapats.

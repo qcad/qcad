@@ -1,0 +1,2 @@
+Selecteert alle objecten die momenteel niet zijn geselecteerd en
+deselecteert alle geselecteerde objecten.

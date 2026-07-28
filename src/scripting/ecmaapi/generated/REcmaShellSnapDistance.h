@@ -80,6 +80,11 @@
             );
         
     
+      QList < RRefPoint > getSnapReferencePoints(
+                
+            );
+        
+    
       QList < RObject::Id > getEntityIds(
                 
             );

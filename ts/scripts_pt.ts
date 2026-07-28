@@ -138,7 +138,7 @@
     <message>
         <location line="+7"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
-        <translation>Todos os nomes de incêndio ou produtos são marcas comerciais ou marcas comerciais registradas de seus respectivos proprietários.</translation>
+        <translation>Todos os nomes de marca ou produtos são marcas comerciais ou marcas comerciais registradas de seus respectivos proprietários.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -270,7 +270,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
         <source>Application Preferences</source>
         <translation>Preferências do aplicativo</translation>
     </message>
@@ -280,7 +280,7 @@
         <translation>Preferências do desenho</translation>
     </message>
     <message>
-        <location line="+326"/>
+        <location line="+328"/>
         <source>Apply preferences</source>
         <translation>Aplicar preferências</translation>
     </message>
@@ -357,7 +357,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
     <message>
         <location line="+24"/>
         <source>Point mass:</source>
-        <translation>Aponte a massa:</translation>
+        <translation>Ponto de massa:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -574,7 +574,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
     <message>
         <location line="+10"/>
         <source>The distance between the two points must be less than the arc length</source>
-        <translation>A distância entre les dois itens deve ser menor do que o comprimento do arco</translation>
+        <translation>A distância entre os dois pontos deve ser menor do que o comprimento do arco</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PL.ui" line="+17"/>
@@ -915,19 +915,19 @@ Do you wish to recover it?</source>
 Você deseja recuperá-lo?</translation>
     </message>
     <message>
-        <location line="+25"/>
-        <location line="+11"/>
-        <location line="+5"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+7"/>
         <source>Cannot rename file:</source>
         <translation>Não é possível renomear o arquivo:</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-25"/>
         <source>Moved autosave backup file to:</source>
         <translation>Movido o arquivo de gravação automática para:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+28"/>
         <source>Moved original file to:</source>
         <translation>Movido o arquivo original para:</translation>
     </message>
@@ -937,7 +937,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Não é possível excluir o arquivo:</translation>
     </message>
     <message>
-        <location line="-124"/>
+        <location line="-135"/>
         <source>Recover Files?</source>
         <translation>Recupere os arquivos?</translation>
     </message>
@@ -1134,12 +1134,12 @@ Você deseja recuperá-lo?</translation>
         <translation>Exportação Bitmap</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Size</source>
         <translation>Tamanho</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Width:</source>
         <translation>Largura:</translation>
     </message>
@@ -1149,28 +1149,48 @@ Você deseja recuperá-lo?</translation>
         <translation>Altura:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+33"/>
         <source>Pixels per drawing unit:</source>
         <translation>Pixels por unidade de desenho:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+280"/>
+        <source>Selection</source>
+        <translation>Seleção</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Export bounding box of selection</source>
         <translation>Exporte a área retangular em torno da seleção</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="-81"/>
         <source>Transparent</source>
         <translation>Transparente</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-271"/>
+        <source>Specify width and height:</source>
+        <translation>Especifique largura e altura:</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Specify resolution:</source>
+        <translation>Especifique resolução:</translation>
+    </message>
+    <message>
+        <location line="+225"/>
         <source>Color</source>
         <comment>Title of group box</comment>
         <translation>Cor</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Prevent white on white / black on black export</source>
+        <translation>Auto corrigir cores preto-no-preto e branco-no-branco</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Monochrome</source>
         <translation>Monocromático</translation>
     </message>
@@ -1196,7 +1216,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Suavização</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-197"/>
         <source>Margin</source>
         <translation>Margem</translation>
     </message>
@@ -1216,9 +1236,9 @@ Você deseja recuperá-lo?</translation>
         <translation>Adicione uma margem extra para compensar o peso da linha</translation>
     </message>
     <message>
-        <location line="-170"/>
+        <location line="+30"/>
         <source>Background</source>
-        <translation>Antecedentes</translation>
+        <translation>Fundo</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1234,7 +1254,7 @@ Você deseja recuperá-lo?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Tamanho de imagem inválido (largura x altura deve ser menor que %1)</translation>
     </message>
@@ -1330,7 +1350,7 @@ Você deseja recuperá-lo?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
         <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -2072,7 +2092,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation>Sorteio de encerramento...</translation>
+        <translation>Fechando o desenho...</translation>
     </message>
 </context>
 <context>
@@ -2313,7 +2333,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+33"/>
         <source>Convert:</source>
-        <translation>Capa:</translation>
+        <translation>Converter:</translation>
     </message>
 </context>
 <context>
@@ -2436,7 +2456,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/CrossInit.js" line="+2"/>
         <source>Centerline Cross</source>
-        <translation>Croce centrale</translation>
+        <translation>Cruz de linha central</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2815,7 +2835,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Ponto final do líder</translation>
+        <translation>Ponto final da linha de chamada</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
@@ -2963,7 +2983,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation>Praça</translation>
+        <translation>Quadrado</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3155,7 +3175,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation>Carrapato arquitetônico</translation>
+        <translation>Marca arquitetônica</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -3206,7 +3226,7 @@ Você deseja recuperá-lo?</translation>
         <location line="+32"/>
         <location line="+60"/>
         <source>Show trailing zeros</source>
-        <translation>Mostrar os zeros traiçoeiros</translation>
+        <translation>Mostrar os zeros à direita</translation>
     </message>
     <message>
         <location line="-50"/>
@@ -3658,7 +3678,7 @@ já se encontra na lista.</translation>
         <location line="+25"/>
         <location line="+23"/>
         <source>Odd field count.</source>
-        <translation>Contagem de campos estranha.</translation>
+        <translation>Contagem ímpar de campos.</translation>
     </message>
     <message>
         <location line="-655"/>
@@ -3740,7 +3760,7 @@ já se encontra na lista.</translation>
         <location line="+35"/>
         <location line="+150"/>
         <source>Angle Invalid.</source>
-        <translation>Angle Invalid.</translation>
+        <translation>Ângulo inválido.</translation>
     </message>
     <message>
         <location line="-527"/>
@@ -4202,18 +4222,18 @@ já se encontra na lista.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2133"/>
+        <location line="+2167"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-2132"/>
+        <location line="-2166"/>
         <source>Done</source>
         <translation>Concluído</translation>
     </message>
     <message>
-        <location line="+284"/>
-        <location line="+133"/>
+        <location line="+287"/>
+        <location line="+143"/>
         <source>Active Tool:</source>
         <translation>Ferramenta ativa:</translation>
     </message>
@@ -4253,7 +4273,7 @@ já se encontra na lista.</translation>
         <translation>A entidade está em uma camada trancada.</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+254"/>
         <source>Length:</source>
         <translation>Comprimento:</translation>
     </message>
@@ -5249,7 +5269,12 @@ já se encontra na lista.</translation>
         <translation>Camada adicional de FP:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Tintas sobre a seleção, imitando um carimbo de rolo</translation>
     </message>
@@ -5464,7 +5489,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation>Informação verbal. (Persistente sobre)</translation>
+        <translation>Informação detalhada. (persistente ligado)</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5550,14 +5575,6 @@ já se encontra na lista.</translation>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
         <translation>Apagar entidades Base *</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -6032,7 +6049,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+12"/>
         <source>Background:</source>
-        <translation>Antecedentes:</translation>
+        <translation>Fundo:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6135,6 +6152,11 @@ já se encontra na lista.</translation>
         <translation>Pontos de referência terciária:</translation>
     </message>
     <message>
+        <location line="+27"/>
+        <source>Snap reference points:</source>
+        <translation>Pontos de referência de salto:</translation>
+    </message>
+    <message>
         <location line="+30"/>
         <source>Snap Tools</source>
         <translation>Ferramentas de salto</translation>
@@ -6180,7 +6202,7 @@ já se encontra na lista.</translation>
         <translation>Borda da caixa de zoom:</translation>
     </message>
     <message>
-        <location line="-712"/>
+        <location line="-739"/>
         <source>Origin:</source>
         <translation>Origem:</translation>
     </message>
@@ -6218,7 +6240,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+7"/>
         <source>Enable pan gesture</source>
-        <translation>Habilitar gesto de panela</translation>
+        <translation>Habilitar gesto de deslocamento</translation>
     </message>
     <message>
         <location line="-193"/>
@@ -6253,7 +6275,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+14"/>
         <source>Panning threshold (px):</source>
-        <translation>Limar de panning:</translation>
+        <translation>Limiar de deslocamento:</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -6881,12 +6903,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+1"/>
         <source>Total hatched area:</source>
-        <translation>Área total de incubação:</translation>
+        <translation>Área total hachurada:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation>Área de incubação diferencial:</translation>
+        <translation>Área hachurada diferencial:</translation>
     </message>
     <message>
         <location line="-68"/>
@@ -6955,7 +6977,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Forma livre do laço da hachura.</translation>
+        <translation>Forma não tratada do laço da hachura.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7700,12 +7722,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Entidades coladas ao ar livre&lt;br&gt;horizontalmente</translation>
+        <translation>Inverta as entidades coladas&lt;br&gt;horizontalmente</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Entidades coladas ao acaso&lt;br&gt;verticalmente</translation>
+        <translation>Inverta as entidades coladas&lt;br&gt;verticalmente</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -7963,7 +7985,7 @@ já se encontra na lista.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+62"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+71"/>
         <source>Language Settings</source>
         <translation>Configurações de linguagem</translation>
     </message>
@@ -8817,6 +8839,16 @@ já se encontra na lista.</translation>
         <source>Draw vertical line</source>
         <translation>Traçar linha vertical</translation>
     </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineVertical/LineVertical.ui" line="+17"/>
+        <source>Length:</source>
+        <translation>Comprimento:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Reference Point:</source>
+        <translation>Ponto de referência:</translation>
+    </message>
 </context>
 <context>
     <name>LinetypeMode</name>
@@ -8852,7 +8884,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+35"/>
         <source>Scale of linetypes matches the scale of each viewport</source>
-        <translation>Escala de tipos de linha corresponde à escala de âncora de vista</translation>
+        <translation>Escala de tipos de linha corresponde à escala de cada janela de visualização</translation>
     </message>
 </context>
 <context>
@@ -9018,7 +9050,7 @@ já se encontra na lista.</translation>
 <context>
     <name>MiscBlock</name>
     <message>
-        <location filename="../scripts/Misc/MiscBlock/MiscBlock.js" line="+51"/>
+        <location filename="../scripts/Misc/MiscBlock/MiscBlock.js" line="+52"/>
         <source>Misc</source>
         <translation>Miscelânea</translation>
     </message>
@@ -9036,7 +9068,7 @@ já se encontra na lista.</translation>
 <context>
     <name>MiscDevelopment</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/MiscDevelopment.js" line="+51"/>
+        <location filename="../scripts/Misc/MiscDevelopment/MiscDevelopment.js" line="+52"/>
         <source>Misc</source>
         <translation>Miscelânea</translation>
     </message>
@@ -9054,7 +9086,7 @@ já se encontra na lista.</translation>
 <context>
     <name>MiscDraw</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/MiscDraw.js" line="+52"/>
+        <location filename="../scripts/Misc/MiscDraw/MiscDraw.js" line="+53"/>
         <source>Misc</source>
         <translation>Miscelânea</translation>
     </message>
@@ -9077,7 +9109,7 @@ já se encontra na lista.</translation>
 <context>
     <name>MiscIO</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MiscIO.js" line="+51"/>
+        <location filename="../scripts/Misc/MiscIO/MiscIO.js" line="+52"/>
         <source>Misc</source>
         <translation>Miscelânea</translation>
     </message>
@@ -9095,7 +9127,7 @@ já se encontra na lista.</translation>
 <context>
     <name>MiscInformation</name>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+41"/>
+        <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+42"/>
         <source>Misc</source>
         <translation>Miscelânea</translation>
     </message>
@@ -9113,7 +9145,7 @@ já se encontra na lista.</translation>
 <context>
     <name>MiscModify</name>
     <message>
-        <location filename="../scripts/Misc/MiscModify/MiscModify.js" line="+44"/>
+        <location filename="../scripts/Misc/MiscModify/MiscModify.js" line="+45"/>
         <source>Misc</source>
         <translation>Miscelânea</translation>
     </message>
@@ -9131,7 +9163,7 @@ já se encontra na lista.</translation>
 <context>
     <name>MiscSelect</name>
     <message>
-        <location filename="../scripts/Misc/MiscSelect/MiscSelect.js" line="+52"/>
+        <location filename="../scripts/Misc/MiscSelect/MiscSelect.js" line="+53"/>
         <source>Misc</source>
         <translation>Miscelânea</translation>
     </message>
@@ -9287,7 +9319,7 @@ já se encontra na lista.</translation>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
         <translation>Abrindo o desenho:</translation>
     </message>
@@ -9535,7 +9567,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+10"/>
         <source>Left:</source>
-        <translation>Comprimento:</translation>
+        <translation>Esquerda:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9806,7 +9838,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>&quot;Power center&quot; de três círculos</translation>
+        <translation>Centro radical de três círculos</translation>
     </message>
 </context>
 <context>
@@ -10155,7 +10187,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+20"/>
         <source>Print Crop Marks</source>
-        <translation>Imprimir marcas de culturas</translation>
+        <translation>Imprimir marcas de corte</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -10189,12 +10221,12 @@ já se encontra na lista.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1715"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1736"/>
         <source>*VARIES*</source>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1483"/>
+        <location line="-1504"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10244,17 +10276,17 @@ já se encontra na lista.</translation>
         <translation>Mostrar todas as propriedades</translation>
     </message>
     <message>
-        <location line="+818"/>
+        <location line="+839"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="-864"/>
+        <location line="-885"/>
         <source>Add custom property to selected objects</source>
         <translation>Adicione uma propriedade personalizada aos objetos selecionados</translation>
     </message>
     <message>
-        <location line="+186"/>
+        <location line="+207"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -10328,7 +10360,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Complexidade máxima para o cálculo automático do comprimento da portinhola:</translation>
+        <translation>Complexidade máxima para o cálculo automático do comprimento da hachura:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10931,7 +10963,7 @@ já se encontra na lista.</translation>
         <translation>Nenhum filtro de exportação foi encontrado. Abortando...</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+92"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>
@@ -11074,6 +11106,11 @@ já se encontra na lista.</translation>
         <source>Define factor using mouse cursor</source>
         <translation>Definir fator usando o cursor do mouse</translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
+        <source>Allow rounding of imaginary corner</source>
+        <translation>Permitir arredondamento de canto imaginário</translation>
+    </message>
 </context>
 <context>
     <name>ScaleOptions</name>
@@ -11200,13 +11237,10 @@ já se encontra na lista.</translation>
         <source>By Color</source>
         <translation>Por cor</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>Selecione todos os objetos de uma cor</translation>
+        <translation>Selecionar todos os objetos de uma cor</translation>
     </message>
 </context>
 <context>
@@ -11524,7 +11558,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZeroInit.js" line="+2"/>
         <source>Set &amp;Relative Zero</source>
-        <translation>Impostare il punto zero &amp;relativo</translation>
+        <translation>Defina o zero &amp;relativo</translation>
     </message>
 </context>
 <context>
@@ -11558,7 +11592,7 @@ já se encontra na lista.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Pelo menos dois pontos são idênticos.</translation>
@@ -12107,11 +12141,11 @@ já se encontra na lista.</translation>
     </message>
 </context>
 <context>
-    <name>SnapSelectionCenter</name>
+    <name>SnapSelection</name>
     <message>
-        <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
-        <source>Center of &amp;Selection</source>
-        <translation>Centro da &amp;seleção</translation>
+        <location filename="../scripts/Snap/SnapSelection/SnapSelectionInit.js" line="+2"/>
+        <source>&amp;Selection Reference Points</source>
+        <translation>&amp;Pontos de referência da seleção</translation>
     </message>
 </context>
 <context>
@@ -12306,7 +12340,7 @@ já se encontra na lista.</translation>
         <translation>Ficheiro</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+48"/>
         <source>Import SVG</source>
         <translation>Importar SVG</translation>
     </message>
@@ -12326,7 +12360,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Importação de SVG...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/SvgImport/SvgImport.js" line="-45"/>
+        <location filename="../scripts/File/SvgImport/SvgImport.js" line="-49"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>Importe um SVG</translation>
@@ -12361,9 +12395,19 @@ já se encontra na lista.</translation>
         <source>Import groups as layers</source>
         <translation>Importar grupos como camadas</translation>
     </message>
+    <message>
+        <location line="+13"/>
+        <source>Paths</source>
+        <translation>Caminhos</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import path lineweights</source>
+        <translation>Importar larguras de linha dos caminhos</translation>
+    </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
@@ -12549,12 +12593,12 @@ já se encontra na lista.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+251"/>
         <source>Default value:</source>
         <translation>Valor padrão:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+275"/>
         <source>&amp;Undo</source>
         <translation>&amp;Desfazer</translation>
     </message>
@@ -12614,12 +12658,12 @@ já se encontra na lista.</translation>
         <translation>&amp;Caracteres especiais...</translation>
     </message>
     <message>
-        <location line="+348"/>
+        <location line="+349"/>
         <source>Others...</source>
         <translation>Outros...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+140"/>
         <source>Degree</source>
         <translation>Grau</translation>
     </message>
@@ -12915,7 +12959,7 @@ já se encontra na lista.</translation>
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
         <translation>Geral</translation>
     </message>
@@ -13313,12 +13357,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+17"/>
         <source>Auto screen scale factor</source>
-        <translation>Fator de escala:</translation>
+        <translation>Fator de escala automático da tela</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Enable high DPI scaling</source>
-        <translation>Habilitar a tela de início</translation>
+        <translation>Ativar escalonamento de DPI elevado</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -13393,7 +13437,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+1"/>
         <source>Centimeter</source>
-        <translation>Centimetro</translation>
+        <translation>Centímetro</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13568,7 +13612,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+0"/>
         <source>Layout - Viewports</source>
-        <translation>Disposição - âncoras de vista</translation>
+        <translation>Layout - Janelas de visualização</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13584,7 +13628,7 @@ já se encontra na lista.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
         <source>Dropped data not supported</source>
         <translation>Dados inseridos não suportados</translation>
     </message>
@@ -13615,7 +13659,7 @@ já se encontra na lista.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1168"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
         <source>Restore defaults</source>
         <translation>Restaurar inadimplências</translation>
     </message>
@@ -13682,7 +13726,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+25"/>
         <source>Square</source>
-        <translation>Praça</translation>
+        <translation>Quadrado</translation>
     </message>
     <message>
         <location line="-18"/>
@@ -13737,12 +13781,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+6"/>
         <source>Property Line</source>
-        <translation>Linha de imóveis</translation>
+        <translation>Linha de propriedade</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation>Assinatura 2</translation>
+        <translation>Subscrito 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13849,7 +13893,7 @@ já se encontra na lista.</translation>
         <location line="+13"/>
         <location line="+38"/>
         <source>Show trailing zeroes</source>
-        <translation>Mostrar os zeros traiçoeiros</translation>
+        <translation>Mostrar os zeros à direita</translation>
     </message>
     <message>
         <location line="-9"/>
@@ -13880,7 +13924,7 @@ já se encontra na lista.</translation>
         <location line="-28"/>
         <location line="+35"/>
         <source>Suppress trailing zeroes</source>
-        <translation>Suprimir os zeros traiçoeiros</translation>
+        <translation>Suprimir os zeros à direita</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -13935,13 +13979,13 @@ já se encontra na lista.</translation>
         <location line="+1"/>
         <location line="+35"/>
         <source>Suppress leading zeroes</source>
-        <translation>Suprimir os zeros condutores</translation>
+        <translation>Suprimir os zeros à esquerda</translation>
     </message>
     <message>
         <location line="-33"/>
         <location line="+35"/>
         <source>Suppress leading / trailing zeroes</source>
-        <translation>Suprimir os zeros condutores / traiçoeiros</translation>
+        <translation>Suprimir os zeros à esquerda / à direita</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -14491,12 +14535,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation>Âncoras de visão</translation>
+        <translation>Janelas de visualização</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation>Âncora de visão</translation>
+        <translation>Janela de visualização</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14571,7 +14615,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation>Âncora de vista 1</translation>
+        <translation>Janela de visualização 1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -14632,17 +14676,17 @@ já se encontra na lista.</translation>
     <message>
         <location line="-390"/>
         <source>Viewport 2</source>
-        <translation>Âncora de vista 2</translation>
+        <translation>Janela de visualização 2</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 3</source>
-        <translation>Âncora de vista 3</translation>
+        <translation>Janela de visualização 3</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 4</source>
-        <translation>Âncora de vista 4</translation>
+        <translation>Janela de visualização 4</translation>
     </message>
 </context>
 <context>

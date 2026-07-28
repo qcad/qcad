@@ -1,0 +1,2 @@
+Esta ferramenta mede a distância exata entre uma entidade e um ponto dado
+pelo usuário.

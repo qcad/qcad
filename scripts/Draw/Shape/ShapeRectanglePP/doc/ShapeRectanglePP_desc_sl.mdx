@@ -1,0 +1,1 @@
+Konstruira pravokotnike iz dveh nasproti si ležečih točk ogljišč.

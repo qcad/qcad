@@ -1,0 +1,1 @@
+Creates polygons with the center and middle point of one side.

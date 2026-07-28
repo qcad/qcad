@@ -1,0 +1,9 @@
+Przesuwanie oznacza przesuwanie (przewijanie) rysunku. Najszybszym sposobem
+jest użycie środkowego przycisku myszy i przesunięcie widoku w taki sam sposób,
+jak w przypadku przesuwania papieru: naciśnij środkowy przycisk myszy i
+przytrzymaj go podczas przesuwania rysunku. Jeśli mysz nie posiada środkowego
+przycisku myszy, można nacisnąć klawisz Control (Mac OS X: Command key) i
+zamiast tego użyć lewego przycisku myszy.  
+Alternatywnie można aktywować to narzędzie, a następnie przesuwać widok
+lewym przyciskiem myszy bez naciskania jakichkolwiek przycisków.  
+Kliknij prawym przyciskiem myszy, gdy skończysz.

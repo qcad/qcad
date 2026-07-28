@@ -1,0 +1,2 @@
+Selecteert of deselecteert alle objecten op dezelfde laag als een gekozen
+object.

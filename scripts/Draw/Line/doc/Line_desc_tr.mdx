@@ -1,0 +1,25 @@
+import TypeAuto from './TypeAuto.png';
+import TypeSegment from './TypeSegment.png';
+import TypeXLine from './TypeXLine.png';
+import TypeRay from './TypeRay.png';
+
+
+
+Çizgiler, iki noktayla tanımlanan düz varlıklardır. Çizgi araçları, örneğin bir başlangıç noktasından bir bitiş noktasına, mevcut bir varlığa paralel, dairelere veya yaylara teğetsel ya da başka bir çizgiye dik olarak bir çizgi oluşturmak için çeşitli yollar sunar.
+
+### Çizgi Türleri {#type}
+
+Çoğu çizgi aracı, seçenekler araç çubuğunda oluşturulacak çizgi türünü seçmenize olanak tanır. Kullanılabilir çizgi türleri şunlardır:
+
+- Auto:
+  <Image src={TypeAuto} alt="TypeAuto" width={40} height={40} />
+  Seçilen başka bir çizgiyle aynı türde bir çizgiyi otomatik olarak oluşturur. Bu, paralel çizgi aracı için geçerlidir.
+- Line Segment:
+  <Image src={TypeSegment} alt="TypeSegment" width={40} height={40} />
+  Bir başlangıç noktasından bir bitiş noktasına çizgi segmentleri oluşturur.
+- Infinite Line:
+  <Image src={TypeXLine} alt="TypeXLine" width={40} height={40} />
+  İki verilen noktadan geçen sonsuz çizgiler oluşturur. Bunlara bazen X-çizgileri veya yapı çizgileri denir.
+- Rays:
+  <Image src={TypeRay} alt="TypeRay" width={40} height={40} />
+  Belirli bir başlangıç noktasından, başka bir noktadan geçen ve sonsuz uzunlukta ışınlar oluşturur.

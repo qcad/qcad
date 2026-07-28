@@ -1,0 +1,2 @@
+Desenha um círculo que é tangencial a uma entidade e passa por dois
+pontos.

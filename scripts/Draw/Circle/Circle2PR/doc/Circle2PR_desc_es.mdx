@@ -1,0 +1,2 @@
+Dibuja un círculo a partir de dos puntos en la línea del círculo y un
+radio.

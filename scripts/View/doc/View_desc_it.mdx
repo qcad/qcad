@@ -1,0 +1,2 @@
+Il menu di visualizzazione contiene tutti gli strumenti per lo zoom, la
+panoramica e la regolazione della visualizzazione

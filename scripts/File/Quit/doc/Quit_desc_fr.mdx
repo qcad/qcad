@@ -1,0 +1,3 @@
+Quitte l'application et ferme la fenêtre principale de l'application. S'il y
+a des modifications non sauvegardées dans les dessins ouverts, vous avez la
+possibilité de les sauvegarder avant la fermeture.

@@ -1,0 +1,2 @@
+Zatrzaskuje się do prostopadłego punktu na linii, łuku, okręgu lub elipsie.
+Dotyczy to wyłącznie rysowania linii.

@@ -1,0 +1,3 @@
+Beendet die Anwendung und schließt das Hauptfenster der Anwendung. Wenn es
+gespeicherte Änderungen gibt in einer offenen Zeichnung können Sie diese erst
+speichern.

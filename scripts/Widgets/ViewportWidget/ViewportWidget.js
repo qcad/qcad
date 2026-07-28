@@ -211,6 +211,12 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
         return;
     }
 
+    // Use alternative image view if available:
+    // if (typeof(RGraphicsViewXY) !== "undefined") {
+    //     qDebug("using RGraphicsViewXY");
+    //     this.graphicsView.setImageView(new RGraphicsViewXY(this.graphicsView));
+    // }
+
     var imageView = this.graphicsView.getImageView();
     imageView.setViewportNumber(this.vpNumber);
     if (isFunction(imageView.setFocusFrameWidget)) {

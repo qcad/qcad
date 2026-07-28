@@ -1,0 +1,1 @@
+Con questo strumento si possono creare archi concentrici.

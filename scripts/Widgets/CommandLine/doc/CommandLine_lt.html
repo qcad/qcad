@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Komandinė eilutė</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/lt/index.php?page=scripts/Widgets/CommandLine/doc/CommandLine">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>Komandinė eilutė</h2>
+<p class="toolinfo">
+<b>Įrankių juosta / piktograma:</b>
+<br /><img src="../doc/CommandLine.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Meniu:</b> <font face="courier new">Peržiūrėti &gt; Komandinė eilutė</font>
+<br /><b>Trumpasis adresas:</b> <font face="courier new">G, M</font>
+<br /><b>Komandos:</b> <font face="courier new">gm</font>
+</p>
+</div>
+<h3>Aprašymas</h3>
+<p>QCAD komandų eilutė leidžia paleisti komandas, įvesti koordinates ar įvesti reikšmes, tokias kaip atstumai ar spinduliai.</p>
+<h3>Koordinačių įvedimas</h3>
+<p>Absoliučios koordinatės įvedamos formatu „x,y":</p>
+<p>40,5</p>
+<p>Santykinės koordinatės įvedamos formatu „@x,y":</p>
+<p>@10,6</p>
+<p>Absoliučios polinės koordinatės įvedamos formatu „atstumas&lt;kampas":</p>
+<p>10&lt;30</p>
+<p>Santykinės polinės koordinatės įvedamos formatu „@atstumas&lt;kampas":</p>
+<p>@10&lt;45</p>
+<p>Įvedant koordinates ar reikšmes, galima naudoti <a href="#expr">matematines išraiškas</a> koordinatei apskaičiuoti pagal žinomas reikšmes. Pavyzdžiui, koordinatę 10,5 taip pat galima įvesti kaip:</p>
+<p>5+5,30/6</p>
+<h3>Skaičiuotuvas</h3>
+<p>Komandų eilutę taip pat galima naudoti kaip skaičiuotuvą. Norėdami tai padaryti, įveskite <a href="#expr">matematinę išraišką</a> prieš ją įrašydami lygybės ženklą:</p>
+<p>=3+4 7</p>
+<p>Kintamuosius galima naudoti reikšmėms saugoti:</p>
+<p>=a=5+6 11 =a/2 5.5</p>
+<h3>Matematinės išraiškos</h3>
+<p>Galimos matematinės konstantos:</p>
+<p>PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2</p>
+<p>Galimos matematinės funkcijos:</p>
+<p>abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt, trunc</p>
+<p>Dauguma šių konstantų ir funkcijų yra standartinės ECMAScript (JavaScript) funkcijos ir dokumentuotos internete. Standartiniame ECMAScript šios funkcijos yra Math klasės dalis, todėl funkcija <em>abs</em> turėtų būti rašoma kaip <em>Math.abs</em>. QCAD komandų eilutėje galite praleisti <em>Math.</em> dalį patogumui. Trigonometrinės funkcijos (sin, cos, tan, asin, acos, atan, atan2) priima ar grąžina kampus laipsniais. Jei pageidaujate radianinių šių funkcijų versijų, vietoj to naudokite originalias <em>Math.</em> funkcijas.</p>
+<p>Funkcijas <em>rad2deg</em> ir <em>deg2rad</em> galima naudoti kampams konvertuoti tarp radianų ir laipsnių.</p></body>
+</html>

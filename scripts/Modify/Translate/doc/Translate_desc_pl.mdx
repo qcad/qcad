@@ -1,0 +1,1 @@
+Przenosi lub kopiuje jednostki.

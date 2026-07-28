@@ -1,0 +1,2 @@
+Konstruira črto pravokotno na izhodiščni objekt.
+Izhodiščni objekt je lahko črta, krog ali krožni lok.

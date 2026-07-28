@@ -1,0 +1,2 @@
+Esta ferramenta cria projecções isométricas (e outros tipos de projecções)
+da selecção actual no desenho.

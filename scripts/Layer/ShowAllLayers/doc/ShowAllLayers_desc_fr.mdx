@@ -1,0 +1,3 @@
+Cet outil peut être utilisé pour afficher toutes les couches en une seule
+fois. Cela peut être utile lorsque vous travaillez avec un dessin à plusieurs
+calques.

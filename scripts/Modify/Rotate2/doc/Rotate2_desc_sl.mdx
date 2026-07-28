@@ -1,0 +1,2 @@
+Rotira objekte med dvema različnima središčema.
+Tipična uproraba tega orodja je pri rotiranju objektov okrog enega središča in pri tem hkrati ohranit njihovo orientacijo.

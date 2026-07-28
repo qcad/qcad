@@ -1,0 +1,2 @@
+Gebruik deze tool voor het maken van en bissectrice (deellijn) tussen twee
+lijnen.

@@ -1,0 +1,2 @@
+Draws an arc from its center point, a point on the arc line, start angle and
+end angle.

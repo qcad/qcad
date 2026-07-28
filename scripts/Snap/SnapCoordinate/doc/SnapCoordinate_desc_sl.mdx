@@ -1,0 +1,1 @@
+Določi točko pri čemer se vnese relativna kartezijska koordinata.

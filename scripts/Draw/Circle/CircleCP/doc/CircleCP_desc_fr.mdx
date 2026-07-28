@@ -1,0 +1,2 @@
+Cet outil permet de créer un cercle, à partir de son centre et d'un point du
+cercle.

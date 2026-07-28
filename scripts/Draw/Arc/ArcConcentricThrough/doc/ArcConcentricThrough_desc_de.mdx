@@ -1,0 +1,2 @@
+Mit diesem Werkzeug können Sie konzentrische Bögen konstruieren, die durch einen
+bestimmten Punkt gehen.

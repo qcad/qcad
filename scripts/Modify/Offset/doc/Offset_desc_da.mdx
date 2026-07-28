@@ -1,0 +1,2 @@
+Med dette værktøj kan du oprette paralleller til eksisterende linjer (eller
+koncentriske buer og cirkler).

@@ -1,0 +1,1 @@
+Crée des dimensions radiales pour les entités de cercle ou d'arc.

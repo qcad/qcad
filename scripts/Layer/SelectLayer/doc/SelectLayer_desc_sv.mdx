@@ -1,0 +1,3 @@
+Verktyget lägger till alla enheter på det aktuella lagret till urvalet.
+Endast enheter på det aktuella blocket kan väljas, enheter på andra block väljs
+inte.

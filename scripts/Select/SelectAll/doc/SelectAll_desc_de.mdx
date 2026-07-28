@@ -1,0 +1,1 @@
+Selektiert alle Objekte auf allen sichtbaren und entsperrten Layern.

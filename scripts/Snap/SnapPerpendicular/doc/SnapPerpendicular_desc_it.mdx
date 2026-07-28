@@ -1,0 +1,2 @@
+Snaps al punto perpendicolare su una linea, arco, cerchio o ellisse. Questo
+vale solo per il disegno di linee.

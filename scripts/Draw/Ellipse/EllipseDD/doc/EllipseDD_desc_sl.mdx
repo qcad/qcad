@@ -1,0 +1,1 @@
+Draws ellipses with given major and minor diameter (width / height).

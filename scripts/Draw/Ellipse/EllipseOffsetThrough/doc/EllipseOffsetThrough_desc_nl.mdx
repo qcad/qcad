@@ -1,0 +1,2 @@
+Met dit functie kunt u curven maken die evenwijdig zijn aan een ellips en
+door een bepaald punt gaan.

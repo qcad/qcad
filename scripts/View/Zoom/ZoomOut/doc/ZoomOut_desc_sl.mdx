@@ -1,0 +1,2 @@
+To orodje pomanjša trenutni izsek za faktor 1,5.
+Namesto tega, lahko tudi uporabimo miškin kolešček, ki ga zavrtimo proti sebi.

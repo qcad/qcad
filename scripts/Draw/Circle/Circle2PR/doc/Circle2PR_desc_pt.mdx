@@ -1,0 +1,2 @@
+Desenha um círculo a partir de dois pontos na linha do círculo e de um
+raio.

@@ -1,0 +1,1 @@
+Hiermee kunt u een nieuwe locatie voor het relatieve nulpunt instellen.

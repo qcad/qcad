@@ -1,0 +1,1 @@
+Questa funzione nasconde tutti i riferimenti di blocco nel disegno.

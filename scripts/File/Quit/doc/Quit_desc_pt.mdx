@@ -1,0 +1,3 @@
+Abre a aplicação e fecha a janela principal da aplicação. Se houver
+alterações não guardadas nos desenhos abertos, tem uma oportunidade de as
+guardar antes de fechar.

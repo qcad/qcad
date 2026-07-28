@@ -1,0 +1,1 @@
+Tekent een cirkel met een gegeven straal die twee entiteiten raakt.

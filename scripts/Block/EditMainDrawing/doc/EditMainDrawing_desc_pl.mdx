@@ -1,0 +1,2 @@
+Wybierz to narzędzie podczas edycji bloku, a następnie powróć do rysunku
+głównego (blok "*Model_Space").

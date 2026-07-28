@@ -1,0 +1,25 @@
+import TypeAuto from './TypeAuto.png';
+import TypeSegment from './TypeSegment.png';
+import TypeXLine from './TypeXLine.png';
+import TypeRay from './TypeRay.png';
+
+
+
+เส้นคือเอนทิตีตรงที่กำหนดโดยจุดสองจุด เครื่องมือเส้นมีวิธีการสร้างเส้นหลายวิธี เช่น จากจุดเริ่มต้นไปยังจุดสิ้นสุด ขนานกับเอนทิตีที่มีอยู่ สัมผัสกับวงกลมหรือส่วนโค้ง หรือตั้งฉากกับอีกเส้นหนึ่ง
+
+### ประเภทเส้น {#type}
+
+เครื่องมือเส้นส่วนใหญ่ให้คุณเลือกประเภทของเส้นที่จะสร้างในแถบเครื่องมือตัวเลือก ประเภทเส้นที่มีให้เลือกคือ:
+
+- Auto:
+  <Image src={TypeAuto} alt="TypeAuto" width={40} height={40} />
+  สร้างเส้นที่มีประเภทเดียวกันกับเส้นอื่นที่เลือกโดยอัตโนมัติ ใช้กับเครื่องมือเส้นขนาน
+- Line Segment:
+  <Image src={TypeSegment} alt="TypeSegment" width={40} height={40} />
+  สร้างเซกเมนต์เส้นจากจุดเริ่มต้นไปยังจุดสิ้นสุด
+- Infinite Line:
+  <Image src={TypeXLine} alt="TypeXLine" width={40} height={40} />
+  สร้างเส้นอนันต์ที่ผ่านจุดสองจุดที่กำหนด บางครั้งเรียกว่าเส้น X หรือเส้นก่อสร้าง
+- Rays:
+  <Image src={TypeRay} alt="TypeRay" width={40} height={40} />
+  สร้างรังสีจากจุดเริ่มต้นที่กำหนด ผ่านอีกจุดหนึ่งด้วยความยาวอนันต์

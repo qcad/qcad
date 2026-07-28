@@ -7,6 +7,6 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("h,a"));
     action.setDefaultCommands(["hatch", "ha"]);
     action.setGroupSortOrder(11800);
-    action.setSortOrder(100);
+    action.setSortOrder(200);
     action.setWidgetNames(["DrawHatchMenu", "HatchToolBar", "HatchToolsPanel", "HatchMatrixPanel"]);
 }

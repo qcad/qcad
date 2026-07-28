@@ -1,0 +1,1 @@
+Rysuje łuk łączący się stycznie z istniejącym łukiem lub linią.

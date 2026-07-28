@@ -10,7 +10,7 @@
     <height>499</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_3">
+  <layout class="QVBoxLayout" name="verticalLayout_4">
    <item>
     <widget class="QGroupBox" name="GroupSplines">
      <property name="title">
@@ -40,6 +40,25 @@
        <widget class="QCheckBox" name="ImportGroupsAsLayers">
         <property name="text">
          <string>Import groups as layers</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="GroupPaths">
+     <property name="title">
+      <string>Paths</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QCheckBox" name="ImportPathLineweights">
+        <property name="text">
+         <string>Import path lineweights</string>
         </property>
         <property name="checked">
          <bool>true</bool>

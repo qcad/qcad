@@ -1,0 +1,2 @@
+Questo strumento crea proiezioni isometriche (e altri tipi di proiezioni)
+della selezione corrente nel disegno.

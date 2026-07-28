@@ -1,0 +1,2 @@
+Begränsar markören horisontellt till samma Y-position som den relativa
+nollpunkten.

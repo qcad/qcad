@@ -1,0 +1,2 @@
+Konstruiert eine Linie orthogonal (senkrecht) zu einem Basisobjekt. Das
+Basisobjekt kann eine Linie oder ein Kreis oder Kreisbogen sein.

@@ -1,0 +1,3 @@
+La finestra di dialogo delle preferenze di disegno consente di modificare le
+preferenze che influiscono su vari aspetti del disegno corrente. Queste
+preferenze sono memorizzate nel disegno.

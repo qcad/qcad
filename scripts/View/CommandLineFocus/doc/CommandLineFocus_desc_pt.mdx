@@ -1,0 +1,3 @@
+Este comando ativa a linha de comando para entrada, por exemplo, para
+introduzir uma coordenada ao especificar um ponto. Isto é normalmente feito
+premindo a tecla Espaço.

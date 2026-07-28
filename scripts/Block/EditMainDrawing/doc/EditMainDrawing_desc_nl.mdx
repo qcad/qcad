@@ -1,0 +1,2 @@
+Kies dit functie bij om na het bewerken van een blok terug naar de
+hoofdtekening te gaan (blok "*Model_Space").

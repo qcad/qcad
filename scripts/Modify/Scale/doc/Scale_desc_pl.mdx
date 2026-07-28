@@ -1,0 +1,1 @@
+Skala podmiotów według danego czynnika w stosunku do danego centrum.

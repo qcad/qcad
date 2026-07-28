@@ -1,0 +1,53 @@
+QCADi käsurida võimaldab käivitada käske, sisestada koordinaate või sisestada väärtusi, näiteks kauguseid või raadiusi.
+
+### Koordinaatide sisestamine
+
+Absoluutsed koordinaadid sisestatakse vormingus "x,y":
+
+40,5
+
+Suhtelised koordinaadid sisestatakse vormingus "@x,y":
+
+@10,6
+
+Absoluutsed polaarkoordinaadid sisestatakse vormingus "kaugus&lt;nurk":
+
+10&lt;30
+
+Suhtelised polaarkoordinaadid sisestatakse vormingus "@kaugus&lt;nurk":
+
+@10&lt;45
+
+Koordinaatide või väärtuste sisestamisel saab kasutada [matemaatilisi avaldisi](#expr), et arvutada koordinaat teadaolevate väärtuste põhjal. Näiteks koordinaadi 10,5 võib sisestada ka järgmiselt:
+
+5+5,30/6
+
+### Kalkulaator
+
+Käsurida saab kasutada ka kalkulaatorina. Selleks sisestage [matemaatiline avaldis](#expr), millele eelneb võrdusmärk:
+
+=3+4  
+7
+
+Väärtuste salvestamiseks saab kasutada muutujaid:
+
+=a=5+6  
+11  
+=a/2  
+5.5  
+
+### Matemaatilised avaldised
+
+Saadaolevad matemaatilised konstandid on:
+
+PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2
+
+Saadaolevad matemaatilised funktsioonid on:
+
+abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad,
+sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh,
+acosh, asinh, atanh, expm1, hypot, cbrt, trunc
+
+Enamik neist konstantidest ja funktsioonidest on standardsed ECMAScripti (JavaScript) funktsioonid ja dokumenteeritud veebis. Standardses ECMAScriptis kuuluvad need funktsioonid klassi Math, seega tuleks funktsioon *abs* kirjutada kujul *Math.abs*. QCADi käsureal saate mugavuse huvides *Math.* osa ära jätta. Trigonomeetrilised funktsioonid (sin, cos, tan, asin, acos, atan, atan2) võtavad vastu või tagastavad nurki kraadides. Kui eelistate nende funktsioonide radiaaniversioone, kasutage selle asemel algseid *Math.* funktsioone.
+
+Funktsioone *rad2deg* ja *deg2rad* saab kasutada nurkade teisendamiseks radiaanide ja kraadide vahel.

@@ -44,6 +44,7 @@
 
 RGraphicsSceneQt::RGraphicsSceneQt(RDocumentInterface& documentInterface) :
     RGraphicsScene(documentInterface),
+    drawablesVersion(0),
     decorating(false),
     screenBasedLinetypesOverride(false) {
 
@@ -940,20 +941,23 @@ void RGraphicsSceneQt::unexportEntity(REntity::Id entityId) {
     if (!exportToPreview) {
         drawables.remove(entityId);
         clipRectangles.remove(entityId);
+        drawablesVersion++;
     }
 }
 
 void RGraphicsSceneQt::deleteDrawables() {
     drawables.clear();
     clipRectangles.clear();
+    drawablesVersion++;
 
     previewDrawables.clear();
     previewClipRectangles.clear();
 }
 
 QList<RGraphicsSceneDrawable> RGraphicsSceneQt::getDrawablesList(REntity::Id entityId) {
-    if (drawables.contains(entityId)) {
-        return drawables[entityId];
+    QHash<RObject::Id, QList<RGraphicsSceneDrawable> >::const_iterator it = drawables.constFind(entityId);
+    if (it!=drawables.constEnd()) {
+        return it.value();
     }
     return QList<RGraphicsSceneDrawable>();
 }
@@ -963,9 +967,11 @@ QList<RGraphicsSceneDrawable> RGraphicsSceneQt::getDrawablesList(REntity::Id ent
  * given ID.
  */
 QList<RGraphicsSceneDrawable>* RGraphicsSceneQt::getDrawables(REntity::Id entityId) {
-    // TODO: check should not be necessary:
-    if (drawables.contains(entityId)) {
-        return &drawables[entityId];
+    // one lookup instead of two: this is called for every entity of every
+    // frame, contains() followed by operator[] walks the map twice:
+    QHash<RObject::Id, QList<RGraphicsSceneDrawable> >::iterator it = drawables.find(entityId);
+    if (it!=drawables.end()) {
+        return &it.value();
     }
 
     return NULL;
@@ -982,13 +988,15 @@ bool RGraphicsSceneQt::hasClipRectangleFor(REntity::Id entityId, bool preview) c
 
 RBox RGraphicsSceneQt::getClipRectangle(REntity::Id entityId, bool preview) const {
     if (preview) {
-        if (previewClipRectangles.contains(entityId)) {
-            return previewClipRectangles.value(entityId);
+        QMap<RObject::Id, RBox>::const_iterator it = previewClipRectangles.constFind(entityId);
+        if (it!=previewClipRectangles.constEnd()) {
+            return it.value();
         }
     }
     else {
-        if (clipRectangles.contains(entityId)) {
-            return clipRectangles.value(entityId);
+        QHash<RObject::Id, RBox>::const_iterator it = clipRectangles.constFind(entityId);
+        if (it!=clipRectangles.constEnd()) {
+            return it.value();
         }
     }
 
@@ -1066,19 +1074,26 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
         }
     }
 
-    QMap<REntity::Id, QList<RGraphicsSceneDrawable> >* dwb;
+    // preview drawables are kept in a map (ordered keys), the drawables of
+    // the document in a hash (faster lookup):
     if (preview) {
-        dwb = &previewDrawables;
+        QMap<REntity::Id, QList<RGraphicsSceneDrawable> >::iterator it = previewDrawables.find(entityId);
+        if (it!=previewDrawables.end()) {
+            it.value().append(drawable);
+        }
+        else {
+            previewDrawables.insert(entityId, QList<RGraphicsSceneDrawable>() << drawable);
+        }
     }
     else {
-        dwb = &drawables;
-    }
-
-    if (dwb->contains(entityId)) {
-        (*dwb)[entityId].append(drawable);
-    }
-    else {
-        dwb->insert(entityId, QList<RGraphicsSceneDrawable>() << drawable);
+        QHash<REntity::Id, QList<RGraphicsSceneDrawable> >::iterator it = drawables.find(entityId);
+        if (it!=drawables.end()) {
+            it.value().append(drawable);
+        }
+        else {
+            drawables.insert(entityId, QList<RGraphicsSceneDrawable>() << drawable);
+        }
+        drawablesVersion++;
     }
 }
 
@@ -1104,8 +1119,9 @@ QList<REntity::Id> RGraphicsSceneQt::getPreviewEntityIds() {
 }
 
 QList<RGraphicsSceneDrawable>* RGraphicsSceneQt::getPreviewDrawables(RObject::Id entityId) {
-    if (previewDrawables.contains(entityId)) {
-        return &previewDrawables[entityId];
+    QMap<RObject::Id, QList<RGraphicsSceneDrawable> >::iterator it = previewDrawables.find(entityId);
+    if (it!=previewDrawables.end()) {
+        return &it.value();
     }
     return NULL;
 }
@@ -1270,7 +1286,12 @@ void RGraphicsSceneQt::startEntity(bool topLevelEntity) {
         if (topLevelEntity) {
             // top level entity (i.e. not entity in block ref):
             // remove previous graphical representations:
-            drawables.remove(getEntity()->getId());
+            if (drawables.remove(getEntity()->getId())>0) {
+                // the entity might not be exported again (e.g. if it has
+                // become invisible), so the removal has to be reported here
+                // and not only in addDrawable:
+                drawablesVersion++;
+            }
         }
     }
 }

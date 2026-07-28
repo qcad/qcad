@@ -1,0 +1,3 @@
+Odznacza wszystkie podmioty. Użyj tego narzędzia, aby upewnić się, że nie
+wybrano żadnych podmiotów. Alternatywnie można również kliknąć w pusty obszar
+rysunku.

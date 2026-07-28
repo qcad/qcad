@@ -1,0 +1,94 @@
+import ArcCircle01 from './ArcCircle01.png';
+import ArcCircle02a from './ArcCircle02a.png';
+import ArcCircle03 from './ArcCircle03.png';
+import ArcCircle02 from './ArcCircle02.png';
+import InfoSector from './InfoSector.png';
+import InfoSlice from './InfoSlice.png';
+import ArcCircle04 from './ArcCircle04.png';
+import ArcCircle06 from './ArcCircle06.png';
+import ArcCircle05 from './ArcCircle05.png';
+import ArcCircle08 from './ArcCircle08.png';
+import ArcCircle07 from './ArcCircle07.png';
+
+Author: Robert S.
+
+Denne kommandoen beregner arealet av buer, sirkler, ellipser og elliptiske
+buer, og legger eventuelt informasjonen til det gjeldende laget i en tegning.
+Hvis du velger en annen type objekt, vises en advarsel i
+kommandolinjen.
+
+For buer finnes det to alternativer for å beregne arealer, nemlig Segment eller
+Sektor. Arealet av et segment (eller en skive) er arealet avgrenset av buen og to
+linjer trukket fra buens startpunkt og endepunkt til buens senter. Arealet
+av en sektor er arealet avgrenset av buen og en korde trukket fra buens
+startpunkt til endepunktet.
+
+<Image src={ArcCircle01} alt="ArcCircle01" width={285} height={149} />  
+Figur 1: et segment (skive) og en sektor.
+
+**Alternativer**
+
+Denne kommandoen har standardalternativene "*Legg til måling i tegningen*" og
+"*Teksthøyde*".
+
+<Image src={ArcCircle02a} alt="ArcCircle02a" width={200} height={19} />  
+Figur 2: Standard info-alternativer
+
+Uansett om dette er av eller ikke, når du klikker på en bue, sirkel, ellipse eller
+ elliptisk bue, vises informasjonen i kommandolinjewidgeten.
+
+<Image src={ArcCircle03} alt="ArcCircle03" width={238} height={29} />  
+Figur 3: Info vist i kommandolinjen
+
+(Merk: Hver gang du starter en info-kommando, er avkrysningsboksen "*Legg til måling i tegningen*"
+alltid umerket. Du må huske å slå den på hvis du vil at informasjonen
+legges til i tegningen).
+
+Den legger også til følgende alternativer.
+
+<Image src={ArcCircle02} alt="ArcCircle02" width={213} height={25} />  
+Figur 4: Tillagte alternativer
+
+**Modus:**
+
+Modusen gjelder bare for buer.
+
+<Image src={InfoSector} alt="InfoSector" width={40} height={40} />  
+*Sektor:* Denne modusen returnerer arealet av sektoren. Dette er nyttig når
+det brukes sammen med kommandoen "*Polygonalt areal*".
+
+<Image src={InfoSlice} alt="InfoSlice" width={40} height={40} /> *Segment:* Denne modusen returnerer arealet av segmentet.
+
+**Legg til:**
+
+*Objekt:* Dette velger om du vil legge til en kopi av det målte
+objektet i det gjeldende laget i tegningen.
+
+*Korde:* Dette velger om du vil ha korden (sektor) eller radiuslinjene
+(segment) lagt til i tegningen.
+
+*Lengde:* Som standard skrives arealet alltid på tegningen. Dette
+alternativet velger om du vil ha ekstra informasjon lagt til i tegningen.
+
+For sirkler og hele ellipser er den ekstra informasjonen omkretsen.
+Dette bruker senterpunktet som nedre venstre hjørne for den tillagte teksten.
+
+<Image src={ArcCircle04} alt="ArcCircle04" width={364} height={136} />
+
+For sirkelbuer er den ekstra informasjonen lengden på buen og
+lengden på korden (i sektormodus), eller radiusen (i segmentmodus).
+
+For ellipser er den ekstra informasjonen lengden på buen og lengden
+på korden (i sektormodus), eller avstanden fra senterpunktet til
+startpunktet for buen, etterfulgt av avstanden fra senterpunktet til
+endepunktet for buen (i segmentmodus).
+
+Nedre venstre hjørne for den tillagte teksten er endepunktet for buen.
+
+<Image src={ArcCircle06} alt="ArcCircle06" width={332} height={75} />
+
+<Image src={ArcCircle05} alt="ArcCircle05" width={378} height={111} />
+
+<Image src={ArcCircle08} alt="ArcCircle08" width={328} height={90} />
+
+<Image src={ArcCircle07} alt="ArcCircle07" width={418} height={105} />

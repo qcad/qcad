@@ -1,0 +1,2 @@
+Esta herramienta mide el área cubierta por un polígono y su
+circunferencia.

@@ -1,0 +1,2 @@
+Konstruiert eine Tangente von einer Koordinate an einen existierenden Kreis,
+Kreisbogen oder an eine Ellipse.

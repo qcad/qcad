@@ -34,6 +34,7 @@ MiscInformation.getMenu = function() {
         MiscInformation.getTitle(),
         "MiscInformationMenu"
     );
+    menu.setProperty("scriptFile", MiscInformation.includeBasePath + "/MiscInformation.js");
     return menu;
 };
 

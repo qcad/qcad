@@ -2601,6 +2601,7 @@ void DL_Dxf::writeControlPoint(DL_WriterA& dw,
     dw.dxfReal(10, data.x);
     dw.dxfReal(20, data.y);
     dw.dxfReal(30, data.z);
+	dw.dxfReal(41, data.w);
 }
 
 

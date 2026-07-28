@@ -116,18 +116,7 @@ Print.prototype.createPrinter = function(pdfFile, printerName, pdfVersion) {
         }
     }
 
-    // always use custom page size to work around Qt page size limitations:
-    var paperSizeMM = Print.getPaperSizeMM(this.document);
-    if (RSettings.getQtVersion() >= 0x060000) {
-        printer.setPageSize(new QPageSize(paperSizeMM, QPageSize.Millimeter));
-        printer.setFullPage(true);
-        printer.setPageOrientation(Print.getPageOrientationEnum(this.document));
-    }
-    else {
-        printer.setPaperSize(paperSizeMM, QPrinter.Millimeter);
-        printer.setFullPage(true);
-        printer.setOrientation(Print.getPageOrientationEnum(this.document));
-    }
+    Print.applyPageSize(printer, this.document);
 
     var colorMode = Print.getColorMode(this.document);
     if (colorMode == RGraphicsView.FullColor) {
@@ -188,9 +177,101 @@ Print.prototype.createPrinter = function(pdfFile, printerName, pdfVersion) {
             destr(printer);
             return undefined;
         }
+
+        // the native print dialog (Windows, macOS) hands the printer back to us
+        // with the device mode it received from the printer driver. Some drivers
+        // discard the page size we've set above and report their own default
+        // instead (e.g. A4 for a drawing set up for A3). Printing would then be
+        // clipped to that smaller page while print preview and PDF export remain
+        // correct. Re-apply the page size of the drawing in that case:
+        if (RSettings.getBoolValue("Print/EnforcePageSize", true)===true) {
+            Print.enforcePageSize(printer, this.document);
+        }
     }
 
     return printer;
+};
+
+/**
+ * Applies the paper size and orientation of the given document to the given printer.
+ *
+ * The paper size is always set as custom page size to work around Qt page size
+ * limitations.
+ */
+Print.applyPageSize = function(printer, document) {
+    var paperSizeMM = Print.getPaperSizeMM(document);
+    if (RSettings.getQtVersion() >= 0x060000) {
+        printer.setPageSize(new QPageSize(paperSizeMM, QPageSize.Millimeter));
+        printer.setFullPage(true);
+        printer.setPageOrientation(Print.getPageOrientationEnum(document));
+    }
+    else {
+        printer.setPaperSize(paperSizeMM, QPrinter.Millimeter);
+        printer.setFullPage(true);
+        printer.setOrientation(Print.getPageOrientationEnum(document));
+    }
+};
+
+/**
+ * Makes sure the given printer uses the paper size of the given document.
+ *
+ * Must be called before painting starts (QPainter.begin), since Qt ignores
+ * page size changes while the printer is active.
+ */
+Print.enforcePageSize = function(printer, document) {
+    var wantedSizeMM = Print.getOrientedPaperSizeMM(document);
+    var printerSizeMM = Print.getPrinterPaperSizeMM(printer);
+    if (Print.isSamePaperSize(wantedSizeMM, printerSizeMM)) {
+        return true;
+    }
+
+    qWarning(sprintf("Print: printer reports paper size %.1fx%.1fmm after print dialog, " +
+                     "drawing is set up for %.1fx%.1fmm. Re-applying paper size of drawing.",
+                     printerSizeMM.width(), printerSizeMM.height(),
+                     wantedSizeMM.width(), wantedSizeMM.height()));
+
+    Print.applyPageSize(printer, document);
+
+    printerSizeMM = Print.getPrinterPaperSizeMM(printer);
+    if (!Print.isSamePaperSize(wantedSizeMM, printerSizeMM)) {
+        qWarning(sprintf("Print: printer driver does not accept paper size %.1fx%.1fmm " +
+                         "(reports %.1fx%.1fmm). Printout may be clipped.",
+                         wantedSizeMM.width(), wantedSizeMM.height(),
+                         printerSizeMM.width(), printerSizeMM.height()));
+        return false;
+    }
+
+    return true;
+};
+
+/**
+ * \return True if the two given paper sizes (QSizeF in mm) are the same
+ * within a tolerance of 1mm.
+ */
+Print.isSamePaperSize = function(sizeMM1, sizeMM2) {
+    return Math.abs(sizeMM1.width() - sizeMM2.width()) < 1.0 &&
+           Math.abs(sizeMM1.height() - sizeMM2.height()) < 1.0;
+};
+
+/**
+ * \return Paper size of the given printer in mm as QSizeF, taking the page
+ * orientation into account (i.e. width > height for landscape).
+ */
+Print.getPrinterPaperSizeMM = function(printer) {
+    var paperRect = printer.paperRect(QPrinter.Millimeter);
+    return new QSizeF(paperRect.width(), paperRect.height());
+};
+
+/**
+ * \return Paper size of the given document in mm as QSizeF, taking the page
+ * orientation into account (i.e. width > height for landscape).
+ */
+Print.getOrientedPaperSizeMM = function(document) {
+    var paperSizeMM = Print.getPaperSizeMM(document);
+    if (Print.getPageOrientationEnum(document)===RS.Landscape) {
+        return new QSizeF(paperSizeMM.height(), paperSizeMM.width());
+    }
+    return paperSizeMM;
 };
 
 /**

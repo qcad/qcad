@@ -1,0 +1,1 @@
+Creëert veelhoeken met het centrum en middelste punt van één zijde.

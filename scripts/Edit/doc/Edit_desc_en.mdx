@@ -1,0 +1,1 @@
+ The edit menu contains tools for basic editing such as copy / paste and deleting.

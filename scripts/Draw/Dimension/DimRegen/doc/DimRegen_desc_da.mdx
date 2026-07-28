@@ -1,0 +1,2 @@
+Dette værktøj nulstiller etiketpositionen for alle valgte dimensionsenheder
+og placerer deres etiket tilbage til deres automatisk beregnede position.

@@ -1,0 +1,5 @@
+La touche d'échappement peut être utilisée pour terminer l'outil courant et
+revenir à l'état de repos de QCAD. Si l'outil actuel nécessite plusieurs
+étapes, l'échappement revient à l'étape précédente de l'outil. Pour terminer
+l'outil, il peut être nécessaire d'appuyer plusieurs fois sur escape dans ce
+cas.

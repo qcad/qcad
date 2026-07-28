@@ -1,0 +1,2 @@
+Cet outil vous permet de créer des lignes orthogonales à une entité de base
+existante. L'entité de base peut être une ligne, un arc ou un cercle.

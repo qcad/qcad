@@ -1,0 +1,1 @@
+Coupe ou étend une ligne, un arc ou une ellipse à une autre entité.

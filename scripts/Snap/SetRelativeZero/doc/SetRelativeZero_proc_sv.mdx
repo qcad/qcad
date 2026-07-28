@@ -1,0 +1,1 @@
+- Klicka på den nya platsen för den relativa nollpunkten.

@@ -1,0 +1,2 @@
+Utilisez cet outil pour créer des formes rectangulaires à partir de deux
+coins diagonalement opposés.

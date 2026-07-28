@@ -1,0 +1,2 @@
+Narzędzie to mierzy dokładną odległość pomiędzy bytem a punktem podanym
+przez użytkownika.

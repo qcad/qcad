@@ -1,0 +1,3 @@
+Dieses Werkzeug fügt alle Objekte auf des aktuellen Layers zur Auswahl hinzu.
+Es können nur Objekte des aktuellen Blocks selektiert werden, Objekte auf
+anderen Blöcken werden nicht selektiert.

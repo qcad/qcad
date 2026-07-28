@@ -1,0 +1,3 @@
+This tool draws an ordinate dimension. Ordinate dimensions indicate the
+X-ordinate or Y-ordinate of a feature in the drawing, relative to an origin
+point.

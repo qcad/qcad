@@ -127,6 +127,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setAutoUpdatesBlocked, "setAutoUpdatesBlocked");
             
+            REcmaHelper::registerFunction(&engine, proto, forceAutoUpdate, "forceAutoUpdate");
+            
             REcmaHelper::registerFunction(&engine, proto, dump, "dump");
             
             REcmaHelper::registerFunction(&engine, proto, validate, "validate");
@@ -3642,6 +3644,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaObject::setAutoUpdatesBlocked", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaObject::forceAutoUpdate
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaObject::forceAutoUpdate", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaObject::forceAutoUpdate";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("forceAutoUpdate", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->forceAutoUpdate();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.forceAutoUpdate().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaObject::forceAutoUpdate", context, engine);
             return result;
         }
          QScriptValue

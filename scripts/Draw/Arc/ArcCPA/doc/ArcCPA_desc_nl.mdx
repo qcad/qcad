@@ -1,0 +1,2 @@
+Tekent een boog uit het middelpunt, een punt op de booglijn, beginhoek en
+eindhoek.

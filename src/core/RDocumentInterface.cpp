@@ -1731,7 +1731,7 @@ REntity::Id RDocumentInterface::getClosestEntity(RInputEvent& event) {
  * \param selectedOnly Only return selected entities.
  */
 REntity::Id RDocumentInterface::getClosestEntity(const RVector& position,
-        double range, double strictRange, bool includeLockedLayers, bool selectedOnly) {
+        double range, double strictRange, bool includeLockedLayers, bool selectedOnly, bool snappable) {
 
     RGraphicsView* view = getLastKnownViewWithFocus();
     bool draft = false;
@@ -1742,7 +1742,7 @@ REntity::Id RDocumentInterface::getClosestEntity(const RVector& position,
         }
     }
 
-    return document.queryClosestXY(position, range, draft, strictRange, includeLockedLayers, selectedOnly);
+    return document.queryClosestXY(position, range, draft, strictRange, includeLockedLayers, selectedOnly, snappable);
 }
 
 /**
@@ -2481,15 +2481,6 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
                     }
                 }
 
-                if (transaction.isType(RTransaction::LayerVisibilityStatusChange)) {
-                    // tag all block references as changed as they might contain entities on that layer:
-                    // TODO: only tag if they do contain entities on that layer
-                    QSet<RObject::Id> blockReferenceIds = document.queryAllBlockReferences();
-                    entityIdsToRegenerate.unite(blockReferenceIds);
-
-                    QSet<RObject::Id> viewportIds = document.queryAllViewports();
-                    entityIdsToRegenerate.unite(viewportIds);
-                }
                 continue;
             }
         }
@@ -2534,6 +2525,7 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
                     deselectEntities(ids);
                 }
 
+                // binding: block had an XRef path before but not anymore (binding is removed):
                 bool binding = !oldXRefFileName.isEmpty() && newXRefFileName.isEmpty();
 
                 // block is XRef or was XRef (binding):
@@ -2595,6 +2587,13 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
         }
     }
 
+    if (transaction.isType(RTransaction::LayerVisibilityStatusChange) && !changedLayerIds.isEmpty()) {
+        // tag block references which might display entities on the changed
+        // layers as changed (they need to be regenerated) as well as all viewports:
+        entityIdsToRegenerate.unite(document.queryBlockReferencesForLayers(changedLayerIds));
+        entityIdsToRegenerate.unite(document.queryAllViewports());
+    }
+
     QList<RLayer::Id> changedLayerIdList = RS::toList<RLayer::Id>(changedLayerIds);
 
     // notify local listeners:
@@ -2634,6 +2633,12 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
 
     if (transaction.isType(RTransaction::LayerLockStatusChange)) {
         // only lock status has changed, no regen:
+        return;
+    }
+
+    if (transaction.isType(RTransaction::LayerCollapseStatusChange)) {
+        // only the collapsed status of a parent layer in the layer list
+        // has changed, no regen:
         return;
     }
 

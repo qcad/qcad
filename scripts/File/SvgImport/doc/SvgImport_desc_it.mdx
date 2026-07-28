@@ -1,0 +1,3 @@
+Questo strumento importa un file SVG nel disegno corrente. Si noti che è
+supportato solo un insieme molto limitato di tag e parametri SVG. L'idea è
+quella di importare quanta più geometria grezza possibile nel file SVG.

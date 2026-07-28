@@ -1,0 +1,3 @@
+Narzędzie to rysuje wymiar współrzędny. Wymiary współrzędnych wskazują na
+współrzędne X lub Y danej cechy na rysunku, w odniesieniu do punktu
+początkowego.

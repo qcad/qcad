@@ -1,0 +1,4 @@
+Diese Funktion zeigt den Layerdialog für den aktuellen Layer an. Dies ist
+derselbe Dialog, der auch zum Erstellen neuer Layer verwendet wird. Verwenden
+Sie diese Option, um den Layernamen oder seine Attribute zu ändern.  
+Der Name des Layers "0" kann nie geändert werden.

@@ -1,0 +1,2 @@
+Toggles anti-aliasing for the current drawing. With anti-aliasing,
+skewed lines, arcs and texts are displayed smoother.

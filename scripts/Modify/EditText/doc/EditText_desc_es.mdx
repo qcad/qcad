@@ -1,0 +1,2 @@
+Esta herramienta se puede utilizar para editar entidades de texto
+existentes.

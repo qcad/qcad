@@ -1,0 +1,7 @@
+To orodje omogoča ujetje pozicije, ki se nahaja na navidezni črti med dvema točkama,
+z željenim odmikom od prve točke.  
+Vnešeni odmik z orodjem ni omejen.
+V kolikor bo vnešen odmik večji od razdaje med točkama ali negativen,
+bo ujeta točka na podaljšku navidezne črte, ki poteka skozi obe točki.  
+Deli so lahko vneseni, kot decimalne številke (0,5; 0,7) ali direktno kot deli (1/7,
+3/11).

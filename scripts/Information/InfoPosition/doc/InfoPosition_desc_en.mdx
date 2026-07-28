@@ -1,0 +1,2 @@
+This tool outputs the absolute, Cartesian coordinates of chosen points in
+the drawing.

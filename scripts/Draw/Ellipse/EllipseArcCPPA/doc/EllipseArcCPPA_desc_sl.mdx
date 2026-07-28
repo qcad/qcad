@@ -1,0 +1,1 @@
+Konstruira eliptični lok s središčem, glavno osjo, sekundarno osjo, začetni ter končni kot.

@@ -1,0 +1,61 @@
+Naredbena linija QCAD-a omogućuje pokretanje naredbi, unos koordinata ili
+unos vrijednosti poput udaljenosti ili polumjera.
+
+### Unos koordinata
+
+Apsolutne koordinate unose se u formatu „x,y”:
+
+40,5
+
+Relativne koordinate unose se u formatu „@x,y”:
+
+@10,6
+
+Apsolutne polarne koordinate unose se u formatu „udaljenost&lt;kut”:
+
+10&lt;30
+
+Relativne polarne koordinate unose se u formatu „@udaljenost&lt;kut”:
+
+@10&lt;45
+
+Prilikom unosa koordinata ili vrijednosti mogu se upotrijebiti [matematički izrazi](#expr) za izračun koordinate na temelju poznatih vrijednosti. Na primjer
+koordinata 10,5 može se unijeti i kao:
+
+5+5,30/6
+
+### Kalkulator
+
+Naredbena linija može se upotrijebiti i kao kalkulator. Za to unesite [matematički izraz](#expr) ispred kojeg stoji znak jednakosti:
+
+=3+4  
+7
+
+Varijable se mogu upotrijebiti za pohranu vrijednosti:
+
+=a=5+6  
+11  
+=a/2  
+5.5  
+
+### Matematički izrazi
+
+Dostupne matematičke konstante su:
+
+PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2
+
+Dostupne matematičke funkcije su:
+
+abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad,
+sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh,
+acosh, asinh, atanh, expm1, hypot, cbrt, trunc
+
+Većina ovih konstanti i funkcija standardne su ECMAScript (JavaScript) funkcije i
+dokumentirane su na mreži. U standardnom ECMAScriptu ove su funkcije dio klase Math, pa bi se
+funkcija *abs* morala napisati kao *Math.abs*. U naredbenoj liniji QCAD-a radi praktičnosti
+možete izostaviti dio *Math.*. Trigonometrijske funkcije (sin, cos, tan, asin, acos, atan, atan2)
+primaju ili vraćaju kutove u stupnjevima. Ako preferirate radijanske verzije ovih funkcija,
+umjesto toga upotrijebite izvorne *Math.* funkcije.
+
+Funkcije *rad2deg* i *deg2rad* mogu se upotrijebiti za pretvorbu kutova između
+radijana i stupnjeva.

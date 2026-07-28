@@ -1,0 +1,3 @@
+Crea quote ruotate (lineari). Le dimensioni lineari sono solitamente
+utilizzate per misurare distanze verticali o orizzontali, ma possono anche
+misurare distanze con qualsiasi altro angolo.

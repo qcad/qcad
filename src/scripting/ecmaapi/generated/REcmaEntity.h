@@ -303,6 +303,9 @@
         setAutoUpdatesBlocked
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        forceAutoUpdate
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

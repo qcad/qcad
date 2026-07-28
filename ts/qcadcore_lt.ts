@@ -644,7 +644,7 @@
     <message>
         <location line="+1"/>
         <source>Bold</source>
-        <translation>Drąsiai</translation>
+        <translation>Paryškinta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -690,7 +690,7 @@
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation>Svetainėje</translation>
+        <translation>Įjungta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -721,7 +721,7 @@
         <translation>Sluoksnio ID</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+931"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Aptikta žiedinė (rekursinė) bloko nuoroda:</translation>
     </message>

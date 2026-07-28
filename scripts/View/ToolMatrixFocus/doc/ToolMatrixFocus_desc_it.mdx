@@ -1,0 +1,2 @@
+Questo comando attiva il campo filtro (ricerca) della matrice utensile per
+l'inserimento dei dati.

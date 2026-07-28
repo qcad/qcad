@@ -1,0 +1,2 @@
+Se você conhece três pontos da circunferência do círculo, você pode utilizar
+esta ferramenta para criar um círculo.

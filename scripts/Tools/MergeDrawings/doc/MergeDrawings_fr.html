@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>merge</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/fr/index.php?page=scripts/Tools/MergeDrawings/doc/MergeDrawings">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>merge</h2>
+</div>
+<h3>Description</h3>
+<p>Outil en ligne de commande qui fusionne plusieurs fichiers de dessin en un seul dessin.</p><h3>Utilisation</h3>
+<pre>Usage: ./merge [OPTIONS]... &lt;XML config file&gt;
+
+Merges multiple drawing files (DWG, DXF, ...) into one.
+
+  -f, -force              Overwrite existing output file
+  -h, -help               Display this help
+  -t TYPE, -type=TYPE     Set file type to TYPE 
+                          (e.g. R12...R27 or 2000...2013)
+  -o FILE, -outfile=FILE  Set output file to FILE
+                          default is same path and base name as input file
+
+macOS specific options:
+
+  -no-dock-icon           Don't show icon in dock. This should only be used
+                          in combination with -no-gui.
+
+Qt/X11 platform arguments:
+
+  -platform offscreen     Run without requiring an X11 server or display.
+                          Use this argument to run this command line tool in a 
+                          Linux server environment.
+
+Qt/X11 environment variables:
+
+  QT_QPA_FONTDIR          Set to fonts directory in a server environment, e.g. 'fonts/qt'.
+
+XML format:
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;merge xmlns="http://qcad.org/merge/elements/1.0/" unit="Millimeter"&gt;
+    &lt;item src="file1.dxf"&gt;
+        &lt;insert x="10" y="0" angle="30" flipx="false" flipy="false" /&gt;
+    &lt;/item&gt;
+&lt;/merge&gt;
+</pre>
+</body>
+</html>

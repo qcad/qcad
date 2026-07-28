@@ -172,14 +172,17 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
     darkGuiBackground = RSettings::hasDarkGuiBackground();
 
     if (orientation == Qt::Horizontal) {
-        if (sizeHint().height()*dpr != lastSize.height()) {
-            lastSize.setHeight(sizeHint().height()*dpr);
+        // round to int to avoid infinite repaint loop for fractional dpr (e.g. 1.25):
+        int h = qRound(sizeHint().height()*dpr);
+        if (h != lastSize.height()) {
+            lastSize.setHeight(h);
             updateViewport();
             return;
         }
     } else {
-        if (sizeHint().width()*dpr != lastSize.width()) {
-            lastSize.setWidth(sizeHint().width()*dpr);
+        int w = qRound(sizeHint().width()*dpr);
+        if (w != lastSize.width()) {
+            lastSize.setWidth(w);
             updateViewport();
             return;
         }

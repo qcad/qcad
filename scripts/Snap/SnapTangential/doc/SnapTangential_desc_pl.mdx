@@ -1,0 +1,4 @@
+Zatrzaskuje się do punktu styczności na łuku, kole lub elipsie. Dotyczy to
+wyłącznie rysowania linii. Punkt zatrzasku to punkt styczny wyimaginowanej
+linii od względnego punktu zerowego, styczny do klikniętego łuku lub
+okręgu.

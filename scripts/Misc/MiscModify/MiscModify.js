@@ -37,6 +37,7 @@ MiscModify.getMenu = function() {
         MiscModify.getTitle(),
         "MiscModifyMenu"
     );
+    menu.setProperty("scriptFile", MiscModify.includeBasePath + "/MiscModify.js");
     return menu;
 };
 

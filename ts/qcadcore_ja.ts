@@ -154,7 +154,7 @@
     <message>
         <location line="+2"/>
         <source>Orange</source>
-        <translation>炎色</translation>
+        <translation>オレンジ</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -721,7 +721,7 @@
         <translation>最大範囲</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+931"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>循環的な（再帰的な）ブロック参照が検出されました:</translation>
     </message>

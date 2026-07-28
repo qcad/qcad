@@ -274,6 +274,107 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="isGradient" cppName="isGradient"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="clearGradient" cppName="clearGradient"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getGradientName" cppName="getGradientName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setGradientName" cppName="setGradientName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="n"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getGradientColor1" cppName="getGradientColor1"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false" />
+    </method>
+    <method name="setGradientColor1" cppName="setGradientColor1"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RColor &amp;" typeName="RColor" name="c"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getGradientColor2" cppName="getGradientColor2"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false" />
+    </method>
+    <method name="setGradientColor2" cppName="setGradientColor2"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RColor &amp;" typeName="RColor" name="c"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getGradientAngle" cppName="getGradientAngle"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setGradientAngle" cppName="setGradientAngle"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="a"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getGradientShift" cppName="getGradientShift"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setGradientShift" cppName="setGradientShift"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="s"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getGradientOneColorMode"
+    cppName="getGradientOneColorMode" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setGradientOneColorMode"
+    cppName="setGradientOneColorMode" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getGradientTint" cppName="getGradientTint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setGradientTint" cppName="setGradientTint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="t"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getLoopBoundary" cppName="getLoopBoundary"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -372,6 +473,20 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyOriginX" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyOriginY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyGradientName" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyGradientColor1" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyGradientColor2" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyGradientAngle" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyGradientShift" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyGradientOneColorMode"
+    type="RPropertyTypeId" isConst="false" isStatic="true" />
+    <property name="PropertyGradientTint" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyVertexNX" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

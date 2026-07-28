@@ -1,0 +1,3 @@
+Kopierar det aktuella urvalet till QCAD:s klippbräda. Med det här verktyget
+kan du ange en referenspunkt som används för att positionera urvalet när du
+klistrar in det i en ritning.

@@ -1,0 +1,2 @@
+Rysuje eliptyczne łuki o danym środku, osi głównej i drugorzędnej oraz
+kątach początku i końca.

@@ -7,7 +7,7 @@ function init(basePath) {
     if (!hasPlugin("PROTOOLS")) { return; };
     // -> Continue with PRO resources
 
-    var action = new RGuiAction(qsTr("&FlexPainter"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("FlexPainter", "&FlexPainter"), RMainWindowQt.getMainWindow());
     var tip = qsTranslate("FlexPainter", "Paints over selection mimicking a roller stamp");
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);

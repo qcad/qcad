@@ -85,6 +85,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="ObjectUcs" />
       <value name="ObjectDocumentVariable" />
       <value name="ObjectDimStyle" />
+      <value name="ObjectConstraint" />
       <value name="EntityAll" />
       <value name="EntityUnknown" />
       <value name="EntityAttribute" />
@@ -693,6 +694,18 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSize" isPureVirtual="false">
         <arg type="int" typeName="int" name="screen"
         isConst="false" />
+      </variant>
+    </method>
+    <method name="getImageFilePath" cppName="getImageFilePath"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="docFileName" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="importedFileName" isConst="true" />
+        <arg type="QByteArray &amp;" typeName="QByteArray"
+        name="imageData" isConst="true" />
       </variant>
     </method>
     <method name="getMetaType" cppName="getMetaType"

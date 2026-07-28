@@ -1,0 +1,3 @@
+Questa funzione seleziona tutti i riferimenti di blocco relativi al blocco
+correntemente selezionato nella lista. Solo i riferimenti che sono parte del
+blocco correntemente oggetto di modifica vengono selezionati.

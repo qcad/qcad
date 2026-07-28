@@ -1,0 +1,14 @@
+Udskriftsoversigten viser, hvordan din tegning vil se ud på udskrift. Brug
+kombinationsboksen i værktøjslinjen Indstillinger til at justere tegningens
+skalafaktor. Denne indstilling skalerer ikke faktisk eller ændrer på anden måde
+dine tegningsenheder, den indstiller kun den skaleringsfaktor, der anvendes til
+at tilpasse din tegning på papiret.  
+Knapperne til højre for kombinationsboksen for skala kan bruges til
+automatisk at tilpasse din tegning til det valgte papir eller til automatisk at
+tilføje sider, så hele din tegning kan udskrives på flere sider.  
+Når du har valgt værktøjet "Move Paper Position", kan du flytte papiret
+frit rundt ved at trække det med venstre museknap. Klik på højre museknap eller
+tryk på flugttasten for at afslutte værktøjet.  
+Værktøjslinjen Indstillinger indeholder nogle andre værktøjer til hurtigt
+at ændre nogle almindelige tegnepræferencer, som også er tilgængelige i
+dialogboksen Tegnepræferencer.

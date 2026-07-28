@@ -1,0 +1,3 @@
+Deze functie beëindigt alle actieve functies en brengt QCAD terug naar de
+rusttoestand waarin u de muiscursor kunt gebruiken om objecten te selecteren,
+objecten te slepen en neerzetten, enz.

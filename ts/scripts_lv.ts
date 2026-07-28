@@ -206,7 +206,7 @@
     <message>
         <location line="+65"/>
         <source>Hatch Patterns</source>
-        <translation>Lūkas modeļi</translation>
+        <translation>Šrafējuma modeļi</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -270,7 +270,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
         <source>Application Preferences</source>
         <translation>Lietojumprogrammas preferences</translation>
     </message>
@@ -280,7 +280,7 @@
         <translation>Zīmēšanas preferences</translation>
     </message>
     <message>
-        <location line="+326"/>
+        <location line="+328"/>
         <source>Apply preferences</source>
         <translation>Piemērot preferences</translation>
     </message>
@@ -406,7 +406,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
     <message>
         <location filename="../scripts/View/AntialiasingMode/AntialiasingMode.js" line="+74"/>
         <source>&amp;Anti-aliasing</source>
-        <translation>Izlīdzināšanas novēršana</translation>
+        <translation>Izlīdzināšana</translation>
     </message>
 </context>
 <context>
@@ -896,9 +896,12 @@ lai stātos spēkā preferenču izmaiņas.</translation>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Atrasta %n automātiskās saglabāšanas dublējuma datne nenosauktam zīmējumam.
+Vai vēlaties to atjaunot?</numerusform>
+            <numerusform>Atrastas %n automātiskās saglabāšanas dublējuma datnes nenosauktiem zīmējumiem.
+Vai vēlaties tās atjaunot?</numerusform>
+            <numerusform>Atrasts %n automātiskās saglabāšanas dublējuma datņu nenosauktiem zīmējumiem.
+Vai vēlaties tās atjaunot?</numerusform>
         </translation>
     </message>
     <message>
@@ -924,19 +927,19 @@ Do you wish to recover it?</source>
 Vai vēlaties to atjaunot?</translation>
     </message>
     <message>
-        <location line="+25"/>
-        <location line="+11"/>
-        <location line="+5"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+7"/>
         <source>Cannot rename file:</source>
         <translation>Failu nevar pārdēvēt:</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-25"/>
         <source>Moved autosave backup file to:</source>
         <translation>Pārvietots automātiskās rezerves kopijas fails uz:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+28"/>
         <source>Moved original file to:</source>
         <translation>Pārvietots sākotnējais fails uz:</translation>
     </message>
@@ -1011,12 +1014,12 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation>Punktu skaits vienībā</translation>
+        <translation>Punkti uz objekta</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Free positioning</source>
-        <translation>Bezmaksas pozicionēšana</translation>
+        <translation>Brīva pozicionēšana</translation>
     </message>
 </context>
 <context>
@@ -1024,7 +1027,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Modify/AutoTrim/AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation>Automātiskā apdare</translation>
+        <translation>Automātiskā apgriešana</translation>
     </message>
 </context>
 <context>
@@ -1082,7 +1085,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
         <source>Trim</source>
-        <translation>Trim</translation>
+        <translation>Apgriezt</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -1128,12 +1131,12 @@ Vai vēlaties to atjaunot?</translation>
         <translation>Bitmap eksportēšana</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Size</source>
         <translation>Izmērs</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Width:</source>
         <translation>Platums:</translation>
     </message>
@@ -1143,29 +1146,44 @@ Vai vēlaties to atjaunot?</translation>
         <translation>Augstums:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+33"/>
         <source>Pixels per drawing unit:</source>
         <translation>Pikseļi uz zīmēšanas vienību:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+280"/>
+        <source>Selection</source>
+        <translation>Atlase</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Export bounding box of selection</source>
         <translation>Eksportēt atlases ierobežojošo rūtiņu</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-107"/>
         <source>Background</source>
-        <translation>Pamatinformācija</translation>
+        <translation>Fons</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="-245"/>
+        <source>Specify width and height:</source>
+        <translation>Norādiet platumu un augstumu:</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Specify resolution:</source>
+        <translation>Norādiet izšķirtspēju:</translation>
+    </message>
+    <message>
+        <location line="+195"/>
         <source>White</source>
-        <translation>White</translation>
+        <translation>Balts</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Black</source>
-        <translation>Black</translation>
+        <translation>Melns</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1180,13 +1198,18 @@ Vai vēlaties to atjaunot?</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Prevent white on white / black on black export</source>
+        <translation>Novērst balts uz balta / melns uz melna eksportu</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Monochrome</source>
         <translation>Vienkrāsains</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Grayscale</source>
-        <translation>Sarkanās krāsas</translation>
+        <translation>Pelēktoņu</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1197,17 +1220,17 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+13"/>
         <source>Anti-aliasing</source>
-        <translation>Izlīdzināšanas novēršana</translation>
+        <translation>Izlīdzināšana</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use anti-aliasing</source>
-        <translation>Izmantojiet izlīdzināšanas novēršanu</translation>
+        <translation>Izmantojiet izlīdzināšanu</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-197"/>
         <source>Margin</source>
-        <translation>Rezerve</translation>
+        <translation>Piemale</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1233,7 +1256,7 @@ Vai vēlaties to atjaunot?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Nepareizs attēla izmērs (platumam x augstumam jābūt mazākam par %1)</translation>
     </message>
@@ -1329,7 +1352,7 @@ Vai vēlaties to atjaunot?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
         <source>Widgets</source>
         <translation>Logrīki</translation>
     </message>
@@ -1476,7 +1499,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation>Otrais breika punkts</translation>
+        <translation>Otrais pārtraukuma punkts</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2135,7 +2158,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+20"/>
         <source>Grayscale</source>
-        <translation>Sarkanās krāsas</translation>
+        <translation>Pelēktoņu</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2215,7 +2238,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+3"/>
         <source>Coordinate</source>
-        <translation>Saskaņot</translation>
+        <translation>Koordināta</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2679,7 +2702,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation>Lūkas</translation>
+        <translation>Šrafējumi</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2814,7 +2837,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Vadītāja galapunkts</translation>
+        <translation>Norādes līnijas galapunkts</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
@@ -2861,9 +2884,9 @@ Vai vēlaties to atjaunot?</translation>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n izmēra etiķetes pozīcija tika atiestatīta.</numerusform>
+            <numerusform>%n izmēru etiķešu pozīcijas tika atiestatītas.</numerusform>
+            <numerusform>%n izmēru etiķešu pozīcijas tika atiestatītas.</numerusform>
         </translation>
     </message>
     <message>
@@ -3070,7 +3093,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation>telpa</translation>
+        <translation>atstarpe</translation>
     </message>
     <message>
         <location line="+309"/>
@@ -3150,7 +3173,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+12"/>
         <source>Arrow</source>
-        <translation>Arrow</translation>
+        <translation>Bulta</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3332,7 +3355,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation>Top</translation>
+        <translation>Augša</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3347,12 +3370,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Middle</translation>
+        <translation>Vidus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation>Tiesības</translation>
+        <translation>Labā</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4183,9 +4206,9 @@ jau ir sarakstā.</translation>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n subjekts dublēts</numerusform>
+            <numerusform>%n subjekti dublēti</numerusform>
+            <numerusform>%n subjektu dublēts</numerusform>
         </translation>
     </message>
     <message>
@@ -4203,18 +4226,18 @@ jau ir sarakstā.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2133"/>
+        <location line="+2167"/>
         <source>Cancel</source>
         <translation>Atcelt</translation>
     </message>
     <message>
-        <location line="-2132"/>
+        <location line="-2166"/>
         <source>Done</source>
         <translation>Paveikts</translation>
     </message>
     <message>
-        <location line="+284"/>
-        <location line="+133"/>
+        <location line="+287"/>
+        <location line="+143"/>
         <source>Active Tool:</source>
         <translation>Aktīvais rīks:</translation>
     </message>
@@ -4254,7 +4277,7 @@ jau ir sarakstā.</translation>
         <translation>Vienība atrodas bloķētā slānī.</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+254"/>
         <source>Length:</source>
         <translation>Garums:</translation>
     </message>
@@ -4432,12 +4455,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation>Izvēlieties lūku</translation>
+        <translation>Izvēlieties šrafējumu</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation>Rediģēt lūkas</translation>
+        <translation>Rediģēt šrafējumu</translation>
     </message>
 </context>
 <context>
@@ -4716,7 +4739,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>Aizbēgt</translation>
+        <translation>Atcelt</translation>
     </message>
 </context>
 <context>
@@ -5012,7 +5035,7 @@ jau ir sarakstā.</translation>
         <location line="+3"/>
         <location filename="../scripts/Misc/Tutorials/CreatingNewTool/ExThreePoints.js" line="+3"/>
         <source>Draw three points</source>
-        <translation>Atvelciet trīs punktus</translation>
+        <translation>Zīmēt trīs punktus</translation>
     </message>
 </context>
 <context>
@@ -5021,9 +5044,9 @@ jau ir sarakstā.</translation>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Transakcija ietekmēja %n objektu.</numerusform>
+            <numerusform>Transakcija ietekmēja %n objektus.</numerusform>
+            <numerusform>Transakcija ietekmēja %n objektu.</numerusform>
         </translation>
     </message>
     <message>
@@ -5094,17 +5117,17 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>Eksplodēt</translation>
+        <translation>Sadalīt</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation>Eksplodēt</translation>
+        <translation>Sadalīt</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+19"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation>Eksplodēt spline uz daudzlīnijām ar līniju segmentiem</translation>
+        <translation>Sadalīt spline uz daudzlīnijām ar līniju segmentiem</translation>
     </message>
     <message>
         <location line="+104"/>
@@ -5129,7 +5152,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+10"/>
         <source>Explode circles into polylines with two half circles</source>
-        <translation>Eksplodēt apļus daudzlīnijās ar diviem pusapļiem</translation>
+        <translation>Sadalīt apļus daudzlīnijās ar diviem pusapļiem</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5195,12 +5218,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="-5"/>
         <source>Black</source>
-        <translation>Black</translation>
+        <translation>Melns</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation>White</translation>
+        <translation>Balts</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5251,7 +5274,12 @@ jau ir sarakstā.</translation>
         <translation>FP pievienots slānis:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Krāsas pārkrāso atlasi, imitējot rullīša zīmogu</translation>
     </message>
@@ -5541,7 +5569,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+3"/>
         <source>Verbose *</source>
-        <translation>Verbose _tmp_bg _tmp_cs _tmp_da _tmp_de _tmp_es _tmp_et _tmp_fi _tmp_fr _tmp_hu _tmp_id _tmp_it _tmp_ja _tmp_ko _tmp_lt _tmp_lv _tmp_nb _tmp_nl _tmp_pl _tmp_pt _tmp_ro _tmp_ru _tmp_sk _tmp_sl _tmp_sv _tmp_tr _tmp_uk _tmp_zh_TW asistent_ar.qm assistant_bg.qm assistant_cs.qm assistant_da.qm assistant_de.qm assistant_en.qm assistant_es.qm assistant_fr.qm assistant_hr.qm assistant_hu.qm assistant_ja.qm assistant_ko.qm assistant_nl.qm assistant_pl.qm assistant_pt_BR.qm assistant_ru.qm assistant_sk.qm assistant_sl.qm assistant_tr.qm assistant_uk.qm assistant_zh_CN.qm assistant_zh_TW.qm designer_ar.qm designer_bg.qm designer_cs.qm designer_da.qm designer_de.qm designer_en.qm designer_es.qm designer_fr.qm designer_hr.qm designer_hu.qm designer_ja.qm designer_ko.qm designer_nl.qm designer_pl.qm designer_ru.qm designer_sk.qm designer_sl.qm designer_tr.qm designer_uk.qm designer_zh_CN.qm designer_zh_TW.qm linguist_ar.qm linguist_bg.qm linguist_cs.qm linguist_da.qm linguist_de.qm linguist_en.qm linguist_es.qm linguist_fr.qm linguist_hr.qm linguist_hu.qm linguist_it.qm linguist_ja.qm linguist_ko.qm linguist_nl.qm linguist_pl.qm linguist_ru.qm linguist_sk.qm linguist_sl.qm linguist_sv.qm linguist_tr.qm linguist_uk.qm linguist_zh_CN.qm linguist_zh_TW.qm qcadcore_bg.qm qcadcore_bg.ts qcadcore_cs.qm qcadcore_cs.ts qcadcore_da.qm qcadcore_da.ts qcadcore_de.qm qcadcore_de.ts qcadcore_el.qm qcadcore_el.ts qcadcore_en.qm qcadcore_en.ts qcadcore_es.qm qcadcore_es.ts qcadcore_et.qm qcadcore_et.ts qcadcore_fi.qm qcadcore_fi.ts qcadcore_fr.qm qcadcore_fr.ts qcadcore_HR.qm qcadcore_HR.ts qcadcore_hu.qm qcadcore_hu.ts qcadcore_id.qm qcadcore_id.ts qcadcore_it.qm qcadcore_it.ts qcadcore_ja.qm qcadcore_ja.ts qcadcore_ko.qm qcadcore_ko.ts qcadcore_lt.qm qcadcore_lt.ts qcadcore_lv.qm qcadcore_lv.ts qcadcore_nb.qm qcadcore_nb.ts qcadcore_nl.qm qcadcore_nl.ts qcadcore_pl.qm qcadcore_pl.ts qcadcore_pt.qm qcadcore_pt.ts qcadcore_ro.qm qcadcore_ro.ts qcadcore_ru.qm qcadcore_ru.ts qcadcore_ru.ts qcadcore_sk.qm qcadcore_sk.ts qcadcore_sl.qm qcadcore_sl.ts qcadcore_sv.qm qcadcore_sv.ts qcadcore_th.qm qcadcore_th.ts qcadcore_tr.qm qcadcore_tr.ts qcadcore_uk.qm qcadcore_uk.ts qcadcore_zh_CN.qm qcadcore_zh_CN.ts qcadcore_zh_TW.qm qcadcore_zh_TW.ts qcadentity_bg.qm qcadentity_bg.ts qcadentity_cs.qm qcadentity_cs.ts qcadentity_da.qm qcadentity_da.ts qcadentity_de.qm qcadentity_de.ts qcadentity_el.qm qcadentity_el.ts qcadentity_en.qm qcadentity_en.ts qcadentity_es.qm qcadentity_es.ts qcadentity_et.qm qcadentity_et.ts qcadentity_fi.qm qcadentity_fi.ts qcadentity_fr.qm qcadentity_fr.ts qcadentity_HR.qm qcadentity_HR.ts qcadentity_HU.qm qcadentity_hu.ts qcadentity_id.qm qcadentity_id.ts qcadentity_it.qm qcadentity_it.ts qcadentity_ja.qm qcadentity_ja.ts qcadentity_ko.qm qcadentity_ko.ts qcadentity_lt.qm qcadentity_lt.ts qcadentity_lv.qm qcadentity_lv.ts qcadentity_nb.qm qcadentity_nb.ts qcadentity_nl.qm qcadentity_nl.ts qcadentity_pl.qm qcadentity_pl.ts qcadentity_pt.qm qcadentity_pt.ts qcadentity_ro.qm qcadentity_ro.ts qcadentity_ru.qm qcadentity_ru.ts qcadentity_sk.qm qcadentity_sk.ts qcadentity_sl.qm qcadentity_sl.ts qcadentity_sv.qm qcadentity_sv.ts qcadentity_th.qm qcadentity_th.ts qcadentity_tr.qm qcadentity_tr.ts qcadentity_uk.qm qcadentity_uk.ts qcadentity_zh_CN.qm qcadentity_zh_CN.ts qcadentity_zh_TW.qm qcadentity_zh_TW.ts qcadgui_bg.qm qcadgui_bg.ts qcadgui_cs.qm qcadgui_cs.ts qcadgui_da.qm qcadgui_da.ts qcadgui_de.qm qcadgui_de.ts qcadgui_el.qm qcadgui_el.ts qcadgui_en.qm qcadgui_en.ts qcadgui_es.qm qcadgui_es.ts qcadgui_et.qm qcadgui_et.ts qcadgui_fi.qm qcadgui_fi.ts qcadgui_fr.qm qcadgui_fr.ts qcadgui_hr.qm qcadgui_hr.ts qcadgui_hu.qm qcadgui_hu.ts qcadgui_id.qm qcadgui_id.ts qcadgui_it.qm qcadgui_it.ts qcadgui_ja.qm qcadgui_ja.ts qcadgui_ko.qm qcadgui_ko.ts qcadgui_lt.qm qcadgui_lt.ts qcadgui_lv.qm qcadgui_lv.ts qcadgui_nb.qm qcadgui_nb.ts qcadgui_nl.qm qcadgui_nl.ts qcadgui_pl.qm qcadgui_pl.ts qcadgui_pt.qm qcadgui_pt.ts qcadgui_ro.qm qcadgui_ro.ts qcadgui_ru.qm qcadgui_ru.ts qcadgui_sk.qm qcadgui_sk.ts qcadgui_sl.qm qcadgui_sl.ts qcadgui_sv.qm qcadgui_sv.ts qcadgui_th.qm qcadgui_th.ts qcadgui_tr.qm qcadgui_tr.ts qcadgui_uk.qm qcadgui_uk.ts qcadgui_zh_CN.qm qcadgui_zh_CN.ts qcadgui_zh_TW.qm qcadgui_zh_TW.ts qmlviewer_ar.qm qmlviewer_bg.qm qmlviewer_cs.qm qmlviewer_da.qm qmlviewer_en.qm qmlviewer_es.qm qmlviewer_fi.qm qmlviewer_fr.qm qmlviewer_he.qm qmlviewer_hu.qm qmlviewer_ja.qm qmlviewer_ko.qm qmlviewer_pl.qm qmlviewer_ru.qm qmlviewer_sk.qm qmlviewer_uk.qm qt_ar.qm qt_bg.qm qt_ca.qm qt_cs.qm qt_da.qm qt_de.qm qt_en.qm qt_es.qm qt_fa.qm qt_fi.qm qt_fr.qm qt_gd.qm qt_gl.qm qt_he.qm qt_help_ar.qm qt_help_bg.qm qt_help_ca.qm qt_help_cs.qm qt_help_da.qm qt_help_de.qm qt_help_en.qm qt_help_es.qm qt_help_fr.qm qt_help_gl.qm qt_help_hr.qm qt_help_hu.qm qt_help_it.qm qt_help_ja.qm qt_help_ko.qm qt_help_nl.qm qt_help_nn.qm qt_help_pl.qm qt_help_pt_BR.qm qt_help_ru.qm qt_help_sk.qm qt_help_sl.qm qt_help_tr.qm qt_help_uk.qm qt_help_zh_CN.qm qt_help_zh_TW.qm qt_hr.qm qt_hu.qm qt_it.qm qt_it.qm qt_ja.qm qt_ko.qm qt_lt.qm qt_lv.qm qt_nl.qm qt_nn.qm qt_pl.qm qt_pt.qm qt_pt_BR.qm qt_pt_PT.qm qt_ru.qm qt_sk.qm qt_sl.qm qt_sv.qm qt_tr.qm qt_uk.qm qt_zh_CN.qm qt_zh_TW.qm qtbase_ar.qm qtbase_bg.qm qtbase_ca.qm qtbase_cs.qm qtbase_da.qm qtbase_de.qm qtbase_en.qm qtbase_es.qm qtbase_fa.qm qtbase_fi.qm qtbase_fr.qm qtbase_gd.qm qtbase_he.qm qtbase_hr.qm qtbase_hu.qm qtbase_it.qm qtbase_ja.qm qtbase_ko.qm qtbase_lv.qm qtbase_nl.qm qtbase_nl.ts qtbase_nn.qm qtbase_pl.qm qtbase_pt.qm qtbase_pt.ts qtbase_pt_BR.qm qtbase_ru.qm qtbase_sk.qm qtbase_tr.qm qtbase_uk.qm qtbase_zh_CN.qm qtbase_zh_CN.ts qtbase_zh_TW.qm qtconfig_hu.qm qtconfig_ja.qm qtconfig_ko.qm qtconfig_pl.qm qtconfig_ru.qm qtconfig_sk.qm qtconfig_sl.qm qtconfig_uk.qm qtconfig_zh_CN.qm qtconfig_zh_TW.qm qtconconnectivity_bg.qm qtconnectivity_da.qm qtconnectivity_de.qm qtconnectivity_en.qm qtconnectivity_es.qm qtconnectivity_ko.qm qtconnectivity_pl.qm qtconnectivity_ru.qm qtconnectivity_uk.qm qtdeclarative_bg.qm qtdeclarative_da.qm qtdeclarative_de.qm qtdeclarative_en.qm qtdeclarative_es.qm qtdeclarative_fi.qm qtdeclarative_fr.qm qtdeclarative_ja.qm qtdeclarative_ko.qm qtdeclarative_lv.qm qtdeclarative_pl.qm qtdeclarative_ru.qm qtdeclarative_sk.qm qtdeclarative_uk.qm qtlocation_bg.qm qtlocation_da.qm qtlocation_de.qm qtlocation_en.qm qtlocation_es.qm qtlocation_fr.qm qtlocation_ko.qm qtlocation_pl.qm qtlocation_ru.qm qtlocation_uk.qm qtmultimultimedia_ar.qm qtmultimultimedia_bg.qm qtmultimultimedia_ca.qm qtmultimultimedia_cs.qm qtmultimultimedia_da.qm qtmultimultimedia_de.qm qtmultimultimedia_en.qm qtmultimultimedia_es.qm qtmultimultimedia_fi.qm qtmultimultimedia_fr.qm qtmultimultimedia_hu.qm qtmultimultimedia_it.qm qtmultimultimedia_ja.qm qtmultimultimedia_ko.qm qtmultimtimedia_pl.qm qtmultimedia_ru.qm qtmultimedia_sk.qm qtmultimedia_uk.qm qtquick1_bg.qm qtquick1_ca.qm qtquick1_cs.qm qtquick1_da.qm qtquick1_de.qm qtquick1_en.qm qtquick1_es.qm qtquick1_fi.qm qtquick1_fr.qm qtquick1_he.qm qtquick1_hu.qm qtquick1_it.qm qtquick1_ja.qm qtquick1_ko.qm qtquick1_pl.qm qtquick1_ru.qm qtquick1_sk.qm qtquick1_uk.qm qtquickcontrols2_ar.qm qtquickcontrols2_bg.qm qtquickcontrols2_en.qm qtquickcontrols2_ko.qm qtquickcontrols2_uk.qm qtquickcontrols_bg.qm qtquickcontrols_de.qm qtquickcontrols_en.qm qtquickcontrols_fi.qm qtquickcontrols_fr.qm qtquickcontrols_ja.qm qtquickcontrols_ru.qm qtquickcontrols_uk.qm qtscript_ar.qm qtscript_bg.qm qtscript_ca.qm qtscript_cs.qm qtscript_da.qm qtscript_de.qm qtscript_en.qm qtscript_es.qm qtscript_fi.qm qtscript_fr.qm qtscript_he.qm qtscript_hu.qm qtscript_it.qm qtscript_ja.qm qtscript_ko.qm qtscript_lv.qm qtscript_pl.qm qtscript_ru.qm qtscript_sk.qm qtscript_uk.qm qtserialport_de.qm qtserialport_en.qm qtserialport_es.qm qtserialport_ja.qm qtserialport_ko.qm qtserialport_pl.qm qtserialport_ru.qm qtserialport_uk.qm qtwebengine_de.qm qtwebengine_en.qm qtwebengine_es.qm qtwebengine_ko.qm qtwebengine_pl.qm qtwebengine_ru.qm qtwebengine_uk.qm qtwebsockets_de.qm qtwebsockets_en.qm qtwebsockets_es.qm qtwebsockets_fr.qm qtwebsockets_ja.qm qtwebsockets_ko.qm qtwebsockets_pl.qm qtwebsockets_ru.qm qtwebsockets_uk.qm qtxmlpatterns_bg.qm qtxmlpatterns_ca.qm qtxmlpatterns_cs.qm qtxmlpatterns_da.qtxmlpatterns_de.qm qtxmlpatterns_en.qm qtxmlpatterns_es.qm qtxmlpatterns_fr.qm qtxmlpatterns_hu.qm qtxmlpatterns_it.qm qtxmlpatterns_ja.qm qtxmlpatterns_ko.qm qtxmlpatterns_pl.qm qtxmlpatterns_ru.qm qtxmlpatterns_sk.qm qtxmlpatterns_uk.qm scripts.pro scripts_bg.qm scripts_bg.ts scripts_cs.qm scripts_cs.ts scripts_da.qm scripts_da.ts scripts_de.qm scripts_de.ts scripts_el.qm scripts_el.ts scripts_en.qm scripts_en.ts scripts_es.qm scripts_es.ts scripts_et.qm scripts_et.ts scripts_fi.qm scripts_fi.ts scripts_fr.qm scripts_fr.ts scripts_hr.qm scripts_hr.ts scripts_hu.qm scripts_hu.ts scripts_id.qm scripts_id.ts scripts_it.qm scripts_it.ts scripts_ja.qm scripts_ja.ts scripts_ko.qm scripts_ko.ts scripts_lt.qm scripts_lt.ts scripts_lv.qm scripts_lv.ts scripts_nb.qm scripts_nb.ts scripts_nl.qm scripts_nl.ts scripts_pl.qm scripts_pl.ts scripts_pt.qm scripts_pt.ts scripts_ro.qm scripts_ro.ts scripts_ru.qm scripts_ru.ts scripts_sk.qm scripts_sk.ts scripts_sl.qm scripts_sl.ts scripts_sv.qm scripts_sv.ts scripts_th.qm scripts_th.ts scripts_tr.qm scripts_tr.ts scripts_uk.qm scripts_uk.ts scripts_zh_CN.qm scripts_zh_CN.ts scripts_zh_TW.qm scripts_zh_TW.ts</translation>
+        <translation>Verbose *</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5551,15 +5579,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+3"/>
         <source>Delete Base Entities *</source>
-        <translation>Dzēst bāzes vienības _tmp_bg _tmp_cs _tmp_da _tmp_de _tmp_es _tmp_et _tmp_fi _tmp_fr _tmp_hu _tmp_id _tmp_it _tmp_ja _tmp_ko _tmp_lt _tmp_lv _tmp_nb _tmp_nl _tmp_pl _tmp_pt _tmp_ro _tmp_ru _tmp_sk _tmp_sl _tmp_sv _tmp_tr _tmp_uk _tmp_zh_TW asistent_ar.qm assistant_bg.qm assistant_cs.qm assistant_da.qm assistant_de.qm assistant_en.qm assistant_es.qm assistant_fr.qm assistant_hr.qm assistant_hu.qm assistant_ja.qm assistant_ko.qm assistant_nl.qm assistant_pl.qm assistant_pt_BR.qm assistant_ru.qm assistant_sk.qm assistant_sl.qm assistant_tr.qm assistant_uk.qm assistant_zh_CN.qm assistant_zh_TW.qm designer_ar.qm designer_bg.qm designer_cs.qm designer_da.qm designer_de.qm designer_en.qm designer_es.qm designer_fr.qm designer_hr.qm designer_hu.qm designer_ja.qm designer_ko.qm designer_nl.qm designer_pl.qm designer_ru.qm designer_sk.qm designer_sl.qm designer_tr.qm designer_uk.qm designer_zh_CN.qm designer_zh_TW.qm linguist_ar.qm linguist_bg.qm linguist_cs.qm linguist_da.qm linguist_de.qm linguist_en.qm linguist_es.qm linguist_fr.qm linguist_hr.qm linguist_hu.qm linguist_it.qm linguist_ja.qm linguist_ko.qm linguist_nl.qm linguist_pl.qm linguist_ru.qm linguist_sk.qm linguist_sl.qm linguist_sv.qm linguist_tr.qm linguist_uk.qm linguist_zh_CN.qm linguist_zh_TW.qm qcadcore_bg.qm qcadcore_bg.ts qcadcore_cs.qm qcadcore_cs.ts qcadcore_da.qm qcadcore_da.ts qcadcore_de.qm qcadcore_de.ts qcadcore_el.qm qcadcore_el.ts qcadcore_en.qm qcadcore_en.ts qcadcore_es.qm qcadcore_es.ts qcadcore_et.qm qcadcore_et.ts qcadcore_fi.qm qcadcore_fi.ts qcadcore_fr.qm qcadcore_fr.ts qcadcore_HR.qm qcadcore_HR.ts qcadcore_hu.qm qcadcore_hu.ts qcadcore_id.qm qcadcore_id.ts qcadcore_it.qm qcadcore_it.ts qcadcore_ja.qm qcadcore_ja.ts qcadcore_ko.qm qcadcore_ko.ts qcadcore_lt.qm qcadcore_lt.ts qcadcore_lv.qm qcadcore_lv.ts qcadcore_nb.qm qcadcore_nb.ts qcadcore_nl.qm qcadcore_nl.ts qcadcore_pl.qm qcadcore_pl.ts qcadcore_pt.qm qcadcore_pt.ts qcadcore_ro.qm qcadcore_ro.ts qcadcore_ru.qm qcadcore_ru.ts qcadcore_ru.ts qcadcore_sk.qm qcadcore_sk.ts qcadcore_sl.qm qcadcore_sl.ts qcadcore_sv.qm qcadcore_sv.ts qcadcore_th.qm qcadcore_th.ts qcadcore_tr.qm qcadcore_tr.ts qcadcore_uk.qm qcadcore_uk.ts qcadcore_zh_CN.qm qcadcore_zh_CN.ts qcadcore_zh_TW.qm qcadcore_zh_TW.ts qcadentity_bg.qm qcadentity_bg.ts qcadentity_cs.qm qcadentity_cs.ts qcadentity_da.qm qcadentity_da.ts qcadentity_de.qm qcadentity_de.ts qcadentity_el.qm qcadentity_el.ts qcadentity_en.qm qcadentity_en.ts qcadentity_es.qm qcadentity_es.ts qcadentity_et.qm qcadentity_et.ts qcadentity_fi.qm qcadentity_fi.ts qcadentity_fr.qm qcadentity_fr.ts qcadentity_HR.qm qcadentity_HR.ts qcadentity_HU.qm qcadentity_hu.ts qcadentity_id.qm qcadentity_id.ts qcadentity_it.qm qcadentity_it.ts qcadentity_ja.qm qcadentity_ja.ts qcadentity_ko.qm qcadentity_ko.ts qcadentity_lt.qm qcadentity_lt.ts qcadentity_lv.qm qcadentity_lv.ts qcadentity_nb.qm qcadentity_nb.ts qcadentity_nl.qm qcadentity_nl.ts qcadentity_pl.qm qcadentity_pl.ts qcadentity_pt.qm qcadentity_pt.ts qcadentity_ro.qm qcadentity_ro.ts qcadentity_ru.qm qcadentity_ru.ts qcadentity_sk.qm qcadentity_sk.ts qcadentity_sl.qm qcadentity_sl.ts qcadentity_sv.qm qcadentity_sv.ts qcadentity_th.qm qcadentity_th.ts qcadentity_tr.qm qcadentity_tr.ts qcadentity_uk.qm qcadentity_uk.ts qcadentity_zh_CN.qm qcadentity_zh_CN.ts qcadentity_zh_TW.qm qcadentity_zh_TW.ts qcadgui_bg.qm qcadgui_bg.ts qcadgui_cs.qm qcadgui_cs.ts qcadgui_da.qm qcadgui_da.ts qcadgui_de.qm qcadgui_de.ts qcadgui_el.qm qcadgui_el.ts qcadgui_en.qm qcadgui_en.ts qcadgui_es.qm qcadgui_es.ts qcadgui_et.qm qcadgui_et.ts qcadgui_fi.qm qcadgui_fi.ts qcadgui_fr.qm qcadgui_fr.ts qcadgui_hr.qm qcadgui_hr.ts qcadgui_hu.qm qcadgui_hu.ts qcadgui_id.qm qcadgui_id.ts qcadgui_it.qm qcadgui_it.ts qcadgui_ja.qm qcadgui_ja.ts qcadgui_ko.qm qcadgui_ko.ts qcadgui_lt.qm qcadgui_lt.ts qcadgui_lv.qm qcadgui_lv.ts qcadgui_nb.qm qcadgui_nb.ts qcadgui_nl.qm qcadgui_nl.ts qcadgui_pl.qm qcadgui_pl.ts qcadgui_pt.qm qcadgui_pt.ts qcadgui_ro.qm qcadgui_ro.ts qcadgui_ru.qm qcadgui_ru.ts qcadgui_sk.qm qcadgui_sk.ts qcadgui_sl.qm qcadgui_sl.ts qcadgui_sv.qm qcadgui_sv.ts qcadgui_th.qm qcadgui_th.ts qcadgui_tr.qm qcadgui_tr.ts qcadgui_uk.qm qcadgui_uk.ts qcadgui_zh_CN.qm qcadgui_zh_CN.ts qcadgui_zh_TW.qm qcadgui_zh_TW.ts qmlviewer_ar.qm qmlviewer_bg.qm qmlviewer_cs.qm qmlviewer_da.qm qmlviewer_en.qm qmlviewer_es.qm qmlviewer_fi.qm qmlviewer_fr.qm qmlviewer_he.qm qmlviewer_hu.qm qmlviewer_ja.qm qmlviewer_ko.qm qmlviewer_pl.qm qmlviewer_ru.qm qmlviewer_sk.qm qmlviewer_uk.qm qt_ar.qm qt_bg.qm qt_ca.qm qt_cs.qm qt_da.qm qt_de.qm qt_en.qm qt_es.qm qt_fa.qm qt_fi.qm qt_fr.qm qt_gd.qm qt_gl.qm qt_he.qm qt_help_ar.qm qt_help_bg.qm qt_help_ca.qm qt_help_cs.qm qt_help_da.qm qt_help_de.qm qt_help_en.qm qt_help_es.qm qt_help_fr.qm qt_help_gl.qm qt_help_hr.qm qt_help_hu.qm qt_help_it.qm qt_help_ja.qm qt_help_ko.qm qt_help_nl.qm qt_help_nn.qm qt_help_pl.qm qt_help_pt_BR.qm qt_help_ru.qm qt_help_sk.qm qt_help_sl.qm qt_help_tr.qm qt_help_uk.qm qt_help_zh_CN.qm qt_help_zh_TW.qm qt_hr.qm qt_hu.qm qt_it.qm qt_it.qm qt_ja.qm qt_ko.qm qt_lt.qm qt_lv.qm qt_nl.qm qt_nn.qm qt_pl.qm qt_pt.qm qt_pt_BR.qm qt_pt_PT.qm qt_ru.qm qt_sk.qm qt_sl.qm qt_sv.qm qt_tr.qm qt_uk.qm qt_zh_CN.qm qt_zh_TW.qm qtbase_ar.qm qtbase_bg.qm qtbase_ca.qm qtbase_cs.qm qtbase_da.qm qtbase_de.qm qtbase_en.qm qtbase_es.qm qtbase_fa.qm qtbase_fi.qm qtbase_fr.qm qtbase_gd.qm qtbase_he.qm qtbase_hr.qm qtbase_hu.qm qtbase_it.qm qtbase_ja.qm qtbase_ko.qm qtbase_lv.qm qtbase_nl.qm qtbase_nl.ts qtbase_nn.qm qtbase_pl.qm qtbase_pt.qm qtbase_pt.ts qtbase_pt_BR.qm qtbase_ru.qm qtbase_sk.qm qtbase_tr.qm qtbase_uk.qm qtbase_zh_CN.qm qtbase_zh_CN.ts qtbase_zh_TW.qm qtconfig_hu.qm qtconfig_ja.qm qtconfig_ko.qm qtconfig_pl.qm qtconfig_ru.qm qtconfig_sk.qm qtconfig_sl.qm qtconfig_uk.qm qtconfig_zh_CN.qm qtconfig_zh_TW.qm qtconconnectivity_bg.qm qtconnectivity_da.qm qtconnectivity_de.qm qtconnectivity_en.qm qtconnectivity_es.qm qtconnectivity_ko.qm qtconnectivity_pl.qm qtconnectivity_ru.qm qtconnectivity_uk.qm qtdeclarative_bg.qm qtdeclarative_da.qm qtdeclarative_de.qm qtdeclarative_en.qm qtdeclarative_es.qm qtdeclarative_fi.qm qtdeclarative_fr.qm qtdeclarative_ja.qm qtdeclarative_ko.qm qtdeclarative_lv.qm qtdeclarative_pl.qm qtdeclarative_ru.qm qtdeclarative_sk.qm qtdeclarative_uk.qm qtlocation_bg.qm qtlocation_da.qm qtlocation_de.qm qtlocation_en.qm qtlocation_es.qm qtlocation_fr.qm qtlocation_ko.qm qtlocation_pl.qm qtlocation_ru.qm qtlocation_uk.qm qtmultimultimedia_ar.qm qtmultimultimedia_bg.qm qtmultimultimedia_ca.qm qtmultimultimedia_cs.qm qtmultimultimedia_da.qm qtmultimultimedia_de.qm qtmultimultimedia_en.qm qtmultimultimedia_es.qm qtmultimultimedia_fi.qm qtmultimultimedia_fr.qm qtmultimultimedia_hu.qm qtmultimultimedia_it.qm qtmultimultimedia_ja.qm qtmultimultimedia_ko.qm qtmultimtimedia_pl.qm qtmultimedia_ru.qm qtmultimedia_sk.qm qtmultimedia_uk.qm qtquick1_bg.qm qtquick1_ca.qm qtquick1_cs.qm qtquick1_da.qm qtquick1_de.qm qtquick1_en.qm qtquick1_es.qm qtquick1_fi.qm qtquick1_fr.qm qtquick1_he.qm qtquick1_hu.qm qtquick1_it.qm qtquick1_ja.qm qtquick1_ko.qm qtquick1_pl.qm qtquick1_ru.qm qtquick1_sk.qm qtquick1_uk.qm qtquickcontrols2_ar.qm qtquickcontrols2_bg.qm qtquickcontrols2_en.qm qtquickcontrols2_ko.qm qtquickcontrols2_uk.qm qtquickcontrols_bg.qm qtquickcontrols_de.qm qtquickcontrols_en.qm qtquickcontrols_fi.qm qtquickcontrols_fr.qm qtquickcontrols_ja.qm qtquickcontrols_ru.qm qtquickcontrols_uk.qm qtscript_ar.qm qtscript_bg.qm qtscript_ca.qm qtscript_cs.qm qtscript_da.qm qtscript_de.qm qtscript_en.qm qtscript_es.qm qtscript_fi.qm qtscript_fr.qm qtscript_he.qm qtscript_hu.qm qtscript_it.qm qtscript_ja.qm qtscript_ko.qm qtscript_lv.qm qtscript_pl.qm qtscript_ru.qm qtscript_sk.qm qtscript_uk.qm qtserialport_de.qm qtserialport_en.qm qtserialport_es.qm qtserialport_ja.qm qtserialport_ko.qm qtserialport_pl.qm qtserialport_ru.qm qtserialport_uk.qm qtwebengine_de.qm qtwebengine_en.qm qtwebengine_es.qm qtwebengine_ko.qm qtwebengine_pl.qm qtwebengine_ru.qm qtwebengine_uk.qm qtwebsockets_de.qm qtwebsockets_en.qm qtwebsockets_es.qm qtwebsockets_fr.qm qtwebsockets_ja.qm qtwebsockets_ko.qm qtwebsockets_pl.qm qtwebsockets_ru.qm qtwebsockets_uk.qm qtxmlpatterns_bg.qm qtxmlpatterns_ca.qm qtxmlpatterns_cs.qm qtxmlpatterns_da.qtxmlpatterns_de.qm qtxmlpatterns_en.qm qtxmlpatterns_es.qm qtxmlpatterns_fr.qm qtxmlpatterns_hu.qm qtxmlpatterns_it.qm qtxmlpatterns_ja.qm qtxmlpatterns_ko.qm qtxmlpatterns_pl.qm qtxmlpatterns_ru.qm qtxmlpatterns_sk.qm qtxmlpatterns_uk.qm scripts.pro scripts_bg.qm scripts_bg.ts scripts_cs.qm scripts_cs.ts scripts_da.qm scripts_da.ts scripts_de.qm scripts_de.ts scripts_el.qm scripts_el.ts scripts_en.qm scripts_en.ts scripts_es.qm scripts_es.ts scripts_et.qm scripts_et.ts scripts_fi.qm scripts_fi.ts scripts_fr.qm scripts_fr.ts scripts_hr.qm scripts_hr.ts scripts_hu.qm scripts_hu.ts scripts_id.qm scripts_id.ts scripts_it.qm scripts_it.ts scripts_ja.qm scripts_ja.ts scripts_ko.qm scripts_ko.ts scripts_lt.qm scripts_lt.ts scripts_lv.qm scripts_lv.ts scripts_nb.qm scripts_nb.ts scripts_nl.qm scripts_nl.ts scripts_pl.qm scripts_pl.ts scripts_pt.qm scripts_pt.ts scripts_ro.qm scripts_ro.ts scripts_ru.qm scripts_ru.ts scripts_sk.qm scripts_sk.ts scripts_sl.qm scripts_sl.ts scripts_sv.qm scripts_sv.ts scripts_th.qm scripts_th.ts scripts_tr.qm scripts_tr.ts scripts_uk.qm scripts_uk.ts scripts_zh_CN.qm scripts_zh_CN.ts scripts_zh_TW.qm scripts_zh_TW.ts</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>FlexPainter</translation>
+        <translation>Dzēst bāzes vienības *</translation>
     </message>
 </context>
 <context>
@@ -5704,7 +5724,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation>Divreiz noklikšķiniet, lai rediģētu lūkas</translation>
+        <translation>Divreiz noklikšķiniet, lai rediģētu šrafējumu</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5804,7 +5824,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation>Izcelsme</translation>
+        <translation>Sākumpunkts</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6059,7 +6079,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation>Izcelsme</translation>
+        <translation>Sākumpunkts</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -6145,6 +6165,11 @@ jau ir sarakstā.</translation>
         <location line="+47"/>
         <source>Tertiary reference points:</source>
         <translation>Terciārie atskaites punkti:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Snap reference points:</source>
+        <translation>Snap atsauces punkti:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -6322,12 +6347,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation>Lūkas rīki</translation>
+        <translation>Šrafējuma rīki</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Hatch</source>
-        <translation>Lūka</translation>
+        <translation>Šrafējums</translation>
     </message>
 </context>
 <context>
@@ -6335,7 +6360,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation>Lūka</translation>
+        <translation>Šrafējums</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6350,7 +6375,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Lūkas modelis</translation>
+        <translation>Šrafējuma modelis</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6393,7 +6418,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>Lūkas no atlases</translation>
+        <translation>Šrafējums no atlases</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -6694,7 +6719,7 @@ jau ir sarakstā.</translation>
         <location line="-108"/>
         <location line="+66"/>
         <source>Circumference</source>
-        <translation>Apjoms</translation>
+        <translation>Apkārtmērs</translation>
     </message>
     <message>
         <location line="-59"/>
@@ -6721,7 +6746,7 @@ jau ir sarakstā.</translation>
         <location line="+67"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
-        <translation>Akords</translation>
+        <translation>Horda</translation>
     </message>
     <message>
         <location line="-60"/>
@@ -6741,7 +6766,7 @@ jau ir sarakstā.</translation>
         <location line="-88"/>
         <location line="+67"/>
         <source>chord:</source>
-        <translation>akords:</translation>
+        <translation>horda:</translation>
     </message>
     <message>
         <location line="-52"/>
@@ -7000,7 +7025,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>Gultnis:</translation>
+        <translation>Virziens:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7010,7 +7035,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation>Pamatne / azimuts</translation>
+        <translation>Virziens / azimuts</translation>
     </message>
 </context>
 <context>
@@ -7542,7 +7567,7 @@ jau ir sarakstā.</translation>
         <location line="+16"/>
         <location line="+33"/>
         <source>Comma</source>
-        <translation>K komats</translation>
+        <translation>Komats</translation>
     </message>
     <message>
         <location line="-33"/>
@@ -7555,7 +7580,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="-31"/>
         <source>Semicolon</source>
-        <translation>Puspunktiņš</translation>
+        <translation>Semikols</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -7575,7 +7600,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Dollar</source>
-        <translation>Dollar</translation>
+        <translation>Dolārs</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7585,7 +7610,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+18"/>
         <source>Dot</source>
-        <translation>Dot</translation>
+        <translation>Punkts</translation>
     </message>
 </context>
 <context>
@@ -7822,7 +7847,7 @@ jau ir sarakstā.</translation>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation>Ministru kabinets</translation>
+        <translation>Kabinets</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7832,7 +7857,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
         <source>Top</source>
-        <translation>Top</translation>
+        <translation>Augša</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -7852,12 +7877,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+24"/>
         <source>Right</source>
-        <translation>Tiesības</translation>
+        <translation>Labā</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation>Tiesības atpakaļ</translation>
+        <translation>Labā aizmugure</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -7901,7 +7926,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridRight/IsometricGridRight.js" line="+35"/>
         <source>&amp;Right Projection</source>
-        <translation>Pareizā projekcija</translation>
+        <translation>Labā projekcija</translation>
     </message>
 </context>
 <context>
@@ -7965,7 +7990,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+62"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+71"/>
         <source>Language Settings</source>
         <translation>Valodas iestatījumi</translation>
     </message>
@@ -8182,12 +8207,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>Leader</translation>
+        <translation>Norādes līnija</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Zīmēt līderi (līniju secība ar bultiņu)</translation>
+        <translation>Zīmēt norādes līniju (līniju secība ar bultiņu)</translation>
     </message>
 </context>
 <context>
@@ -8195,12 +8220,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Līderis tika veiksmīgi izveidots</translation>
+        <translation>Norādes līnija tika veiksmīgi izveidota</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>Vadītājs no izvēlētā teksta</translation>
+        <translation>Norādes līnija no izvēlētā teksta</translation>
     </message>
 </context>
 <context>
@@ -8256,7 +8281,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Stars</translation>
     </message>
 </context>
 <context>
@@ -8337,7 +8362,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Middle</translation>
+        <translation>Vidus</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8720,7 +8745,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Middle</translation>
+        <translation>Vidus</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8818,6 +8843,16 @@ jau ir sarakstā.</translation>
         <location line="+3"/>
         <source>Draw vertical line</source>
         <translation>Zīmēt vertikālu līniju</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineVertical/LineVertical.ui" line="+17"/>
+        <source>Length:</source>
+        <translation>Garums:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Reference Point:</source>
+        <translation>Atsauces punkts:</translation>
     </message>
 </context>
 <context>
@@ -9020,7 +9055,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>MiscBlock</name>
     <message>
-        <location filename="../scripts/Misc/MiscBlock/MiscBlock.js" line="+51"/>
+        <location filename="../scripts/Misc/MiscBlock/MiscBlock.js" line="+52"/>
         <source>Misc</source>
         <translation>Dažādi</translation>
     </message>
@@ -9038,7 +9073,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>MiscDevelopment</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/MiscDevelopment.js" line="+51"/>
+        <location filename="../scripts/Misc/MiscDevelopment/MiscDevelopment.js" line="+52"/>
         <source>Misc</source>
         <translation>Dažādi</translation>
     </message>
@@ -9056,7 +9091,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>MiscDraw</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/MiscDraw.js" line="+52"/>
+        <location filename="../scripts/Misc/MiscDraw/MiscDraw.js" line="+53"/>
         <source>Misc</source>
         <translation>Dažādi</translation>
     </message>
@@ -9079,7 +9114,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>MiscIO</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MiscIO.js" line="+51"/>
+        <location filename="../scripts/Misc/MiscIO/MiscIO.js" line="+52"/>
         <source>Misc</source>
         <translation>Dažādi</translation>
     </message>
@@ -9097,7 +9132,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>MiscInformation</name>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+41"/>
+        <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+42"/>
         <source>Misc</source>
         <translation>Dažādi</translation>
     </message>
@@ -9115,7 +9150,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>MiscModify</name>
     <message>
-        <location filename="../scripts/Misc/MiscModify/MiscModify.js" line="+44"/>
+        <location filename="../scripts/Misc/MiscModify/MiscModify.js" line="+45"/>
         <source>Misc</source>
         <translation>Dažādi</translation>
     </message>
@@ -9133,7 +9168,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>MiscSelect</name>
     <message>
-        <location filename="../scripts/Misc/MiscSelect/MiscSelect.js" line="+52"/>
+        <location filename="../scripts/Misc/MiscSelect/MiscSelect.js" line="+53"/>
         <source>Misc</source>
         <translation>Dažādi</translation>
     </message>
@@ -9289,7 +9324,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
         <translation>Atklāšanas zīmējums:</translation>
     </message>
@@ -9383,18 +9418,18 @@ jau ir sarakstā.</translation>
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Rādiuss noslīdēja zem 0.0 pēc %n koncentriskā apļa.</numerusform>
+            <numerusform>Rādiuss noslīdēja zem 0.0 pēc %n koncentriskiem apļiem.</numerusform>
+            <numerusform>Rādiuss noslīdēja zem 0.0 pēc %n koncentriskiem apļiem.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Rādiuss noslīdēja zem 0.0 pēc %n koncentriskā loka.</numerusform>
+            <numerusform>Rādiuss noslīdēja zem 0.0 pēc %n koncentriskiem lokiem.</numerusform>
+            <numerusform>Rādiuss noslīdēja zem 0.0 pēc %n koncentriskiem lokiem.</numerusform>
         </translation>
     </message>
     <message>
@@ -9479,7 +9514,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+0"/>
         <source>Printing - Page</source>
-        <translation>Drukāšana - Page</translation>
+        <translation>Drukāšana - Lapa</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -9534,7 +9569,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+66"/>
         <source>Margins</source>
-        <translation>Maržas</translation>
+        <translation>Piemales</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9620,7 +9655,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+0"/>
         <source>Paste</source>
-        <translation>Paste</translation>
+        <translation>Ielīmēt</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -9680,7 +9715,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation>Paste</translation>
+        <translation>Ielīmēt</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
@@ -9797,7 +9832,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2"/>
         <source>Pole of Line and Circle</source>
-        <translation>Līnijas un apļa polis</translation>
+        <translation>Līnijas un apļa pols</translation>
     </message>
 </context>
 <context>
@@ -9810,7 +9845,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Trīs apļu jaudas centrs</translation>
+        <translation>Trīs apļu radikālais centrs</translation>
     </message>
 </context>
 <context>
@@ -9963,7 +9998,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation>Koku sabrukšana</translation>
+        <translation>Sakļaut koku</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -10109,7 +10144,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+11"/>
         <source>Auto Center</source>
-        <translation>Auto centrs</translation>
+        <translation>Automātiskā centrēšana</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10298,7 +10333,7 @@ jau ir sarakstā.</translation>
         <translation>Rādīt visas īpašības</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+161"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -10332,7 +10367,7 @@ jau ir sarakstā.</translation>
         <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
-        <translation>Īpašuma redaktors</translation>
+        <translation>Īpašību redaktors</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
@@ -10414,7 +10449,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
-        <translation>Skaidrs saraksts</translation>
+        <translation>Notīrīt sarakstu</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10773,7 +10808,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation>Trim</translation>
+        <translation>Apgriezt</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -10879,7 +10914,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+16"/>
         <source>Saving...</source>
-        <translation>Ietaupot...</translation>
+        <translation>Saglabāšana...</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10947,7 +10982,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+10"/>
         <source>Saving</source>
-        <translation>Glābšana</translation>
+        <translation>Saglabāšana</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -10985,7 +11020,7 @@ jau ir sarakstā.</translation>
         <translation>Eksporta filtri nav atrasti. Pārtraucam...</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+92"/>
         <source>Format:</source>
         <translation>Formāts:</translation>
     </message>
@@ -11077,6 +11112,11 @@ jau ir sarakstā.</translation>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
         <translation>Mērogs</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
+        <source>Allow rounding of imaginary corner</source>
+        <translation>Atļaut iedomāta stūra noapaļošanu</translation>
     </message>
 </context>
 <context>
@@ -11204,13 +11244,10 @@ jau ir sarakstā.</translation>
         <source>By Color</source>
         <translation>Pēc krāsas</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>Atlasīt visus krāsas objektus</translation>
+        <translation>Atlasīt visus vienas krāsas objektus</translation>
     </message>
 </context>
 <context>
@@ -11480,18 +11517,18 @@ jau ir sarakstā.</translation>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n subjekts slānī &quot;%1&quot;</numerusform>
+            <numerusform>%n subjekti slānī &quot;%1&quot;</numerusform>
+            <numerusform>%n subjektu slānī &quot;%1&quot;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n subjekts</numerusform>
+            <numerusform>%n subjekti</numerusform>
+            <numerusform>%n subjektu</numerusform>
         </translation>
     </message>
     <message>
@@ -11503,9 +11540,9 @@ jau ir sarakstā.</translation>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n slānis</numerusform>
+            <numerusform>%n slāņi</numerusform>
+            <numerusform>%n slāņu</numerusform>
         </translation>
     </message>
     <message>
@@ -11565,7 +11602,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vismaz divi punkti ir identiski.</translation>
@@ -11906,7 +11943,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
         <source>&amp;Coordinate</source>
-        <translation>Saskaņot</translation>
+        <translation>Koordināta</translation>
     </message>
 </context>
 <context>
@@ -12021,7 +12058,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>Bezmaksas</translation>
+        <translation>Brīvs</translation>
     </message>
 </context>
 <context>
@@ -12078,7 +12115,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddle/SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
-        <translation>Middle</translation>
+        <translation>Vidus</translation>
     </message>
 </context>
 <context>
@@ -12114,11 +12151,11 @@ jau ir sarakstā.</translation>
     </message>
 </context>
 <context>
-    <name>SnapSelectionCenter</name>
+    <name>SnapSelection</name>
     <message>
-        <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
-        <source>Center of &amp;Selection</source>
-        <translation>Atlases centrs</translation>
+        <location filename="../scripts/Snap/SnapSelection/SnapSelectionInit.js" line="+2"/>
+        <source>&amp;Selection Reference Points</source>
+        <translation>&amp;Atlases atsauces punkti</translation>
     </message>
 </context>
 <context>
@@ -12328,6 +12365,16 @@ jau ir sarakstā.</translation>
         <translation>Importēt grupas kā slāņus</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <source>Paths</source>
+        <translation>Ceļi</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import path lineweights</source>
+        <translation>Importēt ceļu līniju biezumus</translation>
+    </message>
+    <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
         <translation>Faili</translation>
@@ -12339,7 +12386,7 @@ jau ir sarakstā.</translation>
         <translation>SVG importēšana</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+48"/>
         <source>Import SVG</source>
         <translation>SVG importēšana</translation>
     </message>
@@ -12370,7 +12417,7 @@ jau ir sarakstā.</translation>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
@@ -12520,12 +12567,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Līderis tika veiksmīgi izveidots</translation>
+        <translation>Norādes līnija tika veiksmīgi izveidota</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>Teksta izlīdzināts līderis</translation>
+        <translation>Ar tekstu izlīdzināta norādes līnija</translation>
     </message>
 </context>
 <context>
@@ -12556,12 +12603,12 @@ jau ir sarakstā.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+251"/>
         <source>Default value:</source>
         <translation>Noklusējuma vērtība:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+275"/>
         <source>&amp;Undo</source>
         <translation>Atcelt</translation>
     </message>
@@ -12583,12 +12630,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation>Paste</translation>
+        <translation>Ielīmēt</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Bold</source>
-        <translation>Bold</translation>
+        <translation>Treknraksts</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -12621,12 +12668,12 @@ jau ir sarakstā.</translation>
         <translation>Īpašie rakstzīmes...</translation>
     </message>
     <message>
-        <location line="+348"/>
+        <location line="+349"/>
         <source>Others...</source>
         <translation>Citi...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+140"/>
         <source>Degree</source>
         <translation>Grāds</translation>
     </message>
@@ -12653,7 +12700,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Nodaļa</translation>
+        <translation>Dalīšana</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12724,7 +12771,7 @@ jau ir sarakstā.</translation>
         <location line="+18"/>
         <location line="+274"/>
         <source>Bold</source>
-        <translation>Bold</translation>
+        <translation>Treknraksts</translation>
     </message>
     <message>
         <location line="-267"/>
@@ -12765,7 +12812,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+10"/>
         <source>Paste</source>
-        <translation>Paste</translation>
+        <translation>Ielīmēt</translation>
     </message>
     <message>
         <location line="+170"/>
@@ -12922,7 +12969,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
         <translation>Vispārīgi</translation>
     </message>
@@ -13275,7 +13322,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation>Trim</translation>
+        <translation>Apgriezt</translation>
     </message>
 </context>
 <context>
@@ -13591,7 +13638,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
         <source>Dropped data not supported</source>
         <translation>Nav atbalstīta datu atmešana</translation>
     </message>
@@ -13622,7 +13669,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1168"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
         <source>Restore defaults</source>
         <translation>Atjaunot noklusējuma iestatījumus</translation>
     </message>
@@ -13649,7 +13696,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Nodaļa</translation>
+        <translation>Dalīšana</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13789,7 +13836,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation>Tiesības</translation>
+        <translation>Labā</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13800,7 +13847,7 @@ jau ir sarakstā.</translation>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation>Middle</translation>
+        <translation>Vidus</translation>
     </message>
     <message>
         <location line="-6"/>
@@ -13810,7 +13857,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation>Top</translation>
+        <translation>Augša</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14352,12 +14399,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation>Lūkas</translation>
+        <translation>Šrafējumi</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation>Lūka</translation>
+        <translation>Šrafējums</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14372,12 +14419,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation>Līderi</translation>
+        <translation>Norādes līnijas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Leader</translation>
+        <translation>Norādes līnija</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14417,7 +14464,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation>Ray</translation>
+        <translation>Stars</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14462,12 +14509,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation>Sejas</translation>
+        <translation>Skaldnes</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation>Sejas</translation>
+        <translation>Skaldne</translation>
     </message>
     <message>
         <location line="+2"/>

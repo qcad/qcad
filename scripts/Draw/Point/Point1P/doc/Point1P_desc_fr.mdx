@@ -1,0 +1,2 @@
+Cette commande est utilisée pour dessiner des points individuels. Les points
+sont représentés visuellement par une petite croix.

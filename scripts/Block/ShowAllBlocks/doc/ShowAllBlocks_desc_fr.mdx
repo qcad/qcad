@@ -1,0 +1,1 @@
+Cet outil permet de s'assurer que toutes les références de bloc dans le dessin sont affichées.

@@ -1,0 +1,6 @@
+Establezca el punto de destino para las entidades pegadas con el ratón o
+introduzca una coordenada en la línea de comandos. El punto de destino
+corresponde al punto de referencia que se eligió al copiar o cortar las
+entidades si se utilizó Copiar / Cortar con referencia. Si se ha utilizado
+Cortar o Copiar sin punto de referencia, se utiliza el centro de la selección
+como punto de referencia.

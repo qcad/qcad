@@ -1,0 +1,2 @@
+V meniju Urejanje so orodja za osnovno urejanje, kot so kopiranje/lepljenje
+in brisanje

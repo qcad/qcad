@@ -1,0 +1,1 @@
+Narzędzie to aktywuje poprzednie otwarte okno / kartę rysunku.

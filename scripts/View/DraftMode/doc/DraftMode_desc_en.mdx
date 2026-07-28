@@ -1,0 +1,3 @@
+Toggles the draft mode of the current drawing. In draft mode, all lines are
+shown with a width of 1 pixel. Large texts are simplified. Use the draft mode
+if your drawing becomes very large and it takes long to redraw it.

@@ -1,0 +1,27 @@
+import SelectionModeReplace from './SelectionModeReplace.png';
+import SelectionModeAdd from './SelectionModeAdd.png';
+import SelectionModeRemove from './SelectionModeRemove.png';
+import SelectionModeIntersect from './SelectionModeIntersect.png';
+
+
+
+### 交叉选择 {#cross}
+
+某些选择工具可以在交叉选择模式下使用。在此模式下，不仅完全位于给定区域内的实体会被选择，只有部分位于该区域内的实体也会被选择。这种选择也称为"交叉选择"。
+
+### 选择模式 {#mode}
+
+某些选择工具允许您在选项工具栏中选择选择模式。可用的选择模式有：
+
+- Replace selection:  
+  <Image src={SelectionModeReplace} alt="SelectionModeReplace" width={40} height={40} />  
+  用活动选择工具进行的新选区替换当前选区（默认）。
+- Add to selection:  
+  <Image src={SelectionModeAdd} alt="SelectionModeAdd" width={40} height={40} />  
+  将选区添加到当前选区。
+- Remove from selection:  
+  <Image src={SelectionModeRemove} alt="SelectionModeRemove" width={40} height={40} />  
+  从当前选区中移除（减去）选区。
+- Intersect:  
+  <Image src={SelectionModeIntersect} alt="SelectionModeIntersect" width={40} height={40} />  
+  仅选择已被选择且符合选择工具条件的实体。

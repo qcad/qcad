@@ -1,0 +1,1 @@
+This tool hides all block references in the drawing.

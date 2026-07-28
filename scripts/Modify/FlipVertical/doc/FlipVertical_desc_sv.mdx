@@ -1,0 +1,1 @@
+Den här funktionen vänder (speglar) det aktuella urvalet vertikalt.

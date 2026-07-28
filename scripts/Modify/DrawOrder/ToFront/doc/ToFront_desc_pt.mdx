@@ -1,0 +1,3 @@
+Altera a ordem em que as entidades são exibidas. Utilizar esta ferramenta
+para trazer entidades para o primeiro plano se estiverem escondidas atrás de
+imagens, preenchimentos sólidos ou outras entidades.

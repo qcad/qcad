@@ -1,0 +1,2 @@
+Dieses Werkzeug misst den genauen Abstand zwischen zwei Punkten, die vom
+Benutzer vorgegeben werden.

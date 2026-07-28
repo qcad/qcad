@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Сплайн (контрольні точки)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/uk/index.php?page=scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>Сплайн (контрольні точки)</h2>
+<p class="toolinfo">
+<b>Панель інструментів / Піктограма:</b>
+<br /><img src="../../doc/Spline.png" width="40" height="40" />
+&#160;&#160;&#160;
+<img src="../doc/SplineControlPoints.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Меню:</b> <font face="courier new">Побудова &gt; Сплайн &gt; Сплайн (контрольні точки)</font>
+<br /><b>Шорткод:</b> <font face="courier new">S, P</font>
+<br /><b>Команди:</b> <font face="courier new">spline | sp</font>
+</p>
+</div>
+<h3>Опис</h3>
+<p>Малює криві сплайна з контрольних точок. Неоднорідні раціональні B-сплайни (NURBS) з однорідними ваговими коефіцієнтами — єдині підтримувані сплайни.</p><h3>Використання</h3>
+<p> </p>
+<ol>
+<li>Виберіть степінь сплайна на панелі параметрів. Підтримувані степені — 2 (квадратичний b-сплайн) і 3 (кубічний b-сплайн). Чим вищий степінь, тим „гладшою" стає крива. Зауважте, що квадратичний b-сплайн за визначенням потребує щонайменше 3 контрольні точки, тоді як кубічний b-сплайн має щонайменше 4 контрольні точки.</li>
+<li>Установіть прапорець „Closed" на панелі параметрів, якщо ви хочете створити замкнений сплайн. Замкнені сплайни — це неперервні замкнені цикли.</li>
+<li>Вкажіть контрольні точки. Після визначення третьої (для квадратичних b-сплайнів) або четвертої (для кубічних b-сплайнів) контрольної точки буде показано попередній перегляд. Ви можете знову видалити останню контрольну точку, натиснувши кнопку „Undo" на панелі параметрів.</li>
+<li>Натисніть Escape або праву кнопку миші після встановлення останньої точки, щоб підтвердити форму сплайна.</li>
+<li>Тепер ви можете створити інший сплайн або знову клацнути правою кнопкою, щоб завершити інструмент. Приклад для двох відкритих сплайнів (квадратичного та кубічного):<br/><img src="SplineControlPoints01.png" alt="SplineControlPoints01" width="240" height="166" /><br/> Приклад для двох замкнених, періодичних сплайнів (квадратичного та кубічного):<br/><img src="SplineControlPoints02.png" alt="SplineControlPoints02" width="288" height="166" /><br/></li>
+</ol></body>
+</html>

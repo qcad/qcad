@@ -1,0 +1,7 @@
+Med det här verktyget kan du rita polylinjer. En polylinje är en
+kontinuerlig linje som bildas av ett eller flera sammanhängande linje- eller
+bågsegment.  
+Observera att det nästan alltid är bekvämare att använda de vanliga
+linje- och bågverktygen för att rita en ny polylinje. De löst sammanhängande
+linje- och bågsegmenten kan sedan omvandlas till en polylinjeenhet med
+verktyget "Create Polyline from Segments".

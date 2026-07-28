@@ -48,9 +48,7 @@ InsertBlockTest00.prototype.test00 = function() {
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    var w = objectFromPath('MainWindow::BlockListDock::BlockListWidget::BlockList::qt_scrollarea_viewport');
-    this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(72, 46), Qt.LeftButton, 1, 0);
-    this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(72, 46), Qt.LeftButton, 0, 0);
+    this.selectBlock('block 1');
     TdbTest.clickOnWidget('MainWindow::BlockListDock::BlockListWidget::InsertBlock');
     this.setToolOption('InsertBlock/Rotation', '0');
     this.updateToolOptions();

@@ -1,0 +1,1 @@
+Konstroira črto, ki je pravokotna na eno črto ter tangencialna na lok, krog ali elipso.

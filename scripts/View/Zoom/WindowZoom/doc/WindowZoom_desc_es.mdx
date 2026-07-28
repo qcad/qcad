@@ -1,0 +1,2 @@
+Esta herramienta ofrece una forma rápida de acercarse a un área determinada
+del dibujo.

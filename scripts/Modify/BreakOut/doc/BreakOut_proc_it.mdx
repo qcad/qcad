@@ -1,0 +1,4 @@
+Scegliere l'entità che si desidera dividere facendo clic sul segmento che si
+desidera tagliare. Il segmento viene rimosso automaticamente se la casella di
+controllo "Rimuovi segmento" è selezionata. In caso contrario, l'entità viene
+tagliata solo alle intersezioni senza rimuovere il segmento.

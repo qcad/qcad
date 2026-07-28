@@ -1,0 +1,2 @@
+Questo strumento offre un modo rapido per ingrandire una certa area del
+disegno.

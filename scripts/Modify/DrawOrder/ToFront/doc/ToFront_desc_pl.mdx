@@ -1,0 +1,3 @@
+Zmienia kolejność wyświetlania elementów. Narzędzie to pozwala na wysunięcie
+na pierwszy plan podmiotów ukrytych za obrazami, wypełnieniami bryłowymi lub
+innymi podmiotami.

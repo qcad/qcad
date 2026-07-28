@@ -1,0 +1,3 @@
+Utilizzare questo strumento per creare linee con un determinato angolo. La
+linea viene solitamente tagliata alla lunghezza desiderata dopo la
+creazione.

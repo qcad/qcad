@@ -270,7 +270,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
         <source>Application Preferences</source>
         <translation>Предпочтения программы</translation>
     </message>
@@ -280,7 +280,7 @@
         <translation>Предпочтения чертежа</translation>
     </message>
     <message>
-        <location line="+326"/>
+        <location line="+328"/>
         <source>Apply preferences</source>
         <translation>Применить предпочтения</translation>
     </message>
@@ -335,7 +335,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/AddCentroidDialog.ui" line="+14"/>
         <source>Add  point mass 2D Centroid</source>
-        <translation>Добавить массу точки 2D Центроид</translation>
+        <translation>Добавить точечную массу 2D-центроида</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -362,7 +362,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
-        <translation>Сброс на &apos;Undefined&apos;</translation>
+        <translation>Сброс в &apos;Не определено&apos;</translation>
     </message>
 </context>
 <context>
@@ -927,19 +927,19 @@ Do you wish to recover it?</source>
         <translation>Восстановить файл?</translation>
     </message>
     <message>
-        <location line="+26"/>
-        <location line="+11"/>
-        <location line="+5"/>
+        <location line="+25"/>
+        <location line="+21"/>
+        <location line="+7"/>
         <source>Cannot rename file:</source>
         <translation>Не удаётся переименовать файл:</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-25"/>
         <source>Moved autosave backup file to:</source>
         <translation>Файл автосохранения перемещён в:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+28"/>
         <source>Moved original file to:</source>
         <translation>Оригинальный файл перемещён в:</translation>
     </message>
@@ -1131,12 +1131,12 @@ Do you wish to recover it?</source>
         <translation>Экспорт растрового изображения</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Size</source>
         <translation>Размер</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Width:</source>
         <translation>Ширина:</translation>
     </message>
@@ -1146,28 +1146,48 @@ Do you wish to recover it?</source>
         <translation>Высота:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+33"/>
         <source>Pixels per drawing unit:</source>
         <translation>Пикселей на единицу измерения чертежа:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+280"/>
+        <source>Selection</source>
+        <translation>Выделение</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Export bounding box of selection</source>
         <translation>Экспорт ограничительной рамки выделения</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="-81"/>
         <source>Transparent</source>
         <translation>С прозрачностью</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-271"/>
+        <source>Specify width and height:</source>
+        <translation>Укажите ширину и высоту:</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Specify resolution:</source>
+        <translation>Укажите разрешение:</translation>
+    </message>
+    <message>
+        <location line="+225"/>
         <source>Color</source>
         <comment>Title of group box</comment>
         <translation>Цвет</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Prevent white on white / black on black export</source>
+        <translation>Предотвратить белый на белом / чёрный на чёрном при экспорте</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Monochrome</source>
         <translation>Монохромный</translation>
     </message>
@@ -1193,7 +1213,7 @@ Do you wish to recover it?</source>
         <translation>Использовать сглаживание</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-197"/>
         <source>Margin</source>
         <translation>Поле</translation>
     </message>
@@ -1213,7 +1233,7 @@ Do you wish to recover it?</source>
         <translation>Добавить дополнительное поле для компенсации веса линии</translation>
     </message>
     <message>
-        <location line="-170"/>
+        <location line="+30"/>
         <source>Background</source>
         <translation>Фон</translation>
     </message>
@@ -1236,7 +1256,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Неверный размер изображения (ширина х высота должно быть меньше, чем %1)</translation>
     </message>
@@ -1332,7 +1352,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
         <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -1410,7 +1430,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation>Экспорт списка ссылок блока</translation>
+        <translation>&amp;Экспорт списка ссылок блока</translation>
     </message>
 </context>
 <context>
@@ -2768,7 +2788,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation>Используйте максимальный угол</translation>
+        <translation>Использовать максимальный угол</translation>
     </message>
 </context>
 <context>
@@ -2812,7 +2832,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation>Будущее положение</translation>
+        <translation>Положение элемента</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3467,7 +3487,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation>Развёртка</translation>
+        <translation>Угол дуги</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -3477,12 +3497,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation>Draw Fms Lanes</translation>
+        <translation>&amp;Рисовать полосы FMS</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation>Рисунок FMS Полосы (ребра)</translation>
+        <translation>Рисовать полосы FMS (рёбра)</translation>
     </message>
 </context>
 <context>
@@ -4144,7 +4164,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation>Подметать:</translation>
+        <translation>Угол дуги:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -4206,18 +4226,18 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2133"/>
+        <location line="+2167"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location line="-2132"/>
+        <location line="-2166"/>
         <source>Done</source>
         <translation>Готово</translation>
     </message>
     <message>
-        <location line="+284"/>
-        <location line="+133"/>
+        <location line="+287"/>
+        <location line="+143"/>
         <source>Active Tool:</source>
         <translation>Активный инструмент:</translation>
     </message>
@@ -4257,7 +4277,7 @@ is already in the list.</source>
         <translation>Объект находится на заблокированном слое.</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+254"/>
         <source>Length:</source>
         <translation>Длина:</translation>
     </message>
@@ -4748,7 +4768,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation>Экспорт CSV</translation>
+        <translation>&amp;Экспорт CSV</translation>
     </message>
 </context>
 <context>
@@ -5254,7 +5274,12 @@ is already in the list.</source>
         <translation>Добавленный слой FP:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Запечатывает выделение, имитируя роликовый штамп</translation>
     </message>
@@ -5558,14 +5583,6 @@ is already in the list.</source>
     </message>
 </context>
 <context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>&amp;FlexPainter</translation>
-    </message>
-</context>
-<context>
     <name>FlipHorizontal</name>
     <message>
         <location filename="../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js" line="+2"/>
@@ -5586,12 +5603,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js" line="+39"/>
         <source>Flush Undo History</source>
-        <translation>Промыть историю действий</translation>
+        <translation>Очистить историю действий</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation>Вы уверены, что хотите промыть историю транзакций отмены/возврата?</translation>
+        <translation>Вы уверены, что хотите очистить историю транзакций отмены/возврата?</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5601,7 +5618,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Flush &amp;Undo History</source>
-        <translation>&amp;Промыть историю действий отмены</translation>
+        <translation>&amp;Очистить историю действий отмены</translation>
     </message>
 </context>
 <context>
@@ -5742,7 +5759,7 @@ is already in the list.</source>
     <message>
         <location line="+64"/>
         <source>Highlight (and raise) images within range</source>
-        <translation>Выделяйте (и поднимайте) изображения в пределах досягаемости</translation>
+        <translation>Подсвечивать (и выводить на передний план) изображения в диапазоне</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -5922,7 +5939,7 @@ is already in the list.</source>
     <message>
         <location line="+72"/>
         <source>Maximum complexity for solid fills at high quality:</source>
-        <translation>Максимальная сложность для сплошных заливок высокого качества:</translation>
+        <translation>Максимальная сложность для сплошных заливок в высоком качестве:</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+109"/>
@@ -5988,7 +6005,7 @@ is already in the list.</source>
     <message>
         <location line="+103"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-        <translation>Всегда отображайте полилинии с пользовательской шириной не менее 1 пикселя</translation>
+        <translation>Всегда отображать полилинии с пользовательской шириной не менее 1 пикселя</translation>
     </message>
     <message>
         <location line="+121"/>
@@ -6013,12 +6030,12 @@ is already in the list.</source>
     <message>
         <location line="+414"/>
         <source>Allocation limit for bitmaps (MB):</source>
-        <translation>Предел выделения для растровых изображений (МБ):</translation>
+        <translation>Лимит памяти для растровых изображений (МБ):</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Dot length in line patterns:</source>
-        <translation>Длина точки в линейных шаблонах:</translation>
+        <translation>Длина точки в образцах линий:</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="-6"/>
@@ -6140,6 +6157,11 @@ is already in the list.</source>
         <translation>Третичные точки привязки:</translation>
     </message>
     <message>
+        <location line="+27"/>
+        <source>Snap reference points:</source>
+        <translation>Точки привязки:</translation>
+    </message>
+    <message>
         <location line="+30"/>
         <source>Snap Tools</source>
         <translation>Инструменты прилипания</translation>
@@ -6185,7 +6207,7 @@ is already in the list.</source>
         <translation>Граница рамки масштаба:</translation>
     </message>
     <message>
-        <location line="-712"/>
+        <location line="-739"/>
         <source>Origin:</source>
         <translation>Начало координат:</translation>
     </message>
@@ -6233,7 +6255,7 @@ is already in the list.</source>
     <message>
         <location line="-141"/>
         <source>Limit scrolling to vertical and horizontal</source>
-        <translation>Ограничение вертикальной и горизонтальной прокрутки</translation>
+        <translation>Ограничить прокрутку вертикальной и горизонтальной</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6534,7 +6556,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation>Как Блок:</translation>
+        <translation>Как блок:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6574,17 +6596,17 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation>К текущему слою</translation>
+        <translation>На текущий слой</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation>Перезапись слоев</translation>
+        <translation>Перезаписывать слои</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation>Блоки перезаписи</translation>
+        <translation>Перезаписывать блоки</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -6630,27 +6652,27 @@ is already in the list.</source>
     <message>
         <location line="+52"/>
         <source>2D point mass Centroid</source>
-        <translation>масса двумерной точки Центроид</translation>
+        <translation>Точечная масса 2D-центроида</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Undefined</source>
-        <translation>Неопределенный</translation>
+        <translation>Не определено</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19"/>
         <source>Add &amp;custom 2D centroid</source>
-        <translation>Добавить пользовательский 2D центроид</translation>
+        <translation>Добавить &amp;пользовательский 2D-центроид</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
-        <translation>Создание настраиваемого 2D маркера центроида</translation>
+        <translation>Создать настраиваемый маркер 2D-центроида</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new point mass 2D Centroid marker customizable by dialog</source>
-        <translation>Создает новую точечную массу 2D Centroid marker, настраиваемую с помощью диалога</translation>
+        <translation>Создаёт новый маркер точечной массы 2D-центроида, настраиваемый через диалог</translation>
     </message>
 </context>
 <context>
@@ -6872,7 +6894,7 @@ is already in the list.</source>
         <location line="+5"/>
         <location line="+2"/>
         <source>Area 2D Centroid script (v0.32) by CVH</source>
-        <translation>Скрипт Area 2D Centroid (v0.32) by CVH</translation>
+        <translation>Скрипт Area 2D Centroid (v0.32) от CVH</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -6907,7 +6929,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>2D area Centroid</source>
-        <translation>двумерная область Центроид</translation>
+        <translation>2D-центроид площади</translation>
     </message>
     <message>
         <location line="-89"/>
@@ -6975,12 +6997,12 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
-        <translation>Создать область 2D Centroid для выбранного объекта</translation>
+        <translation>Создать 2D-центроид площади для выбранного объекта</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</source>
-        <translation>Создает новый маркер 2D Centroid с равномерной плотностью ареала и метки значений для выбранного объекта</translation>
+        <translation>Создаёт новый маркер 2D-центроида с равномерной плотностью площади и метки значений для выбранного объекта</translation>
     </message>
 </context>
 <context>
@@ -6988,7 +7010,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
         <source>Reference</source>
-        <translation>Привязка</translation>
+        <translation>Точка привязки</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7003,7 +7025,7 @@ is already in the list.</source>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation>Подшипник:</translation>
+        <translation>Пеленг:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7013,7 +7035,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation>Пеленг / Азимут</translation>
+        <translation>&amp;Пеленг / Азимут</translation>
     </message>
 </context>
 <context>
@@ -7036,7 +7058,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Wire</source>
-        <translation>Провод</translation>
+        <translation>Линия</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7051,12 +7073,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Undefined</source>
-        <translation>Неопределенный</translation>
+        <translation>Не определено</translation>
     </message>
     <message>
         <location line="+428"/>
         <source>2D &amp;Centroids</source>
-        <translation>2D центроиды</translation>
+        <translation>2D-&amp;центроиды</translation>
     </message>
     <message>
         <location line="-431"/>
@@ -7074,12 +7096,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+192"/>
         <source>2D Centroids transaction listener active.</source>
-        <translation>активен слушатель транзакций 2D Centroids.</translation>
+        <translation>Слушатель транзакций 2D-центроидов активен.</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Deactivated/removed the 2D Centroids transaction listener.</source>
-        <translation>Деактивирован/удален слушатель транзакции 2D Centroids.</translation>
+        <translation>Слушатель транзакций 2D-центроидов деактивирован/удалён.</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -7092,17 +7114,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
         <source>Centroid &amp;Listener</source>
-        <translation>Слушатель центроида</translation>
+        <translation>&amp;Слушатель центроида</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation>(Де-)активация слушателя транзакций для 2D центроидов</translation>
+        <translation>(Де-)активация слушателя транзакций для 2D-центроидов</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(De-)Activate a transaction listener for binding changes applied to 2D Centroid markers</source>
-        <translation>(Де-)активация слушателя транзакций для изменений привязки, применяемых к маркерам 2D Centroid</translation>
+        <translation>(Де-)активация слушателя транзакций для изменений привязки, применяемых к маркерам 2D-центроидов</translation>
     </message>
 </context>
 <context>
@@ -7241,46 +7263,46 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>2D Centroids weighted sum script (v0.24) by CVH.</source>
-        <translation>скрипт взвешенной суммы 2D центроидов (v0.24) от CVH.</translation>
+        <translation>Скрипт взвешенной суммы 2D-центроидов (v0.24) от CVH.</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Encountered a missing coordinate value.</source>
-        <translation>Встречается отсутствующее значение координат.</translation>
+        <translation>Обнаружено отсутствующее значение координат.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Encountered an invalid coordinate value.</source>
-        <translation>Встречено недопустимое значение координат.</translation>
+        <translation>Обнаружено недопустимое значение координат.</translation>
     </message>
     <message>
         <location line="+8"/>
         <location line="+11"/>
         <location line="+10"/>
         <source>Encountered a missing &apos;%1&apos; value.</source>
-        <translation>Встречено отсутствующее значение &apos;%1&apos;.</translation>
+        <translation>Обнаружено отсутствующее значение &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="-16"/>
         <location line="+11"/>
         <location line="+17"/>
         <source>Encountered an invalid &apos;%1&apos; value.</source>
-        <translation>Встречено недопустимое значение &apos;%1&apos;.</translation>
+        <translation>Обнаружено недопустимое значение &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Encountered an unknown marker type.</source>
-        <translation>Встретился неизвестный тип маркера.</translation>
+        <translation>Обнаружен неизвестный тип маркера.</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>No result.</source>
-        <translation>Безрезультатно.</translation>
+        <translation>Нет результата.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>No 2D Centroid markers found in the selection.</source>
-        <translation>В выборке не найдено ни одного маркера 2D Centroid.</translation>
+        <translation>В выборке не найдено маркеров 2D-центроидов.</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7300,12 +7322,12 @@ is already in the list.</source>
     <message>
         <location line="+11"/>
         <source>Results in a NaN value.</source>
-        <translation>Выдает значение NaN.</translation>
+        <translation>Выдаёт значение NaN.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Combined 2D Centroid</source>
-        <translation>Комбинированная двухмерная центроид</translation>
+        <translation>Комбинированный 2D-центроид</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -7330,32 +7352,32 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>area (Informational):</source>
-        <translation>область (Информационная):</translation>
+        <translation>площадь (информационная):</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>wire length (Informational):</source>
-        <translation>длина провода (Информационный):</translation>
+        <translation>длина линии (информационная):</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Combined centroid:</source>
-        <translation>Объединенный центроид:</translation>
+        <translation>Комбинированный центроид:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
         <source>&amp;Sum 2D Centroids weighted</source>
-        <translation>Сумма взвешенных центроидов 2D</translation>
+        <translation>&amp;Сумма взвешенных 2D-центроидов</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
-        <translation>Объединить выбранные двухмерные центроидные маркеры взвешенными</translation>
+        <translation>Объединить выбранные маркеры 2D-центроидов взвешенно</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combines selected 2D Centroid markers, summing all properties weighted</source>
-        <translation>Объединяет выбранные двухмерные центроидные маркеры, суммируя все взвешенные свойства</translation>
+        <translation>Объединяет выбранные маркеры 2D-центроидов, суммируя все свойства взвешенно</translation>
     </message>
 </context>
 <context>
@@ -7394,12 +7416,12 @@ is already in the list.</source>
     <message>
         <location line="-71"/>
         <source>Wire 2D Centroid script (v0.32) by CVH</source>
-        <translation>Скрипт Wire 2D Centroid (v0.32) by CVH</translation>
+        <translation>Скрипт Wire 2D Centroid (v0.32) от CVH</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>2D Centroid markers circle in selection. No results.</source>
-        <translation>2D Центроид маркеры круг в выделении. Нет результатов.</translation>
+        <translation>Маркеры 2D-центроидов в выделении образуют замкнутый круг. Нет результатов.</translation>
     </message>
     <message>
         <location line="+55"/>
@@ -7409,7 +7431,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>2D wire Centroid</source>
-        <translation>двухмерная проволока Центроид</translation>
+        <translation>2D-центроид линии</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -7450,12 +7472,12 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
-        <translation>Создание проводного 2D центроида для выделения</translation>
+        <translation>Создать 2D-центроид линии для выделения</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</source>
-        <translation>Создает новый маркер 2D Centroid с равномерной линейной плотностью и метки значений для выбранных объектов</translation>
+        <translation>Создаёт новый маркер 2D-центроида с равномерной линейной плотностью и метки значений для выбранных объектов</translation>
     </message>
 </context>
 <context>
@@ -7735,12 +7757,12 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation>Перезапись слоев</translation>
+        <translation>Перезаписывать слои</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation>Блоки перезаписи</translation>
+        <translation>Перезаписывать блоки</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -7875,7 +7897,7 @@ is already in the list.</source>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation>Корпус</translation>
+        <translation>Кабинетная</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7968,7 +7990,7 @@ is already in the list.</source>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+62"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+71"/>
         <source>Language Settings</source>
         <translation>Параметры языка</translation>
     </message>
@@ -8216,12 +8238,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation>Сумма:</translation>
+        <translation>Величина:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation>Сумма для удлинения или укорачивания (отрицательная)</translation>
+        <translation>Величина для удлинения или укорачивания (отрицательная)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
@@ -8292,7 +8314,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation>Используйте фиксированную длину линии</translation>
+        <translation>Использовать фиксированную длину линии</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8302,7 +8324,7 @@ is already in the list.</source>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation>Используйте фиксированный угол для линии</translation>
+        <translation>Использовать фиксированный угол линии</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8822,6 +8844,16 @@ is already in the list.</source>
         <source>Draw vertical line</source>
         <translation>Начертить вертикальную линию</translation>
     </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineVertical/LineVertical.ui" line="+17"/>
+        <source>Length:</source>
+        <translation>Длина:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Reference Point:</source>
+        <translation>Точка привязки:</translation>
+    </message>
 </context>
 <context>
     <name>LinetypeMode</name>
@@ -9023,7 +9055,7 @@ is already in the list.</source>
 <context>
     <name>MiscBlock</name>
     <message>
-        <location filename="../scripts/Misc/MiscBlock/MiscBlock.js" line="+51"/>
+        <location filename="../scripts/Misc/MiscBlock/MiscBlock.js" line="+52"/>
         <source>Misc</source>
         <translation>Разное</translation>
     </message>
@@ -9041,7 +9073,7 @@ is already in the list.</source>
 <context>
     <name>MiscDevelopment</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/MiscDevelopment.js" line="+51"/>
+        <location filename="../scripts/Misc/MiscDevelopment/MiscDevelopment.js" line="+52"/>
         <source>Misc</source>
         <translation>Разное</translation>
     </message>
@@ -9059,7 +9091,7 @@ is already in the list.</source>
 <context>
     <name>MiscDraw</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/MiscDraw.js" line="+52"/>
+        <location filename="../scripts/Misc/MiscDraw/MiscDraw.js" line="+53"/>
         <source>Misc</source>
         <translation>Разное</translation>
     </message>
@@ -9082,7 +9114,7 @@ is already in the list.</source>
 <context>
     <name>MiscIO</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MiscIO.js" line="+51"/>
+        <location filename="../scripts/Misc/MiscIO/MiscIO.js" line="+52"/>
         <source>Misc</source>
         <translation>Разное</translation>
     </message>
@@ -9100,7 +9132,7 @@ is already in the list.</source>
 <context>
     <name>MiscInformation</name>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+41"/>
+        <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+42"/>
         <source>Misc</source>
         <translation>Разное</translation>
     </message>
@@ -9118,7 +9150,7 @@ is already in the list.</source>
 <context>
     <name>MiscModify</name>
     <message>
-        <location filename="../scripts/Misc/MiscModify/MiscModify.js" line="+44"/>
+        <location filename="../scripts/Misc/MiscModify/MiscModify.js" line="+45"/>
         <source>Misc</source>
         <translation>Разное</translation>
     </message>
@@ -9136,7 +9168,7 @@ is already in the list.</source>
 <context>
     <name>MiscSelect</name>
     <message>
-        <location filename="../scripts/Misc/MiscSelect/MiscSelect.js" line="+52"/>
+        <location filename="../scripts/Misc/MiscSelect/MiscSelect.js" line="+53"/>
         <source>Misc</source>
         <translation>Разное</translation>
     </message>
@@ -9292,7 +9324,7 @@ is already in the list.</source>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
         <translation>Открытие чертежа:</translation>
     </message>
@@ -9542,27 +9574,27 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Left:</source>
-        <translation>Левый:</translation>
+        <translation>Слева:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Top:</source>
-        <translation>Топ:</translation>
+        <translation>Сверху:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation>Верно:</translation>
+        <translation>Справа:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Bottom:</source>
-        <translation>Дно:</translation>
+        <translation>Снизу:</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Set to Printer Margins</source>
-        <translation>Установите поля принтера</translation>
+        <translation>Установить поля принтера</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -9658,17 +9690,17 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation>К текущему слою</translation>
+        <translation>На текущий слой</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation>Перезапись слоев</translation>
+        <translation>Перезаписывать слои</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation>Блоки перезаписи</translation>
+        <translation>Перезаписывать блоки</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -9813,7 +9845,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Энергоцентр трёх окружностей</translation>
+        <translation>Радикальный центр трёх окружностей</translation>
     </message>
 </context>
 <context>
@@ -10026,7 +10058,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
-        <translation>Размер бумаги установлен на пользовательский размер (%1x%2 мм). Вы хотите изменить его на размер бумаги по умолчанию для вашего принтера (%3)?</translation>
+        <translation>Размер бумаги установлен на пользовательский размер (%1×%2 мм). Изменить его на размер бумаги по умолчанию для вашего принтера (%3)?</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -10036,7 +10068,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Auto fit drawing to paper?</source>
-        <translation>Автоматическая подгонка рисунка к бумаге?</translation>
+        <translation>Автоматически подогнать чертёж под бумагу?</translation>
     </message>
     <message>
         <location line="+211"/>
@@ -10196,12 +10228,12 @@ is already in the list.</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1715"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1736"/>
         <source>*VARIES*</source>
         <translation>*ВАРЬИРОВАНИЕ*</translation>
     </message>
     <message>
-        <location line="-1483"/>
+        <location line="-1504"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10256,7 +10288,7 @@ is already in the list.</source>
         <translation>Показать все свойства</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+161"/>
         <source>Auto</source>
         <translation>Автоматический</translation>
     </message>
@@ -10335,7 +10367,7 @@ is already in the list.</source>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation>Максимальная сложность для автоматического расчета длины люка:</translation>
+        <translation>Максимальная сложность для автоматического расчёта длины штриховки:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10355,7 +10387,7 @@ is already in the list.</source>
     <message>
         <location line="+128"/>
         <source>Only update when nothing changes during update delay</source>
-        <translation>Обновляйте только тогда, когда ничего не меняется во время задержки обновления</translation>
+        <translation>Обновлять только при отсутствии изменений во время задержки обновления</translation>
     </message>
     <message>
         <location line="-169"/>
@@ -10516,7 +10548,7 @@ is already in the list.</source>
         <location line="-40"/>
         <location line="+66"/>
         <source>Multiples</source>
-        <translation>Multiples</translation>
+        <translation>Кратные</translation>
     </message>
     <message>
         <location line="-115"/>
@@ -10988,7 +11020,7 @@ is already in the list.</source>
         <translation>Фильтры для экспорта не найдены. Прервано...</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+92"/>
         <source>Format:</source>
         <translation>Формат:</translation>
     </message>
@@ -11028,7 +11060,7 @@ is already in the list.</source>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-        <translation>Недопустимый масштабный коэффициент</translation>
+        <translation>Недопустимый коэффициент масштабирования</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -11080,6 +11112,11 @@ is already in the list.</source>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
         <translation>Определить коэффициент с помощью курсора мыши</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
+        <source>Allow rounding of imaginary corner</source>
+        <translation>Разрешить скругление воображаемого угла</translation>
     </message>
 </context>
 <context>
@@ -11207,13 +11244,10 @@ is already in the list.</source>
         <source>By Color</source>
         <translation>По цвету</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>Выделить все объекты цвета</translation>
+        <translation>Выбрать все объекты одного цвета</translation>
     </message>
 </context>
 <context>
@@ -11292,7 +11326,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation>Выбрать контур</translation>
+        <translation>Выбрать &amp;контур</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11568,7 +11602,7 @@ is already in the list.</source>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>По крайней мере две точки идентичны.</translation>
@@ -11965,7 +11999,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Расстояние до щелчка:</translation>
+        <translation>Расстояние привязки:</translation>
     </message>
 </context>
 <context>
@@ -11983,7 +12017,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation>Расстояние до щелчка:</translation>
+        <translation>Расстояние привязки:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12117,11 +12151,11 @@ is already in the list.</source>
     </message>
 </context>
 <context>
-    <name>SnapSelectionCenter</name>
+    <name>SnapSelection</name>
     <message>
-        <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
-        <source>Center of &amp;Selection</source>
-        <translation>Центр в&amp;ыделения</translation>
+        <location filename="../scripts/Snap/SnapSelection/SnapSelectionInit.js" line="+2"/>
+        <source>&amp;Selection Reference Points</source>
+        <translation>&amp;Опорные точки выделения</translation>
     </message>
 </context>
 <context>
@@ -12316,7 +12350,7 @@ is already in the list.</source>
         <translation>Файл</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+48"/>
         <source>Import SVG</source>
         <translation>Импортировать SVG</translation>
     </message>
@@ -12331,7 +12365,7 @@ is already in the list.</source>
         <translation>Все файлы</translation>
     </message>
     <message>
-        <location line="-45"/>
+        <location line="-49"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>Импорт SVG</translation>
@@ -12369,11 +12403,21 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Import groups as layers</source>
-        <translation>Импортируйте группы как слои</translation>
+        <translation>Импортировать группы как слои</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Paths</source>
+        <translation>Контуры</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import path lineweights</source>
+        <translation>Импортировать толщины линий контуров</translation>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
@@ -12559,12 +12603,12 @@ is already in the list.</source>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+251"/>
         <source>Default value:</source>
         <translation>Значение по умолчанию:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+275"/>
         <source>&amp;Undo</source>
         <translation>&amp;Отменить</translation>
     </message>
@@ -12624,12 +12668,12 @@ is already in the list.</source>
         <translation>&amp;Специальные символы...</translation>
     </message>
     <message>
-        <location line="+348"/>
+        <location line="+349"/>
         <source>Others...</source>
         <translation>Другие...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+140"/>
         <source>Degree</source>
         <translation>Градусы</translation>
     </message>
@@ -12925,7 +12969,7 @@ is already in the list.</source>
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
         <translation>Основное</translation>
     </message>
@@ -13182,7 +13226,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Move/Rotate</source>
-        <translation>Перемещение/поворот</translation>
+        <translation>Перемещение/Поворот</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
@@ -13192,7 +13236,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation>Число копий:</translation>
+        <translation>Количество копий:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -13594,14 +13638,14 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
         <source>Dropped data not supported</source>
         <translation>Удалённые данные не поддерживаются</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
-        <translation>Невозможно импортировать файл в существующий чертеж:</translation>
+        <translation>Невозможно импортировать файл в существующий чертёж:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -13625,7 +13669,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1168"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
         <source>Restore defaults</source>
         <translation>Восстановить умолчания</translation>
     </message>
@@ -13702,12 +13746,12 @@ is already in the list.</source>
     <message>
         <location line="-10"/>
         <source>Degrees</source>
-        <translation>Степени</translation>
+        <translation>Градусы</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Almost Equal</source>
-        <translation>Почти равные</translation>
+        <translation>Приблизительно равно</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13717,12 +13761,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Asymptotically Equal</source>
-        <translation>Асимптотически равны</translation>
+        <translation>Асимптотически равно</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Center Line</source>
-        <translation>Линия центра</translation>
+        <translation>Осевая линия</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13732,12 +13776,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Identity</source>
-        <translation>Идентично</translation>
+        <translation>Тождественно</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not Equal</source>
-        <translation>Не равны</translation>
+        <translation>Не равно</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13747,12 +13791,12 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Property Line</source>
-        <translation>Линия собственности</translation>
+        <translation>Граничная линия</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation>Абонемент 2</translation>
+        <translation>Индекс 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13762,12 +13806,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Squared</source>
-        <translation>Квадратный</translation>
+        <translation>Квадрат</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Кубический</translation>
+        <translation>Куб</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14284,17 +14328,17 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Lines)</source>
-        <translation>Угловое измерение (2 линии)</translation>
+        <translation>Угловой размер (2 линии)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Points)</source>
-        <translation>Угловые размеры (3 балла)</translation>
+        <translation>Угловые размеры (3 точки)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Points)</source>
-        <translation>Угловое измерение (3 балла)</translation>
+        <translation>Угловой размер (3 точки)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14511,12 +14555,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation>Wipeouts</translation>
+        <translation>Маски</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation>Wipeout</translation>
+        <translation>Маска</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14664,7 +14708,7 @@ is already in the list.</source>
         <location line="+66"/>
         <location line="+124"/>
         <source>ID does not refer to an entity:</source>
-        <translation>ID не относится к сущности:</translation>
+        <translation>ID не относится к объекту:</translation>
     </message>
     <message>
         <location line="-42"/>

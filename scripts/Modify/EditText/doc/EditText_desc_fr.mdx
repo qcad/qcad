@@ -1,0 +1,1 @@
+Cet outil peut être utilisé pour éditer des entités de texte existantes.

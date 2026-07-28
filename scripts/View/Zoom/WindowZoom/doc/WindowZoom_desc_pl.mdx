@@ -1,0 +1,2 @@
+Narzędzie to oferuje szybki sposób powiększania określonego obszaru
+rysunku.

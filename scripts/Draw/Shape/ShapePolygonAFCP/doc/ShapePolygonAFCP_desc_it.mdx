@@ -1,0 +1,1 @@
+Crea poligoni con il punto centrale e centrale di un lato.

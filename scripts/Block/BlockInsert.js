@@ -72,6 +72,10 @@ BlockInsert.prototype.slotAttributeTagChanged = function() {
     var tagCombo = optionsToolBar.findChild("AttributeTag");
     var valueEdit = optionsToolBar.findChild("AttributeValue");
 
+    if (isNull(tagCombo) || isNull(valueEdit)) {
+        return;
+    }
+
     var data = tagCombo.itemData(tagCombo.currentIndex);
     if (isNull(data)) {
         return;
@@ -93,6 +97,10 @@ BlockInsert.prototype.slotAttributeValueChanged = function(value) {
     var optionsToolBar = EAction.getOptionsToolBar();
     var tagCombo = optionsToolBar.findChild("AttributeTag");
     var valueEdit = optionsToolBar.findChild("AttributeValue");
+
+    if (isNull(tagCombo) || isNull(valueEdit)) {
+        return;
+    }
 
     var data = tagCombo.itemData(tagCombo.currentIndex);
     if (isNull(data)) {

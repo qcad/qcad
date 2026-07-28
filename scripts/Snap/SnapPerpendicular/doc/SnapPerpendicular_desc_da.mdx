@@ -1,0 +1,2 @@
+Fastgør til det vinkelrette punkt på en linje, bue, cirkel eller ellipse.
+Dette gælder kun, når du tegner linjer.

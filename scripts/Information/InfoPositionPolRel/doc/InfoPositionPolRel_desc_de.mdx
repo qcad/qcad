@@ -1,0 +1,2 @@
+Dieses Werkzeug gibt die relativen, polaren Koordinaten von Punkten in
+der Zeichnung aus.

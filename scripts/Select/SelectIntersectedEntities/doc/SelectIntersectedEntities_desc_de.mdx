@@ -1,0 +1,2 @@
+Selektiert oder deselektiert alle Objekte, die von einer gegebenen Linie
+geschnitten werden.

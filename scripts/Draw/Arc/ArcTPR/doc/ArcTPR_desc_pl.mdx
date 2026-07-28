@@ -1,0 +1,2 @@
+Rysuje łuk o danym promieniu, styczny do jednostki i przechodzący przez
+punkt.

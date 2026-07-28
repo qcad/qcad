@@ -1,0 +1,1 @@
+Tegner en cirkel med en given radius, der tangerer to enheder.

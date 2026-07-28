@@ -1,0 +1,4 @@
+This command shows the layer dialog for the current layer. This is the same
+dialog that is also used to create new layers. Use this to change the layer
+name or its attributes.  
+The name of layer "0" can never be changed.

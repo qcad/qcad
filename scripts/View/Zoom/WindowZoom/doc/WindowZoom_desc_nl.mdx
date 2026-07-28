@@ -1,0 +1,2 @@
+Deze functie biedt een snelle manier om in te zoomen op een bepaald deel van
+de tekening.

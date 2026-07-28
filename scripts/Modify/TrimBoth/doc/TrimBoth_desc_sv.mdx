@@ -1,0 +1,2 @@
+Trimmar eller förlänger två linjer, bågar eller ellipser till deras
+gemensamma skärningspunkt.

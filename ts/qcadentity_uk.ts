@@ -34,6 +34,8 @@
         <location line="+4"/>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="+154"/>
         <location line="+4"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+121"/>
+        <location line="+3"/>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="+156"/>
         <location line="+4"/>
         <location line="+4"/>
@@ -42,8 +44,6 @@
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+121"/>
-        <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-2"/>
         <location line="+3"/>
         <location line="+10"/>
@@ -52,8 +52,8 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+97"/>
-        <location line="+3"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+105"/>
+        <location line="+11"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+84"/>
         <location line="+4"/>
         <location line="+3"/>
@@ -99,6 +99,8 @@
         <location line="+4"/>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-3"/>
         <location line="+4"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="-2"/>
+        <location line="+3"/>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-7"/>
         <location line="+4"/>
         <location line="+4"/>
@@ -107,8 +109,6 @@
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-3"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="-2"/>
-        <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-15"/>
         <location line="+3"/>
         <location line="+10"/>
@@ -117,8 +117,8 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-2"/>
-        <location line="+3"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-10"/>
+        <location line="+11"/>
         <location filename="../src/entity/RImageEntity.cpp" line="-6"/>
         <location line="+4"/>
         <location line="+3"/>
@@ -164,6 +164,8 @@
         <location line="+4"/>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-3"/>
         <location line="+4"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="-2"/>
+        <location line="+3"/>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-7"/>
         <location line="+4"/>
         <location line="+4"/>
@@ -172,8 +174,6 @@
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-3"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="-2"/>
-        <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-15"/>
         <location line="+3"/>
         <location line="+10"/>
@@ -403,7 +403,7 @@
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-11"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-19"/>
         <location line="+1"/>
         <source>Origin</source>
         <translation>Початок координат</translation>
@@ -631,16 +631,18 @@
     </message>
     <message>
         <location line="-3"/>
+        <location line="+8"/>
         <source>Name</source>
         <translation>Назва</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-7"/>
         <source>From Entity</source>
         <translation>З об&apos;єкта</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location line="+9"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+14"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-13"/>
@@ -650,12 +652,48 @@
         <translation>Кут</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-8"/>
         <source>Scale</source>
         <translation>Масштаб</translation>
     </message>
     <message>
         <location line="+5"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Gradient</source>
+        <translation>Градієнт</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Color 1</source>
+        <translation>Колір 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Color 2</source>
+        <translation>Колір 2</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Shift</source>
+        <translation>Зсув</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>One Color</source>
+        <translation>Один колір</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tint</source>
+        <translation>Затемнення / освітлення</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-10"/>
@@ -676,7 +714,7 @@
         <translation>Вершина</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+227"/>
         <source>Yes</source>
         <translation>Так</translation>
     </message>

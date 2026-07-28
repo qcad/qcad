@@ -1,0 +1,3 @@
+Cet outil réinitialise la position de l'étiquette de toutes les entités
+dimensionnelles sélectionnées et remet l'étiquette à sa position calculée
+automatiquement.

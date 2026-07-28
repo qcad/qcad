@@ -147,7 +147,7 @@ void RGuiAction::initTexts() {
 
     // Override shortcut text:
     if (!shortcutText.isEmpty()) {
-#ifdef Q_OS_MACX
+#ifdef Q_OS_MACOS
         if (!textAndKeycode.endsWith(" (" + shortcutText + ")")) {
             textAndKeycode += " (" + shortcutText + ")";
         }
@@ -180,7 +180,7 @@ QString RGuiAction::formatToolTip(const QString& text, const QString& shortcut) 
     QString sc = shortcut;
 
     sc.replace(", ", "");
-#ifdef Q_OS_MACX
+#ifdef Q_OS_MACOS
     // change order to standard order on mac:
     sc.replace("Ctrl+Shift+", "Shift+Ctrl+");
     sc.replace("Ctrl+", QString("%1").arg(QChar(0x2318)));
@@ -267,40 +267,14 @@ void RGuiAction::setIcon(const QString& iconFile) {
     // used to update icons on theme or dark mode change:
     this->iconFile = iconFile;
 
-    // look up theme specific icon:
-    QFileInfo fi(iconFile);
-    QString iconFileName = fi.fileName();
-    QString themePath = RSettings::getThemePath();
-    QString themeIconFile = iconFile;
-    if (!themePath.isEmpty()) {
-        // look up svg in theme:
-        themeIconFile = themePath + "/icons/" + iconFileName;
-        if (!QFileInfo(themeIconFile).exists()) {
-            // no SVG found, look up PNG:
-            QString iconBaseName = fi.baseName();
-            themeIconFile = themePath + "/icons/" + iconBaseName + ".png";
-            if (!QFileInfo(themeIconFile).exists()) {
-                // no PNG found, use default icon:
-                themeIconFile = iconFile;
-            }
-        }
-    }
+    QString themeIconFile = RGuiAction::getIconPath(iconFile);
 
     if (themeIconFile.isEmpty()) {
-        // no icon set and no theme icon found:
+        // no default icon set and no theme icon found:
         QAction::setIcon(QIcon());
     }
     else {
         QString fileName = themeIconFile;
-
-        // change fileName to dark mode icon if available (-inverse postfix):
-        if (RSettings::hasDarkGuiBackground()) {
-            QFileInfo fi(themeIconFile);
-            QString iconFileDark = fi.absolutePath() + QDir::separator() + fi.baseName() + "-inverse." + fi.suffix();
-            if (QFileInfo(iconFileDark).exists()) {
-                fileName = iconFileDark;
-            }
-        }
 
         // fileName can be the an original icon file or an icon file of the theme
         // either with or without -inverse postfix:
@@ -1309,6 +1283,59 @@ void RGuiAction::init() {
         QWidget* w = appWin->getChildWidget(wn);
         if (w!=NULL) {
             addToWidget(this, w);
+        }
+    }
+}
+
+QString RGuiAction::getIconPath(const QString& iconFile, bool inverse) {
+    // look up theme specific icon:
+    QFileInfo fi(iconFile);
+    QString iconFileName = fi.fileName();
+    QString iconBaseName = fi.baseName();
+
+    QString themePath = RSettings::getThemePath();
+    QString themeIconFile = "";
+    QStringList themeIconFiles;
+    themeIconFiles.append(themePath + "/icons/" + iconFileName);
+    themeIconFiles.append(":/" + themePath + "/icons/" + iconFileName);
+    themeIconFiles.append(themePath + "/icons/" + iconBaseName + ".png");
+    themeIconFiles.append(":/" + themePath + "/icons/" + iconBaseName + ".png");
+
+    if (!themePath.isEmpty()) {
+        for (int i=0; i<themeIconFiles.length(); i++) {
+            if (QFileInfo(themeIconFiles[i]).exists()) {
+                themeIconFile = themeIconFiles[i];
+                break;
+            }
+        }
+    }
+
+    if (themeIconFile.isEmpty()) {
+        // no theme icon found, use default icon:
+        themeIconFile = iconFile;
+    }
+
+    if (themeIconFile.isEmpty()) {
+        // no default icon set and no theme icon found:
+        return "";
+    }
+    else {
+        QString fileName = themeIconFile;
+
+        // change fileName to dark mode icon if available (-inverse postfix):
+        if ((RSettings::hasDarkGuiBackground() && !inverse) || (!RSettings::hasDarkGuiBackground() && inverse)) {
+            QFileInfo fi(themeIconFile);
+            QString iconFileDark = fi.absolutePath() + QDir::separator() + fi.baseName() + "-inverse." + fi.suffix();
+            if (QFileInfo(iconFileDark).exists()) {
+                fileName = iconFileDark;
+            }
+        }
+
+        if (QFileInfo(fileName).exists()) {
+            return fileName;
+        }
+        else {
+            return "";
         }
     }
 }

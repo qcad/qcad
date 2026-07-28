@@ -1,0 +1,2 @@
+Se ajusta al punto perpendicular en una línea, arco, círculo o elipse. Esto
+sólo se aplica cuando se dibujan líneas.

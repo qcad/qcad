@@ -464,7 +464,7 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation>处理</translation>
+        <translation>句柄</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -587,7 +587,7 @@
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation>置底</translation>
+        <translation>反向</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -620,7 +620,7 @@
     <message>
         <location line="+2"/>
         <source>Overall</source>
-        <translation>顶层</translation>
+        <translation>总体</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -663,7 +663,7 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation>分解</translation>
+        <translation>折叠</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -721,7 +721,7 @@
         <translation>最大扩展</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+931"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>检测到循环（递归）块引用：</translation>
     </message>
@@ -911,7 +911,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation>居中</translation>
+        <translation>中心线</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -953,7 +953,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation>阴影</translation>
+        <translation>假想线</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1098,7 +1098,7 @@
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation>通信线</translation>
+        <translation>通信</translation>
     </message>
     <message>
         <location line="+1"/>

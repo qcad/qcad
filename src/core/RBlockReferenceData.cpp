@@ -409,6 +409,11 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId, b
             return QSharedPointer<REntity> ();
         }
 
+        // additional check if entity is visible:
+        if (!e->isVisible()) {
+            return QSharedPointer<REntity> ();
+        }
+
         // always update selection status:
         e->setSelected(isSelected());
 
@@ -423,6 +428,12 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId, b
     QSharedPointer<REntity> entity = document->queryEntity(entityId);
     if (entity.isNull()) {
         qWarning() << "RBlockReferenceData::queryEntity: entity " << entityId << " is NULL";
+        return QSharedPointer<REntity>();
+    }
+
+    if (!entity->isVisible()) {
+        // even if an entity is not visible, still cache it in case it becomes visible:
+        cache.insert(entityId, entity);
         return QSharedPointer<REntity>();
     }
 

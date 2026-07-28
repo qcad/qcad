@@ -1,0 +1,2 @@
+Gebruik dit menu om een bug (probleem) rapport over QCAD (online) te
+verzenden.

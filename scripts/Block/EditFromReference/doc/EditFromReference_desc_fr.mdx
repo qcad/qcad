@@ -1,0 +1,3 @@
+Avec cet outil, un bloc peut être édité en choisissant une entité de
+référence de bloc existante. Ceci est utile et généralement plus rapide si vous
+ne connaissez pas le nom du bloc que vous voulez éditer.

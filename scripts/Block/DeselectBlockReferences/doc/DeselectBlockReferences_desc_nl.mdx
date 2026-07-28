@@ -1,0 +1,2 @@
+Deze functie deselecteert alle blokreferenties van de blok, die op dat
+moment is geselecteerd in de bloklijst.

@@ -1,0 +1,1 @@
+Met deze functie wordt de actuele selectie horizontaal gespiegeld.

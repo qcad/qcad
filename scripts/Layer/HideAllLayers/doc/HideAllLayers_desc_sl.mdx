@@ -1,0 +1,2 @@
+To orodje se lahko uporabi, da skrijete vse plasti na enkrat.
+To je lahko predvsem uporabo pri risbah z veliko plastmi.

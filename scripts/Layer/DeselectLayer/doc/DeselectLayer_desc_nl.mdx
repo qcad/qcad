@@ -1,0 +1,1 @@
+Deze functie deselecteert alle objecten op de huidige laag.

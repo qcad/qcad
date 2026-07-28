@@ -1,0 +1,1 @@
+Selects or deselects all entities on the same layer as a chosen entity.

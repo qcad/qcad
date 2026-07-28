@@ -218,14 +218,19 @@ function printArgument(name, prop) {
 }
 
 function printGenericUsage() {
-    if (RS.getSystemId()==="osx") {
+    var all = false;
+    if (RSettings.getOriginalArguments().contains("-hall")) {
+        all = true;
+    }
+
+    if (all || RS.getSystemId()==="osx") {
         print();
         print("macOS specific options:\n");
         print("  -no-dock-icon           Don't show icon in dock. This should only be used\n"
             + "                          in combination with -no-gui."  );
     }
 
-    if (RS.getSystemId()==="linux") {
+    if (all || RS.getSystemId()==="linux") {
         print();
         print("Qt/X11 platform arguments:");
         print();

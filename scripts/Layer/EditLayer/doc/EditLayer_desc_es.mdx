@@ -1,0 +1,4 @@
+Este comando muestra el diálogo de capa para la capa actual. Este es el
+mismo diálogo que también se utiliza para crear nuevas capas. Se usa para
+cambiar el nombre de la capa o sus atributos.  
+El nombre de la capa "0" no se puede cambiar nunca.

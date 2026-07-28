@@ -1,0 +1,2 @@
+Verktyget mäter det exakta avståndet mellan en enhet och en punkt som
+användaren anger.

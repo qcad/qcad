@@ -1,0 +1,2 @@
+Dieses Werkzeug kann zum sichtbar machen aller Layer auf einmal verwendet
+werden. Dies kann vor allem in Zeichnungen mit vielen Layern nützlich sein.

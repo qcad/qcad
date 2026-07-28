@@ -1,0 +1,2 @@
+Dette værktøj måler den nøjagtige afstand mellem en enhed og et punkt, som
+brugeren har angivet.

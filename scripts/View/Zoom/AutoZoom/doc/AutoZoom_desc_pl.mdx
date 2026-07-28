@@ -1,0 +1,2 @@
+Skaluje widok rysunku tak, aby wszystkie elementy znajdujące się na
+widocznych warstwach pasowały na ekranie.

@@ -1,0 +1,2 @@
+Narzędzie to wyprowadza względne współrzędne biegunowe wybranych punktów na
+rysunku.

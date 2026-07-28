@@ -1,0 +1,2 @@
+Trimmer eller forlænger to linjer, buer eller ellipser til deres fælles
+skæringspunkt.

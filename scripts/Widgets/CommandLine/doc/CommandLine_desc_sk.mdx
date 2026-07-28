@@ -1,0 +1,53 @@
+Príkazový riadok QCAD vám umožňuje spúšťať príkazy, zadávať súradnice alebo zadávať hodnoty ako vzdialenosti alebo polomery.
+
+### Zadávanie súradníc
+
+Absolútne súradnice sa zadávajú vo formáte „x,y":
+
+40,5
+
+Relatívne súradnice sa zadávajú vo formáte „@x,y":
+
+@10,6
+
+Absolútne polárne súradnice sa zadávajú vo formáte „vzdialenosť&lt;uhol":
+
+10&lt;30
+
+Relatívne polárne súradnice sa zadávajú vo formáte „@vzdialenosť&lt;uhol":
+
+@10&lt;45
+
+Pri zadávaní súradníc alebo hodnôt možno použiť [matematické výrazy](#expr) na výpočet súradnice na základe známych hodnôt. Napríklad súradnicu 10,5 možno zadať aj ako:
+
+5+5,30/6
+
+### Kalkulačka
+
+Príkazový riadok možno použiť aj ako kalkulačku. Na to zadajte [matematický výraz](#expr), pred ktorým je znak rovná sa:
+
+=3+4  
+7
+
+Premenné možno použiť na uloženie hodnôt:
+
+=a=5+6  
+11  
+=a/2  
+5.5  
+
+### Matematické výrazy
+
+Dostupné matematické konštanty sú:
+
+PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2
+
+Dostupné matematické funkcie sú:
+
+abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad,
+sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh,
+acosh, asinh, atanh, expm1, hypot, cbrt, trunc
+
+Väčšina týchto konštánt a funkcií sú štandardné funkcie ECMAScript (JavaScript) a dokumentované online. V štandardnom ECMAScript sú tieto funkcie súčasťou triedy Math, takže funkcia *abs* by sa musela napísať ako *Math.abs*. V príkazovom riadku QCAD môžete časť *Math.* vynechať pre pohodlie. Trigonometrické funkcie (sin, cos, tan, asin, acos, atan, atan2) prijímajú alebo vracajú uhly v stupňoch. Ak preferujete radiánové verzie týchto funkcií, použite namiesto toho pôvodné funkcie *Math.*.
+
+Funkcie *rad2deg* a *deg2rad* možno použiť na prevod uhlov medzi radiánmi a stupňami.

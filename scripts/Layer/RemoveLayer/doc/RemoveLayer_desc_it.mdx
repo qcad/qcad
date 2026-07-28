@@ -1,0 +1,4 @@
+Con questo comando è possibile eliminare il livello attualmente selezionato
+dall'elenco dei livelli. Si noti che verranno cancellate anche tutte le entità
+di quel livello.  
+Il livello "0" non può mai essere eliminato.

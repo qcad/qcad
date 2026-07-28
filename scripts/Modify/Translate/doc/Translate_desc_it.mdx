@@ -1,0 +1,1 @@
+Sposta o copia entità.

@@ -19,9 +19,12 @@
 #include "RPainterPathEngine.h"
 
 RPainterPathEngine::RPainterPathEngine()
-    // starting with Qt 4.8.0 we have to specify feature QPaintEngine::PrimitiveTransform here
-    // see QPainterPrivate::updateEmulationSpecifier
-    : QPaintEngine(QPaintEngine::PainterPaths | QPaintEngine::PrimitiveTransform), strokePolygon(false) {}
+    // claim all features (like QPicturePaintEngine):
+    // any feature not claimed here causes QPainter to emulate it by
+    // rasterizing the operation (QPainterPrivate::draw_helper) and sending it
+    // to drawImage/drawPixmap instead of drawPath/drawPolygon, losing the
+    // vector geometry (e.g. gradient fills, alpha, opacity in SVGs):
+    : QPaintEngine(QPaintEngine::AllFeatures), strokePolygon(false) {}
 
 RPainterPathEngine::~RPainterPathEngine() {}
 
@@ -44,7 +47,6 @@ void RPainterPathEngine::updateState(const QPaintEngineState &state) {
     }
 
     /*
-    QPaintEngine::DirtyFlags flags = state.state();
     if (flags & DirtyPen) updatePen(state.pen());
     if (flags & DirtyBrush) updateBrush(state.brush());
     if (flags & DirtyBrushOrigin) updateBrushOrigin(state.brushOrigin());
@@ -74,7 +76,17 @@ void RPainterPathEngine::drawPath(const QPainterPath& qpath) {
     RPainterPath path(qpath);
     path.setFillRule(Qt::WindingFill);
     path.setBrush(state->brush());
-    if (state->brush().color().isValid()) {
+
+    QPen pen = state->pen();
+    // QtSvg signals "no stroke" through a pen with a Qt::NoBrush brush
+    // (pen style remains Qt::SolidLine, pen color remains valid black):
+    if (pen.brush().style()==Qt::NoBrush) {
+        pen.setStyle(Qt::NoPen);
+    }
+    path.setPen(pen);
+
+    // note: fill="none" arrives as QBrush(Qt::NoBrush) with a valid (black) color:
+    if (state->brush().style()!=Qt::NoBrush && state->brush().color().isValid()) {
         path.setFixedBrushColor(true);
     }
     // required for Qt >= 4.8.0 for texts with unicode characters:

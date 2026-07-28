@@ -325,7 +325,7 @@
         <translation>Външна препратка</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+931"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Открито е кръгово (рекурсивно) препращане към блок:</translation>
     </message>
@@ -559,7 +559,7 @@
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation>Ред за изтегляне</translation>
+        <translation>Ред на чертане</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -641,7 +641,7 @@
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation>Платформа</translation>
+        <translation>Начертаем</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -702,7 +702,7 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation>Дръжка</translation>
+        <translation>Идентификатор</translation>
     </message>
     <message>
         <location line="+1"/>

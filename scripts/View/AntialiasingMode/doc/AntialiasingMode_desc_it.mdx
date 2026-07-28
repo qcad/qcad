@@ -1,0 +1,3 @@
+Commuta l'anti-aliasing per il disegno corrente. Con l'anti-aliasing, le
+linee oblique, gli archi e i testi vengono visualizzati in modo più
+uniforme.

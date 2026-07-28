@@ -1,0 +1,2 @@
+Använd det här verktyget för att skapa textelement med en eller flera
+rader.

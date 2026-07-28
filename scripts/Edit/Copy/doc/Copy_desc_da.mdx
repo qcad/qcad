@@ -1,0 +1,2 @@
+QCAD tilbyder et sæt værktøjer til at kopiere enheder fra en tegning til en
+anden, ligesom andre programmer.

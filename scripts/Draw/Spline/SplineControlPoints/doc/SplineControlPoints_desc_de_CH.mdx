@@ -1,0 +1,3 @@
+Mit diesem Werkzeug können Sie Spline Kurven konstruieren. Die unterstützte
+Kurvenart nennt sich korrekt Non-uniform rational B-Splines (NURBS) mit
+homogenen Gewichtungsfaktoren.

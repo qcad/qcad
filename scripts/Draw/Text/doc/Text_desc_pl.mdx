@@ -1,0 +1,2 @@
+Narzędzie to służy do tworzenia jednowierszowych lub wielowierszowych
+elementów tekstu.

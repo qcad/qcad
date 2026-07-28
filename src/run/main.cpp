@@ -28,7 +28,7 @@
 #include <QSqlDatabase>
 #include <QTime>
 
-#if defined(Q_OS_MAC) || defined(Q_OS_LINUX)
+#if defined(Q_OS_MACOS) || defined(Q_OS_LINUX)
 #include <signal.h>
 #endif
 
@@ -100,7 +100,7 @@
 #endif
 
 
-#if defined(Q_OS_MAC) || defined(Q_OS_LINUX)
+#if defined(Q_OS_MACOS) || defined(Q_OS_LINUX)
 void catchSigPipe(int /*s*/){
     qDebug() << "SIGPIPE caught";
 }
@@ -253,7 +253,7 @@ int main(int argc, char *argv[]) {
     // make sure arguments are correctly encoded:
     RSettings::setOriginalArguments(QCoreApplication::arguments());
 
-#if defined(Q_OS_MAC) || defined(Q_OS_LINUX)
+#if defined(Q_OS_MACOS) || defined(Q_OS_LINUX)
     // note that SIGPIPE is only ignored in release mode, gdb catches SIGPIPE
     // by default. To disable that behavior in gdb, use:
     // handle SIGPIPE nostop noprint pass

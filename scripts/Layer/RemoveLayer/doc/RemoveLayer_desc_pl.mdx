@@ -1,0 +1,4 @@
+Za pomocą tego polecenia można usunąć zaznaczoną warstwę z listy warstw.
+Należy pamiętać, że wszystkie elementy na tej warstwie również zostaną
+usunięte.  
+Warstwa "0" nie może być usunięta.

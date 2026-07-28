@@ -28,7 +28,10 @@
 #include <QString>
 #include <QStringList>
 #include <QSysInfo>
+#include <QStyle>
+#include <QStyleOptionViewItem>
 #include <QTranslator>
+#include <QPainter>
 #include <QDebug>
 
 #if QT_VERSION >= 0x050000
@@ -36,6 +39,10 @@
 #  include <QStandardPaths>
 #else
 #  include <QDesktopServices>
+#endif
+
+#if QT_VERSION >= 0x060500
+#  include <QStyleHints>
 #endif
 
 #include "RMath.h"
@@ -66,6 +73,7 @@ RColor* RSettings::startReferencePointColor = NULL;
 RColor* RSettings::endReferencePointColor = NULL;
 RColor* RSettings::secondaryReferencePointColor = NULL;
 RColor* RSettings::tertiaryReferencePointColor = NULL;
+RColor* RSettings::snapReferencePointColor = NULL;
 RColor* RSettings::crossHairColor = NULL;
 RColor* RSettings::crossHairColorInactive = NULL;
 RColor* RSettings::gridColor = NULL;
@@ -699,7 +707,7 @@ QSettings* RSettings::getQSettings() {
 
         qSettings =
             new QSettings(
-#if defined(Q_OS_WIN) || defined(Q_OS_MAC)
+#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
                 QSettings::IniFormat,
 #else
                 QSettings::NativeFormat,
@@ -912,6 +920,13 @@ RColor RSettings::getTertiaryReferencePointColor() {
         tertiaryReferencePointColor = new RColor(getColor("GraphicsViewColors/TertiaryReferencePointColor", RColor(0,64,172)));
     }
     return *tertiaryReferencePointColor;
+}
+
+RColor RSettings::getSnapReferencePointColor() {
+    if (snapReferencePointColor==NULL) {
+        snapReferencePointColor = new RColor(getColor("GraphicsViewColors/SnapReferencePointColor", RColor(0,200,172)));
+    }
+    return *snapReferencePointColor;
 }
 
 RColor RSettings::getCrossHairColor() {
@@ -1203,7 +1218,7 @@ QString RSettings::getRelativeCoordinatePrefix() {
  */
 bool RSettings::isDarkMode() {
     if (darkMode==-1) {
-#if defined(Q_OS_MAC)
+#if defined(Q_OS_MACOS)
         darkMode = (isMacDarkMode() ? 1 : 0);
 #elif defined(Q_OS_WIN32)
 
@@ -1246,7 +1261,7 @@ bool RSettings::hasDarkGuiBackground() {
         return false;
     }
 
-#if defined(Q_OS_MAC)
+#if defined(Q_OS_MACOS)
     // detect macOS dark mode:
     if (isMacDarkMode()) {
         darkGuiBackground = 1;
@@ -1483,7 +1498,7 @@ QString RSettings::getOSVersion() {
     default:
         return "Windows >= 10";
     }
-#elif defined (Q_OS_MAC)
+#elif defined (Q_OS_MACOS)
     switch (QSysInfo::MacintoshVersion) {
     case QSysInfo::MV_9:
         return "Mac OS 9 (Unsupported)";
@@ -2115,6 +2130,27 @@ bool RSettings::getAllowMouseMoveInterruptions() {
         allowMouseMoveInterruptions = getValue("GraphicsView/AllowMouseMoveInterruptions", QVariant(true)).toBool();
     }
     return (bool)allowMouseMoveInterruptions;
+}
+
+QColor RSettings::getWidgetSelectionColor(const QWidget* w) {
+    if (w==NULL) {
+        return QColor();
+    }
+
+    QStyleOptionViewItem opt;
+    opt.initFrom(w);
+    opt.state |= QStyle::State_Selected | QStyle::State_Active
+                 | QStyle::State_Enabled;
+    opt.showDecorationSelected = true;          // fill the whole rect
+    opt.rect = QRect(0, 0, 8, 8);
+
+    QImage img(8, 8, QImage::Format_ARGB32_Premultiplied);
+    img.fill(Qt::transparent);
+    {
+        QPainter p(&img);
+        w->style()->drawPrimitive(QStyle::PE_PanelItemViewItem, &opt, &p, w);
+    }
+    return img.pixelColor(4, 4);                // un-premultiplied QColor
 }
 
 void RSettings::resetCache() {

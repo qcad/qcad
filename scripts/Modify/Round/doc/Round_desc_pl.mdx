@@ -1,0 +1,2 @@
+Zaokrągla narożnik konturu. Opcjonalnie, elementy brzegowe narożnika mogą
+być automatycznie przycinane w celu dopasowania do nowego kształtu.

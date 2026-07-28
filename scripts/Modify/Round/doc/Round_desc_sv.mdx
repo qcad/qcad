@@ -1,0 +1,2 @@
+Avrundar hörnet av en kontur. Eventuellt kan hörnets kantelement trimmas
+automatiskt så att de passar den nya formen.

@@ -220,6 +220,21 @@ public:
     virtual QSet<RObject::Id> queryAllBlockReferences() const = 0;
 
     /**
+     * \return A set of the IDs of those block reference entities whose
+     * visual appearance may change when the visibility of the given layers
+     * changes. These are references to blocks which contain entities on one
+     * of the given layers (directly or indirectly through nested block
+     * references) and block references which are themselves on one of the
+     * given layers (the visibility of layer 0 entities in the referenced
+     * block depends on the layer of the block reference).
+     * The default implementation conservatively returns all block references.
+     */
+    virtual QSet<RObject::Id> queryBlockReferencesForLayers(const QSet<RObject::Id>& layerIds) const {
+        Q_UNUSED(layerIds)
+        return queryAllBlockReferences();
+    }
+
+    /**
      * \return A set of all viewport entity IDs.
      */
     virtual QSet<RObject::Id> queryAllViewports() const = 0;

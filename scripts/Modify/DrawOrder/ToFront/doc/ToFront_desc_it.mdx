@@ -1,0 +1,3 @@
+Modifica l'ordine di visualizzazione delle entità. Utilizzare questo
+strumento per portare le entità in primo piano se nascoste dietro immagini,
+riempimenti solidi o altre entità.

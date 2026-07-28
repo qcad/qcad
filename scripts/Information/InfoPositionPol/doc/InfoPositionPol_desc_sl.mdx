@@ -1,0 +1,1 @@
+To orodje na risbo izpiše absolutne, polarne koordinate točk.

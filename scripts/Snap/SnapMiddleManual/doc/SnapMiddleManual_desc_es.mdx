@@ -1,0 +1,3 @@
+Esta herramienta le permite ajustar un punto que se encuentra en el medio
+entre dos puntos. Esto es más comúnmente usado para encajar al centro de un
+rectángulo o polígono escogiendo dos esquinas diagonalmente opuestas.

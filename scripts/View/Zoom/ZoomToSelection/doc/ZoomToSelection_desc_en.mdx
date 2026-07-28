@@ -1,0 +1,2 @@
+This tool zooms to the current selection, ensuring that all selected
+entities are visible.

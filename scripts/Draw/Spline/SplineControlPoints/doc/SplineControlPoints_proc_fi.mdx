@@ -1,0 +1,22 @@
+import SplineControlPoints01 from './SplineControlPoints01.png';
+import SplineControlPoints02 from './SplineControlPoints02.png';
+
+1. Valitse splinin aste asetustyökalurivillä. Tuetut asteet ovat 2
+   (toisen asteen b-splini) ja 3 (kolmannen asteen b-splini). Mitä korkeampi aste,
+   sitä 'pehmeämmäksi' käyrä tulee.  
+   Huomaa, että toisen asteen b-splini vaatii määritelmän mukaan vähintään 3
+   kontrollipistettä, kun taas kolmannen asteen b-splinillä on vähintään 4 kontrollipistettä.
+2. Valitse valintaruutu 'Closed' asetustyökalurivillä, jos haluat luoda
+   suljetun splinin. Suljetut splinit ovat jatkuvia suljettuja silmukoita.
+3. Määritä kontrollipisteet. Kolmannen (toisen asteen b-splineille) tai neljännen
+   (kolmannen asteen b-splineille) kontrollipisteen määrittämisen jälkeen näytetään
+   esikatselu. Voit poistaa viimeisen kontrollipisteen uudelleen napsauttamalla
+   asetustyökalurivin painiketta 'Undo'.
+4. Paina Escape tai napsauta hiiren oikeaa painiketta viimeisen pisteen
+   asettamisen jälkeen vahvistaaksesi splinin muodon.
+5. Voit nyt luoda toisen splinin tai napsauttaa uudelleen oikeaa painiketta
+   lopettaaksesi työkalun.
+   Esimerkki kahdesta avoimesta splinistä (toisen ja kolmannen asteen):  
+   <Image src={SplineControlPoints01} alt="SplineControlPoints01" width={240} height={166} />  
+   Esimerkki kahdesta suljetusta, jaksollisesta splinistä (toisen ja kolmannen asteen):  
+   <Image src={SplineControlPoints02} alt="SplineControlPoints02" width={288} height={166} />

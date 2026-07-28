@@ -1,0 +1,2 @@
+Narzędzie to umożliwia wygodne wyświetlanie wszystkich warstw jednocześnie.
+Może to być przydatne podczas pracy z rysunkiem o wielu warstwach.

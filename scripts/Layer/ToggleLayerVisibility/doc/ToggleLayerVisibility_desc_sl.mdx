@@ -1,0 +1,2 @@
+Ta funkcija preklopi vidnost trenutne plasti.
+Vidnost določene plasti, lahko tudi preklopite s klikom na simbol očesa, pri posamezni plasti.

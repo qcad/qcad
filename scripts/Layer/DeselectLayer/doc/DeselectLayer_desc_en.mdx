@@ -1,0 +1,1 @@
+This tool deselects all entities on the current layer.

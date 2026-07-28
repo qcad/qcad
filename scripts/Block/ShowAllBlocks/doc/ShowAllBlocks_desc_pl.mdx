@@ -1,0 +1,2 @@
+Narzędzie to upewnia się, że wszystkie odnośniki do bloków na rysunku są
+pokazane.

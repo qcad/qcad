@@ -1,0 +1,2 @@
+Selects all entities that are not currently selected and deselects all
+selected entities.

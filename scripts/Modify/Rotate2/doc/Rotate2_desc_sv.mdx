@@ -1,0 +1,3 @@
+Roterar och motroterar enheter. Det här verktyget kan vara användbart för
+att rotera enheter runt ett centrum med bibehållen ursprunglig orientering av
+själva enheterna.

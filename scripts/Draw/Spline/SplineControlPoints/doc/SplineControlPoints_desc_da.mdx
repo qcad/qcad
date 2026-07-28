@@ -1,0 +1,3 @@
+Tegner spline-kurver fra kontrolpunkter. Ikke-uniforme rationelle B-Splines
+(NURBS) med homogene vægtningsfaktorer er de eneste splines, der
+understøttes.

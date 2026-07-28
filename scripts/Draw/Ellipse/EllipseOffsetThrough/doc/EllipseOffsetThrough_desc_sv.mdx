@@ -1,0 +1,2 @@
+Med det här verktyget kan du skapa kurvor som är parallella med en ellips
+och går genom en angiven punkt.

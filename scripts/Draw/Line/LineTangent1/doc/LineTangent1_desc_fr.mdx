@@ -1,0 +1,2 @@
+Créez des tangentes à partir d'une coordonnée vers un arc, un cercle ou une
+ellipse existants avec cet outil.

@@ -1,0 +1,3 @@
+Dessine les courbes splines à partir des points de contrôle. Les cannelures
+B rationnelles non uniformes (NURBS) avec des facteurs de pondération homogènes
+sont les seules cannelures qui sont supportées.

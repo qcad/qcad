@@ -1,0 +1,2 @@
+Con questo strumento è possibile creare una o più curve parallele con una
+data distanza da un'ellisse esistente.

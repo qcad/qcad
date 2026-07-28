@@ -1,0 +1,1 @@
+Tworzy wielokąty z dwóch przeciwległych narożników lub boków.

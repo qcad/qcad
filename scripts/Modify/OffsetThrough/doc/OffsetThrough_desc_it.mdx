@@ -1,0 +1,3 @@
+Con questo strumento è possibile creare parallelismi con linee esistenti o
+archi e cerchi concentrici. L'arco o il cerchio parallelo o concentrico
+attraversa un determinato punto.

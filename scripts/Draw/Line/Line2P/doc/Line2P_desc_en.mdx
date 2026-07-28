@@ -1,0 +1,1 @@
+This tool lets you draw a sequence of one or more straight lines.

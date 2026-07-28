@@ -1,0 +1,2 @@
+Dette værktøj kan bruges til at skjule alle lag på en gang. Dette kan være
+nyttigt, når du arbejder med en tegning med mange lag.

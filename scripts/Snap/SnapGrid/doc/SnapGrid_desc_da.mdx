@@ -1,0 +1,1 @@
+Fastgøres til gitterpunkter.

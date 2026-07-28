@@ -100,7 +100,8 @@ public:
         bool draft,
         double strictRange = RMAXDOUBLE,
         bool includeLockedLayers = true,
-        bool selectedOnly = false
+        bool selectedOnly = false,
+        bool snappable = false
     );
     QPair<RObject::Id, QSet<int> > queryClosestXYWithIndices(
         const RVector& wcsPosition,
@@ -149,6 +150,7 @@ public:
     bool hasChildEntities(RObject::Id parentId) const;
     QSet<RObject::Id> queryBlockReferences(RObject::Id blockId) const;
     QSet<RObject::Id> queryAllBlockReferences() const;
+    QSet<RObject::Id> queryBlockReferencesForLayers(const QSet<RObject::Id>& layerIds) const;
     QSet<RObject::Id> queryAllViewports() const;
 
     QSet<RObject::Id> queryContainedEntities(const RBox& box) const;
@@ -164,7 +166,8 @@ public:
         RObject::Id blockId = RObject::INVALID_ID,
         const QList<RS::EntityType>& filter = RDEFAULT_QLIST_RS_ENTITYTYPE,
         bool selectedOnly = false,
-        RObject::Id layerId = RObject::INVALID_ID) const;
+        RObject::Id layerId = RObject::INVALID_ID,
+        bool snappable = false) const;
 
     QMap<RObject::Id, QSet<int> > queryIntersectedEntitiesXYWithIndex(const RBox& box,
          bool checkBoundingBoxOnly=false,
@@ -172,7 +175,8 @@ public:
          RObject::Id blockId = RObject::INVALID_ID,
          const QList<RS::EntityType>& filter = RDEFAULT_QLIST_RS_ENTITYTYPE,
          bool selectedOnly = false,
-         RObject::Id layerId = RObject::INVALID_ID) const;
+         RObject::Id layerId = RObject::INVALID_ID,
+         bool snappable = false) const;
 
     QMap<RObject::Id, QSet<int> > queryIntersectedShapesXY(const RBox& box,
         bool checkBoundingBoxOnly=false,
@@ -180,7 +184,8 @@ public:
         RObject::Id blockId = RObject::INVALID_ID,
         const QList<RS::EntityType>& filter = RDEFAULT_QLIST_RS_ENTITYTYPE,
         bool selectedOnly = false,
-        RObject::Id layerId = RObject::INVALID_ID) const;
+        RObject::Id layerId = RObject::INVALID_ID,
+        bool snappable = false) const;
 
     QSet<RObject::Id> queryContainedEntitiesXY(const RBox& box) const;
 

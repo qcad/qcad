@@ -264,7 +264,7 @@ ShapeAlgorithms.getIntersectionPoints = function(shape, otherShapes, onShape, on
         !isFullEllipseShape(shape) &&
         !isXLineShape(shape) &&
         (!isPolylineShape(shape) || !shape.isGeometricallyClosed()) &&
-        (!isSplineShape(shape) || !shape.isClosed())) {
+        (!isSplineShape(shape) || !shape.isGeometricallyClosed())) {
 
         var sp = shape.getStartPoint();
         sp.isStart = true;
@@ -654,39 +654,38 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
         rest2.trimStartPoint(cutDist2);
 
         segment = shape.clone();
-        //var l1 = segment.getLength();
         segment.setStartAngle(segment.getCenter().getAngleTo(cutPos1));
-        //segment.trimStartPoint(cutDist1);
-        //var l2 = segment.getLength();
-        //segment.trimEndPoint(cutDist2 - (l1-l2));
         segment.setEndAngle(segment.getCenter().getAngleTo(cutPos2));
 
         if (!extend) {
             var angleLength1 = rest1.getAngleLength(true);
             var angleLength2 = rest2.getAngleLength(true);
 
-            // rest1 is the same as the segment:
-            var same1 = RMath.fuzzyAngleCompare(rest1.getStartAngle(), segment.getStartAngle()) &&
-                    RMath.fuzzyAngleCompare(rest1.getEndAngle(), segment.getEndAngle()) &&
-                    rest1.isReversed()===segment.isReversed();
-
-            // catch common errors:
-            if (angleLength1+angleLength2 > shape.getAngleLength() || same1) {
-                rest1.trimEndPoint(cutDist2);
-                rest2.trimStartPoint(cutDist1);
-
-                segment.trimStartPoint(cutDist2);
-                segment.trimEndPoint(cutDist1);
-
-                angleLength1 = rest1.getAngleLength(true);
-                angleLength2 = rest2.getAngleLength(true);
-            }
-            if (angleLength1<1.0e-5) {
+            if (angleLength1<1.0e-5 || angleLength1>2*Math.PI-1.0e-5) {
                 rest1 = undefined;
             }
 
-            if (angleLength2<1.0e-5) {
+            if (angleLength2<1.0e-5 || angleLength2>2*Math.PI-1.0e-5) {
                 rest2 = undefined;
+            }
+
+            if (!isNull(rest1) && !isNull(rest2)) {
+                // rest1 is the same as the segment:
+                var same1 = RMath.fuzzyAngleCompare(rest1.getStartAngle(), segment.getStartAngle()) &&
+                        RMath.fuzzyAngleCompare(rest1.getEndAngle(), segment.getEndAngle()) &&
+                        rest1.isReversed()===segment.isReversed();
+
+                // catch common errors:
+                if (angleLength1+angleLength2 > shape.getAngleLength() || same1) {
+                    rest1.trimEndPoint(cutDist2);
+                    rest2.trimStartPoint(cutDist1);
+
+                    segment.trimStartPoint(cutDist2);
+                    segment.trimEndPoint(cutDist1);
+
+                    angleLength1 = rest1.getAngleLength(true);
+                    angleLength2 = rest2.getAngleLength(true);
+                }
             }
         }
     }
@@ -849,68 +848,126 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
 
     // spline:
     else if (isSplineShape(shape)) {
-        rest1 = shape.clone();
-        rest2 = shape.clone();
-        segment = shape.clone();
+        var closedSpline = shape.isGeometricallyClosed();
 
-        var tAtCutPos1 = shape.getTAtDistance(cutDist1);
-        var tAtCutPos2 = shape.getTAtDistance(cutDist2);
-        var tMax = shape.getTMax();
-
-        if (shape.getStartPoint().equalsFuzzy(shape.getEndPoint())) {
-            if (RMath.fuzzyCompare(tAtCutPos1, shape.getTMax())) {
-                tAtCutPos1 = shape.getTMin();
+        if (closedSpline) {
+            // move the seam (start / end point) of the closed spline to the
+            // first cut point, so the segment to break out never wraps
+            // around the seam:
+            var relocated = ShapeAlgorithms.relocateSplineStartPoint(shape, cutDist1, cutPos1);
+            if (isNull(relocated)) {
+                // seam cannot be relocated: handle spline as open spline:
+                closedSpline = false;
+            }
+            else {
+                shape = relocated;
+                // snap seam to exact cut position:
+                if (isValidVector(cutPos1)) {
+                    shape.setStartPoint(cutPos1);
+                    shape.setEndPoint(cutPos1);
+                }
+                cutPos1 = shape.getStartPoint();
+                cutDist2 -= cutDist1;
+                if (cutDist2<0.0) {
+                    cutDist2 = shape.getLength() + cutDist2;
+                }
+                cutDist1 = 0.0;
             }
         }
 
-        if (tAtCutPos1 < tAtCutPos2) {
-            if (RMath.fuzzyCompare(tAtCutPos1, 0.0)) {
-                rest1 = undefined;
-            }
-            else {
-                rest1.trimEndPoint(cutDist1);
-                // positions are more precise but
-                // distances take into account possible self intersections:
-                rest1.setEndPoint(cutPos1);
-            }
+        if (closedSpline) {
+            // closed spline: there is only one 'rest', the segment is
+            // determined by the click position below:
+            rest1 = shape.clone();
+            rest1.trimEndPoint(cutPos2, cutPos2);
+            rest1.setEndPoint(cutPos2);
 
-            var l1 = segment.getLength();
-            segment.trimStartPoint(cutDist1);
-            segment.setStartPoint(cutPos1);
-            var l2 = segment.getLength();
-            segment.trimEndPoint(cutDist2 - (l1-l2));
-            segment.setEndPoint(cutPos2);
+            rest2 = shape.clone();
+            rest2.trimStartPoint(cutPos2, cutPos2);
+            rest2.setStartPoint(cutPos2);
 
-            if (RMath.fuzzyCompare(tAtCutPos2, tMax)) {
-                rest2 = undefined;
-            }
-            else {
+            // trimming by position is precise but might pick the wrong
+            // location for self intersecting splines:
+            // fall back to trimming by distance in that case
+            // (tolerance is generous: spline lengths are approximated):
+            if (!rest1.isValid() || !rest2.isValid() ||
+                !RMath.fuzzyCompare(rest1.getLength(), cutDist2, shape.getLength()/20)) {
+
+                rest1 = shape.clone();
+                rest1.trimEndPoint(cutDist2);
+                rest1.setEndPoint(cutPos2);
+
+                rest2 = shape.clone();
                 rest2.trimStartPoint(cutDist2);
                 rest2.setStartPoint(cutPos2);
             }
+
+            segment = undefined;
         }
         else {
-            if (RMath.fuzzyCompare(tAtCutPos1, 0.0)) {
-                rest1 = undefined;
-            }
-            else {
-                rest1.trimEndPoint(cutDist2);
-                rest1.setEndPoint(cutPos2);
+            rest1 = shape.clone();
+            rest2 = shape.clone();
+            segment = shape.clone();
+
+            var tAtCutPos1 = shape.getTAtDistance(cutDist1);
+            var tAtCutPos2 = shape.getTAtDistance(cutDist2);
+            var tMax = shape.getTMax();
+
+            if (shape.getStartPoint().equalsFuzzy(shape.getEndPoint())) {
+                if (RMath.fuzzyCompare(tAtCutPos1, shape.getTMax())) {
+                    tAtCutPos1 = shape.getTMin();
+                }
             }
 
-            var l1 = segment.getLength();
-            segment.trimStartPoint(cutDist2);
-            segment.setStartPoint(cutPos2);
-            var l2 = segment.getLength();
-            segment.trimEndPoint(cutDist1 - (l1-l2));
-            segment.setEndPoint(cutPos1);
+            if (tAtCutPos1 < tAtCutPos2) {
+                if (RMath.fuzzyCompare(tAtCutPos1, 0.0)) {
+                    rest1 = undefined;
+                }
+                else {
+                    rest1.trimEndPoint(cutDist1);
+                    // positions are more precise but
+                    // distances take into account possible self intersections:
+                    rest1.setEndPoint(cutPos1);
+                }
 
-            if (RMath.fuzzyCompare(tAtCutPos2, tMax)) {
-                rest2 = undefined;
+                var l1 = segment.getLength();
+                segment.trimStartPoint(cutDist1);
+                segment.setStartPoint(cutPos1);
+                var l2 = segment.getLength();
+                segment.trimEndPoint(cutDist2 - (l1-l2));
+                segment.setEndPoint(cutPos2);
+
+                if (RMath.fuzzyCompare(tAtCutPos2, tMax)) {
+                    rest2 = undefined;
+                }
+                else {
+                    rest2.trimStartPoint(cutDist2);
+                    rest2.setStartPoint(cutPos2);
+                }
             }
             else {
-                rest2.trimStartPoint(cutDist1);
-                rest2.setStartPoint(cutPos1);
+                if (RMath.fuzzyCompare(tAtCutPos1, 0.0)) {
+                    rest1 = undefined;
+                }
+                else {
+                    rest1.trimEndPoint(cutDist2);
+                    rest1.setEndPoint(cutPos2);
+                }
+
+                var l1 = segment.getLength();
+                segment.trimStartPoint(cutDist2);
+                segment.setStartPoint(cutPos2);
+                var l2 = segment.getLength();
+                segment.trimEndPoint(cutDist1 - (l1-l2));
+                segment.setEndPoint(cutPos1);
+
+                if (RMath.fuzzyCompare(tAtCutPos2, tMax)) {
+                    rest2 = undefined;
+                }
+                else {
+                    rest2.trimStartPoint(cutDist1);
+                    rest2.setStartPoint(cutPos1);
+                }
             }
         }
 
@@ -931,6 +988,20 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
                 rest2 = undefined;
             }
         }
+
+        // closed spline: the rest the click position is on becomes the segment:
+        if (closedSpline && isNull(segment) && !isNull(rest1) && !isNull(rest2)) {
+            var distRest1 = rest1.getDistanceTo(position);
+            var distRest2 = rest2.getDistanceTo(position);
+            if (distRest1<distRest2 || isNaN(distRest2)) {
+                segment = rest1;
+                rest1 = undefined;
+            }
+            else {
+                segment = rest2;
+                rest2 = undefined;
+            }
+        }
     }
 
     var ret = [];
@@ -943,6 +1014,116 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
     return ret;
 };
 
+
+/**
+ * Joins the two given splines into a single spline. The end point of
+ * spline1 must be identical to the start point of spline2.
+ *
+ * The junction becomes a knot of multiplicity degree (C0 continuity), so the
+ * geometry of both splines is preserved exactly.
+ *
+ * \param spline1 RSpline
+ * \param spline2 RSpline
+ *
+ * \return RSpline or undefined if the two splines cannot be joined.
+ */
+ShapeAlgorithms.joinSplines = function(spline1, spline2) {
+    if (isNull(spline1) || isNull(spline2)) {
+        return undefined;
+    }
+
+    var degree = spline1.getDegree();
+    if (degree!==spline2.getDegree()) {
+        return undefined;
+    }
+
+    // knot vectors of clamped splines end / start with 'degree' identical
+    // knots (RSpline / OpenNURBS convention):
+    var knots1 = spline1.getKnotVector();
+    var knots2 = spline2.getKnotVector();
+    if (knots1.length<=degree || knots2.length<=degree) {
+        return undefined;
+    }
+
+    var i;
+
+    // first control point of spline2 is identical to last control point of spline1:
+    var controlPoints = spline1.getControlPoints();
+    var controlPoints2 = spline2.getControlPoints();
+    for (i=1; i<controlPoints2.length; i++) {
+        controlPoints.push(controlPoints2[i]);
+    }
+
+    // trailing knots of spline1 are the knots of multiplicity degree at the junction:
+    var knots = knots1;
+    var offset = knots1[knots1.length-1] - knots2[0];
+    for (i=degree; i<knots2.length; i++) {
+        knots.push(knots2[i] + offset);
+    }
+
+    // normalize knot vector to start at 0:
+    var knotOffset = knots[0];
+    for (i=0; i<knots.length; i++) {
+        knots[i] -= knotOffset;
+    }
+
+    var ret = new RSpline();
+    ret.setDegree(degree);
+    ret.setPeriodic(false);
+    ret.setControlPoints(controlPoints);
+    ret.setKnotVector(knots);
+
+    if (!ret.isValid()) {
+        return undefined;
+    }
+
+    return ret;
+};
+
+/**
+ * Moves the seam (start / end point) of the given geometrically closed spline
+ * to the point at the given distance from the current start point.
+ *
+ * \param spline RSpline (geometrically closed)
+ * \param dist Distance from start point of spline
+ * \param pos RVector position of the new seam (optional). If given, the
+ * parameter is determined from this position instead of from dist, which is
+ * more precise.
+ *
+ * \return RSpline with relocated seam or undefined on failure.
+ */
+ShapeAlgorithms.relocateSplineStartPoint = function(spline, dist, pos) {
+    if (isNull(dist) || isNaN(dist)) {
+        return undefined;
+    }
+
+    var length = spline.getLength();
+
+    // seam is already at the desired position:
+    if (RMath.fuzzyCompare(dist, 0.0) || RMath.fuzzyCompare(dist, length)) {
+        var same = new RSpline(spline);
+        return same.isValid() ? same : undefined;
+    }
+
+    var t;
+    if (isValidVector(pos)) {
+        t = spline.getTAtPoint(pos);
+    }
+    if (isNull(t) || isNaN(t)) {
+        t = spline.getTAtDistance(dist);
+    }
+    if (isNull(t) || isNaN(t) || t<=spline.getTMin() || t>=spline.getTMax()) {
+        return undefined;
+    }
+
+    var pieces = spline.splitAtParams([t]);
+    if (pieces.length!==2) {
+        return undefined;
+    }
+
+    // second piece (dist to end) followed by first piece (start to dist):
+    return ShapeAlgorithms.joinSplines(pieces[1], pieces[0]);
+};
 
 /**
  * Splits a circle into two arcs at cutPos1 and cutPos2.
@@ -1073,9 +1254,11 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
         circular = true;
     }
 
-//    if (isSplineShape(shape) && shape.isGeometricallyClosed()) {
-//        circular = true;
-//    }
+    // closed splines wrap around their seam (start / end point) just like
+    // circles, arcs and closed polylines:
+    if (isSplineShape(shape) && shape.isGeometricallyClosed()) {
+        circular = true;
+    }
 
     var pDist = shape.getDistanceFromStart(position);
 
@@ -1148,7 +1331,7 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
                 }
 
                 if (circular) {
-                    if (isNull(cutDistMin) || (dist<cutDistMin && (dist>pDist || isPolylineShape(shape)))) {
+                    if (isNull(cutDistMin) || (dist<cutDistMin && (dist>pDist || isPolylineShape(shape) || isSplineShape(shape)))) {
                         cutDistMin = dist;
                         cutPosMin = ip;
                     }
@@ -1184,7 +1367,7 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
         !isXLineShape(shape) &&
         !isRayShape(shape) &&
         (!isPolylineShape(shape) || !shape.isGeometricallyClosed()) &&
-        (!isSplineShape(shape) || !shape.isClosed())) {
+        (!isSplineShape(shape) || !shape.isGeometricallyClosed())) {
 
         if (!isValidVector(cutPos1)) {
             cutDist1 = 0.0;

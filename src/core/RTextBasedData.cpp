@@ -932,8 +932,9 @@ QString RTextBasedData::toRichText(const QString& escapedText, const QFont& main
     fontFamily.replace("bold", "bol&#100;", Qt::CaseInsensitive);
 #endif
 
+    // "white-space: pre-wrap" to preserve alternative white space such as thin space (U+2009):
     ret += "<html>";
-    ret += QString("<body style=\"font-family:'%1'; font-size:%2pt; font-weight:%3; font-style:%4; \">")
+    ret += QString("<body style=\"white-space: pre-wrap; font-family:'%1'; font-size:%2pt; font-weight:%3; font-style:%4; \">")
             .arg(fontFamily)
             .arg(mainFont.pointSizeF() * fontHeightFactor)
             .arg(mainFont.weight()>QFont::Normal ? "bold" : "normal")

@@ -1,0 +1,2 @@
+Skalar ritningsvyn så att alla enheter som finns på synliga lager får plats
+på skärmen.

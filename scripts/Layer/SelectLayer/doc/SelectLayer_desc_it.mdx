@@ -1,0 +1,3 @@
+Questo strumento aggiunge alla selezione tutte le entità del livello
+corrente. È possibile selezionare solo le entità sul blocco corrente, mentre le
+entità sugli altri blocchi non vengono selezionate.

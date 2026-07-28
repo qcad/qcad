@@ -1,0 +1,1 @@
+Konstruira krog s podanim strediščem ter polmerom.

@@ -1,0 +1,2 @@
+Nabídka zobrazení obsahuje všechny nástroje pro zvětšování, posouvání a
+úpravu zobrazení

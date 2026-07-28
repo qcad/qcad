@@ -1,0 +1,2 @@
+- Choisir l'entité d'où sortir un espace.
+- Cliquez sur le centre de l'espace sur l'entité.

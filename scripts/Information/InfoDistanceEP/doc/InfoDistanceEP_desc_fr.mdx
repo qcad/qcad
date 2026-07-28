@@ -1,0 +1,2 @@
+Cet outil mesure la distance exacte entre une entité et un point donné par
+l'utilisateur.

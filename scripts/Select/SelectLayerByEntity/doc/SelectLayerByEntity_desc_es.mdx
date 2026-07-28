@@ -1,0 +1,2 @@
+Selecciona o deselecciona todas las entidades de la misma capa que una
+entidad seleccionada.

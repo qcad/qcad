@@ -1,0 +1,1 @@
+Narzędzie usuwa zaznaczenie wszystkich elementów na bieżącej warstwie.

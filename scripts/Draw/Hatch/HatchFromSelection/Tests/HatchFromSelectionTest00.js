@@ -39,6 +39,9 @@ HatchFromSelectionTest00.prototype.test00 = function() {
     this.importFile('scripts/Draw/Hatch/HatchFromSelection/Tests/data/contour.dxf');
     this.selectAll();
     this.dlgStart();
+    // hatch dialog of QCAD Professional: choose fill type 'Hatch' (tab index 0)
+    // (the hatch dialog of QCAD Community has no fill type tabs):
+    this.dlgAppendCode("var fillType = dialog.findChild('FillType'); if (!isNull(fillType)) { fillType.currentIndex = 0; }");
     this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Type', 'HatchPattern')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Pattern', 'HOUND')");
@@ -47,7 +50,13 @@ HatchFromSelectionTest00.prototype.test00 = function() {
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();
     this.clickOnWidget('MainWindow::MainToolsPanel::HatchToolsPanelButton');
-    this.clickOnWidget('MainWindow::HatchToolsPanel::HatchFromSelectionButton');
+    // QCAD Professional overrides this tool with HatchFromSelectionPro which
+    // also renames the action and with it the tool button:
+    var button = 'MainWindow::HatchToolsPanel::HatchFromSelectionProButton';
+    if (isNull(objectFromPath(button))) {
+        button = 'MainWindow::HatchToolsPanel::HatchFromSelectionButton';
+    }
+    this.clickOnWidget(button);
     this.verifyDrawing('HatchFromSelectionTest00_000.dxf');
     this.tearDown();
     qDebug('finished HatchFromSelectionTest00.test00()');

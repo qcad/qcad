@@ -3102,57 +3102,20 @@ function neutralPath(path) {
  * mapped icon path for a dark theme (-inverse) or the same path or undefined if no such
  * icon can be found.
  */
-function autoIconPath(path) {
-    // set theme specific icon:
-    var themePath = RSettings.getThemePath();
-    var themeIconFile = undefined;
-    if (themePath.length>0) {
-        var fi = new QFileInfo(path);
-        var iconFileName = fi.fileName();
-        themeIconFile = themePath + "/icons/" + iconFileName;
-        if (!new QFileInfo(themeIconFile).exists()) {
-            // no SVG found, look up PNG:
-            var iconBaseName = fi.baseName();
-            themeIconFile = themePath + "/icons/" + iconBaseName + ".png";
-            if (!new QFileInfo(themeIconFile).exists()) {
-                // no PNG found, use default icon:
-                themeIconFile = undefined;
-            }
-        }
+function autoIconPath(path, inverse) {
+    if (isNull(inverse)) {
+        inverse = false;
     }
 
-    if (!isNull(themeIconFile)) {
-        // got icon from theme:
-        return themeIconFile;
-    }
-
-    // no theme icon, try dark mode icon:
-    var darkModeIconFile = undefined;
-    if (RSettings.hasDarkGuiBackground()) {
-        darkModeIconFile = path.replace(/\.svg$/, "-inverse.svg");
-        darkModeIconFile = darkModeIconFile.replace(/\.png$/, "-inverse.png");
-        if (!new QFileInfo(darkModeIconFile).exists()) {
-            darkModeIconFile = undefined;
-        }
-    }
-
-    if (!isNull(darkModeIconFile)) {
-        // got dark mode icon:
-        return darkModeIconFile;
-    }
-
-    if (!new QFileInfo(path).exists()) {
-        // given icon does not exist (for icons based on object names, e.g. in options toolbar):
-        return "";
-    }
-
-    return path;
+    return RGuiAction.getIconPath(path, inverse);
 }
 
 function applyTheme() {
     var systemId = RS.getSystemId();
     var theme = RSettings.getValue("Theme/ThemeName", undefined);
-    if (systemId!=="osx" && !isNull(theme)) {
+
+    // only allow Modern theme on macOS:
+    if (!isNull(theme) && (systemId!=="osx" || theme==="Modern")) {
         var path = "themes/" + theme + "/";
 
         qApp.styleSheet = "";
@@ -3206,7 +3169,7 @@ function setUtf8Codec(ts) {
 function readTextFile(fileName) {
     if (!isString(fileName)) {
         qWarning("fileName not a string: " + fileName);
-        return false;
+        return undefined;
     }
 
     var file = new QFile(fileName);

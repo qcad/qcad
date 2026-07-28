@@ -23,6 +23,7 @@
 #include "entity_global.h"
 
 #include "RBox.h"
+#include "RColor.h"
 #include "REntityData.h"
 #include "RHatchProxy.h"
 #include "RPattern.h"
@@ -176,6 +177,93 @@ public:
         transparency = t;
     }
 
+    /**
+     * \return True if this hatch is a gradient fill (gradient name set).
+     */
+    bool isGradient() const {
+        return !gradientName.isEmpty();
+    }
+
+    void clearGradient() {
+        gradientName.clear();
+        update();
+    }
+
+    QString getGradientName() const {
+        return gradientName;
+    }
+
+    /**
+     * Sets the gradient name and makes this hatch a gradient fill.
+     * Valid names are LINEAR, CYLINDER, INVCYLINDER, SPHERICAL,
+     * INVSPHERICAL, HEMISPHERICAL, INVHEMISPHERICAL, CURVED, INVCURVED
+     * (CYLINDER and INVCYLINDER are cyclic gradients from color 1 to
+     * color 2 and back to color 1).
+     * AutoCAD resource names (GR_LINEAR, GR_CYLIN, GR_INVCYL, ...) are
+     * accepted and normalized to the DXF names.
+     * An empty name means no gradient (regular hatch or solid fill).
+     */
+    void setGradientName(const QString& n) {
+        gradientName = normalizeGradientName(n);
+        update();
+    }
+
+    static QString normalizeGradientName(const QString& n);
+
+    RColor getGradientColor1() const {
+        return gradientColor1;
+    }
+
+    void setGradientColor1(const RColor& c) {
+        gradientColor1 = c;
+        update();
+    }
+
+    RColor getGradientColor2() const {
+        return gradientColor2;
+    }
+
+    void setGradientColor2(const RColor& c) {
+        gradientColor2 = c;
+        update();
+    }
+
+    double getGradientAngle() const {
+        return gradientAngle;
+    }
+
+    void setGradientAngle(double a) {
+        gradientAngle = a;
+        update();
+    }
+
+    double getGradientShift() const {
+        return gradientShift;
+    }
+
+    void setGradientShift(double s) {
+        gradientShift = s;
+        update();
+    }
+
+    bool getGradientOneColorMode() const {
+        return gradientOneColorMode;
+    }
+
+    void setGradientOneColorMode(bool on) {
+        gradientOneColorMode = on;
+        update();
+    }
+
+    double getGradientTint() const {
+        return gradientTint;
+    }
+
+    void setGradientTint(double t) {
+        gradientTint = t;
+        update();
+    }
+
     double getLength() const;
     double getArea() const;
 
@@ -187,6 +275,7 @@ public:
     void addBoundaryShape(QSharedPointer<RShape> shape, int loop) {
         if (loop < boundary.length()) {
             boundary[loop].append(shape);
+            boundaryBoxesValid = false;
         }
     }
     RPainterPath getBoundaryPath(double pixelSizeHint = RDEFAULT_MIN1) const;
@@ -264,6 +353,13 @@ public:
 
 protected:
     QList<RLine> getSegments(const RLine& line) const;
+    QBrush createGradientBrush() const;
+
+private:
+    void updateBoundaryBoxes() const;
+    void updateBoundaryPointCache() const;
+    bool addWindingNumber(const int* edgeIndices, int count, double x, double y, int& windingNumber) const;
+    bool isPointInBoundary(double x, double y) const;
 
 private:
     bool solid;
@@ -274,6 +370,18 @@ private:
     QString patternName;
     RVector originPoint;
     int transparency;
+
+    /**
+     * Gradient fill data (DXF/DWG compatible). An empty gradient name
+     * means this hatch is not a gradient fill.
+     */
+    QString gradientName;
+    RColor gradientColor1;
+    RColor gradientColor2;
+    double gradientAngle;
+    double gradientShift;
+    bool gradientOneColorMode;
+    double gradientTint;
 
     /**
      * Hatch boundary, ordered by loops, in strictly defined order.
@@ -291,6 +399,34 @@ private:
     mutable bool dirty;
     mutable bool gotDraft;
     mutable double gotPixelSizeHint;
+
+    /**
+     * Bounding box of every boundary shape, grown by the same tolerance the
+     * intersection code uses. Cached to avoid recalculating the bounding box
+     * of every boundary element for every single hatch pattern line.
+     */
+    mutable QVector<double> boundaryBoxes;
+    mutable bool boundaryBoxesValid;
+
+    /**
+     * Flattened boundary (boundaryPath), used to determine whether a point is
+     * inside the hatch much faster than QPainterPath::contains can.
+     * Four coordinates per edge (x1,y1,x2,y2 with y1<y2), the edges sorted
+     * into horizontal bands (CSR style: bandStart indexes into bandEdges).
+     */
+    mutable QVector<double> boundaryEdges;
+    mutable QVector<qint8> boundaryEdgeDirs;
+    mutable QVector<int> boundaryBandStart;
+    mutable QVector<int> boundaryBandEdges;
+    mutable QVector<int> boundaryLongEdges;
+    mutable int boundaryBandCount;
+    mutable double boundaryBandHeight;
+    mutable double boundaryMinX;
+    mutable double boundaryMaxX;
+    mutable double boundaryMinY;
+    mutable double boundaryMaxY;
+    mutable double boundaryFlatteningError;
+    mutable bool boundaryPointCacheValid;
 
     static RHatchProxy* hatchProxy;
 };

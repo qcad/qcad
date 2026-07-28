@@ -1,0 +1,2 @@
+Med dette værktøj kan du oprette koncentriske buer, der går gennem et
+bestemt punkt.

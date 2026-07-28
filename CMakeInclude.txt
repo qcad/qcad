@@ -46,3 +46,83 @@ if(APPLE)
         set(CMAKE_OSX_DEPLOYMENT_TARGET "12.0" CACHE STRING "Minimum macOS version" FORCE)
     endif()
 endif()
+
+# Edition flags (rtrial, rtrial30, ractivated), passed on the CMake
+# command line, e.g.: cmake -Drtrial:BOOL=TRUE ...
+# The flags are kept in the CMake cache: when the build system re-runs
+# CMake automatically (e.g. ninja re-configuring because a CMakeLists.txt
+# or a .qrc file changed), no -D flags are passed and the cached values
+# keep the build tree on the same edition. Removing the flags from the
+# cache instead would silently turn an activated or trial build into a
+# plain full build on the first automatic re-configure.
+# trial and activated are mutually exclusive: if the cache ends up holding
+# both, the flag that changed on this configure run (i.e. was passed on
+# the command line) wins and the stale flag is reset, so switching an
+# existing build tree between editions only requires passing the new
+# flag. Passing conflicting flags together is an error.
+# This block runs once per build tree (CMakeInclude.txt is also included by
+# subdirectories so that they can be configured standalone).
+if(NOT TARGET qcad_edition)
+    # Carrier target for edition-wide compile definitions.
+    # Targets that contain edition-specific code link against this:
+    add_library(qcad_edition INTERFACE)
+
+    option(rtrial "Build trial edition (RTRIAL)" FALSE)
+    option(rtrial30 "Limit trial edition to 30 days (RTRIAL30)" FALSE)
+    option(ractivated "Build activated edition (RACTIVATED)" FALSE)
+
+    # normalize to TRUE/FALSE and detect which flags changed since the
+    # previous configure run:
+    foreach(EDITION_FLAG rtrial rtrial30 ractivated)
+        if(${EDITION_FLAG})
+            set(${EDITION_FLAG}_VALUE TRUE)
+        else()
+            set(${EDITION_FLAG}_VALUE FALSE)
+        endif()
+        if(DEFINED CACHE{QCAD_LAST_${EDITION_FLAG}} AND "$CACHE{QCAD_LAST_${EDITION_FLAG}}" STREQUAL "${${EDITION_FLAG}_VALUE}")
+            set(${EDITION_FLAG}_CHANGED FALSE)
+        else()
+            set(${EDITION_FLAG}_CHANGED TRUE)
+        endif()
+    endforeach()
+
+    if(ractivated_VALUE AND (rtrial_VALUE OR rtrial30_VALUE))
+        if(ractivated_CHANGED AND NOT rtrial_CHANGED AND NOT rtrial30_CHANGED)
+            message(STATUS "ractivated passed: resetting stale rtrial/rtrial30 in CMake cache")
+            set(rtrial FALSE CACHE BOOL "Build trial edition (RTRIAL)" FORCE)
+            set(rtrial30 FALSE CACHE BOOL "Limit trial edition to 30 days (RTRIAL30)" FORCE)
+            set(rtrial_VALUE FALSE)
+            set(rtrial30_VALUE FALSE)
+        elseif(NOT ractivated_CHANGED AND (rtrial_CHANGED OR rtrial30_CHANGED))
+            message(STATUS "rtrial/rtrial30 passed: resetting stale ractivated in CMake cache")
+            set(ractivated FALSE CACHE BOOL "Build activated edition (RACTIVATED)" FORCE)
+            set(ractivated_VALUE FALSE)
+        else()
+            message(FATAL_ERROR
+                "Conflicting edition flags: ractivated and rtrial/rtrial30 cannot both be TRUE. "
+                "Pass only one of them (e.g. add -Dractivated:BOOL=FALSE) or use a fresh build directory.")
+        endif()
+    endif()
+
+    # remember the values for change detection on the next configure run:
+    foreach(EDITION_FLAG rtrial rtrial30 ractivated)
+        set(QCAD_LAST_${EDITION_FLAG} "${${EDITION_FLAG}_VALUE}" CACHE INTERNAL "${EDITION_FLAG} at previous configure run")
+    endforeach()
+
+    if(rtrial_VALUE)
+        message(STATUS "Building QCAD trial edition (RTRIAL)")
+        target_compile_definitions(qcad_edition INTERFACE RTRIAL)
+    else()
+        message(STATUS "Building QCAD full edition")
+    endif()
+
+    if(rtrial30_VALUE)
+        message(STATUS "Trial limited to 30 days (RTRIAL30)")
+        target_compile_definitions(qcad_edition INTERFACE RTRIAL30)
+    endif()
+
+    if(ractivated_VALUE)
+        message(STATUS "Compile Activated (RACTIVATED)")
+        target_compile_definitions(qcad_edition INTERFACE RACTIVATED)
+    endif()
+endif()

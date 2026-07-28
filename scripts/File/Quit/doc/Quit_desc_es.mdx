@@ -1,0 +1,3 @@
+Sale de la aplicación y cierra la ventana principal de la aplicación. Si hay
+cambios no guardados en los sorteos abiertos, tiene la oportunidad de
+guardarlos antes de cerrarlos.

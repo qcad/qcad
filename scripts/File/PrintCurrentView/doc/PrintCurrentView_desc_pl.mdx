@@ -1,0 +1,2 @@
+Polecenie to służy do drukowania części rysunkowej, która jest aktualnie
+wyświetlana na obrazie graficznym.

@@ -1,0 +1,2 @@
+Wijzigt de volgorde waarin objecten worden weergegeven. Gebruik deze tool om
+objecten die andere objecten verbergen naar de achtergrond te sturen.

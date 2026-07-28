@@ -195,6 +195,9 @@
         getTransformed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDistanceFromStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTrimEnd
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

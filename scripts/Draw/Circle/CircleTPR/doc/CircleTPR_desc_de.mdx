@@ -1,0 +1,1 @@
+Zeichnet einen Bogen mit gegebenem Radius, tangential zu einem Objekt und durch einen Punkt.

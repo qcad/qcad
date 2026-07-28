@@ -1,0 +1,2 @@
+Este comando se usa para dibujar puntos individuales. Los puntos están
+representados visualmente por una pequeña cruz.

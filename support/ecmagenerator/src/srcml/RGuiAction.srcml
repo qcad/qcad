@@ -367,6 +367,8 @@
     <function_decl><type><name>void</name></type> <name>setWidgetNames</name><parameter_list>(<param><decl><type><name>const</name> <name>QStringList</name>&amp;</type> <name>widgetNames</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>QStringList</name></type> <name>getWidgetNames</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>getIconPath</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>iconFile</name></decl></param>, <param><decl><type><name>bool</name></type> <name>inverse</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
 </public><public>public slots:
     <comment type="block">/**
      * Called when the action is triggered (e.g. a button is pressed or a menu chosen).

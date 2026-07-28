@@ -94,6 +94,8 @@ public:
     virtual void drawRect(const QRectF& rectangle);
     virtual void fillRect(const QRectF& rectangle, const QBrush& brush);
 
+    virtual void drawPolygon(const QPolygonF& polygon);
+
 protected:
     QPainter* painter;
     QImage image;

@@ -1,0 +1,3 @@
+Cet outil importe un fichier SVG dans le dessin courant. Notez que seul un
+ensemble très limité de balises et d'arguments SVG est supporté. L'idée est
+d'importer autant de géométrie brute que possible dans le fichier SVG.

@@ -1,0 +1,2 @@
+Za pomocą tego narzędzia można tworzyć koncentryczne łuki, które przechodzą
+przez określony punkt.

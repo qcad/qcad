@@ -83,6 +83,9 @@
         unexportEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDrawablesVersion
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         exportPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

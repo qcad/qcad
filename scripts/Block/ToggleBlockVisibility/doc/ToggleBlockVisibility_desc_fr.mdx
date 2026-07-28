@@ -1,0 +1,3 @@
+Cliquez sur l'icône de l'œil dans la liste des blocs pour basculer la
+visibilité d'un bloc. Les références de blocs de blocs invisibles ne sont pas
+affichées.

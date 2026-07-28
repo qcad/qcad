@@ -1,0 +1,6 @@
+Zostanie wyświetlone okno dialogowe wyboru pliku wyjściowego. Po podaniu
+nazwy pliku w drugim oknie dialogowym zostanie wyświetlony monit o rozmiar
+bitmapy i preferowany kolor tła.  
+Należy pamiętać, że eksport do map bitowych o bardzo dużych rozmiarach
+może trwać długo, w zależności od sprzętu. Maksymalny rozmiar bitmapy to
+szerokość x wysokość ≤ 2'147'483'647.

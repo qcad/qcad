@@ -1,0 +1,1 @@
+Izriše krog z dvema poljubnima točkama na krožnici ter danim polmerom.

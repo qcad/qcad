@@ -1,0 +1,2 @@
+Cambia el anti-aliasing para el dibujo actual. Con el anti-aliasing, las
+líneas sesgadas, los arcos y los textos se muestran más suaves.

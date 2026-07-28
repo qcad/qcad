@@ -1,0 +1,1 @@
+Det här verktyget visar/mörkar widgeten för lagerlistan.

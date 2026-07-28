@@ -1,0 +1,2 @@
+Restringe horizontalmente o cursor à mesma posição Y que o ponto zero
+relativo.

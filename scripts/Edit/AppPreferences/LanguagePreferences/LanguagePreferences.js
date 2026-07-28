@@ -26,37 +26,46 @@ function LanguagePreferences(guiAction) {
 
 LanguagePreferences.prototype = {}; //new EAction();
 
-LanguagePreferences.localLanguageName = [];
-LanguagePreferences.localLanguageName["cs"] = "Čeština";
-LanguagePreferences.localLanguageName["da"] = "Dansk";
-LanguagePreferences.localLanguageName["de"] = "Deutsch";
-LanguagePreferences.localLanguageName["de_DE"] = "Deutsch";
-LanguagePreferences.localLanguageName["de_CH"] = "Deutsch (Schweiz)";
-LanguagePreferences.localLanguageName["en"] = "English";
-LanguagePreferences.localLanguageName["en_US"] = "English";
-LanguagePreferences.localLanguageName["es"] = "Español";
-LanguagePreferences.localLanguageName["fi"] = "Suomi";
-LanguagePreferences.localLanguageName["fr"] = "Français";
-LanguagePreferences.localLanguageName["hu"] = "Magyar";
-LanguagePreferences.localLanguageName["hr"] = "Hrvatski";
-LanguagePreferences.localLanguageName["it"] = "Italiano";
-LanguagePreferences.localLanguageName["ja"] = "日本語";
-LanguagePreferences.localLanguageName["ko"] = "한국어";
-LanguagePreferences.localLanguageName["lt"] = "Lietuvių kalba";
-LanguagePreferences.localLanguageName["nb"] = "Norsk";
-LanguagePreferences.localLanguageName["nl"] = "Nederlands";
-LanguagePreferences.localLanguageName["pl"] = "Polski";
-LanguagePreferences.localLanguageName["pt"] = "Português";
-LanguagePreferences.localLanguageName["pt_BR"] = "Português Brasileiro";
-LanguagePreferences.localLanguageName["ru"] = "ру́сский язы́к";
-LanguagePreferences.localLanguageName["sk"] = "Slovenčina";
-LanguagePreferences.localLanguageName["sl"] = "Slovenščina";
-LanguagePreferences.localLanguageName["sv"] = "Svenska";
-LanguagePreferences.localLanguageName["tr"] = "Türkçe";
-LanguagePreferences.localLanguageName["uk"] = "Українська";
-LanguagePreferences.localLanguageName["zh_TW"] = "繁體中文";
-LanguagePreferences.localLanguageName["zh"] = "简体中文";
-LanguagePreferences.localLanguageName["zh_CN"] = "简体中文";
+LanguagePreferences.localLanguageName = {
+    "bg": "Български",
+    "cs": "Čeština",
+    "da": "Dansk",
+    "de": "Deutsch",
+    "de_DE": "Deutsch",
+    "de_CH": "Deutsch (Schweiz)",
+    "el": "Ελληνικά",
+    "en": "English",
+    "en_US": "English",
+    "es": "Español",
+    "et": "Eesti",
+    "fi": "Suomi",
+    "fr": "Français",
+    "hr": "Hrvatski",
+    "hu": "Magyar",
+    "id": "Bahasa Indonesia",
+    "it": "Italiano",
+    "ja": "日本語",
+    "ko": "한국어",
+    "lt": "Lietuvių",
+    "lv": "Latviešu",
+    "nb": "Norsk",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "pt": "Português",
+    "pt_BR": "Português Brasileiro",
+    "ro": "Română",
+    "ru": "Русский",
+    "sk": "Slovenčina",
+    "sl": "Slovenščina",
+    "sv": "Svenska",
+    "th": "ไทย",
+    "tr": "Türkçe",
+    "uk": "Українська",
+    "vi": "Tiếng Việt",
+    "zh_TW": "繁體中文",
+    "zh": "简体中文",
+    "zh_CN": "简体中文",
+};
 
 LanguagePreferences.getPreferencesCategory = function() {
     return [qsTr("Language Settings"), qsTr("Language")];

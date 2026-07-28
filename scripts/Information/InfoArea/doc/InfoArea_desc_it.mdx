@@ -1,0 +1,2 @@
+Questo strumento misura l'area coperta da un poligono e la sua
+circonferenza.

@@ -1,0 +1,3 @@
+Questo strumento inverte la direzione di tutte le entità di linee, archi ed
+ellissi selezionate. Questo è utile soprattutto per i disegni in fase di
+preparazione per un'ulteriore elaborazione (ad es. CAM).

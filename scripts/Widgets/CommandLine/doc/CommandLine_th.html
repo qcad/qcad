@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>บรรทัดคำสั่ง</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/th/index.php?page=scripts/Widgets/CommandLine/doc/CommandLine">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>บรรทัดคำสั่ง</h2>
+<p class="toolinfo">
+<b>แถบเครื่องมือ / ไอคอน:</b>
+<br /><img src="../doc/CommandLine.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>เมนู:</b> <font face="courier new">มุมมอง &gt; บรรทัดคำสั่ง</font>
+<br /><b>ทางลัด:</b> <font face="courier new">G, M</font>
+<br /><b>คำสั่ง:</b> <font face="courier new">gm</font>
+</p>
+</div>
+<h3>คำอธิบาย</h3>
+<p>บรรทัดคำสั่งของ QCAD ให้คุณเริ่มคำสั่ง ป้อนพิกัด หรือป้อนค่าเช่นระยะทางหรือรัศมี</p>
+<h3>การป้อนพิกัด</h3>
+<p>พิกัดสัมบูรณ์ป้อนในรูปแบบ „x,y":</p>
+<p>40,5</p>
+<p>พิกัดสัมพัทธ์ป้อนในรูปแบบ „@x,y":</p>
+<p>@10,6</p>
+<p>พิกัดเชิงขั้วสัมบูรณ์ป้อนในรูปแบบ „ระยะทาง&lt;มุม":</p>
+<p>10&lt;30</p>
+<p>พิกัดเชิงขั้วสัมพัทธ์ป้อนในรูปแบบ „@ระยะทาง&lt;มุม":</p>
+<p>@10&lt;45</p>
+<p>เมื่อป้อนพิกัดหรือค่า สามารถใช้ <a href="#expr">นิพจน์ทางคณิตศาสตร์</a> เพื่อคำนวณพิกัดตามค่าที่ทราบได้ ตัวอย่างเช่น พิกัด 10,5 อาจป้อนเป็น:</p>
+<p>5+5,30/6</p>
+<h3>เครื่องคิดเลข</h3>
+<p>บรรทัดคำสั่งยังสามารถใช้เป็นเครื่องคิดเลขได้ ในการทำเช่นนี้ ให้ป้อน <a href="#expr">นิพจน์ทางคณิตศาสตร์</a> นำหน้าด้วยเครื่องหมายเท่ากับ:</p>
+<p>=3+4 7</p>
+<p>ตัวแปรอาจใช้เพื่อจัดเก็บค่า:</p>
+<p>=a=5+6 11 =a/2 5.5</p>
+<h3>นิพจน์ทางคณิตศาสตร์</h3>
+<p>ค่าคงที่ทางคณิตศาสตร์ที่มีให้คือ:</p>
+<p>PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2</p>
+<p>ฟังก์ชันทางคณิตศาสตร์ที่มีให้คือ:</p>
+<p>abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt, trunc</p>
+<p>ค่าคงที่และฟังก์ชันเหล่านี้ส่วนใหญ่เป็นฟังก์ชัน ECMAScript (JavaScript) มาตรฐานและมีการบันทึกไว้ทางออนไลน์ ใน ECMAScript มาตรฐาน ฟังก์ชันเหล่านี้เป็นส่วนหนึ่งของคลาส Math ดังนั้นฟังก์ชัน <em>abs</em> จะต้องเขียนเป็น <em>Math.abs</em> ในบรรทัดคำสั่ง QCAD คุณสามารถละส่วน <em>Math.</em> เพื่อความสะดวกได้ ฟังก์ชันตรีโกณมิติ (sin, cos, tan, asin, acos, atan, atan2) รับหรือคืนค่ามุมเป็นองศา หากคุณต้องการเวอร์ชันเรเดียนของฟังก์ชันเหล่านี้ ให้ใช้ฟังก์ชัน <em>Math.</em> ต้นฉบับแทน</p>
+<p>ฟังก์ชัน <em>rad2deg</em> และ <em>deg2rad</em> สามารถใช้เพื่อแปลงมุมระหว่างเรเดียนและองศาได้</p></body>
+</html>

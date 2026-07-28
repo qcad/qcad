@@ -1,0 +1,1 @@
+Przycina lub przedłuża linię, łuk lub elipsę do innego elementu.

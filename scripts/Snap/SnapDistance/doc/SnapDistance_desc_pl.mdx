@@ -1,0 +1,2 @@
+Przyciski do punktów z podaną odległością do punktu końcowego linii lub
+łuków.

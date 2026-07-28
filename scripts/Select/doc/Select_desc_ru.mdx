@@ -1,0 +1,33 @@
+import SelectionModeReplace from './SelectionModeReplace.png';
+import SelectionModeAdd from './SelectionModeAdd.png';
+import SelectionModeRemove from './SelectionModeRemove.png';
+import SelectionModeIntersect from './SelectionModeIntersect.png';
+
+
+
+### Перекрёстное выделение {#cross}
+
+Некоторые инструменты выделения можно использовать в режиме перекрёстного
+выделения. В этом режиме выделяются не только объекты, полностью находящиеся
+внутри заданной области, но и объекты, лишь частично находящиеся внутри области.
+Это выделение также известно как «перекрёстное выделение».
+
+### Режим выделения {#mode}
+
+Некоторые инструменты выделения позволяют выбрать режим выделения на панели
+опций. Доступны следующие режимы выделения:
+
+- Заменить выделение:  
+  <Image src={SelectionModeReplace} alt="SelectionModeReplace" width={40} height={40} />  
+  Заменяет текущее выделение новым выделением, сделанным активным инструментом
+  выделения (по умолчанию).
+- Добавить к выделению:  
+  <Image src={SelectionModeAdd} alt="SelectionModeAdd" width={40} height={40} />  
+  Добавляет выделение к текущему выделению.
+- Удалить из выделения:  
+  <Image src={SelectionModeRemove} alt="SelectionModeRemove" width={40} height={40} />  
+  Удаляет (вычитает) выделение из текущего выделения.
+- Пересечь:  
+  <Image src={SelectionModeIntersect} alt="SelectionModeIntersect" width={40} height={40} />  
+  Выделяются только объекты, которые уже были выделены и соответствуют критериям
+  инструмента выделения.

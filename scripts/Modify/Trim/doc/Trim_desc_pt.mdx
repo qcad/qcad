@@ -1,0 +1,1 @@
+Apara ou estende uma linha, arco ou elipse a outra entidade.

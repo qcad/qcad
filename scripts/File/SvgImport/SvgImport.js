@@ -36,6 +36,10 @@ SvgImport.initPreferences = function(pageWidget, calledByPrefDialog, document) {
         if (!isNull(w)) {
             w.visible = false;
         }
+        w = pageWidget.findChild("GroupPaths");
+        if (!isNull(w)) {
+            w.visible = false;
+        }
     }
 };
 

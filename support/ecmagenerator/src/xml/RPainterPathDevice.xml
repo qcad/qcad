@@ -23,6 +23,20 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; RPainterPath &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="setSize" cppName="setSize" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QSize &amp;" typeName="QSize" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setDpi" cppName="setDpi" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="v"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="paintEngine" cppName="paintEngine"
     specifier="protected" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

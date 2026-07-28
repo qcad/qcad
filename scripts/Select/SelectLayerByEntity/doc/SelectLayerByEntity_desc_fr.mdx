@@ -1,0 +1,2 @@
+Sélectionne ou désélectionne toutes les entités de la même couche qu'une
+entité choisie.

@@ -1,0 +1,2 @@
+Selecteert alle objecten die zich binnen een bepaald rechthoekig gebied
+bevinden.

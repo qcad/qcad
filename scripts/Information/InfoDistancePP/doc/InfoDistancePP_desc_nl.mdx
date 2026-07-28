@@ -1,0 +1,2 @@
+Dit functie meet de exacte afstand tussen twee door de gebruiker opgegeven
+punten.

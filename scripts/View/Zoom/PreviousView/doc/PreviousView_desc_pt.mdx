@@ -1,0 +1,3 @@
+Mostra a última vista utilizada. Use-o para voltar à visualização anterior,
+por exemplo, depois de executar um zoom automático ou depois de ampliar com o
+zoom da janela.

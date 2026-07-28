@@ -1,0 +1,2 @@
+Narzędzie to może być używane do wydłużania lub skracania linii lub łuków o
+określoną ilość.

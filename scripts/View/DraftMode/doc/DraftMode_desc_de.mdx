@@ -1,0 +1,4 @@
+Schaltet die Entwurfsansicht ein oder aus. In der Entwurfsansicht werden
+alle Linien dünn dargestellt. Große Texte werden nur als Rechtecke
+angedeutet. Benutzen Sie die Entwurfsansicht um komplexe Zeichnungen
+effizienter anzuzeigen und zu bearbeiten.

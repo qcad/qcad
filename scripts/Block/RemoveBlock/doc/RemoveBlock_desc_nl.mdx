@@ -1,0 +1,2 @@
+Verwijdert de actieve blok. Het blok, alle objecten erop en alle
+blokreferenties van het blok zullen worden verwijderd.

@@ -1,0 +1,2 @@
+Dieses Werkzeug dupliziert die selektierten Elemente und selektiert die
+erstellte Kopie.

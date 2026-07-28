@@ -1,0 +1,3 @@
+Rota y contra-rota entidades. Esta herramienta puede ser útil para rotar
+entidades alrededor de un centro mientras se mantiene la orientación original
+de las propias entidades.

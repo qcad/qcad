@@ -25,6 +25,7 @@
 #endif
 
 #include "RBlock.h"
+#include "RDebug.h"
 #include "RDocument.h"
 #include "RDocumentInterface.h"
 #include "RGraphicsScene.h"
@@ -62,6 +63,9 @@ RGraphicsViewImage::RGraphicsViewImage(QObject* parent)
       drawingScale(1.0),
       alphaEnabled(false),
       showOnlyPlottable(false),
+      editingWorkingSet(false),
+      orderedIdsVersion(-1),
+      orderedIdsValid(false),
       decorationWorker(NULL) {
 
     currentScale = 1.0;
@@ -139,6 +143,12 @@ void RGraphicsViewImage::invalidate(bool force) {
     graphicsBufferNeedsUpdate = true;
     if (force) {
         lastFactor = -1;
+
+        // the scene has changed in a way that is not necessarily reflected in
+        // the drawables of the scene: the cached list of visible entities may
+        // be out of date (e.g. a layer was switched off: the drawables of the
+        // entities on that layer are kept, only their visibility changed):
+        orderedIdsValid = false;
     }
 }
 
@@ -411,6 +421,22 @@ void RGraphicsViewImage::updateImage() {
         }
         //gbPainter.end();
     }
+
+    // paint reference points of current snap function:
+    RSnap* snap = di->getSnap();
+    if (snap!=NULL) {
+        QList<RRefPoint> snapReferencePoints = snap->getSnapReferencePoints();
+        for (int i=0; i<snapReferencePoints.length(); i++) {
+            RRefPoint p = snapReferencePoints[i];
+            RRefPoint pm = mapToView(p);
+            pm.setFlags(p.getFlags());
+            //QPainter gbPainter(&graphicsBufferWithPreview);
+            paintReferencePoint(decorationWorker, pm, false);
+            //gbPainter.end();
+        }
+    }
+
+
     // highlighting of closest reference point:
     if (scene->getHighlightedReferencePoint().isValid()) {
         RRefPoint p = scene->getHighlightedReferencePoint();
@@ -498,6 +524,9 @@ void RGraphicsViewImage::paintReferencePoint(RGraphicsViewWorker* worker, const 
     else if (pos.isTertiary()) {
         color = RSettings::getTertiaryReferencePointColor();
     }
+    else if (pos.isFromSnap()) {
+        color = RSettings::getSnapReferencePointColor();
+    }
     else {
         color = RSettings::getReferencePointColor();
     }
@@ -516,16 +545,15 @@ void RGraphicsViewImage::paintReferencePoint(RGraphicsViewWorker* worker, const 
         worker->drawLine(QLineF(pos.x, pos.y-size/2, pos.x, pos.y+size/2));
     }
     else {
+        // center or arrow:
+        // round:
         if (pos.isCenter() || pos.isArrow()) {
-            // center or arrow:
-            // round:
             worker->setBrush(color);
             worker->drawEllipse(QRectF(pos.x - size/2, pos.y - size/2, size, size));
         }
+        // other:
+        // rectangle:
         else {
-            // other:
-            // rectangle:
-            //??
             worker->setBrush(color);
             worker->fillRect(QRectF(pos.x - size/2, pos.y - size/2, size, size), color);
         }
@@ -1149,6 +1177,10 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
     colorCorrectionDisableForPrinting = RSettings::getColorCorrectionDisableForPrinting();
     colorThreshold = RSettings::getColorThreshold();
 
+    // constant while this update is rendered: querying it per drawable is
+    // expensive (document variables lookup with string construction):
+    editingWorkingSet = document->isEditingWorkingSet();
+
     updateTextHeightThreshold();
 
     //qDebug() << "RGraphicsViewImage::paintEntities: colorCorrection: " << colorCorrection;
@@ -1164,8 +1196,30 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
 
     //RDebug::startTimer(60);
     //mutexSi.lock();
-    QSet<RObject::Id> ids;
-    ids = document->queryIntersectedEntitiesXYFast(qb);
+    // querying the spatial index and ordering the result is expensive and
+    // depends only on the query box and on the drawables of the scene, so the
+    // result is reused while neither changes (e.g. when only the cursor, the
+    // preview or the selection changed):
+    bool orderedIdsUsable =
+        !isPrintingOrExporting() &&
+        orderedIdsValid &&
+        sceneQt!=NULL &&
+        orderedIdsVersion==sceneQt->getDrawablesVersion() &&
+        orderedIdsBox.equalsFuzzy(qb);
+
+    QList<RObject::Id> list;
+    if (orderedIdsUsable) {
+        list = orderedIds;
+    }
+    else {
+        QSet<RObject::Id> ids;
+        ids = document->queryIntersectedEntitiesXYFast(qb);
+        list = document->getStorage().orderBackToFront(ids);
+
+        orderedIds = list;
+        orderedIdsBox = qb;
+        orderedIdsValid = !isPrintingOrExporting();
+    }
     //qDebug() << "RGraphicsViewImage::paintEntities: ids: " << ids;
     //mutexSi.unlock();
     //RDebug::stopTimer(60, "spatial index");
@@ -1204,10 +1258,7 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
     }
     */
 
-    //RDebug::startTimer(60);
-    QList<RObject::Id> list = document->getStorage().orderBackToFront(ids);
-    //QList<RObject::Id> list = ids.toList();
-    //RDebug::stopTimer(60, "ordering");
+
 
     // about 30ms for 50000:
 //    RDebug::startTimer(60);
@@ -1288,6 +1339,13 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
         }
     }
     //RDebug::stopTimer(61, "regen");
+
+    // the loop above may have regenerated drawables: remember the version the
+    // cached list of entities is valid for only now, so that the next update
+    // can reuse it:
+    if (orderedIdsValid && sceneQt!=NULL) {
+        orderedIdsVersion = sceneQt->getDrawablesVersion();
+    }
 
     if (numThreads==1) {
         RGraphicsViewWorker* worker = workers[0];
@@ -1546,11 +1604,12 @@ void RGraphicsViewImage::paintEntityThread(RGraphicsViewWorker* worker, RObject:
     }
 
     // paint drawables (painter paths, texts, images):
-    QListIterator<RGraphicsSceneDrawable> i(*drawables);
-    while (i.hasNext()) {
-        RGraphicsSceneDrawable drawable = i.next();
-
-        paintDrawableThread(worker, drawable, clipRectangle, preview);
+    // note: the drawables are used in place and not copied: copying a drawable
+    // copies its painter path, its points and its original shapes, which is
+    // by far the most expensive part of iterating them
+    // (paintDrawableThread only reads from the drawable):
+    for (int k=0; k<drawables->length(); k++) {
+        paintDrawableThread(worker, (*drawables)[k], clipRectangle, preview);
     }
 }
 
@@ -1568,8 +1627,7 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
 
     bool workingSet = true;
     if (!isPrintingOrExporting() && !preview) {
-        RDocument* doc = getDocument();
-        if (doc->isEditingWorkingSet()) {
+        if (editingWorkingSet) {
             if (!drawable.isWorkingSet()) {
                 // fade out entities not in working set:
                 workingSet = false;
@@ -1786,24 +1844,40 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
     }
 
     // painter path:
-    RPainterPath path = drawable.getPainterPath();
-    if (!path.isSane()) {
+    // the path of the drawable is only copied if it has to be transformed:
+    // copying a RPainterPath copies its elements, its points and its original
+    // shapes, and for most drawables neither a pixel unit scale nor an offset
+    // applies. Everything below only reads from the path.
+    const RPainterPath* pathPtr = &drawable.getPainterPath();
+    if (!pathPtr->isSane()) {
         return;
     }
 
-    if (drawable.getPixelUnit() || path.getPixelUnit()) {
-        // path is displayed in pixels, not drawing unit:
-        //RVector sp = path.getStartPoint();
-        RVector sp = path.getBoundingBox().getCenter();
-        path.move(-sp);
-        double dpr = getDevicePixelRatio();
-        double f = 1/factor*dpr;
-        path.scale(f,f);
-        path.move(sp);
+    RPainterPath transformedPath;
+    bool pixelUnit = drawable.getPixelUnit() || pathPtr->getPixelUnit();
+    RVector drawableOffset = drawable.getOffset();
+
+    if (pixelUnit || !drawableOffset.isZero() || !paintOffset.isZero()) {
+        transformedPath = *pathPtr;
+
+        if (pixelUnit) {
+            // path is displayed in pixels, not drawing unit:
+            RVector sp = transformedPath.getBoundingBox().getCenter();
+            transformedPath.move(-sp);
+            double dpr = getDevicePixelRatio();
+            double f = 1/factor*dpr;
+            transformedPath.scale(f,f);
+            transformedPath.move(sp);
+        }
+
+        transformedPath.move(drawableOffset);
+        transformedPath.move(paintOffset);
+
+        pathPtr = &transformedPath;
     }
 
-    path.move(drawable.getOffset());
-    path.move(paintOffset);
+    const RPainterPath& path = *pathPtr;
+
     RBox pathBB = path.getBoundingBox();
 
     // additional bounding box check for painter paths that are
@@ -2182,11 +2256,7 @@ void RGraphicsViewImage::applyColorCorrection(QPen& pen) {
     }
 
     if (colCorr) {
-        if (pen.color().lightness() <= colorThreshold && bgColorLightness <= colorThreshold) {
-            pen.setColor(Qt::white);
-        } else if (pen.color().lightness() >= 255-colorThreshold && bgColorLightness >= 255-colorThreshold) {
-            pen.setColor(Qt::black);
-        }
+        pen.setColor(getCorrectedColor(pen.color()));
     }
 }
 
@@ -2201,12 +2271,22 @@ void RGraphicsViewImage::applyColorCorrection(QBrush& brush) {
     }
 
     if (colCorr) {
-        if (brush.color().lightness() <= colorThreshold && bgColorLightness <= colorThreshold) {
-            brush.setColor(Qt::white);
-        } else if (brush.color().lightness() >= 255-colorThreshold && bgColorLightness >= 255-colorThreshold) {
-            brush.setColor(Qt::black);
-        }
+        brush.setColor(getCorrectedColor(brush.color()));
     }
+}
+
+QColor RGraphicsViewImage::getCorrectedColor(const QColor& col) {
+    QColor ret = col;
+    if (col.lightness() <= colorThreshold && bgColorLightness <= colorThreshold) {
+        ret.setRed(255);
+        ret.setGreen(255);
+        ret.setBlue(255);
+    } else if (col.lightness() >= 255-colorThreshold && bgColorLightness >= 255-colorThreshold) {
+        ret.setRed(0);
+        ret.setGreen(0);
+        ret.setBlue(0);
+    }
+    return ret;
 }
 
 void RGraphicsViewImage::applyColorMode(QPen& pen) {
@@ -2363,6 +2443,10 @@ void RGraphicsViewImage::paintImage(RGraphicsViewWorker* worker, const RImageDat
         RVector scale; // = image.getScaleFactor();
         scale.x = image.getUVector().getMagnitude();
         scale.y = image.getVVector().getMagnitude();
+
+        if (!RMath::isNormal(scale.x) || !RMath::isNormal(scale.y)) {
+            return;
+        }
 
         if (RMath::getAngleDifference180(image.getUVector().getAngle(), image.getVVector().getAngle()) < 0.0) {
             scale.y *= -1;

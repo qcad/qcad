@@ -1,0 +1,2 @@
+Esta ferramenta pode ser utilizada para bloquear convenientemente todas as
+camadas ao mesmo tempo.

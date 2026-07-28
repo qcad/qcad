@@ -1,0 +1,2 @@
+Este comando cria uma nova camada. O diálogo da camada é mostrado onde se
+pode especificar o nome da nova camada e ajustar os seus atributos.

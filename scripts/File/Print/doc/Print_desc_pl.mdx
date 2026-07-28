@@ -1,0 +1,6 @@
+Polecenie to służy do wydrukowania rysunku. Przed rozpoczęciem drukowania
+należy zawsze przełączyć się na podgląd wydruku, aby sprawdzić, czy skala i
+pozycja rysunkowa są ustawione zgodnie z potrzebami.  
+Przed wydrukowaniem wyświetlone zostanie okno dialogowe konfiguracji. To
+okno dialogowe służy do wybierania drukarki i dostosowywania ustawień
+drukarki.

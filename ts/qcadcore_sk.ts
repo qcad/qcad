@@ -319,7 +319,7 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation>Vo vlastníctve spoločnosti Reference</translation>
+        <translation>Vlastnené odkazom</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -587,7 +587,7 @@
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation>Spätná väzba</translation>
+        <translation>Dozadu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -721,7 +721,7 @@
         <translation>Maximálne</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+931"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Zistený kruhový (rekurzívny) blok:</translation>
     </message>
@@ -1053,7 +1053,7 @@
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation>Železnica</translation>
+        <translation>Dráhy</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1118,7 +1118,7 @@
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation>Režijná energia</translation>
+        <translation>Nadzemné vedenie</translation>
     </message>
     <message>
         <location line="+2"/>

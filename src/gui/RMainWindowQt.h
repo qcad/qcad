@@ -22,9 +22,11 @@
 
 #include "gui_global.h"
 
+#include <QByteArray>
 #include <QDockWidget>
 #include <QElapsedTimer>
 #include <QMainWindow>
+#include <QPointer>
 #include <QToolBar>
 
 #include "RMainWindow.h"
@@ -167,11 +169,16 @@ public:
         return keyLog;
     }
 
+    void notifyDockWidgetClosed(QWidget* dockWidget);
+
 public slots:
     void quit();
     void currentTabChanged(int index);
     void subWindowActivated(QMdiSubWindow* sw);
     //void objectDestroyed(QObject *obj);
+
+protected slots:
+    void forgetDockWidgetState();
 
 signals:
     /**
@@ -227,6 +234,8 @@ protected:
 
     virtual bool event(QEvent* e);
 
+    void restoreClosedDockWidgets();
+
 public slots:
     void updateGuiActions(QMdiSubWindow* mdiChild = NULL);
     void initGuiActions();
@@ -241,6 +250,21 @@ protected:
 
     QString keyLog;
     QElapsedTimer keyTimeOut;
+
+    // State of all dock widgets and tool bars as it was before the first
+    // dock widget of the current close operation was closed by Qt.
+    // Only valid if dockWidgetStateValid is true.
+    // See notifyDockWidgetClosed().
+    QByteArray dockWidgetState;
+    bool dockWidgetStateValid;
+
+    // true while the main window is handling its close event:
+    bool closingDown;
+
+    // Dock widgets that were visible and have been closed by Qt as part of
+    // the current close operation, together with their X position:
+    QList<QPointer<QWidget> > closedDockWidgets;
+    QList<int> closedDockWidgetPositionsX;
 
 //private:
 //    bool objectWasDestroyed;

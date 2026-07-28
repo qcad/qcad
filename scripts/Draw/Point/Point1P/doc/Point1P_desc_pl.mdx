@@ -1,0 +1,2 @@
+Polecenia tego używa się do rysowania pojedynczych punktów. Punkty są
+wizualnie przedstawione za pomocą małego krzyżyka.

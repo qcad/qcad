@@ -1,0 +1,2 @@
+Utilisez cet outil pour dessiner du texte le long d'une ligne, d'un arc ou
+d'un cercle.

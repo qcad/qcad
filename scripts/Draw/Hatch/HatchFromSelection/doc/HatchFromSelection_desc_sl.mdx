@@ -1,0 +1,1 @@
+To orodje zapolni površino, ki je popolnoma obdana z obstoječimi objekti, z željeno šrafuro ali barvo.

@@ -1,0 +1,2 @@
+Com esta ferramenta pode criar paralelos a linhas existentes (ou arcos e
+círculos concêntricos).

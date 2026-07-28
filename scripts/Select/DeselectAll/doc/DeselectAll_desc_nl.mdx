@@ -1,0 +1,3 @@
+Deselecteert alle objecten. Gebruik deze functie om er zeker van te zijn dat er
+geen objecten geselecteerd zijn. Als alternatief kunt u ook in een leeg
+gedeelte van uw tekening klikken.

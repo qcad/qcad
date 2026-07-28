@@ -1,0 +1,1 @@
+To orodje izbriše vse objekte, ki so označeni.

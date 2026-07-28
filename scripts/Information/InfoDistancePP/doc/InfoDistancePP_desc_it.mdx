@@ -1,0 +1,2 @@
+Questo strumento misura l'esatta distanza tra due punti indicati
+dall'utente.

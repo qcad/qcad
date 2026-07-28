@@ -1,0 +1,2 @@
+- Välj den enhet från vilken du vill bryta en lucka.
+- Klicka på mitten av luckan på enheten.

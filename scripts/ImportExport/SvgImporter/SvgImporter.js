@@ -22,6 +22,7 @@ include("scripts/ShapeAlgorithms.js");
 
 /**
  * SAX style XML handler.
+ * @todo Remove to avoid Qt 5 dependency.
  */
 function SvgHandler(svgImporter) {
     QXmlDefaultHandler.call(this);
@@ -323,8 +324,6 @@ SvgHandler.prototype.endElement = function(namespaceURI, localName, qName) {
  * \class SvgImporter
  * \brief Very basic SVG import implementation. Only supports
  * a few SVG tags.
- *
- * \todo Use a 3rd party library to fully support SVG.
  */
 function SvgImporter(document, resolution) {
     if (isNull(resolution)) {

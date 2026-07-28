@@ -1,0 +1,62 @@
+På kommandoraden i QCAD kan du starta kommandon, ange koordinater eller
+ värden som avstånd eller radier.
+
+### Inmatning av koordinater
+
+Absoluta koordinater anges i formatet "x,y"
+
+40,5
+
+Relativa koordinater anges i formatet "@x,y"
+
+@10,6
+
+Absoluta polära koordinater anges i formatet "avstånd&lt;vinkel"
+
+10&lt;30
+
+Relativa polära koordinater anges i formatet "@avstånd&lt;vinkel"
+
+@10&lt;45
+
+När du anger koordinater eller värden kan [matematiska uttryck](#expr) användas för att beräkna en koordinat
+ utifrån kända värden. Exempelvis kan koordinaten 10,5 också anges som
+
+5+5,30/6
+
+### Kalkylator
+
+Kommandoraden kan också användas som en miniräknare. För att göra detta
+ anger du ett [matematiskt uttryck](#expr) som följs av ett likhetstecken
+
+=3+4  
+7
+
+Variabler kan användas för att lagra värden
+
+=a=5+6  
+11  
+=a/2  
+5.5  
+
+### Matematiska uttryck
+
+Följande matematiska konstanter är tillgängliga:
+
+PI, LN2, LN10, LOG2E, LOG10E, SQRT1_2, SQRT2
+
+Följande matematiska funktioner finns tillgängliga:
+
+abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad,
+sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh,
+acosh, asinh, atanh, expm1, hypot, cbrt, trunc
+
+De flesta av dessa konstanter och funktioner är standardfunktioner i
+ ECMAScript (JavaScript) och finns dokumenterade online. I ECMAScript-standard
+ är dessa funktioner en del av Math-klassen, så funktionen *abs* skulle behöva skrivas som *Math.abs*. I QCAD-kommandoraden kan du lämna bort *Math.*-delen för att underlätta. Trigonometriska funktioner (sin, cos,
+ tan, asin, acos, atan, atan2) accepterar eller returnerar vinklar i grader.
+ Om du föredrar radianversionerna av dessa funktioner använder du de
+ ursprungliga *Math.* funktionerna i stället.
+
+Funktionerna *rad2deg* och *deg2rad* kan användas för att konvertera vinklar mellan radianer och
+ grader.

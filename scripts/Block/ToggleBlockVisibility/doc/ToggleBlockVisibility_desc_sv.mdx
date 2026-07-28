@@ -1,0 +1,2 @@
+Klicka på ögonikonen i blocklistan för att växla blockets synlighet.
+Blockreferenser för osynliga block visas inte.

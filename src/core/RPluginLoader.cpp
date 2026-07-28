@@ -34,7 +34,7 @@ QStringList RPluginLoader::pluginFiles;
 QString RPluginLoader::getPluginSuffix() {
 #if defined(Q_OS_WIN)
     return "dll";
-#elif defined(Q_OS_MAC)
+#elif defined(Q_OS_MACOS)
     return "dylib";
 #else
     return "so";
@@ -120,7 +120,7 @@ void RPluginLoader::loadPlugins(bool init) {
     // plugin settings are always stored in a file with base name "QCAD3":
     // this happens before RSettings is initialized:
 //    QSettings settings(
-//#if defined(Q_OS_WIN) || defined(Q_OS_MAC)
+//#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
 //        QSettings::IniFormat,
 //#else
 //        QSettings::NativeFormat,
@@ -146,7 +146,7 @@ void RPluginLoader::loadPlugins(bool init) {
         baseName = baseName.replace("_debug", "");
         baseName = baseName.replace("lib", "");
         if (baseName.startsWith("qcad") && baseName.endsWith("style")) {
-            // plugin is a theme / style:
+            // plugin is a theme / style (e.g. qcaddarkstyle):
             QString styleName = baseName.mid(4, baseName.length()-4-5);
             if (theme.toLower()!=styleName.toLower()) {
                 // only load style plugin if name matched theme:
@@ -177,8 +177,14 @@ void RPluginLoader::loadPlugins(bool init) {
                 QStringList keys = jObj.keys();
                 for (int i=0; i<keys.length(); i++) {
                     QString key = keys[i];
+                    QString value = jObj.value(key).toString();
                     //qDebug() << "JSON value: " << key << ":" << jObj.value(key);
-                    info.set(key, jObj.value(key).toString());
+                    info.set(key, value);
+
+                    if (key=="Theme") {
+                        // theme override:
+                        RSettings::setValue("Theme/ThemeName", value);
+                    }
                 }
             }
             else {

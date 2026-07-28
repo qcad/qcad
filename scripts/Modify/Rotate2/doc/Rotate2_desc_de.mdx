@@ -1,0 +1,3 @@
+Rotiert Objekte um zwei verschiedene Zentren. Typischerweise wird dieses
+Werkzeug verwendet um Objekte um ein Zentrum zu rotieren aber die Ausrichtung
+der Objekte selbst beizubehalten.

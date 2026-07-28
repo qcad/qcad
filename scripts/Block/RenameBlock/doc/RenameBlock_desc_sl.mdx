@@ -1,0 +1,2 @@
+Preimenuje aktivni blok. Pri tem bo prikazan isti dialog kot pri ustvarjanju bloka.
+Blok in blokovne reference bodo nato preimenovane.

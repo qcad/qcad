@@ -1,0 +1,2 @@
+Deze functie maakt isometrische projecties (en andere soorten projecties)
+van de huidige selectie in de tekening.

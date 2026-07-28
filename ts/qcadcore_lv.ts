@@ -325,7 +325,7 @@
         <translation>Ārējā atsauce</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+931"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Atklāta cirkulāra (rekursīva) bloka atsauce:</translation>
     </message>
@@ -774,7 +774,7 @@
     <message>
         <location line="+1"/>
         <source>Bold</source>
-        <translation>Bold</translation>
+        <translation>Treknraksts</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1058,7 +1058,7 @@
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation>Ielikt grozā 1</translation>
+        <translation>Žoga līnija 1</translation>
     </message>
     <message>
         <location line="+1"/>

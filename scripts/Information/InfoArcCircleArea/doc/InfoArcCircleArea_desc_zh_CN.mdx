@@ -1,0 +1,74 @@
+import ArcCircle01 from './ArcCircle01.png';
+import ArcCircle02a from './ArcCircle02a.png';
+import ArcCircle03 from './ArcCircle03.png';
+import ArcCircle02 from './ArcCircle02.png';
+import InfoSector from './InfoSector.png';
+import InfoSlice from './InfoSlice.png';
+import ArcCircle04 from './ArcCircle04.png';
+import ArcCircle06 from './ArcCircle06.png';
+import ArcCircle05 from './ArcCircle05.png';
+import ArcCircle08 from './ArcCircle08.png';
+import ArcCircle07 from './ArcCircle07.png';
+
+作者：Robert S.
+
+此命令计算圆弧、圆、椭圆和椭圆弧的面积，并可选择将信息添加到图形的当前图层。如果您选择任何其他类型的实体，命令行中会显示警告。
+
+对于圆弧，有两个计算面积的选项，即 Segment 或 Sector。弓形（或切片）的面积是由圆弧和从圆弧起点和端点到圆弧圆心绘制的两条线所围成的面积。扇形的面积是由圆弧和从圆弧起点到端点绘制的弦所围成的面积。
+
+<Image src={ArcCircle01} alt="ArcCircle01" width={285} height={149} />  
+图 1：弓形（切片）和扇形。
+
+**Options**
+
+此命令具有标准的"*Add measurement to drawing*"和"*Text Height*"选项。
+
+<Image src={ArcCircle02a} alt="ArcCircle02a" width={200} height={19} />  
+图 2：标准 Info 选项
+
+无论此选项是否关闭，当您单击圆弧、圆、椭圆或椭圆弧时，信息都会显示在命令行小部件中。
+
+<Image src={ArcCircle03} alt="ArcCircle03" width={238} height={29} />  
+图 3：命令行中显示的信息
+
+（注意：每次启动 info 命令时，"*Add measurement to drawing*"复选框始终未选中。如果您想将信息添加到图形中，必须记住将其打开）。
+
+它还添加以下选项。
+
+<Image src={ArcCircle02} alt="ArcCircle02" width={213} height={25} />  
+图 4：添加的选项
+
+**Mode:**
+
+该模式仅适用于圆弧。
+
+<Image src={InfoSector} alt="InfoSector" width={40} height={40} />  
+*Sector:* 此模式返回扇形的面积。与"*Polygonal Area*"命令结合使用时很有用。
+
+<Image src={InfoSlice} alt="InfoSlice" width={40} height={40} /> *Segment:* 此模式返回弓形的面积。
+
+**Add:**
+
+*Entity:* 这选择您是否要将测量实体的副本添加到图形的当前图层。
+
+*Chord:* 这选择您是否要将弦（扇形）或半径线（弓形）添加到图形中。
+
+*Length:* 默认情况下，面积始终打印在图形上。此选项选择您是否要将额外信息添加到图形中。
+
+对于圆和完整椭圆，额外信息是周长。这使用圆心作为添加文本的左下角。
+
+<Image src={ArcCircle04} alt="ArcCircle04" width={364} height={136} />
+
+对于圆弧，额外信息是圆弧的长度和弦的长度（在扇形模式下），或半径（在弓形模式下）。
+
+对于椭圆，额外信息是弧的长度和弦的长度（在扇形模式下），或从圆心到弧起点的距离，然后是从圆心到弧端点的距离（在弓形模式下）。
+
+添加文本的左下角是圆弧的端点。
+
+<Image src={ArcCircle06} alt="ArcCircle06" width={332} height={75} />
+
+<Image src={ArcCircle05} alt="ArcCircle05" width={378} height={111} />
+
+<Image src={ArcCircle08} alt="ArcCircle08" width={328} height={90} />
+
+<Image src={ArcCircle07} alt="ArcCircle07" width={418} height={105} />

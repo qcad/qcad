@@ -1,0 +1,2 @@
+Det här verktyget infogar det aktiva blocket i ritningen. En eller flera
+blockreferenser skapas i ritningen för att representera det aktiva blocket.

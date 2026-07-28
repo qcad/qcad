@@ -1,0 +1,3 @@
+Esta ferramenta repõe a posição da etiqueta de todas as entidades de
+dimensão seleccionadas e coloca a etiqueta de volta à sua posição computada
+automaticamente.

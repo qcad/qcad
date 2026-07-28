@@ -1,0 +1,3 @@
+Este comando cierra el dibujo actual. Si el dibujo actual contiene cambios
+no guardados, se le dará la opción de guardar el dibujo antes de cerrarlo o
+descartar esos cambios.

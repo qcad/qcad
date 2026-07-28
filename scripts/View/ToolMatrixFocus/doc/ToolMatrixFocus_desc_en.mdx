@@ -1,0 +1,1 @@
+This command activates the filter (search) field of the tool matrix for input.

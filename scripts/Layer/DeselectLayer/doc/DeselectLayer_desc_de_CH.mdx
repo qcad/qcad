@@ -1,0 +1,2 @@
+Dieses Werkzeug hebt die Selektion aller Objekte auf dem aktuellen Layer
+auf.

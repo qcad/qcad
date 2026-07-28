@@ -44,6 +44,7 @@ MiscDevelopment.getMenu = function() {
         MiscDevelopment.getTitle(),
         "MiscDevelopmentMenu"
     );
+    menu.setProperty("scriptFile", MiscDevelopment.includeBasePath + "/MiscDevelopment.js");
     return menu;
 };
 

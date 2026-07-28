@@ -1,0 +1,2 @@
+Zmienia kolejność wyświetlania elementów. Narzędzie to służy do wysyłania do
+tła podmiotów ukrywających inne podmioty.

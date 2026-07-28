@@ -1,0 +1,2 @@
+Dette værktøj zoomer til den aktuelle markering og sikrer, at alle markerede
+enheder er synlige.

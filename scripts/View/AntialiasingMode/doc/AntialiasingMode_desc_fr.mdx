@@ -1,0 +1,2 @@
+Bascule l'anticrénelage pour le dessin en cours. Avec l'anticrénelage, les
+lignes, les arcs et les textes obliques sont affichés plus facilement.

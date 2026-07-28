@@ -1,0 +1,2 @@
+Esta ferramenta pode ser utilizada para editar entidades de escotilha
+existentes.

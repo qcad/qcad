@@ -1,0 +1,1 @@
+ The view menu contains all tools for zooming, panning and adjusting the display.

@@ -1,0 +1,2 @@
+Das Dateimenü enthält alle Werkzeuge zum Öffnen, Speichern, Importieren,
+Exportieren und Drucken von Dateien.

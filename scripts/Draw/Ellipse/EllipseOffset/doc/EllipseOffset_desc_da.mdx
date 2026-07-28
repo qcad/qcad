@@ -1,0 +1,2 @@
+Med dette værktøj kan du oprette en eller flere parallelle kurver med en
+given afstand til en eksisterende ellipse.

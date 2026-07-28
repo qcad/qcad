@@ -1,0 +1,13 @@
+import SplineControlPoints01 from './SplineControlPoints01.png';
+import SplineControlPoints02 from './SplineControlPoints02.png';
+
+1. Seçenekler araç çubuğunda spline'ın derecesini seçin. Desteklenen dereceler 2 (karesel b-spline) ve 3'tür (kübik b-spline). Derece ne kadar yüksekse, eğri o kadar „düzgün" olur.  
+   Karesel bir b-spline'ın tanım gereği en az 3 kontrol noktası gerektirdiğini, kübik bir b-spline'ın ise en az 4 kontrol noktasına sahip olduğunu unutmayın.
+2. Kapalı bir spline oluşturmak istiyorsanız seçenekler araç çubuğundaki „Closed" onay kutusunu işaretleyin. Kapalı spline'lar sürekli kapalı döngülerdir.
+3. Kontrol noktalarını belirtin. Üçüncü (karesel b-spline'lar için) veya dördüncü (kübik b-spline'lar için) kontrol noktasını tanımladıktan sonra bir önizleme gösterilir. Seçenekler araç çubuğundaki „Undo" düğmesine tıklayarak son kontrol noktasını tekrar kaldırabilirsiniz.
+4. Spline şeklini onaylamak için son noktayı ayarladıktan sonra Escape tuşuna basın veya sağ fare düğmesine tıklayın.
+5. Artık başka bir spline oluşturabilir veya aracı sonlandırmak için tekrar sağ tıklayabilirsiniz.
+   İki açık spline (karesel ve kübik) için örnek:  
+   <Image src={SplineControlPoints01} alt="SplineControlPoints01" width={240} height={166} />  
+   İki kapalı, periyodik spline (karesel ve kübik) için örnek:  
+   <Image src={SplineControlPoints02} alt="SplineControlPoints02" width={288} height={166} />

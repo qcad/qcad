@@ -1,0 +1,2 @@
+Avec cet outil, vous pouvez créer des cercles concentriques qui passent par
+un point donné.

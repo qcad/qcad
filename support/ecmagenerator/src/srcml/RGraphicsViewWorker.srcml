@@ -150,6 +150,8 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawRect</name><parameter_list>(<param><decl><type><name>const</name> <name>QRectF</name>&amp;</type> <name>rectangle</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>fillRect</name><parameter_list>(<param><decl><type><name>const</name> <name>QRectF</name>&amp;</type> <name>rectangle</name></decl></param>, <param><decl><type><name>const</name> <name>QBrush</name>&amp;</type> <name>brush</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawPolygon</name><parameter_list>(<param><decl><type><name>const</name> <name>QPolygonF</name>&amp;</type> <name>polygon</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
 
 <label><name>signals</name>:</label>
     <function_decl><type><name>void</name></type> <name>finished</name><parameter_list>()</parameter_list>;</function_decl>

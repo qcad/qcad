@@ -1,0 +1,3 @@
+Esta ferramenta pode ser utilizada para mostrar convenientemente todas as
+camadas ao mesmo tempo. Isto pode ser útil enquanto se trabalha com um desenho
+com muitas camadas.

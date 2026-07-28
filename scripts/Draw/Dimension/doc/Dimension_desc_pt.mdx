@@ -1,0 +1,7 @@
+As dimensões são utilizadas para adicionar medidas a um desenho.  
+As dimensões consistem tipicamente numa etiqueta de texto e algumas
+linhas e setas para indicar o local exacto da medição. A etiqueta de texto pode
+ser acompanhada por indicações de tolerância ou símbolos. A barra de
+ferramentas de opções que é mostrada enquanto uma dimensão está a ser criada
+apoia-o na definição do conteúdo da etiqueta de dimensão e das suas
+tolerâncias.

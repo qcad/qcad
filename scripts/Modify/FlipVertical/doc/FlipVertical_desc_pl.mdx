@@ -1,0 +1,2 @@
+Funkcja ta umożliwia obracanie (lustrzane odbicie) bieżącego wyboru w
+pionie.

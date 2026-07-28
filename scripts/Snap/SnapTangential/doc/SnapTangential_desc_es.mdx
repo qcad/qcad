@@ -1,0 +1,4 @@
+Se encaja hasta el punto de tangencia en un arco, círculo o elipse. Esto
+sólo se aplica cuando se dibujan líneas. El punto de ajuste es el punto
+tangente de una línea imaginaria desde el punto cero relativo, tangente al arco
+o círculo en el que se ha hecho clic.

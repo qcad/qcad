@@ -1,0 +1,1 @@
+Scegliere questa funzione quando state modificando un blocco e volete tornare al disegno principale (blocco "*Model_Space").

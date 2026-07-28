@@ -1,0 +1,2 @@
+Cet outil augmente le facteur d'affichage actuel. Le même effet peut
+également être obtenu en tournant la molette de la souris loin de vous.

@@ -1,0 +1,2 @@
+Deze functie verlaagt de huidige kijkfactor. Hetzelfde effect kan ook worden
+bereikt door het muiswiel naar u toe te draaien.

@@ -1,0 +1,2 @@
+Podziela jednostki poprzez wydzielenie segmentu, który jest ograniczony
+przez przecinające się jednostki.

@@ -1,0 +1,2 @@
+Zaznacza wszystkie jednostki, które nie są aktualnie zaznaczone i odznacza
+wszystkie zaznaczone jednostki.

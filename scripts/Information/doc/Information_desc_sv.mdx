@@ -1,0 +1,4 @@
+Verktygen i menyn Info kan användas för att mäta avstånd, ytor och fråga
+efter annan information från ritningen.  
+Vissa av verktygen erbjuder ett alternativ för att lägga till det
+uppmätta resultatet i ritningen som text om så önskas.

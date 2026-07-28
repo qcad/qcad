@@ -1,0 +1,2 @@
+Mit diesem Werkzeug können Sie Kreisbögen konstruieren, die konzentrisch
+zu einem existierenden Kreisbogen sind. Dabei wird die Distanz angegeben.

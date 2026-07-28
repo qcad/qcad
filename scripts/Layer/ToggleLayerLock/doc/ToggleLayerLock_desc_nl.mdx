@@ -1,0 +1,6 @@
+Dit functie schakelt de vergrendelde status van de huidige laag om. U kunt
+ook de vergrendelde status van lagen wijzigen door op het slotpictogram naast
+de naam van de laag in de lagenlijst te klikken.
+
+Entiteiten op vergrendelde lagen kunnen niet worden geselecteerd, verwijderd
+of gewijzigd.

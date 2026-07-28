@@ -1,0 +1,2 @@
+Restricts the cursor vertically to the same X position as the relative
+zero point.

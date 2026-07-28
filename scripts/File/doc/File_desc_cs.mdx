@@ -1,0 +1,2 @@
+Nabídka souborů obsahuje všechny nástroje pro otevírání, ukládání, import,
+export a tisk souborů

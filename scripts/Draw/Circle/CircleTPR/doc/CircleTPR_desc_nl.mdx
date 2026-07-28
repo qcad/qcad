@@ -1,0 +1,2 @@
+Tekent een boog met een bepaalde straal, tangentieel aan een entiteit en
+door een punt.

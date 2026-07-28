@@ -157,6 +157,8 @@ BitmapExport.prototype.getProperties = function() {
     this.dialog = WidgetFactory.createDialog(BitmapExport.includeBasePath, "BitmapExportDialog.ui", appWin);
     WidgetFactory.restoreState(this.dialog);
 
+    var sizeRadio = this.dialog.findChild("SizeRadio");
+    var resolutionRadio = this.dialog.findChild("ResolutionRadio");
     var widthEdit = this.dialog.findChild("Width");
     var heightEdit = this.dialog.findChild("Height");
     var resolutionCombo = this.dialog.findChild("Resolution");
@@ -177,16 +179,9 @@ BitmapExport.prototype.getProperties = function() {
     selectionCheckbox.toggled.connect(this, this.selectionChanged);
     var weightMarginCheckbox = this.dialog.findChild("WeightMargin");
 
-    widthEdit.valueChanged.connect(
-                function() {
-                    resolutionCombo.index = 0;
-                });
-    heightEdit.valueChanged.connect(
-                function() {
-                    resolutionCombo.index = 0;
-                });
+    sizeRadio.toggled.connect(this, this.modeChanged);
     resolutionCombo.editTextChanged.connect(this, this.resolutionChanged);
-    this.resolutionChanged(resolutionCombo.currentText);
+    this.modeChanged();
 
     if (!this.dialog.exec()) {
         destrDialog(this.dialog);
@@ -198,7 +193,7 @@ BitmapExport.prototype.getProperties = function() {
 
     var ret = [];
 
-    if (resolutionCombo.currentText!=="auto") {
+    if (resolutionRadio.checked) {
         ret["resolution"] = parseFloat(resolutionCombo.currentText);
     }
     else {
@@ -238,19 +233,30 @@ BitmapExport.prototype.getProperties = function() {
     return ret;
 };
 
+// width and height OR resolution can be entered, not both: the active mode is
+// chosen with the SizeRadio / ResolutionRadio radio buttons; the fields of the
+// inactive mode are grayed out (but still displayed):
+BitmapExport.prototype.modeChanged = function() {
+    var sizeMode = this.dialog.findChild("SizeRadio").checked;
+
+    this.dialog.findChild("Width").enabled = sizeMode;
+    this.dialog.findChild("Height").enabled = sizeMode;
+    this.dialog.findChild("Resolution").enabled = !sizeMode;
+
+    if (!sizeMode) {
+        // entering resolution mode: derive width and height from resolution:
+        this.resolutionChanged(this.dialog.findChild("Resolution").currentText);
+    }
+};
+
 BitmapExport.prototype.selectionChanged = function(value) {
     this.documentWidth = undefined;
     this.documentHeight = undefined;
 
-    var resolutionCombo = this.dialog.findChild("Resolution");
-    this.resolutionChanged(resolutionCombo.currentText);
+    this.modeChanged();
 };
 
 BitmapExport.prototype.resolutionChanged = function(str) {
-    if (str==="auto") {
-        return;
-    }
-
     var res = parseFloat(str, 10);
     if (isNaN(res)) {
         return;

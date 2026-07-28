@@ -1,0 +1,1 @@
+Dibuja un arco utilizando el punto inicial, el punto final y la altura del arco.

@@ -1,0 +1,1 @@
+Disegna ellissi con dato diametro maggiore e minore (larghezza/altezza).

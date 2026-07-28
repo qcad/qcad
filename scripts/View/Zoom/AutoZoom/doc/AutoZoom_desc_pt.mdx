@@ -1,0 +1,2 @@
+Escala a vista de desenho para que todas as entidades que estão em camadas
+visíveis se encaixem na tela.

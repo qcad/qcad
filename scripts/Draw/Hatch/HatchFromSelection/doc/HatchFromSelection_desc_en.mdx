@@ -1,0 +1,2 @@
+This tool fills an area surrounded by existing entities with a hatch pattern
+or a solid color.

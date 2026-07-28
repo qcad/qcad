@@ -1,0 +1,53 @@
+Linia de comandă a QCAD vă permite să porniți comenzi, să introduceți coordonate sau să introduceți valori cum ar fi distanțe sau raze.
+
+### Introducerea coordonatelor
+
+Coordonatele absolute se introduc în formatul „x,y":
+
+40,5
+
+Coordonatele relative se introduc în formatul „@x,y":
+
+@10,6
+
+Coordonatele polare absolute se introduc în formatul „distanță&lt;unghi":
+
+10&lt;30
+
+Coordonatele polare relative se introduc în formatul „@distanță&lt;unghi":
+
+@10&lt;45
+
+La introducerea coordonatelor sau valorilor, se pot utiliza [expresii matematice](#expr) pentru a calcula o coordonată pe baza valorilor cunoscute. De exemplu, coordonata 10,5 poate fi introdusă și ca:
+
+5+5,30/6
+
+### Calculator
+
+Linia de comandă poate fi utilizată și ca calculator. Pentru a face acest lucru, introduceți o [expresie matematică](#expr) precedată de un semn egal:
+
+=3+4  
+7
+
+Variabilele pot fi utilizate pentru a stoca valori:
+
+=a=5+6  
+11  
+=a/2  
+5.5  
+
+### Expresii matematice
+
+Constantele matematice disponibile sunt:
+
+PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2
+
+Funcțiile matematice disponibile sunt:
+
+abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad,
+sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh,
+acosh, asinh, atanh, expm1, hypot, cbrt, trunc
+
+Majoritatea acestor constante și funcții sunt funcții ECMAScript (JavaScript) standard și documentate online. În ECMAScript standard, aceste funcții fac parte din clasa Math, astfel încât funcția *abs* ar trebui scrisă ca *Math.abs*. În linia de comandă QCAD, puteți omite partea *Math.* pentru comoditate. Funcțiile trigonometrice (sin, cos, tan, asin, acos, atan, atan2) acceptă sau returnează unghiuri în grade. Dacă preferați versiunile în radiani ale acestor funcții, utilizați în schimb funcțiile *Math.* originale.
+
+Funcțiile *rad2deg* și *deg2rad* pot fi utilizate pentru a converti unghiuri între radiani și grade.

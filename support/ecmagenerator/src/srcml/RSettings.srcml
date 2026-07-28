@@ -61,6 +61,7 @@
 
 <class_decl>class <name>QFont</name>;</class_decl>
 <class_decl>class <name>QSettings</name>;</class_decl>
+<class_decl>class <name>QWidget</name>;</class_decl>
 
 <comment type="block">/**
  * \ingroup core
@@ -136,6 +137,7 @@
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getEndReferencePointColor</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getSecondaryReferencePointColor</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getTertiaryReferencePointColor</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RColor</name></type> <name>getSnapReferencePointColor</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getCrossHairColor</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getCrossHairColorInactive</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getGridColor</name><parameter_list>()</parameter_list>;</function_decl>
@@ -327,6 +329,8 @@
 
     <function_decl><type><name>static</name> <name>bool</name></type> <name>useQml</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>static</name> <name>QColor</name></type> <name>getWidgetSelectionColor</name><parameter_list>(<param><decl><type><name>const</name> <name>QWidget</name>*</type> <name>w</name></decl></param>)</parameter_list>;</function_decl>
+
 </public><private>private:
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isInitialized</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>void</name></type> <name>shortenRecentFiles</name><parameter_list>()</parameter_list>;</function_decl>
@@ -348,6 +352,7 @@
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>endReferencePointColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>secondaryReferencePointColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>tertiaryReferencePointColor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>snapReferencePointColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>crossHairColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>crossHairColorInactive</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>gridColor</name></decl>;</decl_stmt>

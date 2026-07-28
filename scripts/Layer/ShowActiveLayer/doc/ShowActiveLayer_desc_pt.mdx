@@ -1,0 +1,2 @@
+Esta ferramenta esconde todas as camadas, excepto a camada seleccionada
+(activa) na lista de camadas.

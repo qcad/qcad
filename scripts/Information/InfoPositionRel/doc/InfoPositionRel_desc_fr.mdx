@@ -1,0 +1,2 @@
+Cet outil affiche les coordonnées cartésiennes relatives des points choisis
+dans le dessin.

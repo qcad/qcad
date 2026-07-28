@@ -1,0 +1,2 @@
+This tool can be used to either lengthen or shorten lines or arcs by a given
+amount.

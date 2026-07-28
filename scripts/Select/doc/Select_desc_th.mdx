@@ -1,0 +1,27 @@
+import SelectionModeReplace from './SelectionModeReplace.png';
+import SelectionModeAdd from './SelectionModeAdd.png';
+import SelectionModeRemove from './SelectionModeRemove.png';
+import SelectionModeIntersect from './SelectionModeIntersect.png';
+
+
+
+### การเลือกแบบไขว้ {#cross}
+
+เครื่องมือเลือกบางส่วนสามารถใช้ในโหมดการเลือกแบบไขว้ได้ ในโหมดนี้ ไม่เพียงเอนทิตีที่อยู่ภายในพื้นที่ที่กำหนดอย่างสมบูรณ์เท่านั้นที่ถูกเลือก แต่ยังรวมถึงเอนทิตีที่อยู่ภายในพื้นที่เพียงบางส่วนด้วย การเลือกนี้เรียกว่า „การเลือกแบบไขว้"
+
+### โหมดการเลือก {#mode}
+
+เครื่องมือเลือกบางส่วนให้คุณเลือกโหมดการเลือกในแถบเครื่องมือตัวเลือก โหมดการเลือกที่มีให้เลือกคือ:
+
+- แทนที่การเลือก:  
+  <Image src={SelectionModeReplace} alt="SelectionModeReplace" width={40} height={40} />  
+  แทนที่การเลือกปัจจุบันด้วยการเลือกใหม่ที่ทำโดยเครื่องมือเลือกที่ใช้งานอยู่ (ค่าเริ่มต้น)
+- เพิ่มในการเลือก:  
+  <Image src={SelectionModeAdd} alt="SelectionModeAdd" width={40} height={40} />  
+  เพิ่มการเลือกในการเลือกปัจจุบัน
+- ลบออกจากการเลือก:  
+  <Image src={SelectionModeRemove} alt="SelectionModeRemove" width={40} height={40} />  
+  ลบ (ลบออก) การเลือกออกจากการเลือกปัจจุบัน
+- ตัดกัน:  
+  <Image src={SelectionModeIntersect} alt="SelectionModeIntersect" width={40} height={40} />  
+  เฉพาะเอนทิตีที่ถูกเลือกอยู่แล้วและตรงกับเกณฑ์ของเครื่องมือเลือกเท่านั้นที่จะถูกเลือก

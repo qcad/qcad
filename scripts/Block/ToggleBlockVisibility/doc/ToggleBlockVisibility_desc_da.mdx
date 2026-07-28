@@ -1,0 +1,2 @@
+Klik på øjenikonet på bloklisten for at skifte blokens synlighed.
+Blokreferencer for usynlige blokke vises ikke.

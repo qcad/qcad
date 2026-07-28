@@ -1,0 +1,2 @@
+Snapt naar het loodrechte punt op een lijn, boog, cirkel of ellips. Dit
+geldt alleen bij het tekenen van lijnen.

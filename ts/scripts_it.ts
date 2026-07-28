@@ -270,7 +270,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
         <source>Application Preferences</source>
         <translation>Preferenze Applicazione</translation>
     </message>
@@ -280,7 +280,7 @@
         <translation>Preferenze Disegno</translation>
     </message>
     <message>
-        <location line="+326"/>
+        <location line="+328"/>
         <source>Apply preferences</source>
         <translation>Applica preferenze</translation>
     </message>
@@ -930,19 +930,19 @@ Do you wish to recover it?</source>
 Vuoi recuperarlo?</translation>
     </message>
     <message>
-        <location line="+25"/>
-        <location line="+11"/>
-        <location line="+5"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+7"/>
         <source>Cannot rename file:</source>
         <translation>Impossibile rinominare il file:</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-25"/>
         <source>Moved autosave backup file to:</source>
         <translation>Spostato archivio di salvataggio automatico in:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+28"/>
         <source>Moved original file to:</source>
         <translation>Spostato file originale a:</translation>
     </message>
@@ -952,7 +952,7 @@ Vuoi recuperarlo?</translation>
         <translation>Impossibile eliminare il file:</translation>
     </message>
     <message>
-        <location line="-124"/>
+        <location line="-135"/>
         <source>Recover Files?</source>
         <translation>Recuperare i file?</translation>
     </message>
@@ -1007,7 +1007,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location line="+10"/>
         <source>Grid points</source>
-        <translation>Griglia</translation>
+        <translation>Punti griglia</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1068,7 +1068,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
-        <translation>Le due entità non può essere cimare.</translation>
+        <translation>Le due entità non possono essere smussate.</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -1134,12 +1134,12 @@ Vuoi recuperarlo?</translation>
         <translation>Esporta bitmap</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Size</source>
         <translation>Dimensioni</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Width:</source>
         <translation>Larghezza:</translation>
     </message>
@@ -1149,28 +1149,48 @@ Vuoi recuperarlo?</translation>
         <translation>Altezza:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+33"/>
         <source>Pixels per drawing unit:</source>
         <translation>Pixel per unità di disegno:</translation>
     </message>
     <message>
-        <location line="+72"/>
-        <source>Export bounding box of selection</source>
-        <translation>Exporte a área retangular em torno da seleção</translation>
+        <location line="+280"/>
+        <source>Selection</source>
+        <translation>Selezione</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+6"/>
+        <source>Export bounding box of selection</source>
+        <translation>Esporta il rettangolo di delimitazione della selezione</translation>
+    </message>
+    <message>
+        <location line="-81"/>
         <source>Transparent</source>
         <translation>Trasparente</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-271"/>
+        <source>Specify width and height:</source>
+        <translation>Specificare larghezza e altezza:</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Specify resolution:</source>
+        <translation>Specificare risoluzione:</translation>
+    </message>
+    <message>
+        <location line="+225"/>
         <source>Color</source>
         <comment>Title of group box</comment>
         <translation>Colore</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Prevent white on white / black on black export</source>
+        <translation>Auto corretti colori bianco e nero</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Monochrome</source>
         <translation>Monocromo</translation>
     </message>
@@ -1196,7 +1216,7 @@ Vuoi recuperarlo?</translation>
         <translation>Antialiasing</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-197"/>
         <source>Margin</source>
         <translation>Margine</translation>
     </message>
@@ -1216,7 +1236,7 @@ Vuoi recuperarlo?</translation>
         <translation>Aggiungere un margine extra per compensare il peso linea</translation>
     </message>
     <message>
-        <location line="-170"/>
+        <location line="+30"/>
         <source>Background</source>
         <translation>Sfondo</translation>
     </message>
@@ -1234,7 +1254,7 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Dimensioni dell&apos;immagine non valido (larghezza x altezza deve essere inferiore a %1)</translation>
     </message>
@@ -1330,7 +1350,7 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
         <location line="+68"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -2181,7 +2201,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation>Cercando di disegnare o modificare le entità su un livello bloccato.</translation>
+        <translation>Transazione non riuscita. Controllare le ricorsioni di blocco e i livelli o blocchi bloccati o invisibili.</translation>
     </message>
     <message>
         <location line="-417"/>
@@ -2236,7 +2256,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History size:</source>
-        <translation>Taglia della storia:</translation>
+        <translation>Dimensione della cronologia:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -2624,7 +2644,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Mappa del personaggio</translation>
+        <translation>Mappa caratteri</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
@@ -2665,7 +2685,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location line="-8"/>
         <source>Splines</source>
-        <translation>Spine</translation>
+        <translation>Spline</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -2862,8 +2882,8 @@ Vuoi recuperarlo?</translation>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
-            <numerusform>Posizione dell&apos;etichetta di %1 dimensione è stato azzerato.</numerusform>
-            <numerusform>Posizione dell&apos;etichetta di %1 dimensiones è stato azzerato.</numerusform>
+            <numerusform>Posizione dell&apos;etichetta di %n dimensione è stata azzerata.</numerusform>
+            <numerusform>Posizione dell&apos;etichetta di %n dimensioni è stata azzerata.</numerusform>
         </translation>
     </message>
     <message>
@@ -4202,18 +4222,18 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2133"/>
+        <location line="+2167"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location line="-2132"/>
+        <location line="-2166"/>
         <source>Done</source>
         <translation>Fatto</translation>
     </message>
     <message>
-        <location line="+284"/>
-        <location line="+133"/>
+        <location line="+287"/>
+        <location line="+143"/>
         <source>Active Tool:</source>
         <translation>Strumento attivo:</translation>
     </message>
@@ -4253,7 +4273,7 @@ is already in the list.</source>
         <translation>Entità è su un livello bloccato.</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+254"/>
         <source>Length:</source>
         <translation>Lunghezza:</translation>
     </message>
@@ -4374,7 +4394,7 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &quot;safe&quot; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Siete in procinto di abilitare la shell ECMAScript.&lt;/p&gt;&lt;p&gt;Nella shell ECMAScript è possibile &lt;span style=&quot; colore:#ff0000;&quot;&gt;modificare i disegni&lt;/span&gt; ma anche &lt;span style=&quot; colore:#ff0000;&quot;&gt;cancellare i file&lt;/span&gt; o &lt;span style=&quot; colore:#ff0000;&quot;&gt;incidere l&apos;applicazione&lt;/span&gt; che può portare a &lt;span style=&quot; colore:#ff0000;&quot;&gt;perdita di dati&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Per i programmatori inesperti, si raccomanda di limitare l&apos;uso della shell ECMAScript a &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; testo-decorazione: sottolineare; colore:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; che è considerato &quot;sicuro&quot; da usare.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Siete in procinto di abilitare la shell ECMAScript.&lt;/p&gt;&lt;p&gt;Nella shell ECMAScript è possibile &lt;span style=&quot; color:#ff0000;&quot;&gt;modificare i disegni&lt;/span&gt; ma anche &lt;span style=&quot; color:#ff0000;&quot;&gt;cancellare i file&lt;/span&gt; o &lt;span style=&quot; color:#ff0000;&quot;&gt;incidere l&apos;applicazione&lt;/span&gt; che può portare a &lt;span style=&quot; color:#ff0000;&quot;&gt;perdita di dati&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Per i programmatori inesperti, si raccomanda di limitare l&apos;uso della shell ECMAScript a &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; che è considerato &quot;sicuro&quot; da usare.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4470,7 +4490,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Edit text</source>
-        <translation>Raccorda di un valore</translation>
+        <translation>Modifica testo</translation>
     </message>
 </context>
 <context>
@@ -5249,7 +5269,12 @@ is already in the list.</source>
         <translation>FP aggiunto layer:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Dipinge sopra la selezione, imitando un timbro a rulli</translation>
     </message>
@@ -5544,20 +5569,12 @@ is already in the list.</source>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation>Verbosio *</translation>
+        <translation>Verboso *</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
         <translation>Cancellare entità di base *</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -5586,7 +5603,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation>Sei sicuro di voler risciacquare la cronologia delle transazioni di annullamento/ripetizione?</translation>
+        <translation>Sei sicuro di voler svuotare la cronologia delle transazioni di annullamento/ripetizione?</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6135,6 +6152,11 @@ is already in the list.</source>
         <translation>Punti di riferimento terziari:</translation>
     </message>
     <message>
+        <location line="+27"/>
+        <source>Snap reference points:</source>
+        <translation>Punti di riferimento snap:</translation>
+    </message>
+    <message>
         <location line="+30"/>
         <source>Snap Tools</source>
         <translation>Strumenti snap</translation>
@@ -6180,7 +6202,7 @@ is already in the list.</source>
         <translation>Confine finestra di selezione:</translation>
     </message>
     <message>
-        <location line="-712"/>
+        <location line="-739"/>
         <source>Origin:</source>
         <translation>Origine:</translation>
     </message>
@@ -6253,7 +6275,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Panning threshold (px):</source>
-        <translation>Soglia della pentola:</translation>
+        <translation>Soglia di panoramica:</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -6955,7 +6977,7 @@ is already in the list.</source>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Forma non gestita dal ciclo del portello.</translation>
+        <translation>Forma non gestita dal ciclo di tratteggio.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -7069,7 +7091,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+192"/>
         <source>2D Centroids transaction listener active.</source>
-        <translation>L&apos;ascoltatore della transazione dei centriidi 2D è attivo.</translation>
+        <translation>L&apos;ascoltatore della transazione dei centroidi 2D è attivo.</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -7092,7 +7114,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation>(De-)Attivare un ascoltatore di transazioni per i centriidi 2D</translation>
+        <translation>(De-)Attivare un ascoltatore di transazioni per i centroidi 2D</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7236,7 +7258,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>2D Centroids weighted sum script (v0.24) by CVH.</source>
-        <translation>Script di somma ponderata dei centriidi 2D (v0.24) di CVH.</translation>
+        <translation>Script di somma ponderata dei centroidi 2D (v0.24) di CVH.</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -7340,7 +7362,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
         <source>&amp;Sum 2D Centroids weighted</source>
-        <translation>Somma dei centriidi 2D ponderati</translation>
+        <translation>Somma dei centroidi 2D ponderati</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7389,7 +7411,7 @@ is already in the list.</source>
     <message>
         <location line="-71"/>
         <source>Wire 2D Centroid script (v0.32) by CVH</source>
-        <translation>Scrittura Wire 2D Centroid (v0.32) di CVH</translation>
+        <translation>Script Wire 2D Centroid (v0.32) di CVH</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -7963,7 +7985,7 @@ is already in the list.</source>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+62"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+71"/>
         <source>Language Settings</source>
         <translation>Impostazioni della lingua</translation>
     </message>
@@ -8018,7 +8040,7 @@ is already in the list.</source>
     <message>
         <location line="+51"/>
         <source>Thawing all layers</source>
-        <translation>Scongiurare tutti i livelli</translation>
+        <translation>Scongelare tutti i livelli</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8198,7 +8220,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation>Linea che consente è stato creato con successo</translation>
+        <translation>Direttrice creata con successo</translation>
     </message>
 </context>
 <context>
@@ -8817,6 +8839,16 @@ is already in the list.</source>
         <source>Draw vertical line</source>
         <translation>Linea verticale</translation>
     </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineVertical/LineVertical.ui" line="+17"/>
+        <source>Length:</source>
+        <translation>Lunghezza:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Reference Point:</source>
+        <translation>Punto di riferimento:</translation>
+    </message>
 </context>
 <context>
     <name>LinetypeMode</name>
@@ -9018,14 +9050,14 @@ is already in the list.</source>
 <context>
     <name>MiscBlock</name>
     <message>
-        <location filename="../scripts/Misc/MiscBlock/MiscBlock.js" line="+51"/>
+        <location filename="../scripts/Misc/MiscBlock/MiscBlock.js" line="+52"/>
         <source>Misc</source>
         <translation>Varie</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation>Strumenti muscolari per blocchi</translation>
+        <translation>Strumenti vari per blocchi</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -9036,7 +9068,7 @@ is already in the list.</source>
 <context>
     <name>MiscDevelopment</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/MiscDevelopment.js" line="+51"/>
+        <location filename="../scripts/Misc/MiscDevelopment/MiscDevelopment.js" line="+52"/>
         <source>Misc</source>
         <translation>Varie</translation>
     </message>
@@ -9054,7 +9086,7 @@ is already in the list.</source>
 <context>
     <name>MiscDraw</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/MiscDraw.js" line="+52"/>
+        <location filename="../scripts/Misc/MiscDraw/MiscDraw.js" line="+53"/>
         <source>Misc</source>
         <translation>Varie</translation>
     </message>
@@ -9077,7 +9109,7 @@ is already in the list.</source>
 <context>
     <name>MiscIO</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MiscIO.js" line="+51"/>
+        <location filename="../scripts/Misc/MiscIO/MiscIO.js" line="+52"/>
         <source>Misc</source>
         <translation>Varie</translation>
     </message>
@@ -9095,14 +9127,14 @@ is already in the list.</source>
 <context>
     <name>MiscInformation</name>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+41"/>
+        <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+42"/>
         <source>Misc</source>
         <translation>Varie</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Misc Information Tools</source>
-        <translation>Strumenti di informazione distorsiva</translation>
+        <translation>Strumenti di informazione vari</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -9113,7 +9145,7 @@ is already in the list.</source>
 <context>
     <name>MiscModify</name>
     <message>
-        <location filename="../scripts/Misc/MiscModify/MiscModify.js" line="+44"/>
+        <location filename="../scripts/Misc/MiscModify/MiscModify.js" line="+45"/>
         <source>Misc</source>
         <translation>Varie</translation>
     </message>
@@ -9131,7 +9163,7 @@ is already in the list.</source>
 <context>
     <name>MiscSelect</name>
     <message>
-        <location filename="../scripts/Misc/MiscSelect/MiscSelect.js" line="+52"/>
+        <location filename="../scripts/Misc/MiscSelect/MiscSelect.js" line="+53"/>
         <source>Misc</source>
         <translation>Varie</translation>
     </message>
@@ -9271,7 +9303,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Mappa del personaggio</translation>
+        <translation>Mappa caratteri</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9287,7 +9319,7 @@ is already in the list.</source>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
         <translation>Aprendo il disegno:</translation>
     </message>
@@ -9806,7 +9838,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>&quot;Power center&quot; di tre cerchi</translation>
+        <translation>Centro radicale di tre cerchi</translation>
     </message>
 </context>
 <context>
@@ -10194,12 +10226,12 @@ is already in the list.</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
     <message>
-        <location line="+861"/>
+        <location line="+882"/>
         <source>*VARIES*</source>
         <translation>*VARIE*</translation>
     </message>
     <message>
-        <location line="-1483"/>
+        <location line="-1504"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10249,7 +10281,7 @@ is already in the list.</source>
         <translation>Mostra tutte le proprietà</translation>
     </message>
     <message>
-        <location line="+818"/>
+        <location line="+839"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10931,7 +10963,7 @@ is already in the list.</source>
         <translation>Non sono stati trovati filtri di exportazione. Interruzione...</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+92"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>
@@ -11074,6 +11106,11 @@ is already in the list.</source>
         <source>Define factor using mouse cursor</source>
         <translation>Definire il fattore usando il cursore del mouse</translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
+        <source>Allow rounding of imaginary corner</source>
+        <translation>Consenti arrotondamento dello spigolo immaginario</translation>
+    </message>
 </context>
 <context>
     <name>ScaleOptions</name>
@@ -11200,9 +11237,6 @@ is already in the list.</source>
         <source>By Color</source>
         <translation>Per colore</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
@@ -11558,7 +11592,7 @@ is already in the list.</source>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Almeno due punti sono identici.</translation>
@@ -12107,11 +12141,11 @@ is already in the list.</source>
     </message>
 </context>
 <context>
-    <name>SnapSelectionCenter</name>
+    <name>SnapSelection</name>
     <message>
-        <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
-        <source>Center of &amp;Selection</source>
-        <translation>Centro di &amp;selezione</translation>
+        <location filename="../scripts/Snap/SnapSelection/SnapSelectionInit.js" line="+2"/>
+        <source>&amp;Selection Reference Points</source>
+        <translation>&amp;Punti di riferimento selezione</translation>
     </message>
 </context>
 <context>
@@ -12307,7 +12341,7 @@ is already in the list.</source>
         <translation>File</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+48"/>
         <source>Import SVG</source>
         <translation>Importa SVG</translation>
     </message>
@@ -12327,7 +12361,7 @@ is already in the list.</source>
         <translation>Importa &amp;SVG...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/SvgImport/SvgImport.js" line="-45"/>
+        <location filename="../scripts/File/SvgImport/SvgImport.js" line="-49"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>Importa SVG</translation>
@@ -12362,13 +12396,23 @@ is already in the list.</source>
         <source>Import groups as layers</source>
         <translation>Importazione di gruppi come livelli</translation>
     </message>
+    <message>
+        <location line="+13"/>
+        <source>Paths</source>
+        <translation>Tracciati</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import path lineweights</source>
+        <translation>Importa gli spessori di linea dei tracciati</translation>
+    </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation>Files SVG %1</translation>
+        <translation>File SVG %1</translation>
     </message>
 </context>
 <context>
@@ -12514,12 +12558,12 @@ is already in the list.</source>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation>Linea che consente è stato creato con successo</translation>
+        <translation>Direttrice creata con successo</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation>&amp;Linea che consente allineato al testo</translation>
+        <translation>&amp;Direttrice allineata al testo</translation>
     </message>
 </context>
 <context>
@@ -12550,12 +12594,12 @@ is already in the list.</source>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+251"/>
         <source>Default value:</source>
         <translation>Predefinito:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+275"/>
         <source>&amp;Undo</source>
         <translation>&amp;Annulla</translation>
     </message>
@@ -12615,12 +12659,12 @@ is already in the list.</source>
         <translation>&amp;Carattere speciale...</translation>
     </message>
     <message>
-        <location line="+348"/>
+        <location line="+349"/>
         <source>Others...</source>
         <translation>Altri...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+140"/>
         <source>Degree</source>
         <translation>Gradi</translation>
     </message>
@@ -12916,7 +12960,7 @@ is already in the list.</source>
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
         <translation>Generale</translation>
     </message>
@@ -13314,12 +13358,12 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Auto screen scale factor</source>
-        <translation>Fattore di scala:</translation>
+        <translation>Fattore di scala automatico dello schermo</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Enable high DPI scaling</source>
-        <translation>Abilita splash screen</translation>
+        <translation>Abilita ridimensionamento ad alto DPI</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -13585,7 +13629,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
         <source>Dropped data not supported</source>
         <translation>I dati inseriti non sono supportati</translation>
     </message>
@@ -13616,7 +13660,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1168"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
         <source>Restore defaults</source>
         <translation>Ripristina predefiniti</translation>
     </message>
@@ -14036,7 +14080,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomOut/ZoomOutInit.js" line="+2"/>
         <source>Zoom &amp;Out</source>
-        <translation>Zoom &amp;ll&apos;esterno</translation>
+        <translation>Zoom a&amp;ll&apos;esterno</translation>
     </message>
 </context>
 <context>

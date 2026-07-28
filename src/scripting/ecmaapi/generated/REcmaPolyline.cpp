@@ -210,6 +210,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, convertArcToLineSegmentsLength, "convertArcToLineSegmentsLength");
             
+            REcmaHelper::registerFunction(&engine, proto, splitMajorArcs, "splitMajorArcs");
+            
             REcmaHelper::registerFunction(&engine, proto, contains, "contains");
             
             REcmaHelper::registerFunction(&engine, proto, containsShape, "containsShape");
@@ -5248,6 +5250,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::convertArcToLineSegmentsLength", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::splitMajorArcs
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::splitMajorArcs", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::splitMajorArcs";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("splitMajorArcs", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPolyline'
+    RPolyline cppResult =
+        
+               self->splitMajorArcs();
+        // return type: RPolyline
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.splitMajorArcs().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::splitMajorArcs", context, engine);
             return result;
         }
          QScriptValue

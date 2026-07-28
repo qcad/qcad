@@ -333,6 +333,7 @@ HEADERS += \
     $$PWD/REcmaSnapPerpendicular.h \
     $$PWD/REcmaSnapReference.h \
     $$PWD/REcmaSnapRestriction.h \
+    $$PWD/REcmaSnapSelection.h \
     $$PWD/REcmaSnapTangential.h \
     $$PWD/REcmaSolidData.h \
     $$PWD/REcmaSolidEntity.h \
@@ -726,6 +727,7 @@ SOURCES += \
     $$PWD/REcmaSnapPerpendicular.cpp \
     $$PWD/REcmaSnapReference.cpp \
     $$PWD/REcmaSnapRestriction.cpp \
+    $$PWD/REcmaSnapSelection.cpp \
     $$PWD/REcmaSnapTangential.cpp \
     $$PWD/REcmaSolidData.cpp \
     $$PWD/REcmaSolidEntity.cpp \

@@ -1,0 +1,1 @@
+Verifica se uma nova versão do QCAD está disponível.

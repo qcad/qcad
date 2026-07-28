@@ -1,0 +1,1 @@
+Narzędzie to służy do rysowania tekstu wzdłuż linii, łuku lub okręgu.

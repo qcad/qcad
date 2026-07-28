@@ -1,0 +1,1 @@
+Trims or extends a line, arc or ellipse to another entity.

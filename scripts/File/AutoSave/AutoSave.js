@@ -231,7 +231,7 @@ AutoSave.recoverUntitled = function() {
  * Checks if there is a backup file available for the given drawing file and
  * offers the user a choice to recover it if desired.
  *
- * \return true no auto save file or auto save file handled. False: cancel.
+ * \return Name of the file to open or empty to open no file.
  */
 AutoSave.recover = function(fileName) {
     var bakFileName = AutoSave.getAutoSaveFileName(fileName);
@@ -242,7 +242,7 @@ AutoSave.recover = function(fileName) {
     // no backup file found,
     // tell caller to open the original file:
     if (!bakFi.exists()) {
-        return true;
+        return fileName;
     }
 
     // backup file found: ask user what to do:
@@ -255,11 +255,10 @@ AutoSave.recover = function(fileName) {
 
     // canceled:
     if (ret===QMessageBox.Cancel) {
-        return false;
+        return "";
     }
 
     // find an available name for a numbered backup file (e.g. file.001.dxf):
-    var file = new QFile(fileName);
     var bakFile = new QFile(bakFileName);
     var bakFileNameNumbered;
     var num = 0;
@@ -267,7 +266,7 @@ AutoSave.recover = function(fileName) {
         var postfix = sprintf("bak%03d", num++);
         bakFileNameNumbered =
             fi.absolutePath() + QDir.separator +
-            fi.completeBaseName() + "." + postfix + "." + fi.suffix();
+            fi.completeBaseName() + "." + postfix + ".dxf";
     } while(new QFileInfo(bakFileNameNumbered).exists());
 
     // move backup file away and open regular file:
@@ -278,26 +277,38 @@ AutoSave.recover = function(fileName) {
             return false;
         }
         EAction.handleUserMessage(qsTr("Moved autosave backup file to:") + ' ' + bakFileNameNumbered);
-        return true;
+        return fileName;
     }
 
     // move regular file away and make backup file regular file to open:
     else if (ret===QMessageBox.Yes) {
-        if (!file.rename(bakFileNameNumbered)) {
-            EAction.handleUserWarning("[" + AutoSave.getTimestamp() + "] "
-                + qsTr("Cannot rename file:") + ' ' + fileName);
-            return false;
+
+        // make sure restored fileName has extension .dxf as autosaves are always in DXF format:
+        var fileNameNew = fileName;
+        var ext = fi.suffix().toLowerCase();
+        if (ext!=="dxf") {
+            fileNameNew = fi.absolutePath() + QDir.separator + fi.completeBaseName() + ".dxf";
         }
-        if (!bakFile.rename(fileName)) {
+
+        if (fileName===fileNameNew) {
+            var file = new QFile(fileName);
+            if (!file.rename(bakFileNameNumbered)) {
+                EAction.handleUserWarning("[" + AutoSave.getTimestamp() + "] "
+                    + qsTr("Cannot rename file:") + ' ' + fileName);
+                return "";
+            }
+        }
+
+        if (!bakFile.rename(fileNameNew)) {
             EAction.handleUserWarning("[" + AutoSave.getTimestamp() + "] "
                 + qsTr("Cannot rename file:") + ' ' + bakFileName);
-            return false;
+            return "";
         }
         EAction.handleUserMessage(qsTr("Moved original file to:") + ' ' + bakFileNameNumbered);
-        return true;
+        return fileNameNew;
     }
 
-    return false;
+    return "";
 };
 
 /**

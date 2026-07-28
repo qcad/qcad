@@ -270,9 +270,9 @@ EAction.prototype.resumeEvent = function() {
         this.setState(this.state);
     }
 
+    var di = this.getDocumentInterface();
     if (!this.optOutRelativeZeroResume) {
         // restore relative zero position when returning from another command:
-        var di = this.getDocumentInterface();
         if (!isNull(di) && isValidVector(this.relativeZeroPos)) {
             if (EAction.noRelativeZeroResume===true) {
                 EAction.noRelativeZeroResume = false;
@@ -283,6 +283,9 @@ EAction.prototype.resumeEvent = function() {
         }
         this.relativeZeroPos = undefined;
     }
+
+    // 20260506: revert to auto zoom to make sure specialized snap visuals (reference points) are updated correctly:
+    di.setSnap(new RSnapAuto());
 };
 
 /**
@@ -2058,12 +2061,15 @@ EAction.enableCoordinateWidget = function(enable) {
  * \param event RInputEvent
  * \param range Cursor range in pixels
  */
-EAction.getEntityIdUnderCursor = function(di, event, range, selectable) {
+EAction.getEntityIdUnderCursor = function(di, event, range, selectable, snappable) {
     if (isNull(di)) {
         return [];
     }
     if (isNull(selectable)) {
         selectable = false;
+    }
+    if (isNull(snappable)) {
+        snappable = false;
     }
 
     var view = event.getGraphicsView();
@@ -2074,7 +2080,7 @@ EAction.getEntityIdUnderCursor = function(di, event, range, selectable) {
     range = view.mapDistanceFromView(range);
 
     var strictRange = view.mapDistanceFromView(10);
-    return di.getClosestEntity(event.getModelPosition(), range, strictRange, !selectable);
+    return di.getClosestEntity(event.getModelPosition(), range, strictRange, !selectable, false, snappable);
 };
 
 /**
@@ -2082,12 +2088,15 @@ EAction.getEntityIdUnderCursor = function(di, event, range, selectable) {
  * \param event RInputEvent
  * \param range Cursor range in pixels
  */
-EAction.getEntityIdsUnderCursor = function(di, event, range, selectable) {
+EAction.getEntityIdsUnderCursor = function(di, event, range, selectable, snappable) {
     if (isNull(di)) {
         return [];
     }
     if (isNull(selectable)) {
         selectable = false;
+    }
+    if (isNull(snappable)) {
+        snappable = false;
     }
 
     var view = event.getGraphicsView();
@@ -2098,7 +2107,16 @@ EAction.getEntityIdsUnderCursor = function(di, event, range, selectable) {
     range = view.mapDistanceFromView(range);
 
     var doc = di.getDocument();
-    return doc.queryIntersectedEntitiesXY(new RBox(event.getModelPosition(), range), false, !selectable);
+    return doc.queryIntersectedEntitiesXY(
+                new RBox(event.getModelPosition(), range),
+                false,                  // checkBoundingBoxOnly
+                !selectable,            // includeLockedLayers
+                RObject.INVALID_ID,     // blockId
+                [],                     // filter
+                false,                  // selectedOnly
+                RObject.INVALID_ID,     // layerId
+                snappable               // snappable
+            );
 };
 
 /**
@@ -2109,12 +2127,15 @@ EAction.getEntityIdsUnderCursor = function(di, event, range, selectable) {
  * \param preview for previewing purposes
  * \param selectable Only return selectable (editable) entities
  */
-EAction.prototype.getEntityId = function(event, preview, selectable) {
+EAction.prototype.getEntityId = function(event, preview, selectable, snappable) {
     if (isNull(preview)) {
         preview = false;
     }
     if (isNull(selectable)) {
         selectable = false;
+    }
+    if (isNull(snappable)) {
+        snappable = false;
     }
 
     var di = this.getDocumentInterface();
@@ -2122,15 +2143,18 @@ EAction.prototype.getEntityId = function(event, preview, selectable) {
         return RObject.INVALID_ID;
     }
 
-    return EAction.getEntityId(di, this, event, preview, selectable);
+    return EAction.getEntityId(di, this, event, preview, selectable, snappable);
 };
 
-EAction.getEntityId = function(di, action, event, preview, selectable) {
+EAction.getEntityId = function(di, action, event, preview, selectable, snappable) {
     if (isNull(preview)) {
         preview = false;
     }
     if (isNull(selectable)) {
         selectable = false;
+    }
+    if (isNull(snappable)) {
+        snappable = false;
     }
 
     var altPressed = isAltPressed(event);
@@ -2140,13 +2164,13 @@ EAction.getEntityId = function(di, action, event, preview, selectable) {
             return action.idFromContextMenu;
         }
         else {
-            return EAction.getEntityIdUnderCursor(di, event, undefined, selectable);
+            return EAction.getEntityIdUnderCursor(di, event, undefined, selectable, snappable);
         }
     }
 
     // fixed range, we never want to show a lot of entities in the context menu:
     var r = 10 * (RSettings.getHighResolutionGraphicsView() ? RSettings.getDevicePixelRatio() : 1);
-    var entityIds = EAction.getEntityIdsUnderCursor(di, event, r, selectable);
+    var entityIds = EAction.getEntityIdsUnderCursor(di, event, r, selectable, snappable);
     entityIds = di.getStorage().orderBackToFront(entityIds);
     if (entityIds.length===0) {
         // no entity under cursor:

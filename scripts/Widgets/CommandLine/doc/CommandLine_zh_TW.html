@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>命令列</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/zh_TW/index.php?page=scripts/Widgets/CommandLine/doc/CommandLine_zh_TW.html">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>命令列</h2>
+<p class="toolinfo">
+<b>工具列 / 圖示:</b>
+<br /><img src="../doc/CommandLine.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>菜单:</b> <font face="courier new">檢視 &gt; 命令列</font>
+<br /><b>捷徑:</b> <font face="courier new">G, M</font>
+<br /><b>命令:</b> <font face="courier new">gm</font>
+</p>
+</div>
+<h3>說明</h3>
+<p>QCAD 的指令行允許您啟動指令、輸入座標或輸入距離或半徑等值。</p>
+<h3>輸入座標</h3>
+<p>絕對座標以「x,y」格式輸入：</p>
+<p>40,5</p>
+<p>相對座標以「@x,y」格式輸入：</p>
+<p>@10,6</p>
+<p>絕對極座標以「distance&lt;angle」格式輸入：</p>
+<p>10&lt;30</p>
+<p>相對極座標以「@distance&lt;angle」格式輸入：</p>
+<p>@10&lt;45</p>
+<p>輸入座標或值時，可以使用<a href="#expr">數學運算式</a>根據已知值計算座標。例如，座標 10,5 也可以輸入為：</p>
+<p>5+5,30/6</p>
+<h3>計算機</h3>
+<p>指令行也可以用作計算機。為此，請輸入前面帶有等號的<a href="#expr">數學運算式</a>：</p>
+<p>=3+4 7</p>
+<p>可以使用變數儲存值：</p>
+<p>=a=5+6 11 =a/2 5.5</p>
+<h3>數學運算式</h3>
+<p>可用的數學常數有：</p>
+<p>PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2</p>
+<p>可用的數學函數有：</p>
+<p>abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt, trunc</p>
+<p>這些常數和函數中的大多數是標準 ECMAScript (JavaScript) 函數，並線上記錄。在標準 ECMAScript 中，這些函數是 Math 類別的一部分，因此函數 <em>abs</em> 必須寫為 <em>Math.abs</em>。在 QCAD 指令行中，為方便起見，您可以省略 <em>Math.</em> 部分。三角函數（sin, cos, tan, asin, acos, atan, atan2）接受或返回以度為單位的角度。如果您更喜歡這些函數的弧度版本，請改用原始的 <em>Math.</em> 函數。</p>
+<p>函數 <em>rad2deg</em> 和 <em>deg2rad</em> 可用於在弧度和度之間轉換角度。</p></body>
+</html>

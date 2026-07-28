@@ -1,0 +1,1 @@
+Cet outil affiche / cache le widget de liste des calques.

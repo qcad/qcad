@@ -1,0 +1,2 @@
+Cet outil offre un moyen rapide de zoomer sur une certaine zone du
+dessin.

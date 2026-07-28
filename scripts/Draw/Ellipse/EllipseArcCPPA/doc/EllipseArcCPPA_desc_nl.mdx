@@ -1,0 +1,2 @@
+Tekent ellipsbogen met een gegeven middelpunt, hoofd- en nevenas en begin-
+en eindhoeken.

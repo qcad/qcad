@@ -1,0 +1,3 @@
+Dette værktøj afslutter alle aktive værktøjer og returnerer QCAD til sin
+inaktive tilstand, hvor du kan bruge musemarkøren til at vælge enheder, trække
+og slippe enheder osv.

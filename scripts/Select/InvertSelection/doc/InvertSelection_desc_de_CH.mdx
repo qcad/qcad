@@ -1,0 +1,2 @@
+Selektiert alle nicht selektierten Objekte und deselektiert alle
+selektierten Objekte.

@@ -325,7 +325,7 @@
         <translation>Väline viide</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+931"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Avastatud ringikujuline (rekursiivne) plokiviitamine:</translation>
     </message>
@@ -774,7 +774,7 @@
     <message>
         <location line="+1"/>
         <source>Bold</source>
-        <translation>Bold</translation>
+        <translation>Paks</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -820,7 +820,7 @@
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation>Veebilehel</translation>
+        <translation>Sees</translation>
     </message>
     <message>
         <location line="+1"/>

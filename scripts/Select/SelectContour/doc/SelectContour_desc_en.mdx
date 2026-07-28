@@ -1,0 +1,2 @@
+Selects or deselects entities that are connected to each other and form a
+contour (closed or open).

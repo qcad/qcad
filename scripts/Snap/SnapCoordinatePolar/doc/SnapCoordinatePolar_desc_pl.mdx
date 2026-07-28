@@ -1,0 +1,2 @@
+Określa punkt poprzez wprowadzenie współrzędnej bezwzględnej lub względnej
+biegunowej.

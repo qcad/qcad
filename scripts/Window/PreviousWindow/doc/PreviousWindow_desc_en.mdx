@@ -1,0 +1,1 @@
+This tool activates the previous open drawing window / tab.

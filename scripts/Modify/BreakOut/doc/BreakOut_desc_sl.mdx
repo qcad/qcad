@@ -1,0 +1,1 @@
+Razdeli objekte tako, da je segment, ki je omejen z dvema objektoma, izbrisan.

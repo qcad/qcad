@@ -1,0 +1,2 @@
+Esta ferramenta pode ser utilizada para alongar ou encurtar linhas ou arcos
+por uma determinada quantidade.

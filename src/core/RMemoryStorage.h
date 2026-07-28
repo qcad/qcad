@@ -91,6 +91,7 @@ public:
     bool hasBlockReferenceEntities() const;
     virtual QSet<RObject::Id> queryBlockReferences(RObject::Id blockId) const;
     virtual QSet<RObject::Id> queryAllBlockReferences() const;
+    virtual QSet<RObject::Id> queryBlockReferencesForLayers(const QSet<RObject::Id>& layerIds) const;
     virtual QSet<RObject::Id> queryAllViewports() const;
     //virtual QSet<RObject::Id> queryViewEntities(RObject::Id viewId);
 

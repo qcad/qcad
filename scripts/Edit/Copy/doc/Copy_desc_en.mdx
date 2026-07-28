@@ -1,0 +1,2 @@
+QCAD offers a set of tools to copy entities from one drawing to another,
+similar like other applications.

@@ -1,0 +1,1 @@
+Miroirs d'entités le long d'un axe donné.

@@ -1,0 +1,1 @@
+Échelle les entités par un facteur donné vers un centre donné.

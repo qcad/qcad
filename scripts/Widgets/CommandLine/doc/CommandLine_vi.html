@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Dòng lệnh</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/vi/index.php?page=scripts/Widgets/CommandLine/doc/CommandLine">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>Dòng lệnh</h2>
+<p class="toolinfo">
+<b>Thanh công cụ / Biểu tượng:</b>
+<br /><img src="../doc/CommandLine.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Trình đơn:</b> <font face="courier new">Xem &gt; Dòng lệnh</font>
+<br /><b>Phím tắt:</b> <font face="courier new">G, M</font>
+<br /><b>Lệnh:</b> <font face="courier new">gm</font>
+</p>
+</div>
+<h3>Mô tả</h3>
+<p>Dòng lệnh của QCAD cho phép bạn khởi động các lệnh, nhập tọa độ hoặc nhập các giá trị như khoảng cách hoặc bán kính.</p>
+<h3>Nhập tọa độ</h3>
+<p>Tọa độ tuyệt đối được nhập theo định dạng „x,y":</p>
+<p>40,5</p>
+<p>Tọa độ tương đối được nhập theo định dạng „@x,y":</p>
+<p>@10,6</p>
+<p>Tọa độ cực tuyệt đối được nhập theo định dạng „distance&lt;angle":</p>
+<p>10&lt;30</p>
+<p>Tọa độ cực tương đối được nhập theo định dạng „@distance&lt;angle":</p>
+<p>@10&lt;45</p>
+<p>Khi nhập tọa độ hoặc giá trị, <a href="#expr">biểu thức toán học</a> có thể được dùng để tính một tọa độ dựa trên các giá trị đã biết. Ví dụ tọa độ 10,5 cũng có thể được nhập như:</p>
+<p>5+5,30/6</p>
+<h3>Máy tính</h3>
+<p>Dòng lệnh cũng có thể được dùng như một máy tính. Để làm điều này, nhập một <a href="#expr">biểu thức toán học</a> đứng trước bởi một dấu bằng:</p>
+<p>=3+4 7</p>
+<p>Các biến có thể được dùng để lưu các giá trị:</p>
+<p>=a=5+6 11 =a/2 5.5</p>
+<h3>Biểu thức toán học</h3>
+<p>Các hằng số toán học có sẵn là:</p>
+<p>PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2</p>
+<p>Các hàm toán học có sẵn là:</p>
+<p>abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt, trunc</p>
+<p>Hầu hết các hằng số và hàm này là các hàm ECMAScript (JavaScript) tiêu chuẩn và được ghi tài liệu trực tuyến. Trong ECMAScript tiêu chuẩn, các hàm này là một phần của lớp Math nên hàm <em>abs</em> sẽ phải được viết là <em>Math.abs</em>. Trong dòng lệnh QCAD, bạn có thể bỏ đi phần <em>Math.</em> để tiện lợi. Các hàm lượng giác (sin, cos, tan, asin, acos, atan, atan2) chấp nhận hoặc trả về các góc theo độ. Nếu bạn thích các phiên bản radian của các hàm này, dùng các hàm <em>Math.</em> gốc thay thế.</p>
+<p>Các hàm <em>rad2deg</em> và <em>deg2rad</em> có thể được dùng để chuyển đổi các góc giữa radian và độ.</p></body>
+</html>

@@ -730,7 +730,7 @@
         <translation>Max. kiterjedés</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+931"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Körkörös (rekurzív) blokkreferencia észlelve:</translation>
     </message>
@@ -946,7 +946,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation>Kétpontvonal</translation>
+        <translation>Felosztás</translation>
     </message>
     <message>
         <location line="+2"/>

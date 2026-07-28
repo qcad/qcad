@@ -1,0 +1,3 @@
+Esta herramienta invierte la dirección de todas las entidades de líneas,
+arcos y elipses seleccionadas. Esto es útil sobre todo para dibujos que se
+están preparando para su procesamiento posterior (p. ej. CAM).

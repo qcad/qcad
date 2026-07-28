@@ -1,0 +1,2 @@
+Utilize esta ferramenta para criar linhas com um determinado ângulo. A linha
+é normalmente recortada no comprimento desejado após a sua criação.

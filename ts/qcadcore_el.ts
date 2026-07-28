@@ -317,7 +317,7 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation>Ιδιοκτησία Αναφοράς</translation>
+        <translation>Ανήκει σε Αναφορά</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -325,7 +325,7 @@
         <translation>Εξωτερική Αναφορά</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+931"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Ανιχνεύθηκε κυκλική (αναδρομική) αναφορά μπλοκ:</translation>
     </message>
@@ -445,7 +445,7 @@
     <message>
         <location line="+1"/>
         <source>Text horizontal</source>
-        <translation>Οριζόντιο κείμενο</translation>
+        <translation>Οριζόντια θέση κειμένου</translation>
     </message>
     <message>
         <location line="+1"/>

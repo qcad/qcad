@@ -44,6 +44,7 @@ MiscIO.getMenu = function() {
         MiscIO.getTitle(),
         "MiscIOMenu"
     );
+    menu.setProperty("scriptFile", MiscIO.includeBasePath + "/MiscIO.js");
     return menu;
 };
 

@@ -1,0 +1,1 @@
+Deze tool verwijdert de objecten die op dat moment zijn geselecteerd.

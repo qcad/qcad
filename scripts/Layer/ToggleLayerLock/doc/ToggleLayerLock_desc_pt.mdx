@@ -1,0 +1,6 @@
+Esta ferramenta alterna o estado bloqueado da camada actual. Também pode
+alternar o estado bloqueado das camadas clicando no ícone de bloqueio ao lado
+do nome da camada na lista de camadas.
+
+As entidades em camadas bloqueadas não podem ser seleccionadas, apagadas ou
+modificadas.

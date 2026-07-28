@@ -1,0 +1,3 @@
+Esta ferramenta inverte a direcção de todas as entidades de linha, arco e
+elipse de arco seleccionadas. Isto é sobretudo útil para desenhos que estão a
+ser preparados para processamento posterior (por exemplo, CAM).

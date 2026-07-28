@@ -312,7 +312,7 @@
     <message>
         <location line="+1"/>
         <source>Layout</source>
-        <translation>Utforming</translation>
+        <translation>Oppsett</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -325,7 +325,7 @@
         <translation>Ekstern referanse</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+931"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Sirkulær (rekursiv) blokkreferanse oppdaget:</translation>
     </message>
@@ -559,7 +559,7 @@
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation>Trekningsrekkefølge</translation>
+        <translation>Tegnerekkefølge</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1118,7 +1118,7 @@
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation>Luftstrøm</translation>
+        <translation>Luftledning</translation>
     </message>
     <message>
         <location line="+2"/>

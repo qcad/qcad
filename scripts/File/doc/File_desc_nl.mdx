@@ -1,0 +1,2 @@
+Het bestandsmenu bevat alle hulpmiddelen om bestanden te openen, op te
+slaan, te importeren, te exporteren en af te drukken.

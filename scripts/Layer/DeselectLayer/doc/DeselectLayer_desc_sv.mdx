@@ -1,0 +1,1 @@
+Det här verktyget tar bort alla enheter på det aktuella lagret.

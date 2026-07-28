@@ -1,0 +1,1 @@
+Gebruik dit functie om tekst langs een lijn, boog of cirkel te tekenen.

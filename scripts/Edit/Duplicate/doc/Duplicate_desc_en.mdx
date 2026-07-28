@@ -1,0 +1,1 @@
+This tool duplicates the selected entities and selects the created copy.

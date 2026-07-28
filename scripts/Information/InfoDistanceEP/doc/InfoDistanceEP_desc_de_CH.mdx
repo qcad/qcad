@@ -1,0 +1,2 @@
+Dieses Werkzeug misst den genauen Abstand zwischen einem Objekt und einem
+Punkt.

@@ -247,6 +247,21 @@ RVector RCircle::getPointAtAngle(double a) const {
 }
 
 /**
+ * \return Distance from \c point to the nearest point on the circle. The
+ *         radius for a point at the center (infinite solutions).
+ *         \c limited and \c strictRange are ignored (circles are unlimited).
+ */
+double RCircle::getDistanceTo(const RVector& point, bool limited, double strictRange) const {
+    // point is at the center of the circle, infinite solutions. The same
+    // condition as in getVectorTo(), which returns an invalid vector there:
+    if ((point - center).get2D().getSquaredMagnitude() < RS::PointTolerance * RS::PointTolerance) {
+        return radius;
+    }
+
+    return RShape::getDistanceTo(point, limited, strictRange);
+}
+
+/**
  * \return Vector from the nearest point on the circle to \c point.
  *         Returns RVector::invalid if \c point is at the center (infinite solutions).
  *         \c limited and \c strictRange are ignored (circles are unlimited).

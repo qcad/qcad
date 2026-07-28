@@ -32,6 +32,8 @@
 #include <QStringDecoder>
 #endif
 
+#include <QCryptographicHash>
+
 #if QT_VERSION >= 0x050300
 #include <QPageSize>
 #endif
@@ -991,4 +993,60 @@ QString RS::convert(const QByteArray& str, const QString& codecName) {
         return codec->toUnicode(str);
     }
 #endif
+}
+
+/**
+ * \return a unique image file path for an image from an imported file based on the
+ * base name of the imported file and an MD5 hash of the image data.
+ *
+ * \param docFileName the name of the document file the image is imported into, used to determine the path
+ * for the image (same path) or empty if the imported file is opened not imported.
+ * \param importedFileName the name of the file the image was imported from,
+ * used to determine the base name of the image file name (e.g. an SVG, EPS or PDF file)
+ * \param imageData the data of the image, used to calculate an MD5 hash that is added to the base name
+ */
+QString RS::getImageFilePath(const QString& docFileName, const QString& importedFileName, const QByteArray& imageData) {
+    bool docIsImport = QFileInfo(docFileName).canonicalFilePath()==QFileInfo(importedFileName).canonicalFilePath();
+
+    QString suffix = QFileInfo(importedFileName).suffix().toLower();
+
+    QString path;
+
+    if (docIsImport || docFileName.isEmpty()) {
+        QString subDir = suffix + "_images";
+
+        // opening the imported file or importing into unsaved doc: save imaged in subdir:
+        QDir d(QFileInfo(importedFileName).absolutePath());
+        if (!d.exists(subDir)) {
+            if (!d.mkdir(subDir)) {
+                qDebug() << "cannot create directory: " + subDir;
+                return QString();
+            }
+        }
+
+        path = QFileInfo(importedFileName).absolutePath() + "/" + subDir;
+    }
+    else {
+        // importing into saved doc: save image in same path as doc:
+        path = QFileInfo(docFileName).absolutePath();
+    }
+
+    // get the base name of the imported file (e.g. "image.svg" -> "image"):
+    QString baseName = QFileInfo(importedFileName).completeBaseName();
+
+    // calculate an MD5 hash of the image data:
+    QByteArray hash = QCryptographicHash::hash(imageData, QCryptographicHash::Md5);
+
+#if QT_VERSION >= 0x050900
+    QByteArray hashHex = hash.toHex('\0');
+#else
+    QByteArray hashHex = hash.toHex();
+#endif
+    // create a unique file name for the image based on the base name and the hash:
+    QString imageFileName = QString("%1_%2.png").arg(baseName, QString(hashHex));
+
+    // create the full path to the image file in the images directory:
+    QString imageFilePath = path + "/" + imageFileName;
+
+    return imageFilePath;
 }

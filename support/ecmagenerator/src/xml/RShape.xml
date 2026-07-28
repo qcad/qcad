@@ -1086,6 +1086,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getInnerMostContour"
+    cppName="getInnerMostContour" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="position" isConst="true" />
+        <arg type="QList &lt; QSharedPointer &lt; RShape &gt; &gt; &amp;"
+        typeName="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+        name="shapes" isConst="true" />
+      </variant>
+    </method>
     <method name="roundShapes" cppName="roundShapes"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

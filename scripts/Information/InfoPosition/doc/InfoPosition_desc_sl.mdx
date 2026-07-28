@@ -1,0 +1,1 @@
+To orodje izpiše na risbo absolutne, kartezijske koordinate točk.

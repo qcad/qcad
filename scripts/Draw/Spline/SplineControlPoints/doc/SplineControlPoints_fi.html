@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Käyrä (ohjauspisteet)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/fi/index.php?page=scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>Käyrä (ohjauspisteet)</h2>
+<p class="toolinfo">
+<b>Työkalurivi / kuvake:</b>
+<br /><img src="../../doc/Spline.png" width="40" height="40" />
+&#160;&#160;&#160;
+<img src="../doc/SplineControlPoints.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Valikko:</b> <font face="courier new">Piirrä &gt; Käyrä &gt; Käyrä (ohjauspisteet)</font>
+<br /><b>Shortcut:</b> <font face="courier new">S, P</font>
+<br /><b>Komennot:</b> <font face="courier new">spline | sp</font>
+</p>
+</div>
+<h3>Kuvaus</h3>
+<p>Piirtää splinikäyriä kontrollipisteistä. Tuettuja splinejä ovat vain epäyhtenäiset rationaaliset B-splinit (NURBS), joilla on homogeeniset painokertoimet.</p><h3>Käyttö</h3>
+<p> </p>
+<ol>
+<li>Valitse splinin aste asetustyökalurivillä. Tuetut asteet ovat 2 (toisen asteen b-splini) ja 3 (kolmannen asteen b-splini). Mitä korkeampi aste, sitä 'pehmeämmäksi' käyrä tulee. Huomaa, että toisen asteen b-splini vaatii määritelmän mukaan vähintään 3 kontrollipistettä, kun taas kolmannen asteen b-splinillä on vähintään 4 kontrollipistettä.</li>
+<li>Valitse valintaruutu 'Closed' asetustyökalurivillä, jos haluat luoda suljetun splinin. Suljetut splinit ovat jatkuvia suljettuja silmukoita.</li>
+<li>Määritä kontrollipisteet. Kolmannen (toisen asteen b-splineille) tai neljännen (kolmannen asteen b-splineille) kontrollipisteen määrittämisen jälkeen näytetään esikatselu. Voit poistaa viimeisen kontrollipisteen uudelleen napsauttamalla asetustyökalurivin painiketta 'Undo'.</li>
+<li>Paina Escape tai napsauta hiiren oikeaa painiketta viimeisen pisteen asettamisen jälkeen vahvistaaksesi splinin muodon.</li>
+<li>Voit nyt luoda toisen splinin tai napsauttaa uudelleen oikeaa painiketta lopettaaksesi työkalun. Esimerkki kahdesta avoimesta splinistä (toisen ja kolmannen asteen):<br/><img src="SplineControlPoints01.png" alt="SplineControlPoints01" width="240" height="166" /><br/> Esimerkki kahdesta suljetusta, jaksollisesta splinistä (toisen ja kolmannen asteen):<br/><img src="SplineControlPoints02.png" alt="SplineControlPoints02" width="288" height="166" /><br/></li>
+</ol></body>
+</html>

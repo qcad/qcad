@@ -66,6 +66,9 @@ DefaultNavigation.applyPreferences = function(doc) {
     }
     DefaultNavigation.panGesture = RSettings.getBoolValue("GraphicsViewNavigation/PanGesture", false);
     DefaultNavigation.middleMouseButtonZoomFactor = RSettings.getDoubleValue("GraphicsViewNavigation/MiddleMouseButtonZoomFactor", 1.2);
+    if (DefaultNavigation.middleMouseButtonZoomFactor<=RS.PointTolerance) {
+        DefaultNavigation.middleMouseButtonZoomFactor = 1.0;
+    }
     DefaultNavigation.panThreshold = RSettings.getDoubleValue("GraphicsViewNavigation/PanThreshold", 4);
     DefaultNavigation.panSpeed = RSettings.getDoubleValue("GraphicsViewNavigation/PanSpeed", 0.5);
     DefaultNavigation.scrollHorVer = RSettings.getBoolValue("GraphicsViewNavigation/ScrollHorVer", false);

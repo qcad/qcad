@@ -1,0 +1,2 @@
+Renomeie o bloco ativo. A mesma caixa de diálogo da criação do bloco é
+exibida. O bloco e todas as inserções do bloco serão renomeadas.

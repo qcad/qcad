@@ -1,0 +1,1 @@
+Vælger eller fravælger alle enheder, der er skåret af en linje.

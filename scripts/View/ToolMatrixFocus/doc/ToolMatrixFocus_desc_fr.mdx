@@ -1,0 +1,2 @@
+Cette commande active le champ filtre (recherche) de la matrice d'outils
+pour la saisie.

@@ -1,0 +1,2 @@
+Dette værktøj opretter isometriske projektioner (og andre typer
+projektioner) af det aktuelle valg i tegningen.

@@ -23,6 +23,7 @@
 #include "gui_global.h"
 
 #include <QList>
+#include <QHash>
 #include <QMultiMap>
 
 #include "RGraphicsScene.h"
@@ -88,6 +89,14 @@ public:
     void transformAndApplyPatternPath(RPainterPath& path) const;
     
     virtual void unexportEntity(RObject::Id entityId);
+
+    /**
+     * \return A number which changes whenever the drawables of the document
+     * change. Used to invalidate caches which depend on them.
+     */
+    int getDrawablesVersion() const {
+        return drawablesVersion;
+    }
 
     virtual void exportPoint(const RPoint& point);
     virtual double exportLine(const RLine& line, double offset = RNANDOUBLE);
@@ -175,9 +184,15 @@ protected:
 
 private:
 
-    QMap<RObject::Id, QList<RGraphicsSceneDrawable> > drawables;
-    QMap<RObject::Id, RBox> clipRectangles;
+    // looked up by entity ID once per entity per frame, never iterated:
+    // a hash keeps those lookups constant time
+    //! bumped whenever the drawables of the document change
+    int drawablesVersion;
 
+    QHash<RObject::Id, QList<RGraphicsSceneDrawable> > drawables;
+    QHash<RObject::Id, RBox> clipRectangles;
+
+    // getPreviewEntityIds() relies on keys() being ordered: keep these maps
     QMap<RObject::Id, QList<RGraphicsSceneDrawable> > previewDrawables;
     QMap<RObject::Id, RBox> previewClipRectangles;
 

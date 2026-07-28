@@ -1,0 +1,2 @@
+Verdeelt objecten door het wegsnijden van een segment dat wordt beperkt door
+kruisende objecten.

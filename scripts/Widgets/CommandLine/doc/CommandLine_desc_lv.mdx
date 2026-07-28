@@ -1,0 +1,53 @@
+QCAD komandrinda ļauj sākt komandas, ievadīt koordinātas vai ievadīt vērtības, piemēram, attālumus vai rādiusus.
+
+### Koordinātu ievadīšana
+
+Absolūtās koordinātas ievada formātā „x,y":
+
+40,5
+
+Relatīvās koordinātas ievada formātā „@x,y":
+
+@10,6
+
+Absolūtās polārās koordinātas ievada formātā „attālums&lt;leņķis":
+
+10&lt;30
+
+Relatīvās polārās koordinātas ievada formātā „@attālums&lt;leņķis":
+
+@10&lt;45
+
+Ievadot koordinātas vai vērtības, [matemātiskās izteiksmes](#expr) var izmantot, lai aprēķinātu koordinātu, pamatojoties uz zināmām vērtībām. Piemēram, koordinātu 10,5 var arī ievadīt kā:
+
+5+5,30/6
+
+### Kalkulators
+
+Komandrindu var izmantot arī kā kalkulatoru. Lai to izdarītu, ievadiet [matemātisku izteiksmi](#expr) pirms tās ierakstot vienādības zīmi:
+
+=3+4  
+7
+
+Mainīgos var izmantot vērtību saglabāšanai:
+
+=a=5+6  
+11  
+=a/2  
+5.5  
+
+### Matemātiskās izteiksmes
+
+Pieejamās matemātiskās konstantes ir:
+
+PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2
+
+Pieejamās matemātiskās funkcijas ir:
+
+abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad,
+sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh,
+acosh, asinh, atanh, expm1, hypot, cbrt, trunc
+
+Lielākā daļa no šīm konstantēm un funkcijām ir standarta ECMAScript (JavaScript) funkcijas un dokumentētas tiešsaistē. Standarta ECMAScript šīs funkcijas ir daļa no Math klases, tāpēc funkcija *abs* būtu jāraksta kā *Math.abs*. QCAD komandrindā ērtības labad varat izlaist *Math.* daļu. Trigonometriskās funkcijas (sin, cos, tan, asin, acos, atan, atan2) pieņem vai atgriež leņķus grādos. Ja dodat priekšroku šo funkciju radiānu versijām, tā vietā izmantojiet oriģinālās *Math.* funkcijas.
+
+Funkcijas *rad2deg* un *deg2rad* var izmantot leņķu konvertēšanai starp radiāniem un grādiem.

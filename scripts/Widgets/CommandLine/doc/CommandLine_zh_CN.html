@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>命令行(C)</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/zh_CN/index.php?page=scripts/Widgets/CommandLine/doc/CommandLine_zh_CN.html">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>命令行(C)</h2>
+<p class="toolinfo">
+<b>工具栏/图标:</b>
+<br /><img src="../doc/CommandLine.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>菜单:</b> <font face="courier new">视图(V) &gt; 命令行(C)</font>
+<br /><b>快捷方式:</b> <font face="courier new">G, M</font>
+<br /><b>命令:</b> <font face="courier new">gm</font>
+</p>
+</div>
+<h3>说明</h3>
+<p>QCAD 的命令行允许您启动命令、输入坐标或输入距离或半径等值。</p>
+<h3>输入坐标</h3>
+<p>绝对坐标以"x,y"格式输入：</p>
+<p>40,5</p>
+<p>相对坐标以"@x,y"格式输入：</p>
+<p>@10,6</p>
+<p>绝对极坐标以"distance&lt;angle"格式输入：</p>
+<p>10&lt;30</p>
+<p>相对极坐标以"@distance&lt;angle"格式输入：</p>
+<p>@10&lt;45</p>
+<p>输入坐标或值时，可以使用<a href="#expr">数学表达式</a>根据已知值计算坐标。例如，坐标 10,5 也可以输入为：</p>
+<p>5+5,30/6</p>
+<h3>计算器</h3>
+<p>命令行也可以用作计算器。为此，请输入前面带有等号的<a href="#expr">数学表达式</a>：</p>
+<p>=3+4 7</p>
+<p>可以使用变量存储值：</p>
+<p>=a=5+6 11 =a/2 5.5</p>
+<h3>数学表达式</h3>
+<p>可用的数学常量有：</p>
+<p>PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2</p>
+<p>可用的数学函数有：</p>
+<p>abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt, trunc</p>
+<p>这些常量和函数中的大多数是标准 ECMAScript (JavaScript) 函数，并在线记录。在标准 ECMAScript 中，这些函数是 Math 类的一部分，因此函数 <em>abs</em> 必须写为 <em>Math.abs</em>。在 QCAD 命令行中，为方便起见，您可以省略 <em>Math.</em> 部分。三角函数（sin, cos, tan, asin, acos, atan, atan2）接受或返回以度为单位的角度。如果您更喜欢这些函数的弧度版本，请改用原始的 <em>Math.</em> 函数。</p>
+<p>函数 <em>rad2deg</em> 和 <em>deg2rad</em> 可用于在弧度和度之间转换角度。</p></body>
+</html>

@@ -1,0 +1,2 @@
+Deze functie verhoogt de huidige kijkfactor. Hetzelfde effect kan ook worden
+bereikt door het muiswiel van u af te draaien.

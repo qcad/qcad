@@ -1,0 +1,1 @@
+To orodje postavi pozicijo besedila, vseh označenih kotoranj, nazaj na samodejno izračunano pozicijo.

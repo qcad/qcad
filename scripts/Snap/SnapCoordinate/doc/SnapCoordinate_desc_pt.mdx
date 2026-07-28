@@ -1,0 +1,1 @@
+Define um ponto introduzindo uma cota cartesiana absoluta ou relativa.

@@ -1,0 +1,2 @@
+- Pick the entity from which you wish to break out a gap.
+- Click the center of the gap on the entity.

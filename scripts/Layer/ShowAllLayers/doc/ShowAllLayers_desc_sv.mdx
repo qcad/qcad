@@ -1,0 +1,2 @@
+Det här verktyget kan användas för att visa alla lager på en gång. Detta kan
+vara användbart när du arbetar med en ritning med många lager.

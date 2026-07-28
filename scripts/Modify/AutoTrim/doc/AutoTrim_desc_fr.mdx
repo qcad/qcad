@@ -1,0 +1,2 @@
+Coupe ou étend une entité des deux côtés jusqu'aux entités limitantes
+suivantes.

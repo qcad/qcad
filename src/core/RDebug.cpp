@@ -35,7 +35,7 @@
 #include <execinfo.h>
 #endif
 
-#if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
+#if defined(Q_OS_MACOS) && !defined(Q_OS_IOS)
 QMap<int, uint64_t> RDebug::timerMac;
 #else
 QMap<int, QElapsedTimer> RDebug::timer;
@@ -78,7 +78,7 @@ void RDebug::printBacktrace(const QString& prefix) {
 }
 
 void RDebug::startTimer(int id) {
-#if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
+#if defined(Q_OS_MACOS) && !defined(Q_OS_IOS)
     timerMac[id] = mach_absolute_time();
 #else
     timer[id].start();
@@ -87,7 +87,7 @@ void RDebug::startTimer(int id) {
 
 
 uint RDebug::stopTimer(int id, const QString& msg, uint msThreshold) {
-#if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
+#if defined(Q_OS_MACOS) && !defined(Q_OS_IOS)
     Nanoseconds elapsedNano;
     uint64_t end = mach_absolute_time();
     uint64_t elapsed = end - timerMac[id];

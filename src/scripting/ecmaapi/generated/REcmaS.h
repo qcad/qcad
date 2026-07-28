@@ -124,6 +124,9 @@
         getAvailableGeometry
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getImageFilePath
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getMetaType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

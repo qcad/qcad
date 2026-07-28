@@ -1,0 +1,1 @@
+Tekent een boog met behulp van het beginpunt, eindpunt en de hoek.

@@ -1,0 +1,3 @@
+Pode apagar a camada actualmente seleccionada da lista de camadas com este
+comando. Note que todas as entidades dessa camada também serão eliminadas.  
+A camada "0" nunca poderá ser apagada.

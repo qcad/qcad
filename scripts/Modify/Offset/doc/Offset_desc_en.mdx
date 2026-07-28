@@ -1,0 +1,2 @@
+With this tool you can create parallels to existing lines (or concentric arcs
+and circles).

@@ -1,0 +1,1 @@
+Snapt naar rasterpunten.

@@ -1,0 +1,2 @@
+This command creates a new layer. The layer dialog is shown where you can
+specify the name for the new layer and adjust its attributes.

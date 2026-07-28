@@ -121,9 +121,7 @@ double RMath::pow(double x, double y) {
 /**
  * \return true if v is non NaN and not Inf.
  */
-bool RMath::isNormal(double v) {
-    return isSane(v);
-}
+
 
 /**
  * \return true if v is NaN.
@@ -152,9 +150,7 @@ bool RMath::isInf(double v) {
 #endif
 }
 
-bool RMath::isSane(double v) {
-    return !isNaN(v) && !isInf(v);
-}
+
 
 /**
  * Evaluates the given mathematical expression and returns the result.
@@ -1069,7 +1065,7 @@ RVector RMath::parseCoordinate(const QString& coordinateString, const RVector& r
 QString RMath::getMd5Hash(const QString& data) {
     QByteArray ba = QCryptographicHash::hash(data.toUtf8(), QCryptographicHash::Md5);
 #if QT_VERSION >= 0x050900
-    return QString(ba.toHex(0));
+    return QString(ba.toHex('\0'));
 #else
     return QString(ba.toHex());
 #endif

@@ -1,0 +1,3 @@
+Esta herramienta recupera el último cambio del dibujo. QCAD puede recuperar
+más de un comando. Por ejemplo, si acaba de crear una línea y un círculo y
+desea deshacer ambos, utilice el comando deshacer dos veces.

@@ -1,0 +1,2 @@
+Skaliert die Ansicht so, dass alle Objekte auf sichtbaren Layern in der
+Grafikansicht angezeigt werden.

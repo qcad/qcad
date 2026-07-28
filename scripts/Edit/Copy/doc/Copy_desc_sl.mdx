@@ -1,0 +1,1 @@
+QCAD ponuja podobna orodja za kopiranje elementov risbe v drugo/isto risbo, kot druge aplikacije.

@@ -1,0 +1,2 @@
+Hvis du kender startpunktet, slutpunktet og et punkt midt imellem på
+buelinjen, kan du bruge dette værktøj til at tegne en bue.

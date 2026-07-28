@@ -1,0 +1,2 @@
+Divise les objets en découpant un segment entre deux points définis par
+l'utilisateur.

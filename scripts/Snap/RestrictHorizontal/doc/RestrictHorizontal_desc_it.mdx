@@ -1,0 +1,2 @@
+Limita il cursore orizzontalmente alla stessa posizione Y del punto zero
+relativo.

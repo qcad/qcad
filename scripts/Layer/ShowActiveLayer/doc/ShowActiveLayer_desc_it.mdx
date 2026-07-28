@@ -1,0 +1,2 @@
+Questo strumento nasconde tutti i livelli tranne quello selezionato (attivo)
+nell'elenco dei livelli.

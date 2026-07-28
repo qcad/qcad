@@ -361,6 +361,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="notifyDockWidgetClosed"
+    cppName="notifyDockWidgetClosed" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QWidget *" typeName="QWidget *"
+        name="dockWidget" isConst="false" />
+      </variant>
+    </method>
     <method name="quit" cppName="quit" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
@@ -380,6 +388,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QMdiSubWindow *" typeName="QMdiSubWindow *"
         name="sw" isConst="false" />
       </variant>
+    </method>
+    <method name="forgetDockWidgetState"
+    cppName="forgetDockWidgetState" specifier="protected"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="closeEvent" cppName="closeEvent"
     specifier="protected" isStatic="false" isVirtual="true"
@@ -411,6 +424,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QEvent *" typeName="QEvent *" name="e"
         isConst="false" />
       </variant>
+    </method>
+    <method name="restoreClosedDockWidgets"
+    cppName="restoreClosedDockWidgets" specifier="protected"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="updateGuiActions" cppName="updateGuiActions"
     specifier="public" isStatic="false" isVirtual="false"

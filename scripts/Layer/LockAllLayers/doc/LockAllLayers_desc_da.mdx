@@ -1,0 +1,1 @@
+Dette værktøj kan bruges til at låse alle lag på en gang.

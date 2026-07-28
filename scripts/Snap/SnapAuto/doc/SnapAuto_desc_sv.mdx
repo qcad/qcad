@@ -1,0 +1,6 @@
+Det automatiska snapsverktyget snapsar till den närmaste skärningspunkten,
+ändpunkten, mittpunkten, vinkelräta punkten, referenspunkten, rutnätspunkten
+eller punkten på en enhet i den prioriteringsordningen.  
+De typer av referenspunkter som det automatiska snapsverktyget snapsar
+till kan konfigureras under *Redigera > Programinställningar > Snaps > Automatisk
+snaps*

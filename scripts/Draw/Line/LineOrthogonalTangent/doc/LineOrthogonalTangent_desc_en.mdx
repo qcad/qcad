@@ -1,0 +1,2 @@
+Use this tool to create a line that is orthogonal to another line and
+tangent to an existing arc, circle or ellipse entity.

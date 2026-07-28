@@ -1,0 +1,1 @@
+Ta ukaz ustvari posamezne točke. Točke so na sliki prikazane kot majhni križi.

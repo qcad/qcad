@@ -1,0 +1,2 @@
+Teilt Objekte indem ein Segment, das von zwei schneidenden Objekten begrenzt
+wird, herausgeschnitten wird.

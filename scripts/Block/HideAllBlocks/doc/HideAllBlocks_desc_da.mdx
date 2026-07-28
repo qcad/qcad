@@ -1,0 +1,1 @@
+Dette værktøj skjuler alle blokreferencer i tegningen.

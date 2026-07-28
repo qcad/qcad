@@ -1,0 +1,8 @@
+S'accroche à l'un des neuf points de référence de la boîte de délimitation
+autour de la sélection actuelle : les quatre coins, les milieux des quatre
+bords ou le centre. Le point le plus proche du curseur de la souris est
+utilisé.  
+Cet outil d'accrochage est utile pour déplacer, copier ou aligner d'une autre
+manière une sélection par rapport à la grille ou à d'autres entités, par
+exemple pour placer le centre ou un coin de la sélection à une position
+spécifique.

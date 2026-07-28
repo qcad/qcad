@@ -6,7 +6,7 @@ SvgImporterFactory.prototype = new RFileImporterFactoryAdapter();
 SvgImporterFactory.includeBasePath = includeBasePath;
 
 SvgImporterFactory.prototype.getFilterStrings = function() {
-    return [ qsTr("SVG Files %1").arg("(*.svg)") ];
+    return [ qsTranslate("SvgImporter", "SVG Files %1").arg("(*.svg)") ];
 };
 
 SvgImporterFactory.prototype.canImport = function(fileName, nameFilter) {

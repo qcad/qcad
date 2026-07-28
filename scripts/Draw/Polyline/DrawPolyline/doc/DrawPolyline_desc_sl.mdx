@@ -1,0 +1,1 @@
+S tem orodjem, lahko ustvarite lomljenke. Lomljenka je skupaj držeča se sekvenca črt ter lokov.

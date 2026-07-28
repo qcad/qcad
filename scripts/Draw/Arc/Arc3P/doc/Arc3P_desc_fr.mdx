@@ -1,0 +1,2 @@
+Si vous connaissez le point de départ, le point d'arrivée et un point
+intermédiaire de l'arc, vous pouvez utiliser cet outil pour créer des arcs.

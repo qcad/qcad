@@ -1,0 +1,2 @@
+Menu Plik zawiera wszystkie narzędzia do otwierania, zapisywania,
+importowania, eksportowania i drukowania plików

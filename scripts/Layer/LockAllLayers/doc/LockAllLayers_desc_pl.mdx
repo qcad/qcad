@@ -1,0 +1,2 @@
+Narzędzie to umożliwia wygodne blokowanie wszystkich warstw
+jednocześnie.

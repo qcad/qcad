@@ -1,0 +1,1 @@
+Ujame točke mreže.

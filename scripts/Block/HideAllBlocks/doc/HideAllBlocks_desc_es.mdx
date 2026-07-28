@@ -1,0 +1,1 @@
+Esta herramienta oculta todas las referencias de bloques en el dibujo.

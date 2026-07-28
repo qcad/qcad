@@ -23,9 +23,11 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QByteArray&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDockWidget&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QElapsedTimer&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMainWindow&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPointer&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QToolBar&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMainWindow.h"</cpp:file></cpp:include>
@@ -168,11 +170,16 @@
         <return>return <expr><name>keyLog</name></expr>;</return>
     }</block></function>
 
+    <function_decl><type><name>void</name></type> <name>notifyDockWidgetClosed</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>dockWidget</name></decl></param>)</parameter_list>;</function_decl>
+
 </public><public>public slots:
     <function_decl><type><name>void</name></type> <name>quit</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>currentTabChanged</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>subWindowActivated</name><parameter_list>(<param><decl><type><name>QMdiSubWindow</name>*</type> <name>sw</name></decl></param>)</parameter_list>;</function_decl>
     <comment type="line">//void objectDestroyed(QObject *obj);</comment>
+
+</public><protected>protected slots:
+    <function_decl><type><name>void</name></type> <name>forgetDockWidgetState</name><parameter_list>()</parameter_list>;</function_decl>
 
 <label><name>signals</name>:</label>
     <comment type="block">/**
@@ -221,12 +228,14 @@
 
     <function_decl><type><name>void</name></type> <name>toolBarContextMenu</name><parameter_list>(<param><decl><type><name>QMenu</name>*</type> <name>menu</name></decl></param>)</parameter_list>;</function_decl>
 
-</public><protected>protected:
+</protected><protected>protected:
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>closeEvent</name><parameter_list>(<param><decl><type><name>QCloseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>dropEvent</name><parameter_list>(<param><decl><type><name>QDropEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>dragEnterEvent</name><parameter_list>(<param><decl><type><name>QDragEnterEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>event</name><parameter_list>(<param><decl><type><name>QEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>restoreClosedDockWidgets</name><parameter_list>()</parameter_list>;</function_decl>
 
 </protected><public>public slots:
     <function_decl><type><name>void</name></type> <name>updateGuiActions</name><parameter_list>(<param><decl><type><name>QMdiSubWindow</name>*</type> <name>mdiChild</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
@@ -242,6 +251,21 @@
 
     <decl_stmt><decl><type><name>QString</name></type> <name>keyLog</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QElapsedTimer</name></type> <name>keyTimeOut</name></decl>;</decl_stmt>
+
+    <comment type="line">// State of all dock widgets and tool bars as it was before the first</comment>
+    <comment type="line">// dock widget of the current close operation was closed by Qt.</comment>
+    <comment type="line">// Only valid if dockWidgetStateValid is true.</comment>
+    <comment type="line">// See notifyDockWidgetClosed().</comment>
+    <decl_stmt><decl><type><name>QByteArray</name></type> <name>dockWidgetState</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>dockWidgetStateValid</name></decl>;</decl_stmt>
+
+    <comment type="line">// true while the main window is handling its close event:</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>closingDown</name></decl>;</decl_stmt>
+
+    <comment type="line">// Dock widgets that were visible and have been closed by Qt as part of</comment>
+    <comment type="line">// the current close operation, together with their X position:</comment>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>QPointer<argument_list>&lt;<argument><name>QWidget</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>closedDockWidgets</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></type> <name>closedDockWidgetPositionsX</name></decl>;</decl_stmt>
 
 <comment type="line">//private:</comment>
 <comment type="line">//    bool objectWasDestroyed;</comment>

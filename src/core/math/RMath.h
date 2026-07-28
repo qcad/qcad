@@ -116,11 +116,23 @@ public:
 
     static double pow(double x, double y);
 
-    static bool isNormal(double v);
     static bool isNaN(double v);
     static bool isInf(double v);
 
-    static bool isSane(double v);
+    /**
+     * \return True if v is neither NaN nor Inf.
+     *
+     * Inline: this is called for every coordinate of every path of every
+     * frame. std::isfinite is exactly the condition of !isNaN(v) && !isInf(v)
+     * for all platform variants of those two.
+     */
+    static bool isSane(double v) {
+        return std::isfinite(v);
+    }
+
+    static bool isNormal(double v) {
+        return isSane(v);
+    }
 
     static double eval(const QString& expression, bool* ok = NULL);
     static QString getError();

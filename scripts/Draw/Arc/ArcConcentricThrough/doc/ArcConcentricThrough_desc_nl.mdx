@@ -1,0 +1,2 @@
+Met dit gereedschap kunt u concentrische bogen maken die door een bepaald
+punt gaan.

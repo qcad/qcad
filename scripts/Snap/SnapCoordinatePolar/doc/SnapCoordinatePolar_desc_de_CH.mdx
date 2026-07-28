@@ -1,0 +1,2 @@
+Bestimmt einen Punkt indem die absolute oder relative polare Koordinate
+eingegeben wird.

@@ -1,0 +1,2 @@
+Questo strumento fornisce le coordinate cartesiane relative dei punti
+selezionati nel disegno.

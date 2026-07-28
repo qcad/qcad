@@ -1,0 +1,2 @@
+Sélectionne ou désélectionne toutes les entités qui sont intersectées par
+une ligne.

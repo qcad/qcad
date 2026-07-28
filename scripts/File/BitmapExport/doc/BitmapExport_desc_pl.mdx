@@ -1,0 +1,1 @@
+Narzędzie to eksportuje bieżący rysunek do pliku mapy bitowej.

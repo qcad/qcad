@@ -325,7 +325,7 @@
         <translation>Ekstern Reference</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+931"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Cirkulær (rekursiv) blokhenvisning opdaget:</translation>
     </message>
@@ -439,7 +439,7 @@
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation>Trækningsrækkefølge</translation>
+        <translation>Tegnerækkefølge</translation>
     </message>
     <message>
         <location line="+2"/>

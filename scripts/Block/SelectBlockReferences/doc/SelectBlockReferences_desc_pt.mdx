@@ -1,0 +1,3 @@
+Esta ferramenta selecciona todas as referências de blocos do bloco que está
+actualmente seleccionado na lista de blocos. Apenas as referências de bloco que
+fazem parte do bloco que está actualmente a ser editado são seleccionadas.

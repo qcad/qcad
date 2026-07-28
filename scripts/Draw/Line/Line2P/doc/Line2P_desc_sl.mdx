@@ -1,0 +1,1 @@
+Konstrukcija ene ali večih stikajočih se ravnih črt.

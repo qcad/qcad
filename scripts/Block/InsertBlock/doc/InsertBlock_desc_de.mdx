@@ -1,0 +1,3 @@
+Fügt eine neue Blockreferenz (Instanz) des aktiven Blocks in die Zeichnung
+ein. Ein oder mehrere Blockreferenzen werden in der Zeichnung erstellt, die den
+aktiven Block darstellen.

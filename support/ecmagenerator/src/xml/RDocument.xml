@@ -113,6 +113,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="selectedOnly"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="snappable"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
       <variant returnType="RObject::Id" isPureVirtual="false">
         <arg type="QSet &lt; RObject::Id &gt; &amp;"
@@ -410,6 +412,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RObject::Id" typeName="RObject::Id"
         name="layerId" hasDefault="true"
         default="RObject :: INVALID_ID" isConst="false" />
+        <arg type="bool" typeName="bool" name="snappable"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="queryIntersectedEntitiesXYWithIndex"
@@ -437,6 +441,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RObject::Id" typeName="RObject::Id"
         name="layerId" hasDefault="true"
         default="RObject :: INVALID_ID" isConst="false" />
+        <arg type="bool" typeName="bool" name="snappable"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="queryIntersectedShapesXY"
@@ -463,6 +469,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RObject::Id" typeName="RObject::Id"
         name="layerId" hasDefault="true"
         default="RObject :: INVALID_ID" isConst="false" />
+        <arg type="bool" typeName="bool" name="snappable"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="queryContainedEntitiesXY"

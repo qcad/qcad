@@ -1,0 +1,1 @@
+Rysuje elipsy z danym środkiem, osią główną i osią podrzędną.

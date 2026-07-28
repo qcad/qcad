@@ -1,0 +1,2 @@
+Si vous connaissez trois points sur la circonférence du cercle, vous pouvez
+utiliser cet outil pour créer ce cercle.

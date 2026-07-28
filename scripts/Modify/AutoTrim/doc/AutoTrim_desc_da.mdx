@@ -1,0 +1,2 @@
+Trimmer eller udvider en enhed på begge sider til de næste begrænsende
+enheder.

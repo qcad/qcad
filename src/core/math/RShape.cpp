@@ -26,6 +26,7 @@
 #include "RMath.h"
 #include "RPolyline.h"
 #include "RRay.h"
+#include "RSettings.h"
 #include "RShape.h"
 #include "RSpline.h"
 #include "RSplineProxy.h"
@@ -2524,6 +2525,18 @@ QList<QSharedPointer<RShape> > RShape::roundCorners(const QList<QSharedPointer<R
 }
 
 /**
+ * Traces the inner most (smallest) closed contour around the given position from
+ * the arrangement formed by the given shapes. Requires the shape proxy (QCAD
+ * Professional). \see RShapeProxy::getInnerMostContour
+ */
+QList<QSharedPointer<RShape> > RShape::getInnerMostContour(const RVector& position, const QList<QSharedPointer<RShape> >& shapes) {
+    if (RShape::hasProxy()) {
+        return RShape::getShapeProxy()->getInnerMostContour(position, shapes);
+    }
+    return QList<QSharedPointer<RShape> >();
+}
+
+/**
  * Rounds the given shape1 against shape2.
  *
  * \param shape1 First shape of corner.
@@ -2592,7 +2605,16 @@ QList<QSharedPointer<RShape> > RShape::roundShapes(
 
     // create two temporary parallels:
     QList<QSharedPointer<RShape> > parallels1 = simpleShape1->getOffsetShapes(radius, 1, RS::NoSide, p);
-    QList<QSharedPointer<RShape> > parallels2 = simpleShape2->getOffsetShapes(radius, 1, RS::NoSide, p);
+    QList<QSharedPointer<RShape> > parallels2;
+
+    if (RSettings::getBoolValue("Round/AllowInverse", false)==true) {
+        // legacy behavior: allow rounding of imaginary corner:
+        parallels2 = simpleShape2->getOffsetShapes(radius, 1, RS::NoSide, p);
+    }
+    else {
+        // always round visible corner:
+        parallels2 = simpleShape2->getOffsetShapes(radius, 1, RS::NoSide, clickPos1);
+    }
 
     if (parallels1.length()!=1 || parallels2.length()!=1) {
         return ret;

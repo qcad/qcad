@@ -1,0 +1,2 @@
+Menu Widok zawiera wszystkie narzędzia służące do powiększania, przesuwania
+i regulacji obrazu

@@ -1,0 +1,2 @@
+Det här verktyget zoomar till det aktuella urvalet och ser till att alla
+markerade enheter är synliga.

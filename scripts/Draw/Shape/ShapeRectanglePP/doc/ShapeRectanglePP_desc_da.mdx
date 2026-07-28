@@ -1,0 +1,2 @@
+Brug dette værktøj til at skabe rektangulære figurer fra to diagonalt
+modsatte hjørner.

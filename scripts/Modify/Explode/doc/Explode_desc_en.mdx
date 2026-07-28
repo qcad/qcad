@@ -1,0 +1,7 @@
+Converts block references, polylines, splines, ellipses, texts, dimensions
+and hatches into more basic entities. Dimensions are split up into lines,
+triangles and text entities. Text entities are split into polylines (or lines,
+arcs and splines). Splines are converted into polylines with tangentially
+connected arc segments. Ellipses are converted into polylines with arc
+segments. Polylines are split up into loose segments. Hatches are split up into
+lines. Solid fills are converted to the outline of the solid fill.

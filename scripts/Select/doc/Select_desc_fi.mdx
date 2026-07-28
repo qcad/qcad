@@ -1,0 +1,33 @@
+import SelectionModeReplace from './SelectionModeReplace.png';
+import SelectionModeAdd from './SelectionModeAdd.png';
+import SelectionModeRemove from './SelectionModeRemove.png';
+import SelectionModeIntersect from './SelectionModeIntersect.png';
+
+
+
+### Ristivalinta {#cross}
+
+Joitakin valintatyökaluja voidaan käyttää ristivalintatilassa. Tässä tilassa
+ ei valita vain kohteita, jotka ovat kokonaan annetun alueen sisällä, vaan
+ myös kohteet, jotka ovat vain osittain alueen sisällä. Tätä valintaa
+ kutsutaan myös "ristivalinnaksi".
+
+### Valintatila {#mode}
+
+Jotkut valintatyökalut mahdollistavat valintatilan valitsemisen
+ asetustyökalurivillä. Saatavilla olevat valintatilat ovat:
+
+- Korvaa valinta:  
+  <Image src={SelectionModeReplace} alt="SelectionModeReplace" width={40} height={40} />  
+  Korvaa nykyisen valinnan aktiivisen valintatyökalun tekemällä uudella
+  valinnalla (oletus).
+- Lisää valintaan:  
+  <Image src={SelectionModeAdd} alt="SelectionModeAdd" width={40} height={40} />  
+  Lisää valinnan nykyiseen valintaan.
+- Poista valinnasta:  
+  <Image src={SelectionModeRemove} alt="SelectionModeRemove" width={40} height={40} />  
+  Poistaa (vähentää) valinnan nykyisestä valinnasta.
+- Leikkaus:  
+  <Image src={SelectionModeIntersect} alt="SelectionModeIntersect" width={40} height={40} />  
+  Valitaan vain kohteet, jotka oli jo valittu ja jotka täyttävät
+  valintatyökalun ehdot.

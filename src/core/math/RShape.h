@@ -478,6 +478,8 @@ public:
 
     static QList<QSharedPointer<RShape> > roundCorners(const QList<QSharedPointer<RShape> >& shapes, double radius);
 
+    static QList<QSharedPointer<RShape> > getInnerMostContour(const RVector& position, const QList<QSharedPointer<RShape> >& shapes);
+
     static QList<QSharedPointer<RShape> > roundShapes(
             const QSharedPointer<RShape> shape1, const RVector& clickPos1,
             const QSharedPointer<RShape> shape2, const RVector& clickPos2,

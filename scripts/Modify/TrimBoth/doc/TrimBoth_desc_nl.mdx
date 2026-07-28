@@ -1,0 +1,2 @@
+Knip twee lijnen, bogen of ellipsen bij tot hun gemeenschappelijke
+snijpunt.

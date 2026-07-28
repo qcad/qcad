@@ -101,7 +101,8 @@
         <param><decl><type><name>bool</name></type> <name>draft</name></decl></param>,
         <param><decl><type><name>double</name></type> <name>strictRange</name> =<init> <expr><name>RMAXDOUBLE</name></expr></init></decl></param>,
         <param><decl><type><name>bool</name></type> <name>includeLockedLayers</name> =<init> <expr><name>true</name></expr></init></decl></param>,
-        <param><decl><type><name>bool</name></type> <name>selectedOnly</name> =<init> <expr><name>false</name></expr></init></decl></param>
+        <param><decl><type><name>bool</name></type> <name>selectedOnly</name> =<init> <expr><name>false</name></expr></init></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>snappable</name> =<init> <expr><name>false</name></expr></init></decl></param>
     )</parameter_list>;</function_decl>
     <function_decl><type><name>QPair<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>queryClosestXYWithIndices</name><parameter_list>(
         <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>wcsPosition</name></decl></param>,
@@ -165,7 +166,8 @@
         <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>blockId</name> =<init> <expr><name><name>RObject</name>::<name>INVALID_ID</name></name></expr></init></decl></param>,
         <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name><name>RS</name>::<name>EntityType</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>filter</name> =<init> <expr><name>RDEFAULT_QLIST_RS_ENTITYTYPE</name></expr></init></decl></param>,
         <param><decl><type><name>bool</name></type> <name>selectedOnly</name> =<init> <expr><name>false</name></expr></init></decl></param>,
-        <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>layerId</name> =<init> <expr><name><name>RObject</name>::<name>INVALID_ID</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+        <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>layerId</name> =<init> <expr><name><name>RObject</name>::<name>INVALID_ID</name></name></expr></init></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>snappable</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>QMap<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>queryIntersectedEntitiesXYWithIndex</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>,
          <param><decl><type><name>bool</name></type> <name>checkBoundingBoxOnly</name>=<init><expr><name>false</name></expr></init></decl></param>,
@@ -173,7 +175,8 @@
          <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>blockId</name> =<init> <expr><name><name>RObject</name>::<name>INVALID_ID</name></name></expr></init></decl></param>,
          <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name><name>RS</name>::<name>EntityType</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>filter</name> =<init> <expr><name>RDEFAULT_QLIST_RS_ENTITYTYPE</name></expr></init></decl></param>,
          <param><decl><type><name>bool</name></type> <name>selectedOnly</name> =<init> <expr><name>false</name></expr></init></decl></param>,
-         <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>layerId</name> =<init> <expr><name><name>RObject</name>::<name>INVALID_ID</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+         <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>layerId</name> =<init> <expr><name><name>RObject</name>::<name>INVALID_ID</name></name></expr></init></decl></param>,
+         <param><decl><type><name>bool</name></type> <name>snappable</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>QMap<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>queryIntersectedShapesXY</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>,
         <param><decl><type><name>bool</name></type> <name>checkBoundingBoxOnly</name>=<init><expr><name>false</name></expr></init></decl></param>,
@@ -181,7 +184,8 @@
         <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>blockId</name> =<init> <expr><name><name>RObject</name>::<name>INVALID_ID</name></name></expr></init></decl></param>,
         <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name><name>RS</name>::<name>EntityType</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>filter</name> =<init> <expr><name>RDEFAULT_QLIST_RS_ENTITYTYPE</name></expr></init></decl></param>,
         <param><decl><type><name>bool</name></type> <name>selectedOnly</name> =<init> <expr><name>false</name></expr></init></decl></param>,
-        <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>layerId</name> =<init> <expr><name><name>RObject</name>::<name>INVALID_ID</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+        <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>layerId</name> =<init> <expr><name><name>RObject</name>::<name>INVALID_ID</name></name></expr></init></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>snappable</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryContainedEntitiesXY</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 

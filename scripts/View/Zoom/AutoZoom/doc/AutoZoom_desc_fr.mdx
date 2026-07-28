@@ -1,0 +1,2 @@
+Permet de mettre à l'échelle la vue du dessin de sorte que toutes les
+entités qui sont sur des calques visibles s'intègrent à l'écran.

@@ -1,0 +1,4 @@
+Værktøjerne i menuen Info kan bruges til at måle afstande, arealer og
+forespørge andre oplysninger fra tegningen.  
+Nogle af værktøjerne giver mulighed for at tilføje det målte resultat til
+tegningen som tekst, hvis det ønskes.

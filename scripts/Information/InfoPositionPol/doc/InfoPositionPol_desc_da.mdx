@@ -1,0 +1,2 @@
+Dette værktøj udsender de absolutte polære koordinater for udvalgte punkter
+i tegningen.

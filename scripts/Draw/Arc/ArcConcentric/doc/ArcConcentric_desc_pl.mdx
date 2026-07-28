@@ -1,0 +1,2 @@
+Za pomocą tego narzędzia można utworzyć jeden lub wiele koncentrycznych
+łuków w określonej odległości od istniejącego łuku.

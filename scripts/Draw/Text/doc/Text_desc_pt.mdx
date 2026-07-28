@@ -1,0 +1,2 @@
+Utilize esta ferramenta para criar entidades de texto de linha única ou de
+várias linhas.

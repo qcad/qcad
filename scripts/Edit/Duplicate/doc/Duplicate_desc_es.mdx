@@ -1,0 +1,2 @@
+Esta herramienta duplica las entidades seleccionadas y selecciona la copia
+creada.

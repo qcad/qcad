@@ -51,7 +51,7 @@
     <message>
         <location line="+3"/>
         <source>Mil</source>
-        <translation>Maili</translation>
+        <translation>Mil</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -711,17 +711,17 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation>Pienin määrä</translation>
+        <translation>Pienin laajuus</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation>Suurin määrä</translation>
+        <translation>Suurin laajuus</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+920"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+931"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Pyöreä (rekursiivinen) lohkoviittaus havaittu:</translation>
     </message>

@@ -1,0 +1,64 @@
+Linia poleceń QCAD pozwala na uruchamianie poleceń, wprowadzanie
+ współrzędnych lub wartości takich jak odległości czy promienie.
+
+### Współrzędne wejściowe
+
+Współrzędne bezwzględne wprowadzane są w formacie "x,y"
+
+40,5
+
+Współrzędne względne wprowadzane są w formacie "@x,y"
+
+@10,6
+
+Współrzędne bezwzględne biegunowe wprowadzane są w formacie
+ "odległość&lt;kąt"
+
+10&lt;30
+
+Względne współrzędne biegunowe wprowadzane są w formacie
+ "@distance&lt;angle"
+
+@10&lt;45
+
+Przy wprowadzaniu współrzędnych lub wartości można używać [wyrażeń matematycznych](#expr) do obliczania współrzędnych w
+ oparciu o znane wartości. Na przykład współrzędna 10,5 może być również
+ wprowadzona jako współrzędna
+
+5+5,30/6
+
+### Kalkulator
+
+Linia poleceń może być również używana jako kalkulator. Aby to zrobić,
+ wpisz [wyrażenie matematyczne](#expr) poprzedzone znakiem równości
+
+=3+4  
+7
+
+Zmienne mogą być używane do przechowywania wartości
+
+=a=5+6  
+11  
+=a/2  
+5.5  
+
+### Wyrażenia matematyczne
+
+Dostępne są stałe matematyczne:
+
+PI, LN2, LN10, LOG2E, LOG10E, SQRT1_2, SQRT2
+
+Dostępne są funkcje matematyczne:
+
+abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad,
+sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh,
+acosh, asinh, atanh, expm1, hypot, cbrt, trunc
+
+Większość tych stałych i funkcji to standardowe funkcje ECMAScript
+ (JavaScript) i udokumentowane online. W standardowym ECMAScript, funkcje te
+ są częścią klasy matematyki, więc funkcja *abs* musiałaby być napisana jako *Math.abs*. W wierszu poleceń QCAD możesz dla wygody zostawić część *matematyczną.* Funkcje trygonometryczne (grzech, cos, opalenizna, asin,
+ acos, atan, atan2) przyjmują lub zwracają kąty w stopniach. Jeśli wolisz
+ radianową wersję tych funkcji, użyj zamiast tego oryginalnych funkcji *matematycznych.*
+
+Funkcje *rad2deg* i *deg2rad* mogą być używane do konwersji kątów pomiędzy radianem i
+ stopniami.

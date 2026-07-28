@@ -1,0 +1,2 @@
+Selecciona todas las entidades que están dentro de un área rectangular
+dada.

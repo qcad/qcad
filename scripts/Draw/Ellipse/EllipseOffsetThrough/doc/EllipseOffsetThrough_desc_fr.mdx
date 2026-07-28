@@ -1,0 +1,2 @@
+Avec cet outil, vous pouvez créer des courbes parallèles à une ellipse et
+passer par un point donné.

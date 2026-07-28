@@ -1,0 +1,13 @@
+import SplineControlPoints01 from './SplineControlPoints01.png';
+import SplineControlPoints02 from './SplineControlPoints02.png';
+
+1. Vyberte stupeň splajnu na paneli s možnosťami. Podporované stupne sú 2 (kvadratický b-splajn) a 3 (kubický b-splajn). Čím vyšší stupeň, tým „hladšia" sa krivka stáva.  
+   Všimnite si, že kvadratický b-splajn vyžaduje podľa definície aspoň 3 riadiace body, zatiaľ čo kubický b-splajn má aspoň 4 riadiace body.
+2. Začiarknite políčko „Closed" na paneli s možnosťami, ak chcete vytvoriť uzavretý splajn. Uzavreté splajny sú súvislé uzavreté slučky.
+3. Určite riadiace body. Po definovaní tretieho (pre kvadratické b-splajny) alebo štvrtého (pre kubické b-splajny) riadiaceho bodu sa zobrazí náhľad. Posledný riadiaci bod môžete znova odstrániť kliknutím na tlačidlo „Undo" na paneli s možnosťami.
+4. Stlačte Escape alebo kliknite pravým tlačidlom myši po nastavení posledného bodu na potvrdenie tvaru splajnu.
+5. Teraz môžete vytvoriť ďalší splajn alebo znova kliknúť pravým tlačidlom na ukončenie nástroja.
+   Príklad pre dva otvorené splajny (kvadratický a kubický):  
+   <Image src={SplineControlPoints01} alt="SplineControlPoints01" width={240} height={166} />  
+   Príklad pre dva uzavreté, periodické splajny (kvadratický a kubický):  
+   <Image src={SplineControlPoints02} alt="SplineControlPoints02" width={288} height={166} />

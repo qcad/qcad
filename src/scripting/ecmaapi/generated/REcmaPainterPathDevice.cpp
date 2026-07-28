@@ -67,6 +67,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getPainterPaths, "getPainterPaths");
             
+            REcmaHelper::registerFunction(&engine, proto, setSize, "setSize");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDpi, "setDpi");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RPainterPathDevice*>(), *proto);
 
@@ -280,6 +284,127 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPathDevice::getPainterPaths", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPathDevice::setSize
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPathDevice::setSize", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPathDevice::setSize";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPathDevice* self = 
+                        getSelf("setSize", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSize */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QSize*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QSize*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+
+                           return REcmaHelper::throwError("RPainterPathDevice: Argument 0 is not of type QSize* or QSharedPointer<QSize>.",
+                               context);
+                    }
+                    QSize& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setSize(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPathDevice.setSize().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPathDevice::setSize", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPathDevice::setDpi
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPathDevice::setDpi", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPathDevice::setDpi";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPathDevice* self = 
+                        getSelf("setDpi", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDpi(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPathDevice.setDpi().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPathDevice::setDpi", context, engine);
             return result;
         }
          QScriptValue REcmaPainterPathDevice::toString

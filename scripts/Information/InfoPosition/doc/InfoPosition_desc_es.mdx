@@ -1,0 +1,2 @@
+Esta herramienta produce las coordenadas cartesianas absolutas de los puntos
+seleccionados en el dibujo.

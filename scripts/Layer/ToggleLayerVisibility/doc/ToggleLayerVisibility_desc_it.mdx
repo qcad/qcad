@@ -1,0 +1,5 @@
+Questo strumento consente di attivare/disattivare la visibilità del livello
+corrente. È anche possibile attivare/disattivare i livelli facendo clic
+sull'icona dell'occhio accanto al nome del livello nell'elenco dei livelli.
+Un'icona ad occhio nero indica che il livello è visibile, un'icona grigia
+indica che il livello è nascosto.

@@ -1,0 +1,2 @@
+Dieses Werkzeug gibt die absoluten, kartesischen Koordinaten von Punkten in
+der Zeichnung aus.

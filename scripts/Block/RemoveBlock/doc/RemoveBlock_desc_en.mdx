@@ -1,0 +1,2 @@
+Removes the active block. The block, all entities on it and all block
+references of the block will be deleted.

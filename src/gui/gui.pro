@@ -105,4 +105,3 @@ TARGET = $${NAME}
 OTHER_FILES += gui.dox
 DEFINES += QCADGUI_LIBRARY
 RC_FILE = gui.rc
-!win32:include( ../../shared_ts.pri )

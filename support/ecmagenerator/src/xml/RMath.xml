@@ -37,13 +37,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="isNormal" cppName="isNormal" specifier="public"
-    isStatic="true" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false">
-        <arg type="double" typeName="double" name="v"
-        isConst="false" />
-      </variant>
-    </method>
     <method name="isNaN" cppName="isNaN" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
@@ -59,6 +52,13 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="isSane" cppName="isSane" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="v"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isNormal" cppName="isNormal" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="double" typeName="double" name="v"

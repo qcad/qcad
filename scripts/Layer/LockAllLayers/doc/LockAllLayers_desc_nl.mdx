@@ -1,0 +1,1 @@
+Met dit functie kunnen alle lagen in één keer worden vergrendeld.

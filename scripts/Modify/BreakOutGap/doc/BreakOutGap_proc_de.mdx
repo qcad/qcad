@@ -1,0 +1,2 @@
+- Wählen Sie das Objekt, von dem Sie einen Zwischenraum heraustrennen möchten.
+- Wählen Sie die Mitte des Zwischenraums.

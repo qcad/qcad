@@ -1,0 +1,2 @@
+Det här verktyget är ett snabbt sätt att zooma in på ett visst område av
+ritningen.

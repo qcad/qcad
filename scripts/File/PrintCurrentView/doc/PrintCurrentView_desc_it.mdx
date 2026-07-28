@@ -1,0 +1,2 @@
+Utilizzare questo comando per stampare la porzione di disegno attualmente
+visualizzata nella vista grafica.

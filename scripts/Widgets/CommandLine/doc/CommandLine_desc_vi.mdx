@@ -1,0 +1,53 @@
+Dòng lệnh của QCAD cho phép bạn khởi động các lệnh, nhập tọa độ hoặc nhập các giá trị như khoảng cách hoặc bán kính.
+
+### Nhập tọa độ
+
+Tọa độ tuyệt đối được nhập theo định dạng „x,y":
+
+40,5
+
+Tọa độ tương đối được nhập theo định dạng „@x,y":
+
+@10,6
+
+Tọa độ cực tuyệt đối được nhập theo định dạng „distance&lt;angle":
+
+10&lt;30
+
+Tọa độ cực tương đối được nhập theo định dạng „@distance&lt;angle":
+
+@10&lt;45
+
+Khi nhập tọa độ hoặc giá trị, [biểu thức toán học](#expr) có thể được dùng để tính một tọa độ dựa trên các giá trị đã biết. Ví dụ tọa độ 10,5 cũng có thể được nhập như:
+
+5+5,30/6
+
+### Máy tính
+
+Dòng lệnh cũng có thể được dùng như một máy tính. Để làm điều này, nhập một [biểu thức toán học](#expr) đứng trước bởi một dấu bằng:
+
+=3+4  
+7
+
+Các biến có thể được dùng để lưu các giá trị:
+
+=a=5+6  
+11  
+=a/2  
+5.5  
+
+### Biểu thức toán học
+
+Các hằng số toán học có sẵn là:
+
+PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2
+
+Các hàm toán học có sẵn là:
+
+abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad,
+sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh,
+acosh, asinh, atanh, expm1, hypot, cbrt, trunc
+
+Hầu hết các hằng số và hàm này là các hàm ECMAScript (JavaScript) tiêu chuẩn và được ghi tài liệu trực tuyến. Trong ECMAScript tiêu chuẩn, các hàm này là một phần của lớp Math nên hàm *abs* sẽ phải được viết là *Math.abs*. Trong dòng lệnh QCAD, bạn có thể bỏ đi phần *Math.* để tiện lợi. Các hàm lượng giác (sin, cos, tan, asin, acos, atan, atan2) chấp nhận hoặc trả về các góc theo độ. Nếu bạn thích các phiên bản radian của các hàm này, dùng các hàm *Math.* gốc thay thế.
+
+Các hàm *rad2deg* và *deg2rad* có thể được dùng để chuyển đổi các góc giữa radian và độ.

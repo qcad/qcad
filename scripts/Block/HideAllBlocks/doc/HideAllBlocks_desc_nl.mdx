@@ -1,0 +1,1 @@
+Deze tool verbergt alle blokreferenties in de tekening.

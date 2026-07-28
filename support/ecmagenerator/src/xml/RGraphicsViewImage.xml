@@ -541,6 +541,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getCorrectedColor" cppName="getCorrectedColor"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QColor" isPureVirtual="false">
+        <arg type="QColor &amp;" typeName="QColor" name="col"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="applyColorMode" cppName="applyColorMode"
     specifier="protected" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

@@ -1,0 +1,2 @@
+Dette værktøj indsætter den aktive blok i tegningen. Der oprettes en eller
+flere blokreferencer i tegningen for at repræsentere den aktive blok.

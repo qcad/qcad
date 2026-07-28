@@ -1,0 +1,1 @@
+Crée des polygones avec le centre et le point central d'un côté.

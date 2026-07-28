@@ -1,0 +1,2 @@
+- Wybierz podmiot, od którego chcesz wypełnić lukę.
+- Kliknij środek luki na danym podmiocie.

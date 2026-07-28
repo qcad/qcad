@@ -1,0 +1,1 @@
+Esta herramienta deselecciona todas las entidades de la capa actual.

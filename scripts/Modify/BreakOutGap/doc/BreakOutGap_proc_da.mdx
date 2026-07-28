@@ -1,0 +1,2 @@
+- Vælg den enhed, som du ønsker at bryde et hul ud fra.
+- Klik på midten af mellemrummet på enheden.

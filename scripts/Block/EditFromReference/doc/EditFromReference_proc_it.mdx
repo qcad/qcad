@@ -1,0 +1,3 @@
+- Fare click su qualunque riferimento di blocco che si riferisce al blocco da modificare.
+
+Il blocco viene aperto per essere modificato. Per tornare al disegno principale (chiamato "*Spazio_modello"), attivate il blocco "*Spazio_modello" e fate click di nuovo sullo stesso pulsante per modificare il blocco o iniziate la funzione "Modifica il disegno principale" nel menu "Blocco".

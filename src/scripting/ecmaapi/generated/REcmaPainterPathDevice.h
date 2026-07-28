@@ -53,6 +53,12 @@
         ;static  QScriptValue
         getPainterPaths
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setSize
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDpi
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

@@ -1,0 +1,1 @@
+Dessine un cercle tangentiel à une entité et passe par deux points.

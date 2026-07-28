@@ -1,0 +1,2 @@
+Divide le entità eliminando un segmento limitato dall'intersezione di
+entità.

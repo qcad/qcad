@@ -1,0 +1,1 @@
+Cet outil désélectionne toutes les entités du calque courant.

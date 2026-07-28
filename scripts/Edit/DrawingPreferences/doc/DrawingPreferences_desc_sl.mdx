@@ -1,0 +1,2 @@
+Dialog za nastavitev risbe, vam omogoča spreminjanje različnih parametrov trenutne risbe.
+Ti parametri so nato shranjeni samo v trenutni risbi.

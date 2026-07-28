@@ -1,0 +1,2 @@
+Utilize esta ferramenta para criar bissectores angulares entre duas
+entidades de linha.

@@ -270,7 +270,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
         <source>Application Preferences</source>
         <translation>Alkalmazás beállítások</translation>
     </message>
@@ -280,7 +280,7 @@
         <translation>Rajz beállítások</translation>
     </message>
     <message>
-        <location line="+326"/>
+        <location line="+328"/>
         <source>Apply preferences</source>
         <translation>Beállítások alkalmazása</translation>
     </message>
@@ -923,19 +923,19 @@ Do you wish to recover it?</source>
 Szeretné helyreállítani?</translation>
     </message>
     <message>
-        <location line="+25"/>
-        <location line="+11"/>
-        <location line="+5"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+7"/>
         <source>Cannot rename file:</source>
         <translation>A fájl nem nevezhető át:</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-25"/>
         <source>Moved autosave backup file to:</source>
         <translation>Automatikusan mentett biztonsági mentés áthelyezve:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+28"/>
         <source>Moved original file to:</source>
         <translation>Eredeti fájl áthelyezve:</translation>
     </message>
@@ -1132,12 +1132,12 @@ Szeretné helyreállítani?</translation>
         <translation>Bitkép exportálása</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Size</source>
         <translation>Méret</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Width:</source>
         <translation>Szélesség:</translation>
     </message>
@@ -1147,22 +1147,37 @@ Szeretné helyreállítani?</translation>
         <translation>Magasság:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+33"/>
         <source>Pixels per drawing unit:</source>
         <translation>Képpont rajzegységenként:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+280"/>
+        <source>Selection</source>
+        <translation>Kijelölés</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Export bounding box of selection</source>
         <translation>A kijelölés határoló dobozának exportálása</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-107"/>
         <source>Background</source>
         <translation>Háttér</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="-245"/>
+        <source>Specify width and height:</source>
+        <translation>Adja meg a szélességet és magasságot:</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Specify resolution:</source>
+        <translation>Adja meg a felbontást:</translation>
+    </message>
+    <message>
+        <location line="+195"/>
         <source>White</source>
         <translation>Fehér</translation>
     </message>
@@ -1184,6 +1199,11 @@ Szeretné helyreállítani?</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Prevent white on white / black on black export</source>
+        <translation>Fehér elem fehér alapon vagy fekete elem fekete alapon elkerülése exportáláskor</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Monochrome</source>
         <translation>Monokróm</translation>
     </message>
@@ -1209,7 +1229,7 @@ Szeretné helyreállítani?</translation>
         <translation>Élsimítás használata</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-197"/>
         <source>Margin</source>
         <translation>Margó</translation>
     </message>
@@ -1232,7 +1252,7 @@ Szeretné helyreállítani?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+130"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Érvénytelen képméret (a szélesség a magasság szorzata kisebb kell legyen, mint %1)</translation>
     </message>
@@ -1328,7 +1348,7 @@ Szeretné helyreállítani?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+653"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
         <source>Widgets</source>
         <translation>Ablakpanelek</translation>
     </message>
@@ -4198,18 +4218,18 @@ már szerepel a listában.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2133"/>
+        <location line="+2167"/>
         <source>Cancel</source>
         <translation>Mégse</translation>
     </message>
     <message>
-        <location line="-2132"/>
+        <location line="-2166"/>
         <source>Done</source>
         <translation>Kész</translation>
     </message>
     <message>
-        <location line="+284"/>
-        <location line="+133"/>
+        <location line="+287"/>
+        <location line="+143"/>
         <source>Active Tool:</source>
         <translation>Aktív eszköz:</translation>
     </message>
@@ -4249,7 +4269,7 @@ már szerepel a listában.</translation>
         <translation>Az elem egy zárolt rétegen van.</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+254"/>
         <source>Length:</source>
         <translation>Hossz:</translation>
     </message>
@@ -5245,7 +5265,12 @@ már szerepel a listában.</translation>
         <translation>FP hozzáadott réteg:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+10"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Festi át a kiválasztást egy hengeres bélyegzőt utánozva</translation>
     </message>
@@ -5265,27 +5290,27 @@ már szerepel a listában.</translation>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation>Flip festők</translation>
+        <translation>Festők tükrözése</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation>Csoportos szereposztás</translation>
+        <translation>Csoportos létrehozás</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Cast on sub-layer</translation>
+        <translation>Létrehozás alrétegen</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Begin Apex</source>
-        <translation>Add Begin Apex hozzáadása</translation>
+        <translation>Kezdő csúcs hozzáadása</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add End Apex</source>
-        <translation>Add End Apex hozzáadása</translation>
+        <translation>Záró csúcs hozzáadása</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5470,7 +5495,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation>&amp;lt</translation>
+        <translation>&lt;Térköz mérete&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5525,7 +5550,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation>Igazodjon a begin</translation>
+        <translation>Igazodjon a kezdethez</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5545,15 +5570,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
-        <translation>null</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterInit</name>
-    <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
-        <source>&amp;FlexPainter</source>
-        <translation>FlexPainter</translation>
+        <translation>Alapelemek törlése *</translation>
     </message>
 </context>
 <context>
@@ -5623,7 +5640,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation>Döntetlen ragasztó öl</translation>
+        <translation>Ragasztófül rajzolása</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
@@ -6139,6 +6156,11 @@ már szerepel a listában.</translation>
         <location line="+47"/>
         <source>Tertiary reference points:</source>
         <translation>Harmadlagos referenciapontok:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Snap reference points:</source>
+        <translation>Illesztési referenciapontok:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -7816,7 +7838,7 @@ már szerepel a listában.</translation>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation>Szekrény</translation>
+        <translation>Kabinet</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7959,7 +7981,7 @@ már szerepel a listában.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+62"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+71"/>
         <source>Language Settings</source>
         <translation>Nyelvi beállítások</translation>
     </message>
@@ -8181,7 +8203,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+14"/>
         <source>Arrow head</source>
-        <translation>Nyíl rajzolása</translation>
+        <translation>Nyílhegy</translation>
     </message>
 </context>
 <context>
@@ -8813,6 +8835,16 @@ már szerepel a listában.</translation>
         <source>Draw vertical line</source>
         <translation>Függőleges vonal szerkesztése</translation>
     </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineVertical/LineVertical.ui" line="+17"/>
+        <source>Length:</source>
+        <translation>Hossz:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Reference Point:</source>
+        <translation>Referenciapont:</translation>
+    </message>
 </context>
 <context>
     <name>LinetypeMode</name>
@@ -9014,7 +9046,7 @@ már szerepel a listában.</translation>
 <context>
     <name>MiscBlock</name>
     <message>
-        <location filename="../scripts/Misc/MiscBlock/MiscBlock.js" line="+51"/>
+        <location filename="../scripts/Misc/MiscBlock/MiscBlock.js" line="+52"/>
         <source>Misc</source>
         <translation>Egyéb</translation>
     </message>
@@ -9032,7 +9064,7 @@ már szerepel a listában.</translation>
 <context>
     <name>MiscDevelopment</name>
     <message>
-        <location filename="../scripts/Misc/MiscDevelopment/MiscDevelopment.js" line="+51"/>
+        <location filename="../scripts/Misc/MiscDevelopment/MiscDevelopment.js" line="+52"/>
         <source>Misc</source>
         <translation>Egyéb</translation>
     </message>
@@ -9050,7 +9082,7 @@ már szerepel a listában.</translation>
 <context>
     <name>MiscDraw</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/MiscDraw.js" line="+52"/>
+        <location filename="../scripts/Misc/MiscDraw/MiscDraw.js" line="+53"/>
         <source>Misc</source>
         <translation>Egyéb</translation>
     </message>
@@ -9073,7 +9105,7 @@ már szerepel a listában.</translation>
 <context>
     <name>MiscIO</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MiscIO.js" line="+51"/>
+        <location filename="../scripts/Misc/MiscIO/MiscIO.js" line="+52"/>
         <source>Misc</source>
         <translation>Egyéb</translation>
     </message>
@@ -9091,7 +9123,7 @@ már szerepel a listában.</translation>
 <context>
     <name>MiscInformation</name>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+41"/>
+        <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+42"/>
         <source>Misc</source>
         <translation>Egyéb</translation>
     </message>
@@ -9109,7 +9141,7 @@ már szerepel a listában.</translation>
 <context>
     <name>MiscModify</name>
     <message>
-        <location filename="../scripts/Misc/MiscModify/MiscModify.js" line="+44"/>
+        <location filename="../scripts/Misc/MiscModify/MiscModify.js" line="+45"/>
         <source>Misc</source>
         <translation>Egyéb</translation>
     </message>
@@ -9127,7 +9159,7 @@ már szerepel a listában.</translation>
 <context>
     <name>MiscSelect</name>
     <message>
-        <location filename="../scripts/Misc/MiscSelect/MiscSelect.js" line="+52"/>
+        <location filename="../scripts/Misc/MiscSelect/MiscSelect.js" line="+53"/>
         <source>Misc</source>
         <translation>Egyéb</translation>
     </message>
@@ -9283,7 +9315,7 @@ már szerepel a listában.</translation>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+191"/>
         <source>Opening drawing:</source>
         <translation>Rajz megnyitása:</translation>
     </message>
@@ -9787,7 +9819,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2"/>
         <source>Pole of Line and Circle</source>
-        <translation>Oszlop vonalból és körből</translation>
+        <translation>Vonal és kör pólusa</translation>
     </message>
 </context>
 <context>
@@ -10238,7 +10270,7 @@ már szerepel a listában.</translation>
         <translation>Minden tulajdonság megjelenítése</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+161"/>
         <source>Auto</source>
         <translation>Automatikus</translation>
     </message>
@@ -10925,7 +10957,7 @@ már szerepel a listában.</translation>
         <translation>Nincsenek exportálási szűrők. Megszakítás...</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+92"/>
         <source>Format:</source>
         <translation>Formátum:</translation>
     </message>
@@ -11068,6 +11100,11 @@ már szerepel a listában.</translation>
         <source>Define factor using mouse cursor</source>
         <translation>Tényező meghatározása az egérrel</translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/Round/PreferencesPage.ui" line="+17"/>
+        <source>Allow rounding of imaginary corner</source>
+        <translation>Képzeletbeli sarok lekerekítésének engedélyezése</translation>
+    </message>
 </context>
 <context>
     <name>ScaleOptions</name>
@@ -11194,13 +11231,10 @@ már szerepel a listában.</translation>
         <source>By Color</source>
         <translation>Szín szerint</translation>
     </message>
-</context>
-<context>
-    <name>SelectByColorInit</name>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>Egy adott színű elemek kijelölése</translation>
+        <translation>Egy szín összes objektumának kijelölése</translation>
     </message>
 </context>
 <context>
@@ -11549,7 +11583,7 @@ már szerepel a listában.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1444"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Legalább két pont azonos.</translation>
@@ -11989,7 +12023,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+5"/>
         <source>Fraction</source>
-        <translation>Osztó</translation>
+        <translation>Tört</translation>
     </message>
 </context>
 <context>
@@ -12098,11 +12132,11 @@ már szerepel a listában.</translation>
     </message>
 </context>
 <context>
-    <name>SnapSelectionCenter</name>
+    <name>SnapSelection</name>
     <message>
-        <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
-        <source>Center of &amp;Selection</source>
-        <translation>Ki&amp;jelölés középpontja</translation>
+        <location filename="../scripts/Snap/SnapSelection/SnapSelectionInit.js" line="+2"/>
+        <source>&amp;Selection Reference Points</source>
+        <translation>&amp;Kijelölés referenciapontjai</translation>
     </message>
 </context>
 <context>
@@ -12303,7 +12337,7 @@ már szerepel a listában.</translation>
         <translation>SVG importálás</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+48"/>
         <source>Import SVG</source>
         <translation>SVG importálása</translation>
     </message>
@@ -12343,6 +12377,16 @@ már szerepel a listában.</translation>
         <translation>Csoportok importálása rétegekként</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <source>Paths</source>
+        <translation>Útvonalak</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import path lineweights</source>
+        <translation>Útvonalak vonalvastagságainak importálása</translation>
+    </message>
+    <message>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>
         <source>Resolution:</source>
         <translation>Felbontás:</translation>
@@ -12354,7 +12398,7 @@ már szerepel a listában.</translation>
     </message>
 </context>
 <context>
-    <name>SvgImporterInit</name>
+    <name>SvgImporter</name>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
@@ -12540,12 +12584,12 @@ már szerepel a listában.</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+256"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+251"/>
         <source>Default value:</source>
         <translation>Alapértelmezett érték:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+275"/>
         <source>&amp;Undo</source>
         <translation>&amp;Visszavonás</translation>
     </message>
@@ -12605,12 +12649,12 @@ már szerepel a listában.</translation>
         <translation>Speciális &amp;karakterek...</translation>
     </message>
     <message>
-        <location line="+348"/>
+        <location line="+349"/>
         <source>Others...</source>
         <translation>Továbbiak...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+140"/>
         <source>Degree</source>
         <translation>Szög</translation>
     </message>
@@ -12677,7 +12721,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Négyzet</translation>
+        <translation>Köb</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12906,7 +12950,7 @@ már szerepel a listában.</translation>
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+35"/>
         <source>General</source>
         <translation>Általános</translation>
     </message>
@@ -13576,7 +13620,7 @@ már szerepel a listában.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
         <source>Dropped data not supported</source>
         <translation>A ráejtett adat nem támogatott típusú</translation>
     </message>
@@ -13607,7 +13651,7 @@ már szerepel a listában.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1168"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
         <source>Restore defaults</source>
         <translation>Alapértelmezett értékek visszaállítása</translation>
     </message>
@@ -13749,12 +13793,12 @@ már szerepel a listában.</translation>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Négyzet</translation>
+        <translation>Köb</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Stacked text</source>
-        <translation>Felső index</translation>
+        <translation>Halmozott szöveg</translation>
     </message>
     <message>
         <location line="+5"/>

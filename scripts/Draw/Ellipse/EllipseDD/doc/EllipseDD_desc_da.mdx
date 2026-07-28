@@ -1,0 +1,1 @@
+Tegner ellipser med en angivet større og mindre diameter (bredde/højde).

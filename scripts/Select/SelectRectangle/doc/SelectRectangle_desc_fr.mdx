@@ -1,0 +1,2 @@
+Sélectionne toutes les entités qui se trouvent dans une zone rectangulaire
+donnée.

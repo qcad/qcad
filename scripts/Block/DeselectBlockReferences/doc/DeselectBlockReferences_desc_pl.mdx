@@ -1,0 +1,2 @@
+Narzędzie to usuwa zaznaczenie wszystkich referencji bloku, który jest
+aktualnie zaznaczony na liście bloków.

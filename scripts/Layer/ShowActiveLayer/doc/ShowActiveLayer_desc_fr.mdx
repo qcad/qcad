@@ -1,0 +1,2 @@
+Cet outil masque tous les calques à l'exception du calque sélectionné
+(actif) dans la liste des calques.

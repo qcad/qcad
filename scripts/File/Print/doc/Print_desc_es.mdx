@@ -1,0 +1,6 @@
+Utilice este comando para imprimir un dibujo. Asegúrese de cambiar siempre a
+la vista previa de impresión antes de imprimir para comprobar si la escala de
+dibujo y la posición están configuradas como se desea.  
+Se muestra un cuadro de diálogo de configuración antes de imprimir
+cualquier cosa. Utilice este cuadro de diálogo para elegir la impresora y
+ajustar la configuración específica de la impresora.

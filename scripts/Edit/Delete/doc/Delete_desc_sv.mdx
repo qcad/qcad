@@ -1,0 +1,2 @@
+Med det här verktyget raderas de enheter som för närvarande är
+markerade.

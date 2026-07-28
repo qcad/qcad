@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Komandrindas</title>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a class="hidden-link" href="/doc/qcad/latest/reference/lv/index.php?page=scripts/Widgets/CommandLine/doc/CommandLine">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<div class="nobreak">
+<h2>Komandrindas</h2>
+<p class="toolinfo">
+<b>Rīkjosla / ikona:</b>
+<br /><img src="../doc/CommandLine.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Izvēlne:</b> <font face="courier new">Skatīt &gt; Komandrindas</font>
+<br /><b>Īsais ceļvedis:</b> <font face="courier new">G, M</font>
+<br /><b>Komandas:</b> <font face="courier new">gm</font>
+</p>
+</div>
+<h3>Apraksts</h3>
+<p>QCAD komandrinda ļauj sākt komandas, ievadīt koordinātas vai ievadīt vērtības, piemēram, attālumus vai rādiusus.</p>
+<h3>Koordinātu ievadīšana</h3>
+<p>Absolūtās koordinātas ievada formātā „x,y":</p>
+<p>40,5</p>
+<p>Relatīvās koordinātas ievada formātā „@x,y":</p>
+<p>@10,6</p>
+<p>Absolūtās polārās koordinātas ievada formātā „attālums&lt;leņķis":</p>
+<p>10&lt;30</p>
+<p>Relatīvās polārās koordinātas ievada formātā „@attālums&lt;leņķis":</p>
+<p>@10&lt;45</p>
+<p>Ievadot koordinātas vai vērtības, <a href="#expr">matemātiskās izteiksmes</a> var izmantot, lai aprēķinātu koordinātu, pamatojoties uz zināmām vērtībām. Piemēram, koordinātu 10,5 var arī ievadīt kā:</p>
+<p>5+5,30/6</p>
+<h3>Kalkulators</h3>
+<p>Komandrindu var izmantot arī kā kalkulatoru. Lai to izdarītu, ievadiet <a href="#expr">matemātisku izteiksmi</a> pirms tās ierakstot vienādības zīmi:</p>
+<p>=3+4 7</p>
+<p>Mainīgos var izmantot vērtību saglabāšanai:</p>
+<p>=a=5+6 11 =a/2 5.5</p>
+<h3>Matemātiskās izteiksmes</h3>
+<p>Pieejamās matemātiskās konstantes ir:</p>
+<p>PI, LN2, LN10, LOG2E, LOG10E, SQRT1\_2, SQRT2</p>
+<p>Pieejamās matemātiskās funkcijas ir:</p>
+<p>abs, ceil, floor, exp, log, max, min, pow, sqrt, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt, trunc</p>
+<p>Lielākā daļa no šīm konstantēm un funkcijām ir standarta ECMAScript (JavaScript) funkcijas un dokumentētas tiešsaistē. Standarta ECMAScript šīs funkcijas ir daļa no Math klases, tāpēc funkcija <em>abs</em> būtu jāraksta kā <em>Math.abs</em>. QCAD komandrindā ērtības labad varat izlaist <em>Math.</em> daļu. Trigonometriskās funkcijas (sin, cos, tan, asin, acos, atan, atan2) pieņem vai atgriež leņķus grādos. Ja dodat priekšroku šo funkciju radiānu versijām, tā vietā izmantojiet oriģinālās <em>Math.</em> funkcijas.</p>
+<p>Funkcijas <em>rad2deg</em> un <em>deg2rad</em> var izmantot leņķu konvertēšanai starp radiāniem un grādiem.</p></body>
+</html>

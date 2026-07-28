@@ -1,0 +1,2 @@
+Narzędzie to pozwala narysować sekwencję jednej lub więcej linii
+prostych.

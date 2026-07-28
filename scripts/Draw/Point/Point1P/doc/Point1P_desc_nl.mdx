@@ -1,0 +1,2 @@
+Dit commando wordt gebruikt om enkele punten te tekenen. Punten worden
+visueel weergegeven door een klein kruisje.

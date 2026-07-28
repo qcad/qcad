@@ -1,0 +1,2 @@
+Escolha esta ferramenta quando estiver a editar um bloco e quiser voltar ao
+desenho principal (bloco "*Model_Space").

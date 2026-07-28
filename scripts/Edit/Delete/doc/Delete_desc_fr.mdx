@@ -1,0 +1,1 @@
+Cet outil supprime les entités actuellement sélectionnées.

@@ -1,0 +1,3 @@
+Benennt den aktiven Block um. Dabei wird derselbe Dialog angezeigt wie beim
+Erstellen eines Blockes. Der Block und alle Blockreferenzen des Blockes werden
+umbenannt.

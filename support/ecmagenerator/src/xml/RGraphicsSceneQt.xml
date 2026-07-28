@@ -120,6 +120,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="entityId" isConst="false" />
       </variant>
     </method>
+    <method name="getDrawablesVersion"
+    cppName="getDrawablesVersion" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
     <method name="exportPoint" cppName="exportPoint"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
