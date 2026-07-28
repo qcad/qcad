@@ -253,7 +253,7 @@ public:
     double getDistanceTo(const RVector& point) const;
 
     void addPoint(const RVector& position);
-    bool hasPoints();
+    bool hasPoints() const;
     void setPoints(const QList<RVector>& p);
     QList<RVector> getPoints() const;
 
