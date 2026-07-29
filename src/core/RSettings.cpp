@@ -707,7 +707,7 @@ QSettings* RSettings::getQSettings() {
 
         qSettings =
             new QSettings(
-#if defined(Q_OS_WIN) || defined(Q_OS_MAC)
+#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
                 QSettings::IniFormat,
 #else
                 QSettings::NativeFormat,
@@ -1218,7 +1218,7 @@ QString RSettings::getRelativeCoordinatePrefix() {
  */
 bool RSettings::isDarkMode() {
     if (darkMode==-1) {
-#if defined(Q_OS_MAC)
+#if defined(Q_OS_MACOS)
         darkMode = (isMacDarkMode() ? 1 : 0);
 #elif defined(Q_OS_WIN32)
 
@@ -1261,7 +1261,7 @@ bool RSettings::hasDarkGuiBackground() {
         return false;
     }
 
-#if defined(Q_OS_MAC)
+#if defined(Q_OS_MACOS)
     // detect macOS dark mode:
     if (isMacDarkMode()) {
         darkGuiBackground = 1;
@@ -1498,7 +1498,7 @@ QString RSettings::getOSVersion() {
     default:
         return "Windows >= 10";
     }
-#elif defined (Q_OS_MAC)
+#elif defined (Q_OS_MACOS)
     switch (QSysInfo::MacintoshVersion) {
     case QSysInfo::MV_9:
         return "Mac OS 9 (Unsupported)";
