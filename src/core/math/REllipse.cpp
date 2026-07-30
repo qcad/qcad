@@ -310,17 +310,29 @@ void REllipse::setMinorPoint(const RVector& p) {
     setRatio(p.getMagnitude() / getMajorRadius());
 }
 
+/**
+ * Switches the major and the minor axis of this ellipse. The ellipse remains
+ * unchanged, only its representation changes: the ratio is inverted and the
+ * parameters are adjusted accordingly.
+ *
+ * \return False for a ratio of zero or a negative (invalid) ratio.
+ */
 bool REllipse::switchMajorMinor() {
-    if (fabs(ratio) < RS::PointTolerance) {
+    // a negative ratio is invalid:
+    if (ratio < RS::PointTolerance) {
         return false;
     }
     RVector vp_start=getStartPoint();
-    RVector vp_end=getStartPoint();
+    RVector vp_end=getEndPoint();
     RVector vp=getMajorPoint();
-    setMajorPoint(RVector(-ratio*vp.y, ratio*vp.x));
-    setRatio(1.0/ratio);
-    setStartParam(getParamTo(vp_start));
-    setEndParam(getParamTo(vp_end));
+    // the new major point is the current minor point. The attributes are
+    // updated directly: the setters would call correctMajorMinor() which
+    // would undo the switch:
+    majorPoint = RVector(-ratio*vp.y, ratio*vp.x);
+    ratio = 1.0/ratio;
+    // parameters of the two end points in the new parameterization:
+    startParam = getParamTo(vp_start);
+    endParam = getParamTo(vp_end);
     return true;
 }
 
@@ -1200,11 +1212,18 @@ bool REllipse::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint,
     return true;
 }
 
+/**
+ * Makes sure that the major axis of this ellipse is at least as long as its
+ * minor axis by switching the two axes if necessary.
+ */
 void REllipse::correctMajorMinor() {
     if (ratio>1.0) {
+        // the minor point has to be determined before the ratio is inverted.
+        // The attributes are updated directly: the setters would call this
+        // function again:
         RVector mp = getMinorPoint();
         ratio = 1.0/ratio;
-        setMajorPoint(mp);
+        majorPoint = mp;
         startParam = RMath::getNormalizedAngle(startParam - M_PI/2.0);
         endParam = RMath::getNormalizedAngle(endParam - M_PI/2.0);
     }
