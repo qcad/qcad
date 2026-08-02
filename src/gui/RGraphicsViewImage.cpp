@@ -143,6 +143,12 @@ void RGraphicsViewImage::invalidate(bool force) {
     graphicsBufferNeedsUpdate = true;
     if (force) {
         lastFactor = -1;
+
+        // the scene has changed in a way that is not necessarily reflected in
+        // the drawables of the scene: the cached list of visible entities may
+        // be out of date (e.g. a layer was switched off: the drawables of the
+        // entities on that layer are kept, only their visibility changed):
+        orderedIdsValid = false;
     }
 }
 
@@ -224,7 +230,7 @@ void RGraphicsViewImage::updateImage() {
 
     if (graphicsBufferNeedsUpdate) {
         // TODO: check if buffer is not updated unnecessarily:
-        RDebug::startTimer();
+        //RDebug::startTimer();
 
         // update drawing scale from document setting:
         QString scaleString;
@@ -298,7 +304,7 @@ void RGraphicsViewImage::updateImage() {
         lastFactor = factor;
 
         //qDebug() << "updateImage: OK";
-        RDebug::stopTimer("updateImage");
+        //RDebug::stopTimer("updateImage");
 
         //RDebug::startTimer();
         if (!workers.isEmpty()) {

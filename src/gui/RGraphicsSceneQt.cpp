@@ -1286,7 +1286,12 @@ void RGraphicsSceneQt::startEntity(bool topLevelEntity) {
         if (topLevelEntity) {
             // top level entity (i.e. not entity in block ref):
             // remove previous graphical representations:
-            drawables.remove(getEntity()->getId());
+            if (drawables.remove(getEntity()->getId())>0) {
+                // the entity might not be exported again (e.g. if it has
+                // become invisible), so the removal has to be reported here
+                // and not only in addDrawable:
+                drawablesVersion++;
+            }
         }
     }
 }
