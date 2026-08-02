@@ -323,8 +323,6 @@ SvgHandler.prototype.endElement = function(namespaceURI, localName, qName) {
  * \class SvgImporter
  * \brief Very basic SVG import implementation. Only supports
  * a few SVG tags.
- *
- * \todo Use a 3rd party library to fully support SVG.
  */
 function SvgImporter(document, resolution) {
     if (isNull(resolution)) {
