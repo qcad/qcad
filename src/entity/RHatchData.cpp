@@ -45,7 +45,12 @@ RHatchData::RHatchData() :
     angle(0.0),
     patternName("SOLID"),
     transparency(255),
-    dirty(true), gotDraft(false), gotPixelSizeHint(0.0) {
+    dirty(true), gotDraft(false), gotPixelSizeHint(0.0),
+    boundaryBoxesValid(false),
+    boundaryBandCount(0), boundaryBandHeight(0.0),
+    boundaryMinX(0.0), boundaryMaxX(0.0), boundaryMinY(0.0), boundaryMaxY(0.0),
+    boundaryFlatteningError(0.0),
+    boundaryPointCacheValid(false) {
 }
 
 RHatchData::RHatchData(RDocument* document, const RHatchData& data)
@@ -75,7 +80,12 @@ RHatchData::RHatchData(bool solid, double scaleFactor, double angle, const QStri
     angle(angle),
     patternName(patternName),
     transparency(255),
-    dirty(true), gotDraft(false) {
+    dirty(true), gotDraft(false), gotPixelSizeHint(0.0),
+    boundaryBoxesValid(false),
+    boundaryBandCount(0), boundaryBandHeight(0.0),
+    boundaryMinX(0.0), boundaryMaxX(0.0), boundaryMinY(0.0), boundaryMaxY(0.0),
+    boundaryFlatteningError(0.0),
+    boundaryPointCacheValid(false) {
 }
 
 RHatchData& RHatchData::operator =(const RHatchData& other) {
@@ -97,6 +107,8 @@ RHatchData& RHatchData::operator =(const RHatchData& other) {
     gotPixelSizeHint = other.gotPixelSizeHint;
 
     boundary.clear();
+    boundaryBoxesValid = false;
+    boundaryPointCacheValid = false;
 
     for (int i=0; i<other.boundary.size(); ++i) {
         newLoop();
@@ -143,6 +155,8 @@ RHatchData& RHatchData::operator =(const RHatchData& other) {
 void RHatchData::clearBoundary() {
     boundary.clear();
     dirty = true;
+    boundaryBoxesValid = false;
+    boundaryPointCacheValid = false;
 }
 
 RBox RHatchData::getBoundingBox(bool ignoreEmpty) const {
@@ -812,6 +826,10 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
     QElapsedTimer timer;
     timer.start();
 
+    // one pen shared by all generated paths (constructing a QPen for every
+    // single hatch line segment is a heap allocation each time):
+    const QPen solidPen(Qt::SolidLine);
+
     QList<RPatternLine> patternLines = localPattern.getPatternLines();
     for (int i=0; i<patternLines.length(); i++) {
         RPatternLine patternLine = patternLines[i];
@@ -871,6 +889,22 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
 
         RVector offset = patternLine.offset;
         offset.rotate(patternLine.angle);
+
+        // exporter configuration only depends on the pattern line:
+        // set up once instead of for every repetition of the pattern line:
+        RPainterPathExporter ppExporter;
+        //ppExporter.setExportZeroLinesAsPoints(false);
+        ppExporter.setExportZeroLinesAsPoints(true);
+        // ignore zero lines if
+        // line was split up into segments
+        ppExporter.setIgnoreZeroLines(!hasDots);
+        // ensure pattern scale of 1:
+        ppExporter.setLineweight(RLineweight::Weight100);
+        if (!patternLine.dashes.isEmpty()) {
+            RLinetypePattern pat;
+            pat.set(patternLine.dashes);
+            ppExporter.setLinetypePattern(pat);
+        }
 
         // offset leads towards the left side of the base line, switch left / right limits:
         RS::Side offsetSide = baseLine.getSideOfPoint(baseLine.getStartPoint() + offset);
@@ -964,24 +998,10 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
             //QList<RLine> segments;
             //segments.append(unclippedLine);
 
-            RPainterPathExporter ppExporter;
-            //ppExporter.setExportZeroLinesAsPoints(false);
-            ppExporter.setExportZeroLinesAsPoints(true);
-            // ignore zero lines if
-            // line was split up into segments
-            ppExporter.setIgnoreZeroLines(!hasDots);
-            // ensure pattern scale of 1:
-            ppExporter.setLineweight(RLineweight::Weight100);
-            if (!patternLine.dashes.isEmpty()) {
-                RLinetypePattern pat;
-                pat.set(patternLine.dashes);
-                ppExporter.setLinetypePattern(pat);
-            }
-
             // copy segments that are inside contour into hatch pattern:
             for (int si=0; si<segments.size(); si++) {
                 RVector middle = segments[si].getMiddlePoint();
-                if (boundaryPath.contains(QPointF(middle.x, middle.y))) {
+                if (isPointInBoundary(middle.x, middle.y)) {
                     RS::Side side = orthoLine.getSideOfPoint(segments[si].getStartPoint());
                     double offset = sp.getDistanceTo(segments[si].getStartPoint());
                     if (side==RS::RightHand) {
@@ -993,7 +1013,7 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
 
                     if (!path.isEmpty()) {
                         //clippedPattern.addPath(path);
-                        path.setPen(QPen(Qt::SolidLine));
+                        path.setPen(solidPen);
                         painterPaths.append(path);
                     }
                 }
@@ -1029,6 +1049,7 @@ RPainterPath RHatchData::getBoundaryPath(double pixelSizeHint) const {
     }
 
     boundaryPath = RPainterPath();
+    boundaryPointCacheValid = false;
 
     if (getAutoRegen()) {
         gotPixelSizeHint = pixelSizeHint;
@@ -1254,22 +1275,426 @@ RPainterPath RHatchData::getBoundaryPath(double pixelSizeHint) const {
     return boundaryPath;
 }
 
+/**
+ * Updates the cached bounding boxes of all boundary shapes.
+ *
+ * The intersection code applies the same test but recalculates the bounding
+ * box of the shape for every single call. Since one hatch typically
+ * intersects every boundary element with hundreds of pattern lines, the
+ * bounding boxes are calculated once here instead.
+ */
+void RHatchData::updateBoundaryBoxes() const {
+    if (boundaryBoxesValid) {
+        return;
+    }
+
+    int shapeCount = 0;
+    for (int loopIndex=0; loopIndex<boundary.size(); loopIndex++) {
+        shapeCount += boundary[loopIndex].size();
+    }
+
+    // six coordinates per shape: minimum and maximum corner:
+    boundaryBoxes.resize(shapeCount*6);
+    double* box = boundaryBoxes.data();
+
+    for (int loopIndex=0; loopIndex<boundary.size(); loopIndex++) {
+        const QList<QSharedPointer<RShape> >& loop = boundary[loopIndex];
+        for (int i=0; i<loop.size(); i++) {
+            if (loop[i].isNull()) {
+                // empty box, never intersects anything:
+                box[0] = box[1] = box[2] = 1.0;
+                box[3] = box[4] = box[5] = -1.0;
+            }
+            else {
+                // same tolerance as used by RShape::getIntersectionPoints:
+                RBox bb = loop[i]->getBoundingBox().growXY(1e-2);
+                RVector minimum = bb.getMinimum();
+                RVector maximum = bb.getMaximum();
+                box[0] = minimum.x;
+                box[1] = minimum.y;
+                box[2] = minimum.z;
+                box[3] = maximum.x;
+                box[4] = maximum.y;
+                box[5] = maximum.z;
+            }
+            box += 6;
+        }
+    }
+
+    boundaryBoxesValid = true;
+}
+
+/**
+ * \return True if the given path contains any curve (bezier) element.
+ */
+static bool hasCurves(const QPainterPath& path) {
+    for (int i=0; i<path.elementCount(); i++) {
+        if (path.elementAt(i).type==QPainterPath::CurveToElement) {
+            return true;
+        }
+    }
+    return false;
+}
+
+/**
+ * Updates the flattened representation of the boundary path which is used by
+ * isPointInBoundary().
+ *
+ * The boundary is flattened into line segments once and the segments are
+ * sorted into horizontal bands. Testing a point then only has to look at the
+ * few edges which cross the band the point is in, instead of at every element
+ * of the boundary path.
+ */
+void RHatchData::updateBoundaryPointCache() const {
+    if (boundaryPointCacheValid) {
+        return;
+    }
+
+    boundaryPointCacheValid = true;
+    boundaryEdges.clear();
+    boundaryEdgeDirs.clear();
+    boundaryBandStart.clear();
+    boundaryBandEdges.clear();
+    boundaryLongEdges.clear();
+    boundaryBandCount = 0;
+    boundaryBandHeight = 0.0;
+
+    if (boundaryPath.isEmpty()) {
+        return;
+    }
+
+    // same rectangle QPainterPath::contains uses to reject points early on:
+    QRectF cpr = boundaryPath.controlPointRect();
+    boundaryMinX = cpr.left();
+    boundaryMaxX = cpr.right();
+    boundaryMinY = cpr.top();
+    boundaryMaxY = cpr.bottom();
+
+    // Paths made up of lines only are flattened exactly. Curves are flattened
+    // by Qt to a precision of about 0.5 drawing units, which is far too
+    // coarse: flattening a scaled up copy of the path brings the error down to
+    // about 1e-5 of the size of the hatch. The scale is a power of two, so
+    // scaling back is lossless. Whatever error is left is handled by
+    // isPointInBoundary(), which falls back to the exact (but much slower)
+    // QPainterPath::contains() for points close to the flattened boundary:
+    double scale = 1.0;
+    if (hasCurves(boundaryPath)) {
+        double extent = qMax(cpr.width(), cpr.height());
+        if (extent>0.0) {
+            while (0.5/scale > 1.0e-5*extent && scale<1.0e12) {
+                scale *= 2.0;
+            }
+        }
+    }
+    double invScale = 1.0/scale;
+
+    // points closer than this to the flattened boundary cannot be classified
+    // reliably (0 for paths without curves, which are flattened exactly):
+    boundaryFlatteningError = (scale>1.0 ? 4.0*0.5*invScale : 0.0);
+
+    QList<QPolygonF> polygons =
+        boundaryPath.toSubpathPolygons(scale>1.0 ? QTransform::fromScale(scale, scale) : QTransform());
+
+    int pointCount = 0;
+    for (int i=0; i<polygons.length(); i++) {
+        pointCount += polygons[i].size();
+    }
+    if (pointCount==0) {
+        return;
+    }
+
+    // filled in place, truncated to the number of edges actually used below:
+    boundaryEdges.resize(pointCount*4);
+    boundaryEdgeDirs.resize(pointCount);
+    double* edgePtr = boundaryEdges.data();
+    qint8* dirPtr = boundaryEdgeDirs.data();
+    int edgeCount = 0;
+
+    for (int i=0; i<polygons.length(); i++) {
+        const QPolygonF& polygon = polygons[i];
+        int n = polygon.size();
+        if (n<2) {
+            continue;
+        }
+        const QPointF* points = polygon.constData();
+        for (int k=0; k<n; k++) {
+            const QPointF& p1 = points[k];
+            // subpaths are implicitly closed (as they are for filling):
+            const QPointF& p2 = points[k+1<n ? k+1 : 0];
+
+            double y1 = p1.y();
+            double y2 = p2.y();
+
+            // horizontal edges never contribute to the winding number:
+            if (qFuzzyCompare(y1, y2)) {
+                continue;
+            }
+
+            double x1 = p1.x();
+            double x2 = p2.x();
+
+            if (y2<y1) {
+                edgePtr[0] = x2*invScale;
+                edgePtr[1] = y2*invScale;
+                edgePtr[2] = x1*invScale;
+                edgePtr[3] = y1*invScale;
+                *dirPtr = -1;
+            }
+            else {
+                edgePtr[0] = x1*invScale;
+                edgePtr[1] = y1*invScale;
+                edgePtr[2] = x2*invScale;
+                edgePtr[3] = y2*invScale;
+                *dirPtr = 1;
+            }
+            edgePtr += 4;
+            dirPtr++;
+            edgeCount++;
+        }
+    }
+
+    boundaryEdges.resize(edgeCount*4);
+    boundaryEdgeDirs.resize(edgeCount);
+
+    if (edgeCount==0) {
+        return;
+    }
+
+    double height = boundaryMaxY - boundaryMinY;
+    if (height<=0.0) {
+        boundaryBandCount = 1;
+        boundaryBandHeight = 1.0;
+    }
+    else {
+        // aim for bands a quarter of the height of an average edge, so that a
+        // typical edge ends up in a handful of bands:
+        const double* edges = boundaryEdges.constData();
+        double spanSum = 0.0;
+        for (int e=0; e<edgeCount; e++) {
+            spanSum += edges[e*4+3] - edges[e*4+1];
+        }
+        double averageSpan = spanSum / edgeCount;
+        int bands = edgeCount;
+        if (averageSpan>0.0) {
+            bands = (int)(4.0*height/averageSpan) + 1;
+        }
+        boundaryBandCount = qBound(1, qMin(bands, 4*edgeCount), 65536);
+        boundaryBandHeight = height / boundaryBandCount;
+    }
+    double invBandHeight = 1.0/boundaryBandHeight;
+
+    // edges which span more bands than this are kept in a separate list which
+    // is always looked at: they would otherwise blow up the index (think of
+    // the two vertical sides of a rectangle with many small islands in it):
+    const int maxBandsPerEdge = 32;
+
+    // edges are indexed a margin beyond their own extent, so that looking at
+    // the band a point is in always finds every edge close enough to it for
+    // the flattening error to matter:
+    double bandMargin = boundaryFlatteningError;
+
+    QVector<int> firstBand(edgeCount);
+    QVector<int> lastBand(edgeCount);
+    QVector<int> counts(boundaryBandCount, 0);
+    int* firstBandPtr = firstBand.data();
+    int* lastBandPtr = lastBand.data();
+    int* countsPtr = counts.data();
+    const double* edges = boundaryEdges.constData();
+
+    int total = 0;
+    boundaryLongEdges.clear();
+    for (int e=0; e<edgeCount; e++) {
+        int b1 = (int)((edges[e*4+1] - bandMargin - boundaryMinY) * invBandHeight);
+        int b2 = (int)((edges[e*4+3] + bandMargin - boundaryMinY) * invBandHeight);
+        b1 = qBound(0, b1, boundaryBandCount-1);
+        b2 = qBound(0, b2, boundaryBandCount-1);
+        if (b2-b1 >= maxBandsPerEdge) {
+            firstBandPtr[e] = 1;
+            lastBandPtr[e] = 0;
+            boundaryLongEdges.append(e);
+            continue;
+        }
+        firstBandPtr[e] = b1;
+        lastBandPtr[e] = b2;
+        for (int b=b1; b<=b2; b++) {
+            countsPtr[b]++;
+        }
+        total += b2-b1+1;
+    }
+
+    boundaryBandStart.resize(boundaryBandCount+1);
+    int* bandStartPtr = boundaryBandStart.data();
+    int offset = 0;
+    for (int b=0; b<boundaryBandCount; b++) {
+        bandStartPtr[b] = offset;
+        offset += countsPtr[b];
+    }
+    bandStartPtr[boundaryBandCount] = offset;
+
+    boundaryBandEdges.resize(total);
+    int* bandEdgesPtr = boundaryBandEdges.data();
+    // reuse counts as the fill cursor for each band:
+    for (int b=0; b<boundaryBandCount; b++) {
+        countsPtr[b] = bandStartPtr[b];
+    }
+    for (int e=0; e<edgeCount; e++) {
+        for (int b=firstBandPtr[e]; b<=lastBandPtr[e]; b++) {
+            bandEdgesPtr[countsPtr[b]++] = e;
+        }
+    }
+}
+
+/**
+ * Accumulates the winding number contribution of the given range of edges,
+ * using the same scanline rules as QPainterPath::contains.
+ *
+ * \return False if the point is too close to one of the edges to be
+ * classified reliably from the flattened boundary.
+ */
+bool RHatchData::addWindingNumber(const int* edgeIndices, int count, double x, double y, int& windingNumber) const {
+    const double* edges = boundaryEdges.constData();
+    const qint8* dirs = boundaryEdgeDirs.constData();
+    const double margin = boundaryFlatteningError;
+    const double margin2 = margin*margin;
+
+    for (int k=0; k<count; k++) {
+        int e = edgeIndices[k];
+        double y1 = edges[e*4+1];
+        double y2 = edges[e*4+3];
+
+        bool crosses = (y>=y1 && y<y2);
+        if (!crosses) {
+            if (margin<=0.0 || y<y1-margin || y>=y2+margin) {
+                continue;
+            }
+            // edge does not cross the scanline but is close enough for the
+            // flattening error to matter: still check the distance below
+        }
+
+        double x1 = edges[e*4+0];
+        double x2 = edges[e*4+2];
+        double dx = x2-x1;
+        double dy = y2-y1;
+        double xi = x1 + (dx/dy) * (y-y1);
+
+        if (margin>0.0) {
+            // the point is within margin of the line through this edge, so
+            // the flattened boundary cannot tell inside from outside here
+            // (compared without taking the square root:
+            // (xi-x)^2 * dy^2 <= margin^2 * (dx^2+dy^2)):
+            double d = xi-x;
+            if (d*d*dy*dy <= margin2*(dx*dx+dy*dy)) {
+                return false;
+            }
+        }
+
+        if (crosses && xi<=x) {
+            windingNumber += dirs[e];
+        }
+    }
+
+    return true;
+}
+
+/**
+ * \return True if the given point is inside the hatch boundary.
+ *
+ * Equivalent to boundaryPath.contains(QPointF(x, y)) but based on the
+ * flattened, indexed boundary maintained by updateBoundaryPointCache().
+ * Points which are too close to the boundary for the flattened representation
+ * to decide are handed to QPainterPath::contains.
+ */
+bool RHatchData::isPointInBoundary(double x, double y) const {
+    updateBoundaryPointCache();
+
+    if (boundaryBandCount==0) {
+        // empty boundary or boundary without any non horizontal edge:
+        return false;
+    }
+
+    if (x<boundaryMinX || x>boundaryMaxX || y<boundaryMinY || y>boundaryMaxY) {
+        return false;
+    }
+
+    // edges are indexed a margin beyond their own extent, so the band the
+    // point is in holds every edge that can matter here:
+    int band = (int)((y - boundaryMinY) / boundaryBandHeight);
+    band = qBound(0, band, boundaryBandCount-1);
+
+    int windingNumber = 0;
+    const int* bandEdges = boundaryBandEdges.constData();
+    int from = boundaryBandStart[band];
+    int to = boundaryBandStart[band+1];
+
+    if (!addWindingNumber(bandEdges+from, to-from, x, y, windingNumber) ||
+        // edges spanning many bands are not indexed:
+        !addWindingNumber(boundaryLongEdges.constData(), boundaryLongEdges.size(), x, y, windingNumber)) {
+
+        return boundaryPath.contains(QPointF(x, y));
+    }
+
+    if (boundaryPath.fillRule()==Qt::WindingFill) {
+        return windingNumber!=0;
+    }
+    return (windingNumber%2)!=0;
+}
+
 QList<RLine> RHatchData::getSegments(const RLine& line) const {
     QList<RLine> ret;
+
+    updateBoundaryBoxes();
+
+    // same tolerance as used by RShape::getIntersectionPoints:
+    RBox lineBox = line.getBoundingBox().growXY(1e-2);
+    RVector lineMinimum = lineBox.getMinimum();
+    RVector lineMaximum = lineBox.getMaximum();
+
+    // hatch lines run across the whole hatch, so their bounding box hardly
+    // rejects anything. Testing which side of the line a boundary element is
+    // on does: normal of the line and its distance from the origin:
+    // the normal is not normalized: scaling normal and distance by the same
+    // factor does not change the result of the comparison below:
+    double normalX = -(line.endPoint.y - line.startPoint.y);
+    double normalY = line.endPoint.x - line.startPoint.x;
+    bool testSide = (fabs(normalX)>RS::PointTolerance || fabs(normalY)>RS::PointTolerance);
+    double normalDistance = normalX*line.startPoint.x + normalY*line.startPoint.y;
 
     // find all intersections of the given line with the boundary:
     // iterate through loops:
     QList<RVector> intersections;
+    const double* box = boundaryBoxes.constData();
     for (int loopIndex=0; loopIndex<boundary.size(); loopIndex++) {
-        QList<QSharedPointer<RShape> > loop = boundary[loopIndex];
+        const QList<QSharedPointer<RShape> >& loop = boundary[loopIndex];
         // iterate through boundary elements:
-        for (int i=0; i<loop.size(); i++) {
-            QSharedPointer<RShape> boundary = loop[i];
-            if (boundary.isNull()) {
+        for (int i=0; i<loop.size(); i++, box+=6) {
+            // quick reject: boundary element is out of reach of the line
+            // (same test the intersection code does, but without having to
+            // recalculate the bounding box of the boundary element):
+            if (box[0]>lineMaximum.x || box[1]>lineMaximum.y || box[2]>lineMaximum.z ||
+                box[3]<lineMinimum.x || box[4]<lineMinimum.y || box[5]<lineMinimum.z) {
                 continue;
             }
 
-            QList<RVector> ips = boundary->getIntersectionPoints(line, true, false);
+            // quick reject: the (already grown) bounding box of the boundary
+            // element lies completely on one side of the line:
+            if (testSide) {
+                double x1 = normalX*box[0];
+                double x2 = normalX*box[3];
+                double y1 = normalY*box[1];
+                double y2 = normalY*box[4];
+                double minimum = qMin(x1, x2) + qMin(y1, y2);
+                double maximum = qMax(x1, x2) + qMax(y1, y2);
+                if (minimum>normalDistance || maximum<normalDistance) {
+                    continue;
+                }
+            }
+
+            const QSharedPointer<RShape>& boundaryShape = loop[i];
+            if (boundaryShape.isNull()) {
+                continue;
+            }
+
+            QList<RVector> ips = boundaryShape->getIntersectionPoints(line, true, false);
             if (ips.isEmpty()) {
                 continue;
             }
@@ -1367,6 +1792,8 @@ QPair<QSharedPointer<RShape>, QSharedPointer<RShape> > RHatchData::getBoundaryEl
 
 void RHatchData::update() const {
     dirty = true;
+    boundaryBoxesValid = false;
+    boundaryPointCacheValid = false;
 }
 
 bool RHatchData::order() {

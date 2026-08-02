@@ -187,6 +187,7 @@ public:
     void addBoundaryShape(QSharedPointer<RShape> shape, int loop) {
         if (loop < boundary.length()) {
             boundary[loop].append(shape);
+            boundaryBoxesValid = false;
         }
     }
     RPainterPath getBoundaryPath(double pixelSizeHint = RDEFAULT_MIN1) const;
@@ -266,6 +267,12 @@ protected:
     QList<RLine> getSegments(const RLine& line) const;
 
 private:
+    void updateBoundaryBoxes() const;
+    void updateBoundaryPointCache() const;
+    bool addWindingNumber(const int* edgeIndices, int count, double x, double y, int& windingNumber) const;
+    bool isPointInBoundary(double x, double y) const;
+
+private:
     bool solid;
     bool winding;
     bool autoRegen;
@@ -291,6 +298,34 @@ private:
     mutable bool dirty;
     mutable bool gotDraft;
     mutable double gotPixelSizeHint;
+
+    /**
+     * Bounding box of every boundary shape, grown by the same tolerance the
+     * intersection code uses. Cached to avoid recalculating the bounding box
+     * of every boundary element for every single hatch pattern line.
+     */
+    mutable QVector<double> boundaryBoxes;
+    mutable bool boundaryBoxesValid;
+
+    /**
+     * Flattened boundary (boundaryPath), used to determine whether a point is
+     * inside the hatch much faster than QPainterPath::contains can.
+     * Four coordinates per edge (x1,y1,x2,y2 with y1<y2), the edges sorted
+     * into horizontal bands (CSR style: bandStart indexes into bandEdges).
+     */
+    mutable QVector<double> boundaryEdges;
+    mutable QVector<qint8> boundaryEdgeDirs;
+    mutable QVector<int> boundaryBandStart;
+    mutable QVector<int> boundaryBandEdges;
+    mutable QVector<int> boundaryLongEdges;
+    mutable int boundaryBandCount;
+    mutable double boundaryBandHeight;
+    mutable double boundaryMinX;
+    mutable double boundaryMaxX;
+    mutable double boundaryMinY;
+    mutable double boundaryMaxY;
+    mutable double boundaryFlatteningError;
+    mutable bool boundaryPointCacheValid;
 
     static RHatchProxy* hatchProxy;
 };
