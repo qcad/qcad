@@ -34,7 +34,7 @@ QStringList RPluginLoader::pluginFiles;
 QString RPluginLoader::getPluginSuffix() {
 #if defined(Q_OS_WIN)
     return "dll";
-#elif defined(Q_OS_MAC)
+#elif defined(Q_OS_MACOS)
     return "dylib";
 #else
     return "so";
@@ -120,7 +120,7 @@ void RPluginLoader::loadPlugins(bool init) {
     // plugin settings are always stored in a file with base name "QCAD3":
     // this happens before RSettings is initialized:
 //    QSettings settings(
-//#if defined(Q_OS_WIN) || defined(Q_OS_MAC)
+//#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
 //        QSettings::IniFormat,
 //#else
 //        QSettings::NativeFormat,

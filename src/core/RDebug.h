@@ -25,7 +25,7 @@
 #include <QString>
 #include <QMetaType>
 
-#if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
+#if defined(Q_OS_MACOS) && !defined(Q_OS_IOS)
 #include <CoreServices/CoreServices.h>
 #include <mach/mach.h>
 #include <mach/mach_time.h>
@@ -104,7 +104,7 @@ public:
     }
 
 private:
-#if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
+#if defined(Q_OS_MACOS) && !defined(Q_OS_IOS)
     static QMap<int, uint64_t> timerMac;
 #else
     static QMap<int, QElapsedTimer> timer;

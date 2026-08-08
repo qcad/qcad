@@ -569,7 +569,10 @@ double RObject::getCustomDoubleProperty(const QString& title, const QString& key
 
 int RObject::getCustomIntProperty(const QString& title, const QString& key, int defaultValue) const {
     QVariant ret = getCustomProperty(title, key, defaultValue);
-    if (RS::getMetaType(ret)==RS::Int) {
+    if (RS::getMetaType(ret)==RS::Double ||
+        RS::getMetaType(ret)==RS::Int || RS::getMetaType(ret)==RS::UInt ||
+        RS::getMetaType(ret)==RS::LongLong || RS::getMetaType(ret)==RS::ULongLong) {
+
         return ret.toInt();
     }
     if (RS::getMetaType(ret)==RS::String) {

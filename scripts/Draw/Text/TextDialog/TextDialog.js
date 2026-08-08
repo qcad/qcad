@@ -990,6 +990,10 @@ TextDialog.prototype.fontChanged = function(font) {
  * Called when user changes the current color or the color under the cursor changed.
  */
 TextDialog.prototype.colorChanged = function(c) {
+    if (isNull(c)) {
+        return;
+    }
+
     if (!RSettings.hasDarkGuiBackground()) {
         // make sure that very bright text is readable:
         if (c.lightness()>240) {

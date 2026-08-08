@@ -147,7 +147,7 @@ void RGuiAction::initTexts() {
 
     // Override shortcut text:
     if (!shortcutText.isEmpty()) {
-#ifdef Q_OS_MACX
+#ifdef Q_OS_MACOS
         if (!textAndKeycode.endsWith(" (" + shortcutText + ")")) {
             textAndKeycode += " (" + shortcutText + ")";
         }
@@ -180,7 +180,7 @@ QString RGuiAction::formatToolTip(const QString& text, const QString& shortcut) 
     QString sc = shortcut;
 
     sc.replace(", ", "");
-#ifdef Q_OS_MACX
+#ifdef Q_OS_MACOS
     // change order to standard order on mac:
     sc.replace("Ctrl+Shift+", "Shift+Ctrl+");
     sc.replace("Ctrl+", QString("%1").arg(QChar(0x2318)));

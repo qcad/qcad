@@ -49,7 +49,7 @@ QString RS::getHostId() {
             .arg(getSystemId())
 #if defined(Q_OS_LINUX) || defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD) || defined(Q_OS_OPENBSD) || defined(Q_OS_SOLARIS)
     .arg(getenv("HOSTNAME"));
-#elif defined(Q_OS_MAC)
+#elif defined(Q_OS_MACOS)
     // environment variable HOSTNAME not exported on macOS by default:
     .arg(QHostInfo::localHostName());
 #elif defined(Q_OS_WIN)
@@ -73,7 +73,7 @@ QString RS::getSystemId() {
     return "openbsd";
 #elif defined(Q_OS_SOLARIS)
     return "solaris";
-#elif defined(Q_OS_MAC)
+#elif defined(Q_OS_MACOS)
     return "osx";
 #elif defined(Q_OS_WIN)
     return "win";
@@ -109,7 +109,7 @@ QString RS::getWindowManagerId() {
 
     wm = "unknown";
 
-#if defined(Q_OS_MAC)
+#if defined(Q_OS_MACOS)
     wm = "osx";
 #elif defined(Q_OS_WIN)
     wm = "win";
@@ -221,7 +221,7 @@ int RS::getCpuCores() {
     cores = sysinfo.dwNumberOfProcessors;
 #elif defined(Q_OS_UNIX)
     cores = sysconf( _SC_NPROCESSORS_ONLN );
-#elif defined (Q_OS_MAC) || defined (Q_OS_BSD4) || defined (Q_OS_FREEBSD) || defined (Q_OS_NETBSD) || defined (Q_OS_OPENBSD)
+#elif defined (Q_OS_MACOS) || defined (Q_OS_BSD4) || defined (Q_OS_FREEBSD) || defined (Q_OS_NETBSD) || defined (Q_OS_OPENBSD)
     nt mib[4];
     size_t len;
 
@@ -290,7 +290,7 @@ bool RS::showInFileManager(const QString& filePath) {
     }
     param += QDir::toNativeSeparators(fileInfo.canonicalFilePath());
     QProcess::startDetached(explorer, param);
-#elif defined(Q_OS_MAC)
+#elif defined(Q_OS_MACOS)
     // open Finder:
     QStringList scriptArgs;
     scriptArgs.append("-e");
@@ -360,7 +360,7 @@ QString RS::getFontFamilyFromFileName(const QString& fileName) {
     // If not found, cache and return the original filename
     fontCache.insert(fileKey, fileName);
     return fileName;
-#elif defined(Q_OS_MAC)
+#elif defined(Q_OS_MACOS)
     return fileName;
 #else
     // TODO: Linux: use fc-list

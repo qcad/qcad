@@ -224,6 +224,14 @@ CadToolBar.initStyle = function() {
         return;
     }
 
+    // theme provides its own application style plugin (e.g. Modern) which
+    // renders CAD tool bar buttons itself, without stylesheet workarounds:
+    var theme = RSettings.getValue("Theme/ThemeName", undefined);
+    if (!isNull(theme) && RPluginLoader.hasPlugin(theme.toUpperCase() + "STYLE")) {
+        toolBar.styleSheet = "";
+        return;
+    }
+
     if (RSettings.isQt(5)) {
         // tool bar buttons under Qt 5 have no border:
         if (!RSettings.hasCustomStyleSheet()) {
