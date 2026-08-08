@@ -319,7 +319,7 @@
     <message>
         <location line="+1"/>
         <source>Owned by Reference</source>
-        <translation>Принадлежит привязке</translation>
+        <translation>Принадлежит ссылке</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1098,12 +1098,12 @@
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation>Общение</translation>
+        <translation>Связь</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Electric</source>
-        <translation>Электрический</translation>
+        <translation>Электричество</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1118,17 +1118,17 @@
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation>Накладная мощность</translation>
+        <translation>Воздушная ЛЭП</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation>Foul</translation>
+        <translation>Канализация</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation>Восстание фолов</translation>
+        <translation>Напорная канализация</translation>
     </message>
 </context>
 <context>

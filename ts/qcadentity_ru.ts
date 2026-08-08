@@ -219,7 +219,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Средний</translation>
+        <translation>Середина</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -459,7 +459,7 @@
     <message>
         <location line="+3"/>
         <source>Text Rotation</source>
-        <translation>Вращение текста</translation>
+        <translation>Поворот текста</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -551,7 +551,7 @@
     <message>
         <location line="+1"/>
         <source>Winding</source>
-        <translation>Намотка</translation>
+        <translation>Направление обхода</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -944,7 +944,7 @@
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
         <source>Frame</source>
-        <translation>Рама</translation>
+        <translation>Рамка</translation>
     </message>
 </context>
 </TS>

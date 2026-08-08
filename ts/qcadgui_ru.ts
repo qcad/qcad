@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/gui/RCadToolBar.cpp" line="+139"/>
         <source>Vertical/Horizontal</source>
-        <translation>Вертикальный/горизонтальный</translation>
+        <translation>Вертикально/горизонтально</translation>
     </message>
 </context>
 <context>
