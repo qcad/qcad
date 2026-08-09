@@ -237,6 +237,7 @@ public:
         ObjectUcs,
         ObjectDocumentVariable,
         ObjectDimStyle,
+        ObjectConstraint,   /**< Constraint */
 
         EntityAll,          /**< All entities (for filters) */
         EntityUnknown,      /**< Unknown entity */
