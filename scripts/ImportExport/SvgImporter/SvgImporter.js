@@ -22,6 +22,7 @@ include("scripts/ShapeAlgorithms.js");
 
 /**
  * SAX style XML handler.
+ * @todo Remove to avoid Qt 5 dependency.
  */
 function SvgHandler(svgImporter) {
     QXmlDefaultHandler.call(this);
