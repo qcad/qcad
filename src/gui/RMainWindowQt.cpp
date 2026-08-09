@@ -24,6 +24,7 @@
 #include <QScreen>
 #include <QStatusBar>
 #include <QTabBar>
+#include <QTimer>
 #include <QToolBar>
 #include <QToolButton>
 #include <QWindow>
@@ -47,7 +48,8 @@
 #include "RTransactionEvent.h"
 
 RMainWindowQt::RMainWindowQt(QWidget* parent, bool hasMdiArea) :
-    QMainWindow(parent), RMainWindow(), mdiArea(NULL), disableCounter(0) {
+    QMainWindow(parent), RMainWindow(), mdiArea(NULL), disableCounter(0),
+    dockWidgetStateValid(false), closingDown(false) {
 
 // uncomment for unified tool bars under Mac:
 //#if QT_VERSION >= 0x050201
@@ -283,37 +285,99 @@ void RMainWindowQt::updateScenes(QMdiSubWindow* mdiChild) {
     }
 }
 
-void RMainWindowQt::closeEvent(QCloseEvent* e) {
-    // Part 2 of workaround for Qt 5.6.1, 5.6.2, 5.15.0, 6.x bug:
-    // dock widget closes before close dialog is shown
-    // dock widget state not persistent between sessions
-    // dock widget closes if user cancels close dialog
-#ifdef Q_OS_MAC
-#if (QT_VERSION >= 0x050601 && QT_VERSION <= 0x050602) || (QT_VERSION >= 0x050F00 && QT_VERSION < 0x060000) || (QT_VERSION >= 0x060600 && QT_VERSION <= 0x060900)
-    // restore dock widgets that were already closed by the same event due to
-    // a Qt bug:
-    QString eventAddr = QString("0x%1").arg((qlonglong)e, 0, 16);
-    QStringList closedDocks = property("ClosedDocks").toStringList();
-    for (int i=0; i<closedDocks.length(); i++) {
-        QString closedDock = closedDocks[i];
-        if (closedDock.startsWith(eventAddr + "|")) {
-            QStringList tuples = closedDock.split("|");
-            if (tuples.length()!=3) {
-                qWarning() << "unexpected value in ClosedDocks:" << closedDocks;
-                continue;
-            }
-            QString objName = tuples.at(1);
-            int x = tuples.at(2).toInt();
-            QWidget* w = findChild<QWidget*>(objName);
-            if (w) {
-                w->setVisible(true);
-                w->move(x, w->y());
-            }
-        }
+/**
+ * Part 2 of workaround for Qt bug:
+ * dock widget closes before close dialog is shown
+ * dock widget state not persistent between sessions
+ * dock widget closes if user cancels close dialog
+ *
+ * Called by RDockWidget whenever a dock widget receives a close event,
+ * i.e. before the dock widget is hidden by Qt.
+ *
+ * When the application is terminated, Qt closes all top level widgets
+ * (QApplicationPrivate::tryCloseAllWidgetWindows). Floating dock widgets are
+ * top level widgets, so they are closed (and hidden) as well. The order in
+ * which this happens is the order of QApplication::topLevelWidgets(), which
+ * is based on an unordered set and therefore arbitrary: if a floating dock
+ * widget happens to come before the main window, it is already hidden when
+ * closeEvent() / writeSettings() is called and saveState() would store it as
+ * hidden for the next session. Docked (non-floating) dock widgets are not top
+ * level widgets and are never affected, which is why only floating dock
+ * widgets lose their visibility (and only sometimes).
+ *
+ * We therefore remember the dock widget state of the main window before the
+ * first dock widget of a close operation is hidden. The remembered state is
+ * discarded again as soon as control returns to the event loop: if the dock
+ * widget was closed by the user (and not as part of closing the main window),
+ * closeEvent() is never called and the state must not be reused.
+ */
+void RMainWindowQt::notifyDockWidgetClosed(QWidget* dockWidget) {
+    if (dockWidget==NULL) {
+        return;
     }
-    setProperty("ClosedDocks", QStringList());
+
+    if (!dockWidgetStateValid) {
+        // first dock widget which is closed:
+        // remember state while all dock widgets are still in their
+        // pre-close state:
+        dockWidgetState = saveState();
+        dockWidgetStateValid = true;
+
+        // forget the state again as soon as we are back in the event loop:
+        QTimer::singleShot(0, this, SLOT(forgetDockWidgetState()));
+    }
+
+    if (dockWidget->isVisible()) {
+        closedDockWidgets.append(QPointer<QWidget>(dockWidget));
+        closedDockWidgetPositionsX.append(dockWidget->x());
+    }
+}
+
+/**
+ * Discards the dock widget state remembered by notifyDockWidgetClosed().
+ */
+void RMainWindowQt::forgetDockWidgetState() {
+    if (closingDown) {
+        // the main window is closing: keep the remembered state until it has
+        // been stored by writeSettings(). Note that closeEvent may well return
+        // to the event loop, e.g. to show a 'save changes?' dialog:
+        return;
+    }
+
+    dockWidgetState.clear();
+    dockWidgetStateValid = false;
+    closedDockWidgets.clear();
+    closedDockWidgetPositionsX.clear();
+}
+
+/**
+ * Shows all dock widgets again which were closed by Qt as part of the
+ * current (canceled) close operation.
+ */
+void RMainWindowQt::restoreClosedDockWidgets() {
+    closingDown = false;
+
+    for (int i=0; i<closedDockWidgets.length(); i++) {
+        QWidget* w = closedDockWidgets[i];
+        if (w==NULL) {
+            continue;
+        }
+        w->setVisible(true);
+#ifdef Q_OS_MAC
+        // workaround for macOS bug:
+        // floating dock widget moves when hidden and shown again:
+        w->move(closedDockWidgetPositionsX[i], w->y());
 #endif
-#endif
+    }
+    forgetDockWidgetState();
+}
+
+void RMainWindowQt::closeEvent(QCloseEvent* e) {
+    // from here on, the dock widget state remembered by
+    // notifyDockWidgetClosed() must not be discarded until it was stored by
+    // writeSettings() (closeEvent may return to the event loop, e.g. to show
+    // a 'save changes?' dialog):
+    closingDown = true;
 
     if (mdiArea==NULL) {
         e->accept();
@@ -356,6 +420,9 @@ void RMainWindowQt::closeEvent(QCloseEvent* e) {
         if (!closeEvent.isAccepted()) {
             e->ignore();
             // closing of app canceled:
+            // show dock widgets again which were closed by Qt as part of
+            // this close operation:
+            restoreClosedDockWidgets();
             return;
         }
 
@@ -631,7 +698,18 @@ bool RMainWindowQt::readSettings() {
 void RMainWindowQt::writeSettings() {
     RMainWindow::writeSettings();
 
-    RSettings::getQSettings()->setValue("Appearance/DockappWindows", saveState());
+    // if Qt has already closed (and hidden) floating dock widgets as part of
+    // the current close operation, store the state from before they were
+    // closed, otherwise their visibility would be lost for the next session
+    // (see notifyDockWidgetClosed):
+    QByteArray state;
+    if (dockWidgetStateValid) {
+        state = dockWidgetState;
+    }
+    else {
+        state = saveState();
+    }
+    RSettings::getQSettings()->setValue("Appearance/DockappWindows", state);
     RSettings::getQSettings()->setValue("Appearance/FullScreen", isFullScreen());
     RSettings::getQSettings()->setValue("Appearance/Maximized", isMaximized());
     RSettings::getQSettings()->setValue("Appearance/StatusBar", statusBar()->isVisible());
