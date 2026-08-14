@@ -196,13 +196,19 @@ public:
     /**
      * Sets the gradient name and makes this hatch a gradient fill.
      * Valid names are LINEAR, CYLINDER, INVCYLINDER, SPHERICAL,
-     * INVSPHERICAL, HEMISPHERICAL, INVHEMISPHERICAL, CURVED, INVCURVED.
+     * INVSPHERICAL, HEMISPHERICAL, INVHEMISPHERICAL, CURVED, INVCURVED
+     * (CYLINDER and INVCYLINDER are cyclic gradients from color 1 to
+     * color 2 and back to color 1).
+     * AutoCAD resource names (GR_LINEAR, GR_CYLIN, GR_INVCYL, ...) are
+     * accepted and normalized to the DXF names.
      * An empty name means no gradient (regular hatch or solid fill).
      */
     void setGradientName(const QString& n) {
-        gradientName = n.toUpper();
+        gradientName = normalizeGradientName(n);
         update();
     }
+
+    static QString normalizeGradientName(const QString& n);
 
     RColor getGradientColor1() const {
         return gradientColor1;

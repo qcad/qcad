@@ -728,6 +728,29 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape, bool addAutoLoops) {
 }
 
 /**
+ * \return Normalized gradient name: the canonical DXF name in upper case.
+ * Accepts DXF names (e.g. "CYLINDER") as well as AutoCAD resource names
+ * (e.g. "GR_CYLIN") as used by the AutoCAD gradient user interface.
+ */
+QString RHatchData::normalizeGradientName(const QString& n) {
+    QString name = n.trimmed().toUpper();
+
+    if (name.startsWith("GR_")) {
+        if (name=="GR_LINEAR") { return "LINEAR"; }
+        if (name=="GR_CYLIN") { return "CYLINDER"; }
+        if (name=="GR_INVCYL") { return "INVCYLINDER"; }
+        if (name=="GR_SPHER") { return "SPHERICAL"; }
+        if (name=="GR_INVSPH") { return "INVSPHERICAL"; }
+        if (name=="GR_HEMISP") { return "HEMISPHERICAL"; }
+        if (name=="GR_INVHEM") { return "INVHEMISPHERICAL"; }
+        if (name=="GR_CURVED") { return "CURVED"; }
+        if (name=="GR_INVCUR") { return "INVCURVED"; }
+    }
+
+    return name;
+}
+
+/**
  * \return Gradient brush used to render this gradient fill.
  * Approximates the AutoCAD gradient types (LINEAR, CYLINDER, SPHERICAL,
  * HEMISPHERICAL, CURVED and their INV counterparts).
@@ -747,6 +770,9 @@ QBrush RHatchData::createGradientBrush() const {
         qSwap(c1, c2);
     }
 
+    // gradient shift: 0.0: centered, 1.0: fully shifted:
+    double shift = qBound(-1.0, gradientShift, 1.0);
+
     if (name=="SPHERICAL" || name=="HEMISPHERICAL") {
         double radius = QLineF(rect.topLeft(), rect.bottomRight()).length()/2.0;
         if (radius<RS::PointTolerance) {
@@ -756,6 +782,15 @@ QBrush RHatchData::createGradientBrush() const {
         if (name=="HEMISPHERICAL") {
             gradientCenter = center + QPointF(sin(gradientAngle), -cos(gradientAngle)) * (radius/2.0);
         }
+        // AutoCAD renders non-centered gradients shifted up and to the left
+        // relative to the gradient angle (against the gradient direction and
+        // perpendicular up), creating the illusion of a light source to the
+        // left of the object; the shift direction rotates with the angle:
+        QPointF shiftDir(
+            (-cos(gradientAngle) - sin(gradientAngle)) / sqrt(2.0),
+            (cos(gradientAngle) - sin(gradientAngle)) / sqrt(2.0)
+        );
+        gradientCenter += shiftDir * (radius/2.0) * shift;
         QRadialGradient gradient(gradientCenter, radius, gradientCenter);
         gradient.setColorAt(0.0, c1);
         gradient.setColorAt(1.0, c2);
@@ -767,7 +802,11 @@ QBrush RHatchData::createGradientBrush() const {
     if (extension<RS::PointTolerance) {
         extension = 1.0;
     }
-    QLinearGradient gradient(center - dir*extension, center + dir*extension);
+    // shifted gradients move the gradient definition up and to the left
+    // relative to the gradient angle; for linear gradients only the
+    // component against the gradient direction is visible:
+    QPointF shiftOffset = -dir*extension*shift;
+    QLinearGradient gradient(center - dir*extension + shiftOffset, center + dir*extension + shiftOffset);
 
     if (name=="CYLINDER") {
         gradient.setColorAt(0.0, c1);
