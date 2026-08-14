@@ -23,6 +23,7 @@
 #include "entity_global.h"
 
 #include "RBox.h"
+#include "RColor.h"
 #include "REntityData.h"
 #include "RHatchProxy.h"
 #include "RPattern.h"
@@ -176,6 +177,87 @@ public:
         transparency = t;
     }
 
+    /**
+     * \return True if this hatch is a gradient fill (gradient name set).
+     */
+    bool isGradient() const {
+        return !gradientName.isEmpty();
+    }
+
+    void clearGradient() {
+        gradientName.clear();
+        update();
+    }
+
+    QString getGradientName() const {
+        return gradientName;
+    }
+
+    /**
+     * Sets the gradient name and makes this hatch a gradient fill.
+     * Valid names are LINEAR, CYLINDER, INVCYLINDER, SPHERICAL,
+     * INVSPHERICAL, HEMISPHERICAL, INVHEMISPHERICAL, CURVED, INVCURVED.
+     * An empty name means no gradient (regular hatch or solid fill).
+     */
+    void setGradientName(const QString& n) {
+        gradientName = n.toUpper();
+        update();
+    }
+
+    RColor getGradientColor1() const {
+        return gradientColor1;
+    }
+
+    void setGradientColor1(const RColor& c) {
+        gradientColor1 = c;
+        update();
+    }
+
+    RColor getGradientColor2() const {
+        return gradientColor2;
+    }
+
+    void setGradientColor2(const RColor& c) {
+        gradientColor2 = c;
+        update();
+    }
+
+    double getGradientAngle() const {
+        return gradientAngle;
+    }
+
+    void setGradientAngle(double a) {
+        gradientAngle = a;
+        update();
+    }
+
+    double getGradientShift() const {
+        return gradientShift;
+    }
+
+    void setGradientShift(double s) {
+        gradientShift = s;
+        update();
+    }
+
+    bool getGradientOneColorMode() const {
+        return gradientOneColorMode;
+    }
+
+    void setGradientOneColorMode(bool on) {
+        gradientOneColorMode = on;
+        update();
+    }
+
+    double getGradientTint() const {
+        return gradientTint;
+    }
+
+    void setGradientTint(double t) {
+        gradientTint = t;
+        update();
+    }
+
     double getLength() const;
     double getArea() const;
 
@@ -265,6 +347,7 @@ public:
 
 protected:
     QList<RLine> getSegments(const RLine& line) const;
+    QBrush createGradientBrush() const;
 
 private:
     void updateBoundaryBoxes() const;
@@ -281,6 +364,18 @@ private:
     QString patternName;
     RVector originPoint;
     int transparency;
+
+    /**
+     * Gradient fill data (DXF/DWG compatible). An empty gradient name
+     * means this hatch is not a gradient fill.
+     */
+    QString gradientName;
+    RColor gradientColor1;
+    RColor gradientColor2;
+    double gradientAngle;
+    double gradientShift;
+    bool gradientOneColorMode;
+    double gradientTint;
 
     /**
      * Hatch boundary, ordered by loops, in strictly defined order.

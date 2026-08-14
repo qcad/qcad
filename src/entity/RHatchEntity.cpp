@@ -53,6 +53,14 @@ RPropertyTypeId RHatchEntity::PropertyAngle;
 RPropertyTypeId RHatchEntity::PropertyOriginX;
 RPropertyTypeId RHatchEntity::PropertyOriginY;
 
+RPropertyTypeId RHatchEntity::PropertyGradientName;
+RPropertyTypeId RHatchEntity::PropertyGradientColor1;
+RPropertyTypeId RHatchEntity::PropertyGradientColor2;
+RPropertyTypeId RHatchEntity::PropertyGradientAngle;
+RPropertyTypeId RHatchEntity::PropertyGradientShift;
+RPropertyTypeId RHatchEntity::PropertyGradientOneColorMode;
+RPropertyTypeId RHatchEntity::PropertyGradientTint;
+
 RPropertyTypeId RHatchEntity::PropertyVertexNX;
 RPropertyTypeId RHatchEntity::PropertyVertexNY;
 RPropertyTypeId RHatchEntity::PropertyVertexNZ;
@@ -97,6 +105,14 @@ void RHatchEntity::init() {
     RHatchEntity::PropertyOriginX.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "X"));
     RHatchEntity::PropertyOriginY.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "Y"));
 
+    RHatchEntity::PropertyGradientName.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Gradient"), QT_TRANSLATE_NOOP("REntity", "Name"));
+    RHatchEntity::PropertyGradientColor1.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Gradient"), QT_TRANSLATE_NOOP("REntity", "Color 1"));
+    RHatchEntity::PropertyGradientColor2.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Gradient"), QT_TRANSLATE_NOOP("REntity", "Color 2"));
+    RHatchEntity::PropertyGradientAngle.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Gradient"), QT_TRANSLATE_NOOP("REntity", "Angle"));
+    RHatchEntity::PropertyGradientShift.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Gradient"), QT_TRANSLATE_NOOP("REntity", "Shift"));
+    RHatchEntity::PropertyGradientOneColorMode.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Gradient"), QT_TRANSLATE_NOOP("REntity", "One Color"));
+    RHatchEntity::PropertyGradientTint.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Gradient"), QT_TRANSLATE_NOOP("REntity", "Tint"));
+
     RHatchEntity::PropertyVertexNX.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
     RHatchEntity::PropertyVertexNY.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
     RHatchEntity::PropertyVertexNZ.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
@@ -122,6 +138,17 @@ bool RHatchEntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& v
 
     ret = ret || RObject::setMember(data.originPoint.x, value, PropertyOriginX == propertyTypeId);
     ret = ret || RObject::setMember(data.originPoint.y, value, PropertyOriginY == propertyTypeId);
+
+    if (PropertyGradientName == propertyTypeId) {
+        data.setGradientName(value.toString());
+        ret = true;
+    }
+    ret = ret || RObject::setMember(data.gradientColor1, value, PropertyGradientColor1 == propertyTypeId);
+    ret = ret || RObject::setMember(data.gradientColor2, value, PropertyGradientColor2 == propertyTypeId);
+    ret = ret || RObject::setMember(data.gradientAngle, value, PropertyGradientAngle == propertyTypeId);
+    ret = ret || RObject::setMember(data.gradientShift, value, PropertyGradientShift == propertyTypeId);
+    ret = ret || RObject::setMember(data.gradientOneColorMode, value, PropertyGradientOneColorMode == propertyTypeId);
+    ret = ret || RObject::setMember(data.gradientTint, value, PropertyGradientTint == propertyTypeId);
 
     if (data.hasCustomPattern()) {
         if (PropertyScaleFactor == propertyTypeId) {
@@ -324,6 +351,30 @@ QPair<QVariant, RPropertyAttributes> RHatchEntity::getProperty(
         return qMakePair(QVariant(data.originPoint.x), RPropertyAttributes(op));
     } else if (propertyTypeId == PropertyOriginY) {
         return qMakePair(QVariant(data.originPoint.y), RPropertyAttributes(op));
+    }
+
+    // gradient properties are hidden for non-gradient hatches:
+    RPropertyAttributes::Option gradientOp =
+        data.isGradient() ? RPropertyAttributes::NoOptions : RPropertyAttributes::Invisible;
+
+    if (propertyTypeId == PropertyGradientName) {
+        return qMakePair(QVariant(data.gradientName), RPropertyAttributes(gradientOp));
+    } else if (propertyTypeId == PropertyGradientColor1) {
+        QVariant var;
+        var.setValue(data.gradientColor1);
+        return qMakePair(var, RPropertyAttributes(gradientOp));
+    } else if (propertyTypeId == PropertyGradientColor2) {
+        QVariant var;
+        var.setValue(data.gradientColor2);
+        return qMakePair(var, RPropertyAttributes(gradientOp));
+    } else if (propertyTypeId == PropertyGradientAngle) {
+        return qMakePair(QVariant(data.gradientAngle), RPropertyAttributes(RPropertyAttributes::Angle|gradientOp));
+    } else if (propertyTypeId == PropertyGradientShift) {
+        return qMakePair(QVariant(data.gradientShift), RPropertyAttributes(RPropertyAttributes::UnitLess|gradientOp));
+    } else if (propertyTypeId == PropertyGradientOneColorMode) {
+        return qMakePair(QVariant(data.gradientOneColorMode), RPropertyAttributes(gradientOp));
+    } else if (propertyTypeId == PropertyGradientTint) {
+        return qMakePair(QVariant(data.gradientTint), RPropertyAttributes(RPropertyAttributes::UnitLess|gradientOp));
     }
 
     if (propertyTypeId == PropertyVertexNX ||

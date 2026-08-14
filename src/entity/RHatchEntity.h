@@ -69,6 +69,14 @@ public:
     static RPropertyTypeId PropertyOriginX;
     static RPropertyTypeId PropertyOriginY;
 
+    static RPropertyTypeId PropertyGradientName;
+    static RPropertyTypeId PropertyGradientColor1;
+    static RPropertyTypeId PropertyGradientColor2;
+    static RPropertyTypeId PropertyGradientAngle;
+    static RPropertyTypeId PropertyGradientShift;
+    static RPropertyTypeId PropertyGradientOneColorMode;
+    static RPropertyTypeId PropertyGradientTint;
+
     static RPropertyTypeId PropertyVertexNX;
     static RPropertyTypeId PropertyVertexNY;
     static RPropertyTypeId PropertyVertexNZ;
@@ -221,6 +229,70 @@ public:
 
     void clearCustomPattern() {
         data.clearCustomPattern();
+    }
+
+    bool isGradient() const {
+        return data.isGradient();
+    }
+
+    void clearGradient() {
+        data.clearGradient();
+    }
+
+    QString getGradientName() const {
+        return data.getGradientName();
+    }
+
+    void setGradientName(const QString& n) {
+        data.setGradientName(n);
+    }
+
+    RColor getGradientColor1() const {
+        return data.getGradientColor1();
+    }
+
+    void setGradientColor1(const RColor& c) {
+        data.setGradientColor1(c);
+    }
+
+    RColor getGradientColor2() const {
+        return data.getGradientColor2();
+    }
+
+    void setGradientColor2(const RColor& c) {
+        data.setGradientColor2(c);
+    }
+
+    double getGradientAngle() const {
+        return data.getGradientAngle();
+    }
+
+    void setGradientAngle(double a) {
+        data.setGradientAngle(a);
+    }
+
+    double getGradientShift() const {
+        return data.getGradientShift();
+    }
+
+    void setGradientShift(double s) {
+        data.setGradientShift(s);
+    }
+
+    bool getGradientOneColorMode() const {
+        return data.getGradientOneColorMode();
+    }
+
+    void setGradientOneColorMode(bool on) {
+        data.setGradientOneColorMode(on);
+    }
+
+    double getGradientTint() const {
+        return data.getGradientTint();
+    }
+
+    void setGradientTint(double t) {
+        data.setGradientTint(t);
     }
 
     QList<QSharedPointer<RShape> > getLoopBoundary(int index) const {

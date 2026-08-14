@@ -45,6 +45,12 @@ RHatchData::RHatchData() :
     angle(0.0),
     patternName("SOLID"),
     transparency(255),
+    gradientColor1(RColor(0,0,255)),
+    gradientColor2(RColor(255,255,0)),
+    gradientAngle(0.0),
+    gradientShift(0.0),
+    gradientOneColorMode(false),
+    gradientTint(1.0),
     dirty(true), gotDraft(false), gotPixelSizeHint(0.0),
     boundaryBoxesValid(false),
     boundaryBandCount(0), boundaryBandHeight(0.0),
@@ -80,6 +86,12 @@ RHatchData::RHatchData(bool solid, double scaleFactor, double angle, const QStri
     angle(angle),
     patternName(patternName),
     transparency(255),
+    gradientColor1(RColor(0,0,255)),
+    gradientColor2(RColor(255,255,0)),
+    gradientAngle(0.0),
+    gradientShift(0.0),
+    gradientOneColorMode(false),
+    gradientTint(1.0),
     dirty(true), gotDraft(false), gotPixelSizeHint(0.0),
     boundaryBoxesValid(false),
     boundaryBandCount(0), boundaryBandHeight(0.0),
@@ -99,6 +111,13 @@ RHatchData& RHatchData::operator =(const RHatchData& other) {
     transparency = other.transparency;
     patternName = other.patternName;
     originPoint = other.originPoint;
+    gradientName = other.gradientName;
+    gradientColor1 = other.gradientColor1;
+    gradientColor2 = other.gradientColor2;
+    gradientAngle = other.gradientAngle;
+    gradientShift = other.gradientShift;
+    gradientOneColorMode = other.gradientOneColorMode;
+    gradientTint = other.gradientTint;
     other.getPainterPaths(false);
     painterPaths = other.painterPaths;
     boundaryPath = other.boundaryPath;
@@ -411,6 +430,9 @@ bool RHatchData::move(const RVector& offset) {
 
 bool RHatchData::rotate(double rotation, const RVector& center) {
     angle = RMath::getNormalizedAngle(angle+rotation);
+    if (isGradient()) {
+        gradientAngle = RMath::getNormalizedAngle(gradientAngle+rotation);
+    }
 
     for (int i=0; i<boundary.size(); ++i) {
         QList<QSharedPointer<RShape> > loop = boundary.at(i);
@@ -445,6 +467,9 @@ bool RHatchData::scale(const RVector& scaleFactors, const RVector& center) {
 bool RHatchData::mirror(const RLine& axis) {
     double ang = axis.getAngle();
     angle = RMath::getNormalizedAngle(angle + ang*2.0);
+    if (isGradient()) {
+        gradientAngle = RMath::getNormalizedAngle(ang*2.0 - gradientAngle);
+    }
 
     for (int i=0; i<boundary.size(); ++i) {
         QList<QSharedPointer<RShape> > loop = boundary.at(i);
@@ -703,6 +728,69 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape, bool addAutoLoops) {
 }
 
 /**
+ * \return Gradient brush used to render this gradient fill.
+ * Approximates the AutoCAD gradient types (LINEAR, CYLINDER, SPHERICAL,
+ * HEMISPHERICAL, CURVED and their INV counterparts).
+ */
+QBrush RHatchData::createGradientBrush() const {
+    QRectF rect = boundaryPath.boundingRect();
+    QPointF center = rect.center();
+
+    QColor c1 = gradientColor1;
+    QColor c2 = gradientColor2;
+    c1.setAlpha(transparency);
+    c2.setAlpha(transparency);
+
+    QString name = gradientName.toUpper();
+    if (name.startsWith("INV")) {
+        name = name.mid(3);
+        qSwap(c1, c2);
+    }
+
+    if (name=="SPHERICAL" || name=="HEMISPHERICAL") {
+        double radius = QLineF(rect.topLeft(), rect.bottomRight()).length()/2.0;
+        if (radius<RS::PointTolerance) {
+            radius = 1.0;
+        }
+        QPointF gradientCenter = center;
+        if (name=="HEMISPHERICAL") {
+            gradientCenter = center + QPointF(sin(gradientAngle), -cos(gradientAngle)) * (radius/2.0);
+        }
+        QRadialGradient gradient(gradientCenter, radius, gradientCenter);
+        gradient.setColorAt(0.0, c1);
+        gradient.setColorAt(1.0, c2);
+        return QBrush(gradient);
+    }
+
+    QPointF dir(cos(gradientAngle), sin(gradientAngle));
+    double extension = fabs(rect.width()/2.0*dir.x()) + fabs(rect.height()/2.0*dir.y());
+    if (extension<RS::PointTolerance) {
+        extension = 1.0;
+    }
+    QLinearGradient gradient(center - dir*extension, center + dir*extension);
+
+    if (name=="CYLINDER") {
+        gradient.setColorAt(0.0, c1);
+        gradient.setColorAt(0.5, c2);
+        gradient.setColorAt(1.0, c1);
+    }
+    else if (name=="CURVED") {
+        // curved gradients transition faster at the start:
+        QColor mid((c1.red()+3*c2.red())/4, (c1.green()+3*c2.green())/4, (c1.blue()+3*c2.blue())/4, transparency);
+        gradient.setColorAt(0.0, c1);
+        gradient.setColorAt(0.5, mid);
+        gradient.setColorAt(1.0, c2);
+    }
+    else {
+        // LINEAR and unknown gradient names:
+        gradient.setColorAt(0.0, c1);
+        gradient.setColorAt(1.0, c2);
+    }
+
+    return QBrush(gradient);
+}
+
+/**
  * \param pixelSizeHint Pixel size hint for rendering arcs.
  * Negative if it does not matter (current cached painter paths are returned).
  */
@@ -741,7 +829,12 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
         }
         else if (isSolid()) {
             boundaryPath.setPen(QPen(Qt::NoPen));
-            boundaryPath.setBrush(QBrush(Qt::SolidPattern));
+            if (isGradient()) {
+                boundaryPath.setBrush(createGradientBrush());
+            }
+            else {
+                boundaryPath.setBrush(QBrush(Qt::SolidPattern));
+            }
         }
         boundaryPath.setAutoRegen(true);
         if (isWinding()) {
