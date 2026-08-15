@@ -72,7 +72,7 @@ TrimTest06.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::TrimButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::TrimProButton');
     this.setZoom(35.01639344262295, new RVector(-9.16105, -9.18867, 0, true));
     var p = new RVector(22.954588, 15.956929);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

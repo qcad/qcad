@@ -50,10 +50,12 @@ EditBlockTest00.prototype.test00 = function() {
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    var w = objectFromPath('MainWindow::BlockListDock::BlockListWidget::BlockList::qt_scrollarea_viewport');
-    this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(58, 48), Qt.LeftButton, 1, 0);
-    this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(58, 48), Qt.LeftButton, 0, 0);
+    // select block by name instead of clicking into the block list at a fixed
+    // position (which depends on list sorting, item height, style, ...):
+    this.selectBlock('block 1');
     TdbTest.clickOnWidget('MainWindow::BlockListDock::BlockListWidget::EditBlock');
+    // make sure the correct block is being edited:
+    this.verifyEval("EAction.getDocument().getCurrentBlockName()", "block 1");
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::LineToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadToolBar::LineToolsPanel::Line2PButton');
     this.setZoom(37.75609756097561, new RVector(2.05846, 0.787145, 0, true));

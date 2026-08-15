@@ -16,7 +16,7 @@ AutoTrimTest04.prototype.test00 = function() {
     this.setUp();
     this.importFile('scripts/Modify/AutoTrim/Tests/data/polylines.dxf');
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::AutoTrimButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::AutoTrimProButton');
     this.setZoom(3.910224438902743, new RVector(48.176, 36.5185, 0, true));
     var p = new RVector(35.195153, 63.475765);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

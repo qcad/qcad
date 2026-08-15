@@ -40,6 +40,7 @@ StretchTest10.prototype.test00 = function() {
     TdbTest.clickOnWidget('MainWindow::CadToolBar::SelectToolsPanel::BackButton');
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::HatchToolsPanelButton');
     this.dlgStart();
+    this.dlgAppendCode("var fillType = dialog.findChild('FillType'); if (!isNull(fillType)) { fillType.currentIndex = 0; }");
     this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Type', 'HatchPattern')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Pattern', 'CIRCLES')");
@@ -47,7 +48,7 @@ StretchTest10.prototype.test00 = function() {
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Angle', '0.0')");
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();
-    TdbTest.clickOnWidget('MainWindow::CadToolBar::HatchToolsPanel::HatchFromSelectionButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::HatchToolsPanel::HatchFromSelectionProButton');
     var p = new RVector(40.5, 17.7);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);

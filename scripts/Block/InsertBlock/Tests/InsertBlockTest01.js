@@ -48,16 +48,13 @@ InsertBlockTest01.prototype.test00 = function() {
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(9.4, 10);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
+    this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.dlgStart();
     this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/BlockName', 'block 1')");
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();
-    this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    var w = objectFromPath('MainWindow::BlockListDock::BlockListWidget::BlockList::qt_scrollarea_viewport');
-    this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(87, 51), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::BlockListDock::BlockListWidget::BlockList::qt_scrollarea_viewport');
-    this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(87, 51), Qt.LeftButton, 0, 0);
+    this.selectBlock('block 1');
     this.dlgStart();
     this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/ColumnCount', '5')");

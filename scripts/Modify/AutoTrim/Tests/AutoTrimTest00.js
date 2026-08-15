@@ -34,7 +34,7 @@ AutoTrimTest00.prototype.test00 = function() {
     this.setUp();
     this.importFile('scripts/Modify/AutoTrim/Tests/data/line_arc_circle.dxf');
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::AutoTrimButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::AutoTrimProButton');
     this.setToolOption('AutoTrim/RemoveSegment', 'true');
     this.updateToolOptions();
     this.setZoom(11.315068493150683, new RVector(-0.863801, 6.13378, 0) );
