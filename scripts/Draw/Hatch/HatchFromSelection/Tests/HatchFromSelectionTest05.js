@@ -28,7 +28,11 @@ HatchFromSelectionTest05.prototype.test00 = function() {
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();
     this.clickOnWidget('MainWindow::MainToolsPanel::HatchToolsPanelButton');
-    this.clickOnWidget('MainWindow::HatchToolsPanel::HatchFromSelectionProButton');
+    var button = 'MainWindow::HatchToolsPanel::HatchFromSelectionProButton';
+    if (isNull(objectFromPath(button))) {
+        button = 'MainWindow::HatchToolsPanel::HatchFromSelectionButton';
+    }
+    this.clickOnWidget(button);
     this.setZoom(10.248366013071895, new RVector(-20.5077, -13.4356, 0, true));
     var p = new RVector(75.052934, 24.559311);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

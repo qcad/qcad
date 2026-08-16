@@ -48,7 +48,11 @@ HatchFromSelectionTest03.prototype.test00 = function() {
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();
     this.clickOnWidget('MainWindow::MainToolsPanel::HatchToolsPanelButton');
-    this.clickOnWidget('MainWindow::HatchToolsPanel::HatchFromSelectionProButton');
+    var button = 'MainWindow::HatchToolsPanel::HatchFromSelectionProButton';
+    if (isNull(objectFromPath(button))) {
+        button = 'MainWindow::HatchToolsPanel::HatchFromSelectionButton';
+    }
+    this.clickOnWidget(button);
     this.verifyDrawing('HatchFromSelectionTest03_000.dxf');
     this.tearDown();
     qDebug('finished HatchFromSelectionTest03.test00()');
