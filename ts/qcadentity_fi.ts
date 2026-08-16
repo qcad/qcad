@@ -52,8 +52,8 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+97"/>
-        <location line="+3"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+105"/>
+        <location line="+11"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+84"/>
         <location line="+4"/>
         <location line="+3"/>
@@ -117,8 +117,8 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-2"/>
-        <location line="+3"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-10"/>
+        <location line="+11"/>
         <location filename="../src/entity/RImageEntity.cpp" line="-6"/>
         <location line="+4"/>
         <location line="+3"/>
@@ -392,7 +392,7 @@
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-11"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-19"/>
         <location line="+1"/>
         <source>Origin</source>
         <translation>Nollapiste</translation>
@@ -568,16 +568,18 @@
     </message>
     <message>
         <location line="-3"/>
+        <location line="+8"/>
         <source>Name</source>
         <translation>Nimi</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-7"/>
         <source>From Entity</source>
         <translation>Kohteesta</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location line="+9"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+14"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-13"/>
@@ -587,7 +589,43 @@
         <translation>Kulma</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="-3"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Gradient</source>
+        <translation>Liukuväri</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Color 1</source>
+        <translation>Väri 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Color 2</source>
+        <translation>Väri 2</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Shift</source>
+        <translation>Siirtymä</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>One Color</source>
+        <translation>Yksi väri</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tint</source>
+        <translation>Tummennus / vaalennus</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>Yes</source>
         <translation>Kyllä</translation>
     </message>
@@ -597,12 +635,12 @@
         <translation>Ei</translation>
     </message>
     <message>
-        <location line="-223"/>
+        <location line="-242"/>
         <source>Scale</source>
         <translation>Mittakaava</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+13"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-10"/>

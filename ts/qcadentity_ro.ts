@@ -52,8 +52,8 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+97"/>
-        <location line="+3"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+105"/>
+        <location line="+11"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+84"/>
         <location line="+4"/>
         <location line="+3"/>
@@ -117,8 +117,8 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-2"/>
-        <location line="+3"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-10"/>
+        <location line="+11"/>
         <location filename="../src/entity/RImageEntity.cpp" line="-6"/>
         <location line="+4"/>
         <location line="+3"/>
@@ -403,7 +403,7 @@
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-11"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-19"/>
         <location line="+1"/>
         <source>Origin</source>
         <translation>Origine</translation>
@@ -631,16 +631,18 @@
     </message>
     <message>
         <location line="-3"/>
+        <location line="+8"/>
         <source>Name</source>
         <translation>Nume</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-7"/>
         <source>From Entity</source>
         <translation>De la Entitate</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location line="+9"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+14"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-13"/>
@@ -650,12 +652,48 @@
         <translation>Unghi</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-8"/>
         <source>Scale</source>
         <translation>Scară</translation>
     </message>
     <message>
         <location line="+5"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Gradient</source>
+        <translation>Gradient</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Color 1</source>
+        <translation>Culoare 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Color 2</source>
+        <translation>Culoare 2</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Shift</source>
+        <translation>Deplasare</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>One Color</source>
+        <translation>O singură culoare</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tint</source>
+        <translation>Deschidere</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-10"/>
@@ -676,7 +714,7 @@
         <translation>Vertex</translation>
     </message>
     <message>
-        <location line="+216"/>
+        <location line="+227"/>
         <source>Yes</source>
         <translation>Da</translation>
     </message>

@@ -11583,7 +11583,7 @@ már szerepel a listában.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1443"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Legalább két pont azonos.</translation>
@@ -12654,7 +12654,7 @@ már szerepel a listában.</translation>
         <translation>Továbbiak...</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Degree</source>
         <translation>Szög</translation>
     </message>
@@ -13620,7 +13620,7 @@ már szerepel a listában.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
         <source>Dropped data not supported</source>
         <translation>A ráejtett adat nem támogatott típusú</translation>
     </message>

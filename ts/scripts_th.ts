@@ -11582,7 +11582,7 @@ is already in the list.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1443"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>At least two points are identical.</translation>
@@ -12653,7 +12653,7 @@ is already in the list.</translation>
         <translation>Others...</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Degree</source>
         <translation>องศา</translation>
     </message>
@@ -13618,7 +13618,7 @@ is already in the list.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
         <source>Dropped data not supported</source>
         <translation>Dropped data not supported</translation>
     </message>

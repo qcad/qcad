@@ -11582,7 +11582,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1443"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Paling tidak, ada dua poin yang identik.</translation>
@@ -12653,7 +12653,7 @@ sudah ada dalam daftar.</translation>
         <translation>Lainnya...</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Degree</source>
         <translation>Derajat</translation>
     </message>
@@ -13618,7 +13618,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
         <source>Dropped data not supported</source>
         <translation>Data yang dijatuhkan tidak didukung</translation>
     </message>

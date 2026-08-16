@@ -11590,7 +11590,7 @@ finns redan i listan.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1443"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Minst två punkter är identiska.</translation>
@@ -12661,7 +12661,7 @@ finns redan i listan.</translation>
         <translation>Andra...</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
@@ -13626,7 +13626,7 @@ finns redan i listan.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
         <source>Dropped data not supported</source>
         <translation>Uppgifter som tappats bort stöds inte</translation>
     </message>

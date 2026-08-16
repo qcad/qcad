@@ -11600,7 +11600,7 @@ již v seznamu je.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1443"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Alespoň 2 body jsou identické.</translation>
@@ -12671,7 +12671,7 @@ již v seznamu je.</translation>
         <translation>Další...</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Degree</source>
         <translation>Stupeň</translation>
     </message>
@@ -13636,7 +13636,7 @@ již v seznamu je.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
         <source>Dropped data not supported</source>
         <translation>Vložené údaje nejsou podporované</translation>
     </message>

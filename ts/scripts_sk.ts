@@ -11602,7 +11602,7 @@ už existuje v zozname.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1443"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1627"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Minimálne dva body sú rovnaké.</translation>
@@ -12673,7 +12673,7 @@ už existuje v zozname.</translation>
         <translation>Ďalšie...</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Degree</source>
         <translation>Stupne</translation>
     </message>
@@ -13638,7 +13638,7 @@ už existuje v zozname.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
         <source>Dropped data not supported</source>
         <translation>Vložené údaje nie sú podporované</translation>
     </message>

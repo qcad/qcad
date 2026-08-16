@@ -85,8 +85,8 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+97"/>
-        <location line="+3"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+105"/>
+        <location line="+11"/>
         <location filename="../src/entity/RImageEntity.cpp" line="-18"/>
         <location line="+4"/>
         <location line="+3"/>
@@ -169,8 +169,8 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-2"/>
-        <location line="+3"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-10"/>
+        <location line="+11"/>
         <location filename="../src/entity/RImageEntity.cpp" line="-6"/>
         <location line="+4"/>
         <location line="+3"/>
@@ -338,7 +338,7 @@
         <translation>Área total</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-20"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-28"/>
         <source>Solid</source>
         <translation>Sólido</translation>
     </message>
@@ -362,16 +362,18 @@
     </message>
     <message>
         <location line="-3"/>
+        <location line="+8"/>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-7"/>
         <source>From Entity</source>
         <translation>De entidad</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location line="+9"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+14"/>
         <location filename="../src/entity/RLineEntity.cpp" line="-2"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-13"/>
@@ -381,7 +383,43 @@
         <translation>Ángulo</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="-3"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Gradient</source>
+        <translation>Degradado</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Color 1</source>
+        <translation>Color 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Color 2</source>
+        <translation>Color 2</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Shift</source>
+        <translation>Desplazamiento</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>One Color</source>
+        <translation>Un color</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tint</source>
+        <translation>Aclarado</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>Yes</source>
         <translation>Sí</translation>
     </message>
@@ -391,7 +429,7 @@
         <translation>No</translation>
     </message>
     <message>
-        <location line="-223"/>
+        <location line="-242"/>
         <source>Scale</source>
         <translation>Escalar</translation>
     </message>
@@ -428,7 +466,7 @@
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="+4"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+12"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+20"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+12"/>
         <source>Area</source>
         <translation>Área</translation>
@@ -700,7 +738,7 @@
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-5"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-13"/>
         <location line="+1"/>
         <source>Origin</source>
         <translation>Origen</translation>

@@ -11592,7 +11592,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1450"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1634"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>
@@ -12628,7 +12628,7 @@ ist bereits in der Liste.</translation>
         <translation>&amp;Unterstreichen</translation>
     </message>
     <message>
-        <location line="+522"/>
+        <location line="+526"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
@@ -12793,7 +12793,7 @@ ist bereits in der Liste.</translation>
         <translation>Unten rechts</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-555"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-559"/>
         <source>&amp;Bold</source>
         <translation>&amp;Fett</translation>
     </message>
@@ -12828,7 +12828,7 @@ ist bereits in der Liste.</translation>
         <translation>Andere...</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+141"/>
         <source>Plus-Minus</source>
         <translation>Plus-Minus</translation>
     </message>
@@ -13628,7 +13628,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+365"/>
         <source>Dropped data not supported</source>
         <translation>Eingefügte Daten nicht unterstützt</translation>
     </message>

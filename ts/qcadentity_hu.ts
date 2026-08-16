@@ -52,8 +52,8 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+97"/>
-        <location line="+3"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+105"/>
+        <location line="+11"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+84"/>
         <location line="+4"/>
         <location line="+3"/>
@@ -117,8 +117,8 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-2"/>
-        <location line="+3"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-10"/>
+        <location line="+11"/>
         <location filename="../src/entity/RImageEntity.cpp" line="-6"/>
         <location line="+4"/>
         <location line="+3"/>
@@ -397,7 +397,7 @@
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-11"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-19"/>
         <location line="+1"/>
         <source>Origin</source>
         <translation>Origó</translation>
@@ -576,16 +576,18 @@
     </message>
     <message>
         <location line="-3"/>
+        <location line="+8"/>
         <source>Name</source>
         <translation>Név</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-7"/>
         <source>From Entity</source>
         <translation>Elemből</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location line="+9"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+14"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-13"/>
@@ -595,7 +597,43 @@
         <translation>Szög</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="-3"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Gradient</source>
+        <translation>Színátmenet</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Color 1</source>
+        <translation>1. szín</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Color 2</source>
+        <translation>2. szín</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Shift</source>
+        <translation>Eltolás</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>One Color</source>
+        <translation>Egy szín</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tint</source>
+        <translation>Árnyalat</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>Yes</source>
         <translation>Igen</translation>
     </message>
@@ -605,12 +643,12 @@
         <translation>Nem</translation>
     </message>
     <message>
-        <location line="-223"/>
+        <location line="-242"/>
         <source>Scale</source>
         <translation>Lépték</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+13"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-10"/>
