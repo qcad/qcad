@@ -26,6 +26,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RS.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RShape</name>;</class_decl>
+<class_decl>class <name>RVector</name>;</class_decl>
 
 
 <comment type="block">/**
@@ -39,6 +40,18 @@
     <destructor><specifier>virtual</specifier> <name>~RShapeProxy</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>roundAllCorners</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>shapes</name></decl></param>, <param><decl><type><name>double</name></type> <name>radius</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Traces the inner most (smallest) closed contour around the given position
+     * from the arrangement formed by the given shapes.
+     *
+     * \param position Point inside the region to trace (e.g. a click point).
+     * \param shapes Boundary shapes (lines, arcs, circles, ellipses, splines,
+     *      polylines) that may form contours. Polylines are exploded internally.
+     * \return The ordered shapes forming the traced contour (counter-clockwise),
+     *      or an empty list if no closed contour was found.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getInnerMostContour</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>shapes</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 </public>}</block>;</class>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>

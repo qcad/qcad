@@ -775,6 +775,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="forceAutoUpdate" cppName="forceAutoUpdate"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="getProperty" cppName="getProperty"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

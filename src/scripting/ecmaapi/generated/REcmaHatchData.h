@@ -166,6 +166,57 @@
         setTransparency
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isGradient
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        clearGradient
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getGradientName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setGradientName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        normalizeGradientName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getGradientColor1
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setGradientColor1
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getGradientColor2
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setGradientColor2
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getGradientAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setGradientAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getGradientShift
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setGradientShift
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getGradientOneColorMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setGradientOneColorMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getGradientTint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setGradientTint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLength
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

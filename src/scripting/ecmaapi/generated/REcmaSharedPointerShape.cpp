@@ -284,6 +284,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, roundCorners, "roundCorners");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getInnerMostContour, "getInnerMostContour");
+            
             REcmaHelper::registerFunction(&engine, &ctor, roundShapes, "roundShapes");
             
             REcmaHelper::registerFunction(&engine, &ctor, xLineToRay, "xLineToRay");
@@ -11866,6 +11868,82 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerShape::roundCorners", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerShape::getInnerMostContour
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerShape::getInnerMostContour", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerShape::getInnerMostContour";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QList < QSharedPointer < RShape > > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isArray or QVariantMap
+                    QList < QSharedPointer < RShape > >
+                    a1;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(1),
+                        a1
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        RShape::
+       getInnerMostContour(a0
+        ,
+    a1);
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.getInnerMostContour().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerShape::getInnerMostContour", context, engine);
             return result;
         }
          QScriptValue

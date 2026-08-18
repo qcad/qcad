@@ -670,7 +670,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="setAutoUpdatesBlocked"
     cppName="setAutoUpdatesBlocked" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="on"
         isConst="false" />
@@ -678,7 +678,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="getAutoUpdatesBlocked"
     cppName="getAutoUpdatesBlocked" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="getDefaultDrawOrder"

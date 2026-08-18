@@ -392,6 +392,7 @@
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getTextLayoutsPainterPaths</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>text</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RTextLayout</name></argument>&gt;</argument_list></name>&amp;</type> <name>textLayouts</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>applyMinimumLineweight</name><parameter_list>(<param><decl><type><name>QPen</name>&amp;</type> <name>pen</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>applyColorCorrection</name><parameter_list>(<param><decl><type><name>QPen</name>&amp;</type> <name>pen</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QColor</name></type> <name>getCorrectedColor</name><parameter_list>(<param><decl><type><name>const</name> <name>QColor</name>&amp;</type> <name>col</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>applyColorCorrection</name><parameter_list>(<param><decl><type><name>QBrush</name>&amp;</type> <name>brush</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>applyColorMode</name><parameter_list>(<param><decl><type><name>QPen</name>&amp;</type> <name>pen</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>applyColorMode</name><parameter_list>(<param><decl><type><name>QBrush</name>&amp;</type> <name>brush</name></decl></param>)</parameter_list>;</function_decl>
@@ -481,6 +482,15 @@
     <decl_stmt><decl><type><name>QString</name></type> <name>lastScaleString</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>bool</name></type> <name>showOnlyPlottable</name></decl>;</decl_stmt>
+
+    <comment type="line">//! cached per update: constant while one update is rendered</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>editingWorkingSet</name></decl>;</decl_stmt>
+
+    <comment type="line">//! cached list of visible entities in draw order and what it is valid for</comment>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>orderedIds</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RBox</name></type> <name>orderedIdsBox</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>orderedIdsVersion</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>orderedIdsValid</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RGraphicsViewWorker</name>*</argument>&gt;</argument_list></name></type> <name>workers</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RGraphicsViewWorker</name>*</type> <name>decorationWorker</name></decl>;</decl_stmt>

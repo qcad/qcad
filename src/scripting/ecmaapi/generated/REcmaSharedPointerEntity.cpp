@@ -237,6 +237,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setAutoUpdatesBlocked, "setAutoUpdatesBlocked");
             
+            REcmaHelper::registerFunction(&engine, proto, forceAutoUpdate, "forceAutoUpdate");
+            
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
             
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
@@ -9048,6 +9050,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerEntity::setAutoUpdatesBlocked", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEntity::forceAutoUpdate
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEntity::forceAutoUpdate", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEntity::forceAutoUpdate";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntity* self = 
+                        getSelf("forceAutoUpdate", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->forceAutoUpdate();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.forceAutoUpdate().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEntity::forceAutoUpdate", context, engine);
             return result;
         }
          QScriptValue

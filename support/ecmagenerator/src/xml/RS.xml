@@ -85,6 +85,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="ObjectUcs" />
       <value name="ObjectDocumentVariable" />
       <value name="ObjectDimStyle" />
+      <value name="ObjectConstraint" />
       <value name="EntityAll" />
       <value name="EntityUnknown" />
       <value name="EntityAttribute" />

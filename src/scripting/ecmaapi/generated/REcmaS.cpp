@@ -492,6 +492,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("ObjectConstraint",
+    QScriptValue(RS::ObjectConstraint),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("EntityAll",
     QScriptValue(RS::EntityAll),
     QScriptValue::ReadOnly);

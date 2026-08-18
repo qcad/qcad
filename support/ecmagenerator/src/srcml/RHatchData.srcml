@@ -24,6 +24,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"entity_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBox.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RColor.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntityData.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RHatchProxy.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPattern.h"</cpp:file></cpp:include>
@@ -177,6 +178,93 @@
         <expr_stmt><expr><name>transparency</name> = <name>t</name></expr>;</expr_stmt>
     }</block></function>
 
+    <comment type="block">/**
+     * \return True if this hatch is a gradient fill (gradient name set).
+     */</comment>
+    <function><type><name>bool</name></type> <name>isGradient</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>!<name>gradientName</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>clearGradient</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>gradientName</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>QString</name></type> <name>getGradientName</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>gradientName</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * Sets the gradient name and makes this hatch a gradient fill.
+     * Valid names are LINEAR, CYLINDER, INVCYLINDER, SPHERICAL,
+     * INVSPHERICAL, HEMISPHERICAL, INVHEMISPHERICAL, CURVED, INVCURVED
+     * (CYLINDER and INVCYLINDER are cyclic gradients from color 1 to
+     * color 2 and back to color 1).
+     * AutoCAD resource names (GR_LINEAR, GR_CYLIN, GR_INVCYL, ...) are
+     * accepted and normalized to the DXF names.
+     * An empty name means no gradient (regular hatch or solid fill).
+     */</comment>
+    <function><type><name>void</name></type> <name>setGradientName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>n</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>gradientName</name> = <call><name>normalizeGradientName</name><argument_list>(<argument><expr><name>n</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>normalizeGradientName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>n</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>RColor</name></type> <name>getGradientColor1</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>gradientColor1</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setGradientColor1</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>c</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>gradientColor1</name> = <name>c</name></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>RColor</name></type> <name>getGradientColor2</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>gradientColor2</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setGradientColor2</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>c</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>gradientColor2</name> = <name>c</name></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getGradientAngle</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>gradientAngle</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setGradientAngle</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>gradientAngle</name> = <name>a</name></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getGradientShift</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>gradientShift</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setGradientShift</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>gradientShift</name> = <name>s</name></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>getGradientOneColorMode</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>gradientOneColorMode</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setGradientOneColorMode</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>gradientOneColorMode</name> = <name>on</name></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getGradientTint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>gradientTint</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setGradientTint</name><parameter_list>(<param><decl><type><name>double</name></type> <name>t</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>gradientTint</name> = <name>t</name></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
     <function_decl><type><name>double</name></type> <name>getLength</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getArea</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
@@ -188,6 +276,7 @@
     <function><type><name>void</name></type> <name>addBoundaryShape</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>shape</name></decl></param>, <param><decl><type><name>int</name></type> <name>loop</name></decl></param>)</parameter_list> <block>{
         <if>if <condition>(<expr><name>loop</name> &lt; <name>boundary</name>.<call><name>length</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
             <expr_stmt><expr><name><name>boundary</name><index>[<expr><name>loop</name></expr>]</index></name>.<call><name>append</name><argument_list>(<argument><expr><name>shape</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <expr_stmt><expr><name>boundaryBoxesValid</name> = <name>false</name></expr>;</expr_stmt>
         }</block></then></if>
     }</block></function>
     <function_decl><type><name>RPainterPath</name></type> <name>getBoundaryPath</name><parameter_list>(<param><decl><type><name>double</name></type> <name>pixelSizeHint</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -265,8 +354,15 @@
 
 </public><protected>protected:
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RLine</name></argument>&gt;</argument_list></name></type> <name>getSegments</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>line</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QBrush</name></type> <name>createGradientBrush</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
 </protected><private>private:
+    <function_decl><type><name>void</name></type> <name>updateBoundaryBoxes</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>updateBoundaryPointCache</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>addWindingNumber</name><parameter_list>(<param><decl><type><name>const</name> <name>int</name>*</type> <name>edgeIndices</name></decl></param>, <param><decl><type><name>int</name></type> <name>count</name></decl></param>, <param><decl><type><name>double</name></type> <name>x</name></decl></param>, <param><decl><type><name>double</name></type> <name>y</name></decl></param>, <param><decl><type><name>int</name>&amp;</type> <name>windingNumber</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isPointInBoundary</name><parameter_list>(<param><decl><type><name>double</name></type> <name>x</name></decl></param>, <param><decl><type><name>double</name></type> <name>y</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+</private><private>private:
     <decl_stmt><decl><type><name>bool</name></type> <name>solid</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>winding</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>autoRegen</name></decl>;</decl_stmt>
@@ -275,6 +371,18 @@
     <decl_stmt><decl><type><name>QString</name></type> <name>patternName</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>originPoint</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>int</name></type> <name>transparency</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * Gradient fill data (DXF/DWG compatible). An empty gradient name
+     * means this hatch is not a gradient fill.
+     */</comment>
+    <decl_stmt><decl><type><name>QString</name></type> <name>gradientName</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RColor</name></type> <name>gradientColor1</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RColor</name></type> <name>gradientColor2</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>gradientAngle</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>gradientShift</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>gradientOneColorMode</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>gradientTint</name></decl>;</decl_stmt>
 
     <comment type="block">/**
      * Hatch boundary, ordered by loops, in strictly defined order.
@@ -292,6 +400,34 @@
     <decl_stmt><decl><type><name>mutable</name> <name>bool</name></type> <name>dirty</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>bool</name></type> <name>gotDraft</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>double</name></type> <name>gotPixelSizeHint</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * Bounding box of every boundary shape, grown by the same tolerance the
+     * intersection code uses. Cached to avoid recalculating the bounding box
+     * of every boundary element for every single hatch pattern line.
+     */</comment>
+    <decl_stmt><decl><type><name>mutable</name> <name>QVector<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>boundaryBoxes</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>bool</name></type> <name>boundaryBoxesValid</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * Flattened boundary (boundaryPath), used to determine whether a point is
+     * inside the hatch much faster than QPainterPath::contains can.
+     * Four coordinates per edge (x1,y1,x2,y2 with y1&lt;y2), the edges sorted
+     * into horizontal bands (CSR style: bandStart indexes into bandEdges).
+     */</comment>
+    <decl_stmt><decl><type><name>mutable</name> <name>QVector<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>boundaryEdges</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>QVector<argument_list>&lt;<argument><name>qint8</name></argument>&gt;</argument_list></name></type> <name>boundaryEdgeDirs</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>QVector<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></type> <name>boundaryBandStart</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>QVector<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></type> <name>boundaryBandEdges</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>QVector<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></type> <name>boundaryLongEdges</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>int</name></type> <name>boundaryBandCount</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>double</name></type> <name>boundaryBandHeight</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>double</name></type> <name>boundaryMinX</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>double</name></type> <name>boundaryMaxX</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>double</name></type> <name>boundaryMinY</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>double</name></type> <name>boundaryMaxY</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>double</name></type> <name>boundaryFlatteningError</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>bool</name></type> <name>boundaryPointCacheValid</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>static</name> <name>RHatchProxy</name>*</type> <name>hatchProxy</name></decl>;</decl_stmt>
 </private>}</block>;</class>

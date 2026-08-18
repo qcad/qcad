@@ -164,6 +164,38 @@
             
             REcmaHelper::registerFunction(&engine, proto, setTransparency, "setTransparency");
             
+            REcmaHelper::registerFunction(&engine, proto, isGradient, "isGradient");
+            
+            REcmaHelper::registerFunction(&engine, proto, clearGradient, "clearGradient");
+            
+            REcmaHelper::registerFunction(&engine, proto, getGradientName, "getGradientName");
+            
+            REcmaHelper::registerFunction(&engine, proto, setGradientName, "setGradientName");
+            
+            REcmaHelper::registerFunction(&engine, proto, getGradientColor1, "getGradientColor1");
+            
+            REcmaHelper::registerFunction(&engine, proto, setGradientColor1, "setGradientColor1");
+            
+            REcmaHelper::registerFunction(&engine, proto, getGradientColor2, "getGradientColor2");
+            
+            REcmaHelper::registerFunction(&engine, proto, setGradientColor2, "setGradientColor2");
+            
+            REcmaHelper::registerFunction(&engine, proto, getGradientAngle, "getGradientAngle");
+            
+            REcmaHelper::registerFunction(&engine, proto, setGradientAngle, "setGradientAngle");
+            
+            REcmaHelper::registerFunction(&engine, proto, getGradientShift, "getGradientShift");
+            
+            REcmaHelper::registerFunction(&engine, proto, setGradientShift, "setGradientShift");
+            
+            REcmaHelper::registerFunction(&engine, proto, getGradientOneColorMode, "getGradientOneColorMode");
+            
+            REcmaHelper::registerFunction(&engine, proto, setGradientOneColorMode, "setGradientOneColorMode");
+            
+            REcmaHelper::registerFunction(&engine, proto, getGradientTint, "getGradientTint");
+            
+            REcmaHelper::registerFunction(&engine, proto, setGradientTint, "setGradientTint");
+            
             REcmaHelper::registerFunction(&engine, proto, getLength, "getLength");
             
             REcmaHelper::registerFunction(&engine, proto, getArea, "getArea");
@@ -216,6 +248,8 @@
     
     // static methods:
     
+            REcmaHelper::registerFunction(&engine, &ctor, normalizeGradientName, "normalizeGradientName");
+            
             REcmaHelper::registerFunction(&engine, &ctor, hasProxy, "hasProxy");
             
 
@@ -3491,6 +3525,901 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaHatchData::setTransparency", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::isGradient
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::isGradient", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::isGradient";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("isGradient", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isGradient();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.isGradient().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::isGradient", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::clearGradient
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::clearGradient", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::clearGradient";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("clearGradient", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearGradient();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.clearGradient().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::clearGradient", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::getGradientName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::getGradientName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::getGradientName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("getGradientName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getGradientName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.getGradientName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::getGradientName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::setGradientName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::setGradientName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::setGradientName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("setGradientName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setGradientName(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.setGradientName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::setGradientName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::normalizeGradientName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::normalizeGradientName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::normalizeGradientName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RHatchData::
+       normalizeGradientName(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.normalizeGradientName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::normalizeGradientName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::getGradientColor1
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::getGradientColor1", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::getGradientColor1";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("getGradientColor1", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        
+               self->getGradientColor1();
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.getGradientColor1().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::getGradientColor1", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::setGradientColor1
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::setGradientColor1", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::setGradientColor1";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("setGradientColor1", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RColor */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RColor*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RColor*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RHatchData: Argument 0 is not of type RColor.",
+                               context);                    
+                    }
+                    RColor 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setGradientColor1(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.setGradientColor1().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::setGradientColor1", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::getGradientColor2
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::getGradientColor2", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::getGradientColor2";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("getGradientColor2", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        
+               self->getGradientColor2();
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.getGradientColor2().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::getGradientColor2", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::setGradientColor2
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::setGradientColor2", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::setGradientColor2";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("setGradientColor2", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RColor */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RColor*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RColor*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RHatchData: Argument 0 is not of type RColor.",
+                               context);                    
+                    }
+                    RColor 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setGradientColor2(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.setGradientColor2().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::setGradientColor2", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::getGradientAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::getGradientAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::getGradientAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("getGradientAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getGradientAngle();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.getGradientAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::getGradientAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::setGradientAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::setGradientAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::setGradientAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("setGradientAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setGradientAngle(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.setGradientAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::setGradientAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::getGradientShift
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::getGradientShift", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::getGradientShift";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("getGradientShift", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getGradientShift();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.getGradientShift().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::getGradientShift", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::setGradientShift
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::setGradientShift", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::setGradientShift";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("setGradientShift", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setGradientShift(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.setGradientShift().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::setGradientShift", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::getGradientOneColorMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::getGradientOneColorMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::getGradientOneColorMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("getGradientOneColorMode", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getGradientOneColorMode();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.getGradientOneColorMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::getGradientOneColorMode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::setGradientOneColorMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::setGradientOneColorMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::setGradientOneColorMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("setGradientOneColorMode", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setGradientOneColorMode(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.setGradientOneColorMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::setGradientOneColorMode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::getGradientTint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::getGradientTint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::getGradientTint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("getGradientTint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getGradientTint();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.getGradientTint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::getGradientTint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::setGradientTint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::setGradientTint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::setGradientTint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("setGradientTint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setGradientTint(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.setGradientTint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::setGradientTint", context, engine);
             return result;
         }
          QScriptValue

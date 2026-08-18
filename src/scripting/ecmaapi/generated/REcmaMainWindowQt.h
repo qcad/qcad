@@ -413,6 +413,9 @@
         getKeyLog
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        notifyDockWidgetClosed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         quit
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

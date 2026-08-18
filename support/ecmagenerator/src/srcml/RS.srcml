@@ -238,6 +238,7 @@
         <expr><name>ObjectUcs</name></expr>,
         <expr><name>ObjectDocumentVariable</name></expr>,
         <expr><name>ObjectDimStyle</name></expr>,
+        <expr><name>ObjectConstraint</name></expr>,   <comment type="block">/**&lt; Constraint */</comment>
 
         <expr><name>EntityAll</name></expr>,          <comment type="block">/**&lt; All entities (for filters) */</comment>
         <expr><name>EntityUnknown</name></expr>,      <comment type="block">/**&lt; Unknown entity */</comment>

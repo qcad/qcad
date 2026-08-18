@@ -61,9 +61,6 @@
         pow
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        isNormal
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         isNaN
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -71,6 +68,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isSane
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isNormal
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         eval

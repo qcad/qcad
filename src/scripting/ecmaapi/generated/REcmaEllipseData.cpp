@@ -217,6 +217,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getTransformed, "getTransformed");
             
+            REcmaHelper::registerFunction(&engine, proto, getDistanceFromStart, "getDistanceFromStart");
+            
             REcmaHelper::registerFunction(&engine, proto, getTrimEnd, "getTrimEnd");
             
             REcmaHelper::registerFunction(&engine, proto, trimStartPoint, "trimStartPoint");
@@ -3988,6 +3990,78 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEllipseData::getTransformed", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEllipseData::getDistanceFromStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEllipseData::getDistanceFromStart", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEllipseData::getDistanceFromStart";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REllipseData* self = 
+                        getSelf("getDistanceFromStart", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("REllipse: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDistanceFromStart(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipseData.getDistanceFromStart().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEllipseData::getDistanceFromStart", context, engine);
             return result;
         }
          QScriptValue

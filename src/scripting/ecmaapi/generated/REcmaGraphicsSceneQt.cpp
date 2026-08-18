@@ -130,6 +130,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, unexportEntity, "unexportEntity");
             
+            REcmaHelper::registerFunction(&engine, proto, getDrawablesVersion, "getDrawablesVersion");
+            
             REcmaHelper::registerFunction(&engine, proto, exportPoint, "exportPoint");
             
             REcmaHelper::registerFunction(&engine, proto, exportLine, "exportLine");
@@ -1102,6 +1104,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::unexportEntity", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsSceneQt::getDrawablesVersion
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::getDrawablesVersion", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::getDrawablesVersion";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsSceneQt* self = 
+                        getSelf("getDrawablesVersion", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getDrawablesVersion();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.getDrawablesVersion().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::getDrawablesVersion", context, engine);
             return result;
         }
          QScriptValue

@@ -383,6 +383,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getKeyLog, "getKeyLog");
             
+            REcmaHelper::registerFunction(&engine, proto, notifyDockWidgetClosed, "notifyDockWidgetClosed");
+            
             REcmaHelper::registerFunction(&engine, proto, quit, "quit");
             
             REcmaHelper::registerFunction(&engine, proto, currentTabChanged, "currentTabChanged");
@@ -8411,6 +8413,65 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindowQt::getKeyLog", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::notifyDockWidgetClosed
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::notifyDockWidgetClosed", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::notifyDockWidgetClosed";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("notifyDockWidgetClosed", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QWidget * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QWidget *
+            a0 =
+            qobject_cast<
+            QWidget *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->notifyDockWidgetClosed(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.notifyDockWidgetClosed().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::notifyDockWidgetClosed", context, engine);
             return result;
         }
          QScriptValue
