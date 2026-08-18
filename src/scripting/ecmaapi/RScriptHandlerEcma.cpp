@@ -20,11 +20,15 @@
 
 #include <QDomNode>
 #include <QFile>
+#include <QListWidget>
+#include <QMetaType>
 #include <QScriptEngine>
 #include <QScriptValueIterator>
 #include <QStringList>
+#include <QTableWidget>
 #include <QTextCharFormat>
 #include <QTextStream>
+#include <QTreeWidget>
 #include <QFontDatabase>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
@@ -447,6 +451,30 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
         }
     }
     
+    // qt-labs-qtscriptgenerator does not generate wrappers for slots: slots are
+    // exposed to scripts through the meta object system instead. Calling a slot
+    // that way requires all its argument types to be registered meta types.
+    // Qt registers 'QTreeWidgetItem*' but not 'const QTreeWidgetItem*', so slots
+    // such as QTreeWidget::scrollToItem / expandItem / collapseItem or
+    // QListWidget::scrollToItem cannot be called from scripts and fail with
+    // "argument 1 has unknown type `const QTreeWidgetItem*'".
+    // Register the pointer to const types as aliases of the (already registered)
+    // pointer to non-const types:
+    {
+        static const char* itemTypeNames[] = {
+            "QTreeWidgetItem", "QListWidgetItem", "QTableWidgetItem"
+        };
+        for (int i=0; i<int(sizeof(itemTypeNames)/sizeof(itemTypeNames[0])); i++) {
+            QByteArray typeName = QByteArray(itemTypeNames[i]) + "*";
+            int typeId = QMetaType::type(typeName);
+            if (typeId==QMetaType::UnknownType) {
+                qWarning() << "RScriptHandlerEcma: meta type not registered:" << typeName;
+                continue;
+            }
+            QMetaType::registerNormalizedTypedef("const " + typeName, typeId);
+        }
+    }
+
     QScriptValue globalObject = engine->globalObject();
     globalObject.setProperty("include", engine->newFunction(ecmaInclude, 1));
     globalObject.setProperty("evalAppEngine", engine->newFunction(ecmaEvalAppEngine));
