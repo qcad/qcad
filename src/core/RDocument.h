@@ -150,6 +150,7 @@ public:
     bool hasChildEntities(RObject::Id parentId) const;
     QSet<RObject::Id> queryBlockReferences(RObject::Id blockId) const;
     QSet<RObject::Id> queryAllBlockReferences() const;
+    QSet<RObject::Id> queryBlockReferencesForLayers(const QSet<RObject::Id>& layerIds) const;
     QSet<RObject::Id> queryAllViewports() const;
 
     QSet<RObject::Id> queryContainedEntities(const RBox& box) const;

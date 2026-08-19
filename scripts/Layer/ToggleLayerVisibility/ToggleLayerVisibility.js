@@ -39,6 +39,8 @@ ToggleLayerVisibility.prototype.beginEvent = function() {
     var freezeLayer = Layer.getFreezeLayer();
 
     var op = new RModifyObjectsOperation();
+    // only visibility flags change: allows optimized regeneration:
+    op.setTransactionType(RTransaction.LayerVisibilityStatusChange);
     for (var i=0; i<layers.length; i++) {
         var layer = layers[i];
 

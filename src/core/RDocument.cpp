@@ -1672,6 +1672,13 @@ QSet<REntity::Id> RDocument::queryAllBlockReferences() const {
 }
 
 /**
+ * \copydoc RStorage::queryBlockReferencesForLayers
+ */
+QSet<REntity::Id> RDocument::queryBlockReferencesForLayers(const QSet<RLayer::Id>& layerIds) const {
+    return storage.queryBlockReferencesForLayers(layerIds);
+}
+
+/**
  * \copydoc RStorage::queryAllViewports
  */
 QSet<REntity::Id> RDocument::queryAllViewports() const {

@@ -178,6 +178,8 @@ Layer.showHide = function(show, di, layerId, showProgress) {
 
     var doc = di.getDocument();
     var operation = new RModifyObjectsOperation();
+    // only visibility flags change: allows optimized regeneration:
+    operation.setTransactionType(RTransaction.LayerVisibilityStatusChange);
     var layers = doc.queryAllLayers();
     for (var l = 0; l < layers.length; ++l) {
         if (showProgress===true) {
@@ -228,6 +230,8 @@ Layer.thawFreeze = function(freeze, di, layerId, showProgress) {
     }
 
     var operation = new RModifyObjectsOperation();
+    // only visibility flags change: allows optimized regeneration:
+    operation.setTransactionType(RTransaction.LayerVisibilityStatusChange);
     var layers = di.getDocument().queryAllLayers();
     for (var l = 0; l < layers.length; ++l) {
         if (showProgress===true) {

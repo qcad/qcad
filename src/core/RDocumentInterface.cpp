@@ -2481,15 +2481,6 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
                     }
                 }
 
-                if (transaction.isType(RTransaction::LayerVisibilityStatusChange)) {
-                    // tag all block references as changed as they might contain entities on that layer:
-                    // TODO: only tag if they do contain entities on that layer
-                    QSet<RObject::Id> blockReferenceIds = document.queryAllBlockReferences();
-                    entityIdsToRegenerate.unite(blockReferenceIds);
-
-                    QSet<RObject::Id> viewportIds = document.queryAllViewports();
-                    entityIdsToRegenerate.unite(viewportIds);
-                }
                 continue;
             }
         }
@@ -2594,6 +2585,13 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
                 continue;
             }
         }
+    }
+
+    if (transaction.isType(RTransaction::LayerVisibilityStatusChange) && !changedLayerIds.isEmpty()) {
+        // tag block references which might display entities on the changed
+        // layers as changed (they need to be regenerated) as well as all viewports:
+        entityIdsToRegenerate.unite(document.queryBlockReferencesForLayers(changedLayerIds));
+        entityIdsToRegenerate.unite(document.queryAllViewports());
     }
 
     QList<RLayer::Id> changedLayerIdList = RS::toList<RLayer::Id>(changedLayerIds);

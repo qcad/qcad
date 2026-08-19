@@ -498,7 +498,7 @@ void RMemoryStorage::updateVisibleCache() const {
             //selectedEntityMap.insert(e->getId(), e);
 
             if (RStorage::isEntityVisible(*e, currentBlockId)) {
-                visibleEntityMap.insert(e->getId(), queryEntityDirect(e->getId()));
+                visibleEntityMap.insert(e->getId(), e);
             }
         }
     }
@@ -772,6 +772,107 @@ QSet<REntity::Id> RMemoryStorage::queryAllBlockReferences() const {
             for (it = map.constBegin(); it != map.constEnd(); ++it) {
                 QSharedPointer<RBlockReferenceEntity> e = it->dynamicCast<RBlockReferenceEntity>();
                 if (!e->isUndone()) {
+                    result.insert(e->getId());
+                }
+            }
+        }
+    }
+
+    return result;
+}
+
+QSet<REntity::Id> RMemoryStorage::queryBlockReferencesForLayers(const QSet<RObject::Id>& layerIds) const {
+    QSet<REntity::Id> result;
+
+    if (!hasBlockReferenceEntities()) {
+        return result;
+    }
+
+    RBlock::Id currentBlockId = getCurrentBlockId();
+
+    // find all blocks which contain entities on one of the given layers,
+    // also indirectly through nested block references:
+
+    // IDs of blocks which contain entities on one of the given layers:
+    QSet<RBlock::Id> affectedBlockIds;
+    // block ID -> IDs of blocks referenced by the entities of that block:
+    QHash<RBlock::Id, QSet<RBlock::Id> > childBlockIds;
+
+    QHash<RObject::Id, QHash<RObject::Id, QSharedPointer<REntity> > >::const_iterator bit;
+    for (bit=blockEntityMap.constBegin(); bit!=blockEntityMap.constEnd(); ++bit) {
+        RBlock::Id blockId = bit.key();
+        if (blockId==currentBlockId) {
+            // entities of the current block are filtered at paint time,
+            // no regeneration needed for those:
+            continue;
+        }
+
+        bool affected = false;
+        QSet<RBlock::Id> children;
+        QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
+        for (it=bit.value().constBegin(); it!=bit.value().constEnd(); ++it) {
+            const QSharedPointer<REntity>& e = *it;
+            if (e.isNull() || e->isUndone()) {
+                continue;
+            }
+            if (!affected && layerIds.contains(e->getLayerId())) {
+                affected = true;
+            }
+            QSharedPointer<RBlockReferenceEntity> blockRef = e.dynamicCast<RBlockReferenceEntity>();
+            if (!blockRef.isNull()) {
+                children.insert(blockRef->getReferencedBlockId());
+            }
+        }
+        if (affected) {
+            affectedBlockIds.insert(blockId);
+        }
+        if (!children.isEmpty()) {
+            childBlockIds.insert(blockId, children);
+        }
+    }
+
+    // propagate: a block which references an affected block is itself affected:
+    bool changed = true;
+    while (changed) {
+        changed = false;
+        QHash<RBlock::Id, QSet<RBlock::Id> >::const_iterator cit;
+        for (cit=childBlockIds.constBegin(); cit!=childBlockIds.constEnd(); ++cit) {
+            if (affectedBlockIds.contains(cit.key())) {
+                continue;
+            }
+            QSet<RBlock::Id>::const_iterator chIt;
+            for (chIt=cit.value().constBegin(); chIt!=cit.value().constEnd(); ++chIt) {
+                if (affectedBlockIds.contains(*chIt)) {
+                    affectedBlockIds.insert(cit.key());
+                    changed = true;
+                    break;
+                }
+            }
+        }
+    }
+
+    // collect references to affected blocks and block references which are
+    // themselves on one of the given layers:
+    {
+        const QHash<RObject::Id, QSharedPointer<RObject> >& map = typeObjectMap[RS::EntityBlockRef];
+        QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
+        for (it = map.constBegin(); it != map.constEnd(); ++it) {
+            QSharedPointer<RBlockReferenceEntity> e = it->dynamicCast<RBlockReferenceEntity>();
+            if (!e.isNull() && !e->isUndone() &&
+                (layerIds.contains(e->getLayerId()) || affectedBlockIds.contains(e->getReferencedBlockId()))) {
+                result.insert(e->getId());
+            }
+        }
+    }
+
+    {
+        for (int i=0; i<customEntityTypes.length(); i++) {
+            const QHash<RObject::Id, QSharedPointer<RObject> >& map = typeObjectMap[customEntityTypes[i]];
+            QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
+            for (it = map.constBegin(); it != map.constEnd(); ++it) {
+                QSharedPointer<RBlockReferenceEntity> e = it->dynamicCast<RBlockReferenceEntity>();
+                if (!e.isNull() && !e->isUndone() &&
+                    (layerIds.contains(e->getLayerId()) || affectedBlockIds.contains(e->getReferencedBlockId()))) {
                     result.insert(e->getId());
                 }
             }
