@@ -211,15 +211,10 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
         return;
     }
 
-    // Use canvas image view if available:
-    // if (typeof(RGraphicsViewCanvas) !== "undefined") {
-    //     qDebug("using RGraphicsViewCanvas");
-    //     this.graphicsView.setImageView(new RGraphicsViewCanvas(this.graphicsView));
-    // }
-
-    // if (typeof(RGraphicsViewRhi2D) !== "undefined") {
-    //     qDebug("using RGraphicsViewRhi2D");
-    //     this.graphicsView.setImageView(new RGraphicsViewRhi2D(this.graphicsView));
+    // Use alternative image view if available:
+    // if (typeof(RGraphicsViewXY) !== "undefined") {
+    //     qDebug("using RGraphicsViewXY");
+    //     this.graphicsView.setImageView(new RGraphicsViewXY(this.graphicsView));
     // }
 
     var imageView = this.graphicsView.getImageView();
