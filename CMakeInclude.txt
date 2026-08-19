@@ -46,3 +46,46 @@ if(APPLE)
         set(CMAKE_OSX_DEPLOYMENT_TARGET "12.0" CACHE STRING "Minimum macOS version" FORCE)
     endif()
 endif()
+
+# Edition flags (rtrial, rtrial30, ractivated).
+# These must be passed explicitly on the CMake command line on EVERY
+# configure run, e.g.: cmake -Drtrial:BOOL=TRUE ...
+# The values are deliberately removed from the CMake cache after being read
+# here: a stale cached value from a previous configure run could otherwise
+# turn a trial build into a full build or vice versa.
+# A flag that is absent from the command line always means FALSE
+# (full version, no 30 day limit, not activated).
+# This block runs once per build tree (CMakeInclude.txt is also included by
+# subdirectories so that they can be configured standalone).
+if(NOT TARGET qcad_edition)
+    # Carrier target for edition-wide compile definitions.
+    # Targets that contain edition-specific code link against this:
+    add_library(qcad_edition INTERFACE)
+
+    foreach(EDITION_FLAG rtrial rtrial30 ractivated)
+        if(DEFINED CACHE{${EDITION_FLAG}} AND ${EDITION_FLAG})
+            set(${EDITION_FLAG} TRUE)
+        else()
+            set(${EDITION_FLAG} FALSE)
+        endif()
+        # never keep the flag in the cache beyond this configure run:
+        unset(${EDITION_FLAG} CACHE)
+    endforeach()
+
+    if(rtrial)
+        message(STATUS "Building QCAD trial edition (RTRIAL)")
+        target_compile_definitions(qcad_edition INTERFACE RTRIAL)
+    else()
+        message(STATUS "Building QCAD full edition")
+    endif()
+
+    if(rtrial30)
+        message(STATUS "Trial limited to 30 days (RTRIAL30)")
+        target_compile_definitions(qcad_edition INTERFACE RTRIAL30)
+    endif()
+
+    if(ractivated)
+        message(STATUS "Compile Activated (RACTIVATED)")
+        target_compile_definitions(qcad_edition INTERFACE RACTIVATED)
+    endif()
+endif()
