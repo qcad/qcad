@@ -84,7 +84,8 @@ public:
         SaveWorkingSet = 0x0010,
         ChangeDocumentSetting = 0x0020,
         Undo = 0x0040,
-        Redo = 0x0080
+        Redo = 0x0080,
+        LayerCollapseStatusChange = 0x0100
     };
     Q_DECLARE_FLAGS(Types, Type)
 

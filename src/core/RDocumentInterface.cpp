@@ -2636,6 +2636,12 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
         return;
     }
 
+    if (transaction.isType(RTransaction::LayerCollapseStatusChange)) {
+        // only the collapsed status of a parent layer in the layer list
+        // has changed, no regen:
+        return;
+    }
+
     if (transaction.isType(RTransaction::LayerVisibilityStatusChange)) {
         // only visibility has changed, regen block references only:
         // TODO: this can still be slow for drawings with many / complex block references
