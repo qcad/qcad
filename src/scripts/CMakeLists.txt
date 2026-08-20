@@ -31,23 +31,29 @@ qt_standard_project_setup()
 # The extra, never-created output forces the command to run on every build;
 # update_qrc.sh only rewrites a .qrc when its content actually changed (via its
 # diff check), so rcc is only re-invoked when there is a real change.
-add_custom_command(
-    OUTPUT
-        ${CMAKE_CURRENT_SOURCE_DIR}/scripts.qrc
-        ${CMAKE_CURRENT_SOURCE_DIR}/scripts_release.qrc
-        ${CMAKE_CURRENT_BINARY_DIR}/update_qrc_always_run
-    COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/update_qrc.sh
-    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-    COMMENT "Updating scripts.qrc / scripts_release.qrc"
-    VERBATIM
-)
+#
+# Windows cannot execute the shell script (it gets opened with the associated
+# text editor instead), so the .qrc files are only regenerated on systems
+# capable of running it; on Windows the checked-in .qrc files are used as-is.
+if(NOT WIN32)
+    add_custom_command(
+        OUTPUT
+            ${CMAKE_CURRENT_SOURCE_DIR}/scripts.qrc
+            ${CMAKE_CURRENT_SOURCE_DIR}/scripts_release.qrc
+            ${CMAKE_CURRENT_BINARY_DIR}/update_qrc_always_run
+        COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/update_qrc.sh
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+        COMMENT "Updating scripts.qrc / scripts_release.qrc"
+        VERBATIM
+    )
 
-add_custom_target(qcadscripts_qrc
-    DEPENDS
-        ${CMAKE_CURRENT_SOURCE_DIR}/scripts.qrc
-        ${CMAKE_CURRENT_SOURCE_DIR}/scripts_release.qrc
-        ${CMAKE_CURRENT_BINARY_DIR}/update_qrc_always_run
-)
+    add_custom_target(qcadscripts_qrc
+        DEPENDS
+            ${CMAKE_CURRENT_SOURCE_DIR}/scripts.qrc
+            ${CMAKE_CURRENT_SOURCE_DIR}/scripts_release.qrc
+            ${CMAKE_CURRENT_BINARY_DIR}/update_qrc_always_run
+    )
+endif()
 
 if(rtest)
     qt_add_resources(SOURCES scripts.qrc)
@@ -82,7 +88,9 @@ target_compile_definitions(qcadscripts PRIVATE
 
 # Ensure the .qrc files are regenerated before this target's resources are
 # compiled (the rcc command also depends on the .qrc files directly).
-add_dependencies(qcadscripts qcadscripts_qrc)
+if(NOT WIN32)
+    add_dependencies(qcadscripts qcadscripts_qrc)
+endif()
 
 set_target_properties(qcadscripts PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../../plugins)
 set_target_properties(qcadscripts PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../../plugins)
