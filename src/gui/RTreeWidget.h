@@ -63,6 +63,9 @@ protected:
     virtual void resizeEvent(QResizeEvent* event);
 
 #if QT_VERSION >= 0x060000
+    /**
+     * \nonscriptable
+     */
     void initViewItemOption(QStyleOptionViewItem* option) const;
 #endif
 
