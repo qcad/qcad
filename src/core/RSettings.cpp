@@ -767,7 +767,14 @@ void RSettings::shortenRecentFiles() {
     initRecentFiles();
     int historySize = getValue("RecentFiles/RecentFilesSize", 10).toInt();
     while (recentFiles.length() > historySize) {
+        int prevLength = recentFiles.length();
         removeRecentFile(recentFiles.first());
+        if (recentFiles.length() >= prevLength) {
+            // fail-safe: entry could not be removed by name
+            // (e.g. path from another platform), drop it directly:
+            recentFiles.removeFirst();
+            setValue("RecentFiles/Files", recentFiles);
+        }
     }
 }
 
@@ -778,7 +785,12 @@ void RSettings::removeRecentFile(const QString& fileName) {
     initRecentFiles();
     QString absFilePath = QFileInfo(fileName).absoluteFilePath();
     recentFiles.removeAll(absFilePath);
+    // also remove the entry exactly as given / stored
+    // (a path from another platform, e.g. "C:/...", is not absolute here
+    // and would otherwise never match):
+    recentFiles.removeAll(fileName);
     removeThumbnail(absFilePath);
+    removeThumbnail(fileName);
     setValue("RecentFiles/Files", recentFiles);
 }
 
