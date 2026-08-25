@@ -40,14 +40,11 @@ BreakOutTest20.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 1, 0);
 
-    this.sendMouseEventToGv(QEvent.MouseButtonPress, new QPoint(91, 316), Qt.RightButton, 2, 0);
-    this.sendMouseEventToGv(QEvent.MouseButtonRelease, new QPoint(91, 316), Qt.RightButton, 0, 0);
+    this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
+    this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
 
-    this.sendMouseEventToGv(QEvent.MouseButtonPress, new QPoint(91, 316), Qt.RightButton, 2, 0);
-    this.sendMouseEventToGv(QEvent.MouseButtonRelease, new QPoint(91, 316), Qt.RightButton, 0, 0);
-
-
-
+    this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
+    this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
 
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::BreakOutProButton');
