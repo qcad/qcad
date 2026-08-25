@@ -685,6 +685,15 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
 
                     angleLength1 = rest1.getAngleLength(true);
                     angleLength2 = rest2.getAngleLength(true);
+
+                    // re-check for zero length or full circle rests:
+                    if (angleLength1<1.0e-5 || angleLength1>2*Math.PI-1.0e-5) {
+                        rest1 = undefined;
+                    }
+
+                    if (angleLength2<1.0e-5 || angleLength2>2*Math.PI-1.0e-5) {
+                        rest2 = undefined;
+                    }
                 }
             }
         }
@@ -1301,7 +1310,20 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
             }
         }
         else {
-            var dists = shape.getDistancesFromStart(ip);
+            var dists;
+            if (ip.isStart===true) {
+                // point is the start point of the shape:
+                // distance is exactly 0 (getDistanceFromStart may return the
+                // full circumference for arcs due to angle rounding at the seam):
+                dists = [ 0.0 ];
+            }
+            else if (ip.isEnd===true) {
+                // point is the end point of the shape:
+                dists = [ shape.getLength() ];
+            }
+            else {
+                dists = shape.getDistancesFromStart(ip);
+            }
             for (var k=0; k<dists.length; k++) {
                 dist = dists[k];
 
