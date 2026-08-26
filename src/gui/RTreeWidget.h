@@ -38,8 +38,6 @@ class QCADGUI_EXPORT RTreeWidget: public QTreeWidget {
     Q_OBJECT
 
 public:
-    using QTreeWidget::QTreeWidget;
-
     RTreeWidget(QWidget* parent=0);
     virtual ~RTreeWidget();
 
