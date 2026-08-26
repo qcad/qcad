@@ -2588,9 +2588,28 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
     }
 
     if (transaction.isType(RTransaction::LayerVisibilityStatusChange) && !changedLayerIds.isEmpty()) {
+        // child layers (e.g. "parent ... child" or XRef layers "xref|parent ... child")
+        // inherit their visibility from the changed layers, so entities on those
+        // layers are affected as well:
+        QSet<RLayer::Id> changedLayerIdsWithChildren = changedLayerIds;
+        QSet<RLayer::Id>::const_iterator lit;
+        for (lit=changedLayerIds.constBegin(); lit!=changedLayerIds.constEnd(); ++lit) {
+            QSharedPointer<RLayer> changedLayer = document.queryLayerDirect(*lit);
+            if (changedLayer.isNull()) {
+                continue;
+            }
+            QList<QString> childLayerNames = changedLayer->getChildLayerNames();
+            for (int i=0; i<childLayerNames.length(); i++) {
+                RLayer::Id childLayerId = document.getLayerId(childLayerNames[i]);
+                if (childLayerId!=RLayer::INVALID_ID) {
+                    changedLayerIdsWithChildren.insert(childLayerId);
+                }
+            }
+        }
+
         // tag block references which might display entities on the changed
         // layers as changed (they need to be regenerated) as well as all viewports:
-        entityIdsToRegenerate.unite(document.queryBlockReferencesForLayers(changedLayerIds));
+        entityIdsToRegenerate.unite(document.queryBlockReferencesForLayers(changedLayerIdsWithChildren));
         entityIdsToRegenerate.unite(document.queryAllViewports());
     }
 
