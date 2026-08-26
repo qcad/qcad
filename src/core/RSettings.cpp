@@ -2162,7 +2162,12 @@ QColor RSettings::getWidgetSelectionColor(const QWidget* w) {
         QPainter p(&img);
         w->style()->drawPrimitive(QStyle::PE_PanelItemViewItem, &opt, &p, w);
     }
+
+#if QT_VERSION >= 0x050600
     return img.pixelColor(4, 4);                // un-premultiplied QColor
+#else
+    return QColor::fromRgba(img.pixel(4, 4));
+#endif
 }
 
 void RSettings::resetCache() {
