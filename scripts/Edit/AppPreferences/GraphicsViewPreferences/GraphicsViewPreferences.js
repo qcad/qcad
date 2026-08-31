@@ -48,6 +48,11 @@ GraphicsViewPreferences.initPreferences = function(pageWidget, calledByPrefDialo
         widgets["ImageAllocationLimit_Label"].visible = false;
         widgets["ImageAllocationLimit"].visible = false;
     }
+
+    // RHI based graphics view is only available if the RHI3D plugin is loaded:
+    if (!hasPlugin("RHI3D") || typeof(RGraphicsViewRhi2D)==="undefined") {
+        widgets["UseRhiGraphicsView"].visible = false;
+    }
 };
 
 GraphicsViewPreferences.applyPreferences = function(doc, mdiChild) {

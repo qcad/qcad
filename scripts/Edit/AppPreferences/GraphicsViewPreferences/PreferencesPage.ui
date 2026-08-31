@@ -417,6 +417,19 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_6">
        <item>
+        <widget class="QCheckBox" name="UseRhiGraphicsView">
+         <property name="toolTip">
+          <string>Use the hardware accelerated graphics view based on the Qt RHI (Rendering Hardware Interface) instead of the image based graphics view</string>
+         </property>
+         <property name="text">
+          <string>Use RHI Graphicsview</string>
+         </property>
+         <property name="RequiresRestart" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QCheckBox" name="Antialiasing">
          <property name="text">
           <string>Anti-aliasing on by default</string>
@@ -1367,6 +1380,7 @@
   <tabstop>AutoScaleLinetypePatterns</tabstop>
   <tabstop>ZeroWeightWeight</tabstop>
   <tabstop>ApplyLineweightToPoints</tabstop>
+  <tabstop>UseRhiGraphicsView</tabstop>
   <tabstop>Antialiasing</tabstop>
   <tabstop>HighResolutionGraphicsView</tabstop>
   <tabstop>Threads</tabstop>
