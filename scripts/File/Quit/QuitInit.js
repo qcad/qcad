@@ -9,9 +9,11 @@ function init(basePath) {
     }
 
     var action = new RGuiAction(title, RMainWindowQt.getMainWindow());
-    if (RS.getSystemId() === "osx") {
-        action.disableIcon();
-    }
+
+    // 20260831: always show icon, also on macOS:
+    //if (RS.getSystemId() === "osx") {
+        //action.disableIcon();
+    //}
     action.setRequiresDocument(false);
     action.setDefaultShortcut(new QKeySequence(QKeySequence.Quit));
     action.setDefaultCommands(["quit", "exit"]);
