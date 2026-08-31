@@ -61,6 +61,13 @@ public:
     virtual void clear();
     virtual void clearLinked();
 
+    void setLinkedEntityQueriesEnabled(bool on) {
+        linkedEntityQueriesEnabled = on;
+    }
+    bool getLinkedEntityQueriesEnabled() const {
+        return linkedEntityQueriesEnabled;
+    }
+
     virtual QSet<RObject::Id> queryAllObjects() const;
     virtual QSet<RObject::Id> querySelectedLayers() const;
     virtual QSet<RObject::Id> queryAllVisibleEntities();
@@ -183,6 +190,9 @@ public:
 private:
     RStorage* backStorage;
     int objectIdOffset;
+    // whether entity enumeration queries (queryAllEntities, etc.) include
+    // entities of the back storage or only entities of this storage:
+    bool linkedEntityQueriesEnabled;
 };
 
 Q_DECLARE_METATYPE(RLinkedStorage*)

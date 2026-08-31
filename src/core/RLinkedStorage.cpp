@@ -23,7 +23,8 @@
 RLinkedStorage::RLinkedStorage(RStorage& backStorage) :
     RMemoryStorage(),
     backStorage(&backStorage),
-    objectIdOffset(1) {
+    objectIdOffset(1),
+    linkedEntityQueriesEnabled(true) {
 
     // copy document settings from original:
     //QSharedPointer<RDocumentVariables> docVars = QSharedPointer<RDocumentVariables>(new RDocumentVariables(this));
@@ -44,18 +45,27 @@ QSet<RObject::Id> RLinkedStorage::querySelectedLayers() const {
 }
 
 QSet<RObject::Id> RLinkedStorage::queryAllVisibleEntities() {
-    return RMemoryStorage::queryAllVisibleEntities()
-            .unite(backStorage->queryAllVisibleEntities());
+    QSet<RObject::Id> ret = RMemoryStorage::queryAllVisibleEntities();
+    if (linkedEntityQueriesEnabled) {
+        ret.unite(backStorage->queryAllVisibleEntities());
+    }
+    return ret;
 }
 
 QSet<RObject::Id> RLinkedStorage::queryAllEntities(bool undone, bool allBlocks, RS::EntityType type) {
-    return RMemoryStorage::queryAllEntities(undone, allBlocks, type)
-            .unite(backStorage->queryAllEntities(undone, allBlocks, type));
+    QSet<RObject::Id> ret = RMemoryStorage::queryAllEntities(undone, allBlocks, type);
+    if (linkedEntityQueriesEnabled) {
+        ret.unite(backStorage->queryAllEntities(undone, allBlocks, type));
+    }
+    return ret;
 }
 
 QSet<RObject::Id> RLinkedStorage::queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types) {
-    return RMemoryStorage::queryAllEntities(undone, allBlocks, types)
-            .unite(backStorage->queryAllEntities(undone, allBlocks, types));
+    QSet<RObject::Id> ret = RMemoryStorage::queryAllEntities(undone, allBlocks, types);
+    if (linkedEntityQueriesEnabled) {
+        ret.unite(backStorage->queryAllEntities(undone, allBlocks, types));
+    }
+    return ret;
 }
 
 QSet<RUcs::Id> RLinkedStorage::queryAllUcs() {
@@ -99,23 +109,35 @@ QSet<RLinetype::Id> RLinkedStorage::queryAllLinetypes() {
 }
 
 QSet<RObject::Id> RLinkedStorage::queryInfiniteEntities() const{
-    return RMemoryStorage::queryInfiniteEntities()
-            .unite(backStorage->queryInfiniteEntities());
+    QSet<RObject::Id> ret = RMemoryStorage::queryInfiniteEntities();
+    if (linkedEntityQueriesEnabled) {
+        ret.unite(backStorage->queryInfiniteEntities());
+    }
+    return ret;
 }
 
 QSet<RObject::Id> RLinkedStorage::querySelectedEntities() const {
-    return RMemoryStorage::querySelectedEntities()
-            .unite(backStorage->querySelectedEntities());
+    QSet<RObject::Id> ret = RMemoryStorage::querySelectedEntities();
+    if (linkedEntityQueriesEnabled) {
+        ret.unite(backStorage->querySelectedEntities());
+    }
+    return ret;
 }
 
 QSet<RObject::Id> RLinkedStorage::queryLayerEntities(RObject::Id layerId, bool allBlocks) {
-    return RMemoryStorage::queryLayerEntities(layerId, allBlocks)
-            .unite(backStorage->queryLayerEntities(layerId, allBlocks));
+    QSet<RObject::Id> ret = RMemoryStorage::queryLayerEntities(layerId, allBlocks);
+    if (linkedEntityQueriesEnabled) {
+        ret.unite(backStorage->queryLayerEntities(layerId, allBlocks));
+    }
+    return ret;
 }
 
 QSet<RObject::Id> RLinkedStorage::querySelectedLayerEntities(RObject::Id layerId, bool allBlocks) {
-    return RMemoryStorage::querySelectedLayerEntities(layerId, allBlocks)
-            .unite(backStorage->querySelectedLayerEntities(layerId, allBlocks));
+    QSet<RObject::Id> ret = RMemoryStorage::querySelectedLayerEntities(layerId, allBlocks);
+    if (linkedEntityQueriesEnabled) {
+        ret.unite(backStorage->querySelectedLayerEntities(layerId, allBlocks));
+    }
+    return ret;
 }
 
 bool RLinkedStorage::hasBlockEntities(RBlock::Id blockId) const {
@@ -171,13 +193,19 @@ QSet<RObject::Id> RLinkedStorage::queryBlockReferences(RBlock::Id blockId) const
 }
 
 QSet<RObject::Id> RLinkedStorage::queryAllBlockReferences() const {
-    return RMemoryStorage::queryAllBlockReferences()
-            .unite(backStorage->queryAllBlockReferences());
+    QSet<RObject::Id> ret = RMemoryStorage::queryAllBlockReferences();
+    if (linkedEntityQueriesEnabled) {
+        ret.unite(backStorage->queryAllBlockReferences());
+    }
+    return ret;
 }
 
 QSet<RObject::Id> RLinkedStorage::queryAllViewports() const {
-    return RMemoryStorage::queryAllViewports()
-            .unite(backStorage->queryAllViewports());
+    QSet<RObject::Id> ret = RMemoryStorage::queryAllViewports();
+    if (linkedEntityQueriesEnabled) {
+        ret.unite(backStorage->queryAllViewports());
+    }
+    return ret;
 }
 
 QSharedPointer<RDocumentVariables> RLinkedStorage::queryDocumentVariablesDirect() const {
