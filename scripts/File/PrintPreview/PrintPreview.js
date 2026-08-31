@@ -372,7 +372,10 @@ PrintPreviewImpl.prototype.finishEvent = function() {
         this.view.setPrintPreview(false);
         this.view.setBackgroundColor(this.bgColor);
         this.view.setColorMode(RGraphicsView.FullColor);
-        this.view.clearBackground();
+        if (isFunction(this.view.clearBackground)) {
+            // image based view only (not supported by the RHI based view):
+            this.view.clearBackground();
+        }
 
         if (!isNull(this.view.getScene())) {
             if (RSettings.getBoolValue("GraphicsView/AutoSwitchLinetypes", false)===true) {
@@ -652,6 +655,13 @@ PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
     this.view.setHairlineMode(Print.getHairlineMode(document));
     this.view.setPrintPreview(true);
 
+    if (!isFunction(this.view.addToBackground)) {
+        // view does not support background decorations
+        // (e.g. RHI based view): show print preview without paper decoration:
+        this.view.regenerate(true);
+        return;
+    }
+
     this.view.clearBackground();
 
     var pages = Print.getPages(document);
@@ -773,7 +783,8 @@ PrintPreviewImpl.prototype.updateBackgroundTransform = function() {
     var unitScale = RUnit.convert(1.0, RS.Millimeter, document.getUnit());
     var factor = 1.0 / scale * unitScale;
 
-    if (!isNull(this.view)) {
+    if (!isNull(this.view) && isFunction(this.view.setBackgroundTransform)) {
+        // image based view only (not supported by the RHI based view):
         this.view.setBackgroundTransform(factor, offset);
     }
 };
@@ -873,6 +884,24 @@ PrintPreviewImpl.prototype.slotPrint = function(pdfFile, pdfVersion) {
 PrintPreviewImpl.slotPrint = function(pdfFile, pdfVersion) {
     var mdiChild = EAction.getMdiChild();
     var view = mdiChild.getLastKnownViewWithFocus();
+
+    if (isNull(view) || !isFunction(view.paintEntities)) {
+        // view cannot paint to a printer (e.g. RHI based view):
+        // print through a temporary off-screen image based view instead:
+        var di = EAction.getDocumentInterface();
+        var scene = new RGraphicsSceneQt(di);
+        var viewImage = new RGraphicsViewImage();
+        viewImage.setNumThreads(1);
+        viewImage.setScene(scene, false);
+        var printOffScreen = new Print(undefined, EAction.getDocument(), viewImage);
+        var ret = printOffScreen.print(pdfFile, undefined, pdfVersion);
+        scene.unregisterView(viewImage);
+        destr(viewImage);
+        di.unregisterScene(scene);
+        destr(scene);
+        return ret;
+    }
+
     var print = new Print(undefined, EAction.getDocument(), view);
     return print.print(pdfFile, undefined, pdfVersion);
 };

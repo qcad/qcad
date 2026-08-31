@@ -377,8 +377,11 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
 
     if (isOpen) {
         // force image buffer update to make sure the thumbnail is up to date when added to recent files:
-        var view = di.getLastKnownViewWithFocus()
-        view.updateImage();
+        var view = di.getLastKnownViewWithFocus();
+        if (!isNull(view) && isFunction(view.updateImage)) {
+            // image based view only (not supported by the RHI based view):
+            view.updateImage();
+        }
         di.updateThumbnail();
         RSettings.addRecentFile(fileName, di.getThumbnail());
     }

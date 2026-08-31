@@ -41,7 +41,22 @@ function ViewportWidget(vpNumber, vpWidget, documentInterface) {
     this.vpWidget = vpWidget;
     this.documentInterface = documentInterface;
     this.eventHandler = undefined;
+    this.rhiView = undefined;
 }
+
+/**
+ * \return True if the RHI based graphics view (RGraphicsViewRhi2D) should be
+ * used instead of the image based graphics view (RGraphicsViewImage). This is
+ * the case if the RHI3D plugin is loaded and the preference
+ * "Use RHI Graphicsview" is enabled.
+ */
+ViewportWidget.useRhiGraphicsView = function() {
+    if (typeof(RGraphicsViewRhi2D)==="undefined") {
+        // RHI3D plugin not loaded:
+        return false;
+    }
+    return RSettings.getBoolValue("GraphicsView/UseRhiGraphicsView", false);
+};
 
 /**
  * \return Array of ViewportWidget objects, one for each child of widget that
@@ -81,7 +96,10 @@ ViewportWidget.updateViewports = function(viewports) {
     // TODO auto zoom for each graphics view works only for the first viewport
     for (var i = 0; i < viewports.length; ++i) {
         var vp = viewports[i];
-        vp.getEventHandler().viewportChanged();
+        var eventHandler = vp.getEventHandler();
+        if (!isNull(eventHandler)) {
+            eventHandler.viewportChanged();
+        }
         var view = vp.getGraphicsView();
 
         if (RSettings.getAutoZoomOnLoad() || i>0) {
@@ -132,6 +150,13 @@ ViewportWidget.initMdiChild = function(mdiChild, uiFileName) {
 
 ViewportWidget.prototype.initEventHandler = function() {
     var self = this;
+
+    if (!isNull(this.rhiView)) {
+        // the RHI based graphics view handles its own navigation and
+        // forwards events to the document interface through its
+        // RGraphicsView adapter (no scrollbars, rulers or drag and drop):
+        return;
+    }
 
     this.eventHandler = new EventHandler(this, this.documentInterface);
     if (isOfType(this.graphicsView, RGraphicsViewQt)) {
@@ -208,6 +233,14 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
 
     if (isNull(this.graphicsView)) {
         qWarning("graphics view not found");
+        return;
+    }
+
+    // use the RHI based graphics view instead of the image based
+    // graphics view (RGraphicsViewImage) if the RHI3D plugin is loaded
+    // and the preference is enabled:
+    if (ViewportWidget.useRhiGraphicsView()) {
+        this.initRhiGraphicsView(vpw);
         return;
     }
 
@@ -319,11 +352,84 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
     }
 };
 
+/**
+ * Replaces the image based graphics view (RGraphicsViewQt with its
+ * RGraphicsViewImage backend) in the viewport template with an RHI based
+ * graphics view (RGraphicsViewRhi2D). Called from init if the RHI3D plugin
+ * is loaded and the preference "Use RHI Graphicsview" is enabled.
+ *
+ * The RHI view provides its own navigation (pan / zoom) and grid, the
+ * scrollbars, rulers and grid info label of the viewport template are
+ * hidden.
+ *
+ * \param vpw Widget created from the viewport UI file
+ * (ViewportWidgetQt.ui) which contains the graphics view.
+ */
+ViewportWidget.prototype.initRhiGraphicsView = function(vpw) {
+    var layout = vpw.layout();
+    if (isNull(layout) || !isOfType(layout, QGridLayout)) {
+        qWarning("cannot replace graphics view: viewport has no grid layout");
+        return;
+    }
+
+    // remove and delete the image based graphics view:
+    layout.removeWidget(this.graphicsView);
+    this.graphicsView.hide();
+    destr(this.graphicsView);
+    this.graphicsView = undefined;
+
+    // the graphics view is in cell 1,1 of the grid layout of
+    // ViewportWidgetQt.ui (surrounded by rulers and scrollbars):
+    this.rhiView = new RGraphicsViewRhi2D(vpw);
+    this.rhiView.objectName = "GraphicsView";
+    // expanding size policy as for the graphics view in the UI file
+    // (without it, the grid layout only assigns part of the available
+    // space to the column / row of the view):
+    this.rhiView.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding);
+    layout.addWidget(this.rhiView, 1, 1);
+
+    var view = this.rhiView.getRGraphicsView();
+    view.setViewportNumber(this.vpNumber);
+
+    // the scene is owned by the document interface and keeps the view
+    // up to date until the document is closed:
+    var scene = new RGraphicsSceneRhi3D(this.documentInterface);
+    if (RSettings.getBoolValue("GraphicsView/AutoSwitchLinetypes", false)===true) {
+        if (isFunction(scene.setScreenBasedLinetypes)) {
+            scene.setScreenBasedLinetypes(true);
+        }
+    }
+    scene.setView(this.rhiView);
+
+    // the RHI view navigates with the mouse (middle button pan, wheel
+    // zoom) and paints its own grid, hide scrollbars, rulers and grid
+    // info label:
+    var names = ["HorizontalScrollBar", "VerticalScrollBar", "InfoLabel",
+                 "HorizontalRuler", "VerticalRuler",
+                 "CornerTopLeft", "CornerTopRight", "CornerBottomLeft"];
+    for (var i=0; i<names.length; i++) {
+        var child = this.vpWidget.findChild(names[i]);
+        if (!isNull(child)) {
+            child.hide();
+        }
+    }
+
+    if (RSettings.isQt(6)) {
+        this.rhiView.setFocus(Qt.OtherFocusReason);
+    }
+    else {
+        this.rhiView.setFocus();
+    }
+};
+
 ViewportWidget.prototype.getVpWidget = function() {
     return this.vpWidget;
 };
 
 ViewportWidget.prototype.getGraphicsView = function() {
+    if (!isNull(this.rhiView)) {
+        return this.rhiView.getRGraphicsView();
+    }
     return this.graphicsView.getImageView();
 };
 
