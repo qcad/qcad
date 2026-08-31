@@ -104,7 +104,9 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
         if (this.sender.text===this.sender.originalText) {
             return;
         }
-        this.sender.setProperty("originalText", this.sender.text);
+        if (!isNull(this.sender.text)) {
+            this.sender.setProperty("originalText", this.sender.text);
+        }
         value = this.sender.getValue();
         if (isNaN(value)) {
             this.propertyEditor.updateGui(true);
@@ -120,7 +122,8 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
         if (this.sender.currentText===this.sender.originalText) {
             return;
         }
-        this.sender.setProperty("originalText", this.sender.text);
+        // note: a combo box has no 'text' property, use currentText:
+        this.sender.setProperty("originalText", this.sender.currentText);
         value = this.sender.getValue();
         if (isNaN(value)) {
             this.propertyEditor.updateGui(true);
@@ -1163,7 +1166,9 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
     if (isOfType(control, RMathLineEdit) || isOfType(control, QLineEdit)) {
         if (control.text!==newText) {
             control.text = newText;
-            control.setProperty("originalText", newText);
+            if (!isNull(newText)) {
+                control.setProperty("originalText", newText);
+            }
             if (isFunction(control.clearError)) {
                 control.clearError();
             }
@@ -1180,7 +1185,9 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
 //            else {
                 control.currentText = newText;
 //            }
-            control.setProperty("originalText", newText);
+            if (!isNull(newText)) {
+                control.setProperty("originalText", newText);
+            }
             if (isFunction(control.lineEdit().clearError)) {
                 control.lineEdit().clearError();
             }
