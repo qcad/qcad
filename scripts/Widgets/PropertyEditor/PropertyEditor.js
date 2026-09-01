@@ -1778,16 +1778,31 @@ PropertyEditor.applyPreferences = function(doc, mdiChild) {
 };
 
 /**
- * Shows / hides the property editor.
+ * Shows, raises or hides the property editor:
+ * - property editor hidden: show and raise the property editor
+ * - property editor visible but stacked behind other dock widgets: raise the property editor
+ * - property editor visible and on top of its stack or not stacked: hide the property editor
  */
 PropertyEditor.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
     var appWin = RMainWindowQt.getMainWindow();
     var dock = appWin.findChild("PropertyEditorDock");
-    if (!RSettings.getOriginalArguments().contains("-no-show")) {
-        dock.visible = !dock.visible;
-        if (dock.visible) dock.raise();
+    if (!isNull(dock) && !RSettings.getOriginalArguments().contains("-no-show")) {
+        if (!dock.visible) {
+            // property editor is hidden: show it and raise it to the top of its stack:
+            dock.visible = true;
+            dock.raise();
+        }
+        else if (dock.visibleRegion().isEmpty()) {
+            // property editor is visible but completely covered by other dock widgets
+            // (tabbed dock widget which is not the current tab): raise it:
+            dock.raise();
+        }
+        else {
+            // property editor is visible and on top of its stack (or not stacked): hide it:
+            dock.visible = false;
+        }
     }
     var linetypeCombo = dock.findChild("Linetype");
     linetypeCombo.init(EAction.getDocument());

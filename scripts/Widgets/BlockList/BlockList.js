@@ -715,16 +715,31 @@ BlockList.getSelectedItems = function() {
 };
 
 /**
- * Shows / hides the block list.
+ * Shows, raises or hides the block list:
+ * - block list hidden: show and raise the block list
+ * - block list visible but stacked behind other dock widgets: raise the block list
+ * - block list visible and on top of its stack or not stacked: hide the block list
  */
 BlockList.prototype.beginEvent = function() {
     Widgets.prototype.beginEvent.call(this);
 
     var appWin = RMainWindowQt.getMainWindow();
     var dock = appWin.findChild("BlockListDock");
-    if (!RSettings.getOriginalArguments().contains("-no-show")) {
-        dock.visible = !dock.visible;
-        if (dock.visible) dock.raise();
+    if (!isNull(dock) && !RSettings.getOriginalArguments().contains("-no-show")) {
+        if (!dock.visible) {
+            // block list is hidden: show it and raise it to the top of its stack:
+            dock.visible = true;
+            dock.raise();
+        }
+        else if (dock.visibleRegion().isEmpty()) {
+            // block list is visible but completely covered by other dock widgets
+            // (tabbed dock widget which is not the current tab): raise it:
+            dock.raise();
+        }
+        else {
+            // block list is visible and on top of its stack (or not stacked): hide it:
+            dock.visible = false;
+        }
     }
 };
 

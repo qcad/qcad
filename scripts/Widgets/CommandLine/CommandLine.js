@@ -33,16 +33,31 @@ CommandLine.getPreferencesCategory = function() {
 CommandLine.prototype = new EAction();
 
 /**
- * Shows / hides the command line widget.
+ * Shows, raises or hides the command line:
+ * - command line hidden: show and raise the command line
+ * - command line visible but stacked behind other dock widgets: raise the command line
+ * - command line visible and on top of its stack or not stacked: hide the command line
  */
 CommandLine.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
     var appWin = RMainWindowQt.getMainWindow();
     var dock = appWin.findChild("CommandLineDock");
-    if (!RSettings.getOriginalArguments().contains("-no-show")) {
-        dock.visible = !dock.visible;
-        if (dock.visible) dock.raise();
+    if (!isNull(dock) && !RSettings.getOriginalArguments().contains("-no-show")) {
+        if (!dock.visible) {
+            // command line is hidden: show it and raise it to the top of its stack:
+            dock.visible = true;
+            dock.raise();
+        }
+        else if (dock.visibleRegion().isEmpty()) {
+            // command line is visible but completely covered by other dock widgets
+            // (tabbed dock widget which is not the current tab): raise it:
+            dock.raise();
+        }
+        else {
+            // command line is visible and on top of its stack (or not stacked): hide it:
+            dock.visible = false;
+        }
     }
 };
 
