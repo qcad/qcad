@@ -41,7 +41,10 @@ EcmaScriptShell.prototype = new EAction();
 EcmaScriptShell.includeBasePath = includeBasePath;
 
 /**
- * Shows / hides the script shell widget.
+ * Shows, raises or hides the script shell:
+ * - script shell hidden: show and raise the script shell
+ * - script shell visible but stacked behind other dock widgets: raise the script shell
+ * - script shell visible and on top of its stack or not stacked: hide the script shell
  */
 EcmaScriptShell.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
@@ -72,8 +75,20 @@ EcmaScriptShell.prototype.beginEvent = function() {
             }
         }
 
-        dock.visible = !dock.visible;
-        if (dock.visible) dock.raise();
+        if (!dock.visible) {
+            // script shell is hidden: show it and raise it to the top of its stack:
+            dock.visible = true;
+            dock.raise();
+        }
+        else if (dock.visibleRegion().isEmpty()) {
+            // script shell is visible but completely covered by other dock widgets
+            // (tabbed dock widget which is not the current tab): raise it:
+            dock.raise();
+        }
+        else {
+            // script shell is visible and on top of its stack (or not stacked): hide it:
+            dock.visible = false;
+        }
     }
 };
 
