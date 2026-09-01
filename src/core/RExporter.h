@@ -341,6 +341,22 @@ public:
     }
 
     /**
+     * \return True if this exporter displays painter paths which are
+     * flagged as pixel unit (\ref RPainterPath::setPixelUnit) at a
+     * constant size in pixels, independently of the zoom factor. This
+     * is the case for the graphics scenes of interactive views.
+     *
+     * Entities with a constant display size (e.g. connection points)
+     * can export their glyph as one such path in pixel coordinates if
+     * this is true. Exporters which return false (e.g. file exporters)
+     * must be given the geometry in drawing units, sized for the
+     * current zoom factor through \ref getCurrentPixelSizeHint.
+     */
+    virtual bool isPixelUnitSupported() const {
+        return false;
+    }
+
+    /**
      * \return True if this exporter exports only visible entities
      * (on visible layers).
      */

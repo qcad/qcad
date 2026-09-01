@@ -170,6 +170,15 @@ public:
         return RGraphicsScene::getScreenBasedLinetypes();
     }
 
+    /**
+     * Painter paths in pixel unit are stored as such and scaled to a
+     * constant size in pixels at paint time by the view
+     * (\ref RGraphicsViewImage::paintDrawable).
+     */
+    virtual bool isPixelUnitSupported() const {
+        return true;
+    }
+
     virtual void dump() {
         qDebug() << *this;
     }
