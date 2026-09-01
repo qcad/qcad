@@ -262,8 +262,10 @@ PrintPreviewImpl.prototype.beginEvent = function() {
     //PrintPreview.setRunning(true);
     //PrintPreview.setInstance(this);
 
-    var mdiChild = EAction.getMdiChild();
-    this.view = mdiChild.getLastKnownViewWithFocus();
+    // RMdiChildQt.getLastKnownViewWithFocus casts to RGraphicsViewImage and
+    // returns NULL for the RHI based view: ask the document interface for
+    // the view with focus instead (RGraphicsView):
+    this.view = di.getLastKnownViewWithFocus();
 
     di.disableUpdates();
     this.parentClass.prototype.beginEvent.call(this);
@@ -372,9 +374,9 @@ PrintPreviewImpl.prototype.finishEvent = function() {
         this.view.setPrintPreview(false);
         this.view.setBackgroundColor(this.bgColor);
         this.view.setColorMode(RGraphicsView.FullColor);
-        if (isFunction(this.view.clearBackground)) {
-            // image based view only (not supported by the RHI based view):
-            this.view.clearBackground();
+        var bgView = this.getBackgroundDecorationView();
+        if (!isNull(bgView)) {
+            bgView.clearBackground();
         }
 
         if (!isNull(this.view.getScene())) {
@@ -639,6 +641,35 @@ PrintPreviewImpl.prototype.hideUiOptions = function() {
 };
 
 /**
+ * \return The view the background decoration (paper, page borders, page
+ * tags, crop marks) is added to or undefined if the current view does not
+ * support background decorations.
+ *
+ * For image based views (RGraphicsViewQt) this is the view itself. The
+ * RGraphicsView of an RHI based view is an adapter owned by the widget:
+ * the decoration is added to the widget (RGraphicsViewRhi2D).
+ */
+PrintPreviewImpl.prototype.getBackgroundDecorationView = function() {
+    if (isNull(this.view)) {
+        return undefined;
+    }
+
+    if (isFunction(this.view.addToBackground)) {
+        // image based view:
+        return this.view;
+    }
+
+    if (typeof(RGraphicsViewRhi2D)!=="undefined") {
+        var rhiView = RGraphicsViewRhi2D.getViewOf(this.view);
+        if (!isNull(rhiView)) {
+            return rhiView;
+        }
+    }
+
+    return undefined;
+};
+
+/**
  * Called to update the background decoration (paper borders) if the scale
  * or paper settings change.
  */
@@ -655,14 +686,15 @@ PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
     this.view.setHairlineMode(Print.getHairlineMode(document));
     this.view.setPrintPreview(true);
 
-    if (!isFunction(this.view.addToBackground)) {
-        // view does not support background decorations
-        // (e.g. RHI based view): show print preview without paper decoration:
+    var bgView = this.getBackgroundDecorationView();
+    if (isNull(bgView)) {
+        // view does not support background decorations:
+        // show print preview without paper decoration:
         this.view.regenerate(true);
         return;
     }
 
-    this.view.clearBackground();
+    bgView.clearBackground();
 
     var pages = Print.getPages(document);
     var backgroundColor = Print.getBackgroundColor(document);
@@ -692,7 +724,7 @@ PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
     path.setPen(new QPen(Qt.NoPen));
     path.setBrush(new QBrush(new QColor(colBg)));
     path.addRect(new QRectF(-1.0e8, -1.0e8, 2.0e8, 2.0e8));
-    this.view.addToBackground(RGraphicsSceneDrawable.createFromPainterPath(path));
+    bgView.addToBackground(RGraphicsSceneDrawable.createFromPainterPath(path));
 
     // page border with shadow
     if (Print.getShowPaperBorders(document)) {
@@ -702,7 +734,7 @@ PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
             path.setPen(new QPen(Qt.NoPen));
             path.setBrush(new QBrush(new QColor(colShadow)));
             this.drawShadow(path, pages[i]);
-            this.view.addToBackground(RGraphicsSceneDrawable.createFromPainterPath(path));
+            bgView.addToBackground(RGraphicsSceneDrawable.createFromPainterPath(path));
         }
 
         // paper background
@@ -713,7 +745,7 @@ PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
                     backgroundColor.blue());
             path.setBrush(new QBrush(color));
             this.drawPaper(path, pages[i]);
-            this.view.addToBackground(RGraphicsSceneDrawable.createFromPainterPath(path));
+            bgView.addToBackground(RGraphicsSceneDrawable.createFromPainterPath(path));
         }
 
         // paper border
@@ -722,7 +754,7 @@ PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
             path.setPen(new QPen(new QColor(colBorder)));
             path.setBrush(new QBrush(Qt.NoBrush));
             this.drawPaper(path, pages[i]);
-            this.view.addToBackground(RGraphicsSceneDrawable.createFromPainterPath(path));
+            bgView.addToBackground(RGraphicsSceneDrawable.createFromPainterPath(path));
         }
     }
 
@@ -743,17 +775,17 @@ PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
     for (i = 0; i < pages.length; ++i) {
         this.drawGlueMargins(path, pages[i]);
     }
-    this.view.addToBackground(RGraphicsSceneDrawable.createFromPainterPath(path));
+    bgView.addToBackground(RGraphicsSceneDrawable.createFromPainterPath(path));
 
     // hook for page tags, footer, etc.:
-    this.addDecorations(pages);
+    this.addDecorations(pages, bgView);
 
     // crop marks:
     if (Print.getPrintCropMarks(document)) {
         for ( i = 0; i < pages.length; ++i) {
             path = new RPainterPath();
             Print.drawCropMarks(document, path, pages[i], false);
-            this.view.addToBackground(RGraphicsSceneDrawable.createFromPainterPath(path));
+            bgView.addToBackground(RGraphicsSceneDrawable.createFromPainterPath(path));
         }
     }
 
@@ -762,8 +794,11 @@ PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
 
 /**
  * Overwritable hook to add more decorations to the print preview.
+ *
+ * \param bgView View the decorations are added to (see
+ * getBackgroundDecorationView).
  */
-PrintPreviewImpl.prototype.addDecorations = function(pages) {};
+PrintPreviewImpl.prototype.addDecorations = function(pages, bgView) {};
 
 /**
  * Updates the background decoration transformation.
@@ -783,9 +818,9 @@ PrintPreviewImpl.prototype.updateBackgroundTransform = function() {
     var unitScale = RUnit.convert(1.0, RS.Millimeter, document.getUnit());
     var factor = 1.0 / scale * unitScale;
 
-    if (!isNull(this.view) && isFunction(this.view.setBackgroundTransform)) {
-        // image based view only (not supported by the RHI based view):
-        this.view.setBackgroundTransform(factor, offset);
+    var bgView = this.getBackgroundDecorationView();
+    if (!isNull(bgView)) {
+        bgView.setBackgroundTransform(factor, offset);
     }
 };
 
