@@ -169,6 +169,7 @@ public:
     RVector getPointAt(double t) const;
     RVector getPointAtDistance(double distance) const;
     virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const;
+    double getAngleAtT(double t) const;
 
     virtual QList<RVector> getEndPoints() const;
     virtual RVector getMiddlePoint() const;
@@ -208,6 +209,7 @@ public:
 
     QList<RSpline> splitAtPoints(const QList<RVector>& points) const;
     QList<RSpline> splitAtParams(const QList<double>& params) const;
+    RSpline getSubSpline(double t1, double t2) const;
 
     RPolyline toPolyline(int segments) const;
     RPolyline approximateWithArcs(double tolerance, double radiusLimit=RDEFAULT_MIN1) const;

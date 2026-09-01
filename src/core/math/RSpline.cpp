@@ -1077,8 +1077,20 @@ double RSpline::getAngleAt(double distance, RS::From from) const {
         return RNANDOUBLE;
     }
     double t = getTAtPoint(points[0]);
+    return getAngleAtT(t);
+}
+
+/**
+ * \return Tangent angle at the given spline parameter.
+ */
+double RSpline::getAngleAtT(double t) const {
+    updateInternal();
+#ifndef R_NO_OPENNURBS
     ON_3dVector v = curve.DerivativeAt(t);
     return RVector(v.x, v.y).getAngle();
+#else
+    return RNANDOUBLE;
+#endif
 }
 
 QList<RVector> RSpline::getEndPoints() const {
@@ -1860,6 +1872,53 @@ QList<RSpline> RSpline::splitAtParams(const QList<double>& params) const {
         return splineProxy->split(*this, params);
     }
     return QList<RSpline>();
+}
+
+/**
+ * \return Sub spline of this spline from parameter t1 to parameter t2
+ *      or an invalid spline on error. Computed from the internal,
+ *      non-rational NURBS representation (weights are not considered,
+ *      consistent with getPointAt, getExploded, etc.).
+ */
+RSpline RSpline::getSubSpline(double t1, double t2) const {
+    RSpline ret;
+
+#ifndef R_NO_OPENNURBS
+    updateInternal();
+
+    if (t2-t1<RS::PointTolerance) {
+        return ret;
+    }
+
+    ON_NurbsCurve* dup = dynamic_cast<ON_NurbsCurve*>(curve.DuplicateCurve());
+    if (dup==NULL) {
+        return ret;
+    }
+
+    if (!dup->Trim(ON_Interval(t1, t2))) {
+        delete dup;
+        return ret;
+    }
+
+    QList<RVector> ctrlPts;
+    ON_3dPoint onp;
+    for (int i=0; i<dup->CVCount(); i++) {
+        dup->GetCV(i, onp);
+        ctrlPts.append(RVector(onp.x, onp.y, onp.z));
+    }
+
+    QList<double> knots;
+    for (int i=0; i<dup->KnotCount(); i++) {
+        knots.append(dup->Knot(i));
+    }
+
+    delete dup;
+
+    ret = RSpline(ctrlPts, degree);
+    ret.setKnotVector(knots);
+#endif
+
+    return ret;
 }
 
 void RSpline::update() const {
