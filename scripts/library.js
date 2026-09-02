@@ -3101,13 +3101,18 @@ function neutralPath(path) {
  * \return Mapped icon path for the given icon for the current theme or
  * mapped icon path for a dark theme (-inverse) or the same path or undefined if no such
  * icon can be found.
+ *
+ * The given path is resolved through autoPath() first, so a relative path
+ * such as "scripts/Edit/DrawingPreferences/DrawingPreferences.svg" works
+ * both in development builds (file on disk) and in deployed builds where
+ * scripts are compiled into resources (":scripts/...").
  */
 function autoIconPath(path, inverse) {
     if (isNull(inverse)) {
         inverse = false;
     }
 
-    return RGuiAction.getIconPath(path, inverse);
+    return RGuiAction.getIconPath(autoPath(path), inverse);
 }
 
 function applyTheme() {
